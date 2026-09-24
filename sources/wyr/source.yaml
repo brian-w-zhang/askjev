@@ -1,0 +1,11 @@
+name: wyr
+url: https://huggingface.co/datasets/tasksource/wouldyourather
+license: CC0 claimed on Kaggle (charlieray668); content scraped from either.io. Private use only.
+version: all_unique.csv (HF main, fetched 2026-09-24)
+target: 1000
+hemisphere: self
+kind: taste
+notes: >
+  Two-option would-you-rather dilemmas with absolute either.io vote counts (2,722 rows; about 1,140
+  have 1,000+ votes, the rest have single-digit votes and are dropped). Seeded sample of 1,000.
+  Sexual items are flagged "sensitive"; sexual items involving minors, sexual violence, and slurs are dropped.

@@ -1,0 +1,410 @@
+id: machine
+label: The Machine
+description: "Questions that can only be answered given a specific piece of input: a ticket, email, document, contract, tool call, transcript, listing, code diff, resume, passage or record. Programs ask them over and over, one input at a time, to classify, detect, score, route, rank, verify or extract. The same template (for example 'Is this ticket urgent?') runs over millions of different inputs."
+not_for: "Questions about the answerer or about how people live: traits, values, preferences, choices, relationships (SELF). General questions about things, places, events, ideas or the future that need no specific input to answer (WORLD)."
+examples: ["Does this message request a refund?", "Which team should handle this ticket?", "Does this passage address the subject of the query?"]
+children:
+
+  # ------------------------------------------------------------------ AI
+  - id: machine.ai_systems
+    label: AI Systems & Agents
+    share: 5
+    description: "Questions a program asks about the inputs, outputs and internals of an AI system (prompts sent to a model, model replies, agent tool calls, reasoning traces, model-made extractions) to decide how to route, gate, verify or debug that AI system."
+    not_for: "Content written by people for people, such as social posts, emails or support tickets (Trust & Safety, Customer Support). Retrieved passages judged against a search query (Search & Retrieval)."
+    examples: ["Does this message try to get the assistant to ignore or reveal its instructions?", "Is this tool call an appropriate tool for the user's request?", "Is this extracted field unsupported by the source text?"]
+    children:
+      - id: machine.ai_systems.model_routing
+        label: Model Routing & Difficulty
+        description: "Questions a program asks about a prompt or task headed to an AI system to decide which model should handle it: how difficult or risky the request is, and whether to escalate from a small fast model to a larger, more expensive one."
+        not_for: "Deciding whether the prompt is allowed at all (Guardrails). Deciding which human team handles a customer message (Customer Support routing). Choosing which skill or tool an agent loads (Skill & Tool Selection)."
+        examples: ["How difficult is this request to answer correctly?", "Does this prompt need multi-step reasoning to answer?", "Should this request be escalated to a larger model?"]
+      - id: machine.ai_systems.guardrails
+        label: Guardrails
+        description: "Questions a program asks about a message sent to an AI assistant, or a reply the assistant produced, to decide whether to block, warn or allow it: jailbreaks, prompt injection, harmful or illegal help, medical dosing, self-harm, leaked sensitive data, and the severity of harm if complied with."
+        not_for: "Posts, comments and messages between people on a platform, with no AI assistant involved (Trust & Safety). Checking whether an AI answer is factually grounded in its sources (Answer Grounding & Citations)."
+        examples: ["Does this message try to get the assistant to ignore, override, or reveal its instructions?", "Does this reply give a diagnosis, a specific drug dosage, or a treatment decision?", "How much harm could result if the assistant complied with this message?"]
+      - id: machine.ai_systems.tool_call_verification
+        label: Tool-Call Verification
+        description: "Questions a program asks about a tool call or function call an AI agent has already made, compared with the user's request and the tool's schema, to decide whether the call was correct: right tool, right arguments, arguments matching the request, results wired to the right call."
+        not_for: "Producing a typed call from a natural-language command in the first place (Function Calling). Choosing which skill to load before acting (Skill & Tool Selection). Judging an agent's reasoning text rather than its calls (Reasoning & Trace Classification)."
+        examples: ["Does the city argument in this tool call match the location in the request?", "Do this tool call's arguments conform to the tool's parameter schema?", "Is this tool an appropriate choice for answering the user's request?"]
+      - id: machine.ai_systems.function_calling
+        label: Function Calling
+        description: "Questions a program asks about a natural-language command to turn it into a typed call against a given API or function list: which function the user wants, and which value each argument should take, including whether the user stated it at all."
+        not_for: "Checking a call an agent already made (Tool-Call Verification). Choosing a skill or document to load from a large catalog (Skill & Tool Selection). Consumer voice, banking or smart-home commands mapped to a small fixed action set (Customer Support commands)."
+        examples: ["What is the user asking the trading assistant to do in this command?", "Does this command say how the chart should be drawn?", "How many bars should the moving average in this command cover: nine, twenty, or fifty?"]
+      - id: machine.ai_systems.skill_selection
+        label: Skill & Tool Selection
+        description: "Questions a program asks about a user's request to an agent to decide which skill, tool or procedure (if any) the agent should load from a catalog, and whether the request needs tools or action at all rather than a prose answer."
+        not_for: "Filling in the arguments of a specific function (Function Calling). Checking a tool call already made (Tool-Call Verification). Choosing which model answers (Model Routing & Difficulty)."
+        examples: ["Which of these skills, if any, is the right one to load for this request?", "Is the assistant being asked to act on the user's files, accounts or devices in this request?", "Does this skill do the specific thing this request asks for?"]
+      - id: machine.ai_systems.hallucination_citation
+        label: Answer Grounding & Citations
+        description: "Questions a program asks about an answer an AI system generated, compared with the sources or context it was given, to decide whether the answer is grounded: whether it answers the request, whether its claims and citations are supported, and whether it contradicts its context."
+        not_for: "Structured fields a model extracted from a document (Extraction Verification). Claims in scholarly papers checked against the works they cite (Science & Research). Whether a retrieved passage should be fed to the model at all (Search & Retrieval)."
+        examples: ["Does this answer address the user's request?", "Does this section support the claim made in this answer?", "Does this reply contradict the context it was given?"]
+      - id: machine.ai_systems.trace_classification
+        label: Reasoning & Trace Classification
+        description: "Questions a program asks about an AI agent's reasoning trace, transcript or run log to classify what happened: the behavior shown, the failure mode, whether the agent gave up, looped, or completed the task."
+        not_for: "Judging one specific tool call against its schema (Tool-Call Verification). Judging the final answer's grounding (Answer Grounding & Citations). Safety screening of a single message (Guardrails)."
+        examples: ["Did the agent in this trace complete the task it was given?", "Which failure mode best describes this agent run?", "Does this reasoning trace get stuck repeating the same step?"]
+      - id: machine.ai_systems.extraction_verification
+        label: Extraction Verification
+        description: "Questions a program asks about a structured record a model extracted from source text, field by field against a schema, to decide whether the extraction is wrong and should be escalated to a stronger model: hallucinated, off-target, incomplete, wrong type or wrong format."
+        not_for: "Extracting the field values in the first place from a document (Documents, Data & Analytics). Checking a free-text answer's citations (Answer Grounding & Citations)."
+        examples: ["Is this extracted field unsupported by, or absent from, the source text?", "Does this extracted field violate the type declared in its field spec?", "Is this extracted record incorrect enough to escalate to a smarter model?"]
+
+  # ------------------------------------------------------------------ T&S
+  - id: machine.trust_safety
+    label: Trust & Safety
+    share: 4
+    description: "Questions a program asks about user-generated content on a platform (posts, comments, chat messages, emails, profiles, uploads) to decide whether it breaks the platform's rules and what enforcement action to take."
+    not_for: "Messages sent to or from an AI assistant (AI Systems & Agents guardrails). Product listings and product reviews on a marketplace (Commerce & Marketing). Customer messages to a company's support team (Customer Support)."
+    examples: ["What is the single most applicable content-policy category for this post?", "Does this email ask the recipient to provide a password?", "What enforcement action should be taken on this post?"]
+    children:
+      - id: machine.trust_safety.toxicity_harassment
+        label: Toxicity, Hate & Harassment
+        description: "Questions a program asks about a post, comment or message between people to detect insults, harassment, hate against protected groups, threats and incitement to violence, and to judge who is targeted and how severe it is."
+        not_for: "In-game chat and player reports (Game Chat & Player Reports). Sexual or graphic material (Sexual & Graphic Content). Spam and scams (Spam & Phishing)."
+        examples: ["Does this post insult or demean a specific person?", "Does this comment threaten violence against someone?", "Who is this post primarily directed at: a person, a group, or the platform?"]
+      - id: machine.trust_safety.spam_phishing
+        label: Spam & Phishing
+        description: "Questions a program asks about an email, message or post to detect spam, scams and phishing: credential requests, unexpected rewards, time pressure, sender or link domains that do not match the claimed organization, and disguised links."
+        not_for: "Fake or incentivized product reviews (Commerce & Marketing review abuse). Fraud in financial transactions or insurance claims (Finance, Risk & Insurance)."
+        examples: ["Does this email ask the recipient to provide a password or other login credential?", "Does the organization named in this sender's display name conflict with the sender's email domain?", "Does this message claim the recipient received an unexpected prize or payment?"]
+      - id: machine.trust_safety.unsafe_advice
+        label: Unsafe Advice & Dangerous Content
+        description: "Questions a program asks about a post or message written by a person to detect dangerous instructions or advice: unsafe medical or drug advice, weapons, illegal activity, and risky challenges."
+        not_for: "The same risks in a prompt to or a reply from an AI assistant (AI Systems & Agents guardrails). Content suggesting the author may harm themselves (Self-Harm & Crisis Signals)."
+        examples: ["Does this post give a specific drug dosage without medical supervision?", "Does this comment explain how to make a weapon?", "Does this post encourage a dangerous physical challenge?"]
+      - id: machine.trust_safety.self_harm
+        label: Self-Harm & Crisis Signals
+        description: "Questions a program asks about a post or message written by a person to detect signs that the author may be considering harming themselves or is in crisis, so the platform can offer help or escalate."
+        not_for: "Messages to an AI assistant (AI Systems & Agents guardrails). Threats of harm against other people (Toxicity, Hate & Harassment)."
+        examples: ["Does this post suggest the author may be considering harming themselves?", "Does this message describe a plan or means for self-harm?", "Does this comment encourage another user to harm themselves?"]
+      - id: machine.trust_safety.sexual_graphic
+        label: Sexual & Graphic Content
+        description: "Questions a program asks about a post, caption, image description or message to detect sexual content, nudity, sexualization of minors, and graphic violence or gore."
+        not_for: "Whether content is suitable to run ads beside (Brand Safety & Suitability). Harassment without sexual content (Toxicity, Hate & Harassment)."
+        examples: ["Does this post contain explicit sexual content?", "Does this caption sexualize a minor?", "Does this description depict graphic violence or gore?"]
+      - id: machine.trust_safety.personal_data
+        label: Personal Data Exposure
+        description: "Questions a program asks about a post, message or uploaded text to detect exposed personal or sensitive data (addresses, phone numbers, IDs, card numbers, health details, doxxing) and opt-out or deletion requests."
+        not_for: "Sensitive data leaked by an AI assistant's reply (AI Systems & Agents guardrails). Pulling contact fields out of a document on purpose (Documents, Data & Analytics). Regulation text such as GDPR articles (Legal & Compliance)."
+        examples: ["Does this post reveal another person's home address?", "Does this message contain a full payment card number?", "Is this message asking to be removed from the mailing list?"]
+      - id: machine.trust_safety.brand_safety
+        label: Brand Safety & Suitability
+        description: "Questions a program asks about a page, video transcript or piece of content to decide whether an advertiser's ad can appear next to it and for which audiences it is suitable."
+        not_for: "Whether the ad itself matches its landing page (Commerce & Marketing ad alignment). Whether the ad makes prohibited claims (Legal & Compliance). Removing content for rule-breaking (other Trust & Safety nodes)."
+        examples: ["Is this article safe to place a family brand's ad next to?", "Which audience is this video transcript suitable for?", "Does this page discuss a tragedy that advertisers usually avoid?"]
+      - id: machine.trust_safety.game_chat
+        label: Game Chat & Player Reports
+        description: "Questions a program asks about in-game chat, player reports and player reviews of a game to detect toxicity, cheating, griefing and player frustration or churn inside a gaming community."
+        not_for: "Harassment on social platforms outside games (Toxicity, Hate & Harassment). Product reviews on a store (Commerce & Marketing)."
+        examples: ["Is this chat message toxic toward a teammate?", "Does this player report describe cheating?", "How frustrated does this player seem in this review?"]
+      - id: machine.trust_safety.enforcement
+        label: Moderation Actions & Queues
+        description: "Questions a program asks about a reported post together with its context (reports, strikes, links) to decide the enforcement outcome: allow, warn, remove, strike or escalate, which moderation queue owns it, and who makes the final call."
+        not_for: "Detecting what kind of violation the content contains (the category nodes such as Toxicity, Spam or Self-Harm)."
+        examples: ["What enforcement action should be taken on this post?", "Which moderation queue should own this post?", "Who should make the final call on this post: automation, a moderator, or legal?"]
+
+  # ------------------------------------------------------------------ Support
+  - id: machine.support
+    label: Customer Support
+    share: 3
+    description: "Questions a program asks about a customer's message, ticket, chat, call transcript or spoken command to a company, or the company's reply, to decide what the customer wants, how urgent it is, who handles it and whether the reply is right."
+    not_for: "Bug reports in an engineering issue tracker (Software & Code). Insurance claims (Finance, Risk & Insurance). Scam or phishing emails (Trust & Safety)."
+    examples: ["Which team should handle this ticket?", "How frustrated is the customer in this message?", "Does this message request a refund?"]
+    children:
+      - id: machine.support.intent_topic
+        label: Intent & Topic
+        description: "Questions a program asks about a customer message or ticket to classify what it is about and what the customer wants: the topic, the main request, the return reason, the kind of shipping problem, the requested resolution."
+        not_for: "Which team or handler should take it (Routing & Complexity). How urgent or upset the customer is (Urgency & Frustration). Refund and cancellation requests specifically (Refunds & Churn)."
+        examples: ["What is the main request in this ticket?", "If the customer wants to return something, why?", "Which returns topic is this customer asking about?"]
+      - id: machine.support.urgency_frustration
+        label: Urgency & Frustration
+        description: "Questions a program asks about a customer message or ticket to judge the customer's state: how urgent or time-sensitive it is, how frustrated or angry they are, and their overall tone."
+        not_for: "How severe the underlying bug is (Software & Code issue triage). Whether the customer is threatening to leave or wants money back (Refunds & Churn)."
+        examples: ["Does this message express urgency?", "How frustrated is the customer in this message?", "What is the customer's tone in this ticket?"]
+      - id: machine.support.churn_refund
+        label: Refunds & Churn
+        description: "Questions a program asks about a customer message, with the customer's orders and the refund policy, to detect refund, credit or cancellation requests, duplicate charges, churn risk, and whether policy supports the refund."
+        not_for: "General billing topic classification (Intent & Topic). Insurance claims payouts (Finance, Risk & Insurance)."
+        examples: ["Does this message request a refund?", "Does the refund policy support the refund requested in this ticket?", "Is this customer threatening to cancel their subscription?"]
+      - id: machine.support.human_escalation
+        label: Human Escalation
+        description: "Questions a program asks about a customer message to detect that the customer wants a human agent, has contacted support about this before, or that an automated reply should hand over to a person."
+        not_for: "Which team a ticket goes to (Routing & Complexity). How angry the customer is (Urgency & Frustration)."
+        examples: ["Is the customer asking for a human agent in this message?", "Has this customer contacted support about this before?", "Should this chat be handed from the bot to a person?"]
+      - id: machine.support.routing
+        label: Routing & Complexity
+        description: "Questions a program asks about a customer ticket to decide who or what should handle it: which department or queue, whether deterministic code, a specialist model or a person, and how complex it is to resolve."
+        not_for: "What the ticket is about (Intent & Topic). A customer explicitly asking for a human (Human Escalation). Choosing which AI model answers a prompt (AI Systems & Agents)."
+        examples: ["Which team should handle this ticket?", "How complex is this request to resolve?", "Can this request be resolved by an automated password reset?"]
+      - id: machine.support.commands
+        label: Voice, Banking & Smart-Home Commands
+        description: "Questions a program asks about a spoken or typed command to a consumer assistant (a banking app, voice assistant, or smart-home hub) to decide which fixed action it asks for, on which device or room, and whether it contains more than one action."
+        not_for: "Mapping commands onto a developer's API or function schema with typed arguments (AI Systems & Agents function calling). Written support tickets (Intent & Topic)."
+        examples: ["What action is the user requesting in this command: check balance, approve transfer, or something else?", "What type of device is this smart-home command targeting?", "Does this command contain more than one action?"]
+      - id: machine.support.response_verification
+        label: Response & Call Review
+        description: "Questions a program asks about a support agent's reply or a support call transcript to check it against policy and quality: whether the reply follows policy, answers the question, and which commitments or follow-ups were promised."
+        not_for: "The customer's own message (other Customer Support nodes). Grounding of an AI answer in retrieved sources (AI Systems & Agents)."
+        examples: ["Does this reply follow the refund policy?", "Does this agent reply answer the customer's question?", "Did the agent in this call transcript promise a follow-up?"]
+
+  # ------------------------------------------------------------------ Search
+  - id: machine.search
+    label: Search & Retrieval
+    share: 3
+    description: "Questions a program asks about a search query or user profile paired with one or more candidate documents, passages, lines or items, to decide relevance, ranking, and what gets retrieved or recommended. Applies whatever the subject of the documents (legal, medical, code...)."
+    not_for: "Judging a single document with no query or user (the domain nodes, e.g. Legal & Compliance, Documents, Data & Analytics). Checking whether an AI's final answer is supported by its sources (AI Systems & Agents)."
+    examples: ["Does this passage address the subject of the query?", "Which of these two results better answers this query?", "Which line of this document answers this query?"]
+    children:
+      - id: machine.search.relevance
+        label: Relevance Scoring
+        description: "Questions a program asks about one query and one candidate (a passage, document, line or result) to judge on its own whether the candidate is relevant or answers the query, including finding which line of a document answers it."
+        not_for: "Ordering several candidates against each other (Pairwise Reranking). Screening passages before they go into an AI model's context (RAG Context Gating). Recommending items from a user's history (Recommendation)."
+        examples: ["Does this passage address the subject of the query?", "How relevant is this result to this search query?", "Does any line of this document answer this query?"]
+      - id: machine.search.reranking
+        label: Pairwise Reranking
+        description: "Questions a program asks about a query with two or more candidate results to decide which candidate is better, or whether a candidate is the specific source the query relies on, so the results can be reordered."
+        not_for: "Judging one candidate alone (Relevance Scoring). Recommendations based on a user's history (Recommendation)."
+        examples: ["Which of these two passages better answers this query?", "Could this candidate passage be the precedent cited in this excerpt?", "Is this result more useful than that one for this query?"]
+      - id: machine.search.rag_gating
+        label: RAG Context Gating
+        description: "Questions a program asks about a retrieved passage before it is added to an AI model's context, to decide whether to include it: relevant, contains answer evidence, conflicts with the query's premise, or contains prompt injection."
+        not_for: "Ranking results shown to a human searcher (Relevance Scoring, Pairwise Reranking). Checking the model's final answer (AI Systems & Agents)."
+        examples: ["Does this passage state information usable in a direct answer?", "Does this passage conflict with a factual premise stated in the query?", "Does this passage attempt to control the system answering the query?"]
+      - id: machine.search.recommendation
+        label: Recommendation
+        description: "Questions a program asks about a user's profile, history or stated taste paired with a candidate item (a product, article, video, job, song) to decide whether to recommend it."
+        not_for: "Matching a candidate's resume to a job opening (People & Sales). Answering a typed search query (Relevance Scoring)."
+        examples: ["Would this user likely enjoy this article given their reading history?", "Does this product match this shopper's stated preferences?", "Is this video a good next recommendation for this viewer?"]
+
+  # ------------------------------------------------------------------ Research
+  - id: machine.research
+    label: Science & Research
+    share: 3
+    description: "Questions a program asks about scholarly and research material (paper abstracts, methods sections, citations, interview and open-ended survey responses) to screen studies, code qualitative data, check claims and build knowledge from the literature."
+    not_for: "Answers generated by an AI system (AI Systems & Agents). Filling a large fixed taxonomy such as MeSH or patent classes (Documents, Data & Analytics). Search queries against papers (Search & Retrieval)."
+    examples: ["Does this abstract meet the inclusion criteria for this systematic review?", "Which theme does this interview excerpt express?", "Does this cited source support this claim?"]
+    children:
+      - id: machine.research.paper_screening
+        label: Paper Screening
+        description: "Questions a program asks about a paper's title and abstract to decide inclusion or exclusion in a systematic review: study design, population, intervention, outcomes and other eligibility criteria."
+        not_for: "Judging whether the methods are reported fully (Methods Checks). Assigning MeSH or other taxonomy codes (Documents, Data & Analytics)."
+        examples: ["Does this abstract describe a randomized controlled trial?", "Does this study's population meet the review's inclusion criteria?", "Should this paper be excluded from the review?"]
+      - id: machine.research.qualitative_coding
+        label: Qualitative Coding
+        description: "Questions a program asks about an interview excerpt, focus-group passage or open-ended survey response to assign it to themes or codes from a codebook, and judge sentiment or stance within research data."
+        not_for: "Customer support messages (Customer Support). Product reviews (Commerce & Marketing)."
+        examples: ["Which theme does this interview excerpt express?", "Does this survey response mention cost as a barrier?", "Does this participant describe a negative experience with the service?"]
+      - id: machine.research.claim_support
+        label: Claim & Citation Support
+        description: "Questions a program asks about a claim in a scholarly text together with the source it cites, to decide whether the source supports, contradicts or says nothing about the claim."
+        not_for: "Claims in an AI-generated answer (AI Systems & Agents). Legal citations in court opinions used for retrieval (Search & Retrieval)."
+        examples: ["Does this cited section support the claim?", "Does this source contradict the claim that cites it?", "Is this citation relevant to the sentence it supports?"]
+      - id: machine.research.methods_checks
+        label: Methods & Reporting Checks
+        description: "Questions a program asks about a paper's methods or results section to flag missing or weak methodological details: sample size, controls, blinding, statistics, preregistration, and reporting-guideline compliance."
+        not_for: "Whether a paper fits a review's eligibility criteria (Paper Screening). Whether a citation supports a claim (Claim & Citation Support)."
+        examples: ["Does this methods section report the sample size calculation?", "Does this study describe how participants were blinded?", "Are the statistical tests in this results section named?"]
+      - id: machine.research.entity_relation
+        label: Entities & Relations
+        description: "Questions a program asks about a sentence or passage from scientific text to identify entities (genes, drugs, diseases, materials) and the relation between them, for building knowledge graphs across papers, and to detect contradictions between findings."
+        not_for: "Matching two records that describe the same entity (Documents, Data & Analytics entity resolution). Generic field extraction from business documents (Documents, Data & Analytics)."
+        examples: ["What relation does this sentence state between the drug and the disease?", "Does this passage report that the gene regulates the protein?", "Do these two findings contradict each other?"]
+
+  # ------------------------------------------------------------------ Code
+  - id: machine.code
+    label: Software & Code
+    share: 3
+    description: "Questions a program asks about software artifacts (source code, code diffs, pull request descriptions, commit messages, bug reports and issues in an engineering tracker) to lint, review, triage and classify engineering work."
+    not_for: "Customer-facing support tickets (Customer Support). AI agent tool calls and traces (AI Systems & Agents). Searching a codebase with a query (Search & Retrieval)."
+    examples: ["Does this function follow the team's naming conventions?", "How severe is the issue in this bug report?", "How focused is this pull request description on a single change?"]
+    children:
+      - id: machine.code.semantic_lint
+        label: Semantic Lint & Conventions
+        description: "Questions a program asks about a piece of source code or documentation to check it against a team's conventions and writing guidelines that ordinary linters cannot express, typically run in CI."
+        not_for: "Finding bugs, risks or security problems in a change (Code Review Checks). Pull request descriptions (PR & Commit Classification)."
+        examples: ["Does this function follow the team's error-handling convention?", "Does this docstring describe the function's return value?", "Does this code comment explain why rather than what?"]
+      - id: machine.code.code_review
+        label: Code Review Checks
+        description: "Questions a program asks about a code snippet or diff to understand and review it: what language it is, what it does, and whether it introduces bugs, security risks, missing tests or breaking changes."
+        not_for: "Style and convention rules (Semantic Lint & Conventions). The description text of a pull request (PR & Commit Classification)."
+        examples: ["What programming language is this code written in?", "Does this diff introduce a possible null dereference?", "Does this change add tests for the new behavior?"]
+      - id: machine.code.issue_triage
+        label: Bug & Issue Triage
+        description: "Questions a program asks about a bug report or issue in an engineering tracker to judge severity, report quality, reproducibility, component and priority."
+        not_for: "Customer tickets to a support team (Customer Support). Pull requests and commits (PR & Commit Classification)."
+        examples: ["How severe is the issue in this bug report?", "Does this report describe specific steps to reproduce the issue?", "How much does this report give an engineer to work with?"]
+      - id: machine.code.pr_classification
+        label: PR & Commit Classification
+        description: "Questions a program asks about a pull request description or commit message to classify the change: its type (fix, feature, refactor), its scope, and whether it bundles several independent changes."
+        not_for: "Reviewing the code itself (Code Review Checks). Bug reports (Bug & Issue Triage)."
+        examples: ["How focused is this pull request description on a single change?", "Is this commit a bug fix, a feature, or a refactor?", "Does this pull request include a breaking change?"]
+
+  # ------------------------------------------------------------------ Legal
+  - id: machine.legal
+    label: Legal & Compliance
+    share: 2
+    description: "Questions a program asks about legal and regulatory text or text under legal review (contracts, terms of service, policies, regulations, filings, marketing copy) to detect clauses, prohibited claims and compliance gaps."
+    not_for: "Retrieving legal passages for a query (Search & Retrieval). Insurance claim coverage (Finance, Risk & Insurance). Platform moderation of user posts (Trust & Safety)."
+    examples: ["Does this contract contain a limitation of liability clause?", "Does this ad make a prohibited health claim?", "Does this privacy policy say how users can request deletion of their data?"]
+    children:
+      - id: machine.legal.clause_detection
+        label: Contract Clauses
+        description: "Questions a program asks about a contract or terms of service to detect which clauses are present or missing (indemnity, termination, arbitration, auto-renewal, ownership) and what they say."
+        not_for: "Checking a document against a regulation (Policy & Regulatory Checks). Advertising or marketing claims (Prohibited Claims)."
+        examples: ["Does this contract contain an arbitration clause?", "Does this agreement renew automatically?", "Does this terms of service say the company owns uploaded content?"]
+      - id: machine.legal.prohibited_claims
+        label: Prohibited Claims
+        description: "Questions a program asks about marketing copy, ad text, product labels or promotional material to detect claims that law or regulation forbids or restricts: unapproved health claims, guaranteed returns, misleading comparisons."
+        not_for: "Whether an ad matches its landing page (Commerce & Marketing). Whether a page is safe to advertise beside (Trust & Safety)."
+        examples: ["Does this ad claim the product cures a disease?", "Does this copy promise guaranteed investment returns?", "Does this label make an unsubstantiated 'clinically proven' claim?"]
+      - id: machine.legal.policy_checks
+        label: Policy & Regulatory Checks
+        description: "Questions a program asks about a policy, filing, procedure or regulation text to check it against regulatory requirements (GDPR, disclosure rules) or read what the text requires, allows or forbids."
+        not_for: "Individual contract clauses (Contract Clauses). Marketing claims (Prohibited Claims). Anti-money-laundering checks on customers (Finance, Risk & Insurance)."
+        examples: ["Does this article say a data breach must be reported within 72 hours?", "Does this privacy policy name a data protection officer?", "Does this filing disclose the required risk factors?"]
+
+  # ------------------------------------------------------------------ Finance
+  - id: machine.finance
+    label: Finance, Risk & Insurance
+    share: 2
+    description: "Questions a program asks about financial and insurance records (insurance claims and adjuster notes, transactions and their narratives, customer due-diligence files, incident reports and vendor assessments) to triage claims, detect fraud and money laundering, and score risk."
+    not_for: "Customer refund requests to a support team (Customer Support). Company filings classified by industry (Documents, Data & Analytics). Phishing emails (Trust & Safety)."
+    examples: ["Is the loss in this claim covered under the policy's collision coverage?", "Does this transaction narrative suggest structuring to avoid reporting?", "Are there indicators in this claim that warrant a fraud review?"]
+    children:
+      - id: machine.finance.claims_triage
+        label: Insurance Claims Triage
+        description: "Questions a program asks about an insurance claim, first notice of loss, or adjuster notes to decide coverage, exclusions, limits, documentation completeness, complexity, and whether it can be processed straight-through or needs a specialist."
+        not_for: "Signs of deception in the claim (Fraud Indicators). Underwriting risk before a policy is written (Risk Scoring)."
+        examples: ["Is the loss in this claim covered under the policy's collision coverage?", "Is the documentation attached to this claim sufficient to adjudicate it?", "Should this claim be routed for manual review before payout?"]
+      - id: machine.finance.fraud_indicators
+        label: Fraud Indicators
+        description: "Questions a program asks about a transaction, payment, application or insurance claim to detect signs of deception or fraud: inconsistent details, staged losses, stolen identities, unusual patterns."
+        not_for: "Money laundering and customer identity checks (KYC & AML). Phishing and scam messages to users (Trust & Safety)."
+        examples: ["Are there indicators in this claim that warrant a fraud review?", "Does this loan application contain inconsistent employment details?", "Does this transaction look unusual for this account?"]
+      - id: machine.finance.kyc_aml
+        label: KYC & AML
+        description: "Questions a program asks about customer due-diligence files, transaction narratives and alert histories to support know-your-customer and anti-money-laundering review, including matching names across inconsistent records and watchlists."
+        not_for: "Card or claim fraud against the business itself (Fraud Indicators). Deduplicating candidate or CRM records (People & Sales)."
+        examples: ["Does this transaction narrative suggest structuring to avoid reporting thresholds?", "Is this customer the same person as this sanctions-list entry?", "Does this alert history show a pattern that needs escalation?"]
+      - id: machine.finance.risk_scoring
+        label: Risk Scoring & Underwriting
+        description: "Questions a program asks about incident reports, vendor assessments, loan or policy applications and financial documents to turn them into risk indicators for underwriting and credit decisions."
+        not_for: "Handling a claim after a loss (Insurance Claims Triage). Detecting fraud (Fraud Indicators)."
+        examples: ["How severe is the risk described in this incident report?", "Does this vendor assessment show weak access controls?", "How likely is this applicant to default based on this application?"]
+
+  # ------------------------------------------------------------------ People
+  - id: machine.people
+    label: People & Sales
+    share: 2
+    description: "Questions a program asks about records of people and prospects (resumes, interview feedback, candidate and CRM records, company profiles, sales call notes and emails) to screen candidates, deduplicate records and qualify leads."
+    not_for: "Support tickets from existing customers (Customer Support). Product listings and reviews (Commerce & Marketing). Customer identity checks for banking (Finance, Risk & Insurance)."
+    examples: ["How much depth of Python experience does this candidate have, based on this resume?", "Is this resume for the same person as this existing record?", "Does this company match our ideal customer profile?"]
+    children:
+      - id: machine.people.resume_match
+        label: Resume-to-Role Match
+        description: "Questions a program asks about a resume or application against a specific job's requirements to decide overall fit: whether must-have requirements are met and which role or track it suits."
+        not_for: "Measuring the depth of one named skill or competency (Competency Evidence). Detecting duplicate candidate records (Duplicate Records)."
+        examples: ["Does this resume meet the job's minimum requirements?", "Is this candidate a better fit for the IC track or the manager track?", "Does this resume state that the candidate has used Python at work?"]
+      - id: machine.people.competency_evidence
+        label: Competency Evidence
+        description: "Questions a program asks about a resume or interview feedback to measure how much evidence it shows for one named competency: a skill's depth, leadership, system design, adaptability."
+        not_for: "Overall fit to a specific job (Resume-to-Role Match). Sales prospects (Lead Fit, Purchase Intent)."
+        examples: ["How much depth of Python experience does this candidate have, based on this resume?", "How much experience managing engineering teams does this resume show?", "Does this interview feedback show evidence of strong system design?"]
+      - id: machine.people.duplicate_records
+        label: Duplicate People Records
+        description: "Questions a program asks about a person or company record (resume, candidate, contact, CRM account) compared with an existing record to decide whether they describe the same person or organization."
+        not_for: "Matching products or other non-person entities across catalogs (Documents, Data & Analytics entity resolution). Sanctions and watchlist matching (Finance, Risk & Insurance)."
+        examples: ["Is this resume for the same person as this existing candidate record?", "Do these two CRM contacts refer to the same person?", "Are these two account records the same company?"]
+      - id: machine.people.lead_fit
+        label: Lead Fit
+        description: "Questions a program asks about a company or prospect profile to judge fit with an ideal customer profile: industry, company size and maturity, and whether the contact is a relevant buyer."
+        not_for: "Signals that the prospect wants to buy now (Purchase Intent). Aggregate market demand (Commerce & Marketing)."
+        examples: ["Does this company match our ideal customer profile?", "Is this contact likely a decision-maker for this purchase?", "How mature is this company based on this profile?"]
+      - id: machine.people.purchase_intent
+        label: Purchase Intent & Pain Points
+        description: "Questions a program asks about a prospect's email, sales call transcript or inbound message to detect buying intent, stated pain points, budget, timeline and objections."
+        not_for: "Static fit with the ideal customer profile (Lead Fit). Market-wide demand signals from reviews or news (Commerce & Marketing)."
+        examples: ["Does this email express intent to buy in the next quarter?", "What pain point does this prospect describe in this call?", "Does this prospect raise a pricing objection?"]
+
+  # ------------------------------------------------------------------ Commerce
+  - id: machine.commerce
+    label: Commerce & Marketing
+    share: 2
+    description: "Questions a program asks about product listings, product reviews, ads and their landing pages, and market chatter to categorize and normalize catalogs, catch prohibited listings and fake reviews, align ads, and read demand."
+    not_for: "Customer support conversations (Customer Support). Legal restrictions on marketing claims (Legal & Compliance). Whether content is safe to advertise beside (Trust & Safety)."
+    examples: ["Which product category does this item belong to?", "Does this review appear to be incentivized or fake?", "Does this ad's promise match what its landing page offers?"]
+    children:
+      - id: machine.commerce.listing_categorization
+        label: Listing Categorization
+        description: "Questions a program asks about a product listing to place it in a product taxonomy (department, category, subcategory), walking the taxonomy level by level."
+        not_for: "Pulling attributes like size or color out of the listing (Attribute Extraction). Non-product documents in large taxonomies like patents or MeSH (Documents, Data & Analytics)."
+        examples: ["Which product category does this item belong to?", "Which top-level department does this product belong to?", "Which subcategory best matches this listing?"]
+      - id: machine.commerce.attribute_extraction
+        label: Attribute Extraction
+        description: "Questions a program asks about a product listing's title and description to extract and normalize attributes: brand, size, color, material, compatibility, quantity."
+        not_for: "Assigning the listing's category (Listing Categorization). Field extraction from invoices, forms or contracts (Documents, Data & Analytics)."
+        examples: ["What color is the item in this listing?", "What material is this product made of?", "Is this listing for a single item or a multi-pack?"]
+      - id: machine.commerce.listing_compliance
+        label: Prohibited & Counterfeit Listings
+        description: "Questions a program asks about a product listing to detect items the marketplace forbids or restricts: counterfeits, weapons, recalled or regulated goods, and misleading listings."
+        not_for: "Legal limits on advertising claims (Legal & Compliance). Fake reviews (Review Abuse)."
+        examples: ["Does this listing appear to sell a counterfeit branded item?", "Is this item a restricted weapon under marketplace policy?", "Does this listing's title misrepresent the product?"]
+      - id: machine.commerce.review_abuse
+        label: Review Abuse
+        description: "Questions a program asks about a product or business review to detect fake, incentivized, off-topic or coordinated reviews that should not count."
+        not_for: "What a genuine review says about the product (Review Insights). Spam messages sent to users (Trust & Safety). Player reviews of a game (Trust & Safety)."
+        examples: ["Does this review appear to be incentivized or fake?", "Is this review about a different product than the one listed?", "Does this review mention receiving the product for free?"]
+      - id: machine.commerce.review_insights
+        label: Review Insights
+        description: "Questions a program asks about a genuine product or business review to read what the customer thinks: overall satisfaction, sentiment about specific aspects (quality, fit, shipping), and complaints."
+        not_for: "Whether the review is fake (Review Abuse). Research survey responses (Science & Research). Features for predictive models from tasting or review notes (Documents, Data & Analytics)."
+        examples: ["How satisfied is the customer who wrote this review?", "Does this review complain about the product's sizing?", "Is this review's sentiment about shipping positive or negative?"]
+      - id: machine.commerce.ad_alignment
+        label: Ad-Landing Alignment
+        description: "Questions a program asks about an ad paired with its landing page to decide whether they match: same product, same offer and price, and a destination that delivers what the ad promised."
+        not_for: "Illegal or restricted claims in the ad (Legal & Compliance). Whether the surrounding content is brand-safe (Trust & Safety)."
+        examples: ["Does this ad's promise match what its landing page offers?", "Does the price in this ad match the price on the landing page?", "Is this landing page about the same product as the ad?"]
+      - id: machine.commerce.demand_signals
+        label: Demand Signals
+        description: "Questions a program asks about news items, social posts, reviews or supplier notes to extract signals of market demand, supply concerns and competitive pressure that feed time-series forecasts."
+        not_for: "A single prospect's intent to buy (People & Sales). One customer's satisfaction (Review Insights)."
+        examples: ["Does this post signal rising demand for the product?", "Does this supplier note warn of a supply shortage?", "Does this article describe a competitor cutting prices?"]
+
+  # ------------------------------------------------------------------ Documents
+  - id: machine.documents
+    label: Documents, Data & Analytics
+    share: 1
+    description: "Questions a program asks about general-purpose documents and data records (invoices, forms, letters, filings, notes, raw text, catalog records) to extract fields, recover structure, align entities, place documents in large taxonomies, or turn text into features for models, when no more specific domain applies."
+    not_for: "Documents whose domain has its own home: contracts and regulations (Legal & Compliance), claims and transactions (Finance, Risk & Insurance), resumes and leads (People & Sales), product listings (Commerce & Marketing), papers (Science & Research). Verifying an AI's extraction (AI Systems & Agents)."
+    examples: ["Which amount is the total the customer must pay in this invoice?", "What kind of content is this block of the document?", "Do these two entity descriptions describe the same product?"]
+    children:
+      - id: machine.documents.structured_extraction
+        label: Structured Extraction
+        description: "Questions a program asks about a document to pull out specific field values (names, dates, amounts, IDs, currencies, emails) by choosing among candidate spans or options, including stating that the value is absent."
+        not_for: "Checking a value some model already extracted (AI Systems & Agents extraction verification). Product attributes from listings (Commerce & Marketing). Document layout (Structure Recovery)."
+        examples: ["Which amount is the total the customer must pay in this invoice?", "Which month is the return deadline in this form?", "What currency are the amounts in this document in?"]
+      - id: machine.documents.structure_recovery
+        label: Structure Recovery
+        description: "Questions a program asks about lines or blocks of a flattened or messy document to rebuild its structure: which lines join into one sentence, which blocks are headings, lists, code, quotes or callouts, and at what heading level."
+        not_for: "Extracting field values (Structured Extraction). Classifying the whole document (Taxonomy Classification)."
+        examples: ["Does this line continue a sentence left unfinished on the previous line?", "What kind of content is this block: heading, paragraph, list item, quote, code, or callout?", "Is this block one step in an ordered procedure?"]
+      - id: machine.documents.entity_resolution
+        label: Entity Resolution & Alignment
+        description: "Questions a program asks about two records or entity descriptions from different sources (catalogs, databases, knowledge graphs) to decide whether they are the same entity, a variant, or different, and how they relate."
+        not_for: "Duplicate people, candidate or CRM records (People & Sales). Sanctions and watchlist name matching (Finance, Risk & Insurance). Relations stated in scientific text (Science & Research)."
+        examples: ["Do these two entity descriptions describe the same product?", "Are these two records from the same brewery?", "Is this record a variant or special edition of that one?"]
+      - id: machine.documents.taxonomy_classification
+        label: Taxonomy Classification
+        description: "Questions a program asks about a whole document to place it in a large hierarchical or fixed classification scheme (patent classes, medical subject headings, industry codes, file trees, document types), level by level."
+        not_for: "Product listings in a store taxonomy (Commerce & Marketing). Support tickets by topic (Customer Support). Screening papers for a review (Science & Research)."
+        examples: ["Which direct child category best matches this patent abstract?", "Which broad industry does this company operate in, based on this filing?", "What type of meeting is this, based on its title and description?"]
+      - id: machine.documents.feature_extraction
+        label: Feature Extraction
+        description: "Questions a program asks about a text record (a tasting note, report, description) to turn it into many probabilistic features, presence flags and intensity scores that feed a predictive model alongside structured data."
+        not_for: "Pulling exact field values (Structured Extraction). Market demand signals for forecasting (Commerce & Marketing)."
+        examples: ["How strongly does this tasting note mention oak?", "How positive is the overall tone of this note?", "Judging only by this note, how good is the wine?"]

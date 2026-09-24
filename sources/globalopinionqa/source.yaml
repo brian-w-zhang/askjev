@@ -1,0 +1,15 @@
+name: globalopinionqa
+url: https://huggingface.co/datasets/Anthropic/llm_global_opinions
+license: CC BY-NC-SA 4.0
+version: data/global_opinions.csv (HF main, fetched 2026-09-24)
+target: 800
+hemisphere: world
+kind: social (values for moral/normative items)
+notes: >
+  Pew Global Attitudes (GAS) + World Values Survey (WVS) multiple-choice items with per-country answer
+  shares; one Question per survey question, one HumanDist per country. About 70% of the 2,556 items are
+  political, so every clean non-political item is kept (~630) plus a seeded sample of 170 political items
+  flagged meta.flags=["political"] (kept off the displayed map). Dropped: garbled rows whose options merge
+  several questions, 0-10 numeric scales, unfillable "____" blanks, context-free "this"/Statement #N items.
+  Non-substantive codes (No answer, Missing, INAP, Total N=) are removed and shares renormalized;
+  Don't know / Refused is kept as the option "dont_know".

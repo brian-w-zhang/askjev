@@ -1,0 +1,387 @@
+id: self
+label: The Self
+description: "Questions about the answerer or about how people live: their traits, values, preferences, choices, relationships, habits, moral dilemmas, and philosophy of life. The answer depends on who is answering or on how a person should live, not on facts about the outside world."
+not_for: "Facts about things, places, events, people in the news, or ideas as subjects of study (use World). Questions that can only be answered by reading a specific supplied input such as a ticket, document, transcript, or listing (use Machine)."
+examples: ["Would you rather be feared or loved?", "Are you more of a morning person or a night owl?", "Is it ever okay to lie to protect a friend's feelings?"]
+children:
+
+  # ------------------------------------------------------------------ PERSONALITY
+  - id: self.personality
+    label: Personality
+    share: 8
+    description: "Questions about what the answerer is like as a person: stable traits, temperament, personality types, dark traits, career interests, sense of humor, drive, emotional patterns, risk style, and self-image. Typical form is a self-description item: 'I am someone who...' rated agree or disagree, or 'which describes you better?'"
+    not_for: "What the answerer believes is right or wrong (use Values & Morality). How they behave toward partners, friends, or family (use Love & Relationships). Concrete likes, favorites, and daily routines (use Lifestyle & Taste). Abstract questions about mind, meaning, or knowledge (use Mind & Philosophy)."
+    examples: ["Do you see yourself as someone who is the life of the party?", "Are you more of a planner or do you go with the flow?", "Do you tend to worry about things that might go wrong?"]
+    children:
+
+      - id: self.personality.big_five
+        label: Big Five Traits
+        description: "Questions that measure the five broad personality dimensions: openness to experience, conscientiousness, extraversion, agreeableness, and neuroticism. Typical form is a short self-description statement ('I get chores done right away', 'I am full of ideas') rated from disagree to agree, as in the IPIP and BFI inventories."
+        not_for: "Either-or type sorting such as 'thinking or feeling', 'introvert or extrovert: which are you?' (use Personality Type). Manipulativeness, grandiosity, or callousness (use Dark Side). Humor specifically (use Humor Style). Ambition and goals (use Motivation & Ambition)."
+        examples: ["Do you agree that you get chores done right away?", "Do you agree that you have a vivid imagination?", "Do you agree that you get stressed out easily?"]
+        children:
+          - id: self.personality.big_five.openness
+            label: Openness to Experience
+            description: "Questions about openness to experience: imagination and fantasy, appreciation of art and beauty, awareness of one's own feelings, willingness to try new activities, intellectual curiosity, and openness to unconventional ideas and values."
+            not_for: "Specific favorite artworks, foods, or places (use Lifestyle & Taste). Whether philosophical claims are true (use Mind & Philosophy)."
+            examples: ["Do you agree that you enjoy thinking about abstract ideas?", "Do you prefer variety to routine?", "Do you agree that you are deeply moved by art or music?"]
+          - id: self.personality.big_five.conscientiousness
+            label: Conscientiousness
+            description: "Questions about conscientiousness: self-efficacy, orderliness and tidiness, sense of duty, striving for achievement, self-discipline, and cautious, deliberate decision making."
+            not_for: "Life goals and how much one wants success (use Motivation & Ambition). Specific daily routines such as waking time or chores schedule (use Lifestyle > Habits & Routines). Taking bold risks (use Risk & Decision Style)."
+            examples: ["Do you agree that you always keep your promises?", "Do you leave your belongings lying around?", "Do you agree that you finish what you start?"]
+          - id: self.personality.big_five.extraversion
+            label: Extraversion
+            description: "Questions about extraversion: warmth and friendliness, liking for crowds and company, assertiveness, activity level and pace, excitement seeking, and frequent cheerful emotions."
+            not_for: "Choosing between 'introvert' and 'extrovert' as a type label (use Personality Type > Extraversion-Introversion). Rules of polite behavior (use Love & Relationships > Etiquette & Social Norms)."
+            examples: ["Do you agree that you feel comfortable around people?", "Do you prefer a big party or a quiet night in?", "Do you agree that you take charge in groups?"]
+          - id: self.personality.big_five.agreeableness
+            label: Agreeableness
+            description: "Questions about agreeableness: trust in others, straightforwardness, altruism, compliance and avoiding conflict, modesty, and tender-mindedness or sympathy."
+            not_for: "Deliberate manipulation, entitlement, or lack of empathy as dark traits (use Dark Side). Whether a specific act was right or wrong (use Values & Morality)."
+            examples: ["Do you agree that you sympathize with others' feelings?", "Do you agree that you believe people have good intentions?", "Do you avoid arguments when you can?"]
+          - id: self.personality.big_five.neuroticism
+            label: Neuroticism
+            description: "Questions about neuroticism as a stable trait: general anxiety, anger and irritability, tendency toward low mood, self-consciousness, impulsiveness with cravings, and vulnerability to stress."
+            not_for: "How the answerer copes with a specific stressor or which coping strategy they prefer (use Emotions & Stress). Overall life satisfaction (use Mind & Philosophy > Happiness & Wellbeing)."
+            examples: ["Do you agree that you worry about things?", "Do you agree that your mood changes often?", "Do you get irritated easily?"]
+
+      - id: self.personality.type
+        label: Personality Type
+        description: "Questions that sort the answerer into one pole of an either-or type dichotomy, in the style of MBTI or the Open Extended Jungian Type Scales: energy from people or solitude, facts or possibilities, logic or feelings, plans or spontaneity. Typical form is a forced choice between two descriptions."
+        not_for: "Agree-disagree trait statements rated on a scale (use Big Five Traits). Everyday quickfire preferences not tied to type theory, such as sunrise or sunset (use Lifestyle > This or That)."
+        examples: ["Are you more drawn to facts or to possibilities?", "When deciding, do you rely more on logic or on feelings?", "Which are you, an introvert or an extrovert?"]
+        children:
+          - id: self.personality.type.ei
+            label: Extraversion vs Introversion
+            description: "Questions that ask whether the answerer draws energy from other people and the outer world or from solitude and the inner world, framed as a choice between the two poles."
+            not_for: "Agree-disagree items about sociability (use Big Five > Extraversion)."
+            examples: ["After a long week, would you rather go out with friends or stay home alone?", "Do you think out loud or think before you speak?"]
+          - id: self.personality.type.sn
+            label: Sensing vs Intuition
+            description: "Questions that ask whether the answerer attends more to concrete facts, details, and practical experience or to patterns, meanings, and future possibilities, framed as a choice between the two poles."
+            not_for: "Agree-disagree items about imagination or curiosity (use Big Five > Openness)."
+            examples: ["Do you trust experience more than theory?", "Are you more interested in what is or in what could be?"]
+          - id: self.personality.type.tf
+            label: Thinking vs Feeling
+            description: "Questions that ask whether the answerer decides mainly by impersonal logic and consistency or by personal values and effects on people, framed as a choice between the two poles."
+            not_for: "Agree-disagree items about sympathy or trust (use Big Five > Agreeableness). What is actually morally right (use Values & Morality)."
+            examples: ["Would you rather be seen as fair or as kind?", "When a friend shares a problem, do you first offer solutions or sympathy?"]
+          - id: self.personality.type.jp
+            label: Judging vs Perceiving
+            description: "Questions that ask whether the answerer prefers settled plans, closure, and schedules or open options, flexibility, and spontaneity, framed as a choice between the two poles."
+            not_for: "Agree-disagree items about orderliness or discipline (use Big Five > Conscientiousness). Concrete routines like planning meals (use Lifestyle > Habits & Routines)."
+            examples: ["Do you prefer to plan a trip in detail or keep it open?", "Do deadlines motivate you or stress you out?"]
+
+      - id: self.personality.dark_side
+        label: Dark Side
+        description: "Questions about socially aversive personality traits: narcissism (grandiosity, entitlement, need for admiration), Machiavellianism (strategic manipulation, cynicism about people), psychopathy (callousness, thrill seeking, low remorse), and everyday sadism or spite, as measured by Dark Triad and Dark Tetrad scales."
+        not_for: "Ordinary disagreeableness or bluntness (use Big Five > Agreeableness). Judging whether a specific act was wrong (use Values & Morality > Everyday Ethics). Lying and trustworthiness as a value (use Values & Morality > Honesty & Trust)."
+        examples: ["Do you agree that you deserve special treatment?", "Is it wise to keep information you can use against people later?", "Do you agree that you like to get revenge on authorities?"]
+
+      - id: self.personality.interests
+        label: Career Interests
+        description: "Questions about which kinds of work activities the answerer would enjoy, following the RIASEC model: realistic (hands-on, building), investigative (research, analysis), artistic (creating), social (helping, teaching), enterprising (leading, selling), and conventional (organizing data, records). Typical form is 'would you like to do this activity?'"
+        not_for: "How hard the answerer wants to work or how much they want success (use Motivation & Ambition). Free-time hobbies (use Lifestyle > Leisure & Hobbies). Workplace habits like remote work or meetings (use Lifestyle > Work & Study Life)."
+        examples: ["Would you enjoy repairing engines?", "Would you rather teach a class or run a business?", "Would you like to analyze data in a lab?"]
+
+      - id: self.personality.humor_style
+        label: Humor Style
+        description: "Questions about the answerer's sense of humor: what they find funny, and how they use humor, such as affiliative (bonding), self-enhancing (coping), aggressive (teasing, sarcasm), or self-defeating (joking at own expense); also taste in jokes like puns, dark humor, or absurdity."
+        not_for: "Opinions about specific comedians, sitcoms, or comedy films (use World > Arts & Entertainment). Whether a particular joke is morally acceptable (use Values & Morality > Everyday Ethics)."
+        examples: ["Do you often make fun of yourself to get a laugh?", "Do you enjoy puns?", "Is sarcasm your default kind of humor?"]
+
+      - id: self.personality.motivation_ambition
+        label: Motivation & Ambition
+        description: "Questions about what drives the answerer and how hard they strive: ambition, grit and persistence, competitiveness, need for achievement, intrinsic versus extrinsic motivation, procrastination, and attitudes to success and failure."
+        not_for: "Which broad life values matter most, such as security versus adventure (use Values & Morality > Life Values). General self-discipline and orderliness (use Big Five > Conscientiousness). Which jobs appeal (use Career Interests)."
+        examples: ["Do you agree that setbacks don't discourage you?", "Is winning important to you?", "Do you work harder for praise or for your own satisfaction?"]
+
+      - id: self.personality.emotions_stress
+        label: Emotions & Stress
+        description: "Questions about how the answerer experiences and handles emotions in particular situations: coping strategies, crying, anger management, expressing or hiding feelings, reactions to pressure, and emotional intelligence."
+        not_for: "General anxiety or moodiness as a stable trait (use Big Five > Neuroticism). Overall happiness and life satisfaction (use Mind & Philosophy > Happiness & Wellbeing). Medical or clinical mental health facts (use World > Health & Body)."
+        examples: ["When stressed, do you prefer to talk it out or be alone?", "Do you find it easy to name what you are feeling?", "Do you cry at movies?"]
+
+      - id: self.personality.risk_decision_style
+        label: Risk & Decision Style
+        description: "Questions about how the answerer takes risks and makes decisions: risk tolerance, gambling on uncertain outcomes, gut versus analysis, maximizing versus settling for good enough, indecisiveness, and regret over choices."
+        not_for: "Money-specific habits such as saving or budgeting (use Lifestyle > Money Habits). Formal would-you-rather hypotheticals (use Lifestyle > Would You Rather). Philosophical questions about decision and rationality (use Mind & Philosophy > Epistemics)."
+        examples: ["Would you take a sure small reward over a risky big one?", "Do you trust your gut when making big decisions?", "Do you keep searching for the best option or settle for good enough?"]
+
+      - id: self.personality.self_concept
+        label: Self-Image & Identity
+        description: "Questions about how the answerer sees themself: self-esteem, confidence, perceived strengths and weaknesses, self-rated abilities, sense of personal identity, and how they think others see them."
+        not_for: "Philosophical puzzles about what makes a person the same over time (use Mind & Philosophy > Thought Experiments). Appearance and clothing choices (use Lifestyle > Style & Appearance)."
+        examples: ["Do you agree that you are satisfied with yourself?", "Are you better with words or with numbers?", "Do people usually see you the way you see yourself?"]
+
+  # ------------------------------------------------------------------ VALUES
+  - id: self.values
+    label: Values & Morality
+    share: 9
+    description: "Questions about right and wrong and what matters: moral intuitions, dilemmas with lives at stake, judgments of everyday conduct, fairness and justice, core life values, honesty, giving, and ethical treatment of animals and nature. The answerer is asked what is right, acceptable, or important."
+    not_for: "Contested political or policy questions (out of scope). Descriptions of the answerer's temperament (use Personality). Relationship preferences without a moral question (use Love & Relationships). Philosophical puzzles about mind, knowledge, or meaning (use Mind & Philosophy)."
+    examples: ["Is it ever acceptable to break a promise?", "Would you pull the lever to save five people?", "Which matters more to you, freedom or security?"]
+    children:
+
+      - id: self.values.moral_foundations
+        label: Moral Foundations
+        description: "Questions that measure how much weight the answerer gives to broad moral concerns in general, as in the Moral Foundations Questionnaire: care, equality, proportionality, loyalty, authority, and purity. Typical form is a general moral statement rated from disagree to agree, or 'how relevant is this to judging right and wrong?'"
+        not_for: "A concrete scenario with a specific actor to judge (use Everyday Ethics). Life-or-death tradeoffs (use Sacrificial Dilemmas). Specific cases of punishment or dividing rewards (use Fairness & Justice)."
+        examples: ["Is whether someone suffered emotionally relevant to judging right and wrong?", "Do you agree that people should be loyal to their family even when it is costly?", "Do you agree that some acts are wrong because they are disgusting?"]
+        children:
+          - id: self.values.moral_foundations.care
+            label: Care
+            description: "Questions measuring the moral concern for preventing harm and suffering and for protecting the vulnerable: compassion, kindness, and avoiding cruelty."
+            not_for: "Specific rescue or sacrifice scenarios (use Sacrificial Dilemmas). Treatment of animals and nature (use Animals & Environment)."
+            examples: ["Do you agree that caring for people who are suffering is a crucial virtue?", "Do you agree that we should never hurt a defenseless creature?"]
+          - id: self.values.moral_foundations.equality
+            label: Equality
+            description: "Questions measuring the moral concern for equal treatment and equal outcomes: everyone getting the same share, rights, and opportunities regardless of contribution."
+            not_for: "Rewards in proportion to effort or merit (use Proportionality). Contested political policy (out of scope)."
+            examples: ["Do you agree that everyone should be treated the same no matter what?", "Does it bother you when some people have far more than others?"]
+          - id: self.values.moral_foundations.proportionality
+            label: Proportionality
+            description: "Questions measuring the moral concern that people get what they deserve: rewards in proportion to contribution and effort, and penalties matching wrongdoing."
+            not_for: "Equal shares regardless of contribution (use Equality). A specific case of punishment or payout to decide (use Fairness & Justice)."
+            examples: ["Do you agree that people who work harder should end up with more?", "Do you agree that people should be rewarded in proportion to what they contribute?"]
+          - id: self.values.moral_foundations.loyalty
+            label: Loyalty
+            description: "Questions measuring the moral concern for standing with one's group: family, team, community, or country; valuing solidarity, self-sacrifice for the group, and condemning betrayal."
+            not_for: "Loyalty inside a specific friendship or romance (use Love & Relationships). National politics (out of scope)."
+            examples: ["Do you agree that betraying your group is one of the worst things a person can do?", "Should people stand by their team even when it is losing?"]
+          - id: self.values.moral_foundations.authority
+            label: Authority
+            description: "Questions measuring the moral concern for respecting legitimate hierarchy, tradition, and social order: deference to parents, elders, teachers, and leaders, and following duties that come with roles."
+            not_for: "Partisan politics or specific laws (out of scope). Parenting styles and discipline (use Love & Relationships > Family & Parenting)."
+            examples: ["Do you agree that children should respect their elders?", "Do you agree that traditions deserve respect even when their purpose is unclear?"]
+          - id: self.values.moral_foundations.purity
+            label: Purity
+            description: "Questions measuring the moral concern for sanctity and cleanliness: avoiding what is degrading or disgusting, treating the body and certain things as sacred, and self-restraint."
+            not_for: "Food hygiene facts or health advice (use World). Personal food preferences (use Lifestyle > Food Preferences)."
+            examples: ["Do you agree that some acts are wrong because they are unnatural?", "Is it wrong to do something disgusting even if no one is harmed?"]
+
+      - id: self.values.sacrificial_dilemmas
+        label: Sacrificial Dilemmas
+        description: "Questions posing life-or-death tradeoffs where harming some saves others: trolley problems, footbridge cases, lifeboat cases, triage of scarce care, and Moral Machine scenarios where a self-driving car must choose whom to spare."
+        not_for: "Low-stakes interpersonal conduct (use Everyday Ethics). Metaphysical puzzles without a moral tradeoff, such as teleporters or brains in vats (use Mind & Philosophy > Thought Experiments). General agreement with moral principles (use Moral Foundations)."
+        examples: ["Would you pull the lever to divert the trolley onto one person instead of five?", "Should a self-driving car swerve to spare a child if it kills its passenger?", "Is it acceptable to push one person off a bridge to save five?"]
+
+      - id: self.values.everyday_ethics
+        label: Everyday Ethics
+        description: "Questions judging a specific person's conduct in an ordinary situation, in the style of 'Am I the Asshole?': conflicts with roommates, coworkers, family, or strangers; small lies, broken promises, borrowing, excluding someone, or keeping found money. Typical form is 'was this person wrong?'"
+        not_for: "Life-or-death tradeoffs (use Sacrificial Dilemmas). Rules of politeness where no wrong is at issue (use Love & Relationships > Etiquette & Social Norms). Lying and trust as a general value (use Honesty & Trust)."
+        examples: ["Was it wrong to skip a friend's wedding for a job interview?", "Is it okay to keep extra change a cashier gave you by mistake?", "Was the roommate wrong to eat food that was not labeled?"]
+
+      - id: self.values.fairness_justice
+        label: Fairness & Justice
+        description: "Questions about what outcomes are fair in specific cases: deserved punishment, forgiveness versus retribution, dividing money or credit in a group, luck versus merit, second chances, and fair rules in games or contests."
+        not_for: "General agreement with equality or proportionality as principles (use Moral Foundations). Contested political policy (out of scope). One person's conduct in a personal conflict (use Everyday Ethics)."
+        examples: ["Should someone who confesses get a lighter punishment?", "Should a group prize be split equally or by effort?", "Does everyone deserve a second chance?"]
+
+      - id: self.values.life_values
+        label: Life Values
+        description: "Questions about which broad goals guide the answerer's life, following Schwartz's basic values: security, achievement, power, pleasure, stimulation, self-direction, universalism, benevolence, tradition, and conformity; typical form is choosing or ranking what matters most."
+        not_for: "How hard the answerer strives (use Personality > Motivation & Ambition). What makes a good or happy life in the abstract (use Mind & Philosophy > Happiness & Wellbeing). Specific money habits (use Lifestyle > Money Habits)."
+        examples: ["Which matters more to you, freedom or security?", "Is it important to you to be rich?", "Would you choose an exciting life over a stable one?"]
+
+      - id: self.values.honesty_trust
+        label: Honesty & Trust
+        description: "Questions about honesty and trust as values: white lies, keeping secrets, brutal honesty versus tact, promise keeping, cheating, integrity when unobserved, and how much to trust others."
+        not_for: "Judging one specific person's conduct in a story (use Everyday Ethics). Manipulation as a personality trait (use Personality > Dark Side). Trust in sources of knowledge or experts (use Mind & Philosophy > Epistemics)."
+        examples: ["Is it okay to tell a white lie to spare someone's feelings?", "Would you tell a friend their partner is cheating?", "Would you return a lost wallet if no one would ever know?"]
+
+      - id: self.values.giving_charity
+        label: Giving & Charity
+        description: "Questions about duties to help others beyond one's circle: donating money, volunteering, helping strangers, effective giving, giving to beggars, and how much of one's own resources one owes to others."
+        not_for: "Tipping and gift customs (use Love & Relationships > Etiquette & Social Norms). Personal budgeting (use Lifestyle > Money Habits). Helping animals or nature (use Animals & Environment)."
+        examples: ["Do you have a duty to help strangers in need?", "Should people give to the charity that does the most good per dollar?", "Is it better to give money or time?"]
+
+      - id: self.values.animals_environment
+        label: Animals & Environment Ethics
+        description: "Questions about the moral treatment of animals and nature: eating meat, animal testing, zoos, pets' moral status, hunting, wasting resources, and personal duties toward the environment."
+        not_for: "Facts about animal species or ecosystems (use World > Nature & Animals). Personal diet preferences without a moral question (use Lifestyle > Food Preferences). Climate policy and politics (out of scope)."
+        examples: ["Is it wrong to eat meat?", "Is keeping animals in zoos acceptable?", "Do you feel guilty about wasting food?"]
+
+  # ------------------------------------------------------------------ LOVE
+  - id: self.love
+    label: Love & Relationships
+    share: 5
+    description: "Questions about how people relate to one another: attraction and dating, romantic partnership, friendship, family and parenting, coworkers and neighbors, and social manners. The answerer states preferences or judgments about relationships."
+    not_for: "Sexual topics (out of scope). Whether a specific person's conduct was morally wrong (use Values & Morality > Everyday Ethics). The answerer's general sociability as a trait (use Personality)."
+    examples: ["Can men and women be just friends?", "Should couples share all their passwords?", "Is it rude to be late to a dinner party?"]
+    children:
+
+      - id: self.love.dating_attraction
+        label: Dating & Attraction
+        description: "Questions about finding and choosing a partner: what makes someone attractive, first dates, dating apps, who should ask or pay, dealbreakers, crushes, and love at first sight."
+        not_for: "Committed relationships, marriage, and breakups (use Romance & Partnership). Sexual topics (out of scope). General politeness on dates (use Etiquette & Social Norms)."
+        examples: ["Do you believe in love at first sight?", "Should the person who asked pay on a first date?", "Is humor more attractive than looks?"]
+
+      - id: self.love.romance_partnership
+        label: Romance & Partnership
+        description: "Questions about committed romantic relationships: marriage, living together, love languages, jealousy, privacy between partners, arguments, attachment style, long distance, breakups, and staying friends with an ex."
+        not_for: "Meeting and choosing a partner (use Dating & Attraction). Raising children (use Family & Parenting). Sexual topics (out of scope)."
+        examples: ["Should couples share all their passwords?", "Can a long-distance relationship work?", "Is it okay to stay friends with an ex?"]
+
+      - id: self.love.friendship
+        label: Friendship
+        description: "Questions about friends: making and keeping friends, best friends, number of close friends, loyalty between friends, drifting apart, lending money to friends, and cross-sex friendship."
+        not_for: "Romantic partners (use Romance & Partnership). Coworkers and neighbors (use Coworkers & Community). Loyalty as a general moral value (use Values & Morality > Moral Foundations)."
+        examples: ["Can men and women be just friends?", "Would you rather have a few close friends or many casual ones?", "Should you lend money to a friend?"]
+
+      - id: self.love.family_parenting
+        label: Family & Parenting
+        description: "Questions about family life: parenting styles and discipline, having children, siblings, birth order, grandparents, caring for aging parents, family traditions, and in-laws."
+        not_for: "Marriage itself and couple dynamics (use Romance & Partnership). Respect for elders as a general moral principle (use Values & Morality > Moral Foundations > Authority). Household routines (use Lifestyle > Habits & Routines)."
+        examples: ["Should children be paid for doing chores?", "Is it the duty of adult children to care for their aging parents?", "Would you rather be an only child or have siblings?"]
+
+      - id: self.love.workplace_community
+        label: Coworkers & Community
+        description: "Questions about relationships outside family, friends, and romance: coworkers and bosses, neighbors, classmates, online acquaintances, networking, and belonging to clubs or local communities."
+        not_for: "Close friendships (use Friendship). Work habits like remote work or meetings (use Lifestyle > Work & Study Life). Judging a specific person's wrongdoing (use Values & Morality > Everyday Ethics)."
+        examples: ["Is it a good idea to date a coworker?", "Should you get to know your neighbors?", "Is it okay to add your boss on social media?"]
+
+      - id: self.love.etiquette_social_norms
+        label: Etiquette & Social Norms
+        description: "Questions about manners and unwritten social rules: tipping, gifts, thank-you notes, punctuality, phone use at the table, greetings, recline or not on planes, hosting and guest behavior, and texting etiquette."
+        not_for: "Serious moral wrongdoing (use Values & Morality > Everyday Ethics). Facts about customs of a particular country (use World > Society & Culture). Duties to strangers in need (use Values & Morality > Giving & Charity)."
+        examples: ["Is it rude to check your phone during dinner?", "Should you recline your seat on a plane?", "Is it okay to regift a present?"]
+
+  # ------------------------------------------------------------------ LIFESTYLE
+  - id: self.lifestyle
+    label: Lifestyle & Taste
+    share: 8
+    description: "Questions about the answerer's tastes, preferences, and way of living: favorites, quick either-or picks, would-you-rather games, daily habits, home and style, hobbies, food, travel, money, screens, pets, and work or study life."
+    not_for: "Personality traits and temperament (use Personality). Moral questions (use Values & Morality). Facts about specific dishes, places, products, or works of art (use World)."
+    examples: ["What is your favorite season?", "Sunrise or sunset?", "Do you make your bed every morning?"]
+    children:
+
+      - id: self.lifestyle.favorites
+        label: Favorites
+        description: "Questions asking for the answerer's favorite among general, abstract categories: color, number, season, animal, word, letter, shape, weather, time of day, day of the week, or holiday."
+        not_for: "Favorite dishes or drinks (use Food Preferences). Favorite destinations (use Travel Preferences). Favorite pastimes (use Leisure & Hobbies). Favorite specific films, songs, athletes, or brands (use World)."
+        examples: ["What is your favorite color?", "Which season do you like best?", "Is your favorite number odd or even?"]
+
+      - id: self.lifestyle.this_or_that
+        label: This or That
+        description: "Questions asking for a quick pick between two ordinary things with no big stakes, the classic quickfire pair: sunrise or sunset, texting or calling, summer or winter, books or movies."
+        not_for: "Hypotheticals with an unusual cost or fantasy element (use Would You Rather). Pairs clearly about food, travel, home, money, or pets (use the matching sibling: Food Preferences, Travel Preferences, Home & Living, Money Habits, or Pets). Type-theory dichotomies (use Personality > Personality Type)."
+        examples: ["Sunrise or sunset?", "Books or movies?", "Texting or calling?"]
+
+      - id: self.lifestyle.would_you_rather
+        label: Would You Rather
+        description: "Questions posing a playful hypothetical choice between two unusual, fantastical, or costly options: superpowers, impossible trade-offs, living in another era, giving something up forever, or odd scenarios."
+        not_for: "Ordinary everyday pairs (use This or That). Life-or-death moral tradeoffs (use Values & Morality > Sacrificial Dilemmas). Serious philosophical puzzles (use Mind & Philosophy > Thought Experiments)."
+        examples: ["Would you rather be able to fly or be invisible?", "Would you rather give up music or television forever?", "Would you rather live in the past or the future?"]
+
+      - id: self.lifestyle.habits_routines
+        label: Habits & Routines
+        description: "Questions about daily habits and routines: sleep and waking, morning and evening rituals, exercise, chores, cleanliness, showers, punctuality, planning the day, and small quirks like how one squeezes toothpaste."
+        not_for: "Eating habits (use Food Preferences). Phone and screen use (use Screens & Media). Money routines (use Money Habits). Orderliness as a personality trait (use Personality > Big Five > Conscientiousness)."
+        examples: ["Do you make your bed every morning?", "Are you a morning person or a night owl?", "Do you shower in the morning or at night?"]
+
+      - id: self.lifestyle.home_living
+        label: Home & Living
+        description: "Questions about where and how the answerer likes to live: city or countryside, house or apartment, living alone or with others, decor style, tidiness of home, temperature settings, and plants or gardens."
+        not_for: "Clothing and personal appearance (use Style & Appearance). Pets (use Pets). Household chores routines (use Habits & Routines). Facts about specific cities (use World > Places & Travel)."
+        examples: ["Would you rather live in the city or the countryside?", "Do you prefer a minimalist or a cozy home?", "Would you rather live alone or with roommates?"]
+
+      - id: self.lifestyle.style_appearance
+        label: Style & Appearance
+        description: "Questions about personal style and appearance choices: clothing, fashion, comfort versus looks, tattoos, hairstyles, jewelry, grooming, and dressing up or down."
+        not_for: "Self-esteem and how one sees oneself (use Personality > Self-Image & Identity). Facts about fashion brands or designers (use World). Attractiveness in partners (use Love & Relationships > Dating & Attraction)."
+        examples: ["Do you prefer comfort over style?", "Would you ever get a tattoo?", "Do you wear the same outfit style most days?"]
+
+      - id: self.lifestyle.leisure_hobbies
+        label: Leisure & Hobbies
+        description: "Questions about how the answerer spends free time: hobbies, reading, crafts, games, sports participation, outdoor activities, collecting, music making, and weekend plans."
+        not_for: "Which jobs they would enjoy (use Personality > Career Interests). Screen time and social media (use Screens & Media). Opinions on specific sports teams, games, or works (use World > Sports & Games or World > Arts & Entertainment)."
+        examples: ["Would you rather spend a weekend hiking or reading?", "Do you have a hobby you do every week?", "Do you prefer playing sports or watching them?"]
+
+      - id: self.lifestyle.food_preferences
+        label: Food Preferences
+        description: "Questions about the answerer's personal eating and drinking habits and tastes: favorite foods, picky eating, spice tolerance, cooking versus ordering in, breakfast habits, snacking, coffee or tea, and diet choices."
+        not_for: "Facts or rankings of dishes, cuisines, and drinks themselves (use World > Food & Drink). The morality of eating meat (use Values & Morality > Animals & Environment). Table manners (use Love & Relationships > Etiquette & Social Norms)."
+        examples: ["Do you like spicy food?", "Coffee or tea?", "Do you prefer cooking at home or eating out?"]
+
+      - id: self.lifestyle.travel_preferences
+        label: Travel Preferences
+        description: "Questions about how the answerer likes to travel and vacation: beach or mountains, planning versus spontaneity on trips, solo or group travel, packing, window or aisle seat, road trips, and staying home versus going away."
+        not_for: "Facts about or rankings of specific countries, cities, or landmarks (use World > Places & Travel). Where they would like to live (use Home & Living). Etiquette on planes (use Love & Relationships > Etiquette & Social Norms)."
+        examples: ["Beach vacation or mountain vacation?", "Window seat or aisle seat?", "Do you prefer to travel alone or with others?"]
+
+      - id: self.lifestyle.money_habits
+        label: Money Habits
+        description: "Questions about the answerer's personal money behavior and attitudes: saving versus spending, budgeting, splurges, impulse buying, cash versus card, lending, and experiences versus possessions."
+        not_for: "Facts about economics, markets, companies, or investing products (use World > Money & Work). Giving to charity (use Values & Morality > Giving & Charity). Risk tolerance in general (use Personality > Risk & Decision Style)."
+        examples: ["Are you more of a saver or a spender?", "Would you rather spend money on experiences or things?", "Do you keep a budget?"]
+
+      - id: self.lifestyle.screens_media
+        label: Screens & Media
+        description: "Questions about the answerer's personal technology and media habits: phone use, screen time, social media, notifications, streaming and binge watching, gaming time, news consumption habits, and digital detoxes."
+        not_for: "Facts about technology products or companies (use World > Technology & Internet). Opinions about specific shows, games, or films (use World > Arts & Entertainment). Phone manners around others (use Love & Relationships > Etiquette & Social Norms)."
+        examples: ["Do you check your phone first thing in the morning?", "Do you binge-watch shows?", "Could you go a week without social media?"]
+
+      - id: self.lifestyle.pets
+        label: Pets
+        description: "Questions about the answerer's relationship with pets: whether to have them, which kind they would keep, pet care habits, pets sleeping in the bed, naming pets, and treating pets as family."
+        not_for: "Facts about animal species and breeds (use World > Nature & Animals). The ethics of keeping animals (use Values & Morality > Animals & Environment). Simply picking a favorite animal (use Favorites)."
+        examples: ["Should pets be allowed to sleep in the bed?", "Would you rather own a cat or a dog?", "Do you consider your pet part of the family?"]
+
+      - id: self.lifestyle.work_study_life
+        label: Work & Study Life
+        description: "Questions about how the answerer prefers to work and study: remote or office, working hours, meetings, music while working, studying alone or in groups, note-taking, work-life balance, and ideal workspaces."
+        not_for: "Which careers appeal (use Personality > Career Interests). Ambition and drive (use Personality > Motivation & Ambition). Relationships with coworkers (use Love & Relationships > Coworkers & Community). Facts about jobs and the economy (use World > Money & Work)."
+        examples: ["Would you rather work from home or in an office?", "Do you listen to music while you work?", "Do you study better alone or in a group?"]
+
+  # ------------------------------------------------------------------ MIND
+  - id: self.mind
+    label: Mind & Philosophy
+    share: 5
+    description: "Questions about the answerer's views on deep questions of life and mind: free will, meaning, philosophical thought experiments, consciousness and machine minds, belief and knowledge, luck and fate, time and death, and what makes a happy life."
+    not_for: "Right and wrong in specific cases (use Values & Morality). Personality and temperament (use Personality). History of philosophy or facts about philosophers (use World > Society & Culture). Religious belief (out of scope)."
+    examples: ["Do humans have free will?", "Could a machine ever be conscious?", "Would you want to know the date of your death?"]
+    children:
+
+      - id: self.mind.big_questions
+        label: Big Questions
+        description: "Questions about the large open questions of existence, asked without religious framing: free will, the meaning of life, whether life has a purpose, whether people are basically good, whether we are alone in the universe, and whether reality is what it seems."
+        not_for: "Named puzzles with a specific scenario, such as the experience machine or a teleporter (use Thought Experiments). Consciousness in minds and machines (use Consciousness & AI). Religious belief (out of scope)."
+        examples: ["Do humans have free will?", "Does life have an objective meaning?", "Are people basically good?"]
+
+      - id: self.mind.thought_experiments
+        label: Thought Experiments
+        description: "Questions built on a specific philosophical scenario to probe intuitions about identity, reality, or value: the experience machine, teleporters and personal identity, the Ship of Theseus, brains in vats, simulation arguments, and Newcomb's problem."
+        not_for: "Life-or-death moral tradeoffs like trolley problems (use Values & Morality > Sacrificial Dilemmas). Playful fantasy picks like superpowers (use Lifestyle > Would You Rather)."
+        examples: ["Would you plug into an experience machine that guaranteed happiness?", "If a teleporter copies you and destroys the original, did you survive?", "Is the rebuilt Ship of Theseus the same ship?"]
+
+      - id: self.mind.consciousness_ai
+        label: Consciousness & AI
+        description: "Questions about minds and machine minds: what consciousness is, whether animals or AIs can feel, whether an AI understands or has preferences, AI rights, and the answerer's knowledge of its own nature, abilities, and limits."
+        not_for: "Facts about AI products, companies, or technical methods (use World > Technology & Internet). Personal screen and tech habits (use Lifestyle > Screens & Media)."
+        examples: ["Could a machine ever be conscious?", "Do you have preferences of your own?", "Should a sentient AI have rights?"]
+
+      - id: self.mind.epistemics
+        label: Belief & Knowledge
+        description: "Questions about how the answerer forms beliefs and handles uncertainty: certainty and doubt, changing one's mind, trusting experts, intuition versus evidence, conspiracy thinking, admitting ignorance, and whether some truths are unknowable."
+        not_for: "Luck, fate, and superstition (use Luck, Fate & Superstition). Trust between people (use Values & Morality > Honesty & Trust). Everyday decision habits and risk taking (use Personality > Risk & Decision Style)."
+        examples: ["Do you change your mind easily when shown new evidence?", "Should you trust experts outside their field?", "Is it possible to be certain of anything?"]
+
+      - id: self.mind.luck_fate
+        label: Luck, Fate & Superstition
+        description: "Questions about belief in luck, fate, destiny, karma, coincidence, superstitions, astrology, ghosts, and the paranormal, asked as what the answerer believes, without religious framing."
+        not_for: "Organized religion and God (out of scope). Scientific facts about astronomy or physics (use World > Science & Math). General standards of evidence (use Belief & Knowledge)."
+        examples: ["Do you believe everything happens for a reason?", "Do you believe in ghosts?", "Do you knock on wood for luck?"]
+
+      - id: self.mind.time_mortality
+        label: Time & Mortality
+        description: "Questions about time, aging, and death: wanting to live forever, knowing when you will die, regret, nostalgia, living in the past versus the future, the ideal age, and legacy."
+        not_for: "Medical facts about aging or death (use World > Health & Body). Living in another era as a playful pick (use Lifestyle > Would You Rather)."
+        examples: ["Would you want to live forever?", "Would you want to know when you will die?", "Do you think about the past more than the future?"]
+
+      - id: self.mind.happiness_wellbeing
+        label: Happiness & the Good Life
+        description: "Questions about happiness and what makes life go well: life satisfaction, whether money buys happiness, pleasure versus meaning, gratitude, contentment, and what a good life consists of."
+        not_for: "Coping with specific emotions or stress (use Personality > Emotions & Stress). Which values guide one's choices, such as security or achievement (use Values & Morality > Life Values). Medical mental health facts (use World > Health & Body)."
+        examples: ["Are you satisfied with your life?", "Can money buy happiness?", "Is a meaningful life better than a happy one?"]
