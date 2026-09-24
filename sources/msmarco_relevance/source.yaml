@@ -1,0 +1,14 @@
+name: msmarco_relevance
+url: https://microsoft.github.io/msmarco/
+download: https://huggingface.co/api/datasets/microsoft/ms_marco/parquet/v1.1/validation/0.parquet
+license: MS MARCO terms (non-commercial research)
+version: MS MARCO v1.1 validation (10,047 queries, ~10 passages each)
+target: 200
+hemisphere: machine
+shape: rank
+notes: >
+  Template msmarco.answers_query: Noul "Does `passage` contain an answer to `query`?". Truth =
+  is_selected (the annotator used the passage to write the answer). One pair per query, only queries
+  with a selected passage and an answer; seeded 100 true + 100 false. Negatives are unselected
+  passages from the same query (hard negatives), skipping any that contain the annotator's short
+  answer string, since MS MARCO has known false negatives (some remain). query + passage <= 1,500 chars.

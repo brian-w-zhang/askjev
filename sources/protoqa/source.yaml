@@ -1,0 +1,16 @@
+name: protoqa
+url: https://github.com/iesl/protoqa-data
+license: CC BY 4.0 (iesl/protoqa-data); answer counts originate from Family Feud fan sites
+version: data/dev/dev.scraped.jsonl (master, fetched 2026-09-24)
+target: 150
+hemisphere: self
+kind: social
+notes: >
+  Family Feud style "Name something..." survey questions as Choice: 'Which of these would most people name
+  first when asked: "<question>"', options = the top 4-6 answer clusters (count > 0). Human distribution =
+  cluster counts renormalized over the offered options (n = those counts, ~100-person surveys). Uses the
+  scraped dev set (979 questions, one clean label per cluster); the 51 crowdsourced dev questions are
+  downloaded but unused because their clusters have no readable label. Drops questions with numeric,
+  letter, or counting answers (§7), fewer than 4 clusters, or under 80 covered answers; seeded sample of
+  150. Mostly self hemisphere (lifestyle, love); world where the topic is (food, places, arts, law).
+  Nudity/sexual/self-harm keywords are flagged "sensitive".

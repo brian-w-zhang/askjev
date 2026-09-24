@@ -1,0 +1,16 @@
+name: code_lang
+url: https://rosettacode.org
+download: https://huggingface.co/api/datasets/christopher/rosetta-code/parquet/default/train/0.parquet
+license: GFDL-1.2
+version: christopher/rosetta-code HF dump (79,013 task x language solutions)
+target: 200
+hemisphere: machine
+shape: classify
+notes: >
+  Template code.language: Choice "What programming language is `code` written in?" over {python,
+  javascript, typescript, go, rust, java, other}. Truth = Rosetta Code language heading; languages
+  outside the six map to other (meta.language keeps the real one). Seeded 25 per named language, the
+  rest other, round-robin over C, C++, C#, Kotlin, Ruby, PHP, Swift, Scala, Perl, Haskell, Lua, Julia,
+  Dart, R. 120-1,500 chars, one per (task, language), exact-code dedup; snippets naming their own
+  language are dropped; TypeScript must use TS-only syntax. bigcode/the-stack-smol was the first
+  choice but is gated (needs a login).

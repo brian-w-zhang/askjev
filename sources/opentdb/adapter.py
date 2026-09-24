@@ -79,9 +79,10 @@ def fetch(raw_dir: Path) -> None:
         for c, p in todo:
             if p > 0 and not (raw_dir / f"cat{c}_p{p - 1}.json").exists():
                 continue
-            data = _get(client, API, {"amount": 50, "category": c, "type": "multiple", "token": token})
-            if data.get("response_code") == 1:  # fewer than 50 left in this category
-                data = _get(client, API, {"amount": 20, "category": c, "type": "multiple", "token": token})
+            for amount in (50, 25, 10):  # codes 1/4: fewer than `amount` questions left for this token
+                data = _get(client, API, {"amount": amount, "category": c, "type": "multiple", "token": token})
+                if data.get("response_code") == 0:
+                    break
             if data.get("response_code") in (1, 4) or not data.get("results"):
                 # Category exhausted: record an empty page so reruns don't re-request it.
                 data = {"response_code": data.get("response_code"), "results": []}

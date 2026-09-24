@@ -12,7 +12,7 @@ def main(argv: list[str] | None = None):
     sub.add_parser("migrate")
     sub.add_parser("tree")
     s = sub.add_parser("source"); s.add_argument("names", nargs="+")
-    s = sub.add_parser("ingest"); s.add_argument("names", nargs="+")
+    s = sub.add_parser("ingest"); s.add_argument("names", nargs="+"); s.add_argument("--cap", type=int, default=None)
     s = sub.add_parser("authored"); s.add_argument("paths", nargs="*")
     s = sub.add_parser("place"); s.add_argument("--limit", type=int, default=None)
     s = sub.add_parser("screen"); s.add_argument("--limit", type=int, default=None)
@@ -40,7 +40,7 @@ def main(argv: list[str] | None = None):
     elif a.cmd == "ingest":
         from .ingest import ingest_source
         for n in a.names:
-            print(f"{n}: {ingest_source(n)} new questions")
+            print(f"{n}: {ingest_source(n, a.cap)} new questions")
     elif a.cmd == "authored":
         from .authored import ingest_authored
         print(ingest_authored(a.paths))

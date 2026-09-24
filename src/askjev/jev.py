@@ -262,13 +262,17 @@ def answers(resp: dict) -> dict[str, Answer]:
     return {k: parse_answer(v) for k, v in (resp.get("answers") or {}).items()}
 
 
-def pack(state: Any, questions: dict[str, dict], budget: int = REQUEST_TOKEN_BUDGET) -> list[Request]:
-    """Split questions over one state into as few requests as fit the token budget."""
+MAX_QUESTIONS_PER_REQUEST = 24  # larger batches intermittently return 503 through the gateway (measured 2026-09-24)
+
+
+def pack(state: Any, questions: dict[str, dict], budget: int = REQUEST_TOKEN_BUDGET,
+         max_q: int = MAX_QUESTIONS_PER_REQUEST) -> list[Request]:
+    """Split questions over one state into as few requests as fit the token budget and question cap."""
     base = estimate_tokens({"state": state})
     reqs, cur, size = [], {}, base
     for qid, q in questions.items():
         t = estimate_tokens(q) + 4
-        if cur and size + t > budget:
+        if cur and (size + t > budget or len(cur) >= max_q):
             reqs.append(Request(state, cur))
             cur, size = {}, base
         cur[qid] = q

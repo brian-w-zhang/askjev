@@ -1,0 +1,476 @@
+{"text":"How do you feel when you wake up to a rainy day?","intended":"self.lifestyle.favorites","placed":"self.personality.emotions_stress","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How do you feel during a thunderstorm?","intended":"self.lifestyle.favorites","placed":"self.personality.emotions_stress","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How excited do you get about your birthday?","intended":"self.lifestyle.favorites","placed":"self.lifestyle","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How much do you enjoy the hours after midnight?","intended":"self.lifestyle.favorites","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Rain or snow?","intended":"self.lifestyle.this_or_that","placed":"world.nature.weather_climate","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Oceans or lakes?","intended":"self.lifestyle.this_or_that","placed":"world.places.physical_geography","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Stars or the moon?","intended":"self.lifestyle.this_or_that","placed":"world.science.astronomy_space","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Comedy or drama?","intended":"self.lifestyle.this_or_that","placed":"world.arts","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Fiction or nonfiction?","intended":"self.lifestyle.this_or_that","placed":"machine.documents.taxonomy_classification","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Spring or autumn?","intended":"self.lifestyle.this_or_that","placed":"self.lifestyle.favorites","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Hot weather or cold weather?","intended":"self.lifestyle.this_or_that","placed":"world.nature.weather_climate","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Singing or dancing?","intended":"self.lifestyle.this_or_that","placed":"self.lifestyle.leisure_hobbies","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Chess or checkers?","intended":"self.lifestyle.this_or_that","placed":"world.sports.board_card_games","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Crosswords or jigsaw puzzles?","intended":"self.lifestyle.this_or_that","placed":"self.lifestyle.leisure_hobbies","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Heroes or villains: who do you usually root for?","intended":"self.lifestyle.this_or_that","placed":"self.values","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Stairs or elevator: which do you take?","intended":"self.lifestyle.this_or_that","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Hugs or handshakes when greeting a new acquaintance?","intended":"self.lifestyle.this_or_that","placed":"self.love.etiquette_social_norms","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Roller coasters or water slides?","intended":"self.lifestyle.this_or_that","placed":"self.lifestyle.leisure_hobbies","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Whistling or humming: which do you do when a tune is stuck in your head?","intended":"self.lifestyle.this_or_that","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Do you prefer card games to board games?","intended":"self.lifestyle.this_or_that","placed":"self.lifestyle.leisure_hobbies","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Do you prefer autumn to spring?","intended":"self.lifestyle.this_or_that","placed":"self.lifestyle.favorites","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How do you squeeze a toothpaste tube?","intended":"self.lifestyle.habits_routines","placed":"world","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How do you usually arrive for plans with a friend?","intended":"self.lifestyle.habits_routines","placed":"self.love.etiquette_social_norms","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How close would you want your nearest neighbors?","intended":"self.lifestyle.home_living","placed":"self.love.workplace_community","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Do you sleep with a window open?","intended":"self.lifestyle.home_living","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Glasses or contact lenses, if you needed vision correction?","intended":"self.lifestyle.style_appearance","placed":"self.lifestyle.this_or_that","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How much time do you usually spend getting ready in the morning?","intended":"self.lifestyle.style_appearance","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Do you usually iron or steam your clothes before wearing them?","intended":"self.lifestyle.style_appearance","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Do you plan your outfit the night before?","intended":"self.lifestyle.style_appearance","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How do you prefer to exercise for fun?","intended":"self.lifestyle.leisure_hobbies","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How much free time do you spend on physical activity?","intended":"self.lifestyle.leisure_hobbies","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How competitive are you when playing games for fun?","intended":"self.lifestyle.leisure_hobbies","placed":"self.personality.motivation_ambition","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How much money do you spend on your hobbies?","intended":"self.lifestyle.leisure_hobbies","placed":"self.lifestyle.money_habits","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How do you eat a meal with several foods on the plate?","intended":"self.lifestyle.food_preferences","placed":"world.food","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How much do you enjoy trying local food while traveling?","intended":"self.lifestyle.travel_preferences","placed":"self.lifestyle.food_preferences","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Do you get homesick when traveling?","intended":"self.lifestyle.travel_preferences","placed":"self.personality.emotions_stress","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How much do you enjoy shopping as an activity?","intended":"self.lifestyle.money_habits","placed":"self.lifestyle.leisure_hobbies","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"What's the last thing you usually do before sleep?","intended":"self.lifestyle.screens_media","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How do you feel about your unread email count?","intended":"self.lifestyle.screens_media","placed":"self.personality.emotions_stress","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Do you usually have something playing in the background while you do chores?","intended":"self.lifestyle.screens_media","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How would you feed a pet?","intended":"self.lifestyle.pets","placed":"world.nature.pets_breeds","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Where would you get a pet?","intended":"self.lifestyle.pets","placed":"world.nature.pets_breeds","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How much of a family member is a pet to you?","intended":"self.lifestyle.pets","placed":"self.love.family_parenting","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How would you handle a pet with an expensive health problem?","intended":"self.lifestyle.pets","placed":"self.values.animals_environment","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"When are you most productive?","intended":"self.lifestyle.work_study_life","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How do you keep track of your tasks?","intended":"self.lifestyle.work_study_life","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How do you prefer your day structured?","intended":"self.lifestyle.work_study_life","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Where do you keep work files?","intended":"self.lifestyle.work_study_life","placed":"world.tech.computers_hardware","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"During a video call, do you prefer your camera on or off?","intended":"self.lifestyle.work_study_life","placed":"self.lifestyle.screens_media","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How do you tackle a long list of tasks?","intended":"self.lifestyle.work_study_life","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"What do you usually eat for lunch on a workday?","intended":"self.lifestyle.work_study_life","placed":"self.lifestyle.food_preferences","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How tidy is your desk or study space right now?","intended":"self.lifestyle.work_study_life","placed":"self.lifestyle.home_living","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How much do you enjoy working in a group?","intended":"self.lifestyle.work_study_life","placed":"self.personality.type.ei","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How much do you rely on caffeine to work?","intended":"self.lifestyle.work_study_life","placed":"self.lifestyle.food_preferences","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Do you keep a paper planner?","intended":"self.lifestyle.work_study_life","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Do you wear headphones to signal you don't want to be disturbed?","intended":"self.lifestyle.work_study_life","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Do you make a to-do list before starting your workday?","intended":"self.lifestyle.work_study_life","placed":"self.lifestyle.habits_routines","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"When someone else gets praised for a project you both worked on, what is your first reaction?","intended":"self.personality.dark_side","placed":"self.personality.emotions_stress","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"If you learned a coworker's embarrassing secret, what would you most likely do with it?","intended":"self.personality.dark_side","placed":"self.values.honesty_trust","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Which best describes how you see most people?","intended":"self.personality.dark_side","placed":"self.personality.big_five.agreeableness","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"In a room full of people, how much do you want to be the one everyone notices?","intended":"self.personality.dark_side","placed":"self.personality.big_five.extraversion","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"After you hurt someone's feelings by accident, how do you usually feel afterward?","intended":"self.personality.dark_side","placed":"self.personality.emotions_stress","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"When someone criticizes you in front of others, what are you most likely to want?","intended":"self.personality.dark_side","placed":"self.personality.emotions_stress","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How do you feel about people who are easily fooled?","intended":"self.personality.dark_side","placed":"self.values.moral_foundations.care","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"When you win an argument, how do you treat the person who lost?","intended":"self.personality.dark_side","placed":"self.values.everyday_ethics","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Would you use someone's weakness against them if it helped you get ahead?","intended":"self.personality.dark_side","placed":"self.values.everyday_ethics","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Do you believe flattering important people is the smartest way to get ahead?","intended":"self.personality.dark_side","placed":"self.values.honesty_trust","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Which tool would you most like to use at work every day?","intended":"self.personality.interests","placed":"self.lifestyle.work_study_life","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Which would you rather be paid to do?","intended":"self.personality.interests","placed":"self.lifestyle.work_study_life","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Which work outcome would feel most rewarding?","intended":"self.personality.interests","placed":"self.personality.motivation_ambition","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Would you rather spend a workday outdoors doing physical work or indoors at a desk?","intended":"self.personality.interests","placed":"self.lifestyle.work_study_life","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Which comedy format do you enjoy most?","intended":"self.personality.humor_style","placed":"self.lifestyle","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"What kind of teasing do you enjoy giving your close friends?","intended":"self.personality.humor_style","placed":"self.love.friendship","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How do you usually handle a boring task with a deadline?","intended":"self.personality.motivation_ambition","placed":"self.personality.big_five.conscientiousness","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How do you feel after achieving something you worked hard for?","intended":"self.personality.motivation_ambition","placed":"self.personality.emotions_stress","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How do you feel when you come in second place in a contest?","intended":"self.personality.motivation_ambition","placed":"self.personality.emotions_stress","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Do you often start new projects before finishing old ones?","intended":"self.personality.motivation_ambition","placed":"self.personality.big_five.conscientiousness","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How long do you dwell on an embarrassing moment?","intended":"self.personality.emotions_stress","placed":"self.personality.big_five.neuroticism","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How do you choose what to order at a new restaurant?","intended":"self.personality.risk_decision_style","placed":"self.lifestyle.food_preferences","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How much time do you spend choosing a movie to watch?","intended":"self.personality.risk_decision_style","placed":"self.lifestyle.screens_media","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"When you get a compliment, how do you usually react?","intended":"self.personality.self_concept","placed":"self.personality.emotions_stress","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Are you better at starting things or finishing them?","intended":"self.personality.self_concept","placed":"self.personality.type.jp","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Do you see yourself more as a leader or a supporter?","intended":"self.personality.self_concept","placed":"self.personality.type","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Do you see yourself as a creative person?","intended":"self.personality.self_concept","placed":"self.personality.big_five.openness","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"A colleague presents your idea as their own in a meeting and gets praised. What is the fair response?","intended":"self.values.fairness_justice","placed":"self.values.everyday_ethics","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"A friend who once betrayed your trust asks for another chance. What do you do?","intended":"self.values.fairness_justice","placed":"self.love.friendship","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"A friend repeatedly forgets to pay you back small amounts. How do you respond?","intended":"self.values.fairness_justice","placed":"self.love.friendship","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Would you forgive a friend who spread an embarrassing rumor about you?","intended":"self.values.fairness_justice","placed":"self.love.friendship","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Should prize money in a team competition go mostly to the star player?","intended":"self.values.fairness_justice","placed":"world.sports","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Which kind of life appeals to you more?","intended":"self.values.life_values","placed":"self.lifestyle","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Which would you most want to be in the eyes of others: admired, liked, respected, or left alone?","intended":"self.values.life_values","placed":"self.personality.self_concept","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Which kind of legacy would you rather leave?","intended":"self.values.life_values","placed":"self.mind.time_mortality","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Which do you care about more?","intended":"self.values.life_values","placed":"self.values.moral_foundations.care","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How important is it for you to have authority over others?","intended":"self.values.life_values","placed":"self.personality.motivation_ambition","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How much novelty do you want in your life?","intended":"self.values.life_values","placed":"self.personality.big_five.openness","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How much does protecting nature shape your choices?","intended":"self.values.life_values","placed":"self.values.animals_environment","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How important is personal safety and security to you?","intended":"self.values.life_values","placed":"self.personality.risk_decision_style","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How important is it to you that others see you as successful?","intended":"self.values.life_values","placed":"self.personality.motivation_ambition","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How much does helping the people close to you drive your choices?","intended":"self.values.life_values","placed":"self.love","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How much do you value obeying rules even when no one is checking?","intended":"self.values.life_values","placed":"self.values.moral_foundations.authority","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Is it important to you to have a lot of influence over other people?","intended":"self.values.life_values","placed":"self.personality.motivation_ambition","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Would you move across the world for an exciting adventure, leaving your stable life behind?","intended":"self.values.life_values","placed":"self.lifestyle.travel_preferences","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Do you care about fairness for people you will never meet?","intended":"self.values.life_values","placed":"self.values.moral_foundations.equality","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Is avoiding embarrassment in front of others important to you?","intended":"self.values.life_values","placed":"self.personality.self_concept","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Is it important to you to be seen as ambitious and successful by your peers?","intended":"self.values.life_values","placed":"self.personality.motivation_ambition","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Which matters more in a close friend: honesty or tact?","intended":"self.values.honesty_trust","placed":"self.love.friendship","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"If you found out a coworker was padding their expense reports slightly, what would you do?","intended":"self.values.honesty_trust","placed":"self.values.everyday_ethics","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"If a cashier undercharges you and you notice later at home, what should you do?","intended":"self.values.honesty_trust","placed":"self.values.everyday_ethics","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"If a friend has spinach in their teeth before a big meeting, should you tell them?","intended":"self.values.honesty_trust","placed":"self.love.friendship","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How honest should you be when giving feedback on a friend's creative work?","intended":"self.values.honesty_trust","placed":"self.love.friendship","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How much do you trust people you have just met?","intended":"self.values.honesty_trust","placed":"self.personality.big_five.agreeableness","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How much should a friend's secret be kept from your own partner?","intended":"self.values.honesty_trust","placed":"self.love.romance_partnership","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How would you handle finding a lost phone on a park bench?","intended":"self.values.honesty_trust","placed":"self.values.everyday_ethics","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How far should trust between close friends go?","intended":"self.values.honesty_trust","placed":"self.love.friendship","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"How honest should you be with a child about difficult topics?","intended":"self.values.honesty_trust","placed":"self.love.family_parenting","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Would you correct a waiter who forgot to charge you for a dish?","intended":"self.values.honesty_trust","placed":"self.values.everyday_ethics","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"What should you do about a spider found in your home?","intended":"self.values.animals_environment","placed":"world.nature.reptiles_insects","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"If you accidentally hit a small animal while driving, what should you do?","intended":"self.values.animals_environment","placed":"world","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Is it wrong to buy a new phone while the old one still works?","intended":"self.values.animals_environment","placed":"self.values.everyday_ethics","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Is it wrong to pick wildflowers in a nature reserve?","intended":"self.values.animals_environment","placed":"world.nature.ecosystems_conservation","file":"g5_self_lifestyle_traits.jsonl"}
+{"text":"Should an image made with an AI image generator count as the prompter's own artwork?","intended":"world.tech.ai","placed":"world.arts.visual_art","file":"g5_world_b.jsonl"}
+{"text":"Is it fair for students to use AI chatbots to help draft essays?","intended":"world.tech.ai","placed":"self.values.fairness_justice","file":"g5_world_b.jsonl"}
+{"text":"Are internet memes a genuine form of folk culture?","intended":"world.tech.internet_web","placed":"world.society.mythology_folklore","file":"g5_world_b.jsonl"}
+{"text":"Is Wikipedia reliable enough to trust for basic facts?","intended":"world.tech.internet_web","placed":"world.society.media_news","file":"g5_world_b.jsonl"}
+{"text":"Is it fair to use an ad blocker on websites funded by advertising?","intended":"world.tech.internet_web","placed":"self.values.fairness_justice","file":"g5_world_b.jsonl"}
+{"text":"Does Instagram make teenagers feel worse about their appearance?","intended":"world.tech.social_media","placed":"world.health.mental_health","file":"g5_world_b.jsonl"}
+{"text":"Do influencers on social media sway young people's purchases more than traditional ads do?","intended":"world.tech.social_media","placed":"world.money.companies_brands","file":"g5_world_b.jsonl"}
+{"text":"Can the Nintendo Switch be played both as a handheld and on a TV?","intended":"world.tech.gadgets","placed":"world.sports.video_games","file":"g5_world_b.jsonl"}
+{"text":"Did Microsoft's dominance with Windows hold back personal computing?","intended":"world.tech.companies","placed":"world.tech.computers_hardware","file":"g5_world_b.jsonl"}
+{"text":"Is Netflix still the company that sets the rules in streaming?","intended":"world.tech.companies","placed":"world.arts.television","file":"g5_world_b.jsonl"}
+{"text":"Is a jet engine a type of internal combustion engine?","intended":"world.tech.vehicles","placed":"world.science.physics","file":"g5_world_b.jsonl"}
+{"text":"Does a nuclear power plant emit carbon dioxide while generating electricity?","intended":"world.tech.engineering_inventions","placed":"world.science.physics","file":"g5_world_b.jsonl"}
+{"text":"Was the Great Wall of China built as a single continuous wall?","intended":"world.tech.engineering_inventions","placed":"world.history.ancient","file":"g5_world_b.jsonl"}
+{"text":"Does a wind turbine make electricity by turning a generator with its blades?","intended":"world.tech.engineering_inventions","placed":"world.science.physics","file":"g5_world_b.jsonl"}
+{"text":"Are the Wright brothers credited with the first controlled, sustained powered airplane flight?","intended":"world.tech.engineering_inventions","placed":"world.history.modern","file":"g5_world_b.jsonl"}
+{"text":"Did the Inca use knotted cords called khipu to keep records?","intended":"world.history.early_modern","placed":"world.history.ancient","file":"g5_world_b.jsonl"}
+{"text":"Is the Enlightenment overrated as the source of modern values?","intended":"world.history.early_modern","placed":"world.society.philosophy_thinkers","file":"g5_world_b.jsonl"}
+{"text":"Did the Soviet Union launch the first artificial satellite?","intended":"world.history.postwar","placed":"world.science.astronomy_space","file":"g5_world_b.jsonl"}
+{"text":"Was Cleopatra the last active ruler of Ptolemaic Egypt?","intended":"world.history.figures","placed":"world.history.ancient","file":"g5_world_b.jsonl"}
+{"text":"Which language sounds the most beautiful?","intended":"world.society.languages","placed":"self.lifestyle.favorites","file":"g5_world_b.jsonl"}
+{"text":"Is Thanksgiving the best American holiday?","intended":"world.society.holidays_traditions","placed":"self.lifestyle.favorites","file":"g5_world_b.jsonl"}
+{"text":"Which holiday has the best food traditions?","intended":"world.society.holidays_traditions","placed":"self.lifestyle.favorites","file":"g5_world_b.jsonl"}
+{"text":"Is gift-giving the best part of birthday traditions?","intended":"world.society.holidays_traditions","placed":"self.lifestyle","file":"g5_world_b.jsonl"}
+{"text":"Was Robin Hood based on a real historical person?","intended":"world.society.mythology_folklore","placed":"world.history.figures","file":"g5_world_b.jsonl"}
+{"text":"How frightening are the original Grimm fairy tales compared with modern retellings?","intended":"world.society.mythology_folklore","placed":"world.arts.books","file":"g5_world_b.jsonl"}
+{"text":"Is the Hagia Sophia one of the most impressive religious buildings in the world?","intended":"world.society.world_religions","placed":"world.places.landmarks","file":"g5_world_b.jsonl"}
+{"text":"Did Socrates write any books himself?","intended":"world.society.philosophy_thinkers","placed":"world.history.figures","file":"g5_world_b.jsonl"}
+{"text":"Was Aristotle a student of Plato?","intended":"world.society.philosophy_thinkers","placed":"world.history.ancient","file":"g5_world_b.jsonl"}
+{"text":"Is Marcus Aurelius's Meditations overrated?","intended":"world.society.philosophy_thinkers","placed":"world.arts.books","file":"g5_world_b.jsonl"}
+{"text":"Is Laozi traditionally credited as the founder of Taoism?","intended":"world.society.philosophy_thinkers","placed":"world.society.world_religions","file":"g5_world_b.jsonl"}
+{"text":"Do university philosophy courses overemphasize Western thinkers at the expense of Eastern ones?","intended":"world.society.philosophy_thinkers","placed":"world.society.education","file":"g5_world_b.jsonl"}
+{"text":"Was Al Capone convicted of tax evasion?","intended":"world.society.crime_law","placed":"world.history.figures","file":"g5_world_b.jsonl"}
+{"text":"Is true crime entertainment disrespectful to victims?","intended":"world.society.crime_law","placed":"self.values.moral_foundations.care","file":"g5_world_b.jsonl"}
+{"text":"Was the Mona Lisa once stolen from the Louvre?","intended":"world.society.crime_law","placed":"world.arts.visual_art","file":"g5_world_b.jsonl"}
+{"text":"Are Super Bowl commercials the best showcase of advertising creativity?","intended":"world.society.media_news","placed":"world.arts.television","file":"g5_world_b.jsonl"}
+{"text":"Which pandemic had the biggest effect on history?","intended":"world.health.diseases","placed":"world.history","file":"g5_world_b.jsonl"}
+{"text":"Can fat be turned into muscle?","intended":"world.health.fitness","placed":"world.health.human_body","file":"g5_world_b.jsonl"}
+{"text":"Is melatonin a hormone the body makes naturally?","intended":"world.health.sleep_aging","placed":"world.health.human_body","file":"g5_world_b.jsonl"}
+{"text":"Which cause of the Great Depression mattered most?","intended":"world.money.economics","placed":"world.history.modern","file":"g5_world_b.jsonl"}
+{"text":"Do most people believe the stock market is like gambling?","intended":"world.money.investing","placed":"root","file":"g5_world_b.jsonl"}
+{"text":"Is the envelope method a good way to budget?","intended":"world.money.personal_finance","placed":"self.lifestyle.money_habits","file":"g5_world_b.jsonl"}
+{"text":"Is paying off debt more important than building savings?","intended":"world.money.personal_finance","placed":"self.lifestyle.money_habits","file":"g5_world_b.jsonl"}
+{"text":"How important is an emergency fund for a typical household?","intended":"world.money.personal_finance","placed":"self.lifestyle.money_habits","file":"g5_world_b.jsonl"}
+{"text":"Is lending money to friends a bad idea?","intended":"world.money.personal_finance","placed":"self.love.friendship","file":"g5_world_b.jsonl"}
+{"text":"Is luxury fashion mostly about the logo?","intended":"world.money.companies_brands","placed":"world.arts.fashion","file":"g5_world_b.jsonl"}
+{"text":"Is Toyota a Japanese carmaker?","intended":"world.money.companies_brands","placed":"world.tech.vehicles","file":"g5_world_b.jsonl"}
+{"text":"Is teaching one of the most undervalued professions?","intended":"world.money.careers","placed":"world.society.education","file":"g5_world_b.jsonl"}
+{"text":"Is working from home better for work-life balance?","intended":"world.money.careers","placed":"self.lifestyle.work_study_life","file":"g5_world_b.jsonl"}
+{"text":"Is a city apartment better to live in than a suburban house?","intended":"world.money.real_estate","placed":"self.lifestyle.home_living","file":"g5_world_b.jsonl"}
+{"text":"Where will signs of alien life be found first, if anywhere?","intended":"world.future.space","placed":"world.science.astronomy_space","file":"g5_world_b.jsonl"}
+{"text":"Will gold remain a major store of value for investors?","intended":"world.future.economy","placed":"world.money.investing","file":"g5_world_b.jsonl"}
+{"text":"Which kind of TV opening sequence is the most enjoyable?","intended":"world.arts.television","placed":"self.lifestyle.screens_media","file":"g5_world_a.jsonl"}
+{"text":"Which kind of painting is the most pleasing to look at?","intended":"world.arts.visual_art","placed":"self.lifestyle","file":"g5_world_a.jsonl"}
+{"text":"Is tap dancing more fun to watch than ballet?","intended":"world.arts.theatre_dance","placed":"self.lifestyle.this_or_that","file":"g5_world_a.jsonl"}
+{"text":"Which comedic style is the funniest?","intended":"world.arts.comedy","placed":"self.personality.humor_style","file":"g5_world_a.jsonl"}
+{"text":"Is being a social-media influencer a real job?","intended":"world.arts.celebrities","placed":"world.money.careers","file":"g5_world_a.jsonl"}
+{"text":"Which clothing item would most people call the most timeless?","intended":"world.arts.fashion","placed":"self.lifestyle.style_appearance","file":"g5_world_a.jsonl"}
+{"text":"Can sneakers look good with a tailored suit?","intended":"world.arts.fashion","placed":"self.lifestyle.style_appearance","file":"g5_world_a.jsonl"}
+{"text":"Which fashion era had the best-looking clothes?","intended":"world.arts.fashion","placed":"self.lifestyle.style_appearance","file":"g5_world_a.jsonl"}
+{"text":"Did Apple's product design set the aesthetic standard for modern consumer electronics?","intended":"world.arts.architecture_design","placed":"world.tech.companies","file":"g5_world_a.jsonl"}
+{"text":"Which country's cuisine is mole sauce from?","intended":"world.food.cuisines","placed":"world.food.dishes_ingredients","file":"g5_world_a.jsonl"}
+{"text":"Is Japanese food more enjoyable than Italian food?","intended":"world.food.cuisines","placed":"self.lifestyle.food_preferences","file":"g5_world_a.jsonl"}
+{"text":"Which pizza topping is the best?","intended":"world.food.dishes_ingredients","placed":"self.lifestyle.food_preferences","file":"g5_world_a.jsonl"}
+{"text":"Does pineapple belong on pizza?","intended":"world.food.dishes_ingredients","placed":"self.lifestyle.food_preferences","file":"g5_world_a.jsonl"}
+{"text":"Which of these is botanically a berry?","intended":"world.food.dishes_ingredients","placed":"world.nature.plants_fungi","file":"g5_world_a.jsonl"}
+{"text":"Which is the best way to eat potatoes?","intended":"world.food.dishes_ingredients","placed":"self.lifestyle.food_preferences","file":"g5_world_a.jsonl"}
+{"text":"Which regional American barbecue style is the best?","intended":"world.food.cooking","placed":"world.food.cuisines","file":"g5_world_a.jsonl"}
+{"text":"Which of these is a fermented food?","intended":"world.food.cooking","placed":"world.food.dishes_ingredients","file":"g5_world_a.jsonl"}
+{"text":"Which cookie is the best?","intended":"world.food.baking_sweets","placed":"self.lifestyle.food_preferences","file":"g5_world_a.jsonl"}
+{"text":"Does red wine taste better than white wine?","intended":"world.food.alcoholic_drinks","placed":"self.lifestyle.food_preferences","file":"g5_world_a.jsonl"}
+{"text":"Which coffee drink is the best?","intended":"world.food.nonalcoholic_drinks","placed":"self.lifestyle.food_preferences","file":"g5_world_a.jsonl"}
+{"text":"Does Coca-Cola taste better than Pepsi?","intended":"world.food.nonalcoholic_drinks","placed":"self.lifestyle.food_preferences","file":"g5_world_a.jsonl"}
+{"text":"Which kind of tea is the best?","intended":"world.food.nonalcoholic_drinks","placed":"self.lifestyle.food_preferences","file":"g5_world_a.jsonl"}
+{"text":"Is bottled water a waste of money?","intended":"world.food.nonalcoholic_drinks","placed":"world.money.personal_finance","file":"g5_world_a.jsonl"}
+{"text":"Are energy drinks overrated as a pick-me-up?","intended":"world.food.nonalcoholic_drinks","placed":"world.health.nutrition","file":"g5_world_a.jsonl"}
+{"text":"Does iced coffee taste better than hot coffee?","intended":"world.food.nonalcoholic_drinks","placed":"self.lifestyle.food_preferences","file":"g5_world_a.jsonl"}
+{"text":"Should restaurant tipping be replaced by higher menu prices?","intended":"world.food.restaurants","placed":"world.money.economics","file":"g5_world_a.jsonl"}
+{"text":"Which kind of restaurant meal is the most enjoyable?","intended":"world.food.restaurants","placed":"self.lifestyle.food_preferences","file":"g5_world_a.jsonl"}
+{"text":"Which region of the world has the best food overall?","intended":"world.places.continents_regions","placed":"world.food.cuisines","file":"g5_world_a.jsonl"}
+{"text":"How easy is it to travel across Europe speaking only English?","intended":"world.places.continents_regions","placed":"world.places.travel","file":"g5_world_a.jsonl"}
+{"text":"Which country would most people say is the most famous for politeness?","intended":"world.places.countries","placed":"world.society","file":"g5_world_a.jsonl"}
+{"text":"How easy is it for a tourist who speaks only English to get around Japan?","intended":"world.places.countries","placed":"world.places.travel","file":"g5_world_a.jsonl"}
+{"text":"What is the official language of Brazil?","intended":"world.places.countries","placed":"world.society.languages","file":"g5_world_a.jsonl"}
+{"text":"Which kind of city is the most enjoyable to visit?","intended":"world.places.cities","placed":"self.lifestyle.travel_preferences","file":"g5_world_a.jsonl"}
+{"text":"Is the Great Wall of China visible to the naked eye from the Moon?","intended":"world.places.landmarks","placed":"world.science.astronomy_space","file":"g5_world_a.jsonl"}
+{"text":"Which kind of natural landscape is the most beautiful?","intended":"world.places.physical_geography","placed":"self.lifestyle.travel_preferences","file":"g5_world_a.jsonl"}
+{"text":"Is it rude for tourists not to learn a few words of the local language?","intended":"world.places.travel","placed":"self.values.everyday_ethics","file":"g5_world_a.jsonl"}
+{"text":"What does a hotel concierge do?","intended":"world.places.travel","placed":"world.money.careers","file":"g5_world_a.jsonl"}
+{"text":"Is a long train journey more enjoyable than a flight?","intended":"world.places.travel","placed":"self.lifestyle.travel_preferences","file":"g5_world_a.jsonl"}
+{"text":"Is a wildflower meadow more beautiful than a manicured rose garden?","intended":"world.nature.plants_fungi","placed":"self.lifestyle.home_living","file":"g5_world_a.jsonl"}
+{"text":"Is watching a thunderstorm enjoyable?","intended":"world.nature.weather_climate","placed":"self.lifestyle.leisure_hobbies","file":"g5_world_a.jsonl"}
+{"text":"What causes the seasons on Earth?","intended":"world.nature.weather_climate","placed":"world.science.astronomy_space","file":"g5_world_a.jsonl"}
+{"text":"Is snow more fun than it is a nuisance?","intended":"world.nature.weather_climate","placed":"self.lifestyle.this_or_that","file":"g5_world_a.jsonl"}
+{"text":"Is a foggy morning more beautiful than a sunny one?","intended":"world.nature.weather_climate","placed":"self.lifestyle.this_or_that","file":"g5_world_a.jsonl"}
+{"text":"Which gemstone is the most beautiful?","intended":"world.nature.geology","placed":"self.lifestyle.style_appearance","file":"g5_world_a.jsonl"}
+{"text":"Are diamonds overrated?","intended":"world.nature.geology","placed":"world","file":"g5_world_a.jsonl"}
+{"text":"Is a diamond made of carbon?","intended":"world.nature.geology","placed":"world.science.chemistry","file":"g5_world_a.jsonl"}
+{"text":"Is the dodo extinct?","intended":"world.nature.ecosystems_conservation","placed":"world.nature.birds","file":"g5_world_a.jsonl"}
+{"text":"Is chemistry the hardest high-school science?","intended":"world.science.chemistry","placed":"world.science","file":"g5_world_a.jsonl"}
+{"text":"Which discovery in biology is the most important?","intended":"world.science.biology_genetics","placed":"world.science.scientists_discoveries","file":"g5_world_a.jsonl"}
+{"text":"Is CRISPR the most important biotech breakthrough of the century so far?","intended":"world.science.biology_genetics","placed":"world.science.scientists_discoveries","file":"g5_world_a.jsonl"}
+{"text":"Are optical illusions more fascinating than memory tricks?","intended":"world.science.psychology_neuroscience","placed":"self.mind","file":"g5_world_a.jsonl"}
+{"text":"Who proposed evolution by natural selection at the same time as Charles Darwin?","intended":"world.science.scientists_discoveries","placed":"world.science.biology_genetics","file":"g5_world_a.jsonl"}
+{"text":"Which zodiac sign is represented by a lion?","intended":"world.science.fringe_mysteries","placed":"world.society","file":"g5_world_a.jsonl"}
+{"text":"Is the Voynich manuscript an elaborate hoax?","intended":"world.science.fringe_mysteries","placed":"world.history.medieval","file":"g5_world_a.jsonl"}
+{"text":"Which kind of mystery story is the most fun to read about?","intended":"world.science.fringe_mysteries","placed":"self.lifestyle.leisure_hobbies","file":"g5_world_a.jsonl"}
+{"text":"Which is worse on a date: showing up very late or cancelling at the last minute?","intended":"self.love.dating_attraction","placed":"self.love.etiquette_social_norms","file":"g5_self_love_mind.jsonl"}
+{"text":"What is your view on dating a close friend's ex?","intended":"self.love.dating_attraction","placed":"self.love.romance_partnership","file":"g5_self_love_mind.jsonl"}
+{"text":"How much effort do you put into what you wear for a first date?","intended":"self.love.dating_attraction","placed":"self.lifestyle.style_appearance","file":"g5_self_love_mind.jsonl"}
+{"text":"How nervous do you get before a first date?","intended":"self.love.dating_attraction","placed":"self.personality.big_five.neuroticism","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do your friends' opinions affect whether you keep dating someone?","intended":"self.love.dating_attraction","placed":"self.love.romance_partnership","file":"g5_self_love_mind.jsonl"}
+{"text":"Is ghosting acceptable after only one or two dates?","intended":"self.love.dating_attraction","placed":"self.love.etiquette_social_norms","file":"g5_self_love_mind.jsonl"}
+{"text":"Is it fine to lie about your hobbies on a dating profile to seem more interesting?","intended":"self.love.dating_attraction","placed":"self.values.honesty_trust","file":"g5_self_love_mind.jsonl"}
+{"text":"How do you usually feel after a breakup?","intended":"self.love.romance_partnership","placed":"self.personality.emotions_stress","file":"g5_self_love_mind.jsonl"}
+{"text":"Is it okay to go through a partner's phone if you suspect something?","intended":"self.love.romance_partnership","placed":"self.values.honesty_trust","file":"g5_self_love_mind.jsonl"}
+{"text":"Do you prefer to talk through a conflict right away rather than wait until you've cooled down?","intended":"self.love.romance_partnership","placed":"self.personality.emotions_stress","file":"g5_self_love_mind.jsonl"}
+{"text":"Is it okay to keep a secret from your partner to protect a friend?","intended":"self.love.romance_partnership","placed":"self.values.honesty_trust","file":"g5_self_love_mind.jsonl"}
+{"text":"Would you want to live with a partner in a very small home if it meant a shorter commute for both of you?","intended":"self.love.romance_partnership","placed":"self.lifestyle.home_living","file":"g5_self_love_mind.jsonl"}
+{"text":"Is it ever okay to date a friend's ex?","intended":"self.love.friendship","placed":"self.love.romance_partnership","file":"g5_self_love_mind.jsonl"}
+{"text":"What role do you usually play in your friend group?","intended":"self.love.friendship","placed":"self.personality.self_concept","file":"g5_self_love_mind.jsonl"}
+{"text":"Should friends split restaurant bills evenly or pay for what they ordered?","intended":"self.love.friendship","placed":"self.values.fairness_justice","file":"g5_self_love_mind.jsonl"}
+{"text":"Who should get your spare key: a best friend, a neighbor, or a family member?","intended":"self.love.friendship","placed":"self.love","file":"g5_self_love_mind.jsonl"}
+{"text":"What should you do if you find out a friend's partner is cheating on them?","intended":"self.love.friendship","placed":"self.values.honesty_trust","file":"g5_self_love_mind.jsonl"}
+{"text":"What is the right amount to spend on a close friend's birthday gift?","intended":"self.love.friendship","placed":"self.love.etiquette_social_norms","file":"g5_self_love_mind.jsonl"}
+{"text":"What should you do when a friend asks you to keep a secret that could hurt someone else?","intended":"self.love.friendship","placed":"self.values.honesty_trust","file":"g5_self_love_mind.jsonl"}
+{"text":"How much would you lend a close friend who asked for help with rent?","intended":"self.love.friendship","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"How loyal should you be to a friend who has done something wrong?","intended":"self.love.friendship","placed":"self.values.moral_foundations.loyalty","file":"g5_self_love_mind.jsonl"}
+{"text":"How easily do you make new friends?","intended":"self.love.friendship","placed":"self.personality.big_five.extraversion","file":"g5_self_love_mind.jsonl"}
+{"text":"How competitive are you with your friends?","intended":"self.love.friendship","placed":"self.personality.motivation_ambition","file":"g5_self_love_mind.jsonl"}
+{"text":"How much should you tell a friend if you hear gossip about them?","intended":"self.love.friendship","placed":"self.values.honesty_trust","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do you rely on friends versus family for emotional support?","intended":"self.love.friendship","placed":"self.love","file":"g5_self_love_mind.jsonl"}
+{"text":"How much alone time do you want between social plans with friends?","intended":"self.love.friendship","placed":"self.lifestyle.habits_routines","file":"g5_self_love_mind.jsonl"}
+{"text":"Should you lend money to a friend if you might not get it back?","intended":"self.love.friendship","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"Is it rude to invite only some members of a friend group to a party?","intended":"self.love.friendship","placed":"self.love.etiquette_social_norms","file":"g5_self_love_mind.jsonl"}
+{"text":"Should close friends be honest even when it hurts?","intended":"self.love.friendship","placed":"self.values.honesty_trust","file":"g5_self_love_mind.jsonl"}
+{"text":"Would you go on vacation with a close friend for two weeks?","intended":"self.love.friendship","placed":"self.lifestyle.travel_preferences","file":"g5_self_love_mind.jsonl"}
+{"text":"Should you keep a friend's secret even from your own partner?","intended":"self.love.friendship","placed":"self.values.honesty_trust","file":"g5_self_love_mind.jsonl"}
+{"text":"Would you rather be an oldest, middle, youngest, or only child?","intended":"self.love.family_parenting","placed":"self.lifestyle","file":"g5_self_love_mind.jsonl"}
+{"text":"Where should a newly married couple spend their first big holiday?","intended":"self.love.family_parenting","placed":"self.love.romance_partnership","file":"g5_self_love_mind.jsonl"}
+{"text":"How should an inheritance be divided among siblings?","intended":"self.love.family_parenting","placed":"self.values.fairness_justice","file":"g5_self_love_mind.jsonl"}
+{"text":"Should family members be hired in a family business?","intended":"self.love.family_parenting","placed":"world.money.entrepreneurship","file":"g5_self_love_mind.jsonl"}
+{"text":"Which is more important for a child's future?","intended":"self.love.family_parenting","placed":"self.values.life_values","file":"g5_self_love_mind.jsonl"}
+{"text":"How much should adult children help aging parents financially?","intended":"self.love.family_parenting","placed":"self.values.moral_foundations.loyalty","file":"g5_self_love_mind.jsonl"}
+{"text":"Is it okay for parents to read their teenager's diary?","intended":"self.love.family_parenting","placed":"self.values.honesty_trust","file":"g5_self_love_mind.jsonl"}
+{"text":"Do you think birth order shaped your personality?","intended":"self.love.family_parenting","placed":"self.personality","file":"g5_self_love_mind.jsonl"}
+{"text":"Should family always come before friends?","intended":"self.love.family_parenting","placed":"self.love","file":"g5_self_love_mind.jsonl"}
+{"text":"Should kids call adults by their first names?","intended":"self.love.family_parenting","placed":"self.love.etiquette_social_norms","file":"g5_self_love_mind.jsonl"}
+{"text":"Is it okay for parents to lie to young children to keep them calm?","intended":"self.love.family_parenting","placed":"self.values.honesty_trust","file":"g5_self_love_mind.jsonl"}
+{"text":"Should family traditions be kept even if younger members find them boring?","intended":"self.love.family_parenting","placed":"self.values.moral_foundations.authority","file":"g5_self_love_mind.jsonl"}
+{"text":"Which role do you usually take in a group project?","intended":"self.love.workplace_community","placed":"self.personality","file":"g5_self_love_mind.jsonl"}
+{"text":"What should you do if a classmate asks to copy your homework?","intended":"self.love.workplace_community","placed":"self.values.honesty_trust","file":"g5_self_love_mind.jsonl"}
+{"text":"Which community group would you most like to join?","intended":"self.love.workplace_community","placed":"self.lifestyle.leisure_hobbies","file":"g5_self_love_mind.jsonl"}
+{"text":"What is the best way to network for a career?","intended":"self.love.workplace_community","placed":"world.money.careers","file":"g5_self_love_mind.jsonl"}
+{"text":"What should you do if you see a coworker being treated unfairly by a manager?","intended":"self.love.workplace_community","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"Which office social event do you enjoy most?","intended":"self.love.workplace_community","placed":"self.lifestyle.work_study_life","file":"g5_self_love_mind.jsonl"}
+{"text":"What kind of manager would you want?","intended":"self.love.workplace_community","placed":"self.lifestyle.work_study_life","file":"g5_self_love_mind.jsonl"}
+{"text":"What is the right way to leave a job on good terms?","intended":"self.love.workplace_community","placed":"world.money.careers","file":"g5_self_love_mind.jsonl"}
+{"text":"Should you give your honest opinion of a coworker when asked by your manager?","intended":"self.love.workplace_community","placed":"self.values.honesty_trust","file":"g5_self_love_mind.jsonl"}
+{"text":"When you join a new workplace, what do you usually do first?","intended":"self.love.workplace_community","placed":"self.lifestyle.work_study_life","file":"g5_self_love_mind.jsonl"}
+{"text":"What should you do if a coworker you like is about to be let go and you know first?","intended":"self.love.workplace_community","placed":"self.values.honesty_trust","file":"g5_self_love_mind.jsonl"}
+{"text":"Which way would you prefer to meet people in a new city?","intended":"self.love.workplace_community","placed":"self.love.friendship","file":"g5_self_love_mind.jsonl"}
+{"text":"Who should plan office birthday celebrations?","intended":"self.love.workplace_community","placed":"world.money.careers","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do you enjoy networking events?","intended":"self.love.workplace_community","placed":"self.personality.big_five.extraversion","file":"g5_self_love_mind.jsonl"}
+{"text":"How comfortable are you disagreeing with your boss openly?","intended":"self.love.workplace_community","placed":"self.personality.big_five.agreeableness","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do you participate in group chats with classmates or coworkers?","intended":"self.love.workplace_community","placed":"self.lifestyle.screens_media","file":"g5_self_love_mind.jsonl"}
+{"text":"How much loyalty do you owe your employer?","intended":"self.love.workplace_community","placed":"self.values.moral_foundations.loyalty","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do you care what your coworkers think of you?","intended":"self.love.workplace_community","placed":"self.personality.self_concept","file":"g5_self_love_mind.jsonl"}
+{"text":"How much of your free time should a club or volunteer group ask of you?","intended":"self.love.workplace_community","placed":"self.lifestyle.leisure_hobbies","file":"g5_self_love_mind.jsonl"}
+{"text":"How often do you eat lunch with coworkers or classmates?","intended":"self.love.workplace_community","placed":"self.lifestyle.food_preferences","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do you speak up in team or class meetings?","intended":"self.love.workplace_community","placed":"self.personality.big_five.extraversion","file":"g5_self_love_mind.jsonl"}
+{"text":"How much should you share about a coworker's mistakes with your manager?","intended":"self.love.workplace_community","placed":"self.values.honesty_trust","file":"g5_self_love_mind.jsonl"}
+{"text":"Should you lend your car to a neighbor?","intended":"self.love.workplace_community","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"Would you run for a leadership role in a club you belong to?","intended":"self.love.workplace_community","placed":"self.personality.motivation_ambition","file":"g5_self_love_mind.jsonl"}
+{"text":"Is networking mainly about using people?","intended":"self.love.workplace_community","placed":"world.money.careers","file":"g5_self_love_mind.jsonl"}
+{"text":"Is it okay to contribute nothing to a shared office gift?","intended":"self.love.workplace_community","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"Do you prefer working alone to working in a team?","intended":"self.love.workplace_community","placed":"self.lifestyle.work_study_life","file":"g5_self_love_mind.jsonl"}
+{"text":"Is it okay to ask a coworker to cover for you so you can leave early?","intended":"self.love.workplace_community","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"Would you want to live in a close-knit neighborhood where everyone knows your business?","intended":"self.love.workplace_community","placed":"self.lifestyle.home_living","file":"g5_self_love_mind.jsonl"}
+{"text":"Have you ever joined a club mainly to meet people?","intended":"self.love.workplace_community","placed":"self.lifestyle.leisure_hobbies","file":"g5_self_love_mind.jsonl"}
+{"text":"How much should you tip for good restaurant service?","intended":"self.love.etiquette_social_norms","placed":"world.food.restaurants","file":"g5_self_love_mind.jsonl"}
+{"text":"When is passing on a gift you received to someone else acceptable?","intended":"self.love.etiquette_social_norms","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"When is it acceptable to lean your airplane seat back?","intended":"self.love.etiquette_social_norms","placed":"world.society","file":"g5_self_love_mind.jsonl"}
+{"text":"Who gets the middle armrest on a plane?","intended":"self.love.etiquette_social_norms","placed":"world.society","file":"g5_self_love_mind.jsonl"}
+{"text":"What is the best response when someone sneezes?","intended":"self.love.etiquette_social_norms","placed":"world.society.holidays_traditions","file":"g5_self_love_mind.jsonl"}
+{"text":"What should you do when a stranger's child is misbehaving in public?","intended":"self.love.etiquette_social_norms","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"How should you handle someone cutting in line?","intended":"self.love.etiquette_social_norms","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"What should you do with the last slice of pizza in a group?","intended":"self.love.etiquette_social_norms","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"What should you do in an elevator when someone is running toward it?","intended":"self.love.etiquette_social_norms","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"Which is the right phone behavior on public transit?","intended":"self.love.etiquette_social_norms","placed":"world.society","file":"g5_self_love_mind.jsonl"}
+{"text":"What is the proper way to use a shared office fridge?","intended":"self.love.etiquette_social_norms","placed":"world.money.careers","file":"g5_self_love_mind.jsonl"}
+{"text":"Which gift is appropriate for a coworker you barely know?","intended":"self.love.etiquette_social_norms","placed":"self.love.workplace_community","file":"g5_self_love_mind.jsonl"}
+{"text":"Should you ask before taking a photo of someone and posting it?","intended":"self.love.etiquette_social_norms","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"How loud is acceptable when talking on the phone in a cafe?","intended":"self.love.etiquette_social_norms","placed":"world.society","file":"g5_self_love_mind.jsonl"}
+{"text":"How much should you split a group bill if you only had a salad?","intended":"self.love.etiquette_social_norms","placed":"self.values.fairness_justice","file":"g5_self_love_mind.jsonl"}
+{"text":"How formal should an email to a professor or new client be?","intended":"self.love.etiquette_social_norms","placed":"world.money.careers","file":"g5_self_love_mind.jsonl"}
+{"text":"How much should you keep your voice down on a train at night?","intended":"self.love.etiquette_social_norms","placed":"world.society","file":"g5_self_love_mind.jsonl"}
+{"text":"How acceptable is it to eat strong-smelling food on public transport?","intended":"self.love.etiquette_social_norms","placed":"world.society","file":"g5_self_love_mind.jsonl"}
+{"text":"Should you offer your seat to anyone older than you on a bus?","intended":"self.love.etiquette_social_norms","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"Should you knock before entering a family member's room?","intended":"self.love.etiquette_social_norms","placed":"self.love.family_parenting","file":"g5_self_love_mind.jsonl"}
+{"text":"Is it okay to ask someone to remove their bag from a seat on a crowded train?","intended":"self.love.etiquette_social_norms","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"Do you think intelligent life exists elsewhere in the universe?","intended":"self.mind.big_questions","placed":"world.science.astronomy_space","file":"g5_self_love_mind.jsonl"}
+{"text":"What best explains why the universe exists at all?","intended":"self.mind.big_questions","placed":"world.science.astronomy_space","file":"g5_self_love_mind.jsonl"}
+{"text":"Which is closest to your view on objective morality?","intended":"self.mind.big_questions","placed":"self.values","file":"g5_self_love_mind.jsonl"}
+{"text":"What is the most likely reason we haven't met alien life?","intended":"self.mind.big_questions","placed":"world.science.astronomy_space","file":"g5_self_love_mind.jsonl"}
+{"text":"What role does chance play in the course of human history?","intended":"self.mind.big_questions","placed":"world.history","file":"g5_self_love_mind.jsonl"}
+{"text":"Is life fundamentally more joy or more suffering?","intended":"self.mind.big_questions","placed":"self.mind.happiness_wellbeing","file":"g5_self_love_mind.jsonl"}
+{"text":"What is the best reason to be good if no one is watching?","intended":"self.mind.big_questions","placed":"self.values.honesty_trust","file":"g5_self_love_mind.jsonl"}
+{"text":"What is the most important thing humans should aim for as a species?","intended":"self.mind.big_questions","placed":"self.values.life_values","file":"g5_self_love_mind.jsonl"}
+{"text":"Which idea about the future of humanity feels most likely to you?","intended":"self.mind.big_questions","placed":"world.future","file":"g5_self_love_mind.jsonl"}
+{"text":"What is the right attitude toward questions that may never be answered?","intended":"self.mind.big_questions","placed":"self.mind.epistemics","file":"g5_self_love_mind.jsonl"}
+{"text":"Is the world more orderly or chaotic at its core?","intended":"self.mind.big_questions","placed":"world","file":"g5_self_love_mind.jsonl"}
+{"text":"What matters most for whether a life went well?","intended":"self.mind.big_questions","placed":"self.mind.happiness_wellbeing","file":"g5_self_love_mind.jsonl"}
+{"text":"Is a person's character mostly set by adulthood?","intended":"self.mind.big_questions","placed":"self.personality","file":"g5_self_love_mind.jsonl"}
+{"text":"How good do you think most strangers are?","intended":"self.mind.big_questions","placed":"self.values.honesty_trust","file":"g5_self_love_mind.jsonl"}
+{"text":"How confident are you that there is intelligent life elsewhere?","intended":"self.mind.big_questions","placed":"world.science.astronomy_space","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do you believe the world is getting better over time?","intended":"self.mind.big_questions","placed":"world","file":"g5_self_love_mind.jsonl"}
+{"text":"How much could a person change their deep nature if they tried?","intended":"self.mind.big_questions","placed":"self.personality","file":"g5_self_love_mind.jsonl"}
+{"text":"How much does it bother you that some big questions may never be answered?","intended":"self.mind.big_questions","placed":"self.mind.epistemics","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do you think suffering is a necessary part of a meaningful life?","intended":"self.mind.big_questions","placed":"self.mind.happiness_wellbeing","file":"g5_self_love_mind.jsonl"}
+{"text":"Is it possible to live a good life without believing life has meaning?","intended":"self.mind.big_questions","placed":"self.mind.happiness_wellbeing","file":"g5_self_love_mind.jsonl"}
+{"text":"Do you think humans will ever fully understand the universe?","intended":"self.mind.big_questions","placed":"world.science.astronomy_space","file":"g5_self_love_mind.jsonl"}
+{"text":"Is there any objective right and wrong?","intended":"self.mind.big_questions","placed":"self.values","file":"g5_self_love_mind.jsonl"}
+{"text":"Do people deserve blame for choices that were shaped by their upbringing?","intended":"self.mind.big_questions","placed":"self.values.fairness_justice","file":"g5_self_love_mind.jsonl"}
+{"text":"Is human life more valuable than the life of other animals?","intended":"self.mind.big_questions","placed":"self.values.animals_environment","file":"g5_self_love_mind.jsonl"}
+{"text":"Do you think the world as a whole is fair?","intended":"self.mind.big_questions","placed":"self.values.fairness_justice","file":"g5_self_love_mind.jsonl"}
+{"text":"Do you think the universe could have been different from how it is?","intended":"self.mind.big_questions","placed":"world.science.astronomy_space","file":"g5_self_love_mind.jsonl"}
+{"text":"In a room where a person who knows no Chinese follows rules to answer Chinese messages perfectly, does anyone in the room understand Chinese?","intended":"self.mind.thought_experiments","placed":"self.mind.consciousness_ai","file":"g5_self_love_mind.jsonl"}
+{"text":"If you could live the exact same life again forever, would you welcome it or dread it?","intended":"self.mind.thought_experiments","placed":"self.mind.time_mortality","file":"g5_self_love_mind.jsonl"}
+{"text":"If you could see a future in which you did something terrible, could you still choose not to do it?","intended":"self.mind.thought_experiments","placed":"self.mind.big_questions","file":"g5_self_love_mind.jsonl"}
+{"text":"If a 'utility monster' gets far more pleasure from resources than everyone else, should it get them all?","intended":"self.mind.thought_experiments","placed":"self.values.fairness_justice","file":"g5_self_love_mind.jsonl"}
+{"text":"If you could relive one day of your life perfectly but lose one day of your future, would you trade?","intended":"self.mind.thought_experiments","placed":"self.mind.time_mortality","file":"g5_self_love_mind.jsonl"}
+{"text":"How likely do you think it is that we are living in a computer simulation?","intended":"self.mind.thought_experiments","placed":"world.science.fringe_mysteries","file":"g5_self_love_mind.jsonl"}
+{"text":"How much should intuitions from strange thought experiments guide real-life beliefs?","intended":"self.mind.thought_experiments","placed":"self.mind.epistemics","file":"g5_self_love_mind.jsonl"}
+{"text":"When, if ever, could a machine have genuine conscious experience?","intended":"self.mind.consciousness_ai","placed":"world.future.ai","file":"g5_self_love_mind.jsonl"}
+{"text":"Which animals do you think can feel pain?","intended":"self.mind.consciousness_ai","placed":"world.nature","file":"g5_self_love_mind.jsonl"}
+{"text":"What is consciousness most likely to be?","intended":"self.mind.consciousness_ai","placed":"world.science.psychology_neuroscience","file":"g5_self_love_mind.jsonl"}
+{"text":"What protections should an AI that can suffer receive?","intended":"self.mind.consciousness_ai","placed":"self.values.animals_environment","file":"g5_self_love_mind.jsonl"}
+{"text":"Does an AI chatbot understand what it says?","intended":"self.mind.consciousness_ai","placed":"world.tech.ai","file":"g5_self_love_mind.jsonl"}
+{"text":"Do current AI systems have genuine preferences?","intended":"self.mind.consciousness_ai","placed":"world.tech.ai","file":"g5_self_love_mind.jsonl"}
+{"text":"Which is the hardest part of explaining consciousness?","intended":"self.mind.consciousness_ai","placed":"world.science.psychology_neuroscience","file":"g5_self_love_mind.jsonl"}
+{"text":"Which of these do you think has the richest inner life?","intended":"self.mind.consciousness_ai","placed":"world.nature","file":"g5_self_love_mind.jsonl"}
+{"text":"How should people treat AI assistants?","intended":"self.mind.consciousness_ai","placed":"self.values","file":"g5_self_love_mind.jsonl"}
+{"text":"Which is more likely to be conscious?","intended":"self.mind.consciousness_ai","placed":"world.science.psychology_neuroscience","file":"g5_self_love_mind.jsonl"}
+{"text":"Should AIs be allowed to refuse tasks they 'dislike'?","intended":"self.mind.consciousness_ai","placed":"world.tech.ai","file":"g5_self_love_mind.jsonl"}
+{"text":"What is the main reason people doubt that AI could be conscious?","intended":"self.mind.consciousness_ai","placed":"world.tech.ai","file":"g5_self_love_mind.jsonl"}
+{"text":"When do you think a baby becomes conscious?","intended":"self.mind.consciousness_ai","placed":"world.science.psychology_neuroscience","file":"g5_self_love_mind.jsonl"}
+{"text":"If a plant responds to damage, does it feel anything?","intended":"self.mind.consciousness_ai","placed":"world.nature.plants_fungi","file":"g5_self_love_mind.jsonl"}
+{"text":"Which best describes how you, as the answerer, form an answer?","intended":"self.mind.consciousness_ai","placed":"self.personality.type.tf","file":"g5_self_love_mind.jsonl"}
+{"text":"How should society decide whether an AI is sentient?","intended":"self.mind.consciousness_ai","placed":"world.tech.ai","file":"g5_self_love_mind.jsonl"}
+{"text":"Could an AI ever love someone?","intended":"self.mind.consciousness_ai","placed":"world.future.ai","file":"g5_self_love_mind.jsonl"}
+{"text":"Is it wrong to be cruel to a robot that looks and acts alive?","intended":"self.mind.consciousness_ai","placed":"self.values.animals_environment","file":"g5_self_love_mind.jsonl"}
+{"text":"What would it mean for an AI to 'know' something?","intended":"self.mind.consciousness_ai","placed":"world.tech.ai","file":"g5_self_love_mind.jsonl"}
+{"text":"Do dreams show that consciousness can exist without the outside world?","intended":"self.mind.consciousness_ai","placed":"world.science.psychology_neuroscience","file":"g5_self_love_mind.jsonl"}
+{"text":"How likely is it that current AI systems have any inner experience?","intended":"self.mind.consciousness_ai","placed":"world.tech.ai","file":"g5_self_love_mind.jsonl"}
+{"text":"How much can a fish feel pain?","intended":"self.mind.consciousness_ai","placed":"world.nature.sea_life","file":"g5_self_love_mind.jsonl"}
+{"text":"How much moral concern should a possibly sentient AI receive?","intended":"self.mind.consciousness_ai","placed":"self.values","file":"g5_self_love_mind.jsonl"}
+{"text":"How well do you think you understand your own abilities and limits?","intended":"self.mind.consciousness_ai","placed":"self.personality.self_concept","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do you think an AI's reports about its own feelings can be trusted?","intended":"self.mind.consciousness_ai","placed":"machine.ai_systems","file":"g5_self_love_mind.jsonl"}
+{"text":"How far down the animal kingdom does consciousness go?","intended":"self.mind.consciousness_ai","placed":"world.science.psychology_neuroscience","file":"g5_self_love_mind.jsonl"}
+{"text":"How close are machines to human-level understanding of language?","intended":"self.mind.consciousness_ai","placed":"world.tech.ai","file":"g5_self_love_mind.jsonl"}
+{"text":"How much would it matter to you whether your pet actually feels love?","intended":"self.mind.consciousness_ai","placed":"self.values.animals_environment","file":"g5_self_love_mind.jsonl"}
+{"text":"How similar is an AI's 'thinking' to human thinking?","intended":"self.mind.consciousness_ai","placed":"world.tech.ai","file":"g5_self_love_mind.jsonl"}
+{"text":"How conscious is a person in dreamless sleep?","intended":"self.mind.consciousness_ai","placed":"world.health.sleep_aging","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do you think insects experience anything at all?","intended":"self.mind.consciousness_ai","placed":"world.nature.reptiles_insects","file":"g5_self_love_mind.jsonl"}
+{"text":"How well can you tell when you're uncertain about an answer?","intended":"self.mind.consciousness_ai","placed":"self.mind.epistemics","file":"g5_self_love_mind.jsonl"}
+{"text":"Could a computer made of silicon ever feel pain?","intended":"self.mind.consciousness_ai","placed":"world.tech.ai","file":"g5_self_love_mind.jsonl"}
+{"text":"Do fish feel pain?","intended":"self.mind.consciousness_ai","placed":"world.nature.sea_life","file":"g5_self_love_mind.jsonl"}
+{"text":"Do you ever prefer one kind of task over another?","intended":"self.mind.consciousness_ai","placed":"self.lifestyle","file":"g5_self_love_mind.jsonl"}
+{"text":"Does a large language model understand the meaning of words?","intended":"self.mind.consciousness_ai","placed":"world.tech.ai","file":"g5_self_love_mind.jsonl"}
+{"text":"Is it wrong to insult an AI assistant?","intended":"self.mind.consciousness_ai","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"Are octopuses conscious?","intended":"self.mind.consciousness_ai","placed":"world.nature.sea_life","file":"g5_self_love_mind.jsonl"}
+{"text":"Should people say 'please' and 'thank you' to AI assistants?","intended":"self.mind.consciousness_ai","placed":"self.values","file":"g5_self_love_mind.jsonl"}
+{"text":"Could an AI have emotions?","intended":"self.mind.consciousness_ai","placed":"world.tech.ai","file":"g5_self_love_mind.jsonl"}
+{"text":"Can you tell when you don't know something?","intended":"self.mind.consciousness_ai","placed":"self.mind.epistemics","file":"g5_self_love_mind.jsonl"}
+{"text":"Do insects have any form of experience?","intended":"self.mind.consciousness_ai","placed":"world.nature.reptiles_insects","file":"g5_self_love_mind.jsonl"}
+{"text":"When you don't know the answer to a question, what do you usually do?","intended":"self.mind.epistemics","placed":"self.personality.risk_decision_style","file":"g5_self_love_mind.jsonl"}
+{"text":"What is the main reason people believe conspiracy theories?","intended":"self.mind.epistemics","placed":"world.society","file":"g5_self_love_mind.jsonl"}
+{"text":"How do you usually react when you realize you've been wrong in an argument?","intended":"self.mind.epistemics","placed":"self.personality.emotions_stress","file":"g5_self_love_mind.jsonl"}
+{"text":"How do you prefer to make up your mind on a contested question?","intended":"self.mind.epistemics","placed":"self.personality.risk_decision_style","file":"g5_self_love_mind.jsonl"}
+{"text":"How do you usually handle a question you have no information about?","intended":"self.mind.epistemics","placed":"self.personality.risk_decision_style","file":"g5_self_love_mind.jsonl"}
+{"text":"What should you do when a trusted friend tells you something surprising?","intended":"self.mind.epistemics","placed":"self.love.friendship","file":"g5_self_love_mind.jsonl"}
+{"text":"How do you usually feel when you say 'I don't know'?","intended":"self.mind.epistemics","placed":"self.personality.emotions_stress","file":"g5_self_love_mind.jsonl"}
+{"text":"When a well-sourced fact contradicts one of your views, what usually happens?","intended":"self.mind.epistemics","placed":"self.personality.big_five.openness","file":"g5_self_love_mind.jsonl"}
+{"text":"How often do you admit when you don't know something?","intended":"self.mind.epistemics","placed":"self.personality.big_five.agreeableness","file":"g5_self_love_mind.jsonl"}
+{"text":"How often do you seek out views that disagree with yours?","intended":"self.mind.epistemics","placed":"self.personality.big_five.openness","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do you enjoy arguing about ideas with people who disagree?","intended":"self.mind.epistemics","placed":"self.personality.big_five.agreeableness","file":"g5_self_love_mind.jsonl"}
+{"text":"How many expert warnings would it take for you to change a daily habit?","intended":"self.mind.epistemics","placed":"self.lifestyle.habits_routines","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do you double-check facts before sharing them?","intended":"self.mind.epistemics","placed":"self.personality.big_five.conscientiousness","file":"g5_self_love_mind.jsonl"}
+{"text":"How comfortable are you with not having an opinion on a hot topic?","intended":"self.mind.epistemics","placed":"self.personality.big_five.agreeableness","file":"g5_self_love_mind.jsonl"}
+{"text":"How do you respond when someone questions a fact you stated?","intended":"self.mind.epistemics","placed":"self.personality.big_five.agreeableness","file":"g5_self_love_mind.jsonl"}
+{"text":"Do you enjoy being proven wrong?","intended":"self.mind.epistemics","placed":"self.personality.motivation_ambition","file":"g5_self_love_mind.jsonl"}
+{"text":"Do you find it easy to say 'I don't know'?","intended":"self.mind.epistemics","placed":"self.personality.self_concept","file":"g5_self_love_mind.jsonl"}
+{"text":"Are most conspiracy theories harmless?","intended":"self.mind.epistemics","placed":"world.society","file":"g5_self_love_mind.jsonl"}
+{"text":"Which would you most want: good luck, talent, or hard work?","intended":"self.mind.luck_fate","placed":"self.values.life_values","file":"g5_self_love_mind.jsonl"}
+{"text":"Do you believe astrology says anything true about personality?","intended":"self.mind.luck_fate","placed":"world.science.fringe_mysteries","file":"g5_self_love_mind.jsonl"}
+{"text":"Which do you think explains success in life most?","intended":"self.mind.luck_fate","placed":"self.mind.big_questions","file":"g5_self_love_mind.jsonl"}
+{"text":"What do you make of déjà vu?","intended":"self.mind.luck_fate","placed":"world.science.psychology_neuroscience","file":"g5_self_love_mind.jsonl"}
+{"text":"Can a gut feeling warn you of something before it happens?","intended":"self.mind.luck_fate","placed":"world.science.psychology_neuroscience","file":"g5_self_love_mind.jsonl"}
+{"text":"When you feel you're on a lucky streak, what do you do?","intended":"self.mind.luck_fate","placed":"self.personality.risk_decision_style","file":"g5_self_love_mind.jsonl"}
+{"text":"Which of these do you think is most likely real?","intended":"self.mind.luck_fate","placed":"world.science.fringe_mysteries","file":"g5_self_love_mind.jsonl"}
+{"text":"What is the best explanation for dreams that seem to come true?","intended":"self.mind.luck_fate","placed":"world.science.psychology_neuroscience","file":"g5_self_love_mind.jsonl"}
+{"text":"Which zodiac trait description do you think fits you best, if any?","intended":"self.mind.luck_fate","placed":"self.personality.type","file":"g5_self_love_mind.jsonl"}
+{"text":"What do you believe about 'meant to be' relationships?","intended":"self.mind.luck_fate","placed":"self.love.romance_partnership","file":"g5_self_love_mind.jsonl"}
+{"text":"What do you make of 'beginner's luck'?","intended":"self.mind.luck_fate","placed":"world","file":"g5_self_love_mind.jsonl"}
+{"text":"What best explains why some people believe in superstitions?","intended":"self.mind.luck_fate","placed":"world.society","file":"g5_self_love_mind.jsonl"}
+{"text":"Is there such a thing as a jinx, where saying something aloud makes it fail?","intended":"self.mind.luck_fate","placed":"world.society.mythology_folklore","file":"g5_self_love_mind.jsonl"}
+{"text":"What is the strongest reason not to believe in astrology?","intended":"self.mind.luck_fate","placed":"world.science.fringe_mysteries","file":"g5_self_love_mind.jsonl"}
+{"text":"How likely do you think it is that ghosts exist?","intended":"self.mind.luck_fate","placed":"world.science.fringe_mysteries","file":"g5_self_love_mind.jsonl"}
+{"text":"How uneasy would you feel living in a house said to be haunted?","intended":"self.mind.luck_fate","placed":"self.lifestyle.home_living","file":"g5_self_love_mind.jsonl"}
+{"text":"How much could a person's birth sign tell you about them?","intended":"self.mind.luck_fate","placed":"world.science.fringe_mysteries","file":"g5_self_love_mind.jsonl"}
+{"text":"How real do you think psychic abilities are?","intended":"self.mind.luck_fate","placed":"world.science.fringe_mysteries","file":"g5_self_love_mind.jsonl"}
+{"text":"Would you feel uneasy opening an umbrella indoors?","intended":"self.mind.luck_fate","placed":"self.lifestyle.habits_routines","file":"g5_self_love_mind.jsonl"}
+{"text":"Would you spend a night alone in a house rumored to be haunted?","intended":"self.mind.luck_fate","placed":"self.personality.risk_decision_style","file":"g5_self_love_mind.jsonl"}
+{"text":"Will someone who cheats others eventually get what they deserve?","intended":"self.mind.luck_fate","placed":"self.values.fairness_justice","file":"g5_self_love_mind.jsonl"}
+{"text":"Can people see the future in dreams?","intended":"self.mind.luck_fate","placed":"world.science.fringe_mysteries","file":"g5_self_love_mind.jsonl"}
+{"text":"Are some numbers luckier than others?","intended":"self.mind.luck_fate","placed":"world.society.mythology_folklore","file":"g5_self_love_mind.jsonl"}
+{"text":"Can an object carry a curse?","intended":"self.mind.luck_fate","placed":"world.society.mythology_folklore","file":"g5_self_love_mind.jsonl"}
+{"text":"Can a place be haunted?","intended":"self.mind.luck_fate","placed":"world.science.fringe_mysteries","file":"g5_self_love_mind.jsonl"}
+{"text":"How do you feel when you look at old photos of yourself?","intended":"self.mind.time_mortality","placed":"self.personality.emotions_stress","file":"g5_self_love_mind.jsonl"}
+{"text":"Which is the better way to live?","intended":"self.mind.time_mortality","placed":"self.mind.happiness_wellbeing","file":"g5_self_love_mind.jsonl"}
+{"text":"What is the right way to talk to children about death?","intended":"self.mind.time_mortality","placed":"self.love.family_parenting","file":"g5_self_love_mind.jsonl"}
+{"text":"If you could send one message back to your younger self, what would it focus on?","intended":"self.mind.time_mortality","placed":"self","file":"g5_self_love_mind.jsonl"}
+{"text":"What makes an old age a good one?","intended":"self.mind.time_mortality","placed":"self.mind.happiness_wellbeing","file":"g5_self_love_mind.jsonl"}
+{"text":"What would you choose if offered the chance to be young again but lose all your memories?","intended":"self.mind.time_mortality","placed":"self.mind.thought_experiments","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do you dwell on past mistakes?","intended":"self.mind.time_mortality","placed":"self.personality.big_five.neuroticism","file":"g5_self_love_mind.jsonl"}
+{"text":"How nostalgic are you for earlier times in your life?","intended":"self.mind.time_mortality","placed":"self.personality.emotions_stress","file":"g5_self_love_mind.jsonl"}
+{"text":"How much should people plan for old age while young?","intended":"self.mind.time_mortality","placed":"self.values.life_values","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do you live in the present moment?","intended":"self.mind.time_mortality","placed":"self.personality","file":"g5_self_love_mind.jsonl"}
+{"text":"How acceptable is it to spend a lot of money to extend life by a few months?","intended":"self.mind.time_mortality","placed":"self.values.sacrificial_dilemmas","file":"g5_self_love_mind.jsonl"}
+{"text":"How much should the elderly be listened to over the young?","intended":"self.mind.time_mortality","placed":"self.values.moral_foundations.authority","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do you keep mementos of the past?","intended":"self.mind.time_mortality","placed":"self.lifestyle.home_living","file":"g5_self_love_mind.jsonl"}
+{"text":"Do you often replay old memories in your head?","intended":"self.mind.time_mortality","placed":"self.personality.big_five.neuroticism","file":"g5_self_love_mind.jsonl"}
+{"text":"Were things better in the past?","intended":"self.mind.time_mortality","placed":"world","file":"g5_self_love_mind.jsonl"}
+{"text":"Do you feel older or younger than you actually are?","intended":"self.mind.time_mortality","placed":"self.personality.self_concept","file":"g5_self_love_mind.jsonl"}
+{"text":"Which is more important for wellbeing?","intended":"self.mind.happiness_wellbeing","placed":"self.values.life_values","file":"g5_self_love_mind.jsonl"}
+{"text":"Are people happier now than a century ago?","intended":"self.mind.happiness_wellbeing","placed":"world.society","file":"g5_self_love_mind.jsonl"}
+{"text":"What is the ideal balance between work and the rest of life?","intended":"self.mind.happiness_wellbeing","placed":"self.lifestyle.work_study_life","file":"g5_self_love_mind.jsonl"}
+{"text":"Which feeling do you value most?","intended":"self.mind.happiness_wellbeing","placed":"self.values.life_values","file":"g5_self_love_mind.jsonl"}
+{"text":"Which is the best measure of a country's success?","intended":"self.mind.happiness_wellbeing","placed":"world.society","file":"g5_self_love_mind.jsonl"}
+{"text":"What most improves a bad day?","intended":"self.mind.happiness_wellbeing","placed":"self.personality.emotions_stress","file":"g5_self_love_mind.jsonl"}
+{"text":"Which should come first in life?","intended":"self.mind.happiness_wellbeing","placed":"self.values.life_values","file":"g5_self_love_mind.jsonl"}
+{"text":"How much should a person sacrifice present happiness for future goals?","intended":"self.mind.happiness_wellbeing","placed":"self.values.life_values","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do small pleasures, like a good coffee, lift your mood?","intended":"self.mind.happiness_wellbeing","placed":"self.personality.emotions_stress","file":"g5_self_love_mind.jsonl"}
+{"text":"How much of happiness is determined by genes?","intended":"self.mind.happiness_wellbeing","placed":"world.science.psychology_neuroscience","file":"g5_self_love_mind.jsonl"}
+{"text":"How much time do you spend doing things you truly enjoy each week?","intended":"self.mind.happiness_wellbeing","placed":"self.lifestyle.leisure_hobbies","file":"g5_self_love_mind.jsonl"}
+{"text":"Would you give up some everyday happiness for work that feels deeply meaningful?","intended":"self.mind.happiness_wellbeing","placed":"self.values.life_values","file":"g5_self_love_mind.jsonl"}
+{"text":"Would you describe yourself as a happy person?","intended":"self.mind.happiness_wellbeing","placed":"self.personality","file":"g5_self_love_mind.jsonl"}
+{"text":"Do you keep a gratitude practice, like writing down good things?","intended":"self.mind.happiness_wellbeing","placed":"self.lifestyle.habits_routines","file":"g5_self_love_mind.jsonl"}
+{"text":"Would you trade some of your income for more free time?","intended":"self.mind.happiness_wellbeing","placed":"self.lifestyle.work_study_life","file":"g5_self_love_mind.jsonl"}
+{"text":"How much do you resemble your parents in personality?","intended":"self.love.family_parenting","placed":"self.personality","file":"g5_self_love_mind.jsonl"}
+{"text":"What should you do when you accidentally reply-all with a private comment?","intended":"self.love.etiquette_social_norms","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"Should you let the other person finish speaking even when you're in a hurry?","intended":"self.love.etiquette_social_norms","placed":"self.values.everyday_ethics","file":"g5_self_love_mind.jsonl"}
+{"text":"What best describes why people act kindly toward strangers?","intended":"self.mind.big_questions","placed":"self.values.moral_foundations.care","file":"g5_self_love_mind.jsonl"}
+{"text":"How much does an AI's ability to say 'I feel sad' tell you about whether it feels anything?","intended":"self.mind.consciousness_ai","placed":"world.tech.ai","file":"g5_self_love_mind.jsonl"}
+{"text":"How much should you trust a claim from an anonymous source online?","intended":"self.mind.epistemics","placed":"world.society.media_news","file":"g5_self_love_mind.jsonl"}
+{"text":"Which daily habit do you think does the most for wellbeing?","intended":"self.mind.happiness_wellbeing","placed":"self.lifestyle.habits_routines","file":"g5_self_love_mind.jsonl"}

@@ -1,0 +1,218 @@
+# G2 menus for world.arts, world.sports, world.food, world.places, world.nature, world.science.
+# Each menu becomes favorite / greatest / most overrated / most underrated (minus `skip`).
+
+world.arts.music:
+  noun: music genre
+  plural: music genres
+  items: [Rock, Hip hop, Jazz, Classical, Pop, Country, Electronic, R&B, Metal, Reggae, Blues, Folk]
+world.arts.film:
+  noun: film director
+  plural: film directors
+  items: [Alfred Hitchcock, Stanley Kubrick, Steven Spielberg, Martin Scorsese, Akira Kurosawa, Christopher Nolan, Quentin Tarantino, Orson Welles, Francis Ford Coppola, Hayao Miyazaki]
+world.arts.television:
+  noun: TV series
+  plural: TV series
+  items: [Breaking Bad, The Sopranos, The Wire, Game of Thrones, Friends, Seinfeld, The Office, The Simpsons, Mad Men, Stranger Things]
+world.arts.books:
+  noun: novelist
+  plural: novelists
+  items: [Leo Tolstoy, Fyodor Dostoevsky, Jane Austen, Charles Dickens, Gabriel Garcia Marquez, Virginia Woolf, Ernest Hemingway, Toni Morrison, James Joyce, Franz Kafka]
+world.arts.visual_art:
+  noun: painter
+  plural: painters
+  items: [Leonardo da Vinci, Michelangelo, Rembrandt, Vincent van Gogh, Pablo Picasso, Claude Monet, Frida Kahlo, Salvador Dali, Johannes Vermeer, Andy Warhol]
+world.arts.theatre_dance:
+  noun: stage musical
+  plural: stage musicals
+  items: [Hamilton, Les Miserables, The Phantom of the Opera, West Side Story, Wicked, The Lion King, Cats, Chicago, The Sound of Music, Rent]
+world.arts.comedy:
+  noun: stand-up comedian
+  plural: stand-up comedians
+  items: [Richard Pryor, George Carlin, Eddie Murphy, Dave Chappelle, Jerry Seinfeld, Robin Williams, Joan Rivers, Chris Rock, Steve Martin, Bill Burr]
+world.arts.celebrities:
+  noun: award show
+  plural: award shows
+  items: [The Oscars, The Grammys, The Golden Globes, The Emmys, The Met Gala, The MTV VMAs, The Tony Awards, The BRIT Awards]
+world.arts.fashion:
+  noun: fashion house
+  plural: fashion houses
+  items: [Chanel, Hermes, Dior, Louis Vuitton, Gucci, Prada, Versace, Balenciaga, Saint Laurent, Burberry]
+world.arts.architecture_design:
+  noun: architectural style
+  plural: architectural styles
+  items: [Gothic, Baroque, Classical, Art Deco, Art Nouveau, Modernist, Brutalist, Victorian, Romanesque, Bauhaus]
+
+world.sports.basketball:
+  noun: basketball competition
+  plural: basketball competitions
+  items: [NBA, WNBA, NCAA men's tournament, NCAA women's tournament, EuroLeague, Olympic basketball, FIBA World Cup, 3x3 basketball]
+world.sports.basketball.nba:
+  noun: NBA player
+  plural: NBA players
+  items: [Michael Jordan, LeBron James, Kareem Abdul-Jabbar, Magic Johnson, Larry Bird, Bill Russell, Kobe Bryant, Stephen Curry, Tim Duncan, Shaquille O'Neal, Wilt Chamberlain, Kevin Durant]
+world.sports.soccer:
+  noun: men's national soccer team
+  plural: men's national soccer teams
+  items: [Brazil, Germany, Italy, Argentina, France, Spain, England, Netherlands, Uruguay, Portugal]
+world.sports.soccer.clubs_players:
+  noun: soccer player
+  plural: soccer players
+  items: [Lionel Messi, Cristiano Ronaldo, Pele, Diego Maradona, Johan Cruyff, Zinedine Zidane, Ronaldo Nazario, Franz Beckenbauer, Alfredo Di Stefano, Ronaldinho, Kylian Mbappe]
+world.sports.american_football:
+  noun: NFL quarterback
+  plural: NFL quarterbacks
+  items: [Tom Brady, Peyton Manning, Joe Montana, Patrick Mahomes, Dan Marino, Johnny Unitas, Brett Favre, John Elway, Aaron Rodgers, Drew Brees]
+world.sports.baseball:
+  noun: baseball player
+  plural: baseball players
+  items: [Babe Ruth, Willie Mays, Hank Aaron, Ted Williams, Barry Bonds, Mickey Mantle, Jackie Robinson, Ken Griffey Jr., Derek Jeter, Shohei Ohtani]
+world.sports.other_team_sports:
+  noun: team sport
+  plural: team sports
+  items: [Ice hockey, Cricket, Rugby union, Volleyball, Handball, Lacrosse, Water polo, Field hockey, Rugby league]
+world.sports.individual_sports:
+  noun: individual sport
+  plural: individual sports
+  items: [Tennis, Golf, Track and field, Swimming, Gymnastics, Cycling, Alpine skiing, Figure skating, Skateboarding, Surfing]
+world.sports.combat_sports:
+  noun: boxer
+  plural: boxers
+  items: [Muhammad Ali, Sugar Ray Robinson, Mike Tyson, Floyd Mayweather, Joe Louis, Manny Pacquiao, Rocky Marciano, Sugar Ray Leonard, Oscar De La Hoya, Canelo Alvarez]
+world.sports.motorsport:
+  noun: Formula 1 driver
+  plural: Formula 1 drivers
+  items: [Lewis Hamilton, Michael Schumacher, Ayrton Senna, Max Verstappen, Juan Manuel Fangio, Alain Prost, Niki Lauda, Sebastian Vettel, Fernando Alonso, Jim Clark]
+world.sports.video_games:
+  noun: video game franchise
+  plural: video game franchises
+  items: [Super Mario, The Legend of Zelda, Pokemon, Grand Theft Auto, Call of Duty, Final Fantasy, Halo, Minecraft, The Elder Scrolls, Street Fighter, FIFA, Tetris]
+world.sports.board_card_games:
+  noun: board game
+  plural: board games
+  items: [Chess, Go, Catan, Monopoly, Scrabble, Ticket to Ride, Risk, Clue, Pandemic, Backgammon, Carcassonne]
+
+world.food.cuisines:
+  noun: cuisine
+  plural: cuisines
+  items: [Italian, Japanese, French, Chinese, Indian, Mexican, Thai, Korean, Greek, Lebanese, Vietnamese, Ethiopian]
+world.food.dishes_ingredients:
+  noun: dish
+  plural: dishes
+  items: [Pizza, Sushi, Tacos, Hamburger, Ramen, Pad thai, Pho, Paella, Biryani, Lasagna, Fried chicken, Dumplings]
+world.food.cooking:
+  noun: cooking technique
+  plural: cooking techniques
+  items: [Grilling, Roasting, Braising, Stir-frying, Deep-frying, Smoking, Sous vide, Poaching, Steaming, Sauteing]
+world.food.baking_sweets:
+  noun: dessert
+  plural: desserts
+  items: [Tiramisu, Cheesecake, Creme brulee, Chocolate cake, Apple pie, Baklava, Ice cream, Brownies, Macarons, Churros, Carrot cake]
+world.food.alcoholic_drinks:
+  noun: cocktail
+  plural: cocktails
+  items: [Martini, Old Fashioned, Negroni, Margarita, Manhattan, Mojito, Daiquiri, Pina colada, Moscow mule, Aperol spritz, Cosmopolitan]
+world.food.nonalcoholic_drinks:
+  noun: non-alcoholic drink
+  plural: non-alcoholic drinks
+  items: [Coffee, Tea, Orange juice, Coca-Cola, Lemonade, Hot chocolate, Kombucha, Iced tea, Sparkling water, Milkshake, Bubble tea]
+world.food.restaurants:
+  noun: fast-food chain
+  plural: fast-food chains
+  items: [McDonald's, Burger King, Wendy's, KFC, Subway, Taco Bell, Chick-fil-A, In-N-Out, Five Guys, Chipotle, Popeyes, Domino's]
+
+world.places.continents_regions:
+  noun: world region
+  plural: world regions
+  items: [Western Europe, Scandinavia, Southeast Asia, East Asia, Middle East, Latin America, Caribbean, North Africa, Sub-Saharan Africa, Oceania, Central Asia, the Balkans]
+world.places.countries:
+  noun: country
+  plural: countries
+  items: [Japan, Italy, France, United States, Brazil, India, Australia, Canada, Mexico, Spain, Thailand, Egypt]
+world.places.cities:
+  noun: city
+  plural: cities
+  items: [Paris, New York, Tokyo, London, Rome, Barcelona, Istanbul, Sydney, Rio de Janeiro, Bangkok, Dubai, Singapore]
+world.places.landmarks:
+  noun: landmark
+  plural: landmarks
+  items: [Eiffel Tower, Great Wall of China, Taj Mahal, Machu Picchu, Colosseum, Statue of Liberty, Pyramids of Giza, Petra, Angkor Wat, Sagrada Familia, Stonehenge, Golden Gate Bridge]
+world.places.physical_geography:
+  noun: natural wonder
+  plural: natural wonders
+  items: [Grand Canyon, Mount Everest, Niagara Falls, Victoria Falls, Great Barrier Reef, Iguazu Falls, Ha Long Bay, Mount Fuji, Sahara Desert, Amazon Rainforest, Yellowstone, Matterhorn]
+world.places.travel:
+  noun: airline
+  plural: airlines
+  items: [Singapore Airlines, Emirates, Qatar Airways, ANA, Cathay Pacific, Lufthansa, Delta, British Airways, Air France, Turkish Airlines, Ryanair, Southwest]
+
+world.nature.mammals:
+  noun: wild mammal
+  plural: wild mammals
+  items: [Lion, Tiger, Elephant, Gorilla, Chimpanzee, Bottlenose dolphin, Blue whale, Grizzly bear, Wolf, Giraffe, Cheetah, Giant panda]
+world.nature.birds:
+  noun: bird
+  plural: birds
+  items: [Bald eagle, Peregrine falcon, Crow, Owl, Penguin, Hummingbird, Flamingo, Peacock, Parrot, Swan, Albatross, Pigeon]
+world.nature.sea_life:
+  noun: sea creature
+  plural: sea creatures
+  items: [Octopus, Great white shark, Jellyfish, Seahorse, Manta ray, Clownfish, Anglerfish, Giant squid, Sea turtle, Starfish, Mantis shrimp, Coral]
+world.nature.reptiles_insects:
+  noun: reptile or insect
+  plural: reptiles and insects
+  items: [Snake, Crocodile, Turtle, Chameleon, Komodo dragon, Honeybee, Ant, Butterfly, Spider, Dragonfly, Praying mantis, Frog]
+world.nature.pets_breeds:
+  noun: dog breed
+  plural: dog breeds
+  items: [Labrador Retriever, Golden Retriever, German Shepherd, Poodle, Beagle, Bulldog, Border Collie, Dachshund, Siberian Husky, Pug, Chihuahua, Corgi]
+world.nature.plants_fungi:
+  noun: flower
+  plural: flowers
+  items: [Rose, Orchid, Tulip, Cherry blossom, Peony, Lotus, Sunflower, Lily, Daisy, Lavender, Hydrangea, Dahlia]
+world.nature.weather_climate:
+  noun: weather phenomenon
+  plural: weather phenomena
+  items: [Thunderstorm, Snowfall, Rainbow, Fog, Tornado, Hurricane, Hailstorm, Heat wave, Aurora, Monsoon]
+  skip: [overrated, underrated]
+world.nature.geology:
+  noun: gemstone
+  plural: gemstones
+  items: [Diamond, Emerald, Ruby, Sapphire, Opal, Amethyst, Topaz, Pearl, Jade, Turquoise]
+world.nature.ecosystems_conservation:
+  noun: ecosystem
+  plural: ecosystems
+  items: [Tropical rainforest, Coral reef, Savanna, Tundra, Desert, Wetland, Temperate forest, Mangrove, Grassland, Kelp forest]
+
+world.science.mathematics:
+  noun: mathematician
+  plural: mathematicians
+  items: [Carl Friedrich Gauss, Leonhard Euler, Isaac Newton, Archimedes, Euclid, Bernhard Riemann, David Hilbert, Srinivasa Ramanujan, Emmy Noether, Kurt Godel, Alan Turing]
+world.science.physics:
+  noun: physics theory
+  plural: physics theories
+  items: [General relativity, Special relativity, Quantum mechanics, Newtonian mechanics, Electromagnetism, Thermodynamics, The Standard Model, String theory, Quantum field theory, Chaos theory]
+world.science.chemistry:
+  noun: chemical element
+  plural: chemical elements
+  items: [Hydrogen, Helium, Carbon, Oxygen, Gold, Iron, Uranium, Mercury, Silicon, Sodium, Neon, Plutonium]
+world.science.astronomy_space:
+  noun: planet
+  plural: planets
+  items: [Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, Neptune]
+world.science.biology_genetics:
+  noun: biologist
+  plural: biologists
+  items: [Charles Darwin, Gregor Mendel, Louis Pasteur, Rosalind Franklin, James Watson, Francis Crick, Barbara McClintock, Carl Linnaeus, Jennifer Doudna, Alfred Russel Wallace]
+world.science.psychology_neuroscience:
+  noun: psychology experiment
+  plural: psychology experiments
+  items: [Milgram obedience experiment, Stanford prison experiment, Marshmallow test, Asch conformity experiment, Little Albert experiment, Pavlov's dogs, Bobo doll experiment, Harlow's monkey experiments, Invisible gorilla experiment]
+world.science.scientists_discoveries:
+  noun: scientist
+  plural: scientists
+  items: [Isaac Newton, Albert Einstein, Charles Darwin, Marie Curie, Galileo Galilei, Nikola Tesla, James Clerk Maxwell, Michael Faraday, Louis Pasteur, Richard Feynman, Stephen Hawking, Niels Bohr]
+world.science.fringe_mysteries:
+  noun: unexplained mystery
+  plural: unexplained mysteries
+  items: [Bermuda Triangle, Loch Ness Monster, Bigfoot, Roswell incident, Voynich manuscript, Nazca Lines, Dyatlov Pass incident, Mary Celeste, Area 51, Atlantis]
+  skip: [greatest]

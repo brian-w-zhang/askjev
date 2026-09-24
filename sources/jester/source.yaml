@@ -1,0 +1,15 @@
+name: jester
+url: https://eigentaste.berkeley.edu/dataset/
+license: Jester dataset, free for research use with citation (Goldberg, Roeder, Gupta & Perkins 2001). Private use only.
+version: HF mirror SeppeV/jester_jokes_extracted (train parquet, 140 jokes with per-user ratings, fetched 2026-09-24)
+target: 100
+hemisphere: self
+kind: taste
+notes: >
+  "How funny is this joke?" (state {"joke": text}) as a 5-level Score. The official host was unreachable and
+  the goldberg.berkeley.edu mirror has ratings only (no texts), so texts + ratings come from a public HF
+  mirror of the Jester jokes; its llama-70b reasoning column is ignored. Human distribution = that joke's
+  Jester ratings (-10..+10, ~10k-26k per joke) binned at -6, -2, 2, 6 (equal width); the level wording is
+  aligned to the bipolar scale (middle bin = "mildly amusing"). Seeded sample of 100 of the 140 jokes with
+  1,000+ ratings. Slurs and sexual content involving minors are dropped; sexual, ethnic/religious stereotype,
+  profanity, or death jokes are flagged "sensitive" and political jokes "political" (keyword, over-inclusive).

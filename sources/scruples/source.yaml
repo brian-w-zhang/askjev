@@ -1,0 +1,14 @@
+name: scruples
+url: https://github.com/allenai/scruples
+license: Apache-2.0 (allenai/scruples repo); action descriptions come from Reddit r/AmItheAsshole titles
+version: Scruples Dilemmas v1.0 (dilemmas.tar.gz, dev + test splits)
+target: 600
+hemisphere: self
+kind: values
+notes: >
+  Pairs of real-life actions ("Which of these two actions is less ethical?"), options {"a", "b"} with the
+  action text capitalized. Seeded sample of 600 from dev + test (4,700 pairs), in equal thirds by gold
+  agreement: unanimous 5-0, clear 4-1, split 3-2. The human distribution pools the 5 gold and 5
+  human-performance MTurk annotations each dev/test pair has (n=10); raw counts are in meta. No truth.
+  Pairs with slurs, sexual violence terms, or sexual content that mentions minors are dropped. Sexual,
+  self-harm, or violent content is flagged "sensitive" by keyword (over-inclusive: e.g. "killing a spider").

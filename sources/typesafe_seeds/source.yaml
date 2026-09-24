@@ -1,0 +1,21 @@
+name: typesafe_seeds
+url: https://docs.typesafe.ai
+download: >
+  resources/references/typesafe-docs/ (archived docs; cookbook playground share links decoded into
+  data/raw/typesafe_seeds/payloads/) + https://www.rfc-editor.org/rfc/rfc7519.txt
+license: TypeSafe docs (reference)
+version: docs archive 2026-09-24
+target: 300
+hemisphere: machine
+shape: mixed (classify, detect, score, route, rank, verify, extract)
+notes: >
+  Every concrete example question in the TypeSafe docs, one Question per (template, state), with the
+  docs' instructions and criteria verbatim. Cookbook playground links carry the exact request
+  (state + questions) and are decoded with a bundled pure-Python lz-string port (lzdecode.py).
+  Other pages are transcribed in seeds.py. Where the docs give a template but no state (or only a
+  truncated preview), we wrote the state: meta.authored_state = true ("completed" for previews).
+  Structured instructions/criteria are flattened to strings; the raw instruction object is kept in
+  meta.instructions_raw. Truth only where the docs state or design the answer (meta.truth_source
+  docs|authored). Skipped: GDPR parallel-questions (54k-char state), semantic-find (218-way Choice over
+  a 44k-char document), taxonomy walk (nested-tree criteria), line-search. Wine and structure-recovery
+  payloads are subset (10 of 38; 21 of 62).

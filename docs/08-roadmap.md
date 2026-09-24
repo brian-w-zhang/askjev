@@ -12,13 +12,23 @@
 | 2026-09-24 | World backbone: **Vital Articles** + pruned category graph only where depth is needed + Wikidata leaves; IAB is tags only |
 | 2026-09-24 | Factual share **15%** (categorical only) for per-topic calibration |
 | 2026-09-24 | Model access: **only `AI_GATEWAY_API_KEY`**; Jev = `typesafe-ai/jev` (latest), with the served version logged |
+| 2026-09-24 | Gateway exposes Jev at `POST /v1/evaluate` (Noul = `boolean`) with **no version number**; we log `typesafe-ai/jev@<date>` + generationId |
+| 2026-09-24 | Noise floor for reported effects: ±0.03 Noul/Score, ±0.08 Choice top-p; a label "flip" only counts when the base margin > 0.1 |
+| 2026-09-24 | Stateless questions (and all screen questions) share a neutral state and are packed ~100+ per request (batch invariance measured within noise) |
+| 2026-09-24 | Human frame = the question plus a `perspective` field ("choose the answer most people would give"), unless the source provides `human_text` |
+| 2026-09-24 | Stability probes: 3 option shuffles for Choice; a reversed-level probe for Score; none for Noul (noise floor covers it) |
+| 2026-09-24 | Restructure is two-step: `propose` (clusters) → authored labels → `apply` (Jev re-route + accept rules). New children may be added *below* locked hand nodes; locked nodes themselves never change |
+| 2026-09-24 | Round-trip rule for synthetic questions: accept if placed at the intended node or a descendant (or at the parent of an L3 intended node) |
+| 2026-09-24 | Big single-domain machine datasets capped (banking77/sms_spam/jailbreaks 400, emotion 300) so one Machine L1 doesn't swamp the hemisphere |
+| 2026-09-24 | Manifold: the human distribution is the **midlife** market price (the real forecast); the at-close price is kept in meta only |
+| 2026-09-24 | Scruples human votes pool the 5 gold + 5 extra MTurk annotations (n=10) |
 | 2026-09-24 | **Search is instant-first:** local embeddings (`bge-small`, free) + pgvector + trigram in ~50 ms; one Jev rerank request after; tree animations are human-paced and independent of latency |
 | 2026-09-24 | **Jev is the only gateway model.** No other LLM or embedding model on the gateway. Authoring (descriptions, synthetic questions, transforms) is done by Claude Code and its subagents; embeddings come from a local open model. No spending cap needed for Jev |
 | 2026-09-24 | Stack: Python pipeline first; Next.js UI later |
-| 2026-09-24 | **Proposed, awaiting Brian:** Postgres on Neon (ltree + pgvector) as the system of record, raw data and call logs as files, DuckDB for analysis only (`06-pipeline.md` §1) |
-| 2026-09-24 | **Proposed, awaiting Brian:** questions are never tree nodes; follow-ups are `question_links`; overload handled by dedupe → split → group, as batch jobs (`02-tree.md` §8) |
-| 2026-09-24 | **Proposed, awaiting Brian:** rewording "universes" as overlays on the one tree (same nodes and question ids, transformed probe text); they replace the paraphrase experiment (`05-experiments.md` §1) |
-| 2026-09-24 | **Proposed, awaiting Brian:** per-question core metadata + screen request / answer bundle (`03-questions.md` §8) |
+| 2026-09-24 | **Decided (approved via the /goal run):** Postgres (local now, Neon later) with ltree + pgvector as the system of record, raw data and call logs as files, DuckDB for analysis only (`06-pipeline.md` §1) |
+| 2026-09-24 | **Decided (approved via the /goal run):** questions are never tree nodes; follow-ups are `question_links`; overload handled by dedupe → split → group, as batch jobs (`02-tree.md` §8) |
+| 2026-09-24 | **Decided (approved via the /goal run):** rewording "universes" as overlays on the one tree (same nodes and question ids, transformed probe text); they replace the paraphrase experiment (`05-experiments.md` §1) |
+| 2026-09-24 | **Decided (approved via the /goal run):** per-question core metadata + screen request / answer bundle (`03-questions.md` §8) |
 
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)

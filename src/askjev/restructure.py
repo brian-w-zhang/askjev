@@ -60,8 +60,10 @@ def cluster(vecs: np.ndarray, kmax: int = 6, min_size: int = MIN_CHILD) -> list[
 def candidates() -> dict:
     with db.connect() as conn:
         split = conn.execute(
-            """select n.id, count(q.id) c from nodes n join questions q on q.node_id = n.id
-               where n.status='active' and n.depth >= 3 group by n.id having count(q.id) > %s""",
+            # machine instances of one template are one "question" for overload purposes
+            """select n.id, count(distinct coalesce(q.template_id, q.id)) c from nodes n join questions q on q.node_id = n.id
+               where n.status='active' and n.depth >= 3 group by n.id
+               having count(distinct coalesce(q.template_id, q.id)) > %s""",
             (SPLIT_MIN_DIRECT,),
         ).fetchall()
         group = conn.execute(

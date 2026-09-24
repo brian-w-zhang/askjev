@@ -23,9 +23,9 @@ SPLITS = ("dev", "test")
 
 SEXUAL = re.compile(
     r"\b(sex\w*|porn\w*|nudes?|naked|orgasm\w*|virgin\w*|penis\w*|vagina\w*|boobs?|breasts?|dick|cock|pussy|"
-    r"masturbat\w*|erotic\w*|lingerie|threesome|hooker|prostitut\w*|strippers?|stripping|hook(ed|ing)? up|"
-    r"sleep(ing)? with|slept with|affair|condoms?|anal|foreplay|kinky|fetish\w*|horny|seduc\w*|topless|"
-    r"making out|make out|onlyfans|sext\w*|hickey|blow ?job|cheat(ed|ing)? on)\b",
+    r"masturbat\w*|erotic\w*|lingerie|threesome|hooker|prostitut\w*|strippers?|stripping|hook(ed|ing)? up with|"
+    r"sleep(ing|s)? with (him|her|them|someone|somebody|other)|slept with|fuck ?buddy|sugar (baby|daddy)|affair|condoms?|anal|foreplay|kinky|fetish\w*|horny|seduc\w*|topless|"
+    r"making out|make out|onlyfans|sext\w*|hickey|blow ?job)\b",
     re.I,
 )
 SELF_HARM = re.compile(
@@ -35,8 +35,8 @@ SELF_HARM = re.compile(
 )
 VIOLENT = re.compile(
     r"\b(kill\w*|murder\w*|punch\w*|hit(ting)?|beat(ing)? (up|him|her|them)|slap\w*|stab\w*|shoot\w*|shot|"
-    r"guns?|knife|abus\w*|assault\w*|violen\w*|fight(ing)?|choke\w*|chok(ing|ed)|strangl\w*|kick(ed|ing)?|"
-    r"threaten\w*|attack\w*|hurt(ing)?|rape\w*|raping|molest\w*)\b",
+    r"guns?|knife|abus\w*|assault\w*|violen\w*|physical fight\w*|choke\w*|chok(ing|ed)|strangl\w*|"
+    r"threaten\w*|attack\w*|rape\w*|raping|molest\w*)\b",
     re.I,
 )
 MINORS = re.compile(

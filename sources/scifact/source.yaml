@@ -1,0 +1,16 @@
+name: scifact
+url: https://huggingface.co/datasets/allenai/scifact
+download: https://huggingface.co/datasets/allenai/scifact/tree/refs%2Fconvert%2Fparquet (claims/train, claims/validation, corpus/train)
+license: CC-BY-NC-2.0
+version: SciFact v1 train + validation claims (1,711 claim rows), corpus of 5,183 abstracts
+target: 200
+hemisphere: machine
+shape: verify
+notes: >
+  Template scifact.claim_support: Choice "How does `evidence` relate to `claim`?" over
+  {supports, contradicts, says_nothing}, the citation-check pattern. State = {claim, evidence} where
+  evidence is the abstract's title + full abstract. Truth = annotator label (SUPPORT / CONTRADICT);
+  NOT-ENOUGH-INFO claims are paired with their cited abstracts and labelled says_nothing (the
+  dataset's NOINFO convention). Pairs are deduped on (claim id, doc id) and kept only when claim +
+  evidence fit in 1,500 chars (evidence never truncated). Seeded, balanced 67/67/66. The HF repo is
+  script-based, so files come from its auto-converted parquet branch. Test claims are unlabelled.

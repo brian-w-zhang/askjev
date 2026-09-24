@@ -1,0 +1,14 @@
+name: nba
+url: https://query.wikidata.org/
+license: CC0 (Wikidata)
+version: SPARQL pulls cached 2026-09-24 (data/raw/nba/*.json)
+target: 400
+hemisphere: world
+kind: taste (GOAT pairs) + factual (team membership)
+notes: >
+  Top 25 NBA players by Wikidata sitelinks (occupation basketball player, league NBA). 300 GOAT pair
+  questions, one per unordered pair, options in alphabetical order ("Who is the greater basketball
+  player?", kind taste, no truth). Plus 100 Noul facts "Did <player> play for the <team>?" (origin
+  wikidata-fact): 2 true teams per player from P54 (member of sports team, teams with P118 = NBA) and
+  2 false ones from current NBA teams the player never joined, excluding relocated franchises of any team
+  he did play for. Teams with digits in the name (76ers) are skipped. Truth is as of the fetch date.

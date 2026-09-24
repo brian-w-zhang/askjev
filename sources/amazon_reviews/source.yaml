@@ -1,0 +1,13 @@
+name: amazon_reviews
+url: https://registry.opendata.aws/amazon-reviews-ml/
+download: https://huggingface.co/api/datasets/mteb/amazon_reviews_multi/parquet/en/test/0.parquet
+license: Amazon MARC license (non-commercial research)
+version: Multilingual Amazon Reviews Corpus, English test split (5,000 reviews, 1,000 per star)
+target: 200
+hemisphere: machine
+shape: score
+notes: >
+  Template amazon.satisfaction: Score "How satisfied is the reviewer in `review`?" over 5 concrete
+  situations (warns others away / let down / torn / pleased with a minor reservation / delighted).
+  Truth = stars - 1 (the reviewer's own rating). State review = title + body as in the MTEB mirror.
+  40-1,500 chars, case-insensitive dedup, seeded 40 per star.

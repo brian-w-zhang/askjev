@@ -1,0 +1,14 @@
+name: financial_phrasebank
+url: https://huggingface.co/datasets/takala/financial_phrasebank
+download: https://huggingface.co/datasets/takala/financial_phrasebank/resolve/main/data/FinancialPhraseBank-v1.0.zip
+license: CC-BY-NC-SA-3.0
+version: FinancialPhraseBank v1.0, Sentences_AllAgree (2,264 sentences, unanimous annotator label)
+target: 200
+hemisphere: machine
+shape: classify
+notes: >
+  Template fpb.investor_sentiment: Choice "What is the sentiment of `sentence` for the company's
+  investors?" over {positive, neutral, negative}. Truth = the unanimous label (5-8 annotators with
+  finance background). Light detokenization, case-insensitive dedup, seeded 67/67/66 across labels.
+  File is latin-1 encoded. Node is machine.finance.risk_scoring (financial documents turned into risk
+  indicators); the finance L2s do not have a dedicated news-sentiment leaf.

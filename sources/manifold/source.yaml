@@ -1,0 +1,19 @@
+name: manifold
+url: https://docs.manifold.markets/api
+license: Manifold public API, no auth for reads (docs/04 notes non-commercial dumps; API use allowed). Private use only.
+version: search-markets (filter=resolved, BINARY, most-popular, 1,000 per topic) + bets, fetched 2026-09-24
+target: 100
+hemisphere: world
+kind: forecast
+notes: >
+  Resolved YES/NO binary markets as Noul forecasts: text = the market question unchanged, truth = resolution.
+  Pool = the 1,000 most popular resolved binary markets in 10 non-political topics (ai, space, climate,
+  economics, technology, science, sports, entertainment, movies, gaming); the first matching topic sets the
+  world.future.* node. Keeps 50+ unique bettors; drops politics/war/geopolitics, deaths, streamer drama,
+  sexual content, self-referential or Manifold-meta markets, questions needing unseen context ("this tweet"),
+  wh-questions, and $/%/count thresholds; duplicate question texts are merged. Seeded per-node quotas (ai 20,
+  technology 20, sports/entertainment 24, space/climate/economy 12 each), preferring questions with no digits,
+  then ones whose only digits are years. Two human distributions (n = uniqueBettorCount): "at close" =
+  resolutionProbability (usually ~0.01/0.99, i.e. nearly the answer) and "midlife" = market probability after
+  the last bet before the midpoint between creation and close (the more useful forecast signal).
+  Questions keep relative time words ("this year", "by Monday"); meta has url, closeTime, created, closed.

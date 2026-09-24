@@ -1,0 +1,13 @@
+name: unfair_tos
+url: https://huggingface.co/datasets/coastalcph/lex_glue
+download: https://huggingface.co/api/datasets/coastalcph/lex_glue/parquet/unfair_tos/{train,validation,test}/0.parquet
+license: CC-BY-4.0
+version: LexGLUE unfair_tos config (9,414 sentences from 50 Terms of Service; 8 unfair-clause types)
+target: 200
+hemisphere: machine
+shape: detect
+notes: >
+  Template unfair_tos.unfair: Noul "Is `clause` potentially unfair to the consumer (...)?" with the
+  8 clause types spelled out in the criteria. Truth = sentence has any unfair label. Light
+  detokenization (source text is lowercased and space-tokenized), case-insensitive dedup, 40-1,500
+  chars, seeded 100 unfair + 100 fair across all splits. meta.label_raw keeps the clause types.

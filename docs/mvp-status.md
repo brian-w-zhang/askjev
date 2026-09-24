@@ -13,12 +13,15 @@ _Living status of the autonomous build (docs/09-mvp-plan.md). Newest first._
   backoff on 429/5xx, 24k-token request budget (under the 32k gateway context).
 - Local embeddings: fastembed `BAAI/bge-small-en-v1.5` (384-d): 2 ms per query, ~900 texts/s.
 
-## Phase 2: Tree (in progress)
+## Phase 2: Tree ✅
 - `tree/world.yaml`, `tree/self.yaml`, `tree/machine.yaml` (authored by subagents, reviewed): **249 nodes**:
   root, 3 hemispheres, 28 L1, 200 L2, 17 L3 (Big Five traits, MBTI dichotomies, MFQ-2 foundations, NBA, soccer clubs).
   All hand nodes `locked`. `uv run askjev tree` loads them with choice cards + embeddings.
 - Known-path taxonomy test (Shopify product taxonomy, leaf-name only): depth 1 74%, depth 4 58% (docs/taxonomy-eval.md).
-- Held-out routing eval: pending (authored/routing_eval.jsonl).
+- **Held-out routing eval ✅** (332 questions written for known nodes, never shown to Jev; 85 are boundary cases):
+  **91.0% placed at exactly the intended node**, 0.9% wrong hemisphere; world 95.5%, self 90.0%, machine 87.4%;
+  boundary cases 92.9%. Confusions are near-siblings (e.g. research.qualitative_coding ↔ support.intent_topic).
+  Full report: docs/routing-eval.md.
 
 ## Phase 3: Pipeline (in progress)
 Stages implemented: source adapters → ingest (hints = deterministic placement) → place (Jev beam K=3) → screen

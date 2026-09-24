@@ -10,7 +10,7 @@ import asyncio
 
 from . import db
 from .answer import answer_pending, screen_pending
-from .embed import embed, to_pg
+from .embed import embed, question_text, to_pg
 from .jev import JevClient, Request, answers, gateway_question
 from .measure import measure_all, rollup
 from .model import KINDS, SHAPES, Question
@@ -134,7 +134,7 @@ def ask(payload: dict) -> dict:
             conn.execute("update questions set ask_count = ask_count + 1 where id=%s", (probe.id,))
             conn.commit()
             return result(probe.id, duplicate_of=probe.id)
-    vec = embed([text if not state else f"{text}\n{str(state)[:400]}"])[0]
+    vec = embed([question_text(text, opts, state)])[0]
     neigh = nearest(vec, 10)
     dup = find_duplicate(q, neigh)
     if dup:
@@ -155,7 +155,7 @@ def ask(payload: dict) -> dict:
                  source, embedding, ask_count, meta)
                values (%s,%s,(select path from nodes where id=%s),%s,%s,%s,%s,%s,%s,%s,'asked','ask-box',%s,1,'{}')""",
             (probe.id, node, node, hemisphere, None if hemisphere == "machine" else tag,
-             tag if hemisphere == "machine" else None, prim, text, db.Jsonb(opts), db.Jsonb(state), to_pg(vec)),
+             tag if hemisphere == "machine" else None, prim, text, db.Jsonb(opts) if opts is not None else None, db.Jsonb(state) if state is not None else None, to_pg(vec)),
         )
         conn.execute(
             """insert into placements (question_id, node_id, node_version, method, confidence, separation, path_probs)

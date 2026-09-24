@@ -7,7 +7,7 @@ from pathlib import Path
 
 from . import db
 from .config import DATA, RAW, SOURCES
-from .embed import embed, to_pg
+from .embed import embed, question_text, to_pg
 from .model import Question, read_jsonl, write_jsonl
 
 NORMALIZED = DATA / "normalized"
@@ -55,7 +55,7 @@ def ingest_questions(qs: list[Question], batch: int = 500) -> int:
     with db.connect() as conn:
         for i in range(0, len(qs), batch):
             chunk = qs[i : i + batch]
-            vecs = embed([q.text if not q.state else f"{q.text}\n{str(q.state)[:400]}" for q in chunk])
+            vecs = embed([question_text(q.text, q.options, q.state) for q in chunk])
             for q, v in zip(chunk, vecs):
                 node = q.node_hint if q.node_hint in nodes else None
                 flags = list(q.meta.get("flags", []))
@@ -71,8 +71,8 @@ def ingest_questions(qs: list[Question], batch: int = 500) -> int:
                        on conflict (id) do nothing""",
                     (
                         q.id, node, node, q.hemisphere, q.kind, q.shape, q.primitive, q.text,
-                        db.Jsonb(q.options), db.Jsonb(q.state), q.template_id, q.origin, q.source,
-                        q.source_item_id, q.license, db.Jsonb(q.truth), flags,
+                        db.Jsonb(q.options) if q.options is not None else None, db.Jsonb(q.state) if q.state is not None else None, q.template_id, q.origin, q.source,
+                        q.source_item_id, q.license, db.Jsonb(q.truth) if q.truth is not None else None, flags,
                         not any(f in ("political", "sensitive") for f in flags),
                         db.Jsonb(meta), to_pg(v),
                     ),
@@ -94,9 +94,12 @@ def ingest_questions(qs: list[Question], batch: int = 500) -> int:
     return n
 
 
-def ingest_file(path: Path) -> int:
-    return ingest_questions(list(read_jsonl(path)))
+def ingest_file(path: Path, cap: int | None = None) -> int:
+    qs = list(read_jsonl(path))
+    if cap and len(qs) > cap:
+        qs = sorted(qs, key=lambda q: q.id)[:cap]  # ids are hashes → deterministic pseudo-random sample
+    return ingest_questions(qs)
 
 
-def ingest_source(name: str) -> int:
-    return ingest_file(NORMALIZED / f"{name}.jsonl")
+def ingest_source(name: str, cap: int | None = None) -> int:
+    return ingest_file(NORMALIZED / f"{name}.jsonl", cap)

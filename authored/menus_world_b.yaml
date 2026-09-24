@@ -1,0 +1,141 @@
+# G2 menus for world.tech / history / society / health / money (hand-authored).
+# Future nodes have no menus: favorite/greatest/overrated templates don't fit forecasts.
+# world.society.world_religions has no menu: ranking religions is a question of belief (out of scope).
+
+world.tech.computers_hardware:
+  noun: computer brand
+  plural: computer brands
+  items: [Apple Mac, Dell, HP, Lenovo, ASUS, Acer, Microsoft Surface, Razer, MSI, Framework]
+
+world.tech.software_programming:
+  noun: programming language
+  plural: programming languages
+  items: [Python, JavaScript, Java, C, C++, C#, Rust, Go, Ruby, Swift, Kotlin, PHP]
+
+world.tech.ai:
+  noun: AI chatbot
+  plural: AI chatbots
+  items: [ChatGPT, Claude, Gemini, Microsoft Copilot, Grok, Meta AI, Mistral Le Chat, DeepSeek, Perplexity]
+
+world.tech.internet_web:
+  noun: website
+  plural: websites
+  items: [Wikipedia, Google Search, Amazon, eBay, Craigslist, IMDb, Stack Overflow, Internet Archive, Yahoo, Gmail]
+
+world.tech.social_media:
+  noun: social media platform
+  plural: social media platforms
+  items: [TikTok, Instagram, YouTube, Facebook, X (Twitter), Reddit, Snapchat, LinkedIn, Pinterest, Discord, Tumblr, Threads]
+
+world.tech.gadgets:
+  noun: gadget
+  plural: gadgets
+  items: [iPhone, iPad, AirPods, Apple Watch, Nintendo Switch, PlayStation, Kindle, GoPro, Samsung Galaxy phone, Game Boy, iPod, Sony Walkman]
+
+world.tech.companies:
+  noun: tech company
+  plural: tech companies
+  items: [Apple, Google, Microsoft, Amazon, Meta, Tesla, Nvidia, Samsung, Netflix, OpenAI, Intel, IBM]
+
+world.tech.vehicles:
+  noun: car model
+  plural: car models
+  items: [Ford Model T, Volkswagen Beetle, Toyota Corolla, Porsche 911, Ford Mustang, Mini Cooper, Tesla Model 3, Jeep Wrangler, Honda Civic, Land Rover Defender]
+
+world.tech.engineering_inventions:
+  noun: invention
+  plural: inventions
+  items: [the wheel, the printing press, the steam engine, the electric light bulb, the telephone, the airplane, the internet, the refrigerator, the transistor, the compass, the mechanical clock]
+
+world.history.ancient:
+  noun: ancient civilization
+  plural: ancient civilizations
+  items: [Ancient Egypt, Mesopotamia, Ancient Greece, Ancient Rome, Persian Empire, Han China, Maurya Empire, Maya civilization, Carthage, Indus Valley civilization]
+
+world.history.medieval:
+  noun: medieval empire
+  plural: medieval empires
+  items: [Byzantine Empire, Mongol Empire, Abbasid Caliphate, Holy Roman Empire, Carolingian Empire, Song dynasty, Mali Empire, Khmer Empire, Kievan Rus, Aztec Empire]
+
+world.history.early_modern:
+  noun: early modern empire
+  plural: early modern empires
+  items: [Ottoman Empire, Mughal Empire, Spanish Empire, Portuguese Empire, Ming dynasty, Qing dynasty, Dutch Republic, Tokugawa Japan, Inca Empire, Safavid Empire]
+
+world.history.wars_battles:
+  noun: battle
+  plural: battles
+  items: [Battle of Thermopylae, Battle of Gaugamela, Battle of Cannae, Battle of Hastings, Battle of Agincourt, Battle of Trafalgar, Battle of Waterloo, Battle of Gettysburg, Battle of Verdun, Battle of Stalingrad, Battle of Midway, Normandy landings]
+  skip: [favorite]
+
+world.history.figures:
+  noun: historical figure
+  plural: historical figures
+  items: [Alexander the Great, Julius Caesar, Cleopatra, Charlemagne, Genghis Khan, Joan of Arc, Marco Polo, Ferdinand Magellan, Napoleon Bonaparte, Florence Nightingale, Zheng He]
+
+world.society.languages:
+  noun: language
+  plural: languages
+  items: [English, Mandarin Chinese, Spanish, French, Arabic, Hindi, Japanese, German, Portuguese, Russian, Italian, Korean]
+
+world.society.education:
+  noun: university
+  plural: universities
+  items: [Harvard, Oxford, Cambridge, Stanford, MIT, Yale, Princeton, Sorbonne, University of Tokyo, ETH Zurich]
+
+world.society.holidays_traditions:
+  noun: holiday
+  plural: holidays
+  items: [Christmas, Halloween, Thanksgiving, Lunar New Year, Diwali, New Year's Eve, Easter, Valentine's Day, Day of the Dead, St. Patrick's Day, Oktoberfest]
+
+world.society.mythology_folklore:
+  noun: mythology
+  plural: mythologies
+  items: [Greek mythology, Norse mythology, Egyptian mythology, Roman mythology, Celtic mythology, Aztec mythology, Mesopotamian mythology, Japanese folklore, Chinese folklore, Slavic folklore]
+
+world.society.philosophy_thinkers:
+  noun: philosopher
+  plural: philosophers
+  items: [Socrates, Plato, Aristotle, Confucius, Laozi, Marcus Aurelius, Descartes, Kant, Hume, Nietzsche, Sartre, Wittgenstein]
+
+world.society.media_news:
+  noun: magazine
+  plural: magazines
+  items: [National Geographic, The New Yorker, Rolling Stone, Vogue, Scientific American, Wired, Reader's Digest, Time, Sports Illustrated, Popular Science]
+
+world.health.human_body:
+  noun: organ
+  plural: organs
+  items: [brain, heart, liver, lungs, skin, kidneys, stomach, eyes, pancreas, intestines]
+  skip: [overrated]
+
+world.health.medicine:
+  noun: medical breakthrough
+  plural: medical breakthroughs
+  items: [vaccines, antibiotics, anesthesia, insulin, X-rays, organ transplants, blood transfusion, MRI scans, germ theory, oral rehydration therapy]
+  skip: [favorite]
+
+world.health.nutrition:
+  noun: diet
+  plural: diets
+  items: [Mediterranean diet, keto diet, paleo diet, vegan diet, vegetarian diet, intermittent fasting, Atkins diet, carnivore diet, DASH diet, low-fat diet]
+
+world.health.fitness:
+  noun: form of exercise
+  plural: forms of exercise
+  items: [running, weightlifting, yoga, swimming, cycling, Pilates, HIIT, CrossFit, walking, rowing]
+
+world.money.investing:
+  noun: investment
+  plural: investments
+  items: [stocks, bonds, index funds, gold, Bitcoin, Ethereum, savings accounts, rental property, treasury bills, dividend stocks]
+
+world.money.companies_brands:
+  noun: brand
+  plural: brands
+  items: [Nike, Coca-Cola, McDonald's, Disney, Costco, Walmart, IKEA, Starbucks, Toyota, Lego, Adidas, Louis Vuitton]
+
+world.money.careers:
+  noun: profession
+  plural: professions
+  items: [doctor, teacher, engineer, lawyer, nurse, firefighter, airline pilot, chef, software developer, scientist, electrician, architect]

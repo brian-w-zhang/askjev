@@ -23,3 +23,15 @@ def embed(texts: list[str], batch_size: int = 256) -> np.ndarray:
 
 def to_pg(v: np.ndarray) -> str:
     return "[" + ",".join(f"{x:.6f}" for x in v) + "]"
+
+
+def question_text(text: str, options=None, state=None) -> str:
+    """What gets embedded for a question: text + option labels + an input excerpt (so same-text items differ)."""
+    parts = [text]
+    if isinstance(options, dict):
+        parts.append(" / ".join(str(v or k) for k, v in list(options.items())[:12]))
+    elif isinstance(options, list):
+        parts.append(" / ".join(str(x) for x in options[:10]))
+    if state:
+        parts.append(str(state)[:400])
+    return "\n".join(parts)

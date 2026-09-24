@@ -5,6 +5,8 @@ import nextTs from "eslint-config-next/typescript";
 const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
+  // three.js scene code mutates GPU-side objects every frame by design.
+  { files: ["src/components/scene/**"], rules: { "react-hooks/immutability": "off" } },
   // Override default ignores of eslint-config-next.
   globalIgnores([
     // Default ignores of eslint-config-next:
