@@ -15,10 +15,13 @@ import httpx
 import polars as pl
 
 from askjev.model import Question
+from askjev.sampling import env_int, hash_order, top_up
 
 NAME = "amazon_reviews"
 URL = "https://huggingface.co/api/datasets/mteb/amazon_reviews_multi/parquet/en/test/0.parquet"
-TARGET = 200
+TARGET_V1 = 200  # the original seeded sample, kept as-is so its ids stay stable
+TARGET = env_int("TARGET_AMAZON_REVIEWS", TARGET_V1)  # Phase 6: 4,000
+EXTRA = env_int("EXTRA_AMAZON_REVIEWS", 0)  # secondary template size; Phase 6: 1,500
 SEED = 2020
 LICENSE = "Amazon MARC license (non-commercial research)"
 TEXT = "How satisfied is the reviewer in `review`?"
@@ -29,6 +32,16 @@ LEVELS = [
     "The reviewer is pleased with the product, with a minor reservation",
     "The reviewer is delighted and recommends it without reservation",
 ]
+
+TOPIC_TEXT = "What is the main topic of complaint or praise in `review`?"
+TOPIC_OPTIONS = {
+    "quality": "How well the product works, how it is made, or how long it lasts",
+    "price": "What the product cost or whether it was worth the money",
+    "shipping": "Delivery, arrival time, packaging, or the item arriving damaged or missing",
+    "fit_size": "Size, fit, or dimensions compared with what was expected",
+    "customer_service": "Dealings with the seller or support: returns, refunds, replies",
+    "other": "Something else",
+}
 
 
 def fetch(raw_dir: Path) -> None:
@@ -53,8 +66,12 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
         pools[label].append((rid, review))
 
     rng = random.Random(SEED)
-    per = TARGET // 5
-    items = [(lab, *x) for lab in range(5) for x in rng.sample(sorted(pools[lab]), per)]
+    per1, per = min(TARGET, TARGET_V1) // 5, TARGET // 5
+    items = []
+    for lab in range(5):
+        got = rng.sample(sorted(pools[lab]), per1)
+        got += top_up(got, pools[lab], per - per1, lambda x: x[0], f"amazon.{lab}")  # Phase 6, prefix-stable
+        items += [(lab, *x) for x in got]
     items.sort(key=lambda x: x[1])
 
     for lab, rid, review in items:
@@ -72,5 +89,25 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
             source_item_id=f"en_test:{rid}",
             license=LICENSE,
             truth=lab,
+            meta={"stars": lab + 1, "split": "test", "lang": "en"},
+        )
+
+    # Secondary template: main topic of the review (no truth), first EXTRA sampled reviews in hash order.
+    tid = "amazon.topic"
+    for lab, rid, review in sorted(hash_order(items, lambda x: x[1], tid)[:EXTRA], key=lambda x: x[1]):
+        yield Question(
+            text=TOPIC_TEXT,
+            primitive="choice",
+            hemisphere="machine",
+            origin="dataset",
+            source=NAME,
+            options=TOPIC_OPTIONS,
+            state={"review": review},
+            shape="classify",
+            node_hint="machine.commerce.review_insights",
+            template_id=tid,
+            source_item_id=f"en_test:{rid}",
+            license=LICENSE,
+            truth=None,
             meta={"stars": lab + 1, "split": "test", "lang": "en"},
         )

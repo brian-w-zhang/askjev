@@ -1,0 +1,18 @@
+name: scruples_anecdotes
+url: https://github.com/allenai/scruples
+license: Apache-2.0 (allenai/scruples repo); post titles and text come from Reddit r/AmItheAsshole
+version: Scruples Anecdotes v1.0 (anecdotes.tar.gz, train + dev + test)
+target: 8000
+hemisphere: self
+kind: values
+notes: >
+  Real r/AmItheAsshole posts asked as "Based on `story`, who is in the wrong?" with state {"story": title +
+  text} and five options (author, other, everybody, nobody, info) mapping the subreddit's YTA / NTA / ESH /
+  NAH / INFO verdicts. Eligible posts: text at most 1,500 characters after whitespace trimming, at least 5
+  verdict votes, deduplicated by story text; seeded sample of 8,000 from all splits. The human distribution
+  is the post's label_scores (verdict counts from the thread's comments), population "r/AmItheAsshole
+  voters"; the majority label is in meta, not truth. node_hint is everyday_ethics.family_conflicts or
+  .friends_dating_social when family vs friend/dating keyword hits clearly dominate (>= 2 hits and >= 2x the
+  other side), else self.values.everyday_ethics. Same content filters as scruples: slurs, sexual violence
+  terms, and sexual content co-occurring with minor terms are dropped; sexual, self-harm, and violent keywords
+  flag "sensitive" (over-inclusive on long stories). Contested-politics keywords flag "political".

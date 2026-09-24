@@ -15,10 +15,12 @@ import httpx
 import polars as pl
 
 from askjev.model import Question
+from askjev.sampling import env_int, top_up
 
 NAME = "emotion"
 URL = "https://huggingface.co/api/datasets/dair-ai/emotion/parquet/split/train/0.parquet"
-TARGET = 400
+TARGET_V1 = 400  # the original seeded sample, kept as-is so its ids stay stable
+TARGET = env_int("TARGET_EMOTION", TARGET_V1)  # Phase 6: 2,500
 SEED = 2018
 LICENSE = "other (dataset card: educational and research use only)"
 TEXT = "Which emotion does `text` express most strongly?"
@@ -55,13 +57,16 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
         seen.add(text)
         pools[label].append((row, text))
 
+    def split(total: int) -> list[int]:
+        per, extra = divmod(total, len(LABELS))
+        return [per + (1 if lab < extra else 0) for lab in range(len(LABELS))]
+
     rng = random.Random(SEED)
-    per = TARGET // len(LABELS)
-    extra = TARGET - per * len(LABELS)
     items = []
-    for lab in range(len(LABELS)):
-        n = per + (1 if lab < extra else 0)
-        items += [(row, text, lab) for row, text in rng.sample(pools[lab], n)]
+    for lab, (n1, n) in enumerate(zip(split(min(TARGET, TARGET_V1)), split(TARGET))):
+        got = rng.sample(pools[lab], n1)
+        got += top_up(got, pools[lab], n - n1, lambda x: x[0], f"emotion.{lab}")  # Phase 6, prefix-stable
+        items += [(row, text, lab) for row, text in got]
     items.sort()
 
     for row, text, lab in items:

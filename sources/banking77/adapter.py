@@ -16,13 +16,30 @@ from typing import Iterator
 import httpx
 
 from askjev.model import Question
+from askjev.sampling import env_int, hash_order
 
 NAME = "banking77"
 URL = "https://raw.githubusercontent.com/PolyAI-LDN/task-specific-datasets/master/banking_data/test.csv"
-TARGET = 800
+TARGET = env_int("TARGET_BANKING77", 800)  # Phase 6: 3,000
+EXTRA = env_int("EXTRA_BANKING77", 0)  # per secondary template; Phase 6: 1,500
 SEED = 77
 TEXT = "What is the customer asking the bank about in `message`?"
 LICENSE = "CC-BY-4.0"
+
+# Secondary templates over the same messages (no truth: the dataset labels only the intent).
+URGENCY_TEXT = "How urgent is `message` for the customer?"
+URGENCY_LEVELS = [
+    "A general question about how something works that the customer can wait days to have answered",
+    "A request or minor problem that is inconvenient but can wait a day or two",
+    "A problem that blocks something the customer needs to do today, such as paying or withdrawing cash",
+    "Money may be leaving the account or the card or account may be in someone else's hands right now",
+]
+MONEY_LEFT_TEXT = "Does `message` report a problem with money that already left the account?"
+MONEY_LEFT = {
+    "true": "The customer describes a payment, transfer, withdrawal or charge that has already been taken "
+    "from their account and something is wrong with it",
+    "false": "The message is a question, a request, or a problem with money coming in or not yet sent",
+}
 
 # key (Jev sees it) -> short description. Keys are the dataset labels, lowercased, with the stray
 # "?" dropped from reverted_card_payment?.
@@ -169,3 +186,27 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
             truth=lab,
             meta={"split": "test", "label_raw": rows[i]["category"]},
         )
+
+    # Secondary templates: the first EXTRA picked messages in a per-template hash order.
+    for tid, prim, text, options, shape, node in (
+        ("banking77.urgency", "score", URGENCY_TEXT, URGENCY_LEVELS, "score", "machine.support.urgency_frustration"),
+        ("banking77.money_left", "noul", MONEY_LEFT_TEXT, MONEY_LEFT, "detect", "machine.support.churn_refund"),
+    ):
+        sub = sorted(hash_order(picked, lambda x: x[1], tid)[:EXTRA], key=lambda x: x[1])
+        for lab, i, msg in sub:
+            yield Question(
+                text=text,
+                primitive=prim,
+                hemisphere="machine",
+                origin="dataset",
+                source=NAME,
+                options=options,
+                state={"message": msg[:1500]},
+                shape=shape,
+                node_hint=node,
+                template_id=tid,
+                source_item_id=f"test:{i}",
+                license=LICENSE,
+                truth=None,
+                meta={"split": "test", "intent": lab},
+            )

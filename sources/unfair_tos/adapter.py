@@ -18,11 +18,14 @@ import httpx
 import polars as pl
 
 from askjev.model import Question
+from askjev.sampling import env_int, hash_order, top_up
 
 NAME = "unfair_tos"
 URL = "https://huggingface.co/api/datasets/coastalcph/lex_glue/parquet/unfair_tos/{split}/0.parquet"
 SPLITS = ("train", "validation", "test")
-TARGET = 200
+TARGET_V1 = 200  # the original seeded sample, kept as-is so its ids stay stable
+TARGET = env_int("TARGET_UNFAIR_TOS", TARGET_V1)  # Phase 6: 4,000
+EXTRA = env_int("EXTRA_UNFAIR_TOS", 0)  # secondary template size; Phase 6: 1,500
 SEED = 2019
 LICENSE = "CC-BY-4.0"
 LABELS = [
@@ -44,6 +47,19 @@ CRITERIA = {
     "content at its discretion, binds the user just by using the service, or imposes a governing law, "
     "forum or arbitration on disputes",
     "false": "The clause does none of these",
+}
+
+TYPE_TEXT = "Which kind of potentially unfair clause is `clause`, if any?"
+TYPE_OPTIONS = {
+    "limitation_of_liability": "Limits or excludes the provider's liability for losses or damages",
+    "unilateral_termination": "Lets the provider suspend or terminate the service or account at its discretion",
+    "unilateral_change": "Lets the provider change the terms or the service at its discretion",
+    "content_removal": "Lets the provider remove or edit the user's content at its discretion",
+    "contract_by_using": "Binds the user to the terms simply by using the service",
+    "choice_of_law": "Sets which country's or state's law governs the terms",
+    "jurisdiction": "Sets which courts or place disputes must be brought in",
+    "arbitration": "Sends disputes to arbitration instead of court",
+    "none": "None of these",
 }
 
 
@@ -81,9 +97,16 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
             pools[bool(labels)].append((split, row, clause, sorted(labels)))
 
     rng = random.Random(SEED)
-    n_pos = TARGET // 2
+    v1 = min(TARGET, TARGET_V1)
+    n_pos = v1 // 2
     items = [(True, *x) for x in rng.sample(pools[True], n_pos)]
-    items += [(False, *x) for x in rng.sample(pools[False], TARGET - n_pos)]
+    items += [(False, *x) for x in rng.sample(pools[False], v1 - n_pos)]
+    # Phase 6 top-up (hash order, prefix-stable): unfair clauses up to half of TARGET while they last.
+    key = lambda x: (x[1], x[2])  # noqa: E731
+    pos = [(True, *x) for x in pools[True]]
+    more = top_up(items, pos, min(TARGET - len(items), TARGET // 2 - n_pos), key, "unfair_tos.pos")
+    items += more
+    items += top_up(items, [(False, *x) for x in pools[False]], TARGET - len(items), key, "unfair_tos.neg")
     order = {s: i for i, s in enumerate(SPLITS)}
     items.sort(key=lambda x: (order[x[1]], x[2]))
 
@@ -102,5 +125,30 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
             source_item_id=f"{split}:{row}",
             license=LICENSE,
             truth=unfair,
+            meta={"split": split, "label_raw": [LABELS[i] for i in labels]},
+        )
+
+    # Secondary template: which clause type (truth only when the sentence has zero or one label).
+    tid = "unfair_tos.clause_type"
+    half = EXTRA // 2
+    sub = hash_order([x for x in items if x[0]], key, tid)[:half]
+    sub += hash_order([x for x in items if not x[0]], key, tid)[: EXTRA - len(sub)]
+    sub.sort(key=lambda x: (order[x[1]], x[2]))
+    for unfair, split, row, clause, labels in sub:
+        truth = LABELS[labels[0]] if len(labels) == 1 else ("none" if not labels else None)
+        yield Question(
+            text=TYPE_TEXT,
+            primitive="choice",
+            hemisphere="machine",
+            origin="dataset",
+            source=NAME,
+            options=TYPE_OPTIONS,
+            state={"clause": clause},
+            shape="classify",
+            node_hint="machine.legal.clause_detection",
+            template_id=tid,
+            source_item_id=f"{split}:{row}",
+            license=LICENSE,
+            truth=truth,
             meta={"split": split, "label_raw": [LABELS[i] for i in labels]},
         )

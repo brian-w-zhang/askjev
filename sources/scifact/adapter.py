@@ -22,6 +22,7 @@ import httpx
 import polars as pl
 
 from askjev.model import Question
+from askjev.sampling import env_int, top_up
 
 NAME = "scifact"
 BASE = "https://huggingface.co/datasets/allenai/scifact/resolve/refs%2Fconvert%2Fparquet"
@@ -30,7 +31,8 @@ FILES = {
     "claims_validation.parquet": f"{BASE}/claims/validation/0000.parquet",
     "corpus.parquet": f"{BASE}/corpus/train/0000.parquet",
 }
-TARGET = 200
+TARGET_V1 = 200  # the original balanced seeded sample, kept as-is so its ids stay stable
+TARGET = env_int("TARGET_SCIFACT", TARGET_V1)  # Phase 6: every pair that fits (set it high, e.g. 100000)
 SEED = 2020
 MAX_CHARS = 1500
 LICENSE = "CC-BY-NC-2.0"
@@ -80,13 +82,17 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
 
     rng = random.Random(SEED)
     labels = sorted(pools)
-    per = {lab: TARGET // len(labels) for lab in labels}
-    for lab in labels[: TARGET - sum(per.values())]:
+    v1 = min(TARGET, TARGET_V1)
+    per = {lab: v1 // len(labels) for lab in labels}
+    for lab in labels[: v1 - sum(per.values())]:
         per[lab] += 1
     items = []
     for lab in labels:
         pool = sorted(pools[lab])
         items += [(lab, *x) for x in rng.sample(pool, min(per[lab], len(pool)))]
+    # Phase 6 top-up across all labels (hash order, prefix-stable; unbalanced once a label runs out).
+    everything = [(lab, *x) for lab in labels for x in sorted(pools[lab])]
+    items += top_up(items, everything, TARGET - len(items), lambda x: (x[1], x[2], x[3]), "scifact")
     items.sort(key=lambda x: (x[1], x[2], x[3]))
 
     for lab, split, cid, doc_id, claim, evidence in items:

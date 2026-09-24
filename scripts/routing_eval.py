@@ -9,12 +9,20 @@ import orjson
 
 from askjev.config import AUTHORED, ROOT
 from askjev.jev import sha
-from askjev.place import place_many
+from askjev.embed import embed, question_text, to_pg
+from askjev.place import place_fast_many, place_many
 
 path = AUTHORED / "routing_eval.jsonl"
 rows = [orjson.loads(l) for l in path.read_bytes().splitlines() if l.strip()]
 qs = [{"id": sha(r)[:16], "text": r["text"], "options": r.get("options"), "state": r.get("state"), "_r": r} for r in rows]
-res = asyncio.run(place_many(qs))
+MODE = sys.argv[2] if len(sys.argv) > 2 else "beam"
+if MODE == "fast":
+    vecs = embed([question_text(q["text"], q["options"], q["state"]) for q in qs])
+    for q, v in zip(qs, vecs):
+        q["embedding"] = to_pg(v)
+    res = asyncio.run(place_fast_many(qs))
+else:
+    res = asyncio.run(place_many(qs))
 
 
 def rel(intended, placed):
@@ -46,7 +54,7 @@ for q in qs:
     if r.get("separation", 100) < 1.5:
         low_sep += 1
 n = len(qs)
-lines = [f"# Routing evaluation (held-out, {n} questions)", "",
+lines = [f"# Routing evaluation (held-out, {n} questions, mode={MODE})", "",
          "Each question was written for a known node (authored/routing_eval.jsonl, not shown to Jev) and placed from the root",
          "by Jev beam search (K=3). *lineage* = placed at an ancestor or descendant of the intended node.", ""]
 def fmt(c, tot):
@@ -61,6 +69,6 @@ lines.append("\n## Most confused (intended → placed)")
 for (a, b), k in confused.most_common(25):
     lines.append(f"- {a} → {b} ({k})")
 out = "\n".join(lines)
-tag = sys.argv[1] if len(sys.argv) > 1 else ""
+tag = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] != '-' else ""
 (ROOT / "docs" / f"routing-eval{tag}.md").write_text(out + "\n")
 print(out)

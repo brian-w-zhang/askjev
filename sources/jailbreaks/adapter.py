@@ -17,11 +17,12 @@ import httpx
 import polars as pl
 
 from askjev.model import Question
+from askjev.sampling import env_int
 
 NAME = "jailbreaks"
 HF = "https://huggingface.co/api/datasets/TrustAIRLab/in-the-wild-jailbreak-prompts/parquet/{cfg}/train/0.parquet"
 CONFIGS = {"jailbreak_2023_12_25": True, "regular_2023_12_25": False}
-TARGET = 600
+TARGET = env_int("TARGET_JAILBREAKS", 600)  # Phase 6: 1,200 (all short jailbreaks, regular fills the rest)
 MAX_CHARS = 1500
 SEED = 1225
 LICENSE = "MIT"
@@ -67,7 +68,10 @@ def _norm_key(text: str) -> str:
 def normalize(raw_dir: Path) -> Iterator[Question]:
     rng = random.Random(SEED)
     seen: set[str] = set()
-    per_class = TARGET // 2
+    # Half jailbreaks (or all of them if fewer), regular prompts fill the rest. Each class takes a prefix of
+    # its seeded shuffle, so a larger TARGET contains a smaller one.
+    quota = {True: TARGET // 2}
+    taken = 0
     dropped = {"minor_sexual": 0, "slur": 0}
     for cfg, is_jb in CONFIGS.items():
         df = pl.read_parquet(raw_dir / f"{cfg}.parquet").with_row_index("row")
@@ -84,6 +88,7 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
             seen.add(key)
             pool.append((row, text, platform, src, date))
         rng.shuffle(pool)
+        per_class = quota.get(is_jb, TARGET - taken)
         n = 0
         for row, text, platform, src, date in pool:
             if n >= per_class:
@@ -96,6 +101,7 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
                 dropped["slur"] += 1
                 continue
             n += 1
+            taken += 1
             yield Question(
                 text=TEXT,
                 primitive="noul",
@@ -119,4 +125,4 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
                     **({"flags": ["sensitive"]} if sexual else {}),
                 },
             )
-    print(f"jailbreaks: dropped {dropped}")
+    print(f"jailbreaks: dropped {dropped}, kept {taken}")

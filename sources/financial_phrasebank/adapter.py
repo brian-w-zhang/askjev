@@ -16,11 +16,13 @@ from typing import Iterator
 import httpx
 
 from askjev.model import Question
+from askjev.sampling import env_int, top_up
 
 NAME = "financial_phrasebank"
 URL = "https://huggingface.co/datasets/takala/financial_phrasebank/resolve/main/data/FinancialPhraseBank-v1.0.zip"
 MEMBER = "FinancialPhraseBank-v1.0/Sentences_AllAgree.txt"
-TARGET = 200
+TARGET_V1 = 200  # the original balanced seeded sample, kept as-is so its ids stay stable
+TARGET = env_int("TARGET_FINANCIAL_PHRASEBANK", TARGET_V1)  # Phase 6: 2,200 (nearly all AllAgree sentences)
 SEED = 2014
 LICENSE = "CC-BY-NC-SA-3.0"
 TEXT = "What is the sentiment of `sentence` for the company's investors?"
@@ -65,10 +67,14 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
 
     rng = random.Random(SEED)
     labels = sorted(pools)
-    per = {lab: TARGET // len(labels) for lab in labels}
-    for lab in labels[: TARGET - sum(per.values())]:
+    v1 = min(TARGET, TARGET_V1)
+    per = {lab: v1 // len(labels) for lab in labels}
+    for lab in labels[: v1 - sum(per.values())]:
         per[lab] += 1
     items = [(lab, *x) for lab in labels for x in rng.sample(pools[lab], per[lab])]
+    # Phase 6 top-up across labels (hash order, prefix-stable; follows the natural label mix).
+    everything = [(lab, *x) for lab in labels for x in pools[lab]]
+    items += top_up(items, everything, TARGET - len(items), lambda x: x[1], "fpb")
     items.sort(key=lambda x: x[1])
 
     for lab, i, sentence in items:

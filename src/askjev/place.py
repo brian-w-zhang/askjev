@@ -174,16 +174,19 @@ def resolve_start(hint: str | None, nodes: dict) -> str:
     return "root"
 
 
-def place_pending(limit: int | None = None) -> str:
+def place_pending(limit: int | None = None, fast: bool | None = None) -> str:
     with db.connect() as conn:
         rows = conn.execute(
-            "select id, text, options, state, meta from questions where node_id is null order by id" + (f" limit {int(limit)}" if limit else "")
+            "select id, text, options, state, meta, embedding::text as embedding from questions where node_id is null order by id"
+            + (f" limit {int(limit)}" if limit else "")
         ).fetchall()
         nodes = {r["id"] for r in conn.execute("select id from nodes where status='active'")}
     if not rows:
         return "nothing to place"
     starts = {r["id"]: resolve_start((r["meta"] or {}).get("node_hint"), {n: 1 for n in nodes}) for r in rows}
-    res = asyncio.run(place_many(rows, starts))
+    # beam is more accurate (90.1% vs 84.9% exact on the held-out set); fast only for very large batches
+    use_fast = fast if fast is not None else len(rows) > 20000
+    res = asyncio.run(place_fast_many(rows, starts) if use_fast else place_many(rows, starts))
     n_ok = 0
     with db.connect() as conn:
         for qid, r in res.items():
@@ -196,10 +199,78 @@ def place_pending(limit: int | None = None) -> str:
             )
             conn.execute(
                 """insert into placements (question_id, node_id, node_version, method, confidence, separation, path_probs, runner_up)
-                   values (%s,%s,(select version from nodes where id=%s),'jev',%s,%s,%s,
+                   values (%s,%s,(select version from nodes where id=%s),%s,%s,%s,%s,
                            (select path from nodes where id=%s))""",
-                (qid, node, node, r["confidence"], r["separation"], db.Jsonb(r["path_probs"]), r.get("runner_up")),
+                (qid, node, node, r.get("method", "jev"), r["confidence"], r["separation"], db.Jsonb(r["path_probs"]), r.get("runner_up")),
             )
             n_ok += 1
         conn.commit()
     return f"placed {n_ok}/{len(rows)}"
+
+
+# --- fast bulk placement (node-embedding candidates + one Jev Choice) -------------------------------------
+
+FAST_K = 8
+FAST_ACCEPT = 0.5
+
+
+def _node_candidates(conn, vec: str, within: str | None, k: int = FAST_K) -> list[str]:
+    if within and within != "root":
+        rows = conn.execute(
+            "select id from nodes where status='active' and depth >= 2 and path <@ (select path from nodes where id=%s) "
+            "order by embedding <=> %s::vector limit %s", (within, vec, k)).fetchall()
+    else:
+        rows = conn.execute(
+            "select id from nodes where status='active' and depth >= 2 order by embedding <=> %s::vector limit %s",
+            (vec, k)).fetchall()
+    return [r["id"] for r in rows]
+
+
+async def place_fast_many(qs: list[dict], starts: dict[str, str] | None = None, concurrency: int = 64) -> dict[str, dict]:
+    """qs need 'embedding' (pgvector text). One Choice over the K nearest nodes (+ none); beam fallback when unsure."""
+    idx = TreeIndex()
+    client = JevClient()
+    sem = asyncio.Semaphore(concurrency)
+    out: dict[str, dict] = {}
+    starts = dict(starts or {})
+
+    async def hemisphere(q):
+        # step 1: Jev picks the hemisphere (cheap, and where embeddings alone confuse Self/Machine)
+        req = Request(question_state(q), {"h": idx.question("root")})
+        res = (await client.run([req]))[req.hash]
+        a = answers(res).get("h") if "error" not in res else None
+        return max(a.dist, key=a.dist.get) if a else "root"
+
+    async def one(q):
+        async with sem:
+            if starts.get(q["id"], "root") == "root":
+                starts[q["id"]] = await hemisphere(q)
+            with db.connect() as conn:
+                cn = [c for c in _node_candidates(conn, q["embedding"], starts[q["id"]]) if c in idx.nodes]
+            if cn:
+                crit = {f"n{i}": {"topic_path": " > ".join(idx.nodes[".".join(nid.split(".")[: j + 1])]["label"]
+                                                            for j in range(len(nid.split(".")))),
+                                  **(idx.nodes[nid]["choice_card"] or {})} for i, nid in enumerate(cn)}
+                crit["none"] = {"what": "None of these topic areas fits the question well."}
+                gq = gateway_question("choice", {"question": "Which topic area does the question in `question` belong to?"}, crit)
+                req = Request(question_state(q), {"fast": gq})
+                res = (await client.run([req]))[req.hash]
+                a = answers(res).get("fast") if "error" not in res else None
+                if a:
+                    key = max(a.dist, key=a.dist.get)
+                    if key != "none" and a.dist[key] >= FAST_ACCEPT:
+                        ranked = sorted(a.dist.values(), reverse=True)
+                        node = cn[int(key[1:])]
+                        out[q["id"]] = {"node": node, "confidence": a.dist[key],
+                                        "separation": round(min(ranked[0] / max(ranked[1], 1e-6), 100.0), 3) if len(ranked) > 1 else 100.0,
+                                        "path_probs": [[node, "fast", a.dist[key]]], "method": "jev_fast"}
+                        return
+            r = await place_one(client, idx, q, starts.get(q["id"], "root"))
+            r["method"] = "jev"
+            out[q["id"]] = r
+
+    try:
+        await asyncio.gather(*(one(q) for q in qs))
+    finally:
+        await client.close()
+    return out
