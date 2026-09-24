@@ -55,6 +55,18 @@ def truth_key(primitive: str, truth) -> str | None:
 
 
 def measure_all(ids: list[str] | None = None) -> str:
+    if ids is None:
+        # chunk over all questions to bound memory at large scale
+        with db.connect() as conn:
+            all_ids = [r["id"] for r in conn.execute("select id from questions order by id")]
+        total = 0
+        for i in range(0, len(all_ids), 20000):
+            total += int(_measure(all_ids[i:i + 20000]).split()[1])
+        return f"measured {total} questions"
+    return _measure(ids)
+
+
+def _measure(ids: list[str] | None = None) -> str:
     f = " and question_id = any(%s)" if ids else ""
     arg = (ids,) if ids else ()
     with db.connect() as conn:

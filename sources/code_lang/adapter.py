@@ -24,11 +24,13 @@ import httpx
 import polars as pl
 
 from askjev.model import Question
+from askjev.sampling import env_int, top_up
 
 NAME = "code_lang"
 URL = "https://huggingface.co/api/datasets/christopher/rosetta-code/parquet/default/train/0.parquet"
-TARGET = 200
-PER_NAMED = 25
+TARGET = env_int("TARGET_CODE_LANG", 200)  # Phase 6: 1,500
+PER_NAMED_V1 = 25  # the original seeded sample per named language, kept so its ids stay stable
+PER_NAMED = max(PER_NAMED_V1, TARGET * 3 // 4 // 6)  # named languages keep ~3/4 of the items
 SEED = 1337
 LICENSE = "GFDL-1.2"
 TEXT = "What programming language is `code` written in?"
@@ -110,10 +112,12 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
     items: list[tuple[str, str, int, str, str]] = []
     for lang in NAMED:
         pool = pools[lang]
-        items += [(lang, lang, *x) for x in rng.sample(pool, min(PER_NAMED, len(pool)))]
+        got = rng.sample(pool, min(PER_NAMED_V1, len(pool)))
+        got += top_up(got, pool, PER_NAMED - len(got), lambda x: x[0], f"code.{lang}")  # Phase 6, prefix-stable
+        items += [(lang, lang, *x) for x in got]
     others = {lang: rng.sample(pools[lang], len(pools[lang])) for lang in OTHER}
     cursor = 0
-    while len(items) < TARGET:
+    while len(items) < TARGET and cursor < len(OTHER) * max(len(v) for v in others.values()):
         lang = OTHER[cursor % len(OTHER)]
         k = cursor // len(OTHER)
         if k < len(others[lang]):

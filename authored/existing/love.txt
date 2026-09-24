@@ -1,0 +1,425 @@
+self.love.dating_attraction | When you have a crush on someone, what do you usually do?
+self.love.dating_attraction | Which of these would most people name first when asked: "Name something people might lie about on their online dating profile."
+self.love.dating_attraction | Would you rather date someone who shares your interests or someone with different ones?
+self.love.dating_attraction | Who do you think should pay on a first date?
+self.love.dating_attraction | Which is the worst choice for a first date?
+self.love.dating_attraction | Should you mention on a first date that you want children someday?
+self.love.dating_attraction | Is it a warning sign if someone you're dating has no social media at all?
+self.love.dating_attraction | How much does physical fitness matter to you in a potential partner?
+self.love.dating_attraction | Do you think opposites attract?
+self.love.dating_attraction | Would you date someone who smokes?
+self.love.dating_attraction | Which of these would most people name first when asked: "Name a place you would not describe as romantic."
+self.love.dating_attraction | Can being 'too nice' make someone less attractive?
+self.love.dating_attraction | What do you tend to notice first about someone you find attractive?
+self.love.dating_attraction | Would you date an adult who still lives with their parents?
+self.love.dating_attraction | Where would you most like to meet a future partner?
+self.love.dating_attraction | Do you think dating apps have made dating worse?
+self.love.dating_attraction | Have you ever had a crush on someone you never actually spoke to?
+self.love.dating_attraction | Which of these would most people name first when asked: "Name something a beautiful woman might flirt with someone in order to get."
+self.love.dating_attraction | Which of these would most people name first when asked: "Name something a man might try to keep covered during a first date."
+self.love.dating_attraction | Which do you find more attractive in someone you just met?
+self.love.dating_attraction | Which first date would you most enjoy?
+self.love.dating_attraction | Who do you tell first when you have a new crush?
+self.love.dating_attraction | If you had to pick, would you rather date someone who is much smarter than you, much funnier, much better looking, or much kinder?
+self.love.dating_attraction | How much do you care about a potential partner's ambition?
+self.love.dating_attraction | After a first date that went well, when should you send a message?
+self.love.dating_attraction | Would you tell a crush how you feel even if you expected to be turned down?
+self.love.dating_attraction | Is it okay to ask someone out by text rather than in person?
+self.love.dating_attraction | How far would you be willing to travel for a first date?
+self.love.dating_attraction | How should someone show you they're interested?
+self.love.dating_attraction | What is the kindest way to turn someone down after two or three dates?
+self.love.dating_attraction | Is it okay to date more than one person before agreeing to be exclusive?
+self.love.dating_attraction | Which kind of dating setup suits you best?
+self.love.dating_attraction | Which trait matters most to you when deciding whether to date someone?
+self.love.dating_attraction | Which hobby would make a potential partner most attractive to you?
+self.love.dating_attraction | Which quality do you find least attractive in someone you're dating?
+self.love.dating_attraction | If your date looks quite different from their photos, what should you do?
+self.love.dating_attraction | What do you notice most in a new match's text messages?
+self.love.dating_attraction | Which skill would be most attractive in a date?
+self.love.dating_attraction | Which stage of dating do you enjoy most?
+self.love.dating_attraction | How much do you rely on dating apps to meet people?
+self.love.dating_attraction | How much does it matter to you if a potential partner is much older or younger than you?
+self.love.dating_attraction | How important is a sense of humor in someone you date?
+self.love.dating_attraction | How much do you enjoy the messaging phase before meeting someone in person?
+self.love.dating_attraction | How much does a potential partner's style of dress matter to you?
+self.love.dating_attraction | Which dating profile flaw puts you off the most?
+self.love.dating_attraction | How open are you to dating someone who already has children?
+self.love.dating_attraction | How selective are you when swiping on dating apps?
+self.love.dating_attraction | How much does a potential date's job affect your interest in them?
+self.love.dating_attraction | Do you think you have a clear 'type' that you're always drawn to?
+self.love.dating_attraction | Would you be happy for a first date to split the bill?
+self.love.dating_attraction | If your date is rude to a waiter, how much does it change your view of them?
+self.love.dating_attraction | How open are you to a blind date?
+self.love.dating_attraction | How much do you research someone online before a first date?
+self.love.dating_attraction | Who should make the first move when two people are interested in each other?
+self.love.dating_attraction | What do you think most single people want most from dating right now?
+self.love.dating_attraction | Would you go on a second date with someone you felt no spark with on the first?
+self.love.dating_attraction | Which is the strongest sign of chemistry with a new person?
+self.love.dating_attraction | How much does a potential partner's height matter to you?
+self.love.dating_attraction | How comfortable would you be approaching a stranger you find attractive?
+self.love.dating_attraction | How forward are you when flirting?
+self.love.dating_attraction | Would you date someone whose home was very messy?
+self.love.dating_attraction | Which of these would most likely stop you from going on a second date?
+self.love.dating_attraction | How much do spelling mistakes in a match's messages turn you off?
+self.love.dating_attraction | How would you most like to be asked out?
+self.love.dating_attraction | What kind of voice do you find most attractive?
+self.love.dating_attraction | Which dating app photo makes the best impression on you?
+self.love.dating_attraction | Which of these would most people name first when asked: "What might a man tell his girlfriend that he's waiting for before proposing marriage?"
+self.love.dating_attraction | Which way of meeting a partner would you trust most?
+self.love.dating_attraction | Would you go on a date with someone you met through the comments of a social media post?
+self.love.dating_attraction | Do you find it attractive when a date plans the whole evening without asking you?
+self.love.dating_attraction | What matters most to you on a first date?
+self.love.dating_attraction | How quickly do you usually know whether you're attracted to someone?
+self.love.dating_attraction | Would you date someone who doesn't drink alcohol at all?
+self.love.dating_attraction | How long do you wait before replying to a match you like?
+self.love.dating_attraction | What is the best topic to talk about on a first date?
+self.love.dating_attraction | Would you rather date someone you're intensely drawn to but share little with, or someone very compatible whom you find only mildly attractive?
+self.love.dating_attraction | What is the best opening message on a dating app?
+self.love.dating_attraction | Which of these would most people name first when asked: "Name a good excuse to get your date to come inside at the end of the night."
+self.love.dating_attraction | Which is the bigger warning sign in someone you're starting to date?
+self.love.dating_attraction | How much of your dating life do you share with your friends?
+self.love.etiquette_social_norms | How often do you write thank-you notes?
+self.love.etiquette_social_norms | How strict should punctuality be for a casual lunch with a friend?
+self.love.etiquette_social_norms | How should you respond to a group message invitation you can't attend?
+self.love.etiquette_social_norms | What should you do when you disagree with someone's opinion at a dinner party?
+self.love.etiquette_social_norms | Which is more polite when a host offers a food you dislike?
+self.love.etiquette_social_norms | What should you do if you forget someone's name mid-conversation?
+self.love.etiquette_social_norms | What is the proper way to decline an invitation?
+self.love.etiquette_social_norms | Who should pay when you invite someone out for their birthday?
+self.love.etiquette_social_norms | What is the most annoying thing a movie theater neighbor can do?
+self.love.etiquette_social_norms | How should the bill be handled when friends eat out together?
+self.love.etiquette_social_norms | Which texting habit is the rudest?
+self.love.etiquette_social_norms | Should you take your shoes off when entering someone's home?
+self.love.etiquette_social_norms | What should you do if a restaurant brings the wrong dish?
+self.love.etiquette_social_norms | What is the right amount of time to stay as a houseguest?
+self.love.etiquette_social_norms | When is it okay to leave a voicemail instead of texting?
+self.love.etiquette_social_norms | What should you do if you receive a gift you dislike?
+self.love.etiquette_social_norms | Who should hold the door for whom?
+self.love.etiquette_social_norms | How late can you arrive at a party and still be polite?
+self.love.etiquette_social_norms | When is it okay to use your phone at the dinner table?
+self.love.etiquette_social_norms | What should you do when someone's phone keeps ringing in a quiet place?
+self.love.etiquette_social_norms | What is the right way to thank someone for a gift?
+self.love.etiquette_social_norms | What should a guest bring to a dinner party?
+self.love.etiquette_social_norms | How do you prefer to greet someone you've just met?
+self.love.etiquette_social_norms | When should you reply to a text from a friend?
+self.love.etiquette_social_norms | What should you do if you're running late to meet someone?
+self.love.etiquette_social_norms | Is it rude to answer a question with 'k'?
+self.love.etiquette_social_norms | Is it okay to leave a wedding before the cake is cut?
+self.love.etiquette_social_norms | Is it rude to send a voice note instead of typing?
+self.love.etiquette_social_norms | Is it okay to ask guests to take their shoes off?
+self.love.etiquette_social_norms | Is it rude to talk during a movie at a friend's house?
+self.love.etiquette_social_norms | Is it okay to use a group chat to wish someone happy birthday instead of messaging them directly?
+self.love.etiquette_social_norms | Should you RSVP even when you're not attending?
+self.love.etiquette_social_norms | Is it acceptable to send a thank-you by text instead of a note?
+self.love.etiquette_social_norms | Is it rude to take the last cookie on a shared plate?
+self.love.etiquette_social_norms | Is it okay to wear white to someone else's wedding?
+self.love.etiquette_social_norms | Is it rude to ask how much someone paid for something?
+self.love.etiquette_social_norms | Should you ask before bringing a dish to a dinner party?
+self.love.etiquette_social_norms | Is it rude to wear sunglasses while talking to someone indoors?
+self.love.etiquette_social_norms | Is it okay to text someone to cancel plans instead of calling?
+self.love.etiquette_social_norms | Is it rude to leave a party without saying goodbye to the host?
+self.love.etiquette_social_norms | Should you tip at a counter-service coffee shop?
+self.love.etiquette_social_norms | Is it rude to show up to a party empty-handed?
+self.love.etiquette_social_norms | Should you stand up when someone older enters the room?
+self.love.etiquette_social_norms | Is it rude to eat before everyone at the table has been served?
+self.love.etiquette_social_norms | How should you greet a coworker in a hallway for the third time that day?
+self.love.etiquette_social_norms | How much should you tip a hairdresser you visit regularly?
+self.love.etiquette_social_norms | How rude is it to wear headphones while someone talks to you?
+self.love.etiquette_social_norms | How much should guests follow house rules they find strange?
+self.love.etiquette_social_norms | How much notice should you give before cancelling plans with a friend?
+self.love.etiquette_social_norms | How long is it acceptable to leave a friend's message unanswered?
+self.love.etiquette_social_norms | How acceptable is it to bring an uninvited friend to a party?
+self.love.etiquette_social_norms | How much should you tip a delivery driver in bad weather?
+self.love.etiquette_social_norms | How strict should hosts be about guests removing shoes?
+self.love.etiquette_social_norms | How much small talk is polite with a hairdresser or taxi driver?
+self.love.etiquette_social_norms | How early should you respond to a party invitation?
+self.love.etiquette_social_norms | How much should you spend on a wedding gift for a friend?
+self.love.etiquette_social_norms | How much should you dress up for a friend's casual birthday dinner?
+self.love.etiquette_social_norms | How rude is it to check your phone during a one-on-one conversation?
+self.love.etiquette_social_norms | How much should a guest help clean up after a dinner party?
+self.love.family_parenting | Is it fine for adult children to move back home?
+self.love.family_parenting | Which parenting style do you think works best?
+self.love.family_parenting | Which of these would most people name first when asked: "Name something a child can do to earn money."
+self.love.family_parenting | Which of these would most people name first when asked: "Name something some parents have that makes other parents jealous."
+self.love.family_parenting | Which of these would most people name first when asked: "Name something in your house that children are not allowed to touch."
+self.love.family_parenting | Which of these would most people name first when asked: "Name a high school subject that kids consider difficult be specific."
+self.love.family_parenting | Which of these would most people name first when asked: "Name a reason why a teen might swear off love."
+self.love.family_parenting | Which of these would most people name first when asked: "Name a gift that a new mom is bound to get duplicates of at a baby shower."
+self.love.family_parenting | Which of these would most people name first when asked: "Name something babies throw out of the crib."
+self.love.family_parenting | Which of these would most people name first when asked: "Tell me something in a teenager's room that they wouldn't want touched."
+self.love.family_parenting | Which of these would most people name first when asked: "As well as a baby, name something you need to bath a baby."
+self.love.family_parenting | Which of these would most people name first when asked: "Name something babies love to throw."
+self.love.family_parenting | Which of these would most people name first when asked: "Name a game teenagers play at parties."
+self.love.family_parenting | Which of these would most people name first when asked: "Name a reason parents might want their kid to go to a particular college."
+self.love.family_parenting | Which of these would most people name first when asked: "Name a place where a child might get separated from her parents."
+self.love.family_parenting | Which of these would most people name first when asked: "Name something that parents point out to their toddlers while on a walk."
+self.love.family_parenting | Which of these would most people name first when asked: "What does a child do more of once they become a teenager."
+self.love.family_parenting | Which of these would most people name first when asked: "Name something parents should do to be sure that their kids have a safe halloween."
+self.love.family_parenting | Which of these would most people name first when asked: "Name something little kids are often afraid of."
+self.love.family_parenting | Which of these would most people name first when asked: "What might parents be caught doing that causes their kid to bust them for doing santa's job?"
+self.love.family_parenting | Which of these would most people name first when asked: "Name something you'd see in someone's shopping cart that would tell you that they're a parent."
+self.love.family_parenting | Which of these would most people name first when asked: "Name a public place where wimpy parents let their children act up."
+self.love.family_parenting | Which of these would most people name first when asked: "Name something from her childhood that a woman might keep forever."
+self.love.family_parenting | Which of these would most people name first when asked: "Name a place where kids always complain about having to go."
+self.love.family_parenting | Which of these would most people name first when asked: "What might a new parent wish their baby would learn to do quickly to make life easier?"
+self.love.family_parenting | Who should decide a baby's name?
+self.love.family_parenting | How should parents handle a teenager's social media?
+self.love.family_parenting | What should adult children do when they disagree with their parents' life choices?
+self.love.family_parenting | What, if anything, should kids get in return for helping around the house?
+self.love.family_parenting | What is the best way to discipline a young child who misbehaves?
+self.love.family_parenting | When should a child get their first smartphone?
+self.love.family_parenting | Who should care for aging parents who can no longer live alone?
+self.love.family_parenting | How many children would you ideally want?
+self.love.family_parenting | What is the best age gap between siblings?
+self.love.family_parenting | What should parents do when a child wants to quit an activity they started?
+self.love.family_parenting | How should parents talk to young children about money?
+self.love.family_parenting | What should happen when grandparents undermine the parents' rules?
+self.love.family_parenting | What is the most important thing a parent can give a child?
+self.love.family_parenting | What should adult siblings do when they stop getting along?
+self.love.family_parenting | Who should host big family holiday gatherings?
+self.love.family_parenting | At what stage should adult children move out?
+self.love.family_parenting | How should parents respond when a teen breaks curfew?
+self.love.family_parenting | Should parents pay for their children's college?
+self.love.family_parenting | Which family tradition matters most to you?
+self.love.family_parenting | How involved should in-laws be in a couple's life?
+self.love.family_parenting | Is it better for one parent to stay home with young children?
+self.love.family_parenting | How should parents split attention among siblings?
+self.love.family_parenting | What should parents do about a child who is being bullied?
+self.love.family_parenting | When should children learn the truth about fictional holiday figures like the tooth fairy?
+self.love.family_parenting | What is the right way to handle a family member who always causes drama at gatherings?
+self.love.family_parenting | How close would you want to live to your parents as an adult?
+self.love.family_parenting | How should parents treat a child's sibling rivalry?
+self.love.family_parenting | Should grandparents be regular babysitters?
+self.love.family_parenting | What should parents do if a child wants a career they think is a bad idea?
+self.love.family_parenting | How strict should parents be about screen time for young children?
+self.love.family_parenting | How much freedom should a teenager have to go out on their own?
+self.love.family_parenting | How much should parents praise their children?
+self.love.family_parenting | How close are you with your siblings?
+self.love.family_parenting | How much should parents push children to excel in school?
+self.love.family_parenting | How much should grandparents be part of raising grandchildren?
+self.love.family_parenting | How much should children be told about family money problems?
+self.love.family_parenting | How much should adult children follow their parents' wishes about career or marriage?
+self.love.family_parenting | How big a family gathering do you enjoy most?
+self.love.family_parenting | How much privacy should a teenager have in their bedroom?
+self.love.family_parenting | How much should a parent share about their own mistakes with their children?
+self.love.family_parenting | How often do you talk to your parents?
+self.love.family_parenting | How much should parents plan their children's free time?
+self.love.family_parenting | How much should chores be expected of children?
+self.love.family_parenting | How much should in-laws be welcome to visit without warning?
+self.love.family_parenting | How much should parents let children make their own mistakes?
+self.love.family_parenting | How much should birth order shape family responsibilities?
+self.love.family_parenting | How much do family holidays feel like an obligation rather than a joy for you?
+self.love.family_parenting | How much should parents share their children's lives on social media?
+self.love.family_parenting | Is it okay for parents to have a favorite child?
+self.love.family_parenting | How much should parents stay involved once their children are adults?
+self.love.family_parenting | What is the best way to settle a dispute between adult siblings over a parent's care?
+self.love.family_parenting | Which family activity do you think bonds a family most?
+self.love.family_parenting | Should siblings share a bedroom when they're young?
+self.love.family_parenting | Should children be paid an allowance?
+self.love.family_parenting | Would you move an aging parent into your own home?
+self.love.family_parenting | Should parents apologize to their children when they're wrong?
+self.love.family_parenting | Should children be allowed to choose their own clothes from a young age?
+self.love.family_parenting | Would you want to live in the same household as your in-laws?
+self.love.family_parenting | Is growing up without siblings a disadvantage?
+self.love.family_parenting | Should parents be friends with their children?
+self.love.family_parenting | Do you want to have children someday?
+self.love.family_parenting | Should grandparents give gifts without checking with the parents?
+self.love.family_parenting | Is it okay to cut contact with a family member who is unkind?
+self.love.family_parenting | Should parents let kids win at games?
+self.love.family_parenting | Should parents tell their children if they were adopted?
+self.love.family_parenting | Which of these would most people name first when asked: "Name something kids might try to get away with at a sleepover."
+self.love.family_parenting | Is it okay for parents to check their child's location through their phone?
+self.love.friendship | Should best friends tell each other everything?
+self.love.friendship | Do you usually wait for friends to reach out first?
+self.love.friendship | Is it okay to have a favorite friend in a group?
+self.love.friendship | Can you be real friends with someone you only know online?
+self.love.friendship | Would you forgive a friend who forgot your birthday?
+self.love.friendship | Is it okay to drop a friend just because you've grown apart?
+self.love.friendship | Do you still have a best friend from childhood?
+self.love.friendship | Who do you most want as a friend?
+self.love.friendship | What should you do when a friend's partner treats them badly?
+self.love.friendship | Can you stay close friends with someone after they've hurt you badly?
+self.love.friendship | Is it okay to have a best friend, or should all close friends be equal?
+self.love.friendship | What is the most unforgivable thing a friend could do?
+self.love.friendship | If your best friend gets into a relationship and disappears, what should you do?
+self.love.friendship | How should you tell a friend you can't make their important event?
+self.love.friendship | What is the best way to end a friendship that has become harmful?
+self.love.friendship | When a friend is upset, what do you usually do first?
+self.love.friendship | If a friend repays only part of a loan and seems to have forgotten the rest, what should you do?
+self.love.friendship | What is your rule for lending money to friends?
+self.love.friendship | How much should you help a friend who is struggling but won't help themselves?
+self.love.friendship | How long have you kept your oldest friendship?
+self.love.friendship | How much should a friendship be equal in effort?
+self.love.friendship | How do you feel when friends make plans without you?
+self.love.friendship | How much should friends be involved in each other's romantic decisions?
+self.love.friendship | How much can a friend ask of you before it's too much?
+self.love.friendship | How much should old friendships be kept up even if you now have little in common?
+self.love.friendship | How much do you enjoy meeting your friends' other friends?
+self.love.friendship | Which friend would you most want on a long road trip?
+self.love.friendship | How much should you change your plans to support a friend going through a breakup?
+self.love.friendship | How do you usually react when a close friend makes a new best friend?
+self.love.friendship | What should you do when a friend keeps bringing up an old argument?
+self.love.friendship | What should you do if you discover a friend lied to you about something small?
+self.love.friendship | If two close friends have a falling out, what should you do?
+self.love.friendship | Which is your favorite way to spend time with a close friend?
+self.love.friendship | How do you react when a friend doesn't reply to your messages for weeks?
+self.love.friendship | How much do you share about your personal problems with friends?
+self.love.friendship | What makes someone a true friend?
+self.love.friendship | How should you respond if a friend asks your honest opinion on a bad decision they've already made?
+self.love.friendship | How honest should you be with a friend about their new partner whom you dislike?
+self.love.friendship | Which of these would most people name first when asked: "Name something a good neighborhood kid might do for his elderly neighbor."
+self.love.friendship | How much effort do you put into staying in touch with friends?
+self.love.friendship | Which kind of friend group do you prefer?
+self.love.friendship | Do you prefer a small inner circle of friends or a wide social network?
+self.love.friendship | What makes a long-lasting friendship?
+self.love.friendship | When do you feel closest to a friend?
+self.love.friendship | Should you go into business with a close friend?
+self.love.friendship | Which of these would most people name first when asked: "Name something a friend has that they brag is better than yours."
+self.love.friendship | How often would you like to see your closest friend?
+self.love.friendship | Which of these would most people name first when asked: "Name something about which friends say, "keep looking. you can do better."."
+self.love.friendship | Can you stay friends with someone whose life choices you strongly disagree with?
+self.love.friendship | What should you do if a friend keeps canceling plans at the last minute?
+self.love.friendship | Can men and women be close friends without romance getting involved?
+self.love.friendship | Should friends be honest about each other's cooking or creative work?
+self.love.friendship | How many close friends do you have that you could call at midnight?
+self.love.friendship | Should you invite a friend's new partner to group events right away?
+self.love.friendship | Is it okay to vent to one friend about another friend?
+self.love.friendship | Would you tell a friend if they had bad breath?
+self.love.friendship | How do you most often make new friends as an adult?
+self.love.friendship | What is your preferred way to keep in touch with friends who live far away?
+self.love.friendship | What should you do when a friendship slowly drifts apart?
+self.love.friendship | Have you ever ended a friendship on purpose?
+self.love.friendship | Is it possible to be too dependent on one friend?
+self.love.friendship | Is a friend who only calls when they need something still a friend?
+self.love.friendship | Is it okay to cancel on a friend because you'd rather stay home?
+self.love.friendship | Is it fine for friends to borrow clothes without asking?
+self.love.romance_partnership | How soon after a breakup is it okay to start dating again?
+self.love.romance_partnership | Should couples go to bed at the same time?
+self.love.romance_partnership | Do you tend to get jealous in relationships?
+self.love.romance_partnership | Should you tell a partner about a crush you have on someone else?
+self.love.romance_partnership | Would you agree to a long-distance relationship with no set end date?
+self.love.romance_partnership | Should couples live together before getting married?
+self.love.romance_partnership | Which of these would most people name first when asked: "Name something it might be ok to lie to a partner about in order to spare their feelings."
+self.love.romance_partnership | How much physical affection do you want in public from a partner?
+self.love.romance_partnership | How much should a partner's opinion shape your big life decisions?
+self.love.romance_partnership | How much effort should a couple spend to save a struggling relationship?
+self.love.romance_partnership | How often do you need to hear 'I love you' to feel secure?
+self.love.romance_partnership | How committed would you need to be before moving in with a partner?
+self.love.romance_partnership | How do you usually act during an argument with a partner?
+self.love.romance_partnership | How jealous do you get when your partner spends time with an attractive friend?
+self.love.romance_partnership | How much privacy should partners keep from each other?
+self.love.romance_partnership | Which small gesture from a partner would mean the most to you?
+self.love.romance_partnership | What is the healthiest way to handle an ex who still contacts you?
+self.love.romance_partnership | Who should change their last name after marriage?
+self.love.romance_partnership | What should couples do about each other's annoying habits?
+self.love.romance_partnership | If you found out a partner had emotionally confided in someone else instead of you for months, how would you see it?
+self.love.romance_partnership | What is the best reason to get married?
+self.love.romance_partnership | How much time together feels ideal in a relationship?
+self.love.romance_partnership | What should you do if a partner's close friend openly dislikes you?
+self.love.romance_partnership | What should a couple do on social media about their relationship?
+self.love.romance_partnership | What is your preferred way to make up after a fight?
+self.love.romance_partnership | What should a couple do if one wants children and the other doesn't?
+self.love.romance_partnership | Where would you rather live with a partner?
+self.love.romance_partnership | What is the main reason long-distance relationships fail?
+self.love.romance_partnership | Should couples take separate vacations sometimes?
+self.love.romance_partnership | What should happen to a couple's shared pet after a breakup?
+self.love.romance_partnership | How often would you want a planned date night in a long relationship?
+self.love.romance_partnership | Which should come first when career and relationship conflict?
+self.love.romance_partnership | What is the best response when your partner feels jealous?
+self.love.romance_partnership | Whose family should a couple spend major holidays with?
+self.love.romance_partnership | Should partners check each other's phones?
+self.love.romance_partnership | How much should partners know about each other's past relationships?
+self.love.romance_partnership | What is the most important foundation for a long marriage?
+self.love.romance_partnership | Which is the worst thing a partner could do?
+self.love.romance_partnership | How should couples handle a serious argument?
+self.love.romance_partnership | When is the right point for a couple to move in together?
+self.love.romance_partnership | How should a couple handle money once they live together?
+self.love.romance_partnership | Which attachment style best describes you in a relationship?
+self.love.romance_partnership | Which love language matters most to you in a relationship?
+self.love.romance_partnership | How much access to your accounts should a long-term partner have?
+self.love.romance_partnership | Which of these would most people name first when asked: "Name something that couples in love always have a favourite one of."
+self.love.romance_partnership | Would you move to another country for a partner's career?
+self.love.romance_partnership | Is it healthy for couples to argue sometimes?
+self.love.romance_partnership | Have you ever stayed in a relationship longer than you should have?
+self.love.romance_partnership | Would you forgive a partner who cheated once?
+self.love.romance_partnership | Which of these would most people name first when asked: "Name something you should never wear as the guest at someones wedding."
+self.love.romance_partnership | Which of these would most people name first when asked: "Tell me something many wives encourage their husbands to do as they get older."
+self.love.romance_partnership | Which of these would most people name first when asked: "Name a reason why a spouse might end up spending the night on the couch."
+self.love.romance_partnership | Is it a red flag if a partner has no close friends?
+self.love.romance_partnership | Is it ever okay to get back together with an ex?
+self.love.romance_partnership | Which of these would most people name first when asked: "Tell me something a husband is afraid to admit to his spouse."
+self.love.romance_partnership | Which of these would most people name first when asked: "Name something a woman might ask her husband to get rid of once they have kids."
+self.love.romance_partnership | How would you prefer a breakup to happen?
+self.love.romance_partnership | Should couples tell each other how much they earn?
+self.love.romance_partnership | Would you want to sleep in separate beds from a partner if it meant better sleep?
+self.love.romance_partnership | Is it fine to still follow an ex on social media while in a relationship?
+self.love.romance_partnership | How long should someone stay in a long-distance relationship without a plan to close the gap?
+self.love.romance_partnership | How much contact with an ex is acceptable while in a new relationship?
+self.love.romance_partnership | How often do you check in by message with a partner during the day?
+self.love.romance_partnership | How much should couples share their relationship problems with friends?
+self.love.romance_partnership | How much do you plan anniversaries and special dates?
+self.love.romance_partnership | How important is marriage to you for a lifelong partnership?
+self.love.romance_partnership | How quickly do you forgive a partner after a hurtful fight?
+self.love.romance_partnership | How acceptable is it for a partner to have close friends of the gender they're attracted to?
+self.love.romance_partnership | How much would you want to merge your daily life with a partner's?
+self.love.romance_partnership | How often do you and a partner need to spend time apart to feel good?
+self.love.romance_partnership | How much should partners change for each other over time?
+self.love.romance_partnership | How much do you worry that a partner will leave you?
+self.love.romance_partnership | How much say should a partner have over how you spend your own money?
+self.love.romance_partnership | Can a relationship survive without regular date nights?
+self.love.romance_partnership | What kind of wedding would you want?
+self.love.romance_partnership | Which proposal would you prefer?
+self.love.romance_partnership | Which matters more in a long relationship?
+self.love.romance_partnership | Which household arrangement would you want with a partner?
+self.love.romance_partnership | When is it fine to remain close with a former partner?
+self.love.romance_partnership | Should a partner be your best friend?
+self.love.romance_partnership | Would you want a prenuptial agreement before marriage?
+self.love.romance_partnership | Is it okay to break up with someone over text after a long relationship?
+self.love.workplace_community | How much should managers be friends with the people they manage?
+self.love.workplace_community | How much do you trust people you've only met online?
+self.love.workplace_community | How much should neighbors be involved in each other's lives?
+self.love.workplace_community | How much should coworkers know about each other's salaries?
+self.love.workplace_community | How much should you tolerate a noisy neighbor before saying something?
+self.love.workplace_community | How involved are you in your local community?
+self.love.workplace_community | How much should you help a new coworker learn the ropes?
+self.love.workplace_community | How much should you socialize with coworkers outside work hours?
+self.love.workplace_community | How well do you know your neighbors?
+self.love.workplace_community | How close do you get to your coworkers?
+self.love.workplace_community | Should you accept a coworker's friend request if you don't like them?
+self.love.workplace_community | What makes a good neighbor?
+self.love.workplace_community | What should you do if a coworker's hygiene is bothering the team?
+self.love.workplace_community | Should you invite your whole team to a personal party?
+self.love.workplace_community | Where do you feel the strongest sense of community?
+self.love.workplace_community | Is it okay to borrow tools or ingredients from a neighbor?
+self.love.workplace_community | What should you do when a neighbor keeps parking in front of your house?
+self.love.workplace_community | Should you connect with your boss on personal social media?
+self.love.workplace_community | Should you stay in touch with former coworkers?
+self.love.workplace_community | Is it fine to decline a coworker's lunch invitation every time?
+self.love.workplace_community | What should you do when a club you belong to changes in a way you dislike?
+self.love.workplace_community | Should people know the names of the neighbors on their street?
+self.love.workplace_community | Should you take sides in a conflict between two coworkers?
+self.love.workplace_community | Is it okay to date someone who reports to you at work?
+self.love.workplace_community | Should you tell a coworker if they have food in their teeth?
+self.love.workplace_community | Is it fine to talk about coworkers who aren't present?
+self.love.workplace_community | How friendly should you be with your boss?
+self.love.workplace_community | Under what conditions is dating a coworker acceptable?
+self.love.workplace_community | Should you invite your neighbors to your house party?
+self.love.workplace_community | Should neighbors watch each other's homes while away?
+self.love.workplace_community | How should online acquaintances you've never met be treated?
+self.love.workplace_community | How should you handle a coworker who always asks you to cover their shifts?
+self.love.workplace_community | What should you do if your neighbor's tree drops leaves in your yard?
+self.love.workplace_community | Should you attend a coworker's wedding if invited?
+self.love.workplace_community | Should you tell coworkers about your personal life?
+self.love.workplace_community | How should you respond to a coworker who constantly vents to you?
+self.love.workplace_community | What should you do about a neighbor who plays loud music late at night?
+self.love.workplace_community | What is the best way to get to know new neighbors?
+self.love.workplace_community | What should you do if you don't get along with your roommate?
+self.love.workplace_community | Is it okay to use a work friend as a job reference after they've left?
+self.love.workplace_community | Which kind of coworker do you most enjoy working with?
+self.love.workplace_community | What should you do when a coworker takes credit for your work?
+self.love.workplace_community | Is it okay to skip the office holiday party?
+self.love.workplace_community | Have you ever made a close friend at work?
+self.love.workplace_community | Should you let a neighbor's kids use your yard or pool?
+self.love.workplace_community | Should you add classmates on social media right after meeting them?
+self.love.workplace_community | Is it a good idea to become close friends with your boss?
+self.love.workplace_community | How much do you feel you belong to a community where you live?

@@ -31,8 +31,8 @@ _spec.loader.exec_module(F)
 
 POLITICAL = re.compile(
     r"\b(abortion\w*|pro-?life|pro-?choice|trump\w*|biden|obama|hillary|republican\w*|democrat\w*|maga|"
-    r"liberals?|conservatives?|gun control|immigra\w*|illegal aliens?|black lives matter|blm|all lives matter|"
-    r"feminis\w*|trans rights|same-sex marriage|gay marriage|death penalty|anti-?vax\w*|vaccin\w*|"
+    r"liberals?|conservatives?|gun control|immigration|illegal (aliens?|immigrants?)|black lives matter|blm|all lives matter|"
+    r"feminis\w*|trans rights|same-sex marriage|gay marriage|death penalty|anti-?vax\w*|vaccines?|"
     r"election\w*|politic\w*|left-wing|right-wing|socialis\w*|communis\w*|brexit)\b",
     re.I,
 )

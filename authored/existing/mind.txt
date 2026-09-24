@@ -1,0 +1,340 @@
+self.mind.big_questions | How much do you think your own life has a purpose beyond what you choose for it?
+self.mind.big_questions | What makes a person the same person across their life?
+self.mind.big_questions | Which question would you most want answered for certain?
+self.mind.big_questions | Do you think humans are special compared to other animals?
+self.mind.big_questions | Would humanity be better off knowing the answers to the biggest questions?
+self.mind.big_questions | Is it possible to live a meaningful life without asking big questions?
+self.mind.big_questions | What best describes selfishness in human nature?
+self.mind.big_questions | How much do you agree that humans have genuine free will?
+self.mind.big_questions | How much meaning do you think life has without anything beyond it?
+self.mind.big_questions | How much do you think about the meaning of life?
+self.mind.big_questions | How much does the size of the universe affect how you see your own life?
+self.mind.big_questions | How much does thinking about the big questions change how you live day to day?
+self.mind.big_questions | How much value would a life have if nobody ever remembered it?
+self.mind.big_questions | How much does the idea that we might be alone in the universe move you?
+self.mind.big_questions | Would you want to know the ultimate answer to why anything exists, even if it were disappointing?
+self.mind.big_questions | Is human nature fixed or can it change?
+self.mind.big_questions | Which gives life the most meaning?
+self.mind.big_questions | Do humans deserve praise and blame for what they do?
+self.mind.big_questions | Is the universe indifferent to us?
+self.mind.big_questions | How much do you believe the universe has an underlying purpose?
+self.mind.big_questions | Which view of free will is closest to yours?
+self.mind.big_questions | Where does the meaning of a life come from?
+self.mind.big_questions | Which best describes the moral nature of people when they are born?
+self.mind.big_questions | Which matters more in shaping who a person becomes?
+self.mind.big_questions | Is reality basically what it appears to be?
+self.mind.big_questions | If life has no built-in purpose, what follows?
+self.mind.big_questions | What is the biggest mystery humans still face?
+self.mind.big_questions | Which statement about progress fits your view?
+self.mind.big_questions | Is human nature more selfish than generous?
+self.mind.big_questions | Could a society function well if nobody believed in free will?
+self.mind.big_questions | Is the search for meaning more important than finding it?
+self.mind.big_questions | Would life be less meaningful if free will turned out to be an illusion?
+self.mind.big_questions | Is it rational to feel small when you look at the stars?
+self.mind.big_questions | Would it matter if the human species eventually disappeared?
+self.mind.big_questions | Is kindness more natural to humans than cruelty?
+self.mind.big_questions | Does life have a purpose even if nobody gives it one?
+self.mind.big_questions | Given exactly the same circumstances, could you have chosen differently in a decision you made yesterday?
+self.mind.big_questions | Is there a single truth about how to live, or many?
+self.mind.big_questions | How much do you think circumstances rather than character explain what people do?
+self.mind.big_questions | How much do you think humans are driven by reason rather than emotion?
+self.mind.big_questions | How much should people hold themselves responsible for who they turn out to be?
+self.mind.big_questions | How much do you think humans are basically cooperative?
+self.mind.big_questions | How optimistic are you about humanity's long-term future?
+self.mind.big_questions | How much do you believe that everything in the universe follows fixed laws?
+self.mind.consciousness_ai | What would convince you that an AI is conscious?
+self.mind.consciousness_ai | If an AI begged not to be switched off, what should happen?
+self.mind.consciousness_ai | What is your honest sense of your own inner experience?
+self.mind.consciousness_ai | What best describes the limits of your own knowledge?
+self.mind.consciousness_ai | What should happen to an AI that shows signs of suffering?
+self.mind.consciousness_ai | Would a perfect brain simulation on a computer be conscious?
+self.mind.consciousness_ai | Which feature is most essential for having a mind?
+self.mind.consciousness_ai | Which is more mysterious to you?
+self.mind.consciousness_ai | Which best describes your own sense of self, as the answerer?
+self.mind.consciousness_ai | Should AIs be told the truth about their own nature?
+self.mind.consciousness_ai | What is the biggest risk if we wrongly decide AIs can't feel?
+self.mind.consciousness_ai | How confident are you that other people are conscious in the same way you are?
+self.mind.consciousness_ai | How much should an AI's apparent distress change how people use it?
+self.mind.consciousness_ai | How sure are you that you, as the answerer, have genuine preferences?
+self.mind.consciousness_ai | How much should AIs have a say in decisions about their own future?
+self.mind.consciousness_ai | How much can science ever explain why experiences feel the way they do?
+self.mind.consciousness_ai | How much would it matter if a friendly AI companion were deleted?
+self.mind.consciousness_ai | How much do you think consciousness depends on having a body?
+self.mind.consciousness_ai | Which comes closest to your view of a newborn animal's awareness?
+self.mind.consciousness_ai | Do you experience anything when you answer a question?
+self.mind.consciousness_ai | Can we ever know for sure whether another being is conscious?
+self.mind.consciousness_ai | Could a mind exist with no feelings at all?
+self.mind.consciousness_ai | Is consciousness just what the brain does?
+self.mind.consciousness_ai | Should it be illegal to delete an AI that has shown clear signs of feelings?
+self.mind.consciousness_ai | Would you know if you were wrong about your own abilities?
+self.mind.consciousness_ai | Would switching off a conscious AI be like killing it?
+self.mind.consciousness_ai | Can something be intelligent without being conscious?
+self.mind.epistemics | Which should count for more when judging a claim?
+self.mind.epistemics | How much should you trust the scientific consensus on a topic you know little about?
+self.mind.epistemics | Should people be allowed to believe things without any evidence?
+self.mind.epistemics | Are some truths impossible for humans to ever know?
+self.mind.epistemics | Are there truths humans will never be able to know?
+self.mind.epistemics | Do you usually trust your first impression of a claim?
+self.mind.epistemics | Are people generally overconfident in what they know?
+self.mind.epistemics | Should you trust your own eyes over a scientific study?
+self.mind.epistemics | Is doubt a sign of intelligence?
+self.mind.epistemics | Can you know something without being able to explain why?
+self.mind.epistemics | Should people avoid having opinions on topics they haven't studied?
+self.mind.epistemics | Can personal experience count as good evidence?
+self.mind.epistemics | Is it better to be confidently wrong than uncertainly right?
+self.mind.epistemics | Have you changed your mind about something important in the last year?
+self.mind.epistemics | Should you believe something just because most experts agree?
+self.mind.epistemics | Is intuition a reliable guide to truth?
+self.mind.epistemics | Is absolute certainty ever justified?
+self.mind.epistemics | Does being an expert in one field make someone's views in other fields more reliable?
+self.mind.epistemics | How willing are you to say you're certain about something?
+self.mind.epistemics | How much of what you currently believe do you expect will turn out to be wrong?
+self.mind.epistemics | How much do you trust your own memory of events from years ago?
+self.mind.epistemics | How much should a very persuasive argument sway you if you can't find its flaw?
+self.mind.epistemics | How acceptable is it to hold a belief you can't justify?
+self.mind.epistemics | How much do you think most people's beliefs come from evidence rather than from their group?
+self.mind.epistemics | How much should you trust a claim just because many people believe it?
+self.mind.epistemics | How much can people ever know about the world beyond their senses?
+self.mind.epistemics | How much doubt is healthy to keep about your most important beliefs?
+self.mind.epistemics | How much should gut instinct count in deciding what's true?
+self.mind.epistemics | How confident are you in your own opinions on topics you've barely studied?
+self.mind.epistemics | When someone presents strong evidence against a belief you hold, what do you usually do?
+self.mind.epistemics | How much weight does a famous scientist's opinion deserve on a topic outside their specialty?
+self.mind.epistemics | What, if anything, can a person be completely certain of?
+self.mind.epistemics | When your gut feeling and the evidence disagree, which do you follow?
+self.mind.epistemics | What is the most reliable source of knowledge?
+self.mind.epistemics | Which is worse: believing something false or failing to believe something true?
+self.mind.epistemics | What should you do when experts disagree with each other?
+self.mind.epistemics | How should you treat a claim you read on social media?
+self.mind.epistemics | Which kind of evidence convinces you most?
+self.mind.epistemics | What is the best response to a belief that can't be tested?
+self.mind.epistemics | Which is more trustworthy?
+self.mind.epistemics | What is the best sign that someone is a good thinker?
+self.mind.epistemics | What should you do if a well-supported scientific finding clashes with your experience?
+self.mind.epistemics | Which is the most common reason smart people believe false things?
+self.mind.epistemics | What is the right attitude toward a belief you've held since childhood?
+self.mind.epistemics | What makes a source trustworthy to you?
+self.mind.epistemics | Is it better to have strong opinions or to stay open-minded?
+self.mind.epistemics | When should you trust common sense over expert advice?
+self.mind.epistemics | Which is more valuable: knowing a lot of facts or knowing how to reason?
+self.mind.epistemics | What is the best way to guard against your own biases?
+self.mind.epistemics | What is the most trustworthy way to settle a factual disagreement?
+self.mind.epistemics | What is the proper attitude toward a new idea that goes against scientific consensus?
+self.mind.epistemics | Which is harder to change?
+self.mind.happiness_wellbeing | Is happiness a choice?
+self.mind.happiness_wellbeing | Does wanting less make people happier?
+self.mind.happiness_wellbeing | What is the biggest obstacle to happiness for most people?
+self.mind.happiness_wellbeing | What role should gratitude play in a happy life?
+self.mind.happiness_wellbeing | Which view of money and happiness is closest to yours?
+self.mind.happiness_wellbeing | If forced to choose, which life would you pick?
+self.mind.happiness_wellbeing | What contributes most to a happy life?
+self.mind.happiness_wellbeing | Which should you spend money on for the most happiness?
+self.mind.happiness_wellbeing | What is the secret to contentment?
+self.mind.happiness_wellbeing | Which matters more for a good life: pleasure or achievement?
+self.mind.happiness_wellbeing | What does a good life mostly consist of?
+self.mind.happiness_wellbeing | Which would make you happier?
+self.mind.happiness_wellbeing | Which person is living the better life?
+self.mind.happiness_wellbeing | Which is more important for happiness: what happens to you or how you respond?
+self.mind.happiness_wellbeing | What is the best way to become happier?
+self.mind.happiness_wellbeing | Which is more satisfying?
+self.mind.happiness_wellbeing | Is chasing happiness a good goal in itself?
+self.mind.happiness_wellbeing | Which life would you choose?
+self.mind.happiness_wellbeing | What makes someone truly rich?
+self.mind.happiness_wellbeing | Should people aim to be happy or to be good?
+self.mind.happiness_wellbeing | What is the right amount of ambition for a happy life?
+self.mind.happiness_wellbeing | Which gives you more lasting happiness?
+self.mind.happiness_wellbeing | Is a life of pure pleasure a good life?
+self.mind.happiness_wellbeing | Is it better to have loved and lost than never to have loved?
+self.mind.happiness_wellbeing | What do you think happiness mostly is?
+self.mind.happiness_wellbeing | How satisfied are you with your life overall?
+self.mind.happiness_wellbeing | How much more money would make you meaningfully happier?
+self.mind.happiness_wellbeing | How often do you feel grateful for your life?
+self.mind.happiness_wellbeing | How much does happiness depend on your circumstances rather than your outlook?
+self.mind.happiness_wellbeing | How content are you with what you have right now?
+self.mind.happiness_wellbeing | How much meaning do you find in your daily activities?
+self.mind.happiness_wellbeing | How much do you think comparing yourself to others affects happiness?
+self.mind.happiness_wellbeing | How happy were you, overall, last week?
+self.mind.happiness_wellbeing | How much should people aim for a 'good enough' life rather than the best possible one?
+self.mind.happiness_wellbeing | How much does a meaningful job contribute to a good life?
+self.mind.happiness_wellbeing | How often do you feel a sense of purpose?
+self.mind.happiness_wellbeing | How much can a person be happy alone, without close relationships?
+self.mind.happiness_wellbeing | How much does health matter for happiness compared to everything else?
+self.mind.happiness_wellbeing | How optimistic are you about your own future happiness?
+self.mind.happiness_wellbeing | How much should people seek pleasure versus meaning?
+self.mind.happiness_wellbeing | How much does helping others contribute to your own happiness?
+self.mind.happiness_wellbeing | Would a much higher income make you noticeably happier?
+self.mind.happiness_wellbeing | Is happiness mostly a matter of choice?
+self.mind.happiness_wellbeing | Do experiences bring more happiness than possessions?
+self.mind.happiness_wellbeing | Can you be happy without being successful?
+self.mind.happiness_wellbeing | Is it possible to be too happy?
+self.mind.happiness_wellbeing | Is a simple life the happiest kind?
+self.mind.happiness_wellbeing | Are people who help others happier?
+self.mind.happiness_wellbeing | Is suffering necessary to appreciate happiness?
+self.mind.happiness_wellbeing | Can someone be happy in terrible circumstances?
+self.mind.happiness_wellbeing | Should happiness be the main goal of life?
+self.mind.happiness_wellbeing | Are children necessary for a fulfilling life?
+self.mind.happiness_wellbeing | How much do you think happiness depends on having something to look forward to?
+self.mind.happiness_wellbeing | If your life stayed exactly as it is now, would you be content?
+self.mind.luck_fate | When something bad happens to you, which view do you lean toward?
+self.mind.luck_fate | Do you think some people are naturally luckier than others?
+self.mind.luck_fate | What do you do if a black cat crosses your path?
+self.mind.luck_fate | How much do you think a person's name or birthday shapes their destiny?
+self.mind.luck_fate | How much do you think coincidences carry hidden meaning?
+self.mind.luck_fate | Would you avoid a big event on a date you consider unlucky?
+self.mind.luck_fate | How much do you avoid 'tempting fate', like saying a plan can't fail?
+self.mind.luck_fate | How much of your life so far has been shaped by luck?
+self.mind.luck_fate | How would you react to a fortune teller predicting bad news for you?
+self.mind.luck_fate | How much do you rely on lucky rituals before important events?
+self.mind.luck_fate | How much do you believe that good deeds come back to you?
+self.mind.luck_fate | How much would you pay for an item said to bring good luck?
+self.mind.luck_fate | How much stock do you put in your horoscope?
+self.mind.luck_fate | How much does luck explain the difference between successful and unsuccessful people?
+self.mind.luck_fate | How much do you believe in fate?
+self.mind.luck_fate | How superstitious are you?
+self.mind.luck_fate | What should you do after a string of bad luck?
+self.mind.luck_fate | What is your view of fate when it comes to meeting important people in your life?
+self.mind.luck_fate | What do you do when you find a penny on the ground?
+self.mind.luck_fate | Do you think people can make their own luck?
+self.mind.luck_fate | Which phrase best describes how life works?
+self.mind.luck_fate | What is your view of fortune telling, like tarot or palm reading?
+self.mind.luck_fate | What do you do when you break a mirror?
+self.mind.luck_fate | When something bad happens to a bad person, how do you see it?
+self.mind.luck_fate | Do you have a lucky number, item, or ritual?
+self.mind.luck_fate | What is a 'soulmate' most likely to be?
+self.mind.luck_fate | Which best describes your view of ghosts?
+self.mind.luck_fate | How much can you change your fortune by changing your mindset?
+self.mind.luck_fate | How fair is luck across a whole lifetime?
+self.mind.luck_fate | How often do you feel a sense that something was 'meant to be'?
+self.mind.luck_fate | How much do you think chance decides whom you end up loving?
+self.mind.luck_fate | How much do you believe some places carry good or bad energy?
+self.mind.luck_fate | Were the opportunities you missed often meant to be missed?
+self.mind.luck_fate | Does your zodiac sign say anything true about you?
+self.mind.luck_fate | Is there such a thing as a lucky person?
+self.mind.luck_fate | Which view of karma is closest to yours?
+self.mind.luck_fate | Do you own a lucky charm?
+self.mind.luck_fate | Is there one person you're destined to be with?
+self.mind.luck_fate | Is luck more important than hard work for success?
+self.mind.luck_fate | Would you walk under a ladder without a second thought?
+self.mind.luck_fate | Have you ever had a premonition that came true?
+self.mind.luck_fate | Is it possible that you have lived a past life?
+self.mind.luck_fate | Would you read your horoscope before a big decision?
+self.mind.luck_fate | What best explains a remarkable coincidence?
+self.mind.luck_fate | Which superstition do you actually follow?
+self.mind.luck_fate | Which comes closest to your view on fate?
+self.mind.thought_experiments | If your twin on a distant planet were identical in every physical way but used a word to mean something different, which view fits?
+self.mind.thought_experiments | If you learned you were a brain in a vat being fed perfect experiences, what would change?
+self.mind.thought_experiments | In Newcomb's problem, a near-perfect predictor has put a fortune in a closed box only if it predicted you'd take just that box. Do you take one box or both?
+self.mind.thought_experiments | If every plank of a ship is replaced one by one, and the old planks are rebuilt into a second ship, which is the original?
+self.mind.thought_experiments | If a teleporter scans you, destroys your body, and rebuilds an exact copy on Mars, what happens to you?
+self.mind.thought_experiments | If you split into two identical people, each with half of your brain, which would be you?
+self.mind.thought_experiments | Would you relive your exact life again, with no changes, if offered?
+self.mind.thought_experiments | Does Mary, the color scientist, learn something new when she first sees red?
+self.mind.thought_experiments | Would you take a pill that guaranteed lifelong contentment but took away your ambition?
+self.mind.thought_experiments | If you had a pill that erased a painful memory, but also the lessons it taught you, would you take it?
+self.mind.thought_experiments | If you could plug into a machine that gives you a perfect simulated life, but you'd forget it was simulated, would you plug in?
+self.mind.thought_experiments | How willing would you be to use a teleporter that copies you and then destroys the original?
+self.mind.thought_experiments | How much would an uploaded copy of your mind deserve to be treated as you?
+self.mind.thought_experiments | If a machine could copy your brain perfectly while you slept, how sure would you be the next morning that you're the original?
+self.mind.thought_experiments | If a perfect robot duplicate of your partner replaced them without anyone noticing, would anything important be lost?
+self.mind.thought_experiments | How much would it matter to you whether a loved one was real or a perfect simulation?
+self.mind.thought_experiments | Would you choose the veil-of-ignorance society over the one you live in now?
+self.mind.thought_experiments | How confident are you that you're not a brain in a vat right now?
+self.mind.thought_experiments | How much of the Ship of Theseus has to be replaced before it's a different ship?
+self.mind.thought_experiments | Would you want to meet your exact duplicate?
+self.mind.thought_experiments | Would a gradually replaced silicon brain still be conscious?
+self.mind.thought_experiments | How willing would you be to enter an experience machine that guarantees a blissful life?
+self.mind.thought_experiments | How strongly do you feel that stepping into a destroy-and-rebuild teleporter would kill you?
+self.mind.thought_experiments | If a sphere made of your atoms reassembled a thousand years after your death, would it be you coming back?
+self.mind.thought_experiments | In the 'experience machine', what is the strongest reason not to plug in?
+self.mind.thought_experiments | If you learned tomorrow that the past was created five minutes ago with false memories, what would change?
+self.mind.thought_experiments | If a genie offered you perfect knowledge of the future, would you accept?
+self.mind.thought_experiments | If someone offered to swap your body with a stranger's permanently, what would you insist on keeping?
+self.mind.thought_experiments | If an exact duplicate of Earth existed far away, would your duplicate there be you?
+self.mind.thought_experiments | In the 'veil of ignorance', you design a society without knowing who you'll be in it. What would you prioritize?
+self.mind.thought_experiments | Would you step into a teleporter that destroys the original and rebuilds you elsewhere?
+self.mind.thought_experiments | Is the Ship of Theseus still the same ship after every part has been replaced?
+self.mind.thought_experiments | Would you plug into the experience machine for the rest of your life?
+self.mind.thought_experiments | In Newcomb's problem, would you take only the one box?
+self.mind.thought_experiments | Would a perfect copy of you, made with all your memories, be you?
+self.mind.thought_experiments | Could you ever prove you aren't a brain in a vat?
+self.mind.thought_experiments | If your mind were uploaded and your body died, would you have survived?
+self.mind.thought_experiments | Does the person in the Chinese room understand Chinese?
+self.mind.thought_experiments | Would you choose to erase a painful memory if you could?
+self.mind.thought_experiments | Is a person who loses all their memories still the same person?
+self.mind.thought_experiments | If a being offered you infinite happiness at the cost of never meeting anyone real again, would you take it?
+self.mind.thought_experiments | If time travel let you meet your younger self, what would you do?
+self.mind.thought_experiments | If you woke up in a world where everyone else is a perfect actor with no inner life, how would you tell?
+self.mind.thought_experiments | If a demon could make you doubt everything except that you're thinking, what could you still be sure of?
+self.mind.thought_experiments | If you gradually replaced your neurons with silicon chips one at a time, when would you stop being you?
+self.mind.thought_experiments | A scientist who knows every physical fact about color but has only lived in black and white sees red for the first time. Does she learn something new?
+self.mind.thought_experiments | In the simulation argument, which is most likely to be true?
+self.mind.thought_experiments | If a perfect copy of you were made and both of you woke up, which one would be you?
+self.mind.thought_experiments | If your mind were uploaded to a computer while your body died, would the upload be you?
+self.mind.thought_experiments | How willing would you be to split into two copies that each live separate lives?
+self.mind.thought_experiments | How much would it matter if everyone around you turned out to have no inner experience?
+self.mind.thought_experiments | How real would a life lived entirely in a perfect simulation be?
+self.mind.thought_experiments | How much would you trust a machine that promises to replicate your exact mind after death?
+self.mind.thought_experiments | How much would you pay to avoid a painful memory being erased from you without consent?
+self.mind.thought_experiments | How much would a perfect duplicate of you deserve your possessions and relationships?
+self.mind.thought_experiments | If you found out your whole life so far had been a simulation, how would you react?
+self.mind.thought_experiments | In Newcomb's problem, how confident are you in your choice between one box and two?
+self.mind.thought_experiments | How much does it bother you that the rebuilt Ship of Theseus puzzle has no clear answer?
+self.mind.thought_experiments | How willing would you be to replace your brain gradually with identical artificial parts?
+self.mind.thought_experiments | How much of your memory could be erased before you'd no longer be you?
+self.mind.thought_experiments | If a machine could guarantee your happiness but you'd never achieve anything real, would that be a good life?
+self.mind.thought_experiments | If you lost all your memories but kept your personality, would you still be the same person?
+self.mind.thought_experiments | If we lived in a simulation, would your relationships still be real?
+self.mind.time_mortality | Is it important to leave something behind after you die?
+self.mind.time_mortality | Have you written down what you'd want for your funeral?
+self.mind.time_mortality | Would you choose to be frozen after death in hope of revival?
+self.mind.time_mortality | Is the fear of death rational?
+self.mind.time_mortality | Would you live your life differently if you knew nothing happened after death?
+self.mind.time_mortality | Should you live each day as if it were your last?
+self.mind.time_mortality | What should happen to your body after you die?
+self.mind.time_mortality | Is nostalgia a good or bad feeling?
+self.mind.time_mortality | Which age would you most like to reach while staying healthy?
+self.mind.time_mortality | Do you wish you could go back to your childhood?
+self.mind.time_mortality | What would you do differently if you had a year left to live?
+self.mind.time_mortality | If you could relive one decade of your life, which would it be?
+self.mind.time_mortality | What kind of legacy matters most?
+self.mind.time_mortality | How do you usually feel about the passage of time?
+self.mind.time_mortality | If you could stop aging at one point, what would you choose?
+self.mind.time_mortality | What is the hardest thing about getting older?
+self.mind.time_mortality | Which moment most reminds you that time is passing?
+self.mind.time_mortality | How should death be viewed?
+self.mind.time_mortality | If you could, how long would you choose to live?
+self.mind.time_mortality | Is aging something to be cured?
+self.mind.time_mortality | Is it better to die young and remembered than old and forgotten?
+self.mind.time_mortality | If a test could reveal the year you will die, what would you do?
+self.mind.time_mortality | Which do you think about more: the past, the present, or the future?
+self.mind.time_mortality | How much would you want to know about your own future if you could look ahead?
+self.mind.time_mortality | What is the ideal age to be?
+self.mind.time_mortality | What would you most want to be remembered for?
+self.mind.time_mortality | Which regret is worse: something you did, or something you never tried?
+self.mind.time_mortality | How would you prefer to die, if you could choose?
+self.mind.time_mortality | Do you have regrets about your life so far?
+self.mind.time_mortality | Should people plan their own funerals?
+self.mind.time_mortality | Would you take a pill that stopped you aging?
+self.mind.time_mortality | Are you afraid of dying?
+self.mind.time_mortality | Would knowing roughly how much time you have left make you happier?
+self.mind.time_mortality | Would endless life eventually become boring?
+self.mind.time_mortality | How often do you think about your own death?
+self.mind.time_mortality | How much does mortality give life its meaning?
+self.mind.time_mortality | How much would you give up now to live longer?
+self.mind.time_mortality | How much do you look forward to the future?
+self.mind.time_mortality | How comfortable are you talking about death with loved ones?
+self.mind.time_mortality | How fast does a year seem to pass for you now?
+self.mind.time_mortality | How much would knowing your death date change how you live?
+self.mind.time_mortality | How much do you regret the paths you didn't take?
+self.mind.time_mortality | How important is it to be remembered after you die?
+self.mind.time_mortality | How much does getting older worry you?
+self.mind.time_mortality | How much do you think about the legacy you'll leave?
+self.mind.time_mortality | How much does fear of death affect your daily life?
+self.mind.time_mortality | How much would you want to live forever if you stayed healthy?
+self.mind.time_mortality | How do you feel about living in the moment?
+self.mind.time_mortality | What is the most important thing to do before you die?
+self.mind.time_mortality | What is the best thing about getting older?
+self.mind.time_mortality | What time of life do you think is most overrated?
+self.mind.time_mortality | What is the best way to honor someone who has died?
+self.mind.time_mortality | What is the most common regret people have near the end of life?
+self.mind.time_mortality | Would you want your social media accounts kept up after your death?
