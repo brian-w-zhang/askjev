@@ -23,7 +23,8 @@
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)
 - [x] `AI_GATEWAY_API_KEY` in `.env`; Jev found on the gateway as `typesafe-ai/jev`
-- [ ] Provision Neon Postgres (Vercel Marketplace), enable ltree/vector/pg_trgm, add `DATABASE_URL`; apply `db/migrations`
+- [x] Local Postgres 17 (Homebrew) running, DB `askjev` with ltree/vector/pg_trgm, `DATABASE_URL` in .env
+- [ ] Apply `db/migrations`
 - [ ] Spike: the gateway request/response shape (probabilities, confidence, served version)
 - [ ] Spike: determinism noise floor and batch invariance (`05-experiments.md` §0)
 

@@ -13,3 +13,6 @@ __pycache__/
 # Personal notes: kept local, never published
 resources/references/notion/
 resources/conversations/
+
+# Local Claude Code settings
+.claude/settings.local.json
