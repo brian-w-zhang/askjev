@@ -24,6 +24,11 @@ FACTS_PER_PLAYER = (2, 2)  # (true, false)
 SEED = 20260924
 
 API = "https://www.wikidata.org/w/api.php"
+QLEVER = "https://qlever.dev/api/wikidata"
+PREFIXES = """PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+"""
 NBA = "Q155223"
 
 # Kept light: the label service / multi-OPTIONAL variants time out on WDQS, so labels and P54
@@ -36,6 +41,16 @@ QUERIES = {
   ?team wdt:P31 wd:Q13393265 ; wdt:P118 wd:Q155223 .
   OPTIONAL { ?team wdt:P576 ?end }
 }""",
+}
+
+RECENT = 2025
+AS_OF = "2026-09-24"
+# Year each franchise took its current name/city.
+NAMED_SINCE = {
+    "Oklahoma City Thunder": 2008, "Brooklyn Nets": 2012, "New Orleans Pelicans": 2013, "Charlotte Hornets": 2014,
+    "Memphis Grizzlies": 2001, "Sacramento Kings": 1985, "Los Angeles Clippers": 1984, "Washington Wizards": 1997,
+    "Utah Jazz": 1979, "Los Angeles Lakers": 1960, "Golden State Warriors": 1971, "Houston Rockets": 1971,
+    "Atlanta Hawks": 1968, "Detroit Pistons": 1957, "San Antonio Spurs": 1973,
 }
 
 # Relocated/renamed franchises: current team -> earlier identities (never used as a false answer
@@ -60,20 +75,20 @@ FRANCHISE = {
 
 
 def _sparql(query: str) -> list[dict]:
-    for attempt in range(6):
+    """WDQS first; on timeout/5xx/429 fall back to the public QLever Wikidata mirror (same data model)."""
+    query = PREFIXES + query
+    for endpoint, timeout in ((SPARQL, 45), (QLEVER, 90), (SPARQL, 60), (QLEVER, 90)):
         try:
-            r = httpx.get(SPARQL, params={"query": query}, headers={"User-Agent": UA, "Accept": "application/sparql-results+json"}, timeout=90)
+            r = httpx.get(endpoint, params={"query": query}, timeout=timeout, follow_redirects=True,
+                          headers={"User-Agent": UA, "Accept": "application/sparql-results+json"})
         except httpx.TimeoutException:
-            time.sleep(10 * (attempt + 1))
             continue
-        if r.status_code in (429, 500, 502, 503, 504):
-            wait = r.headers.get("Retry-After", "")
-            time.sleep(int(wait) + 1 if wait.isdigit() else 30 * (attempt + 1))
+        if r.status_code != 200:
+            time.sleep(5)
             continue
-        r.raise_for_status()
         return [{k: v["value"].rsplit("/", 1)[-1] if v.get("type") == "uri" else v["value"] for k, v in b.items()}
                 for b in r.json()["results"]["bindings"]]
-    raise RuntimeError("wikidata sparql failed")
+    raise RuntimeError("wikidata sparql failed on WDQS and QLever")
 
 
 def _entities(ids: list[str], props: str) -> dict:
@@ -99,6 +114,25 @@ def _label(ent: dict) -> str | None:
     return (labels.get("en") or labels.get("mul") or {}).get("value")
 
 
+def _year(q: dict, prop: str) -> int | None:
+    for v in q.get(prop, []):
+        t = (v.get("datavalue") or {}).get("value", {})
+        if isinstance(t, dict) and t.get("time"):
+            return int(t["time"][1:5])
+    return None
+
+
+def _tenures(ent: dict) -> list[dict]:
+    """P54 memberships with start/end years (P580/P582 qualifiers), deprecated statements dropped."""
+    out = []
+    for c in ent.get("claims", {}).get("P54", []):
+        if c.get("rank") == "deprecated" or not c["mainsnak"].get("datavalue"):
+            continue
+        q = c.get("qualifiers", {})
+        out.append({"team": c["mainsnak"]["datavalue"]["value"]["id"], "start": _year(q, "P580"), "end": _year(q, "P582")})
+    return out
+
+
 def _claim_ids(ent: dict, prop: str) -> list[str]:
     return [c["mainsnak"]["datavalue"]["value"]["id"] for c in ent.get("claims", {}).get(prop, [])
             if c["mainsnak"].get("datavalue")]
@@ -115,11 +149,11 @@ def fetch(raw_dir: Path) -> None:
         return
     rows = json.loads((raw_dir / "players.json").read_text())
     players = _entities(list(dict.fromkeys(r["item"] for r in rows)), "labels|claims")
-    team_ids = {t for e in players.values() for t in _claim_ids(e, "P54")}
+    team_ids = {t["team"] for e in players.values() for t in _tenures(e)}
     team_ids |= {r["team"] for r in json.loads((raw_dir / "teams.json").read_text())}
     teams = _entities(sorted(team_ids), "labels|claims")
     slim = {
-        "players": {q: {"label": _label(e), "P54": _claim_ids(e, "P54")} for q, e in players.items()},
+        "players": {q: {"label": _label(e), "P54": _tenures(e)} for q, e in players.items()},
         "teams": {q: {"label": _label(e), "P118": _claim_ids(e, "P118"), "ended": bool(e.get("claims", {}).get("P576"))}
                   for q, e in teams.items()},
     }
@@ -175,17 +209,25 @@ def _facts(raw_dir: Path, players: list[dict]) -> Iterator[Question]:
     current_ids = {r["team"] for r in json.loads((raw_dir / "teams.json").read_text()) if not r.get("end")}
     current = sorted({teams[t]["label"] for t in current_ids
                       if t in teams and teams[t]["label"] and not re.search(r"\d", teams[t]["label"])})
-    played: dict[str, set[str]] = {}
+    played: dict[str, set[str]] = {}  # every NBA team label (used to exclude false answers)
+    safe_true: dict[str, set[str]] = {}  # teams usable as a true answer
     for pq, p in ents["players"].items():
         for t in p["P54"]:
-            info = teams.get(t) or {}
-            if NBA in info.get("P118", []) and info.get("label"):
-                played.setdefault(pq, set()).add(info["label"])
+            info = teams.get(t["team"]) or {}
+            label = info.get("label")
+            if NBA not in info.get("P118", []) or not label:
+                continue
+            played.setdefault(pq, set()).add(label)
+            # Skip moves too recent to be settled knowledge, and franchise-level links where the
+            # player's whole stint predates the current name (Chamberlain -> "Golden State Warriors").
+            if (t["start"] or 0) >= RECENT or (t["end"] and t["end"] <= NAMED_SINCE.get(label, 0)):
+                continue
+            safe_true.setdefault(pq, set()).add(label)
     n_true, n_false = FACTS_PER_PLAYER
     for p in players:
         rng = random.Random(f"{SEED}:{p['qid']}")
         teams = played.get(p["qid"], set())
-        trues = sorted(t for t in teams if not re.search(r"\d", t))
+        trues = sorted(t for t in safe_true.get(p["qid"], set()) if not re.search(r"\d", t))
         falses = [t for t in current if t not in teams and not _related(t, teams)]
         picks = [(t, True) for t in rng.sample(trues, min(n_true, len(trues)))]
         picks += [(t, False) for t in rng.sample(falses, min(n_false + (n_true - len(picks)), len(falses)))]
@@ -201,7 +243,7 @@ def _facts(raw_dir: Path, players: list[dict]) -> Iterator[Question]:
                 node_hint="world.sports.basketball.nba",
                 source_item_id=f"{p['qid']}:P54:{team}",
                 license=LICENSE,
-                meta={"qid": p["qid"], "property": "P54", "team": team},
+                meta={"qid": p["qid"], "property": "P54", "team": team, "as_of": AS_OF},
             )
 
 

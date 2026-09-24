@@ -72,7 +72,11 @@ def question_state(q: dict) -> dict:
     s = {"question": q["text"]}
     if q.get("options"):
         opts = q["options"]
-        s["answer_options"] = list(opts.keys())[:12] if isinstance(opts, dict) else opts
+        if isinstance(opts, dict):
+            # show descriptions when present (keys like "a"/"b" carry no content)
+            s["answer_options"] = [str(v)[:160] if v else k for k, v in list(opts.items())[:12]]
+        else:
+            s["answer_options"] = opts
     if q.get("state"):
         s["input_excerpt"] = str(q["state"])[:400]
     return s

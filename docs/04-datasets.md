@@ -112,7 +112,9 @@ are a last resort, because their labels are just LLM opinions.
 | **IAB Content Taxonomy 3.1** | sensitive-topic tags + coverage checklist only | CC BY 3.0 (v) |
 
 Tested Wikidata query (NBA players by sitelinks). Limits: 60 s timeout, 5 parallel queries per IP,
-a User-Agent is required, and `rdfs:label` works where the label service returned a bare QID:
+a User-Agent is required. **Correction (2026-09-24 build):** `rdfs:label` with `en` still returned no label for
+LeBron James and Kevin Durant; the adapter takes labels from the Wikidata entity API with `en` then `mul`. WDQS
+timed out and returned 502 and 429 during the build, so `sources/nba` falls back to the public QLever mirror (qlever.dev):
 ```sparql
 SELECT ?item ?label ?sitelinks WHERE {
   ?item wdt:P106 wd:Q3665646 ; wdt:P118 wd:Q155223 ; wikibase:sitelinks ?sitelinks .

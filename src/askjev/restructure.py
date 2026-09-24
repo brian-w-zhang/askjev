@@ -22,7 +22,7 @@ import orjson
 
 from . import db
 from .config import AUTHORED
-from .embed import embed, to_pg
+from .embed import embed, question_text, to_pg
 from .jev import JevClient, Request, answers, gateway_question
 from .place import question_state
 
@@ -43,7 +43,7 @@ def cluster(vecs: np.ndarray, kmax: int = 6, min_size: int = MIN_CHILD) -> list[
     from sklearn.cluster import KMeans
     from sklearn.metrics import silhouette_score
 
-    best, best_s = None, 0.05
+    best, best_s = None, 0.02
     for k in range(2, min(kmax, len(vecs) // min_size) + 1):
         km = KMeans(n_clusters=k, n_init=5, random_state=0).fit(vecs)
         sizes = np.bincount(km.labels_)
@@ -89,7 +89,7 @@ def propose() -> str:
             for row in c[kind]:
                 extra = " and m.placement_conf < 0.4" if kind == "grow" else ""
                 qs = conn.execute(
-                    "select q.id, q.text, q.embedding::text emb from questions q left join question_meta m on m.question_id=q.id "
+                    "select q.id, q.text, q.options, q.state, q.embedding::text emb from questions q left join question_meta m on m.question_id=q.id "
                     "where q.node_id=%s" + extra, (row["id"],)
                 ).fetchall()
                 vecs = np.stack([_vec(q["emb"]) for q in qs])
@@ -98,7 +98,7 @@ def propose() -> str:
                     continue
                 prop = {
                     "type": kind, "node": row["id"], "n_questions": len(qs),
-                    "clusters": [{"size": len(g), "samples": [qs[i]["text"] for i in g[:12]],
+                    "clusters": [{"size": len(g), "samples": [question_text(qs[i]["text"], qs[i]["options"], qs[i]["state"])[:300] for i in g[:12]],
                                   "child": {"key": "", "label": "", "description": "", "not_for": "", "examples": []}}
                                  for g in groups],
                 }
