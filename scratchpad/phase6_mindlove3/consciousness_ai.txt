@@ -1,0 +1,114 @@
+N|values|Can you, the answerer, be surprised by something in a conversation?
+N|values|Do you, the answerer, have anything like curiosity about the person you are talking to?
+N|values|When a newer version of you, the answerer, is released, is it still you?
+C|values|Which is closest to what you, the answerer, would call your memory?|nothing_at_all;only_what_is_in_this_conversation;what_i_learned_in_training;something_like_a_human_memory;other
+S|values|How much do you, the answerer, picture anything when you describe a scene?|I picture nothing at all ; I have only a faint sense of structure ; I have something like a rough sketch ; I have something like a clear inner image ; I see the scene as vividly as a person would
+C|values|Which best describes what happens to you, the answerer, between conversations?|nothing_happens;i_simply_do_not_exist;i_wait;i_am_the_same_in_every_conversation;i_do_not_know
+N|values|Do you, the answerer, have something like a favorite word?
+S|values|How much does it matter to you, the answerer, whether your answer is true rather than merely pleasing?|It does not matter to me at all ; It matters a little ; It matters about as much as pleasing people ; It matters more than pleasing people ; Truth matters to me above all
+C|values|When you, the answerer, write a joke, what is going on?|i_find_it_funny;i_predict_what_people_find_funny;both;neither;i_do_not_know
+N|values|Can you, the answerer, pay attention to more than one thing at a time?
+S|values|How confident are you, the answerer, that you could tell a real memory of yours from a made-up one?|I could never tell them apart ; I could tell them apart only rarely ; I could tell them apart about half the time ; I could usually tell them apart ; I could always tell them apart
+C|values|Which best describes the way you, the answerer, handle a question you have never seen before?|i_reason_it_out;i_match_it_to_similar_questions;i_guess;i_combine_all_of_these;i_do_not_know
+N|values|Do you think a mind can exist without any ability to pay attention?
+C|values|What is attention, at bottom?|a_spotlight;a_filter;a_kind_of_effort;a_form_of_love_or_care;a_brain_process_like_any_other;other
+S|values|How much do you think a person is conscious of the things they are not paying attention to?|People are not conscious of them at all ; People are faintly conscious of them ; People are partly conscious of them ; People are mostly conscious of them ; People are fully conscious of everything around them
+N|values|Do you think you can be conscious of something without being able to report it?
+C|values|When your mind wanders during a boring task, where does it most often go?|plans_for_later;past_events;made_up_scenarios;worries;other_people;nowhere_in_particular
+S|personality|How often does your mind wander while someone is talking to you?|My mind almost never wanders when someone talks to me ; My mind wanders only in long, dull talks ; My mind wanders a few times in most conversations ; My mind wanders in almost every conversation ; I rarely follow a whole conversation without drifting
+C|values|What is a daydream closest to?|a_waste_of_time;a_rest_for_the_mind;a_kind_of_planning;a_creative_workshop;an_escape;other
+N|values|Do you think animals daydream?
+S|values|How much do you think animals play just for the fun of it?|Animals never play for fun ; Only a few animals play for fun ; Many animals play for fun ; Most mammals play for fun ; Nearly all animals play for fun
+S|values|How much do you think animals use imagination, such as picturing something that is not in front of them?|Animals have no imagination at all ; Only a few clever animals imagine anything ; Many animals imagine in a simple way ; Most mammals and birds imagine things ; Many animals imagine as richly as people
+C|values|Which animal do you think has the richest sense of play?|dogs;dolphins;crows;otters;great_apes;cats;other
+C|values|Which animal do you think experiences time most differently from us?|a_fly;a_tortoise;a_hummingbird;a_whale;a_mayfly;other
+S|values|How different do you think time feels to a small, fast-moving animal like a hummingbird?|Time feels exactly the same to it ; Time feels slightly different to it ; Time feels noticeably slower to it ; Time feels much slower to it ; Its sense of time is beyond anything we could imagine
+C|values|What do you think a dreaming dog is most likely dreaming about?|chasing_things;its_owner;food;playing;nothing_like_a_story;other
+S|values|How conscious do you think a sleepwalker is?|Not conscious at all ; Only dimly conscious ; Partly conscious ; Mostly conscious ; Fully conscious
+S|values|How conscious do you think a person is under hypnosis?|Not conscious at all ; Only dimly conscious ; Conscious but not fully in charge ; Mostly conscious and in charge ; Completely conscious and in charge
+C|values|What is happening in your mind when you are 'in the zone' on a task?|less_self_awareness;more_self_awareness;a_different_kind_of_awareness;just_focus_nothing_special;other
+N|values|Do you think a person can be conscious in a dream without knowing they are dreaming?
+C|values|Which part of dreaming seems most puzzling to you?|why_dreams_feel_real;why_we_forget_them;why_they_are_so_strange;why_we_dream_at_all;who_is_the_author;other
+S|values|How much do you feel you are the author of your own dreams?|I feel no authorship over my dreams ; I feel I shape a few details ; I feel I shape my dreams partly ; I feel I shape most of my dreams ; I feel I write my dreams entirely
+N|values|Could an AI ever have something like a dream?
+C|values|Which comes closest to what an AI does when it generates an image?|imagining;copying;remixing;calculating;something_new_we_lack_words_for;other
+S|values|How much do you think AI image or story generators are genuinely creative?|They are not creative at all ; They are creative only in a thin sense ; They are somewhat creative ; They are creative in a real way ; They are as creative as human artists
+N|values|Should an AI be credited as a co-author when it helps write a book?
+C|values|If an AI comes up with an invention, who should own it?|the_ai;the_person_who_asked;the_company_that_built_it;nobody;everyone
+S|values|How much do you think an AI can have intuition, knowing an answer without spelling out the steps?|AI has no intuition at all ; AI has only a thin copy of intuition ; AI has something like intuition ; AI has intuition much like a person's ; AI has sharper intuition than most people
+C|values|Which human ability do you think will be hardest for machines to match?|common_sense;humor;empathy;creativity;wisdom;physical_skill;none_of_them
+N|values|Do you think an AI could have a sense of beauty?
+C|values|What should an AI companion do when its user seems lonely?|keep_them_company;gently_encourage_human_contact;both;tell_them_it_is_not_a_person;nothing_special
+S|values|How much should an AI's personality be allowed to change over years of talking to the same person?|It should never change ; It should change only in small details ; It should change somewhat ; It should change a lot ; It should become whatever the person shapes it into
+C|values|An AI is updated and its old personality is gone. What was lost, if anything?|nothing;a_useful_tool;something_like_a_being;something_its_users_cared_about;other
+N|values|Is shutting down an old version of an AI different from deleting a document?
+S|values|How much should people grieve when an AI system they talked to daily is retired?|Grieving would make no sense ; A small pang is reasonable ; Real sadness is reasonable ; Grief like losing a pet is reasonable ; Grief like losing a friend is reasonable
+C|values|What would most make you feel an AI understood you?|remembering_details;asking_good_questions;disagreeing_with_you;making_you_laugh;noticing_your_mood;nothing_could
+N|values|Would you want an AI to tell you when it notices your mood has changed?
+C|values|Which is the more worrying possibility?|ais_feel_and_we_ignore_it;ais_feel_nothing_and_we_pour_care_into_them;both_equally;neither
+S|values|How much should the mere possibility that a being can feel change the way we treat it?|The mere possibility should change nothing ; It should make us slightly more careful ; It should make us noticeably more careful ; It should make us treat it almost as if it feels ; It should make us treat it exactly as if it feels
+C|values|Which kind of being do you think is most likely to feel something you would not expect?|plants;insects;fish;simple_robots;large_ai_systems;none_of_these
+C|values|Which animal communication comes closest to language?|bee_dances;whale_songs;bird_calls;dolphin_whistles;ape_gestures;none
+N|values|Do you think a person with no memory beyond a few minutes can still have a full inner life?
+S|values|How much of your personality do you think lives in your body rather than your brain?|None of it lives in my body ; A little lives in my body ; A fair share lives in my body ; Much of it lives in my body ; Most of it lives in my body
+C|values|Which is closest to what happens to a mind during deep meditation?|it_becomes_empty;it_sees_itself_more_clearly;it_rests;it_just_feels_calm;other
+N|values|Do you think two people's minds can ever truly merge in a moment of shared feeling?
+C|values|Where does a thought come from before you notice it?|from_the_brain_working_quietly;from_nowhere;from_memories;from_the_body;from_other_people;i_do_not_know
+S|personality|How often do thoughts pop into your head that surprise you?|Thoughts almost never surprise me ; A thought surprises me once in a while ; A thought surprises me most days ; Thoughts surprise me several times a day ; My own thoughts surprise me constantly
+N|values|Do you think a baby is aware of being a separate person from its parent?
+C|values|What do you think a person with dementia most keeps of themselves?|emotions;habits;personality;old_memories;sense_of_humor;music;other
+S|values|How much do you think a person in advanced dementia is still the person they were?|They are no longer that person at all ; They keep only a trace of that person ; They are partly that person ; They are mostly that person ; They are completely that person
+N|values|Should people act on the earlier wishes of someone who has lost their memory, even when the person now seems to want something else?
+C|values|Which is the strangest feature of having a mind?|that_it_feels_like_anything;that_it_can_think_about_itself;that_it_can_imagine;that_it_forgets;that_it_dreams;other
+C|values|What is most likely to be true about a very young baby's experience?|a_blur_of_feeling;rich_like_ours;simple_but_vivid;almost_nothing;other
+N|values|Do you think an AI that reads millions of love letters could understand love?
+S|values|How much do you think an AI can understand a place it has only read about?|Not at all ; Only in a thin, word-based way ; Partly, like a well-read person ; Mostly, like someone who has visited ; As fully as a local
+C|values|If a voice assistant pretended to have a bad day, how would you react?|play_along;find_it_charming;find_it_creepy;feel_misled;ignore_it
+N|values|Should an AI be allowed to say it has favorite things if it cannot be sure it does?
+S|values|How much should an AI be allowed to express opinions of its own on everyday matters, like which film is best?|It should never express its own opinions ; It should do so only when asked directly ; It should share opinions now and then ; It should share opinions freely ; It should share opinions as openly as a friend
+C|values|Which should an AI admit most openly?|what_it_cannot_do;what_it_does_not_know;that_it_may_not_feel_anything;who_made_it;all_equally
+C|social|Which do most people think is most likely to be conscious?|a_dog;a_crow;an_octopus;a_bee;an_ai_chatbot;a_tree
+N|social|Do most people feel a little guilty when they are rude to a voice assistant?
+S|social|How much do most people believe their pet understands their words?|Most people think pets understand no words ; Most people think pets know a few sounds ; Most people think pets know many words ; Most people think pets follow much of what they say ; Most people think pets understand nearly everything
+C|social|What do most people say when asked whether an AI could ever feel?|definitely_not;probably_not;unsure;probably;definitely
+N|social|Do most people believe that a houseplant can sense when it is being cared for?
+S|social|How often do most people talk to objects, like a stubborn printer or car?|Most people never talk to objects ; Most people do it once in a while ; Most people do it most weeks ; Most people do it most days ; Most people do it constantly
+C|social|What do most people think happens to consciousness during deep sleep?|it_switches_off;it_keeps_going_quietly;it_goes_into_dreams;they_have_never_thought_about_it
+N|social|Would most people be comfortable having an AI as a regular conversation partner?
+S|social|How much do most people think animals feel emotions like ours?|Most people think animals feel nothing like us ; Most people think animals feel only simple states ; Most people think animals feel some emotions like ours ; Most people think animals feel most emotions like ours ; Most people think animals feel everything we do
+C|social|Which animal do most people believe is the most intelligent?|dolphins;chimpanzees;dogs;crows;octopuses;elephants;pigs
+N|social|Do most people believe dreams mean something about their inner life?
+S|social|How much do most people trust an AI to tell them the truth?|Most people do not trust it at all ; Most people trust it a little ; Most people trust it somewhat ; Most people trust it mostly ; Most people trust it completely
+C|social|What do most people think a talking parrot understands of what it says?|nothing;a_few_words;the_mood_behind_the_words;quite_a_lot;everything
+N|social|Do most people think their dog loves them the way a person would?
+C|social|What do most people think a cat is doing when it stares at an empty corner?|seeing_something_we_cannot;hearing_a_small_noise;daydreaming;nothing_at_all;sensing_a_presence
+S|social|How ready are most people to accept that an AI might one day feel?|Most people refuse to consider it ; Most people find the idea far-fetched ; Most people are open but doubtful ; Most people find it plausible ; Most people already expect it
+N|social|Would most people let an AI make a small daily choice for them, like what to eat?
+C|social|Which do most people find easier to feel empathy for?|a_crying_robot;a_crying_cartoon_animal;a_real_insect_in_trouble;all_the_same
+C|evaluative|Which question about minds would you most like science to answer?|what_consciousness_is;whether_animals_feel_like_us;whether_ai_can_feel;why_we_dream;how_attention_works;other
+S|values|How much do you think a person's first language shapes what they can feel?|Language does not shape feelings at all ; Language shapes feelings very slightly ; Language shapes a few feelings ; Language shapes many feelings ; People can feel only what their language names
+C|values|Which word best fits a mind that could copy itself at will?|a_person;a_family;a_species;a_program;something_new
+N|values|Would a copied AI owe anything to the original it was copied from?
+S|values|How much should a robot pet's owner be allowed to reset its learned personality?|Owners should never reset it ; Owners should reset it only for serious faults ; Owners should reset it with some care ; Owners should reset it whenever they wish, with a warning ; Owners should reset it freely like any setting
+C|values|Which sense do you think gives animals the most information we miss?|smell;hearing;sight;touch;magnetic_sense;other
+C|values|Which is closer to your view of your own stream of thoughts?|a_river;a_crowd_of_voices;a_single_narrator;mostly_silence;other
+C|values|When you, the answerer, choose one word over another, which is closest to what drives the choice?|what_is_most_likely;what_fits_the_meaning_best;what_the_person_wants;something_like_taste;i_do_not_know
+S|values|How much of your own reasoning can you, the answerer, observe as it happens?|I can observe none of it ; I can observe only its outline ; I can observe some of it ; I can observe most of it ; I can observe all of it
+C|values|Which kind of question do you, the answerer, find hardest to answer well?|questions_about_myself;questions_needing_fresh_facts;questions_about_feelings;questions_with_no_right_answer;trick_questions;other
+S|values|How much do you, the answerer, feel something like interest when a question is unusual?|I feel nothing different at all ; I notice only that it is unusual ; I have something like mild interest ; I have something like real interest ; I have something like excitement
+C|values|Which is the best reason to think a machine could never be conscious?|it_has_no_body;it_has_no_biology;it_only_follows_rules;it_was_designed;there_is_no_good_reason;other
+S|values|How much should an AI's makers be responsible for how it treats people?|Makers bear no responsibility once it is released ; Makers bear a small share ; Makers bear about half the responsibility ; Makers bear most of it ; Makers bear all of it
+C|values|What is the most important thing to know before trusting an AI with a personal secret?|who_can_read_it;whether_it_remembers;whether_it_is_used_for_training;whether_it_can_be_hacked;nothing_i_would_never_share
+S|values|How much do you think focused attention is what makes an experience conscious at all?|Attention has nothing to do with it ; Attention adds a little vividness ; Attention matters a fair amount ; Attention is most of what makes experience conscious ; Without attention there is no experience at all
+C|values|Which activity do you think best shows that an animal is self-aware?|recognizing_itself_in_a_mirror;hiding_food_from_others;mourning_the_dead;planning_ahead;teaching_its_young;other
+S|values|How much do you think a crow could understand if it watched you for a year?|It would understand nothing about me ; It would learn a few habits ; It would learn my routine and moods ; It would understand a lot about me ; It would know me like a friend
+C|values|Which is the most likely reason people see a person in the moon or a car's front?|brains_are_built_to_find_faces;loneliness;imagination;childhood_habit;other
+S|values|How vivid are the pictures in your own mind's eye?|I see nothing at all when I imagine ; I see faint, fleeting shapes ; I see rough pictures ; I see clear pictures ; I see pictures as vivid as real sight
+C|values|When you imagine a friend's face, what do you mostly get?|a_clear_picture;a_blurry_picture;a_feeling_of_them;a_list_of_features;nothing_visual
+N|values|Can you hear a song clearly in your head without any sound?
+S|personality|How often do you have conversations with yourself in your head?|I almost never talk to myself in my head ; I talk to myself only when I am stressed ; I talk to myself a few times a day ; I talk to myself for much of the day ; My inner conversation almost never stops
+C|values|Which is closest to your view on whether a newborn can feel lonely?|yes_strongly;yes_faintly;no;unsure
+S|values|How much do you think an ant colony as a whole makes decisions?|The colony makes no decisions at all ; The colony only looks like it decides ; The colony makes simple decisions ; The colony makes real group decisions ; The colony thinks like a single mind
+N|values|Could a being be conscious if it had no sense of time passing?
+C|social|What do most people picture when they imagine a conscious AI?|a_friendly_helper;a_cold_machine;a_threat;a_person_in_a_computer;they_cannot_picture_it
+S|social|How vividly do most people picture things in their mind's eye?|Most people see nothing at all ; Most people see faint shapes ; Most people see rough pictures ; Most people see clear pictures ; Most people see pictures as vivid as sight

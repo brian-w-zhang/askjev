@@ -1,0 +1,329 @@
+@node self.values.moral_foundations.care
+# choice
+C | A classmate laughs loudly at a student who stutters while reading aloud. What would you most likely do? | step_in = tell the classmate to stop right then ; comfort_after = check on the student afterward ; tell_teacher = mention it to the teacher later ; stay_out = stay out of it ; laugh_along = laugh a little too ; other
+C | At the grocery store, a parent is yelling harshly at a crying toddler. What would you most likely do? | offer_help = offer the parent a hand ; smile_at_child = try to calm the child with a smile ; keep_watching = keep an eye on it from a distance ; look_away = look away and keep shopping ; say_something = tell the parent to ease up ; other
+C | A coworker mocks the new intern's accent in the break room. Which response feels right to you? | call_it_out = say it is not okay in front of everyone ; private_word = pull the coworker aside later ; support_intern = quietly check in with the intern ; ignore_it = ignore it since it was a joke ; other
+C | A friend keeps posting cruel jokes about a mutual acquaintance's weight. What would you most likely do? | ask_to_stop = ask the friend to stop ; unfollow = quietly unfollow the friend ; warn_acquaintance = tell the acquaintance what is being said ; nothing = do nothing ; other
+C | An elderly neighbor has not collected their mail for several days. What would you most likely do? | knock_now = knock on their door right away ; call_family = try to reach their family ; wait_a_bit = wait a day or two and see ; not_my_business = assume it is not my business ; other
+C | You see a teenager sitting alone and crying on a bus bench late at night. What would you most likely do? | ask_if_ok = ask if they are okay ; stay_nearby = stay nearby without intruding ; call_someone = call for help on their behalf ; walk_past = walk past ; other
+C | Which of these seems most cruel to you? | mocking_disability = mocking someone's disability ; public_humiliation = humiliating a worker in front of customers ; ignoring_suffering = ignoring someone who is clearly in pain ; spreading_rumor = spreading a hurtful rumor ; other
+C | A child at the park keeps getting pushed off the swings by older kids. What would you most likely do? | tell_older_kids = tell the older kids to stop ; find_parents = look for the children's parents ; play_with_child = invite the child to play elsewhere ; let_them_sort = let the kids sort it out ; other
+C | A coworker comes back from a family funeral and seems fragile. What would you most likely do? | check_in = check in with them privately ; take_tasks = quietly take some of their tasks ; send_card = leave a card or small note ; act_normal = act normal so they are not singled out ; other
+C | Someone in your group chat shares a humiliating photo of a person who passed out at a party. What would you most likely do? | ask_to_delete = ask them to delete it ; leave_chat = leave the chat ; react_nothing = say nothing and scroll on ; laugh_react = react with a laugh ; other
+C | Which matters most to you when deciding whether a joke went too far? | hurt_feelings = whether someone's feelings were hurt ; intent = whether it was meant to hurt ; audience = who was in the room ; truth = whether the joke was true ; other
+C | A stranger ahead of you in a checkout line is short a small amount and flustered. What would you most likely do? | cover_it = cover the difference ; offer_but_hesitate = offer only if no one else does ; wait_patiently = wait patiently without helping ; show_annoyance = sigh at the delay ; other
+C | On a hiking trail, someone twists an ankle far from the parking lot. What would you most likely do? | help_them_out = help them walk out even if it ends my hike ; call_rescue = call for help and wait with them ; leave_supplies = leave water and keep going ; keep_going = assume others will help ; other
+C | At work, your manager harshly criticizes a shy colleague in front of the team. What would you most likely do? | defend_them = speak up for the colleague ; comfort_later = comfort them afterward ; report_it = raise it with human resources ; stay_silent = stay silent ; other
+C | A friend asks you to help prank a coworker by hiding their lunch every day for a week. What would you do? | refuse = refuse because it would upset them ; do_it_once = go along only once ; make_it_kinder = suggest a harmless prank instead ; join_in = join in the whole week ; other
+C | Which kind of person do you admire most? | gentle = someone who is gentle with everyone ; protective = someone who stands up for the weak ; generous = someone who gives freely ; tough = someone who never shows weakness ; other
+C | A child tells you another child has been calling them names at school every day. What would you most likely advise? | tell_adult = tell a teacher right away ; ignore_it = ignore it and it will stop ; stand_up = stand up to them firmly ; befriend = try to befriend the name caller ; other
+C | Which would you find hardest to watch? | child_crying = a lost child crying for a parent ; old_person_fall = an elderly person falling on ice ; friend_humiliated = a friend being humiliated in public ; stranger_ignored = a stranger being ignored when asking for help ; other
+C | Your roommate is having a panic attack at two in the morning before your big exam. What would you most likely do? | stay_with_them = stay with them until it passes ; check_briefly = check on them briefly then go back to bed ; call_friend = call someone else to help them ; sleep = put in earplugs and sleep ; other
+C | A delivery driver slips on your icy steps. What would you do first? | help_up = rush out to help them up ; ask_if_hurt = ask from the door if they are hurt ; check_liability = worry about whether I am responsible ; nothing = assume they are fine ; other
+C | When someone is rude to a waiter at your table, what would you most likely do? | apologize_to_waiter = apologize to the waiter myself ; confront_diner = tell the diner to be kinder ; tip_extra = leave the waiter an extra tip ; say_nothing = say nothing ; other
+C | A new student at your child's school has no one to sit with at lunch. What would you most likely do? | encourage_child = encourage my child to invite them ; tell_teacher = mention it to the teacher ; wait_and_see = wait and see if it improves ; not_involved = stay out of it ; other
+# score
+S | A comedian's whole act is built on mocking people with visible disabilities. How acceptable is this to you? | I find it fine and would laugh along ; I find it edgy but would stay for the show ; I would feel uneasy and not laugh ; I would walk out of the show ; I would walk out and complain to the venue
+S | Someone leaves a harsh one-star review that singles out a teenage cashier by name. How wrong does this seem to you? | It seems fine, reviews are fair game ; It seems a bit unkind but not wrong ; It seems wrong and I would think less of the reviewer ; It seems cruel enough that I would report the review
+S | How relevant is it to your judgment of a person that they are consistently kind to people who can do nothing for them? | It does not affect my judgment at all ; It tips my view slightly ; It is one of several things I weigh ; It is one of the main things I judge people by ; It matters more than almost anything else
+S | A friend enjoys watching videos of people getting badly hurt in accidents. How does this sit with you? | It does not bother me at all ; It seems a little odd ; It makes me uncomfortable around them ; It makes me question their character ; It would make me pull away from the friendship
+S | A parent tells a child who is crying over a scraped knee to stop being a baby. How does this sit with you? | It seems like fine parenting ; It seems a bit harsh but normal ; It seems unkind and I would wince ; It seems wrong enough that I might gently say something
+S | A manager keeps an exhausted worker late on their birthday for a task that could wait. How does this sit with you? | It is fine, work comes first ; It is a bit thoughtless ; It is unkind and I would think less of the manager ; It is wrong and I would say so to the manager
+S | A student secretly records a classmate's meltdown and shares it for laughs. How serious a wrong is this to you? | It is harmless fun ; It is mean but minor ; It is a real wrong that deserves a talking-to ; It is serious enough that the school should step in ; It is one of the worst things a student could do to another
+S | How much would it bother you to learn a friend teased a lonely coworker behind their back? | It would not bother me ; It would bother me briefly ; It would make me see the friend differently ; It would make me confront the friend
+S | You hear a neighbor shouting cruel insults at their teenager through the wall most nights. What would you most likely do? | Do nothing, it is their family ; Feel bad but do nothing ; Try to be extra kind to the teenager when I see them ; Talk to the parent or to someone who could help
+S | A coach makes a slow runner do extra laps alone while the team watches. How does this sit with you? | It seems like fair motivation ; It seems harsh but acceptable ; It seems humiliating and wrong ; It seems cruel enough that parents should step in
+S | How much should a person's suffering count when deciding whether to break a small rule to help them? | It should not count at all ; It should count a little ; It should count about as much as the rule ; It should usually outweigh a small rule
+S | Someone tells a grieving friend to get over it after a few weeks. How does this sit with you? | It seems like healthy advice ; It seems blunt but well meant ; It seems insensitive ; It seems hurtful and I would say so
+S | A group of friends makes one member the constant butt of every joke, even though that member laughs along. How does this sit with you? | It is just how friends are ; It is fine as long as they laugh ; It makes me a little uneasy ; It seems unkind and I would ease off the jokes ; It seems cruel and I would tell the group to stop
+S | You see a stranger kick a vending machine and then shove the person waiting behind them. How strongly would you want to step in? | I would not want to step in at all ; I would only watch closely ; I would check on the person who was shoved ; I would tell the stranger to back off
+S | A friend refuses to visit a sick relative because hospitals make them uncomfortable. How does this sit with you? | It is completely understandable ; It is understandable but a little selfish ; It is selfish and I would nudge them to go ; It is wrong and I would tell them so plainly
+# noul
+N | Would you give up your seat on a crowded train to someone who looks exhausted but not elderly or pregnant?
+N | Would you stop to help a stranger pick up papers that blew across a busy street?
+N | Is it wrong to laugh at a video of a stranger falling hard on a sidewalk?
+N | Would you speak up if a friend was being cruel to a waiter?
+N | Is it wrong to tell a child their drawing is ugly because you think it is?
+N | Would you spend your lunch break sitting with a coworker who just got bad news?
+N | Is it wrong to tease a friend about something you know they are deeply insecure about?
+N | Would you leave a party early to walk home a guest who seemed shaken?
+N | Is causing someone emotional pain as bad as causing them physical pain?
+N | Would you step in if you saw a stranger bullying a younger child at a bus stop?
+N | Is it wrong to ignore a lonely neighbor who keeps trying to chat with you?
+N | Would you comfort a crying stranger on a plane?
+N | Is it wrong to make fun of a coworker's old clothes behind their back?
+
+@node self.values.moral_foundations.equality
+# choice
+C | A teacher gives every member of a group project the same grade, even though effort varied. How do you view this? | right = right, the group shares one result ; acceptable = acceptable but not ideal ; unfair_to_workers = unfair to those who did more ; unfair_to_all = unfair to everyone ; other
+C | Your family is dividing a grandparent's belongings. Which approach seems fairest to you? | equal_shares = equal shares for every grandchild ; by_closeness = more for those who were closest ; by_need = more for those who need it most ; by_request = whoever asks first ; other
+C | A company gives the same holiday bonus to every worker, from cleaners to executives. What do you think? | good = good, everyone matters equally ; fine_for_bonus = fine for a small bonus ; should_scale = it should scale with pay ; should_scale_by_merit = it should reward performance ; other
+C | Two siblings want the front seat on a long car trip. What seems fairest to you? | take_turns = switch halfway ; coin_flip = flip a coin ; older_first = older sibling gets it ; better_behaved = the better behaved one gets it ; other
+C | A club lets longtime members book the best practice slots first. How do you view this? | unfair = unfair to newer members ; rotate_instead = slots should rotate evenly ; fair_reward = a fair reward for loyalty ; fine = fine either way ; other
+C | At a shared office, only managers get access to the good coffee machine. What do you think? | unfair = unfair, everyone should use it ; minor = a minor perk, not worth fussing over ; fair = fair, it is part of their role ; other
+C | A restaurant gives regulars better tables and faster service than first-time guests. What do you think? | unfair = unfair to new guests ; understandable = understandable business ; fair = fair, regulars earned it ; other
+C | Friends are sharing a pizza, and one person is much hungrier than the rest. How should it be split? | equal_slices = equal slices for everyone ; more_for_hungry = more for the hungry one ; who_paid_more = more for whoever paid more ; first_come = whoever grabs first ; other
+C | In a group house, one roommate has a much bigger bedroom. How should rent be split? | equal = everyone pays the same ; by_room_size = the big room pays more ; by_income = whoever earns more pays more ; big_room_owner_decides = let them negotiate privately ; other
+C | A teacher lets students with wealthy parents take expensive class trips while others stay behind. What should happen? | cancel_trips = cancel trips unless all can go ; fund_everyone = raise money so all can go ; allow_it = allow it, it is optional ; other
+C | At a wedding, the couple seats close family at a raised head table and everyone else below. How do you view this? | fine = fine, it is tradition ; a_bit_off = a little off putting ; unfair = unfair to other guests ; other
+C | A sports league gives the most playing time to the best kids even at the youngest age level. What do you think? | equal_time = every child should play equally ; mostly_equal = mostly equal with some reward for skill ; skill_based = playing time should follow skill ; other
+C | A company offers remote work only to senior staff. What do you think? | unfair = unfair, it should be offered to all who can do it ; acceptable = acceptable as a perk of seniority ; sensible = sensible, seniors have earned trust ; other
+C | Which feels most unfair to you? | unequal_pay = two people paid differently for the same work ; unequal_rules = rules enforced on some but not others ; unequal_access = some shut out of opportunities others get freely ; unequal_voice = some voices ignored in a group decision ; other
+C | A neighborhood association lets homeowners decide on changes but not renters. How do you view this? | unfair = unfair, renters live there too ; somewhat_fair = somewhat fair, owners have more at stake ; fair = fair, owners bear the costs ; other
+C | A family pays for one child's university fully but not their sibling's apprenticeship. What do you think? | unfair = unfair, both deserve the same support ; depends = depends on the costs involved ; fair = fair, education costs more ; other
+C | A gym charges a lower rate to members who joined years ago than to new members for the same service. How do you view this? | unfair = unfair to new members ; fine = fine, it is a loyalty perk ; smart = smart business ; other
+C | A theme park sells a pass that lets people skip every line. What do you think? | unfair = unfair to those who wait ; acceptable = acceptable as an option ; good = good, people should get what they pay for ; other
+C | Your team gets tickets to a big game, but only enough for half. How should they be given out? | lottery = random draw ; top_performers = the best performers ; seniority = longest serving first ; rotate = whoever missed out last time ; other
+C | Grandparents give one grandchild a much bigger birthday gift because that child visits more. What do you think? | unfair = unfair to the others ; understandable = understandable ; fair = fair, visits deserve reward ; other
+C | Which is most important for a fair workplace to you? | same_pay_same_work = the same pay for the same work ; same_chances = the same chances to get promoted ; same_rules = the same rules for everyone ; same_respect = the same respect for every role ; other
+C | A school awards a prize only to students who can afford to enter an outside competition. What should the school do? | pay_fees = pay fees for anyone who wants to enter ; drop_prize = drop the prize ; keep_it = keep it as it is ; other
+# score
+S | A company pays its newest cleaners less than its longest serving cleaners for exactly the same shifts. How does this sit with you? | It seems completely fair ; It seems mostly fair ; It seems a bit off ; It seems unfair and should change
+S | At a potluck, some families bring expensive dishes and others bring cheap ones, but everyone eats the same. How does this sit with you? | It bothers me, people should contribute equally ; It bothers me a little ; It is fine, everyone eats together ; It is exactly how a potluck should work
+S | How much should a family try to give each of its children exactly the same amount of money over their lives? | It should not try at all ; It should roughly balance things ; It should try hard to keep things close ; It should keep things exactly equal
+S | In a neighborhood, one street gets its potholes fixed quickly while another waits months. How much would this bother you if you lived on the fast street? | Not at all ; A little ; Enough that I would mention it to the council ; Enough that I would push to fix the other street first
+S | A teacher calls on the same few confident students every class. How does this sit with you? | It is fine, they are volunteering ; It is a small problem ; It is unfair to the quieter students ; It is unfair enough that I would raise it with the teacher
+S | How much does it bother you when some guests at an event get special gift bags and others do not? | Not at all ; A little ; Quite a bit ; Enough that I would say something to the host
+S | In a work group chat, some colleagues get invited to lunch and others are left out every week. How much does this bother you? | Not at all ; A little ; It seems unfair ; It seems unfair and I would invite the others myself
+S | A landlord repairs the apartments of long term tenants faster than those of newer tenants. How does this sit with you? | It is fair, loyalty matters ; It is understandable ; It is somewhat unfair ; It is clearly unfair
+S | How relevant is it to your sense of right and wrong whether everyone in a group gets an equal say? | Not relevant ; Slightly relevant ; Somewhat relevant ; Very relevant ; One of the most relevant things
+S | A hospital lets donors' families skip the waiting room line. How does this sit with you? | It is fine, donors help everyone ; It is acceptable in small ways ; It is uncomfortable ; It is wrong
+S | A school gives tablets only to students whose parents attended an evening meeting. How does this sit with you? | It is fair, parents had the chance ; It is mostly fair ; It is somewhat unfair ; It is unfair to the children
+S | A club gives prizes to every child who participates, not just the winners. How does this sit with you? | It is a bad idea ; It is questionable ; It is fine for young children ; It is a good idea at any age
+S | Two coworkers do the same job, but one negotiated a much higher salary. How does this sit with you? | It is completely fair ; It is fair, they asked ; It is somewhat unfair ; It is unfair and the company should even it out
+S | A community pool opens early only for residents of the wealthier side of town. How much does this bother you? | Not at all ; A little ; Quite a bit ; Enough that I would complain
+S | How much would it bother you if your manager gave out bonuses in secret, so no one knew what others got? | Not at all ; A little ; Quite a bit ; A great deal
+# noul
+N | Should chores in a shared house be split equally regardless of who is home more?
+N | Is it unfair for a parent to buy one child a car and not the other?
+N | Should everyone on a volunteer team get the same thank-you gift regardless of hours given?
+N | Is it wrong for a teacher to have favorite students?
+N | Should a family dinner bill be split evenly even if some ordered more?
+N | Is it unfair when some students can afford private tutors and others cannot?
+N | Should interns get the same access to company events as full employees?
+N | Is it unfair when a company gives parking spots only to managers?
+N | Should every child in a class be invited to a birthday party held at school?
+N | Is it wrong for a club to charge new members more than old members?
+N | Should all workers on a project get their names listed the same way in the credits?
+N | Is it unfair for airlines to board first-class passengers first?
+N | Should inheritances between siblings always be equal?
+
+@node self.values.moral_foundations.proportionality
+# choice
+C | A company's bonus pool can be split evenly or by hours each person worked. Which seems right to you? | by_hours = by hours worked ; by_results = by results delivered ; evenly = evenly for everyone ; mix = part even, part by effort ; other
+C | A roommate never cleans but eats the most shared food. What seems fair to you? | pay_more = they pay more for groceries ; do_more_later = they take on extra chores ; equal_anyway = keep splitting equally ; kick_them_out = ask them to move out ; other
+C | A student skipped every study session but wants to copy the group's notes before the exam. What would you do? | refuse = refuse, they did not help ; share_some = share a summary only ; share_all = share everything ; charge_favor = share in exchange for a future favor ; other
+C | Your sibling helped care for your parents far more than you did. How should your parents' small savings be divided? | more_to_sibling = more to my sibling ; equal = equal shares ; sibling_decides = let my sibling decide ; other
+C | A coworker was late for a meeting once. What consequence fits? | nothing = nothing at all ; mention = a quick mention ; written_warning = a written warning ; docked_pay = docked pay ; other
+C | A teen breaks a neighbor's window with a baseball and runs off. What consequence seems right? | pay_for_it = pay for the window from their own money ; apologize_only = apologize in person ; work_it_off = do yard work for the neighbor ; grounded = be grounded at home ; other
+C | Two people did most of the work on a group presentation, and one did almost nothing. Who should present it? | the_workers = the two who did the work ; all_three = all three equally ; the_slacker = the slacker, to make up for it ; other
+C | A salesperson brought in far more revenue than anyone this year. How should they be rewarded? | big_bonus = a much bigger bonus than others ; small_bonus = a slightly bigger bonus ; same_as_all = the same as everyone ; public_praise = public praise only ; other
+C | A neighbor who never helped with the community garden wants a share of the harvest. What seems fair? | no_share = no share ; small_share = a small share ; equal_share = an equal share ; share_if_help_next_year = a share if they help next year ; other
+C | A player who scored most of the team's goals gets the same trophy as benchwarmers. How do you view this? | fair = fair, it was a team effort ; mostly_fair = mostly fair ; unfair = unfair to the top scorer ; other
+C | A child who did all their chores and a child who did none both get the same allowance. What seems right? | pay_by_chores = allowance should depend on chores ; same_allowance = same allowance is fine ; half_for_none = the one who did nothing gets less ; other
+C | Which consequence fits best for someone who cut in a long line at a bakery? | sent_to_back = sent to the back of the line ; warned = a warning from staff ; refused_service = refused service that day ; nothing = nothing ; other
+C | A carpool member never pays for gas but always gets a ride. What would you do? | ask_to_pay = ask them to pay their share ; drop_them = stop giving them rides ; keep_quiet = say nothing ; take_turns_driving = ask them to drive sometimes ; other
+C | A coworker who works twice as hard as you asks for the same raise you are getting. How do you view it? | they_deserve_more = they deserve a bigger raise than me ; same_is_fine = the same raise is fine ; i_deserve_more = I deserve more anyway ; other
+C | A friend who always cancels plans complains they are never invited anymore. What do you think? | fair_result = it is a fair result of their behavior ; harsh = it is too harsh ; talk_it_out = they should be told why ; other
+C | A person caught littering once in a park gets the same fine as a company that dumped waste there. How do you view this? | unfair = unfair, the company deserves far more ; fine = fine, the rule is the rule ; unsure = hard to say ; other
+C | A new employee got promoted faster than you because they brought a big client. How do you feel about it? | fair = fair, results matter ; somewhat_unfair = somewhat unfair to longer staff ; unfair = unfair, time served should count ; other
+C | A student who cheated on one quiz is given a zero for the entire course. How do you view this? | too_harsh = too harsh ; about_right = about right ; too_lenient = too lenient ; other
+C | Two volunteers staff a fundraiser, one for an hour and one all day. How should thanks be given? | more_for_all_day = more thanks for the all day volunteer ; same = the same thanks for both ; private_extra = the same in public, extra in private ; other
+C | At a potluck, one guest brought nothing and ate the most. What would you do? | nothing = nothing, food is for sharing ; mention_lightly = mention it lightly ; not_invite_next = not invite them next time ; ask_to_bring = ask them to bring something next time ; other
+C | A worker catches a costly mistake before it ships. What reward seems right? | bonus = a bonus ; praise = public praise ; nothing = nothing, it is their job ; other
+C | Which consequence fits best for a teen who lied about where they spent the night? | lose_privileges = lose privileges for a while ; talk_only = a serious talk only ; tracked_phone = location tracking for a while ; grounded_long = grounded for a long time ; other
+# score
+S | A worker who pulls long nights gets the same raise as one who leaves early. How does this sit with you? | It is fair ; It is mostly fair ; It is somewhat unfair ; It is clearly unfair
+S | How relevant is it to your judgment of fairness whether people got rewards in line with what they put in? | Not relevant ; Slightly relevant ; Somewhat relevant ; Very relevant ; The most relevant thing
+S | A friend who borrowed your car returned it with an empty tank and a dent. What would you most likely ask of them? | Nothing at all ; Just an apology ; Fill the tank ; Fill the tank and pay for the dent
+S | A student who studied all term gets the same grade as one who crammed the night before. How does this sit with you? | It is fair, grades measure results ; It is mostly fair ; It is a bit unfair ; It is unfair
+S | A shop owner bans a teen for life for shoplifting a candy bar. How does this sit with you? | It is far too harsh ; It is somewhat harsh ; It is about right ; It is too lenient
+S | A company gives every employee a trip, including one caught stealing from the office. How does this sit with you? | It is fine ; It is a bit odd ; It is wrong ; It is outrageous
+S | A kid who scored the winning goal gets a big trophy while teammates get nothing. How does this sit with you? | It is unfair to the team ; It is a bit much ; It is fair ; It is exactly right
+S | How much should a person's effort count, beyond their results, when deciding their reward? | Not at all ; A little ; About as much as results ; More than results
+S | Someone who parked in a disabled spot for a minute gets a heavy fine. How does this sit with you? | It is far too harsh ; It is harsh ; It is about right ; It is too light
+S | A roommate who pays more rent expects more say in house decisions. How does this sit with you? | It is not fair at all ; It is a little fair ; It is mostly fair ; It is completely fair
+S | A worker who reported a safety problem gets no recognition. How does this sit with you? | It is fine, it was their duty ; It is a bit stingy ; It is unfair ; It is wrong and should be fixed
+S | A friend who helped you move for a whole day gets the same thank-you as one who dropped by for an hour. How does this sit with you? | It is fine ; It is a bit off ; It is unfair to the all day helper ; It is clearly unfair
+S | How much should the size of a punishment depend on the harm caused rather than the rule broken? | Not at all ; A little ; Somewhat ; Mostly ; Entirely
+S | A player who breaks a rule by accident gets the same penalty as one who does it on purpose. How does this sit with you? | It is fair, rules are rules ; It is mostly fair ; It is somewhat unfair ; It is clearly unfair
+S | A lazy team member gets fired while the team member who covered for them gets nothing. How does this sit with you? | It is fine ; It is incomplete ; The helper deserves recognition ; The helper deserves a real reward
+# noul
+N | Should someone who contributes more to a shared household get a bigger say in how it is run?
+N | Is it fair for top performers to get much larger bonuses than average workers?
+N | Should a child who skips chores lose part of their allowance?
+N | Is it wrong for someone who did nothing in a group project to accept equal credit?
+N | Should a restaurant that gave terrible service still receive a normal tip?
+N | Is it fair for a first mistake to be punished as harshly as a repeated one?
+N | Should the person who finds a lost wallet get a reward from the owner?
+N | Is it fair for a volunteer who worked twice as many hours to get the same gift as others?
+N | Should a friend who never hosts still be invited to every gathering?
+N | Is it fair to pay a fast worker more than a slow worker for the same task?
+N | Should someone who breaks a borrowed item pay for all of it?
+N | Is it fair for a late joiner to a startup to get the same equity as a founder?
+N | Should a player who fouls on purpose face a bigger penalty than one who fouls by accident?
+
+@node self.values.moral_foundations.loyalty
+# choice
+C | A rival company offers you a better job and asks you to bring your current client list. What would you do? | refuse_list = take the job but refuse to bring the list ; decline_job = decline the job entirely ; bring_list = bring the list ; negotiate = ask my current employer to match ; other
+C | Your hometown team is losing badly and a friend offers you tickets to the rival's game. What would you do? | stay_loyal = decline, I stick with my team ; go_quietly = go but keep quiet about it ; go_happily = go and enjoy it ; other
+C | A coworker on your team made a mistake that your boss is asking about. What would you do? | protect = protect my coworker ; tell_truth = tell the boss what happened ; stay_vague = give a vague answer ; urge_confess = urge my coworker to own up ; other
+C | Your family runs a small bakery, and a big chain opens next door with cheaper bread. Where would you buy bread? | family_only = only from my family ; mostly_family = mostly from my family ; wherever_cheaper = wherever is cheaper ; other
+C | Your old school is raising money for a new library. What would you most likely do? | donate = donate ; share = share the appeal but not donate ; ignore = ignore it ; other
+C | A teammate is being trashed by fans online after a loss. What would you do? | defend_publicly = defend them publicly ; message_privately = message them privately ; stay_out = stay out of it ; agree_with_fans = agree with some of the criticism ; other
+C | Someone outside your family criticizes your brother in front of you. What would you do? | defend = defend my brother ; listen = listen first to see if it is fair ; agree = agree if it is true ; leave = leave the conversation ; other
+C | Your neighborhood is organizing a cleanup day on a weekend you had planned to rest. What would you do? | join = join the cleanup ; join_briefly = join for a short time ; skip = skip it ; donate_supplies = donate supplies instead ; other
+C | Your company is struggling and asks staff to take a small pay cut to avoid layoffs. What would you do? | accept = accept the cut ; accept_reluctantly = accept but look for other jobs ; refuse = refuse the cut ; leave = leave the company ; other
+C | A friend from your old team now works for a competitor and asks for gossip about your company. What would you do? | refuse = refuse to share ; share_harmless = share only harmless news ; share_freely = share freely ; other
+C | You find out a member of your club is secretly bad-mouthing the club online. What would you do? | confront = confront them privately ; report_to_club = tell the club leaders ; ignore = ignore it ; defend_club_online = defend the club online ; other
+C | Which feels like the bigger betrayal to you? | leak_secrets = leaking your team's plans to a rival ; quit_mid_season = quitting a team mid season ; mocking_team = mocking your team in public ; switching_sides = switching to the rival team ; other
+C | A local family business and a big online store sell the same item, with the online store a little cheaper. Where would you buy? | local = the local business ; online = the online store ; depends = depends on how much I save ; other
+C | Your cousin is running for a small local club position against someone more qualified. Whom would you back? | cousin = my cousin ; qualified = the more qualified person ; stay_neutral = stay neutral ; other
+C | Your choir needs someone to take over tedious organizing tasks nobody wants. What would you do? | volunteer = volunteer ; share_it = offer to share the tasks ; wait = wait for someone else ; leave_choir = consider leaving ; other
+C | A longtime friend asks you to vouch for them for a job you are unsure they can do. What would you do? | vouch = vouch for them ; vouch_honestly = vouch but mention my doubts ; decline = politely decline ; other
+C | Your family asks you to spend a holiday with them instead of on a trip you planned with friends. What would you do? | family = go to my family ; trip = go on the trip ; split = split the time ; other
+C | A player on your amateur team is poached by a rival team for a small perk. How do you view it? | betrayal = a betrayal ; disappointing = disappointing but fair ; fine = fine, it is their choice ; other
+C | Your coworkers plan a group complaint about the boss, but you get along well with the boss. What would you do? | join = join the group ; stay_out = stay out ; warn_boss = warn the boss ; mediate = try to mediate ; other
+C | Your sibling started a small online shop with mediocre products. What would you do? | buy_anyway = buy from them anyway ; promote = promote it without buying ; honest_feedback = give honest feedback instead ; nothing = do nothing ; other
+C | Your hometown is mocked on a popular TV show. How would you react? | offended = feel offended ; laugh = laugh along ; defend_online = defend it online ; indifferent = not care ; other
+C | A new friend asks you to skip your weekly game night with old friends. What would you do? | keep_game_night = keep game night ; skip_once = skip it once ; switch = switch to the new friend's plan regularly ; invite_both = invite the new friend along ; other
+# score
+S | A coworker publicly criticizes your team's work at a company meeting. How much does this bother you? | Not at all ; A little ; Quite a bit ; Enough that I would confront them
+S | How relevant is it to your judgment of a person whether they stand by their family during hard times? | Not relevant ; Slightly relevant ; Somewhat relevant ; Very relevant ; One of the most relevant things
+S | A player leaves their team for a rival right before the championship. How does this sit with you? | It is fine ; It is disappointing ; It is disloyal ; It is a real betrayal
+S | A relative sells the family's old home to a stranger instead of offering it to family first. How does this sit with you? | It is fine ; It is a little disappointing ; It is disloyal ; It is a betrayal of the family
+S | How much would you sacrifice personal comfort to support your community during a hard time? | I would not give anything up ; I would give up a little ; I would give up a fair amount ; I would give up a lot
+S | Your company's founder asks employees to put in extra weekend hours during a crisis. How willing are you? | Not willing at all ; Willing for a day or two ; Willing for a few weeks ; Willing for as long as it takes
+S | A friend cheers for a rival team at a game where your team is playing. How does this sit with you? | It does not bother me ; It is a little annoying ; It feels disloyal ; It feels like a real betrayal
+S | How much should you support a teammate who has been treated unfairly by the coach? | Not at all ; A little ; A fair amount ; Fully, even at a cost to me
+S | Someone leaves a close-knit hobby group and starts a rival group, taking half the members. How does this sit with you? | It is fine ; It is understandable ; It is disloyal ; It is a real betrayal
+S | How much should you keep buying from a local shop that treated your family well even when it gets pricier? | Not at all ; A little longer ; For quite a while ; Always
+S | A cousin tells a stranger embarrassing family stories at a party. How much does this bother you? | Not at all ; A little ; Quite a bit ; A great deal
+S | How much does it matter to you to stick with a club that has shrunk and lost its best members? | Not at all ; A little ; Quite a bit ; A great deal
+S | A worker reports their own team's safety shortcuts to regulators. How does this sit with you? | It is a betrayal of the team ; It is questionable ; It is understandable ; It is admirable
+S | A teammate misses the team's awards dinner for a friend's party. How does this sit with you? | It is fine ; It is a bit careless ; It is disloyal ; It is a real snub
+S | How much should you defend your school's reputation when an outsider mocks it? | Not at all ; A little ; A fair amount ; Strongly
+# noul
+N | Is it wrong to leave a company during its hardest year for a better offer?
+N | Would you keep supporting a local team that has lost for many seasons?
+N | Is it wrong to criticize your own family to outsiders?
+N | Should you stand by a teammate even if they made a bad mistake?
+N | Is it disloyal to switch your favorite team because another team is winning?
+N | Would you give up a weekend to help your old school's fundraiser?
+N | Is it wrong to share your employer's internal struggles with friends outside the company?
+N | Would you stay in a struggling hobby club out of loyalty to its members?
+N | Is it disloyal to date someone your best friend dislikes?
+N | Should you back a family member in a dispute even when unsure they are right?
+N | Is it wrong for a team captain to publicly blame a teammate for a loss?
+N | Would you turn down a better job to stay with a team that needs you?
+N | Is it disloyal to shop at a big chain instead of your neighbor's store?
+
+@node self.values.moral_foundations.authority
+# choice
+C | A new hire corrects the head chef in front of the whole kitchen staff. How do you view this? | disrespectful = disrespectful, it should be said privately ; fine_if_right = fine if the new hire was right ; brave = brave and good ; other
+C | Your grandmother insists on a family tradition at dinner that you find old-fashioned. What would you do? | follow_it = follow it out of respect ; follow_quietly = go along but grumble later ; skip_it = skip it ; suggest_change = suggest a change gently ; other
+C | A teacher tells a student to stop using their phone, and the student ignores them. What should happen? | take_phone = the phone is taken away ; warning = a warning ; send_out = the student is sent out ; nothing = nothing, it is minor ; other
+C | Your manager makes a decision you disagree with but it is not harmful. What would you do? | follow = follow it ; follow_and_voice = follow it and voice my view privately ; argue_publicly = argue in front of the team ; ignore = quietly ignore it ; other
+C | At a wedding, the officiant asks guests to put phones away, but a guest keeps filming. How do you view this? | rude = rude and disrespectful ; minor = a minor slip ; fine = fine, it is their memory ; other
+C | A young employee calls the company's elderly founder by a nickname at a meeting. How do you view this? | disrespectful = disrespectful ; depends = depends on the company culture ; fine = fine and friendly ; other
+C | A referee makes a call that the players on your team disagree with. How should players respond? | accept = accept it and move on ; respectful_challenge = challenge it respectfully ; argue_hard = argue hard ; walk_off = walk off in protest ; other
+C | A child tells their grandparent that their advice is outdated and useless. What should the parents do? | correct_child = correct the child firmly ; talk_later = talk to the child later ; laugh_it_off = laugh it off ; agree = agree with the child ; other
+C | A group of students decides to skip the school assembly as a prank. What should happen? | detention = detention ; talk = a serious talk ; ignore = ignore it ; other
+C | An employee skips the company's formal dress code on a client day. How do you view this? | disrespectful = disrespectful to the company ; unwise = unwise but not wrong ; fine = fine, clothes do not matter ; other
+C | Which feels most disrespectful to you? | talking_back_to_parent = talking back to a parent in public ; ignoring_a_teacher = ignoring a teacher's instruction ; mocking_elder = mocking an elder's beliefs ; defying_a_boss = openly defying a boss ; other
+C | A volunteer coach tells your child to sit out a game for missing practice. What would you do? | support_coach = support the coach ; ask_why = ask the coach why ; argue = argue with the coach ; pull_child = pull my child from the team ; other
+C | Your family always gathers at the eldest relative's house for holidays, but it is far for you. What would you do? | go_anyway = go anyway out of respect ; suggest_rotation = suggest rotating hosts ; skip = skip some years ; other
+C | A new team leader changes a long standing office routine without asking. How do you view this? | their_right = their right as leader ; should_consult = they should have consulted ; overstepping = overstepping ; other
+C | A museum guard asks you not to touch an exhibit, though others are touching it. What would you do? | obey = stop touching it ; obey_and_point = stop and point out the others ; argue = argue ; ignore = ignore the guard ; other
+C | A student refuses to stand when a guest speaker enters the room. How do you view this? | disrespectful = disrespectful ; minor = minor ; fine = fine, it is their choice ; other
+C | A new neighbor ignores the building's quiet hours because they find them silly. How do you view this? | wrong = wrong, rules are rules ; rude = rude to neighbors ; fine = fine if no one complains ; other
+C | Your boss asks you to follow a procedure you think is slower but harmless. What would you do? | follow = follow it ; follow_and_suggest = follow it and suggest a change ; skip = do it my way ; other
+C | At a religious service you are visiting, you are asked to cover your head. What would you do? | comply = comply ; comply_reluctantly = comply reluctantly ; leave = leave ; refuse = refuse ; other
+C | A child calls their teacher by first name without being invited to. How do you view this? | disrespectful = disrespectful ; odd = a bit odd ; fine = fine ; other
+C | A soldier disobeys an order they think is only a little unwise. How do you view this? | wrong = wrong, orders matter ; understandable = understandable ; right = right to follow conscience ; other
+C | A long serving club president is replaced by a younger member without ceremony. How do you view this? | disrespectful = disrespectful to the president ; fine = fine, it is a normal change ; good = good, new blood ; other
+# score
+S | An employee rolls their eyes openly while their boss speaks at a meeting. How does this sit with you? | It is fine ; It is a bit rude ; It is disrespectful ; It deserves a reprimand
+S | How relevant is it to your judgment of a person whether they show respect to their elders? | Not relevant ; Slightly relevant ; Somewhat relevant ; Very relevant ; One of the most relevant things
+S | A teen refuses to help with a family ritual they find pointless. How does this sit with you? | It is fine ; It is understandable ; It is disrespectful ; It deserves a consequence
+S | A student argues with a teacher about a grade in front of the class. How does this sit with you? | It is admirable ; It is fine ; It is rude ; It deserves a consequence
+S | How much should a family follow a grandparent's wishes about a holiday tradition? | Not at all ; A little ; Mostly ; Completely
+S | A worker ignores a safety supervisor's instruction to wear gloves for a quick task. How does this sit with you? | It is fine ; It is careless ; It is disrespectful ; It deserves a formal warning
+S | A guest ignores the host's house rules about taking off shoes. How does this sit with you? | It is fine ; It is a bit rude ; It is disrespectful ; It is disrespectful enough to ask them to leave
+S | How much should an employee defer to a manager's decision they think is slightly wrong? | Not at all ; A little ; Mostly ; Completely
+S | A young coach ignores advice from the club's veteran coaches. How does this sit with you? | It is fine ; It is a bit arrogant ; It is disrespectful ; It is disrespectful and unwise
+S | A team captain calls out the coach's plan as stupid in front of the team. How does this sit with you? | It is fine ; It is a bit much ; It is disrespectful ; It deserves a benching
+S | How much should old customs at a wedding be kept even when the couple dislikes them? | Not at all ; A little ; Mostly ; Completely
+S | A new member of a choir sings their own harmony instead of the director's part. How does this sit with you? | It is creative ; It is fine ; It is disrespectful to the director ; It deserves removal from the choir
+S | A diner openly argues with a restaurant owner about how a traditional dish should be cooked. How does this sit with you? | It is fine ; It is a bit rude ; It is disrespectful ; It is very disrespectful
+S | How much should children be expected to follow their parents' wishes once they are adults? | Not at all ; A little ; Mostly ; Completely
+S | A junior doctor questions a senior doctor's treatment plan in front of a patient. How does this sit with you? | It is admirable ; It is fine ; It is out of line ; It deserves a reprimand
+# noul
+N | Is it wrong to call a teacher by their first name when they have not invited it?
+N | Should adult children still follow their parents' household rules when visiting?
+N | Is it wrong to talk back to a police officer who is being polite?
+N | Should employees follow a manager's harmless instruction they think is pointless?
+N | Is it disrespectful to skip a family tradition because it bores you?
+N | Should students stand when a principal enters the classroom?
+N | Is it wrong to leave a religious service in the middle of it?
+N | Should the oldest person at a family dinner be served first?
+N | Is it disrespectful to wear casual clothes to a formal ceremony?
+N | Should a team follow the captain's call even when most disagree?
+N | Is it wrong to interrupt an elder who is telling a story?
+N | Should a new employee wait to suggest changes until they have been there a while?
+N | Is it wrong to ignore a lifeguard's instruction to leave the water?
+
+@node self.values.moral_foundations.purity
+# choice
+C | Someone uses their late grandmother's heirloom wedding dress as a painting smock. How do you view this? | disrespectful = disrespectful to her memory ; odd = odd but harmless ; fine = fine, it is just fabric ; other
+C | A person licks their fingers and then serves food to others at a party. What would you do? | refuse = refuse the food ; eat_anyway = eat it anyway ; say_something = say something ; other
+C | A friend uses a cemetery as a shortcut and eats lunch on a grave. How do you view this? | disrespectful = disrespectful ; odd = odd but harmless ; fine = fine ; other
+C | A restaurant serves a dish made from ingredients most people find disgusting but safe. What would you do? | try_it = try it ; refuse = refuse it ; watch_others = watch others try it ; other
+C | Someone spits on a national monument as a joke. How do you view this? | degrading = degrading and wrong ; rude = rude but minor ; harmless = harmless joke ; other
+C | A person wears a used, unwashed shirt they found in a thrift store bin. How do you view this? | gross = gross ; fine = fine if they wash it soon ; fine_anyway = fine either way ; other
+C | Someone keeps their deceased pet's ashes in a coffee jar on the kitchen counter. How do you view this? | disrespectful = disrespectful ; odd = odd but harmless ; sweet = sweet ; other
+C | A friend takes selfies at a memorial for disaster victims. How do you view this? | disrespectful = disrespectful ; thoughtless = thoughtless but minor ; fine = fine ; other
+C | A person eats food that fell on a public restroom floor. How do you view this? | disgusting = disgusting ; unwise = unwise ; fine = fine if wrapped ; other
+C | At a wedding, a guest gets drunk and dances on the altar. How do you view this? | degrading = degrading and wrong ; embarrassing = embarrassing ; fun = harmless fun ; other
+C | Someone uses a holy book as a doorstop. How do you view this? | disrespectful = disrespectful ; odd = odd ; fine = fine ; other
+C | A roommate never washes their dishes and lets food rot in the sink. What would you do? | clean_it = clean it myself ; confront = confront them ; move_out = move out ; ignore = ignore it ; other
+C | A tattoo artist offers to tattoo a sacred symbol on someone who does not share the faith. How do you view this? | disrespectful = disrespectful ; questionable = questionable ; fine = fine ; other
+C | A person wears the same socks for a week without washing them. How do you view this? | disgusting = disgusting ; lazy = lazy but harmless ; fine = fine ; other
+C | Someone drinks from a public water fountain by putting their mouth on the spout. How do you view this? | disgusting = disgusting ; rude = rude to others ; fine = fine ; other
+C | An artist makes a sculpture from human hair collected at salons. How do you view this? | disgusting = disgusting ; odd = odd but acceptable ; interesting = interesting ; other
+C | A guest uses a host's toothbrush without asking. How do you view this? | disgusting = disgusting ; rude = rude ; fine = fine ; other
+C | Someone sells their late parent's wedding ring to buy a gaming console. How do you view this? | disrespectful = disrespectful ; understandable = understandable ; fine = fine ; other
+C | A chef reuses leftover food from customers' plates for staff meals. How do you view this? | disgusting = disgusting ; wasteful_otherwise = better than wasting it ; fine = fine ; other
+C | A person swears loudly inside a house of worship. How do you view this? | disrespectful = disrespectful ; rude = rude but minor ; fine = fine ; other
+C | Which feels most wrong to you? | trashing_a_grave = trashing a grave ; mocking_a_funeral = mocking a funeral ; burning_a_holy_book = burning a holy book ; spitting_on_food = spitting in someone's food ; other
+C | A friend eats a whole cake alone every night even though they feel sick after. How do you view this? | lacks_restraint = a lack of self control ; their_business = their business ; fine = fine ; other
+# score
+S | Someone uses a church pew as a picnic table after a service. How does this sit with you? | It is fine ; It is a bit odd ; It is disrespectful ; It is very disrespectful
+S | How relevant is it to your judgment of a person whether they do something degrading, even if no one is harmed? | Not relevant ; Slightly relevant ; Somewhat relevant ; Very relevant ; One of the most relevant things
+S | A person eats lunch next to an overflowing dumpster without seeming to mind. How does this sit with you? | It is fine ; It is a bit odd ; It is gross ; It is disgusting
+S | Someone uses an old flag as a rag to wash their car. How does this sit with you? | It is fine ; It is a bit odd ; It is disrespectful ; It is very disrespectful
+S | How much should people hold back from indulging in pleasures like junk food, even when it harms no one else? | Not at all ; A little ; Quite a bit ; A great deal
+S | A friend jokes loudly at a stranger's funeral they wandered into. How does this sit with you? | It is fine ; It is odd ; It is disrespectful ; It is shameful
+S | Someone keeps a collection of used chewing gum as a hobby. How does this sit with you? | It is fine ; It is quirky ; It is gross ; It is disgusting
+S | A person wears shoes on a prayer rug in a mosque they are touring. How does this sit with you? | It is fine ; It is careless ; It is disrespectful ; It is very disrespectful
+S | How much should a body be treated with dignity after death, even if the person had no wishes? | Not at all ; A little ; Quite a bit ; Completely
+S | A cook sneezes over a salad and serves it anyway. How does this sit with you? | It is fine ; It is careless ; It is gross ; It is disgusting and wrong
+S | Someone scatters their late parent's ashes in a fast food parking lot because it was their favorite place. How does this sit with you? | It is sweet ; It is fine ; It is odd ; It is disrespectful
+S | How much does it bother you when people curse in front of children? | Not at all ; A little ; Quite a bit ; A great deal
+S | Someone uses a dead relative's diary as scrap paper. How does this sit with you? | It is fine ; It is careless ; It is disrespectful ; It is very disrespectful
+S | A friend drinks until they vomit at every party. How does this sit with you? | It is fine ; It is unwise ; It is degrading ; It is shameful
+S | A tourist climbs onto a sacred rock that locals ask visitors not to touch. How does this sit with you? | It is fine ; It is careless ; It is disrespectful ; It is shameful
+# noul
+N | Is it wrong to use a gravestone as a seat while eating lunch?
+N | Would you feel uneasy wearing a dead stranger's clothing?
+N | Is it wrong to toss a holy book in the trash?
+N | Would you refuse to eat food a stranger had touched with bare hands?
+N | Is it wrong to mock a religious ritual you do not believe in?
+N | Should people show self-restraint in pleasures even when no one else is harmed?
+N | Would you feel disgusted drinking from a glass that had been cleaned in a toilet?
+N | Is it wrong to sell a relative's ashes urn at a garage sale?
+N | Would you feel uneasy sleeping in a room where someone recently died?
+N | Is it degrading to eat competitively until you are sick?
+N | Should sacred places be treated differently from ordinary places, even by nonbelievers?
+N | Is it wrong to wear a sacred item as a fashion accessory?
+N | Would you feel disgusted using a public bathroom that had not been cleaned in days?

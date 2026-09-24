@@ -1,0 +1,154 @@
+# self.lifestyle.money_habits
+C | What do you splurge on most often without regret? | food_and_restaurants ; clothes_and_shoes ; gadgets ; travel ; books_and_hobbies ; home_things ; other
+C | Which small daily purchase is hardest for you to give up? | coffee_out ; snacks ; lunch_out ; rides_instead_of_walking ; drinks_out ; none
+C | How do you usually set a budget for holiday gifts? | fixed_total_for_everyone ; set_amount_per_person ; decide_as_i_shop ; no_budget_at_all ; mostly_make_gifts
+C | What do you usually do with a gift card you receive? | spend_it_right_away ; save_it_for_something_special ; forget_about_it ; regift_it ; sell_or_swap_it
+C | What do you do with receipts after a purchase? | keep_them_all ; keep_only_big_ones ; snap_a_photo ; throw_them_away ; never_take_them
+C | How do you prefer to get receipts? | paper ; by_email ; in_an_app ; no_receipt ; no_preference
+C | Where do you keep the paper receipts you save? | wallet ; a_drawer ; a_folder_or_envelope ; stuffed_in_a_bag ; nowhere
+C | Which kind of bargain gives you the biggest thrill? | clearance_rack_find ; thrift_store_treasure ; free_item_with_purchase ; big_online_discount ; haggled_price ; none
+C | Where do you most enjoy hunting for bargains? | thrift_shops ; flea_markets ; outlet_stores ; online_deal_sites ; garage_sales ; nowhere
+C | How do you usually find out about a sale? | store_emails ; social_media ; walking_past_a_shop ; friends_tell_me ; price_tracking_app ; i_rarely_do
+C | What do you do when a price drops right after you buy something? | ask_for_a_refund_of_the_difference ; return_and_rebuy ; shrug_it_off ; feel_annoyed_for_days ; other
+C | How many streaming or app subscriptions would you comfortably keep at once? | none ; just_one ; a_couple ; several ; as_many_as_i_want
+C | How do you keep track of your subscriptions? | a_list_or_spreadsheet ; an_app ; checking_my_statements ; reminders_before_renewal ; i_do_not_track_them
+C | Which kind of subscription do you value most? | video_streaming ; music ; news_or_magazines ; cloud_storage ; gym_or_fitness ; food_boxes ; none
+C | What do you do before a free trial turns into a paid plan? | cancel_right_away_after_signing_up ; set_a_reminder ; decide_near_the_end ; usually_forget ; avoid_free_trials
+C | How do you prefer to pay for groceries? | debit_card ; credit_card ; cash ; phone_or_watch ; other
+C | What do you carry in your wallet? | lots_of_cash ; a_little_cash ; cards_only ; phone_instead_of_wallet ; other
+C | How much cash do you usually keep at home? | none ; a_little_for_emergencies ; a_fair_amount ; a_lot ; other
+C | Which saving method works best for you? | automatic_transfers ; a_jar_or_envelope ; saving_whatever_is_left ; a_separate_account_per_goal ; savings_challenges ; none
+C | What are you most likely to be saving for right now? | a_trip ; a_big_purchase ; an_emergency_fund ; a_home ; education ; nothing_specific
+C | How do you celebrate reaching a savings goal? | small_treat ; big_treat ; set_a_new_goal_right_away ; tell_someone ; nothing_special
+C | What do you do with coins from your pocket at the end of the day? | drop_them_in_a_jar ; keep_them_in_my_wallet ; leave_them_in_a_bowl ; use_them_up_quickly ; never_carry_coins
+C | How do you prefer to handle a large purchase? | save_up_first ; pay_in_installments ; put_it_on_a_card ; buy_used_instead ; skip_it
+C | Which big purchase would you save for longest? | a_car ; a_trip_abroad ; a_computer ; furniture ; a_musical_instrument ; other
+C | What makes you walk away from buying something you wanted? | price_too_high ; bad_reviews ; no_real_need ; guilt ; long_wait_for_delivery ; other
+C | How do you decide what to buy when choosing between two similar items? | cheaper_one ; better_reviews ; better_looking_one ; familiar_brand ; ask_someone ; other
+C | Which kind of shop do you spend the most time browsing? | bookshops ; clothing_stores ; hardware_stores ; kitchen_shops ; electronics_stores ; online_shops ; none
+C | When do you do most of your online shopping? | late_at_night ; during_lunch_breaks ; weekend_mornings ; on_my_commute ; rarely_shop_online
+C | What do you do with items sitting in an online shopping cart? | buy_them_soon ; leave_them_for_weeks ; wait_for_a_discount ; delete_them ; never_use_carts
+C | How do you usually shop for clothes? | wait_for_sales ; buy_new_season_pieces ; thrift_them ; buy_only_when_something_wears_out ; other
+C | What is your attitude toward luxury brands for yourself? | love_them ; one_special_piece_is_enough ; only_if_bought_used ; not_worth_it ; do_not_care
+C | How do you prefer to celebrate a payday? | a_treat_meal ; a_small_purchase ; move_money_into_savings ; pay_bills_first ; nothing_special
+C | What would you do with a small windfall found in an old coat pocket? | spend_it_on_a_treat ; add_it_to_savings ; give_it_away ; put_it_back_for_later ; other
+C | Which kind of bill do you find most annoying to pay? | phone ; electricity ; internet ; rent ; insurance ; other
+C | How do you pay your regular bills? | autopay_everything ; pay_each_by_hand ; mix_of_both ; someone_else_handles_it ; other
+C | What time of the month do you check on your money? | payday ; start_of_the_month ; end_of_the_month ; whenever_a_bill_arrives ; rarely ; daily
+C | How do you like to see your spending laid out? | an_app_with_charts ; a_spreadsheet ; a_paper_notebook ; bank_statements ; i_do_not_look
+C | Which spending category do you most often go over? | eating_out ; groceries ; entertainment ; shopping ; transport ; none
+C | Which expense do you cut first when money is tight? | eating_out ; clothes ; subscriptions ; hobbies ; travel ; other
+C | How do you feel about splitting shared costs with a roommate or partner? | exactly_even ; by_income ; whoever_uses_more_pays_more ; take_turns ; other
+C | How do you like to pay back a friend who covered you? | right_away_by_app ; cash_next_time_i_see_them ; buy_their_next_meal ; when_i_remember ; other
+C | Which money app feature matters most to you? | spending_alerts ; savings_goals ; easy_transfers_to_friends ; budget_categories ; none
+C | What kind of treat do you buy yourself after a hard week? | a_fancy_coffee ; takeout_dinner ; a_book ; clothes ; a_plant_or_flowers ; nothing
+C | How do you prefer to buy furniture? | brand_new ; secondhand ; hand_me_downs ; build_or_restore_it_myself ; rent_it ; other
+C | How do you prefer to buy books? | new_from_a_shop ; used ; ebooks ; borrow_from_a_library ; do_not_buy_books
+C | What would you most like to own that you currently rent or borrow? | a_home ; a_car ; tools ; nice_clothes ; nothing
+C | How do you approach buying a new phone? | latest_model ; one_generation_behind ; refurbished ; use_mine_until_it_breaks ; other
+C | Where would you put money you set aside for fun? | a_jar ; a_separate_account ; an_envelope ; mixed_in_with_everything_else ; other
+C | Which feeling do you get most often after spending money? | satisfied ; guilty ; relieved ; anxious ; nothing_much
+C | What kind of price tag makes you hesitate most? | slightly_over_budget ; a_round_high_number ; a_monthly_fee ; hidden_fees ; none
+C | How do you react to a fee you did not expect? | fight_to_get_it_removed ; complain_and_pay ; pay_and_forget ; switch_providers ; other
+C | How do you tend to shop at a farmers market? | bring_cash_and_a_limit ; buy_whatever_looks_good ; buy_only_from_a_list ; just_browse ; never_go
+C | Which item do you always buy the cheapest version of? | paper_towels ; batteries ; cleaning_supplies ; pasta ; socks ; none
+C | Which item do you always pay more for? | shoes ; coffee ; mattress ; headphones ; kitchen_knives ; none
+C | How do you save on food? | meal_planning ; buying_in_bulk ; cooking_at_home ; discount_stores ; using_leftovers ; i_do_not_try
+C | How do you feel about loyalty cards and reward programs? | sign_up_for_everything ; only_for_places_i_visit_often ; too_much_hassle ; avoid_them ; other
+C | How do you like to receive money as a gift? | cash_in_a_card ; bank_transfer ; gift_card ; would_rather_get_an_object ; other
+C | Which spending habit are you proudest of? | never_carrying_card_debt ; saving_regularly ; buying_quality ; avoiding_impulse_buys ; none
+C | Which spending habit would you most like to change? | eating_out_less ; fewer_impulse_buys ; fewer_subscriptions ; saving_more ; none
+C | How do you set aside money for yearly costs like gifts or trips? | save_a_bit_each_month ; pay_when_they_come ; use_a_bonus ; put_on_a_card ; other
+C | How would you spend a free afternoon with a little spare money? | a_nice_lunch ; a_museum_or_show ; browsing_shops ; a_small_hobby_purchase ; save_it_and_stay_in ; other
+C | How do you plan for a vacation budget? | set_a_daily_amount ; set_a_total ; spend_freely_and_check_later ; no_plan ; other
+C | How do you pay when traveling abroad? | card_everywhere ; cash_in_local_currency ; travel_money_card ; mix ; other
+C | Which kind of memento do you spend money on during trips? | postcards ; magnets ; local_crafts ; clothing ; food_to_bring_home ; none
+C | What do you do with old things you no longer use? | sell_them ; donate_them ; give_to_friends ; throw_them_out ; keep_them ; other
+C | Where do you prefer to sell things you no longer need? | online_marketplace ; garage_sale ; consignment_shop ; to_friends ; never_sell
+C | How do you decide whether to repair or replace something broken? | always_repair_first ; repair_if_cheap ; replace_if_old ; always_replace ; other
+C | How would you handle a friend asking to borrow a small amount? | lend_it_happily ; lend_it_and_note_it ; offer_to_pay_for_something_instead ; say_no_politely ; other
+C | How do you prefer to budget for going out with friends? | set_a_limit_in_advance ; leave_cards_at_home ; bring_only_cash ; do_not_budget ; other
+C | Which kind of experience is most worth spending money on for you? | concerts ; fine_dining ; travel ; classes ; sporting_events ; spa_days ; other
+C | How do you prefer to spend on hobbies? | best_gear_from_the_start ; cheap_starter_gear ; borrow_or_rent_first ; secondhand_gear ; other
+C | What do you do when you are tempted by an ad? | click_and_buy ; save_it_for_later ; look_for_a_cheaper_version ; ignore_it ; other
+C | What do you think about paying for convenience like delivery? | worth_it_often ; worth_it_sometimes ; only_in_emergencies ; never_worth_it
+C | How often would you want to review your spending in an ideal world? | daily ; weekly ; monthly ; yearly ; never
+C | What is your usual approach to birthday spending on yourself? | a_big_treat ; a_small_treat ; an_experience ; nothing_special ; other
+C | Which way of saving small amounts appeals to you most? | rounding_up_purchases ; a_no_spend_day_each_week ; skipping_one_treat ; a_coin_jar ; none
+C | How do you feel about buying things in bulk? | love_it ; only_for_staples ; not_enough_space ; waste_of_money ; other
+C | Which room of your home gets most of your spending? | kitchen ; living_room ; bedroom ; bathroom ; workspace ; none
+C | What kind of wallet do you use? | slim_card_holder ; bifold ; big_zip_wallet ; phone_case_wallet ; no_wallet ; other
+S | How often do you buy yourself a coffee or snack out? | Almost never ; A few times a month ; About once a week ; Several times a week ; Every day or more
+S | How much do you spend on gifts compared with what you spend on yourself? | Far less on gifts than on yourself ; A bit less on gifts ; About the same ; A bit more on gifts ; Far more on gifts than on yourself
+S | How often do you cancel subscriptions you no longer use? | You never do and they pile up ; You notice them only at year end ; You clear them out every few months ; You cancel as soon as you stop using one
+S | How carefully do you read the fine print before signing up for a paid plan? | You never read it ; You skim the price only ; You read the key terms ; You read it all and compare plans
+S | How often do you shop secondhand? | Never ; Once in a while for special finds ; For some categories regularly ; For most of what you buy
+S | How long do you keep a pair of shoes before replacing them? | You replace them each season ; You replace them every year or so ; You wear them for a few years ; You wear them until they fall apart
+S | How long would you wait between wanting a pricey item and buying it? | You buy it on the spot ; You wait a day or two ; You wait a few weeks ; You wait months ; You usually never buy it
+S | How often do you buy things you end up not using? | Almost never ; Once or twice a year ; Every few months ; Most months ; Nearly every week
+S | How much do you enjoy haggling over a price? | You refuse to ever haggle ; You find it awkward but will try ; You find it fine ; You enjoy it ; You love it and haggle wherever you can
+S | How much of your spending goes on experiences rather than things? | Almost all on things ; Mostly on things ; An even split ; Mostly on experiences ; Almost all on experiences
+S | How much does a good bargain please you? | You do not care about bargains ; You feel mildly pleased ; You feel pleased and mention it ; You feel thrilled and tell everyone ; It is one of your favorite feelings
+S | How often do you check prices on a tracking site before buying online? | Never ; For rare big purchases ; For most mid-sized purchases ; For almost everything you buy
+S | How much do you plan grocery spending before shopping? | You buy whatever you feel like ; You have a rough idea ; You bring a list ; You bring a list with a set budget ; You plan every meal and cost in advance
+S | How often do you pay only with cash? | Never ; On rare occasions ; For small purchases ; For most purchases ; For everything
+S | How much money do you keep untouched as a cushion for surprises? | None at all ; Enough for a small repair ; Enough for a month of expenses ; Enough for several months ; Enough for a year or more
+S | How often do you treat friends to a meal or drink? | Never ; Once in a long while ; Every few outings ; Most outings ; Nearly every time
+S | How often do you wait for a sale before buying something you need? | Never ; For a few big items ; For about half your purchases ; For almost everything
+S | How often do you buy something because it was on sale rather than needed? | Never ; Once in a while ; Fairly often ; Most of what you buy on sale is unplanned
+S | How often do you review your bank statement line by line? | Never ; Once a year ; A few times a year ; Every month ; Every week
+S | How far ahead do you save for the holidays? | You do not save for them ; You start the month before ; You start a few months before ; You save all year round
+S | How often do you buy books, music, or games you never finish? | Never ; Rarely ; Sometimes ; Often ; Most of the time
+S | How often do you make a shopping list before going to a store? | Never ; For big trips only ; For most trips ; For every trip
+S | How often do you check a menu's prices before choosing a restaurant? | Never ; Only for fancy places ; For most places ; Every single time
+S | How often do you compare phone or internet plans to save money? | Never ; Only when a contract ends ; Every year or so ; Several times a year
+S | How often do you return things you have bought? | Never ; Once a year or less ; A few times a year ; Most months ; Almost every time you shop
+S | How much does paying a late fee bother you? | You do not mind ; It irks you briefly ; It annoys you for a day ; It upsets you for days ; You have never let it happen
+S | How often do you spend money on something just for fun with no purpose? | Never ; Rarely ; Now and then ; Most weeks ; Almost daily
+S | How often do you borrow things instead of buying them? | Never ; For a few big tools or items ; For many things you use rarely ; Whenever you can
+S | How often do you spend money to save time? | Never ; On rare occasions ; Fairly often ; Whenever it is available
+S | How much of each extra bit of income do you save? | None of it ; A small part ; About half ; Most of it ; All of it
+S | How much do you think about the price when ordering at a restaurant? | You never look at prices ; You notice prices but order what you want ; You avoid the most expensive dishes ; You pick based mostly on price ; You always order the cheapest dish
+S | How often do you buy snacks at the checkout counter? | Never ; Rarely ; Sometimes ; Often ; Almost every time
+S | How often do you buy coffee beans or tea for home instead of drinks out? | You never buy drinks for home ; You buy some for home ; You make most drinks at home ; You make all drinks at home
+S | How much do you enjoy window shopping without buying anything? | You find it pointless ; You find it boring ; You find it fine ; You enjoy it ; You love it
+S | How often do you give yourself a spending-free weekend? | Never ; Once a year or so ; A few times a year ; Every month ; Most weekends
+N | Do you have a separate account just for fun money?
+N | Do you check a price online before buying something in a shop?
+N | Do you enjoy thrift shopping?
+N | Do you keep a jar for spare coins?
+N | Do you pay for music streaming?
+N | Do you have a monthly spending limit you actually stick to?
+N | Do you buy yourself a gift on your birthday?
+N | Have you ever done a no-spend month?
+N | Do you use cash-back or reward points on purpose?
+N | Do you set up automatic transfers into savings?
+N | Do you know how much you spent last month on eating out?
+N | Do you buy the same brands every time out of habit?
+N | Do you shop at discount grocery stores?
+N | Do you keep a wish list for gifts people can buy you?
+N | Do you pay for extra phone or cloud storage?
+N | Do you usually buy the cheapest option on a menu?
+N | Do you enjoy talking about deals you have found?
+N | Do you split costs down to the last cent with friends?
+N | Do you keep gift receipts when giving presents?
+N | Do you prefer to pay for things all at once rather than in parts?
+N | Have you ever sold something online to make extra money?
+N | Do you shop for clothes more than once a month?
+N | Do you give yourself a regular allowance for treats?
+N | Do you feel guilty spending money on things you do not need?
+N | Do you buy gifts for friends outside of birthdays and holidays?
+N | Do you track every purchase you make?
+N | Would you pay extra for faster delivery?
+N | Do you keep your savings in a place that is hard to reach?
+N | Do you enjoy the feeling of saving money more than spending it?
+C | How do you decide how much to spend on a present for a relative? | same_amount_every_time ; based_on_what_they_want ; based_on_what_i_can_afford ; make_something_instead ; other
+C | Which impulse buy tempts you most at a bookshop or gift shop? | notebooks ; candles ; postcards ; small_toys ; books ; none
+C | How do you handle money you get as a birthday gift? | spend_it_on_a_treat ; save_all_of_it ; split_between_saving_and_spending ; use_it_for_bills ; other
+C | Which money task do you put off most? | checking_statements ; canceling_subscriptions ; filing_receipts ; paying_bills ; setting_a_budget ; none
+C | How do you like to keep money for a shared household pot? | a_joint_account ; a_cash_tin ; an_app_that_tracks_who_owes ; each_pays_their_own ; other
+S | How often do you pay extra for a nicer version of something ordinary, like fancy soap? | Never ; Rarely ; Sometimes ; Often ; Almost always
+S | How often do you use a food delivery service instead of picking up food yourself? | Never ; A few times a year ; A few times a month ; Most weeks ; Several times a week
+S | How often do you look at your savings balance just to feel good? | Never ; A few times a year ; Every month ; Every week ; Every day
+N | Do you keep a running total in your head while grocery shopping?
+N | Do you buy yourself something small every payday?

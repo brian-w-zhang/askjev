@@ -1,0 +1,126 @@
+# self.love.dating_attraction
+C | Which rainy day first date would you pick? | museum_wander ; bookshop_and_cafe ; cooking_class ; bowling ; cinema_matinee ; other
+C | Which winter first date appeals to you most? | ice_skating ; hot_chocolate_crawl ; holiday_lights_walk ; board_game_cafe ; cozy_pub_by_a_fire ; other
+C | Which summer first date appeals to you most? | picnic_in_a_park ; beach_walk ; outdoor_film ; rooftop_drinks ; kayaking ; ice_cream_stroll ; other
+C | Which creative first date would you enjoy most? | pottery_class ; painting_night ; photo_walk ; open_mic_night ; making_pasta_together ; none ; other
+C | What kind of hands do you find attractive? | strong_and_rough ; slender_and_elegant ; paint_or_ink_stained ; well_kept_nails ; no_preference
+C | Which kind of outfit on a date catches your eye most? | crisp_white_shirt ; worn_denim_jacket ; bold_colored_sweater ; all_black ; vintage_find ; no_preference
+C | Which accent or way of speaking do you find most charming? | soft_and_slow ; quick_and_witty ; deep_and_calm ; musical_and_lively ; no_preference
+C | Which kind of glasses look do you find attractive? | thick_dark_frames ; thin_wire_frames ; round_frames ; no_glasses ; no_preference
+C | How do you like a crush to text you in the early days? | short_and_frequent ; long_thoughtful_messages ; mostly_voice_notes ; memes_and_links ; rarely_but_meaningfully
+C | What time would you like to get a good morning text from someone new? | right_when_they_wake ; mid_morning ; never_just_start_later ; no_preference
+C | How would you like someone to pass on their number to you? | write_it_on_a_napkin ; type_it_into_my_phone ; through_a_friend ; on_a_business_card ; ask_for_mine_instead
+C | What kind of first date lighting do you find most flattering and relaxing? | candlelight ; warm_lamps ; daylight_outdoors ; neon_bar_glow ; no_preference
+C | Which drink would you order on a first date? | coffee ; tea ; a_cocktail ; wine ; a_soft_drink ; water ; other
+C | Which dessert would you want to share on a date? | chocolate_lava_cake ; tiramisu ; ice_cream_sundae ; churros ; a_fruit_tart ; nothing_i_skip_dessert
+C | Which kind of walk after dinner sounds most romantic to you? | along_a_river ; through_an_old_town ; on_a_beach ; through_a_park_at_dusk ; no_walk
+C | What would you most like a first date to bring along to show off? | a_camera ; a_dog ; a_favorite_book ; homemade_snacks ; nothing
+C | How would you like to be told someone has a crush on you? | face_to_face ; a_handwritten_note ; a_text ; through_a_friend ; a_playlist ; other
+C | Which small gesture on a date would charm you most? | remembering_a_detail_i_mentioned ; walking_on_the_street_side ; saving_me_the_best_bite ; laughing_at_my_jokes ; asking_follow_up_questions ; other
+C | Which first-date spot would you rather avoid? | loud_club ; fancy_restaurant ; cinema ; their_workplace_hangout ; a_chain_coffee_shop ; none
+C | Which kind of hairstyle on a date do you find most attractive? | neat_and_styled ; messy_and_natural ; tied_back ; very_short ; long_and_loose ; no_preference
+C | Which quirky talent in a date would win you over? | juggling ; speaking_many_languages ; playing_piano_by_ear ; doing_impressions ; magic_tricks ; drawing_portraits ; other
+C | How long would you like a first date to be? | a_quick_coffee ; about_an_hour ; a_full_evening ; an_all_day_adventure ; no_preference
+C | Which place would you most like to bump into a future partner? | a_bookshop ; a_hiking_trail ; a_friends_birthday ; a_dog_park ; a_train ; a_concert ; other
+C | What would you rather wear on a first date? | my_favorite_comfortable_outfit ; something_new ; something_dressy ; something_bold ; whatever_is_clean
+C | Which scent on your own clothes do you want on a date? | a_light_perfume_or_cologne ; fresh_laundry ; nothing_at_all ; a_strong_signature_scent ; other
+C | What kind of first message would you most like to receive from a match? | a_funny_line ; a_question_about_my_photos ; a_simple_hello ; a_date_suggestion_right_away ; a_long_introduction ; other
+C | Which song mood would you want playing on a date? | slow_jazz ; upbeat_indie ; old_soul ; soft_acoustic ; no_music_so_we_can_talk
+C | Which topic would you most love a date to bring up? | travel_stories ; childhood_memories ; big_dreams ; favorite_books_or_films ; weird_hobbies ; food ; other
+C | Which kind of date planner do you like best? | plans_everything ; offers_a_few_choices ; plans_it_together_with_me ; lets_me_plan ; no_preference
+C | Which personality do you find most magnetic on a first meeting? | calm_and_grounded ; playful_and_teasing ; curious_and_attentive ; bold_and_adventurous ; gentle_and_shy ; other
+C | What would make you swipe left instantly? | sunglasses_in_every_photo ; group_photos_only ; no_bio ; a_rude_bio ; photos_with_dead_fish ; none ; other
+C | Which kind of place would you choose for a second date? | somewhere_quieter ; somewhere_more_adventurous ; their_favorite_spot ; my_favorite_spot ; the_same_place_again ; other
+C | Which kind of sense of style in a crush's home would charm you most? | lots_of_books ; plants_everywhere ; art_on_every_wall ; spotless_and_minimal ; cozy_clutter ; no_preference
+C | Which kind of style in shoes catches your eye on a date? | clean_sneakers ; polished_leather ; boots ; sandals ; bright_colorful_shoes ; no_preference
+C | How would you like a crush to show interest at a party? | seek_me_out_to_talk ; bring_me_a_drink ; ask_me_to_dance ; send_a_friend_over ; lingering_eye_contact ; other
+C | Which kind of date conversation pace do you enjoy? | fast_banter ; slow_deep_talk ; comfortable_pauses ; mostly_listening ; mostly_talking
+C | Which kind of follow up after a first date would you like best? | a_photo_from_the_date ; a_callback_to_an_inside_joke ; a_simple_thank_you ; an_invitation_right_away ; other
+C | Which date activity would show you the most about someone? | cooking_together ; a_long_hike ; a_competitive_game ; volunteering_together ; a_road_trip ; other
+C | Which feature do you notice first in a dating photo? | smile ; eyes ; outfit ; background ; pets ; hair ; other
+C | Which kind of dating photo backdrop appeals to you most? | mountains ; a_city_street ; a_kitchen ; a_concert ; a_beach ; no_preference
+C | How would you like a date to dress for a fancy dinner? | a_suit_or_formal_dress ; smart_casual ; a_bold_statement_piece ; something_simple_and_elegant ; no_preference
+C | Which gift would charm you after a few dates? | a_book_they_loved ; a_mixtape_or_playlist ; a_small_plant ; homemade_food ; tickets_to_something ; nothing_yet
+C | Which way would you like to be asked on a second date? | at_the_end_of_the_first ; by_text_the_next_day ; by_a_phone_call ; with_a_specific_plan ; i_would_ask_first
+C | Which kind of weekend activity in a crush's life seems most attractive? | hiking ; playing_in_a_band ; volunteering ; cooking_big_meals ; gardening ; sports_league ; other
+C | Which kind of date would you choose to meet someone's close friends for the first time? | a_casual_barbecue ; a_pub_quiz ; a_birthday_dinner ; a_game_night ; a_group_hike ; other
+C | What kind of pet name would you like from someone you just started dating? | none_yet ; a_sweet_classic ; a_funny_nickname ; a_shortened_version_of_my_name ; no_preference
+C | Which kind of date would you pick if you were feeling shy? | a_film ; a_walk ; an_activity_class ; a_board_game_cafe ; a_group_outing ; other
+C | Which color would you most like a date to wear? | black ; white ; red ; blue ; green ; earthy_neutrals ; no_preference
+C | How do you prefer to call it off with someone you have seen only once? | a_kind_text ; a_phone_call ; say_it_in_person ; let_them_reach_out_first ; other
+C | Which dating app style suits you best? | swiping_on_photos ; long_written_profiles ; question_matching ; video_intros ; i_avoid_apps
+C | Which kind of dating app prompt would you most enjoy answering? | my_perfect_sunday ; a_hot_take ; two_truths_and_a_lie ; my_most_irrational_fear ; the_way_to_win_me_over ; other
+C | Which first date would you plan if money were no object? | a_private_chef_dinner ; a_hot_air_balloon_ride ; a_helicopter_city_tour ; a_weekend_in_another_city ; the_same_as_usual ; other
+C | Which kind of night out would you pick for a third date? | live_comedy ; a_dinner_party_with_friends ; karaoke ; a_night_market ; a_play ; other
+C | Which kind of kindness in a stranger makes them most attractive to you? | helping_someone_carry_something ; being_gentle_with_children ; talking_warmly_to_staff ; being_patient_in_a_queue ; other
+C | How do you like to split the planning after a few dates? | take_turns ; whoever_has_an_idea ; always_them ; always_me ; plan_together
+C | What kind of message would you like before a first date? | a_confirmation_text ; a_joke_to_break_the_ice ; a_nervous_admission ; nothing_until_we_meet
+C | Which kind of weather would you want for a first date picnic? | warm_and_sunny ; breezy_and_cool ; golden_autumn_afternoon ; spring_after_rain ; no_picnic
+C | Which movie genre would you choose for a first film date? | comedy ; horror ; romance ; action ; animated ; indie_drama ; no_film_dates
+C | What kind of crush do you tend to have? | slow_growing_friend_crush ; instant_spark ; celebrity_crush ; distant_admiration ; i_rarely_get_crushes
+C | Which place do you think is most romantic to be asked out? | under_the_stars ; at_a_cafe ; on_a_walk ; at_the_end_of_a_group_hangout ; over_text ; no_preference
+C | How would you prefer a date to handle a spill or small disaster? | laugh_it_off ; apologize_a_lot ; make_a_joke ; fix_it_calmly ; other
+C | Which kind of voice note from a crush would you enjoy most? | a_quick_hello ; a_story_from_their_day ; them_singing_badly ; a_sleepy_goodnight ; i_dislike_voice_notes
+C | Which kind of hobby would you most like to learn from a date? | an_instrument ; a_dance ; a_sport ; a_language ; a_craft ; cooking ; other
+C | Which first-date food would you rather avoid? | spaghetti ; ribs ; garlic_heavy_dishes ; crab_or_lobster ; tacos ; none
+C | Which kind of opening line in person works best on you? | a_compliment ; a_question_about_something_around_us ; a_joke ; a_simple_hi_and_name ; other
+C | How would you like to spend time with a crush on a lazy Sunday? | brunch ; farmers_market ; long_walk ; staying_in_with_a_film ; exploring_a_new_neighborhood ; other
+C | What would you most want in a dating profile photo of yourself? | a_big_smile ; me_doing_a_hobby ; a_travel_shot ; a_photo_with_my_pet ; a_dressed_up_photo ; other
+C | Which kind of person makes you most nervous in a good way? | someone_very_funny ; someone_very_smart ; someone_very_kind ; someone_very_confident ; someone_very_good_looking
+C | What is the first thing you check on a match's profile? | photos ; bio ; job ; interests ; distance ; prompts
+S | How much do you enjoy dressing up for a date? | I wear whatever I have on ; I change my shirt ; I put together a nice outfit ; I plan my look a day ahead ; I buy something new for each big date
+S | How much do you like being surprised by the plan on a date? | I want to know everything ahead ; I like to know the rough plan ; I am fine with a small surprise ; I love not knowing the plan ; I want the whole date to be a mystery
+S | How much do you enjoy double dates? | I avoid them ; I go if I must ; I enjoy one now and then ; I enjoy them often ; They are my favorite kind of date
+S | How much does a good singing voice draw you to someone? | Not at all ; It is a small bonus ; It is a nice plus ; It really draws me in ; It makes me melt
+S | How much do you like dates in nature? | I prefer staying in town ; I tolerate a short park walk ; I enjoy a park or garden ; I love hikes and lakes ; I would take every date outdoors
+S | How much do you enjoy flirty banter by text? | I find it tiring ; I play along a little ; I enjoy some of it ; I enjoy it a lot ; It is my favorite part of dating
+S | How much does good posture attract you? | I never notice it ; I notice it slightly ; I find it pleasant ; I find it quite attractive ; It is one of the first things that draws me in
+S | How much do you like a date who dances in public without caring? | I find it embarrassing ; I tolerate it ; I find it cute ; I find it very attractive ; I would join in at once
+S | How much do you enjoy being the one to plan the first date? | I would rather never plan it ; I plan it only if asked ; I am happy either way ; I like planning it ; I insist on planning it
+S | How much do you like a date with a big bold style? | It puts me off ; I can tolerate it ; I am neutral ; I find it attractive ; It is my favorite kind of style
+S | How much do you enjoy dates with lots of physical activity like climbing or biking? | I avoid them ; I would do a gentle one ; I enjoy them sometimes ; I enjoy them often ; I would pick them every time
+S | How much do deep eyebrows or strong facial features draw you in? | Not at all ; A little ; Somewhat ; A lot ; They are my strongest attraction
+S | How much do you enjoy late night dates that go past midnight? | I prefer to be home early ; I am fine until late evening ; I enjoy staying out late sometimes ; I love late nights ; The best dates end at dawn
+S | How much does a partner's love of reading attract you? | It does not matter ; It is a small plus ; It is a nice plus ; It really attracts me ; It is almost a must
+S | How much do you enjoy daytime dates? | I dislike them ; They are fine now and then ; I enjoy them as much as evening dates ; I prefer them ; I only want daytime dates
+S | How much do you like getting to know someone through long phone calls? | I avoid phone calls ; I do short calls only ; I enjoy a call now and then ; I love long calls ; I could talk all night on the phone
+S | How much does freckles or small skin details catch your eye? | Never ; Rarely ; Sometimes ; Often ; I find them irresistible
+S | How much do you enjoy trying a date's favorite food? | I stick to what I know ; I take a small taste ; I try it happily ; I love trying it ; I ask them to order for both of us
+S | How much does someone's taste in films affect your interest? | Not at all ; A little ; Somewhat ; A lot ; It is one of the first things I ask about
+S | How much do you enjoy meeting someone at a class or workshop? | I would rather not ; It is fine ; It is a nice way to meet ; It is one of my favorite ways ; It is my ideal way to meet someone
+S | How much do you enjoy a slow burn before the first date? | I want to meet right away ; I like a few messages first ; I like a week or so of chatting ; I enjoy weeks of chatting ; I love a long slow build
+S | How much does a stylish watch or jewelry catch your eye on a date? | Never ; Rarely ; Sometimes ; Often ; Always
+S | How much do you like when a date has a bit of a rebellious streak? | It puts me off ; I tolerate it ; It is fine ; It is appealing ; It is very attractive to me
+S | How much does a warm speaking voice matter to you in someone new? | Not at all ; A little ; Somewhat ; A lot ; It can win me over on its own
+S | How much do you enjoy dates at home cooking dinner together early on? | I would feel uncomfortable ; I would try it after many dates ; I would enjoy it after a few dates ; I would enjoy it early ; It is my ideal early date
+S | How much do you enjoy when a date is a little nervous? | It makes me uneasy ; I do not mind ; I find it sweet ; I find it very endearing ; It is one of my favorite things
+S | How much does a date's sense of adventure appeal to you? | I prefer someone cautious ; A little is fine ; Some adventure is nice ; I really like it ; I want someone who will try anything
+S | How much do you like seeing a date's photos of their travels? | I find it boring ; A few is fine ; I enjoy it ; I love it ; I would ask to see all of them
+S | How much do matching interests in music draw you to someone? | Not at all ; A little ; Somewhat ; A lot ; It is essential to me
+S | How often do you daydream about a new crush? | Never ; Rarely ; A few times a day ; Most of the day ; I can hardly think of anything else
+S | How much do you enjoy flirting with someone through playful competition? | I dislike it ; It is fine once ; I enjoy it sometimes ; I enjoy it a lot ; It is how I flirt best
+N | Do you find it attractive when someone is great with plants?
+N | Do you like getting flowers on a first date?
+N | Do you find a messy bun or casual hair attractive?
+N | Would you enjoy a date at an aquarium?
+N | Would you enjoy a date at a night market?
+N | Do you find people who sing in the car attractive?
+N | Do you like when a date orders the same thing as you?
+N | Would you enjoy a first date at an arcade?
+N | Do you find it attractive when someone can cook without a recipe?
+N | Would you enjoy a stargazing date?
+N | Do you like when a crush sends you songs?
+N | Do you find a good handshake attractive?
+N | Would you enjoy a date at a bookshop reading aloud to each other?
+N | Do you like when a date brings a small homemade gift?
+N | Would you like to be asked out with a handwritten letter?
+N | Do you find it attractive when someone is great with kids?
+N | Would you enjoy a first date at a farmers market?
+N | Do you find someone more attractive when they wear a uniform?
+N | Would you enjoy a date volunteering together?
+N | Would you enjoy a first date at a climbing gym?
+N | Would you enjoy a first date spent entirely walking around a city?
+N | Do you find dimples attractive?
+N | Would you like a date who plans a surprise picnic?
+N | Do you find it attractive when someone writes poetry?
+N | Would you enjoy a date watching the sunrise together?

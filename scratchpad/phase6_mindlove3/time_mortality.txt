@@ -1,0 +1,112 @@
+N|personality|Do childhood summers seem much longer in your memory than recent ones?
+C|values|Why do you think time seems to speed up as people get older?|fewer_new_experiences;more_routine;each_year_is_a_smaller_share_of_life;busier_lives;it_does_not_really;other
+S|personality|How much does waiting in a line feel like wasted life to you?|Waiting never feels wasted to me ; Waiting feels wasted only when it is long ; Waiting feels a little wasted most times ; Waiting feels clearly wasted most times ; Every minute of waiting feels like life slipping away
+C|personality|What do you usually do while waiting for something with nothing to do?|check_my_phone;people_watch;daydream;plan_ahead;get_restless;talk_to_someone_nearby
+N|personality|Do you enjoy the feeling of waiting for something good to arrive?
+S|personality|How long does a week of holiday feel to you while you are on it?|It flies by in what feels like a day ; It feels shorter than a normal week ; It feels about as long as a normal week ; It feels longer than a normal week ; It feels like it lasts a month
+C|values|Which kind of week usually feels longest looking back?|a_week_full_of_new_things;a_week_of_routine;a_week_of_hard_work;a_week_of_boredom;a_week_of_worry
+N|values|Do you think filling your life with new experiences makes it feel longer?
+C|personality|When a deadline is far away, how does it usually feel?|like_it_will_never_come;comfortably_distant;already_close;i_start_right_away_anyway
+S|personality|How often do you lose track of what day of the week it is?|I always know what day it is ; I lose track only on holidays ; I lose track a few times a month ; I lose track most weeks ; I rarely know what day it is without checking
+C|values|What best describes the present moment to you?|the_only_thing_that_is_real;a_thin_line_between_past_and_future;an_illusion;where_all_of_life_happens;other
+N|values|Do you think the future self you are saving for today is really you?
+S|values|How much do you think of your future self as a stranger you are doing favors for?|My future self feels exactly like me ; My future self feels mostly like me ; My future self feels partly like a stranger ; My future self feels mostly like a stranger ; My future self feels like a complete stranger
+C|values|Which is the best reason to take care of your future self?|they_will_be_me;they_will_have_to_live_with_my_choices;it_is_the_responsible_thing;people_depend_on_them;there_is_no_strong_reason
+N|personality|Do you ever feel that your life is behind schedule compared with people your age?
+S|personality|How much pressure do you feel to reach life milestones by a certain age?|I feel no pressure about milestone ages ; I feel a little pressure now and then ; I feel noticeable pressure ; I feel strong pressure ; I feel the pressure almost constantly
+C|values|Which life milestone do you think people feel the most pressure to reach on time?|finishing_school;a_steady_career;marriage;having_children;buying_a_home;other
+N|values|Is there such a thing as being too old to start a new career?
+C|values|What is the best way to use the last hours before a big change, like a move or a new job?|say_goodbyes;revisit_favorite_places;rest;prepare;celebrate;other
+S|values|How much should people plan for a future that will come long after they are gone?|People need not think about it at all ; People should think about it a little ; People should give it some real thought ; People should plan for it seriously ; People should put it at the center of their choices
+C|values|Which act best shows care for people who will live long after you?|planting_trees;building_things_that_last;keeping_records_of_today;teaching_the_young;protecting_nature;other
+N|values|Would you want to be alive to see how the world looks in a few centuries?
+C|values|If you could see one future era for a single day, which would you pick?|a_decade_from_now;a_generation_from_now;a_century_from_now;a_thousand_years_from_now;none
+S|values|How strongly do you feel that the era you were born in suits you?|I feel I was born in completely the wrong era ; I feel a little out of place in my era ; I feel my era is fine ; I feel my era suits me well ; I feel my era was made for me
+C|values|Which past era would you most like to have seen as a visitor, not a resident?|ancient_times;the_middle_ages;the_age_of_exploration;the_early_industrial_age;the_mid_twentieth_century;none
+N|values|Would you want to spend a day living exactly as your great-grandparents lived?
+C|values|What do you think each generation most misunderstands about the one before it?|how_hard_things_were;what_they_valued;how_much_they_changed;how_young_they_once_were;other
+S|personality|How often do you feel out of touch with how younger people live?|I never feel out of touch ; I feel out of touch once in a while ; I feel out of touch now and then ; I often feel out of touch ; I feel out of touch almost all the time
+N|values|Do you think friendships between people of very different ages are especially valuable?
+C|values|What does an older friend give you that a friend your own age does not?|perspective;calm;stories;honest_advice;nothing_different;other
+C|values|What does a much younger friend give you that a friend your own age does not?|energy;new_ideas;a_fresh_view_of_old_things;a_sense_of_purpose;nothing_different;other
+S|values|How much should people keep objects that remind them they will die, like a small skull ornament or a reminder note?|Such reminders are morbid and should be avoided ; They are harmless but pointless ; They can be useful now and then ; They are a healthy habit ; Everyone should keep one in plain sight
+N|values|Does remembering that you will die make you kinder?
+C|values|What do you think most people would do differently if they truly felt how short life is?|say_what_they_feel;quit_jobs_they_hate;travel_more;spend_more_time_with_family;worry_less;nothing_different
+C|values|When a pet dies, what is the best thing for a family to do?|hold_a_small_goodbye;get_a_new_pet_soon;wait_a_long_time_before_a_new_pet;talk_openly_about_it;keep_a_memento
+C|values|What is the best way to remember a pet that has died?|a_photo_on_display;planting_something;keeping_its_collar;a_small_ceremony;getting_another_pet;other
+S|values|How much can the death of a pet teach a child about loss?|It teaches nothing lasting ; It teaches a small first lesson ; It teaches a useful lesson ; It teaches a deep lesson ; It is the most important lesson about loss a child gets
+C|values|What makes a funeral or memorial feel most fitting?|stories_about_the_person;music_they_loved;laughter_as_well_as_tears;a_simple_quiet_gathering;food_and_company;other
+N|values|Is it okay to laugh at a funeral?
+S|values|How much of a memorial service should be about celebrating a life rather than mourning a death?|It should be entirely mourning ; It should be mostly mourning ; It should be an even mix ; It should be mostly celebration ; It should be entirely celebration
+C|values|What should happen to a person's online accounts after they die?|deleted;kept_as_a_memorial;handed_to_family;left_as_they_are;whatever_they_asked_for
+C|values|Which is the kindest thing to say to someone who is grieving?|i_am_so_sorry;tell_me_about_them;i_am_here_for_you;nothing_just_be_there;a_happy_memory_of_the_person;other
+N|values|Should grieving people be encouraged to move on after a set time?
+S|values|How long should a person be expected to grieve a close loss before returning to normal life?|They should return right away ; They should take a few weeks ; They should take a few months ; They should take a year or more ; There should be no expected time at all
+C|values|Which is the hardest part of losing someone for most people?|the_first_holidays_without_them;small_daily_reminders;things_left_unsaid;other_people_moving_on;the_empty_space_at_home;other
+N|values|Do you think you would want to live to a very old age even if your friends had all died?
+C|values|What would you most want to keep doing into very old age?|walking;reading;cooking;seeing_friends;working;travelling;other
+S|values|How much would you want to keep up with new technology in old age?|I would not bother at all ; I would learn only what I truly need ; I would keep up with the basics ; I would keep up with most new things ; I would want to be first to try everything
+C|values|What is the biggest mistake people make about aging?|thinking_it_is_all_decline;ignoring_it;fighting_it_too_hard;not_planning_for_it;other
+N|values|Do you think older people should dress in whatever way they like, however young it looks?
+C|values|Which time of life do you think is most underrated?|early_childhood;the_teenage_years;the_twenties;middle_age;old_age
+S|values|How much do you think people become more themselves as they age?|People become less themselves with age ; People stay the same ; People become slightly more themselves ; People become much more themselves ; People only become fully themselves in old age
+S|values|How much do you think people become more alike as they grow old?|People become far more different ; People become a little more different ; People stay as different as ever ; People become a little more alike ; People become far more alike
+C|values|Which is closest to your view of a midlife crisis?|a_real_wake_up_call;a_silly_cliche;a_natural_stage;an_excuse_for_bad_choices;other
+S|values|How much can a person change who they are after middle age?|Not at all ; Only in small habits ; In a few real ways ; In many ways ; As much as at any age
+C|values|Which would you rather have at the end of each year?|a_list_of_accomplishments;a_box_of_memories;a_few_new_friends;a_sense_of_peace;new_skills
+N|personality|Do you mark the end of a season, like the last swim of summer, on purpose?
+C|values|What does a clock in a room most make you feel?|calm_and_order;pressure;nothing;a_sense_of_home;other
+S|personality|How much do you like knowing the exact time throughout the day?|I prefer not to know the time at all ; I like a rough sense of the time ; I check the time now and then ; I check the time often ; I want to know the exact time at every moment
+C|values|Which is the best way to make a year feel full rather than blurry?|travel;learn_a_new_skill;keep_a_journal;take_photos;change_routines;other
+N|personality|Do you ever wish you could slow down a good afternoon while it is happening?
+S|values|How much should people fill their free time with plans rather than leaving it open?|Free time should be completely open ; Free time should have one small plan at most ; Free time should be about half planned ; Free time should be mostly planned ; Every free hour should be planned
+C|values|Which phrase fits your view of time best?|time_is_money;time_heals_all_wounds;time_flies;there_is_always_time;time_waits_for_no_one
+C|values|Which unit of time feels most real to you?|a_day;a_week;a_season;a_year;a_lifetime
+C|values|Which is the better way to spend a working life?|a_few_long_projects;many_short_projects;a_mix;one_life_work
+S|values|How much do you think the fast pace of modern life has changed how people experience time?|It has not changed it at all ; It has changed it a little ; It has changed it noticeably ; It has changed it a great deal ; It has completely changed how people experience time
+C|values|What would you do with a day that nobody else could see or remember?|rest;do_something_bold;finish_old_tasks;explore_alone;think;other
+C|social|What do most people fear most about growing old?|losing_health;losing_independence;loneliness;losing_memory;money_worries;losing_looks
+S|social|How often do most people check the time during an ordinary day?|Most people rarely check the time ; Most people check it a few times a day ; Most people check it every hour or so ; Most people check it many times an hour ; Most people check it almost constantly
+N|social|Do most people wish they could go back to a younger age?
+C|social|At what life stage do most people say they were happiest?|childhood;teenage_years;early_adulthood;middle_age;old_age
+S|social|How prepared are most people for their own death, in terms of wills and wishes?|Most people have prepared nothing ; Most people have prepared very little ; Most people have covered the basics ; Most people are well prepared ; Most people have everything planned in detail
+N|social|Do most people feel time is passing faster every year?
+C|social|What do most people regret more near the end of life?|working_too_much;not_taking_chances;losing_touch_with_friends;not_expressing_feelings;not_taking_care_of_health;other
+S|social|How much do most people want to be remembered after they die?|Most people do not care at all ; Most people care a little ; Most people care somewhat ; Most people care a lot ; Most people care about it more than almost anything
+N|social|Do most people feel that holidays pass faster than ordinary weeks?
+C|social|What do most people want their funeral to feel like?|a_celebration;a_quiet_goodbye;a_traditional_service;no_funeral_at_all;they_have_not_thought_about_it
+S|social|How comfortable are most people talking about death?|Most people refuse to talk about it ; Most people are very uncomfortable ; Most people are somewhat uncomfortable ; Most people are mostly comfortable ; Most people talk about death easily
+N|social|Would most people choose to live forever if they stayed healthy?
+C|social|What most makes most people call someone old?|their_health;their_attitude;their_looks;their_interests;their_age_alone;other
+S|social|How much do most people romanticize the decade they grew up in?|Most people do not romanticize it at all ; Most people romanticize it a little ; Most people romanticize it somewhat ; Most people romanticize it a lot ; Most people think it was a golden age
+N|social|Do most people think the world was better when they were young?
+C|social|What do most people spend their extra free time on when they retire?|travel;grandchildren;hobbies;volunteering;part_time_work;resting
+S|social|How often do most people put off something they want to do until 'someday'?|Most people almost never put things off ; Most people put off a few things ; Most people put off many things ; Most people put off most things they dream of ; Most people put off nearly everything until someday
+N|social|Do most people feel they have not had enough time for the people they love?
+C|social|Which do most people value more as they get older?|time;money;health;friends;peace_and_quiet
+C|social|What do most people do on the anniversary of losing a loved one?|visit_a_grave_or_special_place;share_memories_with_family;keep_busy;light_a_candle;nothing_special
+N|values|Would you want a friend to tell you honestly if they thought you were wasting your life?
+S|values|How much should a person's age matter when choosing a leader?|Age should not matter at all ; Age should matter a little ; Age should be one fair factor ; Age should matter a lot ; Age should be the main factor
+C|values|Which would you choose: one extra healthy year at the end of life or one extra free year right now?|a_healthy_year_at_the_end;a_free_year_right_now;unsure
+C|values|Which ordinary moment makes you most aware that you are getting older?|a_new_song_you_do_not_know;a_child_you_know_growing_up;an_injury_that_heals_slowly;being_called_sir_or_madam;a_school_reunion;other
+C|personality|When you meet someone from your past who has aged a lot, what is your first thought?|how_much_time_has_passed;i_must_look_older_too;they_look_wonderful;i_hardly_notice;other
+C|values|Which is the best way to spend a birthday that ends a decade of your life?|a_big_party;a_trip;a_quiet_day_with_loved_ones;something_you_have_never_done;ignore_it
+C|values|Which is the better way to face a birthday you are dreading?|celebrate_it_loudly;let_it_pass_quietly;make_a_new_goal;spend_it_with_older_friends;other
+C|values|What is the most meaningful thing a grandparent can pass on?|family_stories;recipes;a_skill;values;an_heirloom;their_time
+C|personality|When you think about the next few years, which picture comes first?|things_i_want_to_do;problems_i_need_to_solve;people_i_will_be_with;places_i_will_live;nothing_clear
+C|values|Which do you think is the best age to learn about family history?|childhood;the_teenage_years;early_adulthood;middle_age;old_age
+C|values|What would you want done with your ashes or resting place?|a_family_plot;scattered_somewhere_meaningful;a_natural_burial;whatever_my_family_prefers;i_do_not_mind
+S|values|How much should a person's final wishes be followed if they cause hardship for the living?|The wishes should be followed exactly ; The wishes should be followed unless the hardship is severe ; The wishes should be weighed equally against the hardship ; The living should usually come first ; The living should always come first
+S|personality|How much do you enjoy looking at old maps or photos that show how your town used to look?|I have no interest in them ; I glance at them now and then ; I enjoy them when I come across them ; I seek them out ; I could spend hours on them
+S|values|How much should towns preserve old buildings rather than replace them with new ones?|Towns should replace old buildings freely ; Towns should save only the most famous ; Towns should save a fair number ; Towns should save most old buildings ; Towns should save every old building they can
+S|personality|How much do you feel the passage of time when you look at a child you have known since birth?|I feel nothing special ; I feel a small jolt ; I feel a clear sense of time passing ; I feel a strong pang ; I feel almost dizzy at how fast time goes
+S|values|How much should people try to finish what they start before they die, rather than leave it for others?|It does not matter at all ; It matters a little ; It matters somewhat ; It matters a lot ; It matters more than almost anything
+S|personality|How often do you think about the moment you will look back on today?|I never think about looking back on today ; I think about it once in a while ; I think about it on special days ; I think about it most weeks ; I think about it nearly every day
+N|values|Would you want to receive a video message from your younger self recorded long ago?
+C|values|Which is the best way to mark an adult birthday?|a_cake_and_candles;a_meal_out;a_trip;a_quiet_day;no_marking_at_all
+N|personality|Have you ever kept a calendar or diary from a year just to remember it?
+N|values|Is an unfinished life's work still a worthy legacy?
+C|social|What do most people do on their birthday morning?|sleep_in;check_messages;have_a_special_breakfast;go_to_work_as_usual;call_family
+C|social|What do most people wish they had more of as they age?|time_with_family;money;energy;friends;purpose;adventure
+C|social|What do most people do when they realize a year has flown by?|make_new_resolutions;feel_nostalgic;shrug_it_off;plan_to_slow_down;look_through_photos
+S|social|How much do most people fear getting older?|Most people do not fear it at all ; Most people fear it a little ; Most people fear it somewhat ; Most people fear it a lot ; Most people dread it deeply

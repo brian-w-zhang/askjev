@@ -1,0 +1,204 @@
+@node self.values.animals_environment
+# choice
+C | Mice keep getting into your kitchen cupboards. Which way of dealing with them do you think is most morally acceptable? | snap_traps = quick-kill snap traps ; live_traps = catch and release them far away ; poison_bait = poison bait ; get_a_cat = let a cat handle it ; seal_and_tolerate = seal gaps and put up with the rest ; other
+C | Your elderly dog needs surgery that costs as much as a used car and may only give it a few more months. What should you do? | pay_for_surgery = pay for the surgery ; palliative_care = keep it comfortable without surgery ; put_to_sleep = have it put to sleep now ; ask_the_vet_to_decide = follow whatever the vet recommends ; other
+C | A pigeon with a broken wing is lying on the sidewalk outside your office. What should you do? | take_to_rescue = take it to a wildlife rescue ; call_someone = call animal control or a rescue line ; move_it_aside = move it somewhere safer and leave it ; leave_it = leave it alone ; other
+C | Your town plans to cull an invasive deer population that is destroying native forest. Which approach is most acceptable to you? | professional_cull = shoot them with trained marksmen ; open_hunting = open a hunting season ; relocation = trap and relocate them ; fertility_control = use contraceptive darts ; do_nothing = leave the deer alone ; other
+C | When buying eggs, which option feels morally best to you? | pasture_raised = pasture-raised eggs ; free_range = free-range eggs ; cage_free = cage-free eggs ; cheapest = whatever is cheapest ; no_eggs = skip eggs entirely ; other
+C | A friend offers you a ticket to a greyhound race. What would you do? | go_and_enjoy = go and enjoy it ; go_uneasy = go but feel uneasy ; decline_politely = decline without explaining ; decline_and_explain = decline and say why ; other
+C | You find a wasp nest under your porch roof. What should you do? | destroy_it = spray and destroy it ; hire_removal = pay someone to relocate it ; wait_for_winter = leave it until it is abandoned ; leave_it = leave it if no one is allergic ; other
+C | Your child wants a puppy. Where is the most ethical place to get one? | shelter = an animal shelter ; rescue_group = a breed rescue group ; responsible_breeder = a health-testing breeder ; pet_shop = a pet shop ; friend_litter = a friend's accidental litter ; other
+C | A new drug that could cure a childhood cancer can only be tested on monkeys first. What is your view? | test_on_monkeys = run the monkey tests ; test_on_mice_only = only allow tests on smaller animals ; skip_to_volunteers = go straight to willing human volunteers ; do_not_develop = do not develop it that way ; other
+C | You catch a fish that is too small to keep and swallowed the hook deep. What should you do? | cut_line_release = cut the line and release it ; pull_hook_out = try to remove the hook ; kill_it_quickly = kill it quickly and humanely ; keep_it_anyway = keep it to eat ; other
+C | Your family is choosing a holiday destination. How much should the flight distance weigh in the choice? | decisive = pick somewhere reachable without flying ; strong_factor = choose a shorter flight if the trips are close ; minor_factor = only a tiebreaker ; irrelevant = not a factor at all ; other
+C | Your phone screen is cracked but the phone still works. What should you do? | keep_using = keep using it as is ; repair_it = pay to repair the screen ; trade_in = trade it in for a new one ; buy_new_and_keep = buy a new one and keep the old in a drawer ; other
+C | Moles are digging up your lawn. What do you think is the right response? | trap_and_kill = trap and kill them ; repellent = use a repellent that drives them off ; accept_the_holes = accept a bumpy lawn ; replace_the_lawn = replace the lawn with a meadow ; other
+C | You are offered a free leather jacket that belonged to a relative. What should you do with it? | wear_it = wear it ; give_away = give it to someone who wants it ; keep_unworn = keep it but not wear it ; throw_away = throw it out ; other
+C | On a holiday abroad, tourists are offered rides on elephants. What would you do? | ride = take the ride ; watch_only = watch but not ride ; visit_sanctuary = visit a sanctuary that bans riding instead ; avoid_entirely = avoid all elephant attractions ; other
+C | A seagull steals food from your picnic every day at the beach. What is an acceptable response? | shoo_it = wave it away ; cover_the_food = just cover the food ; throw_something = throw a small stone near it ; feed_it_elsewhere = toss it scraps away from you ; other
+C | Your neighbor's cat keeps killing songbirds in your garden. What should you do? | talk_to_neighbor = ask the neighbor to keep it inside or add a bell ; deterrents = put up cat deterrents ; call_animal_control = call animal control ; accept_it = accept it as nature ; other
+C | Your cat is sick and the vet offers a treatment with a small chance of success and a lot of discomfort. What would you choose? | try_treatment = try the treatment ; comfort_care = give comfort care only ; euthanize = put it to sleep ; second_opinion = get another vet's view first ; other
+C | Which kind of meat, if any, feels least troubling to you to eat? | shellfish = shellfish like mussels ; fish ; chicken ; pork ; beef ; wild_game = wild game hunted locally ; none = none are acceptable ; other
+C | Scientists want to reintroduce wolves to a nearby wilderness, which could threaten local sheep. What is your view? | support = bring the wolves back ; support_with_compensation = bring them back and pay farmers for losses ; oppose = keep the wolves out ; unsure ; other
+C | A pet shop near you keeps puppies in small glass boxes. What would you do? | boycott = stop shopping there ; complain = complain to the manager ; report = report it to a welfare group ; nothing = do nothing ; other
+C | You see a turtle crossing a busy road. What should you do? | carry_across = carry it across in the direction it was heading ; carry_back = carry it back where it came from ; stop_traffic = stop and wave cars around it ; drive_on = keep driving ; other
+C | A friend's parrot plucks out its own feathers from boredom. What should your friend do? | more_enrichment = give it more toys and time ; get_a_companion = get it a second bird ; rehome = give it to a sanctuary ; nothing = leave things as they are ; other
+C | Which is the most acceptable reason to kill a wild animal? | food = to eat it ; protect_livestock = to protect livestock ; protect_crops = to protect crops ; population_control = to manage its numbers ; end_suffering = to end its suffering ; none = no reason is acceptable ; other
+C | Your restaurant order arrives and it is a dish with foie gras you didn't notice. What would you do? | eat_it = eat it ; send_back = send it back ; eat_but_never_again = eat it but not order it again ; give_to_friend = give it to a friend at the table ; other
+C | A local aquarium is raising money to keep an orca it has held for decades. What should happen to the orca? | stay_in_aquarium = stay where it is ; sea_pen = move to a seaside sanctuary pen ; release_to_wild = release it into the ocean ; unsure ; other
+C | While hiking, you see a family feeding bread to wild ducks. What should you do? | say_something = politely explain bread is bad for ducks ; ignore = say nothing ; join_in = join in ; tell_a_ranger = tell a ranger ; other
+C | Your family hosts a big party. Which choice about tableware is most responsible? | reusable_dishes = use real dishes and wash them ; compostable = buy compostable plates ; plastic = use cheap plastic plates ; rent_dishes = rent dishes ; other
+C | A horse in a race falls and is badly injured. Who bears the most moral responsibility? | owner ; jockey ; trainer ; racing_industry = the racing industry as a whole ; spectators = the betting public ; no_one = no one, it was an accident ; other
+C | Which of these animal uses do you find hardest to justify? | fur_coats ; circus_acts ; trophy_hunting ; animal_fighting_bets = betting on animal fights ; foie_gras ; bullfighting ; other
+C | You find baby birds in a nest in your car's engine compartment. What would you do? | stop_driving = stop using the car until they fledge ; move_nest = move the nest nearby ; call_rescue = call a wildlife rescue ; remove_nest = remove the nest and drive ; other
+C | Your garden is overrun with slugs eating your vegetables. What is the right thing to do? | slug_pellets = use slug pellets ; beer_traps = use beer traps that drown them ; pick_and_move = pick them off and move them ; share_the_crop = accept losing some vegetables ; other
+C | A pet goldfish from a fair is living in a tiny bowl. What should its owner do? | bigger_tank = buy a proper filtered tank ; give_to_pond = give it to someone with a pond ; release_in_river = release it in a river ; keep_as_is = keep it in the bowl ; other
+C | A stray cat has been hanging around your house for weeks. What would you do? | adopt_it = adopt it ; feed_it_outside = feed it but keep it outside ; take_to_shelter = take it to a shelter ; trap_neuter_return = have it neutered and let it go ; ignore_it = ignore it ; other
+C | When you have food left over after dinner, what do you think you should do? | eat_later = keep it and eat it later ; give_away = give it to a neighbor ; compost = compost it ; bin_it = throw it in the trash ; feed_pets = feed it to pets ; other
+C | A factory upstream offers your town jobs but will pollute the river where people fish. What matters most to you? | jobs = the jobs ; river = protecting the river ; compromise = allow it with strict limits ; ask_residents = let the residents decide ; other
+C | Which is the most acceptable use of an animal for entertainment? | horse_riding ; dog_shows ; rodeo ; zoo_visits ; aquarium_shows ; none = none are acceptable ; other
+C | A mosquito lands on your arm. What do you do? | swat_it = swat it ; brush_away = brush it away ; let_it_feed = let it bite ; other
+C | Your dog barks at night and a neighbor complains. Which solution is most humane? | more_exercise = more exercise and training ; bark_collar = a shock collar ; keep_inside = keep it indoors at night ; debarking = surgery to quiet it ; other
+C | Which is the most important reason to avoid buying fast fashion? | waste = the waste it creates ; workers = how workers are treated ; animals = animal products in it ; quality = it falls apart quickly ; no_reason = no need to avoid it ; other
+C | You hit a deer with your car at night and it is still alive but badly hurt. What should you do? | call_police = call the police to deal with it ; call_wildlife_line = call a wildlife rescue ; stay_with_it = stay until help comes ; drive_away = drive away ; other
+C | A friend plans to buy a rare exotic snake online. What would you tell them? | go_ahead = go ahead ; check_source = make sure it was bred in captivity ; adopt_instead = adopt a reptile from a rescue ; dont_buy = don't buy it at all ; say_nothing ; other
+C | A beach resort offers swimming with captive dolphins. What would you do? | book_it = book the swim ; watch_from_outside = watch others do it ; wild_tour = take a wild dolphin boat tour instead ; skip_it = skip anything with dolphins ; other
+C | A company offers a cheaper cleaning product that harms aquatic life. What would you buy? | cheaper_product ; greener_product = the gentler product at a higher price ; homemade = make your own cleaner ; whichever_works_best ; other
+C | You discover your favorite brand of chocolate is linked to rainforest clearing. What would you do? | stop_buying = stop buying it ; buy_less = buy it less often ; write_to_company = keep buying and write to the company ; keep_buying = keep buying as before ; other
+C | Rats are living under a community garden shed. What should the garden group do? | poison = put out poison ; snap_traps = set snap traps ; get_rid_of_food = remove food sources and wait ; live_trap = live-trap and release ; other
+C | Your family's farm dog is getting too old to work. What should happen to it? | retire_at_home = keep it as a pet ; give_to_family = give it to a family who wants it ; put_down = have it put down ; keep_working = keep it working as long as it can ; other
+C | Which of these would bother you most to see at a county fair? | pig_racing ; goldfish_prizes = goldfish given as prizes ; petting_zoo = crowded petting zoo ; rodeo_calf_roping = calf roping ; none ; other
+C | You are asked to join a wildlife survey that involves briefly trapping and tagging birds. Would you take part? | yes_gladly ; yes_but_uneasy = yes but I would feel uneasy ; no_harms_birds = no, it stresses the birds ; no_not_interested ; other
+C | Your apartment has a cockroach problem. What is the most acceptable fix? | professional_spray = call an exterminator ; gel_bait = use bait gel ; natural_repellent = try natural repellents only ; live_with_it ; other
+C | When it comes to wearing wool, what is your moral view? | fully_fine = wool is fine ; fine_if_mulesing_free = fine if the sheep are treated well ; prefer_avoiding = I prefer to avoid it ; wrong = wearing wool is wrong ; other
+C | A park plans to kill feral cats that are wiping out native lizards. What should it do? | cull = cull the cats ; trap_and_rehome = trap and rehome them ; fence_areas = fence off lizard areas ; leave_cats = leave the cats alone ; other
+C | You find a trapped bat in your bedroom at night. What would you do? | open_window = open a window and wait ; catch_and_release = catch it gently and let it out ; call_pest_control = call pest control ; kill_it = kill it ; other
+C | Which household habit do you think matters most for the environment? | eating_less_meat ; flying_less ; driving_less ; buying_less ; recycling ; saving_energy_at_home ; other
+C | Your friend brags about catching a big shark on a fishing trip and keeping it as a trophy. How do you react? | congratulate = congratulate them ; ask_questions = ask whether it was released ; express_disapproval = say you think it was wrong ; change_subject ; other
+C | A lab needs to end the lives of mice after a study ends. What should happen to them instead, if possible? | adopt_as_pets = adopt them out as pets ; humane_end = end their lives painlessly as planned ; use_again = reuse them in another study ; other
+C | A bear keeps raiding trash bins in a mountain town. What is the best response? | bear_proof_bins = install bear-proof bins ; relocate_bear = move the bear far away ; kill_bear = kill the bear ; fine_residents = fine residents who leave trash out ; other
+C | Which is worse for a pet dog? | kept_alone_all_day = left alone all day ; kept_in_a_crate_often = crated for long hours ; never_walked = rarely walked ; overfed = overfed ; other
+C | A small hole in your favorite sweater appears. What would you do? | darn_it = mend it yourself ; pay_tailor = pay a tailor ; wear_as_is = wear it with the hole ; replace_it = buy a new one ; other
+C | A child in your family wants to keep a tadpole from a pond. What should you tell them? | yes_then_release = keep it and release it as a frog ; yes_keep_it = keep it as a pet ; look_not_take = look but leave it in the pond ; other
+C | A charity asks you to fund either saving a rare frog species or helping stray dogs. Which would you choose? | rare_frog = the rare frog species ; stray_dogs = the stray dogs ; split = split the money ; neither ; other
+C | You notice a spider web across your front door every morning. What do you do? | brush_through = walk through it ; move_spider = move the spider somewhere else ; kill_spider = kill the spider ; leave_it = use another door ; other
+C | A friend's pet rabbit lives alone in a hutch all day. What should they do? | get_second_rabbit = get it a companion ; bring_indoors = bring it indoors ; more_attention = spend more time with it ; nothing = nothing needs to change ; other
+C | You see a man kicking his dog at a park. What would you do? | confront_him = confront him directly ; film_and_report = record it and report it ; call_police = call the police ; walk_away = walk away ; other
+C | Your city allows a new ski resort that would clear old forest. Which view is closest to yours? | build_it = build it for the jobs and fun ; build_smaller = build a smaller version ; block_it = block it to save the forest ; other
+C | At a supermarket, which fish would you avoid on moral grounds? | tuna ; farmed_salmon ; shrimp ; octopus ; none = I avoid none ; all = I avoid all fish ; other
+C | A pet rat is sick and the treatment would cost more than a hundred rats. What should its owner do? | pay_for_it = pay for treatment ; put_it_to_sleep = put it to sleep ; home_comfort = care for it at home ; other
+C | You want a new couch. Which option is most responsible? | secondhand = buy one secondhand ; reupholster_old = reupholster your old one ; new_sustainable = buy new from a green brand ; new_cheap = buy the cheapest new one ; other
+C | Which is the best way to handle a fox living under your shed? | leave_it = leave it be ; block_entry_after_it_leaves = seal the gap once it leaves ; hire_trapper = hire someone to trap it ; call_wildlife_group = call a wildlife group ; other
+C | A local zoo has a polar bear pacing in a small enclosure. What should the zoo do? | bigger_enclosure = build a bigger enclosure ; move_to_sanctuary = send it to a sanctuary ; keep_it = keep it as is ; stop_keeping_polar_bears = stop keeping polar bears for good ; other
+C | Your family always runs the air conditioning even when out. What would you do? | turn_it_off = turn it off when leaving ; raise_it = set it warmer ; bring_it_up = raise it with the family ; leave_it = leave it ; other
+C | Which of these would you most likely change for the environment? | shorter_showers ; no_car_trips_under_a_mile = walking short trips ; meat_free_days ; buying_secondhand ; skipping_a_flight ; none ; other
+C | A crow with a hurt leg keeps coming to your balcony. What would you do? | feed_it = feed it ; call_rescue = call a rescue ; shoo_it_away = shoo it away ; ignore_it ; other
+C | A friend offers you venison from a deer they hunted. Would you eat it? | yes_happily ; yes_better_than_farmed = yes, it seems better than farmed meat ; no_uncomfortable ; no_vegetarian = no, I don't eat meat ; other
+C | Which is the most acceptable reason to keep an animal in a zoo? | conservation = to save the species ; education = to teach children ; research = for study ; rescue = it couldn't survive in the wild ; entertainment ; none ; other
+C | Your garden hedge has a bird nest in it, but it is overdue for trimming. What would you do? | wait = wait until the chicks leave ; trim_around = trim around it ; trim_anyway = trim it anyway ; other
+C | A delivery company offers a slower but lower-emission shipping choice at the same price. Which would you pick? | slower_greener ; faster ; depends_on_urgency = depends how soon I need it ; other
+C | Your elderly neighbor's many cats are unhealthy and multiplying. What should you do? | talk_to_neighbor = offer help directly ; call_animal_welfare = call animal welfare ; help_with_neutering = pay for neutering ; stay_out_of_it ; other
+C | What should happen to a dog that bit a child badly? | put_down = put it down ; rehome_with_adults = rehome it to a home without children ; training = keep it and train it ; depends_on_cause = depends on whether it was provoked ; other
+C | Which of these pets do you think should not be kept at all? | monkeys ; big_cats ; parrots ; reptiles ; hamsters ; none ; other
+C | A friend plans to release unwanted pet turtles into a local pond. What do you tell them? | fine = that is fine ; take_to_rescue = take them to a rescue instead ; keep_them = keep them ; say_nothing ; other
+C | A developer wants to drain a marsh with rare birds to build affordable homes. What should happen? | build_homes = build the homes ; protect_marsh = protect the marsh ; build_elsewhere = find another site even if it costs more ; build_part = build on part of it ; other
+C | You find a lost dog with no tag. What should you do? | keep_it = keep it if no one claims it quickly ; vet_scan = take it to a vet to scan for a chip ; post_online = post it online and look after it ; shelter = take it to a shelter ; other
+C | Which is the most ethical way to get milk for your coffee? | cow_milk_local = local cow's milk ; cow_milk_any = any cow's milk ; plant_milk = plant milk ; no_milk = drink it black ; other
+C | Which of these is the worst way to treat a pet? | ignoring_it ; hitting_it ; abandoning_it ; overfeeding_it ; dressing_it_up ; other
+C | A cafe owner leaves out saucers of milk for stray cats. What do you think of that? | kind = it is kind ; kind_but_unwise = kind but milk is bad for cats ; attracts_problems = it creates more strays ; other
+C | Your old laptop still works but is slow. What would you do? | keep_it ; repair_upgrade = upgrade its parts ; sell_it = sell it and buy new ; recycle_it = recycle it and buy new ; other
+C | You learn a cheap chicken dish at your favorite restaurant comes from crowded barns. What do you do? | keep_ordering ; order_less ; order_something_else ; ask_the_owner = ask the owner to change supplier ; other
+C | A hunter offers to donate the meat from a deer he shot to a food bank. What is your view? | good_use = a good use of the meat ; fine_but_uneasy = fine, though the hunt bothers me ; wrong = the food bank should refuse it ; other
+C | Your garden pond is full of frogs, but your young kids want to fill it in for play space. What would you do? | keep_pond = keep the pond ; fence_pond = keep it and fence it off ; move_frogs_then_fill = move the frogs and fill it ; fill_it = just fill it ; other
+# score
+S | How acceptable is it to set glue traps for mice? | Completely unacceptable, I would never use them ; Only if nothing else works ; Acceptable in a serious infestation ; Fine to use whenever mice appear
+S | How much should a pet's quality of life outweigh an owner's wish to keep it alive? | The owner's wish should always come first ; The owner's wish usually wins ; They weigh about the same ; Quality of life usually wins ; The pet's quality of life should always decide
+S | How acceptable is it to take a long-haul flight just for a weekend holiday? | Completely unacceptable ; Only for a rare special occasion ; Fine now and then ; Fine whenever you like
+S | How much should you spend on a pet's vet bills before stopping? | Only basic care ; Up to a modest sum ; Up to a large sum I could afford ; Whatever it takes, even going into debt
+S | How acceptable is it to keep a large dog in a small city apartment? | Always wrong ; Wrong unless it gets hours of exercise ; Fine with daily walks ; Perfectly fine
+S | How acceptable is breeding dogs with flat faces that struggle to breathe? | Always wrong ; Wrong unless the breeder tests for health ; Fine if buyers know the risks ; Completely fine
+S | How much should someone feel guilty for stepping on an ant? | Not at all ; A passing twinge ; Some real regret ; As much as for hurting a bigger animal
+S | How acceptable is it to catch a fish only to take a photo before releasing it? | Wrong, it causes needless stress ; Questionable but tolerable ; Acceptable if done carefully ; Perfectly fine
+S | How much should a zoo's conservation work justify keeping animals captive? | Not at all ; A little ; Quite a lot ; Fully
+S | How acceptable is it to buy a pedigree kitten when shelters are full? | Wrong ; Hard to defend ; Acceptable ; Completely fine
+S | How acceptable is it to use pesticides that kill bees to protect a vegetable garden? | Never acceptable ; Only as a last resort ; Acceptable if used sparingly ; Fine whenever needed
+S | How wrong is it to throw away a still-working appliance because you want a newer model? | Not wrong at all ; Slightly wasteful ; Fairly wasteful ; Clearly wrong
+S | How acceptable is it to kill a snake found in your yard? | Never acceptable ; Only if it is venomous and near children ; Acceptable if it scares you ; Always fine
+S | How acceptable is it to use animals to test household cleaning products? | Never acceptable ; Only for safety tests required by law ; Acceptable for new products ; Completely fine
+S | How much does it matter morally whether a fish felt pain when caught? | Not at all ; A little ; A fair amount ; As much as for a mammal
+S | How acceptable is it to buy a real Christmas tree cut from a farm? | Wrong ; Hard to defend ; Acceptable ; Completely fine
+S | How acceptable is it to keep a hamster in a small cage? | Never acceptable ; Only for a short time ; Acceptable if cleaned often ; Completely fine
+S | How acceptable is whale watching from boats that get very close? | Wrong, it disturbs the whales ; Only from a distance ; Acceptable with rules ; Completely fine
+S | How acceptable is a lawn that uses lots of water in a dry region? | Wrong ; Only with recycled water ; Acceptable if you pay the bill ; Completely fine
+S | How much should convenience decide whether you bring your own bag to the store? | Never, always bring one ; Rarely ; Sometimes ; Convenience always decides
+S | How acceptable is it to remove a wasp nest that is far from where people walk? | Never ; Only if it grows large ; Acceptable ; Always fine
+S | How wrong is it to leave a pet alone for a whole weekend with extra food and water? | Not wrong ; Slightly careless ; Clearly careless ; Cruel
+S | How acceptable is it to cull a healthy wolf that killed a farmer's sheep? | Never ; Only if it keeps killing ; Acceptable after one kill ; Always fine
+S | How much should you avoid buying products with palm oil? | Not at all ; Only when an easy swap exists ; Most of the time ; Always
+S | How acceptable is horse racing, given injuries to horses? | Never acceptable ; Only with strict safety rules ; Acceptable ; Completely fine
+S | How acceptable is buying a cheap shirt you will wear once? | Wrong ; Hard to defend ; Acceptable now and then ; Completely fine
+S | How much should a crowded chicken barn trouble someone who eats chicken? | Not at all ; A little ; A lot ; Enough to stop eating chicken
+S | How acceptable is it to tie a dog outside a shop for a few minutes? | Never ; Only in mild weather ; Acceptable ; Completely fine
+S | How acceptable is it to keep a single goldfish in an unfiltered bowl? | Cruel ; Wrong ; Not ideal but acceptable ; Completely fine
+S | How much should people repair things instead of replacing them? | Never bother ; Only when repair is much cheaper ; Usually ; Always, even when it costs more
+S | How acceptable is it to shoot pigeons that foul a public square? | Never ; Only if other methods fail ; Acceptable ; Always fine
+S | How much should a restaurant owner care where their meat comes from? | Not at all ; A little ; A lot ; It should decide the whole menu
+S | How acceptable is it to trim a cat's claws to protect furniture? | Wrong ; Only if done gently ; Acceptable ; Completely fine
+S | How much should the life of a lab mouse count against curing a human disease? | Not at all ; A little ; A fair amount ; As much as a human life
+S | How acceptable is keeping a horse alone in a field without other horses? | Cruel ; Wrong ; Not ideal but acceptable ; Completely fine
+S | How acceptable is it to buy bottled water when tap water is safe? | Wrong ; Hard to defend ; Acceptable now and then ; Completely fine
+S | How acceptable is it to feed wild foxes in your garden? | Wrong, it harms them ; Only in harsh winters ; Acceptable ; Completely fine
+S | How acceptable is eating an animal you raised yourself? | Unthinkable ; Hard to defend ; Acceptable ; Better than buying meat
+S | How acceptable is it to drive to a place you could easily walk to? | Wrong ; Only in bad weather ; Acceptable when tired ; Completely fine
+S | How acceptable is killing a spider that is harmless but scares you? | Never ; Only if you can't move it ; Acceptable ; Always fine
+S | How acceptable is keeping a large parrot that may outlive its owner? | Wrong ; Only with a plan for its care ; Acceptable ; Completely fine
+S | How acceptable is it to buy leather shoes? | Wrong ; Only secondhand ; Acceptable if they last ; Completely fine
+S | How much should a pet owner restrict their cat from hunting birds? | Not at all ; A bell on the collar is enough ; Keep it in at dawn and dusk ; Keep it indoors always
+S | How acceptable is it to shoot a deer that keeps eating your garden? | Never ; Only after fencing fails ; Acceptable ; Always fine
+S | How acceptable is it to fish with live worms as bait? | Wrong ; Hard to defend ; Acceptable ; Completely fine
+S | How acceptable is it to use a leaf blower that burns fuel every week? | Wrong ; Hard to defend ; Acceptable ; Completely fine
+S | How acceptable is it to buy a dog bred for guarding and keep it chained? | Cruel ; Wrong ; Acceptable for a working dog ; Completely fine
+S | How acceptable is it to breed rabbits for their fur? | Never ; Only if they live well ; Acceptable ; Completely fine
+S | How much should you avoid buying fruit flown in from far away? | Not at all ; Only when a local choice is easy ; Most of the time ; Always
+S | How acceptable is it to keep a snake that must be fed live mice? | Wrong ; Only with frozen mice ; Acceptable ; Completely fine
+S | How acceptable is a hotel that washes every towel every day? | Wasteful and wrong ; Wasteful ; Acceptable ; Completely fine
+S | How acceptable is it to release balloons at a celebration? | Wrong, they harm wildlife ; Hard to defend ; Acceptable now and then ; Completely fine
+S | How much should a family's convenience outweigh a dog's need for walks? | Never ; Rarely ; Sometimes ; Often
+S | How acceptable is it to break up a beaver dam that floods a farmer's field? | Never ; Only if the beavers are moved ; Acceptable ; Completely fine
+S | How acceptable is it to swat flies in your kitchen? | Wrong ; Hard to defend ; Acceptable ; Completely fine
+S | How acceptable is it to throw food scraps in the trash when you could compost? | Wrong ; Wasteful ; Acceptable ; Completely fine
+S | How acceptable is it to hunt ducks for food with a licence? | Never ; Hard to defend ; Acceptable ; Completely fine
+S | How acceptable is it to let a pet dog breed so children can see puppies born? | Wrong ; Hard to defend ; Acceptable if homes are found ; Completely fine
+S | How acceptable is it to mow a meadow while ground-nesting birds are nesting? | Never ; Only if you check for nests first ; Acceptable ; Completely fine
+S | How acceptable is it to keep a dog outside in a kennel year-round? | Cruel ; Wrong ; Acceptable with good shelter ; Completely fine
+# noul
+N | Is it wrong to poison rats when traps would also work?
+N | Would you pay a large vet bill for a pet you had only owned for a week?
+N | Is it wrong to buy a pet from a breeder when shelters have animals waiting?
+N | Should an owner put down a healthy pet that has become aggressive toward strangers?
+N | Is it acceptable to eat octopus given how intelligent it is?
+N | Should zoos stop keeping elephants altogether?
+N | Is it wrong to catch and eat a fish you did not need to eat?
+N | Would you skip a dream holiday abroad to avoid flying?
+N | Is it wrong to kill a wasp that is not bothering anyone?
+N | Should you stop your car to move a hedgehog off the road?
+N | Is it acceptable to cull invasive grey squirrels to save native red squirrels?
+N | Is it wrong to keep a cat indoors its whole life?
+N | Would you choose a vegetarian meal at a wedding to avoid meat?
+N | Is it wrong to buy new clothes when your old ones are still wearable?
+N | Should pet shops be allowed to sell puppies?
+N | Is it wrong to feed bread to ducks at a pond?
+N | Would you turn down a job at a company that tests products on animals?
+N | Is it acceptable to kill a mouse caught in your kitchen rather than release it?
+N | Should a pet owner pay for surgery that will only add a few weeks of life?
+N | Is it wrong to keep a dog in a crate while you are at work?
+N | Is it acceptable to wear a real fur coat inherited from a grandmother?
+N | Should people who can't afford vet care avoid getting pets?
+N | Is it wrong to put a bell on a cat's collar to stop it catching birds?
+N | Would you eat meat grown in a lab from animal cells?
+N | Is it wrong to leave the lights on in empty rooms?
+N | Should you intervene if a stranger leaves a dog in a hot car?
+N | Is it acceptable to hunt deer to keep their numbers down?
+N | Is it wrong to ride horses?
+N | Would you give up your car if good buses served your area?
+N | Should wild animals that attack people be killed?
+N | Is it wrong to kill a moth that flew into your house?
+N | Is it acceptable to buy eggs from caged hens to save money?
+N | Should a neighbor's barking dog be reported to the authorities?
+N | Is it wrong to cut down a healthy tree that blocks your view?
+N | Would you adopt an old shelter dog over a young one?
+N | Is it acceptable to keep bees for honey?
+N | Should kids be allowed to keep insects in jars for a day?
+N | Is it wrong to throw a broken toaster away instead of repairing it?
+N | Would you step in if you saw children throwing stones at a bird?
+N | Is it acceptable to put down a pet because it is expensive to care for?
+N | Is it wrong to paint your pet's fur for fun?
+N | Should a racehorse that can no longer race be kept for life by its owner?
+N | Is it acceptable to keep fish in an outdoor pond that freezes in winter?
+N | Would you let a wild bird that flew into your house stay until it finds its way out?
+N | Is it wrong to trample wildflowers while taking photos?
+N | Should dog owners always pick up after their dogs on hiking trails?
+N | Is it wrong to cut a pet cat's claws out surgically?
+N | Would you choose a secondhand phone over a new one to reduce waste?
+N | Is it wrong to kill a rat that is not doing any harm?
+N | Should people avoid buying seafood caught by bottom trawling?

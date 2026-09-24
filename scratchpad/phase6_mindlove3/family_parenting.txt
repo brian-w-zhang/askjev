@@ -1,0 +1,105 @@
+N|values|Would you take a home DNA test to learn about your ancestry?
+C|values|What should you do if a DNA test reveals a relative you never knew about?|reach_out_to_them;talk_to_family_first;keep_it_to_yourself;ignore_it;other
+S|values|How much should families keep old secrets from younger generations?|Families should keep no secrets at all ; Families should keep only a few painful secrets ; Families should keep secrets until children are adults ; Families should keep most old secrets ; Families should take old secrets to the grave
+C|values|Which family secret is most important to tell adult children?|a_hidden_illness_in_the_family;a_past_marriage;a_lost_sibling;money_troubles;an_adoption;none_should_be_kept
+N|personality|Have you ever tried to build a family tree?
+S|personality|How much do you know about your great-grandparents' lives?|I know nothing about them ; I know only their names ; I know a few facts ; I know a fair amount ; I know their stories in detail
+C|values|Which is the best way to pass family history to children?|telling_stories_at_meals;a_written_family_book;visiting_ancestral_places;keeping_old_photos_on_display;recorded_interviews_with_elders
+C|values|What should a couple do about their children's last name?|use_one_parents_name;combine_both_names;each_child_gets_a_different_name;make_up_a_new_name;other
+N|values|Should a family have a motto or saying that everyone knows?
+C|taste|Which small weekly family tradition sounds best to you?|a_pancake_breakfast;a_movie_night;a_walk_together;a_game_night;a_takeout_dinner;a_family_meeting
+S|values|How much do small family traditions matter to children as they grow up?|They do not matter at all ; They matter a little ; They matter a fair amount ; They matter a lot ; They are among the most important things in childhood
+C|values|Which birthday tradition should every family have?|a_special_breakfast;choosing_the_dinner;a_birthday_song_at_dawn;a_measuring_mark_on_the_wall;a_yearly_photo;none_is_needed
+N|values|Should families hold regular family meetings to talk about plans and problems?
+S|values|How much say should children have in a family meeting?|Children should only listen ; Children can make suggestions ; Children should get a real voice ; Children should get an equal vote on most things ; Children should have as much say as adults
+C|values|Which family activity teaches children the most about kindness?|volunteering_together;caring_for_a_pet;visiting_elderly_relatives;helping_neighbors;donating_old_toys;other
+N|values|Should families volunteer together on a regular basis?
+C|values|Should parents let children be bored?|yes_boredom_sparks_creativity;yes_but_only_briefly;no_they_should_offer_activities;no_screens_are_fine_for_that;other
+S|values|How much free, unplanned time should a school-age child have each week?|Almost none, every hour should be planned ; A little, just an hour or two ; A fair amount, a few afternoons ; A lot, most afternoons ; Almost all their free time should be unplanned
+C|values|What is the best way to encourage a child's imagination?|reading_stories_together;open_ended_toys;time_outdoors;making_up_games_with_them;leaving_them_alone;other
+N|values|Should children be allowed to use AI tools to help with homework?
+S|values|How much should parents allow AI chat tools in a teenager's schoolwork?|Not at all ; Only to check answers ; For explanations but not writing ; For most tasks with some limits ; Freely, like any other tool
+C|values|What should a parent do when a child asks an AI assistant for advice about a personal problem?|let_them;talk_with_them_about_it;set_limits;block_it;other
+C|values|At what stage should a child run a small errand alone, like buying bread nearby?|early_grade_school;late_grade_school;early_teens;late_teens;it_depends_on_the_neighborhood
+S|values|How much should children walk or bike to school on their own?|Never, they should always be taken ; Only in the last years of grade school ; From the middle years of grade school ; From early grade school if it is safe ; As early as they can manage the route
+N|values|Should parents let a child climb trees even if they might fall?
+C|values|Which outdoor experience should every child have?|camping;climbing_trees;swimming_in_a_lake_or_sea;growing_a_plant;seeing_farm_animals;other
+S|values|How much time should young children spend playing outdoors each day?|Almost none is needed ; A little, when the weather is nice ; About an hour ; A few hours ; As much as possible
+C|values|Which skill should parents teach a child before the teen years?|cooking_a_simple_meal;managing_pocket_money;doing_laundry;basic_first_aid;finding_their_way_around_town;other
+N|values|Should children help cook family meals from a young age?
+C|values|What is the best way to teach a child to apologize?|model_it_yourself;make_them_say_sorry;talk_about_feelings_first;let_them_make_amends_with_an_action;other
+S|values|How much should parents insist a child apologize when the child does not feel sorry?|Parents should never insist ; Parents should gently suggest it ; Parents should expect it in serious cases ; Parents should usually insist ; Parents should always insist
+N|values|Should parents make children share their birthday gifts with siblings?
+C|values|What is the best way to handle sleepovers for young children?|allow_them_freely;allow_only_with_known_families;allow_late_evening_visits_without_sleeping_over;wait_until_they_are_older;other
+S|values|How much should parents know the families of their children's friends before allowing visits?|Not at all ; A quick hello is enough ; A brief chat ; They should know them fairly well ; They should know them very well
+C|values|What is the best first job for a teenager?|babysitting;working_in_a_shop;mowing_lawns;tutoring;a_summer_camp_job;other
+N|values|Should teenagers pay part of their own phone bill?
+C|values|What is the best way for a teenager to learn to drive?|from_a_parent;from_a_professional_instructor;a_mix_of_both;from_another_relative
+S|values|How nervous should parents let themselves appear when teaching a teen to drive?|They should hide all nerves ; They should show only a little ; They should be honest but calm ; They should show their worry clearly ; They should not teach if they are nervous
+C|values|What is the best way for adult siblings to stay close?|a_yearly_trip_together;a_group_chat;regular_calls;holidays_at_a_parents_home;shared_hobbies;other
+N|personality|Have you ever taken a trip with only your siblings?
+S|values|How much should adult siblings include each other's partners in sibling time?|Never, sibling time is for siblings ; Only on big occasions ; About half the time ; Most of the time ; Always
+C|values|Which relative do you think has the most fun role in a child's life?|a_grandparent;an_aunt_or_uncle;an_older_cousin;a_godparent;a_family_friend
+N|personality|Were you close with your cousins growing up?
+S|values|How important is it for children to know their cousins well?|It is not important at all ; It is a small bonus ; It is fairly important ; It is very important ; It is one of the most important family bonds
+C|values|What is the best way for a family to keep in touch with relatives abroad?|video_calls;letters_and_packages;visits;a_shared_photo_album;group_chats;other
+C|values|Which is the best way to include a new step-parent in family traditions?|let_them_start_a_new_one;invite_them_into_old_ones;go_slowly;let_the_children_decide;other
+S|values|How much should step-siblings be expected to spend holidays together?|Not at all ; On the biggest holiday only ; On some holidays ; On most holidays ; On every holiday
+N|values|Should parents tell adult children before they sell the family home?
+C|values|What should parents do with their children's childhood belongings when they downsize?|send_them_to_the_children;keep_a_few_special_items;donate_them;throw_them_away;ask_first_then_decide
+S|values|How much should adult children help parents clear out a lifetime of belongings?|Not at all ; A little, when asked ; A fair amount ; A lot ; They should do most of it
+C|values|What is the best way for grandparents to share their stories with grandchildren?|at_bedtime;on_walks;through_photo_albums;in_letters;by_teaching_a_skill
+N|values|Should grandparents leave letters for grandchildren to read when they are older?
+S|values|How much should grandparents keep their own hobbies and social lives rather than centering everything on the grandchildren?|They should center everything on grandchildren ; They should mostly center on grandchildren ; They should balance both ; They should mostly keep their own lives ; They should keep their own lives first
+C|values|What is the best way to handle a relative who keeps asking about your love life at gatherings?|laugh_it_off;change_the_subject;answer_honestly;ask_them_about_theirs;other
+C|values|Which is the best way to divide hosting of a big family holiday among siblings?|take_turns_each_year;always_at_a_parents_home;whoever_has_the_biggest_home;split_the_cooking_between_homes;other
+N|values|Should family members bring a dish to a holiday meal even if the host says not to?
+S|values|How much should a family tradition change when a new baby arrives?|It should not change at all ; It should change slightly ; It should adapt somewhat ; It should change a lot ; It should be rebuilt around the baby
+C|values|Which is the best family tradition for the first snow or first warm day of the year?|a_walk_together;a_special_treat;a_photo;a_day_off_from_chores;none
+C|values|What makes a family recipe worth passing on?|the_story_behind_it;the_taste;who_made_it;it_is_made_only_on_special_days;other
+S|personality|How often do you cook a dish that a family member taught you?|I never do ; I do once in a great while ; I do a few times a year ; I do most months ; I do most weeks
+N|values|Should parents teach their children the recipes they grew up with?
+C|values|Which is the best family road trip game?|i_spy;spotting_license_plates;twenty_questions;singing_along;a_shared_audiobook;other
+C|values|What is the best age to take a child on their first long-haul trip?|as_a_baby;as_a_toddler;in_early_grade_school;in_late_grade_school;as_a_teenager
+S|values|How much should families choose holidays that suit the children over the adults?|Holidays should suit the adults only ; Holidays should mostly suit the adults ; Holidays should suit both equally ; Holidays should mostly suit the children ; Holidays should suit the children only
+N|values|Should children keep a holiday journal on family trips?
+C|values|How should parents respond when a child says they are bored on a trip?|give_them_a_job;suggest_a_game;let_them_be_bored;hand_them_a_device;other
+S|values|How much should parents share their family's daily life with a child's online following, if the child has a channel?|Not at all ; Only small harmless parts ; Some parts with care ; Most of it ; Everything the child wants to share
+N|values|Should children be allowed to run their own video channels before they are teenagers?
+C|social|What do most families do together on a weekend?|watch_films;eat_out;visit_relatives;do_chores;go_outdoors;sports_or_activities
+S|social|How often do most families eat dinner together?|Most families rarely eat together ; Most families eat together a few times a month ; Most families eat together a few times a week ; Most families eat together most nights ; Most families eat together every night
+N|social|Do most parents feel they give their children less free play than they had themselves?
+C|social|What do most parents worry about most?|screen_time;safety;school;friends;health;the_future
+S|social|How involved are most grandparents in their grandchildren's lives today?|Most grandparents are barely involved ; Most grandparents are involved a little ; Most grandparents are fairly involved ; Most grandparents are very involved ; Most grandparents are involved almost daily
+N|social|Do most adults talk to their siblings every week?
+C|social|Which family tradition do most families keep?|a_holiday_meal;birthday_rituals;a_yearly_trip;religious_or_cultural_celebrations;weekend_breakfasts;none
+S|social|How much do most parents rely on grandparents for childcare?|Most parents never rely on grandparents ; Most parents rely on them now and then ; Most parents rely on them fairly often ; Most parents rely on them a lot ; Most parents could not manage without them
+N|social|Do most people know the names of all their great-grandparents?
+C|social|What do most parents think is the hardest age to raise a child?|the_baby_years;the_toddler_years;grade_school;the_early_teens;the_late_teens
+S|social|How much do most parents believe they are stricter than their own parents were?|Most parents think they are far less strict ; Most parents think they are a little less strict ; Most parents think they are about the same ; Most parents think they are a little stricter ; Most parents think they are much stricter
+N|social|Do most parents secretly enjoy their children's school holidays?
+C|social|What do most teenagers want most from their parents?|privacy;trust;money;rides;advice;to_be_left_alone
+S|social|How often do most adults call their parents?|Most adults rarely call their parents ; Most adults call a few times a year ; Most adults call about monthly ; Most adults call most weeks ; Most adults call nearly every day
+N|social|Would most parents let their child walk to school alone at a younger age than they do now, if it were safe?
+C|social|Which household rule do most families argue about most?|screen_time;bedtime;chores;homework;food;tidy_rooms
+S|social|How much do most families care about keeping family recipes alive?|Most families do not care at all ; Most families care a little ; Most families care somewhat ; Most families care a lot ; Most families treat them as treasures
+N|social|Do most grandparents think parents today are too soft?
+C|social|What do most children remember most fondly about their grandparents?|their_cooking;their_stories;their_home;the_gifts;trips_together;their_patience
+C|values|Which family pet teaches children the most responsibility?|a_dog;a_cat;fish;a_rabbit;a_hamster;chickens
+S|values|How much should a child be responsible for a family pet's daily care?|Not at all ; Only small tasks like filling a water bowl ; A fair share with adult help ; Most of the daily care ; All of the daily care
+C|values|Which is the best way to mark a child's first day of school?|a_photo_on_the_doorstep;a_special_breakfast;a_small_gift;a_note_in_their_bag;nothing_special
+N|values|Should parents keep a box of each child's artwork and school work?
+C|evaluative|Which family moment do you think children remember longest?|holiday_mornings;family_trips;bedtime_stories;big_family_meals;a_parent_cheering_them_on;other
+C|values|Which is the best way to handle a family member who always takes over the kitchen at gatherings?|let_them;give_them_one_dish;ask_them_to_rest;cook_together;other
+S|values|How much should parents let adult children see them struggle with money or health?|Not at all ; Only a little ; Honestly when asked ; Fairly openly ; Completely openly
+C|values|Which is the best way to celebrate a grandparent's long life at a family gathering?|a_slideshow_of_old_photos;everyone_sharing_a_memory;cooking_their_favorite_dishes;a_family_portrait;a_small_book_of_stories
+C|values|What is the fairest way to share a family holiday home among relatives?|a_rotating_schedule;first_come_first_served;split_by_branch_of_the_family;the_owner_decides;other
+C|values|Which household job should a teenager fully own?|their_own_laundry;cooking_one_meal_a_week;the_family_pet;yard_work;groceries;other
+S|values|How much should parents push a shy child to join group activities?|Not at all ; A gentle suggestion now and then ; Some encouragement ; Firm encouragement ; They should require it
+S|values|How much should families plan screen-free time together?|Not at all ; On rare occasions ; One evening a week ; Several evenings a week ; Every day
+S|personality|How often do you look at old family photo albums?|I never do ; I do once in a great while ; I do a few times a year ; I do most months ; I do often
+C|values|Which is the best way to include an elderly relative in a family holiday when travel is hard for them?|bring_the_holiday_to_them;a_video_call;a_visit_the_day_before_or_after;send_a_care_package;other
+S|values|How much should parents let children see them try and fail at something new?|Never ; Rarely ; Now and then ; Often ; As often as possible
+C|values|Which is the best reward for a child who has worked hard all term?|a_family_outing;choosing_dinner;a_small_gift;extra_free_time;praise_alone
+C|social|What do most families do to mark a child's birthday?|a_party;a_special_meal;a_small_gift;a_day_out;a_cake_at_home;nothing_special
+N|social|Do most grandparents keep a special treat at home just for grandchildren?

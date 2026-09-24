@@ -1,0 +1,112 @@
+N|values|Can a person learn to be happier the way they learn a skill?
+S|values|How much of a person's happiness do you think comes from how they direct their attention?|Attention has nothing to do with happiness ; Attention plays a small part ; Attention plays a fair part ; Attention plays a large part ; Where attention goes decides almost all of happiness
+C|values|Which is the best habit for a calmer mind?|a_daily_walk;less_news;writing_things_down;time_with_friends;a_regular_bedtime;quiet_time_alone;other
+N|personality|Do you feel happier on days when you make something with your hands?
+S|personality|How much joy do you get from making things, like cooking, drawing, or building?|Making things gives me no joy ; Making things gives me a little satisfaction ; Making things is a real pleasure ; Making things is one of my favorite joys ; Making things is where I feel most alive
+C|values|Which creative activity do you think lifts people's spirits the most?|singing;dancing;drawing_or_painting;writing;cooking;gardening;playing_music
+N|personality|Do you enjoy doing something you are bad at, just for fun?
+S|personality|How much do you enjoy being a complete beginner at something?|I hate being a beginner ; I tolerate being a beginner to get better ; I enjoy it now and then ; I enjoy it a lot ; Being a beginner is one of my favorite feelings
+C|values|Which is the better source of long-lasting happiness?|mastering_one_thing;trying_many_things;helping_others_master_things;neither
+N|values|Is it good for adults to have hobbies with no useful purpose at all?
+S|personality|How much does a good laugh change your mood for the rest of the day?|A laugh does not change my mood at all ; A laugh lifts me for a few minutes ; A laugh lifts me for an hour or so ; A laugh lifts me for most of the day ; A laugh can turn a whole bad day around
+C|values|What is the best cure for a gloomy mood?|laughter;sunlight;exercise;talking_to_someone;a_good_meal;sleep;other
+N|values|Do you think crying can leave a person happier afterward?
+C|values|Which is closer to your view of sadness in a good life?|it_should_be_avoided;it_is_a_necessary_part;it_makes_joy_deeper;it_is_a_sign_something_is_wrong;other
+S|values|How much should people always look on the bright side?|People should never force themselves to look on the bright side ; People should look on the bright side only now and then ; People should look on the bright side when it helps ; People should usually look on the bright side ; People should always look on the bright side
+C|values|Which is the kindest response to a friend's bad day?|cheer_them_up;listen;help_fix_it;distract_them;leave_them_be
+C|values|Which feeling do you think is the most underrated?|calm;contentment;relief;curiosity;pride;nostalgia;other
+C|values|Which bittersweet moment do you find the most beautiful?|the_last_night_of_a_trip;a_graduation;watching_a_child_grow_up;an_old_song;a_farewell;other
+S|personality|How often do you feel happy and sad at the same time?|I almost never feel both at once ; I feel both at once only on rare big days ; I feel both at once a few times a year ; I feel both at once most months ; I often feel both at once
+S|values|How much does a happy life need excitement?|It needs none at all ; A little now and then ; A fair amount ; A lot ; Constant excitement
+C|values|What does being kind to yourself mostly mean?|forgiving_your_mistakes;resting_without_guilt;speaking_to_yourself_gently;saying_no_to_others;treating_yourself;other
+S|personality|How kindly do you speak to yourself in your head after a mistake?|I am harsh and cruel to myself ; I am mostly critical ; I am critical but fair ; I am mostly gentle ; I am as kind as I would be to a friend
+N|values|Does holding a grudge make a person less happy?
+S|values|How much does forgiving someone improve the forgiver's own happiness?|Forgiving does nothing for the forgiver ; Forgiving helps the forgiver a little ; Forgiving helps the forgiver noticeably ; Forgiving helps the forgiver a lot ; Forgiving is one of the biggest boosts to happiness there is
+C|values|Which feeling do you think eats away at happiness the most?|envy;resentment;worry;guilt;boredom;loneliness;other
+N|personality|Do you feel a small lift after a friendly chat with a stranger?
+C|values|What makes a neighborhood cafe, park, or club a happy place to be?|familiar_faces;friendly_staff;comfort;a_sense_of_belonging;good_food_or_drink;other
+S|values|How important is it to have a regular place outside home and work where you feel you belong?|It is not important at all ; It is a small nice extra ; It is fairly important ; It is very important ; It is one of the most important things for happiness
+N|personality|Do you have a regular place, other than home and work, where people know you?
+C|values|Which daily moment do you think matters most for how happy a day feels?|the_first_minutes_after_waking;lunch;the_commute_home;dinner;the_last_minutes_before_sleep;other
+S|values|How much does a long daily commute take away from happiness?|It takes nothing away ; It takes away a little ; It takes away a noticeable amount ; It takes away a lot ; It ruins happiness almost entirely
+N|values|Would you give up a bigger home for a much shorter commute?
+C|values|Which kind of noise makes it hardest to feel content at home?|traffic;neighbors;construction;barking_dogs;music_from_elsewhere;none_bother_me
+S|personality|How much does bright sunlight lift your mood?|Sunlight does nothing for my mood ; Sunlight lifts my mood a little ; Sunlight lifts my mood noticeably ; Sunlight lifts my mood a lot ; Sunlight changes my whole outlook
+N|values|Do you think a happy life needs some beautiful things around it?
+C|values|Which thing in a home adds the most to daily happiness?|good_light;a_comfortable_chair;plants;a_view;a_tidy_kitchen;photos_of_loved_ones;other
+C|values|Which is the better way to spend a small amount of extra money for happiness?|a_treat_for_yourself;a_treat_for_someone_else;an_experience;saving_it;paying_to_save_time
+N|values|Does paying someone to do a chore you hate make people happier?
+S|values|How much happier would most people be if they worked one day less each week for the same pay?|Not happier at all ; A little happier ; Noticeably happier ; Much happier ; Dramatically happier
+C|values|Which is the best way to end a working day to feel good at home?|a_walk;a_shower;changing_clothes;writing_a_to_do_list_for_tomorrow;a_chat_with_someone;other
+N|personality|Do you find it hard to switch off from work in the evening?
+S|values|How much should people guard their weekends from work?|Weekends need no protection from work ; Work can take a little of the weekend ; Work should take only rare emergencies ; Work should almost never touch the weekend ; Weekends should be completely off limits to work
+C|values|Which is the better approach to a long list of chores?|do_the_worst_first;do_the_easiest_first;mix_in_small_rewards;spread_them_out;get_help
+C|values|Which keeps people content in a long, dull stretch of life?|small_rituals;something_to_look_forward_to;good_company;a_sense_of_humor;patience;other
+N|personality|Do you enjoy rituals, like the same breakfast on Sundays?
+S|values|How much do small shared rituals, like a weekly film night, add to a household's happiness?|They add nothing at all ; They add a little ; They add a fair amount ; They add a lot ; They are the glue of a happy home
+C|values|Which is the better sign that a day went well?|you_laughed;you_got_things_done;you_learned_something;you_helped_someone;you_rested;other
+N|values|Is a happy life mostly made of ordinary days rather than special ones?
+S|values|How much does curiosity add to a happy life?|Curiosity adds nothing to happiness ; Curiosity adds a little ; Curiosity adds a fair amount ; Curiosity adds a lot ; Curiosity is one of the keys to happiness
+C|values|What makes someone lose their sense of fun as they grow up?|too_much_responsibility;fear_of_looking_silly;less_free_time;tiredness;they_do_not_lose_it;other
+N|personality|Do you still do things just because they are silly?
+C|values|Which is the best thing to do on a day off with no plans?|explore_somewhere_new;see_friends;catch_up_on_rest;do_a_hobby;get_errands_done;other
+S|values|How much does sharing a happy moment with someone make it better?|Sharing makes no difference ; Sharing makes it slightly better ; Sharing makes it noticeably better ; Sharing makes it much better ; A happy moment barely counts unless it is shared
+C|values|Which kind of happiness do you think lasts longer?|quiet_contentment;bursts_of_excitement;both_equally;neither_lasts
+C|values|Which is the best description of peace of mind?|nothing_to_worry_about;accepting_what_you_cannot_change;having_done_your_best;feeling_safe;a_clear_conscience;other
+S|personality|How often do you feel truly at peace?|I almost never feel at peace ; I feel at peace only on rare occasions ; I feel at peace a few times a month ; I feel at peace most days ; I feel at peace nearly all the time
+C|values|What is the biggest thief of joy in everyday life?|hurry;comparison;screens;worry;tiredness;other
+S|values|How much happier would most households be with far fewer possessions?|Not happier at all ; A little happier ; Somewhat happier ; Much happier ; Dramatically happier
+C|values|Which is more important for a happy retirement?|good_health;enough_money;friends_nearby;a_purpose;a_partner;other
+S|values|How much do you think volunteering adds to a person's happiness?|Volunteering adds nothing ; Volunteering adds a little ; Volunteering adds a fair amount ; Volunteering adds a lot ; Volunteering is one of the surest paths to happiness
+C|values|Which is closest to your view of treating yourself?|a_healthy_reward;a_slippery_slope;only_on_special_occasions;a_daily_necessity;other
+N|personality|Do you plan small treats for yourself to get through a hard week?
+C|values|Which season of life do you think is best for taking big adventures?|youth;middle_age;retirement;any_time;never
+S|values|How much can a hard childhood be outgrown when it comes to adult happiness?|It can never be outgrown ; It can be outgrown only slightly ; It can be partly outgrown ; It can be mostly outgrown ; It can be completely outgrown
+C|social|What do most people say would make them happier?|more_money;more_time;better_health;more_love;less_stress;a_better_job
+S|social|How happy are most people with their lives, overall?|Most people are unhappy ; Most people are a little unhappy ; Most people are neither happy nor unhappy ; Most people are fairly happy ; Most people are very happy
+N|social|Do most people think money would solve most of their problems?
+C|social|What do most people do first when they feel down?|call_someone;scroll_their_phone;eat_something_comforting;sleep;go_for_a_walk;keep_busy
+S|social|How often do most people stop to enjoy a small pleasure during a busy day?|Most people almost never stop ; Most people stop only on good days ; Most people stop a few times a week ; Most people stop most days ; Most people stop several times a day
+N|social|Do most people think they would be happier living somewhere else?
+C|social|Where do most people feel happiest?|at_home;outdoors;with_friends;on_holiday;at_work;other
+S|social|How much do most people compare their lives with others on social media?|Most people never compare ; Most people compare now and then ; Most people compare fairly often ; Most people compare a lot ; Most people compare constantly
+N|social|Do most people know what truly makes them happy?
+C|social|What do most people think is the secret of a happy life?|good_relationships;good_health;doing_what_you_love;having_enough_money;a_positive_attitude;other
+S|social|How often do most people do something just for fun?|Most people almost never do ; Most people do so a few times a month ; Most people do so most weeks ; Most people do so several times a week ; Most people do so every day
+N|social|Would most people take a lower-paying job to have a much shorter commute?
+C|social|What do most people spend a sudden free afternoon on?|resting;seeing_friends;chores;screens;hobbies;going_outside
+S|social|How much do most people think happiness is in their own control?|Most people think it is out of their hands ; Most people think it is mostly out of their hands ; Most people think it is half in their hands ; Most people think it is mostly in their hands ; Most people think it is entirely in their hands
+N|social|Do most people feel happier on weekends than on weekdays?
+C|social|Which do most people think lasts longer?|the_joy_of_a_purchase;the_joy_of_a_trip;both_the_same
+S|social|How much do most people think they need to feel happy compared with what they have?|Most people think they need far less than they have ; Most people think they need a bit less ; Most people think they have about what they need ; Most people think they need a bit more ; Most people think they need far more than they have
+N|social|Do most people become happier as they get older?
+C|social|What do most people treat themselves with after a hard day?|a_snack;a_show;a_bath;a_drink;shopping;a_long_sleep
+N|social|Would most people rather be comfortable than excited?
+S|social|How often do most people laugh out loud in a day?|Most people rarely laugh out loud ; Most people laugh out loud once or twice ; Most people laugh out loud a few times ; Most people laugh out loud many times ; Most people laugh out loud almost constantly
+C|values|Which is more important for a happy friendship group?|shared_laughter;shared_history;shared_values;frequent_meetups;honesty
+C|values|Which makes a meal the happiest?|the_company;the_food;the_setting;the_conversation;the_occasion
+C|values|Where do you think happiness is easiest to find?|a_small_town;a_big_city;the_countryside;a_suburb;it_does_not_depend_on_place
+S|personality|How much do you enjoy the anticipation of the weekend on a Friday afternoon?|I feel nothing special on Friday afternoons ; I feel a small lift ; I feel noticeably happier ; I feel a real buzz ; Friday afternoon is the best part of my week
+C|values|Which is the kindest gift to give yourself?|a_day_off;an_early_night;a_long_walk;forgiveness;a_good_book;other
+C|evaluative|Which word best describes a truly happy person?|calm;cheerful;grateful;curious;generous;free
+N|values|Can a person be happy while feeling lonely?
+C|values|Which habit do you think steals the most happiness without people noticing?|checking_the_phone_first_thing;staying_up_late;skipping_meals;saying_yes_to_everything;complaining;other
+C|values|Which is the better reward after finishing a big project?|a_celebration_with_others;a_quiet_rest;a_trip;buying_something_special;starting_the_next_thing
+C|personality|What is usually the highlight of your week?|a_meal_with_people;a_hobby;a_workout;a_lie_in;a_show_or_game;a_phone_call;other
+C|values|Which is the better attitude toward a job that is just okay?|be_grateful_for_it;keep_looking_for_better;find_meaning_outside_it;make_it_better_from_within;other
+C|values|Which is more important for a happy morning?|enough_sleep;a_calm_start;a_good_breakfast;fresh_air;a_plan_for_the_day
+C|values|Which kind of praise brings people the most lasting happiness?|praise_for_effort;praise_for_talent;praise_for_kindness;praise_for_results;no_praise_is_needed
+C|values|Which is the better way to handle a disappointing birthday?|laugh_it_off;plan_a_do_over;tell_people_how_you_feel;let_it_go;other
+C|taste|Which small sound makes a home feel happy to you?|a_kettle;rain_on_the_roof;laughter_in_another_room;music_playing;birds_outside;a_pet_moving_around
+S|values|How much does a tidy desk or workspace affect how content you feel while working?|It makes no difference at all ; It makes a small difference ; It makes a noticeable difference ; It makes a big difference ; I cannot feel content in a messy space
+S|personality|How much does a good night out with friends carry over into your next few days?|It fades by the next morning ; It lifts me for a day ; It lifts me for a couple of days ; It lifts me for most of the week ; It lifts me for weeks
+S|values|How much does having a pet in the home improve daily life for most households?|It makes daily life worse ; It makes no difference ; It improves daily life a little ; It improves daily life a lot ; It is one of the best things a household can do
+S|personality|How much do you enjoy a completely spontaneous day with no plan?|I dislike days with no plan ; I tolerate them ; I enjoy them now and then ; I love them ; Spontaneous days are my favorite kind of day
+S|values|How much should people rearrange their lives to do more of what they love, even at some cost?|People should never rearrange their lives for that ; People should make only small changes ; People should make a few real changes ; People should make big changes ; People should rebuild their lives around what they love
+S|personality|How much do little rewards, like a nice coffee after a chore, keep you going?|Little rewards do nothing for me ; Little rewards help a tiny bit ; Little rewards help noticeably ; Little rewards help a lot ; Little rewards are what get me through
+S|values|How much do you think a warm, sunny climate adds to people's happiness?|It adds nothing at all ; It adds a little ; It adds a fair amount ; It adds a lot ; It makes a huge difference
+C|values|Which is the most rewarding way to spend an hour on a weekend?|with_family;alone_with_a_book;outdoors;cooking_something_good;learning_something;helping_someone
+C|values|Which quality in a home makes it happiest to live in?|warmth;quiet;space;light;good_neighbors;other
+N|personality|Do you feel better after tidying up a single drawer or shelf?
+C|social|What do most people say is their favorite simple pleasure?|a_good_coffee;a_hot_shower;sleeping_in;a_walk_outside;a_good_meal;music
+N|social|Do most people feel happier after spending time in nature?

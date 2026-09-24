@@ -1,0 +1,105 @@
+C|values|What is the best first message to an old friend you have not spoken to in years?|a_simple_hello;a_shared_memory;an_apology_for_the_silence;a_photo_from_back_then;an_invitation_to_meet;other
+N|personality|Would you feel awkward reaching out to an old friend first after years of silence?
+S|values|How much should you explain why you lost touch when reconnecting with an old friend?|Not at all, just pick up again ; A quick mention is enough ; A short honest explanation ; A full explanation ; A proper apology and explanation
+C|values|Which is the best setting for a reunion with an old friend?|a_long_meal;a_walk;a_phone_call_first;a_trip_together;visiting_an_old_haunt;other
+N|values|Is it worth reconnecting with a friend if you suspect you now have little in common?
+S|personality|How often do you look up old friends online out of curiosity?|I never look them up ; I look them up once in a great while ; I look them up a few times a year ; I look them up most months ; I look them up often
+C|values|What most often keeps people from reconnecting with old friends?|fear_of_awkwardness;pride;not_knowing_what_to_say;assuming_the_other_moved_on;busy_lives;other
+N|values|Should you accept a friend request from someone you drifted from on bad terms?
+C|values|What is the best way to keep a friendship alive through a busy season of life?|short_regular_messages;a_standing_monthly_call;sending_funny_things;one_big_visit_a_year;understanding_that_it_will_come_back;other
+S|values|How much do sending funny videos or memes back and forth count as keeping in touch?|They do not count at all ; They count for a little ; They count for a fair amount ; They count for a lot ; They count as much as a real conversation
+N|personality|Do you have a standing plan with a friend, like a weekly call or monthly dinner?
+S|values|How important are regular standing plans for keeping adult friendships alive?|They are not important at all ; They help a little ; They help a fair amount ; They help a lot ; Adult friendships rarely survive without them
+C|values|Which friendship tradition would you most like to keep for decades?|a_yearly_trip;a_holiday_meal_together;a_birthday_ritual;a_regular_game_night;a_shared_book_club;other
+N|values|Should friends celebrate the anniversary of when they met?
+C|values|What do you think of friends holding a holiday meal together instead of with family?|a_lovely_tradition;fine_as_an_extra;a_sign_of_family_problems;not_for_me
+S|values|How much can close friends be a true family for a person?|Friends can never be family ; Friends can be like distant relatives ; Friends can be like close relatives ; Friends can be fully family ; Friends can be closer than any family
+N|values|Can a friend be a better parent figure than a person's own relative?
+C|values|What does being an honorary aunt or uncle to a friend's child mean to you?|a_real_bond;a_nice_title;a_responsibility;something_i_would_love;not_something_i_want
+S|values|How involved should you be in the life of a close friend's child?|Not involved at all ; A friendly face at birthdays ; A regular presence now and then ; A close, trusted adult ; Almost like a second parent
+N|values|Would you agree to be the guardian of a close friend's children if something happened to them?
+C|values|Which is the best way to support a friend who has just become a parent?|bring_meals;offer_babysitting;visit_briefly;keep_inviting_them;do_not_expect_much_for_a_while;other
+S|values|How much should friendships change when one friend has children and the other does not?|They should not change at all ; They should change a little ; They should change somewhat ; They should change a lot ; They should become a different kind of friendship
+C|values|What is the best way for friends in very different life stages to stay close?|find_new_shared_activities;keep_old_traditions;accept_seeing_each_other_less;talk_openly_about_it;other
+N|personality|Have you ever used an app to make new friends?
+S|values|How strange is it to use an app to find friends as an adult?|Not strange at all ; Slightly unusual ; Somewhat odd ; Quite odd ; Very strange
+C|values|Which is the best way to turn a friendly acquaintance into a real friend?|invite_them_to_something_specific;share_something_personal;help_them_with_something;keep_showing_up_in_the_same_place;other
+N|personality|Do you find it awkward to ask someone new to hang out one on one?
+C|values|Which is the best activity for a first friend date?|coffee;a_walk;a_class;a_meal;a_sports_game;a_board_game
+S|personality|How much effort do you put into making new friends these days?|I put in no effort at all ; I make a small effort now and then ; I make a steady effort ; I make a big effort ; Making new friends is a top priority for me
+N|values|Should friends share their live locations with each other?
+C|values|What is the main benefit of sharing locations with close friends?|safety;easy_meetups;feeling_connected;none_it_is_too_much
+S|personality|How much do you enjoy long voice messages from friends?|I dislike them ; I tolerate them ; I enjoy them somewhat ; I enjoy them a lot ; I love them more than texts
+C|values|Which small online gesture from a friend means the most?|replying_to_a_story;sending_a_song;remembering_a_date;a_private_message_of_praise;tagging_you_in_something_funny;none
+N|values|Is liking a friend's posts enough to keep a friendship going?
+C|values|Which is the best way to celebrate a friend's big life change, like a new home?|help_them_move_in;bring_a_housewarming_gift;throw_a_small_party;send_a_card;visit_soon
+C|personality|Which friend's parent or family member do you know best?|a_best_friends_mom;a_best_friends_dad;a_friends_sibling;a_friends_grandparent;none
+N|values|Is it important to know your close friends' families?
+S|values|How much should you keep up with a close friend's parents after the friend moves away?|Not at all ; A greeting on big holidays ; An occasional visit or message ; Regular contact ; As if they were my own family
+C|values|What is the best thing to do when a friend is caring for a sick parent?|offer_practical_help;check_in_often;give_them_a_break;keep_inviting_them;listen;other
+N|values|Should friends visit each other in the hospital without being asked?
+C|values|What should friends do when one of them goes through a divorce?|stay_neutral;take_their_side;keep_things_normal;help_with_practical_things;give_space
+S|values|How much should a friend keep inviting someone who always declines because of a hard time in their life?|They should stop inviting ; They should invite once more ; They should invite now and then ; They should keep inviting often ; They should never stop inviting
+N|values|Is it a friend's job to tell you when you are being difficult to be around?
+C|values|Which is the kindest way to tell a friend they have hurt you?|in_person_calmly;by_message;through_a_joke;wait_until_it_happens_again;other
+C|values|Which quality matters most in an old friend compared with a new one?|shared_history;loyalty;knowing_your_past_self;patience;they_matter_equally
+S|values|How much should a shared childhood count toward keeping a friendship going?|It should count for nothing ; It should count a little ; It should count a fair amount ; It should count a lot ; It should count more than anything
+N|personality|Do you still have friends from your first years of school?
+C|values|Which is the best trip for old friends reconnecting?|a_city_break;a_cabin_weekend;a_beach_holiday;revisiting_their_hometown;a_road_trip;other
+C|values|What is the best way to honor a friendship that has ended peacefully?|remember_it_fondly;keep_a_keepsake;wish_them_well_quietly;reach_out_once_a_year;let_it_go_entirely
+S|values|How much should old grudges be let go when an old friend reaches out?|They should never be let go ; They should be let go a little ; They should be let go if the friend apologizes ; They should mostly be let go ; They should be let go completely
+N|values|Can a friendship be closer after a big falling out than it was before?
+C|values|Which is more important for a lasting friendship?|shared_interests;shared_values;shared_history;similar_life_stages;regular_contact
+C|values|What makes a friendship feel equal?|both_reach_out;both_listen;both_help;both_share;it_does_not_need_to_be_equal
+N|personality|Do you keep track of friends' important dates, like a job interview or medical test, so you can check in?
+S|personality|How often do you send a friend a message just because something reminded you of them?|I almost never do ; I do once in a while ; I do a few times a month ; I do most weeks ; I do several times a week
+C|taste|Which gift feels most like a friendship gift?|matching_bracelets;a_framed_photo;a_handwritten_letter;a_shared_experience;a_playlist;an_inside_joke_item
+N|values|Are matching friendship items like bracelets still fine for adults?
+C|values|Which is the best way to share news with a group of close friends?|a_group_message;telling_each_one_privately;a_gathering;a_call_to_the_closest_first;other
+S|values|How much should you tell your closest friend before others about big news?|It does not matter at all ; It would be nice ; It matters somewhat ; It matters a lot ; It is an unwritten rule of friendship
+C|values|Which is the best way to handle a friend who always one-ups your stories?|point_it_out_kindly;laugh_along;share_less_with_them;ignore_it;other
+N|values|Is it fine to have a friend you mainly see for one activity, like tennis?
+C|values|Which kind of friend is most valuable at work gatherings, family parties, or weddings where you know few people?|a_friend_who_talks_to_anyone;a_friend_who_sticks_by_you;a_friend_who_makes_you_laugh;a_friend_who_knows_when_to_leave
+S|values|How much should friends be willing to show up for each other's boring errands, like waiting at the car mechanic?|Not at all ; Only in an emergency ; Now and then ; Often ; Always
+C|social|What do most people say is the hardest part of making friends as an adult?|finding_time;knowing_where_to_meet_people;taking_the_first_step;keeping_it_going;trusting_new_people
+S|social|How often do most adults make a new close friend?|Most adults almost never make one ; Most adults make one every several years ; Most adults make one every year or two ; Most adults make one most years ; Most adults make several each year
+N|social|Do most people have a friend they have known for more than half their life?
+C|social|What do most people feel when an old friend suddenly gets in touch?|delighted;suspicious_they_want_something;awkward;nostalgic;indifferent
+S|social|How satisfied are most adults with their friendships?|Most adults are very unsatisfied ; Most adults are somewhat unsatisfied ; Most adults feel neutral ; Most adults are fairly satisfied ; Most adults are very satisfied
+N|social|Do most people wish they had more close friends?
+C|social|What do most people do when a friendship starts to fade?|let_it_fade;make_one_more_effort;talk_about_it;blame_the_other_person;feel_guilty_but_do_nothing
+S|social|How much do most people rely on friends rather than family when times are hard?|Most people rely only on family ; Most people rely mostly on family ; Most people rely on both equally ; Most people rely mostly on friends ; Most people rely only on friends
+N|social|Do most people reach out to old friends when they hear bad news about them?
+C|social|What do most people think makes a friendship last for decades?|loyalty;humor;honesty;effort;shared_history;living_nearby
+S|social|How often do most friends see each other in person once they have families of their own?|Most friends almost never meet ; Most friends meet a few times a year ; Most friends meet about monthly ; Most friends meet most weeks ; Most friends meet every week
+N|social|Do most people think friendship apps are a good way to meet people?
+C|social|Where do most adults meet their new friends?|work;through_other_friends;neighborhood;hobby_groups;their_childrens_schools;online
+S|social|How often do most people reconnect with an old friend after years of silence?|Most people never do ; Most people do once in their life ; Most people do a few times in their life ; Most people do every few years ; Most people do often
+N|social|Do most people think friends can be as important as a partner?
+C|social|What do most people find most annoying in a friend?|always_being_late;always_cancelling;only_talking_about_themselves;never_paying_their_share;gossiping;one_upping
+N|social|Do most people feel guilty about friends they have let drift away?
+C|social|What do most people bring to a friend's new home?|a_plant;a_bottle_of_something;food;a_candle;a_useful_home_item;nothing
+C|values|Which is the best reason to forgive a friend for a thoughtless comment?|they_did_not_mean_it;the_friendship_matters_more;everyone_says_dumb_things;they_apologized;other
+N|values|Is it okay to tell a friend you are too tired to hang out?
+S|values|How much should you plan a surprise for a friend who dislikes surprises?|Not at all ; Only a tiny surprise ; A modest surprise they would still enjoy ; A real surprise, they will come around ; A big surprise, it is good for them
+C|values|Which is the best way to include a new friend in an old friend group?|a_small_dinner;a_group_activity;one_on_one_introductions;a_big_party;let_it_happen_slowly
+C|evaluative|Which classic friendship moment is the most heartwarming?|a_friend_showing_up_unannounced_in_a_crisis;an_old_friend_remembering_an_inside_joke;friends_helping_you_move;a_friend_crying_at_your_wedding;a_surprise_visit_from_far_away
+C|values|Which is the best way to make up for missing a close friend's important event?|a_heartfelt_apology;take_them_out_to_celebrate_later;a_thoughtful_gift;a_long_call_to_hear_all_about_it;other
+C|values|Which friend is the best one to travel with?|the_planner;the_easygoing_one;the_adventurous_one;the_funny_one;the_one_who_knows_the_language
+C|values|Which is the best response when a friend shares a big dream that seems unrealistic?|encourage_them;ask_how_you_can_help;share_your_doubts_gently;stay_quiet;other
+C|values|What is the best way to thank a friend who helped you through a hard time?|a_heartfelt_letter;a_special_meal;a_gift;being_there_for_them_later;just_saying_thank_you
+C|personality|Which role do you usually play when your friends plan a trip?|the_planner;the_budget_keeper;the_navigator;the_entertainer;the_one_who_goes_along
+C|values|Which is more important in a friend who lives nearby?|dropping_by_easily;helping_in_emergencies;sharing_errands;daily_small_chats;other
+S|values|How much should you let a friend lean on you before gently suggesting other help?|Never suggest other help ; Only after a very long time ; After a fair while ; Fairly soon ; Right away
+S|personality|How comfortable are you with long silences on a car trip with a friend?|Very uncomfortable ; A little uncomfortable ; Neutral ; Comfortable ; I enjoy them
+S|values|How much should a friend's new partner be welcomed into the group right away?|Not at all at first ; A little, with caution ; Somewhat ; Warmly ; As fully as any old friend
+S|personality|How much do you enjoy doing nothing special with a close friend, like running errands together?|I find it pointless ; I tolerate it ; I enjoy it somewhat ; I enjoy it a lot ; It is my favorite kind of time with friends
+N|personality|Have you ever written a letter to a friend just to tell them what they mean to you?
+N|values|Is it fine to have a close friend you never see in person?
+C|values|Which is the best way to reconnect with a friend after a quarrel neither of you wants to talk about?|act_as_if_nothing_happened;invite_them_to_something_fun;send_a_short_note;talk_it_out_anyway;other
+C|social|What do most people do for a close friend's birthday?|send_a_message;give_a_gift;take_them_out;call_them;throw_a_party;post_online
+C|values|Which is the best way to rebuild closeness with a friend after you moved away and back?|pick_up_old_routines;start_something_new_together;talk_about_the_gap;let_it_come_back_slowly;other
+S|values|How much should you forgive a friend who forgot to invite you to something by accident?|Not at all ; A little, with a word ; Mostly, after an apology ; Fully, after an apology ; Fully, no apology needed
+S|personality|How often do you introduce friends from different parts of your life to each other?|I never do ; I do once in a great while ; I do now and then ; I do often ; I do whenever I can
+C|social|What do most people do when an old friend they drifted from gets married?|attend_if_invited;send_a_message;send_a_gift;feel_a_pang_and_do_nothing;do_nothing
+S|social|How much effort do most adults put into keeping old friendships alive?|Most adults put in no effort ; Most adults put in a little ; Most adults put in some ; Most adults put in a lot ; Most adults put in a great deal

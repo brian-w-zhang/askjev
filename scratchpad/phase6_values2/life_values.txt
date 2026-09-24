@@ -1,0 +1,207 @@
+@node self.values.life_values
+# choice: security vs stimulation / self-direction
+C | You are offered a promotion that means moving far away from your aging parents. What do you do? | take_it = accept and visit when I can ; negotiate_remote = ask to do the job from home ; decline = stay near my parents ; move_them = accept and ask my parents to move with me ; other
+C | A steady government job and a risky role at a young startup both offer you a place. Which do you take? | steady_job = the secure government job ; startup = the risky startup role ; ask_for_time = delay and gather more information ; other
+C | Your family expects you to take over the family bakery, but you want to study marine biology. What do you choose? | take_over = run the bakery ; study_biology = follow my own path ; do_both = study part time and help at the bakery ; hand_it_on = help find someone else to run it ; other
+C | You have saved enough for either a year of travel or a deposit on a small home. Which do you pick? | travel = a year of travel ; home_deposit = the home deposit ; half_and_half = shorter trip and a smaller deposit ; other
+C | Your community holds a yearly festival you find dull, and skipping it would upset the elders. What do you do? | attend_fully = attend and take part ; attend_briefly = show up for a short while ; skip_politely = skip and explain kindly ; skip_quietly = just stay home ; other
+C | Your manager asks you to follow a procedure you think is inefficient. What do you do? | follow_it = follow it as asked ; follow_and_suggest = follow it and propose a better way ; quietly_improvise = do it my own way without saying ; refuse = openly refuse ; other
+C | A friend invites you on a spontaneous weekend trip, but you had planned a quiet weekend catching up on sleep and chores. What do you do? | go = drop my plans and go ; stay = keep my quiet weekend ; join_part = join for one day ; other
+C | You inherit a house in your hometown. What do you do with it? | live_there = move back and live in it ; keep_as_retreat = keep it for holidays ; rent_it_out ; sell_it = sell and use the money elsewhere ; give_to_family = let a relative use it ; other
+C | Your grandmother asks you to wear a traditional outfit to a family wedding, though you find it uncomfortable. What do you do? | wear_it = wear it gladly for her ; wear_part = wear part of it ; wear_my_own = wear my own clothes ; other
+C | You could lead a large team with real influence or stay in a smaller role where you do the work you love. Which do you pick? | lead = take the leadership role ; stay_hands_on = keep the work I love ; try_lead_then_decide = try leading for a while then decide ; other
+C | A charity job pays much less than your current corporate job but matches your ideals. What do you do? | switch = take the charity job ; stay = keep the corporate job ; volunteer_on_side = keep my job and volunteer ; other
+C | Your neighborhood asks everyone to paint their fences the same color, and you prefer a bright shade. What do you do? | conform = paint it the agreed color ; ask_exception = ask for an exception ; paint_bright = paint it my color anyway ; other
+C | You win a free month anywhere in the world. Where would you rather spend it? | familiar_place = somewhere familiar and comfortable ; unknown_place = somewhere I know nothing about ; with_family = near family I rarely see ; retreat = a quiet place to rest ; other
+C | Your closest friend asks you to be godparent to their child, which comes with a lifelong duty. What do you do? | accept_gladly ; accept_reluctantly = accept out of loyalty despite doubts ; decline = decline because I cannot commit ; other
+C | You are offered a well-paid job at a company whose products harm the environment. What do you do? | accept = take it ; accept_and_push = take it and push for change inside ; decline = turn it down ; other
+C | A new town law would make your street safer but ban the street parties you love. How do you feel about it? | support = support the safety rule ; oppose = oppose losing the parties ; seek_compromise = ask for permits for occasional parties ; indifferent ; other
+C | You have a free evening. Your elderly neighbor has asked for company, and a friend has invited you to a concert. Which do you choose? | neighbor = keep my neighbor company ; concert = go to the concert ; split_evening = visit my neighbor early then the concert ; other
+C | Your parents want you to marry within your community's tradition, but your partner is from elsewhere. What do you do? | follow_heart = stay with my partner ; follow_tradition = end it to honor my parents ; blend = find a ceremony that honors both ; other
+C | You are asked to lead a volunteer group, which gives you influence but eats your free time. What do you do? | lead_it ; help_without_leading = help but not lead ; decline ; other
+C | Your job offers a choice of perk. Which do you pick? | extra_vacation = more vacation days ; pension_boost = a bigger retirement contribution ; learning_budget = money for classes ; title_bump = a better job title ; other
+C | You can join a prestigious club that would open doors, but its members' values clash with yours. What do you do? | join = join for the opportunities ; join_and_speak_up = join and challenge them ; decline ; other
+C | Your school reunion is the same night as a rare chance to see a total solar eclipse abroad. Which do you choose? | reunion ; eclipse ; other
+C | A friend's unusual business idea needs a partner. It could be thrilling or a disaster. What do you do? | join_fully = quit my job and join ; join_part_time ; advise_only = offer advice but not join ; decline ; other
+C | Your city offers a lottery for either a guaranteed lifetime job or a one-time grant to start your own venture. Which would you enter for? | lifetime_job ; venture_grant ; other
+C | At a new job, everyone eats lunch at their desks. You prefer to take a proper break outside. What do you do? | eat_at_desk = fit in and eat at my desk ; go_outside = take my break outside anyway ; alternate = do both on different days ; other
+C | Your elderly father wants to keep living alone, though it worries you. What do you do? | respect_choice = respect his wish ; arrange_help = arrange daily help while he stays ; move_him_in = insist he move in with me ; move_in_with_him ; other
+C | You are offered a free place on a research ship in the Antarctic for six months, but you'd miss a close friend's wedding. What do you do? | go = go on the expedition ; stay = stay for the wedding ; ask_to_join_later = ask to join the ship later ; other
+C | You can live somewhere with low crime but little to do, or somewhere lively but less safe. Which do you choose? | safe_quiet ; lively_risky ; other
+C | A rival offers you a big title and more say over company decisions if you leave your loyal team. What do you do? | leave = take the offer ; stay = stay with my team ; bring_team = ask to bring my team along ; other
+C | Your family's holiday tradition clashes with a chance to spend the holiday abroad with friends. What do you choose? | family_tradition ; abroad_with_friends ; alternate_years = alternate each year ; other
+C | You find a well-paid job that bores you and a lower-paid job that excites you. Which do you take? | well_paid_boring ; lower_paid_exciting ; try_to_shape = take the well-paid job and seek more interesting work in it ; other
+C | Your community has always kept a certain dress code at worship, and you disagree with it. What do you do? | follow_it = follow the code ; follow_and_discuss = follow it but raise my view ; ignore_it ; stop_attending ; other
+C | A friend offers you free tickets to an extreme sport experience, like cliff diving. What do you do? | go_eagerly ; go_nervously ; watch_only = go but only watch ; decline ; other
+C | You could have your name on a building for a large gift, or give the same gift anonymously. Which do you choose? | name_on_building ; anonymous ; other
+C | Your partner wants to settle down now, while you want a few more years of wandering. What do you do? | settle_now ; wander_first = ask for a few more years ; wander_together = try to travel together first ; go_separate_ways ; other
+C | You are asked to break a long-standing family rule, like working on the day of rest, to meet a big deadline. What do you do? | keep_rule = keep the rule and miss the deadline ; break_rule = work anyway ; ask_extension = ask for more time ; other
+C | Your workplace offers a choice between a fixed salary and a lower base with big performance bonuses. Which do you choose? | fixed_salary ; bonus_based ; other
+C | You could spend a sabbatical learning a new craft, caring for a sick relative, or resting at home. What do you choose? | learn_craft ; care_for_relative ; rest ; other
+C | Your friends all go into respectable professions, and you feel drawn to becoming a street performer. What do you do? | follow_friends = choose a respectable career ; follow_calling = become a performer ; perform_on_side = keep a steady job and perform on weekends ; other
+C | A town meeting asks you to lead a committee that decides how money is spent. What is your first thought? | influence = a chance to shape things ; duty = someone has to do it ; burden = it would take too much of my life ; unqualified = someone else would be better ; other
+C | You find out your employer quietly treats suppliers unfairly, though your position is secure. What do you do? | stay_quiet ; raise_internally = raise it inside the company ; leave = look for another job ; go_public ; other
+C | Your parents offer to pay for a sensible degree but not for art school. What do you do? | sensible_degree = take their offer ; art_school = pay my own way to art school ; negotiate = ask for a double major ; other
+C | A friend who breaks rules often invites you to sneak into a closed rooftop to watch the sunset. What do you do? | go_along ; decline ; suggest_legal_spot = suggest a spot we are allowed to be ; other
+C | You're given a choice of how to celebrate a big birthday. What do you choose? | family_dinner = a traditional family dinner ; wild_party ; adventure_trip ; quiet_day_alone ; donate_it = ask for donations to a cause instead of gifts ; other
+C | You could move to a country with more freedom but fewer family ties, or stay where your roots are. What do you choose? | move ; stay ; other
+C | Your boss offers you a chance to take credit for a team success, boosting your career. What do you do? | take_credit ; share_credit = credit the whole team ; decline = give the credit to others ; other
+C | A tech company offers you a job building a product you find pointless but that pays extremely well. What do you do? | take_it ; decline ; take_briefly = take it for a year to save up ; other
+C | Your aging mother wants you to keep her old recipes and customs alive. How do you respond? | carry_on_fully = keep them just as she did ; adapt_them = keep them with my own changes ; record_only = write them down but not practice them ; let_them_go ; other
+C | You have a chance to join an exclusive team where you'd have to follow strict orders. What matters most in your decision? | prestige = the status it brings ; security = the stability it gives ; freedom_lost = how much freedom I'd lose ; the_mission = what the team does ; other
+C | A company offers you early retirement with a modest pension, or to keep working toward a senior title. Which do you choose? | retire_early ; keep_working ; other
+C | Your friends pressure you to join a trendy diet everyone is doing. What do you do? | join_in ; try_briefly ; decline_politely ; other
+C | You are offered the chance to spend a year living with a remote tribe to learn their ways. What do you do? | accept ; decline ; shorter_visit = ask for a shorter stay ; other
+C | A new housing development would destroy a wild meadow but give your town affordable homes. Where do you stand? | homes = the homes matter more ; meadow = the meadow matters more ; smaller_plan = build fewer homes and keep part ; other
+C | Your partner gets a dream job in a city you dislike. What do you do? | move_together ; stay_long_distance ; ask_them_to_decline ; other
+C | You could become famous for a skill you have but lose your privacy. What do you do? | pursue_fame ; stay_private ; use_pseudonym = pursue it under another name ; other
+C | Your company asks you to move to a leadership role that means firing people. What do you do? | accept ; decline ; accept_with_conditions = accept but ask for a fair process ; other
+C | Your culture expects adult children to live with parents until marriage, and you want your own place. What do you do? | stay_home ; move_out ; move_nearby = move out but live close ; other
+C | You receive an unexpected bonus. Which use appeals to you most? | save_it ; treat_myself ; give_to_family ; donate_it ; invest_in_skill = spend it on learning ; other
+C | A friend invites you to a religious ceremony from a faith that is not yours. What do you do? | join_fully = take part respectfully ; attend_observe = attend but only observe ; decline ; other
+C | You are asked to join a protest march for a local park you care about, though your employer frowns on it. What do you do? | march ; support_quietly = donate or sign but not march ; stay_out ; other
+C | You could spend the rest of your career in one stable company or change jobs every few years for new challenges. Which do you choose? | one_company ; change_often ; other
+C | Your adult sibling asks you to cosign a loan, risking your savings. What do you do? | cosign ; lend_less = offer a smaller amount directly ; decline ; other
+C | A local leader offers you a seat on a council that decides town matters, but you would need to follow its traditions strictly. What do you do? | accept ; decline ; accept_and_challenge = accept and try to change the traditions ; other
+C | You discover an old family heirloom worth a lot of money. What do you do? | keep_it = keep it in the family ; sell_it ; donate_to_museum ; other
+C | Your friend group always goes to the same restaurant, and you want to try somewhere new. What do you do? | go_along ; suggest_new ; go_alone = try the new place on my own another time ; other
+C | Your job offers a transfer to a dangerous but exciting region. What do you do? | go ; decline ; short_visit = ask for a short assignment first ; other
+C | You are offered a chance to be the face of an ad campaign for a product you don't use. What do you do? | accept ; decline ; accept_if_i_try_it = accept only if I try it first ; other
+C | You are asked to keep a family business going though its methods feel outdated. What do you do? | keep_it_as_is ; modernize_it ; sell_it ; hand_it_on ; other
+C | Your partner wants a big traditional wedding, and you want a small private one. What do you do? | big_wedding ; small_wedding ; middle_ground ; other
+C | You could live in a gated community with strict rules or a free-spirited neighborhood with fewer amenities. Which do you choose? | gated_strict ; free_spirited ; other
+C | A mentor offers you a sure path to a senior role if you follow their exact advice for years. What do you do? | follow_mentor ; forge_own_path ; take_advice_selectively ; other
+C | You're offered the chance to live forever in a comfortable but unchanging routine. Would you take it? | yes = accept ; no = decline ; other
+C | Your employer asks you to wear a uniform that clashes with your personal style. What do you do? | wear_it ; wear_it_with_touches = wear it with small personal touches ; ask_to_change ; quit ; other
+C | A friend asks you to help at a food bank on your only day off. What do you do? | help_all_day ; help_a_few_hours ; decline ; other
+C | You can study a subject you love with poor job prospects or one you find dull with great prospects. Which do you choose? | love_subject ; dull_prospects ; combine = take the dull subject with the loved one as a minor ; other
+C | Your community asks you to take a leading role in organizing a traditional celebration you find old-fashioned. What do you do? | lead_it_traditionally ; lead_it_with_changes ; help_without_leading ; decline ; other
+C | You're offered a lifetime membership at a luxury spa or a lifetime pass for free courses at any university. Which do you choose? | spa ; university ; other
+C | Your elderly aunt leaves you money on the condition that you continue her gardening club. What do you do? | accept_condition ; decline_money ; accept_and_delegate = accept and find someone to run it ; other
+C | You could join a group expedition to climb a big mountain, knowing it's risky. What do you do? | join ; decline ; train_first = train for a year and then decide ; other
+C | A job offers great pay but requires you to hide your personal beliefs at work. What do you do? | accept ; decline ; accept_and_test = accept and see how strict it is ; other
+C | Your friend wants to start a family tradition of weekly dinners together. What do you do? | commit_fully ; attend_sometimes ; decline ; other
+C | A company offers you a big raise to move to a role where you'd manage people instead of creating things. What do you do? | take_manager_role ; stay_creative ; ask_for_hybrid = ask for a mix of both ; other
+C | You could work abroad for a charity helping refugees or take a secure job near home. Which do you choose? | work_abroad ; secure_job ; other
+C | Your city asks residents to cut water use during a drought, though no one checks. What do you do? | cut_strictly ; cut_somewhat ; carry_on ; other
+C | A friend who has become powerful offers to pull strings for you. What do you do? | accept_help ; decline ; accept_small_help ; other
+C | Your partner suggests moving to a quiet village to live simply. What do you do? | agree ; decline ; trial_period = try it for a season first ; other
+C | You are invited to a gala where you could meet influential people, or a friend's small birthday dinner the same night. Which do you choose? | gala ; birthday_dinner ; both_briefly = drop into each briefly ; other
+C | Your elders ask you to take on an unpaid role keeping records for the community. What do you do? | accept ; decline ; accept_temporarily ; other
+C | You are offered a job with complete freedom over your hours but no job security. What do you do? | take_it ; decline ; take_on_trial = try it for a few months ; other
+
+C | Your friend offers you a rent-free room if you follow the strict house rules of their family. What do you do? | accept_rules = accept and follow the rules ; accept_and_bend = accept and quietly bend a few rules ; decline = keep paying rent elsewhere for my freedom ; other
+
+# score
+S | Your friend invites you on a last-minute road trip that would mean skipping a family dinner you promised to attend. How likely are you to go on the trip? | I keep my promise and skip the trip ; I would go only if my family urged me to ; I would feel torn and might go ; I would probably go and apologize ; I would go without hesitation
+S | A job offer doubles your pay but requires you to relocate far from friends. How tempted are you? | Not tempted at all, I would stay ; Slightly tempted but I would stay ; Seriously tempted and unsure ; Likely to accept ; I would accept right away
+S | Your family expects you to carry on a religious or cultural practice you no longer feel connected to. How much do you keep it up? | I have stopped it entirely ; I do it only when family is watching ; I do it on major occasions ; I keep most of it ; I keep it fully out of respect
+S | You are asked to take charge of a group that has no leader. How eager are you? | I would refuse ; I would accept only if no one else would ; I would accept but reluctantly ; I would accept gladly ; I would push to be chosen
+S | How much would you give up in salary to have full control over your own work schedule? | Nothing, the salary matters more ; A small cut ; A noticeable cut ; A large cut ; I would take almost any cut for full control
+S | Your neighbors all follow an unspoken rule about keeping gardens neat, and you prefer a wild garden. How closely do you follow the rule? | I keep my garden wild regardless ; I tidy only the front edge ; I keep it moderately neat ; I keep it as neat as everyone else ; I keep it the neatest on the street
+S | A friend asks you to join a skydiving class. How willing are you? | I would never do it ; I would go only to watch ; I would think about it for a long time ; I would likely try it ; I would sign up immediately
+S | You could live near your parents in a small town or far away in an exciting city. How strongly do you lean toward the city? | I would definitely stay near my parents ; I lean toward staying near them ; I am evenly torn ; I lean toward the city ; I would definitely move to the city
+S | Your employer offers a public award for your work, but receiving it means giving a speech you dread. How likely are you to accept? | I would decline the award ; I would ask to accept it privately ; I would accept but keep the speech very short ; I would accept and give the speech ; I would accept eagerly and enjoy the spotlight
+S | A new job would let you help many strangers but cut your time with close friends. How appealing is it? | Not appealing, friends come first ; Slightly appealing ; Equally appealing and unappealing ; Quite appealing ; Very appealing, I would take it
+S | Your community elders disapprove of a hobby you love. How much do you change your behavior? | I carry on openly ; I carry on but more discreetly ; I cut back on it ; I do it only in secret ; I give it up
+S | How much would you sacrifice your comfort to reduce your own impact on nature? | Not at all ; Small changes like recycling ; Several habits like driving less ; Major changes in diet and travel ; I would reshape my whole life around it
+S | You could spend a free afternoon either resting in comfort or learning something difficult. How often do you choose learning? | Never ; Rarely ; About half the time ; Usually ; Almost always
+S | A friend offers you a place in their powerful network in exchange for occasional favors. How willing are you? | I would refuse outright ; I would accept only minor ties ; I would accept cautiously ; I would accept gladly ; I would seek out more such ties
+S | Your family wants you to follow a family trade. How much do their wishes weigh on your choice? | Not at all ; A little ; Somewhat ; A lot ; They decide it for me
+S | A work trip to a place you've never been clashes with your weekly routine. How much do you look forward to it? | I dread the disruption ; I would rather skip it ; I feel neutral ; I look forward to it ; I am thrilled by the change
+S | You are offered a lower-paid job at a nonprofit that matches your ideals. How likely are you to switch from your better-paid job? | I would not switch ; I would think about it but stay ; I am genuinely unsure ; I would likely switch ; I would switch immediately
+S | How willing would you be to break an old family custom to live the way you prefer? | I would never break it ; Only if it caused me real harm ; If I had a strong reason ; Fairly willing ; I would break it without much thought
+S | Your manager asks you to comply with a rule you think is pointless. How closely do you follow it? | I ignore it ; I follow it only when watched ; I follow it most of the time ; I follow it fully ; I follow it and remind others too
+S | A charity asks you to give up a weekend each month to volunteer. How much would you commit? | Nothing ; One weekend a year ; A few weekends a year ; Most months ; Every month
+S | You have the chance to join a well-known competition where you could win recognition but might fail publicly. How eager are you? | I would not enter ; I would enter only under another name ; I would enter nervously ; I would enter gladly ; I would enter and aim to win
+S | How much does the approval of your neighbors shape how you decorate your home? | Not at all ; A little ; Somewhat ; Quite a lot ; It decides almost everything
+S | Your company offers to put you in charge of a department you know little about. How appealing is the added power? | Not appealing, I'd decline ; Slightly appealing ; Somewhat appealing ; Quite appealing ; Extremely appealing
+S | Your spouse wants to plan every holiday in detail, while you love to improvise. How much would you give up spontaneity for their peace of mind? | Not at all ; I would plan only the basics ; I would plan about half ; I would plan most things ; I would plan everything their way
+S | A dangerous but thrilling job opportunity comes along. How far does the danger put you off? | The danger rules it out ; It puts me off a lot ; It gives me pause ; It barely matters ; The danger is part of the appeal
+S | You can keep a traditional family recipe exactly as it is or improve it with modern ingredients. How much would you change it? | I would change nothing ; A tiny tweak ; A few changes ; Many changes ; I would reinvent it entirely
+S | You receive an unexpected windfall. How much of it would you spend on treats and fun for yourself? | None of it ; A small part ; About half ; Most of it ; All of it
+S | A stranger in a distant country needs help your skills could provide. How willing are you to travel to help? | Not willing ; I would help from home only ; I would go if it were easy ; I would go even at some cost ; I would go no matter the cost
+S | Your workplace asks everyone to attend optional after-hours events. How often do you go to fit in? | Never ; Rarely ; Sometimes ; Usually ; Always
+S | You could be admired as the best in your field or be loved as a kind person but unremarkable at work. How strongly do you lean toward being admired? | I strongly prefer being loved ; I lean toward being loved ; I am torn ; I lean toward being admired ; I strongly prefer being admired
+S | Your aging parents ask you to live with them to care for them. How much of your own life would you rearrange? | None, I'd arrange other care ; A little, I'd visit more often ; A fair amount, I'd move nearby ; A lot, I'd move in part of the week ; Everything, I'd move in full time
+S | A travel opportunity means leaving a secure job with no guarantee of return. How likely are you to go? | I would not go ; I would think hard but stay ; I am genuinely torn ; I would probably go ; I would go immediately
+S | How much would you give up to keep your family's land in the family? | Nothing, I'd sell it ; A little effort ; Some money and time ; A lot of money and time ; Anything it takes
+S | A friend asks you to attend a traditional ceremony in formal dress though you'd prefer to skip it. How likely are you to go? | I would skip it ; I would go but leave early ; I would go in my own clothes ; I would go and dress as asked ; I would go gladly and help organize
+S | You could have a guaranteed comfortable life or a life of big highs and lows. How strongly do you prefer the guaranteed comfort? | I strongly prefer the highs and lows ; I lean toward the highs and lows ; I am torn ; I lean toward comfort ; I strongly prefer comfort
+S | Your employer wants you to stop sharing opinions that differ from company messaging. How much do you comply? | I keep speaking freely ; I tone it down a little ; I keep quiet at work but not outside ; I keep quiet everywhere ; I fully align my views
+S | You can win a leadership role by outshining a colleague who needs it more. How hard would you compete? | I would step aside for them ; I would compete only lightly ; I would compete fairly ; I would compete hard ; I would do whatever it takes to win
+S | A local cause you care about needs someone to organize it. How much time would you give? | None ; An hour here and there ; A few hours a week ; Most evenings ; I would make it my main commitment
+S | A friend offers a free spot at an unusual retreat where you'd live without technology for a month. How appealing is it? | Not at all ; Slightly ; Somewhat ; Quite a lot ; I'd go tomorrow
+S | You could keep a safe routine at work or volunteer for a risky new project. How often do you choose the risky project? | Never ; Rarely ; Sometimes ; Often ; Always
+S | Your parents want you to marry someone they approve of. How much weight do you give their approval? | None ; A little ; Some ; A great deal ; Their approval is essential
+S | You are asked to follow a strict dress code at a place of worship you visit. How closely do you follow it? | I ignore it ; I follow the parts I agree with ; I follow most of it ; I follow all of it ; I follow it and help others follow it
+S | You can buy a luxury you've always wanted or donate the same money to a cause you believe in. How strongly do you lean toward the luxury? | I would definitely donate ; I lean toward donating ; I am torn ; I lean toward the luxury ; I would definitely buy the luxury
+S | Your friends plan a daring outdoor adventure. How much danger are you willing to accept to join? | None, I'd stay home ; Only mild risk ; Moderate risk ; Serious risk ; Almost any risk
+S | A company offers you a lifetime contract with no chance of promotion. How appealing is the guarantee? | Not appealing, I want room to grow ; Slightly appealing ; Somewhat appealing ; Quite appealing ; Very appealing, I'd sign right away
+S | How much would you bend your own tastes to fit in with a new group of coworkers? | Not at all ; A little ; Somewhat ; Quite a lot ; Completely
+S | A wealthy relative offers to fund your life if you follow their plans for your career. How tempted are you? | Not tempted ; Slightly tempted ; Somewhat tempted ; Very tempted ; I would accept
+S | Your town wants to replace an old historic square with a modern one. How much do you favor keeping it as it is? | I favor the modern one ; I lean modern ; I'm undecided ; I lean toward keeping it ; I'd fight to keep it
+S | You can take a job that puts you in the public eye or one that keeps you behind the scenes. How strongly do you prefer the public role? | I strongly prefer behind the scenes ; I lean behind the scenes ; I'm torn ; I lean toward the public role ; I strongly prefer the public role
+S | A chance to learn a brand new skill means giving up evenings with your family for a year. How willing are you? | Not willing ; Slightly willing ; Somewhat willing ; Quite willing ; Fully willing
+S | How much would you give up personal comfort to care for a sick neighbor for a month? | Nothing ; A little time now and then ; A few hours a week ; Several hours a day ; I would put my own life on hold
+S | Your friends share a rule of never discussing money. How closely do you stick to it even when you need advice? | I break it freely ; I break it when needed ; I hint around it ; I stick to it mostly ; I never break it
+S | A job offer promises great status but longer hours. How much does the status pull you toward it? | Not at all ; A little ; Somewhat ; A lot ; It decides it for me
+S | You could spend your savings on a year of adventure or keep them as a safety net. How much would you spend? | None ; A small part ; About half ; Most of it ; All of it
+S | Your grandparents ask you to learn their native language. How much effort would you put in? | None ; A few phrases ; Basic conversation ; Near fluency ; Full fluency no matter what
+S | Your employer offers flexible hours or a fancy office. How strongly do you prefer the flexible hours? | I strongly prefer the office ; I lean toward the office ; I'm torn ; I lean toward flexibility ; I strongly prefer flexibility
+S | You are asked to stand for a leadership role in your community. How willing are you to give up privacy for it? | Not willing ; Slightly willing ; Somewhat willing ; Quite willing ; Fully willing
+S | How much would you give up comfort to see the world? | Nothing ; A little ; A fair amount ; A lot ; Everything I have
+S | A friend challenges you to live on very little for a month to learn simplicity. How likely are you to accept? | I would decline ; I would try it for a week ; I would try it but might quit ; I would do the full month ; I would do it and keep going longer
+S | Your employer offers a chance to supervise former peers. How comfortable are you taking power over them? | Very uncomfortable, I'd decline ; Uncomfortable but willing ; Neutral ; Fairly comfortable ; Completely comfortable
+
+# noul
+N | Would you turn down a promotion if it meant moving away from your aging parents?
+N | Would you leave a secure job to travel the world for a year?
+N | Would you keep a family tradition you find meaningless because your grandparents care about it?
+N | Would you accept a powerful position even if it meant making enemies?
+N | Would you take a job you love over one that gives your family more security?
+N | Would you follow a workplace rule you think is foolish just to keep the peace?
+N | Would you give up a comfortable lifestyle to live near a cause you care about?
+N | Would you try a dangerous extreme sport if a friend dared you?
+N | Would you refuse a well-paid job at a company whose values you reject?
+N | Would you move to a country where you know no one just for the adventure?
+N | Would you keep practicing your family's faith to please your parents even if you had doubts?
+N | Would you choose fame over privacy if offered the choice?
+N | Would you give up your weekends to care for a sick relative?
+N | Would you change your appearance to fit in at a new workplace?
+N | Would you give up a luxury holiday to fund a friend's medical bill?
+N | Would you give up a stable career to start your own business?
+N | Would you follow your elders' advice on a big life decision even if you disagreed?
+N | Would you take a job with less pay if it gave you more control over your time?
+N | Would you choose a quiet village life over a busy city career?
+N | Would you volunteer abroad for a year at the cost of your career progress?
+N | Would you take on a leadership role you didn't want because no one else would?
+N | Would you break with a family custom to marry the person you love?
+N | Would you spend your savings on a once-in-a-lifetime experience?
+N | Would you stay in a boring but safe job for the rest of your life?
+N | Would you give up meat to reduce your harm to nature even if you loved eating it?
+N | Would you speak out against your group's shared opinion even if it cost you friends?
+N | Would you choose a job that impresses others over one you enjoy more?
+N | Would you move back to your hometown to help run a struggling family business?
+N | Would you accept a prestigious award from an organization you disagree with?
+N | Would you give up your phone for a month to join a retreat for inner peace?
+N | Would you move in with your parents to care for them in old age?
+N | Would you choose a career that helps strangers over one that helps your family financially?
+N | Would you wear a uniform you dislike to keep a well-paid job?
+N | Would you trade some of your independence for a guaranteed income for life?
+N | Would you take a big risk for a chance at something extraordinary?
+N | Would you respect a tradition you disagree with while visiting another culture?
+N | Would you stay in a job to protect your coworkers even if a better offer came?
+N | Would you turn down an inheritance that came with strict conditions on how you live?
+N | Would you give up a well-paid job to become a teacher in a poor area?
+N | Would you choose a life of adventure over a life of comfort?
+N | Would you accept a promotion that meant supervising your closest friend?
+N | Would you live somewhere less safe if it were far more exciting?
+N | Would you follow a strict rule at a place of worship even if you weren't a believer?
+N | Would you give up time with friends to learn a demanding new skill?
+N | Would you accept a quieter life to protect your health, even if it meant giving up big goals?
+N | Would you take a pay cut to work for an organization that protects nature?
+N | Would you stay in your hometown to keep your family close, even with fewer opportunities?
+N | Would you seek influence over others if it let you do more good?
+N | Would you give up a family holiday to join a rare adventure with friends?
+N | Would you follow a dress code at a family event to avoid upsetting your elders?

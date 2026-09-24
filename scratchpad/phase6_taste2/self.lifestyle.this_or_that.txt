@@ -1,0 +1,124 @@
+# self.lifestyle.this_or_that
+C | Crickets chirping or frogs croaking on a summer night? | crickets ; frogs ; no_preference
+C | Candlelight or fairy lights for a relaxed evening? | candlelight ; fairy_lights ; neither
+C | Wool socks or bare feet around the house? | wool_socks ; bare_feet ; slippers_instead
+C | Scented candles or incense? | scented_candles ; incense ; neither
+C | A blank sketchbook or a lined journal as a gift for yourself? | blank_sketchbook ; lined_journal ; neither
+C | Jigsaw puzzle on a rainy day or a long nap on a rainy day? | jigsaw_puzzle ; long_nap ; something_else
+C | Stargazing or cloud watching? | stargazing ; cloud_watching ; no_preference
+C | Bubble baths or long showers? | bubble_baths ; long_showers ; no_preference
+C | Morning walks or evening walks? | morning_walks ; evening_walks ; no_walks
+C | Fountain pens or gel pens? | fountain_pens ; gel_pens ; neither
+C | Wind chimes or rain on the roof as a background sound? | wind_chimes ; rain_on_the_roof ; neither
+C | Sunflowers or lavender fields for a summer photo? | sunflowers ; lavender_fields ; no_preference
+C | Autumn leaves or spring blossoms? | autumn_leaves ; spring_blossoms ; no_preference
+C | Crisp cold air or warm humid air when you step outside? | crisp_cold_air ; warm_humid_air ; no_preference
+C | Sneakers or sandals on a summer day out? | sneakers ; sandals ; other
+C | A crackling fireplace or a humming air conditioner on a lazy afternoon? | crackling_fireplace ; humming_air_conditioner ; neither
+C | Ghost tour or boat tour on a night out? | ghost_tour ; boat_tour ; neither
+C | Drive-in movie or rooftop cinema? | drive_in ; rooftop_cinema ; neither
+C | Marbles or dominoes to fidget with? | marbles ; dominoes ; neither
+C | Lo-fi beats or nature sounds while you relax? | lofi_beats ; nature_sounds ; silence
+C | Cozy mystery or epic saga for a long weekend read? | cozy_mystery ; epic_saga ; something_else
+C | Talking to the audience or staying quiet in an interactive show? | join_in ; stay_quiet ; depends
+C | Hand-drawn animation or stop-motion animation? | hand_drawn ; stop_motion ; no_preference
+C | Crossword in pen or crossword in pencil? | in_pen ; in_pencil ; no_crosswords
+C | Soft blankets or crisp sheets? | soft_blankets ; crisp_sheets ; no_preference
+C | Neon signs or string lights for a party vibe? | neon_signs ; string_lights ; neither
+C | Birdsong or church bells as a morning sound? | birdsong ; church_bells ; neither
+C | Ferry ride or cable car ride? | ferry_ride ; cable_car ; no_preference
+C | Board game night or movie night with friends? | board_game_night ; movie_night ; something_else
+C | Beanie or baseball cap? | beanie ; baseball_cap ; no_hat
+C | Mountains at dawn or city lights at midnight? | mountains_at_dawn ; city_lights_at_midnight ; no_preference
+C | Handwritten to-do list or phone reminders? | handwritten_list ; phone_reminders ; no_lists
+C | Waves crashing or a babbling brook? | waves_crashing ; babbling_brook ; no_preference
+C | Acoustic cover or original studio version of a song you love? | acoustic_cover ; studio_original ; depends_on_the_song
+C | Snow days or sick days off school when you were a kid? | snow_days ; sick_days ; neither
+C | Heavy blanket or light quilt on a cool night? | heavy_blanket ; light_quilt ; no_preference
+C | Polaroid photos or phone photos? | polaroids ; phone_photos ; no_preference
+C | Card tricks or coin tricks? | card_tricks ; coin_tricks ; neither
+C | Hot air balloons or blimps drifting overhead? | hot_air_balloons ; blimps ; neither
+C | Ocean breeze or mountain breeze? | ocean_breeze ; mountain_breeze ; no_preference
+C | Autumn rain or summer thunderstorm? | autumn_rain ; summer_thunderstorm ; neither
+C | Scarves or hats in winter? | scarves ; hats ; both_equally
+C | Train whistle or foghorn as a sound from far away? | train_whistle ; foghorn ; neither
+C | Fireflies in a field or snow falling past a streetlight? | fireflies_in_a_field ; snow_past_a_streetlight ; no_preference
+C | Comedy podcast or true story podcast on a long walk? | comedy_podcast ; true_story_podcast ; music_instead
+C | A cozy sweater or a crisp button-up shirt? | cozy_sweater ; crisp_button_up ; no_preference
+C | Street performers or buskers with a guitar? | street_performers ; guitar_buskers ; neither
+C | Doodling or daydreaming during a slow afternoon? | doodling ; daydreaming ; neither
+C | The smell of cut grass or the smell of a new book? | cut_grass ; new_book ; neither
+C | Ice rink or roller rink? | ice_rink ; roller_rink ; neither
+C | Paper maps or a phone map on a walk? | paper_map ; phone_map ; no_map
+C | Treehouse or tree swing? | treehouse ; tree_swing ; neither
+C | Lantern festival or fireworks show? | lantern_festival ; fireworks_show ; neither
+C | Whispered secrets or shouted jokes? | whispered_secrets ; shouted_jokes ; neither
+C | Sock puppets or shadow puppets? | sock_puppets ; shadow_puppets ; neither
+C | Birthday cake candles blown out in one breath or several tries? | one_breath ; several_tries ; no_candles
+C | The first snow of the year or the first warm day of the year? | first_snow ; first_warm_day ; no_preference
+C | Bookmark or folded page corner? | bookmark ; folded_corner ; whatever_is_nearby
+C | Pinball or claw machine? | pinball ; claw_machine ; neither
+C | Colored pencils or pastels? | colored_pencils ; pastels ; neither
+C | Silk or velvet? | silk ; velvet ; neither
+C | Silver or gold? | silver ; gold ; neither
+C | Hammock or porch swing? | hammock ; porch_swing ; neither
+C | Street festival or quiet park picnic? | street_festival ; park_picnic ; neither
+C | Bright white light or warm yellow light in a room? | bright_white ; warm_yellow ; no_preference
+C | Handwritten letter or voice message from someone far away? | handwritten_letter ; voice_message ; no_preference
+C | Early spring mud or late autumn frost? | spring_mud ; autumn_frost ; neither
+C | Choir or brass band at a celebration? | choir ; brass_band ; neither
+N | Do you prefer the sound of rain to the sound of silence?
+N | Would you pick a paper calendar over a digital one?
+N | Do you prefer wearing a watch to checking the time on your phone?
+N | Would you choose a rainy day indoors over a sunny day outdoors?
+N | Do you prefer the smell of woodsmoke to the smell of the sea?
+N | Do you prefer mossy forest trails to sandy coastal trails?
+N | Do you prefer boots to sneakers in autumn?
+N | Would you pick a board game over a card game at a family gathering?
+N | Do you prefer knitted blankets to fleece blankets?
+N | Do you prefer the sound of a crackling record to a perfectly clean recording?
+N | Would you choose a quiet train carriage over a lively one?
+N | Do you prefer summer nights to summer mornings?
+N | Would you choose a hammock over a beach towel on a lazy afternoon?
+N | Do you prefer instrumental music to songs with words while you relax?
+N | Do you prefer frosty mornings to foggy mornings?
+N | Would you pick a picnic over a restaurant for a sunny lunch?
+N | Do you prefer wearing hoodies to wearing jackets?
+N | Would you pick watching a sunrise over sleeping in?
+N | Do you prefer yellow flowers to red flowers?
+N | Do you prefer the sound of a typewriter to the sound of a keyboard?
+N | Would you choose a candle-lit room over a brightly lit one for reading?
+N | Do you prefer snow crunching underfoot to leaves crunching underfoot?
+N | Would you choose a comedy club over a jazz club for a night out?
+N | Do you prefer mornings that start slowly to mornings that start with a rush of energy?
+N | Do you prefer the first day of a holiday to the last day?
+S | How strongly do you lean toward chalk drawings on the sidewalk over finger painting as a playful activity? | I would always choose finger painting ; I lean toward finger painting ; I would enjoy either ; I lean toward sidewalk chalk ; I would always choose sidewalk chalk
+S | How strongly do you lean toward candles over lamps in the evening? | I only ever use lamps ; I use lamps and light a candle on rare occasions ; I mix candles and lamps about evenly ; I light candles most evenings ; I light candles every evening and rarely switch on a lamp
+S | How strongly do you lean toward window seats over middle seats at a movie theater? | I always sit in the dead center ; I usually sit near the center ; I sit wherever there is space ; I usually sit near the aisle ; I always sit on the aisle
+S | How strongly do you lean toward thick socks over thin socks? | I always wear thin socks ; I mostly wear thin socks ; I wear both depending on the day ; I mostly wear thick socks ; I wear thick socks even in summer
+S | How strongly do you lean toward a patterned umbrella over a plain black one? | I would only carry plain black ; I lean toward plain black ; I carry whatever I grab first ; I lean toward a bold pattern ; I would only carry a loud, patterned umbrella
+S | How strongly do you prefer loud thunderstorms over gentle drizzle? | Thunderstorms frighten me and I hide from them ; I much prefer a quiet drizzle ; I like both about the same ; I get excited when a storm rolls in ; I go outside or to a window to watch every storm
+S | How strongly do you lean toward crossword puzzles over word games on your phone? | I only play word games on my phone ; I mostly play phone word games ; I do both about equally ; I mostly do crosswords ; I only do crosswords and never phone word games
+S | How strongly do you lean toward seeing a band live over listening at home? | I never go to concerts and always listen at home ; I go to a concert once in a long while ; I split my listening between both ; I go to shows whenever I can ; I travel to see bands live and rarely listen at home
+S | How strongly do you prefer fog over bright sunshine on a morning walk? | I avoid walking on foggy mornings ; I tolerate fog but wish for sun ; I enjoy both equally ; I find foggy walks more magical ; I set my alarm early hoping for fog
+S | How strongly do you prefer old black-and-white films over new color films? | I never watch black-and-white films ; I watch one only when someone insists ; I enjoy both equally ; I seek out black-and-white films often ; Most of what I watch is black-and-white
+S | How strongly do you lean toward stairs over escalators in a shopping mall? | I always take the escalator ; I take the escalator unless it is crowded ; I take whichever is closest ; I take the stairs most of the time ; I always take the stairs even with bags
+S | How strongly do you prefer quiet cafes over lively ones for meeting a friend? | I always pick the busiest, loudest cafe ; I prefer some buzz around me ; I have no preference ; I prefer a quieter corner ; I only meet in nearly silent cafes
+S | How strongly do you prefer summer festivals over winter markets? | I only go to winter markets ; I lean toward winter markets ; I enjoy both equally ; I lean toward summer festivals ; I only go to summer festivals
+S | How strongly do you lean toward cozy flannel over crisp cotton pajamas? | I only wear crisp cotton ; I mostly wear cotton ; I switch between both ; I mostly wear flannel ; I wear flannel all year round
+S | How strongly do you prefer early morning quiet over late night quiet? | I love late nights and never see early mornings ; I much prefer late night quiet ; I enjoy both equally ; I much prefer the early morning quiet ; I wake before dawn just to enjoy the quiet
+S | How strongly do you lean toward mountain lakes over ocean beaches for a day trip? | I always pick the ocean ; I usually pick the ocean ; I have no preference ; I usually pick a mountain lake ; I always pick a mountain lake
+S | How strongly do you lean toward drawing over writing when you have a spare notebook page? | I only ever write ; I write most of the time ; I do both about equally ; I mostly doodle and draw ; Every spare page ends up covered in drawings
+S | How strongly do you prefer rainy season over dry season? | I dread every rainy day ; I put up with rain but prefer dry weather ; I like both equally ; I enjoy rainy stretches more ; I feel happiest in the wettest weeks of the year
+S | How strongly do you lean toward window light over lamp light when you read during the day? | I always switch on a lamp ; I usually use a lamp ; I use whichever is handy ; I usually sit by a window ; I always move to a window to read
+S | How strongly do you lean toward jigsaw puzzles over video games on a quiet evening? | I always choose video games ; I usually choose video games ; I pick either ; I usually choose a jigsaw puzzle ; I always choose a jigsaw puzzle
+S | How strongly do you prefer snowy landscapes over sunny beaches in pictures on your walls? | All my pictures are sunny beaches ; I have mostly beaches ; I have a mix ; I have mostly snowy landscapes ; All my pictures are snowy landscapes
+S | How strongly do you lean toward whistling over humming when you are happy? | I always hum and never whistle ; I mostly hum ; I do both ; I mostly whistle ; I whistle constantly when I am happy
+S | How strongly do you prefer autumn evenings over summer evenings? | I far prefer summer evenings ; I lean toward summer evenings ; I love both equally ; I lean toward autumn evenings ; I far prefer autumn evenings
+S | How strongly do you prefer a bicycle bell over a car horn as a sound on your street? | I barely notice either ; I mildly prefer the bell ; I clearly prefer the bell ; I smile whenever I hear a bike bell ; I would ban car horns to hear more bells
+S | How strongly do you prefer handmade gifts over store-bought gifts to receive? | I always prefer store-bought ; I usually prefer store-bought ; I like both equally ; I usually prefer handmade ; I treasure handmade gifts far above anything bought
+S | How strongly do you lean toward podcasts over music on a long walk? | I only listen to music ; I mostly listen to music ; I switch between both ; I mostly listen to podcasts ; I only listen to podcasts
+S | How strongly do you lean toward winter coats over light jackets when the weather is borderline? | I always go with a light jacket and risk the chill ; I usually pick the light jacket ; It depends on the day ; I usually bring the heavy coat ; I always bundle up in a heavy coat
+S | How strongly do you prefer lakes over rivers for a quiet afternoon? | I always pick a river ; I usually pick a river ; I have no preference ; I usually pick a lake ; I always pick a lake
+S | How strongly do you prefer comedy over drama for a first watch with someone new? | I always pick a drama ; I lean toward a drama ; I pick either ; I lean toward a comedy ; I always pick a comedy
+S | How strongly do you lean toward sparklers over glow sticks at a summer party? | I always grab a glow stick ; I usually grab a glow stick ; I take whichever is handed to me ; I usually grab a sparkler ; I always grab a sparkler

@@ -1,0 +1,105 @@
+N|values|Is it okay to use an AI tool to help write messages to someone you are dating?
+S|values|How much would it bother you to learn a date's charming messages were written with an AI tool?|It would not bother me at all ; It would bother me a little ; It would bother me noticeably ; It would bother me a lot ; It would end my interest in them
+C|values|Which use of AI in dating seems most acceptable to you?|polishing_a_profile;suggesting_date_ideas;writing_opening_messages;checking_a_match_is_real;none_of_them
+N|values|Should you turn off read receipts while getting to know someone new?
+C|values|What does it mean when someone you are dating reads your message but does not reply for a day?|they_are_busy;they_are_losing_interest;they_are_playing_it_cool;nothing_at_all;it_depends_on_the_person
+S|personality|How much does it bother you when a new match sends mostly voice notes instead of texts?|It does not bother me at all ; It bothers me a little ; It bothers me noticeably ; It bothers me a lot ; I would stop talking to them
+C|values|Which modern dating habit seems the most unkind?|disappearing_without_a_word;keeping_someone_on_hold_as_a_backup;heavy_flattery_that_soon_stops;watching_their_stories_after_ghosting;sending_occasional_messages_with_no_intent_to_meet
+N|values|Is it unkind to keep someone as a 'maybe' while you see if something better comes along?
+S|values|How suspicious should you be of someone who showers you with intense attention in the first week?|Not suspicious at all ; Slightly curious ; Somewhat cautious ; Quite wary ; Very suspicious
+C|values|What is the best response when someone you dated briefly keeps watching your online posts but never messages?|ignore_it;block_them;message_them;find_it_flattering;other
+C|values|Which is the best way to meet someone through a shared hobby?|a_running_club;a_cooking_class;a_climbing_gym;a_book_club;a_volunteer_group;a_dance_class;other
+N|personality|Would you join a club or class partly in the hope of meeting someone to date?
+S|values|How much better is meeting someone through a shared hobby than through an app?|It is no better at all ; It is slightly better ; It is noticeably better ; It is much better ; It is by far the best way to meet someone
+C|values|What is the biggest advantage of dating someone you were friends with first?|you_already_trust_them;you_know_their_flaws;you_share_friends;less_first_date_pressure;there_is_no_advantage
+N|values|Would you use a professional matchmaker if you could afford one?
+C|values|Which introducer would you trust most to find you a good match?|a_parent;a_sibling;a_close_friend;a_coworker;a_professional_matchmaker;an_app
+S|values|How much should family members be involved in introducing people to potential partners?|Family should never be involved ; Family can mention someone once in a while ; Family can make a few gentle introductions ; Family should actively help ; Family should take the lead
+N|values|Is it harder to start dating again after a long relationship ends than to date for the first time?
+C|values|What is the hardest part of dating again after a long relationship?|not_knowing_the_new_rules;nerves;comparing_to_the_ex;fear_of_getting_hurt;finding_time;other
+S|values|How soon is it reasonable to start dating after a divorce?|Right away is fine ; After a few weeks ; After a few months ; After a year or so ; Only after several years
+C|values|What should an older adult dating for the first time in many years do first?|ask_friends_for_introductions;try_an_app;join_social_groups;take_it_slow;other
+N|values|Should a widowed person wait a certain time before dating again?
+S|values|How much can two people who meet later in life have the same romance as a young couple?|Not at all ; A little ; Somewhat ; Mostly ; Completely
+C|values|What is the best first step for dating after moving to a new city?|join_local_groups;try_apps;ask_coworkers_about_social_events;make_friends_first;wait_until_settled
+N|values|Would you date someone who does not speak your first language well?
+C|values|What is the best part of dating someone from a different culture?|learning_new_traditions;new_food;a_new_language;seeing_your_own_culture_fresh;there_is_no_special_benefit
+S|values|How much effort should you make to learn a date's native language if things get serious?|No effort is needed ; A few words to be polite ; Enough to chat with their family ; Enough for real conversations ; Full fluency
+N|values|Would you learn a new hobby just because someone you were dating loved it?
+C|values|Which trait do you find more attractive: being good at something or being curious about everything?|being_good_at_something;being_curious_about_everything;both_equally;neither
+S|values|How attractive do you find someone who is very skilled at their craft, like a great chef or carpenter?|Skill does nothing for their appeal ; Skill adds a little appeal ; Skill adds noticeable appeal ; Skill adds a lot of appeal ; Skill is one of the most attractive things there is
+C|values|Which small act on a date says the most about someone's character?|how_they_treat_staff;whether_they_listen;how_they_handle_a_mishap;whether_they_ask_questions;how_they_talk_about_others;other
+N|values|Does it count against someone if they never ask you any questions on a first date?
+S|values|How much should someone's curiosity about you count in whether you want a second date?|It should not count at all ; It should count a little ; It should count a fair amount ; It should count a lot ; It should count more than anything else
+C|taste|Which first-date activity lets you see how someone handles a small challenge?|mini_golf;an_escape_room;a_cooking_class;a_pub_quiz;a_hike;a_board_game_cafe
+C|taste|Which kind of museum makes the best date?|art;science;history;natural_history;an_odd_small_museum;none
+N|taste|Would you enjoy a first date spent volunteering together?
+S|personality|How much do you enjoy a date that involves learning something new together?|I dislike dates like that ; I tolerate them ; I enjoy them somewhat ; I enjoy them a lot ; They are my favorite kind of date
+C|values|Which is the best sign that a date is genuinely kind rather than just polite?|they_notice_small_needs;they_are_patient_with_delays;they_speak_warmly_about_others;they_help_a_stranger;other
+N|values|Is kindness more attractive than confidence?
+C|values|What does a person's bookshelf or music collection tell you on a date?|a_lot_about_them;a_little;nothing;it_depends_on_how_they_talk_about_it
+S|values|How much does a date's taste in films affect your interest in them?|Not at all ; A little ; Somewhat ; A lot ; It can decide the matter
+N|personality|Have you ever had a crush on a fictional character?
+S|personality|How often do you develop crushes on famous people?|I never do ; I do once in a great while ; I do now and then ; I do fairly often ; I always have a famous crush
+C|values|Which kind of famous crush is most harmless?|an_actor;a_musician;an_athlete;a_writer;a_fictional_character;all_equally
+N|values|Is it okay to mention a celebrity crush to someone you are dating?
+C|values|Which is the best way to handle being recognized in public by someone you matched with online?|say_hello;smile_and_move_on;pretend_not_to_notice;leave_quickly;other
+C|values|What should you do if you match with a coworker on a dating app?|ignore_it;unmatch_quietly;joke_about_it_at_work;message_them;other
+N|values|Should you unmatch with an ex if you see them on a dating app?
+S|personality|How tired of dating do you get after a string of disappointing first dates?|I never tire of it ; I get a little weary ; I need a short break ; I need a long break ; I give up on dating altogether
+C|values|What is the best thing to do when dating starts to feel like a chore?|take_a_break;change_how_you_meet_people;go_on_fewer_better_dates;ask_friends_for_help;keep_going
+N|values|Is it healthy to take a long break from dating on purpose?
+S|values|How happy can a person be staying single by choice for many years?|They cannot be happy at all ; They can be a little happy ; They can be fairly happy ; They can be very happy ; They can be happier than most couples
+C|values|Which reason for staying single seems most admirable?|focusing_on_a_career;valuing_freedom;healing_from_the_past;not_settling;caring_for_family;other
+C|values|Which is the better rule for how quickly to reply to someone new?|reply_when_you_see_it;wait_a_little_to_seem_relaxed;match_their_pace;there_should_be_no_rule
+N|values|Should the person who likes the other more hide it in the early stages?
+S|values|How much should you play it cool when you like someone new?|Not at all, show it openly ; A little, to avoid scaring them ; Somewhat, to keep things balanced ; A lot, to keep them interested ; Completely, never show more than they do
+C|values|Who should say 'I like you' first in a new romance?|whoever_feels_it_first;whoever_asked_the_other_out;whoever_is_more_confident;it_should_happen_naturally;other
+C|values|Which is the best way to tell someone you like them for the first time?|in_person;in_a_letter;in_a_message;through_a_small_gesture;other
+N|personality|Have you ever written a love letter by hand?
+S|personality|How much would you enjoy getting a handwritten letter from someone you are dating?|I would not enjoy it at all ; I would find it a little odd ; I would find it sweet ; I would love it ; I would treasure it forever
+C|values|What is the best way to pay a compliment to someone you have just met?|on_their_style;on_their_smile;on_something_they_said;on_their_energy;on_their_taste;other
+N|values|Are pickup lines ever charming?
+S|values|How much can a cheesy joke work as an opener with someone new?|It never works ; It works only by rare luck ; It works now and then ; It often works ; It almost always works
+C|values|Which everyday skill makes someone more appealing to date?|cooking;fixing_things;giving_good_advice;planning_trips;making_people_laugh;other
+N|values|Can attraction grow between two people who felt nothing at first?
+S|values|How much does attraction grow as you get to know someone's character?|It never grows ; It grows a little ; It grows noticeably ; It grows a lot ; It can grow from nothing to strong
+C|values|Which is the most attractive way for someone to talk about their work?|with_passion;with_humor;with_modesty;with_ambition;they_should_not_talk_about_it_much
+N|values|Is it attractive when someone is openly nervous on a first date?
+C|values|What should you do if your date has something stuck in their teeth?|tell_them_quietly;signal_with_a_gesture;ignore_it;make_a_joke
+C|values|Which small mishap on a first date is most forgivable?|spilling_a_drink;getting_lost_on_the_way;forgetting_your_name_once;a_bad_joke;running_a_bit_late
+S|values|How much does a date's reaction to a small mishap tell you about them?|It tells me nothing ; It tells me a little ; It tells me a fair amount ; It tells me a lot ; It tells me almost everything
+N|values|Should you tell someone on a first date that you are nervous?
+C|values|Which is the best way to handle a lull in conversation on a first date?|ask_a_new_question;share_a_story;comment_on_your_surroundings;enjoy_the_silence;suggest_moving_somewhere
+C|values|Which question is too personal for a first date?|past_relationships;salary;family_problems;health;future_children;none_of_these
+S|values|How much should money come up on the first few dates?|It should never come up ; It should come up only lightly ; It can come up naturally ; It should come up clearly ; It should be discussed openly from the start
+C|social|What do most people think is the best way to meet a partner today?|apps;through_friends;at_work;through_hobbies;at_bars_or_parties;at_school
+S|social|How much do most people enjoy using dating apps?|Most people hate them ; Most people dislike them ; Most people feel neutral ; Most people like them ; Most people love them
+N|social|Do most people think it is fine to use an AI tool to write a dating profile?
+C|social|What do most people find most attractive in a new person?|humor;kindness;looks;confidence;intelligence;ambition
+S|social|How much do most people exaggerate on their dating profiles?|Most people do not exaggerate at all ; Most people stretch a detail or two ; Most people exaggerate a fair amount ; Most people exaggerate a lot ; Most people's profiles are mostly fiction
+N|social|Do most people believe they have a type?
+C|social|What do most people do right after a first date?|text_a_friend;text_the_date;replay_it_in_their_head;look_at_the_dates_profile_again;forget_about_it
+S|social|How often do most people check a date's social media before meeting?|Most people never check ; Most people check only a little ; Most people check about half the time ; Most people usually check ; Most people always check thoroughly
+N|social|Would most people date someone they met through a hobby group?
+C|social|What do most people say is the worst way to be turned down?|being_ghosted;a_harsh_message;a_fake_excuse;being_told_through_a_friend;a_long_silence
+S|social|How quickly do most people decide whether they want a second date?|Most people decide within minutes ; Most people decide within the first hour ; Most people decide by the end of the date ; Most people decide over the next day ; Most people need several days to decide
+N|social|Do most people prefer to be asked out in person rather than by text?
+C|social|What do most people think is the best way to show interest after a first date?|a_quick_thank_you_message;asking_for_a_second_date;a_call;a_funny_follow_up;waiting_for_the_other_person
+S|social|How much do most people think looks matter in the long run of a relationship?|Most people think looks do not matter at all ; Most people think looks matter a little ; Most people think looks matter somewhat ; Most people think looks matter a lot ; Most people think looks matter most of all
+N|social|Do most people take a break from dating after a bad breakup?
+C|social|Which dating habit do most people say they are tired of?|ghosting;endless_messaging;flaky_plans;fake_photos;games_and_mind_tricks
+S|social|How much do most people rely on friends to help judge someone new?|Most people do not rely on friends at all ; Most people rely on friends a little ; Most people rely on friends somewhat ; Most people rely on friends a lot ; Most people let friends decide
+N|social|Would most people go on a date with someone their parents picked?
+C|social|What do most people consider the best first-date length?|under_an_hour;about_an_hour;a_couple_of_hours;an_afternoon_or_evening;a_whole_day
+N|social|Do most people think single people in their thirties are under pressure to settle down?
+C|values|Which is the best way to handle two dates you like equally?|be_honest_with_both;keep_seeing_both_for_a_while;choose_quickly;take_a_break_to_think;other
+N|values|Is it fair to compare a new date to your ex?
+S|values|How much should a date's closeness with their friends count in their favor?|It should not count at all ; It should count a little ; It should count a fair amount ; It should count a lot ; It should count more than almost anything
+C|values|Which trait would you most want your future partner's friends to have?|kindness;humor;honesty;loyalty;open_mindedness;other
+C|evaluative|Which first-date story would be the most fun to tell years later?|getting_caught_in_a_storm;a_restaurant_mix_up;a_spontaneous_adventure;meeting_a_mutual_friend_by_chance;a_disaster_that_ended_well
+C|values|Which is the best way to end things kindly after a few weeks of dating?|a_short_honest_call;meeting_in_person;a_thoughtful_message;letting_it_fade;other
+S|values|How much should you tell a new date about your hopes for marriage early on?|Nothing at all ; A light hint ; A clear but brief mention ; An honest talk ; Everything from the start
+C|social|What do most singles say they want most in a partner?|kindness;humor;loyalty;ambition;looks;shared_values
+C|social|What do most people say is the best sign that a first date went well?|the_date_ran_long;easy_laughter;plans_for_a_second_date;a_quick_message_afterwards;no_awkward_silences
+N|social|Do most people prefer a partner with a similar sense of humor?

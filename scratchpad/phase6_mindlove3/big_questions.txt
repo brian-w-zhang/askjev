@@ -1,0 +1,112 @@
+C|values|Where do genuinely new ideas mostly come from?|combining_old_ideas=recombining things that already exist;sudden_insight=a flash that seems to come from nowhere;hard_work=long deliberate effort;conversation=bouncing ideas off other people;accident=lucky mistakes;dreams_and_rest=the mind working while you rest;other
+N|values|Do you think a truly original idea is possible, one that owes nothing to anything before it?
+S|values|How much of human creativity do you think is really remixing what came before?|Almost every creative work is a genuinely new invention ; Most creative work is new, with a few borrowed pieces ; Creative work is about half new and half borrowed ; Most creative work is clever reuse of older material ; Every creative work is a rearrangement of things that already existed
+C|values|What makes a person creative, at bottom?|born_talent;curiosity;courage_to_look_foolish;hard_practice;a_rich_inner_life;freedom_from_rules;other
+S|values|How many people do you think are creative in some real way?|Almost nobody is truly creative ; Only a gifted few are creative ; Many people are creative ; Most people are creative ; Every single person is creative in some way
+C|evaluative|Which human capacity strikes you as the most mysterious?|imagination;memory;language;humor;love;conscience;creativity;other
+N|values|Do you think a person can think without using words?
+S|values|How much do you think the language you speak shapes the way you think?|Language has no effect on how people think ; Language nudges a few habits of attention ; Language shapes some of how people see the world ; Language shapes much of how people see the world ; People cannot think beyond what their language lets them say
+C|values|What is imagination mostly for?|planning_ahead=trying out the future safely;escaping_reality;understanding_other_people;making_art;solving_problems;play;other
+N|values|Do you think a world without fiction would be a poorer world, even if it had all the same facts?
+C|values|Can a made-up story tell a truth that a factual report cannot?|yes_often=stories often show truths facts miss;yes_sometimes;only_emotional_truths;no=only facts tell truths;unsure
+S|values|How important is play to a fully human life, even for adults?|Play is only for children ; Adults can play now and then, but it adds little ; Play adds real value to an adult life ; Play is one of the main things that makes life worth living ; A life without play is barely a human life at all
+C|values|Why do you think humans laugh at all?|to_bond_with_others;to_release_tension;to_show_we_are_safe;to_notice_absurdity;to_cope_with_pain;no_real_reason;other
+S|values|How much do you think a good sense of humor reveals intelligence?|Humor has nothing to do with intelligence ; Humor hints at a quick mind now and then ; Humor usually goes with a sharp mind ; Humor is one of the clearest signs of intelligence ; Real humor is impossible without deep intelligence
+C|evaluative|Which is closer to the truth about boredom?|boredom_is_useful=it pushes people toward something new;boredom_is_harmless;boredom_is_wasted_life;boredom_is_a_modern_problem;depends_on_the_person
+N|values|Do you think a person's attention is the most valuable thing they own?
+S|values|How much do you think what you pay attention to shapes who you become?|What I pay attention to has no effect on who I become ; My attention shapes a few of my habits ; My attention shapes my moods and interests noticeably ; My attention shapes much of my character ; I am, in the end, what I pay attention to
+C|values|What deserves most of a person's attention over a lifetime?|the_people_they_love;their_work;the_natural_world;learning;their_own_inner_life;the_needs_of_strangers;other
+C|values|Which is closer to your view of dreams at night?|random_noise=meaningless brain activity;sorting_memories=the brain filing the day;hidden_feelings=clues to what we really feel;rehearsal=practice for real threats;mix_of_these;unsure
+N|values|Do you think dreams can tell you something true about yourself?
+S|values|How much of your own thinking do you think happens outside your awareness?|Nearly all my thinking is conscious ; A little happens outside my awareness ; About half happens outside my awareness ; Most happens outside my awareness ; Almost all my thinking happens without my noticing
+S|values|How much do you think the person you will be in far old age is really still you?|That future person will be a stranger to me ; That future person will share a few traits with me ; That future person will be partly me ; That future person will be mostly me ; That future person will be completely me
+N|values|Are you the same person you were when you were a small child?
+C|values|What most keeps a person the same person over the years?|their_body;their_memories;their_character;their_relationships;their_name_and_story;nothing_really_does;other
+S|values|How much should people be judged by outcomes that were partly down to luck?|People should be judged only by their intentions ; People should be judged mostly by intentions, a little by outcomes ; People should be judged by intentions and outcomes equally ; People should be judged mostly by outcomes ; People should be judged only by what actually happened
+C|values|Two drivers are equally careless, but only one hits someone. How should they be viewed?|equally_to_blame;the_one_who_hit_is_worse;the_one_who_hit_is_worse_legally_only=worse in law but equal in character;neither_deserves_much_blame;unsure
+N|values|Is a person who would have done something terrible in other circumstances, but never had the chance, as bad as someone who did it?
+C|values|What does a person deserve credit for, at bottom?|their_effort;their_intentions;their_results;their_choices;nothing_they_did_not_choose;other
+N|values|Do you think a person can deserve credit for being kind if kindness came easily to them?
+S|values|How much do you think a person's circumstances of birth decide how good a person they become?|Birth circumstances make no difference to goodness ; Birth circumstances matter a little ; Birth circumstances matter about as much as personal effort ; Birth circumstances matter a great deal ; Birth circumstances decide almost everything about a person's goodness
+C|values|Which comes closest to your view of what wisdom is?|knowing_what_matters;knowing_yourself;good_judgment_in_hard_cases;knowing_how_little_you_know;long_experience;kindness_plus_knowledge;other
+S|values|How much wisdom do you think a person can have before middle age?|Real wisdom is impossible before middle age ; Young people can have flashes of wisdom ; Some young people are genuinely wise ; Many young people are as wise as their elders ; Age has nothing to do with wisdom
+C|values|Which is more valuable to humanity in the long run?|great_art;great_science;great_kindness;great_institutions;great_ideas_about_how_to_live
+C|values|Which is closest to your view of whether art progresses over time?|it_progresses_like_science;it_changes_but_does_not_improve;it_has_declined;each_era_has_its_own_peak;other
+S|values|How much do you think great art reveals something true about the world?|Art is pure decoration and reveals nothing ; Art occasionally hints at something true ; Art often shows real truths about people ; Art reveals truths that nothing else can ; Art is the deepest source of truth humans have
+C|values|What do you think beauty is for?|nothing=it serves no purpose and needs none;attracting_mates;signaling_health_or_order;drawing_us_toward_what_is_good;giving_rest_to_the_mind;other
+N|values|Do you think humans would still make art if nobody else ever saw it?
+C|values|Which is the deepest human need?|to_be_loved;to_be_understood;to_be_useful;to_be_free;to_be_safe;to_make_something;other
+S|values|How much do you think people need other people to become fully themselves?|People become themselves entirely on their own ; Other people help a little ; Other people matter about as much as a person's own nature ; People become themselves mostly through others ; No one can become a self without other people
+N|values|Could a person raised completely alone still develop a real sense of self?
+C|values|Which is the deeper question?|who_am_i;how_should_i_live;what_is_real;why_is_there_anything;what_can_i_know
+C|values|What best describes love, at bottom?|a_feeling;a_choice;a_commitment;a_chemical_reaction;a_way_of_seeing_someone;a_mystery;other
+S|values|How central is love to a good human life?|Love is optional for a good life ; Love is one good among many ; Love is one of the most important goods ; Love is the most important good ; Nothing else matters much without love
+S|values|How much do you think ordinary daily routines can hold deep meaning?|Daily routines are empty filler between meaningful moments ; Routines hold a little meaning on good days ; Routines hold real meaning when done with care ; Routines hold much of the meaning in a life ; Everyday routines are where nearly all of life's meaning lives
+C|values|Which is the better question to ask about a life?|was_it_happy;was_it_good;was_it_meaningful;was_it_interesting;was_it_loving
+N|values|Can a person be wrong about whether their own life is going well?
+C|values|Where do you think a sense of wonder mostly comes from?|the_unknown;beauty;great_size_or_age;human_achievement;small_everyday_things;other
+S|values|How much should a person's views about life's big questions change as they age?|Big views should stay fixed for a whole life ; Big views should shift a little over time ; Big views should change noticeably over a lifetime ; Big views should be rebuilt several times over a lifetime ; Big views should be questioned and remade constantly
+N|values|Is it better to live with an unanswered big question than to adopt an answer you are not sure of?
+C|values|What does silence offer a person?|rest;clarity;fear_or_unease;a_sense_of_something_larger;nothing_special;other
+N|values|Do you think humans are more defined by what they make than by what they are born with?
+C|values|Which best describes what a name means to who someone is?|nothing=just a label;a_little;a_real_part_of_identity;a_central_part_of_identity
+S|values|How strongly do you feel that your body is you, rather than something you have?|My body is just a vehicle I live in ; My body is mostly something I have ; My body is partly me and partly something I have ; My body is mostly me ; My body is completely me
+C|values|What makes a place feel like home, at bottom?|the_people;long_familiarity;memories_made_there;having_chosen_it;feeling_safe;other
+N|values|Can a person have more than one true home?
+C|values|Which is the better description of human progress?|a_rising_line;a_zigzag;a_circle;no_real_direction;steady_decline
+C|values|What do you think humans will still be doing in the far future, whatever else changes?|telling_stories;making_music;falling_in_love;arguing;playing_games;asking_why;other
+S|values|How often do you think curiosity leads people somewhere bad?|Curiosity never leads anywhere bad ; Curiosity goes wrong only in rare cases ; Curiosity goes wrong now and then ; Curiosity often leads people into trouble ; Curiosity does more harm than good
+S|values|How much do you think there are things humans should never try to know?|Humans should try to know absolutely everything ; There are a few narrow things better left unknown ; Some areas of knowledge are best left alone ; Many things are better left unknown ; Humans already know more than is good for them
+C|values|Which kind of knowledge matters most for living well?|knowledge_of_yourself;knowledge_of_other_people;knowledge_of_nature;practical_skills;knowledge_of_history;other
+S|values|How much of a blessing do you think forgetting is?|Forgetting is purely a loss ; Forgetting helps only with trivial things ; Forgetting is about as much gift as loss ; Forgetting is mostly a gift ; Forgetting is one of the great mercies of being human
+C|values|What is the most important thing a person can give another?|time;attention;honesty;forgiveness;encouragement;material_help;other
+N|values|Is it possible to live a meaningful life that nobody else ever knows about?
+S|values|How much do you think the small choices people make each day add up to who they are?|Small daily choices do not affect who a person is ; Small choices shape a little of who a person is ; Small choices matter about as much as big ones ; Small choices shape most of who a person is ; A person is nothing but the sum of their small choices
+C|values|When someone does something heroic in a crisis, what mostly explains it?|character_built_over_time;instinct_in_the_moment;training;luck_of_being_there;a_mix_of_these;other
+N|values|Do you think ordinary people are capable of heroism if the moment calls for it?
+C|values|Which is harder to explain: why people create art, or why people play games?|creating_art;playing_games;equally_hard;neither_is_hard
+C|values|What most separates humans from other animals?|language;imagination;tool_making;knowing_we_will_die;humor;moral_sense;nothing_fundamental;other
+S|values|How much do you think the urge to ask why things exist is built into humans?|The urge is purely learned from culture ; A few people have it by nature ; Many people have it by nature ; Nearly everyone has it by nature ; The urge to ask why is the core of being human
+S|values|How much do you think a single conversation can change the course of a person's life?|A single conversation never changes a life ; A conversation can shift a small plan ; A conversation can change a real decision ; A conversation can change the direction of a life ; A single conversation can completely remake a person
+C|values|What is the best reason to keep learning as an adult?|to_stay_useful;to_keep_the_mind_sharp;for_the_joy_of_it;to_understand_the_world;to_stay_humble;other
+S|values|How well can one person ever understand another?|Barely at all ; Only on the surface ; Fairly well ; Very well ; Completely
+C|values|Which describes the relationship between reason and emotion in a good life?|reason_should_rule;emotion_should_rule;equal_partners;emotion_sets_goals_reason_finds_ways=emotion chooses the goal, reason finds the way;they_cannot_be_separated
+S|values|How much do you think feelings are a kind of knowledge about the world?|Feelings tell us nothing about the world ; Feelings sometimes carry a useful hint ; Feelings often carry real information ; Feelings are as reliable as careful thought ; Feelings are the truest knowledge we have
+N|values|Is it better to be a person who asks many questions than one who knows many answers?
+C|values|What do you think gives an object sentimental value?|who_gave_it;what_it_witnessed;how_long_you_have_had_it;that_it_cannot_be_replaced;the_story_attached;other
+S|values|How much do you feel old objects carry something of the people who owned them?|Objects carry nothing of their owners ; Objects remind me of owners, but that is all ; Some objects feel faintly marked by their owners ; Many objects feel like they hold part of their owners ; Old objects feel almost alive with the people who owned them
+C|social|What do most people say they would do differently if they were sure life had no built-in purpose?|nothing_different;live_more_for_pleasure;focus_on_loved_ones;make_their_own_purpose;feel_lost
+N|social|Do most people believe they could have chosen differently in a decision they made?
+S|social|How much do most people think about the meaning of life in a typical month?|Most people never think about it ; Most people think about it only in a crisis ; Most people think about it once in a while ; Most people think about it most weeks ; Most people think about it nearly every day
+C|social|What would most people say makes someone a good person?|kindness;honesty;generosity;loyalty;fairness;humility;other
+N|social|Do most people think they are more creative than average?
+C|social|If most people could have one big question answered for certain, which would they pick?|what_happens_after_death;whether_life_has_a_purpose;whether_we_are_alone;how_the_universe_began;whether_they_have_free_will;other
+S|social|How optimistic are most people about human nature?|Most people think humans are basically selfish and cruel ; Most people lean toward a dark view of human nature ; Most people see human nature as a mix ; Most people lean toward thinking humans are basically decent ; Most people are sure humans are basically good
+N|social|Would most people rather be wise than be clever?
+C|social|What do most people think happens to a person's character over a lifetime?|stays_the_same;gets_better;gets_worse;changes_back_and_forth;depends_on_life_events
+N|social|Do most people feel their life story makes sense as a whole?
+C|social|Which trait do most people most admire in others?|courage;kindness;intelligence;honesty;humor;creativity;other
+S|social|How much do most people believe that everyone has a hidden talent?|Most people think hidden talents are a myth ; Most people think a few lucky people have them ; Most people think many people have one ; Most people think nearly everyone has one ; Most people are sure every single person has one
+N|social|Would most people want to know the true answer to whether free will exists?
+C|social|What do most people think makes a life a success?|wealth;happy_family;respect_from_others;doing_what_they_love;good_health;leaving_something_behind;other
+N|social|Do most people believe humans are basically different from other animals?
+C|social|What do most people think a person's true self is?|how_they_act_under_pressure;how_they_act_when_alone;what_they_value_most;how_they_treat_the_weak;their_first_impulses;other
+S|social|How often do most people talk with friends about questions like why anything exists?|Most people never talk about such questions ; Most people talk about them only late at night or in a crisis ; Most people talk about them a few times a year ; Most people talk about them most months ; Most people talk about them nearly every week
+N|social|Do most people think a meaningful life requires doing something big?
+C|social|What do most people think is the main reason people do good things?|to_feel_good;to_be_seen_as_good;because_it_is_right;out_of_habit;to_get_something_back;other
+C|social|How do most people rate the wisdom of their own generation compared with older ones?|wiser;less_wise;about_the_same;wise_in_different_ways
+S|values|How much should people try to live by a single guiding purpose?|People need no guiding purpose at all ; A loose sense of direction is enough ; A few guiding goals are best ; A clear main purpose is best ; Every choice should serve one guiding purpose
+S|values|How seriously should a person take the big questions of life?|The big questions deserve no serious attention ; The big questions are fun to think about now and then ; The big questions deserve steady, calm attention ; The big questions deserve a central place in life ; The big questions should shape every part of how a person lives
+C|evaluative|Which image best captures a human life?|a_journey;a_story;a_garden;a_game;a_song;a_puzzle;other
+C|values|What would be lost if humans could no longer feel sadness?|compassion;art;depth_of_joy;wisdom;nothing_important;other
+N|values|Do you think something can be beautiful and also bad?
+S|values|How much do you think a person's deepest values are chosen rather than discovered?|Deep values are entirely discovered, never chosen ; Deep values are mostly discovered ; Deep values are half chosen, half discovered ; Deep values are mostly chosen ; Deep values are entirely chosen
+C|values|Which is the more important kind of freedom for a good life?|freedom_from_fear;freedom_from_want;freedom_to_choose_your_path;freedom_of_thought;freedom_of_time;other
+N|values|Do you think suffering can make a person more creative?
+C|values|What is the right response to learning that your life is tiny compared with the universe?|humility;relief;wonder;dread;indifference;greater_urgency;other
+S|values|How much does kindness between strangers tell you about how good a society is?|Kindness between strangers tells me nothing about a society ; It tells me a little ; It tells me as much as the society's wealth does ; It tells me more than most other measures ; It is the best single sign of a good society
+S|values|How much do you think a person's name shapes the way their life goes?|A name has no effect on a life ; A name shapes a few first impressions ; A name shapes how others treat a person noticeably ; A name shapes much of how a life goes ; A name largely decides who a person becomes
+S|evaluative|How strange does it seem to you that humans can imagine things that have never existed?|It does not seem strange at all ; It seems a little curious ; It seems genuinely remarkable ; It seems astonishing ; It seems like the deepest mystery there is
+S|values|How much do you think great ideas belong to the person who first had them rather than to everyone?|Great ideas belong to everyone once shared ; The first thinker deserves a little credit ; The first thinker deserves real credit, but ideas are shared ; The first thinker mostly owns the idea ; A great idea belongs wholly to whoever had it first
+C|social|What do most people think is the main purpose of art?|beauty;expressing_feelings;telling_the_truth;entertainment;making_people_think;decoration
+S|social|How much do most people think a person's character can change after childhood?|Most people think it cannot change at all ; Most people think it changes a little ; Most people think it changes somewhat ; Most people think it changes a lot ; Most people think it can change completely

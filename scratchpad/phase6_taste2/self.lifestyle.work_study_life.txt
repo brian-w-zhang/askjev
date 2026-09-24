@@ -1,0 +1,129 @@
+# self.lifestyle.work_study_life
+C | Which kind of pen do you like to write with? | gel_pen ; ballpoint ; fountain_pen ; felt_tip ; pencil ; i_rarely_write_by_hand
+C | Which highlighter color do you reach for first? | yellow ; pink ; green ; blue ; orange ; i_do_not_highlight
+C | What do you drink from at your desk? | a_favorite_mug ; a_big_water_bottle ; a_takeaway_cup ; a_glass ; a_thermos ; nothing
+C | Which plant would you keep on your desk? | a_small_succulent ; a_trailing_pothos ; a_tiny_cactus ; fresh_flowers ; a_fake_plant ; none
+C | Which part of your commute do you enjoy most? | the_quiet_time ; the_music_or_podcast ; the_walk_at_the_end ; people_watching ; the_coffee_stop ; nothing
+C | Which way would you choose to commute if distance were no issue? | walking ; cycling ; train ; bus ; driving ; scooter ; ferry
+C | Which kind of laptop decoration fits you? | lots_of_stickers ; one_small_sticker ; a_colorful_case ; plain_and_clean ; no_laptop
+C | Which email sign off do you use most? | best ; thanks ; cheers ; kind_regards ; just_my_name ; nothing ; other
+C | Which study aid do you rely on most? | flashcards ; practice_questions ; summaries ; mind_maps ; teaching_someone_else ; rereading ; other
+C | Which part of a library do you like to work in? | silent_floor ; group_tables ; a_corner_carrel ; near_the_windows ; in_the_stacks ; i_do_not_work_in_libraries
+C | Which snack keeps you going during a long work session? | nuts ; chocolate ; fruit ; chips ; candy ; coffee_only ; nothing
+C | What music helps you most when doing boring repetitive work? | upbeat_pop ; electronic ; video_game_soundtracks ; old_favorites ; a_podcast ; silence ; other
+C | What music helps you most when doing deep thinking work? | classical ; ambient ; lo_fi ; instrumental_film_scores ; white_noise ; silence ; other
+C | Which view would you most want from your workspace? | a_park ; a_city_street ; the_sea ; mountains ; a_garden ; a_blank_wall
+C | Which kind of font do you like to write documents in? | classic_serif ; clean_sans_serif ; rounded_friendly ; typewriter_style ; whatever_is_default
+C | Which kind of bag do you carry to work or class? | backpack ; tote ; messenger_bag ; briefcase ; no_bag ; other
+C | What is your favorite way to use a whiteboard? | lists ; diagrams ; doodles_while_thinking ; big_headlines ; i_do_not_use_them
+C | How do you like your paper to look when you take notes? | lined ; grid ; dotted ; blank ; i_take_notes_digitally
+C | Which kind of work break refreshes you most? | a_short_walk ; a_snack ; a_chat ; stretching ; a_short_nap ; scrolling_my_phone ; other
+C | Which lighting do you like for late evening work? | a_warm_desk_lamp ; bright_overhead_light ; only_the_screen_glow ; candles ; natural_light_only
+C | Which kind of task do you save for the afternoon slump? | email ; filing_and_admin ; errands ; easy_reading ; calls ; none
+C | Which kind of reward would you give yourself after a big exam or deadline? | a_nice_meal ; a_lazy_day ; a_new_purchase ; a_night_out ; sleep ; nothing
+C | Which kind of notebook cover do you like? | plain_black ; bright_color ; patterned ; kraft_paper ; leather ; i_do_not_use_notebooks
+C | Where do you like to put your to do list? | on_a_sticky_note ; in_a_notebook ; in_an_app ; on_a_whiteboard ; in_my_head
+C | What kind of desk chair cushion or support do you like? | firm_and_upright ; soft_and_cushy ; a_ball_chair ; a_kneeling_stool ; no_preference
+C | Which kind of office layout would you choose? | open_plan ; private_office ; small_team_room ; hot_desks ; a_mix_of_zones ; other
+C | How do you like your screen arranged? | one_big_window ; two_side_by_side ; many_small_windows ; tabs_only
+C | Which small ritual helps you start work? | making_coffee ; tidying_the_desk ; writing_a_list ; a_short_walk ; putting_on_music ; none
+C | What do you do while waiting for a meeting or class to start? | chat ; check_my_phone ; review_notes ; doodle ; sit_quietly
+C | Which kind of footwear do you like to work in at home? | barefoot ; socks ; slippers ; outdoor_shoes ; no_preference
+C | Which kind of commute would you choose for thinking time? | a_long_walk ; a_quiet_train ; a_solo_drive ; a_bike_ride ; no_commute
+C | What kind of noise at a cafe helps you work? | soft_chatter ; clinking_cups ; background_music ; none_i_wear_earplugs ; i_do_not_work_in_cafes
+C | Which scent would you want in your study space? | coffee ; fresh_air ; citrus ; wood ; lavender ; no_scent
+C | How do you handle a big pile of reading? | skim_first ; read_start_to_finish ; read_summaries ; split_it_over_days ; avoid_it
+C | Which kind of calendar view do you use most? | day ; week ; month ; a_simple_list ; i_do_not_use_a_calendar
+C | What kind of alarm or reminder helps you remember deadlines? | phone_alerts ; written_notes ; a_wall_calendar ; asking_a_friend ; nothing
+C | Which kind of workspace would you pick for a creative day? | a_messy_studio ; a_cafe ; outdoors ; a_quiet_library ; my_bed ; other
+C | How would you prefer to travel to a job interview? | early_on_foot ; a_taxi ; public_transport ; driving_myself ; a_video_call_instead
+C | Which kind of study group activity do you enjoy most? | quizzing_each_other ; explaining_topics ; working_silently_together ; sharing_notes ; none
+C | What would you name your work or study playlist? | focus ; deep_work ; get_it_done ; a_joke_name ; no_playlist
+C | Which kind of bottle or mug color would you pick for work? | black ; white ; bright_color ; pastel ; clear ; patterned
+C | Which weekday do you like to schedule your hardest task? | monday ; tuesday ; wednesday ; thursday ; friday ; no_preference
+C | Which part of a school or work day do you like best? | the_first_hour ; mid_morning ; lunch ; the_afternoon ; the_last_hour
+C | What do you most like about a rainy workday? | cozy_focus ; fewer_distractions ; the_sound ; nothing
+C | What kind of computer mouse do you prefer? | standard_mouse ; vertical_mouse ; trackpad ; trackball ; keyboard_shortcuts_only
+C | What kind of keyboard feel do you like? | clicky_mechanical ; quiet_and_flat ; soft_laptop_keys ; no_preference
+C | Which way do you like to share your ideas in a group? | talk_them_through ; write_them_first ; draw_them ; one_on_one_later ; rarely_share
+C | What would you most like in an office kitchen? | a_great_coffee_machine ; free_snacks ; a_big_table ; a_quiet_corner ; nothing
+C | How do you like your commute to end? | a_short_walk ; a_coffee_stop ; straight_to_my_desk ; a_few_minutes_in_the_car ; no_commute
+C | What kind of chat status do you usually leave on? | available ; busy ; away ; custom_message ; i_do_not_bother
+C | Which kind of hand warmer or comfort item do you keep at your desk? | a_cardigan ; a_blanket ; a_fan ; a_heater ; none
+C | Which kind of study space music volume do you prefer? | barely_there ; soft ; medium ; loud_through_headphones ; none
+C | Which part of a work trip do you enjoy most? | the_travel ; the_hotel ; meeting_people ; exploring_after_hours ; nothing
+C | How do you prefer your breaks to be scheduled? | fixed_times ; whenever_i_feel_like_it ; after_each_task ; rarely_take_them
+C | What would you do with a free hour at work or school? | learn_something_new ; get_ahead_on_tasks ; tidy_up ; chat ; rest ; other
+C | If you took up a new language for school or work, which format would you pick? | an_app ; a_class ; a_tutor ; living_abroad ; books ; no_interest
+C | What do you do on a commute when your phone battery is low? | look_out_the_window ; read_a_book ; nap ; talk_to_someone ; people_watch
+C | What would be the ideal soundtrack for your morning commute? | energetic_music ; calm_music ; news ; a_podcast ; audiobook ; silence
+C | Which kind of end of day wind down suits your work life? | a_walk_home ; a_workout ; a_chat_with_someone ; straight_to_the_sofa ; more_work
+C | Which season do you most like to study or work in? | spring ; summer ; autumn ; winter ; no_preference
+C | Which kind of tea or coffee break do you like at work? | a_solo_break ; with_a_colleague ; a_group_break ; at_my_desk ; no_breaks
+C | What kind of desk surface do you like? | light_wood ; dark_wood ; white ; glass ; metal ; no_preference
+C | What do you like to see pinned above your desk? | photos ; a_calendar ; quotes ; art ; to_do_lists ; nothing
+S | How much do you enjoy color coding your notes? | I never use colors ; I use one extra color ; I use a few colors ; I have a full color system ; Every note is a rainbow
+S | How much do you enjoy commuting by bicycle? | I would never ; I would try it once ; I would ride on nice days ; I ride most days ; I would ride in any weather
+S | How much do you like working to the sound of rain? | I find it distracting ; I barely notice it ; I find it pleasant ; I love it ; I play rain sounds even on dry days
+S | How much do you like studying in complete darkness with just a lamp? | I dislike it ; I tolerate it ; I enjoy it now and then ; I enjoy it often ; It is my favorite way to work
+S | How much do you enjoy writing things out by hand for study? | I never do ; I jot a few words ; I write some notes ; I write most notes ; I rewrite everything by hand
+S | How much do you enjoy working with a pet nearby? | I find it distracting ; I tolerate it briefly ; I do not mind ; I enjoy it ; I work best with a pet beside me
+S | How much do you enjoy early morning study sessions? | I cannot do them ; I manage them rarely ; I do them when needed ; I enjoy them ; They are my favorite time to study
+S | How much do you like long commutes for the time alone? | I hate them ; I tolerate them ; I do not mind ; I enjoy them ; I would miss a long commute
+S | How much do you enjoy using stationery that you think is beautiful? | I do not care ; I notice it now and then ; I like it ; I choose it on purpose ; I collect it
+S | How much do you enjoy talking through problems out loud while working? | I work in silence ; I mutter now and then ; I talk to myself sometimes ; I talk through most problems ; I need someone to talk to
+S | How much do you enjoy working outside in a park or garden? | I never would ; I tried it once ; I do it now and then ; I do it often ; I would work outside every day
+S | How much do you enjoy a messy desk while you work? | I cannot work with any mess ; I tolerate a little ; I do not mind some ; I like a lived in desk ; I work best in chaos
+S | How much do you like working to a strict timetable? | I hate schedules ; I use a loose plan ; I follow a plan most days ; I stick to a detailed plan ; I plan every minute
+S | How much do you enjoy study sessions over a video call with friends? | I would never ; I tried once ; I do it sometimes ; I do it often ; It is my main way to study
+S | How much do you enjoy a standing or walking meeting? | I dislike them ; I tolerate them ; I am fine with them ; I enjoy them ; I would make every meeting one
+S | How much do you like a hot drink while working? | I never have one ; I have one now and then ; I have one most days ; I have several a day ; I always have one in hand
+S | How much do you enjoy making study guides for others? | I never make them ; I made one once ; I share mine sometimes ; I enjoy making them ; I make guides for the whole class
+S | How much do you enjoy learning from long lectures? | I cannot stand them ; I get through them ; I find them fine ; I enjoy them ; I seek out long talks
+S | How much do you like walking to work or class? | I avoid it ; I walk only short bits ; I walk when the weather is nice ; I walk most days ; I would walk any distance
+S | How much do you enjoy working late at night in a quiet house? | I never work late ; I do it when I must ; I do it sometimes ; I enjoy it ; It is my favorite time to work
+S | How much do you enjoy a completely clean inbox? | I never think about it ; I clear it once in a while ; I tidy it weekly ; I keep it tidy daily ; I keep it empty all the time
+S | How much do you enjoy trying new productivity apps? | I never try them ; I tried one once ; I try one now and then ; I try many ; I switch tools every month
+S | How much do you enjoy rearranging your desk setup? | I never change it ; I change it once a year ; I change it a few times a year ; I change it most months ; I rearrange it every week
+S | How much do you enjoy commute podcasts? | I never listen ; I listen now and then ; I listen most weeks ; I listen most days ; I save my favorites just for the commute
+S | How much do you enjoy working in a room full of people typing? | I find it unbearable ; I tolerate it ; I do not notice ; I find it motivating ; I work best that way
+S | How much do you enjoy a short nap during a workday? | I never nap ; I nap only when exhausted ; I nap now and then ; I nap most days ; I plan my day around a nap
+S | How much do you enjoy working with the window open? | I never open it ; I open it on hot days ; I open it now and then ; I open it most days ; I keep it open all year
+S | How much do you like studying the same subject for a whole day? | I cannot do it ; I manage a few hours ; I can do most of a day ; I enjoy a full day ; I would study one subject for days
+N | Do you enjoy commuting by ferry or boat?
+N | Do you like to work with a scented candle burning?
+N | Do you use a special pen for signing things?
+N | Do you like to work facing a door?
+N | Do you like to wear headphones with no music just for quiet?
+N | Do you enjoy the smell of new notebooks?
+N | Do you prefer a paper map of your week on the wall?
+N | Do you like to eat lunch at your desk?
+N | Do you like your commute to be as short as possible even if it costs more?
+N | Do you like to study with a candle or fairy lights on?
+N | Do you prefer to type in dark mode?
+N | Do you enjoy stationery shopping?
+N | Do you like to take the scenic route to work even if it is slower?
+N | Do you like to decorate your workspace for holidays?
+N | Do you like to work with a clock in view?
+N | Do you enjoy studying on trains?
+N | Do you enjoy tidying your files at the end of a week?
+N | Do you prefer quiet coworking spaces to cafes?
+N | Do you enjoy the first day back after a long break?
+N | Do you prefer to take calls while walking?
+N | Do you enjoy handwriting your ideas on index cards?
+N | Do you like a fan blowing while you work?
+N | Do you like to work in pajamas when at home?
+N | Do you like wearing a watch while you work?
+N | Do you enjoy the quiet of an early empty office or classroom?
+C | Which kind of sticky note color do you buy? | classic_yellow ; neon_pink ; pastel_mix ; bright_rainbow ; i_do_not_use_them
+C | How do you prefer to carry your lunch to work or school? | a_bento_box ; a_paper_bag ; glass_containers ; a_lunchbox ; i_buy_lunch
+C | Which weather would make you happiest on a commute day? | crisp_and_clear ; light_snow ; soft_rain ; warm_sunshine ; foggy_morning
+C | Which kind of classroom or meeting room would you choose? | small_round_table ; big_boardroom ; comfy_lounge ; outdoor_courtyard ; lecture_hall
+C | Which kind of shared work music would you tolerate best? | soft_jazz ; the_radio ; lo_fi ; classical ; none_please
+C | What do you like to fidget with while thinking? | a_pen ; a_paperclip ; my_hair ; a_fidget_toy ; nothing
+C | Which kind of end of term or project celebration would you choose? | a_team_lunch ; drinks_after_work ; a_quiet_day_off ; a_small_gift ; nothing
+S | How much do you enjoy the smell of coffee in a work or study space? | I dislike it ; I barely notice ; I find it pleasant ; I love it ; It helps me focus
+S | How much do you enjoy color coded calendars shared with a team? | I find them confusing ; I use them if required ; I like them fine ; I enjoy them ; I set them up for everyone
+N | Do you enjoy working in hotel lobbies?
+N | Do you like to leave a small treat on your desk as a reward for finishing?
+N | Do you enjoy a long commute by train more than a short drive?

@@ -1,0 +1,126 @@
+# self.lifestyle.screens_media
+C | What music mood do you put on when you are cleaning? | upbeat_pop ; loud_rock ; old_favorites ; dance_music ; a_podcast_instead ; silence ; other
+C | What music mood do you reach for on a rainy evening? | soft_acoustic ; jazz ; lo_fi_beats ; classical ; moody_indie ; no_music ; other
+C | What do you listen to when you need to cheer yourself up? | happy_pop ; songs_from_my_teens ; comedy_podcast ; movie_soundtracks ; dance_music ; nothing ; other
+C | What kind of ringtone or alert sound do you keep? | the_default_tone ; a_song ; a_quirky_sound ; vibrate_only ; silent ; other
+C | What do you name your playlists? | plain_labels ; moods ; inside_jokes ; seasons_or_months ; long_poetic_titles ; i_do_not_make_playlists
+C | How do you prefer the lighting when you watch a film at home? | completely_dark ; one_soft_lamp ; fairy_lights ; full_lights_on ; daylight ; no_preference
+C | Which kind of headphones do you use most? | in_ear_buds ; over_ear_headphones ; bone_conduction ; wired_earphones ; i_use_speakers ; none
+C | What genre do you put on when you want to fall asleep to something? | nature_documentary ; familiar_sitcom ; soft_music ; an_audiobook ; sleep_sounds ; nothing
+C | Which kind of show do you watch when you are sick in bed? | comfort_sitcom ; long_drama ; cooking_show ; cartoons ; old_movies ; nothing ; other
+C | What kind of video do you watch while you eat alone? | a_series_episode ; short_clips ; a_video_essay ; news ; a_cooking_video ; nothing
+C | Which theme color do you set on your apps when you can? | dark_mode ; light_mode ; a_bright_accent_color ; follows_the_time_of_day ; never_change_it
+C | What kind of lock screen photo do you keep? | people_i_love ; a_pet ; a_landscape ; artwork ; plain_color ; the_default
+C | How do you prefer to listen to a new album? | from_start_to_finish ; on_shuffle ; only_the_singles ; in_the_background_while_working ; i_do_not_listen_to_albums
+C | What kind of audio do you want on a long walk alone? | music ; a_podcast ; an_audiobook ; a_phone_call ; nothing
+C | Which kind of video game mood do you like most? | cozy_and_calm ; tense_and_scary ; fast_and_competitive ; story_heavy ; puzzle_solving ; i_do_not_play
+C | What do you watch on a lazy Sunday morning? | cartoons ; cooking_shows ; sports ; old_movies ; nothing_i_stay_off_screens ; other
+C | Which kind of podcast voice do you enjoy most? | calm_and_soothing ; energetic_and_loud ; two_friends_chatting ; a_single_storyteller ; no_preference ; i_skip_podcasts
+C | What kind of music do you play when friends come over? | background_jazz ; current_hits ; old_classics ; whatever_the_guests_pick ; nothing ; other
+C | What would you choose for a quiet night of media? | a_film ; a_few_episodes ; a_video_game ; an_audiobook ; music_and_a_book ; other
+C | How do you like your phone keyboard to sound? | clicks_on ; vibration_only ; completely_silent ; no_preference
+C | Which kind of film do you pick for a rainy day marathon? | fantasy_epic ; comedy ; mystery ; animated_classic ; romance ; horror ; other
+C | Where do you listen to music most? | in_the_car ; on_headphones_walking ; at_home_on_speakers ; at_work ; in_the_shower ; i_rarely_listen
+C | Which kind of screen time do you enjoy most at the end of a long day? | a_show ; scrolling ; a_game ; chatting_online ; a_video_call ; none
+C | Which music tempo do you prefer for a workout? | fast_and_pounding ; steady_mid_tempo ; slow_and_calm ; a_podcast_instead ; silence
+C | What do you usually do during the ads on a free stream? | watch_them ; mute_them ; check_my_phone ; get_a_snack ; pay_to_skip_them ; other
+C | Which kind of online video creator do you follow most closely? | gamers ; cooks ; crafters ; comedians ; educators ; travelers ; none ; other
+C | Which kind of season finale do you like best? | a_big_cliffhanger ; a_neat_resolution ; an_emotional_goodbye ; a_shocking_twist ; no_preference
+C | Which kind of background noise do you play while you relax? | rain_sounds ; cafe_chatter ; fireplace_video ; white_noise ; ocean_waves ; none
+C | How do you prefer your phone screen brightness? | very_dim ; automatic ; medium ; always_full_brightness
+C | Which feature of a new phone matters most to you? | camera ; battery_life ; screen_size ; storage ; color ; price ; other
+C | What kind of music do you like on a long drive at night? | slow_ballads ; synth_music ; old_rock ; hip_hop ; talk_radio ; silence ; other
+C | Which kind of show do you rewatch when you want comfort? | a_sitcom ; a_baking_show ; a_teen_drama ; an_animated_series ; a_mystery ; none
+C | How do you prefer to watch a big live event like a final or awards night? | alone_at_home ; with_friends_at_home ; at_a_bar ; on_my_phone_on_the_go ; i_skip_it ; other
+C | What do you listen to while cooking? | upbeat_music ; old_songs ; a_podcast ; the_radio ; a_show_in_the_background ; silence
+C | How many songs are on your favorite playlist? | only_a_handful ; enough_for_an_hour ; enough_for_an_afternoon ; hundreds ; i_do_not_have_one
+C | Which kind of music do you secretly enjoy but rarely admit? | cheesy_pop ; old_boy_bands ; country ; musicals ; video_game_music ; nothing ; other
+C | What do you do with a song stuck in your head? | play_it_again ; play_a_different_song ; hum_it_out ; ignore_it ; other
+C | Which kind of film ending do you prefer? | happy ; bittersweet ; open_ended ; tragic ; twist ; no_preference
+C | Which device do you use for reading long stories? | phone ; tablet ; e_reader ; laptop ; paper_only ; other
+C | Which game setting do you usually choose? | easy_mode ; normal ; hard ; the_hardest_available ; i_do_not_play_games
+C | What kind of show do you watch with your family or housemates? | reality_competition ; quiz_show ; comedy ; drama ; documentary ; none
+C | Which kind of video length do you prefer? | a_few_seconds ; a_few_minutes ; around_twenty_minutes ; an_hour_or_more ; no_preference
+C | Which sort of podcast topic do you fall asleep to? | history ; true_stories ; comedy ; science ; meditation ; none
+C | What kind of opening title sequence do you enjoy most? | catchy_theme_song ; moody_visuals ; short_and_quick ; none_just_start_the_show ; no_preference
+C | How do you like to discover new music? | friend_recommendations ; algorithm_suggestions ; radio ; film_soundtracks ; live_shows ; i_rarely_look_for_new_music
+C | What music would you want playing on a sunny Saturday morning? | breezy_pop ; soul ; reggae ; indie_folk ; classical ; nothing ; other
+C | Which kind of emoji habit fits you best? | none_at_all ; one_now_and_then ; several_per_message ; mostly_reaction_gifs ; mostly_stickers
+C | What do you do when a show you love gets cancelled? | rewatch_it ; move_on_quickly ; look_for_something_similar ; sign_petitions ; other
+C | Which kind of photo filter do you usually use? | no_filter ; warm_tone ; black_and_white ; faded_vintage ; bright_and_bold ; i_do_not_post_photos
+C | Which kind of story format do you enjoy most on a screen? | short_series ; long_running_series ; standalone_films ; anthology_episodes ; no_preference
+C | What do you play in the shower? | upbeat_songs ; sing_along_classics ; a_podcast ; the_news ; nothing
+C | Which kind of video game world do you like to explore? | open_countryside ; spooky_castle ; futuristic_city ; underwater ; outer_space ; i_do_not_play
+C | Which kind of screen do you prefer for video games? | big_tv ; computer_monitor ; handheld ; phone ; i_do_not_play
+C | Which kind of reality show do you enjoy most? | cooking_competition ; dating_show ; home_renovation ; talent_contest ; survival_challenge ; none
+C | What kind of phone case do you use? | clear ; plain_dark ; bright_color ; patterned ; wallet_case ; no_case
+C | How do you like to read a comic or graphic story? | paper ; tablet ; phone ; i_do_not_read_comics
+C | What do you watch on a first snowy day of winter? | holiday_movie ; cozy_series ; nature_documentary ; nothing_i_go_outside ; other
+C | How do you like to share a song you love? | send_a_link ; play_it_out_loud ; add_it_to_a_shared_playlist ; post_it ; keep_it_to_myself
+C | How do you prefer to watch a horror film? | alone_in_the_dark ; with_friends ; with_the_lights_on ; during_the_day ; never
+S | How loud do you play music in your headphones? | Barely audible ; Quiet background level ; Comfortable listening level ; Loud enough to block out everything ; As loud as it goes
+S | How much do you sing along to music when alone? | Never ; I hum under my breath ; I sing along to favorites ; I sing loudly to most songs ; I perform full concerts to myself
+S | How much do you enjoy music with no lyrics? | I find it dull ; I put it on rarely ; I enjoy it sometimes ; I choose it often ; It is most of what I listen to
+S | How much do you like sad songs? | I skip them ; I tolerate them ; I enjoy one now and then ; I seek them out when I feel low ; They are my favorite kind of song
+S | How much do you enjoy video games with no end goal like sandbox builders? | I find them pointless ; I play one briefly ; I enjoy them sometimes ; I play them often ; They are my favorite kind of game
+S | How much do you enjoy watching others play video games? | I find it boring ; I watch a clip now and then ; I watch sometimes ; I watch often ; I watch more than I play
+S | How much do you like black and white films? | I avoid them ; I watch one if someone insists ; I enjoy a classic now and then ; I seek them out ; They are my favorite kind of film
+S | How much do you like watching things in their original language with subtitles? | I avoid subtitles completely ; I use dubbing whenever possible ; I use either ; I prefer subtitles ; I always choose the original language
+S | How much do you enjoy long video essays? | I never watch them ; I watch the start and quit ; I finish one now and then ; I watch them often ; They are my favorite videos
+S | How much do you like to re-listen to the same podcast episode? | Never ; Rarely ; Sometimes ; Often ; I have favorite episodes I replay over and over
+S | How much do you enjoy music from before you were born? | I never listen to it ; I hear it by chance ; I enjoy it sometimes ; I choose it often ; It is most of what I play
+S | How much do you enjoy animated films as an adult? | I avoid them ; I watch them with kids only ; I enjoy one now and then ; I watch them often ; They are my favorite films
+S | How much do you customize the look of your devices? | I never change the defaults ; I change the wallpaper only ; I change a few settings ; I customize most things ; I theme every icon and font
+S | How much do you enjoy multiplayer games with strangers online? | I never play with strangers ; I tried it and stopped ; I play now and then ; I play often ; It is my main way to game
+S | How much do you enjoy documentaries? | I never watch them ; I watch one if it is on ; I pick one now and then ; I watch them often ; They are most of what I watch
+S | How much do you enjoy audiobooks? | I cannot follow them ; I tried a few ; I listen now and then ; I listen most weeks ; I listen to them daily
+S | How much do you enjoy holiday themed movies in season? | I avoid them ; I watch one if someone else chooses ; I watch a couple each season ; I watch many ; I start them months early
+S | How much do you enjoy very long films over three hours? | I refuse to start them ; I split them over days ; I watch one rarely ; I enjoy them ; I love an epic film in one sitting
+S | How much do you like music that is loud and heavy? | I cannot stand it ; I tolerate it briefly ; I enjoy it sometimes ; I play it often ; It is my main music
+S | How much do you enjoy scary video games? | I refuse to play them ; I play only with a friend nearby ; I play now and then ; I play them often ; They are my favorite games
+S | How much do you enjoy retro video games? | I never play them ; I play one for nostalgia rarely ; I play them sometimes ; I play them often ; I mostly play retro games
+S | How much do you enjoy live radio? | I never listen ; I hear it in the car by chance ; I listen now and then ; I listen most days ; I have favorite shows I never miss
+S | How much do you enjoy watching sports highlights instead of full games? | I never watch sports ; I only watch full games ; I watch either ; I prefer highlights ; I only watch highlights
+S | How much do you enjoy karaoke apps or singing games? | I avoid them ; I tried once ; I use them at parties ; I use them often ; I sing on them most weeks
+S | How often do you put on a film you have seen many times? | Never ; A few times a year ; Every month ; Every week ; Most nights
+S | How often do you play music first thing in the morning? | Never ; Rarely ; A few mornings a week ; Most mornings ; Every morning
+S | How much do you enjoy quiz or trivia apps? | I never use them ; I tried one ; I play now and then ; I play most weeks ; I play every day
+S | How much do you like watching things in bed? | Never, screens stay out of the bedroom ; Only when I am sick ; Now and then ; Most nights ; It is where I watch almost everything
+S | How much do you enjoy music videos? | I never watch them ; I watch one by chance ; I watch sometimes ; I watch them often ; I always watch the video with the song
+N | Do you like to watch the end credits all the way through?
+N | Do you listen to the same song on repeat for days?
+N | Do you prefer physical media like vinyl or discs to streaming?
+N | Do you keep a watch list you actually finish?
+N | Do you enjoy watching cooking videos without ever cooking the dish?
+N | Do you like to look up a film's plot before watching it?
+N | Do you enjoy slow television such as long train ride videos?
+N | Do you like podcasts played at normal speed only?
+N | Do you like to game with a headset on?
+N | Do you listen to music while falling asleep?
+N | Do you enjoy watching old home videos?
+N | Do you enjoy video games with no dialogue?
+N | Do you prefer to watch a series only after all episodes are out?
+N | Do you like to make themed playlists for events?
+N | Do you like watching shows with the subtitles on even in your own language?
+N | Do you prefer your music in a set order rather than on shuffle?
+N | Do you enjoy streaming radio stations from other countries?
+N | Do you like soundtrack albums from films or games?
+N | Do you enjoy watching nature cameras or live animal streams?
+N | Do you ever leave music on for a pet when you go out?
+N | Do you enjoy listening to music from other countries in languages you do not speak?
+N | Do you turn your phone to grayscale to use it less?
+N | Do you enjoy watching sports on a small screen?
+N | Do you like watching award shows?
+N | Do you tend to play the same video game for years?
+C | Which kind of sound do you want your phone to make for a new message? | soft_chime ; short_buzz ; a_funny_sound ; a_musical_note ; nothing
+C | How do you prefer to fall asleep when a show is on? | set_a_sleep_timer ; let_it_autoplay ; turn_it_off_first ; i_never_watch_in_bed
+C | Which kind of mobile game do you keep installed? | word_puzzles ; match_three ; city_builder ; card_game ; racing ; none ; other
+C | What kind of film do you choose for a first watch with a new friend? | a_comedy ; a_crowd_pleasing_action_film ; a_personal_favorite ; something_neither_of_us_has_seen ; other
+C | Which kind of music do you play when you are sad but want to stay sad? | slow_piano ; heartbreak_ballads ; old_songs_from_a_hard_time ; rainy_lo_fi ; nothing
+C | Which feed would you keep if you could only keep one? | photos ; short_videos ; long_videos ; text_posts ; news ; none
+S | How much do you enjoy watching a show from the very first season when joining late? | I jump straight to the newest episodes ; I skim a recap first ; I watch a few key episodes ; I watch most of the earlier seasons ; I always start from the pilot
+S | How much do you enjoy streaming someone reading a book aloud or doing a quiet task? | I find it pointless ; I tried it once ; I use it sometimes to relax ; I use it often ; I fall asleep to it most nights
+S | How much do you like to keep your inbox and chat apps tidy? | I never tidy anything ; I clear things once a year ; I tidy now and then ; I tidy weekly ; I keep everything at zero every day
+N | Do you prefer mono audio in one earbud so you can hear the world?
+N | Do you like to leave the television on for company when home alone?
+N | Do you enjoy watching movie reaction videos?

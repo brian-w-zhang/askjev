@@ -1,0 +1,208 @@
+@node self.values.honesty_trust
+# choice
+C | The self-checkout machine fails to scan an expensive item and you only notice in the parking lot. What should you do? | go_back_and_pay = walk back in and pay for it ; pay_next_visit = pay for it next time you shop there ; tell_staff_only = mention it to staff but not pay ; keep_it = keep it, since the machine made the mistake ; other
+C | A former coworker who did weak work asks you to be a job reference. What is the right thing to do? | decline_politely = politely decline to be a reference ; honest_reference = agree and describe their work honestly ; stress_strengths = agree and mention only their strengths ; glowing_reference = give a glowing reference to help them out ; other
+C | You find a wallet on the sidewalk with cash and an ID card inside. What should you do? | contact_owner = track down the owner using the ID ; hand_to_police = hand it in to the police ; leave_at_nearby_shop = leave it at the nearest shop ; keep_cash_return_wallet = return the wallet but keep the cash ; leave_it = leave it where it was ; other
+C | You overhear a coworker telling someone they plan to quit next month. What should you do with that information? | keep_it_to_myself = say nothing to anyone ; tell_them_i_heard = let the coworker know you overheard ; tell_close_friend = share it with one trusted friend ; tell_the_manager = warn the manager ; other
+C | A friend asks you to write a glowing online review for their new cafe, which you have never visited. What should you do? | refuse = refuse to review a place you have not been ; visit_first = visit first and then write an honest review ; write_it_anyway = write the glowing review to support them ; share_instead = share their page instead of reviewing it ; other
+C | You missed a work deadline because you simply forgot. What should you tell your manager? | plain_truth = say you forgot and apologize ; vague_excuse = say something came up ; blame_workload = say you were swamped with other work ; invent_reason = make up a specific reason ; say_nothing = hand it in late without comment ; other
+C | You feel fine but want a day off to rest. What is the most honest option? | take_vacation_day = use a vacation day instead ; call_in_sick = call in sick anyway ; mental_health_day = ask openly for a rest day ; go_to_work = go to work as usual ; other
+C | You wore a jacket once to an event and want to return it to the store as unworn. What should you do? | keep_it = keep it, since you wore it ; return_honestly = ask to return it and admit you wore it ; return_as_new = return it as if it were new ; sell_it_secondhand = sell it secondhand instead ; other
+C | During an online exam at home, you realize the answer key is open in another tab on a shared computer. What should you do? | close_it_unread = close it without looking ; tell_the_instructor = close it and tell the instructor ; glance_once = take a quick glance for a hard question ; use_it = use it for the whole exam ; other
+C | A contract you are about to sign has a clause the other side clearly forgot to remove, and it favors you. What should you do? | point_it_out = point it out before signing ; sign_and_mention_later = sign it and mention it only if it ever comes up ; sign_silently = sign it without saying anything ; ask_a_lawyer = ask a lawyer what to do ; other
+C | A friend confides that they are secretly applying to the same job as your mutual friend. The mutual friend asks you if anyone else is applying. What should you say? | keep_secret = say you do not know ; honest_but_vague = say you would rather not discuss others' plans ; tell_the_truth = tell them who else applied ; tell_confider_first = ask the confider if you may share ; other
+C | A teenage relative asks you not to tell their parents that they skipped school one day. What should you do? | keep_it = keep it between you ; urge_them_to_tell = keep it but urge them to tell their parents ; tell_parents = tell the parents ; depends_why = decide based on why they skipped ; other
+C | You are selling your used car, and it has an intermittent rattle the buyer did not notice on the test drive. What should you do? | disclose_it = tell the buyer about the rattle ; lower_price = lower the price a little without explaining ; answer_if_asked = mention it only if they ask ; say_nothing = say nothing ; other
+C | A friend shows you a painting they plan to enter in a competition, and you think it is weak. What should you say? | full_honesty = tell them plainly it is not ready ; kind_critique = praise one part and suggest specific changes ; encourage_only = encourage them to enter ; ask_what_they_want = ask what kind of feedback they want ; other
+C | Your young niece asks whether her pet goldfish, which died, went to a happy place. What should you say? | comforting_story = tell her it is in a happy place ; gentle_truth = explain gently that it died ; ask_her_parents = say she should ask her parents ; ask_what_she_thinks = ask what she thinks happened ; other
+C | You promised to help a friend move on Saturday, but a better invitation arrives for the same day. What should you do? | keep_promise = help your friend as promised ; ask_to_swap = ask your friend if another day works ; send_someone_else = find someone to take your place ; cancel_politely = cancel with an apology ; invent_excuse = cancel with a made-up excuse ; other
+C | A game of cards with friends has no money at stake, and you could easily peek at another player's hand. What would you do? | never_peek = never peek ; point_it_out = tell them to hold their cards up ; peek_as_joke = peek and admit it as a joke ; peek_quietly = peek quietly ; other
+C | A shop assistant hands you a bag with an extra item you did not pay for. What should you do? | return_it_immediately = hand it back right away ; pay_for_it = offer to pay for it ; keep_if_cheap = keep it if it is something cheap ; keep_it = keep it ; other
+C | Your manager asks the team who broke the office coffee machine, and it was you. What should you do? | own_up_at_once = admit it right away ; tell_privately = tell the manager privately later ; stay_quiet_offer_to_replace = stay quiet but chip in for a new one ; stay_quiet = say nothing ; other
+C | A friend tells you a secret that you later realize could hurt them if it stays hidden. What should you do? | keep_it_always = keep it no matter what ; press_them = urge them to tell someone who can help ; tell_someone_safe = tell someone who can help without their consent ; ask_permission = ask their permission to share it ; other
+C | Which of these lies seems most acceptable to you? | spare_feelings = a lie to spare someone's feelings ; protect_privacy = a lie to protect your own privacy ; keep_surprise = a lie to keep a surprise ; avoid_conflict = a lie to avoid a pointless argument ; none_acceptable = none of them ; other
+C | Which of these broken promises seems worst to you? | promise_to_child = a promise made to a child ; promise_to_dying = a promise made to someone near death ; promise_in_writing = a promise made in writing ; casual_promise = a casual promise to a friend ; other
+C | A colleague asks what you honestly think of their presentation, which ran long and lost the room. What should you say? | direct_truth = tell them it ran long and lost people ; soften_it = say it was good but could be tighter ; praise_only = say it went well ; one_tip = give one specific tip and leave it there ; other
+C | A buyer online offers to pay you more if you describe your item as brand new, though it was used once. What should you do? | refuse = refuse and describe it honestly ; describe_as_like_new = call it like new ; agree = describe it as brand new ; cancel_sale = cancel the sale ; other
+C | A friend tells you an idea for an app that you know already exists. What should you do? | tell_them_directly = tell them it already exists ; hint_at_it = suggest they research similar apps ; stay_supportive = encourage them without mentioning it ; other
+C | You borrowed a friend's book and spilled coffee on it. What should you do? | confess_and_replace = tell them and buy a new copy ; confess_only = tell them and apologize ; quietly_replace = secretly swap in a new copy ; return_as_is = return it without saying anything ; other
+C | You learn that a close friend's new business partner has a history of not paying debts. What should you do? | tell_friend_now = tell your friend right away ; hint_carefully = hint that they should check the partner's background ; stay_out = stay out of it ; other
+C | Your roommate asks whether you ate their leftovers, and you did. What should you say? | admit_and_replace = admit it and replace them ; admit_only = admit it ; blame_someone_else = suggest someone else ate them ; deny_it = deny it ; other
+C | A teacher accidentally gives you a higher grade than your score deserves. What should you do? | report_it = tell the teacher about the mistake ; keep_it = keep the higher grade ; report_if_big = tell them only if the difference is large ; other
+C | Someone you just met asks to hold your bag while you use the restroom. What would you do? | hand_it_over = hand it to them ; take_valuables = hand it over but take your wallet and phone ; take_it_along = take the bag with you ; ask_staff = leave it with staff instead ; other
+C | Your best friend asks if their partner is a good match for them, and you have doubts. What should you say? | voice_doubts = share your doubts honestly ; ask_questions = ask questions that help them think it through ; say_supportive = say you support whatever makes them happy ; say_yes = say they are a great match ; other
+C | You notice a typo in a published report your team already sent to a client, and no one else has spotted it. What should you do? | tell_the_team = tell the team so it can be corrected ; fix_quietly = fix it in the file without telling anyone ; ignore_it = ignore it, since it is minor ; other
+C | You accidentally dent a parked car while no one is around. What should you do? | leave_note = leave a note with your contact details ; wait_for_owner = wait for the owner to return ; report_to_police = report it to the police ; drive_away = drive away ; other
+C | A friend asks you to keep a secret before telling you what it is. How should you respond? | promise_anyway = promise before hearing it ; promise_with_limits = promise, but say you may break it if someone could be hurt ; decline_to_promise = say you cannot promise without knowing ; other
+C | You receive a birthday gift you already own. What should you tell the giver? | pretend_its_new = act as if you love it and keep quiet ; say_you_own_it = tell them kindly you already have one ; exchange_quietly = thank them and exchange it without saying ; other
+C | Your company asks you to fill out an anonymous survey about your manager, whom you dislike. How should you answer? | honest_detail = answer honestly with specific examples ; honest_but_soft = answer honestly but soften it ; stay_neutral = give neutral answers to be safe ; praise = give positive answers in case it is not really anonymous ; other
+C | While playing a board game, you realize you have been following a rule wrong in your own favor for several rounds. What should you do? | announce_and_fix = tell everyone and fix the score ; fix_going_forward = quietly play correctly from now on ; keep_going = keep playing as before ; other
+C | A charity collector asks if you have already donated this year, and you have not. What should you say? | admit_no = admit you have not ; say_you_have = say you have already donated ; say_not_today = just say not today ; other
+C | A friend asks you to lie to their parents that they spent the night at your place. What should you do? | agree = agree to cover for them ; refuse = refuse to lie ; refuse_but_keep_quiet = refuse to lie but not volunteer anything ; ask_why = ask why before deciding ; other
+C | A hotel undercharges you for your stay, and you notice at the airport. What should you do? | call_and_pay = call them and pay the difference ; email_them = email to point it out and let them decide ; keep_it = keep the savings ; other
+C | Your partner asks whether you liked the meal they spent all afternoon cooking, and you did not. What should you say? | loved_it = say you loved it ; praise_effort = praise the effort and one part you liked ; gentle_truth = gently say it was not your favorite ; blunt_truth = say plainly you did not like it ; other
+C | You find a large math error in your favor on your paycheck. What should you do? | report_right_away = report it to payroll right away ; wait_to_see = wait to see if they notice ; report_if_asked = only say something if they ask ; keep_it = keep the money ; other
+C | A coworker gives you credit in a meeting for work that was mostly theirs. What should you do? | correct_it_publicly = correct it in the meeting ; correct_privately = tell your boss privately afterward ; thank_them_privately = thank the coworker and leave it ; accept_it = accept the credit ; other
+C | A job application asks why you left your last job, and you were let go. What should you write? | say_let_go = say you were let go ; neutral_phrase = use a neutral phrase such as the role ended ; say_i_resigned = say you resigned ; leave_blank = leave it blank ; other
+C | A friend asks to copy your homework because they were ill all week. What should you do? | let_them_copy = let them copy it ; help_them_do_it = offer to help them do it themselves ; suggest_extension = suggest they ask for an extension ; refuse = refuse ; other
+C | You receive too much food in a delivery order that is clearly meant for another customer. What should you do? | tell_restaurant = contact the restaurant ; keep_it = keep it, since it would be thrown away ; give_it_away = give it to someone who needs it ; other
+C | Your sibling asks you to promise never to tell your parents that they dropped out of a class. What should you do? | promise_and_keep = promise and keep it ; promise_and_encourage = promise but encourage them to tell ; refuse_promise = refuse to promise ; other
+C | Which matters more when a friend asks your opinion of their new tattoo that you dislike? | their_feelings = sparing their feelings, since it is permanent ; your_honesty = giving your honest opinion ; balance = saying you like the meaning behind it ; other
+C | A salesperson says a warranty is essential, and you suspect they earn commission on it. How much do you trust their advice? | trust_it = trust it ; check_elsewhere = check elsewhere before deciding ; assume_bias = assume it is biased and decline ; other
+C | You told a small lie to get out of an event, and the host later asks you directly about it. What should you do? | come_clean = admit the lie and apologize ; stick_to_story = stick to the story ; change_subject = change the subject ; other
+C | A club you belong to asks every member to report their own fitness test results with no check. What should you report? | exact_result = your exact result ; round_up = round your result up a little ; best_ever = your best ever result ; skip_it = skip reporting ; other
+C | When someone breaks a small promise to you once, how should you treat their next promise? | trust_fully = trust it fully ; trust_with_caution = trust it but keep a backup plan ; wait_for_proof = wait to see if they keep it before relying on them ; stop_trusting = stop relying on their promises ; other
+C | A stranger asks to borrow your bike for ten minutes to fetch a forgotten item nearby. What would you do? | lend_it = lend it ; ask_for_deposit = lend it if they leave something as a deposit ; offer_to_go_along = offer to walk with them ; refuse = refuse ; other
+C | You can win a video game tournament by using a glitch the rules do not mention. What should you do? | use_it = use it ; ask_organizers = ask the organizers first ; avoid_it = avoid it ; use_and_report = use it and report it afterward ; other
+C | A friend lends you money and forgets about it. What should you do? | repay_now = remind them and repay it now ; repay_when_able = repay it when you have spare cash ; wait_for_them = repay only if they ask ; forget_it = let it go ; other
+C | Your elderly neighbor asks whether their homemade jam, which you found too sweet, was good. What should you say? | it_was_lovely = say it was lovely ; honest_kind = say it was a bit sweet for you but thank them ; thank_only = thank them without judging it ; other
+C | You notice your friend's online profile uses a photo that is many years old. What should you do? | say_nothing = say nothing ; joke_about_it = joke about it gently ; suggest_new_photo = suggest a newer photo ; tell_them_plainly = say plainly it is misleading ; other
+C | A client asks if a project will be done on time, and you know it will probably slip. What should you say? | honest_risk = tell them it is likely to slip ; hopeful_answer = say you are doing everything possible ; promise_on_time = promise it will be on time ; other
+C | A friend's child shows you a school drawing and asks if it is the best you have ever seen. What should you say? | yes_the_best = say it is the best ever ; praise_specific = praise specific things you like ; ask_about_it = ask them to tell you about it ; other
+C | You accidentally read a private message on a friend's phone that says they are unhappy at home. What should you do? | tell_them_you_saw = tell them you saw it ; offer_support_vaguely = check in on them without mentioning it ; ignore_it = act as if you saw nothing ; other
+C | While filling a lost luggage claim, you could add items that were not in the bag. What should you do? | list_only_real = list only what was really there ; add_small_item = add one small item ; inflate_values = list real items at higher values ; other
+C | A new coworker asks whether the manager is fair, and you think they are not. What should you say? | honest_warning = tell them honestly ; let_them_decide = say they should form their own view ; say_fair = say the manager is fair ; other
+C | Someone at a party asks what you do for work, and your job is less impressive than theirs. What would you say? | plain_truth = describe your job plainly ; make_it_sound_better = make it sound more impressive ; change_subject = steer the conversation elsewhere ; other
+C | When a close friend asks whether you have been talking about them behind their back, and you have, what should you say? | admit_it = admit it and explain ; admit_if_kind = admit it only if what you said was kind ; deny_it = deny it ; other
+C | Your team has agreed to split tips equally, and a customer hands you a large tip in private. What should you do? | share_it = add it to the shared pot ; keep_part = share part and keep part ; keep_it = keep it, since it was given to you ; other
+C | You catch yourself giving the wrong directions to a tourist who has already walked away. What should you do? | chase_them = run after them to correct it ; call_out = call out if they are still in earshot ; let_it_go = let it go ; other
+C | Your parents ask whether you are eating well while living alone, and you are not. What should you say? | the_truth = tell the truth ; half_truth = say you are trying ; reassure_them = say you are eating well ; other
+C | A long-time friend asks you to lend them a large sum and promises to pay it back quickly, though they have not repaid before. What should you do? | lend_it = lend it again ; lend_smaller = lend a smaller amount ; lend_in_writing = lend it with a written agreement ; decline = decline ; other
+C | You make a mistake at work that no one would ever trace to you, but it causes extra work for others. What should you do? | own_it = admit it to the team ; fix_it_quietly = quietly fix what you can ; say_nothing = say nothing ; other
+C | A friend asks whether you told anyone their news, and you told one person by accident. What should you do? | admit_it = admit it and apologize ; admit_if_it_spreads = admit it only if the news spreads ; deny_it = deny it ; other
+C | At a garage sale you notice an item priced far below its real value because the seller does not know what it is. What should you do? | tell_them = tell the seller its real value ; pay_more = pay more than the asking price ; buy_it = buy it at the asking price ; other
+C | Which is hardest for you to forgive? | lie_to_face = a direct lie to your face ; broken_promise = a broken promise ; shared_secret = a secret shared behind your back ; cheating_in_game = cheating at a game you played together ; other
+C | Which is the better policy with a coworker you have just met? | trust_until_let_down = trust them fully until they let you down ; trust_small_things = trust them with small things first ; keep_distance = keep your distance until you know them ; other
+C | A friend asks you to sign a birthday card for someone and add money, but you do not know the person. What should you do? | sign_and_give = sign it and give money ; sign_only = sign it without giving ; decline = politely decline to sign ; other
+C | You told your friend you would keep their plant alive while they traveled, and it died. What should you do? | tell_them = tell them honestly ; replace_and_tell = replace it and tell them ; replace_silently = replace it without telling them ; other
+C | A company offers you a free product in exchange for a review. How should you write it? | honest_and_disclosed = honest review that mentions the free product ; honest_undisclosed = honest review without mentioning it ; positive_disclosed = positive review that mentions it ; refuse_offer = refuse the offer ; other
+C | You are asked how much you paid for a gift you gave, and it was much cheaper than it looks. What should you say? | tell_the_price = tell the price ; say_you_forget = say you do not remember ; dodge = say the price does not matter ; other
+C | When a friend tells you their business plan in confidence, and your cousin works in the same field, what should you do? | never_mention = never mention it to your cousin ; ask_first = ask your friend before mentioning it ; mention_vaguely = mention it vaguely to your cousin ; other
+C | A friend asks you to hide their smoking from their spouse. What should you do? | agree_to_hide = agree to keep it hidden ; stay_neutral = refuse to lie but not bring it up ; refuse_involvement = tell them you will not cover for them ; other
+C | Your boss asks you to tell a caller that they are out, though they are at their desk. What would you do? | say_it = say they are out ; rephrase = say they are not available ; refuse = refuse to say it ; other
+C | A friend who is a slow runner asks if they have a chance of winning an upcoming race. What should you say? | honest_odds = give them an honest view of their odds ; focus_on_goals = encourage them to aim for a personal best ; say_yes = say they have a good chance ; other
+C | You find an old diary of your late grandparent that reveals a family secret. What should you do with it? | share_with_family = share it with the family ; keep_it_private = keep it private ; destroy_it = destroy it ; ask_one_relative = ask one relative what to do ; other
+C | You are the only witness when a child breaks a shop display and runs off. What should you do? | tell_shop = tell the shop what you saw ; find_parents = try to find the child's parents ; stay_out = stay out of it ; other
+C | A friend asks you to honestly rate their singing on a scale, and they sing badly. What should you do? | give_real_rating = give your real rating ; round_up = give a slightly higher rating ; refuse_to_rate = decline to give a rating ; other
+C | You are a referee in a friendly match and make a wrong call that decided the game. What should you do? | admit_after = admit it after the game ; replay = offer a rematch ; keep_quiet = keep quiet, since it is over ; other
+C | Which is the best reason to keep a promise when keeping it has become inconvenient? | my_word = your word should mean something ; their_reliance = the other person is relying on it ; my_reputation = your reputation depends on it ; no_good_reason = there is no good reason, so break it ; other
+C | You cannot remember the name of someone who clearly remembers yours. What should you do? | admit_it = admit you forgot ; fish_for_it = try to get their name without admitting it ; pretend = pretend you remember ; other
+
+C | A friend asks you to proofread their cover letter, which contains a claim you know is untrue. What should you do? | point_it_out = point out the untrue claim ; fix_grammar_only = fix only the grammar ; rewrite_it_softer = reword it so it is less of a stretch ; other
+C | Your gym asks members to sign in honestly for a class you are only half attending. What should you do? | sign_in_honestly = sign in only when you attend the full class ; sign_in_anyway = sign in each time ; skip_sign_in = skip signing in ; other
+C | A friend who is learning to cook asks if their bread is good enough to sell at a market. What should you say? | not_yet = say honestly it is not ready yet ; try_small = suggest they test it with a few buyers first ; yes_go_for_it = say yes, go for it ; other
+
+# score
+S | How acceptable is it to pretend you have a prior commitment to avoid a party you just do not want to attend? | Completely wrong, you should say you do not want to go ; Wrong but understandable ; Acceptable if it spares their feelings ; Perfectly fine and normal
+S | How acceptable is it to say a product is out of stock to a rude customer when it is actually available? | Never acceptable ; Wrong but understandable ; Acceptable if they were very rude ; Completely fine
+S | How much should you trust a neighbor you have chatted with only a few times to water your plants while you are away? | Not at all, you would never give them a key ; Only with outdoor plants ; With a key if someone else checks in too ; Completely, you would hand over the key
+S | How acceptable is it to tell a child that the ice cream van plays music when it has run out of ice cream? | Never acceptable ; Only if the child is very young ; Acceptable as a harmless fib ; Completely fine
+S | How acceptable is it to tell your boss you are stuck in traffic when you actually overslept? | Never acceptable ; Wrong but common ; Acceptable if it rarely happens ; Completely fine
+S | How serious is it to take a few extra napkins and sauce packets from a fast food counter? | Not wrong at all ; Slightly petty ; Somewhat dishonest ; Clearly stealing
+S | How acceptable is it to let a friend believe you cooked a dish you actually bought? | Never acceptable ; Wrong but harmless ; Acceptable if it is a joke you reveal later ; Completely fine
+S | How acceptable is it to keep quiet about a secret a friend told you when your partner asks directly? | You must tell your partner ; You should hint at it ; You should say you cannot share it ; You should deny knowing anything
+S | How much should you trust a review site where every review is glowing? | Completely, you would buy right away ; Mostly, with a small doubt ; Somewhat, you would check elsewhere ; Not at all, it seems fake
+S | How acceptable is it to exaggerate your language skills in a casual conversation with new acquaintances? | Never acceptable ; Wrong but minor ; Acceptable as small talk ; Completely fine
+S | How obligated are you to tell a friend that the used car they just bought was advertised elsewhere for much less? | Not obligated at all ; Only if they ask ; You should mention it gently ; You must tell them right away
+S | How acceptable is it to use a student discount after you have graduated? | Completely fine ; Acceptable if no one checks ; Somewhat dishonest ; Clearly wrong
+S | How strictly should you keep a promise to attend a friend's small gig when you are exhausted that night? | You can skip it without saying anything ; You can skip it with an honest message ; You should go for a short while ; You must stay for the whole thing
+S | How acceptable is it to tell a store you are just browsing when you actually plan to buy online for less? | Completely fine ; Mostly fine ; Slightly dishonest ; Clearly wrong
+S | How acceptable is it to hide a small scratch you put on a rented apartment wall when moving out? | Never acceptable ; Wrong but common ; Acceptable if it is truly tiny ; Completely fine
+S | How much should you trust a friend who has cancelled plans with you several times this year? | Not at all, you stop making plans ; Only for casual plans ; For most plans with a backup ; Completely, as before
+S | How acceptable is it to tell your team a report is almost done when you have barely started? | Never acceptable ; Wrong but understandable under pressure ; Acceptable if you then finish quickly ; Completely fine
+S | How much should you trust a stranger who asks to charge their phone at your cafe table? | You would say no ; You would allow it if they stay at the table ; You would allow it and keep an eye on it ; You would trust them fully
+S | How important is it to tell the truth on a questionnaire that no one will ever check? | Not important at all ; Slightly important ; Fairly important ; Very important ; As important as telling the truth anywhere
+S | How acceptable is it to say you love a gift when you plan to give it away? | Never acceptable ; Wrong but kind ; Acceptable and polite ; Completely normal
+S | How honest should you be when a friend asks whether their new business logo looks professional and it does not? | Say it looks great ; Say it is nice but ask a question or two ; Suggest one specific change ; Say plainly it looks unprofessional
+S | How acceptable is it to take credit for a joke you heard from someone else? | Completely fine ; Mostly fine in casual chat ; Slightly dishonest ; Clearly wrong
+S | How acceptable is it to tell a telemarketer you are not home when you are? | Completely fine ; Mostly fine ; Slightly dishonest ; Clearly wrong
+S | How much should a friend's past broken promises affect whether you trust a new one? | Not at all, each promise is fresh ; A little ; Quite a bit ; Entirely, you no longer trust their promises
+S | How acceptable is it to let a friend lose a bet you know is based on a wrong fact? | Never acceptable, you should correct them ; Wrong but minor ; Acceptable as part of the game ; Completely fine
+S | How serious is it to use your partner's streaming account password after you have broken up? | Not serious at all ; Slightly wrong ; Clearly wrong ; A real breach of trust
+S | How acceptable is it to tell your host a dish was delicious when you secretly fed it to their dog? | Never acceptable ; Wrong but funny ; Acceptable to spare their feelings ; Completely fine
+S | How acceptable is it to round your working hours up on a timesheet? | Never acceptable ; Wrong even by a few minutes ; Acceptable by a few minutes ; Completely fine
+S | How much would you trust a friend with your house keys while you travel for a month? | Not at all ; Only if a neighbor checks as well ; Mostly, with a few instructions ; Completely, without any worry
+S | How acceptable is it to agree with a strongly held view at a dinner party just to keep the peace? | Never acceptable ; Wrong but understandable ; Acceptable at a one-time event ; Completely fine
+S | How acceptable is it to tell a lonely relative you will call more often when you know you probably will not? | Never acceptable ; Wrong but kindly meant ; Acceptable to comfort them ; Completely fine
+S | How acceptable is it to peek at the ending of a mystery game your friends are playing blind? | Completely fine ; Mostly fine if you keep quiet ; Slightly dishonest ; Clearly cheating
+S | How much should you trust an online seller with no reviews who offers a great price? | Completely, you would buy ; Somewhat, if payment is protected ; Barely, only with a small purchase ; Not at all
+S | How acceptable is it to say your family emergency is the reason you missed a meeting when you actually forgot? | Never acceptable ; Wrong and serious ; Wrong but understandable ; Completely fine
+S | How strongly are you bound by a promise you made while you were upset and not thinking clearly? | Not bound at all ; Bound only if it is easy to keep ; Mostly bound unless it causes harm ; Fully bound
+S | How acceptable is it to keep a found umbrella that has been sitting in your office lobby for weeks? | Never acceptable ; Wrong but minor ; Acceptable after asking around ; Completely fine
+S | How honest should you be with a friend who asks why you have been distant, when the reason is their behavior? | Say nothing is wrong ; Give a vague reason ; Mention it gently ; Explain fully and directly
+S | How acceptable is it to claim you already read a book your book club is discussing when you only skimmed it? | Never acceptable ; Wrong but harmless ; Acceptable to avoid embarrassment ; Completely fine
+S | How acceptable is it to hide a mistake from your team if you fix it before anyone notices? | Never acceptable ; Wrong unless trivial ; Acceptable if nothing was harmed ; Completely fine
+S | How acceptable is it to ask a friend to vouch that you are an experienced dog walker when you have only walked your own dog? | Never acceptable ; Wrong but minor ; Acceptable if you are careful ; Completely fine
+S | How much should you trust someone who admits they lied to you once but came clean on their own? | Not at all ; A little less than before ; About as much as before ; More than before, for their honesty
+S | How acceptable is it to tell a child that the tooth fairy exists? | Never acceptable ; Acceptable only for very young children ; Acceptable as part of childhood fun ; Completely fine at any age
+S | How obligated are you to report a coworker's small but repeated lies to customers about delivery times? | Not obligated at all ; Only obligated to mention it to them ; Obligated to raise it with them firmly ; Obligated to report it to a manager
+S | How acceptable is it to tell your friends you are busy on a night you simply want to stay in alone? | Completely fine ; Mostly fine ; Slightly dishonest ; Clearly wrong
+S | How serious is it to hand in an essay you wrote for a different class? | Not wrong at all ; Slightly lazy ; Somewhat dishonest ; Clearly cheating
+S | How acceptable is it to say you have no cash when a street performer asks for tips and you do have some? | Completely fine ; Mostly fine ; Slightly dishonest ; Clearly wrong
+S | How acceptable is it to sneak your own snacks into a cinema that forbids outside food? | Completely fine ; Mostly fine ; Slightly dishonest ; Clearly wrong
+S | How honest should you be with a doctor about how much junk food you eat? | You can play it down a lot ; You can play it down a little ; You should be mostly honest ; You should be completely honest
+S | How acceptable is it to let someone think you have a pet allergy to avoid looking after their cat? | Completely fine ; Mostly fine ; Slightly dishonest ; Clearly wrong
+S | How acceptable is it to keep playing a card you know was dealt by mistake in a casual game? | Completely fine ; Fine unless someone notices ; Slightly dishonest ; Clearly cheating
+S | How much should you trust a friend's recommendation of a mechanic who is also their cousin? | Completely ; Mostly ; Somewhat, you would get a second quote ; Not at all
+S | How acceptable is it to tell a coworker you like their idea in a meeting when you privately think it is bad? | Never acceptable ; Wrong but polite ; Acceptable to keep the meeting moving ; Completely fine
+S | How acceptable is it to hide how much you paid for something from your partner? | Never acceptable ; Wrong unless it is small ; Acceptable for small purchases ; Completely fine
+S | How acceptable is it to give a fake name to a coffee shop barista for your order? | Completely fine ; Mostly fine ; Slightly odd but harmless ; Clearly dishonest
+S | How obligated are you to tell a friend that a rumor about them is spreading? | Not obligated at all ; Only if they ask ; Should mention it gently ; Must tell them right away
+S | How acceptable is it to pretend not to see a message so you can reply later? | Completely fine ; Mostly fine ; Slightly dishonest ; Clearly dishonest
+S | How acceptable is it to tell a friend you are almost there when you have not left home yet? | Completely fine ; Mostly fine ; Slightly dishonest ; Clearly wrong
+S | How much honesty do you owe a stranger who asks if their outfit looks good for an interview? | None, just say it looks great ; A little, mention one small thing ; A fair amount, point out what could be better ; Full honesty, even if it is harsh
+S | How acceptable is it to accept praise for a group project where you did the least work? | Completely fine ; Mostly fine ; Slightly dishonest ; Clearly wrong
+S | How strictly should you keep a promise to call someone back today when you are busy? | You can forget about it ; You can call tomorrow without explaining ; You should send a quick message explaining ; You must call today
+
+# noul
+N | Would you tell a friend that the expensive watch they bought as a gift for you is a fake?
+N | Would you return extra change a vending machine gave you by mistake if you could find the owner?
+N | Is it acceptable to promise a child a treat later to stop a tantrum, knowing you will not follow through?
+N | Would you admit to your team that you took the last clean mug that someone else had set aside?
+N | Is it acceptable to pretend to be on the phone to avoid talking to someone you know on the street?
+N | Would you report your own mistake to a shop if it undercharged you for a large appliance?
+N | Should you tell your host you are vegetarian if they serve you meat by accident?
+N | Is it acceptable to keep a library book you have had for so long that the library stopped asking for it?
+N | Would you confess to a friend that you lost the earrings they lent you?
+N | Is it acceptable to use someone else's discount code that they shared publicly?
+N | Should you tell a friend you forgot their birthday instead of pretending your card was lost in the mail?
+N | Would you tell your parents a family heirloom broke while you were looking after it?
+N | Is it dishonest to leave a positive review for a product you have not finished using?
+N | Would you tell a stranger that their car headlights are left on?
+N | Is it acceptable to keep a secret from your family if telling it would only upset them?
+N | Would you lend your car to a friend who has had several parking tickets?
+N | Is it acceptable to tell an acquaintance you remember them when you do not?
+N | Would you tell a coworker that you saw their private salary information by accident?
+N | Should a promise to a friend outweigh a request from your boss?
+N | Is it acceptable to pretend you are enjoying a hobby a friend invited you to so that they keep including you?
+N | Would you tell the organizers if you won a raffle prize because your ticket was counted twice?
+N | Is it acceptable to keep an item you were sent twice by an online store?
+N | Would you trust a stranger's advice on which street is safe to walk at night in an unfamiliar city?
+N | Should you tell a friend that their new roommate has a reputation for not paying rent?
+N | Is it acceptable to play dumb about a rule you knew to avoid a fine?
+N | Would you admit you did not do the reading if a teacher called on you in class?
+N | Should you reveal a surprise party to a friend who hates surprises?
+N | Would you tell a classmate that the answer they copied from you was wrong?
+N | Is it acceptable to hide your real reasons for turning down a job offer?
+N | Would you tell a friend that you do not like the name they picked for their baby?
+N | Is it acceptable to tell a small lie to make a nervous friend feel confident before a performance?
+N | Would you trust a friend to split a shared bill fairly without checking the receipt?
+N | Should you tell someone that the gift they gave you broke the first day?
+N | Would you point out a scoring error in your favor during a friendly bowling game?
+N | Is it acceptable to use a coworker's forgotten login to finish an urgent task?
+N | Would you admit to a neighbor that your dog dug up their flower bed?
+N | Should you keep a promise to a friend who has since treated you badly?
+N | Is it acceptable to hide from a friend that you are applying for the same scholarship?
+N | Would you let a friend know that you cannot keep a secret before they tell you one?
+N | Is it acceptable to tell a store your item broke on its own when you dropped it?
+N | Would you tell a friend that a joke they posted online hurt someone?
+N | Should you keep a found phone overnight before returning it if you are too tired to go out?
+N | Is it acceptable to pretend to be busier than you are to avoid extra tasks at work?
+N | Would you trust a new friend to hold your passport while traveling?
+N | Is it acceptable to tell your friend you loved a film they recommended when you fell asleep during it?
+N | Would you correct someone who praises you for a kind act that someone else did?
+N | Is it acceptable to keep money you find on the floor of a busy train?
+N | Would you tell a friend that you broke a promise to them even if they would never find out?
+N | Should you tell a hiring manager about a flaw in your own work sample that they missed?
+N | Is it acceptable to keep quiet when a teammate is blamed for a small mistake you made?
+N | Would you trust a coworker to take notes for you in a meeting you cannot attend?

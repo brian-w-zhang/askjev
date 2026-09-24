@@ -1,0 +1,126 @@
+# self.love.friendship
+C | Which kind of weeknight hangout with a friend do you like most? | cheap_dinner_out ; cooking_at_someones_place ; a_walk_and_talk ; a_pub_quiz ; a_gym_session_together ; a_video_call ; other
+C | Which kind of friend weekend away would you plan? | lake_cabin ; city_break ; camping_trip ; beach_house ; music_festival ; spa_weekend ; other
+C | Which kind of friend would you most want on your team at a pub quiz? | the_pop_culture_expert ; the_history_buff ; the_science_nerd ; the_sports_fan ; the_confident_guesser
+C | What would you like friends to bring to your dinner party? | wine_or_drinks ; dessert ; flowers ; a_game ; nothing_just_themselves ; other
+C | Which kind of friendship bracelet or token would you enjoy sharing? | matching_bracelets ; matching_keychains ; half_heart_necklaces ; a_shared_tattoo_idea ; none
+C | How would you like to spend a snow day with friends? | sledding ; building_a_snow_fort ; cozy_movie_marathon ; baking ; hot_drinks_at_a_cafe ; staying_home_alone
+C | Which way would you like friends to wish you a happy birthday? | a_phone_call ; a_group_video ; a_card_in_the_mail ; a_surprise_visit ; a_message ; no_fuss
+C | Which birthday cake would you choose for a friend's party? | chocolate ; vanilla_sprinkle ; carrot_cake ; ice_cream_cake ; a_tower_of_cupcakes ; other
+C | Which kind of group photo do you like taking with friends? | a_neat_posed_shot ; a_jumping_shot ; a_goofy_faces_shot ; a_candid_moment ; i_avoid_group_photos
+C | Which friend tradition would you most like to start? | an_annual_trip ; a_monthly_dinner ; a_yearly_photo ; a_holiday_gift_swap ; a_book_club ; other
+C | Which kind of holiday gift swap would you prefer with friends? | secret_santa ; white_elephant ; homemade_gifts_only ; a_book_exchange ; no_gift_swap ; other
+C | How much would you spend in a friends gift swap if you chose the rules? | a_token_amount ; a_modest_amount ; a_generous_amount ; homemade_only_no_money
+C | What kind of message do you like to send a friend just because? | a_funny_meme ; a_photo_that_reminds_me_of_them ; a_voice_note ; a_long_text ; a_song ; other
+C | Which kind of shared playlist would you make with friends? | road_trip_songs ; party_anthems ; nostalgic_hits ; songs_we_each_love ; none
+C | Which kind of friend do you like to go shopping with? | one_who_gives_honest_opinions ; one_who_hypes_everything ; one_who_shops_fast ; one_who_browses_for_hours ; i_shop_alone
+C | Which kind of friend do you like to exercise with? | one_who_pushes_me ; one_who_chats_the_whole_time ; one_who_keeps_the_same_pace ; i_exercise_alone
+C | How would you like to spend a long overdue catch up with an old friend? | a_long_lunch ; a_walk ; a_night_out ; a_weekend_visit ; a_phone_call ; other
+C | Which kind of friend reunion setting would you choose? | our_old_haunt ; a_new_restaurant ; someones_home ; a_trip_somewhere_new ; other
+C | Which kind of friend makes the best roommate for you? | a_tidy_quiet_one ; a_social_fun_one ; one_who_cooks ; one_who_is_rarely_home ; i_prefer_no_roommates
+C | What would you like to make together with a friend? | a_big_meal ; a_piece_of_art ; music ; a_video ; a_garden ; other
+C | Which kind of friend group outing do you enjoy most in summer? | beach_day ; barbecue ; outdoor_concert ; camping ; pool_party ; other
+C | Which kind of friend outing do you enjoy most in autumn? | apple_picking ; a_haunted_house ; a_bonfire ; a_hike_among_the_leaves ; a_cozy_pub ; other
+C | Which kind of friend outing do you enjoy most in spring? | a_picnic ; a_garden_visit ; a_bike_ride ; a_street_fair ; a_farmers_market ; other
+C | Which kind of friend outing do you enjoy most in winter? | ice_skating ; a_holiday_market ; a_cabin_trip ; a_dinner_party ; a_film_night ; other
+C | Which kind of birthday party would you want thrown for you? | a_surprise_party ; a_dinner_with_a_few_friends ; a_big_house_party ; an_activity_like_bowling ; a_weekend_trip ; nothing
+C | Which kind of birthday gift would you rather give a close friend? | an_experience_together ; something_handmade ; something_they_asked_for ; a_funny_gift ; a_thoughtful_book ; other
+C | Which kind of friend would you most want at your side at a wedding where you know nobody? | a_chatterbox ; a_great_dancer ; a_calm_observer ; a_food_lover ; nobody_i_go_alone
+C | Which kind of friend group chat name style do you like? | an_inside_joke ; a_pun ; plain_names ; lots_of_emojis ; no_group_chats
+C | Which kind of sleepover or stay over with friends appeals to you? | a_film_marathon ; talking_all_night ; a_games_night ; a_cooking_session ; none
+C | What would you like to do on a road trip stop with friends? | a_quirky_roadside_attraction ; a_diner ; a_scenic_viewpoint ; a_small_town_shop ; a_swim_spot ; other
+C | Which kind of souvenir would you bring back for a close friend? | local_snacks ; a_postcard_with_a_long_note ; a_funny_trinket ; a_piece_of_local_art ; nothing
+C | Which kind of friend do you like to call on a long commute? | an_old_school_friend ; a_family_friend ; a_new_friend ; nobody_i_prefer_quiet
+C | Which kind of friend hangout at home do you enjoy most? | a_potluck ; a_craft_night ; a_game_night ; a_film_night ; just_talking ; other
+C | Which kind of friendship do you enjoy most in a new city? | a_neighbor ; a_coworker_turned_friend ; a_class_or_club_friend ; a_friend_of_a_friend ; an_online_friend_i_finally_meet
+C | What kind of care package would you send a friend who is feeling low? | snacks_and_tea ; a_cozy_blanket ; a_book_and_a_note ; homemade_cookies ; a_plant ; other
+C | Which kind of friend visit do you like hosting? | a_single_evening ; an_overnight_stay ; a_long_weekend ; a_week_or_more ; i_prefer_not_to_host
+C | Which kind of friend would you choose for a spontaneous adventure? | the_one_who_says_yes_to_everything ; the_careful_planner ; the_one_with_a_car ; the_one_with_local_knowledge ; nobody_i_go_alone
+C | Which way do you like to keep up with a far away friend? | a_monthly_video_call ; letters_or_postcards ; a_shared_online_game ; a_running_voice_note_thread ; a_yearly_visit ; other
+C | Which kind of friend group size feels best at a dinner table? | two_of_us ; four_people ; six_people ; a_long_table_of_many ; no_preference
+C | What would you most like to try for the first time with a friend? | skydiving ; a_cooking_class ; a_new_country ; karaoke ; a_dance_class ; other
+C | Which kind of photo of a friend would you frame? | a_childhood_photo ; a_trip_photo ; a_silly_snapshot ; a_formal_event_photo ; none
+C | Which kind of friendship anniversary would you like to celebrate? | the_day_we_met ; a_yearly_trip ; nothing_formal ; a_shared_birthday_week ; other
+C | Which type of friend do you like to cook with? | one_who_follows_recipes ; one_who_improvises ; one_who_just_eats ; one_who_cleans_up ; i_cook_alone
+C | Which kind of friend group vacation lodging would you pick? | one_big_house ; separate_hotel_rooms ; a_campsite ; a_boat ; a_hostel ; other
+C | What kind of friendship do you enjoy with someone much older? | a_mentor_bond ; an_equal_bond ; a_story_sharing_bond ; a_hobby_partner ; i_do_not_have_one
+C | How do you like to celebrate a friend's promotion or big news? | a_toast_at_a_bar ; a_nice_dinner ; a_card_and_gift ; a_congratulations_call ; a_surprise_party ; other
+C | Which friend activity would you do every week if you could? | a_running_club ; a_dinner_rotation ; a_film_night ; a_book_club ; a_sports_game ; other
+C | How would you like to spend a long car ride with a friend? | deep_talks ; singing_along ; audiobooks ; games ; comfortable_silence ; other
+C | Which kind of friend gift do you like to receive? | a_handwritten_letter ; a_practical_thing ; something_funny ; a_shared_outing ; a_book ; other
+C | Which way would you rather meet a new friend's family? | a_holiday_dinner ; a_casual_barbecue ; a_birthday_party ; a_quick_hello_at_their_door ; no_need
+C | Which kind of friend would you most want to live next door to? | a_best_friend ; a_friendly_neighbor_i_barely_know ; a_couple_of_friends ; nobody_i_prefer_privacy
+C | Which kind of inside joke do you most enjoy with friends? | a_nickname ; a_catchphrase ; a_running_bit_from_a_trip ; an_old_photo ; a_shared_song ; other
+C | Which kind of friend night out suits you best? | dancing ; a_bar_crawl ; a_comedy_club ; a_late_dinner ; a_concert ; stay_in_instead
+C | Which kind of friend pet sitting swap would you be happy with? | yes_any_pet ; only_cats ; only_dogs ; only_fish_or_small_pets ; none
+C | Which way would you most like to support a friend's creative project? | attend_the_show ; buy_the_work ; share_it_online ; give_feedback ; help_make_it ; other
+C | Which kind of group trip pace do you like best? | packed_itinerary ; one_activity_a_day ; mostly_lounging ; split_up_and_meet_for_dinner ; other
+C | What kind of friendship do you enjoy most at work or school? | a_lunch_buddy ; a_study_or_project_partner ; a_break_time_chatter ; a_walk_home_friend ; none
+C | Which kind of friend night would you plan for a friend going through a breakup? | ice_cream_and_films ; a_big_night_out ; a_long_walk_and_talk ; a_spa_night_in ; let_them_choose
+C | Which kind of friend group holiday celebration would you host? | a_friendsgiving_dinner ; a_new_years_party ; a_summer_solstice_picnic ; a_winter_cookie_bake ; none
+C | How do you prefer to invite friends to something? | group_chat ; individual_messages ; a_phone_call ; an_invite_card ; in_person
+C | Which kind of friend do you prefer as a travel roommate? | an_early_riser ; a_night_owl ; a_tidy_packer ; a_messy_but_fun_one ; no_preference
+C | Which kind of weekly check in with a best friend would you enjoy? | a_standing_phone_call ; a_coffee_date ; a_running_text_thread ; a_shared_workout ; none
+C | Which kind of friend group size do you enjoy on a trip? | just_one_friend ; three_or_four_people ; a_group_of_six_or_so ; a_big_crowd ; no_preference
+C | What would you choose for a group friend costume theme? | a_famous_band ; a_film_cast ; food_items ; animals ; a_pun_theme ; no_costumes
+C | Which kind of friend makes the best movie buddy? | one_who_stays_silent ; one_who_whispers_comments ; one_who_cries_openly ; one_who_debates_after ; no_preference
+C | Which kind of shared hobby with a friend appeals to you most? | a_sport ; a_craft ; a_band ; gardening ; gaming ; cooking ; other
+C | Which kind of friend do you like to text late at night? | a_night_owl_friend ; a_friend_in_another_time_zone ; my_best_friend ; nobody_i_sleep
+C | How do you like to spend the first hour when a friend visits from out of town? | a_big_meal ; a_walk_around_my_area ; a_drink_and_catch_up ; showing_them_their_room ; other
+C | Which kind of reunion would you most enjoy? | a_school_reunion ; a_work_reunion ; a_childhood_friends_reunion ; a_trip_friends_reunion ; none
+S | How much do you enjoy planning surprises for friends? | I never plan them ; I help if someone else leads ; I plan a small one now and then ; I plan them often ; I am the surprise mastermind of my group
+S | How much do you enjoy long voice notes from friends? | I never listen to them ; I skim them ; I listen when I have time ; I enjoy them ; I prefer them to texts
+S | How much do you enjoy friend trips with a strict schedule? | I hate schedules on trips ; I accept a loose plan ; I like a few fixed plans ; I like a clear schedule ; I want every hour planned
+S | How much do you like hosting a big friend dinner? | I avoid it ; I do it once in a long while ; I host now and then ; I host often ; I love being the home base for my friends
+S | How much do you like making friendship playlists or mixtapes? | I never would ; I did it once ; I make one now and then ; I make them often ; I make one for every friend
+S | How much do you enjoy friends dropping by for a quick cup of tea? | I dislike it ; I tolerate it ; I enjoy it sometimes ; I enjoy it a lot ; I keep the kettle ready
+S | How much do you like being part of a friendship group chat? | I leave them ; I mute them ; I read along ; I post now and then ; I am the most active member
+S | How much do you enjoy handmade gifts from friends? | I prefer store bought ; I appreciate them politely ; I like them ; I love them ; They are the gifts I treasure most
+S | How much do you enjoy trying friends' cooking? | I avoid it ; I take a polite bite ; I enjoy it ; I love it ; I ask friends to cook for me often
+S | How much do you enjoy doing chores together with a friend? | I would never ; I would do it once ; I enjoy it now and then ; I enjoy it often ; It is one of my favorite ways to hang out
+S | How much do you like to plan birthday celebrations for friends? | I leave it to others ; I help a little ; I help plan some ; I plan most ; I plan every birthday in my group
+S | How much do you enjoy friends teasing each other playfully in your group? | I dislike it ; I tolerate it ; I enjoy it a bit ; I enjoy it a lot ; It is the heart of my friendships
+S | How much do you enjoy meeting friends for early morning coffee? | I never would ; Only for a special reason ; Now and then ; Often ; It is my favorite time to meet
+S | How much do you like sending friends postcards when you travel? | I never send any ; I sent one once ; I send a few ; I send them every trip ; I send one to every friend
+S | How much do you enjoy online game nights with friends? | I avoid them ; I join rarely ; I join now and then ; I join often ; I organize them
+S | How much do you enjoy dressing up with friends for a theme party? | I refuse ; I wear a small accessory ; I dress up a little ; I go all out ; I design the group costumes
+S | How much do you like quiet hangouts where friends each do their own thing? | I find them pointless ; I tolerate them ; I enjoy them sometimes ; I enjoy them often ; They are my favorite kind of hangout
+S | How much do you enjoy long walks with a friend? | I avoid them ; I would do a short one ; I enjoy one now and then ; I enjoy them often ; They are my favorite way to catch up
+S | How much do you like celebrating friends' small wins? | I rarely notice them ; I say congratulations ; I send a message ; I buy a small treat ; I throw a little celebration
+S | How much do you enjoy traveling to see a friend in another city? | I avoid it ; I go once in a long while ; I go now and then ; I go often ; I plan trips around friends
+S | How much do you enjoy friends who plan everything for you? | I dislike it ; I tolerate it ; I am fine with it ; I enjoy it ; I love having someone else take charge
+S | How much do you enjoy helping a friend redecorate or move? | I avoid it ; I help if asked twice ; I help when asked ; I enjoy it ; I volunteer before anyone asks
+S | How much do you enjoy a friend who texts every day? | It overwhelms me ; I tolerate it ; I am fine with it ; I enjoy it ; I want daily contact
+S | How much do you like friends mixing your different friend circles? | I keep them apart ; I mix them rarely ; I mix them sometimes ; I mix them often ; I love one big combined group
+S | How much do you enjoy spontaneous last minute plans with friends? | I dislike them ; I join rarely ; I join sometimes ; I join often ; I am the one who suggests them
+S | How much do you enjoy taking a class with a friend? | I prefer classes alone ; I would try it once ; I enjoy it sometimes ; I enjoy it often ; I always sign up with a friend
+S | How much do you enjoy friend reunions after years apart? | I dread them ; I feel awkward ; I enjoy them ; I love them ; I organize them
+S | How much do you like hearing about friends' daily details? | I find it tiring ; I listen a little ; I enjoy some of it ; I enjoy it ; I want to hear every detail
+S | How much do you enjoy friendship rituals like a yearly trip? | I find them forced ; I go along ; I enjoy them ; I love them ; I start new ones often
+S | How much do you enjoy meeting a friend's new pet? | I avoid it ; I say hello politely ; I enjoy it ; I love it ; I ask to meet it first
+S | How much do you enjoy friends staying over at your place? | I dislike it ; I allow one night ; I enjoy a short stay ; I enjoy long stays ; My spare room is always ready
+N | Would you enjoy a monthly dinner rotation among friends?
+N | Would you like a friend to surprise you at your door?
+N | Would you enjoy a regular craft night with friends?
+N | Would you like to take an annual trip with the same friends?
+N | Would you enjoy matching outfits with a friend for an event?
+N | Would you like a friend to give you a nickname?
+N | Would you enjoy a shared journal passed between friends?
+N | Would you like to learn an instrument with a friend?
+N | Would you enjoy a friends only holiday dinner instead of a family one?
+N | Would you enjoy writing letters to a friend by post?
+N | Would you like to work on a creative project with a friend?
+N | Would you enjoy going to a concert with a friend who loves a band you do not know?
+N | Would you enjoy a friendship with a pen pal from another country?
+N | Would you like to run a race with a friend?
+N | Would you enjoy volunteering with a group of friends?
+N | Would you like to have a friend group that meets for brunch every weekend?
+N | Would you enjoy a silent retreat with a friend?
+N | Would you like your friends to throw you a surprise party?
+N | Would you enjoy a friend who always brings snacks?
+N | Would you like to start a small band or choir with friends?
+N | Would you enjoy a friend trip with no phones allowed?
+N | Would you like to share a garden plot with a friend?
+N | Would you enjoy being set up with a new friend by a mutual friend?
+N | Would you enjoy a friend group costume every Halloween?
+N | Would you like a friend who shares your exact taste in music?

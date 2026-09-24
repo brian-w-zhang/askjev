@@ -1,0 +1,105 @@
+N|values|Is it a betrayal to watch ahead in a show you and your partner watch together?
+C|values|What should happen if one partner watches ahead in a shared show?|confess_and_rewatch_together;keep_it_secret;it_does_not_matter;they_owe_a_small_treat;other
+S|personality|How much does it bother you when a partner takes food off your plate without asking?|It never bothers me ; It bothers me a tiny bit ; It depends on the food ; It bothers me quite a lot ; It really annoys me every time
+C|values|How should a couple settle a disagreement about how warm to keep the home?|split_the_difference;the_colder_person_adds_layers;take_turns;whoever_pays_the_bill_decides;separate_rooms
+N|values|Should couples kiss each other hello and goodbye every day?
+S|values|How much do small daily rituals, like a goodbye kiss or a morning coffee together, matter for a lasting relationship?|They do not matter at all ; They matter a little ; They matter a fair amount ; They matter a lot ; They are the heart of a lasting relationship
+C|values|Which daily habit most keeps a long relationship warm?|saying_thank_you;a_shared_meal;a_goodnight_ritual;small_touches;asking_about_each_others_day;other
+N|values|Should partners thank each other for doing ordinary chores?
+S|personality|How often do you tell a partner what you appreciate about them?|I almost never tell them ; I tell them on special occasions ; I tell them now and then ; I tell them most weeks ; I tell them nearly every day
+C|values|What is the best way for a long-term couple to keep learning new things about each other?|trying_new_activities;travelling_somewhere_new;asking_deep_questions;spending_time_with_each_others_friends;it_happens_naturally
+N|values|Is it good for a long-term couple to take a class together?
+C|taste|Which new activity would be most fun to try with a partner?|dance_lessons;a_cooking_class;a_new_sport;learning_a_language;pottery;a_road_trip;other
+S|values|How much does trying new things together keep a relationship exciting?|It makes no difference ; It helps a little ; It helps noticeably ; It helps a lot ; It is the key to keeping a relationship exciting
+C|values|Which is the biggest test for a couple on a long trip together?|getting_lost;different_budgets;different_energy_levels;too_much_time_together;planning_styles;other
+N|personality|Do you and a partner usually agree on how to plan a trip?
+S|values|How much should partners share each other's calendars?|Partners should not share calendars at all ; Partners should share only big dates ; Partners should share most plans ; Partners should share nearly everything ; Partners should run one shared calendar for everything
+C|values|Who should remember and plan gifts for the extended family in a couple?|whoever_is_related;both_together;whoever_is_better_at_it;take_turns;nobody_needs_to
+N|values|Should couples have friends who are also couples?
+C|values|What is the biggest benefit of having couple friends?|double_dates;sharing_advice;shared_holidays;seeing_other_relationships_up_close;there_is_no_special_benefit
+S|values|How much should a couple still make an effort to see friends separately after many years together?|No effort is needed ; A little effort now and then ; A fair effort ; A strong effort ; It should be a top priority
+C|values|Which is the best way to support a partner's creative project, like a novel or a band?|attend_every_event;give_honest_feedback;give_them_quiet_time;tell_everyone_about_it;stay_out_of_it
+N|values|Should you give a partner honest criticism of their cooking?
+S|values|How honest should you be about a partner's hobby project that is not very good?|Completely honest, even if it stings ; Honest, with gentle wording ; Honest only about the most important points ; Mostly encouraging, with a hint of critique ; Entirely encouraging
+C|values|What should you do if your partner suddenly changes their style in a way you do not like?|tell_them_gently;say_nothing;ask_why;support_it_anyway;make_a_joke
+N|values|Should partners encourage each other to exercise?
+S|values|How much should a partner speak up about the other's unhealthy habits?|They should never speak up ; They should mention it once ; They should mention it now and then ; They should speak up often ; They should push until the habit changes
+C|values|What is the kindest way to help a partner through a stressful week at work?|take_over_chores;plan_something_relaxing;listen_without_advice;give_them_space;give_practical_help
+N|personality|Do you tell your partner about your dreams from the night before?
+S|personality|How much do you share small daily news with a partner, like something funny you saw?|I share almost nothing small ; I share a little ; I share some of it ; I share most of it ; I share every little thing
+C|values|Which is the better sign of a strong couple?|comfortable_silence;endless_conversation;shared_laughter;teamwork_in_a_crisis;other
+N|values|Can a couple be happy if they have very few hobbies in common?
+C|values|What is the healthiest way to spend the first evening after a long work trip apart?|a_quiet_night_in;a_special_dinner;catching_up_with_long_talks;going_to_bed_early_together;other
+S|values|How much do you think love between long-term partners can grow deeper after many years?|Love only fades over the years ; Love holds steady at best ; Love can deepen a little ; Love can deepen a lot ; Love can become far deeper than it began
+C|values|What do you most look forward to about growing old with a partner?|shared_memories;slower_days_together;travel;grandchildren;knowing_each_other_completely;other
+N|values|Is growing old together the main point of a long-term relationship?
+S|values|How much should a couple plan their retirement years together?|Not at all ; A little ; Somewhat ; A lot ; In great detail
+C|values|What is the biggest challenge when both partners retire and are home all day?|too_much_time_together;different_routines;money_worries;losing_purpose;other
+N|values|Should partners retire at the same time if they can?
+C|values|Which is the best thing for a couple to do when one partner starts to feel older and less attractive?|reassure_them;do_something_fun_together;listen;compliment_them_often;other
+S|values|How much does physical attraction matter to a couple after decades together?|It does not matter at all ; It matters a little ; It matters somewhat ; It matters a lot ; It matters as much as ever
+N|values|Can working together in a family business be good for a couple?
+C|values|What is the biggest risk of a couple working at the same company?|bringing_work_home;office_gossip;no_time_apart;one_earning_more;a_breakup_affecting_work;no_real_risk
+S|values|How much should a couple keep work talk out of their evenings?|Work talk is fine any time ; Work talk should be limited a little ; Work talk should have a short slot ; Work talk should be rare ; Work talk should be banned at home
+C|values|Which is the fairest way to split the driving on a long road trip?|take_turns;the_better_driver_drives;whoever_enjoys_it;the_one_who_planned_the_trip_rests;other
+N|personality|Do you argue with your partner about directions while travelling?
+C|values|How should a couple handle one partner loving loud music at home while the other wants quiet?|headphones;set_hours;separate_rooms;compromise_on_volume;the_quiet_one_leaves_the_room
+S|values|How much should a partner adapt to the other's sleeping schedule?|Not at all ; A little ; Somewhat ; A lot ; Completely
+C|values|What is the best way to deal with a partner who uses their phone in bed?|ask_them_to_stop;set_a_phone_free_time;join_them;ignore_it;other
+N|values|Should couples keep phones out of the bedroom?
+S|personality|How much does it bother you when a partner scrolls their phone while you are talking?|It does not bother me at all ; It bothers me a little ; It bothers me somewhat ; It bothers me a lot ; It makes me feel ignored every time
+C|values|Which shared playlist or song matters most to a couple?|the_song_from_when_they_met;their_wedding_song;a_road_trip_song;a_silly_song_they_both_love;they_do_not_need_one
+N|personality|Do you and a partner have a song you think of as yours?
+C|values|Which is the best way to keep a record of a couple's life together?|a_shared_photo_album;a_joint_journal;keeping_ticket_stubs;a_yearly_video;memories_alone_are_enough
+S|values|How much should partners keep separate traditions from their own childhoods?|They should drop them all ; They should keep only a couple ; They should keep some and blend others ; They should keep most of them ; They should keep them all
+C|values|What should a couple do when their holiday traditions clash?|alternate_years;blend_them;start_new_ones;follow_the_stronger_tradition;other
+N|values|Should a long-term couple have a weekly night that is only for the two of them?
+C|values|What is the best way to rekindle romance after a stressful period like a new baby or a move?|a_trip_alone;small_daily_gestures;scheduled_date_nights;talking_it_through;give_it_time
+S|values|How much should a couple keep making romantic gestures after many years together?|Romantic gestures are no longer needed ; Gestures are nice on big occasions only ; Gestures should come now and then ; Gestures should come often ; Gestures should keep coming as they did at the start
+N|values|Is it romantic to surprise a partner by recreating your first date?
+C|values|Which is the best way to celebrate a partner's big career win?|a_surprise_party;a_special_dinner;a_heartfelt_note;a_gift;telling_everyone
+N|values|Should partners share how they feel about each other's close family members?
+S|values|How much should you tell a partner about your worries over their health?|Say nothing at all ; Mention it once gently ; Share it honestly when it comes up ; Raise it regularly ; Keep pressing until they see a doctor
+C|values|Which is the best way for a couple to handle one partner's grief over a friend's death?|be_present;give_space;handle_practical_tasks;share_memories;follow_their_lead
+N|values|Is it okay to take a break from caring for a sick partner to look after yourself?
+S|values|How much should partners share decisions about big purchases like a car?|Each partner decides alone ; One partner decides after a quick chat ; They decide together with some input ; They decide fully together ; They must agree on every detail
+C|values|Which is the fairest way to decide which partner's job to prioritize?|higher_pay;more_meaningful_work;better_future_prospects;take_turns;whoever_cares_more
+N|values|Should couples share one bank account for everything?
+C|values|What is the most important thing to agree on when a couple adopts a pet?|who_cares_for_it_daily;what_kind_of_pet;costs;rules_in_the_home;other
+S|values|How much should a couple talk about what they would want if one of them died first?|They should never talk about it ; They should talk about it once briefly ; They should talk about the basics ; They should talk about it in detail ; They should revisit it regularly
+C|social|What do most couples argue about most after many years together?|chores;money;in_laws;how_to_spend_free_time;screen_time;small_habits
+S|social|How often do most couples who have been together for years go on real dates?|Most couples never go on dates ; Most couples go a few times a year ; Most couples go about once a month ; Most couples go most weeks ; Most couples go every week
+N|social|Do most couples have a song they call their own?
+C|social|What do most couples do together on a typical weekday evening?|watch_shows;cook_and_eat;talk;do_separate_things;chores;go_out
+S|social|How much do most couples share their phone passwords?|Most couples never share them ; Most couples share a few ; Most couples share many ; Most couples share nearly all ; Most couples share every password
+N|social|Do most people think couples should sleep in the same bed every night?
+C|social|What do most people think is the secret to a long marriage?|good_communication;friendship;patience;humor;shared_values;commitment
+S|social|How much do most couples split household chores evenly?|Most couples leave nearly all chores to one partner ; Most couples split chores quite unevenly ; Most couples split chores somewhat unevenly ; Most couples split chores nearly evenly ; Most couples split chores perfectly evenly
+N|social|Do most couples keep some money separate?
+C|social|Which household task do most couples fight about the most?|dishes;laundry;cleaning_the_bathroom;cooking;taking_out_the_trash;grocery_shopping
+S|social|How much do most couples change each other's habits over the years?|Most couples change nothing about each other ; Most couples change a few small habits ; Most couples change several habits ; Most couples change many habits ; Most couples end up with nearly the same habits
+N|social|Do most couples think they would marry the same person again?
+C|social|What do most couples do on an anniversary?|dinner_out;exchange_gifts;a_trip;a_quiet_night_in;forget_it
+S|social|How much do most couples use their phones during meals together?|Most couples never use phones at meals ; Most couples glance at them now and then ; Most couples use them at some meals ; Most couples use them at most meals ; Most couples are on their phones at almost every meal
+N|social|Do most people believe that love fades after the first few years?
+C|social|What do most couples say keeps their relationship fun?|inside_jokes;travel;shared_hobbies;date_nights;teasing;surprises
+S|social|How much do most couples look alike in taste after many years together?|Most couples keep completely different tastes ; Most couples share a few tastes ; Most couples share many tastes ; Most couples share most tastes ; Most couples end up with almost identical tastes
+N|social|Would most people move abroad for a partner?
+C|social|What do most people think is the biggest threat to a long relationship?|boredom;money_troubles;lack_of_time;growing_apart;jealousy;dishonesty
+C|values|Which is the best way to say sorry after forgetting something important to a partner?|a_sincere_apology;making_up_for_it_with_a_plan;a_gift;a_note;other
+N|values|Should couples keep a secret surprise fund for each other's birthdays?
+S|values|How much should a couple decorate their home in a shared style rather than each person's own?|Each person should keep their own style everywhere ; Mostly separate styles with a few shared rooms ; An even blend ; Mostly shared style ; One shared style everywhere
+C|evaluative|Which image best captures a long, happy relationship?|two_trees_growing_side_by_side;a_long_walk;a_well_worn_armchair;a_dance;a_team;other
+C|values|Which is the best thing to do when your partner is quiet and you do not know why?|ask_gently;give_space;do_something_kind;wait_for_them_to_speak;other
+C|values|Which is the best way to handle a partner who always runs late when you go out together?|leave_without_them;tell_them_an_earlier_time;talk_about_it_calmly;accept_it;other
+C|values|What should a couple do when one partner wants to redecorate and the other is happy as things are?|compromise_on_one_room;the_keen_partner_takes_charge;wait_until_both_agree;hire_help;other
+C|values|Which is the best time for a couple to talk about something difficult?|over_a_walk;during_a_quiet_dinner;on_a_weekend_morning;right_when_it_comes_up;at_a_planned_time
+S|personality|How much do you like a partner to join you when you run errands?|I prefer to run errands alone ; I like company once in a while ; I like company about half the time ; I like company most of the time ; I always want my partner along
+S|values|How much should a couple keep up with each other's work lives?|Not at all ; Only the big news ; The main ups and downs ; Most of the details ; Every detail
+N|values|Should a partner be told about a close friend's secret?
+N|personality|Do you like doing chores side by side with a partner?
+C|values|Which is the best way to handle a partner who always wants to talk about problems at bedtime?|agree_on_another_time;talk_briefly_then_sleep;hear_them_out_fully;ask_them_to_write_it_down;other
+S|values|How much should partners keep up with each other's friends' news?|Not at all ; Only the big news ; The main ups and downs ; Most of it ; Every detail
+C|social|What do most couples say is the best part of a long relationship?|feeling_known;companionship;shared_history;security;laughter;teamwork
+C|social|What do most couples do when they disagree about a big purchase?|compromise;wait_and_revisit;the_earner_decides;one_gives_in;buy_it_anyway
+S|social|How much do most couples keep up romantic gestures after many years?|Most couples stop entirely ; Most couples keep a few on special days ; Most couples keep some up ; Most couples keep many up ; Most couples keep them up as at the start

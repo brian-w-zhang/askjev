@@ -1,0 +1,125 @@
+# self.lifestyle.food_preferences
+C | Which smell coming from a kitchen makes you hungriest? | onions_frying ; bread_baking ; garlic_in_butter ; barbecue_smoke ; cinnamon_and_sugar ; coffee_brewing ; other
+C | What would you choose as your birthday dinner? | home_cooked_favorite ; fancy_restaurant ; takeout_on_the_sofa ; backyard_grill ; family_recipe_made_by_someone_else ; other
+C | Which birthday dessert would you want instead of a standard cake? | ice_cream_cake ; pie ; cheesecake ; a_tower_of_doughnuts ; brownies ; fruit_tart ; no_dessert ; other
+C | What temperature do you like your pizza leftovers? | cold_from_the_fridge ; reheated_in_a_pan ; reheated_in_the_oven ; microwaved ; i_do_not_keep_leftover_pizza
+C | Which crunchy topping do you like on a salad or soup? | croutons ; toasted_seeds ; crispy_onions ; nuts ; tortilla_strips ; crackers ; none
+C | What do you most like to dunk into hot chocolate? | marshmallows ; cookies ; churros ; toast ; nothing ; i_skip_hot_chocolate
+C | How do you like your bananas? | still_a_little_green ; bright_yellow ; freckled_with_brown_spots ; very_soft_and_brown ; i_do_not_eat_bananas
+C | Which kind of pickled or fermented side do you reach for? | dill_pickles ; kimchi ; sauerkraut ; pickled_onions ; pickled_ginger ; olives ; none
+C | What would you pick for a picnic basket centerpiece? | sandwiches ; cold_fried_chicken ; cheese_and_crackers ; pasta_salad ; fruit_platter ; savory_pies ; other
+C | Which frozen treat do you pick on a hot afternoon? | ice_pop ; soft_serve ; gelato ; frozen_yogurt ; shaved_ice ; sorbet ; other
+C | Which cooking fat do you reach for most? | butter ; olive_oil ; neutral_vegetable_oil ; coconut_oil ; bacon_fat ; ghee ; other
+C | What is your favorite way to eat eggs at dinner rather than breakfast? | fried_egg_on_rice ; frittata ; egg_in_a_ramen_bowl ; shakshuka ; omelette ; i_do_not_eat_eggs_at_dinner
+C | Which comfort food do you make when you are feeling low? | macaroni_and_cheese ; buttery_noodles ; grilled_cheese ; soup ; rice_with_an_egg ; mashed_potatoes ; other
+C | Which dipping sauce do you pick for chicken nuggets or tenders? | honey_mustard ; barbecue ; ranch ; sweet_and_sour ; ketchup ; buffalo ; other
+C | How do you like the texture of your hummus or dips? | ultra_smooth ; slightly_chunky ; very_chunky ; no_preference ; i_do_not_eat_dips
+C | What do you drink with a slice of cake? | coffee ; tea ; milk ; water ; a_sweet_drink ; nothing
+C | Which fruit do you like baked into a pie? | apple ; cherry ; blueberry ; peach ; pumpkin ; lemon ; other
+C | Which part of a roast chicken do you want? | crispy_skin ; breast ; thigh ; drumstick ; wing ; no_preference
+C | How do you like your mashed potatoes? | silky_smooth ; lumpy_and_rustic ; with_the_skins ; loaded_with_cheese ; garlic_heavy ; i_skip_mashed_potatoes
+C | Which kind of sandwich bread do you prefer for a grilled cheese? | plain_white ; sourdough ; whole_wheat ; rye ; brioche ; other
+C | What do you do with the last bite on a shared plate? | take_it ; offer_it_around ; split_it ; leave_it_there ; depends_who_i_am_with
+C | Which herb do you love to see sprinkled on a dish? | basil ; parsley ; dill ; mint ; chives ; rosemary ; none ; other
+C | Which kind of soup texture do you enjoy most? | clear_broth ; chunky_stew ; smooth_puree ; creamy_chowder ; noodle_soup ; i_rarely_eat_soup
+C | How do you like the edges of a baked dish like lasagna or brownies? | corner_piece_with_crispy_edges ; soft_middle_piece ; no_preference
+C | What kind of flavored water or sparkling drink do you choose? | lemon_or_lime ; berry ; cucumber ; grapefruit ; unflavored ; i_do_not_drink_them
+C | What would you eat at a midnight diner stop? | pancakes ; fries ; a_burger ; pie ; grilled_cheese ; milkshake ; other
+C | Which kind of hot sauce do you keep closest? | vinegar_based ; smoky_chipotle ; sweet_chili ; sriracha_style ; fermented_chili_paste ; no_hot_sauce
+C | Which grain would you rather eat as a side? | white_rice ; brown_rice ; couscous ; quinoa ; farro ; bread_instead ; other
+C | What do you put on a baked potato? | butter_only ; sour_cream_and_chives ; cheese_and_bacon ; chili ; beans ; other ; i_do_not_eat_baked_potatoes
+C | How do you like your vegetables cooked? | raw_and_crunchy ; steamed ; roasted_until_charred ; sauteed_in_butter ; boiled_soft ; other
+C | Which kind of cookie do you pick from a mixed tray first? | chocolate_chip ; oatmeal_raisin ; peanut_butter ; sugar_cookie ; shortbread ; gingersnap ; other
+C | What is your preferred ratio of toppings on a frozen yogurt or ice cream bowl? | plain ; one_topping ; a_few_toppings ; buried_under_toppings
+C | Which is your favorite way to eat apples? | raw_and_crisp ; sliced_with_peanut_butter ; baked ; applesauce ; in_a_pie ; i_do_not_like_apples
+C | What do you usually bring to a potluck? | a_salad ; a_dessert ; a_casserole ; bread_or_rolls ; drinks ; something_store_bought ; other
+C | What would your dream breakfast in bed be? | pancakes_and_berries ; eggs_and_toast ; croissants_and_jam ; a_full_fried_breakfast ; yogurt_and_fruit ; leftover_pizza ; other
+C | Which snack do you pack for a long walk or hike? | trail_mix ; granola_bar ; fresh_fruit ; jerky ; a_sandwich ; chocolate ; other
+C | How do you like your rice? | sticky ; fluffy_and_separate ; crispy_on_the_bottom ; creamy_like_risotto ; no_preference
+C | Which kind of dumpling do you order? | steamed ; pan_fried ; boiled ; deep_fried ; in_soup ; i_do_not_eat_dumplings
+C | What do you like in your sandwich for crunch? | lettuce ; pickles ; potato_chips_inside ; raw_onion ; toasted_bread ; nothing_crunchy
+C | Which condiment do you think you could not live without? | ketchup ; mayonnaise ; mustard ; soy_sauce ; hot_sauce ; salsa ; other
+C | What would you pick as your last meal of a long holiday trip before flying home? | local_street_food ; the_fanciest_meal_of_the_trip ; a_familiar_comfort_food ; something_quick_at_the_airport ; other
+C | Which fruit texture do you enjoy most? | crisp_like_an_apple ; juicy_like_a_peach ; creamy_like_a_banana ; bursting_like_grapes ; fibrous_like_a_mango
+C | How do you prefer to eat a cupcake? | top_first ; peel_and_bite_normally ; split_and_make_a_sandwich ; frosting_only ; i_skip_cupcakes
+C | Which flavor of crisps or chips do you avoid? | salt_and_vinegar ; sour_cream_and_onion ; barbecue ; cheese ; spicy ; none
+C | Which kind of sweetener do you use most? | white_sugar ; brown_sugar ; honey ; maple_syrup ; artificial_sweetener ; none
+C | What do you order at an ice cream truck? | ice_pop ; ice_cream_sandwich ; cone_with_sprinkles ; chocolate_coated_bar ; slushy ; nothing
+C | Which spice do you like most in a warm drink or dessert? | cinnamon ; nutmeg ; cardamom ; ginger ; clove ; vanilla ; other
+C | How do you eat an orange? | peel_and_split_into_segments ; cut_into_wedges ; juice_it ; i_do_not_eat_oranges
+C | Which breakfast drink would you pick on a slow weekend morning? | fresh_orange_juice ; drip_coffee ; latte ; tea ; hot_chocolate ; smoothie ; other
+C | What kind of cheese do you want on a burger? | cheddar ; american_slice ; swiss ; blue_cheese ; pepper_jack ; no_cheese ; other
+C | How do you like your pasta sauce? | simple_tomato ; creamy ; pesto ; oil_and_garlic ; meat_ragu ; just_butter_and_cheese ; other
+C | What do you eat first in a bento box or mixed plate? | my_favorite_thing ; my_least_favorite_thing ; whatever_is_hottest ; i_eat_everything_together
+C | Which nut would you pick from a bowl of mixed nuts? | cashew ; almond ; pecan ; peanut ; pistachio ; macadamia ; none
+C | How do you like your popcorn seasoned at the cinema? | plain_salted ; extra_butter ; sweet_caramel ; mixed_sweet_and_salty ; i_skip_popcorn
+C | Which kind of bread do you like with soup? | crusty_baguette ; soft_roll ; crackers ; cornbread ; grilled_cheese ; nothing
+C | Which dish would you most want to learn to cook well? | fresh_pasta ; a_perfect_curry ; homemade_bread ; dumplings ; a_roast_dinner ; sushi ; other
+C | How do you prefer your fries shaped? | thin_and_crispy ; thick_cut ; curly ; waffle ; wedges ; tater_tots
+C | What is your usual drink with spicy food? | cold_water ; milk ; a_sweet_drink ; beer ; yogurt_drink ; nothing
+C | Which kind of chocolate bar filling do you like best? | caramel ; nougat ; peanut ; wafer ; mint ; plain_chocolate ; other
+C | Which way do you like your coffee temperature? | scalding_hot ; warm ; iced ; cold_brew ; i_do_not_drink_coffee
+C | Which pizza topping combination would you order? | plain_cheese ; pepperoni ; mushroom_and_onion ; margherita ; meat_lovers ; veggie_supreme ; other
+C | Which fruit do you think makes the best jam? | strawberry ; raspberry ; apricot ; blackberry ; grape ; orange_marmalade ; other
+C | What is your favorite meal to eat outdoors? | grilled_food ; sandwiches ; fish_and_chips ; street_tacos ; ice_cream ; a_packed_lunch ; other
+C | Which food do you think tastes better the next day? | pizza ; curry ; chili ; lasagna ; soup ; fried_rice ; none
+C | How do you like your salad dressed? | lightly ; heavily ; dressing_on_the_side ; no_dressing ; i_do_not_eat_salad
+C | What do you usually eat at a movie theater? | popcorn ; candy ; nachos ; hot_dog ; nothing ; i_sneak_in_my_own_snacks
+C | How do you like your peanut butter? | smooth ; crunchy ; natural_with_oil_on_top ; i_do_not_eat_peanut_butter
+C | Which frozen meal would you keep stocked? | frozen_pizza ; dumplings ; burritos ; pot_pies ; fish_sticks ; none ; other
+C | Which drink do you pick on a cold rainy afternoon? | hot_chocolate ; black_tea ; herbal_tea ; coffee ; warm_cider ; broth ; other
+S | How much do you enjoy chewy textures like mochi or gummy candy? | I avoid chewy foods ; I tolerate them now and then ; I like them in small amounts ; I seek them out ; Chewy foods are my favorite texture
+S | How much do you enjoy cooking for a crowd? | I avoid cooking for more than myself ; I cook for others only when I must ; I am happy to cook for a few friends ; I enjoy hosting big dinners ; I jump at any chance to cook for a crowd
+S | How do you react when a dish arrives with a vegetable you dislike? | I send it back ; I push it aside and eat around it ; I eat a little of it ; I eat it without fuss ; I end up enjoying it
+S | How much do you care about eating seasonal produce? | I never think about seasons ; I notice seasonal foods sometimes ; I buy seasonal fruit when I see it ; I plan meals around what is in season ; I shop at markets to eat only in season
+S | How much do you enjoy smoky flavors? | I avoid smoky food ; I tolerate a little smokiness ; I like smoky flavors sometimes ; I choose smoky dishes often ; I would add smoke to everything
+S | How much do you like crunchy food? | I prefer soft foods ; I like a little crunch ; I enjoy crunchy snacks ; I pick crunchy options whenever I can ; Crunch is the main thing I eat for
+S | How often do you eat dessert for breakfast? | Never ; Once or twice a year ; A few times a year ; Most months ; Most weeks
+S | How often do you order the same dish at your favorite restaurant? | I always try something new ; I usually try something new ; I switch it up about half the time ; I usually get my usual ; I have ordered the same thing for years
+S | How much do you enjoy creamy textures like custard or pudding? | I dislike creamy textures ; I eat them only occasionally ; I like them now and then ; I enjoy them a lot ; Creamy textures are my favorite
+S | How much do you like tangy flavors like lemon or vinegar in savory food? | I avoid tangy food ; I like a small hint ; I like a clear tang ; I often add extra lemon or vinegar ; I want everything sharp and tangy
+S | How much do you enjoy trying a new snack from the store shelf? | I stick to the snacks I know ; I try a new one once in a while ; I pick up a new snack most trips ; I always grab whatever is new ; I hunt for limited editions and odd flavors
+S | How much do you like foods with strong fermented flavors? | I avoid them completely ; I tolerate them in small amounts ; I like some of them ; I enjoy most of them ; I love the funkiest ones
+S | How much do you enjoy very hot soup or drinks? | I let them cool completely ; I wait until they are warm ; I drink them fairly hot ; I like them hot enough to sip slowly ; I drink them nearly boiling
+S | How much do you enjoy eating fruit as a snack? | I rarely eat fruit ; I eat fruit when it is offered ; I eat fruit a few times a week ; I snack on fruit most days ; Fruit is my main snack
+S | How much do you like herbs like mint or basil in desserts? | I dislike herbs in desserts ; I tolerate a hint ; I enjoy it sometimes ; I seek it out ; I would put herbs in every dessert
+S | How much do you enjoy eating food straight from the pan or pot? | Never, I always plate it ; Only for a taste while cooking ; Sometimes when eating alone ; Often ; It is how I eat most meals at home
+S | How much do you enjoy rich buttery food? | I avoid it ; I enjoy it rarely ; I like it in moderation ; I enjoy it often ; I would choose the richest dish every time
+S | How long can you go without chocolate before you miss it? | I never miss chocolate ; A few months ; A few weeks ; A few days ; I have some every day
+S | How much do you enjoy snacking on raw vegetables? | I never eat raw vegetables as a snack ; I eat them only with a dip ; I snack on them now and then ; I snack on them most days ; They are my favorite snack
+S | How much do you like chili heat in sweet foods like chocolate or mango? | I think it is a terrible idea ; I would try it once ; I enjoy it now and then ; I seek it out ; It is one of my favorite combinations
+S | How much do you enjoy making your own sauces from scratch? | I only use bottled sauces ; I make a simple sauce rarely ; I make sauces now and then ; I make most of my sauces ; I have a collection of homemade sauces
+S | How big is your usual morning coffee or tea? | I skip it ; A small cup ; A regular mug ; A large mug ; An oversized travel cup
+S | How much do you like mint flavor in sweets? | I dislike mint ; I tolerate mint gum ; I like mint now and then ; I pick mint sweets often ; Mint chocolate is my favorite treat
+S | How ripe do you like your avocados? | Firm enough to cube ; Just yielding when pressed ; Soft and spreadable ; Very soft and nearly brown ; I do not eat avocados
+S | How much do you like to share dishes when eating out? | I never share my plate ; I share a bite if asked ; I share a starter ; I like ordering several dishes to share ; I only eat family style
+S | How much do you enjoy strong ginger flavor? | I avoid ginger ; I like a faint hint ; I like it in some dishes ; I add extra ginger ; I would eat pickled ginger by the handful
+S | How often do you cook a dish from a cuisine you grew up with? | Never ; A few times a year ; Once a month or so ; Every week ; Most of my meals
+S | How much do you like sparkling drinks? | I cannot stand the fizz ; I drink them rarely ; I like them sometimes ; I choose fizzy drinks often ; I would carbonate everything
+S | How much do you enjoy cold food like chilled noodles or gazpacho? | I dislike cold dishes ; I eat them only on very hot days ; I like them in summer ; I enjoy them any time ; I often prefer cold dishes to hot ones
+S | How much do you like sesame flavor? | I dislike it ; I barely notice it ; I like it in some dishes ; I sprinkle sesame on a lot ; Sesame is one of my favorite flavors
+N | Do you like the crispy burnt bits at the bottom of a pan?
+N | Do you enjoy eating cereal without milk?
+N | Do you put ice cubes in your juice?
+N | Do you eat pizza with a knife and fork?
+N | Do you enjoy the taste of lavender or rose in food?
+N | Do you like fruit in savory dishes?
+N | Do you eat the stems of broccoli?
+N | Do you enjoy cold pizza for breakfast?
+N | Do you like cinnamon on savory food?
+N | Do you prefer your tea or coffee iced even in winter?
+N | Do you enjoy the taste of black coffee?
+N | Do you like your sandwiches cut diagonally?
+N | Do you enjoy eating grapefruit?
+N | Do you like the skin on hot milk or custard?
+N | Do you add hot sauce to your eggs?
+N | Do you enjoy the flavor of smoked fish?
+N | Do you put butter on your pancakes before the syrup?
+N | Do you like popcorn with chocolate mixed in?
+N | Do you eat the rind of cheese?
+N | Do you enjoy fizzy drinks with your meals?
+N | Do you like whipped cream on hot chocolate?
+N | Do you like pomegranate seeds?
+N | Do you enjoy the taste of beetroot?
+N | Do you prefer warm apple pie with cold ice cream?
+N | Do you enjoy eating sardines from a tin?

@@ -1,0 +1,126 @@
+# self.lifestyle.pets
+C | If you got a cat, which coat color would you pick? | black ; ginger ; tabby ; calico ; white ; grey ; no_cat ; other
+C | Which dog coat color would you most like to have? | black ; golden ; chocolate_brown ; spotted ; white ; brindle ; no_dog ; other
+C | Which sound from a pet would you most like to hear at home? | a_cat_purring ; a_dog_sighing ; birds_chirping ; an_aquarium_bubbling ; none
+C | Which pet smell do you secretly like? | puppy_breath ; warm_dog_fur ; clean_cat_fur ; fresh_hay ; none
+C | What theme would you use for naming a set of pets? | foods ; famous_scientists ; mythology ; old_people_names ; musicians ; no_theme ; other
+C | What costume would you put on a pet for a party? | a_hot_dog ; a_lion_mane ; a_superhero_cape ; a_bumblebee ; a_tiny_hat_only ; no_costume
+C | Which way would you want a pet to greet you at the door? | jumping_and_wagging ; a_slow_stretch_and_a_meow ; bringing_a_toy ; ignoring_me_until_later ; a_happy_chirp ; no_pet
+C | What decor would you choose for a fish tank? | live_plants ; a_sunken_ship ; natural_rocks_and_driftwood ; colorful_gravel ; a_tiny_castle ; no_tank
+C | Which job would you want your dog to be able to do? | fetch_the_newspaper ; guard_the_house ; herd_the_kids ; carry_a_backpack_on_hikes ; comfort_visitors ; no_job ; no_dog
+C | Which kind of dog walk do you like best? | a_slow_sniff_walk ; a_brisk_power_walk ; a_run ; a_trail_hike ; a_park_with_other_dogs ; no_dog
+C | What time of day would you most like to walk a dog? | sunrise ; mid_morning ; lunchtime ; sunset ; late_night ; no_dog
+C | What would your pet's bed look like? | round_donut_bed ; tiny_sofa ; tent_or_cave ; window_hammock ; a_folded_blanket ; other
+C | Which small habit of a pet do you find most charming? | a_head_tilt ; slow_blinks ; zoomies ; kneading_blankets ; snoring ; none
+C | What would you want your pet's collar or tag to say? | just_a_phone_number ; its_name ; a_funny_phrase ; nothing ; no_collar
+C | Which kind of pet photo would you frame in your home? | a_sleeping_pet ; a_goofy_action_shot ; a_formal_portrait ; a_puppy_or_kitten_photo ; none
+C | Which pet would you choose to keep you company while you work from home? | a_sleepy_cat ; a_lazy_old_dog ; a_fish_tank ; a_chatty_bird ; none
+C | Which pet treat would you make at home? | frozen_broth_cubes ; baked_biscuits ; dried_sweet_potato ; fresh_fruit_slices ; none_i_buy_treats
+C | Which kind of toy do you most enjoy watching a cat play with? | a_cardboard_box ; a_laser_dot ; a_feather_wand ; a_crinkle_ball ; a_toy_mouse ; no_cat
+C | Which game would you most like to play with a dog? | hide_and_seek ; tug_of_war ; fetch_in_water ; puzzle_toys ; frisbee ; no_dog
+C | How would you want your pet groomed in summer? | a_short_summer_cut ; brushed_but_left_long ; bathed_often ; left_natural ; no_pet
+C | Which unusual pet name would you most enjoy saying out loud? | pickle ; sir_fluffington ; waffles ; bartholomew ; potato ; other
+C | Where would you set up a cat's favorite perch? | a_sunny_window ; the_top_of_a_bookshelf ; a_tall_cat_tree ; the_back_of_the_sofa ; no_cat
+C | Which trait would you most want in a pet bird? | talkative ; musical ; cuddly ; colorful ; quiet ; no_bird
+C | Which animal would you most like to foster for a short time? | puppies ; kittens ; a_senior_dog ; baby_birds ; rabbits ; none
+C | How would you want your dog to travel in the car? | in_a_crate ; in_a_seat_harness ; head_out_the_window ; on_my_lap ; left_at_home ; no_dog
+C | What do you most look forward to when visiting a friend who has a pet? | cuddles ; playing ; seeing_its_tricks ; watching_it_nap ; nothing_i_would_rather_not
+C | Which kind of pet would you pick for a garden pond? | goldfish ; koi ; frogs ; turtles ; none
+C | What would you do on your pet's adoption anniversary? | a_special_treat ; a_new_toy ; a_long_walk_or_play ; a_photo ; nothing_special
+C | Which part of daily pet care would you enjoy most? | feeding_time ; brushing ; walks ; bedtime_cuddles ; cleaning_the_habitat ; none
+C | Which kind of pet would you want to watch through a glass tank? | tropical_fish ; a_gecko ; an_ant_colony ; a_hermit_crab ; a_tarantula ; none
+C | Which color would you pick for a dog's leash and collar set? | red ; blue ; green ; pink ; black ; patterned ; no_dog
+C | What would be your ideal size for a pet cat? | small_and_dainty ; average ; large_and_fluffy ; a_giant_breed ; no_cat
+C | Which kind of weekend outing would you plan around a dog? | beach_with_dogs_allowed ; a_forest_hike ; a_dog_friendly_cafe ; a_dog_show_or_meet_up ; staying_home ; no_dog
+C | Which pet behavior would you find most annoying? | early_morning_wake_ups ; stealing_food ; scratching_furniture ; constant_barking_or_meowing ; chewing_shoes ; none
+C | How would you want a pet to spend the day while you are out? | napping ; watching_out_the_window ; playing_with_another_pet ; at_a_daycare ; with_a_sitter ; no_pet
+C | Which rescue animal story would move you most to adopt? | the_oldest_in_the_shelter ; one_with_three_legs ; a_shy_one ; a_bonded_pair ; the_last_of_a_litter ; none
+C | How would you want your pet to sleep near you? | on_my_bed ; in_my_room_on_its_own_bed ; outside_my_room ; in_another_part_of_the_home ; no_pet
+C | What would you use to keep a pet entertained on a rainy day? | indoor_games ; a_puzzle_feeder ; a_new_toy ; a_long_nap_together ; nothing_special
+C | Which pet would you want if it could live as long as you? | a_parrot ; a_tortoise ; a_dog ; a_cat ; none
+C | Which kind of pet hair would you rather deal with? | short_prickly_hairs ; long_floating_fur ; feathers ; no_hair_at_all
+C | Which cat personality quirk would you find most endearing? | talking_back ; bringing_gifts ; sitting_in_boxes ; knocking_things_off_tables ; following_you_everywhere ; no_cat
+C | Which kind of pet shop item would you browse longest? | toys ; beds ; clothing ; tanks_and_habitats ; treats ; none
+C | Which snack would you most enjoy sharing with a dog? | apple_slices ; carrots ; plain_popcorn ; peanut_butter ; a_bit_of_cheese ; none
+C | What would you do if your cat chose to sleep on your laptop? | let_it_stay ; move_it_gently ; take_a_photo_first ; buy_it_a_warm_pad ; no_cat
+C | Which kind of animal would you choose as a study buddy? | a_sleeping_cat ; a_quiet_hamster ; a_goldfish ; a_dog_at_my_feet ; none
+C | How would you want a new puppy or kitten to be introduced to your home? | one_room_at_a_time ; free_run_from_day_one ; crate_and_slow_start ; no_new_pet
+C | Which kind of pet event would you enjoy attending? | a_dog_costume_parade ; a_cat_show ; an_adoption_day ; a_pet_blessing ; none
+C | What would you most like to learn about a pet you just adopted? | its_history ; its_favorite_foods ; its_fears ; its_quirks ; nothing_i_would_learn_as_i_go
+C | Which pet photo pose do you like most? | belly_up ; a_sleepy_curl ; a_tongue_out_grin ; a_serious_side_profile ; mid_jump
+C | How do you prefer pets in a home you are visiting? | coming_to_greet_me ; staying_out_of_the_way ; in_another_room ; i_do_not_mind ; no_pets_please
+C | What kind of pet would you want in a classroom or office? | a_fish ; a_guinea_pig ; a_rabbit ; a_lizard ; a_dog ; none
+C | Which kind of pet toy sound annoys you the most? | squeakers ; bells ; crinkly_plastic ; rattling_balls ; none
+C | What kind of pet portrait would you commission? | oil_painting ; cartoon_drawing ; embroidered_patch ; a_small_statue ; none
+C | Which sleeping spot would you give a rabbit? | a_large_hutch ; a_free_roam_room ; a_cage_in_the_living_room ; a_garden_enclosure ; no_rabbit
+C | What would your dream pet space at home include? | a_pet_room ; a_built_in_dog_bath ; a_cat_wall_with_shelves ; a_fenced_yard ; a_big_aquarium ; none
+C | Which kind of animal would you rather pet at a petting farm? | goats ; lambs ; alpacas ; ponies ; rabbits ; ducks ; none
+C | Which kind of dog would you choose for cuddling on a sofa? | a_tiny_lap_dog ; a_medium_mutt ; a_giant_gentle_breed ; no_dog
+C | What would you want your cat's name to sound like? | short_and_snappy ; long_and_grand ; cute_and_silly ; human_like ; no_cat
+C | Which pet related task would you happily hand to someone else? | nail_trimming ; baths ; litter_or_cage_cleaning ; vet_trips ; walks ; none
+C | How would you react if your dog rolled in something smelly? | laugh ; give_it_an_immediate_bath ; ignore_it_until_home ; feel_disgusted ; no_dog
+S | How much do you enjoy the smell of a freshly bathed dog? | I dislike it ; I barely notice ; I find it pleasant ; I love it ; I bury my face in the fur every time
+S | How much do you like pets that climb on you? | I cannot stand it ; I put up with it briefly ; I am fine with it ; I enjoy it ; I want a pet on my shoulder all day
+S | How much do you like caring for plants in a pet's habitat? | I would avoid it ; I would do the minimum ; I would enjoy it a little ; I would enjoy it a lot ; Designing the habitat would be the best part
+S | How much do you enjoy teaching a pet new tricks? | I would not bother ; I would teach one basic command ; I would teach a few tricks ; I would train often ; I would compete in trick contests
+S | How much do you enjoy picking out pet supplies? | I buy whatever is cheapest ; I grab the basics quickly ; I compare a few options ; I enjoy browsing ; I spend hours on the perfect items
+S | How much do you like animals that are awake at night? | I would find it unbearable ; I could tolerate it ; I would not mind ; I would enjoy it ; I would love a night time pet
+S | How much do you enjoy brushing a pet? | I would avoid it ; I would do it when needed ; I would find it fine ; I would enjoy it ; I would brush a pet every day for fun
+S | How much would you want to know about your pet's breed or species? | Nothing beyond the basics ; A few key care facts ; A good general overview ; A lot of detail ; I would read every book on it
+S | How much do you enjoy dog parks? | I avoid them ; I go only when I must ; I go now and then ; I go often ; It is my favorite place to take a dog
+S | How much do you enjoy watching fish swim? | I find it boring ; I glance now and then ; I find it relaxing briefly ; I watch for long stretches ; I could watch for hours
+S | How much would you enjoy a pet that follows you room to room? | I would find it irritating ; I would tolerate it ; I would be fine with it ; I would enjoy it ; I would want it always at my side
+S | How much do you like birdsong from a pet bird indoors? | I would hate it ; I would tolerate a little ; I would enjoy some of it ; I would enjoy it all day ; I would want several singing birds
+S | How much would you enjoy walking a dog in the rain? | I would refuse ; I would do a short loop ; I would go with a good coat ; I would enjoy it ; Rainy walks would be my favorite
+S | How much would you enjoy a cat sleeping on your chest? | I would move it at once ; I would allow it briefly ; I would be fine with it ; I would love it ; I would stay still for hours for it
+S | How much would you like to take a pet to cafes and shops? | Never ; Only if it had to come ; Now and then ; Often ; Everywhere it is allowed
+S | How much do you enjoy holding small animals like hamsters? | I avoid it ; I would hold one briefly ; I enjoy it now and then ; I enjoy it a lot ; I would hold them every day
+S | How much would you enjoy a pet that loves water? | I would find it a nuisance ; I would tolerate it ; I would not mind ; I would enjoy it ; I would take it swimming every week
+S | How much would you want a pet that is independent? | I want a pet that needs me constantly ; I want a mostly attached pet ; I want a balance ; I want a mostly independent pet ; I want a pet that barely notices me
+S | How much would you enjoy caring for an elderly pet? | I would find it too hard ; I would manage it reluctantly ; I would accept it ; I would find it rewarding ; I would seek out older pets
+S | How much would you enjoy a pet that makes lots of noise at play? | I would hate it ; I would put up with some ; I would not mind ; I would enjoy it ; The louder the better
+S | How much do you enjoy watching pet videos online? | I skip them ; I watch one now and then ; I watch several a week ; I watch them daily ; I follow many pet accounts
+S | How much would you enjoy waking up to a pet at dawn? | I would hate it ; I would tolerate it ; I would be fine with it ; I would enjoy it ; I would love my pet as an alarm clock
+S | How much would you enjoy keeping chickens in a backyard? | I would hate it ; I might try it ; I would enjoy it somewhat ; I would enjoy it a lot ; It is a dream of mine
+S | How much would you want to hear a pet during the night? | I need total silence ; I could tolerate faint sounds ; I would not notice ; I would find it comforting ; I would sleep better with it
+S | How much would you enjoy a pet that loves car rides? | Not at all ; A little ; Somewhat ; A lot ; I would plan drives just for it
+S | How much do you enjoy the feel of soft fur under your hand? | I dislike it ; I barely notice ; I find it nice ; I love it ; It is one of my favorite feelings
+S | How much would you want your pet to be friendly with strangers? | I would want it wary of everyone ; I would want it cautious ; I would want it polite ; I would want it friendly ; I would want it to love everyone
+S | How much would you like a pet to join you on runs or bike rides? | Not at all ; Rarely ; Sometimes ; Often ; Every time
+N | Would you like a pet that can be left for a weekend with just food and water?
+N | Would you enjoy a dog that snores?
+N | Would you want a pet with a funny underbite?
+N | Would you enjoy having a pet that sheds seasonally?
+N | Would you enjoy a pet that likes to be carried?
+N | Would you enjoy keeping a pet snail?
+N | Would you like to own a pet that you could take to a nursing home as a visitor?
+N | Would you enjoy bathing a dog in a bathtub at home?
+N | Would you enjoy a cat that loves to go on walks with a harness?
+N | Would you like a pet that sleeps most of the day?
+N | Would you enjoy a pet duck?
+N | Would you like to share your meals with a pet in small bites?
+N | Would you enjoy keeping a pet that needs special lighting like a lizard?
+N | Would you enjoy dressing your pet in a holiday sweater?
+N | Would you enjoy having two pets of different species?
+N | Would you keep a pet that is loud in the early morning like a rooster?
+N | Would you enjoy a pet that loves to chew things?
+N | Would you enjoy caring for a pet's teeth by brushing them?
+N | Would you like a pet that follows commands in more than one language?
+N | Would you enjoy a pet pig?
+N | Would you enjoy a cat that fetches?
+N | Would you like to name a pet after a food?
+N | Would you enjoy a pet that has a very strong personality?
+N | Would you enjoy a hairless cat?
+C | Which pet would you pick to match your daily routine? | a_dog_for_walks ; a_cat_for_quiet_evenings ; fish_for_low_effort ; a_bird_for_company ; none
+C | What kind of pet sitter would you trust most? | a_friend ; a_neighbor_kid ; a_professional_sitter ; a_boarding_kennel ; family ; other
+C | Which feature would you want in a smart pet gadget? | automatic_feeder ; treat_camera ; self_cleaning_litter_box ; water_fountain ; gps_tracker ; none
+C | How would you choose your pet's name? | on_the_first_day ; after_watching_its_personality ; by_family_vote ; keep_its_shelter_name ; other
+C | Which kind of fish would you keep in a small tank? | a_betta ; guppies ; neon_tetras ; a_goldfish ; shrimp ; none
+C | Where would you most like to take a dog for its first adventure? | the_beach ; a_forest ; a_busy_town_square ; a_friends_house ; the_pet_store ; no_dog
+S | How much would you want to photograph your pet? | Never ; On special occasions ; A few times a month ; Most days ; Several times every day
+S | How much would you enjoy a big fluffy dog that sheds on everything? | I would hate it ; I would tolerate it ; I would accept it ; I would enjoy it ; The fluffier the better
+N | Would you enjoy a pet that watches television with you?
+N | Would you let a pet choose its own name by reacting to a list?
+N | Would you enjoy a pet that wakes you with a gentle paw on your face?
+N | Would you like your pet to have its own social media account?
+N | Would you enjoy a pet rat?

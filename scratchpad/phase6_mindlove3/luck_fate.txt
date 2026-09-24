@@ -1,0 +1,112 @@
+N|values|Do you believe that thinking positively about something can make it happen?
+S|values|How much do you believe that picturing a goal vividly, like on a vision board, helps bring it about?|Picturing a goal does nothing at all ; Picturing a goal helps only by keeping me focused ; Picturing a goal gives a small real boost ; Picturing a goal pulls good things toward me noticeably ; Picturing a goal is the main way good things come to me
+C|values|What best explains why some people who 'manifest' their dreams seem to succeed?|they_work_harder_on_what_they_picture;they_notice_more_chances;only_the_successes_get_told;the_universe_responds;other
+S|values|How much do you think a full moon affects how people behave?|Not at all ; A tiny bit ; Somewhat ; Noticeably ; A great deal
+C|personality|When a run of small tech failures happens in the same week, which thought comes to you first?|pure_coincidence;something_is_in_the_air;the_planets_are_to_blame;i_am_being_careless;i_do_not_think_about_it
+S|values|How much do you think a person's blood type says about their personality?|Blood type says nothing about personality ; Blood type might hint at one or two traits ; Blood type shapes personality a little ; Blood type shapes personality noticeably ; Blood type largely decides personality
+N|values|Do you believe close twins can sense each other's feelings from far away?
+S|values|How much do you believe that some people can send thoughts to each other without speaking?|I am sure it is impossible ; I think it is very unlikely ; I am unsure ; I think it happens now and then ; I am sure it happens
+C|values|What would you do if friends brought out a talking board at a party to contact spirits?|join_in_for_fun;watch_but_not_touch_it;leave_the_room;ask_them_to_put_it_away;join_in_seriously
+N|values|Would you attend a séance if a friend invited you?
+C|values|Which mysterious creature do you think is most likely to be real?|a_lake_monster;a_forest_ape_creature;a_sea_serpent;a_winged_night_creature;none_of_them
+S|values|How likely do you think it is that some unexplained sightings in the sky are visitors from elsewhere?|I am sure none are visitors ; I think it is very unlikely ; I am unsure ; I think some probably are ; I am sure some are visitors
+C|values|What best explains people who describe seeing a light during a near-death experience?|the_brain_under_stress;something_beyond_this_world;expectations_shaping_memory;unsure;other
+C|values|What do you think of arranging furniture to improve the flow of luck in a home?|it_really_works;it_just_makes_rooms_nicer;it_is_harmless_fun;it_is_nonsense;never_heard_of_it
+N|personality|Have you ever moved an object in your home to bring better luck?
+C|personality|In a theater, would you say the name of the play that actors consider cursed?|yes_freely;only_outside_the_theater;no_out_of_respect;no_because_i_believe_it;i_did_not_know_about_it
+C|values|Why do you think performers say 'break a leg' instead of 'good luck'?|superstition;tradition_for_its_own_sake;it_is_funnier;to_calm_nerves;other
+N|personality|Would you avoid mentioning that a sports team has not conceded a goal yet, while the match is still going?
+S|personality|How much would you avoid washing a lucky shirt during a winning streak?|I would wash it as usual ; I might delay the wash by a day ; I would skip washing it for a while ; I would not wash it until the streak ended ; I would never wash it again if the streak continued
+C|values|What do you believe about an itchy palm?|money_is_coming;money_is_leaving;it_means_nothing;never_heard_of_it
+C|personality|When your ears feel hot for no reason, what goes through your mind?|someone_is_talking_about_me;i_am_warm_or_embarrassed;nothing;never_heard_of_that_saying
+N|values|Do you think rain on a wedding day brings good luck to the couple?
+C|values|Which wedding luck tradition do you find the most charming?|something_borrowed=wearing something old, new, borrowed, and blue;not_seeing_the_bride_before;carrying_over_the_threshold;throwing_rice_or_petals;a_coin_in_the_shoe;none
+C|personality|If a bird's droppings landed on you, which thought would come first?|how_lucky;how_gross;both_at_once;i_would_just_clean_it
+C|values|Which trade's superstitions seem most reasonable to you?|sailors;miners;actors;athletes;pilots;none
+S|values|How much do you think the season of the year a person is born in shapes their life?|Birth season has no effect at all ; Birth season has a tiny effect, like being the oldest in class ; Birth season has a small real effect ; Birth season has a noticeable effect ; Birth season shapes a person's whole life
+C|values|Which is the best description of the luck of being born with natural talent?|pure_luck;luck_that_brings_duty=luck that carries a duty to use it well;earned_somehow;not_luck_at_all;other
+N|values|Should people with natural gifts feel they owe something to those without them?
+S|values|How much credit does a naturally gifted athlete deserve for winning?|No credit, it was the gift ; A little credit for showing up ; Credit shared equally with the gift ; Most of the credit, for the training ; All the credit, gift or not
+C|values|A reckless driver speeds home and arrives safely. How should they feel about it?|lucky;guilty;relieved_and_resolved_to_change;nothing_special;proud
+S|values|How much should a careless act be forgiven when luck kept it from causing harm?|It should be forgiven completely ; It should be forgiven mostly ; It should be half forgiven ; It should be judged almost as if harm had happened ; It should be judged exactly as if harm had happened
+N|values|Is someone who harms another through pure bad luck owed sympathy as well as blame?
+C|values|Which best describes a person who was never tested by hard temptation?|lucky;untested_but_good;not_yet_proven;just_as_good_as_anyone;other
+C|values|How do you think luck should affect how we judge failures in others?|we_should_always_consider_it;only_for_big_failures;rarely;never
+S|values|How much should luck play a part in how prizes and rewards are handed out?|Luck should play no part at all ; Luck should break ties only ; Luck should play a small part ; Luck should play a fair part ; Luck should decide most rewards
+C|values|Which decision would you be happy to leave to a random draw?|where_to_go_on_holiday;what_to_eat_tonight;which_film_to_watch;who_does_a_chore;none
+N|personality|Have you ever let a random pick decide where you went on a trip?
+S|personality|How often do you use chance, like drawing names or spinning something, to settle small choices with others?|I never use chance for choices ; I use chance once in a great while ; I use chance a few times a year ; I use chance most months ; I use chance for small choices all the time
+C|values|Which is the fairest way to decide who gets the best seat on a long car trip?|draw_straws;take_turns;whoever_gets_carsick;the_oldest;whoever_called_it_first;other
+C|values|What does a streak of good weather on your holidays mostly show?|good_planning;good_luck;nothing_at_all;that_you_deserve_it
+N|values|Do you believe some days are simply meant to go wrong no matter what you do?
+C|values|Which is closest to your view of 'what goes around comes around'?|it_is_literally_true;it_is_true_because_people_remember_how_they_were_treated;it_is_a_nice_hope;it_is_false;other
+S|values|How much do you believe the universe keeps a balance between your good and bad days?|There is no balance at all ; There might be a faint tendency ; There is a loose balance over time ; There is a strong balance ; Every bad day is paid back with a good one
+C|values|Which best explains a string of green traffic lights on an important morning?|pure_chance;a_good_sign;good_timing;i_would_not_notice
+N|personality|Do you take a string of small lucky events as a sign that a big day will go well?
+C|personality|When you find something you lost after giving up, what do you usually think?|always_the_last_place;someone_moved_it;it_turned_up_when_meant_to;just_chance
+C|values|What is the most likely reason people report seeing departed loved ones in dreams?|grief_shaping_dreams;a_real_visit;memory_at_work;comfort_the_mind_creates;other
+S|values|How much would a dream about a departed relative giving you advice affect what you do?|It would not affect me at all ; It would make me think for a moment ; It would make me consider the advice seriously ; It would probably change what I do ; I would follow the advice without question
+C|values|Which folk weather sign do you trust most?|red_sky_at_night;cows_lying_down;aching_joints;swallows_flying_low;none
+C|values|Which animal behavior do people often read as an omen that seems most reasonable to you?|dogs_howling;birds_flying_low_before_rain;cats_hiding;cows_lying_down;none
+C|taste|Which way of reading the future sounds most fun to try, just for entertainment?|tea_leaves;palm_reading;tarot;a_magic_eight_ball;fortune_sticks;none
+C|values|What do you think of personality types based on the letters of a person's name?|there_is_some_truth;it_is_fun_but_false;it_is_nonsense;never_heard_of_it
+S|values|How much should a couple consider a lucky date when picking their wedding day?|Not at all ; Only as a tie breaker ; It is one small factor ; It is an important factor ; It should come first
+C|values|Which is the best reason to follow a superstition you do not believe in?|to_respect_someone_else;for_fun;just_in_case;it_calms_your_nerves;there_is_no_good_reason
+N|values|Is it harmless to follow a superstition if it makes you feel calmer?
+C|values|What is the biggest harm a superstition can do?|stopping_people_from_seeing_a_doctor;wasting_money;causing_needless_worry;spoiling_plans;no_harm;other
+S|values|How much do you think luck decides whether a small business survives its early years?|Luck plays no part ; Luck plays a small part ; Luck matters about as much as skill ; Luck matters more than skill ; Luck decides it almost entirely
+C|values|Which setback do people blame on bad luck most unfairly?|losing_a_job;a_failed_relationship;a_bad_grade;getting_sick;missing_a_train;other
+S|values|How much do you think some people attract drama wherever they go?|Nobody attracts drama ; A rare few people do ; Some people do ; Many people do ; Drama follows certain people everywhere
+C|values|When a friend says 'it was fate' about meeting their partner, what do you think?|how_romantic;it_was_chance_dressed_up;it_was_their_choices;i_believe_them
+S|values|How much do you think luck shapes which friends a person ends up with?|Luck plays no part in friendship ; Luck plays a small part ; Luck and choice matter equally ; Luck plays a large part ; Luck decides nearly all friendships
+C|values|Which of these coincidences would feel most like more than chance to you?|meeting_a_neighbor_abroad;sharing_a_birthday_with_a_new_partner;a_stranger_knowing_your_nickname;finding_an_old_letter_on_an_important_day;none
+N|values|Would you feel uneasy buying a used item that once belonged to someone who died?
+C|values|What would you do with a ring you found on a beach that looked old?|keep_it_for_luck;try_to_find_the_owner;sell_it;leave_it_there;hand_it_in
+S|values|How uneasy would you be sleeping in a hotel room where something sad once happened?|I would not feel uneasy at all ; I would feel slightly odd ; I would feel noticeably uneasy ; I would ask to change rooms ; I would leave the hotel
+C|values|What most likely explains a cold spot in an old house?|drafts;poor_insulation;a_ghost;imagination;other
+C|social|Which superstition do most people still follow, even if they say they do not believe it?|knocking_on_wood;avoiding_walking_under_ladders;crossing_fingers;not_opening_umbrellas_indoors;making_a_birthday_wish;other
+S|social|How superstitious are most people when something important is at stake?|Most people drop all superstition ; Most people hold on to a small habit ; Most people follow a few rituals ; Most people follow many rituals ; Most people become very superstitious
+N|social|Do most people secretly read their horoscope even if they call it nonsense?
+C|social|What do most people credit when they narrowly avoid an accident?|luck;their_quick_reactions;fate;a_guardian_or_protector;nothing_in_particular
+S|social|How much do most people believe in fate when it comes to love?|Most people do not believe in it at all ; Most people believe in it a little ; Most people are split ; Most people mostly believe in it ; Most people firmly believe in it
+N|social|Do most people think they are luckier than average?
+C|social|What do most people say is the main reason a person got rich?|hard_work;luck;family_money;talent;cheating;timing
+S|social|How much do most people think luck explains their own failures compared with their successes?|Most people blame luck far less for failures ; Most people blame luck a little less for failures ; Most people blame luck about equally ; Most people blame luck a little more for failures ; Most people blame luck far more for failures than they credit it for successes
+N|social|Would most people keep a lucky charm they were given, even if they doubted it worked?
+C|social|What do most people do after they accidentally say that nothing could go wrong?|nothing;knock_on_wood;laugh_nervously;take_it_back;feel_uneasy_all_day
+S|social|How likely are most people to believe a fortune teller who gets one detail right?|Most people would stay fully skeptical ; Most people would be slightly impressed ; Most people would be curious to hear more ; Most people would believe much of what followed ; Most people would be completely convinced
+N|social|Do most people believe some places have a bad feeling about them?
+C|social|Which do most people think is more important for success?|luck;hard_work;talent;connections;timing
+S|social|How often do most people say something like 'knock on wood'?|Most people never say it ; Most people say it a few times a year ; Most people say it most months ; Most people say it most weeks ; Most people say it nearly every day
+N|social|Do most people believe in ghosts, at least a little?
+C|social|What do most people wish for when they blow out birthday candles?|health;love;money;success;happiness_for_others;nothing_in_particular
+S|social|How much do most people think where they were born decided how their life went?|Most people think it made no difference ; Most people think it mattered a little ; Most people think it mattered somewhat ; Most people think it mattered a lot ; Most people think it decided almost everything
+N|social|Would most people let a coin toss settle a disagreement with a friend?
+C|social|What do most people think a déjà vu feeling means?|a_brain_glitch;a_memory_of_a_dream;a_sign_they_are_on_the_right_path;a_past_life;nothing
+C|social|Which paranormal belief do most people hold?|ghosts;psychic_powers;astrology;visitors_from_space;lucky_charms;none
+S|values|How much would a lucky find, like money on the street, change your mood for the day?|It would not change my mood at all ; It would give me a brief smile ; It would lift my mood for the morning ; It would lift my whole day ; It would make me feel the whole week was blessed
+C|values|What should you do with money you find on the street with no way to trace the owner?|keep_it;give_it_away;hand_it_to_the_police;spend_it_on_something_fun;leave_it
+N|values|Do you believe that finding money brings more good luck if you give some of it away?
+S|values|How much do you think a good first day at a new job predicts how the job will go?|A first day predicts nothing ; A first day hints a tiny bit ; A first day gives a fair clue ; A first day predicts a lot ; A first day sets the tone for everything after
+C|values|Which is the wiser way to think about bad luck?|it_evens_out;it_teaches_something;it_is_just_noise;it_is_a_warning;other
+N|personality|Do you say a quick phrase to yourself before something risky, like a flight taking off?
+C|personality|What do you do when someone says your plan can't possibly fail?|laugh_it_off;knock_on_wood;tell_them_not_to_say_that;agree_confidently;nothing
+C|values|Which is closest to your view of lucky streaks in your own life?|they_come_and_go_randomly;they_come_after_hard_work;they_come_when_i_am_in_a_good_mood;i_have_never_had_one
+C|values|Which do you think shapes a person's life more: the family they are born into or the era they are born into?|the_family;the_era;both_equally;neither_much
+C|values|A talented musician never gets discovered while a less talented one becomes famous. What mostly explains it?|luck;marketing;connections;persistence;the_less_talented_one_is_better_than_it_seems;other
+C|values|What would you most want to be lucky in?|love;health;money;friendship;career;other
+C|values|Which is harder to accept: bad luck that hurts you or good luck that helps someone who did nothing?|bad_luck_that_hurts_me;undeserved_luck_for_others;both_equally;neither
+C|values|What does the phrase 'it wasn't meant to be' mean to you?|real_fate;a_comforting_saying;a_way_to_move_on;an_excuse;other
+C|values|Which best describes how you feel about envelopes of money or red packets given for luck at celebrations?|a_lovely_tradition;just_a_gift;a_real_blessing;never_had_them
+C|values|Which of these would you say was pure luck?|finding_a_parking_space;getting_a_job_after_many_applications;meeting_your_best_friend;passing_a_test_you_studied_for;none
+C|personality|When you are late and every light turns red, what do you usually think?|typical_luck;the_universe_is_telling_me_something;i_should_have_left_earlier;nothing
+S|values|How much do you think a person can change their luck by moving to a new place?|Moving cannot change luck at all ; Moving changes luck only by chance ; Moving can bring a fresh start with new chances ; Moving often changes a person's luck ; Moving is the surest way to change one's luck
+S|values|How much do you think luck has shaped the person you are, rather than just what happened to you?|Luck has not shaped my character at all ; Luck has shaped my character a little ; Luck has shaped my character somewhat ; Luck has shaped much of my character ; Luck has shaped nearly all of my character
+S|personality|How often do you catch yourself hoping for a lucky break instead of making a plan?|I almost never hope for luck over planning ; I do it once in a while ; I do it now and then ; I do it often ; I do it nearly every time
+S|values|How much should people plan their lives around the chance that things will go wrong?|People should not plan for things going wrong ; People should keep a small safety net ; People should plan sensibly for common setbacks ; People should plan carefully for most setbacks ; People should plan for every possible disaster
+N|values|Do you think a person can be unlucky in love but lucky in everything else?
+N|values|Would you swap your natural talents for a lifetime of steady good luck?
+N|personality|Have you ever made a wish at a well, bridge, or statue that tradition says grants wishes?
+C|values|Which story of luck do you find most moving?|a_stranger_saves_a_life_by_chance;lost_family_reunited_by_accident;a_last_minute_change_of_plans_avoids_disaster;a_wrong_number_leads_to_love;other
+C|social|What do most people do when a friend says a place feels haunted?|laugh_it_off;ask_for_the_story;feel_a_little_uneasy;avoid_the_place;believe_them
+S|social|How much do most people believe that everything happens for a reason?|Most people do not believe it at all ; Most people believe it a little ; Most people are split ; Most people mostly believe it ; Most people firmly believe it

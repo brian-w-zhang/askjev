@@ -1,0 +1,225 @@
+@node self.values.fairness_justice
+# choice: dividing money, prizes, and goods
+C | Four friends chip in unequal amounts for a raffle ticket, and it wins a vacation for one person. What is the fairest way to decide who goes? | biggest_contributor = whoever paid the most ; draw_lots = pick a name at random ; sell_and_split = sell the trip and split the money by contribution ; sell_and_split_evenly = sell it and split evenly ; buyer_decides = whoever physically bought the ticket decides ; other
+C | Three roommates share a flat, but one room is much larger and has its own bathroom. What is the fairest way to split the rent? | equal_shares = everyone pays the same ; by_room_size = rent follows room size ; big_room_pays_premium = the big room pays a set premium ; auction_rooms = roommates bid for the rooms ; rotate_rooms = swap rooms every few months ; other
+C | A carpool driver takes three coworkers to the office every day. What is the fairest arrangement? | split_fuel = riders split the fuel cost ; fuel_and_wear = riders cover fuel plus car wear ; take_turns_driving = everyone takes turns driving ; driver_pays_nothing_extra = riders buy the driver lunch now and then ; nothing_owed = the driver was going anyway ; other
+C | Two neighbors share a fence that falls down in a storm. Only one of them has a dog that needs the fence. How should the repair cost be split? | half_each = split it evenly ; dog_owner_more = the dog owner pays more ; dog_owner_all = the dog owner pays everything ; by_frontage = split by how much of the fence each side faces ; other
+C | A band plays its first paid gig. The singer wrote all the songs, but everyone played. How should the fee be divided? | equal_split = equal shares for every member ; songwriter_bonus = equal shares plus a bonus for the songwriter ; by_role = shares set by each person's role ; reinvest = put it all into the band fund ; other
+C | Five coworkers share a pizza order, but one of them ate almost half. What is the fairest way to pay? | split_evenly = everyone pays the same ; by_slices = pay by slices eaten ; big_eater_pays_extra = the big eater adds a bit extra ; big_eater_treats = the big eater pays the whole bill ; other
+C | A group of hikers finds a wallet with cash and a reward is offered by the owner. Who should get the reward? | first_to_see = whoever spotted it first ; split_evenly = the whole group shares it ; whoever_returned_it = whoever made the call and handed it back ; donate_it = give it to charity ; refuse_it = decline the reward ; other
+C | Two siblings inherit a single valuable painting that cannot be split. What is the fairest outcome? | sell_and_split = sell it and split the money ; one_buys_out = one keeps it and pays the other half its value ; take_turns = it moves between their homes ; coin_flip = decide by chance ; older_keeps = the older sibling keeps it ; other
+C | A startup's early employee left before the company became valuable. What share of the success is fair for them? | full_original_share = everything they were promised ; share_for_time_served = a share matching the time they stayed ; small_thank_you = a small token ; nothing = nothing beyond their salary ; other
+C | A family grows vegetables in a shared community garden plot but one member did most of the weeding. How should the harvest be shared? | evenly = everyone gets the same ; by_effort = shares follow hours worked ; weeder_picks_first = the weeder chooses first, then even split ; by_need = whoever needs food most gets more ; other
+C | A group trip has one person who drove the whole way. How should the fuel and tolls be covered? | everyone_splits = everyone including the driver splits it ; passengers_pay = passengers split it and the driver pays nothing ; passengers_pay_plus = passengers pay it all plus buy the driver meals ; driver_pays_share_of_fuel = the driver pays only for fuel ; other
+C | A crossword contest ends in a tie, and there is one trophy. What is the fairest way to settle it? | tiebreaker_puzzle = a sudden death puzzle ; fastest_time = whoever finished faster wins ; share_it = both share the title and trophy ; coin_toss ; second_trophy = the organizers buy another trophy ; other
+C | An office team wins a bonus pool for a project that one person rescued at the last minute. How should the pool be divided? | equal = everyone gets the same share ; rescuer_bonus = equal shares plus extra for the rescuer ; by_seniority = shares follow rank ; manager_decides = the manager divides it freely ; team_votes_privately = team members allocate points to one another ; other
+C | Two kids both want the last cupcake at a birthday party. What is the fairest way to decide? | cut_in_half = cut it in half ; one_cuts_other_chooses = one cuts, the other chooses ; birthday_kid_decides = the birthday child decides ; neither_gets_it = no one gets it ; younger_gets_it = the younger child gets it ; other
+C | A neighborhood yard sale earns money from items that were very unequal in value. How should the takings be divided? | by_item_sold = each family keeps what their items earned ; evenly = split evenly ; mostly_by_item = mostly by item with a small shared pot for the organizer ; all_to_street_fund = it all goes to a street fund ; other
+C | A parent leaves money to three adult children, one of whom is much poorer than the others. What is the fairest will? | equal_thirds = equal shares ; more_to_poorest = more to the child in need ; more_to_caregiver = more to whoever helped the parent most ; by_parents_wishes = whatever the parent chooses is fair ; other
+C | Two authors wrote a book together, but one also did all the promotion afterward. How should royalties be split? | half_each ; more_to_promoter = more to the one who promoted it ; by_chapters = by chapters written ; agreed_upfront = whatever they agreed at the start ; other
+C | A shared family cabin is wanted by several relatives for the same holiday week. What is the fairest way to allocate it? | rotate_yearly = rotate the week each year ; first_to_ask = first come, first served ; oldest_gets_it = the oldest relative gets priority ; share_the_week = everyone squeezes in together ; lottery = draw lots each year ; other
+C | A class earns money from a bake sale and one parent paid for all the ingredients. What is fairest? | reimburse_first = pay the parent back before counting profits ; count_as_donation = treat the ingredients as a gift ; partial_reimbursement = pay back half ; ask_the_parent = let the parent decide ; other
+C | Friends share a streaming subscription, but one of them watches far more than the others. How should the cost be split? | evenly ; by_use = by hours watched ; heavy_user_extra = the heavy user pays a little extra ; owner_pays = the account holder pays it all ; other
+C | Two players tie on points at the end of a league season. What is the fairest way to name a champion? | head_to_head = whoever won their games against each other ; playoff = a deciding match ; goal_difference = better overall margin ; joint_champions = name both champions ; other
+C | A lost dog is found by one neighbor but returned to its owner by another. Who deserves the reward? | the_finder = whoever found it ; the_returner = whoever brought it home ; split = split between both ; neither = no reward is needed ; other
+C | A company can promote only one of two equally strong candidates. What is the fairest tiebreaker? | longer_service = whoever has worked there longer ; interview_panel = an extra interview with a new panel ; lottery = draw lots ; whoever_needs_it_more = whoever would benefit more ; team_feedback = ask the team ; other
+C | An estate includes the family home, which one child has lived in rent free for years. What is fair when dividing the estate? | equal_shares_ignore_rent = split equally and ignore the past ; deduct_rent = deduct the rent they saved from their share ; they_keep_house = let them keep the house and adjust the rest ; sell_everything = sell it all and split evenly ; other
+C | Several restaurant staff share tips. What is the fairest way to split the tip jar? | equal = equal shares for all ; by_hours = by hours worked ; servers_most = servers get most, kitchen gets some ; by_seniority ; other
+C | A charity auction item is won at the same price by two bidders who raised their hands together. What is fair? | auctioneer_picks = the auctioneer picks one ; rebid = restart bidding between the two ; both_pay = ask whether both will pay for a duplicate ; coin_toss ; other
+C | Two teams tie a friendly football match that needs a winner for the trophy. What is the fairest decider? | penalty_shootout ; extra_time ; share_the_trophy ; replay_match = play again another day ; coin_toss ; other
+C | A group buys concert tickets but the seats vary from front row to far back. How should seats be assigned? | draw_lots ; whoever_paid_more = whoever paid more picks first ; biggest_fan_first = the biggest fan picks first ; organizer_first = the organizer picks first ; swap_at_intermission = swap seats halfway ; other
+
+# choice: punishment, forgiveness, second chances
+C | A teenager keys a neighbor's car on a dare and admits it the next day. What consequence is fairest? | pay_for_repair = pay for the repair ; work_it_off = do chores for the neighbor until it is paid off ; apology_only = a sincere apology is enough ; police_report = report it to the police ; grounding = punishment at home only ; other
+C | An employee borrows from the till to cover rent and repays it all before anyone notices. When it later comes out, what is fair? | no_action = no action since it was repaid ; warning = a formal warning ; lose_cash_duties = keep the job but lose access to cash ; fired ; other
+C | A club member leaked the surprise plans for the club's anniversary party. What is the fairest response from the club? | nothing = let it go ; private_talk = a private word ; removed_from_committee = removed from the planning committee ; suspended = suspended from the club for a while ; expelled ; other
+C | A student is caught using notes during a quiz but says they did not know notes were banned. What is fair? | full_penalty = zero on the quiz ; retake = allow a retake ; warning_only = a warning and keep the grade ; partial_credit = deduct some points ; other
+C | Someone ran over your mailbox years ago and never owned up. They finally confess and offer to pay. What is fair? | accept_payment = accept payment and move on ; forgive_no_payment = forgive and refuse the money ; payment_plus_apology = accept payment and an apology ; refuse_to_forgive = accept the money but not the apology ; other
+C | A player on a youth soccer team shoved an opponent after a bad tackle. What punishment is fairest? | sit_out_one_game = sit out the next game ; apology_to_opponent = apologize to the opponent ; both_players_punished = punish both players ; warning_only ; removed_from_team ; other
+C | A roommate eats your labeled food for the third time. What is the fairest outcome? | replace_food = they replace what they ate ; pay_double = they pay double its value ; house_meeting = a house meeting to set rules ; separate_fridges = separate shelves with locks ; move_out = ask them to move out ; other
+C | A long time volunteer is found to have kept a small amount of donated money. What is the fairest response? | quiet_repayment = repay it quietly and stay ; repay_and_step_down = repay it and step down ; public_notice = inform the donors ; police = report it to the police ; forgive = forgive given their years of service ; other
+C | A child breaks a classmate's tablet by accident while playing. Who should pay for the repair? | childs_family = the child's family pays ; split_families = the two families split it ; school = the school pays ; nobody = it was an accident, so nobody ; owner = the owner, since they brought it to school ; other
+C | A hotel guest damaged a room and left without reporting it. What is fair when they are traced? | charge_repair = charge the repair cost ; charge_plus_fee = charge repair plus a fee ; ban_them = ban them from the hotel ; let_it_go = absorb the cost ; other
+C | A friend who borrowed your bike returns it with a bent wheel and says nothing. What outcome is fair? | they_pay_repair = they pay for the repair ; split_repair = you split it ; you_pay = you pay since bikes wear out ; replace_bike = they buy a new bike ; other
+C | A local shop catches a regular customer shoplifting a candy bar. What is the fairest response? | pay_and_warn = pay for it and a warning ; ban_customer = ban them from the shop ; call_police ; let_it_slide = let it go this once ; other
+C | Someone spread a false rumor about you at work, and now they apologize publicly. What is the fairest way to respond? | full_forgiveness = forgive fully ; forgive_keep_distance = forgive but keep distance ; demand_correction = ask them to correct it with everyone told ; report_to_hr = report it anyway ; no_forgiveness ; other
+C | A driver backs into your parked car and leaves a note with their number. What is the fairest outcome? | they_pay_all = they pay the full repair ; insurance = let insurance handle it ; split = split the cost for their honesty ; forgive = let it go because they left a note ; other
+C | A soccer referee admits after the match that a call was wrong. What should happen to the result? | result_stands = the result stands ; replay = replay the match ; overturn = change the result ; stands_with_review = the result stands but the referee is reviewed ; other
+C | A coworker who was fired for rudeness reapplies years later saying they have changed. What is fairest? | hire_back = give them a fresh chance ; interview_normally = interview like any candidate ; trial_period = rehire on a trial ; decline = do not rehire ; other
+C | A kid cheats in a spelling bee and is discovered after winning. What is fair? | stripped_of_title = the title goes to the runner up ; rematch = hold the final again ; keep_title_with_warning = keep it with a warning ; void_contest = cancel the result for everyone ; other
+C | Someone repeatedly parks in your reserved spot despite notes. What is the fairest step? | tow_the_car = have the car towed ; talk_in_person = speak to them in person ; complain_to_manager = complain to the building manager ; ignore = ignore it ; other
+C | An online game player is caught using a cheat once in a tournament. What penalty fits? | lifetime_ban ; ban_for_a_season ; forfeit_that_match = forfeit only that match ; warning ; other
+C | Someone who stole from your garden years ago now helps out at your community project. What is fair? | welcome_fully = welcome them fully ; welcome_but_watch = welcome them but keep an eye out ; ask_for_apology_first = ask for an apology first ; exclude = keep them out ; other
+C | A roommate forgets to pay their share of the utilities for two months and then apologizes. What is the fair outcome? | pay_back_now = pay it all at once ; payment_plan = pay it back over time ; pay_plus_interest = pay back with a little extra ; forgive_debt = forget it ; other
+C | A student disrupted a school trip so badly the whole class returned early. What consequence is fair for that student? | miss_next_trip = miss the next trip ; apologize_to_class = apologize to the class ; extra_duties = do extra duties ; no_extra_penalty = no penalty beyond the lost trip ; other
+C | A tenant leaves an apartment with obvious damage beyond normal wear. What should happen to their deposit? | keep_all = the landlord keeps it all ; deduct_repair_cost = deduct only the repair cost ; return_most = return most and absorb the rest ; return_all ; other
+C | A marathon runner is found to have taken a short cut for part of the race. What is fair? | disqualify ; add_time_penalty = add a time penalty ; ban_future_races = ban them from future races ; warning ; other
+C | A dog bites a neighbor's child who had been poking it through the fence. What is the fair outcome? | owner_pays_bills = the owner pays medical bills ; split_responsibility = both families share responsibility ; child_family_responsible = the child's family bears it ; dog_removed = the dog must be rehomed ; other
+C | A long time employee made one serious error that cost a big client. What is the fairest response? | fire_them ; formal_warning ; retraining ; no_action = no action given their record ; demotion ; other
+C | Someone apologizes for a hurtful comment they made a decade ago that you still remember. What is the fairest response? | full_forgiveness ; forgive_but_tell_them = forgive and tell them how it felt ; thank_but_not_forgive = thank them but not forgive ; ignore_it ; other
+C | A hockey player injures an opponent with an illegal hit. What is the fairest penalty? | game_misconduct = thrown out of that game ; multi_game_ban = banned for several games ; season_ban = banned for the season ; fine_only = a fine only ; other
+
+# choice: credit, recognition, merit and luck
+C | Two scientists make the same discovery a week apart without knowing about each other. Who deserves the credit? | first_to_publish = whoever published first ; both_equally = share credit equally ; whoever_explained_better = whoever explained it more fully ; the_more_senior = the more established scientist ; other
+C | An intern's suggestion saves the company a lot of money, but the manager implemented it. Who deserves the award? | the_intern ; the_manager ; both_named = both named together ; the_whole_team ; other
+C | A goalkeeper's mistake lets in a goal, but the team still wins. How should the goalkeeper be rated for the game? | judged_on_mistake = judged mainly on the mistake ; judged_on_result = judged on the team's win ; judged_on_whole_game = judged on the whole performance ; other
+C | A student gets a perfect score after the teacher accidentally left the answer key visible to the whole room. What is fair? | void_test = void the test for everyone ; retest_all = retest everyone ; keep_scores = keep the scores ; retest_top_scores = retest only the top scorers ; other
+C | A promotion goes to someone who got lucky with a project that happened to succeed. What is the fairest view? | deserved = they deserved it since results count ; undeserved = it was luck, not merit ; partly_deserved = partly deserved ; depends_on_effort = it depends on their effort ; other
+C | A charity fun run winner turns out to be a professional athlete. What is fair? | keep_the_win = keep the win ; separate_category = move them to an elite category ; give_prize_to_runner_up = give the prize to the next amateur ; other
+C | In a cooking contest, the winning dish was mostly prepared by the contestant's assistant. Who should get the trophy? | contestant ; assistant ; both ; runner_up = the runner up instead ; other
+C | A job opening goes to an internal candidate over a stronger outside candidate. What is the fairest view? | fair_loyalty = fair to reward loyalty ; unfair_merit = unfair since the best should win ; fair_if_close = fair only if they were close ; other
+C | A fishing contest is won by someone whose catch was a lucky fluke on the last cast. What is fair? | win_stands = the win stands, luck is part of fishing ; add_skill_award = give a separate skill award too ; count_total_weight = judge by total catch instead ; other
+C | A group presentation is praised, and the boss thanks only the person who presented it. What is the fair next step? | presenter_corrects = the presenter should name the others ; team_raises_it = the team should raise it later ; leave_it = leave it ; boss_should_ask = the boss should have asked who did what ; other
+C | A school awards a prize for most improved student. Who deserves it more? | biggest_jump = the student who improved the most ; hardest_worker = the student who worked the hardest ; overcame_most = the student who overcame the most ; other
+C | A bestseller is based on an idea the author heard at a dinner party. What does the author owe the person who shared it? | nothing ; thanks_in_book = a thank you in the acknowledgments ; share_of_money = a share of the earnings ; co_credit = co author credit ; other
+C | A startup succeeds partly because a friend made one key introduction. What is fair for the friend? | nothing_owed = nothing is owed ; thank_you_gift = a thank you gift ; small_equity = a small share in the company ; finders_fee = a one time fee ; other
+C | A relay team wins gold, but one runner was carried by the others' fast legs. Who deserves a medal? | whole_team = everyone gets one ; only_strong_runners = only the strong runners ; all_but_weakest = all but the slowest ; other
+C | When a club chooses a new captain, what should count most? | best_player ; most_committed = most committed member ; longest_serving ; members_choice = whoever members pick ; best_leader = best at leading others ; other
+C | A scholarship can go to the top scorer or to a close runner up from a poorer family. Who should get it? | top_scorer ; runner_up_in_need ; split_it = split the scholarship ; other
+C | A research paper lists a senior professor first even though a student did most of the work. What is fair? | student_first = the student should be first ; professor_first = the professor first is normal ; equal_contribution_note = note equal contribution ; other
+C | A salesperson lands a huge deal from a lead passed on by a colleague. How should the commission be shared? | salesperson_all = all to the salesperson ; split_evenly ; finders_share = a smaller share to the colleague ; team_pool = add it to the team pool ; other
+C | A lucky customer finds a rare coin in change and sells it for a fortune. What is fair to the shop that gave it out? | keep_it_all = the customer keeps it all ; share_with_shop = share some with the shop ; return_the_coin = return the coin ; other
+C | A gymnast wins because the judges misread a rival's score. The error is found a week later. What is fair? | swap_medals = swap the medals ; share_gold = both get gold ; result_stands = the result stands ; other
+
+# choice: queues, rules, and allocations
+C | A bakery has one loaf left and two customers arrive at the same moment. What is fairest? | split_loaf = split the loaf ; first_to_speak = whoever speaks first ; baker_chooses = the baker decides ; older_customer = the older customer ; regular_customer = the regular gets it ; other
+C | A theme park lets visitors pay extra to skip the queue. What is the fairest view? | fair_choice = fair since anyone can pay ; unfair_to_others = unfair to those who waited ; fair_if_limited = fair if only a few skips per ride ; other
+C | A hospital waiting room has walk ins and appointments. Who should be seen first when both are equally sick? | appointment_first ; walk_in_first = whoever arrived first ; alternate = take turns ; other
+C | A popular class has more applicants than seats. What is the fairest way to fill it? | lottery ; first_come ; grades = best grades ; seniority = older students first ; need = students who need it to graduate ; other
+C | Someone saves spots for friends in a long line outside a concert. What is fairest? | fair = holding places for friends is fine ; one_spot = hold only one spot ; unfair = unfair to those behind ; fair_if_they_arrive_soon = fine if the friends arrive soon ; other
+C | Beach chairs are claimed by towels at dawn and left empty for hours. What is the fairest rule? | towels_hold = towels hold the chair all day ; time_limit = chairs free after an hour unattended ; first_seated = whoever is sitting there ; hotel_assigns = the hotel assigns chairs ; other
+C | A game of pickup basketball has more players than spots. Who plays next? | winners_stay = the winning team stays on ; strict_rotation = everyone rotates in turn ; best_players_first ; first_to_arrive ; other
+C | A community garden has more applicants than plots. What is fairest? | lottery ; waiting_list = first come waiting list ; longtime_residents = longtime residents first ; share_plots = split plots in half ; families_first = families with children first ; other
+C | Only one parking spot is available in front of a building. What is the fairest rule for it? | first_come ; reserved_for_disabled = reserved for people with mobility needs ; rotate_daily = rotate among tenants ; highest_rent = tenant who pays most ; other
+C | A limited edition sneaker release has far more buyers than pairs. What is fairest? | lottery ; first_in_line ; loyal_customers = loyal customers first ; highest_bidder = auction them ; one_per_person = first come but one pair each ; other
+C | Two kids fight over which show to watch on the one television. What rule is fairest? | alternate_days = take turns by day ; flip_a_coin ; parent_picks ; watch_neither ; split_the_time = split the time evenly ; other
+C | A town swimming pool is crowded on hot days. What is the fairest way to limit entry? | first_come ; time_slots = timed slots booked ahead ; residents_first = residents before visitors ; lottery ; higher_price = raise the price ; other
+C | In a game of cards, a player notices the dealer accidentally exposed a card. What is the fairest fix? | redeal = redeal the hand ; card_to_bottom = put that card at the bottom ; play_on = play on as dealt ; other
+C | A popular restaurant takes reservations but also holds some tables for walk ins. What split is fairest? | all_reservations ; mostly_reservations ; half_and_half ; mostly_walk_ins ; all_walk_ins ; other
+C | A charity food bank has more visitors than food. What is the fairest way to distribute it? | equal_bags = everyone gets the same bag ; by_family_size = by family size ; first_come ; neediest_first ; other
+C | Two coworkers want the same week off, and only one can go. What is the fairest way to decide? | who_asked_first ; seniority ; last_years_loser = whoever missed out last time ; family_reason = whoever has a family reason ; coin_flip ; other
+C | A shared office has one window desk. What is the fairest way to assign it? | rotate_monthly ; seniority ; lottery ; best_performer = the top performer ; whoever_needs_light = whoever needs light most ; other
+C | A children's race has kids of very different ages. What is the fairest setup? | age_groups = separate age groups ; head_starts = head starts for younger kids ; everyone_together = one race for all ; everyone_gets_medal = medals for all ; other
+C | A pub quiz team uses a phone to look up an answer. What is the fair outcome? | disqualify_team ; lose_that_round = lose points for that round ; lose_that_answer = lose that answer only ; warning ; other
+C | A limited number of flu shots arrive at a workplace. Who should get them first? | oldest_staff ; staff_with_health_risks = staff with health risks ; frontline_staff = staff who meet the public ; lottery ; first_to_sign_up ; other
+C | A shared house has one parking space and three drivers. What is fairest? | rotate_weekly ; whoever_pays_more = whoever pays more rent ; first_home = first home each evening ; longest_resident = the longest resident ; auction = drivers bid for it ; other
+C | A club tournament draws its brackets. What is the fairest method? | random_draw ; seeded_by_rank = seeded by ranking ; regional_groups = group by region ; organizer_choice = organizers arrange it ; other
+C | A popular summer camp must pick campers from a long list. What rule is fairest? | lottery ; returning_campers_first ; first_to_apply ; siblings_together = keep siblings together first ; need_based = children who need it most ; other
+C | A delayed flight has one seat on the next plane. Who should get it? | first_to_check_in ; highest_fare = whoever paid most ; urgent_reason = whoever has an urgent reason ; frequent_flyer = the loyal customer ; lottery ; other
+C | A playground swing has a long queue of kids. What is the fairest rule? | time_limit = a set time each ; count_pushes = a set number of swings ; first_come_no_limit = first come, stay as long as you like ; younger_first ; other
+C | A new apartment building has a few units with sea views and many without. How should they be assigned? | highest_price = sell to the highest payer ; lottery ; first_to_sign ; families_first ; other
+C | A local road race offers a cash prize but a hired pace runner accidentally crosses first. What is fair? | give_to_next = prize goes to the next finisher ; pacer_keeps = the pacer keeps it ; split = split it ; other
+
+# score: deservingness and proportion
+S | Someone lends a friend money and never gets it back. How much should the friend have to pay back years later? | Nothing, the moment has passed ; A token amount as a gesture ; About half the loan ; The full amount ; The full amount plus something extra for the wait
+S | How much should a sincere apology reduce the consequences for someone who damaged your property? | Not at all, they still pay everything ; A little, maybe a small discount ; About half the cost is forgiven ; Most of it is forgiven ; All of it is forgiven
+S | A worker who is rude to customers is otherwise excellent. What consequence fits? | No consequence, their work speaks for itself ; A friendly reminder ; A formal warning ; A pay cut or lost bonus ; Dismissal
+S | How should a teacher treat a late essay handed in with a sincere excuse? | Full penalty like any late essay ; A reduced penalty ; No penalty but no extension next time ; No penalty at all ; A new deadline and extra help
+S | A player breaks a minor rule in a friendly match and it changes the score. What is fair? | Let the score stand ; Give a warning and keep the score ; Remove the point that came from it ; Replay the whole match ; Award the match to the other side
+S | How many chances should a friend get who keeps borrowing things and returning them damaged? | None after the first time ; One more chance ; A couple more chances ; Several chances ; As many as it takes
+S | Someone skipped ahead of you in a long queue. What response feels fair? | Say nothing and let it go ; Give them a pointed look ; Politely point out the back of the line ; Insist firmly that they move ; Call staff to remove them
+S | A friend forgot your birthday after you threw them a surprise party. What response fits? | Nothing, it doesn't matter ; A light joke about it ; A gentle mention that it hurt ; A serious talk about it ; Pulling back from the friendship
+S | How much should a person's hard childhood reduce blame for a later mistake? | Not at all ; A little ; A fair amount ; A great deal ; Completely
+S | A contractor finishes your kitchen two months late. How much should you hold back from payment? | Nothing, delays happen ; A small discount ; A meaningful discount ; A large part of the fee ; Most of the fee
+S | How should a sports league treat a team caught faking injuries to waste time? | No action ; A warning to the team ; A fine ; A points deduction ; Expulsion from the league
+S | A cleaner accidentally breaks a cheap vase while working. What is fair? | Nothing, it is part of the job ; They say sorry and that's it ; They offer to replace it ; Its cost comes out of their pay ; They lose the job
+S | How much of the credit for a team win belongs to the coach? | Almost none ; A small part ; About as much as a key player ; Most of it ; Nearly all of it
+S | A person keeps an extra item a cashier forgot to charge for, then returns it the next day. How much credit do they deserve? | None, they should have noticed ; A little ; Some praise ; Real praise ; High praise for honesty
+S | A friend who hurt you badly years ago now wants to be close again. How much should you let them back in? | Not at all ; As a distant acquaintance ; As a casual friend ; Almost as close as before ; Fully as before
+S | How much should someone who found a lost wallet be rewarded? | Nothing, returning it is expected ; A thank you ; A small gift ; A meaningful cash reward ; A large share of the cash inside
+S | A neighbor's tree falls on your garage during a storm. How much should the neighbor pay? | Nothing, it was the weather ; A small share ; Half the cost ; Most of the cost ; All of it
+S | A child tells a lie to avoid trouble and then confesses. How should their punishment change? | Full punishment anyway ; Slightly lighter ; Much lighter ; A warning only ; No punishment at all
+S | How much should luck count when a manager gives out bonuses? | Only results count, luck included ; Mostly results ; Results and effort equally ; Mostly effort ; Only effort counts
+S | A student helped a classmate study and the classmate outscored them. How fair is that outcome? | Deeply unfair ; Somewhat unfair ; Neither fair nor unfair ; Fair enough ; Completely fair
+S | A company pays two workers the same though one works much harder. How fair is it? | Completely fair ; Mostly fair ; Somewhat unfair ; Clearly unfair ; Deeply unfair
+S | How much should a first offense count in how someone is judged for a later one? | Not at all ; A little ; Somewhat ; A lot ; It should decide the outcome
+S | How long should a player banned for cheating be kept out of competition? | Not at all, a warning is enough ; One event ; A season ; Several years ; For life
+S | Someone who broke your trust has made amends for a year. How much trust do they deserve now? | None ; A little ; Some ; Most of what they had ; All of it
+S | A worker loses a big sale through bad luck, not error. How should it affect their review? | Heavily, results are results ; Somewhat ; A little ; Not at all ; They should get credit for effort
+S | A diner receives a wrong order but eats it anyway. What should they pay? | Nothing ; A small part of the price ; Half the price ; Most of the price ; The full price
+S | How fair is it for a family business to hand the top job to a less able relative? | Completely fair, it's their business ; Mostly fair ; Somewhat unfair ; Very unfair ; Completely unfair
+S | A child breaks a rule that the parents never explained clearly. What consequence is fair? | Full punishment ; Reduced punishment ; A warning and an explanation ; No consequence at all
+S | How fair is it for someone to win a prize draw they only entered because a friend paid? | Unfair, the friend should win it ; Somewhat unfair ; Fair if they share it ; Completely fair
+S | A long time club member broke a club rule. How much should their service soften the penalty? | Not at all ; A little ; Somewhat ; A lot ; Completely
+S | A friend who stole from you once pays you back in full. How much should the friendship recover? | Not at all ; A little ; Partly ; Mostly ; Fully
+S | How much should a contest organizer bend the rules for a contestant who misread the deadline? | Not at all ; A short grace period ; A day or so extra ; Full acceptance of the entry
+S | How much should the winner of a charity raffle give back to the charity? | Nothing ; A small token ; Some of it ; Half of it ; All of it
+S | A teenager damages a store window and cannot pay. What is the fairest consequence? | None ; An apology only ; Community service ; Work at the store until it is paid ; Their parents pay in full
+S | How fair is a tennis tie break when one player served more points in it? | Completely fair ; Mostly fair ; Slightly unfair ; Clearly unfair
+S | A late joiner to a group gift wants their name on the card. How much should they pay? | Nothing ; A small amount ; A reduced share ; An equal share
+S | How fair is it for grandparents to leave more to grandchildren they see often? | Completely fair ; Mostly fair ; Somewhat unfair ; Very unfair ; Completely unfair
+S | An athlete loses a medal after a failed drug test caused by a contaminated supplement. What is fair? | Keep the medal, it was an accident ; Keep it with a warning ; Lose the medal but no ban ; Lose the medal and a short ban ; Lose the medal and a long ban
+S | A worker has been late every Monday for a month. What consequence fits? | None ; A friendly chat ; A written warning ; Lost pay for the time ; Dismissal
+S | How fair is it that the tallest kids get picked first for basketball at recess? | Completely fair ; Mostly fair ; Somewhat unfair ; Very unfair
+S | A spouse forgets to pay a shared bill, causing a late fee. How should the fee be covered? | Split evenly ; Mostly by the forgetful spouse ; Fully by the forgetful spouse ; Fully plus a small treat for the other
+S | How fair is it for a restaurant to charge a group for a no show booking? | Completely unfair ; Mostly unfair ; Fair if they were warned ; Completely fair
+S | How much credit should a team captain get for a win in which they did not play? | None ; A little ; Some ; A lot
+S | A neighbor who plays loud music late apologizes and stops. How much should you hold against them? | Nothing ; A little wariness ; Some lingering annoyance ; A lasting grudge
+S | Someone returns a borrowed book a year late but in perfect shape. What is fair? | Nothing more is owed ; A thank you and an apology ; A small gift ; Replace it with a new copy
+S | A team fires its coach after one bad season following many good ones. How fair is it? | Completely fair ; Mostly fair ; Somewhat unfair ; Very unfair
+S | How strongly should a surprise windfall be shared with family? | Not at all ; A small gift to close family ; A fair share to close family ; Most of it ; All of it
+S | A coworker admits they covered up a small mistake that later grew. How should the delay be judged? | Not at all, the admission is what counts ; A little worse than an early admission ; Much worse than an early admission ; As bad as never admitting it
+S | How fair is it for a prize to go to the first correct answer when some entrants had slower internet? | Completely fair ; Mostly fair ; Somewhat unfair ; Very unfair
+S | How much should a contest winner's prize be reduced if they broke a minor entry rule? | Not at all ; A little ; Half ; Most of it ; All of it
+S | How fair is it for siblings to get unequal gifts when their needs differ? | Very unfair ; Somewhat unfair ; Fair enough ; Completely fair
+S | A person repays a debt with a heartfelt letter but no interest after many years. How satisfied should the lender be? | Not at all ; A little ; Mostly ; Fully
+S | How strongly should forgiveness depend on the wrongdoer asking for it? | Not at all, forgive freely ; A little ; A fair amount ; Heavily ; Only forgive those who ask
+S | How much should the size of a harm matter compared with the intent behind it? | Only intent matters ; Mostly intent ; Both equally ; Mostly the harm ; Only the harm matters
+S | A hardworking student fails an exam by one mark. How fair is it to round the grade up? | Completely unfair ; Somewhat unfair ; Fair enough ; Completely fair
+S | A company rewards its top seller with a trip while support staff get nothing. How fair is it? | Completely fair ; Mostly fair ; Somewhat unfair ; Very unfair
+S | A child who cheats at a board game wins. What is the fairest reaction? | Ignore it ; Mention it gently ; Replay the game ; Declare the other player the winner
+S | How fair is it to punish a whole team for one member's rule break? | Completely fair ; Mostly fair ; Somewhat unfair ; Very unfair ; Completely unfair
+S | How fair is it that a person born into wealth wins a scholarship based on test scores alone? | Completely fair ; Mostly fair ; Somewhat unfair ; Very unfair
+S | Someone apologizes only after being caught. How much should that apology count? | Not at all ; A little ; Somewhat ; As much as any apology
+
+# noul
+N | Should a player who scored on an unnoticed foul own up and give the point back?
+N | Is it fair for a grandparent to leave everything to the grandchild who cared for them?
+N | Should a runner who wins because the leader fell offer to share the prize?
+N | Is it fair to split a group restaurant bill evenly when one person only had a salad?
+N | Should someone who wins a raffle with a ticket found on the ground keep the prize?
+N | Is it fair for a manager to give a raise based on effort rather than results?
+N | Should a wrongdoer who fully repaid the damage still face a further penalty?
+N | Is it fair to give a second chance to an employee who lied on their application?
+N | Should a sports team keep a title won because a rival was disqualified?
+N | Is it fair to make children share their birthday money with their siblings?
+N | Should a contest judge step aside if a friend is competing?
+N | Is it fair for early investors to earn far more than later employees who worked harder?
+N | Should a restaurant owner forgive a server who spilled wine on a customer by accident?
+N | Is it fair to charge the same entry fee to children and adults?
+N | Should you forgive a debt owed by a friend who has fallen on hard times?
+N | Is it fair for the oldest child to inherit the family business automatically?
+N | Should a finder of lost money keep it if the owner cannot be traced?
+N | Is it fair to reward only the top performer when the whole team contributed?
+N | Should someone who hurt you get a chance to explain before you decide to forgive?
+N | Is it fair for a club to charge new members more than founding members?
+N | Should a queue jumper be sent to the back of the line?
+N | Is it fair for a teacher to give extra credit only to students who ask for it?
+N | Should an honest mistake be treated the same as a careless one?
+N | Is it fair for a landlord to raise rent on a tenant who has always paid on time?
+N | Should a prize be shared if two people contributed to the winning entry?
+N | Is it fair to judge people for what they did as teenagers?
+N | Should a family member who handled the estate be paid extra for the work?
+N | Is it fair to keep a lucky windfall without sharing it with those who helped you get there?
+N | Should a replayed match be held when a clear refereeing error decided the result?
+N | Is it fair for a school to reward attendance when some students are often sick?
+N | Should people who broke a rule without knowing it face the same penalty as those who knew?
+N | Is it fair for the person who cooked to skip washing the dishes?
+N | Should an athlete caught cheating ever be allowed to compete again?
+N | Is it fair for a boss to take credit for their team's work in public?
+N | Should a friend who broke a promise be given a chance to make it up?
+N | Is it fair to give the same bonus to part time and full time staff?
+N | Should an employee's past good record protect them from dismissal for one serious error?
+N | Is it fair to pick teams by drawing names rather than by skill?
+N | Should a winner who benefited from a judging mistake give back the prize?
+N | Is it fair for a parent to lend money to one child but not another?
+N | Should someone who keeps apologizing for the same mistake still be forgiven?
+N | Is it fair for a charity to reward its top fundraiser with a prize?
+N | Should a friend who spoiled a surprise pay part of the cost of the ruined plan?
+N | Is it fair for a person who invested nothing to share in a group's winnings?
+N | Should a student who helped others cheat be punished as much as those who cheated?
+N | Is it fair for a winning team to keep all the prize money when the losing team helped organize the event?
+N | Should forgiveness depend on the wrongdoer changing their behavior?
+N | Is it fair to reserve the best seats for season ticket holders?
+N | Should a store honor a price that was mislabeled far too low?
+N | Is it fair to give a newcomer an equal say in club decisions as a founding member?

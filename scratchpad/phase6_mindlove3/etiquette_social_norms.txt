@@ -1,0 +1,105 @@
+C|values|What should a host offer a guest the moment they arrive?|a_drink;a_seat;a_quick_tour;somewhere_to_put_their_coat;something_to_eat;other
+N|values|Should a host give overnight guests a short tour of the home?
+S|values|How much should a host prepare a guest room for an overnight visitor?|Nothing special is needed ; Clean sheets are enough ; Clean sheets and towels ; Towels, sheets, and a few small comforts ; A hotel-style room with snacks and a note
+C|values|Which small touch makes a guest room feel most welcoming?|fresh_towels;a_bedside_water_glass;a_phone_charger;a_note_with_the_wifi_password;fresh_flowers;other
+N|values|Is it okay for a guest to ask for the wifi password right after arriving?
+C|values|What should a guest do before using a host's phone charger or other small items?|ask_first;use_it_and_mention_it;just_use_it;bring_their_own
+S|values|How much should an overnight guest fit their mornings around the host's routine?|Not at all ; A little ; Somewhat ; Mostly ; Completely
+C|values|What should you do if a friend asks to bring their dog to your home?|say_yes_happily;say_yes_with_rules;suggest_meeting_elsewhere;politely_say_no;other
+N|values|Is it rude to bring your dog to someone's home without asking?
+S|values|How much should a host adjust their home for guests' young children?|Not at all ; Move a few breakable things ; Set up a small play corner ; Childproof the main rooms ; Rearrange the whole home
+C|values|What is the best way for a host to send guests home with leftovers?|offer_containers_to_everyone;offer_only_if_asked;offer_to_close_friends;keep_the_leftovers
+N|values|Should a host serve guests before serving themselves?
+C|values|What is the kindest way for a host to handle a guest who arrives with an unexpected friend?|welcome_them_warmly;welcome_them_and_mention_it_later;quietly_stretch_the_food;ask_them_to_leave;other
+S|values|How much should a host plan activities for weekend guests?|No plans at all, guests entertain themselves ; A loose idea or two ; A plan for each day with free time ; A fairly full schedule ; Every hour planned
+C|values|Which is the best way to host a group when your home is small?|a_standing_party_with_snacks;rotate_guests_in_small_groups;take_everyone_out;a_picnic_in_a_park;do_not_host
+N|personality|Do you enjoy having friends stay the night at your home?
+C|values|What is the right thing to do with a typing indicator that starts and stops without a message arriving?|ignore_it;ask_if_they_meant_to_say_something;wait_patiently;assume_something_is_wrong
+S|values|How much does it bother you when someone reacts to a long heartfelt message with just an emoji?|It does not bother me at all ; It bothers me a little ; It bothers me somewhat ; It bothers me a lot ; It feels like a slap in the face
+N|values|Is it rude to react with a thumbs up to a message that asked a real question?
+C|values|Which emoji reaction is most likely to be misread?|thumbs_up;a_single_smiley;a_laughing_face;a_heart;a_fire_symbol;other
+C|values|What is the polite way to end a long text conversation?|say_goodnight_or_bye;send_an_emoji;let_it_trail_off;a_short_sign_off;other
+N|values|Should you reply when someone views your online story?
+S|values|How acceptable is it to use an AI tool to write a condolence message?|Completely unacceptable ; Unacceptable unless edited heavily ; Acceptable as a starting point ; Mostly acceptable ; Completely acceptable
+C|values|Which message is most important to write entirely yourself, without help?|a_condolence_note;a_wedding_speech;a_love_letter;an_apology;a_thank_you_note;none_of_them
+N|values|Should you tell people when a message you sent them was written with an AI tool?
+C|values|How should you sign off an email to someone you have just met professionally?|best_regards;thanks;kind_regards;cheers;just_your_name
+S|values|How rude is it to start a video call with someone who expected a voice call?|Not rude at all ; Slightly awkward ; Somewhat rude ; Quite rude ; Very rude
+N|values|Is it okay to share a friend's streaming password with another friend?
+C|values|Which is the rudest thing to do in a shared group chat?|replying_to_one_person_for_ages;posting_ads;leaving_messages_on_read;changing_the_group_name_without_asking;adding_strangers;other
+S|values|How acceptable is it to send a photo to a stranger nearby through a phone's wireless sharing feature?|Completely unacceptable ; Rarely acceptable ; Acceptable if it is a photo you took of them ; Mostly acceptable ; Completely acceptable
+C|values|What should you do after taking a photo that accidentally includes strangers?|crop_them_out;keep_it_private;post_it_as_is;delete_it;ask_them
+N|values|Is it rude to film strangers in public for social media?
+C|values|What is the right gym etiquette after using a machine?|wipe_it_down;put_weights_back;both;nothing_needed
+S|values|How much should people in a gym keep noise, like loud grunting, to themselves?|Any noise is fine ; A little restraint is polite ; Moderate restraint is expected ; Strong restraint is expected ; Near silence is expected
+N|values|Is it rude to rest on a gym machine while scrolling your phone?
+C|values|Which is the fairest rule for saving a spot in a line?|never_save_spots;only_for_one_person_who_is_coming;only_briefly;save_as_many_as_you_like
+S|values|How acceptable is it to reserve beach or pool chairs with towels early in the morning?|Completely unacceptable ; Unacceptable if you leave them for hours ; Acceptable for a short while ; Mostly acceptable ; Completely acceptable
+C|values|What should you do when someone is holding a spot at a concert for friends who arrive later?|let_it_go;ask_them_to_move;take_the_spot;complain_to_staff
+N|values|Should you let a dog greet strangers without asking first?
+S|values|How acceptable is it to let a friendly dog off its leash in a busy park?|Completely unacceptable ; Rarely acceptable ; Acceptable if it is well trained ; Mostly acceptable ; Completely acceptable
+C|values|What should a dog owner say when their dog runs up to a stranger?|apologize_and_call_the_dog;say_it_is_friendly;say_nothing;laugh_it_off
+C|values|What is the polite way to use a laundromat or shared laundry room?|remove_clothes_promptly;never_touch_others_clothes;leave_a_note_if_moving_clothes;clean_the_lint_trap;all_of_these
+N|values|Is it okay to move someone's finished laundry out of a shared machine?
+S|values|How acceptable is it to take a few pieces of fruit from a hotel breakfast buffet for later?|Completely unacceptable ; Unacceptable but common ; Acceptable for a small snack ; Mostly acceptable ; Completely acceptable
+C|values|What should you do if you borrow a pen from a stranger?|return_it;thank_them_and_return_it;keep_it_if_they_leave;ask_if_you_can_keep_it
+C|values|What is the polite way to handle a dripping umbrella indoors?|use_the_umbrella_stand;leave_it_by_the_door;keep_it_closed_by_your_side;leave_it_outside
+N|values|Is it rude to open an umbrella under a shop awning where others are standing?
+C|values|Which gift is most appropriate when a friend asks for cash toward a honeymoon instead of items?|give_cash_as_asked;give_a_physical_gift_anyway;give_both;give_a_card_only
+S|values|How acceptable is it for couples to ask for cash instead of gifts for their wedding?|Completely unacceptable ; Rather rude ; Acceptable if asked politely ; Mostly acceptable ; Completely acceptable
+C|values|Which gift is the best choice when you know little about the person?|something_edible;a_plant;a_gift_card;a_candle;a_book;other
+N|values|Is an experience, like concert tickets, a better gift than an object?
+C|values|What is the right way to invite people to a big birthday party?|a_group_message;individual_messages;a_social_media_event;printed_invitations;phone_calls
+S|values|How acceptable is it to invite people to a formal event only through social media?|Completely unacceptable ; Rather rude ; Acceptable for younger guests ; Mostly acceptable ; Completely acceptable
+C|values|When should you send a save-the-date for a wedding?|very_early;fairly_early;a_bit_before_the_invitation;no_need_to_send_one
+N|values|Is it rude to mention a party in front of someone who was not invited?
+S|values|How much should you keep a surprise party secret from the guest of honor's partner?|Tell the partner everything ; Tell them the basics ; Tell them only what they need ; Tell them almost nothing ; Keep it secret from them too
+C|values|What should you do if you accidentally spoil a surprise party?|apologize_to_the_organizer;pretend_nothing_happened;tell_the_guest_to_act_surprised;confess_to_everyone
+C|values|Which is the polite response when someone admires something you own?|thank_them;tell_them_where_you_got_it;offer_to_lend_it;downplay_it
+N|values|Should you tell someone their shoelace is untied?
+S|values|How much should you point out a stranger's minor fashion mishap, like a tag sticking out?|Never mention it ; Only if it is very visible ; Mention it quietly if convenient ; Usually mention it quietly ; Always mention it
+C|values|What is the polite way to refuse a hug from someone you know?|offer_a_handshake;say_you_are_not_a_hugger;step_back_with_a_smile;accept_it_anyway
+N|values|Is it rude to greet a close friend with only a wave?
+S|values|How much should you adjust your greetings to match another culture's customs when visiting?|Not at all ; A little, to be polite ; Somewhat, in formal settings ; Mostly, in all settings ; Completely, as a local would
+C|values|What should you do if you do not know the greeting custom in a place you are visiting?|watch_others_first;ask_someone;use_your_own_custom;smile_and_nod;other
+C|values|Which is the most polite way to decline a second helping at a family dinner abroad where refusing may seem rude?|take_a_small_amount;praise_the_food_and_decline;leave_some_on_your_plate;say_you_are_full;other
+C|values|Which local phrase is most important to learn before visiting a new country?|hello;thank_you;please;excuse_me;sorry;goodbye
+S|values|How important is it to learn basic polite phrases in the local language before travelling?|Not important at all ; A nice extra ; Fairly important ; Very important ; Essential
+C|values|What is the polite thing to do when a self-checkout line forms behind you and you have many items?|keep_going;let_people_with_few_items_go_first;switch_to_a_staffed_lane;hurry_as_best_you_can
+N|values|Is it rude to use self-checkout with a full cart?
+S|values|How much should you apologize when your child cries on a long flight?|No apology is needed ; A quick smile to neighbors ; A brief apology ; A sincere apology to those nearby ; Treats or small gifts for neighbors
+C|values|Which is the rudest thing to do in a hotel?|slamming_doors_at_night;loud_calls_in_the_hallway;leaving_the_room_a_mess;hogging_the_pool_chairs;being_rude_to_staff
+C|social|What do most guests expect from a host at a dinner party?|good_food;good_company;a_clean_home;drinks;a_relaxed_mood;games_or_music
+S|social|How often do most people bring a gift when invited to someone's home?|Most people never do ; Most people rarely do ; Most people do about half the time ; Most people usually do ; Most people always do
+N|social|Do most people feel annoyed by a thumbs up reply to a long message?
+C|social|Which digital habit do most people find the rudest?|leaving_messages_on_read;phone_calls_without_warning;long_voice_notes;one_word_replies;posting_photos_without_asking
+S|social|How much do most people expect a reply to a text within the same hour?|Most people do not expect it at all ; Most people expect it a little ; Most people expect it somewhat ; Most people expect it strongly ; Most people are hurt without it
+C|social|What do most people find most annoying at the gym?|people_hogging_machines;loud_grunting;unwiped_equipment;weights_left_out;phone_calls;people_filming_themselves
+C|social|What do most hosts wish guests would do?|arrive_on_time;offer_to_help;bring_something;leave_at_a_reasonable_hour;say_thank_you_afterwards
+S|social|How acceptable do most people find reserving pool chairs with towels?|Most people find it unacceptable ; Most people find it rude but common ; Most people are split ; Most people find it fine ; Most people do it themselves
+N|social|Do most people take their shoes off at a friend's home without being asked?
+C|social|What do most people do when a dog they do not know runs up to them?|pet_it;stand_still;step_away;look_for_the_owner;ignore_it
+S|social|How strongly do most people feel about loud phone calls on public transport?|Most people do not mind ; Most people mind a little ; Most people mind somewhat ; Most people mind a lot ; Most people find it infuriating
+N|social|Do most people think it is fine to use an AI tool to write a work email?
+C|social|What do most guests forget to bring when staying overnight?|a_toothbrush;a_phone_charger;pajamas;a_host_gift;medicine
+S|social|How often do most people send thank-you messages after being hosted for dinner?|Most people never do ; Most people rarely do ; Most people do about half the time ; Most people usually do ; Most people always do
+S|social|How much do most travellers try to follow local customs abroad?|Most travellers ignore local customs ; Most travellers follow a few obvious ones ; Most travellers make a fair effort ; Most travellers make a strong effort ; Most travellers follow local customs closely
+C|social|Which gift do most people secretly dislike receiving?|scented_candles;novelty_mugs;clothing;gift_cards;decor_items;books
+S|social|How acceptable do most people find filming strangers in public for social media?|Most people find it unacceptable ; Most people find it rude ; Most people are split ; Most people find it fine ; Most people do not care at all
+N|social|Would most people move a stranger's finished laundry out of a machine?
+C|social|What do most people consider the polite way to leave a party?|say_goodbye_to_the_host;slip_out_quietly;say_goodbye_to_everyone;send_a_message_later
+C|evaluative|Which hospitality gesture do you find most touching?|a_note_left_for_guests;a_favorite_dish_remembered;a_warm_welcome_at_the_door;being_walked_to_your_car;a_packed_snack_for_the_trip_home
+C|values|Which is the best way for a guest to thank a host who wanted nothing in return?|a_handwritten_note;returning_the_invitation;a_small_gift_sent_later;a_heartfelt_message;other
+S|values|How much should a host hide the stress of hosting from guests?|Not at all, guests can help ; A little ; Mostly ; Almost completely ; Completely
+S|personality|How much do you enjoy being a houseguest at a friend's home?|I dislike it ; I tolerate it ; I enjoy it somewhat ; I enjoy it a lot ; I love it
+C|values|What is the best way to politely ask guests to leave at the end of the night?|start_tidying_up;mention_an_early_morning;offer_a_last_drink;say_it_directly_with_a_smile;yawn_openly
+C|values|What is the best thing to say when a guest breaks something at your home?|do_not_worry_about_it;accidents_happen_but_thanks;ask_them_to_replace_it;say_nothing
+C|values|Which is the right time to text a friend who lives in another time zone?|during_their_waking_hours;any_time_they_can_mute_it;only_on_weekends;agree_on_times_in_advance
+S|values|How much should you tidy a friend's kitchen after they cook for you?|Not at all ; Clear my own plate ; Help with a few dishes ; Help with most of the cleanup ; Do all the cleanup
+S|values|How rude is it to leave a group video call without saying goodbye?|Not rude at all ; Slightly rude ; Somewhat rude ; Quite rude ; Very rude
+C|values|Which is the most polite way to ask a neighbor at a concert to stop filming and blocking your view?|ask_politely;tap_their_shoulder_and_point;move_to_another_spot;tell_staff;put_up_with_it
+C|values|Which is the best way to decline a dinner invitation from a neighbor you barely know?|a_polite_excuse;an_honest_no_thank_you;suggest_a_coffee_instead;accept_to_be_polite
+S|values|How much should guests follow a host's no-phones rule at a dinner?|Ignore it ; Follow it loosely ; Follow it mostly ; Follow it closely ; Follow it strictly
+C|values|What is the polite way to handle a group bill when one person ordered far more than others?|split_evenly_anyway;each_pays_for_their_own;the_big_orderer_offers_more;mention_it_gently
+C|social|What do most people do when a host serves a dish they dislike?|eat_a_little_politely;eat_it_all;leave_it;make_an_excuse;say_so_honestly
+S|social|How much do most guests help with cleanup after a dinner party?|Most guests do not help at all ; Most guests carry a plate or two ; Most guests offer but accept a no ; Most guests help with much of it ; Most guests insist on doing most of it

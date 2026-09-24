@@ -1,0 +1,112 @@
+C|values|Which kind of question do you think humans are worst at knowing the answer to?|questions_about_their_own_motives;questions_about_the_far_future;questions_about_other_minds;questions_about_very_small_or_large_things;questions_about_what_is_good;other
+S|values|How much of what humanity will eventually know do you think it knows today?|Humanity knows almost nothing of what it will know ; Humanity knows a small slice ; Humanity knows a fair share ; Humanity knows most of it ; Humanity already knows nearly everything worth knowing
+N|values|Do you think there are simple facts about the world that no human will ever discover?
+C|values|What most limits what a single person can know?|time;their_senses;their_intelligence;their_biases;the_people_around_them;other
+S|values|How much do you think knowledge has been permanently lost over human history?|Almost nothing important has been lost ; A few small things have been lost ; A fair amount has been lost ; A great deal has been lost ; Most of what humans once knew has been lost
+N|values|Do you think ancient people knew some things that we have since forgotten?
+C|values|Which is the best way to find out what you do not know you do not know?|talk_to_people_unlike_you;read_widely;travel;ask_experts_what_beginners_miss;make_mistakes;other
+S|personality|How often do you realize that a whole topic existed that you had never heard of?|I almost never discover a whole new topic ; I discover one a few times a year ; I discover one most months ; I discover one most weeks ; I discover one nearly every day
+N|personality|Do you enjoy discovering how little you know about a subject?
+C|personality|When you meet a word you do not know in a book, what do you usually do?|look_it_up_right_away;guess_from_context;note_it_for_later;skip_it;ask_someone
+S|personality|How often do you nod along as if you understand when you do not?|I never pretend to understand ; I pretend only in rare awkward moments ; I pretend now and then to keep things moving ; I pretend fairly often ; I pretend to understand most of the time
+N|personality|Do you ask a question in a group even when you suspect everyone else knows the answer?
+C|values|Which is the better way to learn a hard subject?|many_short_sessions;one_long_immersion;teaching_it_to_someone;building_something_with_it;it_depends_on_the_subject
+S|values|How much should you trust an answer from an AI chatbot on a factual question?|I should not trust it at all ; I should trust it only as a starting hint ; I should trust it about as much as a random web page ; I should trust it about as much as an encyclopedia ; I should trust it completely
+N|values|Should you check an AI's answer before repeating it to someone else?
+C|values|What is the biggest risk of getting most of your answers from AI tools?|confident_errors;losing_the_habit_of_thinking;everyone_believing_the_same_things;hidden_bias;no_real_risk;other
+S|values|How much do you think looking things up instantly has weakened people's memory?|It has not weakened memory at all ; It has weakened memory a little ; It has weakened memory noticeably ; It has weakened memory a great deal ; It has nearly replaced memory altogether
+N|values|Is knowing where to find a fact as good as knowing the fact?
+C|values|Which is more valuable to have in your head rather than on a device?|phone_numbers_of_loved_ones;basic_first_aid;how_to_find_your_way_home;simple_cooking;none_of_them
+S|values|How much do you trust your sense of direction over a navigation app?|I always trust the app over myself ; I trust myself only on very familiar routes ; I trust myself and the app about equally ; I usually trust myself over the app ; I always trust my own sense of direction
+C|values|When your intuition about a person clashes with their good reputation, which do you trust?|my_intuition;their_reputation;neither_until_i_learn_more;depends_on_how_strong_the_feeling_is
+S|values|How reliable is your first impression of a stranger's character?|My first impressions are nearly always wrong ; My first impressions are right less than half the time ; My first impressions are right about half the time ; My first impressions are usually right ; My first impressions are almost always right
+N|values|Can a hunch be good evidence if you cannot say where it comes from?
+C|values|Where do your best hunches usually come from?|long_experience;noticing_small_details;emotions;pure_guessing;i_rarely_have_good_hunches;other
+S|values|How much should you trust a doctor's gut feeling that goes against the test results?|Not at all ; A little ; About as much as the tests ; More than the tests ; Almost completely
+C|values|In which area do you think intuition is least reliable?|money_and_investing;judging_strangers;predicting_the_weather;medical_symptoms;choosing_a_partner;other
+N|values|Do you think experts in a field develop intuitions that beginners should defer to?
+S|values|How confident are you that you would recognize a genius if you met one?|I would never recognize one ; I would recognize one only by luck ; I might recognize one ; I would probably recognize one ; I would certainly recognize one
+C|values|Which is a better sign that someone truly understands a subject?|they_can_explain_it_simply;they_can_predict_what_happens;they_can_answer_hard_questions;they_admit_its_open_problems;they_can_teach_a_child
+S|values|How much does being very smart help a person spot their own mistakes?|It does not help at all ; It helps a little ; It helps somewhat ; It helps a lot ; It makes a person almost immune to mistakes
+C|values|What does a person most need in order to learn from their mistakes?|to_notice_them;to_admit_them;to_understand_why;someone_to_point_them_out;time_to_reflect
+S|personality|How often do you look back and realize you were confidently wrong about something?|Almost never ; Once every few years ; A few times a year ; Most months ; Most weeks
+C|values|Which is more important for a good thinker?|knowing_many_facts;asking_good_questions;noticing_what_is_missing;changing_their_mind;staying_calm;other
+N|values|Is it possible to know something by imagining it carefully?
+S|values|How much can you learn about a place by reading about it without ever going?|Nothing real at all ; Only dry facts ; A fair amount ; Most of what matters ; Everything that matters
+C|values|Which kind of knowledge do you think books capture worst?|how_something_feels;how_to_do_a_physical_skill;what_a_place_is_like;how_to_read_people;what_a_taste_is_like;other
+N|values|Do you think a person can know what grief is like without having grieved?
+S|values|How much of what you know do you think you learned from doing rather than being told?|Almost all of it was told to me ; Most of it was told to me ; About half and half ; Most of it came from doing ; Almost all of it came from doing
+C|values|Who taught you the most about how to think carefully?|a_teacher;a_parent;a_friend;a_book_or_writer;your_own_mistakes;nobody_in_particular;other
+S|values|How much should people distrust knowledge that makes them feel good about themselves?|People should not distrust it at all ; People should be slightly wary ; People should be as careful as with any claim ; People should be extra careful ; People should assume it is probably flattering nonsense
+C|values|Which feeling most often tricks people into believing something false?|hope;fear;anger;pride;loneliness;other
+N|values|Do you think being in a strong mood changes what you believe is true?
+S|personality|How much does your mood affect how likely you are to believe good news?|My mood makes no difference ; My mood makes a slight difference ; My mood makes a noticeable difference ; My mood makes a big difference ; My mood decides almost entirely what I believe
+C|values|Which is the most reliable sign that a prediction is worth taking seriously?|the_forecaster_has_a_good_record;it_comes_with_clear_reasons;many_forecasters_agree;it_is_stated_as_a_probability;it_can_be_checked_soon;other
+N|values|Is it wiser to say how likely something is than to say whether it will happen?
+C|values|When you are unsure between two answers on a test, what do you usually do?|go_with_your_first_instinct;switch_after_rethinking;pick_the_longer_answer;guess_randomly;leave_it
+S|values|How much should a person trust their own memory of a dream as a report of what happened in it?|Not at all ; Only for a rough outline ; For the main events ; For most details ; Completely
+C|values|Which is the best way to tell whether you are remembering a real event or a story you have been told many times?|check_a_photo_or_record;ask_someone_who_was_there;notice_how_vivid_it_is;there_is_no_good_way;other
+N|values|Do you think you have memories that come mostly from stories others told you?
+S|values|How much do you think your beliefs would change if you had grown up in a different century?|My beliefs would be exactly the same ; My beliefs would differ in small ways ; My beliefs would differ noticeably ; Most of my beliefs would be different ; Almost none of my beliefs would survive
+C|values|Which of your beliefs do you expect future generations will find most mistaken?|beliefs_about_food_and_health;beliefs_about_technology;beliefs_about_animals;beliefs_about_work;beliefs_about_education;other
+N|values|Do you think you hold a belief right now that people will one day find as silly as old medical myths?
+C|values|What should you do with a belief you cannot check but cannot help holding?|hold_it_loosely;act_on_it_anyway;keep_it_private;try_to_drop_it;other
+S|values|How much should the sheer number of people who hold a belief count as evidence for it?|It should count for nothing ; It should count for a little ; It should count for a fair amount ; It should count for a lot ; It should count more than almost anything else
+C|values|Which kind of source has most improved your understanding of the world?|books;teachers;conversations;travel;work_experience;online_videos;other
+N|personality|Do you enjoy reading arguments by people you strongly disagree with?
+S|personality|How often do you read about a topic from a source you would normally avoid?|I never do ; I do it once in a while ; I do it a few times a year ; I do it most months ; I do it most weeks
+C|values|What is the best way to test whether you really believe something?|would_you_bet_on_it;would_you_act_on_it;would_you_defend_it_to_an_expert;would_you_teach_it_to_a_child;other
+N|values|Are some questions better left unanswered, even if they could be answered?
+S|values|How much do you think knowing more makes people happier?|Knowing more always makes people less happy ; Knowing more often makes people less happy ; Knowing more makes little difference to happiness ; Knowing more usually makes people happier ; Knowing more always makes people happier
+C|values|What best describes the feeling of finally understanding something difficult?|relief;joy;pride;surprise_at_how_simple_it_was;a_new_hunger_to_learn_more;other
+S|personality|How carefully do you read instructions before trying something new?|I never read them ; I skim them after I get stuck ; I skim them first ; I read most of them first ; I read every word first
+C|values|When a scientific theory you learned in school is replaced, what does that show?|science_works;science_cannot_be_trusted;schools_are_behind;nothing_is_ever_settled;other
+S|values|How much do you think today's best scientific theories will survive the next few centuries?|Almost none will survive ; A few will survive ; About half will survive ; Most will survive ; Nearly all will survive
+C|social|Where do most people get most of their information about the world today?|social_media;television_news;friends_and_family;search_engines;ai_tools;newspapers
+S|social|How often do most people check a surprising claim before sharing it?|Most people never check ; Most people check only rarely ; Most people check about half the time ; Most people usually check ; Most people always check
+N|social|Do most people think they are better than average at spotting fake news?
+C|social|What do most people do when they realize they were wrong in an argument?|admit_it_openly;change_the_subject;quietly_drop_the_point;double_down;joke_about_it
+S|social|How much do most people trust experts in general?|Most people do not trust experts at all ; Most people trust experts a little ; Most people trust experts somewhat ; Most people mostly trust experts ; Most people trust experts completely
+N|social|Would most people rather hear a comforting guess than an honest 'I do not know'?
+C|social|What makes most people believe a rumor?|who_told_them;how_often_they_hear_it;whether_it_fits_their_views;how_shocking_it_is;how_detailed_it_is
+S|social|How much do most people trust their own memory of events from childhood?|Most people barely trust it ; Most people trust it a little ; Most people trust it somewhat ; Most people trust it mostly ; Most people trust it completely
+N|social|Do most people change their minds after reading a single strong article?
+C|social|Which do most people trust more for medical advice?|their_doctor;a_friend_who_had_the_same_problem;online_forums;an_ai_chatbot;a_family_elder
+S|social|How often do most people say 'I do not know' when they do not?|Most people almost never say it ; Most people say it rarely ; Most people say it about half the time ; Most people usually say it ; Most people always say it
+N|social|Do most people follow their gut more than the evidence in big life decisions?
+C|social|What do most people do when two news sources disagree?|pick_the_one_they_already_trust;look_for_a_third_source;ignore_the_story;assume_the_truth_is_in_the_middle;believe_neither
+S|social|How confident are most people in opinions on topics they know little about?|Most people have no confidence in such opinions ; Most people are a little confident ; Most people are fairly confident ; Most people are very confident ; Most people are completely sure of such opinions
+N|social|Would most people want to know if a cherished family story turned out to be false?
+C|social|What do most people think is the best way to learn a new skill today?|online_videos;a_class;a_mentor;trial_and_error;books;ai_tools
+N|social|Do most people believe they could be fooled by a well-made fake photo?
+S|social|How often do most people look up the answer to a question that pops up in conversation?|Most people never look it up ; Most people look it up only for important things ; Most people look it up about half the time ; Most people usually look it up ; Most people look it up right away every time
+C|social|Which do most people find hardest to say?|i_was_wrong;i_do_not_know;i_changed_my_mind;you_were_right;i_need_help
+C|evaluative|Which is the most impressive feat of human knowledge?|mapping_the_stars;understanding_disease;decoding_genes;inventing_writing;building_computers;other
+C|values|Which is the better attitude toward a question science has not yet answered?|wait_patiently;make_a_best_guess;accept_mystery;look_to_other_ways_of_knowing;other
+N|values|Do you think some things can only be understood through experience and never explained in words?
+S|values|How much can careful reasoning alone tell you about how to live?|Reasoning alone tells us nothing about how to live ; Reasoning gives us a few pointers ; Reasoning gives us a useful framework ; Reasoning tells us most of what we need ; Reasoning alone can tell us everything
+C|values|When you learn something that changes your view, where does the change most often start?|a_fact;a_story;a_person_you_respect;a_personal_experience;a_logical_argument;other
+N|personality|Do you keep a list of things you want to learn?
+C|values|Which is the more useful habit for avoiding mistakes?|writing_things_down;asking_someone_to_check;sleeping_on_it;imagining_being_wrong;going_slowly
+S|personality|How often do you sleep on a big decision before making it?|I never sleep on decisions ; I sleep on one only when forced ; I sleep on about half of my big decisions ; I sleep on most big decisions ; I always sleep on big decisions
+C|values|Which of your memories do you trust most?|recent_ones;emotional_ones;ones_with_photos;ones_others_share;none_completely
+C|values|What should you do when a child asks why the sky is blue and you only half remember?|give_your_best_guess;say_you_are_not_sure;look_it_up_together;tell_a_fun_story;other
+C|values|Which is the best reason to read an old book rather than a new one on the same subject?|it_has_stood_the_test_of_time;it_shows_how_people_used_to_think;it_is_free_of_current_fashions;there_is_no_good_reason;other
+C|values|What is the main reason smart people disagree about hard questions?|different_values;different_evidence;different_experiences;pride;the_questions_are_truly_hard;other
+C|values|Which is closest to your view of common sense?|usually_right;right_about_everyday_things_only;often_wrong;just_local_habit;other
+C|values|What is the best thing to do when you realize you have been repeating a false fact for years?|correct_it_with_everyone_you_told;correct_it_going_forward;laugh_about_it;quietly_stop_saying_it;other
+C|values|Which do you trust more to describe a city: a travel guide or a friend who lives there?|the_travel_guide;the_friend;both_equally;neither
+C|values|When an old saying and a new study disagree, which do you tend to believe?|the_old_saying;the_new_study;neither_until_more_studies;depends_on_the_topic
+C|values|Which kind of mistake do you think people learn the most from?|embarrassing_ones;costly_ones;ones_that_hurt_others;small_repeated_ones;ones_nobody_else_saw
+C|values|What should a good teacher do when a student asks something the teacher does not know?|admit_it_and_find_out;guess_carefully;turn_it_back_to_the_class;change_the_subject
+C|personality|When you finish a non-fiction book, what do you usually do?|tell_someone_about_it;write_down_key_ideas;look_up_criticism_of_it;move_on_to_the_next;forget_most_of_it
+C|values|Which is the biggest danger in trusting a single brilliant expert?|they_may_be_wrong_outside_their_field;they_may_be_biased;others_stop_checking;they_may_be_out_of_date;no_danger
+C|values|Which is more convincing to you: one careful study or many small, sloppy ones that agree?|one_careful_study;many_sloppy_ones;neither;depends_on_the_topic
+C|personality|When a friend states a fact you think is wrong, what do you usually do?|correct_them_right_away;ask_where_they_heard_it;look_it_up_quietly;let_it_go;correct_them_later_in_private
+S|values|How much should a hunch count when choosing between two job offers?|It should count for nothing ; It should break a tie only ; It should count for a fair share ; It should count for most of the decision ; It should decide the matter entirely
+S|values|How much do you think people's handwriting or voice reveals about their character?|It reveals nothing at all ; It reveals a hint now and then ; It reveals a few real traits ; It reveals a lot ; It reveals nearly everything
+N|values|Do you think a person's face reveals whether they can be trusted?
+N|values|Is it possible to know a person well only through their writing?
+C|values|Which is the best way to tell whether a very confident person actually knows what they are talking about?|ask_for_specifics;ask_how_they_would_know;check_their_record;see_if_they_admit_limits;other
+C|social|Which kind of source do most people trust least today?|news_outlets;social_media;advertisements;online_reviews;ai_chatbots;strangers_online
+N|social|Do most people pretend to understand things in meetings more often than they admit?

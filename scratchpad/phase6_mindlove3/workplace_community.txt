@@ -1,0 +1,105 @@
+N|values|Is it good to have a best friend at work?
+C|values|What is the biggest risk of having a very close work friend?|favoritism_claims;gossip;hurt_if_one_leaves;blurred_boundaries;competition_for_promotion;no_real_risk
+S|values|How much should a close work friendship be kept separate from work decisions?|It needs no separation at all ; A little care is enough ; Some clear lines are needed ; Strong separation is needed ; Friendship should never touch work matters at all
+C|values|What is the best way to welcome an intern on their first day?|a_team_lunch;a_personal_tour;a_clear_first_task;pairing_them_with_a_buddy;a_welcome_note;other
+N|values|Should interns be invited to every team social event?
+S|values|How much time should a busy team member give to mentoring an intern?|None, the intern should figure it out ; A few minutes when asked ; A regular short check-in ; A good chunk of each week ; As much as the intern needs
+C|values|What is the most valuable thing a mentor can give an intern?|honest_feedback;introductions_to_people;real_responsibility;career_advice;encouragement;other
+N|values|Should an intern ask their manager for a reference letter before leaving?
+C|values|What is the best way for an intern to stay in touch with their team after the internship ends?|a_thank_you_note_then_occasional_updates;connecting_online;visiting_the_office;asking_for_coffee_now_and_then;other
+S|values|How much should a manager be expected to keep supporting a former intern's career?|Not at all ; A reference if asked ; Occasional advice ; Regular guidance ; Ongoing mentorship
+C|values|On a video call with a small team, what is the right camera etiquette?|always_on;on_for_small_meetings;on_when_speaking;off_is_fine;follow_the_host
+N|values|Is it rude to keep your camera off in a small video meeting?
+S|values|How much small talk should open a remote team meeting?|None, start right away ; A quick hello ; A minute or two ; Several minutes ; A good share of the meeting
+C|values|Which is the best way to build friendships on a fully remote team?|virtual_coffee_chats;online_games;a_yearly_meetup;a_casual_chat_channel;pairing_on_work;other
+N|personality|Do you enjoy virtual coffee chats with coworkers?
+C|values|Which work chat habit is most annoying?|sending_hello_and_waiting;many_short_messages_instead_of_one;replying_hours_later;overusing_gifs;tagging_everyone;other
+S|values|How appropriate are emojis in messages to your boss?|Never appropriate ; Rarely appropriate ; Fine now and then ; Usually fine ; Always fine
+N|values|Is it okay to call a coworker without scheduling it first?
+C|values|How quickly should you reply to a coworker's chat message about a non-urgent question?|within_minutes;within_the_hour;the_same_day;within_a_couple_of_days;whenever_convenient
+S|values|How much should you respect a coworker's 'busy' or 'focus' status?|Ignore it if you need them ; Respect it for small things ; Respect it unless it is fairly urgent ; Respect it unless it is urgent ; Never interrupt a busy status
+C|values|Which is the kindest way to leave a message for a coworker in a different time zone?|send_it_with_a_note_not_to_reply_now;schedule_it_for_their_morning;send_it_whenever;wait_until_your_hours_overlap
+N|values|Should coworkers send voice notes to each other?
+C|values|What is the best way to celebrate a remote teammate's birthday?|a_video_call_song;sending_a_small_gift;a_group_card;a_chat_message_thread;none_needed
+S|values|How much should coworkers from different generations make an effort to learn from each other?|No effort is needed ; A little effort ; Some effort ; A lot of effort ; It should be a top priority
+C|values|What can a younger coworker most often teach an older one?|new_tools;fresh_ideas;current_trends;different_ways_of_working;nothing_special
+C|values|What can an older coworker most often teach a younger one?|how_to_handle_people;patience;history_of_the_company;how_to_handle_setbacks;nothing_special
+N|values|Should a team have a regular social ritual, like Friday breakfast?
+S|personality|How much do you look forward to team rituals, like a weekly lunch or a quiz?|I dread them ; I tolerate them ; I enjoy them somewhat ; I enjoy them a lot ; They are a highlight of my week
+C|values|What should you do when a work friend leaves the company?|stay_in_touch_regularly;follow_them_online;meet_now_and_then;let_it_fade_naturally;other
+N|personality|Have you kept a friendship going with someone after one of you changed jobs?
+C|values|Which is the best community space for meeting neighbors?|a_community_garden;a_local_library;a_park;a_cafe;a_farmers_market;a_dog_park
+N|personality|Would you join a community garden?
+S|values|How much should neighbors share tools and equipment through a shared library or list?|Not at all ; Only with close neighbors ; Some sharing is good ; A lot of sharing is good ; Neighbors should share almost everything
+C|values|What would you most want to borrow from a neighborhood sharing shelf or tool library?|a_ladder;a_power_drill;camping_gear;board_games;books;party_supplies
+N|values|Is a small free book box outside a home a good idea for a neighborhood?
+C|values|What should you do when you see a lost pet poster in your neighborhood?|keep_an_eye_out;share_it_online;call_if_you_see_it;help_search;nothing
+S|values|How much should neighbors help look for a lost pet?|Not at all ; Keep an eye out ; Share the news ; Join a search for a while ; Search as if it were their own pet
+C|values|Which is the best use of a neighborhood online group?|lost_and_found;local_recommendations;safety_alerts;giving_away_items;organizing_events;complaints
+S|values|How much should people post complaints about neighbors in a local online group?|Never ; Only after talking to the neighbor ; Only for serious problems ; Whenever something bothers them ; Freely about anything
+N|personality|Do you belong to an online group for your neighborhood?
+C|values|What is the best local event for bringing a neighborhood together?|a_street_party;a_yard_sale;a_holiday_light_walk;a_cleanup_day;an_outdoor_film_night;other
+S|values|How much should local businesses be supported even when they cost more?|Not at all ; A little now and then ; A fair amount ; A lot ; Always, whatever the cost
+N|personality|Do the staff at a local shop or cafe know your name?
+C|values|What is the best way to become a regular at a local cafe or shop?|go_at_the_same_time;chat_with_the_staff;order_the_same_thing;tip_well;it_happens_on_its_own
+S|personality|How much do you enjoy seeing the same familiar strangers on your commute or walk?|I do not notice them ; I notice them but feel nothing ; I find it a little comforting ; I enjoy it ; It brightens my day
+N|values|Should you say hello to someone you see on the same train every day?
+C|values|What is the best way to connect with other parents at a school gate?|small_talk_each_day;organizing_playdates;joining_the_parents_group;volunteering_at_school;keep_to_yourself
+S|values|How involved should parents be in their child's school community?|Not at all ; They should attend the main events ; They should help now and then ; They should be regularly involved ; They should be deeply involved
+C|values|Which online community gives people the strongest sense of belonging?|a_gaming_group;a_fan_community;a_hobby_forum;a_support_group;a_local_group;other
+N|values|Can an online community be as meaningful as an in-person one?
+S|values|How much should members of an online fan community look out for each other?|Not at all ; A little ; Somewhat ; A lot ; Like a family
+C|values|What should you do when a regular member of an online group suddenly goes quiet for weeks?|message_them_privately;mention_it_in_the_group;assume_they_are_busy;do_nothing
+N|personality|Have you ever met someone from an online community in person?
+C|values|Which is the best way to network without feeling fake?|ask_about_their_work_with_real_interest;offer_help_first;talk_about_shared_hobbies;follow_up_with_something_useful;do_not_network_at_all
+S|values|How much should you keep in touch with former classmates for career reasons?|Not at all ; A little ; Somewhat ; A lot ; It is one of the most important things for a career
+C|values|What is the best way to thank someone who gave you a job referral?|a_thank_you_note;a_small_gift;taking_them_for_coffee;keeping_them_updated;returning_the_favor_later
+N|values|Should you tell a friend who referred you for a job how the interview went?
+C|values|What is the best way to find your place in a coworking space?|join_its_events;chat_at_the_coffee_machine;sit_in_the_same_spot;keep_to_yourself;other
+S|personality|How much do you enjoy chatting with people at a gym, pool, or class you attend regularly?|I avoid chatting altogether ; I say hello at most ; I enjoy a short chat now and then ; I enjoy regular chats ; I have made friends there
+C|values|Which is the best way to handle a coworker who never joins team socials?|keep_inviting_them;ask_privately_what_would_suit_them;stop_inviting;leave_them_alone;other
+S|values|How much should team social events avoid alcohol so everyone feels included?|Alcohol is fine at every event ; Most events can include alcohol ; Some events should be alcohol free ; Most events should be alcohol free ; Every event should be alcohol free
+C|values|Which team event includes the most people comfortably?|a_lunch;a_daytime_activity;a_quiz;a_volunteer_day;an_evening_party;other
+C|social|What do most people want most from their coworkers?|reliability;friendliness;respect;help;humor;space
+S|social|How close are most people to their coworkers outside work?|Most people have no contact outside work ; Most people chat online now and then ; Most people meet up a few times a year ; Most people meet up often ; Most people count coworkers among their best friends
+N|social|Do most people feel lonely when working fully from home?
+C|social|What do most people dislike most about video meetings?|awkward_silences;technical_problems;too_many_meetings;being_on_camera;people_talking_over_each_other
+S|social|How often do most people know their neighbors by name?|Most people know no neighbors by name ; Most people know one or two ; Most people know a few ; Most people know most of their neighbors ; Most people know everyone on their street
+N|social|Do most people feel part of a local community?
+C|social|Where do most people feel the strongest sense of belonging outside home?|work;a_hobby_group;an_online_community;their_neighborhood;a_sports_team;a_faith_or_cultural_group
+S|social|How much do most workers enjoy team-building days?|Most workers hate them ; Most workers dislike them ; Most workers feel neutral ; Most workers enjoy them ; Most workers love them
+N|social|Do most people stay in touch with coworkers after changing jobs?
+C|social|What do most people talk about with neighbors?|the_weather;local_news;pets;children;complaints;gardening
+S|social|How often do most people volunteer in their community?|Most people never volunteer ; Most people volunteer once in a great while ; Most people volunteer a few times a year ; Most people volunteer most months ; Most people volunteer every week
+N|social|Do most people think remote work has made workplace friendships weaker?
+C|social|What do most people use their neighborhood online group for?|lost_pets;complaints;recommendations;selling_things;safety_alerts;they_do_not_use_one
+S|social|How much do most people trust their neighbors?|Most people do not trust neighbors at all ; Most people trust them a little ; Most people trust them somewhat ; Most people trust them a lot ; Most people trust them completely
+N|social|Do most people enjoy office holiday parties?
+C|social|What do most interns want most from their team?|real_work;feedback;friendliness;a_job_offer;connections;fun
+S|social|How often do most people say hello to strangers on their street?|Most people never do ; Most people rarely do ; Most people do now and then ; Most people usually do ; Most people always do
+N|social|Do most people prefer working with friends rather than strangers?
+C|social|What do most people think makes a good boss?|fairness;clear_direction;kindness;trust;recognition;flexibility
+C|values|Which is the best reason to join a local volunteer fire, rescue, or civic group?|to_help_others;to_meet_neighbors;to_learn_skills;to_give_back;other
+S|values|How much should a new resident try to learn a town's traditions?|Not at all ; A little ; Somewhat ; A lot ; They should embrace them fully
+C|values|What is the best welcome for a new neighbor?|a_knock_and_hello;a_small_baked_treat;a_welcome_card;an_invitation_to_a_meal;wait_for_them_to_come_to_you
+N|values|Should neighbors check on each other during a heatwave or storm?
+C|evaluative|Which workplace tradition do you find most charming?|a_shared_birthday_cake;a_bell_for_big_wins;a_yearly_team_photo;handwritten_thank_you_notes;a_potluck;none
+C|values|Which is the best way to handle a coworker who asks personal questions in a group chat?|answer_briefly;move_it_to_a_private_chat;politely_decline;ignore_it;other
+S|values|How much should a manager check in on a remote employee's wellbeing, not just their work?|Not at all ; Only if something seems wrong ; Now and then ; Regularly ; In every conversation
+C|values|Which is the best way for an intern to make a good impression on the team?|ask_thoughtful_questions;take_on_extra_tasks;be_on_time_and_reliable;join_social_events;share_new_ideas;other
+C|values|What should an intern do when they finish their work early?|ask_for_more;help_a_teammate;learn_something_related;tidy_up_notes;take_a_break;other
+C|values|What should you do when a new coworker mispronounces your name?|correct_them_kindly_right_away;correct_them_later_in_private;let_it_go_once;let_it_go_forever
+C|values|Which is the best way to thank a coworker who covered for you?|a_coffee_or_treat;a_public_thank_you;a_private_note;returning_the_favor;other
+C|values|Which is the best way to get to know people in a new apartment building?|say_hello_in_the_hallway;join_the_building_chat;host_a_small_gathering;help_with_a_delivery_or_move;wait_for_chance_meetings
+C|values|What should you do when a coworker shares a personal loss in the team chat?|reply_publicly_with_sympathy;send_a_private_message;react_with_an_emoji;say_nothing;other
+S|values|How much should coworkers from rival teams socialize together?|Not at all ; Only at company events ; Now and then ; Often ; As much as with their own team
+S|personality|How comfortable are you asking a senior colleague for a coffee to learn from them?|Very uncomfortable ; Somewhat uncomfortable ; Neutral ; Fairly comfortable ; Completely comfortable
+S|values|How much should an office share snacks and treats that someone brings in?|Nobody should bring shared treats ; Treats should be rare ; Treats now and then are nice ; Treats most weeks are nice ; Treats should be a constant office tradition
+S|values|How much should residents take part in keeping shared spaces like stairwells tidy?|Not at all, that is a landlord's job ; Only their own mess ; A little beyond their own mess ; A fair share ; As if it were their own home
+S|personality|How much do you enjoy a neighborhood yard sale?|I avoid them ; I glance in passing ; I enjoy browsing now and then ; I enjoy them a lot ; I plan my weekend around them
+S|values|How much should a small town community welcome newcomers into its clubs and events?|Newcomers should earn their place first ; Newcomers should be welcomed slowly ; Newcomers should be welcomed politely ; Newcomers should be welcomed warmly ; Newcomers should be pulled in right away
+C|values|Which is the best way to thank a neighbor who looked after your plants while you were away?|a_small_gift_from_your_trip;a_home_baked_treat;returning_the_favor;a_thank_you_card;other
+S|values|How much should coworkers attend a colleague's personal milestone events, like a housewarming?|Never ; Only if very close ; If invited and free ; Usually ; Always if invited
+C|values|Which is the best way for a new intern to learn the unwritten rules of a workplace?|ask_a_peer;watch_quietly;ask_their_manager;make_mistakes_and_learn;other
+C|social|What do most people do when a new neighbor moves in?|say_hello;bring_a_small_gift;wait_to_bump_into_them;ignore_them;look_them_up_online
+S|social|How much do most people rely on neighbors for small favors?|Most people never rely on neighbors ; Most people rely on them rarely ; Most people rely on them now and then ; Most people rely on them often ; Most people rely on them constantly

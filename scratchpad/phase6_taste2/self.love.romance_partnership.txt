@@ -1,0 +1,126 @@
+# self.love.romance_partnership
+C | Which pet name would you most like a partner to call you? | honey ; babe ; darling ; a_silly_made_up_name ; my_real_name ; other
+C | Which pet name would you most likely use for a partner? | sweetheart ; love ; babe ; a_food_nickname ; a_shortened_version_of_their_name ; their_real_name ; other
+C | Which kind of flowers would you most like to receive from a partner? | red_roses ; wildflowers ; sunflowers ; tulips ; a_potted_plant_instead ; no_flowers ; other
+C | Which kind of card would you want from a partner on your birthday? | long_handwritten_letter ; funny_card ; a_card_they_made_themselves ; a_short_sweet_note ; no_card_needed
+C | What would your ideal anniversary morning look like? | breakfast_in_bed ; sleeping_in_late ; a_sunrise_walk ; a_surprise_note ; an_ordinary_morning ; other
+C | Which kind of weekly date night would you rather keep? | cooking_a_new_recipe_together ; trying_a_new_restaurant ; a_film_at_home ; a_game_night_for_two ; a_long_walk ; other
+C | What kind of music would you want for a slow dance in the kitchen? | old_love_songs ; soft_jazz ; our_song ; whatever_is_on_the_radio ; no_dancing
+C | Which kind of reading light setup would you want on a shared bed? | one_lamp_each_side ; one_shared_lamp ; clip_on_book_lights ; ceiling_light_only ; no_reading_in_bed
+C | What temperature would you set in a shared bedroom? | cool_with_thick_blankets ; mild ; warm ; separate_blankets_to_settle_it ; no_preference
+C | How would you like to share blankets with a partner? | one_big_shared_blanket ; separate_blankets ; one_blanket_each_on_one_bed ; no_preference
+C | What would be your favorite way to spend a rainy Sunday with a partner? | reading_side_by_side ; baking ; a_film_marathon ; a_long_nap ; a_board_game ; other
+C | Which kind of gift from a partner would thrill you most? | something_handmade ; an_experience ; something_i_mentioned_months_ago ; jewelry ; a_book ; other
+C | Which gift wrapping style would you like from a partner? | beautifully_wrapped ; a_gift_bag ; newspaper_and_string ; unwrapped_but_hidden ; no_preference
+C | Which kind of houseplant would you want to raise together? | a_big_fiddle_leaf_fig ; trailing_ivy ; a_little_cactus_family ; herbs_on_the_windowsill ; an_orchid ; none
+C | Which kind of photo of you as a couple would you frame? | a_candid_laugh ; a_travel_photo ; a_formal_portrait ; a_silly_selfie ; a_photo_with_our_pet ; none
+C | Which chore would you rather do together than alone? | grocery_shopping ; cooking ; laundry ; cleaning_the_kitchen ; gardening ; none
+C | Which morning routine with a partner appeals to you most? | coffee_together_before_work ; a_morning_walk ; breakfast_at_the_table ; quick_goodbye_kiss ; separate_quiet_mornings
+C | How would you like a partner to wake you up? | gentle_whisper ; smell_of_coffee ; music ; an_alarm_not_them ; let_me_sleep
+C | Which anniversary tradition would you most like to keep? | return_to_where_we_met ; cook_the_first_meal_we_shared ; write_each_other_letters ; take_a_yearly_photo ; a_small_trip ; none
+C | Which kind of holiday gift exchange would you choose as a couple? | one_big_shared_gift ; small_stocking_stuffers ; a_price_limit ; no_gifts_just_a_trip ; surprise_everything
+C | Which kind of shared hobby would you most like to start with a partner? | dance_lessons ; gardening ; a_language ; hiking ; pottery ; cooking_classes ; other
+C | Which way would you like to celebrate a partner's big win? | a_fancy_dinner ; a_surprise_party ; a_quiet_toast_at_home ; a_gift ; a_night_out_with_friends ; other
+C | Which room in a shared home would you most want to design yourself? | kitchen ; bedroom ; living_room ; a_home_office ; the_garden ; none
+C | What is your favorite way to be comforted by a partner after a bad day? | a_long_hug ; my_favorite_meal ; quiet_company ; talking_it_through ; a_distraction_like_a_film ; other
+C | Which kind of love note would you most like to find? | in_my_lunch ; on_the_bathroom_mirror ; in_my_coat_pocket ; in_a_book_i_am_reading ; by_text ; no_notes
+C | Which kind of couple getaway would you choose for a long weekend? | cabin_in_the_woods ; seaside_hotel ; city_food_trip ; spa_retreat ; camping ; other
+C | How would you like to plan meals in a shared home? | one_person_plans ; take_turns ; plan_together_weekly ; decide_each_night ; each_cook_for_ourselves
+C | Which kind of partner cooking would you find most romantic? | a_fancy_multi_course_meal ; my_childhood_favorite ; breakfast_on_a_weekday ; a_picnic_they_packed ; homemade_dessert ; other
+C | What would you most like to receive for a first anniversary? | a_photo_album ; a_trip ; jewelry ; a_letter ; a_new_shared_item_for_the_home ; other
+C | Which way do you like to reconnect when a partner comes home from work? | a_long_hug ; a_chat_about_the_day ; quiet_time_first ; cooking_together ; a_walk ; other
+C | Which kind of wall art would you choose together for a shared home? | photos_of_us ; travel_prints ; abstract_paintings ; plants_instead_of_art ; blank_walls ; other
+C | Which kind of couple nickname style do you enjoy hearing between other couples? | classic_sweet_names ; inside_joke_names ; animal_names ; no_nicknames ; no_preference
+C | What would you most like to do on a partner's birthday? | throw_a_party ; plan_a_surprise_trip ; cook_a_special_dinner ; recreate_a_favorite_memory ; let_them_choose ; other
+C | Which holiday food tradition would you most want to start as a couple? | baking_cookies ; a_big_breakfast ; a_signature_dish ; a_takeout_night ; none
+C | Which kind of weekend breakfast would you want to share? | pancakes ; a_big_fry_up ; pastries_from_a_bakery ; fruit_and_yogurt ; brunch_out ; other
+C | Which small everyday ritual would you like with a partner? | a_goodnight_phrase ; a_morning_coffee_delivered_to_bed ; a_walk_after_dinner ; a_weekly_check_in ; a_shared_playlist ; other
+C | How would you want to spend a partner's day off together? | out_exploring ; lazing_at_home ; doing_errands_together ; seeing_friends ; each_doing_our_own_thing
+C | Which kind of kitchen setup would you want in a shared home? | one_person_cooks_one_cleans ; both_cook_side_by_side ; take_turns_owning_the_kitchen ; no_preference
+C | Which kind of shared bed would you want? | a_king_size_bed ; a_queen_size_bed ; two_beds_pushed_together ; separate_beds ; no_preference
+C | How would you like a partner to say sorry after a small argument? | with_words ; with_a_hug ; with_a_small_treat ; by_making_dinner ; by_a_funny_note ; other
+C | Which color would you want your shared bedroom to be? | soft_white ; warm_beige ; deep_blue ; sage_green ; dusty_pink ; other
+C | Which kind of couple selfie do you like to take? | cheek_to_cheek ; silly_faces ; a_mirror_shot ; a_scenic_background ; we_rarely_take_them
+C | Which kind of evening routine with a partner appeals most? | dinner_then_a_show ; cooking_together ; separate_hobbies_in_the_same_room ; a_walk ; reading_in_bed ; other
+C | Which gift would you rather give a partner for no reason? | their_favorite_snack ; flowers ; a_handwritten_note ; a_small_book ; a_new_mug ; other
+C | What would you like to keep in a shared memory box? | ticket_stubs ; letters ; photos ; dried_flowers ; small_souvenirs ; nothing
+C | Which kind of car ride soundtrack would you share with a partner? | a_shared_playlist ; each_take_turns ; a_podcast ; the_radio ; silence ; other
+C | Which kind of shared pet would you want as a couple? | a_dog ; a_cat ; two_cats ; fish ; a_bird ; no_pet
+C | How would you like to spend a partner's first visit to your hometown? | show_them_my_old_haunts ; eat_at_my_favorite_places ; meet_old_friends ; stay_in_with_family ; no_preference
+C | Which way would you like to say goodbye before a long trip apart? | a_long_airport_hug ; a_last_dinner ; a_gift_to_open_later ; a_quick_goodbye ; other
+C | How would you want to keep in touch with a partner while traveling apart? | nightly_video_calls ; photos_through_the_day ; long_messages ; voice_notes ; a_quick_check_in ; other
+C | Which way would you rather receive a surprise from a partner? | at_home ; at_work ; while_traveling ; in_front_of_friends ; in_private_only
+C | Which part of a partner's style would you enjoy shopping for? | shoes ; jackets ; accessories ; nothing_i_let_them_choose ; other
+C | Which kind of home movie night snack would you share? | popcorn ; candy ; pizza ; cheese_board ; ice_cream ; other
+C | What would you most want to learn from a partner? | a_recipe ; a_skill_from_their_job ; an_instrument ; a_sport ; their_language ; other
+C | How would you like a partner to handle your birthday party? | plan_it_all ; help_me_plan_it ; keep_it_small ; skip_the_party ; other
+C | Which kind of place would you choose to renew a yearly promise with a partner? | a_favorite_restaurant ; a_quiet_beach ; a_hilltop_at_sunset ; our_own_kitchen ; nowhere_special
+C | Which kind of partner style do you enjoy seeing on an ordinary day? | comfy_sweats ; neat_casual ; sporty ; dressed_up ; no_preference
+C | Which kind of garden would you want to tend together? | vegetable_patch ; flower_beds ; herbs_on_a_balcony ; fruit_trees ; none
+C | Which kind of weekend project would you enjoy with a partner? | painting_a_room ; assembling_furniture ; building_a_garden_bed ; organizing_a_closet ; none
+C | What would you choose for a couple's costume party? | a_famous_duo ; matching_animals ; food_pairs ; opposite_characters ; no_couple_costume
+C | Which kind of shared calendar would you want with a partner? | a_paper_calendar_on_the_fridge ; a_shared_phone_calendar ; just_talking_it_over ; each_keep_our_own
+C | Which type of evening walk would you enjoy with a partner? | around_the_block ; to_an_ice_cream_shop ; by_the_water ; through_a_park ; none
+C | How would you want to mark a partner moving in with you? | a_housewarming_party ; a_quiet_dinner ; buying_something_new_together ; a_photo_on_moving_day ; nothing_special
+C | Which kind of shared bookshelf arrangement would you want? | fully_mixed_books ; separate_shelves ; sorted_by_color ; no_preference
+C | Which kind of small daily text from a partner would you like most? | a_photo_of_their_lunch ; a_random_i_love_you ; a_funny_meme ; a_question_about_my_day ; none
+C | Which kind of shared bathroom setup would you want? | two_sinks ; one_sink_shared ; separate_bathrooms ; no_preference
+C | What would you want in a partner's ideal hello after a trip apart? | running_hug ; flowers_at_the_door ; a_home_cooked_meal ; a_quiet_night_in ; no_preference
+C | Which kind of vacation photos would you rather take as a couple? | lots_of_couple_shots ; mostly_scenery ; candid_shots_of_each_other ; very_few_photos
+C | Which season would you most like for an anniversary trip? | spring ; summer ; autumn ; winter ; no_preference
+S | How much do you enjoy matching outfits with a partner? | I would never ; I would do it as a joke once ; I would for a special event ; I enjoy it now and then ; I love coordinated looks
+S | How much do you enjoy cooking together with a partner? | I prefer to cook alone ; I tolerate a helper ; I enjoy it sometimes ; I enjoy it often ; It is my favorite thing to do together
+S | How much do you like getting surprise flowers? | I would rather not ; I find them nice but unnecessary ; I enjoy them ; I love them ; They make my whole week
+S | How much would you enjoy sharing a closet with a partner? | I would hate it ; I would tolerate it ; I would be fine with it ; I would enjoy it ; I would love wearing each other's clothes
+S | How much do you enjoy writing letters to a partner? | I never would ; I write a card on birthdays ; I write a note now and then ; I write often ; I write love letters regularly
+S | How much would you enjoy a partner reading aloud to you? | I would find it odd ; I would tolerate it ; I would enjoy it sometimes ; I would love it ; I would ask for it every night
+S | How much do you enjoy cuddling while watching a film? | I prefer my own space ; I like a little contact ; I enjoy it sometimes ; I enjoy it every time ; I want to be tangled up for the whole film
+S | How much would you want to decorate a shared home together? | I would let them do it all ; I would give a few opinions ; I would share it equally ; I would want to lead ; I would want to choose everything
+S | How much do you like playful teasing from a partner? | I dislike it ; I tolerate a little ; I enjoy it now and then ; I enjoy it often ; It is my favorite way we talk
+S | How much do you enjoy celebrating small milestones like a monthly anniversary? | I find it silly ; I notice it privately ; I mention it ; I plan something small ; I celebrate every milestone
+S | How much would you enjoy a surprise weekend away planned by a partner? | I would feel uneasy ; I would go along ; I would enjoy it ; I would love it ; It would be my dream gift
+S | How much do you like sharing food off a partner's plate? | I dislike it ; I allow a bite ; I enjoy trading bites ; I share most meals ; We always split everything
+S | How much do you enjoy doing nothing together in the same room? | It makes me restless ; I can manage a short while ; I enjoy it ; I love it ; It is my favorite way to be together
+S | How much would you enjoy a partner who sings around the house? | It would annoy me ; I would tolerate it ; I would find it sweet ; I would join in ; I would love a home full of singing
+S | How much do you like a tidy shared space? | I do not care at all ; I like it loosely tidy ; I like it mostly tidy ; I like it very tidy ; I want it spotless all the time
+S | How much do you enjoy trying a partner's hobby with them? | I avoid it ; I would try it once ; I would join sometimes ; I would join often ; I would take it up myself
+S | How much would you enjoy a regular walk together after dinner? | Not at all ; A little ; Somewhat ; A lot ; It would be my favorite daily ritual
+S | How much do you enjoy gifts that are practical rather than sentimental? | I dislike practical gifts ; I accept them ; I like them equally ; I prefer them ; I only want practical gifts
+S | How much would you want to share a playlist with a partner? | I would keep music separate ; I would share a few songs ; I would share some playlists ; I would share most music ; I would want one playlist for both of us
+S | How much do you enjoy slow dancing with a partner? | I never would ; Only at a wedding ; Now and then ; Often ; Every chance I get
+S | How much would you like a partner to plan date nights for you? | I want to plan them myself ; I want to plan most ; I want to share it equally ; I want them to plan most ; I want them to plan every one
+S | How much do you enjoy long talks in bed before sleep? | I want to sleep right away ; A few words is enough ; I enjoy a short chat ; I enjoy long talks ; They are my favorite part of the day
+S | How much do you enjoy spending a holiday with a partner's family? | I dread it ; I tolerate it ; I enjoy it somewhat ; I enjoy it a lot ; I would prefer it to my own family's holiday
+S | How much do you like a partner leaving little notes around the house? | I find it cluttered ; I barely notice ; I find it sweet ; I love it ; I keep every note
+S | How much do you enjoy being photographed by a partner? | I hate it ; I tolerate it ; I am fine with it ; I enjoy it ; I love being their favorite subject
+S | How much do you enjoy running errands together with a partner? | I prefer to do them alone ; I tolerate company ; I enjoy it sometimes ; I enjoy it most times ; Errands together feel like little dates
+S | How much would you like to share a morning coffee ritual? | I want my mornings alone ; A quick cup together is fine ; I enjoy it now and then ; I enjoy it most days ; It is essential to my day
+S | How much do you enjoy a partner who is very affectionate at home? | It overwhelms me ; I like a little ; I like a fair amount ; I like a lot ; I want constant affection
+S | How much would you enjoy growing old in a quiet small town with a partner? | Not at all ; A little ; Somewhat ; A lot ; It is my dream
+S | How much do you enjoy a partner choosing your gifts as a surprise? | I prefer to pick my own gifts ; I like to give hints ; I like a mix ; I love surprises ; I never want to know ahead
+S | How much would you enjoy a partner who plans every holiday down to the hour? | I would hate it ; I would tolerate it ; I would be fine with it ; I would enjoy it ; I would love it
+N | Would you like a partner to write you a song or poem?
+N | Would you enjoy having a standing weekly date night?
+N | Would you want a partner to give you breakfast in bed on birthdays?
+N | Would you like to share a hobby with a partner that neither of you has tried?
+N | Would you enjoy wearing a partner's sweater or jacket?
+N | Would you like a shared journal with a partner?
+N | Would you enjoy dancing in the living room with a partner?
+N | Would you like a partner to take the lead on holiday decorating?
+N | Would you enjoy a partner who wakes up much earlier than you?
+N | Would you like to have a song that is just yours as a couple?
+N | Would you enjoy taking a class with a partner?
+N | Would you like to re-create your first date each year?
+N | Would you enjoy getting a surprise gift at work from a partner?
+N | Would you like to keep a jar of reasons you love each other?
+N | Would you enjoy falling asleep on a partner's shoulder on a train?
+N | Would you enjoy a partner who is a much better cook than you?
+N | Would you like a partner to leave the porch light on for you?
+N | Would you enjoy a regular picnic with a partner?
+N | Would you like a partner to give you a massage after a long day?
+N | Would you enjoy sharing one big dessert on a date night?
+N | Would you enjoy a partner who likes to plan surprise parties?
+N | Would you enjoy reading the same book as a partner at the same time?
+N | Would you like a partner to make you a playlist?
+N | Would you like to have matching mugs with a partner?
+N | Would you enjoy stargazing on a rooftop with a partner?

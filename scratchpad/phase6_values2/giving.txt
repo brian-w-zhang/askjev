@@ -1,0 +1,207 @@
+@node self.values.giving_charity
+# choice
+C | You unexpectedly inherit a modest sum from a distant relative you never met. What share of it should you give away? | none = keep all of it ; a_small_slice = give away a small slice ; about_a_tenth = give away about a tenth ; about_half = give away about half ; nearly_all = give away nearly all of it ; other
+C | You win a large prize in a raffle you entered on a whim. What would you most likely do with part of it first? | pay_debts = pay off my own debts ; treat_myself = buy something I have wanted for a while ; help_family = help out family members ; give_to_charity = give some to a charity ; save_it = put it all in savings ; other
+C | A stranger's crowdfunding page for a sick child's surgery appears in your feed. What do you usually do? | give_something = give a small amount ; share_it = share the page but not give ; check_first = check whether it is genuine before deciding ; scroll_past = scroll past ; other
+C | A coworker shares a crowdfunding page to cover a funeral for their parent. What is the right response? | give_quietly = give without saying anything ; give_and_message = give and send a kind message ; message_only = send condolences but not money ; do_nothing = do nothing ; other
+C | Which crowdfunding appeal would you be most willing to give to? | medical_bills = a stranger's medical bills ; school_fees = a student's school fees ; small_business = a local shop that nearly went under ; fire_recovery = a family whose home burned down ; community_garden = a neighborhood garden project ; other
+C | A blood drive is set up in your building, and it would take most of your lunch hour. What do you do? | donate = go and donate ; donate_another_day = book a slot for another day ; skip_it = skip it this time ; not_eligible = I cannot donate anyway ; other
+C | A registry asks you to join a bone marrow donor list, which means you may be called for a painful procedure for a stranger someday. What should you do? | join_gladly = join without hesitation ; join_but_unsure = join but hope I am never called ; learn_more_first = read more before deciding ; decline = decline to join ; other
+C | You are called as a bone marrow match for a stranger in another country, during your busiest month at work. What should you do? | go_ahead = go ahead with the donation right away ; ask_to_delay = ask whether it can wait a few weeks ; decline = decline this time ; other
+C | Your employer offers one paid day a year for volunteering. How would you most likely use it? | hands_on_local = hands-on work at a local shelter or food bank ; skilled_help = lend my work skills to a nonprofit ; team_event = join a group volunteering event ; not_use_it = not use it ; other
+C | You get a year-end bonus you did not expect. What should happen to it? | spend_on_self = spend it on something for myself ; save_all = save all of it ; split_save_give = save most and give some away ; give_most = give most of it away ; share_with_family = share it with family ; other
+C | The cashier asks if you want to round up your bill for a children's hospital. What do you usually do? | always_yes = say yes every time ; yes_if_small = say yes if the round-up is small ; depends_on_cause = say yes only for causes I trust ; usually_no = usually say no ; other
+C | Why do you sometimes say no when asked to round up at checkout? | unknown_charity = I do not know the charity ; prefer_own_giving = I prefer to choose my own causes ; feel_pressured = I dislike being put on the spot ; money_tight = money is tight ; always_say_yes = I always say yes ; other
+C | A major earthquake strikes a country far away. What is your most likely response? | donate_money = donate money to a relief group ; donate_goods = send supplies or clothes ; share_appeals = share appeals online ; feel_sad_only = feel sad but do nothing ; nothing = not think much about it ; other
+C | After a disaster, which kind of donation do you think helps most? | cash = cash to a relief group ; supplies = boxes of supplies ; volunteers = volunteers flying in ; blood = blood donations ; other
+C | Your elderly neighbor has fallen behind on heating bills this winter. What should you do? | pay_part = quietly pay part of the bill ; offer_loan = offer a loan ; connect_to_help = help them find assistance programs ; invite_over = invite them over on cold evenings ; stay_out = stay out of it ; other
+C | A neighbor who just lost their job has a family to feed. What kind of help should you offer? | groceries = drop off groceries ; cash = give them some money ; job_leads = pass along job leads ; childcare = offer to watch the kids ; nothing = nothing unless asked ; other
+C | When you give to a cause, how do you prefer to be credited? | fully_anonymous = fully anonymous ; name_only = my name on a list ; public_thanks = public thanks ; tell_friends = I tell friends to encourage them ; other
+C | Your employer offers to match any charity gift you make. How does that change your giving? | give_more = I give more than I would have ; same_amount = I give the same but still use the match ; start_giving = I start giving when I otherwise would not ; no_change = it makes no difference ; other
+C | Given a free Saturday, which would you rather give to a cause you care about? | a_day_of_work = a day of hands-on work ; a_days_pay = a day's pay as money ; both_halves = half a day and some money ; neither ; other
+C | You earn far more per hour than a charity would pay a helper. Should you volunteer your time or work extra and donate the money? | volunteer_time = volunteer my time anyway ; work_and_donate = work extra and donate the pay ; both ; neither ; other
+C | A person outside a grocery store asks you to buy them a sandwich. What do you do? | buy_it = buy the sandwich ; buy_more = buy the sandwich and a drink or more ; give_cash = give cash instead ; apologize_walk_on = apologize and walk on ; ignore = walk past without a word ; other
+C | When someone asks you for money on the street, what are you most likely to give? | cash = some cash ; food = food ; conversation = a few minutes of conversation ; information = directions to a shelter ; nothing ; other
+C | You pass the same person asking for money every morning on your way to work. What should you do? | give_daily = give a little every day ; give_sometimes = give now and then ; learn_name = learn their name and chat ; avoid_route = take another route ; nothing ; other
+C | Which is the best reason to choose a charity? | proven_results = it has proven results ; local = it helps my own community ; personal_link = it helped someone I love ; overlooked = few others give to it ; friend_runs_it = a friend runs it ; other
+C | A charity evaluator says a malaria group saves far more lives per dollar than your local food bank. Where should your next donation go? | malaria = the malaria group ; food_bank = the local food bank ; split = split between them ; other
+C | Which feels like the greater good to fund? | cure_research = research that might cure a disease years from now ; treatment_today = treatment for people sick today ; other
+C | Whose need should come first when you decide where to give? | own_town = people in my own town ; own_country = people in my own country ; poorest_anywhere = the poorest people anywhere ; people_like_me = people who share my background ; other
+C | You have a small amount to give. Which gift would you rather make? | one_family = cover one local family's rent for a month ; many_children = buy school books for many children abroad ; other
+C | A friend asks you to sponsor them in a charity bike ride for a cause you do not care about. What do you do? | sponsor_anyway = sponsor them anyway ; small_token = give a small token amount ; encourage_only = cheer them on but not give ; decline = politely decline ; other
+C | A child from your street comes to the door selling cookies for their school trip. What do you do? | buy_some = buy some ; buy_and_extra = buy some and add a bit extra ; donate_no_cookies = give money without taking cookies ; decline = decline ; other
+C | You find a wallet with a large amount of cash and no ID. Nobody claims it at the police station and it is returned to you. What should you do with the cash? | keep_it = keep it ; give_it_all = give it all to charity ; give_part = give part and keep the rest ; spend_on_others = spend it on others around me ; other
+C | You get a refund you had forgotten about. What should you do with it? | spend_it = spend it on myself ; save_it = save it ; give_it = give it to a cause ; other
+C | Which is the most admirable way to give? | quietly_regularly = small amounts quietly every month ; one_big_gift = one big gift in a crisis ; time_every_week = hours of volunteering every week ; leaving_estate = leaving money in a will ; other
+C | Your company runs a charity drive with a leaderboard of who gave most. How does that affect you? | give_more = I give more to rank higher ; give_same = I give what I would anyway ; give_privately = I give but opt out of the board ; put_off = it puts me off giving ; other
+C | A wealthy friend donates loudly and posts about it often. How do you see it? | still_good = still good, since the money helps ; mixed = good, but a bit showy ; mostly_vanity = mostly about vanity ; inspiring = it inspires others to give ; other
+C | A homeless shelter needs volunteers on a holiday you usually spend with family. What should you do? | volunteer = volunteer at the shelter ; bring_family = bring my family along to help ; give_money_instead = give money instead ; stay_with_family = stay with my family ; other
+C | A stranger on a train is short of the fare and the conductor is about to put them off. What do you do? | pay_it = pay the fare for them ; offer_part = offer part of it ; wait_to_see = wait to see if someone else helps ; stay_out = stay out of it ; other
+C | A tourist has lost their wallet and asks you for money for a bus ticket home. What should you do? | give_money = give them the money ; buy_ticket = buy the ticket myself ; point_to_help = point them to the police or embassy ; say_no = say no ; other
+C | You find out a well-known charity pays its director a very large salary. What do you do? | keep_giving = keep giving if its work is good ; give_less = give less ; switch = switch to a leaner charity ; stop = stop giving to it ; other
+C | Which kind of charity would you be most suspicious of? | pushy_fundraisers = one with pushy street fundraisers ; vague_goals = one with vague goals ; no_reports = one that publishes no results ; celebrity_led = one led by a celebrity ; new = one that is brand new ; other
+C | If you had to choose one form of giving for the rest of your life, which would it be? | money = money ; time = time ; skills = professional skills ; blood_and_organs = blood and organs ; other
+C | A friend's startup asks you to work for free on weekends for a cause that helps refugees find housing. What should you do? | join_fully = join every weekend ; join_sometimes = help some weekends ; give_money = give money instead ; decline = decline ; other
+C | You receive more birthday money than you need. Which is the best use of the extra? | treat_myself = something fun for myself ; savings = my savings ; pass_on = pass it on to someone in need ; other
+C | A new coat drive is collecting for winter. What do you give? | best_coat = my best spare coat ; old_coat = an old coat I no longer wear ; buy_new = a new coat I buy for the drive ; money = money instead ; nothing ; other
+C | A food bank asks for canned goods. What do you usually bring? | whatever_is_old = whatever has sat longest in my pantry ; what_i_would_eat = food I would happily eat myself ; what_they_list = exactly what their list asks for ; cash = cash instead ; nothing ; other
+C | When a street fundraiser with a clipboard stops you, what do you usually do? | sign_up = sign up to give monthly ; listen_then_decline = listen, then decline ; walk_past = smile and walk past ; cross_street = cross the street early ; other
+C | Which feels most like a duty rather than a kindness? | rescue_nearby = helping someone in danger right in front of me ; giving_to_poor = giving to the very poor ; volunteering = volunteering locally ; none = none of these are duties ; other
+C | Which would you rather leave in your will? | all_to_family = everything to family ; mostly_family = mostly family, some to charity ; half_and_half = half to family, half to charity ; mostly_charity = mostly to charity ; other
+C | You have enough money to live comfortably for life. What should you do with the rest? | keep_as_buffer = keep it as a safety buffer ; give_to_family = give it to family ; give_to_causes = give it to good causes ; enjoy_it = enjoy it on travel and treats ; other
+C | You can fund one thing in your hometown. Which would you pick? | library = the library ; youth_sports = youth sports ; meals_for_elderly = meals for the elderly ; shelter = the homeless shelter ; park = the park ; other
+C | A stranger's car is stuck in snow and you are dressed for a job interview. What do you do? | push_anyway = help push anyway ; call_for_help = call someone who can help ; offer_rope_or_tips = offer tips from the curb ; drive_on = keep going to my interview ; other
+C | Someone collapses on a busy sidewalk and several people are already gathering. What should you do? | step_in = step in and help directly ; call_emergency = call for an ambulance ; ask_if_needed = ask if help is needed ; keep_walking = keep walking since others are there ; other
+C | A charity sends you free notepads and a greeting card with its appeal. How do you feel? | obliged = obliged to give something ; annoyed = annoyed by the pressure ; neutral = neither ; wasteful = it seems wasteful ; other
+C | You have one hour a week to spare for others. What would you do with it? | tutor = tutor a child ; visit_elderly = visit a lonely older person ; phone_line = answer a support phone line ; clean_up = pick up litter ; rest = keep it for myself ; other
+C | You could donate a kidney to a stranger who has waited years for one. What would you do? | donate = donate ; only_for_family = only for someone I know ; consider_later = consider it later in life ; no = not donate ; other
+C | A charity asks for your skills rather than your money, such as fixing their website for free. What should you do? | do_it_fully = do the whole job for free ; do_part = do part of it ; charge_discount = charge a discounted rate ; say_no = say no ; other
+C | Which kind of generosity do you admire most? | stranger_help = helping a stranger in trouble ; big_donations = giving large sums ; everyday_kindness = small daily kindnesses ; sacrifice_career = giving up a career to serve others ; other
+C | You notice a lonely older man eating alone at the diner every day. What should you do? | join_him = ask if I can join him ; pay_meal = quietly pay for his meal ; chat_briefly = chat briefly on my way out ; leave_him_be = leave him be ; other
+C | Your friend refuses all charity on the grounds that it lets governments off the hook. How do you respond? | disagree_openly = disagree openly ; see_point = see their point ; let_it_go = let it go ; other
+C | A new charity cause is going viral with an online challenge. How do you respond? | join_and_give = join the challenge and give ; give_quietly = give without the challenge ; challenge_only = do the challenge without giving ; ignore = ignore it ; other
+C | When you give money, which do you most want to know afterward? | who_it_helped = who it helped ; how_it_was_spent = how it was spent ; nothing = nothing, I just trust them ; results = what changed as a result ; other
+C | A relative asks you to lend money for rent, and you suspect you will never see it back. What should you do? | give_it_as_gift = give it as a gift ; lend_anyway = lend it anyway ; give_less = give a smaller amount ; say_no = say no ; other
+C | Which place would you rather volunteer? | hospital = a hospital ; school = a school ; soup_kitchen = a soup kitchen ; disaster_zone = a disaster zone ; care_home = a care home ; other
+C | A friend is running a marathon for a cause you strongly dislike. What do you do? | sponsor_friend = sponsor them anyway for the friendship ; explain_and_decline = explain and decline ; give_elsewhere = give the same to a cause I prefer ; ignore_request = ignore the request ; other
+C | Which is the better way to help a family in your street after a house fire? | organize_collection = organize a collection among neighbors ; give_personally = give personally and quietly ; offer_room = offer them a room ; bring_meals = bring meals ; other
+C | When you decide how much to give each year, what guides you? | fixed_share = a fixed share of income ; whatever_is_left = whatever is left at year end ; how_i_feel = how moved I feel at the time ; requests = who asks me ; nothing = I do not give regularly ; other
+C | Your company asks employees to give to a single approved charity through payroll. What do you do? | join = sign up ; join_small = sign up with a small amount ; give_elsewhere = give to my own choice instead ; decline = decline ; other
+C | A charity asks whether to spend your gift where it is needed most or on a project you pick. What do you choose? | needed_most = where it is needed most ; my_project = a project I pick ; other
+C | You are offered a promotion that pays more but leaves no time for your volunteering. What would you do? | take_it_give_money = take it and give more money instead ; take_it_drop_volunteering = take it and drop volunteering ; decline = decline to keep volunteering ; negotiate = ask for time to keep volunteering ; other
+C | Which is the best age to start giving to others? | childhood = in childhood ; first_job = with the first job ; once_settled = once financially settled ; retirement = in retirement ; other
+C | You see someone at the pharmacy counter unable to afford their prescription. What do you do? | pay_full = pay for it ; pay_part = offer to pay part ; point_to_cheaper = help them find a cheaper option ; look_away = look away ; other
+C | A cause you give to is found to have wasted some donations through poor management. What should you do? | keep_giving = keep giving if they fix it ; pause = pause until they report back ; stop = stop giving ; switch = switch to a similar charity ; other
+C | Which would you rather give to a friend's fundraiser? | money = money ; your_time = hours helping run it ; spread_word = spreading the word ; nothing ; other
+C | A young student asks you to mentor them for free for a year. What would you do? | say_yes = say yes ; shorter = offer a shorter time ; refer = refer them to someone else ; say_no = say no ; other
+C | Which is the most generous act a person can do on an ordinary day? | stop_to_help = stop to help a stranger ; give_seat = give up a seat ; listen = really listen to someone ; pay_for_someone = pay for someone else's coffee ; other
+C | You are asked to donate your old car to a charity that sells it for funds. You could also sell it and keep the cash. What do you do? | donate = donate the car ; sell_keep = sell it and keep the money ; sell_give_part = sell it and give part away ; other
+C | Your building collects money for a cleaner who is retiring after many years. What do you give? | generous = a generous amount ; standard = what others give ; small = a little ; nothing ; other
+C | A friend asks you to join them in giving a tenth of your income every year. What do you do? | join = join them ; smaller_share = commit to a smaller share ; decline_politely = decline politely ; other
+C | Which statement best fits how you think about giving? | duty = giving is a duty ; kindness = giving is a kindness beyond duty ; personal_choice = giving is purely a personal choice ; other
+C | You see a small crowdfunding page for a stranger with only a few gifts so far, next to a popular one close to its goal. Which would you give to? | small_page = the struggling page ; popular_page = the popular page ; neither ; other
+C | You learn a volunteer trip abroad costs more than the good the volunteers actually do. What should you do? | go_anyway = go anyway for the experience ; donate_cost = donate the trip cost instead ; volunteer_locally = volunteer at home ; other
+C | Which feels worse: giving to a charity that turns out to be a scam or never giving at all? | scam = giving to a scam ; never_giving = never giving at all ; equal ; other
+C | A new family moves into your street with almost nothing. What should you do first? | welcome_basket = bring a welcome basket ; offer_furniture = offer spare furniture ; ask_what_they_need = ask what they need ; wait = wait to get to know them ; other
+C | You can cover a stranger's grocery bill when their card is declined, but the line is watching. What do you do? | pay_openly = pay openly ; pay_discreetly = pay discreetly ; offer_privately = offer quietly after ; do_nothing = do nothing ; other
+C | Which cause should the next billionaire fund? | global_health = global health ; education = education ; local_poverty = poverty at home ; science = science research ; arts = the arts ; other
+C | You hear a panhandler might spend money on alcohol. What should you do? | give_anyway = give anyway ; give_food = give food instead ; give_nothing = give nothing ; ask_them = ask what they need ; other
+C | A friend who earns much more than you never gives to anything. What do you think? | none_of_my_business = it is their choice ; disappointed = I am disappointed in them ; would_say_something = I would gently say something ; other
+
+C | A stranger at the laundromat is a few coins short for the dryer. What do you do? | give_coins = give them the coins ; lend_coins = offer the coins as a loan ; point_to_change = point them to the change machine ; ignore = say nothing ; other
+C | You are given free concert tickets you cannot use. What should you do with them? | sell_them = sell them ; give_to_friend = give them to a friend ; give_to_stranger = give them to someone who could never afford them ; let_them_go_unused = let them go unused ; other
+C | A charity asks you to leave it a gift in your will instead of giving now. What do you prefer? | give_now = give now while I can see the effect ; give_in_will = leave a gift in my will ; both ; neither ; other
+
+# score
+S | How much of an unexpected windfall should a comfortable person give away? | None of it ; A token amount ; Around a tenth ; Around half ; Nearly all of it
+S | How much does it matter to you whether a charity can show clear evidence that it works? | I give without looking ; I glance at its reputation ; I check a few facts about it ; I only give to charities with published results ; I only give to charities an independent evaluator ranks highly
+S | How far would you go out of your way to help a stranger stranded on the roadside at night? | Drive past ; Call for help without stopping ; Stop and ask if they are okay ; Stop and wait with them until help comes ; Give them a ride wherever they need
+S | How often do you think a comfortable person should give blood? | Never ; Only in an emergency appeal ; Once in a while ; Every year ; As often as they are allowed
+S | How much should giving to strangers cut into your own comforts? | Not at all ; I give only what I won't notice ; I skip some small treats to give ; I give up regular luxuries to give ; I live simply so I can give most of my money away
+S | How much would you give to a coworker's crowdfunding page for a family emergency? | Nothing ; A token amount ; What I would spend on a nice lunch ; What I would spend on a night out ; A large share of my week's pay
+S | How willing would you be to join a bone marrow donor registry? | I would refuse ; I would only join for a relative ; I would think about it ; I would join if asked ; I would sign up today
+S | How much of your spare time should you give to volunteering? | None ; A few hours a year ; A few hours a month ; A few hours a week ; Most of my free time
+S | How strongly do you feel obliged to help after a disaster far away? | I feel no obligation ; I feel sorry but not obliged ; I feel I should give something small ; I feel I must give something meaningful ; I feel I must give as much as I can
+S | How acceptable is it to walk past someone asking for money without looking at them? | Completely fine ; Mostly fine ; A bit unkind ; Unkind ; Cruel
+S | How much should you favor people nearby over people far away when giving? | Only people nearby ; Mostly people nearby ; Equally ; Mostly the neediest anywhere ; Only the neediest anywhere
+S | How much should the cost-effectiveness of a charity guide your giving? | Not at all ; It is a minor factor ; It is one factor among several ; It is the main factor ; It is the only factor
+S | How much of a year-end bonus would you give away? | None ; A token amount ; Around a tenth ; Around a quarter ; Half or more
+S | How much does it bother you when people post their donations online? | It pleases me ; It does not bother me ; It slightly bothers me ; It bothers me ; It disgusts me
+S | How much personal risk would you accept to help a stranger in trouble? | No risk at all ; Only trivial risk ; Some discomfort ; Real risk of injury ; Risk to my life
+S | How important is it to you that your donations stay anonymous? | I want public credit ; I would like some credit ; I do not care ; I prefer anonymity ; I insist on anonymity
+S | How much does an employer match make you want to give? | It makes no difference ; It nudges me slightly ; It makes me give somewhat more ; It makes me give much more ; It is the only reason I give
+S | How much should people who earn a lot be expected to give? | Nothing beyond what they choose ; A small share ; A fair share like everyone ; A larger share than others ; Most of what they do not need
+S | How good is it to give money to people begging, rather than to shelters? | Much worse ; Somewhat worse ; About the same ; Somewhat better ; Much better
+S | How much would you help a struggling neighbor you barely know? | Not at all ; Only if they ask me directly ; Small favors like shoveling snow ; Regular help like meals ; Money or major help
+S | How often do you say yes when asked to round up at checkout for charity? | Never ; Rarely ; Sometimes ; Often ; Every time
+S | How much should you give if you learn a small gift could save a child's life abroad? | Nothing more than now ; A little more ; Noticeably more ; Much more ; As much as I possibly can
+S | How much would a scam story about one charity reduce your giving to all charities? | Not at all ; A little ; Somewhat ; A lot ; I would stop giving entirely
+S | How morally good is volunteering done mainly to look good on a résumé? | Not good at all ; Slightly good ; Good ; Very good ; Just as good as any other volunteering
+S | How much should giving hurt to count as real generosity? | It need not cost anything ; A small cost is enough ; It should be noticeable ; It should require sacrifice ; It should hurt a lot
+S | How much should you give to a friend's fundraiser for a cause you do not care about? | Nothing ; A token amount ; A normal amount ; A generous amount ; More than for my own causes
+S | How much of an inheritance should you leave to charity rather than family? | None ; A small slice ; About a quarter ; About half ; Most of it
+S | How much would you inconvenience yourself to return a lost child's backpack across town? | Leave it where I found it ; Hand it to a nearby shop ; Drop it at the police station ; Take it across town myself ; Go out of my way and track down the family
+S | How much trust do you give to a stranger's online appeal for money? | None ; Very little ; Some after checking ; Quite a lot ; Complete trust
+S | How much should you help a relative who keeps making poor money choices? | Not at all ; Only in a true emergency ; Now and then ; Whenever they ask ; Always, whatever it costs me
+S | How much would you give to a disaster appeal from a country you have never visited? | Nothing ; A token amount ; A normal amount ; A generous amount ; As much as I can afford
+S | How willing would you be to give up a weekend to rebuild homes after a flood nearby? | Not at all ; Only if friends went ; If it fit my plans ; Willing ; Eager
+S | How much of your free time would you give to tutoring a struggling student in your street? | None ; An hour once in a while ; An hour a month ; An hour a week ; Several hours a week
+S | How much should you trust a charity that spends heavily on fundraising? | Not at all ; A little ; Somewhat ; Mostly ; Completely
+S | How strongly should you give to a stranger's medical crowdfunding page when you can afford it? | There is no reason to ; It is a nice gesture ; It is a good thing to do ; It is something I ought to do ; It is a clear duty
+S | How much would you give up a small luxury each month so you could donate? | Not at all ; I would think about it ; I would try it for a while ; I would do it gladly ; I already do this
+S | How much should giving be taught to children? | Not at all ; A little ; Moderately ; A lot ; It should be central to their upbringing
+S | How acceptable is it to spend a windfall entirely on yourself? | Completely acceptable ; Mostly acceptable ; A bit selfish ; Selfish ; Very selfish
+S | How much should a donor get to decide how their gift is spent? | Not at all ; A little ; Somewhat ; A lot ; Completely
+S | How much would you give to help pay for a stranger's funeral in your community? | Nothing ; A token amount ; A normal amount ; A generous amount ; Enough to cover a large part of it
+S | How much should the size of a gift matter compared with the intention behind it? | Only size matters ; Size mostly matters ; Both equally ; Intention mostly matters ; Only intention matters
+S | How strongly do you prefer giving time over giving money? | Strongly prefer money ; Somewhat prefer money ; No preference ; Somewhat prefer time ; Strongly prefer time
+S | How much effort should you spend checking a charity before giving? | None ; A quick look at its website ; Reading a few reviews ; Checking its reports ; Detailed research
+S | How willing would you be to give blood if it meant a small needle and an hour of your day? | Not willing ; Only in a crisis ; Maybe once ; Willing ; Happy to do it regularly
+S | How much would you help a stranger who asked for a ride to the hospital? | Refuse ; Call them a taxi ; Pay for a taxi ; Drive them there ; Drive them and wait with them
+S | How much should you give if a neighbor's child needs costly surgery? | Nothing ; A token amount ; A normal amount ; A generous amount ; Whatever it takes
+S | How much should you give to a person on the street who tells a moving story? | Nothing ; Loose change ; A small note ; A meal ; A large sum
+S | How much does knowing the person you help change your willingness to give? | Not at all ; Slightly ; Somewhat ; A lot ; Completely
+S | How much of your working life would you be willing to give to a cause? | None ; A few volunteer days ; A year of service ; Several years ; My whole career
+S | How much would you give to a charity that helps people in your own profession who fall on hard times? | Nothing ; A token amount ; A normal amount ; A generous amount ; More than to any other cause
+S | How willing would you be to open your home to a family displaced by a fire? | Not at all ; For a night ; For a few nights ; For a few weeks ; For as long as they need
+S | How much should you sacrifice to keep a promised monthly donation when money gets tight? | Stop it right away ; Cut it sharply ; Trim it a little ; Keep it and cut elsewhere ; Keep it whatever the cost
+S | How much credit does a person deserve for giving only after being publicly asked? | None ; A little ; Some ; A lot ; As much as any giver
+S | How acceptable is it to never give to charity when you can easily afford to? | Completely acceptable ; Mostly acceptable ; Somewhat wrong ; Wrong ; Very wrong
+S | How much would you give to help a stranger's family after an accident reported in local news? | Nothing ; A token amount ; A normal amount ; A generous amount ; A very large amount
+S | How much weight should future generations get in your giving compared with people alive today? | None ; A little ; Equal ; More ; Far more
+S | How much of an inheritance from a stranger should you give back to the stranger's community? | None ; A small share ; About half ; Most of it ; All of it
+S | How willing would you be to donate your body to medical research after death? | Not willing ; Unlikely ; Unsure ; Willing ; Already arranged
+S | How much should you help a stranger who asks you to carry heavy bags up several flights of stairs? | Refuse ; Carry one bag ; Carry half ; Carry them all ; Carry them all and offer more help
+S | How willing would you be to take a lower paying job at a charity? | Not at all ; Only for a short time ; For a small pay cut ; For a large pay cut ; For almost no pay
+
+# noul
+N | Would you give part of a lottery win to strangers in need?
+N | Would you give away your birthday gifts and ask friends to donate instead?
+N | Would you donate blood if a local hospital asked this week?
+N | Would you skip a concert you had tickets for to help a friend's charity event?
+N | Is it better to give money directly to a poor family than to a charity serving them?
+N | Would you give to a stranger's crowdfunding page for medical bills?
+N | Is it wrong to decline a coworker's charity request?
+N | Would you volunteer on a holiday instead of spending it at home?
+N | Would you round up your bill at checkout for a charity you had never heard of?
+N | Is giving to the most cost-effective charity more important than giving locally?
+N | Would you spend a surprise bonus entirely on yourself?
+N | Would you give money to someone begging outside your home?
+N | Should a charity drive at work be kept anonymous?
+N | Would you still give if nobody would ever know you did?
+N | Would you volunteer your work skills to a nonprofit for free?
+N | Is it fine to give only to causes that affected your own family?
+N | Would you give a kidney to a stranger?
+N | Would you give up a week of vacation to help after a disaster?
+N | Should rich people give away most of their wealth before they die?
+N | Would you pay for a stranger's groceries if their card was declined?
+N | Is giving time more valuable than giving money?
+N | Would you let an employer match decide which charity you give to?
+N | Should you check a charity's results before giving to it?
+N | Would you cancel a planned purchase to give the money to a family whose home flooded?
+N | Would you help a neighbor you dislike if they were in need?
+N | Is donating to fix a problem abroad better than fixing one in your own town?
+N | Would you sign up to give monthly to a street fundraiser?
+N | Would you keep giving to a charity after its leader was caught wasting funds?
+N | Is it selfish to spend a windfall on travel instead of donating it?
+N | Would you give a stranger money for a bus ticket home?
+N | Would you publicly announce a large donation to encourage others?
+N | Should people who receive charity be expected to give back later?
+N | Would you stop to help someone who dropped their shopping in the rain?
+N | Would you volunteer for a cause even if it paid nothing and no one thanked you?
+N | Would you give to a charity whose founder you personally dislike if it did great work?
+N | Would you give part of an inheritance to charity?
+N | Would you mentor a young stranger for free?
+N | Do you owe more to people in your own country than to people abroad?
+N | Would you give to a charity that helps people you disagree with?
+N | Would you give your spare coat to a stranger shivering at a bus stop?
+N | Should children be expected to give part of their pocket money to others?
+N | Would you open your home to a displaced stranger for a night?
+N | Would you give more if a friend matched your donation?
+N | Is it better to give a lot once than a little every month?
+N | Would you drive a sick stranger to the hospital?
+N | Would you give to a cause online without checking if it is genuine?
+N | Is it acceptable to give nothing at all if you are only just getting by?
+N | Would you register as an organ donor?
+N | Would you take unpaid leave to care for a stranger in crisis?
+N | Should famous people use their fame to raise money for causes?

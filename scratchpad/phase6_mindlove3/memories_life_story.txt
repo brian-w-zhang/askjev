@@ -1,0 +1,112 @@
+N|personality|Did you ever get lost as a child in a shop, park, or crowd?
+C|personality|What do you remember most about getting lost as a child, if it happened?|the_fear;the_stranger_who_helped;the_relief_of_being_found;getting_scolded;it_never_happened
+N|personality|Do you remember the first meal you cooked by yourself?
+C|personality|What was the first thing you learned to cook on your own?|eggs;toast_or_sandwiches;noodles_or_pasta;a_cake_or_cookies;rice;instant_food;i_never_learned
+N|personality|Did you go to sleepovers at friends' houses as a child?
+C|personality|What do you remember most about childhood sleepovers?|staying_up_late;scary_stories;snacks;feeling_homesick;games;i_never_went_to_one
+N|personality|Did you quit a musical instrument or sport as a child that you now wish you had kept up?
+C|personality|Which childhood activity do you most wish you had stuck with?|a_musical_instrument;a_sport;a_language;art_or_drawing;dance;none
+S|personality|How often do you think about a hobby you gave up as a child?|I never think about it ; I think about it once in a great while ; I think about it a few times a year ; I think about it most months ; I think about it often
+N|personality|Did you ever build a den, fort, or secret hideout as a child?
+C|personality|Where was your favorite childhood hideout?|under_a_table_or_bed;in_a_tree;in_a_garden_or_yard;in_a_closet;at_a_friends_place;i_never_had_one
+N|personality|Were you ever picked last for a team at school?
+S|personality|How much do you still remember the feeling of being left out as a child?|I do not remember being left out at all ; I remember it only vaguely ; I remember it clearly but calmly ; I remember it and it still stings a little ; I remember it vividly and it still hurts
+C|personality|Which school event do you remember most?|a_school_trip;a_play_or_concert;sports_day;a_science_fair;graduation;a_school_dance;other
+N|personality|Did you go on a school trip that you still remember in detail?
+C|personality|Which place from your childhood do you remember with the most warmth?|a_grandparents_home;a_holiday_spot;a_park;a_friends_house;your_own_bedroom;a_school;other
+S|personality|How clearly can you picture your grandparents' home?|I cannot picture it at all ; I can picture only a room or two ; I can picture the main rooms ; I can picture most of it in detail ; I can picture every corner of it
+N|personality|Do you remember the first concert or live show you went to?
+C|personality|Which first do you remember best?|first_flight;first_concert;first_time_seeing_snow;first_time_seeing_the_sea;first_phone;first_paycheck
+S|personality|How vividly do you remember the first time you saw the sea or a very large lake?|I do not remember it at all ; I remember it only as a fact ; I remember a few details ; I remember it clearly ; I remember it as if it were yesterday
+N|personality|Do you remember a big storm or power cut from your childhood?
+C|personality|What do you remember best about long car trips as a child?|games_in_the_car;the_music_played;arguing_with_siblings;snacks;getting_carsick;we_rarely_took_them
+N|personality|Did you have a pen pal or someone you wrote letters to as a child?
+C|personality|What kind of object from your past do you find hardest to throw away?|letters_or_cards;ticket_stubs;old_clothes;toys;school_work;photos
+S|personality|How many ticket stubs, programs, or similar keepsakes do you hold on to?|I throw them all away ; I keep one or two special ones ; I keep a small box of them ; I keep a large collection ; I keep nearly every one I get
+N|personality|Have you ever deleted photos to forget a part of your life?
+C|values|What should a person do with photos of an ex after a breakup?|delete_them_all;keep_them_hidden;keep_only_the_good_ones;keep_them_as_they_are;other
+S|personality|How much do you enjoy looking through other people's old family photos?|I do not enjoy it at all ; I look politely but feel little ; I enjoy it somewhat ; I enjoy it a lot ; I could look through them for hours
+C|values|If your life were a book, which kind would it be?|adventure;comedy;drama;mystery;romance;coming_of_age;quiet_literary_novel
+C|values|If your life so far were a film, who would be the main supporting character?|a_parent;a_sibling;a_best_friend;a_partner;a_teacher;a_pet;other
+C|values|How many chapters would your life story so far have, roughly?|very_few;several;many;it_is_one_long_chapter
+N|values|Does your life story so far have a clear turning point in the middle?
+S|values|How much does your life so far feel like a single connected story rather than separate episodes?|It feels like totally separate episodes ; It feels mostly like separate episodes ; It feels partly connected ; It feels mostly like one story ; It feels like one clear, connected story
+C|values|Which song style would best fit the soundtrack of your childhood?|upbeat_pop;quiet_folk;classical;rock;lullaby;silence;other
+C|personality|Who in your family is the keeper of family stories?|a_grandparent;a_parent;an_aunt_or_uncle;a_sibling;me;nobody
+N|personality|Is there a family legend that you are not sure is true?
+S|personality|How much do you know about how your parents met?|I know nothing about it ; I know only the basic facts ; I know the main story ; I know it in detail ; I know every twist of it
+C|values|Which is the best way to preserve family memories?|recorded_interviews;photo_albums;written_stories;family_gatherings;keepsake_boxes;other
+N|personality|Have you ever recorded an older relative telling stories about their life?
+C|personality|What do you remember most about your first phone?|the_model;who_you_texted;the_games_on_it;the_ringtone;how_proud_you_were;i_do_not_remember_it
+S|personality|How often do you scroll back through old messages in your phone?|I never scroll back ; I scroll back once in a great while ; I scroll back a few times a year ; I scroll back most months ; I scroll back often
+C|personality|Which memory do you tell most often at family gatherings?|a_funny_mishap;a_childhood_prank;a_holiday_disaster;how_someone_met_someone;a_near_miss;i_rarely_tell_stories
+N|personality|Did you play a prank as a child that people still talk about?
+C|personality|What did you get in the most trouble for as a child?|talking_back;fighting_with_siblings;breaking_something;lying;staying_out_late;messing_around_at_school;i_rarely_got_in_trouble
+S|personality|How well do you remember what your childhood bedroom smelled like?|I have no memory of it ; I have a faint sense of it ; I remember it somewhat ; I remember it clearly ; I could recognize it instantly
+C|values|Which sense brings back memories most strongly for you?|smell;sound;taste;sight;touch
+N|personality|Is there a food that you cannot eat without thinking of a specific person?
+C|personality|Which kind of meal do you remember most from your past?|a_holiday_feast;a_meal_abroad;a_simple_meal_with_someone_special;a_disastrous_meal;a_first_date_meal;other
+S|personality|How often do you remember a conversation with a stranger that stayed with you?|I cannot recall any such conversation ; I recall one only rarely ; I recall one now and then ; I recall one fairly often ; I think about such a conversation often
+C|personality|Which trip do you remember most vividly?|a_childhood_family_trip;a_school_trip;a_trip_with_friends;a_solo_trip;a_work_trip;other
+N|personality|Have you ever gone to a school reunion?
+S|values|How much would you want to attend a reunion of your old school class?|I would not want to go at all ; I would go only if close friends went ; I would be curious enough to go ; I would be keen to go ; I would be the one organizing it
+C|personality|Who from your school days would you most like to see again?|a_best_friend;a_teacher;a_crush;a_rival;someone_you_were_unkind_to;nobody
+N|values|Would you want to read letters you wrote to friends as a teenager?
+S|personality|How embarrassed would you be to see a video of yourself as a teenager?|I would not be embarrassed at all ; I would cringe a little ; I would be fairly embarrassed ; I would be very embarrassed ; I would want it destroyed
+C|values|What do you think your teenage self would find most surprising about your life now?|where_you_live;what_you_do_for_work;who_your_friends_are;how_calm_you_are;what_you_care_about;nothing_much
+N|values|Would your teenage self like you if you met today?
+C|personality|What did you believe as a child that turned out to be untrue?|that_the_moon_followed_the_car;that_adults_knew_everything;a_family_myth;that_swallowed_seeds_grow_inside_you;that_my_town_was_the_whole_world;other
+S|personality|How much did you believe in magic as a young child?|I never believed in magic ; I half believed in a few things ; I believed in some magic ; I believed in a lot of magic ; I was completely sure magic was real
+C|personality|Which childhood belief did you hold on to the longest?|a_holiday_gift_giver;the_tooth_fairy;monsters_under_the_bed;that_toys_came_alive;other;none
+N|personality|Do you remember the moment you learned to read?
+C|personality|What was the first book you remember reading on your own?|a_picture_book;a_comic;a_school_reader;a_chapter_book;a_fairy_tale;i_do_not_remember
+S|personality|How much did books shape your childhood?|Books played no part in my childhood ; Books played a small part ; Books were a regular part ; Books were a big part ; Books were my whole world
+N|personality|Did you have a favorite blanket or soft toy that you took everywhere?
+C|personality|What happened to your favorite childhood toy?|i_still_have_it;a_family_member_has_it;it_was_lost;it_was_given_away;it_wore_out;i_do_not_remember
+S|personality|How much would you pay to get back a lost childhood toy?|Nothing at all ; A small amount ; A fair amount ; A large amount ; Almost anything
+C|personality|Which memory from a hospital or doctor visit as a child do you remember best?|getting_stitches;a_broken_bone;visiting_a_sick_relative;a_sibling_being_born;getting_a_shot;none
+N|personality|Do you remember the day a younger sibling or cousin was born?
+C|personality|Which neighbor from your childhood do you remember most?|a_kind_older_person;a_grumpy_one;a_friend_your_age;a_family_with_pets;none
+S|personality|How much did your childhood neighborhood feel like a community?|It felt like no community at all ; It felt a little like a community ; It felt somewhat like a community ; It felt very much like a community ; It felt like one big family
+C|personality|How did you spend school holidays most often as a child?|at_home;with_grandparents;at_camp;travelling;working;with_friends_outside
+N|personality|Did you go to a summer camp or similar holiday program?
+C|personality|What do you remember most about your first job interview?|nerves;what_you_wore;a_strange_question;getting_the_job;not_getting_the_job;i_do_not_remember
+S|personality|How often do you tell new friends stories from your childhood?|I never tell childhood stories ; I tell them only if asked ; I tell them now and then ; I tell them often ; I tell them all the time
+C|values|Which is the best age to write down your life story?|in_youth;in_middle_age;in_old_age;keep_writing_it_all_along;never
+N|values|Would you want your life story written by someone else rather than yourself?
+C|social|What do most people remember most about their childhood?|family_holidays;school;friends;their_home;their_pets;hard_times
+S|social|How clearly do most people remember their first day of school?|Most people do not remember it at all ; Most people remember a single image ; Most people remember a few details ; Most people remember it fairly clearly ; Most people remember it vividly
+N|social|Do most people keep a box of mementos from their past?
+C|social|Which childhood smell do most people say brings back the strongest memories?|a_grandparents_kitchen;cut_grass;school_classrooms;sunscreen;rain;a_parents_perfume_or_soap
+S|social|How often do most people look back through old photos?|Most people never look back ; Most people look back once in a long while ; Most people look back a few times a year ; Most people look back most months ; Most people look back most weeks
+N|social|Do most people remember their childhood as happier than it really was?
+C|social|Who do most people say influenced them most growing up?|a_parent;a_grandparent;a_teacher;a_sibling;a_friend;a_coach
+S|social|How much do most people think their childhood shaped who they are now?|Most people think it shaped them not at all ; Most people think it shaped them a little ; Most people think it shaped them somewhat ; Most people think it shaped them a lot ; Most people think it shaped nearly everything
+N|social|Would most people want to relive a day from their childhood?
+C|social|What do most people wish they had asked their grandparents while they could?|about_their_childhood;about_love;about_hard_times;about_family_history;for_their_recipes;for_advice
+S|social|How often do most people think about their first love?|Most people never think about it ; Most people think about it once in a long while ; Most people think about it a few times a year ; Most people think about it most months ; Most people think about it often
+N|social|Do most people still own something from their early childhood?
+C|social|What kind of memory do most people bring up most at family gatherings?|funny_mishaps;embarrassing_moments;holidays;people_who_are_gone;childhood_mischief
+S|social|How much do most people change their memories of the past to fit who they are now?|Most people never change their memories ; Most people change them slightly ; Most people change them somewhat ; Most people change them a lot ; Most people rewrite their past almost completely
+N|social|Would most people want to read their teenage diary?
+C|social|Which turning point do most people say changed their lives most?|leaving_home;a_first_job;meeting_a_partner;having_a_child;losing_someone;moving_somewhere_new
+N|social|Do most people have a family story that gets told at every gathering?
+S|social|How much do most people enjoy telling stories about their past?|Most people dislike it ; Most people do it only when asked ; Most people enjoy it now and then ; Most people enjoy it a lot ; Most people love it more than almost anything
+C|social|What do most people keep from their childhood?|a_toy;photos;school_reports;drawings;clothing;nothing
+C|values|Which is the best way to remember a great trip?|photos;a_journal;a_souvenir;telling_the_story;going_back_one_day
+N|personality|Do you remember the first time you felt proud of someone else?
+S|personality|How much of your childhood do you think you have forgotten?|I remember almost all of it ; I have forgotten a little ; I have forgotten about half ; I have forgotten most of it ; I have forgotten almost all of it
+C|personality|Which memory would you most like to show someone you love, if you could?|a_childhood_holiday;a_proud_moment;a_beautiful_place;a_funny_moment;the_day_you_met_them
+N|values|Would you want to know about a memory your parents kept from you when you were young?
+C|personality|Which of your old handwriting samples would you most like to see again?|early_school_work;a_teenage_diary;a_love_note;a_letter_to_a_grandparent;none
+C|personality|Which kind of photo from your past makes you laugh the most?|a_bad_haircut;an_awkward_school_photo;a_fashion_mistake;a_goofy_face;a_holiday_mishap
+C|personality|What was the first thing you ever saved up money to buy?|a_toy;a_game;clothes;a_bike;a_gift_for_someone;music_or_books;i_never_saved_up
+C|personality|Which part of your old school do you remember most clearly?|the_playground;a_classroom;the_lunch_hall;the_library;the_gym;the_school_gates
+C|values|When you remember a hard time in your life, which feeling comes up first now?|sadness;pride_at_getting_through;relief_it_is_over;gratitude_for_help;nothing_much
+S|personality|How often do you dream about your old school?|I never dream about it ; I dream about it once in a great while ; I dream about it a few times a year ; I dream about it most months ; I dream about it often
+S|personality|How much do you remember about the day you moved into your current home?|I remember nothing about it ; I remember only the date ; I remember a few moments ; I remember most of the day ; I remember it in great detail
+S|personality|How much do your memories of a friendship change after it ends badly?|They do not change at all ; They change a little ; They take on a different color ; Most of them feel spoiled ; I can hardly remember the good times anymore
+S|values|How much should families keep their difficult stories alive for the next generation?|Difficult stories should be left behind entirely ; Only the gentlest parts should be passed on ; Some difficult stories should be passed on ; Most difficult stories should be passed on ; Every difficult story should be told honestly
+N|personality|Can you still sing a song you learned in early childhood from start to finish?
+C|social|Which childhood game do most people say they miss playing?|hide_and_seek;tag;make_believe;hopscotch;board_games;video_games
+S|social|How much do most people enjoy seeing old photos of themselves?|Most people hate it ; Most people cringe a little ; Most people have mixed feelings ; Most people enjoy it ; Most people love it
