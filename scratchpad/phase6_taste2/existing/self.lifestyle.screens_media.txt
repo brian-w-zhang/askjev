@@ -1,0 +1,173 @@
+Do you check the news every day?
+Do you check your phone within a few minutes of waking up?
+Do you have a paid music streaming subscription?
+Do you have more than one social media account on the same app?
+Do you keep a gaming console connected at home?
+Do you keep a screen on in the background while working?
+Do you keep your phone face-down or out of sight when you want to focus?
+Do you keep your phone in the bedroom overnight?
+Do you keep your phone's location sharing on with friends or family?
+Do you mostly post on social media or mostly just watch?
+Do you often catch yourself opening an app without meaning to?
+Do you often fall asleep while watching something?
+Do you often rewatch shows you've already seen?
+Do you often use two screens at the same time?
+Do you prefer light mode or dark mode on your devices?
+Do you prefer podcasts to music on long drives?
+Do you prefer reading an ebook to a paper book?
+Do you prefer watching shows on a phone to a TV?
+Do you prefer watching videos with the sound off?
+Do you read the comments under videos you watch?
+Do you read the news on a screen more than on paper?
+Do you routinely turn off your phone's notifications on weekends?
+Do you sleep with your phone within arm's reach?
+Do you still watch live TV broadcasts regularly?
+Do you tend to read the comments before deciding what you think about a post?
+Do you tend to turn off your phone's sound entirely during the day?
+Do you turn on autoplay for the next episode?
+Do you use a screen time limit or app blocker on any device?
+Do you use your phone as your main alarm clock?
+Do you use your phone in the bathroom?
+Do you usually have something playing in the background while you do chores?
+Do you usually take a break from social media when you feel stressed?
+Do you usually turn off your phone during meals with others?
+Do you usually watch the trailer before starting a new show?
+Do you watch a whole series again when it gets a new season?
+Do you watch videos at faster than normal playback speed?
+Have you ever deleted a social media app to cut down on use?
+How carefully do you curate what you post online?
+How closely do you follow the news?
+How closely do you track your screen time report?
+How do you choose what to watch next?
+How do you deal with newsletters and promotional emails?
+How do you feel about spoilers for something you plan to watch?
+How do you feel about your unread email count?
+How do you handle notifications on your phone?
+How do you handle software updates on your devices?
+How do you handle unread messages and notification badges?
+How do you keep track of shows you want to watch?
+How do you like to play video games?
+How do you manage your photos on your phone?
+How do you organize the apps on your phone's home screen?
+How do you organize your email inbox?
+How do you prefer to consume a podcast episode?
+How do you prefer to listen to things on the go?
+How do you prefer to share photos with family?
+How do you prefer to take in a news story?
+How do you prefer to watch a foreign-language film?
+How do you prefer your phone's text size?
+How do you react when a friend doesn't respond to your message but you can see they've read it?
+How do you respond to a news alert on your phone?
+How do you use your phone during a film at the cinema?
+How do you use your phone when you can't sleep?
+How do you usually decide to stop a streaming session?
+How do you usually decide what to watch on a streaming service?
+How do you usually handle a long video that you are curious about?
+How do you usually listen to music at home?
+How do you usually pick what music to listen to?
+How do you usually react to a cliffhanger at the end of an episode?
+How do you usually react when a group chat gets very busy?
+How do you usually react when your phone battery dies while you're out?
+How do you usually save something interesting to read or watch later?
+How do you usually start your time on a computer when you sit down for fun?
+How do you usually watch a show while doing other things?
+How do you usually watch shows or movies?
+How do you usually watch video on your phone?
+How do you usually wind down your screen use before bed?
+How late do you usually game on a weeknight?
+How long can you watch a video before checking something else?
+How long could you comfortably go without your phone?
+How long do you usually spend choosing something to watch?
+How long does your phone battery usually last before you need to charge it?
+How loud do you usually keep the volume when watching alone?
+How many browser tabs do you usually have open?
+How many hours a week do you spend playing video games?
+How many hours do you usually spend on screens for fun on a weekend day?
+How many phones or personal devices do you carry day to day?
+How many streaming services do you pay for or regularly use?
+How many unread messages do you usually have?
+How much do you curate who you follow online?
+How much do you trust the recommendations feeds show you?
+How much do you use your phone in a typical day?
+How much do you watch live sports on a screen?
+How much do you watch while also looking at your phone?
+How much does it bother you to be without your phone for a whole day?
+How much of your listening time goes to the same favorite songs?
+How much of your news comes from social media?
+How much of your social media feed do you actually read versus scroll past?
+How much time do you spend playing video games?
+How often do you check whether your messages have been read?
+How often do you check your email outside work or school?
+How often do you comment on other people's posts?
+How often do you listen to a whole album in order?
+How often do you listen to podcasts?
+How often do you play games on your phone?
+How often do you post stories or status updates?
+How often do you read the full article rather than just the headline?
+How often do you rewatch a favorite movie?
+How often do you scroll social media?
+How often do you take deliberate breaks from screens?
+How often do you turn off your phone completely?
+How often do you video call friends or family just to chat?
+How often do you watch a whole season of a show in a single weekend?
+How often do you watch something while eating alone?
+How often do you watch videos in bed?
+How public are your social media profiles?
+How quickly do you reply to a text from a friend?
+How soon after waking do you look at a screen?
+How soon after waking do you look at your phone?
+What do you do when an app asks to track you across other apps?
+What do you do when you find yourself doomscrolling?
+What do you most often do on your phone while waiting in a line?
+What do you most often do with a funny video you find?
+What do you most often listen to on a commute?
+What do you usually do when an app asks you to rate it?
+What do you usually do when the opening credits of a show start?
+What do you usually do with a video game you've finished?
+What do you usually do with your phone during a meal at home?
+What do you usually do with your phone when you are out with friends?
+What is the main reason you pick up your phone when it isn't ringing?
+What is the main thing you use a tablet for?
+What is your usual approach to your phone's storage filling up?
+What kind of games do you most often play when you have a spare hour?
+What kind of livestream are you most likely to watch?
+What kind of phone wallpaper do you usually have?
+What's the last thing you usually do before sleep?
+When a show has subtitles available, what do you do?
+When an argument breaks out in a comment section, what do you usually do?
+When do you usually catch up on the news?
+When during the week do you do most of your gaming?
+When you have a spare minute, like waiting in line, what do you usually do?
+When you notice you've spent too long on your phone, what do you usually do?
+When you post something on social media, what do you usually do afterward?
+When you start a new show, how do you usually watch it?
+When you watch a series, how do you usually pace it?
+When you're bored for a few minutes, what do you reach for?
+Where do you keep your phone while you sleep?
+Where do you mostly get your news?
+Where do you usually keep your phone while you sleep?
+Where do you usually watch shows at home?
+Which app do you open most often on your phone?
+Which device do you reach for first in the morning?
+Which device do you use most for video calls?
+Which do you use more for chatting with friends?
+Which gaming platform do you spend the most time on?
+Which kind of content most often keeps you up past your bedtime?
+Which kind of news do you most often read or watch?
+Which kind of notification do you allow on your lock screen?
+Which kind of podcast do you most enjoy listening to?
+Which kind of post do you most often put online?
+Which kind of screen break do you take most often?
+Which kind of screen do you prefer for watching a movie at home?
+Which kind of social media account do you follow most?
+Which kind of social media content do you enjoy most?
+Which kind of video do you most often end up watching late at night?
+Which kind of video do you most often watch online?
+Which messaging style do you use most with close friends?
+Which screen do you spend the most free time on?
+Which sound setting is your phone on most of the time?
+Which time of day do you most often watch shows or films?
+Which way do you most often type on your phone?
+Which way do you prefer to read long articles?
+Would you feel relieved if social media disappeared for a month?
+Would you rather watch something alone or with others?

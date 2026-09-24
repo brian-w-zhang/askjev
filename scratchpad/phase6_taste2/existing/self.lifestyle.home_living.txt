@@ -1,0 +1,168 @@
+Do you grow any plants for food at home?
+Do you keep a spare room for guests?
+Do you keep a welcome mat at your front door?
+Do you keep the curtains open during the day?
+Do you like having a clock in every room?
+Do you like having a television in your bedroom?
+Do you like wallpaper in your home?
+Do you like your home filled with music most of the time?
+Do you own more decorative cushions than you need?
+Do you prefer an open-plan or separate kitchen?
+Do you prefer carpet over hard floors in the bedroom?
+Do you prefer your home to feel cool rather than warm?
+Do you run air conditioning during hot weather?
+Do you sleep with a window open?
+Do you tend to redecorate a room when you feel restless?
+Do you usually keep your front door open to neighbors dropping by?
+How big a role do candles play in your home?
+How close would you want to live to your family?
+How close would you want your nearest neighbors?
+How comfortable would you be living in a place with very few other people nearby?
+How cool do you like the bedroom at night?
+How dark do you want your bedroom at night?
+How do you feel about rearranging your furniture?
+How do you feel about unexpected visitors dropping by your home?
+How do you like your belongings stored?
+How do you like your home lit in the evening?
+How do you like your kitchen items stored?
+How do you prefer to display books at home?
+How do you prefer your windows covered?
+How do you usually decide how to decorate a room?
+How far would you move to find your ideal home?
+How full do you like your bookshelves and shelves to be?
+How important is a big kitchen table to you?
+How involved would you be in designing a home built for you?
+How long would you ideally stay in one home?
+How long would you want your commute from home to be?
+How many plants do you keep at home?
+How many throw blankets do you keep in your living room?
+How minimal do you want your living room to be?
+How much clutter can you live with at home before it bothers you?
+How much color do you want on your walls?
+How much do you care about having a garden?
+How much do you care about matching furniture?
+How much do you care about the look of your home's exterior?
+How much do you put on your walls?
+How much do you want your home to be a place where guests gather?
+How much do you want your home to reflect your personality?
+How much effort do you put into making your home nice?
+How much natural light do you want at home?
+How much natural wood do you like in a home?
+How much noise from neighbors can you tolerate?
+How much of your furniture would you want to be antique or vintage?
+How much of your home would you want to be outdoor space?
+How much of your personality shows in your home?
+How much space do you want between your home and the nearest shop?
+How much storage space do you want in a home?
+How much sunlight do you want in your bedroom in the morning?
+How much would you personalize a rented apartment?
+How much would you spend on a good mattress compared with other furniture?
+How much would you spend to live in a better location?
+How much would you want your home to be filled with technology?
+How much would you want your home to feel like a hotel?
+How often do you buy new things for your home?
+How often do you change your home decor?
+How often do you have people over at your home?
+How often do you rearrange your furniture?
+How open do you like your home's layout?
+How quiet does your home need to be?
+How tidy is your home on a typical day?
+How warm do you keep your home in winter?
+How would you like your home to smell?
+What color walls do you want at home?
+What finish do you like on wooden furniture?
+What flooring do you prefer?
+What is your preferred bed height?
+What is your rule for shoes in the house?
+What kind of bedding do you like best?
+What kind of dining setup would you want at home?
+What kind of doorbell arrangement do you prefer at home?
+What kind of entryway do you want?
+What kind of furniture do you prefer?
+What kind of hallway walls appeal to you?
+What kind of home fragrance do you use most?
+What kind of home would you choose in a big city?
+What kind of home would you choose to rent for a whole year abroad?
+What kind of neighbors would you prefer?
+What kind of place do you want to live in when you are older?
+What kind of place would you most like to live?
+What kind of view would you like from your bed?
+What size bed would you choose?
+What size home would you choose if cost were equal?
+What view would you most want from your window?
+What wall finish do you like best?
+What would be your ideal way to get into your home?
+What would you most like to have in your home if space were no issue?
+What would you most like your bedroom to feel like?
+What would you put at the center of your living room?
+When guests are coming over, what do you usually do beforehand?
+When sharing a home, how do you usually handle a roommate who leaves a mess?
+When something in your home breaks, like a leaky tap, what do you usually do?
+Where would you prefer to eat breakfast at home?
+Where would you prefer to live within a building?
+Where would you prefer to put your television?
+Where would you want your washing machine?
+Which area would you pick to live in, all else being equal?
+Which building material would you want your home made of?
+Which ceiling height do you prefer in a home?
+Which climate would you most like your home to be in?
+Which color scheme would you choose for your living room?
+Which decor style appeals to you most?
+Which floor plan would you want for your ideal home?
+Which home heating do you prefer?
+Which home office setup would you choose?
+Which home temperature feels best to you in summer?
+Which kind of chair would you want for reading at home?
+Which kind of fence or boundary would you like around your home?
+Which kind of front door appeals to you most?
+Which kind of garage use would you want?
+Which kind of garden would you want if you had space?
+Which kind of houseplant arrangement would you want?
+Which kind of kitchen counter would you pick for your home?
+Which kind of kitchen would you want?
+Which kind of lighting fixture do you like most?
+Which kind of mattress feel do you prefer?
+Which kind of mirrors do you like at home?
+Which kind of outdoor seating would you want at home?
+Which kind of pillow setup do you like on your bed?
+Which kind of rug do you like best?
+Which kind of shelving do you like at home?
+Which kind of sofa would you choose for your living room?
+Which kind of staircase would you want in a home?
+Which kind of street would you most like to live on?
+Which of these features would you most want in your bedroom?
+Which outdoor space would you most want at home?
+Which room matters most to you in a home?
+Which room would you most want to be large?
+Which sound would you most like to hear from home?
+Which type of balcony use appeals to you most?
+Which type of bathroom would you most want?
+Which type of bed frame would you choose?
+Which type of closet storage would you want?
+Which type of home would you choose?
+Which type of wall art do you prefer at home?
+Which unusual home would you most enjoy living in?
+Which window style do you like best in a home?
+Who would make up your ideal household?
+Who would you choose to share a home with?
+Would you be happy living in a studio apartment long term?
+Would you be happy living in a tiny house?
+Would you choose to live in a gated community?
+Would you choose to live near water?
+Would you enjoy living in a houseboat?
+Would you like a window seat built into your home?
+Would you like to live above a shop or cafe?
+Would you like to live in a converted building such as a church, barn, or lighthouse?
+Would you like to live in a home with a thatched roof?
+Would you like to live in a treehouse-style home?
+Would you like to live somewhere that snows every winter?
+Would you prefer living on a hill with a view over living in a flat valley?
+Would you rather live in an old building or a new one?
+Would you want a fireplace in your home?
+Would you want a home with a basement?
+Would you want a home with a large attic?
+Would you want a home with a swimming pool?
+Would you want a hot tub at home?
+Would you want to live in a home with a view of a busy street?
+Would you want to live on a high floor of a tall building?
+Would you want to live right next to a park?

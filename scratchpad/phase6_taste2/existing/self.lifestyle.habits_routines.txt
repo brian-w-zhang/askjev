@@ -1,0 +1,178 @@
+Do you exercise before breakfast?
+Do you floss before bed?
+Do you follow a skincare routine every morning?
+Do you get your chores done before noon on days off?
+Do you get your clothes ready for the week on Sundays?
+Do you go for a walk most days?
+Do you hang your towel to dry right after using it?
+Do you keep a glass of water by your bed at night?
+Do you keep a set bedtime on weeknights?
+Do you lay out your clothes the night before?
+Do you like to clean with music playing loudly?
+Do you make your bed every morning?
+Do you meditate regularly?
+Do you often fall asleep on the couch?
+Do you prefer baths to showers?
+Do you set more than one alarm to wake up?
+Do you shower every day?
+Do you sing in the shower?
+Do you sleep better in your own bed than anywhere else?
+Do you sleep with a fan or white noise on?
+Do you sleep with a fan running?
+Do you sleep with earplugs?
+Do you sleep with socks on?
+Do you sleep with the door closed?
+Do you stick to the same route when walking to familiar places?
+Do you take off your shoes as soon as you get home?
+Do you take your shoes off as soon as you get home?
+Do you tend to feel uneasy when you miss your usual workout?
+Do you tend to hum or talk to yourself while doing chores?
+Do you tend to keep your routines even when you are on vacation?
+Do you tidy up before going to bed each night?
+Do you use a sleep mask?
+Do you usually arrive early to meet friends?
+Do you usually lay out your things for the next day the night before?
+Do you usually make your bed as soon as you get up?
+Do you usually wake up before your alarm goes off?
+Do you wash your face every night before bed?
+How carefully do you keep up personal grooming on days you stay home?
+How cluttered is your bedroom right now?
+How consistent is your bedtime?
+How consistent is your wake-up time across the whole week?
+How do you brush your teeth?
+How do you decide when to go to sleep?
+How do you handle a pile of clothes on a chair?
+How do you handle your alarm on a weekday morning?
+How do you like to organize your closet?
+How do you like to prepare the night before a busy day?
+How do you like to spend a rainy day at home?
+How do you most often deal with the dishes after cooking?
+How do you pair your socks?
+How do you plan your day?
+How do you prefer to clean the house?
+How do you prefer to cut your nails?
+How do you prefer to wake up on a day off?
+How do you prefer to warm up before exercise?
+How do you set your alarm on weekends?
+How do you sleep with the covers?
+How do you squeeze a toothpaste tube?
+How do you usually arrive for plans with a friend?
+How do you usually carry your things when you leave home?
+How do you usually decide when to go to bed?
+How do you usually dry your hair?
+How do you usually fold your towels?
+How do you usually get dressed in the morning?
+How do you usually get rid of clutter?
+How do you usually get to places on time?
+How do you usually handle a pile of dishes in the sink?
+How do you usually handle your laundry?
+How do you usually handle your mail?
+How do you usually hang toilet paper?
+How do you usually keep track of appointments?
+How do you usually keep track of chores that need doing?
+How do you usually make your bed?
+How do you usually react when someone moves things around in your home?
+How do you usually relax in the evening?
+How do you usually spend the first hour after waking?
+How do you usually spend time on a long walk?
+How do you usually start a free weekday evening?
+How do you usually tackle a messy room?
+How do you usually take care of your plants?
+How do you usually tie your shoes?
+How do you usually wake up?
+How do you usually wake yourself up on a groggy morning?
+How does your weekend wake-up compare to weekdays?
+How early do you start getting ready for a night out?
+How fixed is your morning routine?
+How long are your usual showers?
+How long do you spend on your evening skincare or grooming routine?
+How long do you take to get ready in the morning?
+How long do you usually keep up a new morning ritual, like stretching or journaling?
+How long do you usually spend getting ready to leave the house in the morning?
+How long does it usually take you to fall asleep?
+How long does your evening wind-down usually last before sleep?
+How long is your usual walk or commute on foot each day?
+How many alarms do you set on a normal morning?
+How many hours of sleep do you usually get on a weeknight?
+How many pillows do you sleep with?
+How much do you move around in your sleep?
+How much do you stretch?
+How much do you tidy up as you go through the day?
+How much does your daily routine vary from one weekday to the next?
+How much of your morning routine happens in the same order every day?
+How often do you change your bedsheets?
+How often do you change your pillowcase?
+How often do you clean out your fridge?
+How often do you clean your bathroom?
+How often do you declutter your belongings?
+How often do you exercise?
+How often do you finish a chore before starting another one?
+How often do you hit snooze?
+How often do you iron your clothes?
+How often do you keep a journal?
+How often do you make a to-do list for your personal life?
+How often do you nap?
+How often do you run late to appointments?
+How often do you skip your usual exercise?
+How often do you sleep in past your usual wake-up time on weekends?
+How often do you stay up later than you meant to?
+How often do you stretch or do yoga?
+How often do you take a cold shower on purpose?
+How often do you take a walk just for fun?
+How often do you take the trash out?
+How often do you vacuum or sweep your home?
+How often do you wake up during the night?
+How often do you wash your car or bike?
+How often do you wash your hair?
+How quickly do you get out of bed once you're awake?
+How regularly do you floss?
+How strictly do you keep your bedtime on weekends?
+How tidy do you leave your bathroom sink after using it?
+What do you do when you wake up in the middle of the night?
+What do you do while waiting for someone who is late?
+What do you usually do first when you get home?
+What do you usually do if you can't fall asleep?
+What do you usually do in the last few minutes before leaving the house?
+What do you usually do right after a workout?
+What do you usually do right before falling asleep?
+What do you usually listen to while doing chores?
+What do you usually sleep in?
+What does your Sunday evening routine usually look like?
+What happens to your clean laundry?
+What is the first thing you do after getting out of bed?
+What is the first thing you do on a free Saturday morning?
+What is your go-to way to exercise when time is short?
+What kind of calendar or planner do you actually stick with?
+What kind of room do you like to sleep in?
+What position do you usually fall asleep in?
+What sound do you prefer while falling asleep?
+What temperature do you like your shower?
+What time do you usually get up on a workday or school day?
+What time do you usually go to bed on a weeknight?
+When do you prefer to nap on a day off?
+When do you usually brush your teeth in the morning?
+When do you usually do laundry?
+When do you usually do your laundry?
+When do you usually exercise?
+When do you usually shower?
+When do you usually take a bath instead of a shower?
+When do you usually wash the dishes?
+When you are running late in the morning, what is the first thing you cut?
+When you notice a small mess at home, like a jacket on a chair, what do you do?
+When you set a new exercise goal, what usually happens?
+When you try to build a new daily habit, which approach works best for you?
+When your alarm goes off, what do you usually do?
+When your morning routine gets disrupted, what do you usually do?
+Where do you do your best thinking during the day?
+Where do you prefer to exercise?
+Where do you usually do your thinking before a big decision?
+Where do you usually put your keys when you get home?
+Which alarm sound do you wake up to?
+Which bedroom temperature helps you sleep best?
+Which chore do you actually enjoy most?
+Which chore do you dislike most?
+Which do you usually wash first in the shower?
+Which kind of exercise do you do most often?
+Which kind of shower do you prefer?
+Which side of the bed do you prefer?
+Who do you prefer to exercise with?

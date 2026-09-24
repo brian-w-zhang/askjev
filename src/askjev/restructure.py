@@ -235,6 +235,10 @@ def apply_group(prop: dict, min_agree: float = 0.8) -> str:
         g["child"]["key"] = g["child"].get("key") or "_".join(g["child"]["label"].lower().replace("&", "and").split())[:30]
     member_group = {m: g["child"]["key"] for g in groups for m in g["members"]}
     with db.connect() as conn:
+        taken = {r["id"] for r in conn.execute("select id from nodes where parent_id=%s", (node,))}
+        clash = [g["child"]["key"] for g in groups if f"{node}.{g['child']['key']}" in taken]
+        if clash:  # a group key equal to an existing child id would silently merge into that child
+            return f"REJECTED group of {node}: group keys collide with existing children {clash}"
         parent = conn.execute("select * from nodes where id=%s", (node,)).fetchone()
         samples = []
         for m in member_group:
@@ -278,3 +282,30 @@ def apply_group(prop: dict, min_agree: float = 0.8) -> str:
                            where path <@ %s::ltree""", (gid, old, old))
         conn.commit()
     return f"{'ACCEPTED' if ok else 'REJECTED'} group of {node}: {metrics}"
+
+
+def repair_paths() -> str:
+    """Recompute every node's path/depth from its parent chain (BFS from root) and every question's path from its
+    node. Safe to run any time; used after restructure edits."""
+    with db.connect() as conn:
+        rows = conn.execute("select id, parent_id from nodes").fetchall()
+        kids: dict = {}
+        for r in rows:
+            kids.setdefault(r["parent_id"], []).append(r["id"])
+        fixed, stack = 0, [("root", "root", 0)]
+        seen = set()
+        while stack:
+            nid, path, depth = stack.pop()
+            if nid in seen:
+                continue
+            seen.add(nid)
+            cur = conn.execute("update nodes set path=%s::ltree, depth=%s where id=%s and (path <> %s::ltree or depth <> %s)",
+                               (path, depth, nid, path, depth))
+            fixed += cur.rowcount
+            for k in kids.get(nid, []):
+                if k != nid:
+                    stack.append((k, f"{path}.{k.rsplit('.', 1)[-1]}", depth + 1))
+        orphans = [r["id"] for r in rows if r["id"] not in seen]
+        q = conn.execute("update questions q set path = n.path from nodes n where n.id = q.node_id and q.path <> n.path")
+        conn.commit()
+    return f"repaired {fixed} node paths, {q.rowcount} question paths; unreachable nodes: {orphans}"

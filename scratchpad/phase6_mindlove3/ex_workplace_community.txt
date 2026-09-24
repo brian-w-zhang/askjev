@@ -1,0 +1,473 @@
+A coworker takes credit for your idea in a meeting. What do you most likely do?
+At a work event where you know few people, what do you usually do?
+At a work happy hour, what do you usually do?
+Do you belong to any club or community group right now?
+Do you have a mentor?
+Do you have a nickname at work?
+Do you keep in touch with any of your former teachers?
+Do you often volunteer for extra tasks at work that nobody else wants?
+Do you prefer working alone to working in a team?
+Do you remember the name of your first boss?
+Do you tend to become friends with your coworkers outside of work?
+Do you tend to compare your pay or title with your coworkers'?
+Do you think most people know too little about their neighbors?
+Do you think most people secretly dislike team-building activities?
+Do you usually eat lunch alone at work or school?
+Do you usually go out of your way to welcome new neighbors?
+Do you usually go to your workplace's social events?
+Do you usually keep your opinions to yourself in group chats with classmates or coworkers?
+Do you usually speak up first when a meeting falls into awkward silence?
+Have you ever been a moderator of an online group?
+Have you ever been in a book club?
+Have you ever been part of a sports league or team as an adult?
+Have you ever cried at work?
+Have you ever gone to a coworker's home for dinner?
+Have you ever had a boss you considered a friend?
+Have you ever had a serious conflict with a neighbor?
+Have you ever helped a neighbor in an emergency?
+Have you ever joined a club mainly to meet people?
+Have you ever left a job because of a coworker?
+Have you ever lent money to a coworker?
+Have you ever lived with a roommate you didn't get along with?
+Have you ever made a close friend at work?
+Have you ever made a lasting friend through an online community?
+Have you ever mentored someone?
+Have you ever organized a neighborhood event?
+Have you ever quit a club because of one person?
+Have you ever reported a coworker to a manager?
+Have you ever volunteered in your community?
+How clean should shared spaces in a roommate home be?
+How close do you feel to people in online communities you belong to?
+How close do you get to your coworkers?
+How close do you usually get to your roommates?
+How comfortable are you asking a neighbor for a favor, like borrowing a tool?
+How comfortable are you asking your boss for help?
+How comfortable are you disagreeing with your boss openly?
+How comfortable are you telling a coworker they made a mistake?
+How committed are you to clubs or groups you join?
+How common do you think it is for neighbors to know each other's names?
+How common do you think it is to have a close friend at work?
+How did you meet most of the people you know in your city?
+How do you handle a coworker whose habits annoy you, like loud phone calls?
+How do you usually approach networking at a professional event?
+How do you usually react to office gossip about a colleague?
+How do you usually react when a neighbor waves at you?
+How do you usually respond when a coworker asks you out for after-work drinks?
+How early is it acceptable for a neighbor to start using a lawnmower on a weekend?
+How friendly should you be with coworkers from other departments?
+How friendly should you be with staff at shops you visit often?
+How friendly should you be with your boss?
+How involved are you in your local community?
+How long should a new coworker be given to settle in before being judged?
+How many of your coworkers do you think would help you move house?
+How many people do you think actually enjoy networking events?
+How much do you care about being liked by your neighbors?
+How much do you care about being popular at work?
+How much do you care about local news and events?
+How much do you care what your coworkers think of you?
+How much do you enjoy being the host of a neighborhood event?
+How much do you enjoy chatting with strangers at a bus stop?
+How much do you enjoy group activities like team sports leagues?
+How much do you enjoy meeting strangers at community events?
+How much do you enjoy networking events?
+How much do you enjoy potluck-style office lunches?
+How much do you enjoy small talk with coworkers?
+How much do you enjoy team sports leagues through work?
+How much do you feel part of your workplace community?
+How much do you feel you belong to a community where you live?
+How much do you look forward to going to work because of the people?
+How much do you look forward to the office holiday party?
+How much do you mind a coworker who is always cheerful?
+How much do you miss your classmates from school?
+How much do you participate in group chats with classmates or coworkers?
+How much do you participate in online forums?
+How much do you share about your personal life with coworkers?
+How much do you share on a team group chat?
+How much do you share your personal opinions in team meetings?
+How much do you speak up in team or class meetings?
+How much do you speak up when working in a group of classmates?
+How much do you talk about work with friends outside work?
+How much do you tend to mediate conflicts among coworkers?
+How much do you think most people trust their boss?
+How much do you trust people you've only met online?
+How much do you trust your coworkers to have your back?
+How much do you try to impress your boss?
+How much does a bad relationship with a coworker affect your mood?
+How much does a coworker's opinion of you affect your mood at work?
+How much does your job shape your identity?
+How much effort do you put into remembering coworkers' birthdays and milestones?
+How much loyalty do you owe your employer?
+How much noise from neighbors is acceptable on a weekend afternoon?
+How much of your free time should a club or volunteer group ask of you?
+How much personal information should you share with online acquaintances?
+How much should a boss comment on employees' appearance?
+How much should a boss know about why an employee needs a day off?
+How much should a classmate share their notes with others?
+How much should a club expect members to attend meetings?
+How much should a community group mix social time with its purpose?
+How much should a landlord be involved in a tenant's life?
+How much should a manager share about company problems with the team?
+How much should a mentor be involved in a mentee's decisions?
+How much should a neighborhood association control what homeowners do?
+How much should a new neighbor be expected to introduce themselves?
+How much should a team leader involve members in decisions?
+How much should apartment neighbors greet each other?
+How much should community groups raise money from their members?
+How much should companies organize social events for staff?
+How much should coworkers attend each other's weddings?
+How much should coworkers celebrate each other's birthdays?
+How much should coworkers chip in for a boss's birthday gift?
+How much should coworkers dress to match each other's style?
+How much should coworkers go out of their way to include a quiet colleague?
+How much should coworkers know about each other's family lives?
+How much should coworkers know about each other's salaries?
+How much should coworkers lend each other money?
+How much should group project members be graded on individual effort?
+How much should long-time club members welcome new members?
+How much should managers be friends with the people they manage?
+How much should managers praise employees in public?
+How much should neighbors be involved in each other's lives?
+How much should neighbors coordinate on how their homes look?
+How much should neighbors help an elderly neighbor who lives alone?
+How much should neighbors help each other with chores like mowing?
+How much should neighbors keep an eye on each other's kids?
+How much should neighbors split costs for shared things like a fence?
+How much should new hires be expected to join after-work events?
+How much should older workers mentor younger ones?
+How much should roommates share food?
+How much should roommates tell each other before having guests over?
+How much should volunteers be thanked for their work?
+How much should you contribute to a collection for a coworker's baby shower?
+How much should you cover for a coworker who is struggling personally?
+How much should you follow up with a new professional contact?
+How much should you get involved in a dispute between two neighbors?
+How much should you help a coworker who is failing at their job?
+How much should you help a new coworker learn the ropes?
+How much should you help a stranger who seems lost in your neighborhood?
+How much should you keep your desk area personal?
+How much should you share about a coworker's mistakes with your manager?
+How much should you socialize with coworkers outside work hours?
+How much should you tell a coworker about a mistake your manager made?
+How much should you tell coworkers about your health problems?
+How much should you tolerate a noisy neighbor before saying something?
+How much socializing should be expected at a company retreat?
+How much time do you spend volunteering in your community?
+How much would you go out of your way to help a neighbor you dislike?
+How much would you miss your coworkers if you left your job?
+How much would you speak up if you saw a coworker being mistreated?
+How much would you trust a coworker with a personal secret?
+How much would you trust a neighbor with a key to your home?
+How much would you want your boss to be your mentor?
+How nervous are you on the first day at a new job?
+How nervous do you get when meeting your new neighbors?
+How often do you eat lunch with coworkers or classmates?
+How often do you keep in touch with former classmates?
+How often do you think people gossip about coworkers?
+How often should a manager check in on each team member?
+How quickly do you make friends at a new job?
+How quickly should you reply to a coworker's message during work hours?
+How should a club handle a member who never pays dues?
+How should a community group handle a member who keeps missing their volunteer shifts?
+How should a manager announce layoffs to the team?
+How should online acquaintances you've never met be treated?
+How should roommates split shared groceries?
+How should you end a conversation with a chatty neighbor when you are in a rush?
+How should you handle a coworker who always asks you to cover their shifts?
+How should you handle a coworker who always replies-all?
+How should you handle a coworker who always wants to chat when you are busy?
+How should you handle a coworker who takes personal phone calls loudly at their desk?
+How should you respond to a coworker who constantly vents to you?
+How should you respond when a coworker asks you to lie for them to the boss?
+How should you respond when a coworker brags about their accomplishments constantly?
+How should you respond when a coworker invites you to join their side business?
+How should you respond when a neighbor asks you to water their plants while they are away?
+How should you respond when a stranger online asks for a job referral?
+How should you respond when your boss asks for honest feedback on their leadership?
+How should you split the check at a team lunch?
+How should you treat a classmate you don't like?
+How strict should an online community's moderators be?
+How well do you know your neighbors?
+How willing are you to stay late to help a coworker finish a project?
+How would your coworkers most likely describe you?
+In a club or volunteer group, which role do you tend to end up in?
+Is it a good idea to become close friends with your boss?
+Is it fine to call your boss by a nickname?
+Is it fine to decline a coworker's lunch invitation every time?
+Is it fine to talk about coworkers who aren't present?
+Is it fine to vent about your job to coworkers?
+Is it okay to ask a coworker how old they are?
+Is it okay to ask a coworker to cover for you so you can leave early?
+Is it okay to ask a coworker to swap vacation days?
+Is it okay to ask a neighbor to keep their kids from playing near your car?
+Is it okay to ask a stranger online for career advice?
+Is it okay to ask classmates to share their grades?
+Is it okay to ask for a favor from someone you met only once at an event?
+Is it okay to ask for a raise after only a short time on the job?
+Is it okay to borrow tools or ingredients from a neighbor?
+Is it okay to bring a friend to a club meeting without asking?
+Is it okay to bring your dog to work if it's allowed?
+Is it okay to contribute nothing to a shared office gift?
+Is it okay to cry at work?
+Is it okay to date someone who reports to you at work?
+Is it okay to decline a coworker's request to follow you on social media?
+Is it okay to decline a team dinner that falls on your evening off?
+Is it okay to decline to join a coworker's fundraising walk?
+Is it okay to eat a roommate's food if you replace it later?
+Is it okay to feed a neighbor's cat when it wanders into your yard?
+Is it okay to hang laundry outside where neighbors can see it?
+Is it okay to have a partner sleep over often in a shared apartment?
+Is it okay to hug a coworker?
+Is it okay to join a club just to meet potential business contacts?
+Is it okay to leave a group chat without saying goodbye?
+Is it okay to leave work early when the boss is away?
+Is it okay to let your dog use a neighbor's lawn?
+Is it okay to microwave fish in the office kitchen?
+Is it okay to peek into a neighbor's window when their lights are on?
+Is it okay to pick fruit from a neighbor's tree that hangs over your fence?
+Is it okay to put up a tall fence without talking to your neighbor?
+Is it okay to quit a volunteer role without notice?
+Is it okay to sell raffle tickets for your child's school at work?
+Is it okay to skip a coworker's retirement party?
+Is it okay to skip the neighborhood meeting every time?
+Is it okay to skip the office holiday party?
+Is it okay to use a neighbor's open wifi without asking?
+Is it okay to use a work friend as a job reference after they've left?
+Is it rude to wear headphones all day at work?
+Is networking mainly about using people?
+On a new hire's first week on your team, how do you usually treat them?
+Should a book club member finish the book before every meeting?
+Should a club have a written code of conduct?
+Should a manager attend a team member's wedding?
+Should a manager ever be told about a coworker's personal struggles?
+Should community members be expected to attend local town meetings?
+Should long-time members of a club get special privileges?
+Should managers know their employees' birthdays?
+Should neighbors exchange phone numbers?
+Should neighbors watch each other's homes while away?
+Should people know the names of the neighbors on their street?
+Should roommates have a written agreement?
+Should you accept a connection request from someone you've never met?
+Should you accept a coworker's friend request if you don't like them?
+Should you add classmates on social media right after meeting them?
+Should you apologize to a coworker for a mistake nobody noticed?
+Should you attend a coworker's funeral if you weren't close?
+Should you attend a coworker's wedding if invited?
+Should you bring a gift when your boss invites the team to their home?
+Should you bring treats to the office on your own birthday?
+Should you connect with your boss on personal social media?
+Should you correct your boss in front of others?
+Should you give neighbors a heads-up before throwing a party?
+Should you give neighbors holiday cards?
+Should you give your boss a holiday gift?
+Should you give your honest opinion of a coworker when asked by your manager?
+Should you help a classmate who is struggling even if it hurts your grade curve?
+Should you invite your neighbors to your house party?
+Should you invite your whole team to a personal party?
+Should you keep a friendship going with a coworker after one of you leaves the company?
+Should you knock on a neighbor's door to complain rather than leave a note?
+Should you lend your car to a neighbor?
+Should you let a neighbor's kids use your yard or pool?
+Should you return a neighbor's borrowed dish with something in it?
+Should you say hello to other regulars at your gym?
+Should you shovel snow from an elderly neighbor's walkway without asking?
+Should you sign a group card for a coworker you've never met?
+Should you split rent with a roommate based on room size?
+Should you stay in touch with former coworkers?
+Should you take sides in a conflict between two coworkers?
+Should you tell a coworker if they have food in their teeth?
+Should you tell a neighbor that their dog got loose?
+Should you tell a neighbor when their car alarm is going off?
+Should you tell a new coworker which colleagues to avoid?
+Should you tell coworkers about your personal life?
+Should you tell online friends your real name?
+Should you tell your boss you're job hunting?
+Should you text a coworker on the weekend about work?
+Should you volunteer if your only goal is to boost your resume?
+Under what conditions is dating a coworker acceptable?
+What do most people dislike most about office holiday parties?
+What do you think coworkers complain about most behind the scenes?
+What do you think is the most common reason people dislike their neighbors?
+What do you think most people want most from a boss?
+What do you usually talk about with coworkers?
+What is the best farewell gift for a departing coworker?
+What is the best reason to join a local club?
+What is the best topic for small talk with a coworker you barely know?
+What is the best way to ask a coworker for a favor?
+What is the best way to ask a noisy upstairs neighbor for quiet without starting a feud?
+What is the best way to ask your boss for a raise?
+What is the best way to find a mentor at work?
+What is the best way to get to know new neighbors?
+What is the best way to give a coworker critical feedback?
+What is the best way to greet a new coworker on their first day?
+What is the best way to handle a coworker who copies your work style?
+What is the best way to handle a local business owner who was rude to you?
+What is the best way to handle a shared fence repair with a neighbor?
+What is the best way to handle office gossip about you?
+What is the best way to leave a work group chat you find noisy?
+What is the best way to make friends at a new job?
+What is the best way to meet other people in your apartment building?
+What is the best way to network for a career?
+What is the best way to stay in touch with classmates after graduating?
+What is the best way to thank a neighbor who helped you in an emergency?
+What is the best way to thank a volunteer?
+What is the fairest way to split office holiday party planning?
+What is the right way to leave a job on good terms?
+What kind of manager would you want?
+What kind of neighbor would you least like to have?
+What kind of neighbor would you most like to have?
+What kind of neighborhood would you most like to live in?
+What makes a good neighbor?
+What role do you usually take in a club or volunteer group?
+What should a manager do when a team member cries during a meeting?
+What should a manager do when a team member is always excluded from lunch plans?
+What should a manager do when two team members refuse to work together?
+What should a mentor do when their mentee makes a big mistake?
+What should a moderator do with a well-liked member who breaks the rules?
+What should a new hire bring on their first day to make a good impression?
+What should a team do when a member's pet dies?
+What should you do about a neighbor who plays loud music late at night?
+What should you do about a neighbor's overgrown yard?
+What should you do after a heated argument with a coworker?
+What should you do after meeting someone useful at a networking event?
+What should you do if a classmate asks to copy your homework?
+What should you do if a coworker confides that they are job hunting?
+What should you do if a coworker you like is about to be let go and you know first?
+What should you do if a coworker's hygiene is bothering the team?
+What should you do if a coworker's kid keeps interrupting their video calls?
+What should you do if you don't get along with your roommate?
+What should you do if you see a coworker being treated unfairly by a manager?
+What should you do if your neighbor's tree drops leaves in your yard?
+What should you do when a classmate copies your answers on a test?
+What should you do when a classmate you barely know invites you to their party?
+What should you do when a club leader makes a decision you disagree with?
+What should you do when a club member keeps dominating every discussion?
+What should you do when a club you belong to changes in a way you dislike?
+What should you do when a colleague from another team is rude to you in a meeting?
+What should you do when a coworker asks to borrow money?
+What should you do when a coworker complains about the boss to you?
+What should you do when a coworker constantly interrupts you in meetings?
+What should you do when a coworker gets engaged?
+What should you do when a coworker has an annoying habit like humming?
+What should you do when a coworker invites you to church or a religious event?
+What should you do when a coworker is always late to shared tasks?
+What should you do when a coworker is visibly upset at their desk?
+What should you do when a coworker keeps asking about your personal life?
+What should you do when a coworker keeps asking you for rides home?
+What should you do when a coworker keeps borrowing your stapler and never returns it?
+What should you do when a coworker keeps eating your lunch from the shared fridge?
+What should you do when a coworker keeps microwaving smelly fish?
+What should you do when a coworker keeps mispronouncing your name?
+What should you do when a coworker keeps scheduling meetings during your lunch?
+What should you do when a coworker keeps selling products to the team?
+What should you do when a coworker keeps sending you tasks that aren't yours?
+What should you do when a coworker keeps talking about their dating life?
+What should you do when a coworker takes credit for your work?
+What should you do when a coworker takes the last coffee and doesn't make more?
+What should you do when a coworker you dislike is promoted to be your boss?
+What should you do when a coworker you like is struggling with the new software everyone uses?
+What should you do when a coworker you trained ends up earning more than you?
+What should you do when a coworker's family member dies?
+What should you do when a coworker's music is too loud in a shared space?
+What should you do when a former coworker asks you for a job reference?
+What should you do when a group project member does no work?
+What should you do when a local shop you love is struggling?
+What should you do when a neighbor keeps borrowing things and not returning them?
+What should you do when a neighbor keeps offering unwanted advice about your lawn?
+What should you do when a neighbor keeps parking in front of your house?
+What should you do when a neighbor keeps putting their trash in your bin?
+What should you do when a neighbor pushes you to join a neighborhood committee you have no interest in?
+What should you do when a neighbor starts a renovation that makes noise every morning?
+What should you do when a neighbor's cat keeps using your garden?
+What should you do when a neighbor's dog barks all day?
+What should you do when a neighbor's kids keep kicking balls into your yard?
+What should you do when a neighbor's package gets delivered to you?
+What should you do when a neighbor's security camera points at your yard?
+What should you do when a new manager changes everything your team built?
+What should you do when a new member at a club seems left out?
+What should you do when a person you met at a conference keeps messaging you?
+What should you do when a roommate keeps having guests over?
+What should you do when a roommate never does their share of cleaning?
+What should you do when a work friend starts slacking and it affects you?
+What should you do when an online acquaintance asks to meet in person?
+What should you do when someone in an online community is rude to you?
+What should you do when someone in your running group is always much slower?
+What should you do when you are invited to a former boss's retirement party?
+What should you do when you are promoted above a close work friend?
+What should you do when you find a coworker crying in the bathroom?
+What should you do when you forget a coworker's name?
+What should you do when you get invited to a coworker's baby shower during work hours?
+What should you do when you move to a new neighborhood?
+What should you do when you notice a neighbor you rarely see hasn't collected their mail for days?
+What should you do when you overhear a coworker badmouthing you?
+What should you do when you realize you made a mistake that made a coworker look bad?
+What should you do when you see a classmate being left out of a group project?
+What should you do when you see a neighbor's car lights left on?
+What should you do when you want to quit a club you've been in for a long time?
+What should you do when your boss asks about your weekend on Monday morning?
+What should you do when your boss invites you to their home?
+What should you do when your boss messages you late at night?
+What should you do when your coworker is always negative about everything?
+What should you do when your manager asks you to train your own replacement?
+What should you do when your neighbor asks you to sign for their packages while they are on vacation?
+What should you do when your neighbor throws a loud party on a weeknight?
+What should you do when your neighbors start a group chat for the street?
+What should you do when your upstairs neighbor walks loudly at night?
+What usually makes you trust a new coworker?
+What would most make you want to join a community group?
+When a classmate or coworker asks you to cover for them, what do you usually do?
+When a coworker keeps asking you for help with their work, how do you respond?
+When a coworker makes a mistake that affects your work, how do you respond?
+When a group project at work stalls, how much do you step in?
+When a new person joins your team, what do you usually do?
+When someone in an online community you belong to posts something you think is wrong, what do you do?
+When you disagree with your boss in a meeting, how do you usually act?
+When you disagree with your boss's decision, what should you do?
+When you join a new workplace, what do you usually do first?
+When your boss gives you a task you think is pointless, what do you usually do?
+When your manager praises you in front of the team, how do you usually react?
+When your neighborhood needs volunteers for a cleanup, how do you usually respond?
+When your neighbors organize a street event, what are you most likely to do?
+When your team disagrees with your proposal, what do you usually do?
+Where do you feel the strongest sense of community?
+Where would you most like to sit in an office?
+Which community event would you most likely volunteer for?
+Which community group would you most like to join?
+Which community space do you use most?
+Which is the best way to celebrate a coworker's birthday?
+Which is the best way to network at an event where you know nobody?
+Which is the best way to resolve a dispute between neighbors?
+Which kind of boss would you least like to work for?
+Which kind of community event would you most want to attend?
+Which kind of coworker are you usually?
+Which kind of coworker do most people find hardest to work with?
+Which kind of coworker do you most enjoy working with?
+Which kind of local group would you most like to lead?
+Which kind of roommate would you most want?
+Which kind of volunteer work appeals to you most?
+Which neighborhood event would you most enjoy?
+Which office social event do you enjoy most?
+Which online community do you spend the most time in?
+Which regulars in your life do you know by name?
+Which role do you usually take in a group project?
+Which roommate habit is most annoying?
+Which team-building activity would you enjoy most?
+Which team-building activity would you most dread?
+Which topic is off-limits in conversation with coworkers?
+Which way would you prefer to meet people in a new city?
+Which work perk do you think builds the most team spirit?
+Who should get the best office or desk?
+Who should lead a volunteer group?
+Who should organize a farewell for a coworker who is leaving?
+Who should pay when a boss takes the team out to lunch?
+Who should plan office birthday celebrations?
+Who should shovel the snow on a shared sidewalk?
+Who should you ask first when you are stuck on a work problem?
+Why do you think most people join community clubs?
+Would you enjoy living in a neighborhood with regular block parties?
+Would you like to work at a company where everyone socializes after hours?
+Would you rather live in an apartment building than a house with no shared walls?
+Would you run for a leadership role in a club you belong to?
+Would you run for a local community board?
+Would you want to be your team's manager someday?
+Would you want to live in a close-knit neighborhood where everyone knows your business?
+Your neighbor's car keeps blocking part of your driveway. What do you usually do?

@@ -1,0 +1,158 @@
+Do you avoid gluten?
+Do you dip your fries in a milkshake?
+Do you drink coffee every day?
+Do you drink milk on its own?
+Do you drink your coffee or tea without any sweetener?
+Do you eat leftovers for breakfast?
+Do you eat spicy food for breakfast?
+Do you eat the same lunch most days?
+Do you eat the skin on your apples?
+Do you enjoy blue cheese?
+Do you enjoy eating alone at a restaurant?
+Do you enjoy liver or other organ meats?
+Do you enjoy mushrooms?
+Do you enjoy peanut butter?
+Do you enjoy raw onions?
+Do you enjoy sushi?
+Do you like anchovies?
+Do you like black licorice?
+Do you like cilantro?
+Do you like coconut?
+Do you like olives?
+Do you like pickles?
+Do you like pineapple on pizza?
+Do you like raisins in baked goods?
+Do you like raw tomatoes?
+Do you like the taste of beer?
+Do you like your food very salty?
+Do you order the hottest dish on the menu when you can?
+Do you prefer sparkling water to still water?
+Do you put ketchup on your eggs?
+Do you put milk in your tea?
+Do you sometimes eat dessert before dinner?
+Do you usually finish everything on your plate?
+How adventurous are you about unfamiliar foods?
+How big is your usual plate at dinner?
+How central is tea to your day?
+How cold do you like your drinks?
+How do you eat a meal with several foods on the plate?
+How do you eat a sandwich cookie with cream in the middle?
+How do you eat a slice of pizza?
+How do you eat at a buffet?
+How do you feel about strong-smelling cheese?
+How do you like to eat avocado?
+How do you like your bacon?
+How do you like your chicken cooked?
+How do you like your cookies?
+How do you like your eggs?
+How do you like your fish cooked?
+How do you like your ice cream served?
+How do you like your oatmeal?
+How do you like your steak or burger cooked?
+How do you like your steak sauce?
+How do you like your toast?
+How do you order a burger?
+How do you prefer to eat corn?
+How do you take your coffee?
+How do you take your tea?
+How do you usually eat rice?
+How far ahead do you plan your meals?
+How fast do you eat compared with the people at your table?
+How much caffeine do you drink on a typical day?
+How much do you care about buying organic food?
+How much do you care about food presentation?
+How much do you enjoy cooking?
+How much do you enjoy eating leftovers?
+How much do you enjoy sour foods?
+How much do you like bitter foods such as dark greens or grapefruit?
+How much do you like eating with your hands?
+How much do you like mixing sweet and salty flavors?
+How much do you like raw fish?
+How much do you like very sweet desserts?
+How much do you snack between meals?
+How much effort do you put into a typical weeknight dinner?
+How much garlic do you use when you cook?
+How much ketchup do you use on fries?
+How much of a sweet tooth do you have?
+How much plain water do you drink during a normal day?
+How much salt do you add at the table?
+How often do you bake at home?
+How often do you cook a meal from scratch?
+How often do you drink soda?
+How often do you eat breakfast at a café?
+How often do you eat dessert after dinner?
+How often do you eat fast food?
+How often do you eat late at night?
+How often do you eat meat?
+How often do you eat on the go instead of sitting down?
+How often do you eat vegetables?
+How often do you order food delivery?
+How often do you skip breakfast?
+How often do you try a new recipe?
+How particular are you about the way your food is prepared?
+How spicy do you like your food?
+How strict are you about eating at regular times?
+How willing are you to eat food that fell on the floor?
+Pizza crust: which do you prefer?
+Sweet breakfast or savory breakfast?
+What do you do with the crusts of your bread?
+What do you order at a bakery?
+What do you order at a café when you don't want coffee?
+What do you put on your pancakes?
+What do you reach for as a late-night snack?
+What do you reach for when you want something salty?
+What do you snack on while watching a film at home?
+What do you spread on your toast most often?
+What do you usually drink with dinner?
+What do you usually put in a smoothie?
+What do you want to eat when you feel sick?
+What drink do you have when you want a treat?
+What is your go-to snack?
+What is your usual breakfast?
+What is your usual morning drink?
+What kind of potato chip flavor do you buy?
+What kind of water do you usually drink?
+What soup do you crave on a cold day?
+When cooking, do you follow recipes?
+When do you usually eat dinner?
+Where do you sit down to eat lunch on a workday?
+Which berry do you like best?
+Which best describes how you eat?
+Which bread do you buy most often?
+Which breakfast would you pick at a diner?
+Which cheese do you like eating most?
+Which citrus fruit do you enjoy most?
+Which coffee drink do you order most at a café?
+Which cooking method do you use most at home?
+Which cuisine do you order most often when you eat out?
+Which dessert type do you reach for first?
+Which dip do you like best with chips?
+Which do you drink most during the day?
+Which do you prefer for dinner most nights?
+Which do you prefer: eating the same few meals or trying new dishes?
+Which fast-food item do you order most?
+Which flavor do you crave most often?
+Which fruit do you eat most often?
+Which ice cream flavor do you choose most?
+Which kind of breakfast cereal do you prefer?
+Which kind of candy do you grab first?
+Which kind of chocolate do you reach for?
+Which kind of fries do you like best?
+Which kind of popcorn do you prefer?
+Which meal of the day do you enjoy most?
+Which meat ends up on your plate most?
+Which melon do you reach for in summer?
+Which noodle dish do you order most?
+Which nut butter do you like best?
+Which part of a sandwich matters most to you?
+Which pasta shape do you choose when you cook?
+Which pastry do you choose with your morning coffee?
+Which salad do you actually enjoy eating?
+Which sauce do you add to almost anything?
+Which seasoning do you use most when you cook?
+Which sour food do you enjoy most?
+Which sushi do you order first?
+Which tea do you drink most?
+Which texture of food do you like most?
+Which topping do you always add to a bowl of ramen?
+Which vegetable do you refuse to eat?

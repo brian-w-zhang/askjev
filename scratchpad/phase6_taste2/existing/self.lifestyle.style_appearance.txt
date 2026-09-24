@@ -1,0 +1,158 @@
+At a party with no dress code, which do you tend to wear?
+Do you cut your own hair?
+Do you enjoy dressing up for costume parties?
+Do you enjoy getting your nails done?
+Do you enjoy trying on clothes in a changing room?
+Do you enjoy wearing hats as a fashion statement?
+Do you have a tattoo or plan to get one?
+Do you have any piercings beyond earlobes, or want one?
+Do you like the feel of wool against your skin?
+Do you like wearing sunglasses even on cloudy days?
+Do you own a piece of clothing you wear far more than anything else?
+Do you own a suit or formal dress you actually like?
+Do you plan your outfit the night before?
+Do you prefer slip-on shoes over lace-ups?
+Do you prefer to shop for clothes in person rather than online?
+Do you prefer to wear clothes in muted earthy tones?
+Do you usually iron or steam your clothes before wearing them?
+Do you usually wear a hat when you go outside?
+Do you usually wear something with a visible logo?
+Do you wear a signature scent?
+Do you wear a watch most days?
+Do you wear bright colors in winter?
+Do you wear clothes with your name or initials on them?
+For a special occasion, would you rather rent an outfit, buy a new one, or rewear one you own?
+Glasses or contact lenses, if you needed vision correction?
+How adventurous are you with haircuts?
+How bold are your glasses or sunglasses frames?
+How bold is your personal style?
+How casual is your preferred look for dinner with friends?
+How do you feel about matching outfits with a partner or friend?
+How do you like your clothes to be sourced?
+How do you like your jeans cut?
+How do you like your jeans washed?
+How do you like your shirts tucked?
+How do you prefer your clothes to be cared for?
+How do you prefer your clothes to fit?
+How do you usually wear your hair on a normal day?
+How dressed up are you on a typical weekday?
+How dressed up do you get for a flight?
+How large is your wardrobe?
+How long do you keep clothes before getting rid of them?
+How long does it take you to choose an outfit for a big night out?
+How many pairs of shoes do you own?
+How much attention do you pay to grooming?
+How much color do you wear on a typical day?
+How much do you care about brand names on your clothes?
+How much do you care about following seasonal colors in your wardrobe?
+How much do you care about matching your socks?
+How much do you care about the fit of your clothes being tailored?
+How much do you care about wearing comfortable underwear over nice-looking underwear?
+How much do you care about wearing the same outfit twice in a week?
+How much do you care about your shoes being clean?
+How much do you care whether your shoes match your outfit?
+How much do you coordinate your bag with your outfit?
+How much do you dress for the weather rather than for looks?
+How much do you dress to stand out in a crowd?
+How much do you dress up to go grocery shopping?
+How much do you notice when your clothes are wrinkled?
+How much do you plan your outfits for trips?
+How much do you spend on a single piece of clothing?
+How much do you think about how your clothes photograph?
+How much do you use fragrance?
+How much does your appearance vary from day to day?
+How much effort do you put into your hair each morning?
+How much jewelry do you wear on a normal day?
+How much of your wardrobe is second-hand?
+How much sun protection do you wear as part of your look?
+How much time do you usually spend getting ready in the morning?
+How much would you change your look for a new job?
+How often do you change your hairstyle?
+How often do you shop for clothes?
+How often do you wear makeup or use styling products?
+How tight do you like your clothes around your waist?
+How visible do you want your tattoos or body art to be?
+How well organized is your wardrobe?
+How willing are you to wear something uncomfortable because it looks good?
+Patterns or solids in your clothing?
+What do you wear to lounge around the house?
+What is your approach to fashion trends?
+What is your go-to pajama style?
+What is your preferred shirt collar?
+What kind of bag do you usually carry?
+What kind of belt do you usually wear?
+What kind of fragrance do you like to wear?
+What kind of gloves do you wear in cold weather?
+What kind of hairstyle do you prefer for yourself?
+What kind of look do you aim for at a job interview?
+What kind of look do you want for a relaxed weekend?
+What kind of nail look do you like on yourself?
+What kind of outfit do you feel best in?
+What kind of piercings appeal to you for yourself?
+What kind of print would you wear on a shirt?
+What kind of sleeves do you prefer on a shirt?
+What kind of socks do you like to wear?
+What kind of swimwear do you prefer?
+What kind of tie would you choose?
+What kind of top do you reach for most often?
+What look do you prefer for a first day at a new place?
+What style of gym clothes do you wear?
+When getting dressed, what do you prioritize most?
+Where do you most like to get your hair cut?
+Where do you mostly buy your clothes?
+Where would you prefer to get a tattoo if you got one?
+Which accessory could you least do without?
+Which best describes your everyday clothing style?
+Which clothing detail do you notice most on yourself in the mirror?
+Which color would you choose for a formal outfit?
+Which colors dominate your wardrobe?
+Which do you prefer for jewelry?
+Which do you prefer on your feet at home?
+Which dress code do you like best for a party?
+Which fabric do you most like for summer clothes?
+Which fabric feel do you prefer most in clothing?
+Which facial hair style would you pick for yourself if you could grow any?
+Which fashion aesthetic describes you best?
+Which feature would you most want in a pair of shoes?
+Which hair color would you pick if you could change it for free?
+Which hair length do you prefer for yourself?
+Which kind of boots do you like wearing most?
+Which kind of earrings would you wear?
+Which kind of eyeglass frames would you choose?
+Which kind of footwear do you wear most often?
+Which kind of hair product do you use most?
+Which kind of hairstyle would you choose for a big event?
+Which kind of hat would you choose to wear?
+Which kind of jacket do you wear most in spring?
+Which kind of makeup look do you prefer on yourself?
+Which kind of necklace do you like wearing?
+Which kind of raincoat would you pick?
+Which kind of ring would you wear every day?
+Which kind of scarf do you prefer?
+Which kind of shoes do you wear for dressing up?
+Which kind of shorts do you prefer?
+Which kind of skincare routine do you follow?
+Which kind of sneakers do you prefer?
+Which kind of sunglasses do you prefer?
+Which kind of sweater do you like most?
+Which kind of tattoo would you choose if you got one?
+Which kind of umbrella would you carry?
+Which kind of wallet do you carry?
+Which kind of watch would you choose to wear?
+Which kind of wedding guest outfit would you choose?
+Which metal do you prefer for jewelry or accessories?
+Which part of an outfit do you like spending money on?
+Which style era would you most like to dress in every day?
+Which type of coat would you pick for winter?
+Which type of trousers do you wear most?
+Would you dye your hair an unnatural color such as blue or green?
+Would you ever wear matching clothes with your family in a photo?
+Would you get a matching tattoo with a friend?
+Would you grow your hair very long?
+Would you pierce your ears if you had not already?
+Would you shave your head completely?
+Would you wear a bold patterned suit to a formal event?
+Would you wear a kilt or a sarong in public?
+Would you wear a vintage fur or leather coat?
+Would you wear socks with sandals?
+Would you wear the same style of outfit every day like a uniform if you could?

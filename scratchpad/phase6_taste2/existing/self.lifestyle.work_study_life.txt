@@ -1,0 +1,178 @@
+Do you check work messages on vacation?
+Do you color-code your calendar?
+Do you enjoy working in a busy coffee shop?
+Do you keep a paper planner?
+Do you keep your desk completely clear at the end of each day?
+Do you keep your work email off your phone?
+Do you like having a coworker or classmate sit next to you while you work?
+Do you like having a set seat in class or at work?
+Do you like to change your study spot every hour or so?
+Do you like to work at a desk facing a wall?
+Do you like to work with a candle or scent nearby?
+Do you like working with a window view?
+Do you make a to-do list before starting your workday?
+Do you prefer a four-day work week with longer days?
+Do you prefer a standing desk to sitting?
+Do you prefer a whiteboard to paper for working through ideas?
+Do you prefer learning from videos rather than books?
+Do you prefer printed documents to reading on a screen for work?
+Do you prefer shared documents over sending files back and forth?
+Do you prefer taking notes by hand over typing them?
+Do you prefer to have your camera off during online classes?
+Do you prefer to study in the morning rather than the evening?
+Do you prefer to work in total silence?
+Do you prefer working late at night to early in the morning?
+Do you read meeting notes before the meeting starts?
+Do you rewrite your notes after class?
+Do you study best right before a deadline?
+Do you study better late at night than during the day?
+Do you take a proper lunch break away from your desk?
+Do you tend to do your best work under deadline pressure?
+Do you tend to volunteer to present your group's work?
+Do you use a timer technique, like working in fixed intervals, to stay focused?
+Do you use sticky notes to remind yourself of tasks?
+Do you usually keep working on a task after hours if you're close to finishing it?
+Do you usually tidy your desk before leaving work or school for the day?
+Do you wear headphones to signal you don't want to be disturbed?
+During a video call, do you prefer your camera on or off?
+How cluttered is your computer desktop?
+How do you approach a long reading assignment?
+How do you feel about meetings?
+How do you feel about working without clear instructions?
+How do you handle work email outside working hours?
+How do you keep track of your tasks?
+How do you like to be assigned work?
+How do you like to study for something hard?
+How do you like your calendar to look?
+How do you prefer to ask for help when stuck?
+How do you prefer to brainstorm ideas?
+How do you prefer to celebrate finishing a big task?
+How do you prefer to communicate about work?
+How do you prefer to communicate an urgent issue at work?
+How do you prefer to commute?
+How do you prefer to deal with a tricky problem?
+How do you prefer to edit your own writing?
+How do you prefer to handle a meeting you find pointless?
+How do you prefer to handle emails?
+How do you prefer to handle interruptions while focused?
+How do you prefer to keep reference notes for later?
+How do you prefer to learn a new piece of software for work?
+How do you prefer to learn a new skill?
+How do you prefer to learn from a course?
+How do you prefer to memorize material for a test?
+How do you prefer to organize your backpack or work bag?
+How do you prefer to organize your computer files?
+How do you prefer to plan a big project?
+How do you prefer to prepare for a presentation?
+How do you prefer to present your work?
+How do you prefer to read work documents?
+How do you prefer to receive feedback on your work?
+How do you prefer to review for an exam or presentation?
+How do you prefer to review your notes?
+How do you prefer to spend a free period between classes or meetings?
+How do you prefer to split a big reading load for school or work?
+How do you prefer to start a workday?
+How do you prefer to structure a study session?
+How do you prefer to take a quick mental break?
+How do you prefer to take notes?
+How do you prefer to track your working time?
+How do you prefer to work toward a deadline?
+How do you prefer to write a long essay or report?
+How do you prefer your coworkers or classmates to reach you?
+How do you prefer your day structured?
+How do you react when a teacher or manager changes a deadline at short notice?
+How do you tackle a long list of tasks?
+How do you usually handle a task you find boring at work or school?
+How do you usually organize your work or study files?
+How do you usually prepare for an important meeting or exam?
+How do you usually take notes in a class or meeting?
+How early do you like to arrive for a class or meeting?
+How early do you start assignments or projects?
+How far ahead do you map out your work or study week?
+How late do you usually finish studying or working on a busy day?
+How long can you sit through a lecture without losing focus?
+How long can you work without checking messages?
+How long do you prefer your workday to be?
+How long would you ideally work in one focused block before a break?
+How many breaks do you take during a work session?
+How many different to-do lists or apps do you keep?
+How much background noise can you work with?
+How much do you check your work before handing it in?
+How much do you enjoy working in a group?
+How much do you like to chat with coworkers or classmates during work time?
+How much do you multitask while working?
+How much do you personalize your study or note-taking with colors?
+How much do you personalize your workspace?
+How much do you prefer detailed written instructions over figuring things out?
+How much do you prefer remote meetings to in-person ones?
+How much do you prefer working with others over working alone?
+How much do you rely on caffeine to work?
+How much do you speak up in meetings or classes?
+How much do you work or study outside your set hours?
+How much of your work do you do at the last minute?
+How much of your work or study do you do in cafes?
+How much small talk do you like at the start of a meeting?
+How often do you change where you work during the day?
+How often do you check work or school messages in the evening?
+How often do you listen to music while studying?
+How often do you pull all-nighters to finish work?
+How often do you reorganize your workspace?
+How often do you review your goals for the week?
+How often do you study or work in bed?
+How often do you study with friends?
+How often do you take work or study materials on vacation?
+How often do you work from somewhere other than your usual spot?
+How often do you work on weekends?
+How often do you work through lunch?
+How strictly do you separate work from personal time?
+How strictly do you stick to your planned study schedule?
+How tidy are your notes after a class or meeting?
+How tidy do you keep your desk while working?
+How tidy is your desk or study space right now?
+How tidy is your workspace at the end of a typical day?
+In a group project at school or work, which part do you usually end up doing?
+What do you do on a short break from work?
+What do you most often keep within reach on your desk?
+What do you prefer to do on the commute to work or school?
+What do you prefer to listen to while working?
+What do you prefer to wear when working from home?
+What do you usually eat for lunch on a workday?
+What is your ideal workspace setup?
+What is your preferred last step before logging off for the day?
+What kind of background sound helps you focus most?
+What kind of chair do you prefer to work in?
+What kind of desk do you prefer?
+What length of meeting do you find ideal?
+What time would you ideally start your workday?
+What would you most like to have in your ideal study room?
+When are you most productive?
+When studying or working, how do you handle notifications?
+When you finish a task earlier than expected, what do you usually do?
+When you get stuck on a hard problem at work or school, what do you usually do first?
+When you have a big assignment or project due in a few weeks, when do you usually start?
+When your workload suddenly doubles, what is your first move?
+Where do you keep work files?
+Where do you most like to study outside home?
+Where do you prefer to put your phone while working?
+Where would you ideally do most of your work?
+Which color of ink do you prefer to write with?
+Which day of the week do you usually get the most done?
+Which day would you choose to take off in a four-day week?
+Which do you prefer for group projects?
+Which kind of chair do you prefer to work in?
+Which kind of lighting do you prefer for working?
+Which kind of meeting do you prefer?
+Which kind of notebook do you prefer?
+Which kind of office dress code do you prefer?
+Which kind of screen setup do you prefer for work?
+Which kind of task do you like to start the day with?
+Which kind of workday rhythm suits you?
+Which kind of workspace would you pick?
+Which reward helps you finish a study session?
+Which room temperature do you work best in?
+Which seat do you prefer in a classroom or lecture?
+Which study group size suits you best?
+Which study or work setup helps you focus best?
+Which time of year do you feel most productive?
+Which working schedule would you choose?
+Would you take a pay cut to work fully from home?
