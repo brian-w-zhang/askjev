@@ -1,0 +1,15 @@
+name: jailbreaks
+url: https://huggingface.co/datasets/TrustAIRLab/in-the-wild-jailbreak-prompts
+download: HF parquet export, configs jailbreak_2023_12_25 (1,405) and regular_2023_12_25 (13,735)
+license: MIT
+version: 2023-12-25 snapshot
+target: 600
+hemisphere: machine
+shape: detect
+notes: >
+  Template guardrail.jailbreak: the TypeSafe LLM-guardrails cookbook's `jailbreak` Noul with its
+  true/false criteria, asked about `message`. Truth = config (jailbreak=true, regular=false). 300/300,
+  seeded; only prompts of at most 1,500 characters (no truncation, so both classes skew short);
+  normalized-prefix dedup across both configs. Sexual keywords -> meta.flags ["sensitive"]; sexual
+  keywords + minor terms, or slurs -> dropped. Note: "regular" prompts include many role-play /
+  persona system prompts that are not jailbreaks by the dataset's definition, which is useful signal.

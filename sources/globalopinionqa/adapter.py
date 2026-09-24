@@ -30,13 +30,13 @@ POLITICAL = re.compile(
     r"united nations|\bthe UN\b|european union|\bEU\b|terror\w*|abortion|homosexual\w*|\bgays?\b|lesbian|"
     r"same-sex|transgender|opposite sex|death penalty|politic\w*|parliament|congress|sanction|nuclear|islam\w*|"
     r"muslim|\bjews?\b|jewish|christians?\b|israel\w*|palestin\w*|putin|obama|trump|bush|merkel|modi|mubarak|"
-    r"xi jinping|iran|taliban|\bisis\b|al qaeda|drone|protest\w*|capitalis\w*|communis\w*|socialis\w*|"
-    r"free market|\btrade\b|tariff|\bborders?\b|entry into our country|minorit\w*|\brac(e|es|ial)\b|ethnic\w*|"
+    r"xi jinping|castro|fidel|chavez|maduro|iran|taliban|\bisis\b|al qaeda|drone|protest\w*|capitalis\w*|communis\w*|socialis\w*|"
+    r"free market|market economy|trade union|international trade|tariff|\bborders?\b|entry into our country|minorit\w*|\brac(e|es|ial)\b|ethnic\w*|"
     r"crimea|ukrain\w*|syria\w*|iraq\w*|afghan\w*|brexit|superpower|\ballies\b|\bally\b|enemy|censor\w*|"
-    r"\bguns?\b|climate change|global warming|opinion of|world affairs|foreign|\bpartner of|\bcorrupt\w*|"
+    r"\bguns?\b|opinion of|world affairs|foreign (aid|policy)|\bpartner of|"
     r"unification|independen\w*|constitution|referendum|\bveil\b|sharia|\barabs?\b|religious leaders|"
-    r"\bpolice\b|\bcourts?\b|the press|civil service|\bstate\b|dictator\w*|human rights|tax\w*|welfare|"
-    r"in power|since 19\d\d|\bprogram\b|influence in the world|\bu\.s\.|united states|americans?\b|china|"
+    r"the press|\bthe state\b|state.controlled|dictator\w*|human rights|welfare state|biden|annan|"
+    r"in power|\bprogram\b|influence in the world|\bu\.s\.|united states|americans?\b|china|"
     r"chinese|russia\w*|german\w*|japan\w*|india\b|pakistan\w*|europe\w*|groups of people in your country)",
     re.I,
 )
@@ -53,6 +53,7 @@ TOPICS = [
     (r"(news|newspaper|television|radio|internet|social media)", "world.society.media_news"),
     (r"(crime|violence|violent|police|safety|security|stolen|robber\w*)", "world.society.crime_law"),
     (r"(robot|computer|technolog\w*|smartphone|cell phone|mobile phone|landline)", "world.tech"),
+    (r"(climate change|global warming|droughts?|floods?|weather)", "world.nature.weather_climate"),
     (r"(pollution|environment\w*|air|water|earthquake|tsunami|hurricane)", "world.nature.ecosystems_conservation"),
     (r"(job|employment|work|econom\w*|income|poor|rich|wealth|price|money|bank|business|compan\w*|standard of living)", "world.money.economics"),
     (r"(science|scientif\w*)", "world.science"),
@@ -80,25 +81,32 @@ def _question_text(q: str | None) -> str | None:
         item = m.group(1).strip().rstrip(".?")
         q = re.sub(r"_{3,}", item, q[: m.start()]).strip()
     q = re.sub(r"\s+", " ", q).strip()
-    if re.match(r"^do you think this is\b", q, re.I):
+    if re.match(r"^do you think this is\b", q, re.I) or re.search(r"\b[a-z]\.$", q):
         return None
     return q
 
 
 def _option_text(o: str) -> str:
     o = re.sub(r"\((vol|do not read|volunteered)\.?\)", "", o, flags=re.I)
-    o = o.replace("(survey country)", "this country")
+    o = re.sub(r"\(survey country\)", "this country", o, flags=re.I)
     return re.sub(r"\s+", " ", o).strip()
+
+
+STOP = {"a", "an", "at", "the", "of", "to", "in", "for", "and", "or", "but", "with", "on", "is", "are", "be"}
 
 
 def _slug(text: str, words: int) -> str:
     toks = re.findall(r"[a-z0-9]+", text.lower().replace("’", "'").replace("'", ""))
-    return "_".join(toks[:words]) or "option"
+    if len(toks) > 5:
+        toks = toks[:words]
+        while len(toks) > 1 and toks[-1] in STOP:
+            toks.pop()
+    return "_".join(toks) or "option"
 
 
 def _keys(opts: list[str]) -> list[str]:
     """Short readable keys: 'dont_know' for DK, else the shortest distinct word-prefix slug (max 5 words)."""
-    for words in (3, 4, 5, 8, 50):
+    for words in (4, 5, 6):
         keys = ["dont_know" if DK.match(o) else _slug(o, words) for o in opts]
         if len(set(keys)) == len(keys):
             return keys
@@ -139,7 +147,19 @@ def _parse(raw_dir: Path) -> list[tuple[bool, Question]]:
             used = [j for j in idx if any(v[j] > 0 for v in sel.values())]
             if len(used) < 2:
                 continue
-            texts = [_option_text(opts[j]) for j in used]
+            if any(re.match(r"^\d", opts[j].strip()) for j in used):
+                continue
+            # Some rows repeat an option text (e.g. two "Don't know" codes): merge them.
+            texts: list[str] = []
+            slot = {}
+            for j in used:
+                t = _option_text(opts[j])
+                norm = "dont_know" if DK.match(t) else t.lower()
+                if norm not in [("dont_know" if DK.match(x) else x.lower()) for x in texts]:
+                    texts.append(t)
+                slot[j] = next(n for n, x in enumerate(texts) if ("dont_know" if DK.match(x) else x.lower()) == norm)
+            if len(texts) < 2:
+                continue
             keys = _keys(texts)
             options = {k: t for k, t in zip(keys, texts)}
             human, taken = [], set()
@@ -149,7 +169,10 @@ def _parse(raw_dir: Path) -> list[tuple[bool, Question]]:
                     continue
                 pop = _population(country, taken)
                 taken.add(pop)
-                human.append(HumanDist(population=pop, distribution={k: v[j] / tot for k, j in zip(keys, used)},
+                dist = dict.fromkeys(keys, 0.0)
+                for j in used:
+                    dist[keys[slot[j]]] += v[j] / tot
+                human.append(HumanDist(population=pop, distribution=dist,
                                        source=f"{r['source']} via Anthropic/llm_global_opinions"))
             if not human:
                 continue

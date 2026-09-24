@@ -1,0 +1,14 @@
+name: opentdb
+url: https://opentdb.com/api_config.php
+license: CC BY-SA 4.0
+version: API pulls cached 2026-09-24 (data/raw/opentdb/cat<N>_p<k>.json)
+target: 500
+hemisphere: world
+kind: factual
+notes: >
+  Open Trivia DB multiple-choice questions (4 options), pulled per category with a session token
+  (no duplicates) at 1 request / 5.5 s; raw responses are cached so reruns never re-hit the API.
+  Mathematics is skipped, and any question with a digit in the question or any answer is dropped
+  (numbers and dates are a known Jev weak spot, docs/01-jev.md section 7). Options are shuffled
+  deterministically and keyed a-d; truth = correct key. Seeded sample capped per category.
+  Politics-category items are flagged political.

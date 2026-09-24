@@ -138,11 +138,13 @@ def _group_requests(items: list[tuple[str, object, dict]]) -> list[Request]:
     return reqs
 
 
-def screen_pending(limit: int | None = None) -> str:
+def screen_pending(limit: int | None = None, ids: list[str] | None = None) -> str:
     rows = _load(
         "select q.id, q.text, q.options, q.state, q.hemisphere from questions q "
-        "left join question_meta m on m.question_id=q.id where m.objective is null order by q.id"
-        + (f" limit {int(limit)}" if limit else "")
+        "left join question_meta m on m.question_id=q.id where m.objective is null "
+        + ("and q.id = any(%s) " if ids else "") + "order by q.id"
+        + (f" limit {int(limit)}" if limit else ""),
+        (ids,) if ids else (),
     )
     if not rows:
         return "nothing to screen"
@@ -196,11 +198,13 @@ def screen_pending(limit: int | None = None) -> str:
     return f"screened {len(per_q)}/{len(rows)} questions in {len(reqs)} requests"
 
 
-def answer_pending(limit: int | None = None) -> str:
+def answer_pending(limit: int | None = None, ids: list[str] | None = None) -> str:
     rows = _load(
         "select q.id, q.text, q.options, q.state, q.hemisphere, q.primitive, q.meta from questions q "
         "where not exists (select 1 from probes p join answers a on a.probe_id=p.id where p.question_id=q.id) "
-        "order by q.id" + (f" limit {int(limit)}" if limit else "")
+        + ("and q.id = any(%s) " if ids else "")
+        + "order by q.id" + (f" limit {int(limit)}" if limit else ""),
+        (ids,) if ids else (),
     )
     if not rows:
         return "nothing to answer"

@@ -1,0 +1,15 @@
+name: oejts
+url: https://openpsychometrics.org/tests/OJTS/development/
+license: CC BY-NC-SA 4.0 (Open Psychometrics; stated in OEJTS1.2.pdf and the development page Appendix B)
+version: OEJTS 1.2 (OEJTS1.2.pdf, 2015-03-03) + development page Appendix A (fetched 2026-09-24)
+target: 51
+hemisphere: self
+kind: personality
+notes: >
+  MBTI-style bipolar pairs asked as "Which describes you better?" with the two poles as options.
+  32 scored items of OEJTS 1.2 (transcribed in the adapter from OEJTS1.2.pdf, with the pole letters derived
+  from the scoring equations) plus 19 screened items from Appendix A whose largest self-typed group mean
+  difference is >= 0.9 on one dichotomy and < 0.5 on the other three (pairs already present, in either
+  order, are skipped). meta.poles maps each option key to its type letter. A few Appendix A poles are
+  rewritten to stand alone ("loves it" -> "loves being photographed"). No public OEJTS response data
+  ("Datasets are forthcoming"), so no human distributions.

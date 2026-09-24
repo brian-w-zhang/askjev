@@ -54,17 +54,19 @@ def truth_key(primitive: str, truth) -> str | None:
     return str(truth)
 
 
-def measure_all() -> str:
+def measure_all(ids: list[str] | None = None) -> str:
+    f = " and question_id = any(%s)" if ids else ""
+    arg = (ids,) if ids else ()
     with db.connect() as conn:
-        qs = conn.execute("select id, primitive, truth from questions").fetchall()
+        qs = conn.execute("select id, primitive, truth from questions" + (" where id = any(%s)" if ids else ""), arg).fetchall()
         probes = conn.execute(
             """select p.question_id, p.frame, p.variant_kind, a.distribution, a.confidence, a.model_served
-               from probes p join answers a on a.probe_id = p.id where p.universe_id='base'"""
+               from probes p join answers a on a.probe_id = p.id where p.universe_id='base'""" + f, arg
         ).fetchall()
-        hum = conn.execute("select question_id, distribution, n from human_dists").fetchall()
+        hum = conn.execute("select question_id, distribution, n from human_dists where true" + f, arg).fetchall()
         plc = conn.execute(
-            """select distinct on (question_id) question_id, confidence, separation from placements
-               order by question_id, created_at desc"""
+            """select distinct on (question_id) question_id, confidence, separation from placements where true"""
+            + f + " order by question_id, created_at desc", arg
         ).fetchall()
     by_q = defaultdict(list)
     for p in probes:

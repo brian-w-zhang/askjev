@@ -132,11 +132,11 @@ async def place_one(client: JevClient, idx: TreeIndex, q: dict, start: str = "ro
             best[f.node] = f
     ranked = sorted(best.values(), key=lambda c: c.score, reverse=True)
     top = ranked[0]
-    second = ranked[1].score if len(ranked) > 1 else 1e-6
+    second = ranked[1].score if len(ranked) > 1 else top.score / 100
     return {
         "node": top.node,
         "confidence": round(top.score, 4),
-        "separation": round(top.score / max(second, 1e-6), 3),
+        "separation": round(min(top.score / max(second, 1e-6), 100.0), 3),  # capped at 100x
         "runner_up": ranked[1].node if len(ranked) > 1 else None,
         "path_probs": top.probs,
     }

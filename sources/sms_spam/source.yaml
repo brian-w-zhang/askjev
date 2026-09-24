@@ -1,0 +1,12 @@
+name: sms_spam
+url: https://archive.ics.uci.edu/dataset/228/sms+spam+collection
+download: https://huggingface.co/api/datasets/ucirvine/sms_spam/parquet/plain_text/train/0.parquet
+license: CC-BY-4.0
+version: HF ucirvine/sms_spam plain_text/train (5,574 messages; 747 spam)
+target: 700
+hemisphere: machine
+shape: detect
+notes: >
+  Template sms.spam: Noul "Is `message` spam?" with true/false criteria. Truth = dataset label
+  (spam=true). Exact-text dedup (case-insensitive, whitespace collapsed), then a seeded sample of
+  280 spam + 420 ham (40% spam).

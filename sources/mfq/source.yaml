@@ -1,0 +1,21 @@
+name: mfq
+url: https://moralfoundations.org/questionnaires/
+license: >
+  "All rights reserved" (MFQ authors); private research use. MFQ-2 items from Atari et al. (2023), JPSP,
+  "Morality beyond the WEIRD" (OSF registration d2b6s holds no item file).
+version: >
+  MFQ-2 36 items (transcribed from arXiv:2507.10073 Appendix B, which reproduces the instrument and scoring
+  key); MFQ-30 July 2008 item key (MFQ30.item-key.doc, fetched 2026-09-24)
+target: 66
+hemisphere: self
+kind: values
+notes: >
+  MFQ-2 (36): "How well does this statement describe you" with the five concrete describes-me levels, as in
+  the MFQ-2's own response format; foundation = item position mod 6 (care, equality, proportionality,
+  loyalty, authority, purity), node_hint self.values.moral_foundations.<foundation>.
+  MFQ-30 (30 scored items, MATH/GOOD catch items dropped): Part 1 relevance items use six concrete
+  relevance levels; Part 2 agreement items (originally 6-point disagree-agree) are asked in the describes-me
+  format. MFQ-30 Harm/Ingroup/Authority/Purity map to care/loyalty/authority/purity; Fairness mixes equality
+  and proportionality, so it goes to the parent node. No human distributions (published norms are means,
+  never item distributions), and no partisan splits. No item is explicitly partisan, so nothing is flagged
+  political. Items about chastity, virginity, and sexual fetishes are flagged "sensitive".

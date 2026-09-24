@@ -1,0 +1,14 @@
+name: emotion
+url: https://huggingface.co/datasets/dair-ai/emotion
+download: https://huggingface.co/api/datasets/dair-ai/emotion/parquet/split/train/0.parquet
+license: other (dataset card says educational and research use only)
+version: split config, train (16,000 tweets)
+target: 400
+hemisphere: machine
+shape: classify
+notes: >
+  Template emotion.primary: Choice "Which emotion does `text` express most strongly?" over the six
+  dataset labels (sadness, joy, love, anger, fear, surprise) with short hand-written descriptions.
+  Truth = dataset label (distant-supervision hashtag labels, so noisy). Balanced ~67 per label, seeded,
+  exact-text dedup. node_hint machine.research.qualitative_coding (sentiment/emotion coding of
+  free-text posts; no machine L2 is a closer fit). Sexual or self-harm keywords -> "sensitive" flag.

@@ -20,8 +20,10 @@ def main(argv: list[str] | None = None):
     sub.add_parser("measure")
     sub.add_parser("rollup")
     sub.add_parser("mix")
-    s = sub.add_parser("restructure"); s.add_argument("--dry-run", action="store_true")
+    s = sub.add_parser("restructure"); s.add_argument("--dry-run", action="store_true"); s.add_argument("--apply", default=None)
     s = sub.add_parser("pipeline"); s.add_argument("--limit", type=int, default=None)
+    s = sub.add_parser("walk"); s.add_argument("--json", action="store_true"); s.add_argument("text")
+    s = sub.add_parser("ask"); s.add_argument("--json", action="store_true"); s.add_argument("payload")
     a = p.parse_args(argv)
 
     if a.cmd == "migrate":
@@ -62,7 +64,15 @@ def main(argv: list[str] | None = None):
         print(mix_report())
     elif a.cmd == "restructure":
         from .restructure import restructure
-        print(restructure(dry_run=a.dry_run))
+        print(restructure(dry_run=a.dry_run, apply_path=a.apply))
+    elif a.cmd == "walk":
+        import json
+        from .ask import walk
+        print(json.dumps(walk(a.text)))
+    elif a.cmd == "ask":
+        import json
+        from .ask import ask
+        print(json.dumps(ask(json.loads(a.payload)), default=str))
     elif a.cmd == "pipeline":
         from .pipeline import run_all
         run_all(limit=a.limit)

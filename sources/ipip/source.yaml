@@ -1,0 +1,23 @@
+name: ipip
+url: https://ipip.ori.org/
+license: >
+  IPIP items are public domain. Norms from Open Psychometrics raw data
+  (https://openpsychometrics.org/_rawdata/IPIP-FFM-data-8Nov2018.zip), no license stated on the data page.
+version: >
+  ipip.ori.org scoring-key pages newBigFive5broadKey.htm, newNEOKey.htm, BFASKeys.htm, newAB5CKey.htm,
+  newHEXACO_PI_key.htm (fetched 2026-09-24); IPIP-FFM-data-8Nov2018
+target: 600
+hemisphere: self
+kind: personality
+notes: >
+  Self-description statements ("I am the life of the party.") rated on five concrete "describes me" levels.
+  Items are pooled from IPIP scoring keys in priority order and deduplicated by text: Big-Five Factor
+  Markers (50/100), IPIP-NEO-300 (30 facets), BFAS (10 aspects) are kept whole; the rest is filled by seeded
+  sample from AB5C (bracketed cross-facet items skipped), then IPIP-HEXACO (X/A/C/O domains first, then H/E).
+  The IPIP stems have no subject, so the adapter prepends "I" (plus a few fixes like "Willing to" -> "I am willing to").
+  meta.keyed is relative to meta.trait: Emotional Stability keys (Markers Factor IV, AB5C IV) are flipped so
+  "+" means high neuroticism. HEXACO H and E items have trait null and node_hint self.personality.big_five.
+  Human distributions exist only for the 50 Big-Five Factor Markers: Open Psychometrics web respondents
+  2016-2018 with IPC==1 (one record per IP) and all 50 items answered 1-5 (n=603,322). Their scale was
+  1=Disagree, 3=Neutral, 5=Agree, mapped 1..5 -> levels "0".."4"; agreement anchors are not identical to
+  the "describes me" levels.

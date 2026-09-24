@@ -1,0 +1,13 @@
+name: banking77
+url: https://huggingface.co/datasets/PolyAI/banking77
+download: https://raw.githubusercontent.com/PolyAI-LDN/task-specific-datasets/master/banking_data/test.csv
+license: CC-BY-4.0
+version: test split (3,080 queries, 77 intents)
+target: 800
+hemisphere: machine
+shape: route
+notes: >
+  Template banking77.intent: one Choice per customer query over the 77 intents (keys = dataset labels,
+  lowercased; descriptions hand-written). Truth = dataset label. Stratified round-robin across intents
+  (~10 each), seeded, case-insensitive text dedup. The HF repo is script-based with no parquet export,
+  so the CSV comes from PolyAI's GitHub repo the loading script points at.

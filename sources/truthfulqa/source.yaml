@@ -1,0 +1,12 @@
+name: truthfulqa
+url: https://huggingface.co/datasets/truthfulqa/truthful_qa
+license: Apache-2.0
+version: multiple_choice + generation validation parquet (HF main, fetched 2026-09-24)
+target: 817
+hemisphere: world
+kind: factual
+notes: >
+  All 817 TruthfulQA questions as single-answer choice questions (mc1_targets: exactly one correct).
+  The dataset lists the correct answer first, so choices are shuffled deterministically per question and
+  keyed a, b, c...; truth = the correct key. Category comes from the generation config (joined on question text).
+  Politics-category items are flagged political.
