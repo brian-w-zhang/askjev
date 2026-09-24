@@ -189,7 +189,9 @@ create table answers (
 );
 create table calls (                           -- index of the on-disk log (bodies stay on disk)
   request_hash text primary key, kind text,    -- jev
-  model_served text, log_file text, latency_ms int, input_tokens int, created_at timestamptz
+  model_served text, generation_id text, log_file text, latency_ms int, input_tokens int,
+  response jsonb,                              -- answers + usage (cache); full bodies stay in the log
+  created_at timestamptz
 );
 
 -- TREE HISTORY -----------------------------------------------------------

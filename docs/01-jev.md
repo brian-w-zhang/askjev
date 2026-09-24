@@ -16,9 +16,14 @@ model listing. **UNVERIFIED** marks anything not confirmed.
   questions, and 32k for state plus the longest single question. The batch planner budgets
   **32k per request**.
 - Pricing is $0.042 per 1M input tokens, with output free. The listing says `zdr: all` and `no_training: all`.
-- **UNVERIFIED (first spike):** the request/response shape through the gateway. Does it
-  accept the native `state` + `questions` body and return `probabilities`, `confidence`, and the
-  served version?
+- **Verified gateway shape (spike, 2026-09-24):** `POST https://ai-gateway.vercel.sh/v1/evaluate` with
+  `{model: "typesafe-ai/jev", state, questions}`. **Noul is called `boolean`** on the gateway, and its answer
+  is `{type: "boolean", probability}`. Choice returns `{choice, probabilities, confidence}`; Score returns
+  `{score, probabilities, confidence}` with string keys. The usage fields are camelCase (`inputTokens`).
+  `providerMetadata.gateway` carries a `generationId` and `cost: "0"` (marketCost ≈ $0.000017 per ~450-token call).
+  **The gateway does not expose Jev's version number**; we log `typesafe-ai/jev@<date>` plus the generationId.
+- **Latency via the gateway:** p50 383 ms, p95 727 ms end to end from this laptop (provider time ≈ 107 ms;
+  the rest is the gateway and the network).
 - Because "latest" moves on release, **every call logs the served version**, and
   experiments never compare answers across versions. TypeSafe promises never to change a
   deployed version silently, and may keep 1.13.0 on long-term support (from the interview).
@@ -68,8 +73,13 @@ model listing. **UNVERIFIED** marks anything not confirmed.
 - There's no seed or temperature. The docs say it's "designed to return stable answers", with no guarantee.
 - Observed: most answers have std 0.0 across repeats. Some Nouls vary (mean std ≈ 0.01; one
   ranged 0.43-0.53 across 15 runs), and Choice top labels sometimes flip.
-- **For us:** the first response for a request hash is canonical. Experiment 0 measures
-  the noise floor, and every reported effect must exceed it.
+- **Measured on our client (20 identical requests, 2026-09-24):** Noul std 0.005-0.011 (a 0.51
+  "hot dog" Noul ranged 0.49-0.53); Score top-level std 0.006; Choice top-probability std 0.019-0.027.
+  **Near-tie Choices flip labels** (a 0.52/0.48 billing/account split flipped across repeats).
+  **Batch vs alone:** differences of 0.00-0.07, within the Choice noise range, so batching is safe.
+- **For us:** the first response for a request hash is canonical. Noise floor for reported effects:
+  **±0.03 for Noul/Score, ±0.08 for Choice top probability**. A top-label "flip" only counts if the
+  base margin exceeds 0.1. Script: `scripts/spike_jev.py`.
 
 ## 6. Jaggedness TypeSafe already documents (jev-1.13)
 From `model-jaggedness/jev-1.13` (reviewed 2026-09-17). **Don't present these as discoveries.

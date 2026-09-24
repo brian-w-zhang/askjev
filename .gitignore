@@ -16,3 +16,9 @@ resources/conversations/
 
 # Local Claude Code settings
 .claude/settings.local.json
+
+# Python / tooling
+.venv/
+*.egg-info/
+.pytest_cache/
+uv.lock.bak
