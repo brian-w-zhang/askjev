@@ -4,7 +4,7 @@ QIDs, sitelink counts and (optionally) 2-month pageviews. Public MediaWiki / Wik
 Writes data/raw/vital/level3.jsonl and level4.jsonl, one article per line:
   {title, section, section_path, shortdesc, qid, sitelinks, pageviews_60d}
 
-Run: uv run python sources/vital4/fetch_vital.py [--pageviews-l4]
+Run: uv run python sources/vital4/fetch_vital.py [--pageviews=3,4]
 Idempotent: raw wikitext, metadata and pageviews are cached under data/raw/vital/cache/.
 """
 
@@ -15,7 +15,6 @@ import re
 import sys
 import threading
 import time
-from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from urllib.parse import quote
 
@@ -29,7 +28,7 @@ WP_API = "https://en.wikipedia.org/w/api.php"
 WD_API = "https://www.wikidata.org/w/api.php"
 PV_API = "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/{}/monthly/{}/{}"
 PV_START, PV_END = "20260701", "20260831"  # July + August 2026 (last two complete months)
-MIN_INTERVAL = 0.25  # seconds between requests (<= 4 req/s overall)
+MIN_INTERVAL = 0.5  # seconds between requests (<= 2 req/s overall)
 
 L3_PAGE = "Wikipedia:Vital articles/Level/3"
 L4_TOPICS = [
@@ -215,12 +214,15 @@ def pageviews(titles: list[str]) -> dict[str, int | None]:
         d = get(PV_API.format(quote(t.replace(" ", "_"), safe=""), PV_START, PV_END), allow_404=True)
         return t, (sum(it["views"] for it in d["items"]) if d else None)
 
-    with ThreadPoolExecutor(4) as ex:
-        for k, (t, v) in enumerate(ex.map(one, todo), 1):
-            cache[t] = v
-            if k % 250 == 0:
-                f.write_text(json.dumps(cache))
-                print(f"  pageviews {k}/{len(todo)}", flush=True)
+    for k, t in enumerate(todo, 1):
+        try:
+            cache[t] = one(t)[1]
+        except RuntimeError:  # persistent 429s: leave uncached so a rerun retries it
+            print(f"  pageviews skipped: {t}", flush=True)
+        time.sleep(0.5)  # the Pageviews API 429s bursts from anonymous clients
+        if k % 100 == 0:
+            f.write_text(json.dumps(cache))
+            print(f"  pageviews {k}/{len(todo)}", flush=True)
     f.write_text(json.dumps(cache))
     return cache
 
@@ -262,11 +264,14 @@ def build(level: int, with_pageviews: bool) -> Path:
     return out
 
 
-def main(pageviews_l4: bool = False) -> None:
+def main(pageviews_levels: tuple[int, ...] = ()) -> None:
+    """Pageviews are opt-in (one request per article; the API rate-limits anonymous clients hard)."""
     CACHE.mkdir(parents=True, exist_ok=True)
-    build(3, with_pageviews=True)
-    build(4, with_pageviews=pageviews_l4)
+    build(3, with_pageviews=3 in pageviews_levels)
+    build(4, with_pageviews=4 in pageviews_levels)
 
 
 if __name__ == "__main__":
-    main(pageviews_l4="--pageviews-l4" in sys.argv)
+    # --pageviews=3 or --pageviews=3,4
+    arg = next((a.split("=", 1)[1] for a in sys.argv[1:] if a.startswith("--pageviews=")), "")
+    main(tuple(int(x) for x in arg.split(",") if x))

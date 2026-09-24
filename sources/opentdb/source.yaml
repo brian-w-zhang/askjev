@@ -3,6 +3,7 @@ url: https://opentdb.com/api_config.php
 license: CC BY-SA 4.0
 version: API pulls cached 2026-09-24 (data/raw/opentdb/cat<N>_p<k>.json)
 target: 500
+target_phase6: every clean item (ASKJEV_TARGET_OPENTDB=100000)
 hemisphere: world
 kind: factual
 notes: >
@@ -12,3 +13,6 @@ notes: >
   (numbers and dates are a known Jev weak spot, docs/01-jev.md section 7). Options are shuffled
   deterministically and keyed a-d; truth = correct key. Seeded sample capped per category.
   Politics-category items are flagged political.
+  Phase 6 (ASKJEV_TARGET_OPENTDB=100000, i.e. every clean item): a second sweep (data/raw/opentdb/sweep/) pulls
+  each category page by page with one session token until it is exhausted, at the same 5.5 s/request; the v1
+  sample is kept and every other clean, deduplicated item is added (salted-hash order, prefix-stable).

@@ -1,0 +1,20 @@
+name: boolq
+url: https://huggingface.co/datasets/google/boolq
+license: CC BY-SA 3.0
+version: google/boolq train + validation parquet (HF parquet API), titles from hugo/boolq (same rows, same order), fetched 2026-09-24
+target: 6000
+target_phase6: 6000 (ASKJEV_TARGET_BOOLQ; the default)
+hemisphere: world
+kind: factual
+notes: >
+  Real, naturally occurring Google yes/no queries (Clark et al. 2019), asked as world-knowledge Noul without
+  their Wikipedia passage: truth = the dataset answer, state = null. Of 12,697 train + validation queries, only
+  ones that stand on their own are kept: no digits, no wh-questions, nothing pointing at unseen context ("this",
+  "the show", "the movie"), no season/episode/sequel/plot or character trivia (drops passages that open on a
+  fictional subject and titles like "X (season 4)" or "Character (Show)"), and nothing time-sensitive ("will
+  there be", "still", "coming out"); duplicates merged (9,142 remain). Target items in salted-hash order.
+  Text = the query with its casing restored from the passage and title (capitalized names, e.g. "Is Texas the
+  largest state in the USA?"), first letter capitalized, "?" appended. node_hint: the title disambiguator
+  ("(film)", "(association football)") if it names a category, else keyword rules scored over the passage's
+  definitional phrase (weight 4), title (3), query (2) and first sentence (1), world.society only when nothing
+  matches (about 4%). Guns, abortion, immigration, parties etc. are flagged political; sexual/suicide terms sensitive.

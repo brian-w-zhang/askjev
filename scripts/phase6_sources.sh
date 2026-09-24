@@ -23,7 +23,14 @@ export ASKJEV_EXTRA_MSMARCO_RELEVANCE=1500    # msmarco.relevance_level
 export ASKJEV_TARGET_CODE_LANG=1500
 export ASKJEV_TARGET_PEOPLE_DOCS=2500
 
+# World hemisphere
+export ASKJEV_TARGET_BOOLQ=6000
+export ASKJEV_TARGET_OPENTDB=100000           # every clean item (a full per-category sweep at 5.5 s/request)
+export ASKJEV_TARGET_LANCASTER=2000           # 400 words x 5 senses
+export ASKJEV_TARGET_MANIFOLD=600
+
 for s in banking77 sms_spam jailbreaks emotion scifact unfair_tos financial_phrasebank amazon_reviews \
-         msmarco_relevance code_lang people_docs typesafe_seeds; do
+         msmarco_relevance code_lang people_docs typesafe_seeds \
+         boolq opentdb lancaster manifold; do
   uv run askjev source "$s"
 done

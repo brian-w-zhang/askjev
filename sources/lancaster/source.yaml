@@ -3,6 +3,7 @@ url: https://osf.io/7emr6/
 license: CC BY 4.0 (Lynott et al. 2020, Behavior Research Methods)
 version: Lancaster_sensorimotor_norms_for_39707_words.csv (OSF Data component rwhs6, file 48wsc, fetched 2026-09-24)
 target: 300
+target_phase6: 2000 (ASKJEV_TARGET_LANCASTER; 400 words x 5 senses)
 hemisphere: world
 kind: perception
 notes: >
@@ -12,3 +13,6 @@ notes: >
   distribution by a normal(mean, max(SD, 0.3)) cut at 1, 2, 3, 4 (tails folded into the end bins).
   n = N_known.perceptual (raters who knew the word; HONEY and GRASS were calibration items rated by ~16k).
   The other 6 dimensions (interoceptive + 5 action effectors) are unused.
+  Phase 6 (ASKJEV_TARGET_LANCASTER=2000): the 60 words stay first, then 340 more from a hand-written lexicon of
+  common concrete nouns by world node (LEXICON in the adapter; homographs like "bat", "saw", "date" excluded),
+  keeping only words with Max_strength.perceptual >= 3.5 and Percent_known >= 0.8, taken in salted-hash order.

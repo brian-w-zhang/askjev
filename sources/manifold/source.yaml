@@ -3,6 +3,7 @@ url: https://docs.manifold.markets/api
 license: Manifold public API, no auth for reads (docs/04 notes non-commercial dumps; API use allowed). Private use only.
 version: search-markets (filter=resolved, BINARY, most-popular, 1,000 per topic) + bets, fetched 2026-09-24
 target: 100
+target_phase6: 600 (ASKJEV_TARGET_MANIFOLD)
 hemisphere: world
 kind: forecast
 notes: >
@@ -17,3 +18,9 @@ notes: >
   resolutionProbability (usually ~0.01/0.99, i.e. nearly the answer) and "midlife" = market probability after
   the last bet before the midpoint between creation and close (the more useful forecast signal).
   Questions keep relative time words ("this year", "by Monday"); meta has url, closeTime, created, closed.
+  Phase 6 (ASKJEV_TARGET_MANIFOLD=600): a second pool (markets_v2.json) adds the next 1,000 markets of each topic
+  capped in v1 and 24 more non-political topics (spacex, energy, weather, physics, medicine, stocks, crypto,
+  chess, F1, soccer, NFL, NBA, music, culture...). The v1 100 stay; the rest is a salted-hash top-up per node to
+  shares of the target (ai .18, technology .20, space .12, climate .10, economy .14, sports/entertainment .20,
+  society .06; digit-free first, then year-only), shortfalls filled one per node in turn. The top-up also drops
+  LGBT/drag/legalization/ban/criminal-case/religion questions and profanity. Same filters and midlife human dist.

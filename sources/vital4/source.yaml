@@ -1,0 +1,19 @@
+name: vital4
+url: https://en.wikipedia.org/wiki/Wikipedia:Vital_articles/Level/4
+license: CC BY-SA 4.0 (Wikipedia Vital Articles list and short descriptions); Wikidata sitelinks CC0
+version: Level 4 topic pages as of 2026-09-24 (10,021 listed articles); pageviews window 2026-07/2026-08 when fetched
+target: 19000
+hemisphere: world
+kind: social (g6.recognize) + evaluative (g6.importance)
+notes: >
+  G6 entity judgments over Wikipedia Vital Articles Level 4, 2 per article (origin template):
+  g6.recognize Noul 'Would most adults have heard of "<X>"?' (kind social, human_text identical; meta carries
+  sitelinks + pageviews so recognition can be compared with popularity) and g6.importance Score
+  'How important is "<X>" to understanding <domain>?' with 5 concrete levels (kind evaluative). <domain> and the
+  node_hint come from the explicit SECTION_TO_NODE map over the Vital section path (longest prefix wins, plus a few
+  title overrides such as specific sports and tech companies). state = {topic: full title, description: Wikipedia
+  short description}. Excluded: People > Politicians and leaders, and Politics and government > Ideology and
+  political theory. Flagged "political": activists/revolutionaries, political writers, the rest of Politics and
+  government, Society > Issues and Social status. Flagged "sensitive": religion-as-belief (religion sections,
+  religious figures, Abrahamic mythology) and Sexuality and gender. Data is fetched by fetch_vital.py into
+  data/raw/vital/ (level3.jsonl + level4.jsonl) from the public MediaWiki, Wikidata and Pageviews APIs.
