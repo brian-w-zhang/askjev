@@ -44,6 +44,9 @@ db/migrations/                          # SQL schema
 ```
 fetch → normalize → screen → dedupe → place → expand → plan → ask → explode → measure → rollup → (restructure)
 ```
+Implementation note: in the batch pipeline, cross-source dedupe runs after answering so it can use final placements;
+the ask flow dedupes before placing. Expand, plan, and explode are folded into the `answer` stage.
+
 | # | Stage | What happens |
 |---|---|---|
 | 1 | fetch | Download once per source version; store the checksum and license text |
@@ -60,6 +63,26 @@ fetch → normalize → screen → dedupe → place → expand → plan → ask 
 | 12 | restructure | Batch job: split, group, and growth proposals → accept/reject → move questions → rollup (`02-tree.md` §8) |
 
 Asks from the UI run stages 3-5 and 7-11 inline for a single question, using the merged screen + answer request.
+
+## 4b. Running it (implemented CLI, `uv run askjev <cmd>`)
+| Command | What it does |
+|---|---|
+| `migrate` | Apply `db/migrations/*.sql` (tracked in `schema_migrations`) |
+| `tree` | Load `tree/*.yaml` → `nodes` (choice cards, embeddings, versions; retire removed hand nodes) |
+| `source <name…>` | Run adapters → `data/normalized/<name>.jsonl` |
+| `ingest <name…> [--cap N]` | Load normalized questions (+ human dists, embeddings); exact hints → deterministic placement |
+| `authored [files…]` | Ingest G5 banks through the Jev round-trip filter and G2 menus as template questions |
+| `place` / `screen` / `answer` | Jev beam placement / screen request / answer bundle for everything pending |
+| `dedupe` | Cross-source near-duplicates (cosine ≥ 0.90 in a node) → Jev "same question?" → link + hide |
+| `measure` / `rollup` | `question_meta` and `node_stats` |
+| `mix` | Mix report vs targets |
+| `restructure [--dry-run] [--apply file]` | Propose splits/groups/grows (clusters) → authored labels → apply with accept rules |
+| `pipeline` | place → screen → answer → dedupe → measure → rollup → mix |
+| `walk --json "<text>"` / `ask --json '<payload>'` | Single-question flows used by the web app |
+
+Request cap: **24 questions per request** (larger gateway batches intermittently return 503).
+Evaluation scripts: `scripts/spike_jev.py`, `routing_eval.py`, `taxonomy_eval.py`, `coverage_test.py`,
+`dedupe_eval.py`, `search_recall.py`.
 
 ## 5. Schema (Postgres)
 ```sql

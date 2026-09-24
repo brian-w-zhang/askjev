@@ -17,6 +17,7 @@ def main(argv: list[str] | None = None):
     s = sub.add_parser("place"); s.add_argument("--limit", type=int, default=None)
     s = sub.add_parser("screen"); s.add_argument("--limit", type=int, default=None)
     s = sub.add_parser("answer"); s.add_argument("--limit", type=int, default=None)
+    sub.add_parser("dedupe")
     sub.add_parser("measure")
     sub.add_parser("rollup")
     sub.add_parser("mix")
@@ -53,6 +54,9 @@ def main(argv: list[str] | None = None):
     elif a.cmd == "answer":
         from .answer import answer_pending
         print(answer_pending(limit=a.limit))
+    elif a.cmd == "dedupe":
+        from .dedupe import dedupe
+        print(dedupe())
     elif a.cmd == "measure":
         from .measure import measure_all
         print(measure_all())

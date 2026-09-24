@@ -53,14 +53,9 @@ def find_duplicate(q: dict, neigh: list[dict]) -> str | None:
     cands = [n for n in neigh if n["sim"] >= 0.8][:8]
     if not cands:
         return None
-    qs = {
-        f"d{i}": gateway_question(
-            "noul",
-            {"question": "Is `candidate` asking essentially the same question as `question` (same meaning and same answer options)?",
-             "candidate": n["text"]},
-        )
-        for i, n in enumerate(cands)
-    }
+    from .dedupe import same_question
+
+    qs = {f"d{i}": same_question(n["text"]) for i, n in enumerate(cands)}
     resp = asyncio.run(_one(Request(question_state(q), qs)))
     best, best_p = None, 0.0
     for i, n in enumerate(cands):

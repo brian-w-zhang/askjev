@@ -134,7 +134,7 @@ try {
   await page.getByRole("switch", { name: "Show Jev's path" }).click(); // lights only for the embedding path here
   await openBySearch("How well does this describe you: I am the life of the party", "11-score-bands.png");
   report.score_card_has_bands = (await page.locator(".band").count()) > 0;
-  await openBySearch("Who is the greater basketball player?", "12-human-overlay.png");
+  await openBySearch("rather be painted by Van Gogh or Da Vinci", "12-human-overlay.png");
   const most = page.getByRole("button", { name: "Most people" });
   if (await most.count()) { await most.click(); await page.waitForTimeout(700); await shot("13-most-people-frame.png"); }
   report.human_overlay_markers = await page.locator(".bar .human").count();

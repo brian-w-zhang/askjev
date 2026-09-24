@@ -13,7 +13,10 @@ const MAX = 4096;
 export function nodeSize(n: TreeNode): number {
   if (n.depth === 0) return 0.9;
   if (n.depth === 1) return 0.55;
-  return 0.14 + 0.07 * Math.log2(1 + n.n_questions) + (n.depth === 2 ? 0.12 : 0);
+  // log-scaled but capped per depth so stars never outgrow their parents as the corpus grows (10k → 1M)
+  const cap = n.depth === 2 ? 0.42 : n.depth === 3 ? 0.3 : 0.22;
+  const base = n.depth === 2 ? 0.2 : 0.1;
+  return Math.min(cap, base + 0.022 * Math.log2(1 + n.n_questions));
 }
 
 const back = (x: number) => 1 + 2.2 * Math.pow(x - 1, 3) + 1.2 * Math.pow(x - 1, 2);

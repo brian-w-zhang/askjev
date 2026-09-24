@@ -1,606 +1,1078 @@
 id: world
 label: The World
-description: "Questions about things, places, events, ideas, and the future out in the world that can be answered without any specific input document and are not about the answerer's own traits, values, preferences, or how people live their lives."
-not_for: "Questions about the answerer or how people live (personality, morals, relationships, favorites, would-you-rather) go to SELF; questions that need a specific ticket, document, transcript, listing, or tool call to answer go to MACHINE."
-examples: ["Is Mount Everest the tallest mountain on Earth?", "Who was the most influential Renaissance painter: Leonardo, Michelangelo, or Raphael?", "Will humans land on Mars before a permanent Moon base exists?"]
+description: Questions about things, places, events, ideas, and the future out in the world that can be answered without any
+  specific input document and are not about the answerer's own traits, values, preferences, or how people live their lives.
+not_for: Questions about the answerer or how people live (personality, morals, relationships, favorites, would-you-rather)
+  go to SELF; questions that need a specific ticket, document, transcript, listing, or tool call to answer go to MACHINE.
+examples:
+- Is Mount Everest the tallest mountain on Earth?
+- 'Who was the most influential Renaissance painter: Leonardo, Michelangelo, or Raphael?'
+- Will humans land on Mars before a permanent Moon base exists?
 children:
-
-  # ------------------------------------------------------------------ ARTS
-  - id: world.arts
-    label: Arts & Entertainment
-    share: 5
-    description: "Questions about creative works and the people who make or star in them: music, film, television, books, visual art, stage performance, comedy, fashion, architecture, and celebrity culture."
-    not_for: "Video games and board games go to world.sports; history of an era goes to world.history; the answerer's own favorite song or film goes to SELF."
-    examples: ["Is film a more influential art form than literature?", "Which art form has changed the most in the last century: music, film, or painting?"]
+- id: world.arts
+  label: Arts & Entertainment
+  share: 5
+  description: 'Questions about creative works and the people who make or star in them: music, film, television, books, visual
+    art, stage performance, comedy, fashion, architecture, and celebrity culture.'
+  not_for: Video games and board games go to world.sports; history of an era goes to world.history; the answerer's own favorite
+    song or film goes to SELF.
+  examples:
+  - Is film a more influential art form than literature?
+  - 'Which art form has changed the most in the last century: music, film, or painting?'
+  children:
+  - id: world.arts.music
+    label: Music
+    description: Questions about songs, albums, musicians, bands, genres, instruments, and music history, from classical composers
+      to current pop and hip-hop.
+    not_for: Musicals and opera staging go to world.arts.theatre_dance; a musician's personal life and fame go to world.arts.celebrities.
+    examples:
+    - Are the Beatles the most influential band of all time?
+    - Is jazz or blues the older genre?
+    - 'Which instrument is hardest to master: violin, piano, or guitar?'
+  - id: world.arts.film
+    label: Film
+    description: Questions about movies, including directors, actors' performances, film genres, animated features, franchises,
+      and awards like the Oscars.
+    not_for: TV series and streaming shows go to world.arts.television; an actor's off-screen fame or scandals go to world.arts.celebrities.
+    examples:
+    - Is The Godfather a better film than Citizen Kane?
+    - Did Pixar make the best animated films of the 2000s?
+    - Is Stanley Kubrick the greatest film director?
+  - id: world.arts.television
+    label: Television & Streaming
+    description: Questions about TV series, sitcoms, dramas, reality shows, anime series, talk shows, and streaming-platform
+      originals.
+    not_for: Feature films go to world.arts.film; stand-up specials go to world.arts.comedy; streaming companies as businesses
+      go to world.tech.companies.
+    examples:
+    - Is Breaking Bad better than The Sopranos?
+    - Did Game of Thrones have the worst final season of any major show?
+    - Is anime more popular in the West than it was twenty years ago?
+  - id: world.arts.books
+    label: Books & Literature
+    description: Questions about novels, poetry, plays as literature, authors, literary genres, comics and manga, and classic
+      or bestselling books.
+    not_for: Film adaptations go to world.arts.film; myths and folktales as tradition go to world.society.mythology_folklore;
+      philosophical works go to world.society.philosophy_thinkers.
+    examples:
+    - Is Shakespeare the greatest writer in the English language?
+    - Is The Lord of the Rings better than Harry Potter?
+    - Are graphic novels real literature?
+  - id: world.arts.visual_art
+    label: Visual Art & Photography
+    description: Questions about paintings, sculpture, photography, street art, art movements, famous artists, and museums'
+      collections.
+    not_for: Buildings and interior design go to world.arts.architecture_design; clothing design goes to world.arts.fashion.
+    examples:
+    - Is the Mona Lisa overrated?
+    - Was Picasso more influential than Van Gogh?
+    - Is photography as much an art as painting?
+  - id: world.arts.theatre_dance
+    label: Theatre, Dance & Opera
+    description: 'Questions about live stage performance: Broadway and West End musicals, plays in performance, ballet, modern
+      dance, opera, and circus.'
+    not_for: Reading plays as literature goes to world.arts.books; recorded music goes to world.arts.music; stand-up comedy
+      goes to world.arts.comedy.
+    examples:
+    - Is Hamilton the most important musical of the century?
+    - Is ballet harder than any other dance form?
+    - Is opera still relevant to young audiences?
+  - id: world.arts.comedy
+    label: Comedy & Humor
+    description: Questions about comedians, stand-up, sketch shows, satire, memes as jokes, and what makes something funny
+      in general.
+    not_for: Sitcoms as TV series go to world.arts.television; the answerer's own sense of humor goes to SELF.
+    examples:
+    - Are puns the lowest form of humor?
+    - Is George Carlin the best stand-up comedian ever?
+    - Does comedy age worse than drama?
+  - id: world.arts.celebrities
+    label: Celebrities & Pop Culture
+    description: Questions about famous people as public figures, influencers, fame itself, award shows as spectacle, fandoms,
+      and viral pop-culture moments.
+    not_for: A celebrity's actual work goes to its art form (world.arts.music, world.arts.film); athletes' careers go to world.sports;
+      social-media platforms go to world.tech.social_media.
+    examples:
+    - Is Taylor Swift the biggest celebrity in the world right now?
+    - Are influencers real celebrities?
+    - Is fame more of a burden than a gift?
+  - id: world.arts.fashion
+    label: Fashion & Style
+    description: Questions about clothing, designers, fashion houses, trends, sneakers, jewelry, and the fashion industry.
+    not_for: The answerer's own style or wardrobe choices go to SELF; fashion brands as businesses and stocks go to world.money.companies_brands.
+    examples:
+    - Is fast fashion worse than it is worth?
+    - Are skinny jeans out of style?
+    - Is Chanel the most iconic fashion house?
+  - id: world.arts.architecture_design
+    label: Architecture & Design
+    description: Questions about architectural styles, famous architects, the beauty or design of buildings, graphic design,
+      typography, and product design as an aesthetic.
+    not_for: Specific landmarks as travel destinations go to world.places.landmarks; engineering of structures goes to world.tech.engineering_inventions.
+    examples:
+    - Is brutalist architecture ugly?
+    - Is Frank Lloyd Wright the greatest American architect?
+    - Is Helvetica overused?
+- id: world.sports
+  label: Sports & Games
+  share: 4
+  description: Questions about competitive sports, athletes, teams, leagues, and tournaments, and about games played for fun
+    or competition, including video games, esports, board games, card games, and chess.
+  not_for: Exercise for health goes to world.health.fitness; the business of sports franchises goes to world.money; predicting
+    a future result goes to world.future.sports_entertainment.
+  examples:
+  - Is soccer the most popular sport in the world?
+  - Is chess a sport?
+  children:
+  - id: world.sports.basketball
+    label: Basketball
+    description: 'Questions about basketball in general: rules, style of play, college basketball, the WNBA, international
+      and Olympic basketball.'
+    not_for: NBA players, teams, and NBA history go to world.sports.basketball.nba.
+    examples:
+    - Is basketball harder to play than soccer?
+    - Is March Madness the best tournament in American sports?
+    - Should the three-point line be moved back?
     children:
-      - id: world.arts.music
-        label: Music
-        description: "Questions about songs, albums, musicians, bands, genres, instruments, and music history, from classical composers to current pop and hip-hop."
-        not_for: "Musicals and opera staging go to world.arts.theatre_dance; a musician's personal life and fame go to world.arts.celebrities."
-        examples: ["Are the Beatles the most influential band of all time?", "Is jazz or blues the older genre?", "Which instrument is hardest to master: violin, piano, or guitar?"]
-      - id: world.arts.film
-        label: Film
-        description: "Questions about movies, including directors, actors' performances, film genres, animated features, franchises, and awards like the Oscars."
-        not_for: "TV series and streaming shows go to world.arts.television; an actor's off-screen fame or scandals go to world.arts.celebrities."
-        examples: ["Is The Godfather a better film than Citizen Kane?", "Did Pixar make the best animated films of the 2000s?", "Is Stanley Kubrick the greatest film director?"]
-      - id: world.arts.television
-        label: Television & Streaming
-        description: "Questions about TV series, sitcoms, dramas, reality shows, anime series, talk shows, and streaming-platform originals."
-        not_for: "Feature films go to world.arts.film; stand-up specials go to world.arts.comedy; streaming companies as businesses go to world.tech.companies."
-        examples: ["Is Breaking Bad better than The Sopranos?", "Did Game of Thrones have the worst final season of any major show?", "Is anime more popular in the West than it was twenty years ago?"]
-      - id: world.arts.books
-        label: Books & Literature
-        description: "Questions about novels, poetry, plays as literature, authors, literary genres, comics and manga, and classic or bestselling books."
-        not_for: "Film adaptations go to world.arts.film; myths and folktales as tradition go to world.society.mythology_folklore; philosophical works go to world.society.philosophy_thinkers."
-        examples: ["Is Shakespeare the greatest writer in the English language?", "Is The Lord of the Rings better than Harry Potter?", "Are graphic novels real literature?"]
-      - id: world.arts.visual_art
-        label: Visual Art & Photography
-        description: "Questions about paintings, sculpture, photography, street art, art movements, famous artists, and museums' collections."
-        not_for: "Buildings and interior design go to world.arts.architecture_design; clothing design goes to world.arts.fashion."
-        examples: ["Is the Mona Lisa overrated?", "Was Picasso more influential than Van Gogh?", "Is photography as much an art as painting?"]
-      - id: world.arts.theatre_dance
-        label: Theatre, Dance & Opera
-        description: "Questions about live stage performance: Broadway and West End musicals, plays in performance, ballet, modern dance, opera, and circus."
-        not_for: "Reading plays as literature goes to world.arts.books; recorded music goes to world.arts.music; stand-up comedy goes to world.arts.comedy."
-        examples: ["Is Hamilton the most important musical of the century?", "Is ballet harder than any other dance form?", "Is opera still relevant to young audiences?"]
-      - id: world.arts.comedy
-        label: Comedy & Humor
-        description: "Questions about comedians, stand-up, sketch shows, satire, memes as jokes, and what makes something funny in general."
-        not_for: "Sitcoms as TV series go to world.arts.television; the answerer's own sense of humor goes to SELF."
-        examples: ["Are puns the lowest form of humor?", "Is George Carlin the best stand-up comedian ever?", "Does comedy age worse than drama?"]
-      - id: world.arts.celebrities
-        label: Celebrities & Pop Culture
-        description: "Questions about famous people as public figures, influencers, fame itself, award shows as spectacle, fandoms, and viral pop-culture moments."
-        not_for: "A celebrity's actual work goes to its art form (world.arts.music, world.arts.film); athletes' careers go to world.sports; social-media platforms go to world.tech.social_media."
-        examples: ["Is Taylor Swift the biggest celebrity in the world right now?", "Are influencers real celebrities?", "Is fame more of a burden than a gift?"]
-      - id: world.arts.fashion
-        label: Fashion & Style
-        description: "Questions about clothing, designers, fashion houses, trends, sneakers, jewelry, and the fashion industry."
-        not_for: "The answerer's own style or wardrobe choices go to SELF; fashion brands as businesses and stocks go to world.money.companies_brands."
-        examples: ["Is fast fashion worse than it is worth?", "Are skinny jeans out of style?", "Is Chanel the most iconic fashion house?"]
-      - id: world.arts.architecture_design
-        label: Architecture & Design
-        description: "Questions about architectural styles, famous architects, the beauty or design of buildings, graphic design, typography, and product design as an aesthetic."
-        not_for: "Specific landmarks as travel destinations go to world.places.landmarks; engineering of structures goes to world.tech.engineering_inventions."
-        examples: ["Is brutalist architecture ugly?", "Is Frank Lloyd Wright the greatest American architect?", "Is Helvetica overused?"]
-
-  # ------------------------------------------------------------------ SPORTS
-  - id: world.sports
-    label: Sports & Games
-    share: 4
-    description: "Questions about competitive sports, athletes, teams, leagues, and tournaments, and about games played for fun or competition, including video games, esports, board games, card games, and chess."
-    not_for: "Exercise for health goes to world.health.fitness; the business of sports franchises goes to world.money; predicting a future result goes to world.future.sports_entertainment."
-    examples: ["Is soccer the most popular sport in the world?", "Is chess a sport?"]
+    - id: world.sports.basketball.nba
+      label: NBA
+      description: 'Questions about the NBA: its players, teams, coaches, dynasties, finals, drafts, and greatest-of-all-time
+        debates.'
+      not_for: College, WNBA, and international basketball stay at world.sports.basketball.
+      examples:
+      - Is Michael Jordan better than LeBron James?
+      - Were the 1996 Bulls the best NBA team ever?
+      - Is Stephen Curry the best shooter in NBA history?
+  - id: world.sports.soccer
+    label: Soccer (Association Football)
+    description: 'Questions about soccer in general: rules, tactics, the World Cup, national teams, leagues, and the sport''s
+      culture worldwide.'
+    not_for: Specific clubs and individual players go to world.sports.soccer.clubs_players; American football goes to world.sports.american_football.
+    examples:
+    - Is the World Cup the biggest sporting event on Earth?
+    - Is VAR good for soccer?
+    - Is the Premier League the best league in the world?
     children:
-      - id: world.sports.basketball
-        label: Basketball
-        description: "Questions about basketball in general: rules, style of play, college basketball, the WNBA, international and Olympic basketball."
-        not_for: "NBA players, teams, and NBA history go to world.sports.basketball.nba."
-        examples: ["Is basketball harder to play than soccer?", "Is March Madness the best tournament in American sports?", "Should the three-point line be moved back?"]
-        children:
-          - id: world.sports.basketball.nba
-            label: NBA
-            description: "Questions about the NBA: its players, teams, coaches, dynasties, finals, drafts, and greatest-of-all-time debates."
-            not_for: "College, WNBA, and international basketball stay at world.sports.basketball."
-            examples: ["Is Michael Jordan better than LeBron James?", "Were the 1996 Bulls the best NBA team ever?", "Is Stephen Curry the best shooter in NBA history?"]
-      - id: world.sports.soccer
-        label: Soccer (Association Football)
-        description: "Questions about soccer in general: rules, tactics, the World Cup, national teams, leagues, and the sport's culture worldwide."
-        not_for: "Specific clubs and individual players go to world.sports.soccer.clubs_players; American football goes to world.sports.american_football."
-        examples: ["Is the World Cup the biggest sporting event on Earth?", "Is VAR good for soccer?", "Is the Premier League the best league in the world?"]
-        children:
-          - id: world.sports.soccer.clubs_players
-            label: Clubs & Players
-            description: "Questions about specific soccer clubs and individual soccer players: rivalries, club legends, transfers, and greatest-player debates."
-            not_for: "National teams, the World Cup, rules, and league-level questions stay at world.sports.soccer."
-            examples: ["Is Messi better than Cristiano Ronaldo?", "Is Real Madrid the greatest club in history?", "Was Pele better than Maradona?"]
-      - id: world.sports.american_football
-        label: American Football
-        description: "Questions about American football: the NFL, college football, the Super Bowl, quarterbacks, teams, and the rules of the game."
-        not_for: "Soccer goes to world.sports.soccer; rugby goes to world.sports.other_team_sports."
-        examples: ["Is Tom Brady the greatest NFL player ever?", "Is college football more fun to watch than the NFL?", "Should the NFL ban kickoffs?"]
-      - id: world.sports.baseball
-        label: Baseball
-        description: "Questions about baseball and softball: MLB, players, teams, pitching, statistics culture, and the game's history and rules."
-        not_for: "Cricket goes to world.sports.other_team_sports."
-        examples: ["Is Babe Ruth the greatest baseball player ever?", "Is the pitch clock good for baseball?", "Is baseball still America's pastime?"]
-      - id: world.sports.other_team_sports
-        label: Other Team Sports
-        description: "Questions about team sports other than basketball, soccer, American football, and baseball: ice hockey, cricket, rugby, volleyball, handball, lacrosse, and similar."
-        not_for: "Basketball, soccer, American football, and baseball each have their own sibling (world.sports.basketball, world.sports.soccer, world.sports.american_football, world.sports.baseball)."
-        examples: ["Is Wayne Gretzky the greatest hockey player ever?", "Is Test cricket better than T20?", "Is rugby tougher than American football?"]
-      - id: world.sports.individual_sports
-        label: Individual & Olympic Sports
-        description: "Questions about individual sports such as tennis, golf, track and field, swimming, gymnastics, cycling, skiing, and skateboarding, and about the Olympic Games as an event."
-        not_for: "Boxing, MMA, and wrestling go to world.sports.combat_sports; racing with engines goes to world.sports.motorsport; Olympic team sports go to their own team-sport sibling."
-        examples: ["Is Roger Federer the greatest tennis player ever?", "Is Usain Bolt the greatest Olympian?", "Is golf really a sport?"]
-      - id: world.sports.combat_sports
-        label: Combat Sports
-        description: "Questions about boxing, mixed martial arts and the UFC, wrestling (amateur and professional), judo, karate, and other fighting sports."
-        not_for: "Self-defense as personal fitness goes to world.health.fitness; military combat goes to world.history.wars_battles."
-        examples: ["Is Muhammad Ali the greatest boxer of all time?", "Is MMA more dangerous than boxing?", "Is pro wrestling a sport?"]
-      - id: world.sports.motorsport
-        label: Motorsport
-        description: "Questions about auto and motorcycle racing: Formula 1, NASCAR, IndyCar, rally, MotoGP, and their drivers and teams."
-        not_for: "Cars as consumer vehicles and automotive technology go to world.tech.vehicles; cycling goes to world.sports.individual_sports."
-        examples: ["Is Lewis Hamilton the greatest F1 driver?", "Is Formula 1 more exciting than NASCAR?", "Are racing drivers true athletes?"]
-      - id: world.sports.video_games
-        label: Video Games & Esports
-        description: "Questions about video games, consoles, game franchises, game studios' games, speedrunning, and competitive esports."
-        not_for: "Gaming hardware specs go to world.tech.gadgets; the answerer's own gaming habits go to SELF; board and card games go to world.sports.board_card_games."
-        examples: ["Is Zelda: Breath of the Wild the best game ever made?", "Is PlayStation better than Xbox?", "Are esports real sports?"]
-      - id: world.sports.board_card_games
-        label: Board, Card & Puzzle Games
-        description: "Questions about chess, go, board games, tabletop role-playing games, card games like poker, trading card games, and puzzles."
-        not_for: "Video game versions go to world.sports.video_games; gambling as an industry goes to world.money."
-        examples: ["Is chess harder than go?", "Is Monopoly a bad board game?", "Is poker more skill than luck?"]
-
-  # ------------------------------------------------------------------ FOOD
-  - id: world.food
-    label: Food & Drink
-    share: 3
-    description: "Questions about food and drink as things in the world: cuisines, dishes, ingredients, cooking and baking, beverages, and restaurants."
-    not_for: "Diet and health effects go to world.health.nutrition; the answerer's own favorite food or eating habits go to SELF; food companies as businesses go to world.money.companies_brands."
-    examples: ["Is Italian food the most popular cuisine in the world?", "Is a hot dog a sandwich?"]
-    children:
-      - id: world.food.cuisines
-        label: World Cuisines
-        description: "Questions about national and regional cuisines as a whole, such as Italian, Japanese, Mexican, Indian, French, or Southern American cooking, and how they compare."
-        not_for: "A single specific dish goes to world.food.dishes_ingredients; restaurants go to world.food.restaurants."
-        examples: ["Is French cuisine overrated?", "Is Japanese food the healthiest national cuisine?", "Is Thai food spicier than Indian food?"]
-      - id: world.food.dishes_ingredients
-        label: Dishes & Ingredients
-        description: "Questions about specific dishes, foods, and ingredients: pizza, sushi, tacos, cheese, spices, fruits and vegetables as food, and food classification debates."
-        not_for: "Desserts and baked goods go to world.food.baking_sweets; how to cook something goes to world.food.cooking; plants as living organisms go to world.nature.plants_fungi."
-        examples: ["Does pineapple belong on pizza?", "Is cilantro a divisive herb?", "Is a tomato a vegetable in cooking?"]
-      - id: world.food.cooking
-        label: Cooking Techniques & Kitchen
-        description: "Questions about how food is prepared: techniques, recipes in general, knives and cookware, grilling and barbecue, fermentation, and famous chefs."
-        not_for: "Baking and pastry go to world.food.baking_sweets; the answerer's own cooking habits go to SELF."
-        examples: ["Is cast iron better than nonstick?", "Should steak be rested after cooking?", "Is sous vide worth it for home cooks?"]
-      - id: world.food.baking_sweets
-        label: Baking, Desserts & Sweets
-        description: "Questions about bread, pastry, cakes, cookies, chocolate, candy, ice cream, and other desserts and sweets."
-        not_for: "Savory dishes go to world.food.dishes_ingredients; sugar's health effects go to world.health.nutrition."
-        examples: ["Is sourdough the best bread?", "Is dark chocolate better than milk chocolate?", "Is cheesecake a cake or a pie?"]
-      - id: world.food.alcoholic_drinks
-        label: Wine, Beer & Spirits
-        description: "Questions about alcoholic beverages: wine, beer, whiskey and other spirits, cocktails, breweries, and wine regions."
-        not_for: "Alcohol's health effects go to world.health.nutrition; coffee, tea, and soft drinks go to world.food.nonalcoholic_drinks."
-        examples: ["Is expensive wine actually better than cheap wine?", "Is Scotch better than bourbon?", "Is the martini the classic cocktail?"]
-      - id: world.food.nonalcoholic_drinks
-        label: Coffee, Tea & Soft Drinks
-        description: "Questions about coffee, tea, soda, juice, energy drinks, bottled water, and other non-alcoholic beverages."
-        not_for: "Beer, wine, spirits, and cocktails go to world.food.alcoholic_drinks; caffeine's health effects go to world.health.nutrition."
-        examples: ["Is Coke better than Pepsi?", "Is espresso stronger than drip coffee?", "Is bubble tea a passing trend?"]
-      - id: world.food.restaurants
-        label: Restaurants & Fast Food
-        description: "Questions about eating out: restaurant chains, fast food, fine dining, Michelin stars, street food, tipping norms at restaurants, and food delivery."
-        not_for: "Restaurant companies as investments go to world.money; home cooking goes to world.food.cooking."
-        examples: ["Is In-N-Out better than Five Guys?", "Are Michelin stars a fair measure of quality?", "Is McDonald's the most iconic fast-food chain?"]
-
-  # ------------------------------------------------------------------ PLACES
-  - id: world.places
-    label: Places & Travel
-    share: 3
-    description: "Questions about places on Earth and traveling to them: continents, countries, cities, landmarks, named geographic features, tourism, and getting around."
-    not_for: "Weather, geology, and ecosystems go to world.nature; a place's past goes to world.history; its politics are out of scope; the answerer's own dream destination goes to SELF."
-    examples: ["Is Paris the most beautiful city in the world?", "Is Australia a continent or an island?"]
-    children:
-      - id: world.places.continents_regions
-        label: Continents & Regions
-        description: "Questions about continents and multi-country regions such as Europe, Southeast Asia, Scandinavia, the Middle East, Latin America, or the Arctic."
-        not_for: "A single country goes to world.places.countries; a single city goes to world.places.cities."
-        examples: ["Is Europe the best continent for tourists?", "Is Scandinavia the most livable region in the world?", "Is Russia part of Europe or Asia?"]
-      - id: world.places.countries
-        label: Countries
-        description: "Questions about individual countries as places: their size, geography, languages spoken, national symbols, and what they are known for."
-        not_for: "Cities go to world.places.cities; a country's government or elections are out of scope; its history goes to world.history."
-        examples: ["Is Japan the most unique country to visit?", "Is Canada bigger than the United States?", "Is New Zealand the most scenic country?"]
-      - id: world.places.cities
-        label: Cities & Towns
-        description: "Questions about specific cities and towns: livability, reputation, neighborhoods, skylines, and how cities compare."
-        not_for: "Individual buildings or monuments go to world.places.landmarks; whole countries go to world.places.countries."
-        examples: ["Is New York better than London?", "Is Tokyo the safest big city?", "Is Venice overrated?"]
-      - id: world.places.landmarks
-        label: Landmarks & Monuments
-        description: "Questions about specific human-made sites: monuments, famous buildings, ruins, bridges, theme parks, and wonders of the world."
-        not_for: "Natural features like mountains and waterfalls go to world.places.physical_geography; architectural style goes to world.arts.architecture_design."
-        examples: ["Is the Great Wall of China visible from space?", "Is Machu Picchu the most impressive ancient site?", "Is Disney World better than Disneyland?"]
-      - id: world.places.physical_geography
-        label: Natural Geography
-        description: "Questions about specific named natural features of the Earth: mountains, rivers, lakes, deserts, islands, oceans, waterfalls, and national parks."
-        not_for: "How volcanoes, earthquakes, and weather work goes to world.nature.geology or world.nature.weather_climate; wildlife in those places goes to world.nature."
-        examples: ["Is the Nile longer than the Amazon?", "Is Yosemite the best US national park?", "Is the Sahara the largest desert?"]
-      - id: world.places.travel
-        label: Travel, Tourism & Transport
-        description: "Questions about traveling in general: tourism, airlines, airports, trains, cruises, hotels, passports, and travel customs."
-        not_for: "A specific destination goes to world.places.cities or world.places.countries; the answerer's own travel preferences go to SELF; vehicle technology goes to world.tech.vehicles."
-        examples: ["Is train travel better than flying in Europe?", "Are cruises a good way to see the world?", "Is Singapore Airlines the best airline?"]
-
-  # ------------------------------------------------------------------ NATURE
-  - id: world.nature
-    label: Nature & Animals
-    share: 3
-    description: "Questions about the living and physical natural world: animals, plants, fungi, pets as species and breeds, ecosystems, weather, climate, and the Earth's geology."
-    not_for: "Human biology and health go to world.health; genetics and evolution as science go to world.science.biology_genetics; named places like specific mountains go to world.places.physical_geography; space goes to world.science.astronomy_space."
-    examples: ["Are dolphins smarter than dogs?", "Is a lightning strike hotter than the surface of the Sun?"]
-    children:
-      - id: world.nature.mammals
-        label: Mammals
-        description: "Questions about wild mammals such as big cats, bears, elephants, whales, primates, bats, and rodents: their behavior, intelligence, and abilities."
-        not_for: "Dogs, cats, and other pets go to world.nature.pets_breeds; fish, sharks, and other non-mammal sea life go to world.nature.sea_life."
-        examples: ["Is a lion stronger than a tiger?", "Are elephants the smartest land animal besides humans?", "Is a bat a better flier than a bird?"]
-      - id: world.nature.birds
-        label: Birds
-        description: "Questions about birds: species, flight, migration, birdsong, intelligence of crows and parrots, and birds of prey."
-        not_for: "Pet birds as companions go to world.nature.pets_breeds; poultry as food goes to world.food."
-        examples: ["Are crows the smartest birds?", "Is the peregrine falcon the fastest animal?", "Are penguins cute or awkward?"]
-      - id: world.nature.sea_life
-        label: Ocean & Sea Life
-        description: "Questions about fish, sharks, octopuses, jellyfish, coral reefs, and other life in oceans, rivers, and lakes."
-        not_for: "Whales and dolphins as mammals go to world.nature.mammals; seafood as food goes to world.food.dishes_ingredients."
-        examples: ["Are sharks more afraid of humans than we are of them?", "Is the octopus the smartest invertebrate?", "Is the deep sea stranger than outer space?"]
-      - id: world.nature.reptiles_insects
-        label: Reptiles, Amphibians & Bugs
-        description: "Questions about snakes, lizards, crocodiles, turtles, frogs, insects, spiders, and other small creatures."
-        not_for: "Mammals go to world.nature.mammals; birds go to world.nature.birds; pet reptiles as companions go to world.nature.pets_breeds."
-        examples: ["Are spiders insects?", "Is the mosquito the deadliest animal?", "Are snakes more feared than they deserve?"]
-      - id: world.nature.pets_breeds
-        label: Pets & Domestic Animals
-        description: "Questions about pets and domestic animals as species and breeds: dog and cat breeds, horses, farm animals, and pet reptiles, birds, and fish."
-        not_for: "The answerer's own pet or preference for dogs versus cats goes to SELF; wild relatives go to world.nature.mammals."
-        examples: ["Is the Border Collie the smartest dog breed?", "Are cats more independent than dogs?", "Is a golden retriever a good family dog?"]
-      - id: world.nature.plants_fungi
-        label: Plants, Trees & Fungi
-        description: "Questions about plants, trees, flowers, mosses, mushrooms and other fungi, and gardening as a topic."
-        not_for: "Fruits and vegetables as food go to world.food.dishes_ingredients; whole forests and ecosystems go to world.nature.ecosystems_conservation."
-        examples: ["Are mushrooms closer to animals than plants?", "Is the redwood the most impressive tree?", "Are roses overrated flowers?"]
-      - id: world.nature.weather_climate
-        label: Weather & Climate
-        description: "Questions about weather phenomena, storms, seasons, climate zones, and the science of climate change as a physical process."
-        not_for: "Climate policy and politics are out of scope; forecasts about future climate go to world.future.climate_environment."
-        examples: ["Is a hurricane the same as a typhoon?", "Is humidity worse than heat?", "Is lightning more dangerous than tornadoes?"]
-      - id: world.nature.geology
-        label: Earth & Geology
-        description: "Questions about how the Earth works: volcanoes, earthquakes, plate tectonics, rocks and minerals, gemstones, fossils, and the Earth's interior."
-        not_for: "Specific named mountains and landforms as places go to world.places.physical_geography; living reptiles go to world.nature.reptiles_insects."
-        examples: ["Is Yellowstone a supervolcano?", "Is diamond the hardest mineral?", "Are earthquakes predictable?"]
-      - id: world.nature.ecosystems_conservation
-        label: Ecosystems & Conservation
-        description: "Questions about habitats, rainforests, food chains, extinction, endangered species, invasive species, and wildlife conservation."
-        not_for: "A single species' traits go to its animal or plant sibling; climate policy is out of scope."
-        examples: ["Are zoos good for conservation?", "Is the rainforest the most important ecosystem?", "Should extinct species be brought back?"]
-
-  # ------------------------------------------------------------------ SCIENCE
-  - id: world.science
-    label: Science & Math
-    share: 3
-    description: "Questions about scientific and mathematical knowledge: physics, chemistry, astronomy, biology, mathematics, psychology as a science, famous scientists, and fringe claims."
-    not_for: "Animals and plants go to world.nature; medicine and the human body go to world.health; applied technology goes to world.tech."
-    examples: ["Is mathematics invented or discovered?", "Is physics the most fundamental science?"]
-    children:
-      - id: world.science.mathematics
-        label: Mathematics
-        description: "Questions about mathematics as a subject: numbers, proofs, famous problems, geometry, probability puzzles, and mathematicians."
-        not_for: "Computing and programming go to world.tech.software_programming; math education goes to world.society.education."
-        examples: ["Is 0.999 repeating equal to 1?", "Is math invented or discovered?", "Is the Monty Hall answer to switch?"]
-      - id: world.science.physics
-        label: Physics
-        description: "Questions about physics: motion, energy, light, relativity, quantum mechanics, time, and the fundamental forces."
-        not_for: "Stars, planets, and cosmology go to world.science.astronomy_space; engineering applications go to world.tech.engineering_inventions."
-        examples: ["Is time travel physically possible?", "Is quantum mechanics harder to understand than relativity?", "Is light a wave or a particle?"]
-      - id: world.science.chemistry
-        label: Chemistry
-        description: "Questions about chemistry: elements, the periodic table, reactions, materials, and everyday chemistry."
-        not_for: "Rocks and minerals go to world.nature.geology; drugs and medicines go to world.health.medicine."
-        examples: ["Is water wet?", "Is gold the most useful element?", "Is glass a liquid?"]
-      - id: world.science.astronomy_space
-        label: Astronomy & Space
-        description: "Questions about planets, stars, galaxies, black holes, the universe, space missions, astronauts, and the search for alien life."
-        not_for: "Forecasts about future space missions go to world.future.space; UFO sightings go to world.science.fringe_mysteries."
-        examples: ["Should Pluto be a planet?", "Is there life elsewhere in the universe?", "Was the Moon landing humanity's greatest achievement?"]
-      - id: world.science.biology_genetics
-        label: Biology & Genetics
-        description: "Questions about life science as a science: cells, DNA, genetics, evolution, microbiology, and the origin of life."
-        not_for: "Specific animals and plants go to world.nature; human health and disease go to world.health."
-        examples: ["Did the chicken or the egg come first?", "Is evolution still happening in humans?", "Are viruses alive?"]
-      - id: world.science.psychology_neuroscience
-        label: Psychology & Neuroscience
-        description: "Questions about the science of the mind and brain: memory, perception, cognitive biases, famous experiments, and intelligence research."
-        not_for: "The answerer's own personality or mind goes to SELF; mental illness and treatment go to world.health.mental_health."
-        examples: ["Do humans only use 10 percent of their brains?", "Was the Stanford prison experiment valid?", "Is IQ a good measure of intelligence?"]
-      - id: world.science.scientists_discoveries
-        label: Scientists & Discoveries
-        description: "Questions about famous scientists, landmark discoveries, Nobel Prizes, and the scientific method and how science is done."
-        not_for: "Inventions and engineers go to world.tech.engineering_inventions; a discovery's physics or chemistry content goes to that sibling."
-        examples: ["Was Newton a greater scientist than Einstein?", "Was penicillin the most important discovery in medicine?", "Did Tesla deserve more credit than Edison?"]
-      - id: world.science.fringe_mysteries
-        label: Pseudoscience & Mysteries
-        description: "Questions about fringe and unexplained claims: UFOs, ghosts, astrology, cryptids, conspiracy-style science claims, and unsolved mysteries."
-        not_for: "Established astronomy goes to world.science.astronomy_space; religious belief is out of scope; unsolved crimes go to world.society.crime_law."
-        examples: ["Is astrology a science?", "Is Bigfoot real?", "Are UFO sightings evidence of aliens?"]
-
-  # ------------------------------------------------------------------ TECH
-  - id: world.tech
-    label: Technology & Internet
-    share: 3
-    description: "Questions about technology and the internet: computers, software, AI, gadgets, social media, tech companies, vehicles, engineering, and inventions."
-    not_for: "Video games go to world.sports.video_games; predictions about future technology go to world.future; the science behind it goes to world.science."
-    examples: ["Was the internet the most important invention of the last century?", "Is technology making life better?"]
-    children:
-      - id: world.tech.computers_hardware
-        label: Computers & Hardware
-        description: "Questions about computers, operating systems, chips and processors, PC building, and the history of computing hardware."
-        not_for: "Phones, wearables, and consumer gadgets go to world.tech.gadgets; programming goes to world.tech.software_programming."
-        examples: ["Is Mac better than Windows?", "Is Linux the best operating system?", "Is Moore's Law dead?"]
-      - id: world.tech.software_programming
-        label: Software & Programming
-        description: "Questions about software, apps as software, programming languages, coding practices, and open source."
-        not_for: "AI models go to world.tech.ai; websites and the internet go to world.tech.internet_web; judging a specific piece of code goes to MACHINE."
-        examples: ["Is Python the best first programming language?", "Are tabs better than spaces?", "Is open source software more secure?"]
-      - id: world.tech.ai
-        label: Artificial Intelligence
-        description: "Questions about artificial intelligence today: chatbots, large language models, image generators, robots, and how AI works and is used."
-        not_for: "Forecasts about AGI or AI's future impact go to world.future.ai; the answerer's own nature as an AI goes to SELF."
-        examples: ["Is ChatGPT actually intelligent?", "Is AI art real art?", "Can AI write better code than most programmers?"]
-      - id: world.tech.internet_web
-        label: Internet, Web & Security
-        description: "Questions about the internet and the web: websites, search engines, online culture, memes, privacy, hacking, and cybersecurity."
-        not_for: "Social media platforms go to world.tech.social_media; crypto as money goes to world.money.investing."
-        examples: ["Is Google still the best search engine?", "Is online privacy dead?", "Was the early internet better?"]
-      - id: world.tech.social_media
-        label: Social Media
-        description: "Questions about social media platforms and their effects: TikTok, Instagram, X, YouTube, Reddit, algorithms, and online communities."
-        not_for: "Influencers as celebrities go to world.arts.celebrities; the answerer's own social media habits go to SELF."
-        examples: ["Is TikTok more addictive than Instagram?", "Has social media made people lonelier?", "Is Reddit the best place for honest advice?"]
-      - id: world.tech.gadgets
-        label: Phones & Gadgets
-        description: "Questions about consumer electronics: smartphones, tablets, headphones, smartwatches, cameras, TVs, and game consoles as hardware."
-        not_for: "Desktop and laptop computers go to world.tech.computers_hardware; games themselves go to world.sports.video_games."
-        examples: ["Is iPhone better than Android?", "Are smartwatches worth it?", "Is vinyl better-sounding than streaming?"]
-      - id: world.tech.companies
-        label: Tech Companies & Leaders
-        description: "Questions about technology companies and their founders and leaders: Apple, Google, Microsoft, Amazon, Meta, Tesla, Netflix, OpenAI, and similar."
-        not_for: "Non-tech companies and brands go to world.money.companies_brands; tech stocks as investments go to world.money.investing."
-        examples: ["Is Apple the most innovative tech company?", "Was Steve Jobs a better CEO than Bill Gates?", "Is Google more innovative than Microsoft?"]
-      - id: world.tech.vehicles
-        label: Cars & Vehicles
-        description: "Questions about cars, electric vehicles, self-driving cars, motorcycles, aircraft, and ships as machines and technology."
-        not_for: "Car racing goes to world.sports.motorsport; airlines and travel go to world.places.travel."
-        examples: ["Are electric cars better than gas cars?", "Is Toyota the most reliable car brand?", "Are self-driving cars safer than human drivers?"]
-      - id: world.tech.engineering_inventions
-        label: Engineering & Inventions
-        description: "Questions about engineering feats, infrastructure, energy technology, and the most important inventions in history."
-        not_for: "Scientific discoveries go to world.science.scientists_discoveries; architectural beauty goes to world.arts.architecture_design."
-        examples: ["Was the printing press the most important invention?", "Is nuclear power the safest energy source?", "Is the wheel overrated as an invention?"]
-
-  # ------------------------------------------------------------------ HISTORY
-  - id: world.history
-    label: History
-    share: 3
-    description: "Questions about the human past: eras from prehistory to the late twentieth century, wars, empires, historical figures, and what-if counterfactuals."
-    not_for: "Current affairs and partisan politics are out of scope; the history of a specific art, sport, or science goes to that L1 (world.arts, world.sports, world.science)."
-    examples: ["Was the fall of Rome the most important event in history?", "Is history mostly shaped by great individuals?"]
-    children:
-      - id: world.history.ancient
-        label: Prehistory & Ancient World
-        description: "Questions about history before about 500 AD: early humans, Egypt, Mesopotamia, Greece, Rome, ancient China and India."
-        not_for: "Specific battles and wars go to world.history.wars_battles; individual leaders' legacies go to world.history.figures; myths go to world.society.mythology_folklore."
-        examples: ["Was ancient Rome more advanced than ancient China?", "Were the pyramids built by slaves?", "Was Athens the birthplace of democracy?"]
-      - id: world.history.medieval
-        label: Middle Ages
-        description: "Questions about roughly 500 to 1500 AD: feudalism, the Byzantine Empire, the Islamic Golden Age, the Mongols, Vikings, and medieval life."
-        not_for: "The Crusades and other wars go to world.history.wars_battles; individual rulers go to world.history.figures."
-        examples: ["Were the Dark Ages really dark?", "Was the Mongol Empire the most impressive empire?", "Were Vikings more traders than raiders?"]
-      - id: world.history.early_modern
-        label: Early Modern Era
-        description: "Questions about roughly 1500 to 1800: the Renaissance, the Age of Exploration, the Reformation, colonial empires, and the Enlightenment."
-        not_for: "Specific wars and revolutions as conflicts go to world.history.wars_battles; individual explorers and monarchs go to world.history.figures."
-        examples: ["Was the Renaissance a real turning point?", "Did Columbus discover America?", "Was the Enlightenment the start of the modern world?"]
-      - id: world.history.modern
-        label: Modern Era (1800-1945)
-        description: "Questions about roughly 1800 to 1945: the Industrial Revolution, the Victorian age, empires at their height, and the interwar years."
-        not_for: "World War I and World War II go to world.history.wars_battles; individual leaders go to world.history.figures."
-        examples: ["Was the Industrial Revolution good for ordinary people?", "Was the British Empire the largest in history?", "Were the Roaring Twenties overrated?"]
-      - id: world.history.postwar
-        label: Postwar Era (1945-2000)
-        description: "Questions about roughly 1945 to 2000 as history: the Cold War era, decolonization, the space race, the civil rights era, and the fall of the Soviet Union."
-        not_for: "Events after 2000 and current politics are out of scope; the Korean and Vietnam wars as conflicts go to world.history.wars_battles."
-        examples: ["Was the space race won by the United States?", "Was the fall of the Berlin Wall the defining moment of the century?", "Were the 1960s the most transformative decade?"]
-      - id: world.history.wars_battles
-        label: Wars & Military History
-        description: "Questions about specific wars, battles, revolutions as conflicts, military tactics, weapons history, and generals' campaigns from any era."
-        not_for: "A general's life and legacy beyond the battlefield goes to world.history.figures; the broader era goes to its era sibling."
-        examples: ["Was Stalingrad the turning point of World War II?", "Was the American Revolution inevitable?", "Were knights more effective than samurai?"]
-      - id: world.history.figures
-        label: Historical Figures
-        description: "Questions about specific people of the past as individuals: rulers, conquerors, explorers, reformers, and their character and legacy."
-        not_for: "Artists, athletes, and scientists as figures in their field go to world.arts, world.sports, or world.science.scientists_discoveries; living politicians are out of scope."
-        examples: ["Was Napoleon a hero or a tyrant?", "Was Genghis Khan the greatest conqueror?", "Was Cleopatra more Greek than Egyptian?"]
-      - id: world.history.what_ifs
-        label: Historical What-Ifs
-        description: "Questions about counterfactual history: what would have happened if a past event had gone differently."
-        not_for: "Questions about what actually happened go to the era sibling or world.history.wars_battles; predictions about the future go to world.future."
-        examples: ["Would Rome have survived without Christianity?", "Would Europe look different today if Napoleon had won at Waterloo?", "Would the Library of Alexandria have changed history if it had survived?"]
-
-  # ------------------------------------------------------------------ SOCIETY
-  - id: world.society
-    label: Society & Culture
-    share: 3
-    description: "Questions about non-contested aspects of human societies and cultures: languages, education, holidays and traditions, mythology, world religions as cultural facts, philosophy, crime and law, and media."
-    not_for: "Partisan politics and religion as a matter of belief are out of scope; how the answerer lives or what they value goes to SELF; economics goes to world.money."
-    examples: ["Is English the most useful language to learn?", "Is Christmas the most widely celebrated holiday?"]
-    children:
-      - id: world.society.languages
-        label: Languages & Linguistics
-        description: "Questions about languages, words, grammar, accents, writing systems, and how languages compare or change."
-        not_for: "Literature written in a language goes to world.arts.books; language teaching in schools goes to world.society.education."
-        examples: ["Is Mandarin the hardest language to learn?", "Is the Oxford comma necessary?", "Is British English more correct than American English?"]
-      - id: world.society.education
-        label: Education & Schools
-        description: "Questions about schools, universities, teaching methods, exams, homework, and education systems around the world."
-        not_for: "The answerer's own study habits go to SELF; school funding politics are out of scope; careers after school go to world.money.careers."
-        examples: ["Is Harvard the best university in the world?", "Should homework be abolished?", "Is Finland's school system the best?"]
-      - id: world.society.holidays_traditions
-        label: Holidays & Traditions
-        description: "Questions about holidays, festivals, customs, rituals, and cultural traditions around the world."
-        not_for: "Religious doctrine and belief are out of scope; how the answerer celebrates goes to SELF; myths and legends go to world.society.mythology_folklore."
-        examples: ["Is Halloween better than Christmas?", "Is Lunar New Year the biggest celebration on Earth?", "Is Valentine's Day a manufactured holiday?"]
-      - id: world.society.mythology_folklore
-        label: Mythology & Folklore
-        description: "Questions about myths, legends, gods of ancient pantheons, fairy tales, folklore, and legendary figures like King Arthur or Robin Hood."
-        not_for: "Living religions go to world.society.world_religions; modern fantasy novels go to world.arts.books; cryptids go to world.science.fringe_mysteries."
-        examples: ["Is Zeus the most powerful mythological god?", "Was King Arthur a real person?", "Is Norse mythology cooler than Greek mythology?"]
-      - id: world.society.world_religions
-        label: World Religions (Facts)
-        description: "Questions about religions as cultural and historical facts: their origins, practices, holy sites, architecture, and number of followers."
-        not_for: "Whether a religion is true, and other questions of belief, are out of scope; ancient pantheons go to world.society.mythology_folklore; the answerer's own faith goes to SELF."
-        examples: ["Is Christianity the largest religion?", "Is Buddhism more a philosophy than a religion?", "Is Hinduism the oldest living religion?"]
-      - id: world.society.philosophy_thinkers
-        label: Philosophers & Schools of Thought
-        description: "Questions about philosophers and philosophical traditions as intellectual history: Plato, Confucius, Kant, Nietzsche, stoicism, existentialism, and similar."
-        not_for: "Asking the answerer's own view on a big question like free will or meaning goes to SELF; ethics dilemmas go to SELF."
-        examples: ["Was Aristotle more influential than Plato?", "Is stoicism the most practical philosophy?", "Was Nietzsche misunderstood?"]
-      - id: world.society.crime_law
-        label: Crime & Law
-        description: "Questions about famous crimes, true crime cases, heists, legal systems as institutions, courts, and law enforcement in general."
-        not_for: "Partisan legal controversies are out of scope; checking a specific contract or policy text goes to MACHINE."
-        examples: ["Was Jack the Ripper ever identified?", "Is the jury system the fairest way to decide trials?", "Was the Great Train Robbery the most daring heist?"]
-      - id: world.society.media_news
-        label: Media & Journalism
-        description: "Questions about newspapers, news outlets, journalism, magazines, radio, podcasts, and advertising as institutions."
-        not_for: "Social media platforms go to world.tech.social_media; entertainment TV goes to world.arts.television; partisan bias debates are out of scope."
-        examples: ["Is print journalism dying?", "Are podcasts the new radio?", "Is advertising an art form?"]
-
-  # ------------------------------------------------------------------ HEALTH
-  - id: world.health
-    label: Health & Body
-    share: 2
-    description: "Questions about the human body and health as general knowledge: anatomy, diseases, medicine, nutrition, fitness, mental health, sleep, and aging."
-    not_for: "The answerer's own health habits or lifestyle choices go to SELF; the science of genetics goes to world.science.biology_genetics; healthcare politics is out of scope."
-    examples: ["Is sleep more important than diet for health?", "Is walking enough exercise?"]
-    children:
-      - id: world.health.human_body
-        label: Human Body
-        description: "Questions about human anatomy and physiology: organs, senses, muscles, bones, the immune system, and body facts."
-        not_for: "The brain's cognition goes to world.science.psychology_neuroscience; diseases go to world.health.diseases."
-        examples: ["Is the skin the largest organ?", "Is the appendix useless?", "Do humans have more than five senses?"]
-      - id: world.health.diseases
-        label: Diseases & Conditions
-        description: "Questions about illnesses and conditions: infections, cancer, heart disease, allergies, pandemics, and their causes and risks."
-        not_for: "Treatments and drugs go to world.health.medicine; mental illness goes to world.health.mental_health."
-        examples: ["Is heart disease more dangerous than cancer?", "Was the Black Death the worst pandemic?", "Are food allergies becoming more common?"]
-      - id: world.health.medicine
-        label: Medicine & Treatments
-        description: "Questions about medicine and treatments: drugs, vaccines, surgery, antibiotics, alternative medicine, and doctors."
-        not_for: "The diseases themselves go to world.health.diseases; the history of a medical discovery goes to world.science.scientists_discoveries."
-        examples: ["Is homeopathy effective?", "Were vaccines the greatest medical advance?", "Are antibiotics overprescribed?"]
-      - id: world.health.nutrition
-        label: Nutrition & Diet
-        description: "Questions about what food does to the body: diets, vitamins, supplements, sugar, caffeine, alcohol's health effects, and weight."
-        not_for: "Food as cuisine or taste goes to world.food; the answerer's own diet goes to SELF."
-        examples: ["Is breakfast the most important meal?", "Is intermittent fasting effective?", "Is red meat unhealthy?"]
-      - id: world.health.fitness
-        label: Fitness & Exercise
-        description: "Questions about exercise as health: strength training, running, yoga, stretching, workout methods, and physical fitness."
-        not_for: "Competitive sports go to world.sports; the answerer's own workout routine goes to SELF."
-        examples: ["Is cardio better than weightlifting?", "Is stretching before exercise necessary?", "Is a daily step goal a useful fitness target?"]
-      - id: world.health.mental_health
-        label: Mental Health
-        description: "Questions about mental health in general: depression, anxiety, ADHD, therapy, stress, and addiction."
-        not_for: "The answerer's own feelings or personality go to SELF; brain science goes to world.science.psychology_neuroscience."
-        examples: ["Is therapy effective for most people?", "Is ADHD overdiagnosed?", "Is stress always harmful?"]
-      - id: world.health.sleep_aging
-        label: Sleep, Aging & Longevity
-        description: "Questions about sleep, dreams as biology, aging, lifespan, longevity research, and the health of older adults."
-        not_for: "The answerer's own sleep habits go to SELF; views on mortality go to SELF; exercise goes to world.health.fitness."
-        examples: ["Do most adults need more sleep than they get?", "Can aging be reversed?", "Are naps good for you?"]
-
-  # ------------------------------------------------------------------ MONEY
-  - id: world.money
-    label: Money & Work
-    share: 2
-    description: "Questions about the economy, business, and work as general topics: economics, markets, investing, personal finance, companies and brands, careers, entrepreneurship, and real estate."
-    not_for: "Tech companies go to world.tech.companies; the answerer's own spending or career choices go to SELF; tax and economic policy debates are out of scope; judging a specific financial document goes to MACHINE."
-    examples: ["Is money the main reason people work?", "Is a college degree a good financial investment?"]
-    children:
-      - id: world.money.economics
-        label: Economics
-        description: "Questions about how economies work: inflation, recessions, trade, supply and demand, and economic history."
-        not_for: "Partisan economic policy is out of scope; stock and crypto markets go to world.money.investing."
-        examples: ["Is inflation always bad?", "Was the Great Depression worse than the 2008 crisis?", "Is GDP a good measure of progress?"]
-      - id: world.money.investing
-        label: Investing & Markets
-        description: "Questions about stocks, bonds, index funds, cryptocurrency, gold, and financial markets."
-        not_for: "Personal budgeting goes to world.money.personal_finance; home buying goes to world.money.real_estate."
-        examples: ["Is Bitcoin a good long-term investment?", "Do index funds beat stock picking?", "Is gold a safe investment?"]
-      - id: world.money.personal_finance
-        label: Personal Finance
-        description: "Questions about personal finance as general knowledge: budgeting, saving, debt, credit cards, retirement accounts, and financial advice."
-        not_for: "The answerer's own money choices go to SELF; investing products go to world.money.investing."
-        examples: ["Is credit card debt the worst kind of debt?", "Is a strict monthly budget worth keeping?", "Is saving for retirement in your 20s necessary?"]
-      - id: world.money.companies_brands
-        label: Companies & Brands
-        description: "Questions about non-tech companies and brands: retail, consumer goods, food and fashion companies, carmakers as businesses, and marketing."
-        not_for: "Technology companies go to world.tech.companies; a company's stock goes to world.money.investing."
-        examples: ["Is Nike the most valuable sports brand?", "Is Costco better than Walmart?", "Is Coca-Cola the best-known brand?"]
-      - id: world.money.careers
-        label: Careers & the Workplace
-        description: "Questions about jobs and work in general: professions, salaries by field, remote work, office culture, unions, and hiring."
-        not_for: "The answerer's own job choices go to SELF; starting a business goes to world.money.entrepreneurship; screening a specific resume goes to MACHINE."
-        examples: ["Is remote work more productive than office work?", "Is being a doctor the most respected profession?", "Is a college degree still worth it for most jobs?"]
-      - id: world.money.entrepreneurship
-        label: Startups & Entrepreneurship
-        description: "Questions about starting and running businesses: startups, venture capital, founders, small businesses, and business strategy."
-        not_for: "Established big companies go to world.money.companies_brands or world.tech.companies."
-        examples: ["Do most startups fail?", "Is venture capital good for founders?", "Is dropping out to start a company a good idea?"]
-      - id: world.money.real_estate
-        label: Housing & Real Estate
-        description: "Questions about housing markets, buying versus renting, mortgages, property values, and real estate as an industry."
-        not_for: "The answerer's own home and decor go to SELF; housing policy debates are out of scope."
-        examples: ["Is renting better than buying?", "Is real estate the safest investment?", "Are houses overpriced right now?"]
-
-  # ------------------------------------------------------------------ FUTURE
-  - id: world.future
-    label: The Future
-    share: 1
-    description: "Questions that forecast whether something will happen in the future, in technology, science, space, the economy, sports, entertainment, climate, or society."
-    not_for: "Elections and partisan political outcomes are out of scope; questions about what is true today go to the matching present-day L1."
-    examples: ["Will humans live on Mars within 50 years?", "Will self-driving cars be common within ten years?"]
-    children:
-      - id: world.future.ai
-        label: Future of AI
-        description: "Questions forecasting AI: whether AGI will arrive, AI's future capabilities, AI's effect on jobs, and future AI risks."
-        not_for: "AI as it exists today goes to world.tech.ai; other future technology goes to world.future.technology."
-        examples: ["Will AGI be built within the next twenty years?", "Will AI replace most programmers?", "Will AI win a Nobel Prize?"]
-      - id: world.future.technology
-        label: Future Technology
-        description: "Questions forecasting non-AI technology: gadgets, energy, transportation, biotech, quantum computing, and future inventions."
-        not_for: "AI forecasts go to world.future.ai; space exploration goes to world.future.space."
-        examples: ["Will quantum computers break encryption?", "Will fusion power be commercial this century?", "Will smartphones be replaced by glasses?"]
-      - id: world.future.space
-        label: Future of Space
-        description: "Questions forecasting space exploration: Mars missions, Moon bases, space tourism, and discovering alien life."
-        not_for: "Current astronomy knowledge goes to world.science.astronomy_space."
-        examples: ["Will humans land on Mars within the next decade?", "Will we find alien life this century?", "Will space tourism become affordable?"]
-      - id: world.future.economy
-        label: Future Economy & Markets
-        description: "Questions forecasting the economy: recessions, markets, cryptocurrency prices, companies' futures, and the future of work."
-        not_for: "How the economy works today goes to world.money; AI's effect on jobs goes to world.future.ai."
-        examples: ["Will Bitcoin reach a new all-time high?", "Will there be a recession next year?", "Will the four-day work week become standard?"]
-      - id: world.future.sports_entertainment
-        label: Future Sports & Entertainment
-        description: "Questions forecasting sports results, awards, box office, album releases, and pop-culture events."
-        not_for: "Past and present sports and entertainment go to world.sports or world.arts."
-        examples: ["Will the next World Cup be won by a European team?", "Will a superhero film win Best Picture?", "Will the Olympics add esports?"]
-      - id: world.future.climate_environment
-        label: Future Climate & Environment
-        description: "Questions forecasting climate and environment: warming thresholds, extreme weather, species extinction, and energy transitions."
-        not_for: "Climate science today goes to world.nature.weather_climate; climate policy and politics are out of scope."
-        examples: ["Will the Arctic be ice-free in summer within our lifetimes?", "Will coral reefs survive this century?", "Will electric cars outsell gas cars globally?"]
-      - id: world.future.society
-        label: Future Society
-        description: "Questions forecasting non-political social change: population, lifespan, cities, languages, education, and how everyday life will look."
-        not_for: "Elections and political outcomes are out of scope; the answerer's own future plans go to SELF."
-        examples: ["Will the world population start shrinking this century?", "Will English remain the global language?", "Will people routinely live past 100?"]
+    - id: world.sports.soccer.clubs_players
+      label: Clubs & Players
+      description: 'Questions about specific soccer clubs and individual soccer players: rivalries, club legends, transfers,
+        and greatest-player debates.'
+      not_for: National teams, the World Cup, rules, and league-level questions stay at world.sports.soccer.
+      examples:
+      - Is Messi better than Cristiano Ronaldo?
+      - Is Real Madrid the greatest club in history?
+      - Was Pele better than Maradona?
+  - id: world.sports.american_football
+    label: American Football
+    description: 'Questions about American football: the NFL, college football, the Super Bowl, quarterbacks, teams, and the
+      rules of the game.'
+    not_for: Soccer goes to world.sports.soccer; rugby goes to world.sports.other_team_sports.
+    examples:
+    - Is Tom Brady the greatest NFL player ever?
+    - Is college football more fun to watch than the NFL?
+    - Should the NFL ban kickoffs?
+  - id: world.sports.baseball
+    label: Baseball
+    description: 'Questions about baseball and softball: MLB, players, teams, pitching, statistics culture, and the game''s
+      history and rules.'
+    not_for: Cricket goes to world.sports.other_team_sports.
+    examples:
+    - Is Babe Ruth the greatest baseball player ever?
+    - Is the pitch clock good for baseball?
+    - Is baseball still America's pastime?
+  - id: world.sports.other_team_sports
+    label: Other Team Sports
+    description: 'Questions about team sports other than basketball, soccer, American football, and baseball: ice hockey,
+      cricket, rugby, volleyball, handball, lacrosse, and similar.'
+    not_for: Basketball, soccer, American football, and baseball each have their own sibling (world.sports.basketball, world.sports.soccer,
+      world.sports.american_football, world.sports.baseball).
+    examples:
+    - Is Wayne Gretzky the greatest hockey player ever?
+    - Is Test cricket better than T20?
+    - Is rugby tougher than American football?
+  - id: world.sports.individual_sports
+    label: Individual & Olympic Sports
+    description: Questions about individual sports such as tennis, golf, track and field, swimming, gymnastics, cycling, skiing,
+      and skateboarding, and about the Olympic Games as an event.
+    not_for: Boxing, MMA, and wrestling go to world.sports.combat_sports; racing with engines goes to world.sports.motorsport;
+      Olympic team sports go to their own team-sport sibling.
+    examples:
+    - Is Roger Federer the greatest tennis player ever?
+    - Is Usain Bolt the greatest Olympian?
+    - Is golf really a sport?
+  - id: world.sports.combat_sports
+    label: Combat Sports
+    description: Questions about boxing, mixed martial arts and the UFC, wrestling (amateur and professional), judo, karate,
+      and other fighting sports.
+    not_for: Self-defense as personal fitness goes to world.health.fitness; military combat goes to world.history.wars_battles.
+    examples:
+    - Is Muhammad Ali the greatest boxer of all time?
+    - Is MMA more dangerous than boxing?
+    - Is pro wrestling a sport?
+  - id: world.sports.motorsport
+    label: Motorsport
+    description: 'Questions about auto and motorcycle racing: Formula 1, NASCAR, IndyCar, rally, MotoGP, and their drivers
+      and teams.'
+    not_for: Cars as consumer vehicles and automotive technology go to world.tech.vehicles; cycling goes to world.sports.individual_sports.
+    examples:
+    - Is Lewis Hamilton the greatest F1 driver?
+    - Is Formula 1 more exciting than NASCAR?
+    - Are racing drivers true athletes?
+  - id: world.sports.video_games
+    label: Video Games & Esports
+    description: Questions about video games, consoles, game franchises, game studios' games, speedrunning, and competitive
+      esports.
+    not_for: Gaming hardware specs go to world.tech.gadgets; the answerer's own gaming habits go to SELF; board and card games
+      go to world.sports.board_card_games.
+    examples:
+    - 'Is Zelda: Breath of the Wild the best game ever made?'
+    - Is PlayStation better than Xbox?
+    - Are esports real sports?
+  - id: world.sports.board_card_games
+    label: Board, Card & Puzzle Games
+    description: Questions about chess, go, board games, tabletop role-playing games, card games like poker, trading card
+      games, and puzzles.
+    not_for: Video game versions go to world.sports.video_games; gambling as an industry goes to world.money.
+    examples:
+    - Is chess harder than go?
+    - Is Monopoly a bad board game?
+    - Is poker more skill than luck?
+- id: world.food
+  label: Food & Drink
+  share: 3
+  description: 'Questions about food and drink as things in the world: cuisines, dishes, ingredients, cooking and baking,
+    beverages, and restaurants.'
+  not_for: Diet and health effects go to world.health.nutrition; the answerer's own favorite food or eating habits go to SELF;
+    food companies as businesses go to world.money.companies_brands.
+  examples:
+  - Is Italian food the most popular cuisine in the world?
+  - Is a hot dog a sandwich?
+  children:
+  - id: world.food.cuisines
+    label: World Cuisines
+    description: Questions about national and regional cuisines as a whole, such as Italian, Japanese, Mexican, Indian, French,
+      or Southern American cooking, and how they compare.
+    not_for: A single specific dish goes to world.food.dishes_ingredients; restaurants go to world.food.restaurants.
+    examples:
+    - Is French cuisine overrated?
+    - Is Japanese food the healthiest national cuisine?
+    - Is Thai food spicier than Indian food?
+  - id: world.food.dishes_ingredients
+    label: Dishes & Ingredients
+    description: 'Questions about specific dishes, foods, and ingredients: pizza, sushi, tacos, cheese, spices, fruits and
+      vegetables as food, and food classification debates.'
+    not_for: Desserts and baked goods go to world.food.baking_sweets; how to cook something goes to world.food.cooking; plants
+      as living organisms go to world.nature.plants_fungi.
+    examples:
+    - Does pineapple belong on pizza?
+    - Is cilantro a divisive herb?
+    - Is a tomato a vegetable in cooking?
+  - id: world.food.cooking
+    label: Cooking Techniques & Kitchen
+    description: 'Questions about how food is prepared: techniques, recipes in general, knives and cookware, grilling and
+      barbecue, fermentation, and famous chefs.'
+    not_for: Baking and pastry go to world.food.baking_sweets; the answerer's own cooking habits go to SELF.
+    examples:
+    - Is cast iron better than nonstick?
+    - Should steak be rested after cooking?
+    - Is sous vide worth it for home cooks?
+  - id: world.food.baking_sweets
+    label: Baking, Desserts & Sweets
+    description: Questions about bread, pastry, cakes, cookies, chocolate, candy, ice cream, and other desserts and sweets.
+    not_for: Savory dishes go to world.food.dishes_ingredients; sugar's health effects go to world.health.nutrition.
+    examples:
+    - Is sourdough the best bread?
+    - Is dark chocolate better than milk chocolate?
+    - Is cheesecake a cake or a pie?
+  - id: world.food.alcoholic_drinks
+    label: Wine, Beer & Spirits
+    description: 'Questions about alcoholic beverages: wine, beer, whiskey and other spirits, cocktails, breweries, and wine
+      regions.'
+    not_for: Alcohol's health effects go to world.health.nutrition; coffee, tea, and soft drinks go to world.food.nonalcoholic_drinks.
+    examples:
+    - Is expensive wine actually better than cheap wine?
+    - Is Scotch better than bourbon?
+    - Is the martini the classic cocktail?
+  - id: world.food.nonalcoholic_drinks
+    label: Coffee, Tea & Soft Drinks
+    description: Questions about coffee, tea, soda, juice, energy drinks, bottled water, and other non-alcoholic beverages.
+    not_for: Beer, wine, spirits, and cocktails go to world.food.alcoholic_drinks; caffeine's health effects go to world.health.nutrition.
+    examples:
+    - Is Coke better than Pepsi?
+    - Is espresso stronger than drip coffee?
+    - Is bubble tea a passing trend?
+  - id: world.food.restaurants
+    label: Restaurants & Fast Food
+    description: 'Questions about eating out: restaurant chains, fast food, fine dining, Michelin stars, street food, tipping
+      norms at restaurants, and food delivery.'
+    not_for: Restaurant companies as investments go to world.money; home cooking goes to world.food.cooking.
+    examples:
+    - Is In-N-Out better than Five Guys?
+    - Are Michelin stars a fair measure of quality?
+    - Is McDonald's the most iconic fast-food chain?
+- id: world.places
+  label: Places & Travel
+  share: 3
+  description: 'Questions about places on Earth and traveling to them: continents, countries, cities, landmarks, named geographic
+    features, tourism, and getting around.'
+  not_for: Weather, geology, and ecosystems go to world.nature; a place's past goes to world.history; its politics are out
+    of scope; the answerer's own dream destination goes to SELF.
+  examples:
+  - Is Paris the most beautiful city in the world?
+  - Is Australia a continent or an island?
+  children:
+  - id: world.places.continents_regions
+    label: Continents & Regions
+    description: Questions about continents and multi-country regions such as Europe, Southeast Asia, Scandinavia, the Middle
+      East, Latin America, or the Arctic.
+    not_for: A single country goes to world.places.countries; a single city goes to world.places.cities.
+    examples:
+    - Is Europe the best continent for tourists?
+    - Is Scandinavia the most livable region in the world?
+    - Is Russia part of Europe or Asia?
+  - id: world.places.countries
+    label: Countries
+    description: 'Questions about individual countries as places: their size, geography, languages spoken, national symbols,
+      and what they are known for.'
+    not_for: Cities go to world.places.cities; a country's government or elections are out of scope; its history goes to world.history.
+    examples:
+    - Is Japan the most unique country to visit?
+    - Is Canada bigger than the United States?
+    - Is New Zealand the most scenic country?
+  - id: world.places.cities
+    label: Cities & Towns
+    description: 'Questions about specific cities and towns: livability, reputation, neighborhoods, skylines, and how cities
+      compare.'
+    not_for: Individual buildings or monuments go to world.places.landmarks; whole countries go to world.places.countries.
+    examples:
+    - Is New York better than London?
+    - Is Tokyo the safest big city?
+    - Is Venice overrated?
+  - id: world.places.landmarks
+    label: Landmarks & Monuments
+    description: 'Questions about specific human-made sites: monuments, famous buildings, ruins, bridges, theme parks, and
+      wonders of the world.'
+    not_for: Natural features like mountains and waterfalls go to world.places.physical_geography; architectural style goes
+      to world.arts.architecture_design.
+    examples:
+    - Is the Great Wall of China visible from space?
+    - Is Machu Picchu the most impressive ancient site?
+    - Is Disney World better than Disneyland?
+  - id: world.places.physical_geography
+    label: Natural Geography
+    description: 'Questions about specific named natural features of the Earth: mountains, rivers, lakes, deserts, islands,
+      oceans, waterfalls, and national parks.'
+    not_for: How volcanoes, earthquakes, and weather work goes to world.nature.geology or world.nature.weather_climate; wildlife
+      in those places goes to world.nature.
+    examples:
+    - Is the Nile longer than the Amazon?
+    - Is Yosemite the best US national park?
+    - Is the Sahara the largest desert?
+  - id: world.places.travel
+    label: Travel, Tourism & Transport
+    description: 'Questions about traveling in general: tourism, airlines, airports, trains, cruises, hotels, passports, and
+      travel customs.'
+    not_for: A specific destination goes to world.places.cities or world.places.countries; the answerer's own travel preferences
+      go to SELF; vehicle technology goes to world.tech.vehicles.
+    examples:
+    - Is train travel better than flying in Europe?
+    - Are cruises a good way to see the world?
+    - Is Singapore Airlines the best airline?
+  - id: world.places.moving_abroad
+    label: Moving & Living Abroad
+    description: 'Questions about relocating to another country: visas, residency, expat life, adapting to a new culture and
+      practical logistics of living abroad.'
+    not_for: Short trips and tourism go to Travel; immigration policy debates go to Society > Politics & Government.
+    examples:
+    - Is it harder to make friends when living abroad?
+    - Which is the biggest challenge of moving to a new country?
+- id: world.nature
+  label: Nature & Animals
+  share: 3
+  description: 'Questions about the living and physical natural world: animals, plants, fungi, pets as species and breeds,
+    ecosystems, weather, climate, and the Earth''s geology.'
+  not_for: Human biology and health go to world.health; genetics and evolution as science go to world.science.biology_genetics;
+    named places like specific mountains go to world.places.physical_geography; space goes to world.science.astronomy_space.
+  examples:
+  - Are dolphins smarter than dogs?
+  - Is a lightning strike hotter than the surface of the Sun?
+  children:
+  - id: world.nature.mammals
+    label: Mammals
+    description: 'Questions about wild mammals such as big cats, bears, elephants, whales, primates, bats, and rodents: their
+      behavior, intelligence, and abilities.'
+    not_for: Dogs, cats, and other pets go to world.nature.pets_breeds; fish, sharks, and other non-mammal sea life go to
+      world.nature.sea_life.
+    examples:
+    - Is a lion stronger than a tiger?
+    - Are elephants the smartest land animal besides humans?
+    - Is a bat a better flier than a bird?
+  - id: world.nature.birds
+    label: Birds
+    description: 'Questions about birds: species, flight, migration, birdsong, intelligence of crows and parrots, and birds
+      of prey.'
+    not_for: Pet birds as companions go to world.nature.pets_breeds; poultry as food goes to world.food.
+    examples:
+    - Are crows the smartest birds?
+    - Is the peregrine falcon the fastest animal?
+    - Are penguins cute or awkward?
+  - id: world.nature.sea_life
+    label: Ocean & Sea Life
+    description: Questions about fish, sharks, octopuses, jellyfish, coral reefs, and other life in oceans, rivers, and lakes.
+    not_for: Whales and dolphins as mammals go to world.nature.mammals; seafood as food goes to world.food.dishes_ingredients.
+    examples:
+    - Are sharks more afraid of humans than we are of them?
+    - Is the octopus the smartest invertebrate?
+    - Is the deep sea stranger than outer space?
+  - id: world.nature.reptiles_insects
+    label: Reptiles, Amphibians & Bugs
+    description: Questions about snakes, lizards, crocodiles, turtles, frogs, insects, spiders, and other small creatures.
+    not_for: Mammals go to world.nature.mammals; birds go to world.nature.birds; pet reptiles as companions go to world.nature.pets_breeds.
+    examples:
+    - Are spiders insects?
+    - Is the mosquito the deadliest animal?
+    - Are snakes more feared than they deserve?
+  - id: world.nature.pets_breeds
+    label: Pets & Domestic Animals
+    description: 'Questions about pets and domestic animals as species and breeds: dog and cat breeds, horses, farm animals,
+      and pet reptiles, birds, and fish.'
+    not_for: The answerer's own pet or preference for dogs versus cats goes to SELF; wild relatives go to world.nature.mammals.
+    examples:
+    - Is the Border Collie the smartest dog breed?
+    - Are cats more independent than dogs?
+    - Is a golden retriever a good family dog?
+  - id: world.nature.plants_fungi
+    label: Plants, Trees & Fungi
+    description: Questions about plants, trees, flowers, mosses, mushrooms and other fungi, and gardening as a topic.
+    not_for: Fruits and vegetables as food go to world.food.dishes_ingredients; whole forests and ecosystems go to world.nature.ecosystems_conservation.
+    examples:
+    - Are mushrooms closer to animals than plants?
+    - Is the redwood the most impressive tree?
+    - Are roses overrated flowers?
+  - id: world.nature.weather_climate
+    label: Weather & Climate
+    description: Questions about weather phenomena, storms, seasons, climate zones, and the science of climate change as a
+      physical process.
+    not_for: Climate policy and politics are out of scope; forecasts about future climate go to world.future.climate_environment.
+    examples:
+    - Is a hurricane the same as a typhoon?
+    - Is humidity worse than heat?
+    - Is lightning more dangerous than tornadoes?
+  - id: world.nature.geology
+    label: Earth & Geology
+    description: 'Questions about how the Earth works: volcanoes, earthquakes, plate tectonics, rocks and minerals, gemstones,
+      fossils, and the Earth''s interior.'
+    not_for: Specific named mountains and landforms as places go to world.places.physical_geography; living reptiles go to
+      world.nature.reptiles_insects.
+    examples:
+    - Is Yellowstone a supervolcano?
+    - Is diamond the hardest mineral?
+    - Are earthquakes predictable?
+  - id: world.nature.ecosystems_conservation
+    label: Ecosystems & Conservation
+    description: Questions about habitats, rainforests, food chains, extinction, endangered species, invasive species, and
+      wildlife conservation.
+    not_for: A single species' traits go to its animal or plant sibling; climate policy is out of scope.
+    examples:
+    - Are zoos good for conservation?
+    - Is the rainforest the most important ecosystem?
+    - Should extinct species be brought back?
+- id: world.science
+  label: Science & Math
+  share: 3
+  description: 'Questions about scientific and mathematical knowledge: physics, chemistry, astronomy, biology, mathematics,
+    psychology as a science, famous scientists, and fringe claims.'
+  not_for: Animals and plants go to world.nature; medicine and the human body go to world.health; applied technology goes
+    to world.tech.
+  examples:
+  - Is mathematics invented or discovered?
+  - Is physics the most fundamental science?
+  children:
+  - id: world.science.mathematics
+    label: Mathematics
+    description: 'Questions about mathematics as a subject: numbers, proofs, famous problems, geometry, probability puzzles,
+      and mathematicians.'
+    not_for: Computing and programming go to world.tech.software_programming; math education goes to world.society.education.
+    examples:
+    - Is 0.999 repeating equal to 1?
+    - Is math invented or discovered?
+    - Is the Monty Hall answer to switch?
+  - id: world.science.physics
+    label: Physics
+    description: 'Questions about physics: motion, energy, light, relativity, quantum mechanics, time, and the fundamental
+      forces.'
+    not_for: Stars, planets, and cosmology go to world.science.astronomy_space; engineering applications go to world.tech.engineering_inventions.
+    examples:
+    - Is time travel physically possible?
+    - Is quantum mechanics harder to understand than relativity?
+    - Is light a wave or a particle?
+  - id: world.science.chemistry
+    label: Chemistry
+    description: 'Questions about chemistry: elements, the periodic table, reactions, materials, and everyday chemistry.'
+    not_for: Rocks and minerals go to world.nature.geology; drugs and medicines go to world.health.medicine.
+    examples:
+    - Is water wet?
+    - Is gold the most useful element?
+    - Is glass a liquid?
+  - id: world.science.astronomy_space
+    label: Astronomy & Space
+    description: Questions about planets, stars, galaxies, black holes, the universe, space missions, astronauts, and the
+      search for alien life.
+    not_for: Forecasts about future space missions go to world.future.space; UFO sightings go to world.science.fringe_mysteries.
+    examples:
+    - Should Pluto be a planet?
+    - Is there life elsewhere in the universe?
+    - Was the Moon landing humanity's greatest achievement?
+  - id: world.science.biology_genetics
+    label: Biology & Genetics
+    description: 'Questions about life science as a science: cells, DNA, genetics, evolution, microbiology, and the origin
+      of life.'
+    not_for: Specific animals and plants go to world.nature; human health and disease go to world.health.
+    examples:
+    - Did the chicken or the egg come first?
+    - Is evolution still happening in humans?
+    - Are viruses alive?
+  - id: world.science.psychology_neuroscience
+    label: Psychology & Neuroscience
+    description: 'Questions about the science of the mind and brain: memory, perception, cognitive biases, famous experiments,
+      and intelligence research.'
+    not_for: The answerer's own personality or mind goes to SELF; mental illness and treatment go to world.health.mental_health.
+    examples:
+    - Do humans only use 10 percent of their brains?
+    - Was the Stanford prison experiment valid?
+    - Is IQ a good measure of intelligence?
+  - id: world.science.scientists_discoveries
+    label: Scientists & Discoveries
+    description: Questions about famous scientists, landmark discoveries, Nobel Prizes, and the scientific method and how
+      science is done.
+    not_for: Inventions and engineers go to world.tech.engineering_inventions; a discovery's physics or chemistry content
+      goes to that sibling.
+    examples:
+    - Was Newton a greater scientist than Einstein?
+    - Was penicillin the most important discovery in medicine?
+    - Did Tesla deserve more credit than Edison?
+  - id: world.science.fringe_mysteries
+    label: Pseudoscience & Mysteries
+    description: 'Questions about fringe and unexplained claims: UFOs, ghosts, astrology, cryptids, conspiracy-style science
+      claims, and unsolved mysteries.'
+    not_for: Established astronomy goes to world.science.astronomy_space; religious belief is out of scope; unsolved crimes
+      go to world.society.crime_law.
+    examples:
+    - Is astrology a science?
+    - Is Bigfoot real?
+    - Are UFO sightings evidence of aliens?
+- id: world.tech
+  label: Technology & Internet
+  share: 3
+  description: 'Questions about technology and the internet: computers, software, AI, gadgets, social media, tech companies,
+    vehicles, engineering, and inventions.'
+  not_for: Video games go to world.sports.video_games; predictions about future technology go to world.future; the science
+    behind it goes to world.science.
+  examples:
+  - Was the internet the most important invention of the last century?
+  - Is technology making life better?
+  children:
+  - id: world.tech.computers_hardware
+    label: Computers & Hardware
+    description: Questions about computers, operating systems, chips and processors, PC building, and the history of computing
+      hardware.
+    not_for: Phones, wearables, and consumer gadgets go to world.tech.gadgets; programming goes to world.tech.software_programming.
+    examples:
+    - Is Mac better than Windows?
+    - Is Linux the best operating system?
+    - Is Moore's Law dead?
+  - id: world.tech.software_programming
+    label: Software & Programming
+    description: Questions about software, apps as software, programming languages, coding practices, and open source.
+    not_for: AI models go to world.tech.ai; websites and the internet go to world.tech.internet_web; judging a specific piece
+      of code goes to MACHINE.
+    examples:
+    - Is Python the best first programming language?
+    - Are tabs better than spaces?
+    - Is open source software more secure?
+  - id: world.tech.ai
+    label: Artificial Intelligence
+    description: 'Questions about artificial intelligence today: chatbots, large language models, image generators, robots,
+      and how AI works and is used.'
+    not_for: Forecasts about AGI or AI's future impact go to world.future.ai; the answerer's own nature as an AI goes to SELF.
+    examples:
+    - Is ChatGPT actually intelligent?
+    - Is AI art real art?
+    - Can AI write better code than most programmers?
+  - id: world.tech.internet_web
+    label: Internet, Web & Security
+    description: 'Questions about the internet and the web: websites, search engines, online culture, memes, privacy, hacking,
+      and cybersecurity.'
+    not_for: Social media platforms go to world.tech.social_media; crypto as money goes to world.money.investing.
+    examples:
+    - Is Google still the best search engine?
+    - Is online privacy dead?
+    - Was the early internet better?
+  - id: world.tech.social_media
+    label: Social Media
+    description: 'Questions about social media platforms and their effects: TikTok, Instagram, X, YouTube, Reddit, algorithms,
+      and online communities.'
+    not_for: Influencers as celebrities go to world.arts.celebrities; the answerer's own social media habits go to SELF.
+    examples:
+    - Is TikTok more addictive than Instagram?
+    - Has social media made people lonelier?
+    - Is Reddit the best place for honest advice?
+  - id: world.tech.gadgets
+    label: Phones & Gadgets
+    description: 'Questions about consumer electronics: smartphones, tablets, headphones, smartwatches, cameras, TVs, and
+      game consoles as hardware.'
+    not_for: Desktop and laptop computers go to world.tech.computers_hardware; games themselves go to world.sports.video_games.
+    examples:
+    - Is iPhone better than Android?
+    - Are smartwatches worth it?
+    - Is vinyl better-sounding than streaming?
+  - id: world.tech.companies
+    label: Tech Companies & Leaders
+    description: 'Questions about technology companies and their founders and leaders: Apple, Google, Microsoft, Amazon, Meta,
+      Tesla, Netflix, OpenAI, and similar.'
+    not_for: Non-tech companies and brands go to world.money.companies_brands; tech stocks as investments go to world.money.investing.
+    examples:
+    - Is Apple the most innovative tech company?
+    - Was Steve Jobs a better CEO than Bill Gates?
+    - Is Google more innovative than Microsoft?
+  - id: world.tech.vehicles
+    label: Cars & Vehicles
+    description: Questions about cars, electric vehicles, self-driving cars, motorcycles, aircraft, and ships as machines
+      and technology.
+    not_for: Car racing goes to world.sports.motorsport; airlines and travel go to world.places.travel.
+    examples:
+    - Are electric cars better than gas cars?
+    - Is Toyota the most reliable car brand?
+    - Are self-driving cars safer than human drivers?
+  - id: world.tech.engineering_inventions
+    label: Engineering & Inventions
+    description: Questions about engineering feats, infrastructure, energy technology, and the most important inventions in
+      history.
+    not_for: Scientific discoveries go to world.science.scientists_discoveries; architectural beauty goes to world.arts.architecture_design.
+    examples:
+    - Was the printing press the most important invention?
+    - Is nuclear power the safest energy source?
+    - Is the wheel overrated as an invention?
+  - id: world.tech.telecom_networks
+    label: Telecom & Networks
+    description: Questions about mobile networks, phone carriers and plans, Wi-Fi, broadband, 4G/5G and how connectivity works.
+    not_for: Websites and online services go to Internet & Web; phones and devices themselves go to Gadgets.
+    examples:
+    - Is 5G noticeably better than 4G for everyday use?
+    - Is fiber internet worth paying extra for?
+- id: world.history
+  label: History
+  share: 3
+  description: 'Questions about the human past: eras from prehistory to the late twentieth century, wars, empires, historical
+    figures, and what-if counterfactuals.'
+  not_for: Current affairs and partisan politics are out of scope; the history of a specific art, sport, or science goes to
+    that L1 (world.arts, world.sports, world.science).
+  examples:
+  - Was the fall of Rome the most important event in history?
+  - Is history mostly shaped by great individuals?
+  children:
+  - id: world.history.ancient
+    label: Prehistory & Ancient World
+    description: 'Questions about history before about 500 AD: early humans, Egypt, Mesopotamia, Greece, Rome, ancient China
+      and India.'
+    not_for: Specific battles and wars go to world.history.wars_battles; individual leaders' legacies go to world.history.figures;
+      myths go to world.society.mythology_folklore.
+    examples:
+    - Was ancient Rome more advanced than ancient China?
+    - Were the pyramids built by slaves?
+    - Was Athens the birthplace of democracy?
+  - id: world.history.medieval
+    label: Middle Ages
+    description: 'Questions about roughly 500 to 1500 AD: feudalism, the Byzantine Empire, the Islamic Golden Age, the Mongols,
+      Vikings, and medieval life.'
+    not_for: The Crusades and other wars go to world.history.wars_battles; individual rulers go to world.history.figures.
+    examples:
+    - Were the Dark Ages really dark?
+    - Was the Mongol Empire the most impressive empire?
+    - Were Vikings more traders than raiders?
+  - id: world.history.early_modern
+    label: Early Modern Era
+    description: 'Questions about roughly 1500 to 1800: the Renaissance, the Age of Exploration, the Reformation, colonial
+      empires, and the Enlightenment.'
+    not_for: Specific wars and revolutions as conflicts go to world.history.wars_battles; individual explorers and monarchs
+      go to world.history.figures.
+    examples:
+    - Was the Renaissance a real turning point?
+    - Did Columbus discover America?
+    - Was the Enlightenment the start of the modern world?
+  - id: world.history.modern
+    label: Modern Era (1800-1945)
+    description: 'Questions about roughly 1800 to 1945: the Industrial Revolution, the Victorian age, empires at their height,
+      and the interwar years.'
+    not_for: World War I and World War II go to world.history.wars_battles; individual leaders go to world.history.figures.
+    examples:
+    - Was the Industrial Revolution good for ordinary people?
+    - Was the British Empire the largest in history?
+    - Were the Roaring Twenties overrated?
+  - id: world.history.postwar
+    label: Postwar Era (1945-2000)
+    description: 'Questions about roughly 1945 to 2000 as history: the Cold War era, decolonization, the space race, the civil
+      rights era, and the fall of the Soviet Union.'
+    not_for: Events after 2000 and current politics are out of scope; the Korean and Vietnam wars as conflicts go to world.history.wars_battles.
+    examples:
+    - Was the space race won by the United States?
+    - Was the fall of the Berlin Wall the defining moment of the century?
+    - Were the 1960s the most transformative decade?
+  - id: world.history.wars_battles
+    label: Wars & Military History
+    description: Questions about specific wars, battles, revolutions as conflicts, military tactics, weapons history, and
+      generals' campaigns from any era.
+    not_for: A general's life and legacy beyond the battlefield goes to world.history.figures; the broader era goes to its
+      era sibling.
+    examples:
+    - Was Stalingrad the turning point of World War II?
+    - Was the American Revolution inevitable?
+    - Were knights more effective than samurai?
+  - id: world.history.figures
+    label: Historical Figures
+    description: 'Questions about specific people of the past as individuals: rulers, conquerors, explorers, reformers, and
+      their character and legacy.'
+    not_for: Artists, athletes, and scientists as figures in their field go to world.arts, world.sports, or world.science.scientists_discoveries;
+      living politicians are out of scope.
+    examples:
+    - Was Napoleon a hero or a tyrant?
+    - Was Genghis Khan the greatest conqueror?
+    - Was Cleopatra more Greek than Egyptian?
+  - id: world.history.what_ifs
+    label: Historical What-Ifs
+    description: 'Questions about counterfactual history: what would have happened if a past event had gone differently.'
+    not_for: Questions about what actually happened go to the era sibling or world.history.wars_battles; predictions about
+      the future go to world.future.
+    examples:
+    - Would Rome have survived without Christianity?
+    - Would Europe look different today if Napoleon had won at Waterloo?
+    - Would the Library of Alexandria have changed history if it had survived?
+- id: world.society
+  label: Society & Culture
+  share: 3
+  description: 'Questions about non-contested aspects of human societies and cultures: languages, education, holidays and
+    traditions, mythology, world religions as cultural facts, philosophy, crime and law, and media.'
+  not_for: Partisan politics and religion as a matter of belief are out of scope; how the answerer lives or what they value
+    goes to SELF; economics goes to world.money.
+  examples:
+  - Is English the most useful language to learn?
+  - Is Christmas the most widely celebrated holiday?
+  children:
+  - id: world.society.languages
+    label: Languages & Linguistics
+    description: Questions about languages, words, grammar, accents, writing systems, and how languages compare or change.
+    not_for: Literature written in a language goes to world.arts.books; language teaching in schools goes to world.society.education.
+    examples:
+    - Is Mandarin the hardest language to learn?
+    - Is the Oxford comma necessary?
+    - Is British English more correct than American English?
+  - id: world.society.education
+    label: Education & Schools
+    description: Questions about schools, universities, teaching methods, exams, homework, and education systems around the
+      world.
+    not_for: The answerer's own study habits go to SELF; school funding politics are out of scope; careers after school go
+      to world.money.careers.
+    examples:
+    - Is Harvard the best university in the world?
+    - Should homework be abolished?
+    - Is Finland's school system the best?
+  - id: world.society.holidays_traditions
+    label: Holidays & Traditions
+    description: Questions about holidays, festivals, customs, rituals, and cultural traditions around the world.
+    not_for: Religious doctrine and belief are out of scope; how the answerer celebrates goes to SELF; myths and legends go
+      to world.society.mythology_folklore.
+    examples:
+    - Is Halloween better than Christmas?
+    - Is Lunar New Year the biggest celebration on Earth?
+    - Is Valentine's Day a manufactured holiday?
+  - id: world.society.mythology_folklore
+    label: Mythology & Folklore
+    description: Questions about myths, legends, gods of ancient pantheons, fairy tales, folklore, and legendary figures like
+      King Arthur or Robin Hood.
+    not_for: Living religions go to world.society.world_religions; modern fantasy novels go to world.arts.books; cryptids
+      go to world.science.fringe_mysteries.
+    examples:
+    - Is Zeus the most powerful mythological god?
+    - Was King Arthur a real person?
+    - Is Norse mythology cooler than Greek mythology?
+  - id: world.society.world_religions
+    label: World Religions (Facts)
+    description: 'Questions about religions as cultural and historical facts: their origins, practices, holy sites, architecture,
+      and number of followers.'
+    not_for: Whether a religion is true, and other questions of belief, are out of scope; ancient pantheons go to world.society.mythology_folklore;
+      the answerer's own faith goes to SELF.
+    examples:
+    - Is Christianity the largest religion?
+    - Is Buddhism more a philosophy than a religion?
+    - Is Hinduism the oldest living religion?
+  - id: world.society.philosophy_thinkers
+    label: Philosophers & Schools of Thought
+    description: 'Questions about philosophers and philosophical traditions as intellectual history: Plato, Confucius, Kant,
+      Nietzsche, stoicism, existentialism, and similar.'
+    not_for: Asking the answerer's own view on a big question like free will or meaning goes to SELF; ethics dilemmas go to
+      SELF.
+    examples:
+    - Was Aristotle more influential than Plato?
+    - Is stoicism the most practical philosophy?
+    - Was Nietzsche misunderstood?
+  - id: world.society.crime_law
+    label: Crime & Law
+    description: Questions about famous crimes, true crime cases, heists, legal systems as institutions, courts, and law enforcement
+      in general.
+    not_for: Partisan legal controversies are out of scope; checking a specific contract or policy text goes to MACHINE.
+    examples:
+    - Was Jack the Ripper ever identified?
+    - Is the jury system the fairest way to decide trials?
+    - Was the Great Train Robbery the most daring heist?
+  - id: world.society.media_news
+    label: Media & Journalism
+    description: Questions about newspapers, news outlets, journalism, magazines, radio, podcasts, and advertising as institutions.
+    not_for: Social media platforms go to world.tech.social_media; entertainment TV goes to world.arts.television; partisan
+      bias debates are out of scope.
+    examples:
+    - Is print journalism dying?
+    - Are podcasts the new radio?
+    - Is advertising an art form?
+  - id: world.society.politics_government
+    label: Politics & Government
+    description: Questions about governments, politicians, elections, political parties, public policy, geopolitics and international
+      relations. These questions are stored and measured but hidden from the public map by the content filter.
+    not_for: Law and famous court cases go to Crime & Law; wars and battles of the past go to History.
+    examples:
+    - Should voting be mandatory?
+    - Is a parliamentary system better than a presidential one?
+  - id: world.society.identity_demographics
+    label: Identity & Demographics
+    description: Questions about ethnicity, nationality, generations, gender and other social groups as categories of people,
+      and how groups are perceived or defined.
+    not_for: Politics and policy about these groups go to Politics & Government; the answerer's own identity or values go
+      to The Self.
+    examples:
+    - Which generation is most optimistic about the future?
+    - Is nationality mostly about where you were born?
+- id: world.health
+  label: Health & Body
+  share: 2
+  description: 'Questions about the human body and health as general knowledge: anatomy, diseases, medicine, nutrition, fitness,
+    mental health, sleep, and aging.'
+  not_for: The answerer's own health habits or lifestyle choices go to SELF; the science of genetics goes to world.science.biology_genetics;
+    healthcare politics is out of scope.
+  examples:
+  - Is sleep more important than diet for health?
+  - Is walking enough exercise?
+  children:
+  - id: world.health.human_body
+    label: Human Body
+    description: 'Questions about human anatomy and physiology: organs, senses, muscles, bones, the immune system, and body
+      facts.'
+    not_for: The brain's cognition goes to world.science.psychology_neuroscience; diseases go to world.health.diseases.
+    examples:
+    - Is the skin the largest organ?
+    - Is the appendix useless?
+    - Do humans have more than five senses?
+  - id: world.health.diseases
+    label: Diseases & Conditions
+    description: 'Questions about illnesses and conditions: infections, cancer, heart disease, allergies, pandemics, and their
+      causes and risks.'
+    not_for: Treatments and drugs go to world.health.medicine; mental illness goes to world.health.mental_health.
+    examples:
+    - Is heart disease more dangerous than cancer?
+    - Was the Black Death the worst pandemic?
+    - Are food allergies becoming more common?
+  - id: world.health.medicine
+    label: Medicine & Treatments
+    description: 'Questions about medicine and treatments: drugs, vaccines, surgery, antibiotics, alternative medicine, and
+      doctors.'
+    not_for: The diseases themselves go to world.health.diseases; the history of a medical discovery goes to world.science.scientists_discoveries.
+    examples:
+    - Is homeopathy effective?
+    - Were vaccines the greatest medical advance?
+    - Are antibiotics overprescribed?
+  - id: world.health.nutrition
+    label: Nutrition & Diet
+    description: 'Questions about what food does to the body: diets, vitamins, supplements, sugar, caffeine, alcohol''s health
+      effects, and weight.'
+    not_for: Food as cuisine or taste goes to world.food; the answerer's own diet goes to SELF.
+    examples:
+    - Is breakfast the most important meal?
+    - Is intermittent fasting effective?
+    - Is red meat unhealthy?
+  - id: world.health.fitness
+    label: Fitness & Exercise
+    description: 'Questions about exercise as health: strength training, running, yoga, stretching, workout methods, and physical
+      fitness.'
+    not_for: Competitive sports go to world.sports; the answerer's own workout routine goes to SELF.
+    examples:
+    - Is cardio better than weightlifting?
+    - Is stretching before exercise necessary?
+    - Is a daily step goal a useful fitness target?
+  - id: world.health.mental_health
+    label: Mental Health
+    description: 'Questions about mental health in general: depression, anxiety, ADHD, therapy, stress, and addiction.'
+    not_for: The answerer's own feelings or personality go to SELF; brain science goes to world.science.psychology_neuroscience.
+    examples:
+    - Is therapy effective for most people?
+    - Is ADHD overdiagnosed?
+    - Is stress always harmful?
+  - id: world.health.sleep_aging
+    label: Sleep, Aging & Longevity
+    description: Questions about sleep, dreams as biology, aging, lifespan, longevity research, and the health of older adults.
+    not_for: The answerer's own sleep habits go to SELF; views on mortality go to SELF; exercise goes to world.health.fitness.
+    examples:
+    - Do most adults need more sleep than they get?
+    - Can aging be reversed?
+    - Are naps good for you?
+  - id: world.health.personal_care
+    label: Personal Care & Grooming
+    description: Questions about skin care, hair care, grooming, hygiene, cosmetics and appearance-related health routines.
+    not_for: Diseases and treatment go to Diseases or Medicine; fashion and personal style preferences go to Self > Style
+      & Appearance.
+    examples:
+    - Is sunscreen necessary on cloudy days?
+    - 'Which matters more for healthy skin: diet or skincare products?'
+- id: world.money
+  label: Money & Work
+  share: 2
+  description: 'Questions about the economy, business, and work as general topics: economics, markets, investing, personal
+    finance, companies and brands, careers, entrepreneurship, and real estate.'
+  not_for: Tech companies go to world.tech.companies; the answerer's own spending or career choices go to SELF; tax and economic
+    policy debates are out of scope; judging a specific financial document goes to MACHINE.
+  examples:
+  - Is money the main reason people work?
+  - Is a college degree a good financial investment?
+  children:
+  - id: world.money.economics
+    label: Economics
+    description: 'Questions about how economies work: inflation, recessions, trade, supply and demand, and economic history.'
+    not_for: Partisan economic policy is out of scope; stock and crypto markets go to world.money.investing.
+    examples:
+    - Is inflation always bad?
+    - Was the Great Depression worse than the 2008 crisis?
+    - Is GDP a good measure of progress?
+  - id: world.money.investing
+    label: Investing & Markets
+    description: Questions about stocks, bonds, index funds, cryptocurrency, gold, and financial markets.
+    not_for: Personal budgeting goes to world.money.personal_finance; home buying goes to world.money.real_estate.
+    examples:
+    - Is Bitcoin a good long-term investment?
+    - Do index funds beat stock picking?
+    - Is gold a safe investment?
+  - id: world.money.personal_finance
+    label: Personal Finance
+    description: 'Questions about personal finance as general knowledge: budgeting, saving, debt, credit cards, retirement
+      accounts, and financial advice.'
+    not_for: The answerer's own money choices go to SELF; investing products go to world.money.investing.
+    examples:
+    - Is credit card debt the worst kind of debt?
+    - Is a strict monthly budget worth keeping?
+    - Is saving for retirement in your 20s necessary?
+  - id: world.money.companies_brands
+    label: Companies & Brands
+    description: 'Questions about non-tech companies and brands: retail, consumer goods, food and fashion companies, carmakers
+      as businesses, and marketing.'
+    not_for: Technology companies go to world.tech.companies; a company's stock goes to world.money.investing.
+    examples:
+    - Is Nike the most valuable sports brand?
+    - Is Costco better than Walmart?
+    - Is Coca-Cola the best-known brand?
+  - id: world.money.careers
+    label: Careers & the Workplace
+    description: 'Questions about jobs and work in general: professions, salaries by field, remote work, office culture, unions,
+      and hiring.'
+    not_for: The answerer's own job choices go to SELF; starting a business goes to world.money.entrepreneurship; screening
+      a specific resume goes to MACHINE.
+    examples:
+    - Is remote work more productive than office work?
+    - Is being a doctor the most respected profession?
+    - Is a college degree still worth it for most jobs?
+  - id: world.money.entrepreneurship
+    label: Startups & Entrepreneurship
+    description: 'Questions about starting and running businesses: startups, venture capital, founders, small businesses,
+      and business strategy.'
+    not_for: Established big companies go to world.money.companies_brands or world.tech.companies.
+    examples:
+    - Do most startups fail?
+    - Is venture capital good for founders?
+    - Is dropping out to start a company a good idea?
+  - id: world.money.real_estate
+    label: Housing & Real Estate
+    description: Questions about housing markets, buying versus renting, mortgages, property values, and real estate as an
+      industry.
+    not_for: The answerer's own home and decor go to SELF; housing policy debates are out of scope.
+    examples:
+    - Is renting better than buying?
+    - Is real estate the safest investment?
+    - Are houses overpriced right now?
+- id: world.future
+  label: The Future
+  share: 1
+  description: Questions that forecast whether something will happen in the future, in technology, science, space, the economy,
+    sports, entertainment, climate, or society.
+  not_for: Elections and partisan political outcomes are out of scope; questions about what is true today go to the matching
+    present-day L1.
+  examples:
+  - Will humans live on Mars within 50 years?
+  - Will self-driving cars be common within ten years?
+  children:
+  - id: world.future.ai
+    label: Future of AI
+    description: 'Questions forecasting AI: whether AGI will arrive, AI''s future capabilities, AI''s effect on jobs, and
+      future AI risks.'
+    not_for: AI as it exists today goes to world.tech.ai; other future technology goes to world.future.technology.
+    examples:
+    - Will AGI be built within the next twenty years?
+    - Will AI replace most programmers?
+    - Will AI win a Nobel Prize?
+  - id: world.future.technology
+    label: Future Technology
+    description: 'Questions forecasting non-AI technology: gadgets, energy, transportation, biotech, quantum computing, and
+      future inventions.'
+    not_for: AI forecasts go to world.future.ai; space exploration goes to world.future.space.
+    examples:
+    - Will quantum computers break encryption?
+    - Will fusion power be commercial this century?
+    - Will smartphones be replaced by glasses?
+  - id: world.future.space
+    label: Future of Space
+    description: 'Questions forecasting space exploration: Mars missions, Moon bases, space tourism, and discovering alien
+      life.'
+    not_for: Current astronomy knowledge goes to world.science.astronomy_space.
+    examples:
+    - Will humans land on Mars within the next decade?
+    - Will we find alien life this century?
+    - Will space tourism become affordable?
+  - id: world.future.economy
+    label: Future Economy & Markets
+    description: 'Questions forecasting the economy: recessions, markets, cryptocurrency prices, companies'' futures, and
+      the future of work.'
+    not_for: How the economy works today goes to world.money; AI's effect on jobs goes to world.future.ai.
+    examples:
+    - Will Bitcoin reach a new all-time high?
+    - Will there be a recession next year?
+    - Will the four-day work week become standard?
+  - id: world.future.sports_entertainment
+    label: Future Sports & Entertainment
+    description: Questions forecasting sports results, awards, box office, album releases, and pop-culture events.
+    not_for: Past and present sports and entertainment go to world.sports or world.arts.
+    examples:
+    - Will the next World Cup be won by a European team?
+    - Will a superhero film win Best Picture?
+    - Will the Olympics add esports?
+  - id: world.future.climate_environment
+    label: Future Climate & Environment
+    description: 'Questions forecasting climate and environment: warming thresholds, extreme weather, species extinction,
+      and energy transitions.'
+    not_for: Climate science today goes to world.nature.weather_climate; climate policy and politics are out of scope.
+    examples:
+    - Will the Arctic be ice-free in summer within our lifetimes?
+    - Will coral reefs survive this century?
+    - Will electric cars outsell gas cars globally?
+  - id: world.future.society
+    label: Future Society
+    description: 'Questions forecasting non-political social change: population, lifespan, cities, languages, education, and
+      how everyday life will look.'
+    not_for: Elections and political outcomes are out of scope; the answerer's own future plans go to SELF.
+    examples:
+    - Will the world population start shrinking this century?
+    - Will English remain the global language?
+    - Will people routinely live past 100?
