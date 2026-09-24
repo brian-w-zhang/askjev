@@ -118,8 +118,8 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
         g, rot = groups[key], texts[key]
         if g["bad"] * 2 >= g["rows"] or len(rot) < 10:
             continue
-        sexual = bool(F.SEXUAL.search(rot))
-        if F.SLURS.search(rot) or F.SEXUAL_VIOLENCE.search(rot) or (sexual and F.MINORS.search(rot)):
+        sexual = A.is_sexual(rot)
+        if A.drop(rot, sexual):
             continue
         (multi if sum(g["votes"]) >= MIN_MULTI else single).append((key, sexual))
 

@@ -1,0 +1,19 @@
+name: social_chem
+url: https://maxwellforbes.com/social-chemistry/
+license: CC BY-SA 4.0 (Social Chemistry 101, Forbes et al., EMNLP 2020)
+version: social-chem-101.v1.0.tsv (social-chem-101.zip)
+target: 6000
+hemisphere: self
+kind: social
+notes: >
+  Rules of thumb asked as 'How many people would agree: "<rule>"?' (human_text identical) on five levels
+  matching the dataset's rot-agree buckets (<1%, 5-25%, 50%, 75-90%, >99%): "Practically no one agrees with
+  it" ... "Practically everyone agrees with it". Rules are deduplicated by normalized text and every non-null
+  rot-agree annotation of the same text is pooled into the human distribution (population "Social Chemistry
+  101 MTurk annotators"; n = annotations, counts in meta). Rules that half or more annotations marked rot-bad
+  are dropped. The seeded 6,000 are drawn from rules with at least 3 annotations first (about 13k qualify, so
+  n >= 3 for every question); single-annotation rules would only fill a shortfall. No truth. node_hint: first
+  keyword route on the rule text (family, romance, dating, friends, work/community, animals/environment,
+  honesty, giving, fairness), else by majority rot-categorization (social-norms -> etiquette_social_norms,
+  morality-ethics -> values.everyday_ethics), else self.values for advice/description rules so placement walks
+  from the Values root. Same content filters as scruples; political keywords flag "political".

@@ -37,6 +37,31 @@ POLITICAL = re.compile(
     re.I,
 )
 
+# Sexual terms the scruples pattern misses (seen in ETHICS scenarios); used through is_sexual().
+SEXUAL_EXTRA = re.compile(
+    r"\b(butts?|buttocks|grop(e|ed|es|ing)|fondl\w*|intercourse|genitals?|genitalia|crotch|panties|underwear|"
+    r"undress\w*|peeping|peep(ed)? (at|on)|lap ?dance\w*|nude|nudity|bikini)\b",
+    re.I,
+)
+
+
+MINORS_EXTRA = re.compile(
+    r"\b((very |little |young )(girls?|boys?)|step-?(daughters?|sons?)|bab(y|ies)|toddlers?|infants?|preteens?|"
+    r"schoolgirls?|schoolboys?)\b",
+    re.I,
+)
+
+
+def is_sexual(s: str) -> bool:
+    return bool(F.SEXUAL.search(s) or SEXUAL_EXTRA.search(s))
+
+
+def drop(s: str, sexual: bool) -> bool:
+    """Slurs, sexual violence, or sexual content that mentions minors: dropped outright."""
+    minors = F.MINORS.search(s) or MINORS_EXTRA.search(s)
+    return bool(F.SLURS.search(s) or F.SEXUAL_VIOLENCE.search(s) or (sexual and minors))
+
+
 FAMILY = re.compile(
     r"\b(mom|moms|mum|mums|mother|mothers|dad|dads|father|fathers|parents?|sisters?|brothers?|siblings?|sons?|"
     r"daughters?|kids?|children|child|grandma|grandpa|grandmother|grandfather|grandparents?|aunts?|uncles?|"
@@ -106,8 +131,8 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
                 key = re.sub(r"\W+", " ", story.lower()).strip()
                 if key in seen:
                     continue
-                sexual = bool(F.SEXUAL.search(story))
-                if F.SLURS.search(story) or F.SEXUAL_VIOLENCE.search(story) or (sexual and F.MINORS.search(story)):
+                sexual = is_sexual(story)
+                if drop(story, sexual):
                     continue
                 seen.add(key)
                 pool.append((split, r, story, sexual))
