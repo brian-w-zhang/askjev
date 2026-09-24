@@ -5,7 +5,7 @@ import { Color, InstancedMesh, Object3D, type PerspectiveCamera } from "three";
 import { useStore } from "@/lib/store";
 import { anim, now, progress } from "@/lib/anim";
 import { nodeColor } from "@/lib/color";
-import { INK, PATH_B_COLOR, type Placed } from "@/lib/layout";
+import { HEMI_COLOR, INK, PATH_B_COLOR, type Placed } from "@/lib/layout";
 import type { TreeNode } from "@/lib/types";
 
 const MAX = 4096;
@@ -92,7 +92,8 @@ export function Nodes({ placed, onPick }: { placed: Map<string, Placed>; onPick:
       // ink squares like the slider markers on typesafe.ai; Jev green where Jev is (its walk, the selection)
       if (tone === "jev" || tone === "sel") c.set(PATH_B_COLOR);
       else if (tone === "dim") c.set("#C9C9C9");
-      else if (s.indicator === "hemisphere" || tone === "path") c.set(INK);
+      else if (tone === "path") c.set(INK);
+      else if (s.indicator === "hemisphere") c.set(HEMI_COLOR[n.hemisphere]).multiplyScalar(0.8);
       else nodeColor(n, s.indicator, c);
       m.setColorAt(i, c);
     }

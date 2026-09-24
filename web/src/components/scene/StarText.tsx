@@ -6,8 +6,7 @@ import { useStore } from "@/lib/store";
 import { anim, now } from "@/lib/anim";
 import { starAttention } from "@/lib/color";
 import { loadTexts, metric, starData, starText, starWorld } from "@/lib/stars";
-import { openQuestion } from "@/lib/actions";
-import { flyTo } from "./CameraRig";
+import { landOnStar, openQuestion } from "@/lib/actions";
 import { overlaps, uiRects } from "@/lib/uirects";
 import { assign, cards, moveCard, place, publish, STAR_LABELS, starSlots } from "@/lib/overlay";
 import type { Placed } from "@/lib/layout";
@@ -152,16 +151,12 @@ function StarPicker() {
       if (s.hoverStar < 0 || s.hovered || !d) return;
       const i = s.hoverStar;
       const nodeId = d.nodeIds[d.node[i]];
-      loadTexts(nodeId).then(() => {
+      loadTexts(nodeId).then(async () => {
         const q = starText(i);
         if (!q) return;
         s.set({ selected: nodeId });
+        await landOnStar(i, 1.0);
         openQuestion(q.id);
-        const p = anim.placed.get(nodeId);
-        if (p) {
-          starWorld(i, p, now() + 1.1, w);
-          flyTo([w[0], w[1], w[2]], Math.max(2.5, p.ball * 0.9), 1.1);
-        }
       });
     };
     el.addEventListener("pointermove", move);

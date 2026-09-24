@@ -1,7 +1,9 @@
 "use client";
-import { anim, lightMs, startLight } from "./anim";
+import { anim, lightMs, now, startLight } from "./anim";
+import { loadTexts, starData, starWorld } from "./stars";
 import { ensurePath, filterQuery, loadSubtree, useStore } from "./store";
 import { flyTo, frameDist } from "@/components/scene/CameraRig";
+import type { TreeNode } from "./types";
 
 const PER_LEVEL = 0.4; // seconds per tree level: slow enough for the eye to follow
 
@@ -12,7 +14,8 @@ const frames = (n = 2) => new Promise<void>((r) => {
 
 export function selectNode(id: string, opts: { fly?: boolean; panel?: boolean } = {}) {
   const s = useStore.getState();
-  s.set({ selected: id, ...(opts.panel === false ? {} : { panel: { kind: "node", id } }) });
+  anim.trackStar = -1;
+  s.set({ selected: id, focusStar: -1, ...(opts.panel === false ? {} : { panel: { kind: "node", id } }) });
   const p = anim.placed.get(id);
   const n = s.nodes[id];
   if (p && n && opts.fly !== false) flyTo([p.x, p.y, p.z], frameDist(id));
@@ -35,6 +38,66 @@ export async function travel(path: string[]): Promise<void> {
   startLight("A", path, PER_LEVEL);
   anim.follow = "A";
   await new Promise((r) => setTimeout(r, lightMs(path.length, PER_LEVEL) + 120));
+}
+
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+/** Root → ... → node ids for a node, from the loaded tree. */
+export function ancestors(id: string): string[] {
+  const { nodes } = useStore.getState();
+  const out: string[] = [];
+  let n: TreeNode | undefined = nodes[id];
+  while (n) {
+    out.unshift(n.id);
+    n = n.parent_id ? nodes[n.parent_id] : undefined;
+  }
+  return out;
+}
+
+/** Star index of a question (its node's texts load if needed), or -1. */
+async function starIndex(nodeId: string, questionId: string): Promise<number> {
+  const off = starData()?.offsets.get(nodeId);
+  if (!off) return -1;
+  const k = (await loadTexts(nodeId)).findIndex((q) => q.id === questionId);
+  return k < 0 ? -1 : off[0] + k;
+}
+
+/** Close in on one question dot and keep it centered; resolves when the camera has arrived. */
+export async function landOnStar(i: number, dur = 1.4) {
+  const d = starData();
+  const p = d ? anim.placed.get(d.nodeIds[d.node[i]]) : undefined;
+  if (!p) return;
+  const at = starWorld(i, p, now() + dur, [0, 0, 0]); // where the dot will be when we get there
+  anim.follow = null;
+  useStore.getState().set({ focusStar: i });
+  flyTo(at, Math.max(1.6, p.ball * 0.45), dur);
+  await sleep(dur * 1000 + 60);
+  anim.trackStar = i;
+}
+
+/**
+ * The search journey (docs/07-ui.md): a light runs root → topic with the camera following, the camera
+ * closes in on the question's own dot, and only then does its card slide in.
+ */
+export async function goToQuestion(path: string[], questionId: string) {
+  anim.trackStar = -1;
+  useStore.getState().set({ panel: { kind: "none" }, focusStar: -1 });
+  const nodeId = path[path.length - 1];
+  const where = starIndex(nodeId, questionId);
+  await travel(path);
+  const i = await where;
+  if (i >= 0) await landOnStar(i);
+  openQuestion(questionId);
+}
+
+/** "I'm feeling lucky": any displayable question, uniformly at random, with the same journey. */
+export async function feelingLucky() {
+  const d = starData();
+  if (!d) return;
+  const i = Math.floor(Math.random() * d.count);
+  const nodeId = d.nodeIds[d.node[i]];
+  const q = (await loadTexts(nodeId))[i - d.offsets.get(nodeId)![0]];
+  if (q) await goToQuestion(ancestors(nodeId), q.id);
 }
 
 export interface Walk { node: string; confidence: number; separation: number; runner_up?: string; path_probs: [string, string, number][] }

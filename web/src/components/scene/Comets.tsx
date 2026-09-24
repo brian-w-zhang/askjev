@@ -4,6 +4,7 @@ import { useFrame } from "@react-three/fiber";
 import { NormalBlending, CanvasTexture, Group, Mesh, Sprite, Vector3, type Camera, type PerspectiveCamera } from "three";
 import { anim, headPosition, now, progress } from "@/lib/anim";
 import { useStore } from "@/lib/store";
+import { starData, starWorld } from "@/lib/stars";
 import { PATH_A_COLOR, PATH_B_COLOR } from "@/lib/layout";
 
 function glowTexture() {
@@ -105,6 +106,31 @@ function Selection() {
   );
 }
 
+/** Ring on the question dot a search, "feeling lucky" or click landed on. */
+function Focus() {
+  const m = useRef<Mesh>(null);
+  const w = useMemo<[number, number, number]>(() => [0, 0, 0], []);
+  useFrame(({ camera, size }) => {
+    const mesh = m.current;
+    if (!mesh) return;
+    const i = useStore.getState().focusStar;
+    const d = starData();
+    const p = d && i >= 0 ? anim.placed.get(d.nodeIds[d.node[i]]) : undefined;
+    mesh.visible = !!p;
+    if (!p) return;
+    starWorld(i, p, now(), w);
+    mesh.position.set(w[0], w[1], w[2]);
+    mesh.quaternion.copy(camera.quaternion);
+    mesh.scale.setScalar((1 + 0.12 * Math.sin(now() * 3)) * pxToWorld(camera, mesh.position, size.height, 11));
+  });
+  return (
+    <mesh ref={m} visible={false} renderOrder={5}>
+      <ringGeometry args={[1, 1.35, 40]} />
+      <meshBasicMaterial color={PATH_B_COLOR} toneMapped={false} depthTest={false} depthWrite={false} />
+    </mesh>
+  );
+}
+
 export function Comets() {
   return (
     <>
@@ -112,6 +138,7 @@ export function Comets() {
       <Comet which="B" color={PATH_B_COLOR} />
       <Fork />
       <Selection />
+      <Focus />
     </>
   );
 }

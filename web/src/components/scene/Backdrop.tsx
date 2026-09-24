@@ -30,8 +30,8 @@ const frag = /* glsl */ `
     // cloud banks hug the horizon and thin out overhead
     float bank = smoothstep(0.55, -0.15, d.y);
     float c = fbm(d * 3.2 + vec3(uTime * 0.004, 0.0, 0.0));
-    float cloud = smoothstep(0.56, 0.74, c * (0.35 + 0.85 * bank));
-    col = mix(col, mix(uCloud2, uCloud, smoothstep(0.6, 0.8, c)), cloud * 0.8);
+    float cloud = smoothstep(0.6, 0.78, c * bank); // only low banks near the horizon: a calm sky
+    col = mix(col, mix(uCloud2, uCloud, smoothstep(0.62, 0.82, c)), cloud * 0.55);
     gl_FragColor = vec4(col, 1.0);
   }`;
 
@@ -46,8 +46,8 @@ export function Backdrop() {
         depthTest: false,
         uniforms: {
           uTime: { value: 0 },
-          uTop: { value: new Color("#BFDDF3") },
-          uLow: { value: new Color("#EEF5FB") },
+          uTop: { value: new Color("#D6EAF8") }, // flat brand sky: only clouds and particles get stippled
+          uLow: { value: new Color("#D6EAF8") },
           uCloud: { value: new Color("#F386A1") },
           uCloud2: { value: new Color("#F7B8CB") },
         },

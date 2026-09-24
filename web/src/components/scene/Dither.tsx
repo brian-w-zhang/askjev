@@ -6,7 +6,7 @@ import { Color, Uniform, Vector2, Vector3 } from "three";
 // Ordered (Bayer 8x8) dither onto TypeSafe's palette at chunky pixel cells (docs/07-ui.md, Look).
 // Each cell samples the scene once at its center, nudges it by the Bayer threshold, and snaps to the
 // nearest palette color, so gradients and clouds come out as halftone stipple like typesafe.ai.
-export const PALETTE = ["#D6EAF8", "#FEFEFE", "#ABBAB9", "#F386A1", "#D45BB6", "#09AEA1", "#4B5BD6", "#03AA5C", "#1E1E1E", "#BFDDF3"];
+export const PALETTE = ["#D6EAF8", "#FEFEFE", "#F386A1", "#D45BB6", "#09AEA1", "#4B5BD6", "#03AA5C", "#1E1E1E", "#BFDDF3"];
 
 const frag = /* glsl */ `
   uniform vec3 uPalette[${PALETTE.length}];
@@ -27,6 +27,11 @@ const frag = /* glsl */ `
     vec2 cell = floor(uv * uRes / uCell);
     vec2 center = (cell + 0.5) * uCell / uRes;
     vec3 c = texture2D(inputBuffer, center).rgb;
+    // colors already on the palette (the flat sky) stay solid; only in-between colors get stippled
+    for (int i = 0; i < ${PALETTE.length}; i++) {
+      vec3 d0 = c - uPalette[i];
+      if (dot(d0, d0) < 2e-5) { outputColor = vec4(uPalette[i], 1.0); return; }
+    }
     float t = bayer8(cell) - 0.5;
     c += t * uSpread;
     float best = 1e9; vec3 pick = uPalette[0];

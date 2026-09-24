@@ -30,8 +30,9 @@ const frag = /* glsl */ `
     if (vT > grown * 1.05) discard;                         // new branches draw outward from the parent
     float drift = 0.5 + 0.5 * sin(vPos * 9.0 - uTime * 1.4); // slow outward flow on every branch
     // thin ink filaments tinted by hemisphere; the dither pass turns them into dotted lines
-    vec3 col = mix(vec3(0.118), vColor, 0.35);
-    float alpha = (0.22 + 0.08 * drift + 0.55 * vRel) * vDim;
+    // filaments in the hemisphere's own color, strong enough to read against the sky
+    vec3 col = vColor * 0.85;
+    float alpha = (0.5 + 0.1 * drift + 0.4 * vRel) * vDim;
     if (vA > 0.5 && uProgA >= 0.0) {
       float trail = step(vPos, uProgA);
       float d = (vPos - uProgA) * 4.5;

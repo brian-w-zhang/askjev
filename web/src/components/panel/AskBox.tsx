@@ -13,9 +13,9 @@ const slug = (s: string) => s.trim().toLowerCase().replace(/[^a-z0-9]+/g, "_").r
 
 interface AskResult { question_id?: string; duplicate_of?: string | null; node_id?: string; error?: string; flags?: string[]; display_ok?: boolean }
 
-export function AskBox({ onClose }: { onClose: () => void }) {
+export function AskBox({ onClose, initial = "" }: { onClose: () => void; initial?: string }) {
   const [prim, setPrim] = useState<Prim>("noul");
-  const [text, setText] = useState("");
+  const [text, setText] = useState(initial);
   const [opts, setOpts] = useState<string[]>(["", ""]);
   const [levels, setLevels] = useState<string[]>(["", "", ""]);
   const [busy, setBusy] = useState(false);

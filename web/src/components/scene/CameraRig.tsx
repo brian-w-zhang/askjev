@@ -5,6 +5,7 @@ import { Vector3, type PerspectiveCamera } from "three";
 import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 import { anim, headPosition, now, progress } from "@/lib/anim";
 import { useStore } from "@/lib/store";
+import { starData, starWorld } from "@/lib/stars";
 
 const easeInOutCubic = (x: number) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
 // Preferred viewing direction: above the sky, tilted toward the viewer.
@@ -43,6 +44,7 @@ export function CameraRig() {
   const tmpT = useMemo(() => new Vector3(), []);
   const tmpP = useMemo(() => new Vector3(), []);
   const dir = useMemo(() => new Vector3(), []);
+  const star: [number, number, number] = useMemo(() => [0, 0, 0], []);
   const offset = useRef(0);
 
   useEffect(() => {
@@ -50,6 +52,7 @@ export function CameraRig() {
     const stop = () => {
       anim.follow = null;
       anim.flight = null;
+      anim.trackStar = -1;
       anim.userMoved = now();
     };
     controls.addEventListener("start", stop);
@@ -97,8 +100,21 @@ export function CameraRig() {
       }
     }
 
+    // After landing on a question: keep its dot centered as its ball slowly turns.
+    if (!f && !anim.follow && anim.trackStar >= 0) {
+      const d = starData();
+      const p = d ? anim.placed.get(d.nodeIds[d.node[anim.trackStar]]) : undefined;
+      if (p) {
+        const w = starWorld(anim.trackStar, p, t, star);
+        tmpT.set(w[0], w[1], w[2]).sub(controls.target);
+        controls.target.add(tmpT);
+        camera.position.add(tmpT);
+        controls.update();
+      }
+    }
+
     // Idle: the nebula turns slowly on its own after a while without input.
-    controls.autoRotate = !anim.flight && !anim.follow && t - anim.userMoved > 12;
+    controls.autoRotate = !anim.flight && !anim.follow && anim.trackStar < 0 && t - anim.userMoved > 12;
   });
   return null;
 }

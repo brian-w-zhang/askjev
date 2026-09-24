@@ -83,7 +83,7 @@ export function Gas({ placed }: { placed: Map<string, Placed> }) {
       for (let i = 0; i < k; i++) {
         const u = r() * 2 - 1, th = r() * Math.PI * 2, rad = p.ball * 0.8 * Math.cbrt(r());
         const s = Math.sqrt(1 - u * u);
-        out.push({ x: p.x + rad * s * Math.cos(th), y: p.y + rad * u, z: p.z + rad * s * Math.sin(th), size: p.ball * (1.4 + r() * 1.4) + 0.8, alpha: 0.22 + 0.12 * r(), seed: r(), node: p.id });
+        out.push({ x: p.x + rad * s * Math.cos(th), y: p.y + rad * u, z: p.z + rad * s * Math.sin(th), size: p.ball * (1.4 + r() * 1.4) + 0.8, alpha: 0.1 + 0.06 * r(), seed: r(), node: p.id });
       }
       // along the branch from the parent, for the big arms (hemisphere → L1 → L2)
       const parent = n.parent_id ? placed.get(n.parent_id) : undefined;
@@ -92,7 +92,7 @@ export function Gas({ placed }: { placed: Map<string, Placed> }) {
         for (let i = 0; i < m; i++) {
           edgePoint(parent, p, 0.15 + 0.75 * ((i + r()) / m), pt);
           const scale = p.depth === 1 ? 7 : p.depth === 2 ? 4 : 2.2;
-          out.push({ x: pt[0] + (r() - 0.5) * scale, y: pt[1] + (r() - 0.5) * scale, z: pt[2] + (r() - 0.5) * scale, size: scale * (1.6 + r()), alpha: p.depth === 1 ? 0.2 : 0.16, seed: r(), node: p.id });
+          out.push({ x: pt[0] + (r() - 0.5) * scale, y: pt[1] + (r() - 0.5) * scale, z: pt[2] + (r() - 0.5) * scale, size: scale * (1.6 + r()), alpha: p.depth === 1 ? 0.07 : 0.05, seed: r(), node: p.id });
         }
       }
     }
@@ -110,7 +110,7 @@ export function Gas({ placed }: { placed: Map<string, Placed> }) {
       for (let i = 0; i < 14; i++) {
         const u = r() * 2 - 1, th = r() * Math.PI * 2, rad = spread * 0.9 * Math.cbrt(r());
         const s = Math.sqrt(1 - u * u);
-        out.push({ x: c[0] + rad * s * Math.cos(th), y: c[1] + rad * u, z: c[2] + rad * s * Math.sin(th), size: spread * (0.6 + 0.4 * r()), alpha: 0.09, seed: r(), node: h });
+        out.push({ x: c[0] + rad * s * Math.cos(th), y: c[1] + rad * u, z: c[2] + rad * s * Math.sin(th), size: spread * (0.6 + 0.4 * r()), alpha: 0.04, seed: r(), node: h });
       }
     }
     return out;
@@ -153,7 +153,7 @@ export function Gas({ placed }: { placed: Map<string, Placed> }) {
         if (indicator === "hemisphere") branchColor(n.hemisphere, shade.get(n.id) ?? 0.5, c);
         else c.set("#FEFEFE"); // no data: plain white cloud
       } else rampColor(a, c);
-      c.lerp(white, 0.3); // lighter than the stars, so the stipple reads as cloud, not ink
+      c.lerp(white, 0.55); // a pale halo: the particles are the cloud, the gas only softens it
       col.setXYZ(i, c.r, c.g, c.b);
     });
     col.needsUpdate = true;

@@ -1,11 +1,10 @@
 "use client";
 import dynamic from "next/dynamic";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useStore } from "@/lib/store";
 import { Search } from "./Search";
 import { Controls } from "./Controls";
 import { Panel } from "./panel/Panel";
-import { WorthALook } from "./WorthALook";
 
 // the vertical caption, as on typesafe.ai: base64 of "askjev: every closed question, answered by Jev"
 const B64 = "YXNramV2OiBldmVyeSBjbG9zZWQgcXVlc3Rpb24sIGFuc3dlcmVkIGJ5IEpldg==";
@@ -26,6 +25,12 @@ export default function App() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
+  // the hint shows once, then gets out of the way
+  const [hintGone, setHintGone] = useState(false);
+  useEffect(() => {
+    const h = setTimeout(() => setHintGone(true), 9000);
+    return () => clearTimeout(h);
+  }, []);
   return (
     <main>
       <div className="stage" data-testid="stage" data-nodes={count}>
@@ -38,15 +43,11 @@ export default function App() {
         </div>
         <Search />
       </div>
-      <button className="askbtn" onClick={() => useStore.getState().set({ panel: { kind: "ask" } })}>
-        Ask Jev a question
-      </button>
       <Controls />
-      <WorthALook />
       <Panel />
       <i className="crop tl" /><i className="crop tr" /><i className="crop bl" /><i className="crop br" />
       <span className="b64" aria-hidden>{B64}</span>
-      <p className="intro">Every dot is a question · drag to orbit · scroll into a cloud to read · click a dot to open</p>
+      <p className="intro" data-hidden={hintGone}>Every dot is a question · drag to orbit · scroll into a cloud to read · click a dot to open</p>
     </main>
   );
 }

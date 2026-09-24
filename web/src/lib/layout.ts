@@ -75,8 +75,8 @@ export function layout(
     // the children's own balls must clear this node's ball; their subtrees grow outward
     let d = Math.max(need, b + GAP + maxBall);
     if (depth === 0) {
-      // three lobes 120° apart: chord = d·√3 must clear each pair
-      for (let i = 0; i < es.length; i++) for (let j = i + 1; j < es.length; j++) d = Math.max(d, ((es[i] + es[j]) * 1.08) / Math.sqrt(3));
+      // three lobes 120° apart: chord = d·√3 must clear each pair (lobes fan outward, so their spheres may overlap a bit)
+      for (let i = 0; i < es.length; i++) for (let j = i + 1; j < es.length; j++) d = Math.max(d, ((es[i] + es[j]) * 0.65) / Math.sqrt(3));
     }
     D.set(id, d);
     const e = d + maxE;

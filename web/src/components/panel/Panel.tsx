@@ -11,7 +11,7 @@ export function Panel() {
     <aside className="panel" data-open={panel.kind !== "none"} data-testid="panel" aria-label="Details">
       {panel.kind === "node" && <NodeView key={panel.id} id={panel.id} onClose={close} />}
       {panel.kind === "question" && <QuestionCard key={panel.id} id={panel.id} note={panel.note} onClose={close} />}
-      {panel.kind === "ask" && <AskBox onClose={close} />}
+      {panel.kind === "ask" && <AskBox key={panel.text ?? ""} onClose={close} initial={panel.text} />}
     </aside>
   );
 }

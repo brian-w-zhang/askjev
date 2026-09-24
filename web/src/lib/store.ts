@@ -5,7 +5,7 @@ import type { Filters, Indicator, TreeNode } from "./types";
 export type PanelView =
   | { kind: "node"; id: string }
   | { kind: "question"; id: string; note?: string }
-  | { kind: "ask" }
+  | { kind: "ask"; text?: string }
   | { kind: "none" };
 
 interface State {
@@ -21,7 +21,7 @@ interface State {
   hovered: string | null;
   hoverStar: number; // star index under the pointer, -1 for none
   starsReady: boolean;
-  tour: boolean; // auto-fly through the "worth a look" list
+  focusStar: number; // the question dot a search or "feeling lucky" flight landed on, -1 for none
   pathA: string[]; // embedding path (root → result node)
   pathB: string[]; // Jev's own walk
   relevance: Record<string, number>; // node id -> 0..1 search relevance (branches brighten)
@@ -42,7 +42,7 @@ export const useStore = create<State>((set) => ({
   hovered: null,
   hoverStar: -1,
   starsReady: false,
-  tour: false,
+  focusStar: -1,
   pathA: [],
   pathB: [],
   relevance: {},

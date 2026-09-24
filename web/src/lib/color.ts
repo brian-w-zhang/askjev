@@ -27,16 +27,16 @@ export function attention(n: TreeNode, ind: Indicator): number | null {
 
 const clamp = (x: number) => Math.max(0, Math.min(1, x));
 
-// steady recedes into the sky (sage), worth a look pops (magenta): TypeSafe palette
-const RAMP = [new Color("#ABBAB9"), new Color("#F386A1"), new Color("#D45BB6")];
-const NODATA = new Color("#C9C9C9");
+// steady = calm blue, worth a look = magenta (TypeSafe palette); no data fades into the sky
+const RAMP = [new Color("#4B5BD6"), new Color("#F386A1"), new Color("#D45BB6")];
+const NODATA = new Color("#BFDDF3");
 
 export function rampColor(t: number, out = new Color()): Color {
   if (t <= 0.5) return out.copy(RAMP[0]).lerp(RAMP[1], t / 0.5);
   return out.copy(RAMP[1]).lerp(RAMP[2], (t - 0.5) / 0.5);
 }
 
-export const RAMP_CSS = "linear-gradient(90deg, #ABBAB9, #F386A1, #D45BB6)";
+export const RAMP_CSS = "linear-gradient(90deg, #4B5BD6, #F386A1, #D45BB6)";
 
 export function nodeColor(n: TreeNode, ind: Indicator, out = new Color()): Color {
   if (ind === "hemisphere") return out.set(HEMI_COLOR[n.hemisphere]);

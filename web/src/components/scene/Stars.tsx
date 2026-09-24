@@ -4,12 +4,12 @@ import { useFrame } from "@react-three/fiber";
 import { BufferAttribute, BufferGeometry, Color, NormalBlending, ShaderMaterial, type PerspectiveCamera } from "three";
 import { useStore } from "@/lib/store";
 import { now } from "@/lib/anim";
-import { rampColor, starAttention } from "@/lib/color";
+import { branchColor, rampColor, starAttention } from "@/lib/color";
 import { metric, starData } from "@/lib/stars";
 import type { Placed } from "@/lib/layout";
 import type { Indicator } from "@/lib/types";
 
-// Every displayable question as one ink dot, in a single draw call (docs/07-ui.md).
+// Every displayable question as one colored particle, in a single draw call (docs/07-ui.md).
 // Dots twinkle by instability, flare magenta at random as if asked again, and turn slowly around their node.
 const vert = /* glsl */ `
   attribute vec3 aLocal; attribute vec3 aColor;
@@ -32,7 +32,7 @@ const vert = /* glsl */ `
     vAlpha = clamp(px / minPx, 0.06, 1.0) * aDim * tw * (1.0 + flare * 2.5) * (1.0 + 0.7 * sel);
     vHot = flare;
     vColor = aColor;
-    gl_PointSize = clamp(px, minPx, (6.5 + 14.0 * flare) * uPR);
+    gl_PointSize = clamp(px, minPx, (7.5 + 14.0 * flare) * uPR);
     gl_Position = projectionMatrix * mv;
   }`;
 
@@ -47,7 +47,7 @@ const frag = /* glsl */ `
     gl_FragColor = vec4(mix(vColor, vec3(0.83, 0.357, 0.714), vHot), min(1.0, a));
   }`;
 
-const BASE = 0.07;
+const BASE = 0.085;
 
 export function Stars({ placed }: { placed: Map<string, Placed> }) {
   const ready = useStore((s) => s.starsReady);
@@ -111,7 +111,7 @@ export function Stars({ placed }: { placed: Map<string, Placed> }) {
     const tw = geometry.getAttribute("aTw") as BufferAttribute;
     const dim = geometry.getAttribute("aDim") as BufferAttribute;
     const c = new Color();
-    const ink = new Color("#1E1E1E");
+    const shade = branchShades(nodes);
     const prim = filters.primitive ? { noul: 0, choice: 1, score: 2 }[filters.primitive] : undefined;
     const nodeMetric = (ind: Indicator, i: number) =>
       ind === "stability" ? metric(d.stability[i]) : ind === "human_gap" ? metric(d.humanGap[i]) : ind === "frame_gap" ? metric(d.frameGap[i])
@@ -121,14 +121,16 @@ export function Stars({ placed }: { placed: Map<string, Placed> }) {
       const n = nodes[nid];
       const seed = ((i * 2654435761) % 1000003) / 1000003;
       let s = BASE * (0.7 + 0.6 * seed);
-      if (indicator === "hemisphere" || indicator === "calibration_ece") {
-        c.copy(ink); // stipple in ink; the clouds carry the hemisphere color
-        if (indicator === "calibration_ece" && d.correct[i] === 2) { c.set("#D45BB6"); s *= 1.6; }
-        else if (indicator === "calibration_ece") c.set("#ABBAB9");
+      if (indicator === "hemisphere") {
+        // the questions themselves are the cloud: colored particles, like the typesafe.ai header
+        branchColor(n?.hemisphere ?? "root", Math.min(1, Math.max(0, (shade.get(nid) ?? 0.5) + (seed - 0.5) * 0.3)), c);
+      } else if (indicator === "calibration_ece") {
+        if (d.correct[i] === 2) { c.set("#D45BB6"); s *= 1.6; }
+        else c.set(d.correct[i] === 1 ? "#4B5BD6" : "#BFDDF3");
       } else {
         const a = starAttention(nodeMetric(indicator, i), indicator);
         if (a === null) {
-          c.set("#C9C9C9");
+          c.set("#BFDDF3");
         } else {
           rampColor(a, c);
           s *= 0.8 + 1.8 * a * a;

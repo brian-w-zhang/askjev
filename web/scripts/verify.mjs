@@ -37,6 +37,11 @@ async function fps(ms = 2000) {
     requestAnimationFrame(tick);
   }), ms);
 }
+// the View tool starts collapsed to its title bar
+const openView = async () => {
+  const t = page.locator(".controls .wintitle");
+  if ((await t.getAttribute("aria-expanded")) === "false") await t.click();
+};
 const shot = async (name) => { const p = path.join(OUT, name); await page.screenshot({ path: p }); step(`screenshot ${name}`); };
 
 try {
@@ -107,6 +112,7 @@ try {
   await page.locator(".crumbs button").nth(1).click();
   await page.getByTestId("node-view").waitFor({ timeout: 10000 });
   await page.waitForTimeout(1500);
+  await openView();
   await page.getByRole("button", { name: "Stability", exact: true }).click();
   await page.waitForTimeout(600);
   await shot("06-node-view-stability.png");
@@ -153,7 +159,9 @@ try {
   await page.getByLabel("Origin").selectOption("");
 
   if (DO_ASK) {
-    await page.getByRole("button", { name: "Ask Jev a question" }).click();
+    // search and ask share one box: the last result row asks Jev
+    await page.getByTestId("search").fill("Which breakfast is best on a cold morning?");
+    await page.locator(".askrow").click();
     await page.getByTestId("ask-box").waitFor();
     await page.getByTestId("prim-choice").click();
     await page.getByTestId("ask-text").fill("Which breakfast is best on a cold morning?");

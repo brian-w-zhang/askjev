@@ -2,7 +2,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useStore } from "@/lib/store";
 import { HEMI_COLOR } from "@/lib/layout";
-import { openQuestion, selectNode, showJevWalk, travel, type Walk } from "@/lib/actions";
+import { feelingLucky, goToQuestion, selectNode, showJevWalk, travel, type Walk } from "@/lib/actions";
 import type { NodeHit, SearchHit } from "@/lib/types";
 
 interface Rerank { state: "idle" | "waiting" | "done" | "error"; ms?: number; cached?: boolean; error?: string }
@@ -102,8 +102,7 @@ export function Search() {
     const path = h.path.map((p) => p.id);
     if (!showJevPath) setWalk({ state: "idle" });
     const walkP = showJevPath ? startWalk(q.trim(), path[path.length - 1]) : null;
-    await travel(path);
-    openQuestion(h.id);
+    await goToQuestion(path, h.id);
     await walkP;
   }
 
@@ -113,6 +112,18 @@ export function Search() {
     useStore.getState().set({ relevance: {} });
     await travel(n.path.map((p) => p.id));
     selectNode(n.id, { fly: false });
+  }
+
+  function ask() {
+    setOpen(false);
+    useStore.getState().set({ panel: { kind: "ask", text: q.trim() } });
+  }
+
+  async function lucky() {
+    setOpen(false);
+    setWalk({ state: "idle" });
+    useStore.getState().set({ relevance: {} });
+    await feelingLucky();
   }
 
   async function startWalk(text: string, embedNode: string) {
@@ -126,6 +137,7 @@ export function Search() {
     if (e.key === "ArrowDown") { e.preventDefault(); setActive((a) => Math.min(a + 1, hits.length - 1)); }
     else if (e.key === "ArrowUp") { e.preventDefault(); setActive((a) => Math.max(a - 1, 0)); }
     else if (e.key === "Enter" && hits[active]) { e.preventDefault(); choose(hits[active]); }
+    else if (e.key === "Enter" && q.trim()) { e.preventDefault(); ask(); }
     else if (e.key === "Escape") setOpen(false);
   };
 
@@ -146,13 +158,16 @@ export function Search() {
           }}
           onFocus={() => hits.length && setOpen(true)}
           onKeyDown={onKey}
-          placeholder="Search questions, like best pizza topping"
-          aria-label="Search questions"
+          placeholder="Search or ask, like best pizza topping"
+          aria-label="Search questions or ask Jev"
           role="combobox"
           aria-expanded={open}
           aria-controls="search-results"
         />
-        {latency !== null && <span className="search-meta num" data-testid="latency">{Math.round(latency)} ms</span>}
+        {latency !== null && q.trim() && <span className="search-meta num" data-testid="latency">{Math.round(latency)} ms</span>}
+        <button className="lucky" onClick={lucky} title="Fly to a random question">
+          I&apos;m feeling lucky
+        </button>
       </div>
       {open && q.trim() && (
         <div className="results" id="search-results" role="listbox" ref={listRef} data-title="Results">
@@ -164,7 +179,7 @@ export function Search() {
               {rerank.state === "error" && "Jev reorder unavailable"}
             </span>
           </div>
-          {hits.length === 0 && <div className="empty">No questions match yet. Try fewer words, or ask it yourself.</div>}
+          {hits.length === 0 && <div className="empty">No questions match yet. Try fewer words, or ask it below.</div>}
           {hits.map((h, i) => (
             <button
               key={h.id}
@@ -197,6 +212,9 @@ export function Search() {
               <span className="where">{n.path.slice(1, -1).map((p) => p.label).join(" / ") || "Hemisphere"}</span>
             </button>
           ))}
+          <button className="askrow" onClick={ask}>
+            <span>Ask Jev</span> &ldquo;{q.trim()}&rdquo;
+          </button>
         </div>
       )}
       {!open && walk.state !== "idle" && showJevPath && (

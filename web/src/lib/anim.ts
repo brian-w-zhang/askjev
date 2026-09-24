@@ -8,6 +8,7 @@ export const anim = {
   flight: null as null | { to: [number, number, number]; dist: number; t0: number; dur: number; from?: { pos: [number, number, number]; target: [number, number, number] } },
   fork: -1, // index in pathB where it leaves pathA (-1: none)
   userMoved: 0,
+  trackStar: -1, // camera keeps this question dot centered as it drifts (-1: off; any drag stops it)
   placed: new Map() as Map<string, import("./layout").Placed>,
   labelRects: [] as import("./uirects").Rect[], // node labels on screen (question labels avoid them)
 };
