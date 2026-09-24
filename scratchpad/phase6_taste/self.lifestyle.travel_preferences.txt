@@ -1,0 +1,119 @@
+# self.lifestyle.travel_preferences
+C | Which season do you prefer to travel in? | spring ; summer ; autumn ; winter ; no_preference
+C | What kind of luggage do you usually travel with? | backpack ; carry_on_roller ; large_suitcase ; duffel_bag ; several_bags
+C | Where on a plane do you like to sit? | near_the_front ; over_the_wing ; near_the_back ; exit_row ; no_preference
+C | What do you do during a long flight? | sleep ; watch_films ; read ; work ; listen_to_music ; chat ; look_out_the_window
+C | How do you spend a long layover? | relax_at_the_gate ; lounge ; explore_the_city ; sleep ; eat ; shop
+C | Which travel item can you not do without? | neck_pillow ; headphones ; e_reader ; snacks ; water_bottle ; sleep_mask ; phone_charger
+C | What view do you want from a hotel room? | ocean ; city_skyline ; mountains ; garden ; pool ; dont_care
+C | Which part of a trip do you enjoy most? | planning ; looking_forward_to_it ; the_journey ; arriving ; exploring ; coming_home
+C | What kind of place do you most want to visit next? | big_city ; small_village ; tropical_island ; national_park ; desert ; far_north
+C | How do you like to explore a new city? | on_foot ; by_bike ; public_transit ; taxis ; hop_on_hop_off_bus ; rental_car
+C | What do you like to do on a beach day? | swim ; sunbathe ; read ; water_sports ; walk_the_shore ; build_sandcastles
+C | What do you like to do on a mountain trip? | hike ; ski ; climb ; scenic_drives ; relax_at_the_lodge
+C | Who usually plans the trip when you travel with others? | me ; someone_else ; we_share_it ; nobody_plans ; a_travel_agent
+C | How do you usually book a trip? | online_myself ; travel_agent ; package_deal ; last_minute_deal ; someone_else_books
+C | When do you like to set off on a road trip? | before_dawn ; early_morning ; midday ; afternoon ; at_night
+C | Who drives on your road trips? | always_me ; we_take_turns ; i_prefer_to_ride ; i_dont_drive
+C | What do you listen to on a road trip? | music ; radio ; podcasts ; audiobooks ; conversation ; silence
+C | What kind of trip would you plan to celebrate something big? | luxury_resort ; adventure_trip ; city_break ; cruise ; road_trip ; group_party_trip
+C | Where do you like to sleep on a road trip? | motels ; campsites ; friends_homes ; hotels ; in_the_car
+C | What do you do on a rainy vacation day? | museums ; stay_in ; go_out_anyway ; shopping ; cafe_hopping ; see_a_movie
+C | What do you do to get by where you don't speak the language? | learn_phrases_ahead ; translation_app ; point_and_gesture ; find_english_speakers ; stay_in_tourist_areas
+C | How do you deal with jet lag? | push_through ; nap ; sleep_early ; plan_a_rest_day ; never_get_it
+C | What do you do at a famous landmark? | take_photos ; read_about_its_history ; people_watch ; skip_it_if_crowded ; buy_a_souvenir
+C | Which kind of museum do you visit on a trip? | art ; history ; science ; quirky_small_museums ; none
+C | What kind of nightlife do you look for on vacation? | bars ; clubs ; night_markets ; live_music ; quiet_dinner ; early_bedtime
+C | How do you spend an evening on a beach vacation? | beach_bar ; long_dinner ; stroll_along_the_water ; watch_the_sunset ; early_night
+C | Which kind of island trip appeals to you? | tropical_resort ; remote_quiet_island ; island_hopping ; none
+C | Which kind of train journey appeals to you most? | scenic_railway ; sleeper_train ; high_speed_train ; steam_train ; none
+C | How would you prefer to cross a sea? | ferry ; plane ; cruise_ship ; sailboat
+C | Which kind of camping do you enjoy? | tent ; campervan ; cabin ; glamping ; hammock ; no_camping
+C | Which adventure activity would you try on vacation? | zip_line ; scuba_diving ; paragliding ; whitewater_rafting ; bungee_jump ; none
+C | How do you like to get to the airport? | drive_and_park ; taxi ; public_transit ; friend_drops_me_off ; rideshare
+C | What do you do while waiting at the gate? | read ; people_watch ; shop ; eat ; work ; walk_around
+C | Where do you stop for food on a road trip? | gas_stations ; diners ; packed_food ; fast_food ; local_restaurants
+C | What does your ideal vacation morning look like? | sleep_in ; early_hike ; long_breakfast ; morning_swim ; beat_the_crowds_sightseeing
+C | How should activities be chosen on a group trip? | everyone_votes ; the_planner_decides ; split_up_by_interest ; go_with_the_flow
+C | Which kind of festival would you travel for? | music ; food ; cultural ; film ; lantern_or_light ; none
+C | Which kind of weekend getaway appeals to you most? | city_break ; countryside_cottage ; beach_town ; spa_retreat ; hiking_trip ; food_tour
+C | Where do you like to stay when visiting a city? | city_center ; quiet_neighborhood ; near_the_station ; outskirts ; wherever_is_cheapest
+C | How do you choose where to go next? | friends_tips ; photos_online ; cheap_flights ; bucket_list ; random_pick ; return_to_a_favorite
+C | What do you want most from a hotel? | comfy_bed ; location ; pool ; breakfast ; low_price ; quiet
+C | How do you handle a long drive on a travel day? | drive_straight_through ; stop_often ; take_scenic_detours ; break_it_up_overnight
+C | How do you carry money when you travel? | card_only ; some_cash ; money_belt ; phone_payments
+C | Which seat do you want on a long train ride? | forward_facing ; window ; table_seat ; quiet_car ; whatever_is_free
+C | What would you do with a free day in a new city? | museums ; markets ; parks ; shopping ; cafes ; walking_tour ; rest
+C | How do you prefer to see wildlife on a trip? | safari ; whale_watching ; birding ; snorkeling ; zoo ; not_interested
+C | What kind of winter trip do you prefer? | ski_trip ; cozy_cabin ; winter_city_break ; northern_lights_trip ; escape_to_the_sun
+C | Where would you go for a summer getaway? | beach ; lake_cabin ; road_trip ; city_break ; festival ; camping
+C | What do you bring to read on a trip? | paperback ; e_reader ; magazines ; guidebook ; nothing
+C | How do you learn about a place before you go? | guidebook ; videos ; travel_blogs ; asking_friends ; no_research
+C | What kind of travel photo do you take most? | landscapes ; selfies ; food ; buildings ; people ; none
+C | What time of day do you prefer to fly? | early_morning ; midday ; evening ; overnight ; no_preference
+C | What makes a trip feel like a success to you? | fully_relaxed ; saw_everything ; met_locals ; great_food ; real_adventure ; nothing_went_wrong
+C | Which kind of vacation rental do you like? | cabin ; beach_house ; city_apartment ; farm_stay ; treehouse ; none
+C | How do you react to a delayed flight? | stay_calm ; complain ; rebook_right_away ; explore_the_airport ; sleep
+C | How do you like to travel between cities abroad? | train ; bus ; short_flight ; rental_car ; ferry
+C | Which kind of travel companion do you prefer? | my_partner ; one_close_friend ; a_group_of_friends ; family ; a_tour_group ; nobody
+C | What do you do the day you get home from a trip? | unpack_right_away ; sleep ; laundry ; back_to_work ; look_at_photos ; plan_the_next_trip
+C | How do you like to hike when you travel? | day_hikes ; multi_day_trek ; hut_to_hut ; easy_nature_walks ; none
+C | What would you do all day at a resort? | pool ; spa ; beach ; organized_activities ; bar ; excursions
+C | Which bag do you carry while sightseeing? | backpack ; crossbody_bag ; tote ; belt_bag ; pockets_only
+C | What kind of view do you seek out on a trip? | rooftop ; beach ; mountain_peak ; riverside ; none
+C | Which travel style fits you best? | backpacker ; comfort_traveler ; luxury_traveler ; adventure_seeker ; slow_traveler
+C | Where would you rather spend a week off? | abroad ; somewhere_in_my_own_country ; at_home
+C | How do you pick a flight? | cheapest ; shortest ; best_times ; favorite_airline ; fewest_stops
+S | How do you feel about spending time in airports? | I hate every minute in them ; I just get through them ; I feel neutral about them ; I enjoy people watching there ; I love airports and arrive early to wander
+S | How much do you pack compared with what you use? | I often forget things I need ; I pack just enough ; I pack a few spare items ; I bring about twice what I wear ; I pack for every possible situation
+S | How much do you haggle at markets when traveling? | I pay the first price asked ; I ask once if there is a discount ; I haggle a little when it seems expected ; I haggle over most purchases ; I treat haggling as the best part of shopping
+S | How much do you use your phone on vacation? | As much as at home ; A bit less than at home ; Only for maps and photos ; I keep it off most of the day ; I leave it at home on purpose
+S | How do you balance rest and sightseeing on a trip? | I lie by the pool all week ; I mostly relax with a single outing ; I mix rest and sightseeing evenly ; I mostly explore with one rest day ; I explore from dawn to dusk every day
+S | How often do you travel abroad? | I have never traveled abroad ; I go abroad once every few years ; I go abroad about once a year ; I go abroad a few times a year ; I go abroad nearly every month
+S | How do you feel about sleeper trains and overnight buses? | I refuse to take them ; I take them only if there is no other option ; They are fine ; I enjoy them ; I seek them out
+S | How do you feel about staying in hostels? | I would never stay in one ; I would only if money were very tight ; They are fine ; I enjoy the social feel ; I prefer hostels to hotels
+S | How early do you start packing for a trip? | The morning I leave ; The night before ; A couple of days before ; About a week before ; I keep a bag packed at all times
+S | How do you feel about crowds at tourist sites? | I leave if a place is busy ; I put up with them briefly ; They don't bother me ; I enjoy the buzz ; I love the busiest famous spots
+S | How do you feel about camping in the wild with no facilities? | I would never do it ; I camp only where there are toilets and showers ; I could manage a single night ; I enjoy a few nights ; I prefer weeks in the backcountry
+S | How do you feel about boat trips on vacation? | I refuse to set foot on a boat ; I take only short calm crossings ; They are fine ; I enjoy them ; I would spend every day on the water
+S | How much time do you spend in museums on a trip? | I skip museums entirely ; I visit one only if it rains ; I visit about one per trip ; I visit several per trip ; I plan whole trips around museums
+S | How far do you like to go for a weekend getaway? | I stay in my own town ; Somewhere within a short drive ; Somewhere a few hours' drive away ; Somewhere a short flight away ; Another continent if I can
+S | How much do you shop on a trip? | I never shop ; I buy a few small gifts ; I browse the local markets ; I set aside a whole afternoon for shopping ; I bring an empty suitcase to fill
+S | How do you feel about arriving somewhere new late at night? | I hate it and avoid it ; I would rather not ; I don't mind ; I rather like it ; I love seeing a new city's lights at night
+S | How much hiking do you want on vacation? | None at all ; A short stroll ; A half-day hike ; A full-day hike ; A trek lasting several days
+S | How do you feel about traveling in a big group? | I hate it ; I tolerate it ; It is fine ; I enjoy it ; My best trips have all been in big groups
+S | How long do you need to recover after coming home from a trip? | I am back to normal the next morning ; I need a single rest day ; I need a couple of days ; I need several days ; I need a full week to settle back in
+S | How do you feel about cold destinations in winter? | I always escape to somewhere warm ; I would rather avoid them ; I don't mind either way ; I like them ; I seek out the coldest places I can
+S | How much do you try to speak the local language on a trip? | I speak only my own language ; I learn hello and thank you ; I learn a handful of useful phrases ; I study basics before I go ; I try to hold whole conversations
+S | How willing are you to take an overnight flight to save a day? | I never would ; I would only if forced ; I sometimes do ; I usually do ; I always choose the overnight flight
+S | How comfortable would you be driving on the other side of the road abroad? | I would never try it ; I would only if there were no other choice ; I would manage but feel nervous ; I would be comfortable ; I would enjoy the challenge
+S | How much do you like trips built around a theme such as film locations? | They don't appeal to me at all ; I might join one if a friend planned it ; I would enjoy one now and then ; I love planning themed trips ; Most of my trips have a theme
+S | How do you feel about staying with friends or family when you travel? | I avoid it ; I do it for a single night at most ; It is fine ; I enjoy it ; I always prefer it to a hotel
+S | How long could you happily live out of a suitcase? | A couple of nights ; About a week ; A few weeks ; A few months ; Indefinitely
+S | How do you feel about traveling during peak holiday season? | I avoid it at all costs ; I go only if I must ; I don't mind it ; I enjoy the festive atmosphere ; I plan trips around the holidays
+S | How do you feel about very early starts on travel days? | I refuse to book anything early ; I dislike them but manage ; They don't bother me ; I like getting going early ; I always pick the earliest departure
+S | How much time do you want in the water on vacation? | I stay completely dry ; I paddle at the edge ; I go for a swim or two ; I snorkel every day ; I surf or dive from morning to night
+S | How much do you enjoy spa days on vacation? | I never go to a spa ; I might try one treatment ; I enjoy a spa visit now and then ; I book a spa day on most trips ; I choose destinations for their spas
+N | Do you sleep well on planes?
+N | Do you bring your own pillow when you travel?
+N | Do you keep a travel journal?
+N | Do you usually check a bag when you fly?
+N | Do you learn a few phrases before visiting a new country?
+N | Do you collect fridge magnets from your trips?
+N | Do you enjoy theme park vacations?
+N | Do you like ski trips?
+N | Do you enjoy visiting historic sites on vacation?
+N | Do you prefer road trips to flying?
+N | Do you enjoy travel days spent entirely on the move?
+N | Do you make a detailed itinerary before a trip?
+N | Do you enjoy traveling in the off-season?
+N | Do you like all-inclusive resorts?
+N | Do you enjoy long walks through a new city?
+N | Do you prefer a room with a kitchen when you travel?
+N | Do you enjoy visiting countryside villages on vacation?
+N | Do you like visiting friends who live abroad?
+N | Do you enjoy traveling for work?
+N | Do you like trips centered on food?
+N | Do you enjoy visiting national parks?
+N | Do you get up early to see sights before the crowds arrive?
+N | Do you like renting a car on vacation?

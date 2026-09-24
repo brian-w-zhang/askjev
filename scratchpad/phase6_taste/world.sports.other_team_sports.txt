@@ -1,0 +1,15 @@
+C | Which ice hockey play gets a crowd loudest? | overtime_winner ; breakaway_goal ; big_hit ; glove_save ; shootout
+C | Which cricket shot is the most beautiful? | cover_drive ; pull_shot ; hook_shot ; straight_drive ; reverse_sweep ; ramp_shot
+C | Which rugby tournament is the most exciting? | rugby_world_cup ; six_nations ; rugby_championship ; super_rugby ; rugby_sevens ; other
+C | Which Olympic team sport is the most fun to watch? | volleyball ; beach_volleyball ; water_polo ; handball ; field_hockey ; ice_hockey
+C | Which team sport has the most exciting atmosphere in the stands? | ice_hockey ; rugby ; cricket ; volleyball ; handball ; hurling
+C | Which rugby code is the best to watch? | rugby_union ; rugby_league ; rugby_sevens
+C | Which team sport has the most graceful athletes? | volleyball ; field_hockey ; lacrosse ; water_polo ; ultimate_frisbee ; netball
+C | Which cricket moment brings the best drama? | last_ball_finish ; hat_trick ; century ; stunning_catch ; six_into_the_crowd
+S | How fun is ice hockey to watch live? | It is confusing and dull ; It is fine for a period ; It is an enjoyable night out ; It is thrilling from start to finish ; It is the best live sport experience there is
+S | How exciting is a Test cricket match that goes down to the final session? | It is dull even at the end ; It is mildly tense ; It is quite gripping ; It is edge-of-seat drama ; It is the most dramatic finish in any sport
+S | How fun is beach volleyball to watch? | It is boring ; It is fine in passing ; It is fun and lively ; It is one of the most fun Olympic events ; It is the most fun team sport to watch
+N | Is rugby sevens more fun to watch than fifteen-a-side rugby?
+N | Is ice hockey the most exciting team sport to watch?
+N | Is Twenty-Twenty cricket more fun than Test cricket?
+N | Is handball one of the most fun Olympic sports to watch?

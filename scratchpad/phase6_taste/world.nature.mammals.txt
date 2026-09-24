@@ -1,0 +1,25 @@
+C | Which big cat is the most beautiful? | lion ; tiger ; leopard ; jaguar ; snow_leopard ; cheetah ; clouded_leopard
+C | Which wild mammal is the cutest? | red_panda ; sea_otter ; koala ; quokka ; fennec_fox ; slow_loris ; other
+C | Which bear is the most appealing? | polar_bear ; grizzly_bear ; giant_panda ; black_bear ; sun_bear ; spectacled_bear
+C | Which primate is the most fascinating to watch? | chimpanzee ; gorilla ; orangutan ; bonobo ; capuchin ; lemur ; other
+C | Which wild mammal is the most majestic? | elephant ; lion ; moose ; tiger ; giraffe ; blue_whale ; other
+C | Which safari animal is the most exciting to see in the wild? | lion ; elephant ; leopard ; rhino ; giraffe ; cheetah ; wild_dog
+C | Which marine mammal is the most delightful to watch? | dolphin ; humpback_whale ; orca ; sea_otter ; seal ; walrus ; manatee
+C | Which wild canine is the most beautiful? | gray_wolf ; arctic_fox ; red_fox ; fennec_fox ; maned_wolf ; african_wild_dog
+C | Which mammal has the most striking coat pattern? | zebra ; giraffe ; tiger ; okapi ; leopard ; ocelot ; other
+C | Which small mammal is the most charming? | hedgehog ; squirrel ; chipmunk ; dormouse ; rabbit ; bat ; other
+C | Which mammal has the most impressive horns or antlers? | moose ; red_deer ; bighorn_sheep ; kudu ; markhor ; ibex ; other
+C | Which Australian mammal is the most endearing? | koala ; kangaroo ; wombat ; quokka ; platypus ; sugar_glider
+C | Which mammal is the most fun to watch at a zoo? | monkeys ; otters ; meerkats ; elephants ; big_cats ; giraffes ; seals
+S | How beautiful is a tiger? | It is an ordinary-looking animal ; It is handsome ; It is stunning ; It is the most beautiful animal alive
+S | How cute is a baby elephant? | It is not cute at all ; It is somewhat cute ; It is very cute ; It is the cutest animal baby there is
+S | How charming are sloths? | They are dull and creepy ; They are mildly amusing ; They are charming ; They are utterly delightful
+S | How impressive is seeing a humpback whale breach? | It is a quick splash, nothing more ; It is a nice moment ; It is thrilling ; It is a once-in-a-lifetime wonder
+S | How appealing are bats as animals? | They are creepy and repulsive ; They are tolerable ; They are quite charming ; They are adorable
+S | How cute are raccoons? | They look like pests ; They are somewhat cute ; They are very cute ; They are irresistibly adorable
+N | Are wolves more majestic than bears?
+N | Are otters the most playful animals to watch?
+N | Is the giant panda the cutest wild animal?
+N | Are cheetahs more beautiful than leopards?
+N | Are elephants the most impressive land animals to see in person?
+N | Are rodents cute?

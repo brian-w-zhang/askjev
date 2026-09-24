@@ -1,0 +1,15 @@
+C | Which Formula One circuit produces the best races? | monaco ; silverstone ; spa_francorchamps ; monza ; suzuka ; interlagos ; other
+C | Which racing series puts on the best show? | formula_one ; nascar ; indycar ; motogp ; rally ; endurance_racing ; other
+C | Which kind of racetrack makes the best racing? | street_circuit ; oval ; road_course ; dirt_track ; night_race_circuit
+C | Which racing car looks the most beautiful? | classic_formula_one_car ; modern_formula_one_car ; le_mans_prototype ; rally_car ; stock_car ; indycar
+C | Which kind of race finish is the best to witness? | overtake_into_the_final_corner ; photo_finish ; pit_stop_gamble ; wet_race_chaos ; last_lap_battle
+C | Which Formula One livery is the most iconic? | ferrari_red ; mclaren_papaya ; lotus_black_and_gold ; williams_blue_and_white ; red_bull_blue ; other
+C | Which endurance race is the most thrilling? | le_mans ; daytona ; sebring ; nurburgring ; bathurst ; other
+C | Which rally stage type is the most exciting? | gravel ; snow ; tarmac ; desert ; jungle
+S | How exciting is the Monaco Grand Prix? | It is a dull procession ; It is mostly for the glamour ; It is interesting during qualifying ; It is tense and unique ; It is the most thrilling race of the year
+S | How fun is NASCAR to watch? | It is endless left turns ; It is fine for the crashes ; It is solid entertainment ; It is exciting from start to finish ; It is the most fun motorsport there is
+S | How exciting is a wet Formula One race? | It is no different from a dry race ; It is a bit more interesting ; It is noticeably more exciting ; It is chaotic and thrilling ; It produces the best races ever seen
+S | How beautiful is the sound of a racing engine? | It is just noise ; It is tolerable ; It is exciting to hear ; It is thrilling music ; It is one of the most beautiful sounds there is
+N | Is MotoGP more exciting than Formula One?
+N | Is rally racing more fun to watch than circuit racing?
+N | Did older Formula One cars look better than modern ones?

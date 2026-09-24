@@ -1,0 +1,45 @@
+C | Which soda is the best? | cola ; lemon_lime ; root_beer ; ginger_ale ; orange_soda ; cream_soda ; dr_pepper ; other
+C | Which juice is the best? | orange ; apple ; grape ; pineapple ; cranberry ; grapefruit ; mango ; other
+C | Which espresso drink is the best? | latte ; cappuccino ; flat_white ; americano ; macchiato ; mocha ; cortado ; other
+C | Which way of brewing coffee makes the best cup? | pour_over ; french_press ; espresso ; drip_machine ; aeropress ; cold_brew ; moka_pot ; other
+C | Which coffee origin makes the best beans? | ethiopia ; colombia ; brazil ; kenya ; guatemala ; sumatra ; other
+C | Which coffee roast is the best? | light ; medium ; dark ; other
+C | Which tea is the best for an afternoon break? | english_breakfast ; earl_grey ; green ; oolong ; chai ; chamomile ; other
+C | Which herbal tea is the best? | peppermint ; chamomile ; rooibos ; hibiscus ; ginger ; lemon_verbena ; other
+C | Which milk goes best in coffee? | whole_milk ; oat_milk ; almond_milk ; soy_milk ; half_and_half ; cream ; other
+C | Which iced drink is the best on a hot day? | iced_tea ; lemonade ; iced_coffee ; agua_fresca ; limeade ; sparkling_water ; other
+C | Which lemonade is the best? | classic ; pink ; strawberry ; mint ; sparkling ; other
+C | Which hot chocolate style is the best? | thick_european ; classic_american ; mexican_spiced ; with_marshmallows ; white_hot_chocolate ; other
+C | Which smoothie is the best? | strawberry_banana ; mango ; mixed_berry ; green ; peanut_butter_banana ; tropical ; other
+C | Which bubble tea is the best? | classic_milk_tea ; brown_sugar ; taro ; matcha ; fruit_tea ; thai_tea ; other
+C | Which sparkling water flavor is the best? | plain ; lime ; lemon ; grapefruit ; berry ; peach ; other
+C | Which chai style is the best? | traditional_masala ; chai_latte ; dirty_chai ; iced_chai ; other
+C | Which milkshake flavor is the best? | chocolate ; vanilla ; strawberry ; cookies_and_cream ; peanut_butter ; banana ; other
+C | Which country makes the best tea? | china ; india ; japan ; sri_lanka ; taiwan ; kenya ; other
+C | Which country has the best coffee culture? | italy ; ethiopia ; turkey ; vietnam ; australia ; colombia ; united_states ; other
+C | Which drink goes best with a spicy meal? | milk ; lassi ; iced_tea ; cola ; water ; lemonade ; other
+C | Which ginger drink is the best? | ginger_ale ; ginger_beer ; fresh_ginger_tea ; ginger_shot ; other
+C | Which iced coffee drink is the best? | iced_latte ; cold_brew ; vietnamese_iced_coffee ; frappe ; iced_americano ; other
+C | Which kombucha flavor is the best? | ginger ; berry ; original ; citrus ; lavender ; other
+C | Which root beer style is the best? | classic_american ; birch_beer ; sarsaparilla ; root_beer_float ; other
+C | Which coconut drink is the best? | fresh_coconut_water ; coconut_milk_shake ; horchata_de_coco ; bottled_coconut_water ; other
+S | How good is matcha? | It tastes like grass ; It is tolerable in a latte ; It is pleasant ; It is delicious ; It is the best tea there is
+S | How good is decaf coffee? | It is pointless ; It is a poor substitute ; It is decent ; It tastes as good as regular ; It tastes better than regular
+S | How good is instant coffee? | It is undrinkable ; It is fine only in an emergency ; It is acceptable ; It is surprisingly good ; It is as good as brewed coffee
+S | How good is root beer? | It tastes like medicine ; It is tolerable ; It is a decent soda ; It is delicious ; It is the best soda there is
+S | How good is diet soda compared with regular? | It is much worse ; It is slightly worse ; It tastes about the same ; It is slightly better ; It is much better
+S | How good is oat milk in coffee? | It ruins the coffee ; It is a weak substitute ; It is fine ; It is as good as dairy ; It is better than dairy
+S | How good is kombucha? | It is revolting ; It is an acquired taste ; It is fine now and then ; It is delicious ; It is the best drink there is
+S | How good is tomato juice? | It is revolting ; It is fine only in a cocktail ; It is acceptable ; It is tasty ; It is the best juice there is
+S | How good is a pumpkin spice latte? | It is undrinkable ; It is overhyped ; It is a pleasant seasonal treat ; It is delicious ; It is the best coffee drink there is
+S | How good is sweet tea? | It is far too sweet ; It is fine with lots of ice ; It is a nice drink ; It is delicious ; It is the best drink there is
+S | How good is coconut water? | It is unpleasant ; It is tolerable ; It is fine ; It is refreshing and tasty ; It is the best drink there is
+N | Is tea better than coffee?
+N | Is sparkling water better than still water?
+N | Is fresh-squeezed orange juice much better than bottled?
+N | Is espresso the best form of coffee?
+N | Is hot chocolate better than coffee on a cold day?
+N | Is cold brew better than regular iced coffee?
+N | Is loose-leaf tea better than tea bags?
+N | Is ginger beer better than ginger ale?
+N | Are milkshakes better than smoothies?

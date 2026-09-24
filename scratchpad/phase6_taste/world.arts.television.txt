@@ -1,0 +1,45 @@
+C | Which sitcom is the funniest of all time? | seinfeld ; friends ; the_office ; arrested_development ; parks_and_recreation ; frasier ; the_simpsons ; other
+C | Which Breaking Bad season is the best? | season_one ; season_two ; season_three ; season_four ; season_five
+C | Which kind of TV show is best for a lazy Sunday binge? | cozy_mystery ; sitcom ; cooking_competition ; nature_documentary ; home_renovation ; crime_drama ; other
+C | Which HBO drama is the best? | the_sopranos ; the_wire ; game_of_thrones ; succession ; six_feet_under ; true_detective ; deadwood ; other
+C | Which animated TV series is the best? | the_simpsons ; south_park ; avatar_the_last_airbender ; bojack_horseman ; futurama ; rick_and_morty ; adventure_time ; other
+C | Which anime series has the best story? | fullmetal_alchemist_brotherhood ; attack_on_titan ; death_note ; cowboy_bebop ; neon_genesis_evangelion ; one_piece ; steins_gate ; other
+C | Which kind of TV finale is the most satisfying? | neat_happy_wrap_up ; time_jump_epilogue ; open_ending ; tragic_ending ; full_circle_callback ; other
+C | Which reality competition show is the most entertaining? | survivor ; the_great_british_bake_off ; rupauls_drag_race ; top_chef ; the_amazing_race ; big_brother ; masterchef ; other
+C | Which Star Trek series is the best? | the_original_series ; the_next_generation ; deep_space_nine ; voyager ; enterprise ; strange_new_worlds ; other
+C | Which TV genre has improved the most in the streaming era? | crime_drama ; science_fiction ; fantasy ; comedy ; documentary_series ; animation ; other
+C | Which TV detective is the most entertaining to watch? | sherlock_holmes ; columbo ; hercule_poirot ; jessica_fletcher ; adrian_monk ; benoit_blanc ; other
+C | Which The Office character is the funniest? | michael_scott ; dwight_schrute ; jim_halpert ; pam_beesly ; andy_bernard ; kevin_malone ; creed_bratton ; other
+C | Which kind of TV episode structure is the most enjoyable? | self_contained_episodes ; long_serialized_arc ; mix_of_both ; anthology_with_new_story_each_season
+C | Which Game of Thrones house is the most compelling to watch? | stark ; lannister ; targaryen ; greyjoy ; tyrell ; martell ; other
+C | Which British TV comedy series is the best? | fawlty_towers ; blackadder ; the_office_uk ; the_it_crowd ; peep_show ; fleabag ; other
+C | Which Stranger Things season is the best? | season_one ; season_two ; season_three ; season_four ; season_five
+C | Which kind of TV theme song is the best? | catchy_sung_theme ; orchestral_score ; short_instrumental_sting ; licensed_pop_song ; other
+C | Which Doctor Who era is the best? | classic_era ; ninth_doctor ; tenth_doctor ; eleventh_doctor ; twelfth_doctor ; later_doctors ; other
+C | Which TV cooking show is the most enjoyable to watch? | the_great_british_bake_off ; hells_kitchen ; chopped ; top_chef ; nailed_it ; masterchef ; other
+C | Which prestige crime drama is the best? | the_wire ; breaking_bad ; the_sopranos ; true_detective ; mindhunter ; ozark ; fargo ; other
+C | Which kind of streaming series length is best? | limited_series ; short_seasons_of_six_to_eight_episodes ; full_network_seasons ; long_running_show_over_many_years
+C | Which late-night talk show format is the most enjoyable? | monologue_heavy ; celebrity_interviews ; comedy_games_and_bits ; musical_guests ; other
+C | Which cartoon from Saturday morning television is the best? | looney_tunes ; scooby_doo ; tom_and_jerry ; the_flintstones ; teenage_mutant_ninja_turtles ; spongebob_squarepants ; other
+C | Which science fiction TV series is the best? | the_twilight_zone ; star_trek_the_next_generation ; battlestar_galactica ; the_expanse ; black_mirror ; firefly ; severance ; other
+C | Which kind of TV villain is the most gripping? | calm_criminal_mastermind ; unhinged_wildcard ; sympathetic_antihero ; corporate_schemer ; supernatural_threat ; other
+S | How good is the finale of The Sopranos? | It is a frustrating non-ending ; It is fine but puzzling ; It is a bold and fitting ending ; It is one of the greatest finales in television
+S | How well does Friends hold up for a new viewer today? | It is hard to watch now ; It has occasional laughs amid dated jokes ; It is still a pleasant comfort watch ; It is as funny now as it ever was
+S | How good is the first season of True Detective? | It is slow and pretentious ; It is a decent crime show ; It is a gripping and atmospheric season ; It is one of the finest seasons of television ever made
+S | How good is the pilot episode of Lost? | It is confusing and dull ; It is an okay start ; It is an exciting and gripping pilot ; It is one of the best pilots ever made
+S | How enjoyable is a laugh track on a sitcom? | It ruins the show ; It is a distraction to be tolerated ; It barely matters ; It adds to the fun
+S | How good is The Simpsons in its later seasons? | It is unwatchable ; It has rare funny episodes ; It is still reliably decent ; It is as good as its golden age
+S | How good is Succession as a drama? | It is a dull show about unlikeable people ; It is a good show with some slow patches ; It is an excellent drama ; It is one of the best dramas ever made for television
+S | How entertaining is a typical home renovation show? | It is boring filler television ; It is mildly pleasant background viewing ; It is satisfying to watch ; It is gripping and hard to turn off
+S | How good is the ending of Breaking Bad? | It is a letdown ; It is a solid but safe ending ; It is a very satisfying ending ; It is a perfect ending
+S | How good is Avatar: The Last Airbender as a series? | It is a forgettable kids' cartoon ; It is a good show for children ; It is a great show for any age ; It is one of the best animated series ever made
+S | How well do soap operas work as entertainment? | They are unwatchable ; They work only as ironic viewing ; They are guilty-pleasure fun ; They are genuinely gripping drama
+N | Is The Wire the best TV drama ever made?
+N | Are Christmas specials of TV shows usually worth watching?
+N | Is The Office (US) funnier than the original British version?
+N | Are TV miniseries better than long-running shows?
+N | Is Seinfeld funnier than Friends?
+N | Are nature documentary series like Planet Earth the most beautiful thing on television?
+N | Is Game of Thrones still worth watching despite its final season?
+N | Do anime series tell better stories than Western animated series?
+N | Is Better Call Saul better than Breaking Bad?

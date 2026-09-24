@@ -1,0 +1,45 @@
+C | Which pizza style is the best? | neapolitan ; new_york ; chicago_deep_dish ; detroit ; roman_al_taglio ; sicilian ; other
+C | Which sandwich is the greatest? | grilled_cheese ; blt ; reuben ; banh_mi ; cuban ; philly_cheesesteak ; club ; other
+C | Which burger topping is the best? | cheese ; bacon ; fried_egg ; avocado ; caramelized_onions ; pickles ; mushrooms ; other
+C | Which pasta shape is the best? | spaghetti ; penne ; rigatoni ; fusilli ; farfalle ; orecchiette ; tagliatelle ; other
+C | Which pasta sauce is the best? | marinara ; bolognese ; carbonara ; pesto ; alfredo ; cacio_e_pepe ; arrabbiata ; other
+C | Which taco filling is the best? | carnitas ; al_pastor ; carne_asada ; barbacoa ; fish ; chicken_tinga ; other
+C | Which sushi is the best? | salmon_nigiri ; tuna_nigiri ; california_roll ; spicy_tuna_roll ; eel ; yellowtail ; other
+C | Which soup is the most satisfying? | ramen ; pho ; chicken_noodle ; french_onion ; tomato ; minestrone ; clam_chowder ; other
+C | Which egg preparation is the tastiest? | scrambled ; fried_sunny_side_up ; poached ; soft_boiled ; omelette ; deviled ; other
+C | Which condiment is the best? | ketchup ; mustard ; mayonnaise ; hot_sauce ; soy_sauce ; sriracha ; ranch ; other
+C | Which fruit is the most delicious? | mango ; strawberry ; peach ; pineapple ; watermelon ; cherry ; banana ; other
+C | Which vegetable is the most delicious? | potato ; corn ; broccoli ; carrot ; tomato ; mushroom ; asparagus ; other
+C | Which fried chicken style is the best? | southern_american ; korean ; japanese_karaage ; nashville_hot ; taiwanese_popcorn ; other
+C | Which dumpling is the most delicious? | soup_dumplings ; gyoza ; pierogi ; momo ; wontons ; ravioli ; khinkali ; other
+C | Which noodle dish is the best? | ramen ; pad_thai ; pho ; lo_mein ; udon ; laksa ; spaghetti_bolognese ; other
+C | Which curry is the best? | butter_chicken ; thai_green_curry ; japanese_curry ; massaman ; rogan_josh ; tikka_masala ; other
+C | Which cut of steak is the best? | ribeye ; filet_mignon ; new_york_strip ; t_bone ; skirt ; flank ; other
+C | Which kind of seafood is the most delicious? | shrimp ; lobster ; crab ; salmon ; oysters ; scallops ; tuna ; other
+C | Which kind of bread makes the best sandwich? | sourdough ; baguette ; ciabatta ; rye ; white_sandwich_loaf ; brioche ; other
+C | Which pizza crust is the best? | thin_and_crispy ; soft_and_chewy ; thick_and_fluffy ; stuffed ; other
+C | Which fresh herb adds the most to a dish? | basil ; cilantro ; parsley ; mint ; rosemary ; thyme ; dill ; other
+C | Which salad is the best? | caesar ; greek ; caprese ; cobb ; nicoise ; waldorf ; other
+C | Which hot dog topping is the best? | mustard ; ketchup ; relish ; sauerkraut ; chili ; onions ; other
+C | Which dip is the best? | guacamole ; hummus ; salsa ; queso ; french_onion ; tzatziki ; other
+C | Which way of serving rice is the best? | fried_rice ; plain_steamed ; risotto ; biryani ; paella ; sushi_rice ; other
+S | How good is anchovy on pizza? | It ruins the pizza ; It is edible but best picked off ; It is fine but unremarkable ; It makes the pizza better ; It is the best topping there is
+S | How good is blue cheese? | It is inedible ; It is tolerable in small amounts ; It is fine in a dressing ; It is delicious on its own ; It is the best cheese there is
+S | How good is a plain baked potato with butter? | It is bland and boring ; It is filler food ; It is a decent side ; It is a simple delight ; It is one of the great foods
+S | How good is liver as a food? | It is inedible ; It is edible only if disguised ; It is acceptable in a pate ; It is a tasty dish ; It is a delicacy
+S | How good are Brussels sprouts when roasted? | They are still awful ; They are edible ; They are a decent side ; They are genuinely delicious ; They are the best vegetable there is
+S | How good is tofu as an ingredient? | It is tasteless and pointless ; It is a poor stand-in for meat ; It is fine in the right dish ; It is delicious when cooked well ; It is one of the best ingredients there is
+S | How good are raw oysters? | They are revolting ; They are something to try once ; They are fine with lots of sauce ; They are delicious ; They are the finest food there is
+S | How good is kimchi? | It is unpleasant ; It is tolerable as a side ; It is a nice side dish ; It makes almost anything better ; It is one of the best foods in the world
+S | How good is raw shaved fennel in a salad? | It spoils the salad ; It is tolerable in thin slices ; It is a fine addition ; It makes the salad great ; It is the best part of any salad
+S | How good is a classic tuna melt? | It is unappetizing ; It is a lazy lunch ; It is a decent sandwich ; It is a comforting favorite ; It is the best sandwich there is
+S | How good is avocado toast? | It is overpriced and bland ; It is fine but overhyped ; It is a pleasant light meal ; It is genuinely delicious ; It is a perfect dish
+N | Does ketchup belong on a hot dog?
+N | Is a taco better than a burrito?
+N | Is mayonnaise better than mustard on a sandwich?
+N | Is fresh pasta better than dried pasta?
+N | Is bacon the best breakfast meat?
+N | Does cheese belong on seafood pasta?
+N | Is garlic the most important ingredient in cooking?
+N | Are olives delicious?
+N | Is ramen better than pho?

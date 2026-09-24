@@ -1,0 +1,30 @@
+C | Which social media platform is the most fun to scroll? | tiktok ; instagram ; youtube ; reddit ; x ; pinterest ; snapchat ; other
+C | Which social media platform has the best-designed app? | instagram ; tiktok ; snapchat ; pinterest ; reddit ; threads ; bluesky ; other
+C | Which kind of social media post is the most enjoyable to see? | funny_video ; travel_photo ; pet_photo ; recipe_video ; life_update_from_a_friend ; meme ; other
+C | Which platform has the most creative content? | tiktok ; youtube ; instagram ; tumblr ; pinterest ; reddit ; other
+C | Which social media feature is the best? | stories ; direct_messages ; reels_or_short_video ; saved_collections ; live_streaming ; group_chats ; other
+C | Which platform has the best community discussions? | reddit ; discord ; x ; facebook_groups ; tumblr ; quora ; other
+C | Which kind of feed is the most pleasant to use? | chronological_following_only ; algorithmic_for_you ; mixed ; topic_based ; other
+C | Which social media platform has aged the worst? | facebook ; x ; tumblr ; snapchat ; instagram ; linkedin ; other
+C | Which kind of YouTube video is the most enjoyable? | video_essay ; vlog ; tutorial ; gaming_lets_play ; music_video ; comedy_sketch ; documentary ; other
+C | Which extinct social media platform was the most fun? | myspace ; vine ; google_plus ; friendster ; orkut ; other
+C | Which platform has the best memes? | reddit ; tiktok ; x ; instagram ; tumblr ; other
+C | Which kind of TikTok trend is the most entertaining? | dance_trend ; lip_sync ; prank ; cooking_hack ; storytime ; transformation ; other
+C | Which kind of creator is the most enjoyable to follow? | comedian ; artist ; chef ; traveler ; educator ; gamer ; fitness_coach ; other
+S | How enjoyable is scrolling TikTok for an average person? | It is dull and repetitive ; It is mildly amusing ; It is very entertaining ; It is almost impossible to put down
+S | How good was Vine as a platform? | It was a forgettable fad ; It was a fun novelty ; It was a great creative platform ; It was the best short video platform ever made
+S | How good is Reddit's design as a place for discussion? | It is confusing and hostile ; It is usable but messy ; It is a good place to discuss things ; It is the best discussion site on the internet
+S | How good is Pinterest as a source of ideas? | It is useless clutter ; It is occasionally helpful ; It is a great source of ideas ; It is the best idea board ever made
+S | How entertaining is a typical livestream on Twitch? | It is boring to watch ; It is fun in small doses ; It is quite entertaining ; It is more entertaining than most television
+S | How pleasant is Instagram as an app to use? | It is cluttered and annoying ; It is fine but overloaded ; It is pleasant and polished ; It is the best-designed social app around
+S | How good is YouTube's recommendation feed? | It shows mostly junk ; It is hit or miss ; It usually finds something good ; It is uncannily good at finding great videos
+N | Is Instagram better than TikTok?
+N | Was early Facebook better than Facebook today?
+N | Is Reddit the most interesting social media platform?
+N | Are disappearing messages a fun feature?
+N | Is YouTube the best platform on the internet?
+N | Was Myspace more fun than modern social media?
+C | Which platform has the best photography content? | instagram ; flickr ; vsco ; pinterest ; reddit ; other
+S | How good is the comment section on a typical YouTube video? | It is worthless noise ; It has a few gems among junk ; It is often funny and useful ; It is frequently better than the video
+N | Is a platform with a chronological feed better than one with an algorithmic feed?
+N | Are short-form videos more entertaining than long-form videos on social media?

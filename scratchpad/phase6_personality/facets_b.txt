@@ -1,0 +1,215 @@
+@node self.personality.emotions_stress
+C | When you get stuck in a traffic jam that will make you late, what do you usually do? | message_ahead = call or text to say you'll be late ; stew_silently ; vent_out_loud ; distract_yourself_with_music ; accept_it_calmly ; other
+C | The night before a big presentation, what do you usually do to settle your nerves? | rehearse_again ; exercise ; talk_to_someone ; watch_something_light ; go_to_bed_early ; stay_up_worrying ; other
+C | When a coworker snaps at you for no clear reason, how do you usually respond in the moment? | snap_back ; go_quiet ; ask_whats_wrong ; walk_away ; laugh_it_off ; other
+C | When you feel tears coming during a sad film with friends, what do you usually do? | let_them_fall ; hold_them_back ; make_a_joke ; leave_the_room ; look_away_from_the_screen
+C | When you are overwhelmed with too many tasks at once, what do you do first? | write_a_list ; tackle_the_easiest ; tackle_the_most_urgent ; freeze_up ; ask_for_help ; take_a_break_first ; other
+C | After receiving a disappointing exam grade or performance review, what is your first move? | reread_it_carefully ; tell_someone ; put_it_away_for_later ; dispute_the_result ; plan_how_to_improve ; other
+C | While you wait anxiously for important news, how do you pass the time? | keep_busy_with_chores ; check_your_phone_constantly ; talk_it_over ; exercise ; rest_or_nap ; watch_shows ; other
+C | When someone you love is angry at you, what do you tend to do? | apologize_quickly ; defend_yourself ; give_them_space ; ask_them_to_explain ; get_angry_back ; other
+C | Which physical sign usually tells you first that you are stressed? | tight_shoulders ; headache ; upset_stomach ; trouble_sleeping ; racing_heart ; clenched_jaw ; no_clear_sign ; other
+C | When you feel jealous of someone's good news, what do you usually do with that feeling? | congratulate_and_move_on ; admit_it_to_them ; vent_to_someone_else ; brood_on_it ; use_it_as_motivation ; other
+C | When a stranger yells at you in public, how do you keep your composure? | breathe_slowly ; stay_formal_and_polite ; match_their_tone ; get_someone_else_involved ; walk_away ; other
+C | When you feel lonely on a weekend, what are you most likely to do? | message_a_friend ; go_somewhere_busy ; call_family ; lose_yourself_in_a_hobby ; scroll_on_your_phone ; wait_it_out ; other
+C | After a painful letdown, which outlet do you reach for first? | music ; writing ; exercise ; talking_to_someone ; comfort_food ; sleep ; throwing_yourself_into_work ; other
+C | When you are nervous in the waiting room before a job interview, what do you do? | review_your_notes ; chat_with_the_receptionist ; breathe_deeply ; scroll_on_your_phone ; picture_it_going_well ; fidget ; other
+C | When you realize you made a big mistake at work, how do you handle the first hour? | tell_your_boss_right_away ; quietly_fix_it ; panic_then_act ; ask_a_colleague_for_advice ; hide_it_for_now ; other
+C | When someone starts crying in front of you, what do you usually do? | hug_them ; listen_quietly ; offer_solutions ; hand_them_a_tissue_and_wait ; change_the_subject ; cry_too ; other
+C | When you come home tense after a long day, how do you usually let it out? | snap_at_whoever_is_near ; go_quiet ; exercise_it_off ; complain_to_someone ; hide_away_alone ; it_fades_on_its_own
+C | When you are proud of something you did, how do you usually express it? | tell_everyone ; tell_one_close_person ; post_about_it ; keep_it_to_yourself ; treat_yourself ; other
+C | When a gadget refuses to work and you're in a hurry, what do you do? | keep_trying_calmly ; read_the_instructions ; bang_on_it ; swear_at_it ; hand_it_to_someone_else ; walk_away_and_come_back
+C | When an argument starts getting heated, what do you do? | lower_your_voice ; call_a_pause ; push_to_win ; leave_the_room ; cry ; go_silent ; other
+C | When bad news arrives right before an event you must attend, what do you do? | put_on_a_brave_face ; cancel ; go_but_leave_early ; tell_the_host_what_happened ; other
+C | When a big change is forced on you, like a move or a new boss, how do you cope at first? | research_everything ; talk_it_through ; resist_it ; focus_on_the_upside ; withdraw_for_a_while ; other
+C | When you feel embarrassed in front of a group, what do you usually do? | laugh_along ; blush_and_go_quiet ; make_an_excuse ; leave ; pretend_nothing_happened ; other
+C | When you suddenly think you've lost your wallet, what is your first reaction? | stop_and_retrace_your_steps ; search_frantically ; call_someone ; freeze ; calmly_cancel_your_cards ; other
+C | When you are upset, who are you most likely to turn to first? | partner ; parent ; sibling ; close_friend ; coworker ; online_community ; nobody ; other
+C | When stress builds up over a hard week, how does it usually come out? | short_temper ; exhaustion ; overeating ; losing_appetite ; crying ; headaches ; it_doesnt_show ; other
+C | After you lose your temper, what do you usually do next? | apologize_right_away ; apologize_later ; explain_why ; act_like_nothing_happened ; feel_bad_but_say_nothing ; other
+C | When you have to deliver bad news to someone, how do you manage your own nerves? | rehearse_the_words ; get_it_over_with_fast ; bring_someone_along ; put_it_off ; write_it_instead ; other
+C | When something makes you really happy, how do you usually show it? | laugh_or_shout ; hug_people ; tell_people_right_away ; smile_quietly ; post_online ; it_hardly_shows
+C | When you sense tension between two people in a room, what do you do? | break_the_ice ; stay_out_of_it ; leave ; ask_one_of_them_privately ; watch_closely ; rarely_notice
+C | Before an appointment you are dreading, what helps you most? | bringing_someone ; reading_up_beforehand ; not_thinking_about_it ; planning_a_treat_afterward ; listing_your_questions ; other
+C | When you are grieving, what helps you most? | being_around_people ; time_alone ; keeping_routines ; talking_about_the_person ; staying_busy ; spiritual_practice ; other
+C | When a situation makes you furious but you must stay polite, what do you do? | breathe_deeply ; grip_something ; excuse_yourself ; smile_through_it ; let_some_of_it_show ; other
+C | When a very stressful stretch like exam season ends, how do you unwind? | sleep_for_ages ; celebrate_with_friends ; get_away_on_a_trip ; binge_shows ; clean_everything ; crash_and_get_sick ; other
+C | When you feel scared, what do you do most often? | talk_about_it ; hide_it_with_jokes ; hide_it_completely ; face_it_head_on ; avoid_the_thing ; other
+S | When you receive harsh feedback by email, how long before you can reply calmly? | I can reply calmly within minutes ; I need an hour or so ; I wait until the next day ; I need several days ; I avoid replying at all
+S | When a movie scene is sad, how do you react? | I feel nothing much ; I feel a lump in my throat ; My eyes get wet ; I cry quietly ; I sob openly
+S | When you are angry with someone close to you, how do you let them know? | I never let them know ; I drop hints ; I tell them calmly later ; I tell them in the moment ; I raise my voice
+S | When a comment hurts you, when do you tell the person? | I never mention it ; I mention it only if it happens again ; I bring it up days later ; I bring it up later that day ; I tell them right away
+S | How much does a stressful day at work spill into your evening? | I leave it at the door ; I mention it at dinner then drop it ; It keeps me from relaxing until bedtime ; It keeps me awake at night ; It spoils the next day too
+S | When you are sad, how visible is it to people around you? | No one could tell ; Only close friends notice ; Coworkers ask if I'm okay ; Strangers can see it on my face
+S | When a deadline is suddenly moved up, how do you handle it? | I calmly re-plan my work ; I grumble then get on with it ; I rush and make mistakes ; I lose sleep over it ; I shut down and can't start
+S | When someone tells you they are going through a hard time, how do you respond? | I change the subject ; I offer quick advice ; I listen and ask questions ; I check in on them for weeks after
+S | When you get stage fright before speaking, how does it affect you? | I feel no nerves at all ; I feel butterflies that fade once I start ; My voice shakes at the start ; I stumble through the whole talk ; I avoid speaking whenever I can
+S | After a stressful phone call, how long does your body stay tense? | I relax as soon as I hang up ; I need a short walk to shake it off ; I feel tense for the rest of the afternoon ; I still feel it at bedtime
+S | When you have a bad day, how much do you talk about it at home? | I say nothing at all ; I say it was fine ; I give a short summary ; I tell the whole story ; I vent for the whole evening
+S | When you feel angry in a meeting, what shows? | Nothing shows at all ; My face gets tense ; My tone becomes sharp ; I interrupt people ; I raise my voice or walk out
+S | When someone asks how you are on a bad day, how do you answer? | I say fine and smile ; I say not great and move on ; I share a little of what happened ; I tell them everything
+S | When you are under heavy pressure, how does your eating change? | It doesn't change ; I snack a little more ; I skip the odd meal ; My meals become chaotic ; I barely eat for days
+S | When you cry in front of others, how do you feel afterward? | Relieved and fine ; A little awkward ; Embarrassed for the rest of the day ; Ashamed for days
+S | When a coworker takes credit for your idea, how do you handle your anger? | I let it go quietly ; I mention it to a friend ; I calmly correct the record ; I confront the coworker privately ; I call them out in front of everyone
+S | When you face a problem that scares you, how do you approach it? | I avoid it entirely ; I wait until I have no choice ; I tackle it after some delay ; I face it right away
+S | When someone near you is anxious, how do you respond? | I don't notice ; I notice but say nothing ; I ask if they're okay ; I help them calm down ; I stay with them until they feel better
+S | After you cry, how quickly do you bounce back? | Within minutes ; Within an hour ; By the next morning ; It takes several days
+S | When a trip goes badly wrong, like a missed flight, how do you react? | I laugh and rebook ; I sigh and rebook ; I get tense and short with people ; I argue with staff ; I break down in tears
+S | When you feel overwhelmed, how willing are you to cancel plans to rest? | I never cancel, I push through ; I cancel only if I'm physically ill ; I cancel the least important plan ; I clear my whole schedule
+N | Do you write in a journal to sort out your feelings?
+N | Do you take slow deep breaths on purpose to calm down when upset?
+N | Do you listen to sad music when you are sad?
+N | Do you tend to cry when you are very angry?
+N | Do you hide your stress from your family so they won't worry?
+N | Do you clean or tidy up when you feel stressed?
+N | Do you find it easy to comfort someone who is crying?
+N | Do you go quiet when you are upset?
+N | Do you need to talk a problem through out loud before you can calm down?
+N | Do you laugh when you are nervous?
+N | Do you eat more when you are stressed?
+N | Do you sleep more when you are going through a hard time?
+N | Do you stay calm when everyone around you is panicking?
+N | Do you slam doors when you are angry?
+
+@node self.personality.risk_decision_style
+C | When you are offered a job with higher pay but less security, what do you do? | take_it ; negotiate_first ; ask_for_time ; stay_put ; take_it_only_with_savings_behind_you ; other
+C | At a card game with money at stake, what is your usual approach? | avoid_it ; bet_small_and_stop ; set_a_limit_and_stick_to_it ; chase_your_losses ; bet_big_for_fun ; other
+C | When your gut feeling and a list of pros and cons disagree, which do you follow? | gut_feeling ; pros_and_cons ; ask_someone_else ; delay_the_decision ; flip_a_coin
+C | Which bet would you take? | sure_thing = a guaranteed small prize ; even_odds = a fair chance at a prize twice as big ; long_shot = a slim chance at a huge prize ; no_bet
+C | When choosing between two job offers, what usually tips the balance? | salary ; gut_feeling ; the_people_you_met ; advice_from_others ; long_term_prospects ; commute ; other
+C | After you order a dish and someone else's arrives looking better, what do you think? | wish_you_had_ordered_theirs ; ask_to_try_theirs ; happy_with_yours ; plan_to_order_it_next_time ; other
+C | When a decision comes with a deadline, when do you usually make it? | right_away ; well_before_the_deadline ; the_day_before ; at_the_last_minute ; after_the_deadline_passes
+C | When choosing a gift for someone, how do you settle on one? | go_with_the_first_good_idea ; hunt_for_the_perfect_one ; ask_what_they_want ; give_money_or_a_voucher ; other
+C | When you are unsure which of two paths to take, who do you consult? | nobody ; family ; best_friend ; partner ; mentor_or_expert ; the_internet ; other
+C | When signing up for a phone plan or contract, how do you choose? | read_all_the_fine_print ; compare_a_few_quickly ; keep_the_default ; pick_what_friends_have ; other
+C | A stranger suggests a shortcut through an unfamiliar area at night. What do you do? | take_it ; decline_politely ; check_a_map_first ; take_it_only_with_a_friend ; other
+C | A store says all sales are final on something you're unsure about. What do you do? | buy_it_anyway ; leave_it ; take_a_photo_and_think_it_over ; ask_for_an_exception
+C | When a choice you made turns out badly, what do you tell yourself? | right_call_with_what_i_knew ; should_have_known_better ; next_time_ill_do_better ; just_bad_luck ; blame_whoever_advised_me ; other
+C | When an app or website asks you to choose your settings, what do you do? | accept_all_defaults ; review_each_one ; skim_and_change_a_few ; other
+C | When you're about to send an important message, what do you usually do? | send_it_immediately ; reread_once ; reread_many_times ; ask_someone_to_check_it ; sleep_on_it
+C | When you're offered an unplanned upgrade, like a bigger room for a fee, what do you do? | accept_on_impulse ; think_it_over ; decline ; ask_your_companion
+C | Which kind of uncertainty bothers you most? | not_knowing_the_outcome ; not_knowing_when ; unclear_rules ; relying_on_others ; none
+C | If you could earn far more by moving to a country where you know no one, what would you do? | go_right_away ; go_for_a_trial_period ; stay ; negotiate_to_work_remotely ; other
+C | In a board game, when you can make a safe move or a risky move that could win, which do you usually take? | safe_move ; risky_move ; depends_on_whos_winning ; other
+C | When a coworker asks you to make a quick call on something you're unsure about, what do you do? | decide_on_the_spot ; ask_for_time ; pass_it_to_someone_else ; ask_more_questions_first
+C | How do you usually feel just before making a big choice you can't take back? | excited ; nervous ; calm ; sick_with_doubt ; numb ; other
+C | When you get a strong hunch about a person you just met, what do you do? | act_on_it ; wait_for_evidence ; ignore_it ; ask_others_what_they_think
+C | When something you took a chance on doesn't pay off, what do you usually do next? | try_again_bigger ; try_again_the_same_way ; take_a_break ; stop_for_good ; analyze_what_went_wrong
+C | What most often makes you hesitate before a decision? | fear_of_regret ; fear_of_judgment ; too_many_options ; missing_information ; fear_of_losing_money ; rarely_hesitate
+C | Which do you trust more when choosing somewhere new to eat? | online_ratings ; a_friends_recommendation ; how_it_looks_from_outside ; how_busy_it_is ; other
+C | When you sign up for a free trial, what do you do? | set_a_reminder_to_cancel ; risk_forgetting_to_cancel ; avoid_free_trials ; read_the_terms_first ; other
+C | When you face a decision under time pressure, how do you tend to perform? | sharper_than_usual ; about_the_same ; worse_than_usual ; freeze
+C | You find a dream apartment, but you have to sign today. What do you do? | sign_now ; ask_for_one_more_day ; walk_away ; ask_someone_to_see_it_first
+C | When an opportunity carries a small chance of embarrassment, what do you do? | go_for_it ; weigh_it_up ; ask_someone_to_do_it_with_you ; pass
+C | Which kind of mistake do you fear more? | acting_and_being_wrong ; missing_a_chance ; both_equally ; neither
+C | When torn between a stable path and a passion project, which pulls you harder? | stable_path ; passion_project ; trying_to_do_both ; other
+C | When a friend dares you to do something slightly risky, what do you do? | accept_every_time ; accept_if_its_safe_enough ; laugh_and_refuse ; dare_them_back
+C | You buy something and see it cheaper elsewhere the next day. How do you react? | shrug_it_off ; return_it_and_rebuy ; ask_for_a_price_match ; stew_about_it
+C | Which everyday decision do you find hardest to make? | what_to_eat ; what_to_wear ; what_to_watch ; what_to_buy_as_a_gift ; how_to_spend_a_free_day ; none_are_hard
+C | When an umbrella seems unnecessary but rain is possible, what do you do? | bring_it_anyway ; leave_it_and_risk_it ; check_the_forecast_again ; other
+S | When buying something expensive, how many options do you compare? | I buy the first one that fits ; I look at a couple of options ; I compare a handful of options ; I compare every option I can find ; I compare for weeks and often buy nothing
+S | When a decision affects only you, how long do you usually take? | I decide in seconds ; I decide within a few minutes ; I sleep on it ; I think about it for weeks ; I avoid deciding until it's decided for me
+S | When you swim in the sea, how far out do you usually go? | I stay on the sand ; I paddle in the shallows ; I swim where my feet can touch ; I swim out past the waves ; I swim far out alone
+S | When crossing a busy street, what do you usually do? | I wait for the signal even with no cars ; I cross early only if the road is empty ; I dart across gaps in traffic ; I weave through moving cars
+S | How fast do you usually drive compared to the speed limit? | I don't drive ; I drive under the limit ; I stay right at the limit ; I go a little over ; I go well over whenever I can
+S | How do you act on a plan when you only have half the facts? | I refuse to act until I know more ; I act only if someone else agrees ; I act carefully and adjust ; I act boldly and figure it out later
+S | After an important choice, how long do you keep revisiting it? | I never think about it again ; I think about it once or twice ; I revisit it for weeks ; I still revisit old choices years later
+S | When a hunch conflicts with the evidence, how much weight do you give the hunch? | None at all ; A little, as a tie-breaker ; About as much as the evidence ; More than the evidence
+S | When you play cards with friends for small stakes, how do you bet? | I don't play for money ; I bet the minimum ; I bet sensibly ; I bet big to make it exciting ; I bet everything on one hand
+S | How do you feel when you have to choose without being able to ask anyone? | Relieved to decide alone ; Fine ; Uneasy ; Paralyzed
+S | How would you react to being offered a job in a field you've never worked in? | I would turn it down immediately ; I would ask a lot of questions and likely decline ; I would try it if the pay were safe ; I would jump at it
+S | How do you handle a decision where every option has a downside? | I delay until the problem solves itself ; I ask someone else to choose ; I pick the least bad after long thought ; I pick quickly and move on
+S | When cooking for guests, how much do you experiment? | I only serve dishes I've made many times ; I test a new dish the day before ; I make a new dish for the first time on the night ; I invent a dish on the spot
+S | How do you respond when someone says you only live once as a reason to do something? | It never persuades me ; It persuades me for small things ; It often tips me over ; It is my life motto
+S | When you notice you picked the slower checkout line, what do you do? | I don't notice ; I notice and shrug ; I switch lines once ; I keep switching and get annoyed
+S | Before a big decision, how much do you plan for what could go wrong? | I don't think about it ; I think of the obvious risk ; I plan for several risks ; I make a backup plan for every risk
+S | How willing are you to let a coin flip decide for you? | I would never let chance decide ; I use it only for trivial things like who goes first ; I use it when I'm truly stuck ; I use it for real decisions like where to travel
+S | When a choice goes wrong purely through bad luck, how do you react? | I shrug it off right away ; I feel annoyed for a day ; I replay it for weeks ; I avoid similar choices from then on
+S | How do you approach signing a long contract, like a lease? | I sign without reading ; I skim the main points ; I read it all carefully ; I have someone else review it too
+S | How comfortable are you leaving something stable to start over? | I would never do it ; I'd do it only with a new position lined up ; I'd do it with some savings behind me ; I've done it before and would again
+S | When you pack for a trip, how much do you prepare for things that might go wrong? | I pack only the basics and wing it ; I bring a few spares ; I pack for most weather and mishaps ; I pack for every possible disaster
+N | Do you buy lottery tickets?
+N | Do you seek out the scariest rides at an amusement park?
+N | Do you read reviews before almost every purchase?
+N | Do you often wish you had ordered something else after your food arrives?
+N | Do you write lists of pros and cons when making decisions?
+N | Do you ask several people for advice before a big choice?
+N | Do you like to have a backup plan for most important decisions?
+N | Would you try an extreme sport if someone offered you a free lesson?
+N | Do you trust first impressions when deciding about people?
+N | Do you bet on sports games with friends?
+N | Do you enjoy making decisions under pressure?
+N | Do you often return things because you changed your mind after buying them?
+N | Would you move to a new country without a job lined up?
+N | Do you usually pick the safe option when you're unsure?
+
+@node self.personality.self_concept
+C | When you look at a photo of yourself, what do you notice first? | your_flaws ; what_you_like ; your_expression ; the_background ; you_avoid_looking
+C | Which role do you usually see yourself playing in a group project? | organizer ; idea_person ; hard_worker ; peacemaker ; critic ; quiet_contributor ; other
+C | When someone praises one of your skills, what do you usually think? | they_are_right ; they_are_being_nice ; i_got_lucky ; i_could_do_better ; other
+C | When you fail at something new, what do you tell yourself? | im_not_good_at_this ; i_need_more_practice ; it_was_bad_luck ; it_doesnt_matter ; other
+C | When you walk into a room of people who seem more accomplished than you, how do you feel? | inspired ; out_of_place ; curious ; competitive ; like_an_equal ; other
+C | Which label would you most readily use to describe yourself? | creative ; practical ; kind ; smart ; funny ; hardworking ; loyal ; other
+C | When someone disagrees with your opinion, what does it do to your confidence? | nothing ; makes_you_doubt_yourself ; makes_you_dig_in ; makes_you_curious
+C | When you imagine yourself a decade from now, what do you picture? | very_different ; mostly_the_same ; a_better_version ; cant_picture_it
+C | When people ask where you're from, what do you usually say? | where_you_were_born ; where_you_live_now ; where_you_grew_up ; it_depends_who_asks ; its_a_long_story
+C | What do you rely on most to feel good about yourself? | achievements ; relationships ; appearance ; living_by_your_values ; skills ; other
+C | When you hear a recording of your own voice, how do you react? | cringe ; dont_mind ; like_it ; laugh ; avoid_listening
+C | How do you think new acquaintances see you at first? | shy ; confident ; friendly ; serious ; intimidating ; funny ; other
+C | When you achieve something, what do you credit most? | your_talent ; help_from_others ; luck ; hard_work ; other
+C | Which role do you see yourself playing in most groups you belong to? | the_planner ; the_listener ; the_joker ; the_advice_giver ; the_wild_one ; the_quiet_one ; other
+C | When someone asks what you're good at, what do you do? | answer_confidently ; list_a_few_things ; downplay_it ; draw_a_blank ; turn_it_into_a_joke
+C | When you're alone with your thoughts, what do you think about yourself most? | past_mistakes ; future_plans ; things_youre_proud_of ; how_others_see_you ; rarely_think_about_yourself
+C | Whose view do you trust most to tell you how you're doing? | your_own_judgment ; close_friends ; family ; your_boss_or_teacher ; the_results ; other
+C | When a younger person asks you for advice, how do you see yourself? | wise_enough_to_help ; unqualified ; flattered ; just_a_peer ; other
+C | Which kind of praise lifts your sense of worth most? | praise_for_effort ; praise_for_talent ; praise_for_kindness ; praise_for_results ; praise_rarely_affects_you
+C | If you wrote a short bio about yourself, what would you lead with? | your_job ; your_hobbies ; your_family ; your_values ; where_you_live ; a_joke
+C | When you think about your past self, what do you mostly feel? | fondness ; embarrassment ; pride_in_how_youve_grown ; regret ; indifference
+C | Which do you consider your most unusual quality? | a_rare_skill ; an_odd_sense_of_humor ; a_strange_habit ; an_unusual_background ; unusual_taste ; nothing_unusual
+C | How do you usually handle being the least experienced person in a room? | ask_lots_of_questions ; stay_quiet ; pretend_to_know ; soak_it_all_up ; leave_early
+C | In which setting do you feel most like yourself? | home_alone ; with_old_friends ; at_work ; outdoors ; with_family ; while_creating_something ; other
+C | When you get a new role or title, how do you feel? | ready_for_it ; like_an_impostor ; proud ; nervous_but_excited ; other
+C | When someone underestimates you, how do you respond? | set_out_to_prove_them_wrong ; ignore_it ; correct_them ; quietly_agree_with_them ; other
+C | Which do you believe more about your own abilities? | mostly_born_with_them ; mostly_built_through_effort ; an_equal_mix
+C | When you think of your strengths, which kind comes to mind first? | mental ; social ; physical ; creative ; practical ; moral
+C | How does your self-confidence vary across settings? | high_everywhere ; high_at_work_low_socially ; high_socially_low_at_work ; low_everywhere ; it_changes_day_to_day
+C | What kind of person do you most want others to see you as? | capable ; kind ; interesting ; successful ; fun ; trustworthy ; other
+C | Compared with most people your age, where do you picture yourself in life? | ahead ; about_even ; behind ; on_a_different_path
+C | When you receive an award or public recognition, how do you feel inside? | deserving ; surprised ; uncomfortable ; thrilled ; sure_its_a_mistake
+C | Which mistake would hurt your self-image most? | looking_foolish ; letting_someone_down ; losing_a_competition ; failing_a_test ; being_wrong_in_public ; other
+C | When asked to rate yourself on a work or school review, what do you do? | rate_yourself_high ; rate_yourself_honestly ; rate_yourself_low_to_be_safe ; put_yourself_in_the_middle ; other
+C | How do you feel when you are the most skilled person in the room? | comfortable ; pressured ; proud ; eager_to_help ; uneasy
+S | How do you feel when you see a candid photo of yourself? | I like how I look ; I see a few flaws but I'm fine ; I focus mostly on my flaws ; I ask for it to be deleted
+S | When someone praises your work in front of others, how much do you believe them? | I don't believe them at all ; I think they're just being polite ; I believe them partly ; I believe them completely
+S | How sure of your own opinions are you in a group discussion? | I rarely form an opinion ; I have one but keep quiet ; I share it but back down easily ; I share it and stand by it
+S | How much do you feel you have to prove yourself at work or school? | I feel accepted as I am ; I feel I must prove myself on new projects ; I feel I must prove myself every week ; I feel I must prove myself every single day
+S | How would you react if asked to teach a class on a skill you know well? | I'd refuse because I'm not good enough ; I'd agree but worry I'd be found out ; I'd agree with some nerves ; I'd jump at it because I know I'm good
+S | When a task goes well, how much credit do you give yourself? | None, it was luck ; A little, others did most of it ; A fair share ; Most of it
+S | How do you talk to yourself after a small mistake? | I laugh it off ; I note it and move on ; I call myself names under my breath ; I replay it and criticize myself all day
+S | How do you feel about your own name? | I dislike it ; It's fine ; I like it ; I love it and it suits me
+S | When you are the new person in a group, how quickly do you feel you belong? | I never quite feel I belong ; It takes me months ; It takes a few weeks ; I feel I belong right away
+S | When someone shares a big accomplishment, how do your own accomplishments feel? | Mine suddenly feel worthless ; Mine feel smaller ; Mine feel unchanged ; Mine feel just as worthy
+S | How do you feel about trying out for something with an audition or tryout? | I never try out ; I try out only if friends do ; I try out but expect to lose ; I try out expecting to get in
+S | How do you describe your abilities on a resume or profile? | I leave out real skills ; I undersell them ; I describe them accurately ; I present them at their very best ; I stretch the truth
+S | How ready do you feel to handle a big unexpected challenge? | I feel I couldn't cope ; I'd cope only with lots of help ; I'd figure it out slowly ; I trust I'd handle it well
+S | How sure are you about which of your traits people like most? | I have no idea ; I have a vague guess ; I have a good idea ; I know exactly
+S | How accepting are you of your own flaws? | I hate them and hide them ; I try hard to fix them ; I accept most of them ; I joke about them openly
+S | When you picture yourself giving a toast at a wedding, how do you see it going? | I'd freeze up ; I'd get through it nervously ; It would go fine ; I'd be the highlight of the night
+S | How strongly do you identify with your job or studies? | It's just what I do to get by ; It's a part of me ; It's a big part of who I am ; It is who I am
+S | How much does a bad hair day affect your confidence? | Not at all ; I notice but forget about it ; It makes me self-conscious all day ; It makes me avoid going out
+S | How do you feel when someone introduces you by listing your achievements? | Embarrassed ; Uneasy ; Pleased ; Proud and energized
+S | How sure are you that you'd be good at a job you've never done? | I assume I'd be bad at it ; I'd need a lot of learning ; I'd pick it up in time ; I'd be good at it quickly
+S | After meeting someone once, how well do you think they remember you? | I assume they forget me ; They remember me vaguely ; They remember something I said ; I'm sure I made a lasting impression
+N | Do you think you are more talented than people give you credit for?
+N | Do you keep a record of your achievements, like saved praise or awards?
+N | Do you consider yourself a good judge of character?
+N | Are you comfortable saying out loud that you are good at something?
+N | Do you think of yourself as a lucky person?
+N | Do you present yourself differently online than in person?
+N | Do you have a clear idea of your biggest strength?
+N | Do you think you are a good listener?
+N | Do you often feel out of place in groups?
+N | Do you think your friends admire you?
+N | Do you see yourself as a brave person?
+N | Do you think of yourself as a practical person?
+N | Do you feel you have reached your potential?
+N | Do you see yourself as a kind person?

@@ -1,0 +1,119 @@
+# self.lifestyle.leisure_hobbies
+C | Which water activity would you most enjoy? | swimming ; kayaking ; surfing ; sailing ; paddleboarding ; snorkeling ; fishing ; none
+C | Which winter activity do you enjoy most? | skiing ; snowboarding ; ice_skating ; sledding ; building_snowmen ; staying_indoors ; other
+C | Which kind of dance would you most like to learn? | salsa ; ballroom ; hip_hop ; tango ; ballet ; swing ; line_dancing ; none
+C | Which art form would you most like to practice? | painting ; drawing ; sculpture ; photography ; calligraphy ; printmaking ; none
+C | Which kind of class would you sign up for on a free evening? | cooking ; language ; pottery ; dance ; martial_arts ; improv_comedy ; woodworking ; other
+C | What kind of hike do you enjoy most? | short_flat_walk ; forest_trail ; mountain_summit ; coastal_path ; multi_day_trek ; no_hiking
+C | Which racket sport would you pick to play? | tennis ; badminton ; squash ; table_tennis ; pickleball ; padel ; none
+C | Which kind of card game do you like best? | poker ; bridge ; rummy ; solitaire ; uno ; go_fish ; none ; other
+C | What would you most like to build with your own hands? | furniture ; a_model_ship ; a_birdhouse ; a_computer ; a_garden_bed ; a_quilt ; other
+C | Which kind of fiber craft appeals to you most? | knitting ; crochet ; sewing ; embroidery ; weaving ; quilting ; none
+C | Which kind of concert would you choose for a night out? | rock ; classical_orchestra ; jazz_club ; pop_arena_show ; folk_acoustic ; electronic_dj_set ; other
+C | Which kind of collection would you most enjoy building? | vinyl_records ; books ; plants ; stamps_or_coins ; sneakers ; art_prints ; board_games ; none
+C | What do you most like to do at the beach? | swim ; sunbathe ; read ; build_sandcastles ; play_volleyball ; walk_along_the_shore ; other
+C | Which kind of game night do you prefer? | board_games ; card_games ; trivia ; charades ; karaoke ; video_games ; other
+C | Which gym activity do you enjoy most? | weightlifting ; treadmill_running ; group_fitness_classes ; spin ; yoga ; swimming_laps ; i_avoid_gyms
+C | Which kind of museum would you visit on a day off? | art ; natural_history ; science ; history ; design ; transport ; none
+C | What kind of book do you reach for on vacation? | thriller ; romance ; fantasy ; literary_fiction ; memoir ; travel_writing ; no_book
+C | Which outdoor adventure appeals to you most? | rock_climbing ; white_water_rafting ; mountain_biking ; paragliding ; scuba_diving ; caving ; none
+C | Which kind of live performance would you choose to watch? | stand_up_comedy ; theater_play ; musical ; ballet ; opera ; circus ; magic_show ; other
+C | What kind of collecting hobby would you take up? | stamps ; coins ; vinyl_records ; trading_cards ; vintage_toys ; plants ; rocks_and_fossils ; none
+C | Which hobby would you pick for a long rainy weekend? | reading ; baking ; puzzles ; crafts ; writing ; learning_something_online ; napping ; other
+C | Which kind of photography do you enjoy most? | landscapes ; portraits ; street_scenes ; wildlife ; food ; architecture ; none
+C | Which martial art would you most like to learn? | karate ; judo ; boxing ; brazilian_jiu_jitsu ; taekwondo ; kung_fu ; none
+C | Which festival would you most like to attend? | music_festival ; food_festival ; film_festival ; book_festival ; lantern_festival ; folk_festival ; none
+C | What kind of writing do you enjoy doing for fun? | journaling ; poetry ; short_stories ; letters ; songwriting ; blogging ; none
+C | Which kind of garden project would you enjoy most? | growing_vegetables ; flower_beds ; bonsai ; herb_garden ; houseplant_collection ; none
+C | Which cycling style do you prefer? | leisurely_city_rides ; long_road_rides ; mountain_biking ; bike_touring ; stationary_bike ; no_cycling
+C | Which kind of puzzle would you pick on a lazy afternoon? | crossword ; sudoku_style_logic_grid ; jigsaw ; word_search ; riddles ; escape_room_box ; none
+C | Which part do you prefer to play in a group game? | leader ; strategist ; wildcard ; quiet_observer ; scorekeeper ; host
+C | What kind of weekend trip away from home do you enjoy most as a hobby? | camping ; fishing_trip ; hiking_trip ; city_break ; spa_weekend ; staying_home
+C | Which type of running do you enjoy most? | slow_jogging ; trail_running ; sprints ; road_races ; running_with_a_group ; no_running
+C | Which kind of baking project would you take on for fun? | bread ; cakes ; cookies ; pastries ; pies ; none
+C | What kind of craft would you do with friends? | candle_making ; pottery_painting ; tie_dye ; jewelry_making ; flower_arranging ; none ; other
+C | Which kind of sport would you play in a local league? | soccer ; basketball ; volleyball ; softball ; ultimate_frisbee ; bowling ; none
+C | Where do you prefer to swim? | indoor_pool ; outdoor_pool ; sea ; lake ; river ; i_do_not_swim
+C | What would you most like to learn to make? | cheese ; beer ; wine ; soap ; candles ; perfume ; other
+C | Which kind of nighttime activity do you enjoy most? | stargazing ; night_walks ; bonfire_with_friends ; late_movie ; bar_or_club ; reading_in_bed ; other
+C | Which animal-related hobby appeals to you most? | birdwatching ; horse_riding ; volunteering_at_a_shelter ; beekeeping ; fishing ; none
+C | Which puzzle game with others do you enjoy most? | escape_rooms ; murder_mystery_parties ; scavenger_hunts ; pub_quizzes ; treasure_hunts ; none
+C | What kind of musical activity would you choose? | singing_in_a_choir ; playing_in_a_band ; solo_instrument ; djing ; karaoke ; none
+C | Which kind of volunteering would you choose as a regular activity? | animal_shelter ; food_bank ; tutoring ; park_cleanup ; hospital_visits ; none ; other
+C | Which kind of workshop would you most like to attend? | blacksmithing ; glassblowing ; bookbinding ; leatherwork ; stained_glass ; none
+C | Which kind of game do you enjoy at a party? | charades ; pictionary ; twister ; truth_or_dare ; beer_pong ; none ; other
+C | What would you do with a spare hour on a weeknight? | read ; exercise ; call_a_friend ; cook_something_new ; work_on_a_project ; rest ; other
+C | Which kind of fishing would you choose? | fly_fishing ; lake_fishing_from_a_boat ; sea_fishing ; ice_fishing ; pier_fishing ; none
+C | Which adventurous weekend activity would you pick? | zip_lining ; go_karting ; horseback_riding ; hot_air_balloon ; skydiving ; none
+C | Which amusement park ride do you like most? | roller_coaster ; ferris_wheel ; log_flume ; bumper_cars ; drop_tower ; carousel ; none
+C | Which kind of woodworking would you do? | carving ; furniture_building ; wood_turning ; pyrography ; none
+C | Which classic pastime do you enjoy most? | knitting ; model_trains ; chess ; bird_feeding ; crossword ; stamp_collecting ; none
+C | Which kind of outdoor game do you enjoy at a picnic? | frisbee ; badminton ; cornhole ; croquet ; bocce ; tag ; none
+C | Which language would you most like to learn as a hobby? | spanish ; french ; japanese ; italian ; mandarin ; sign_language ; none ; other
+C | Which kind of mind hobby do you like most? | memory_training ; learning_trivia ; speed_reading ; mental_math_puzzles ; none
+C | Which kind of volunteering would you most enjoy in your free time? | animal_shelter ; food_bank ; trail_cleanup ; tutoring ; community_garden ; event_help ; none
+C | Which kind of bowling alley activity do you like best? | ten_pin_bowling ; billiards ; darts ; arcade_games ; air_hockey ; none
+C | Which kind of animal would you like to ride for fun? | horse ; camel ; elephant ; donkey ; none
+C | Which kind of hobby club would you join? | book_club ; running_club ; chess_club ; film_club ; hiking_club ; gardening_club ; none ; other
+C | What kind of event would you choose on a free Friday night? | dinner_out ; house_party ; live_music ; quiz_night ; cinema ; early_night ; other
+C | Which type of reading do you do most for pleasure? | novels ; nonfiction ; comics_or_graphic_novels ; magazines ; poetry ; none
+C | Which kind of fitness class would you try? | pilates ; spin ; kickboxing ; zumba ; crossfit ; barre ; none
+C | Which kind of nature outing do you enjoy most? | forest_walk ; lakeside_picnic ; mountain_drive ; berry_picking ; wildflower_hunt ; tide_pooling ; none
+C | Which snow sport would you most like to master? | downhill_skiing ; cross_country_skiing ; snowboarding ; snowshoeing ; ice_climbing ; none
+C | Which do you prefer to do on a free Sunday morning? | sleep_in ; go_for_a_run ; farmers_market ; brunch_with_friends ; read_the_papers ; religious_service ; other
+C | Which kind of creative hobby would you keep up for years? | painting ; music ; writing ; knitting ; photography ; woodworking ; none
+C | Which outdoor sport would you watch or play with friends at a park? | soccer_kickabout ; basketball_pickup ; frisbee ; volleyball ; softball ; none
+C | What kind of pottery would you most like to make? | bowls ; mugs ; vases ; plates ; sculptures ; none
+S | How much do you enjoy learning new skills in your free time? | I would rather rest than learn anything ; I pick up something new once in a while ; I usually have one skill I am working on ; I am often learning several things at once ; Learning new skills is how I spend most of my free time
+S | How far would you travel for a hobby event? | I only do hobbies at home ; I go to events in my own town ; I drive a couple of hours for a good event ; I fly to other cities for events ; I travel abroad for events related to my hobby
+S | How much of your free time do you spend outdoors? | I stay indoors almost all the time ; I get outside on nice weekends ; I spend a few hours outside each week ; I spend most free days outside ; I am outside in every spare moment
+S | How much do you like to plan your weekends? | I make no plans at all ; I have one loose idea ; I plan one activity per day ; I plan most of the weekend ; I have every hour of the weekend scheduled
+S | How much do you enjoy doing hobbies with strangers? | I avoid any group activity with strangers ; I tolerate strangers if a friend comes too ; I am fine joining a group of strangers ; I enjoy meeting new people through hobbies ; I seek out hobby groups mainly to meet new people
+S | How much do you enjoy challenging physical hobbies? | I avoid anything that makes me sweat ; I like gentle walks ; I enjoy moderate exercise ; I like hard workouts ; I love pushing my body to its limits
+S | How patient are you with hobbies that take a long time to master? | I quit if I am not good right away ; I give a new hobby a few weeks ; I stick with it for a few months ; I keep going for years ; I am happy to spend a lifetime improving
+S | How much do you like hobbies that produce something you can keep? | I prefer hobbies that leave nothing behind ; I don't mind either way ; I like having something to show at the end ; I choose hobbies mainly for what I can make
+S | How much do you enjoy doing magic tricks or card tricks? | I have no interest in them ; I know one trick from childhood ; I show a few tricks at parties ; I practice new tricks regularly ; I perform for anyone who will watch
+S | How much equipment do you like for your hobbies? | I want hobbies that need nothing ; I like a few basic tools ; I buy good gear for my main hobby ; I own lots of specialized equipment ; I have a whole room of hobby gear
+S | How much do you enjoy camping rough? | I would never camp ; I prefer a cabin with a bed ; I like a campsite with showers ; I am happy in a tent in the wild ; I love sleeping under the stars with no tent
+S | How much do you like taking part in races or competitions for your hobby? | I never compete ; I would join a fun, casual event ; I enter a few events a year ; I compete regularly ; I train mainly for competitions
+S | How often do you visit museums or galleries for fun? | I never go ; I go when traveling ; I go a few times a year ; I go most months ; I go almost every week
+S | How much do you enjoy sewing or mending things? | I throw away anything that tears ; I sew on a button when I must ; I mend my own clothes ; I make simple clothes ; I sew most of my own wardrobe
+S | How much do you enjoy going to the theater? | I would never go ; I go only if someone gives me a ticket ; I go once in a while ; I go several times a year ; I go as often as I possibly can
+S | How much do you enjoy knitting or sewing as a pastime? | I have never been drawn to it ; I tried it once and stopped ; I pick it up now and then ; I have a project going most of the time ; It fills most of my free evenings
+S | How much do you enjoy long walks? | I walk only when I have to ; I enjoy a short stroll ; I like a walk of an hour or so ; I walk for hours on weekends ; I go on walks that last all day
+S | How much do you enjoy trivia and quiz nights? | I avoid them ; I go if friends insist ; I enjoy one now and then ; I go regularly ; I compete in every quiz I can find
+S | How much do you enjoy karaoke? | I would never sing in front of anyone ; I sing only in a private room with friends ; I join in on group songs ; I happily take the microphone alone ; I would sing all night if allowed
+S | How much do you enjoy geocaching or treasure hunts? | It sounds pointless to me ; I would try it once ; I join in when friends go ; I go out hunting on my own ; I plan whole weekends around it
+S | How much time do you spend on your main hobby each week? | I have no main hobby ; I spend a little time on it now and then ; I spend a few hours on it ; I spend most evenings on it ; It takes up nearly all my free time
+S | How much do you enjoy DIY projects around the house? | I pay someone to do everything ; I hang a picture when needed ; I enjoy simple repairs ; I take on big projects like tiling ; I would renovate a whole house myself
+S | How much do you enjoy cooking as a hobby rather than a chore? | I cook only to eat ; I enjoy cooking a special meal now and then ; I like trying new recipes most weeks ; I spend whole afternoons cooking for fun ; Cooking is my favorite way to spend free time
+S | How much do you enjoy swimming? | I avoid water ; I paddle in the shallow end ; I swim a few leisurely laps ; I swim regularly for fun ; I swim long distances in open water
+S | How much do you enjoy hosting game nights? | I would never host one ; I host when friends ask ; I host a few times a year ; I host every month ; I host game nights nearly every week
+S | How much do you enjoy birdwatching? | I have no interest in birds ; I notice birds in my garden ; I would join a guided bird walk ; I go birdwatching regularly ; I travel to see rare birds
+S | How much do you enjoy doing hobbies alone for hours? | I get bored within minutes on my own ; I like an hour alone with a hobby ; I can spend an afternoon alone on a hobby ; I happily spend whole days on a hobby alone
+S | How much do you enjoy trying a brand-new activity with no experience? | I avoid anything I have not done before ; I try new things only with a friend ; I try new activities now and then ; I love being a beginner at something new ; I try a new activity almost every month
+S | How much do you enjoy going to live concerts? | I never go to concerts ; I go if a friend has a spare ticket ; I go to a couple of shows a year ; I go to concerts most months ; I go to live music almost every week
+S | How much do you enjoy road cycling as a pastime? | I never ride a bike ; I ride slowly around the neighborhood ; I enjoy an hour's ride on weekends ; I ride long distances most weekends ; I plan whole holidays around cycling
+N | Would you like to learn to sail a boat?
+N | Do you enjoy flying kites?
+N | Would you enjoy taking a glassblowing class?
+N | Do you like going to flea markets for fun?
+N | Would you enjoy learning to juggle?
+N | Do you enjoy building model kits such as planes or ships?
+N | Would you join a community choir?
+N | Do you enjoy metal detecting or treasure hunting?
+N | Would you enjoy spending a day at a horse riding stable?
+N | Do you enjoy going to the zoo or aquarium?
+N | Would you take up archery?
+N | Do you enjoy painting by numbers?
+N | Would you enjoy a weekend of foraging for wild food?
+N | Do you like going to amusement parks?
+N | Would you enjoy learning magic tricks?
+N | Do you enjoy drawing or doodling in your free time?
+N | Would you like to try rock climbing indoors?
+N | Do you enjoy visiting historical sites on your days off?
+N | Would you enjoy an afternoon of bowling?
+N | Do you enjoy restoring old furniture?
+N | Would you join a hiking group?
+N | Do you enjoy calligraphy or hand lettering?
+N | Would you enjoy a day learning to surf?

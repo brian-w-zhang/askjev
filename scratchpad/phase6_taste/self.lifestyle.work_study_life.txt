@@ -1,0 +1,121 @@
+# self.lifestyle.work_study_life — choice
+C | What time would you ideally start your workday? | before_dawn ; early_morning ; mid_morning ; late_morning ; afternoon ; evening
+C | How long would you ideally work in one focused block before a break? | a_few_minutes ; about_half_an_hour ; about_an_hour ; a_couple_of_hours ; until_the_task_is_done
+C | Which kind of lighting do you prefer for working? | bright_daylight ; soft_lamp_light ; overhead_office_lights ; dim_light ; no_preference
+C | Which seat do you prefer in a classroom or lecture? | front_row ; middle ; back_row ; near_the_door ; by_the_window
+C | How do you prefer to receive feedback on your work? | in_person ; written_comments ; quick_message ; formal_review ; video_call
+C | Which room temperature do you work best in? | cool ; mild ; warm ; no_preference
+C | What kind of chair do you prefer to work in? | office_chair ; kitchen_chair ; couch ; bed ; floor_cushion ; standing
+C | How do you prefer to start a workday? | check_messages_first ; tackle_the_hardest_task ; knock_out_easy_tasks ; plan_the_day ; ease_in_with_coffee ; chat_with_colleagues
+C | What is your preferred last step before logging off for the day? | clear_my_inbox ; plan_tomorrow ; tidy_my_desk ; just_close_the_laptop ; keep_going_until_tired
+C | Which color of ink do you prefer to write with? | black ; blue ; red ; green ; purple ; pencil_grey ; whatever_is_nearby
+C | Which kind of notebook do you prefer? | lined ; grid ; dotted ; blank ; spiral_bound ; loose_paper ; i_dont_use_notebooks
+C | How do you prefer to memorize material for a test? | flashcards ; rewriting_notes ; teaching_someone_else ; practice_questions ; reading_aloud ; mind_maps
+C | Where do you most like to study outside home? | library ; cafe ; park ; campus_building ; friends_house ; coworking_space ; nowhere_else
+C | How do you prefer to learn from a course? | live_lectures ; recorded_videos ; reading_textbooks ; hands_on_projects ; small_group_discussions ; one_on_one_tutoring
+C | How do you prefer to organize your computer files? | nested_folders ; everything_on_the_desktop ; search_instead_of_folders ; tags_or_labels ; one_big_downloads_folder
+C | What kind of background sound helps you focus most? | silence ; instrumental_music ; songs_with_lyrics ; nature_sounds ; white_noise ; cafe_chatter ; podcasts
+C | How do you prefer to brainstorm ideas? | alone_on_paper ; alone_on_a_computer ; talking_it_out_with_others ; on_a_whiteboard ; while_walking ; in_the_shower
+C | Which kind of chair do you prefer to work in? | office_chair ; kneeling_chair ; exercise_ball ; standing_desk ; couch ; kitchen_chair ; no_preference
+C | Which kind of meeting do you prefer? | in_person ; video_call ; phone_call ; walking_meeting ; written_update_instead
+C | What length of meeting do you find ideal? | a_quick_check_in ; about_half_an_hour ; about_an_hour ; as_long_as_needed ; no_meeting_at_all
+C | How do you like to be assigned work? | clear_step_by_step_instructions ; a_goal_and_freedom ; a_rough_idea_to_shape ; whatever_i_choose_myself
+C | How do you prefer to plan a big project? | detailed_plan_upfront ; rough_outline ; just_start_and_adjust ; work_backward_from_the_deadline ; let_someone_else_plan
+C | How do you prefer to work toward a deadline? | finish_well_ahead ; steady_progress ; big_push_at_the_end ; all_nighter ; ask_for_an_extension
+C | Which do you prefer for group projects? | lead_the_group ; do_the_research ; handle_the_writing ; design_the_visuals ; present_the_results ; keep_everyone_organized
+C | How do you prefer to ask for help when stuck? | message_a_colleague ; ask_in_person ; search_online ; read_the_manual ; keep_trying_alone ; ask_a_teacher_or_boss
+C | Which kind of workspace would you pick? | private_office ; open_plan ; small_shared_room ; home_desk ; kitchen_table ; cafe ; no_fixed_desk
+C | What do you prefer to wear when working from home? | pajamas ; comfy_loungewear ; casual_clothes ; the_same_as_the_office ; business_on_top_comfy_below
+C | How do you prefer to review your notes? | reread_them ; highlight_them ; summarize_them ; turn_them_into_questions ; i_rarely_review_them
+C | Which kind of screen setup do you prefer for work? | laptop_only ; laptop_plus_monitor ; two_monitors ; one_big_monitor ; tablet ; paper_first
+C | How do you prefer to read work documents? | on_screen ; printed ; on_a_tablet_with_a_pen ; listened_to_as_audio ; skimmed_quickly
+C | What do you most often keep within reach on your desk? | a_notebook ; a_water_bottle ; a_plant ; headphones ; a_calendar ; photos ; nothing_extra
+C | How do you prefer to split a big reading load for school or work? | a_fixed_amount_each_day ; one_long_session ; skim_first_then_reread ; only_the_key_parts ; listen_to_it_as_audio
+C | How do you prefer to track your working time? | timer_app ; timesheet ; rough_guess ; i_dont_track_it
+C | Which kind of task do you like to start the day with? | hardest_task ; quickest_task ; email_and_messages ; planning ; creative_work ; whatever_is_due_first
+C | Which time of year do you feel most productive? | spring ; summer ; autumn ; winter ; no_difference
+C | Which day of the week do you usually get the most done? | monday ; tuesday ; wednesday ; thursday ; friday ; weekend
+C | How do you prefer to take a quick mental break? | step_outside ; get_a_drink ; chat_with_someone ; check_my_phone ; close_my_eyes ; stretch
+C | What would you most like to have in your ideal study room? | a_big_window ; a_whiteboard ; lots_of_plants ; a_comfy_armchair ; a_huge_desk ; a_bookshelf ; good_speakers
+C | How do you prefer to communicate an urgent issue at work? | phone_call ; chat_message ; walk_over_in_person ; email ; video_call
+C | How do you like your calendar to look? | packed_with_scheduled_blocks ; a_few_fixed_meetings ; mostly_empty ; i_dont_keep_a_calendar
+C | How do you prefer to handle emails? | reply_right_away ; batch_them_a_few_times_a_day ; once_a_day ; only_when_reminded
+C | What kind of desk do you prefer? | big_and_clear ; small_and_cozy ; standing_desk ; corner_desk ; no_desk_at_all
+C | How do you prefer to learn a new piece of software for work? | play_around_with_it ; watch_a_tutorial ; read_the_documentation ; ask_a_coworker ; take_a_formal_course
+C | How do you prefer to present your work? | live_presentation ; written_report ; slides_sent_ahead ; demo ; one_on_one_walkthrough
+C | Which study group size suits you best? | alone ; with_one_partner ; small_group ; large_group ; it_depends_on_the_subject
+C | How do you prefer to keep reference notes for later? | notebook ; notes_app ; digital_wiki ; sticky_notes ; in_my_head
+C | Where do you prefer to put your phone while working? | in_a_drawer ; face_down_on_the_desk ; in_another_room ; in_my_pocket ; right_in_front_of_me
+C | How do you prefer to celebrate finishing a big task? | treat_myself_to_food ; take_the_rest_of_the_day_off ; tell_someone ; go_out ; start_the_next_task ; no_celebration
+C | How do you prefer to handle interruptions while focused? | deal_with_them_right_away ; ask_people_to_wait ; block_them_with_headphones ; hide_somewhere_quiet ; lock_my_door
+C | Which kind of workday rhythm suits you? | same_hours_every_day ; flexible_hours ; short_days_more_often ; long_days_fewer_of_them ; night_shifts
+C | How do you prefer to prepare for a presentation? | rehearse_many_times ; rehearse_once ; write_a_full_script ; bullet_points_only ; improvise
+C | How do you prefer to review for an exam or presentation? | flashcards ; rewriting_notes ; practice_questions ; explaining_it_aloud ; group_review ; rereading
+C | How do you prefer to deal with a tricky problem? | work_through_it_alone ; talk_it_through ; sleep_on_it ; take_a_walk ; search_for_examples
+C | How do you prefer your coworkers or classmates to reach you? | chat ; email ; call ; text ; stopping_by_my_desk
+C | What do you prefer to do on the commute to work or school? | read ; listen_to_audio ; answer_messages ; nap ; look_out_the_window ; plan_the_day ; i_dont_commute
+C | How do you prefer to commute? | walk ; bike ; drive ; public_transit ; carpool ; work_from_home
+C | Which day would you choose to take off in a four-day week? | monday ; wednesday ; friday ; no_preference
+C | How do you prefer to structure a study session? | one_subject_at_a_time ; switch_subjects_often ; mix_study_and_breaks_evenly ; long_marathon
+C | How do you prefer to write a long essay or report? | outline_first ; free_write_then_edit ; write_the_middle_first ; write_it_in_one_sitting ; a_little_every_day
+C | How do you prefer to edit your own writing? | right_after_writing ; the_next_day ; read_it_aloud ; print_it_out ; ask_someone_else ; i_rarely_edit
+C | How do you prefer to handle a meeting you find pointless? | sit_through_it ; multitask_quietly ; suggest_ending_early ; decline_next_time ; ask_for_notes_instead
+C | Which kind of office dress code do you prefer? | formal ; business_casual ; casual ; anything_goes ; uniform
+C | How do you prefer to spend a free period between classes or meetings? | study ; socialize ; grab_food ; rest ; walk_around ; scroll_my_phone
+C | How do you prefer to organize your backpack or work bag? | everything_in_its_own_pocket ; loosely_sorted ; one_big_jumble ; i_carry_as_little_as_possible
+C | Which reward helps you finish a study session? | a_snack ; an_episode_of_a_show ; time_with_friends ; a_nap ; a_game ; nothing_needed
+# score
+S | How much do you like to chat with coworkers or classmates during work time? | I prefer total silence around me ; I only talk about the task ; I enjoy a few friendly words now and then ; I like steady chatter while I work ; I'd rather talk than work most of the time
+S | How cluttered is your computer desktop? | It has no icons at all ; It has a few neatly arranged icons ; It has a scattering of files ; It is mostly covered ; You can't see the wallpaper anymore
+S | How far ahead do you map out your work or study week? | I don't plan at all ; I note only fixed appointments ; I sketch the main tasks ; I plan each day roughly ; I schedule nearly every hour
+S | How often do you study or work in bed? | Never ; A few times a year ; A few times a month ; Most weeks ; Almost every day
+S | How long can you sit through a lecture without losing focus? | I drift off within minutes ; I last about a quarter of an hour ; I last about half the lecture ; I last most of the lecture ; I stay focused for the whole thing
+S | How strictly do you stick to your planned study schedule? | I never make one ; I make one and ignore it ; I follow it about half the time ; I follow it most days ; I follow it to the minute
+S | How often do you work on weekends? | Never ; Only in real emergencies ; A couple of weekends a month ; Most weekends a little ; Every weekend like a normal day
+S | How much do you prefer working with others over working alone? | I always choose to work alone ; I prefer alone but join groups when asked ; I like a mix of both ; I prefer working with others ; I avoid working alone whenever I can
+S | How late do you usually finish studying or working on a busy day? | Before dinner ; Early evening ; Around bedtime ; Around midnight ; Well into the early morning
+S | How many different to-do lists or apps do you keep? | None, I keep it in my head ; One simple list ; A couple of lists ; Several lists in different places ; So many that I lose track
+S | How tidy do you keep your desk while working? | Buried under papers and cups ; Cluttered but I know where things are ; A few piles to one side ; Mostly clear with a few essentials ; Completely bare except what I am using
+S | How much do you personalize your study or note-taking with colors? | I use a single pen ; I use two colors ; I use a few highlighters ; I have a color code for every subject ; My notes look like artwork
+S | How long do you prefer your workday to be? | A few hours ; A half day ; A standard full day ; A long day ; As long as it takes, even into the night
+S | How often do you take work or study materials on vacation? | Never ; Only for true emergencies ; Sometimes a book or notes ; Usually my laptop ; I work most days of every vacation
+S | How much of your work or study do you do in cafes? | None ; A little now and then ; About a quarter ; About half ; Almost all of it
+S | How early do you like to arrive for a class or meeting? | I arrive right as it starts ; I arrive a minute or two early ; I arrive several minutes early ; I arrive a quarter of an hour early ; I arrive very early and wait
+S | How much do you speak up in meetings or classes? | I never speak ; I speak only when asked ; I add a comment now and then ; I contribute often ; I tend to lead the discussion
+S | How often do you reorganize your workspace? | Never ; Once a year ; Every few months ; Every month ; Every week
+S | How often do you pull all-nighters to finish work? | Never in my life ; Once or twice ever ; Once a year or so ; A few times a year ; Most weeks during busy periods
+S | How much do you prefer detailed written instructions over figuring things out? | I ignore instructions and figure it out ; I skim instructions only when stuck ; I read the main steps ; I follow instructions closely ; I won't start without full written instructions
+S | How often do you listen to music while studying? | Never ; Only for easy tasks ; About half the time ; Most of the time ; Always
+S | How much do you prefer remote meetings to in-person ones? | I strongly prefer meeting in person ; I prefer in person ; I have no preference ; I prefer remote ; I only want remote meetings
+S | How often do you review your goals for the week? | Never ; Once in a while ; Every few weeks ; Every week ; Every day
+S | How long can you work without checking messages? | A few minutes ; About a quarter of an hour ; About an hour ; A few hours ; A whole day
+S | How much of your work do you do at the last minute? | None of it ; A little of it ; About half of it ; Most of it ; All of it
+S | How tidy are your notes after a class or meeting? | I take no notes ; My notes are scribbles only I can read ; My notes are messy but usable ; My notes are neat and organized ; My notes are clean enough to share
+S | How often do you work from somewhere other than your usual spot? | Never ; A few times a year ; A few times a month ; Weekly ; Most days
+S | How much small talk do you like at the start of a meeting? | None, start right away ; A quick hello ; A minute or two ; A few minutes of catching up ; A long friendly chat first
+S | How often do you study with friends? | Never ; Before big exams only ; A few times a month ; Weekly ; Almost every study session
+S | How often do you check work or school messages in the evening? | Never ; Only if I'm expecting something ; Once each evening ; Several times each evening ; Constantly until bed
+# noul
+N | Do you prefer to work in total silence?
+N | Do you like to work at a desk facing a wall?
+N | Do you prefer to study in the morning rather than the evening?
+N | Do you read meeting notes before the meeting starts?
+N | Do you prefer taking notes by hand over typing them?
+N | Do you like having a set seat in class or at work?
+N | Do you prefer a whiteboard to paper for working through ideas?
+N | Do you use sticky notes to remind yourself of tasks?
+N | Do you prefer working late at night to early in the morning?
+N | Do you color-code your calendar?
+N | Do you keep your work email off your phone?
+N | Do you prefer shared documents over sending files back and forth?
+N | Do you enjoy working in a busy coffee shop?
+N | Do you like having a coworker or classmate sit next to you while you work?
+N | Do you prefer a four-day work week with longer days?
+N | Do you study best right before a deadline?
+N | Do you prefer learning from videos rather than books?
+N | Do you like to work with a candle or scent nearby?
+N | Do you rewrite your notes after class?
+N | Do you keep your desk completely clear at the end of each day?
+N | Do you prefer to have your camera off during online classes?
+N | Do you like to change your study spot every hour or so?
+N | Do you take a proper lunch break away from your desk?

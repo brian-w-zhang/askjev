@@ -1,0 +1,203 @@
+@node self.personality.type.ei
+C | After a draining week, which kind of evening restores your energy more? | out_with_friends = going out and being around people ; quiet_night_home = staying in alone with your own thoughts
+C | When you need to think through a hard problem, which works better for you? | talk_it_out = talking it through with someone ; think_it_alone = mulling it over by yourself first
+C | In a meeting where a new idea comes up, what do you usually do first? | speak_right_away = react out loud and build on it ; reflect_first = think quietly and speak later
+C | After a long day of being around people at work, what do you want most? | more_company = to keep socializing into the evening ; time_alone = to be alone and recover
+C | When something exciting happens to you, what is your first impulse? | tell_people = call or tell someone right away ; savor_privately = enjoy it privately for a while first
+C | On a free Saturday with nothing planned, which pulls at you more? | find_people = texting around to see who is free ; solo_day = a day spent on your own
+C | Where do your best ideas usually come from? | conversations = bouncing thoughts off other people ; solitude = quiet time alone with your thoughts
+C | At the end of a big party you enjoyed, how do you usually feel? | energized = wound up and ready for more ; depleted = worn out even though it was fun
+C | When you arrive at a conference or event, which do you do more naturally? | mingle = start chatting with people nearby ; observe = watch and get your bearings before engaging
+C | If you had to learn a new skill, which setting would give you more energy? | group_class = a lively class with other learners ; self_study = studying alone at your own pace
+C | When you are upset, which helps you process it better? | talk_to_someone = talking it through with a friend ; write_or_reflect = reflecting alone, perhaps writing it down
+C | In a group conversation, which role comes more naturally to you? | talker = the one keeping the conversation going ; listener = the one taking it in and adding a thought now and then
+C | After a vacation spent mostly alone, how do you usually feel? | restless = hungry for people again ; refreshed = recharged and content
+C | When you get a phone call from an unknown number, what is your gut reaction? | pick_up = pick up, curious who it is ; let_it_ring = let it go and check later
+C | Which kind of workday leaves you feeling better at the end? | lots_of_interaction = full of meetings and conversations ; heads_down = long stretches of quiet focused work
+C | When you move to a new neighborhood, which do you do first? | meet_neighbors = introduce yourself and get to know people ; settle_in_privately = settle into your own space before meeting anyone
+C | When a milestone in your life deserves marking, which kind of celebration leaves you feeling more recharged? | big_gathering = a big gathering with lots of people ; small_or_alone = something small and quiet, or by yourself
+C | When you walk into a crowded room, what happens to your energy? | it_rises = it goes up as you take in the buzz ; it_drains = it starts to drain almost immediately
+C | When you have a long commute, how would you rather spend it? | chatting = chatting with someone on the phone or in person ; inside_your_head = listening, reading, or thinking alone
+C | Which kind of lunch break recharges you more? | eat_with_group = eating with coworkers or classmates ; eat_alone = eating alone somewhere quiet
+C | When you learn something fascinating, what do you want to do with it? | share_it = tell people about it right away ; sit_with_it = turn it over in your mind for a while
+C | Which describes how you get to know a new idea? | discuss_it = by discussing it with others ; read_and_reflect = by reading and thinking about it alone
+C | When plans with friends fall through at the last minute, how do you usually feel? | disappointed = let down and looking for other plans ; relieved = secretly relieved to have time alone
+C | In a brainstorming session, when do you usually contribute your best ideas? | in_the_room = out loud during the session ; afterward = later, once you have had time to think alone
+C | Which kind of weekend leaves you better prepared for Monday? | social_weekend = one full of plans with people ; quiet_weekend = one with lots of time to yourself
+C | When you are waiting in a long line, which is more like you? | chat_with_strangers = strike up a conversation with someone nearby ; stay_in_your_world = stay in your own head or on your phone
+C | When a friend calls just to chat for an hour, how do you usually feel afterward? | energized = lifted and energized ; tired = pleasantly tired and ready for quiet
+C | When you are figuring out what you think about something, which works better? | say_it_out_loud = saying it out loud to hear how it sounds ; think_it_through = thinking it through silently first
+C | Which work environment would give you more energy? | open_busy_space = a busy open office with people around ; private_quiet_space = a quiet private room
+C | When you have a free hour between commitments, what do you tend to do? | find_someone = look for someone to spend it with ; enjoy_solitude = enjoy it on your own
+C | When you travel, what do you enjoy most on the trip? | meeting_people = meeting locals and other travelers ; exploring_alone = exploring quietly at your own pace
+C | After a big presentation, what do you usually want to do? | debrief_with_people = go over it with colleagues right away ; decompress_alone = decompress somewhere quiet
+C | When a new person joins your team, which is more like you? | welcome_them = go over and introduce yourself ; wait_for_them = wait until you cross paths naturally
+C | How do you tend to recover after a stressful event? | surround_yourself = surround yourself with people ; withdraw = withdraw and have time alone
+C | Which kind of hobby gives you more energy? | team_or_group = one done with a team or group ; solo = one you do by yourself
+C | When you share your opinion, how do you usually arrive at it? | while_speaking = you form it while you are speaking ; before_speaking = you settle it in your head before you say anything
+C | When your phone buzzes with a group chat on a quiet evening, what is your first feeling? | glad = glad for the company ; intruded_upon = a little intruded upon
+C | When you are in a new city for a night alone, what do you usually do? | go_where_people_are = head for a busy bar or market ; enjoy_quiet_time = enjoy a quiet meal and your own company
+C | After a day spent entirely alone, how do you usually feel? | lonely_and_flat = flat and eager for contact ; calm_and_full = calm and full
+C | Which kind of study session works better for you? | study_group = a study group talking things through ; alone_at_desk = alone at your desk
+C | At a dinner party, where do you end up most often? | center_of_table = in the middle of the liveliest conversation ; one_on_one = in a quieter one-on-one conversation off to the side
+C | When you need to make an important personal decision, what do you do first? | ask_around = ask several people what they think ; go_inward = spend time alone figuring out what you want
+C | Which kind of silence do you notice more in a conversation? | awkward = it feels awkward and you want to fill it ; comfortable = it feels comfortable and you let it sit
+C | When you are in a good mood, how do you like to spend it? | with_others = sharing it with people around you ; by_yourself = enjoying it in your own world
+C | When you get home from a busy event, what do you usually do? | keep_texting = keep texting people about it ; go_quiet = go quiet and unwind alone
+C | Which is harder for you to go without? | people = a week without seeing friends ; alone_time = a week without any time to yourself
+C | When you start a new job, which do you focus on first? | people = getting to know the people ; the_work = getting a handle on the work itself quietly
+C | When a friend proposes a spontaneous group outing on a weeknight, what is your first reaction? | in = you are in, it sounds fun ; hesitant = you hesitate because you had counted on a quiet night
+C | When you reflect on your day, how do you usually do it? | recounting_to_someone = telling someone about it ; in_your_head = running through it in your own head
+C | Where do you feel most like yourself? | among_people = in the middle of a lively group ; on_your_own = alone or with one close person
+S | How do you usually feel after a full day of social events? | I feel energized and want to go out again ; I feel good and could keep going a little longer ; I feel fine but ready for a quiet night ; I feel drained and need a quiet evening alone ; I need a full day alone to recover
+S | When you have to think through a decision, how much do you rely on talking it out? | I decide entirely by talking it through with others ; I talk it through with a few people before deciding ; I think alone first and then check with one person ; I work it out alone and tell people afterward ; I work everything out alone and rarely discuss it
+S | How much time alone do you need in a typical week to feel like yourself? | I rarely want any time alone ; A quiet evening or two is plenty ; I need a few hours alone most days ; I need most evenings to myself ; I need long stretches of solitude every day
+S | When you are at a large gathering, how long do you stay before you feel the urge to leave? | I stay until the very end and wish it went longer ; I stay late and leave when the crowd thins ; I stay a few hours and then head home ; I leave early once I have said my hellos ; I look for an exit within the first half hour
+S | When you are working on a project, how much do you like others around you? | I want people working right beside me the whole time ; I like people nearby to chat with now and then ; I like a mix of shared and solo time ; I prefer working alone and checking in at the end ; I want to be completely alone until it is done
+S | How do you usually spend the first hour after getting home from work or school? | I call or meet up with someone right away ; I chat with whoever is at home ; I have a short chat and then some quiet ; I head straight for some time alone ; I avoid talking to anyone until I have recharged
+S | How do you feel about a weekend with no social plans at all? | It sounds miserable and I would fill it fast ; It sounds dull and I would find someone to see ; It sounds fine either way ; It sounds nice and restful ; It sounds like exactly what I need
+S | When you are in a group discussion, how soon do you share your thoughts? | I speak first and think as I go ; I jump in early once I have a rough idea ; I wait until I have a clear point ; I speak only after listening to most people ; I usually share my thoughts later in private
+S | How do you feel when a friend drops by unannounced? | Delighted and I drop everything ; Pleased and happy to have company ; Fine once I adjust ; A bit thrown because I had planned quiet time ; Uncomfortable because my alone time was interrupted
+S | How do you prefer to spend a long flight or train ride? | Talking with the person next to me most of the way ; Chatting for a while and then settling in ; Exchanging a few words and then going quiet ; Keeping to myself with headphones on ; Signaling clearly that I want to be left alone
+S | How do you usually feel about working from home with no colleagues around for a full week? | I would feel cut off and miserable ; I would miss the buzz of people by midweek ; I would be fine but glad to see people again ; I would enjoy the peace ; I would love it and not want to go back
+S | When you have news to share, how do you usually share it? | I tell everyone I see right away ; I tell a group of friends that same day ; I tell a few close people when it comes up ; I tell one person after some time ; I often keep it to myself
+S | How do you feel at the end of a day of back-to-back meetings? | Energized and buzzing with ideas ; Upbeat but ready to wind down ; Neutral, it was just a workday ; Tired and craving quiet ; Completely drained and unable to talk to anyone
+S | How much do you enjoy being the host of a gathering at your home? | I host often and love a full house ; I enjoy hosting now and then ; I host small groups only ; I host only when I have to ; I avoid hosting whenever I can
+S | When you think about an ideal holiday, how many people are in it? | A big group of friends the whole time ; A handful of friends or family ; One travel companion ; Mostly alone with a few social moments ; Entirely alone
+S | How do you feel when you have an evening completely to yourself? | Restless and looking for company ; Fine for an hour, then I want to see someone ; Content either way ; Relieved and relaxed ; It is the highlight of my week
+S | How do you react when a coworker starts chatting while you are concentrating? | I welcome it and happily switch to talking ; I chat for a bit and enjoy the break ; I give a short friendly reply and go back ; I feel interrupted but stay polite ; I put on headphones to signal I need quiet
+S | When you are sad, how much do you want people around you? | I want to be surrounded by friends ; I want one or two people to talk to ; I want someone nearby but not talking ; I want to be alone for a while ; I want to be left completely alone
+S | How do you spend your free time on a typical weeknight? | Out with people almost every night ; Out with people a few nights a week ; Split between people and time alone ; Mostly at home by myself ; Always at home by myself
+S | When you meet someone new at a party, how long can you keep chatting before you want a break? | I could talk all night and still want more ; I could talk for hours ; I am good for a solid conversation ; I need a break after a short while ; I find even a short chat tiring
+S | When you are planning your week, how do you balance time with people and time alone? | I fill almost every slot with people ; I schedule people most days ; I aim for an even balance ; I guard most of my free time for myself ; I keep nearly all my free time for solitude
+S | When you are learning something new, how do you like to process it? | By explaining it out loud to someone right away ; By discussing it in a group ; By mixing discussion with quiet review ; By reviewing it quietly on my own ; By reflecting on it alone for days before discussing it
+S | How do you feel about a job where you would work alone all day? | I would hate it ; I would find it lonely ; I could manage if the work was good ; I would enjoy it ; It would be my dream job
+S | After a long phone call with a friend, how do you feel? | Charged up and ready to call someone else ; Happy and upbeat ; Content ; A bit tired and ready for quiet ; Worn out and done talking for the day
+S | How do you react when your weekend plans get cancelled? | I immediately try to replace them with other plans ; I feel let down and reach out to others ; I feel mixed ; I feel quietly pleased to have time alone ; I feel a wave of relief
+S | When you need to recover from a bad day, where do you go? | Out to a busy place full of people ; To a friend's place for company ; Home with family or housemates ; Somewhere quiet by myself ; Into complete solitude with my phone off
+S | How do you feel about working in an open-plan office? | I thrive on the constant activity ; I like the energy most of the time ; It is fine with headphones ; I find it tiring ; I find it exhausting and avoid it
+S | How do you tend to make sense of your feelings? | By talking about them with lots of people ; By talking with one or two close friends ; By talking a little and reflecting a little ; By reflecting quietly on my own ; By keeping them to myself until I understand them fully
+S | How do you feel after spending a whole day alone? | Low and eager for any contact ; A little lonely ; Fine ; Rested and peaceful ; Better than after almost any other kind of day
+S | When you walk into a party alone, how do you feel? | Excited to see who is there ; Keen to find a group to join ; Neutral ; A little uneasy ; Ready to leave before I start
+N | Do you usually feel recharged after spending time with a big group of people?
+N | Do you tend to figure out what you think by talking out loud?
+N | Do you often need time alone to recover after social events, even fun ones?
+N | Do you prefer to think things through fully before sharing them with others?
+N | Do you usually feel more alive in a busy, crowded place than a quiet one?
+N | Do you often turn down invitations because you want an evening to yourself?
+N | Do you tend to start conversations with strangers when you are in public?
+N | Do you get restless when you spend a whole day without talking to anyone?
+N | Do you prefer a small number of deep conversations to lots of short chats?
+N | Do you usually process your day by telling someone about it?
+N | Do you find that your energy drops after a long stretch of socializing?
+N | Do you usually look forward to spending a weekend alone?
+N | Do you get your best thinking done when you are alone?
+N | Do you usually reach out to friends as soon as you have free time?
+N | Do you tend to go quiet in a group while you work out your thoughts?
+N | Do you feel drained after a day of small talk even when everyone was pleasant?
+N | Do you usually prefer a lively group dinner to a quiet dinner for two?
+N | Do you often keep your reactions to yourself until you have had time to reflect?
+N | Do you tend to seek out people when you feel low?
+N | Do you tend to rehearse what you will say before you say it?
+
+@node self.personality.type.sn
+C | When you follow a recipe, which is more like you? | follow_exactly = measure everything and follow the steps as written ; improvise = get the gist and improvise from there
+C | When someone describes a trip they took, what do you want to hear most about? | concrete_details = the specific places, food, and what happened ; meaning = what it meant to them and how it changed them
+C | When you read instructions for a new gadget, how do you approach them? | step_by_step = go through them in order ; skim_for_idea = skim for the idea and figure out the rest
+C | When you describe a movie to a friend, what do you focus on? | plot_events = what happens, scene by scene ; themes = what it is really about underneath
+C | Which kind of work task appeals to you more? | refine_proven = improving something that already works ; invent_new = inventing something that does not exist yet
+C | When you walk into a room for the first time, what do you notice more? | physical_details = the furniture, colors, and specific objects ; overall_feel = the overall atmosphere and what it suggests
+C | When you learn a new subject, which do you want first? | facts_and_examples = concrete facts and worked examples ; big_picture = the big picture and underlying theory
+C | When someone gives you directions, which do you prefer? | landmarks_and_turns = exact turns, street names, and landmarks ; general_layout = a rough sense of the layout
+C | When you plan a project, where does your mind go first? | practical_steps = the practical steps and resources needed ; future_possibilities = what it could turn into down the road
+C | Which compliment would please you more? | practical = you are practical and reliable ; imaginative = you are imaginative and full of ideas
+C | When you talk about the future, what do you tend to discuss? | concrete_plans = concrete plans for the near term ; possibilities = what might happen years from now
+C | When you look at a painting, which do you focus on more? | technique = the brushwork, colors, and what is depicted ; meaning = what it symbolizes or makes you think of
+C | Which kind of teacher suits you better? | hands_on = one who shows exactly how to do it ; conceptual = one who explains why it works
+C | When you solve a problem, which approach comes more naturally? | proven_method = use a method that has worked before ; new_angle = look for a fresh angle nobody has tried
+C | When you remember a past event, what comes back more clearly? | specifics = exact details like what people wore and said ; impressions = the general mood and what it meant
+C | When a friend tells you a story, which do you usually ask about? | what_happened_next = what happened next and who said what ; why_it_matters = why it happened and what it means
+C | When you read the news, what grabs you more? | facts = the facts of what happened ; implications = what it could mean for the future
+C | When you shop for furniture, what do you focus on? | measurements_and_function = measurements, materials, and function ; vision = how it fits your vision of the room
+C | When assembling flat-pack furniture, what do you usually do? | read_manual = follow the manual page by page ; look_at_picture = glance at the picture and figure it out
+C | When you hear a song for the first time, what do you tend to notice? | sound = the melody, instruments, and specific lyrics ; message = the overall message or story it suggests
+C | Which kind of book do you usually get more out of? | practical_guide = a practical how-to guide ; ideas_book = a book of big ideas and theories
+C | When you start a new job, what do you want to learn first? | procedures = the exact procedures and tools ; vision = the company's vision and where it is heading
+C | When you write a to-do list, what does it look like? | specific_tasks = specific, concrete tasks ; broad_themes = broad goals and themes
+C | When you tell a story, what do you tend to do? | tell_it_as_it_happened = tell it in order with accurate details ; jump_around = jump to the interesting parts and connections
+C | When someone proposes a bold new idea at work, what is your first question? | how_would_it_work = how exactly would it work in practice ; what_could_it_lead_to = what else could it lead to
+C | Which kind of puzzle do you prefer? | jigsaw = a jigsaw with many pieces to fit ; riddle = a riddle with a hidden meaning
+C | When you meet someone new, what do you remember afterward? | concrete_facts = their job, where they live, and what they wore ; impression = the impression they gave and what they might be like
+C | When you think about a trip, which part excites you more? | itinerary = working out the concrete itinerary ; imagining = imagining what the experience will be like
+C | When a coworker explains a problem, which do you want? | exact_details = the exact numbers and specifics ; underlying_pattern = the underlying pattern behind it
+C | When you think about your career, which do you focus on more? | present_skills = the skills and tasks in front of you now ; long_arc = the long arc and where it might go
+C | When you look at clouds, which is more like you? | weather = notice the weather they signal ; shapes = see shapes and stories in them
+C | When reading a novel, which do you enjoy more? | vivid_descriptions = vivid, realistic descriptions of events ; symbolism = hidden symbolism and layers of meaning
+C | When you learn a new game, which do you want first? | the_rules = the exact rules, one by one ; the_strategy = the overall strategy and how to win
+C | When you give advice, what do you usually offer? | practical_steps = practical steps they can take today ; new_perspective = a new way of looking at the situation
+C | Which do you trust more when judging something? | experience = what you have seen and experienced directly ; intuition = your hunch about what is going on beneath the surface
+C | When you describe a person, which do you usually mention first? | appearance_and_facts = how they look and what they do ; character_and_potential = what they are like inside and could become
+C | When you cook without a recipe, what do you rely on? | what_has_worked = combinations that have worked before ; experimenting = experimenting with new combinations
+C | When your team reviews a finished project, what do you focus on? | what_went_wrong = specific things that went right or wrong ; lessons = the broader lessons for next time
+C | Which kind of conversation do you find more satisfying? | practical_matters = about real, practical matters ; ideas = about ideas, theories, and what-ifs
+C | When you notice something unusual at work, what do you do first? | gather_facts = gather the facts about what happened ; wonder_why = wonder what larger pattern it might point to
+C | When you look at a map, which do you focus on? | route_details = the exact route and landmarks ; overall_shape = the shape of the region and how places connect
+C | When a friend asks what you did today, which do you give? | a_list = a list of what you actually did ; a_reflection = your thoughts about how the day went and what it meant
+C | When you learn a new software tool, how do you get started? | tutorial = follow the tutorial step by step ; explore = poke around to see what it could do
+C | Which kind of problem do you enjoy more? | concrete = one with a clear, practical answer ; abstract = one with many possible interpretations
+C | When you picture your ideal home, what comes to mind first? | specifics = specific rooms, features, and fixtures ; feeling = the feeling and life you would have there
+C | When making a decision, which matters more to you? | what_is = what is true right now ; what_could_be = what could be true in the future
+C | When you watch a magic trick, what do you usually do? | watch_the_hands = watch the hands to catch the mechanics ; enjoy_the_mystery = enjoy the mystery and wonder what else is possible
+C | When writing an essay or report, what do you start with? | evidence = gathering facts and evidence ; big_idea = a big idea you then build out
+C | When you hear a rumor at work, what is your first reaction? | check_the_facts = want to check what actually happened ; connect_the_dots = start connecting it to other things you have noticed
+C | Which describes your memory better? | detail_memory = you remember exact details and facts ; gist_memory = you remember the gist and what it meant
+S | When you follow instructions, how closely do you stick to them? | I follow every step exactly as written ; I follow them closely with small adjustments ; I follow the main steps and skip what seems unneeded ; I skim them for the idea and go my own way ; I rarely read instructions and work from the concept
+S | When you describe your weekend, how much detail do you give? | I give a full account of exactly what happened and when ; I give the main events with key details ; I give a quick summary ; I mention the highlights and what they meant to me ; I talk mostly about what it made me think about
+S | How much do you enjoy talking about hypothetical what-if scenarios? | I find them pointless and steer back to real things ; I humor them briefly ; I enjoy them now and then ; I enjoy them a lot ; I could talk about them for hours
+S | When you learn something new, how much do you need concrete examples? | I cannot understand anything without several examples ; I need at least one clear example ; I like examples but can manage without ; I prefer the general principle first ; I find examples distracting and want the theory
+S | How often do you notice hidden patterns or connections others miss? | I stick to what is in front of me ; I occasionally notice a link ; I notice connections when I look for them ; I often spot patterns others have not ; I see connections in almost everything
+S | How do you feel about doing a task the same way it has always been done? | I prefer the tested way every time ; I stick with it unless there is a clear problem ; I am open to changing it if needed ; I usually look for a better way ; I almost always want to reinvent it
+S | When you read a book, what do you pay most attention to? | The literal events and facts ; The events plus a few interpretations ; An even mix of events and meaning ; The themes more than the plot ; Almost entirely the symbolism and deeper meaning
+S | How much do you daydream about possible futures? | I focus on the here and now ; I think about the future only when planning ; I picture possibilities now and then ; I daydream about the future often ; My mind lives mostly in future possibilities
+S | When someone asks you for directions, how do you give them? | Exact street names, distances, and landmarks ; Clear turns with a few landmarks ; A rough route with the key turns ; A general sense of the direction ; A sketch of the big picture and trust them to figure it out
+S | How do you approach learning a new hobby? | I follow a beginner course exactly in order ; I learn the basics carefully before trying things ; I mix lessons with experimenting ; I experiment first and look things up as needed ; I invent my own approach from scratch
+S | When looking at a new gadget, what catches your interest? | Exactly what it does and how well it works ; Its practical features ; A mix of features and potential ; What it could be used for beyond its purpose ; How it might change the way people live
+S | When you plan a trip, how detailed is your picture of it? | I know every stop, time, and address ; I know the main stops and bookings ; I know the rough outline ; I have a general idea of the experience I want ; I have only a vision of how it should feel
+S | How much do you trust your hunches over hard facts? | I go only by facts I can verify ; I trust facts but note my hunches ; I weigh both equally ; I often go with my hunch despite the facts ; I trust my hunches above almost anything
+S | When you tell a story, how closely do you stick to what happened? | Every detail exactly as it happened ; The facts with a little color ; The main events in my own words ; The gist with my own interpretation ; Mostly what it meant, not what happened
+S | How do you feel about work that is repetitive but clear? | I enjoy it and find it satisfying ; I find it comfortable ; I can do it for a while ; It bores me quickly ; I cannot stand it and start inventing changes
+S | When a coworker explains a new plan, how do you listen? | I focus on the specific steps and dates ; I focus on the steps and check the purpose ; I follow both the steps and the purpose ; I focus on the purpose and fill in steps later ; I jump straight to what else the plan could lead to
+S | How much do you enjoy abstract theories with no immediate use? | I find them a waste of time ; I tolerate them if they lead somewhere ; I find some of them interesting ; I enjoy them a lot ; They are my favorite thing to think about
+S | When you describe a place you visited, what do you mention? | Exact facts like size, layout, and prices ; Mostly concrete details ; A mix of details and impressions ; Mostly impressions and atmosphere ; What the place symbolized or reminded me of
+S | When a friend asks for advice, how do you usually answer? | With a specific step-by-step plan ; With practical tips ; With a mix of tips and perspective ; With a new way to see the problem ; With questions about what the situation really means
+S | How much do you notice small physical details like a friend's new haircut? | I notice every small change right away ; I notice most changes ; I notice big changes only ; I rarely notice until told ; I almost never notice physical details
+S | When choosing a book or show, what draws you in? | A true story with real facts ; A realistic story about everyday life ; Either realistic or imaginative ; An imaginative story with big ideas ; Something strange, symbolic, and open to interpretation
+S | How do you approach a new job task you have never done? | I ask for exact instructions before starting ; I find an example and copy its approach ; I get the basics and adapt as I go ; I work out my own approach from the goal ; I reinvent how it should be done
+S | When you take notes in a lecture, what ends up on the page? | I write down facts and details word for word ; I record the key facts ; I record key points and a few ideas ; I jot down ideas and connections ; I sketch diagrams of how concepts relate
+S | When you think about a problem at work, where does your attention go? | Only to the facts in front of me ; Mostly to the facts ; Equally to facts and wider patterns ; Mostly to the wider pattern ; Almost entirely to what it reveals about the bigger picture
+S | How often do you find yourself reading between the lines in a conversation? | I take what people say at face value ; I notice hidden meaning occasionally ; I sometimes read into things ; I often read hidden meaning ; I almost always look for what is not being said
+S | How do you prefer to solve a puzzle? | Carefully testing each piece or clue in order ; Mostly step by step ; A mix of method and hunches ; By looking for the overall pattern ; By leaping to the answer on a hunch
+S | When you remember a conversation, what do you recall? | The exact words people used ; Most of what was said ; The main points ; The general tone and meaning ; Only the impression it left on me
+S | When your manager describes the company's vision, how do you react? | I want to know what it means for my tasks tomorrow ; I look for the practical parts ; I take in both the vision and the practical side ; I get excited about where it could lead ; I start imagining my own bigger version of it
+S | How do you like to learn about history? | Exact dates, facts, and events ; Key events and people ; A mix of events and themes ; The big themes and patterns ; The meaning and what it says about humanity
+S | How do you approach assembling something without instructions? | I will not start until I find instructions ; I look for a diagram or example first ; I lay out the parts and work through it logically ; I get a feel for how it fits and dive in ; I build it my own way and it might end up different
+N | Do you usually follow a recipe exactly as written?
+N | Do you often notice small details that other people miss?
+N | Do you prefer learning from hands-on experience rather than theory?
+N | Do you often find yourself thinking about what something could become?
+N | Do you tend to read hidden meanings into what people say?
+N | Do you prefer tasks with clear, concrete steps?
+N | Do you tend to jump ahead to the big picture when someone explains something?
+N | Do you trust experience more than hunches when deciding what is true?
+N | Do you get bored with practical details once you have grasped the main idea?
+N | Do you enjoy talking about abstract ideas for their own sake?
+N | Do you usually remember facts better than impressions?
+N | Do you tend to change how things are done just to try a new way?
+N | Do you like to know exactly how something works before using it?
+N | Do you often see symbols or patterns in everyday events?
+N | Do you usually describe events in the order they happened?
+N | Do you get more excited about future possibilities than present realities?
+N | Do you prefer realistic stories to fantastical ones?
+N | Do you often skip the instructions and figure things out as you go?
+N | Do you pay close attention to physical surroundings like colors and objects?
+N | Do you tend to think about the theory behind things you use every day?

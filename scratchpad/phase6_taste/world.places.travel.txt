@@ -1,0 +1,50 @@
+C | Which way of traveling between cities is the most pleasant? | plane ; high_speed_train ; overnight_sleeper_train ; car ; bus ; ferry
+C | Which kind of hotel offers the best stay? | luxury_chain_hotel ; boutique_hotel ; bed_and_breakfast ; hostel ; vacation_rental ; resort
+C | Which kind of vacation is the most restful? | beach_resort ; cruise ; cabin_in_the_woods ; spa_retreat ; countryside_farm_stay ; city_break
+C | Which kind of trip makes the best memories? | backpacking_trip ; road_trip ; cruise ; guided_tour ; beach_holiday ; city_break
+C | Which airline region is known for the best in-flight service? | asian_airlines ; middle_eastern_airlines ; european_airlines ; north_american_airlines ; other
+C | Which kind of cruise is the most enjoyable? | caribbean_cruise ; mediterranean_cruise ; alaska_cruise ; river_cruise ; norwegian_fjords_cruise ; antarctic_expedition
+C | Which scenic train route is the most beautiful? | glacier_express ; rocky_mountaineer ; trans_siberian ; bernina_express ; west_highland_line ; other
+C | Which part of a flight is the most enjoyable? | takeoff ; the_view_from_cruising_altitude ; in_flight_meal ; watching_movies ; landing ; none
+C | Which airport amenity makes a layover the most bearable? | lounge ; good_restaurants ; quiet_sleeping_area ; shopping ; free_fast_wifi ; showers
+C | Which airport is the most pleasant to spend a layover in? | singapore_changi ; doha_hamad ; tokyo_haneda ; seoul_incheon ; zurich ; amsterdam_schiphol ; other
+C | Which hotel perk matters most for a good stay? | comfortable_bed ; great_breakfast ; pool ; view ; location ; friendly_staff ; quiet_room
+C | Which kind of guided tour is the most enjoyable? | walking_tour ; food_tour ; bus_tour ; bike_tour ; boat_tour ; museum_tour
+C | Which time of year is the best for tourism in general? | spring ; summer ; autumn ; winter
+C | Which kind of souvenir is the best to bring home? | local_food ; handmade_craft ; postcard ; magnet ; clothing ; artwork ; nothing
+C | Which kind of travel accommodation feels the most authentic? | family_run_guesthouse ; homestay ; farm_stay ; historic_inn ; treehouse ; chain_hotel
+C | Which travel experience is the most overrated? | cruises ; all_inclusive_resorts ; bus_tours ; bucket_list_landmarks ; theme_parks ; other
+C | Which kind of seat on a long train ride is the best? | window_facing_forward ; window_facing_backward ; aisle ; private_compartment ; dining_car
+C | Which cabin on a cruise ship is the best value? | inside_cabin ; ocean_view_cabin ; balcony_cabin ; suite
+C | Which kind of road trip is the most fun? | coastal_highway ; mountain_passes ; desert_route ; countryside_back_roads ; cross_country_interstate
+C | Which way of getting around a new city is the most enjoyable? | walking ; metro ; bicycle ; taxi ; tram ; hop_on_hop_off_bus
+C | Which kind of campsite makes the best camping trip? | lakeside ; forest ; beach ; mountainside ; desert ; national_park_campground
+C | Which kind of travel photo is the most worth taking? | landscapes ; food ; people ; landmarks ; street_scenes ; none
+C | Which kind of hostel is the most fun? | party_hostel ; quiet_boutique_hostel ; nature_lodge_hostel ; historic_building_hostel
+C | Which travel season gives the best balance of weather and crowds? | peak_season ; shoulder_season ; off_season
+C | Which kind of beach resort is the most relaxing? | all_inclusive ; small_boutique ; overwater_bungalows ; family_resort ; adults_only
+C | Which kind of travel guide is the most useful? | printed_guidebook ; travel_blog ; video_vlog ; local_friend ; hired_guide ; map_app
+C | Which kind of hotel breakfast is the best? | full_buffet ; continental ; cooked_to_order ; local_specialties ; room_service
+S | How enjoyable is a long-haul flight in economy class? | It is miserable from start to finish ; It is tiring but bearable ; It is fine with a good movie ; It is a pleasant chance to relax
+S | How pleasant are overnight sleeper trains? | They are cramped and sleepless ; They are tolerable for one night ; They are cozy and fun ; They are one of the most romantic ways to travel
+S | How worthwhile is paying for business class on a long flight? | It is a total waste of money ; It is worth it only on points ; It is worth it on very long flights ; It is worth it on every long flight
+S | How relaxing is a typical cruise vacation? | It is crowded and stressful ; It is relaxing only on sea days ; It is relaxing for most of the trip ; It is the most relaxing kind of vacation there is
+S | How enjoyable are all-inclusive resorts? | They are boring and bland ; They are fine for a few days ; They are very enjoyable ; They are the ideal vacation
+S | How charming are bed and breakfasts compared with hotels? | They are awkward and old-fashioned ; They are fine but nothing special ; They are more charming than most hotels ; They are always the most charming place to stay
+S | How pleasant is a typical big international airport? | It is stressful and exhausting ; It is dull but manageable ; It is comfortable enough ; It is an enjoyable place to spend time
+S | How fun is a long road trip across a big country? | It is boring hours of driving ; It is fun only for the first day ; It is fun for most of the trip ; It is the best kind of adventure
+S | How satisfying are guided group tours? | They are rushed and frustrating ; They are useful but dull ; They are informative and fun ; They are the best way to see a place
+S | How worthwhile are travel souvenirs? | They end up as clutter ; They are nice for a week ; They bring back good memories for years ; They are treasured keepsakes forever
+S | How appealing are hostels for travelers? | They are dirty and uncomfortable ; They are acceptable for the price ; They are fun and social ; They are the best way to travel
+S | How enjoyable is airline food? | It is inedible ; It is edible but bland ; It is decent ; It is genuinely delicious
+N | Are trains more enjoyable than planes for trips of a few hours?
+N | Are boutique hotels better than big chain hotels?
+N | Is river cruising more enjoyable than ocean cruising?
+N | Is the shoulder season the best time to travel?
+N | Are window seats better than aisle seats on planes?
+N | Is backpacking more rewarding than a package holiday?
+N | Is slow travel more satisfying than seeing many places quickly?
+N | Are hotel rooms with a view worth paying extra for?
+N | Are night flights better than daytime flights?
+N | Is camping a better vacation than staying in a hotel?
+N | Are ferries more enjoyable than flights for short hops?

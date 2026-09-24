@@ -1,0 +1,25 @@
+C | Which dog breed is the cutest? | golden_retriever ; corgi ; pomeranian ; shiba_inu ; french_bulldog ; dachshund ; samoyed ; other
+C | Which dog breed is the most beautiful? | siberian_husky ; afghan_hound ; german_shepherd ; irish_setter ; samoyed ; saluki ; other
+C | Which dog breed has the sweetest temperament around children? | labrador_retriever ; golden_retriever ; beagle ; cavalier_king_charles_spaniel ; poodle ; boxer ; other
+C | Which small dog breed is the most charming? | pug ; chihuahua ; shih_tzu ; pomeranian ; yorkshire_terrier ; papillon ; other
+C | Which large dog breed is the most majestic? | great_dane ; bernese_mountain_dog ; newfoundland ; irish_wolfhound ; saint_bernard ; leonberger ; other
+C | Which cat breed is the cutest? | scottish_fold ; munchkin ; british_shorthair ; ragdoll ; exotic_shorthair ; other
+C | Which cat coat color is the most beautiful? | orange_tabby ; black ; tuxedo ; calico ; grey ; white ; siamese_point
+C | Which horse breed is the most beautiful? | arabian ; friesian ; andalusian ; akhal_teke ; mustang ; appaloosa ; other
+C | Which farm animal is the cutest? | lamb ; piglet ; calf ; goat_kid ; chick ; donkey_foal ; other
+C | Which small pet makes the best companion? | rabbit ; guinea_pig ; hamster ; rat ; ferret ; chinchilla ; other
+C | Which pet bird is the most delightful? | budgie ; cockatiel ; lovebird ; canary ; african_grey ; cockatoo ; other
+C | Which aquarium pet fish is the most beautiful? | betta ; goldfish ; guppy ; angelfish ; neon_tetra ; discus ; other
+C | Which dog breed has the funniest personality? | beagle ; boxer ; jack_russell_terrier ; basset_hound ; pug ; husky ; other
+C | Which chicken breed is the most beautiful? | silkie ; polish ; brahma ; orpington ; ayam_cemani ; other
+S | How cute are pugs? | They are ugly ; They are cute in an odd way ; They are very cute ; They are the cutest dogs of all
+S | How good-looking are hairless sphynx cats? | They are unsettling to look at ; They are odd but interesting ; They are quite attractive ; They are gorgeous
+S | How charming are goats as farm animals? | They are annoying ; They are fine ; They are charming ; They are the most delightful farm animals
+S | How appealing are pet snakes? | They are creepy and unappealing ; They are interesting but not lovable ; They are appealing ; They are wonderful pets
+S | How cute are guinea pigs? | They are not cute ; They are somewhat cute ; They are very cute ; They are the cutest small pets
+S | How beautiful is a well-groomed standard poodle? | It looks silly ; It is handsome ; It is elegant ; It is the most elegant dog there is
+N | Are mixed-breed dogs cuter than purebreds?
+N | Are corgis the cutest dog breed?
+N | Are horses the most beautiful domestic animals?
+N | Are long-haired cats more beautiful than short-haired cats?
+N | Are pigs cuter than sheep?

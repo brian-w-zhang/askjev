@@ -1,0 +1,45 @@
+C | Which cake is the best? | chocolate ; carrot ; cheesecake ; lemon ; tiramisu ; black_forest ; vanilla_sponge ; other
+C | Which pie is the best? | apple ; cherry ; pumpkin ; pecan ; key_lime ; lemon_meringue ; blueberry ; other
+C | Which ice cream flavor is the best? | vanilla ; chocolate ; strawberry ; mint_chocolate_chip ; cookies_and_cream ; pistachio ; salted_caramel ; other
+C | Which candy bar is the best? | snickers ; kit_kat ; twix ; reeses_cups ; milky_way ; butterfinger ; other
+C | Which pastry is the most delicious? | croissant ; pain_au_chocolat ; danish ; cinnamon_roll ; eclair ; baklava ; other
+C | Which donut is the best? | glazed ; jelly_filled ; boston_cream ; chocolate_frosted ; old_fashioned ; cruller ; other
+C | Which bread is the most delicious? | sourdough ; baguette ; brioche ; focaccia ; rye ; challah ; naan ; other
+C | Which kind of chocolate is the best? | dark ; milk ; white ; ruby ; other
+C | Which frosting is the best? | buttercream ; cream_cheese ; whipped_cream ; ganache ; fondant ; other
+C | Which French dessert is the best? | creme_brulee ; macarons ; chocolate_mousse ; tarte_tatin ; profiteroles ; mille_feuille ; other
+C | Which Italian dessert is the best? | tiramisu ; cannoli ; panna_cotta ; gelato ; affogato ; biscotti ; other
+C | Which Asian dessert is the best? | mochi ; mango_sticky_rice ; bubble_waffle ; halo_halo ; egg_tart ; gulab_jamun ; other
+C | Which frozen dessert is the best? | ice_cream ; gelato ; frozen_yogurt ; sorbet ; shaved_ice ; popsicle ; other
+C | Which pudding is the best? | chocolate_pudding ; rice_pudding ; bread_pudding ; sticky_toffee_pudding ; banana_pudding ; flan ; other
+C | Which muffin is the best? | blueberry ; chocolate_chip ; banana_nut ; bran ; lemon_poppy_seed ; corn ; other
+C | Which gummy candy is the best? | gummy_bears ; sour_worms ; fruit_slices ; peach_rings ; gummy_cola_bottles ; other
+C | Which holiday sweet is the best? | gingerbread ; fruitcake ; pumpkin_pie ; candy_canes ; mooncakes ; hot_cross_buns ; other
+C | Which cheesecake style is the best? | new_york ; japanese_souffle ; basque_burnt ; no_bake ; italian_ricotta ; other
+C | Which brownie texture is the best? | fudgy ; cakey ; chewy ; other
+C | Which kind of cookie texture is the best? | soft_and_chewy ; crispy ; cakey ; crunchy_edges_soft_center ; other
+C | Which ice cream topping is the best? | hot_fudge ; caramel ; sprinkles ; whipped_cream ; nuts ; cookie_crumbles ; fresh_fruit ; other
+C | Which pancake style is the best? | american_buttermilk ; french_crepe ; dutch_baby ; japanese_souffle ; swedish ; other
+C | Which pastry cream filling is the best? | vanilla_custard ; chocolate ; lemon_curd ; whipped_cream ; pistachio ; other
+C | Which kind of sweet is the best for sharing at a party? | cupcakes ; cookies ; brownies ; cake_pops ; donuts ; fruit_tart ; other
+C | Which fruit makes the best pie? | apple ; cherry ; peach ; blueberry ; rhubarb ; strawberry ; other
+S | How good is fruitcake? | It is inedible ; It is a joke dessert ; It is fine in small slices ; It is a delicious treat ; It is the best holiday dessert
+S | How good is white chocolate? | It is not worth eating ; It is too sweet to enjoy ; It is fine in baking ; It is delicious on its own ; It is the best chocolate there is
+S | How good is black licorice candy? | It is revolting ; It is barely tolerable ; It is an acquired taste ; It is delicious ; It is the best candy there is
+S | How good is carrot cake? | It is a waste of a dessert ; It is only good for its frosting ; It is a pleasant cake ; It is delicious ; It is the best cake there is
+S | How good is a plain glazed donut from a good shop? | It is too sweet to enjoy ; It is fine but forgettable ; It is a nice treat ; It is delicious ; It is the perfect pastry
+S | How good is rice pudding? | It is unappetizing ; It is dull ; It is a pleasant dessert ; It is delicious comfort food ; It is the best pudding there is
+S | How good are macarons? | They are overpriced and bland ; They are pretty but disappointing ; They are pleasant ; They are delicious ; They are the finest cookie there is
+S | How good is mint chocolate chip ice cream? | It tastes like toothpaste ; It is tolerable ; It is a fine flavor ; It is delicious ; It is the best flavor there is
+S | How good is a warm chocolate lava cake? | It is overrated ; It is fine but cliche ; It is a nice dessert ; It is delicious ; It is the ultimate dessert
+S | How good are marshmallows? | They are unpleasant ; They are only good toasted ; They are a fun sweet ; They are delicious ; They are the best sweet there is
+S | How good is fresh sourdough bread? | It is too sour to enjoy ; It is fine but overhyped ; It is good bread ; It is delicious ; It is the best bread there is
+N | Is cake better than pie?
+N | Is ice cream better than cake?
+N | Are cupcakes better than a slice of cake?
+N | Is gelato better than ice cream?
+N | Are raisins good in cookies?
+N | Is sour candy better than sweet candy?
+N | Is a warm cookie better than a cold one?
+N | Are chocolate chip cookies the best cookie?
+N | Is buttercream better than whipped cream as a cake topping?

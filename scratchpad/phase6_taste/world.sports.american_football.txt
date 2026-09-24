@@ -1,0 +1,10 @@
+C | Which kind of play in American football is the most exciting? | hail_mary ; kick_return_touchdown ; pick_six ; trick_play ; long_run ; one_handed_catch
+C | Which part of a football season is the most fun to watch? | preseason ; opening_weekend ; late_regular_season ; playoffs ; bowl_season ; super_bowl
+C | Which college football tradition is the best? | rivalry_week ; marching_bands ; tailgating ; bowl_games ; homecoming ; other
+C | Which kind of football weather makes the best game to watch? | snow_game ; rain_game ; sunny_afternoon ; frigid_night ; dome_game
+C | Which style of offense is the most fun to watch? | air_raid ; run_heavy ; option_offense ; west_coast ; spread
+S | How exciting is a Super Bowl game? | It is usually a dull game ; It is fine but overhyped ; It is a good game most years ; It is often thrilling ; It is the most exciting game of the year every time
+S | How fun is a snow game in American football? | It is sloppy and dull ; It is a fun novelty ; It is more entertaining than usual ; It is a classic viewing treat ; It is the best football there is
+N | Is overtime in American football exciting?
+N | Is a college bowl game more fun than an NFL playoff game?
+N | Is a defensive struggle more fun to watch than a shootout in American football?

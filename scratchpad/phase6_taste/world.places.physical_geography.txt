@@ -1,0 +1,30 @@
+C | Which waterfall is the most spectacular? | niagara_falls ; victoria_falls ; iguazu_falls ; angel_falls ; gullfoss ; yosemite_falls ; other
+C | Which mountain is the most beautiful? | matterhorn ; mount_fuji ; mount_everest ; kilimanjaro ; denali ; machapuchare ; other
+C | Which desert is the most beautiful? | sahara ; atacama ; namib ; wadi_rum ; mojave ; gobi ; other
+C | Which island is the most beautiful? | bora_bora ; santorini ; maui ; bali ; mauritius ; the_maldives ; other
+C | Which national park has the most stunning scenery? | yosemite ; banff ; torres_del_paine ; yellowstone ; zion ; plitvice_lakes ; other
+C | Which lake is the most beautiful? | lake_como ; lake_louise ; lake_bled ; lake_tahoe ; lake_titicaca ; moraine_lake ; other
+C | Which river is the most scenic to travel along? | rhine ; danube ; nile ; amazon ; mekong ; seine ; other
+C | Which ocean has the most beautiful beaches? | pacific ; atlantic ; indian ; arctic ; southern
+C | Which sea has the most beautiful water color? | caribbean_sea ; mediterranean_sea ; red_sea ; andaman_sea ; aegean_sea ; other
+C | Which fjord region is the most breathtaking? | norway ; new_zealand ; chile ; iceland ; greenland ; alaska
+C | Which mountain range has the best hiking scenery? | alps ; rockies ; himalayas ; andes ; dolomites ; scottish_highlands ; other
+C | Which canyon is the most impressive? | grand_canyon ; antelope_canyon ; fish_river_canyon ; colca_canyon ; verdon_gorge ; other
+C | Which volcano is the most striking to look at? | mount_fuji ; mount_etna ; mount_vesuvius ; cotopaxi ; mount_bromo ; mount_rainier ; other
+C | Which beach is the most beautiful in the world? | whitehaven_beach ; anse_source_dargent ; navagio_beach ; grace_bay ; baia_do_sancho ; other
+C | Which glacier is the most spectacular to visit? | perito_moreno ; jokulsarlon ; aletsch ; mendenhall ; fox_glacier ; other
+C | Which kind of coastline is the most beautiful? | white_sand_beach ; rugged_cliffs ; rocky_coves ; mangrove_shore ; black_sand_beach ; fjord_shore
+S | How beautiful is the Grand Canyon in person? | It looks just like a big ditch ; It is nice but less than the photos ; It is stunning ; It is overwhelming and unforgettable
+S | How spectacular is Niagara Falls? | It is a letdown ; It is pleasant to see once ; It is impressive and loud ; It is one of the great sights on Earth
+S | How beautiful is the Sahara at sunset? | It looks empty and dull ; It is pretty for a moment ; It is stunning ; It is one of the most beautiful sights anywhere
+S | How appealing is the Amazon rainforest as a place to visit? | It is hot, buggy, and unpleasant ; It is interesting for a day ; It is thrilling to explore ; It is the adventure of a lifetime
+S | How beautiful are the Swiss Alps in summer? | They are no better than any hills ; They are pretty ; They are gorgeous ; They are the most beautiful mountains on Earth
+S | How impressive is Mount Everest seen from base camp? | It is hard to even tell which peak it is ; It is nice but not special ; It is majestic ; It is awe-inspiring beyond words
+S | How beautiful is Iceland's landscape? | It is bleak and barren ; It is interesting in places ; It is striking almost everywhere ; It is otherworldly and unforgettable
+N | Is Victoria Falls more spectacular than Niagara Falls?
+N | Are mountains more beautiful than coastlines?
+N | Is Patagonia the most beautiful wilderness on Earth?
+N | Is the Great Barrier Reef more beautiful than the Grand Canyon?
+N | Is Lake Como more beautiful than Lake Geneva?
+N | Are tropical islands more beautiful than northern fjords?
+N | Is Mount Fuji the most beautiful mountain in the world?

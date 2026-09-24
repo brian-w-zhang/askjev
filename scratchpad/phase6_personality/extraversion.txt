@@ -1,0 +1,204 @@
+@node self.personality.big_five.extraversion
+# choice
+C | At a party where you know no one, what do you usually do? | introduce_myself = walk up to people and introduce myself ; find_the_host = stick near the host ; join_a_group = hover at the edge of a group until I can join ; find_one_person = find one other person alone and talk to them ; help_out = keep busy helping with food or drinks ; leave_early = stay a short while and slip out
+C | When you walk into a crowded room at a work event, where do you tend to end up? | the_middle = right in the middle of the busiest group ; near_friends = near people I already know ; by_the_food = by the food or drinks table ; a_quiet_corner = in a quieter corner ; near_the_door = close to the exit
+C | A new coworker joins your team on a Monday. What do you most likely do? | invite_to_lunch = invite them to lunch that day ; stop_by_desk = stop by their desk to say hello ; wave_hello = say hi when we cross paths ; wait_for_them = wait for them to approach me ; other
+C | On a long train ride, the stranger next to you seems friendly. What do you usually do? | start_chatting = start a conversation right away ; chat_if_they_start = chat only if they start it ; smile_and_nod = smile but keep to myself ; headphones = put on headphones straight away
+C | When a group of friends can't decide where to go for dinner, what role do you usually take? | make_the_call = pick a place and get everyone moving ; pitch_ideas = throw out a few ideas ; go_along = go with whatever the group decides ; stay_quiet = stay out of it
+C | In a meeting where nobody wants to speak first, what do you usually do? | speak_up = break the silence myself ; wait_briefly = wait a moment then speak ; speak_when_asked = speak only if called on ; stay_silent = say nothing if I can avoid it
+C | When friends are going out on Saturday night, how do you usually join in? | lead_the_night = plan and lead the whole night ; go_all_night = go and stay out late ; go_for_dinner_only = join for dinner then go home ; one_friend_instead = see just one friend instead ; stay_in = stay in
+C | At a wedding reception, where are you most likely to be found? | dance_floor = on the dance floor ; mingling = moving from table to table ; at_my_table = chatting at my own table ; by_the_bar = by the bar with a small group ; outside = stepping outside for air
+C | When your phone rings from a friend you haven't heard from in a while, what do you do? | pick_up_happily = pick up right away, excited ; pick_up = pick up if I'm free ; text_back = let it ring and text them later ; ignore = let it go and forget to reply
+C | You've just had great news at work. What's the first thing you do? | tell_everyone = tell everyone around me right away ; call_someone = call a close friend or family member ; post_it = share it online ; savor_quietly = keep it to myself for a while
+C | In a group conversation, how much of the talking do you usually do? | most = most of it ; fair_share = about my fair share ; some = a bit less than others ; little = very little, mostly listening
+C | Someone at the gym says hello between sets. How do you respond? | full_chat = start a full conversation ; brief_chat = chat briefly then get back to it ; nod = nod and smile ; ignore = keep my headphones in and carry on
+C | Your neighbor is hosting a block party this weekend. What do you do? | help_organize = offer to help organize it ; go_all_day = go and stay the whole time ; stop_by = stop by for a little while ; skip = find a reason not to go
+C | When you arrive at a friend's party, how do you usually greet the room? | greet_everyone = go around greeting everyone ; greet_the_host = say hi to the host and settle in ; find_my_people = head straight to people I know ; slip_in = slip in quietly without fuss
+C | On a guided tour with strangers, what are you most likely to do? | ask_lots = ask the guide lots of questions ; chat_with_group = get chatting with others on the tour ; listen_quietly = listen quietly and take photos ; drift_away = drift off on my own
+C | When a karaoke microphone is passed around, what do you do? | grab_it = grab it and sing first ; sing_when_asked = sing if people insist ; duet_only = sing only as part of a group ; pass_it = pass it on every time
+C | At a conference coffee break, how do you spend the time? | meet_new_people = go meet as many new people as I can ; talk_to_one = strike up one good conversation ; stick_with_colleagues = stay with colleagues I came with ; check_phone = check my phone off to the side ; step_out = step out for some quiet
+C | On a group vacation, how do you usually behave? | ringleader = the ringleader of every outing ; along_for_everything = along for everything ; join_some = join some things and rest ; go_off_alone = often go off on my own
+C | When you're waiting in a long line at the store, what do you usually do? | chat_with_neighbors = chat with the people around me ; comment_once = make a passing comment to someone ; phone = scroll on my phone ; think = stand and think my own thoughts
+C | How do you usually spend your lunch break at work or school? | big_group = eat with a big group ; one_or_two = eat with one or two people ; alone_outside = eat alone somewhere quiet ; at_my_desk = eat at my desk while working
+C | When a friend's birthday comes around, how do you prefer to celebrate with them? | throw_a_party = throw them a big party ; group_dinner = organize a group dinner ; one_on_one = take them out one on one ; send_a_gift = send a gift or message
+C | When you tell a story to a group, how do you usually tell it? | act_it_out = act it out with voices and gestures ; tell_it_with_energy = tell it with a lot of energy ; tell_it_plainly = tell it plainly ; keep_it_short = keep it as short as possible ; rarely_tell = I rarely tell stories to groups
+C | If you had a free evening and no plans, what would you most likely do? | text_around = text around to see who's out ; go_somewhere_busy = go somewhere busy on my own ; call_one_friend = call one friend to hang out ; stay_home = stay in and enjoy the quiet
+C | A team needs someone to present the project to the client. What do you do? | volunteer = volunteer immediately ; offer_if_needed = offer if nobody else does ; help_prepare = help prepare slides but not present ; avoid_it = hope someone else is chosen
+C | What does your laugh tend to be like in a group? | loud = loud and easy to hear across the room ; hearty = hearty but not loud ; quiet = quiet chuckle ; mostly_smile = I mostly just smile
+C | How do you usually react when music starts playing at a gathering? | start_dancing = start dancing right away ; sway_along = tap or sway along ; wait_for_others = wait until others dance first ; keep_talking = keep talking and ignore it
+C | When someone at a party asks what you do, how do you usually answer? | long_story = give a lively story about it ; short_then_ask = give a short answer and ask about them ; one_line = give a one-line answer ; change_subject = change the subject
+C | How do you usually spend a long weekend? | packed_plans = packed with plans and people ; one_big_outing = one big outing with friends ; mix = a mix of plans and downtime ; mostly_home = mostly at home resting
+C | Your friend asks you to come to a party where you'll only know them. What do you say? | yes_excited = yes, it's a chance to meet people ; yes_if_they_stay_close = yes, if they stay with me ; maybe = maybe, and decide on the day ; no_thanks = no thanks
+C | When you're on a group chat, how active are you? | constant = I'm posting all the time ; regular = I jump in regularly ; occasional = I reply now and then ; lurk = I mostly read without posting ; muted = I keep it muted
+C | At a dinner party, which seat do you prefer? | middle_of_table = the middle of the table where the talk is ; next_to_host = next to the host ; end_of_table = at the end ; next_to_friend = next to someone I know well
+C | When you meet someone new, how quickly do you share personal stories? | right_away = right away ; after_a_chat = after chatting a little ; after_a_few_meetings = after meeting a few times ; much_later = much later, if ever
+C | How do you prefer to get to know a new city? | locals = talk to locals everywhere I go ; tours = join group tours and events ; wander = wander around on my own ; guidebook = follow a guidebook quietly
+C | When a friend proposes a spontaneous night out at the last minute, what do you usually say? | yes_immediately = yes, immediately ; yes_if_close = yes, if it's not far ; depends_on_mood = depends on my mood ; usually_no = usually no, I've settled in
+C | How would friends describe your energy at a party? | the_spark = the one getting everyone going ; lively = lively and chatty ; steady = friendly but calm ; low_key = quiet and low key
+C | Your class or team is planning a social event. What part do you take? | lead_it = lead the planning ; handle_invites = send out the invites and hype it up ; show_up = just show up ; skip_it = skip the event
+C | When you're sitting next to someone on a plane, what usually happens? | long_talk = we talk for most of the flight ; quick_hello = a quick hello and a bit of chat ; nod_only = just a nod ; avoid = I avoid eye contact
+C | When you work in a shared open office, how do you usually behave? | chat_all_day = chat with people around me all day ; chat_at_breaks = chat at breaks ; headphones = keep headphones on ; find_a_quiet_spot = look for a quiet spot away from others
+C | You win a small award at work. How do you want it announced? | big_ceremony = at a big gathering with applause ; team_meeting = at a team meeting ; email = in an email ; privately = told privately
+C | At a game night, how do you usually play? | loud_and_trash_talk = loud, joking and teasing everyone ; chatty = chatty and upbeat ; focused = quiet and focused on the game ; watch = I'd rather watch
+C | When you have exciting news, how many people do you usually tell that day? | everyone = everyone I talk to ; many = lots of friends ; a_few = a few close people ; one = one person ; none = nobody yet
+C | You're at a concert. Where do you want to be? | front_row = right up front in the crowd ; middle_of_crowd = in the middle of the crowd ; back = toward the back ; seated = in a seat away from the crowd
+C | How do you usually spend time on a busy beach? | play_games = start a game of volleyball or frisbee with others ; chat_with_group = chat with the group I came with ; swim = swim and explore ; read_alone = read or nap alone
+C | How do you usually behave in the first minutes of a job interview? | chatty = warm and chatty right away ; friendly_professional = friendly but professional ; reserved = reserved until I settle in ; nervous_quiet = quiet and a bit stiff
+C | When you have a whole day off, how many different people do you usually see? | lots = lots of people across the day ; several = several people ; one_or_two = one or two people ; nobody = usually nobody
+C | When a group of acquaintances invites you to a crowded street festival, what do you do? | rally_more_people = go and bring even more people ; go_and_mingle = go and mingle all day ; go_briefly = go for an hour or so ; decline = decline
+C | When you're in a group photo, where do you usually stand? | center = front and center ; front_edge = in the front, near the side ; back = in the back row ; taking_it = I'm the one taking the photo
+C | When there's a lull in conversation at dinner, what do you do? | fill_it = jump in with a new topic ; ask_question = ask someone a question ; wait = wait for someone else ; enjoy_quiet = enjoy the quiet
+C | How do you prefer to celebrate your own birthday? | big_party = a big party ; night_out = a night out with a group ; small_dinner = a small dinner ; quiet_day = a quiet day by myself ; not_at_all = not celebrating at all
+C | Someone you barely know invites you to their housewarming. What do you do? | go_and_mingle = go and mingle with everyone ; go_briefly = go briefly to be polite ; send_a_gift = send a gift instead ; decline = politely decline
+C | How do you usually walk into a room full of strangers? | make_an_entrance = with a big hello ; confidently = confidently, looking for someone to talk to ; quietly = quietly, getting my bearings first ; hesitantly = hesitantly, hoping to find a familiar face
+C | You're asked to give a toast at a friend's wedding. How do you feel? | thrilled = thrilled, I love the spotlight ; happy = happy to do it ; nervous_but_willing = nervous but willing ; dread = I dread it and try to get out of it
+C | When coworkers gather for drinks after work, how long do you usually stay? | last_one_out = until the very end ; a_good_while = a good while ; short_stay = one drink and go ; skip = I usually skip it
+C | When you go shopping, how much do you talk with the staff? | chat_a_lot = chat with them a lot ; small_talk = make friendly small talk ; only_questions = only ask what I need ; avoid = avoid talking if possible
+C | Which role would you rather play on a team trip? | entertainer = the one keeping everyone entertained ; organizer = the one organizing activities ; companion = a relaxed companion ; observer = the quiet observer
+C | How do you usually respond to a group invitation to try an exciting new activity like ziplining? | first_to_sign_up = first to sign up ; join_in = join in with the group ; watch_first = watch first then decide ; pass = pass on it
+C | On your commute, what do you usually do? | talk_to_people = talk to people I recognize ; call_friends = call friends or family ; listen_to_music = listen to music or podcasts ; think = sit and think
+C | After a whole day home alone, what do you usually do in the evening? | go_out = head out to find people ; invite_someone = invite someone over ; call_someone = call someone for a long chat ; stay_in = stay in happily
+C | When a group needs someone to call and book a table for everyone, what do you do? | do_it = I just do it ; do_it_if_asked = I do it if asked ; suggest_someone = suggest someone else ; avoid = avoid it
+C | At a family gathering, where are you usually? | center_of_it = in the center of the chatter ; with_kids = playing with the kids ; kitchen_helper = helping in the kitchen ; quiet_room = in a quieter room
+C | How do you usually handle a room where nobody knows each other, like a class's first day? | break_the_ice = break the ice for everyone ; talk_to_neighbor = talk to the person next to me ; wait_to_be_talked_to = wait to be talked to ; keep_to_myself = keep to myself
+C | How fast do you usually talk when you're excited? | very_fast = so fast people ask me to slow down ; fast = noticeably faster ; same = about the same ; slower = I get quieter and slower
+C | Which kind of gathering would you most like to host? | big_party = a big house party ; barbecue = a relaxed barbecue ; dinner_for_few = dinner for a few friends ; never_host = I'd rather not host
+C | When you go to a restaurant alone, what do you usually do? | chat_with_staff = chat with the staff and nearby diners ; sit_at_bar = sit at the bar to be around people ; bring_a_book = bring a book or phone ; avoid_it = I rarely go alone
+C | How do you usually act when your favorite team scores at a crowded bar? | yell_and_hug = yell and hug strangers ; cheer = cheer loudly ; clap = clap and smile ; quiet = react quietly
+C | How much do you usually talk to your seatmates at a sports game? | high_fives = high fives and chatting all game ; some_chat = some chat during breaks ; little = barely talk ; none = no talking
+C | What's your usual pace on a free day? | nonstop = on the go from morning to night ; busy = busy with a few plans ; relaxed = relaxed with one or two plans ; slow = slow and unhurried
+C | Which describes how you tend to walk down a busy street? | fast_and_weaving = fast, weaving past people ; brisk = brisk and purposeful ; average = at an average pace ; leisurely = slow and leisurely
+C | When you start a new class or hobby group, how soon do you make a friend there? | first_day = on the first day ; first_week = within the first week or two ; slowly = slowly over months ; rarely = I rarely do
+C | You're at a party and the host asks everyone to play a silly group game. What do you do? | jump_in = jump in with enthusiasm ; play_along = play along ; play_reluctantly = play but reluctantly ; sit_out = sit it out
+C | How do you usually get through a long drive with friends? | lead_singalongs = lead singalongs and games ; chat_the_whole_time = chat the whole time ; take_turns = chat a little and rest ; quiet = stay quiet and look out the window
+C | After a long week, how do you usually behave when friends drag you to a crowded bar? | come_alive = I come alive and get chatty ; loosen_up = I loosen up after a while ; stay_quiet = I stay quiet at the edge ; leave_early = I leave early
+C | When you disagree with the group's plan, what do you usually do? | argue_for_mine = argue openly for my own plan ; suggest_changes = suggest a change ; go_along = go along quietly ; drop_out = quietly drop out
+C | Your team leader leaves suddenly and nobody is in charge. What do you do? | take_charge = step up and take charge ; organize_with_others = organize with a couple of others ; follow = wait for someone to lead ; keep_working = just keep doing my own work
+C | How do you usually talk on the phone in public? | loudly = loudly, without thinking about it ; normally = at a normal volume ; quietly = quietly ; step_away = I step away or text instead
+C | When you get a group text inviting people to an event, how fast do you respond? | first = I'm usually the first to reply ; quickly = within the hour ; later = later that day ; last = I'm often the last
+C | How do you usually behave at a party where you know everyone? | life_of_it = I'm keeping the energy up ; move_around = I move around talking to everyone ; one_group = I stay in one group ; one_person = I stick with one person
+C | When a street performer asks for a volunteer from the crowd, what do you do? | raise_hand = raise my hand right away ; go_if_picked = go up if picked ; step_back = step back into the crowd ; walk_away = walk away
+C | When your friends suggest an amusement park day with a big group, how do you respond? | organize_it = take over organizing it ; excited_yes = yes, excitedly ; yes_for_part = join for part of the day ; decline = decline
+C | When a friend texts after a long workday asking to meet up, what do you usually do? | meet_them = meet them right away ; suggest_tomorrow = suggest tomorrow instead ; call_instead = call instead of meeting ; decline = decline and rest
+C | How do you usually respond when a stranger compliments your jacket? | long_chat = start chatting about where I got it ; thank_and_compliment = thank them and compliment them back ; thank = just say thanks ; awkward = feel a bit awkward and smile
+C | When you enter an elevator with other people, what do you usually do? | say_something = say something friendly ; greet = say hello ; nod = nod ; look_at_phone = look at my phone
+C | How do you usually spend a layover at an airport? | chat_with_travelers = chat with other travelers ; walk_around = walk around the shops ; lounge = find a quiet lounge ; sleep = try to sleep
+C | Your company offers a team-building retreat. How do you feel? | excited = excited, I love these ; fine = fine with it ; tolerate = I tolerate it ; dread = I dread it
+C | What part of a party do you enjoy most? | the_peak = the loud peak when everyone's there ; arrival = arriving and greeting everyone ; late_talks = the late quiet talks ; leaving = heading home
+C | When a club you're in needs a new president, what do you do? | run = put myself forward ; run_if_asked = run if people ask me ; support = support someone else ; stay_out = stay out of it
+C | How do you usually behave on a first day at a new job? | meet_everyone = introduce myself to everyone ; meet_team = meet my immediate team ; wait = wait to be introduced ; keep_head_down = keep my head down and work
+C | You spot an acquaintance across the street. What do you usually do? | cross_over = cross over to say hello ; wave = wave and call out ; wave_if_they_see = wave only if they see me ; pretend = pretend not to see them
+C | Which describes your typical mood when you wake up on a weekend? | bursting = bursting with energy and plans ; cheerful = cheerful ; neutral = neutral ; groggy = slow and groggy
+C | When you're part of an audience and the speaker asks a question, what do you do? | answer_loudly = call out an answer ; raise_hand = raise my hand ; think_silently = think the answer silently ; hope_not_picked = hope I'm not picked
+C | In a group fitness class, how do you usually act? | front_row_cheering = front row, cheering others on ; chat_with_neighbors = chat with people next to me ; focus_quietly = focus quietly on my workout ; back_corner = hide in the back corner
+C | At the end of a fun party, what do you usually suggest? | afterparty = heading somewhere else to keep going ; late_food = grabbing late food together ; heading_home = heading home ; nothing = nothing, I'm already gone
+C | When you're excited about a new idea, what do you do first? | tell_people = tell as many people as I can ; tell_a_friend = tell one friend ; write_it_down = write it down ; think_it_over = think it over quietly
+C | What kind of neighbor are you? | know_everyone = I know everyone on the street ; chat_with_some = I chat with a few neighbors ; wave = I wave but rarely talk ; keep_to_myself = I keep to myself
+C | When you're at a fair or carnival, which ride do you head for? | biggest_coaster = the biggest roller coaster ; spinning_rides = the fast spinning rides ; ferris_wheel = the ferris wheel ; no_rides = no rides, just the games and food
+C | How do you usually spend an evening when your partner or roommate is away? | invite_people_over = invite people over ; go_out = go out with friends ; phone_calls = spend it on the phone ; enjoy_solitude = enjoy having the place to myself
+C | When you're at a busy market abroad, how do you usually shop? | haggle_and_chat = chat and haggle with every seller ; ask_questions = ask a few questions ; point_and_pay = point and pay ; browse_quietly = browse quietly without engaging
+C | How do people usually find out how your day went? | i_tell_them = I tell them before they ask ; when_asked = I tell them when asked ; short_answer = I give a short answer ; rarely = they rarely find out
+C | When a group is walking somewhere together, where are you usually? | leading = leading the way ; middle = in the middle chatting ; back = at the back ; wandering = wandering a bit apart
+C | A friend invites you to join a new rec sports league with strangers. What do you say? | yes_immediately = yes, sounds great ; yes_if_friend_plays = yes, if my friend plays too ; maybe = maybe later in the season ; no = no thanks
+C | How would you describe your voice when you're chatting with friends? | booming = loud and booming ; animated = animated ; even = even and moderate ; soft = soft and quiet
+# score
+S | When plans with friends fall through on a Friday night, how do you react? | I feel relieved and enjoy the free evening ; I shrug and settle in at home ; I text around to see if anyone else is free ; I make new plans right away with other people ; I go out alone to find company
+S | When you arrive at a party, how long before you are talking to someone you didn't know? | I usually leave without meeting anyone new ; I meet someone new only if a friend introduces us ; I meet someone new sometime during the night ; I'm talking to a stranger within the first few minutes ; I've met half the room by the end of the night
+S | When a coworker asks you to join a lunch with people from another team, how do you respond? | I turn it down and eat alone ; I go but mostly listen ; I go and chat with the person next to me ; I go and get to know everyone at the table ; I end up organizing the next lunch myself
+S | How do you behave in a group discussion at work or school? | I stay silent the whole time ; I speak only when asked directly ; I add a point or two when I have something ; I share my views throughout ; I end up steering the whole discussion
+S | How do you act when you're put in charge of a group task? | I try to hand the role to someone else ; I lead quietly by example ; I give some direction when needed ; I set the plan and assign roles ; I take full command and drive everyone forward
+S | How do you usually end up at a dinner party? | Sitting quietly and listening all evening ; Chatting with the person beside me ; Joining in with the table conversation ; Telling stories that get the table laughing ; Running the conversation and the games afterward
+S | How do you spend the hour before a big social event? | Wishing I could stay home ; Getting ready slowly and quietly ; Looking forward to it calmly ; Getting excited and playing music ; Texting everyone about how much fun it will be
+S | How do you greet close friends you haven't seen in a while? | A simple hello ; A smile and a quick hug ; A warm hug and lots of questions ; A shout of their name and a big hug ; Running across the room to grab them
+S | How do you usually behave when you're the guest of honor at a small celebration? | I wish everyone would stop looking at me ; I thank people quietly and sit down ; I enjoy it and chat with everyone ; I give an impromptu speech ; I turn it into a full party with music
+S | How do you spend most evenings in a typical week? | At home alone every night ; At home with the people I live with ; Out with friends once or twice ; Out with friends most nights ; Out every night at some event
+S | How does your energy look on a typical weekday afternoon? | I'm slow and want to lie down ; I'm steady but low key ; I'm fairly active and busy ; I'm bouncing between tasks and people ; I'm buzzing and hard to keep up with
+S | When a friend invites you to a crowded club, how do you respond? | I say no without thinking twice ; I say yes only if I owe them ; I go and have a decent time ; I go and dance for hours ; I'm the one who suggested it
+S | How much do you talk to service staff like baristas or cashiers? | I say only what's needed ; I say please and thanks ; I add a bit of friendly small talk ; I chat and learn their names ; They greet me by name and ask about my day
+S | How do you handle a quiet moment when a group falls silent? | I'm glad for the silence ; I wait for someone else to speak ; I ask a small question to keep things going ; I launch into a new story ; I've already started a new game or topic before it gets quiet
+S | How do you tend to behave on a group trip? | I slip away often to be alone ; I join the main activities and then rest ; I'm there for all the group plans ; I push for extra outings and late nights ; I'm organizing everything and rallying everyone
+S | How do you react to a surprise party thrown for you? | I'm uncomfortable and want it to end ; I smile politely through it ; I'm touched and enjoy it ; I'm thrilled and soak up the attention ; I keep the party going long after it was planned to end
+S | How do you usually react when you see a crowd gathered around something on the street? | I walk around it ; I glance and keep going ; I stop for a quick look ; I push in to see what's happening ; I end up chatting with people in the crowd about it
+S | How do you usually spend a free Sunday? | Completely alone at home ; Mostly at home with one or two people ; Half at home, half out ; Out with friends most of the day ; Out from morning to night with different groups
+S | How cheerful do you seem to others on an ordinary day? | People often ask if something is wrong ; I seem calm and neutral ; I seem pleasant and friendly ; I seem upbeat and smile a lot ; People say I light up a room
+S | How do you usually join in when friends are playing music and singing? | I leave the room ; I listen quietly ; I hum along ; I sing along loudly ; I grab an instrument and lead the song
+S | How do you react when you are asked to speak in front of a large audience? | I refuse outright ; I agree but dread it for days ; I do it and feel fine afterward ; I look forward to it ; I ask for more time on stage
+S | How do you tend to make plans with friends? | I wait to be invited and often decline ; I wait to be invited and usually go ; I sometimes suggest plans ; I'm usually the one making plans ; I'm constantly organizing outings for everyone
+S | How much do you seek out excitement on a night out? | I'd rather have a calm evening ; I like a lively restaurant at most ; I enjoy a busy bar or show ; I want loud music and dancing ; I want the wildest night possible, moving from place to place
+S | How do you react when a friend brings along someone you've never met? | I go quiet until they leave ; I'm polite but reserved ; I chat with them a bit ; I make a point of getting to know them ; I've swapped numbers with them by the end of the night
+S | How do you behave in a waiting room with other people? | I avoid eye contact ; I smile if someone looks my way ; I say hello to the person next to me ; I strike up a conversation ; I get the whole room chatting
+S | How do you usually respond to an invitation to a big networking event? | I ignore it ; I plan to go and then skip it ; I go and talk to a few people ; I go and collect lots of contacts ; I go early, stay late and introduce people to each other
+S | How do you usually act when you're really happy? | I feel it inside but show little ; I smile quietly ; I'm noticeably cheerful ; I'm loud, laughing and animated ; I'm bouncing off the walls and hugging people
+S | How do you usually spend a long break between classes or meetings? | Alone with headphones ; Reading or working quietly ; Chatting with one person ; Hanging out with a group ; Going around catching up with everyone
+S | When you visit a new gym, club or class, how do you settle in? | I come and go without talking to anyone ; I talk only to the instructor ; I get to know one or two regulars ; I know most regulars within a few weeks ; I'm the one welcoming newcomers soon after
+S | How do you feel when everyone at a gathering turns to look at you? | I want to disappear ; I get flustered but manage ; I'm fine and carry on ; I enjoy it and play it up ; I feel most alive in that moment
+S | How do you react to a last-minute invitation to a party tonight? | I always say no ; I say no unless it's a close friend ; I go if I'm not too tired ; I go almost every time ; I go and bring more people along
+S | How do you usually respond when people around you are dancing? | I stay seated no matter what ; I dance only if pulled up ; I join once a few are dancing ; I'm one of the first on the floor ; I'm pulling others onto the floor
+S | How do you keep up with your wider circle of acquaintances? | I don't keep up at all ; I see them only by chance ; I reach out now and then ; I check in with lots of people regularly ; I'm the hub who knows everyone's news
+S | How do you tend to fill silences on a long car ride? | I enjoy the silence ; I put on music and stay quiet ; I make small talk now and then ; I chat most of the way ; I talk nonstop the entire ride
+S | How do you usually act in a class or workshop with strangers? | I sit at the back and leave right after ; I sit quietly and take notes ; I talk with my neighbor during breaks ; I ask questions and join discussions ; I'm leading group exercises by the end
+S | How fast do you go through your day? | I move slowly and take my time ; I keep a relaxed pace ; I keep a steady brisk pace ; I rush from one thing to the next ; I pack my day so tightly others can't keep up
+S | How do you react when a friend suggests an adventurous group outing like whitewater rafting? | I say no and suggest something calmer ; I go but stay cautious ; I'm happy to join ; I get excited and push others to come ; I'm already planning the next wilder trip
+S | How do you behave when you're a guest at a gathering of strangers? | I stay near the person who invited me ; I talk to a few people who approach me ; I introduce myself to a few people ; I work the room talking to everyone ; I end up acting like a second host
+S | How do you tend to express enthusiasm about a movie you loved? | I keep it to myself ; I mention it if someone asks ; I recommend it to a few friends ; I rave about it to everyone ; I organize a group to go see it again
+S | How do you usually spend holidays? | Alone, by choice ; With one or two close people ; With my family ; At big gatherings with family and friends ; Hopping between several parties
+S | How do you usually approach small talk with strangers? | I avoid it whenever possible ; I keep it as short as I can ; I'm comfortable with a little ; I enjoy it and keep it going ; I turn small talk into long conversations
+S | How do you respond when a coworker you barely know stops by to chat? | I give short answers so they leave ; I chat politely for a minute ; I chat for a while happily ; I invite them to grab coffee ; We become regular chat buddies
+S | How do you handle a spare hour in a new city? | I stay in my room ; I take a quiet walk alone ; I visit a busy square or market ; I head to a bar to meet locals ; I join a group event or pub crawl
+S | How do you tend to react when someone suggests going around the room for introductions? | I dread it and keep mine as short as possible ; I say my name and one fact ; I say a few lines comfortably ; I enjoy it and make people laugh ; I volunteer to go first and keep it lively
+S | How do you usually react when you find out a friend is throwing a party? | I hope I'm not invited ; I go if I have to ; I look forward to it ; I offer to help set up ; I ask if I can co-host it
+S | How loud is your laugh in a quiet restaurant? | Almost silent ; A quiet chuckle ; A normal laugh ; Loud enough for nearby tables to look ; Loud enough to turn the whole room
+S | How do you usually respond when friends want to stay out late? | I head home early every time ; I leave around the time things wind down ; I stay until most people leave ; I'm one of the last ones out ; I'm the one convincing everyone to stay
+S | How do you spend your time at a cookout with neighbors? | I stay home ; I drop off food and leave ; I chat with the neighbors I know ; I meet neighbors I haven't met before ; I end up manning the grill and hosting
+S | How do you usually behave in a queue for a popular event? | I keep to myself ; I nod at people nearby ; I chat with the people next to me ; I make friends with the people around me ; I get the whole line talking and joking
+S | How do you respond when someone asks for a volunteer to lead a group activity? | I look away and hope someone else does it ; I volunteer only if nobody else does ; I sometimes volunteer ; I usually volunteer ; My hand is up before they finish asking
+S | How much do you look forward to a big crowded event like a festival? | I avoid it at all costs ; I'd go only for a short time ; I enjoy it now and then ; I look forward to it for weeks ; I plan my year around events like that
+S | How do you behave when you're bored at a quiet gathering? | I wait patiently for it to end ; I quietly leave early ; I find one person to chat with ; I suggest something fun to do ; I get everyone up and moving
+S | How many people do you usually talk to at a party? | Only the person I came with ; One or two people ; A handful of people ; Most people there ; Everyone in the room
+S | How do you react when a stranger at a bus stop starts chatting with you? | I put in headphones to end it ; I give polite short answers ; I chat until the bus comes ; I keep the conversation going on the bus ; I've made a new friend by the end of the ride
+S | How much do you enjoy loud, busy places like stadiums or clubs? | I find them unbearable ; I can manage them for a short time ; I enjoy them now and then ; I love them and go often ; I seek them out every chance I get
+S | When a group is deciding what to do, how much do you push your own idea? | I never suggest anything ; I suggest something only if asked ; I offer an idea and let it go ; I argue for my idea ; I push until the group goes with my plan
+S | How do you behave when you meet your friend's family for the first time? | I stay very quiet ; I answer questions politely ; I chat easily with them ; I get them laughing ; I'm hugging everyone by the time I leave
+S | How do you typically start your mornings at work or school? | I head straight to my seat without talking ; I nod hello to a few people ; I say good morning to those near me ; I chat with several people before starting ; I do a round greeting everyone
+S | How do you react when you're seated alone at a shared table in a busy cafe? | I focus on my phone ; I nod at the others ; I make a comment to someone nearby ; I start a conversation with the table ; I end up sharing food and stories with them
+# noul
+N | Do you usually talk to the people sitting next to you on a plane?
+N | At parties, do you usually stay until the very end?
+N | Do you often introduce yourself to strangers at events?
+N | Do you usually take the lead when a group needs direction?
+N | Do you tend to speak up first in meetings?
+N | Do you often organize get-togethers for your friends?
+N | Do you usually get up to dance when music comes on at a party?
+N | Do you often find yourself telling stories to a group?
+N | Do you usually say yes to last-minute invitations to go out?
+N | Do you often start conversations with cashiers or baristas?
+N | Do you tend to make new friends at every job or class you join?
+N | Do you often laugh out loud in public?
+N | Do you usually fill your weekends with social plans?
+N | Do you enjoy being the one who gives the speech at a celebration?
+N | Do you often call friends just to chat?
+N | Do you usually volunteer to go first when people take turns in a group?
+N | Do you often talk loudly without noticing?
+N | Do you usually seek out the most exciting option on a night out?
+N | Do you tend to move quickly from one activity to the next all day?
+N | Do you often invite people you've just met to hang out?
+N | Do you usually greet neighbors by name?
+N | Do you tend to wake up cheerful most days?
+N | Do you often chat with strangers while waiting in line?
+N | Do you usually host gatherings at your place?
+N | Do you enjoy being in the middle of a crowd at a concert?
+N | Do you usually know most people at the parties you go to?
+N | Do you often end up as the spokesperson for your group?
+N | Do you enjoy performing in front of others, like singing at karaoke?
+N | Do you often share your excitement about things with whoever is around?
+N | Do you usually keep the conversation going when it starts to fade?
+N | Do you often take charge when ordering food for a group?
+N | Do you tend to look for company when you're bored?
+N | Do you often join group activities like trivia nights or pickup games?
+N | Do you tend to make friends with people you meet while traveling?
+N | Do you often talk with your hands and act things out?
+N | Do you usually push your friends to go out when they want to stay in?
+N | Do you often end up chatting with people at the next table?
+N | Do you tend to be the loudest person in a group of friends?
+N | Do you often seek out adrenaline activities with a group, like theme park rides?
+N | Do you usually jump into conversations between people you don't know?

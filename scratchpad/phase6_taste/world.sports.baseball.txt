@@ -1,0 +1,10 @@
+C | Which baseball moment is the most thrilling? | walk_off_home_run ; no_hitter_final_out ; stolen_home ; diving_catch ; strikeout_with_bases_loaded
+C | Which kind of baseball ballpark is the most charming? | old_classic_park ; retro_modern_park ; minor_league_park ; domed_stadium ; spring_training_park
+C | Which ballpark food is the best part of a game? | hot_dog ; peanuts ; cracker_jack ; nachos ; garlic_fries ; other
+C | Which pitch is the most beautiful to watch? | fastball ; curveball ; knuckleball ; changeup ; slider ; splitter
+C | Which stretch of a baseball game has the best atmosphere? | first_pitch ; seventh_inning_stretch ; late_innings ; extra_innings ; walk_off
+S | How fun is going to a baseball game in person? | It is long and boring ; It is fine for the snacks ; It is a pleasant afternoon ; It is a great outing ; It is the best way to spend a summer day
+S | How exciting is a no-hitter in its final inning? | It is barely tense ; It is mildly interesting ; It is quite tense ; It is gripping ; It is among the tensest moments in any sport
+N | Is minor league baseball more fun to attend than major league baseball?
+N | Is a stolen base more exciting than a home run?
+N | Is softball as fun to watch as baseball?

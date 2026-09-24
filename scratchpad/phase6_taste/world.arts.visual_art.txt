@@ -1,0 +1,45 @@
+C | Which Van Gogh painting is the most beautiful? | the_starry_night ; sunflowers ; cafe_terrace_at_night ; wheatfield_with_crows ; irises ; the_bedroom ; almond_blossoms ; other
+C | Which Impressionist painter made the most beautiful work? | claude_monet ; pierre_auguste_renoir ; edgar_degas ; camille_pissarro ; berthe_morisot ; alfred_sisley ; other
+C | Which art museum has the best collection to see in person? | the_louvre ; the_metropolitan_museum_of_art ; the_prado ; the_uffizi ; the_rijksmuseum ; the_hermitage ; moma ; other
+C | Which kind of art is the most enjoyable to see in a gallery? | oil_painting ; sculpture ; photography ; installation_art ; watercolor ; video_art ; other
+C | Which Leonardo da Vinci work is the most impressive? | mona_lisa ; the_last_supper ; vitruvian_man ; lady_with_an_ermine ; the_annunciation ; other
+C | Which sculptor made the most beautiful work? | michelangelo ; bernini ; rodin ; donatello ; canova ; henry_moore ; other
+C | Which Frida Kahlo painting is the most striking? | the_two_fridas ; self_portrait_with_thorn_necklace ; the_broken_column ; viva_la_vida ; other
+C | Which painting style is the most pleasing to hang in a living room? | abstract ; landscape ; still_life ; pop_art ; botanical_illustration ; portrait ; other
+C | Which series of Monet paintings is the loveliest? | water_lilies ; haystacks ; rouen_cathedral ; poplars ; the_houses_of_parliament ; other
+C | Which kind of photography makes the most beautiful images? | landscape ; portrait ; street ; wildlife ; black_and_white ; astrophotography ; macro ; other
+C | Which Renaissance painter is the most impressive? | leonardo_da_vinci ; michelangelo ; raphael ; botticelli ; titian ; jan_van_eyck ; other
+C | Which Surrealist painter made the most captivating work? | salvador_dali ; rene_magritte ; max_ernst ; joan_miro ; leonora_carrington ; other
+C | Which Michelangelo work is the most impressive? | the_david ; the_sistine_chapel_ceiling ; the_pieta ; the_last_judgment ; moses ; other
+C | Which art medium produces the most beautiful results? | oil_paint ; watercolor ; charcoal ; ink ; pastel ; acrylic ; fresco ; other
+C | Which Japanese woodblock print is the most striking? | the_great_wave_off_kanagawa ; fine_wind_clear_morning ; sudden_shower_over_shin_ohashi_bridge ; plum_park_in_kameido ; other
+C | Which color palette makes the most beautiful paintings? | warm_earth_tones ; cool_blues_and_greens ; bright_primary_colors ; soft_pastels ; black_and_white ; other
+C | Which Dutch Golden Age painter is the best? | rembrandt ; johannes_vermeer ; frans_hals ; jan_steen ; pieter_de_hooch ; other
+C | Which pop art artist made the most enjoyable work? | andy_warhol ; roy_lichtenstein ; keith_haring ; claes_oldenburg ; jasper_johns ; other
+C | Which kind of street art is the most impressive? | large_murals ; stencil_art ; graffiti_lettering ; three_d_chalk_art ; paste_ups ; other
+C | Which Picasso period produced the best work? | blue_period ; rose_period ; cubism ; neoclassical_period ; late_period ; other
+C | Which famous portrait painting is the most captivating? | mona_lisa ; girl_with_a_pearl_earring ; american_gothic ; whistlers_mother ; the_arnolfini_portrait ; other
+C | Which kind of sculpture material is the most beautiful? | marble ; bronze ; wood ; clay ; glass ; steel ; other
+C | Which modern painting is the most emotionally powerful? | the_scream ; the_kiss = The Kiss by Klimt ; guernica ; the_large_blue_horses = The Large Blue Horses by Franz Marc ; nighthawks ; other
+C | Which kind of museum exhibit is the most fun to walk through? | immersive_digital_show ; retrospective_of_one_artist ; ancient_artifacts ; modern_art_survey ; photography_exhibit ; other
+C | Which art museum building is the most beautiful to visit? | the_louvre ; guggenheim_bilbao ; guggenheim_new_york ; musee_dorsay ; the_getty_center ; tate_modern ; other
+S | How beautiful is The Starry Night in person? | It is a letdown compared with its prints ; It is nice but small and crowded ; It is striking and vivid ; It is breathtaking beyond any reproduction
+S | How impressive is the Sistine Chapel ceiling? | It is overhyped and hard to see ; It is impressive but tiring to look at ; It is a stunning masterpiece ; It is the greatest artistic achievement in history
+S | How enjoyable are Mark Rothko's color field paintings? | They are just blocks of color ; They are pleasant to glance at ; They are moving to stand in front of ; They are among the most powerful paintings ever made
+S | How good is Banksy as an artist? | He is a gimmick with no real talent ; He is clever but shallow ; He is a genuinely talented artist ; He is one of the most important artists of his time
+S | How beautiful are Monet's water lily paintings? | They are blurry and dull ; They are pleasant decoration ; They are lovely and calming ; They are among the most beautiful paintings ever made
+S | How impressive are photorealistic paintings? | They are pointless copies of photos ; They show skill but little art ; They are impressive works of art ; They are among the most impressive feats in painting
+S | How beautiful is Michelangelo's David? | It is overrated ; It is well made but ordinary ; It is a stunning sculpture ; It is the most beautiful sculpture ever made
+S | How good is Andy Warhol's work? | It is lazy copying of ads ; It is fun but shallow ; It is clever and influential ; It is some of the most important art of its century
+S | How moving is Picasso's Guernica? | It leaves most viewers cold ; It is interesting but confusing ; It is powerful and haunting ; It is one of the most moving paintings ever made
+S | How enjoyable is abstract art to look at? | It is meaningless and dull ; It is occasionally interesting ; It is often rewarding ; It can be the most moving art of all
+S | How beautiful is The Birth of Venus by Botticelli? | It is stiff and dated ; It is pretty but ordinary ; It is a beautiful painting ; It is one of the most beautiful paintings in the world
+N | Is Vermeer's Girl with a Pearl Earring more beautiful than the Mona Lisa?
+N | Is Van Gogh the greatest painter who ever lived?
+N | Are Impressionist paintings more beautiful than Renaissance paintings?
+N | Is sculpture more impressive than painting?
+N | Is The Scream a great painting?
+N | Is a great mural more impressive than a great canvas painting?
+N | Are black-and-white photographs more beautiful than color photographs?
+N | Is Salvador Dali's The Persistence of Memory a masterpiece?
+N | Is modern art as beautiful as classical art?

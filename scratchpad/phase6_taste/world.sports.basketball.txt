@@ -1,0 +1,15 @@
+C | Which kind of basketball play is the most exciting? | alley_oop ; chase_down_block ; step_back_three ; crossover_ankle_breaker ; no_look_pass ; half_court_buzzer_beater
+C | Which basketball competition is the most fun to watch? | ncaa_march_madness ; olympic_basketball ; fiba_world_cup ; euroleague ; wnba ; other
+C | Which dunk contest style is the most impressive? | windmill ; between_the_legs ; free_throw_line_takeoff ; reverse ; dunk_over_a_person
+C | Which tempo makes basketball the most entertaining? | fast_run_and_gun ; balanced ; slow_grind_it_out
+C | Which basketball variant is the most fun to watch? | five_on_five ; three_on_three ; streetball ; wheelchair_basketball ; horse_shooting_contest
+C | Which kind of basketball court is the most atmospheric? | packed_college_arena ; outdoor_street_court ; old_school_gym ; modern_pro_arena
+C | Which basketball skill is the most beautiful to watch? | shooting ; passing ; dribbling ; shot_blocking ; post_moves
+C | Which moment in a basketball game is the most tense? | final_possession ; overtime ; free_throws_to_tie ; opening_tip
+S | How exciting is a college basketball buzzer-beater? | It is barely noticeable ; It is a nice moment ; It is a highlight worth rewatching ; It is electrifying ; It is one of the best moments in any sport
+S | How fun is three-on-three basketball to watch? | It is dull ; It is a novelty ; It is fun in short bursts ; It is often more fun than full games ; It is the most exciting form of basketball
+S | How entertaining is streetball? | It is sloppy and boring ; It is fun for a few highlights ; It is a good show ; It is more fun than organized games ; It is the purest fun basketball has to offer
+S | How beautiful is a perfectly swished jump shot? | It is unremarkable ; It is pleasant ; It is satisfying to see ; It is a small work of art ; It is the most beautiful motion in sport
+N | Is college basketball more exciting than professional basketball?
+N | Is a slam dunk more exciting than a long three-pointer?
+N | Is Olympic basketball more fun to watch than club basketball?

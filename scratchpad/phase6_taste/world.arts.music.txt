@@ -1,0 +1,45 @@
+C | Which Beatles album is the best? | please_please_me ; rubber_soul ; revolver ; sgt_peppers = Sgt. Pepper's Lonely Hearts Club Band ; the_white_album ; abbey_road ; let_it_be ; other
+C | Which music genre is best for a long night drive? | synthwave ; classic_rock ; hip_hop ; lo_fi ; country ; jazz ; ambient ; other
+C | Which Queen song is the greatest? | bohemian_rhapsody ; dont_stop_me_now ; somebody_to_love ; under_pressure ; we_will_rock_you ; killer_queen ; other
+C | Which genre makes the best workout soundtrack? | hip_hop ; edm ; metal ; pop ; rock ; drum_and_bass ; other
+C | Which instrument has the most beautiful sound? | cello ; piano ; violin ; acoustic_guitar ; harp ; flute ; french_horn ; other
+C | Which Michael Jackson album is the best? | off_the_wall ; thriller ; bad ; dangerous ; other
+C | Which kind of concert venue gives the best live music experience? | stadium ; arena ; small_club ; outdoor_festival ; concert_hall ; jazz_bar
+C | Which Taylor Swift album is the best? | fearless ; red ; reputation ; lover ; folklore ; evermore ; midnights ; other
+C | Which classical composer wrote the most beautiful music? | bach ; mozart ; beethoven ; chopin ; tchaikovsky ; debussy ; vivaldi ; other
+C | Which genre makes the best background music for studying? | classical ; lo_fi_hip_hop ; ambient ; jazz ; film_scores ; acoustic_folk ; other
+C | Which Pink Floyd album is the best? | the_piper_at_the_gates_of_dawn ; the_dark_side_of_the_moon ; wish_you_were_here ; animals ; the_wall ; other
+C | Which kind of voice is the most pleasant to listen to? | deep_baritone ; soulful_alto ; soaring_soprano ; raspy_rock_voice ; soft_breathy_voice ; operatic_tenor
+C | Which Beyonce album is the best? | dangerously_in_love ; b_day ; lemonade ; renaissance ; cowboy_carter ; self_titled = Beyonce ; other
+C | Which music format sounds the best? | vinyl ; cd ; cassette ; lossless_streaming ; standard_streaming ; live_radio
+C | Which genre has the best guitar solos? | classic_rock ; heavy_metal ; blues ; progressive_rock ; country ; jazz_fusion ; other
+C | Which Radiohead album is the best? | the_bends ; ok_computer ; kid_a ; in_rainbows ; hail_to_the_thief ; a_moon_shaped_pool ; other
+C | Which kind of song is the best to sing at karaoke? | power_ballad ; eighties_pop_hit ; rap_verse ; country_duet ; disco_anthem ; rock_classic ; other
+C | Which Kendrick Lamar album is the best? | good_kid_maad_city ; to_pimp_a_butterfly ; damn ; mr_morale ; gnx ; other
+C | Which genre makes the best music for a summer party? | reggaeton ; pop ; house ; hip_hop ; disco ; afrobeats ; other
+C | Which Bob Dylan album is the best? | the_freewheelin_bob_dylan ; bringing_it_all_back_home ; blonde_on_blonde ; blood_on_the_tracks ; other
+C | Which kind of film score is the most moving? | sweeping_orchestral ; minimalist_piano ; electronic_synth ; choral ; folk_acoustic ; other
+C | Which musical era had the best dance music? | swing_era ; disco_era ; eighties_synth_pop ; nineties_house ; modern_edm ; other
+C | Which Fleetwood Mac album is the best? | rumours ; tusk ; fleetwood_mac_self_titled ; tango_in_the_night ; other
+C | Which kind of album is the most rewarding to listen to all the way through? | concept_album ; live_album ; greatest_hits ; acoustic_album ; soundtrack ; debut_album
+C | Which genre has the most beautiful harmonies? | a_cappella ; gospel ; barbershop ; folk ; doo_wop ; choral_classical ; other
+S | How good is Bohemian Rhapsody as a song? | It is a forgettable novelty track ; It is a fun song with a few strong moments ; It is a very good rock song ; It is one of the great songs of its decade ; It is one of the greatest songs ever recorded
+S | How enjoyable is a full Wagner opera to sit through? | It is almost unbearable to finish ; It has a few good passages among long dull stretches ; It is enjoyable for anyone with patience ; It is gripping from start to finish ; It is one of the most overwhelming experiences in art
+S | How well does disco hold up today? | It sounds dated and cheesy ; It works only as party nostalgia ; It is still fun on a dance floor ; It still sounds fresh and exciting ; It remains some of the best pop music ever made
+S | How good is Thriller as an album? | It is mostly filler around a few hits ; It is a solid pop record ; It is an excellent album with many strong songs ; It is a near-perfect pop album ; It is the best pop album ever made
+S | How pleasant is the sound of bagpipes? | It is painful to hear ; It is tolerable for a few seconds ; It is stirring at the right event ; It is beautiful in almost any setting
+S | How good is jazz fusion as a genre? | It is noodling that goes nowhere ; It has a few great records among many dull ones ; It is a rich genre worth exploring ; It is one of the most exciting genres ever created
+S | How catchy is the average modern pop chorus? | It fades from memory right away ; It sticks after a few plays ; It sticks after a single listen ; It stays stuck for days after one listen
+S | How good is the music in Kind of Blue by Miles Davis? | It is pleasant but unremarkable background jazz ; It is a very good jazz record ; It is an essential jazz album ; It is the greatest jazz album ever made
+S | How well does heavy metal work as music to relax to? | It makes relaxing impossible ; It works only for devoted metal fans ; It works for some slower metal songs ; It is surprisingly calming for many listeners
+S | How enjoyable is an unplugged acoustic version of a loud rock song? | It drains the song of all its energy ; It is a curiosity heard once ; It is a nice change of pace ; It often beats the original
+S | How good is Nirvana's Nevermind? | It is overrated grunge noise ; It is a good rock record with some hits ; It is a great album that defined its era ; It is one of the best rock albums ever made
+N | Does music sound better live than on a studio recording?
+N | Is a symphony orchestra the most impressive sound in music?
+N | Are the Beatles the greatest band of all time?
+N | Is the ukulele a charming instrument to hear?
+N | Does a great bassline matter more than great lyrics in a pop song?
+N | Are cover versions often better than the originals?
+N | Is Beethoven's Ninth Symphony the greatest piece of classical music?
+N | Is a quiet acoustic ballad more moving than a big power ballad?
+N | Does country music have the best storytelling lyrics of any genre?

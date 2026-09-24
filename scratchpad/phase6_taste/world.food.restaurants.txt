@@ -1,0 +1,45 @@
+C | Which fast-food chain has the best burger? | mcdonalds ; burger_king ; wendys ; in_n_out ; five_guys ; shake_shack ; whataburger ; other
+C | Which fast-food chain has the best chicken? | kfc ; popeyes ; chick_fil_a ; raising_canes ; church_s ; other
+C | Which pizza chain is the best? | dominos ; pizza_hut ; papa_johns ; little_caesars ; marcos ; other
+C | Which coffee chain is the best? | starbucks ; dunkin ; tim_hortons ; costa ; peets ; blue_bottle ; other
+C | Which fast-food breakfast item is the best? | egg_mcmuffin ; breakfast_burrito ; hash_browns ; biscuit_sandwich ; pancakes ; other
+C | Which kind of restaurant is the best for a first date? | cozy_bistro ; sushi_bar ; tapas_bar ; pizzeria ; wine_bar ; food_hall ; other
+C | Which kind of restaurant is the best for a big family dinner? | chinese_banquet ; italian_family_style ; steakhouse ; buffet ; korean_barbecue ; other
+C | Which kind of restaurant is the best for a birthday dinner? | steakhouse ; sushi ; italian ; hibachi ; fine_dining ; other
+C | Which restaurant atmosphere is the most enjoyable? | quiet_and_intimate ; lively_and_loud ; casual_and_cozy ; elegant_and_formal ; outdoor_patio ; other
+C | Which kind of eating out is the best value? | street_food ; lunch_specials ; buffets ; food_trucks ; diners ; other
+C | Which kind of fast-food side is the best? | french_fries ; onion_rings ; tater_tots ; mozzarella_sticks ; coleslaw ; mac_and_cheese ; other
+C | Which way of ordering at a restaurant is the most pleasant? | server_at_table ; counter_order ; qr_code_menu ; tablet_kiosk ; other
+C | Which kind of food truck is the best? | tacos ; burgers ; korean_fusion ; lobster_rolls ; barbecue ; crepes ; other
+C | Which kind of restaurant makes the best brunch? | american_diner ; french_cafe ; hotel_buffet ; dim_sum_house ; bakery_cafe ; other
+C | Which dining style is the most fun? | omakase ; hot_pot ; korean_barbecue ; fondue ; conveyor_belt_sushi ; teppanyaki ; other
+C | Which kind of seating in a restaurant is the best? | booth ; window_table ; bar_counter ; patio ; chefs_counter ; other
+C | Which chain restaurant has the best appetizers? | applebees ; chilis ; olive_garden ; red_lobster ; tgi_fridays ; cheesecake_factory ; other
+C | Which fast-food chain has the best milkshakes? | mcdonalds ; shake_shack ; in_n_out ; steak_n_shake ; chick_fil_a ; sonic ; other
+C | Which fast-casual chain is the best? | chipotle ; panera ; sweetgreen ; cava ; qdoba ; panda_express ; other
+C | Which sandwich chain is the best? | subway ; jersey_mikes ; jimmy_johns ; firehouse_subs ; potbelly ; other
+C | Which fast-food dessert is the best? | mcflurry ; frosty ; dairy_queen_blizzard ; apple_pie ; milkshake ; other
+C | Which fine dining experience is the most appealing? | tasting_menu ; chefs_table ; a_la_carte_classic ; wine_pairing_dinner ; other
+C | Which kind of steakhouse is the best? | classic_american ; brazilian_churrascaria ; argentine_parrilla ; japanese_wagyu ; other
+C | Which kind of place serves the best late-night food? | diner ; kebab_shop ; taco_stand ; pizza_by_the_slice ; ramen_bar ; other
+C | Which kind of restaurant is the best for eating alone? | ramen_counter ; sushi_bar ; cafe ; diner_counter ; food_court ; other
+S | How good is Olive Garden? | It is terrible ; It is below average ; It is fine for a casual meal ; It is genuinely good ; It is one of the best chain restaurants
+S | How good is an all-you-can-eat buffet? | It is always a bad meal ; It is fine only when very hungry ; It is decent value ; It is a fun and tasty meal ; It is the best way to eat out
+S | How good is food from a food truck? | It is usually disappointing ; It is hit or miss ; It is reliably decent ; It is often excellent ; It beats most sit-down restaurants
+S | How good is a Michelin-starred tasting menu as an experience? | It is pretentious and dull ; It is interesting but not enjoyable ; It is a nice treat ; It is a memorable delight ; It is the best meal a person can have
+S | How good is airport restaurant food? | It is awful ; It is poor and overpriced ; It is acceptable ; It is often good ; It is as good as city restaurants
+S | How good is Chick-fil-A's chicken sandwich? | It is bad ; It is ordinary ; It is decent ; It is very good ; It is the best fast-food sandwich there is
+S | How good is Subway? | It is bad ; It is barely acceptable ; It is fine in a pinch ; It is good ; It is the best sandwich chain
+S | How good is Chipotle? | It is bad ; It is mediocre ; It is decent ; It is very good ; It is the best fast-casual chain
+S | How good is hotel restaurant food? | It is poor ; It is overpriced and bland ; It is acceptable ; It is good ; It is often the best in town
+S | How good is diner food? | It is greasy junk ; It is filling but dull ; It is decent comfort food ; It is delicious ; It is the best kind of eating out
+S | How good is food ordered through a delivery app when it arrives? | It is soggy and disappointing ; It is noticeably worse than in person ; It is acceptable ; It is nearly as good as in person ; It is just as good as in person
+N | Is Five Guys better than Shake Shack?
+N | Is Popeyes better than KFC?
+N | Is Taco Bell good food?
+N | Is dim sum the best way to have a meal out?
+N | Are chain restaurants worse than independent restaurants?
+N | Is eating at the bar better than eating at a table?
+N | Is Dunkin better than Starbucks?
+N | Is street food better than restaurant food?
+N | Is Wendys the best of the big burger chains?

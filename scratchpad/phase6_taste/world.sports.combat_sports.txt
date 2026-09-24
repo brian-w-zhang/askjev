@@ -1,0 +1,10 @@
+C | Which combat sport is the most skillful to watch? | boxing ; mma ; judo ; muay_thai ; fencing ; taekwondo ; wrestling
+C | Which weight class produces the most exciting fights? | heavyweight ; light_heavyweight ; middleweight ; welterweight ; lightweight ; flyweight
+C | Which finish in MMA is the most impressive? | head_kick_knockout ; flying_knee ; rear_naked_choke ; armbar ; spinning_back_fist ; triangle_choke
+C | Which martial art has the most graceful technique? | boxing ; capoeira ; judo ; karate ; muay_thai ; kendo
+C | Which part of a big fight night is the most fun? | walkouts ; undercard ; main_event ; weigh_in ; face_off
+S | How entertaining is professional wrestling as a show? | It is silly and dull ; It is fun in small doses ; It is a good spectacle ; It is thrilling entertainment ; It is the most fun live show there is
+S | How exciting is a heavyweight boxing title fight? | It is usually dull ; It is fine but slow ; It is a big event worth watching ; It is thrilling ; It is the most exciting event in sport
+N | Is Olympic judo fun to watch?
+N | Is a five-round title fight more exciting than a three-round fight?
+N | Is kickboxing more fun to watch than boxing?

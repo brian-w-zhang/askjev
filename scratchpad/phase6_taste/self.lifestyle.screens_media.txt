@@ -1,0 +1,121 @@
+# self.lifestyle.screens_media — choice
+C | What is the main reason you pick up your phone when it isn't ringing? | check_messages ; scroll_social_media ; check_the_time ; read_news ; play_a_game ; pure_habit ; other
+C | Where do you usually keep your phone while you sleep? | on_the_nightstand ; under_the_pillow ; across_the_room ; in_another_room ; charging_in_the_kitchen ; other
+C | What kind of phone wallpaper do you usually have? | photo_of_people_i_love ; photo_of_a_pet ; nature_scene ; abstract_pattern ; plain_color ; the_default_one ; other
+C | Which sound setting is your phone on most of the time? | ringer_on ; vibrate_only ; fully_silent ; do_not_disturb ; changes_through_the_day
+C | How do you usually watch video on your phone? | held_vertically ; turned_sideways ; propped_on_a_stand ; cast_to_a_tv ; i_rarely_watch_video_on_my_phone
+C | Which kind of video do you most often watch online? | short_clips ; video_essays ; tutorials ; gaming_streams ; music_videos ; vlogs ; full_episodes ; other
+C | When do you usually catch up on the news? | first_thing_in_the_morning ; during_my_commute ; at_lunch ; in_the_evening ; whenever_a_headline_pops_up ; i_rarely_follow_the_news
+C | Which kind of news do you most often read or watch? | local_news ; world_news ; science_and_tech ; sports ; entertainment ; business ; weather ; other
+C | How do you prefer to take in a news story? | reading_an_article ; watching_a_video ; listening_to_audio ; reading_headlines_only ; hearing_it_from_friends
+C | What do you usually do with your phone during a meal at home? | put_it_away ; leave_it_face_down_on_the_table ; check_it_between_bites ; watch_something_while_eating ; depends_who_im_with
+C | What do you most often do on your phone while waiting in a line? | scroll_social_media ; reply_to_messages ; play_a_quick_game ; read_news ; listen_to_something ; nothing_i_just_wait
+C | How do you usually decide to stop a streaming session? | when_an_episode_ends ; when_i_get_sleepy ; when_the_autoplay_countdown_catches_me ; at_a_time_i_set ; when_someone_interrupts ; i_rarely_stop_on_purpose
+C | Which gaming platform do you spend the most time on? | phone ; console ; computer ; handheld_device ; i_dont_play_games
+C | What kind of games do you most often play when you have a spare hour? | puzzle_games ; action_games ; story_games ; sports_games ; strategy_games ; online_multiplayer ; word_games ; i_dont_play_games
+C | How do you like to play video games? | alone ; online_with_friends ; online_with_strangers ; on_the_couch_with_others ; i_dont_play_games
+C | When during the week do you do most of your gaming? | weekday_evenings ; late_at_night ; weekend_mornings ; weekend_afternoons ; in_short_bursts_anytime ; i_dont_play_games
+C | How do you usually listen to music at home? | phone_speaker ; bluetooth_speaker ; headphones ; smart_speaker ; record_or_cd_player ; tv_or_computer ; i_rarely_listen_at_home
+C | How do you usually pick what music to listen to? | my_own_playlists ; app_recommendations ; full_albums ; the_radio ; whatever_is_trending ; songs_friends_send_me
+C | What do you most often listen to on a commute? | music ; podcasts ; audiobooks ; the_radio ; nothing ; i_dont_commute
+C | Which messaging style do you use most with close friends? | long_texts ; short_rapid_texts ; voice_notes ; memes_and_stickers ; video_calls ; phone_calls
+C | How do you usually react when a group chat gets very busy? | read_everything ; skim_the_latest_messages ; mute_it ; reply_to_the_last_message_only ; leave_it_unread_for_later
+C | Which kind of notification do you allow on your lock screen? | everything ; messages_only ; calls_only ; nothing ; only_from_a_few_people
+C | How often do you check whether your messages have been read? | never ; only_for_important_messages ; sometimes ; often ; i_have_read_receipts_turned_off
+C | Which device do you reach for first in the morning? | phone ; tablet ; computer ; tv ; smartwatch ; none_i_wait
+C | What is your usual approach to your phone's storage filling up? | delete_old_photos ; delete_apps ; move_things_to_the_cloud ; buy_more_storage ; ignore_the_warning_as_long_as_possible
+C | How do you manage your photos on your phone? | sort_them_into_albums ; delete_the_bad_ones_right_away ; back_them_up_and_forget_them ; let_them_pile_up ; take_very_few_photos
+C | Which way do you prefer to read long articles? | on_my_phone ; on_a_tablet ; on_a_computer ; on_an_e_reader ; printed_out ; i_rarely_read_long_articles
+C | How do you usually save something interesting to read or watch later? | bookmark_it ; send_it_to_myself ; screenshot_it ; save_it_in_the_app ; keep_the_tab_open ; i_just_hope_i_remember
+C | When a show has subtitles available, what do you do? | always_turn_them_on ; turn_them_on_for_foreign_shows_only ; turn_them_on_when_its_noisy ; always_leave_them_off
+C | How do you prefer to watch a foreign-language film? | original_audio_with_subtitles ; dubbed_in_my_language ; either_is_fine ; i_avoid_foreign_films
+C | Which time of day do you most often watch shows or films? | morning ; lunchtime ; afternoon ; early_evening ; late_night ; it_varies
+C | What do you usually do when the opening credits of a show start? | skip_them ; watch_them_every_time ; watch_them_only_the_first_time ; use_them_for_a_quick_break
+C | How do you usually react to a cliffhanger at the end of an episode? | start_the_next_one_immediately ; stop_and_wait_for_tomorrow ; read_spoilers ; stop_if_its_late
+C | How do you feel about spoilers for something you plan to watch? | avoid_them_at_all_costs ; dont_mind_them ; sometimes_look_them_up_on_purpose ; always_read_the_ending_first
+C | Where do you usually watch shows at home? | living_room_tv ; in_bed_on_a_laptop ; in_bed_on_a_phone ; at_a_desk ; in_the_kitchen ; it_varies
+C | Which kind of social media account do you follow most? | friends_and_family ; creators_and_influencers ; news_outlets ; brands ; hobby_communities ; memes_and_humor ; other
+C | How public are your social media profiles? | fully_public ; public_but_i_post_little ; private_to_friends ; mixed_across_apps ; i_have_no_social_media
+C | What do you most often do with a funny video you find? | send_it_to_a_friend ; share_it_publicly ; save_it ; just_laugh_and_move_on
+C | Which kind of post do you most often put online? | photos_of_my_life ; stories_that_disappear ; opinions_or_thoughts ; creative_work ; reposts ; i_rarely_post
+C | What do you usually do when an app asks you to rate it? | dismiss_it ; give_a_quick_rating ; write_a_review ; rate_only_if_i_love_or_hate_it
+C | How do you handle software updates on your devices? | install_them_right_away ; let_them_install_automatically ; postpone_them_for_weeks ; install_only_when_forced
+C | What do you do when an app asks to track you across other apps? | always_decline ; always_allow ; decide_case_by_case ; i_never_read_the_prompt
+C | Which kind of screen do you prefer for watching a movie at home? | big_tv ; projector ; laptop ; tablet ; phone
+C | How loud do you usually keep the volume when watching alone? | barely_audible ; quiet ; medium ; loud ; as_loud_as_it_goes
+C | How do you usually wind down your screen use before bed? | stop_an_hour_before ; switch_to_night_mode ; read_something_calm ; keep_scrolling_until_sleep ; fall_asleep_watching_something
+C | What is the main thing you use a tablet for? | watching_video ; reading ; drawing ; games ; work_or_school ; i_dont_use_a_tablet
+C | How do you prefer to consume a podcast episode? | at_normal_speed ; sped_up ; in_short_chunks ; in_one_sitting ; i_dont_listen_to_podcasts
+C | Which kind of podcast do you most enjoy listening to? | interviews ; true_crime ; comedy ; current_events ; storytelling ; educational ; sports ; i_dont_listen_to_podcasts
+C | What kind of livestream are you most likely to watch? | gaming ; music_performance ; sports ; cooking ; creators_chatting ; events_and_launches ; i_dont_watch_livestreams
+C | How do you organize your email inbox? | inbox_zero ; folders_and_labels ; everything_in_one_pile ; search_when_i_need_something ; mark_all_as_read_regularly
+C | How do you deal with newsletters and promotional emails? | unsubscribe_right_away ; filter_them_automatically ; delete_them_unread ; read_a_few ; let_them_pile_up
+C | Where do you keep your phone while you sleep? | on_the_nightstand ; under_my_pillow ; across_the_room ; in_another_room ; in_my_hand
+C | Which device do you use most for video calls? | phone ; laptop ; tablet ; desktop_computer ; tv ; i_avoid_video_calls
+C | What do you usually do with your phone when you are out with friends? | keep_it_in_my_bag ; check_it_now_and_then ; use_it_for_photos_only ; stack_it_with_everyone_elses ; use_it_like_normal
+C | What do you do when you find yourself doomscrolling? | put_the_phone_down_right_away ; switch_to_something_lighter ; close_the_app_for_the_day ; keep_going ; i_dont_doomscroll
+C | How do you keep track of shows you want to watch? | a_watchlist_in_the_app ; a_notes_list ; a_tracking_app ; friends_remind_me ; i_dont_keep_track
+C | How do you prefer to share photos with family? | group_chat ; shared_album ; social_media_post ; email ; printed_photos ; i_rarely_share_photos
+C | How do you usually start your time on a computer when you sit down for fun? | check_social_media ; open_a_game ; watch_videos ; browse_news ; message_friends ; shop_online
+C | What do you usually do with a video game you've finished? | move_on_to_a_new_one ; play_it_again ; chase_every_achievement ; sell_or_trade_it ; keep_it_for_nostalgia ; i_dont_play_games
+C | Which kind of screen break do you take most often? | go_for_a_walk ; make_a_drink ; stretch ; talk_to_someone ; look_out_a_window ; i_rarely_take_breaks
+C | How do you prefer your phone's text size? | extra_small ; small ; default ; large ; extra_large
+C | Which way do you most often type on your phone? | two_thumbs ; one_thumb ; swipe_typing ; voice_dictation ; one_finger_hunting
+C | How many phones or personal devices do you carry day to day? | just_one_phone ; a_phone_and_a_watch ; a_phone_and_a_tablet ; two_phones ; a_phone_plus_several_gadgets ; no_phone
+C | Which kind of content most often keeps you up past your bedtime? | short_videos ; a_series ; a_video_game ; group_chats ; news ; reading_online ; nothing_keeps_me_up
+C | Which kind of video do you most often end up watching late at night? | comedy_clips ; music_videos ; documentaries ; tutorials ; gaming_streams ; news_clips ; i_dont_watch_videos_at_night
+# score
+S | How often do you watch a whole season of a show in a single weekend? | I have never watched a whole season in one weekend ; I did it once or twice years ago ; I do it a few times a year ; I do it most months ; I do it nearly every weekend
+S | How much of your social media feed do you actually read versus scroll past? | I read almost every post I see ; I read most posts from people I know ; I read only posts that catch my eye ; I scroll past almost everything ; I don't use social media feeds
+S | How do you respond to a news alert on your phone? | I have news alerts turned off ; I usually swipe them away unread ; I read the headline and move on ; I open most of them ; I open every alert and read the full story
+S | How much do you watch while also looking at your phone? | I never touch my phone while watching ; I check my phone only during slow scenes ; I check my phone every few minutes ; I scroll my phone for most of the show ; The show is just background while I'm on my phone
+S | How long do you usually spend choosing something to watch? | I start the first thing I see ; I pick within a couple of minutes ; I browse for about ten minutes ; I often browse for half an hour ; I sometimes give up before choosing anything
+S | How many unread messages do you usually have? | I have none, I clear them right away ; I have a handful at most ; I have a few dozen ; I have hundreds ; I have thousands and stopped caring
+S | How often do you post stories or status updates? | I never post them ; I post a few times a year ; I post about once a month ; I post a few times a week ; I post something almost every day
+S | How late do you usually game on a weeknight? | I don't game on weeknights ; I stop well before dinner ; I stop by mid-evening ; I play until around bedtime ; I often play past midnight
+S | How often do you watch videos in bed? | I never use screens in bed ; I watch something in bed a few times a month ; I watch something in bed most weekends ; I watch something in bed most nights ; I fall asleep to something every night
+S | How much of your listening time goes to the same favorite songs? | I almost always listen to something new ; I mix new songs with some favorites ; I mostly replay my favorites ; I play the same short playlist on repeat ; I can loop one song for hours
+S | How closely do you track your screen time report? | I have never looked at it ; I glance at it when it pops up ; I check it now and then ; I check it every week ; I review it daily and set goals
+S | How do you usually handle a long video that you are curious about? | I skip it entirely ; I read the comments instead ; I jump around to the key parts ; I watch it sped up ; I watch the whole thing at normal speed
+S | How often do you comment on other people's posts? | I never comment ; I comment a few times a year ; I comment on close friends' big news ; I comment a few times a week ; I comment on something almost every day
+S | How long does your phone battery usually last before you need to charge it? | It dies before lunch ; It lasts until the afternoon ; It lasts until evening ; It lasts the whole day ; It lasts more than a day
+S | How often do you read the full article rather than just the headline? | I only read headlines ; I read the full article a few times a month ; I read full articles a few times a week ; I read at least one full article every day ; I read most articles I click in full
+S | How much do you watch live sports on a screen? | I never watch sports on a screen ; I watch only the biggest finals ; I watch a game every few weeks ; I watch most weekends ; I watch games several times a week
+S | How often do you rewatch a favorite movie? | I never rewatch movies ; I rewatch one every few years ; I rewatch a few favorites each year ; I rewatch favorites most months ; I put on the same comfort movies every week
+S | How often do you video call friends or family just to chat? | I never do ; I do it only on birthdays and holidays ; I do it about once a month ; I do it most weeks ; I do it almost every day
+S | How many hours do you usually spend on screens for fun on a weekend day? | Almost none ; About as long as a single movie ; Most of an afternoon ; Most of the day ; From waking up until bed
+S | How often do you turn off your phone completely? | Never, it is always on ; Only when it needs a restart ; On flights or at the cinema ; Sometimes for a quiet evening ; Regularly for a whole day at a time
+S | How much do you curate who you follow online? | I follow back everyone and never unfollow ; I rarely unfollow anyone ; I unfollow accounts that annoy me ; I clean out my follows every few months ; I keep a tiny, carefully chosen list
+S | How long can you watch a video before checking something else? | I switch away within a minute ; I last a few minutes ; I can watch a short episode ; I can watch a full movie ; I can binge for hours without checking anything
+S | How often do you listen to a whole album in order? | I never listen to full albums ; I did it once or twice ; I do it when a favorite artist releases one ; I do it a few times a month ; I listen to full albums most days
+S | How often do you play games on your phone? | I have no games on my phone ; I play once in a long while ; I play during waits and commutes ; I play every day ; I play for hours most days
+S | How do you use your phone during a film at the cinema? | I leave it at home or in the car ; I switch it fully off ; I keep it silent and never look ; I peek at it once or twice ; I check it regularly during the film
+S | How quickly do you reply to a text from a friend? | I often forget to reply for days ; I reply within a day ; I reply within a few hours ; I reply within minutes ; I reply the moment it arrives
+S | How much of your news comes from social media? | None of it ; A small part ; About half ; Most of it ; All of it
+S | How often do you check your email outside work or school? | Never ; Once a week or so ; Once a day ; Several times a day ; Constantly, it is always open
+S | How many hours a week do you spend playing video games? | None ; Less than an hour ; A few hours ; Around an hour or two each day ; Several hours every day
+S | How often do you watch something while eating alone? | Never ; Rarely ; About half the time ; Most of the time ; Every single meal
+# noul
+N | Do you check your phone within a few minutes of waking up?
+N | Do you sleep with your phone within arm's reach?
+N | Do you use your phone in the bathroom?
+N | Do you turn on autoplay for the next episode?
+N | Do you have a paid music streaming subscription?
+N | Do you keep your phone's location sharing on with friends or family?
+N | Do you prefer watching videos with the sound off?
+N | Do you often fall asleep while watching something?
+N | Do you keep a gaming console connected at home?
+N | Do you prefer podcasts to music on long drives?
+N | Do you watch a whole series again when it gets a new season?
+N | Do you have more than one social media account on the same app?
+N | Do you routinely turn off your phone's notifications on weekends?
+N | Do you use your phone as your main alarm clock?
+N | Do you often catch yourself opening an app without meaning to?
+N | Do you read the comments under videos you watch?
+N | Do you usually watch the trailer before starting a new show?
+N | Do you keep a screen on in the background while working?
+N | Do you prefer reading an ebook to a paper book?
+N | Do you check the news every day?
+N | Do you often use two screens at the same time?
+N | Do you prefer watching shows on a phone to a TV?
+N | Do you tend to turn off your phone's sound entirely during the day?

@@ -1,0 +1,203 @@
+@node self.personality.type.tf
+C | When a friend asks for feedback on a business plan you think will fail, what do you lead with? | the_flaws = point out where the plan breaks down ; encouragement = start with support and ease into your doubts
+C | When two coworkers disagree and ask you to settle it, what do you base your call on? | whose_argument_holds = whose reasoning is sounder ; keeping_both_respected = what will leave both feeling respected
+C | When comparing two job offers, what weighs more in your decision? | the_hard_facts = pay, growth, and conditions side by side ; the_people = how the team made you feel
+C | When a teammate misses a deadline because of a family problem, what is your first thought? | the_impact = how the delay affects the project ; the_person = how they are holding up
+C | When you have to deliver bad news at work, how do you frame it? | straight_facts = state what happened and what follows ; feelings_first = acknowledge how it will land before the facts
+C | In a debate with a friend, what matters more to you? | reaching_the_right_answer ; keeping_the_friendship_warm
+C | When a friend's argument is moving but logically weak, how do you respond? | point_out_the_gap ; respect_the_feeling_behind_it
+C | When judging a cooking contest among friends, how do you pick the winner? | best_dish = strictly by taste and technique ; most_heart = factor in effort and who would love the win
+C | When a rule at work is consistent for everyone but lands hard on one person, what do you favor? | apply_it_consistently ; make_an_exception_for_them
+C | When your sibling asks to borrow your car, what do you think about first? | risks_and_logistics ; what_it_means_for_them
+C | When someone starts crying during a disagreement with you, what do you tend to do? | stay_on_the_issue = keep discussing it calmly ; set_it_aside = drop the issue to comfort them
+C | When you review a friend's essay, which comments do you mostly write? | corrections = what is wrong and how to fix it ; encouragement = what works and why they should keep going
+C | When your team has to cut one project, what should decide which one? | the_results = whichever has the weakest results ; the_people = whichever cut would hurt people least
+C | When a friendly salesperson offers a worse deal than a curt one, which do you buy from? | the_better_deal ; the_friendlier_person
+C | When a friend says they want to quit school to chase a dream, what do you ask first? | how_it_will_work = how they will support themselves ; why_it_matters = what the dream means to them
+C | When you compliment someone's work, what do you tend to praise? | the_quality = specific things done well ; the_effort = how hard they tried
+C | What makes you confident a decision you made was right? | it_adds_up = the reasoning holds ; it_fits_my_values = it sits well with me and people I care about
+C | When an argument gets heated, what do you focus on? | getting_the_facts_straight ; lowering_the_temperature
+C | When a friend asks your opinion on a choice they have already made, which instinct usually wins? | give_an_honest_assessment ; back_their_choice
+C | When choosing between two candidates for a small team, what tips your decision? | the_stronger_record ; the_better_fit_with_people
+C | When a group routine is inefficient but everyone enjoys it, what do you do? | suggest_a_better_way ; go_along_happily
+C | When you hear that someone at work was let go, what do you focus on first? | whether_it_was_justified ; how_the_person_is_feeling
+C | When you disagree with your boss's decision, what kind of case do you make? | the_logical_case = show why it will not work ; the_people_case = show how it will affect the team
+C | When deciding how to split a group bill, what principle do you lean on? | strict_fairness = each pays for what they had ; group_comfort = whatever keeps everyone at ease
+C | When you make a pros and cons list for a decision, what goes on it? | only_practical_factors ; feelings_and_people_too
+C | When a friend brings you a problem, what do you usually offer? | solutions ; sympathy
+C | When someone breaks a small promise to you, how do you look at it? | a_promise_is_a_promise ; consider_what_was_going_on_for_them
+C | When you teach someone a new skill, what do you focus on? | getting_it_right = correct method and accuracy ; building_confidence = making them feel capable
+C | When you hear an argument you disagree with, what do you examine first? | its_logic ; who_is_making_it_and_why
+C | When a meeting runs long because someone is venting, what do you want to do? | steer_back_to_the_agenda ; let_them_finish
+C | How do you prefer to receive criticism? | blunt_and_direct ; gentle_and_warm
+C | When a family dinner splits over which of two relatives was wronged, what guides your view? | the_facts_of_who_did_what ; keeping_the_family_together
+C | When picking teams for a game at a gathering, how do you choose? | strongest_players_first ; whoever_might_feel_left_out_first
+C | When a plan you designed works but hurts someone's feelings, what do you do? | keep_the_plan ; rework_it_for_them
+C | When you watch two strangers argue in public, what do you find yourself judging? | who_makes_more_sense ; who_is_more_hurt
+C | When you must choose between two equally qualified friends for a role, how do you decide? | objective_measure = a fair test or clear criterion ; who_needs_it_more
+C | When a relative makes an illogical choice that makes them happy, what is your reaction? | question_the_reasoning ; accept_their_happiness
+C | When you explain why you made a choice, what do your reasons sound like? | facts_and_logic ; values_and_people
+C | When a friend is excited about a startup idea, what do you do first? | stress_test_it ; cheer_them_on
+C | When settling a squabble between two children you are looking after, how do you decide? | apply_the_same_rule_to_both ; consider_each_child_separately
+C | Which compliment about how you handle decisions would please you more? | sharp_and_fair_minded ; warm_and_caring
+C | When a store refuses a refund strictly by its policy, what do you think? | policy_is_policy ; they_should_bend_for_the_customer
+C | When rating group members after a project where one did little, how do you judge them? | by_their_contribution ; by_their_circumstances
+C | When you want to fire or drop someone from a team, what worries you most? | whether_it_is_the_right_call ; how_they_will_feel
+C | When a coworker proposes an idea in a meeting that has an obvious flaw, what do you do? | name_the_flaw ; build_on_it_gently
+C | When you apologize, what do you focus on? | explaining_what_went_wrong ; acknowledging_their_hurt
+C | When dividing chores among roommates, what do you aim for? | equal_system = identical shares by clear rules ; fit_each_person = shares that suit each person's situation
+C | When you spot a factual mistake in a friend's post, what do you do? | correct_it ; let_it_go_to_spare_them
+C | When a busy week clashes with a friend's event, what decides whether you go? | cost_and_benefit = time, energy, and other obligations ; the_friend = how much it means to them
+C | When a team member's idea is popular but weaker than another, which do you support? | the_stronger_idea ; the_popular_idea
+S | When a coworker makes an error that costs the team time, how do you bring it up? | I explain exactly what went wrong and how to fix it ; I state the error plainly and then ask how they are ; I mention it gently alongside something they did well ; I fix it quietly so they never feel bad
+S | When you make a big decision, what role do other people's feelings play? | I leave them out and follow the analysis ; I note them as one small factor ; I weigh them about as much as the practical facts ; I let them decide it when the facts are close ; I choose whatever keeps the people around me happy
+S | When a coworker describes a problem that is upsetting them, what do you offer? | I start listing fixes right away ; I ask questions to pin down the cause ; I listen and then offer a suggestion ; I just listen and tell them I understand
+S | When a rule produces an unfair result for someone you know, what do you do? | I apply the rule as written ; I apply it but explain the reasoning kindly ; I look for a loophole to help them ; I ignore the rule for their sake
+S | When you are clearly right in an argument with someone you care about, what do you do? | I press until they concede ; I lay out my case once and leave it ; I make my point softly and change the subject ; I drop it to keep the peace
+S | How do you write a review for a struggling teammate? | I list the shortfalls plainly ; I list the shortfalls with a plan to improve ; I open with strengths and then give the shortfalls ; I focus on encouragement and barely mention shortfalls
+S | When choosing between two job candidates, how much does your personal liking for them count? | Not at all, only qualifications count ; It breaks a tie when qualifications are equal ; It counts about as much as qualifications ; It usually outweighs qualifications
+S | When someone gives a sad reason for handing in work late, how does it affect your judgment? | I treat the lateness like any other ; I note the reason but hold to the deadline ; I give them some extra time ; I drop the penalty completely
+S | When a friend is about to make a choice you think is illogical, how do you respond? | I show them step by step why it is a mistake ; I raise my main concern once ; I ask how they feel about it and listen ; I support them without raising doubts
+S | When you describe someone you just met, what do you talk about? | What they know and what they do ; How they argue and what they think ; Their mood and manner ; How they made me feel
+S | When your team debates a plan, what do you care about? | Only which plan works best ; Mostly which plan works, with some thought to morale ; The plan and how the team feels equally ; Mostly that everyone feels heard ; Only that nobody leaves upset
+S | When someone gives you feedback, what do you want from it? | Just the facts about what is wrong ; The facts with a short note on what went well ; An even mix of praise and critique ; Mostly encouragement with a light suggestion
+S | When a friend asks you to proofread their wedding speech, how do you mark it up? | I flag every weak sentence and logical gap ; I fix grammar and flag big problems ; I fix only obvious errors and praise the rest ; I tell them it is lovely and change nothing
+S | When cutting items from a tight group budget, how do you choose? | I cut whatever has the lowest return ; I cut by return but warn affected people first ; I ask everyone what matters to them before cutting ; I cut from my own share so no one else loses out
+S | When a debate turns personal, what do you do? | I keep arguing the facts and ignore the tone ; I say we should stick to the facts ; I pause to check that we are both okay ; I end the debate to protect the relationship
+S | When you explain a hard decision to your team, what does your explanation mostly contain? | Data and reasoning only ; Mostly reasoning with a line about the impact on people ; Reasoning and impact on people equally ; Mostly how it will affect each person
+S | When a friend asks your honest view of their plan to move across the country, what do you give? | A frank list of concerns ; My main concern stated plainly ; A mild concern wrapped in positives ; Only encouragement
+S | When a teammate asks why their idea was not chosen, what do you tell them? | The exact reasons it came out behind ; The main reason stated briefly ; A kind summary that stresses what was good about it ; Something reassuring without the real reasons
+S | When friends argue about a plan, how do you pick a side? | I pick the plan with the best logic ; I pick on logic but explain it gently ; I back the option that upsets the fewest people ; I refuse to pick and try to keep both happy
+S | When someone makes an emotional appeal in a discussion, how does it land with you? | I set it aside as irrelevant ; I note it but wait for evidence ; I give it real weight alongside the facts ; It moves me more than the facts do
+S | When you mediate between two roommates, what do you aim for? | A ruling based on who broke the agreement ; A fair split based on the agreement ; A compromise both can live with ; Whatever makes them both feel understood
+S | When you set rules for a group you lead, how do you handle exceptions? | No exceptions, the rules apply to all ; Exceptions only for clear emergencies ; Exceptions for personal hardship ; I adjust the rules to fit each person
+S | When something true you said hurts a friend's feelings, what do you do? | I explain that it was simply true ; I stand by it but acknowledge the hurt ; I apologize for how I said it ; I take it back to make things right
+S | When you comfort a friend who failed an exam, what do you say? | I go over what went wrong so they do better next time ; I suggest a study plan and add some encouragement ; I mostly reassure them and mention one fix ; I only comfort them and steer clear of their mistakes
+S | When an underqualified close friend applies for a job at your workplace, what do you do? | I tell the hiring manager they are underqualified ; I give a neutral, factual reference ; I highlight their strengths and stay quiet on the gaps ; I push hard for them to get it
+S | When you referee a game among children, how do you call a close play? | Strictly by the rules ; By the rules, then comfort the losing side ; In favor of whoever seems more upset ; I call it a tie so no one feels bad
+S | When you read an angry complaint from a customer, what do you focus on? | Only the facts of what went wrong ; The facts, with a note of their tone ; Their frustration as much as the facts ; Mostly how they feel and how to calm them
+S | When a coworker you like makes a weak argument in a meeting, what do you do? | I challenge it openly like any other ; I challenge it but credit their thinking ; I raise my doubts privately later ; I let it pass to spare them embarrassment
+S | When you look back on a decision you made, what do you judge it by? | Whether the result matched my analysis ; Mostly the result, a little how people reacted ; The result and how people felt equally ; Mostly whether people felt good about it
+S | When your group cannot agree, how do you think the decision should be made? | By whichever option has the best reasons ; By the reasons, with a nod to strong feelings ; By what most people feel good about ; By whatever leaves nobody unhappy
+N | Do you point out flaws in someone's reasoning even when they are upset?
+N | Do you make important decisions by writing out pros and cons?
+N | Do you tend to offer solutions when a friend just wants to vent?
+N | Do people often call you blunt?
+N | Do you find it easy to turn down a request that makes no sense, even from a friend?
+N | Do you let the feelings of the people involved decide a close call?
+N | Do you feel uneasy making a logical choice that upsets someone?
+N | Do you care more about being fair than about being kind?
+N | Do you enjoy debating just to test ideas?
+N | Do you change your feedback depending on how sensitive the person seems?
+N | Do you tend to side with whoever is hurting in an argument?
+N | Do you trust a decision more when you can back it with evidence?
+N | Do sad stories often change your mind about a decision?
+N | Do you stay calm and analytical when people around you are emotional?
+N | Do you think about how an email will make someone feel before you send it?
+N | Do you hold friends to the same standards as strangers when judging their work?
+N | Do you soften bad news so much that the point gets lost?
+N | Do you feel satisfied when you win an argument with better logic?
+N | Before speaking up in a meeting, do you think about keeping the group in harmony?
+N | Do you judge ideas separately from the people who suggest them?
+
+@node self.personality.type.jp
+C | How do you usually get ready for a trip? | pack_days_ahead = from a list, days in advance ; pack_at_the_last_minute = throw things together right before leaving
+C | On a free Saturday, which do you prefer? | a_set_plan = knowing in advance what you will do ; see_what_happens = deciding as the day unfolds
+C | When a decision is not due for weeks, what do you do? | decide_now = settle it early to get it off your mind ; keep_options_open = wait in case something better comes up
+C | How do you approach the start of a new week? | map_it_out = plan the week's tasks ; take_it_as_it_comes
+C | When friends suggest a spontaneous road trip tonight, what do you do? | decline_because_you_had_plans ; jump_in
+C | How do you like to work on a long project? | steady_schedule = spread out on a plan ; bursts = in bursts when inspiration or a deadline hits
+C | When booking a vacation, how much do you plan? | full_itinerary ; book_the_basics_and_wing_it
+C | When a shop you planned to visit turns out to be closed, how do you react? | thrown_off = your plan is ruined ; happy_to_improvise = you find something else to do
+C | Which feels better to you? | a_settled_matter = having the question decided ; open_options = having choices still available
+C | When your manager asks you for a report, what do you prefer to get? | a_clear_deadline_and_format ; a_loose_brief_you_can_shape
+C | When a friend moves your dinner plans at the last minute, what do you feel? | annoyed_by_the_change ; fine_with_it
+C | What does your ideal workday look like? | scheduled_blocks ; open_and_flexible
+C | When a group chat tries to plan a get-together, what role do you take? | pin_down_the_date_and_place ; keep_it_loose
+C | When you have a free evening, how do you usually spend it? | on_something_planned_earlier ; on_whatever_you_feel_like
+C | When writing an essay, how do you start? | outline_first ; start_writing_and_see
+C | How do you handle procedures at a new job? | learn_and_follow_them ; find_your_own_way
+C | When a friend asks what you are doing next weekend, what is your usual answer? | i_already_know ; no_idea_yet
+C | When you have a long task due in a month, when do you do most of it? | early_and_steadily ; right_before_the_deadline
+C | In an unfamiliar city, how do you explore? | follow_a_planned_route ; wander_and_see
+C | When plans are left undecided, how do you feel? | restless_until_settled ; relaxed_with_open_ends
+C | When a meeting ends without a decision, how do you feel? | frustrated_and_wanting_closure ; fine_there_is_time
+C | When someone suggests changing a plan you agreed on, what is your instinct? | stick_to_the_plan ; hear_them_out_and_switch
+C | How do you like to spend a holiday break? | with_scheduled_activities ; with_unscheduled_time
+C | When you take up a new hobby, how do you go about it? | set_a_learning_plan ; dabble_as_you_like
+C | When your calendar shows an empty week ahead, how does that feel? | uneasy_and_wanting_to_fill_it ; freeing
+C | When you finish a task, what do you do next? | the_next_planned_item ; whatever_appeals_in_the_moment
+C | When do you usually reply to an invitation? | right_away_to_lock_it_in ; later_to_see_what_else_comes_up
+C | On a group trip, which companion are you? | the_planner ; the_one_who_goes_with_the_flow
+C | When you are given a choice with no deadline, what do you do? | choose_soon ; leave_it_open
+C | When a project's goal shifts halfway through, how do you feel? | irritated_by_the_change ; energized_by_the_change
+C | When you host a party, how far ahead do you finalize the details? | weeks_ahead ; on_the_day
+C | What bothers you more? | loose_ends = unfinished, undecided things ; being_boxed_in = fixed commitments
+C | When someone asks you to commit to a plan months away, what do you do? | commit_now ; say_maybe
+C | When studying for an exam, how do you work? | follow_a_study_schedule ; study_when_it_feels_right
+C | When a day goes off script, how do you respond? | get_back_on_schedule ; ride_the_detour
+C | When running errands, how do you go about them? | set_route_and_order ; as_they_come_to_mind
+C | When you think about the next few years, which describes you? | a_clear_plan ; open_to_whatever_comes
+C | When a friend plans a surprise outing for your birthday, how do you feel? | would_rather_know_the_plan ; love_the_surprise
+C | When new information turns up after you have decided, what do you tend to do? | stick_with_the_decision ; reopen_it
+C | When a group debates where to go, which do you prefer? | settle_it_fast ; keep_discussing_options
+C | How does your weekend usually get decided? | set_by_friday ; on_saturday_morning
+C | When you are given a flexible deadline, what do you do? | set_your_own_firm_date ; use_the_flexibility
+C | When a delay leaves you with free hours on a trip, what do you do? | rebuild_the_schedule ; explore_on_the_fly
+C | When an event you want to attend is announced, what do you do? | get_tickets_right_away ; decide_closer_to_the_date
+C | When you start a work week, which do you prefer? | known_tasks ; surprises_and_new_requests
+C | How do you like to end your workday? | with_tomorrow_planned ; just_stop_and_leave_it
+C | When a friend says let's play it by ear, how do you feel? | uneasy ; happy
+C | When you organize a group outing, how detailed is your plan? | times_and_places_set ; just_a_meeting_point
+C | Which sounds more like you? | i_like_things_decided ; i_like_things_open
+C | When you get the schedule for a conference, what do you do? | plan_every_session ; drop_in_as_interest_strikes
+S | How far ahead do you usually plan your weekends? | I plan them weeks in advance ; I have them set by midweek ; I make a loose plan on Friday ; I decide each morning ; I never plan them at all
+S | When a planned activity is cancelled, how do you respond? | I feel lost until I have a new plan ; I quickly pick a backup from my list ; I shrug and see what comes up ; I am secretly glad for the open time
+S | How detailed are your travel plans? | Every day and meal is booked ; Each day has a main activity booked ; Only the lodging is booked ; Only the flight is booked ; Nothing is booked before I arrive
+S | When do you usually make decisions that are not urgent? | As soon as the question comes up ; Within a day or so ; Once I have gathered enough options ; Right at the deadline ; I let them get decided by default
+S | How do you work through a big assignment? | I set milestones and meet each one ; I set milestones but adjust them ; I work when I feel ready ; I do it all in one push at the end
+S | How do you treat your calendar? | Everything goes in it and I follow it ; Important things go in and I follow those ; I note a few things and often ignore it ; I do not keep a calendar
+S | When friends propose a spontaneous meetup, what do you do? | I decline unless it was planned ; I come if it fits my schedule ; I usually drop what I am doing ; I am often the one texting to meet right now
+S | How do you feel about an afternoon with nothing planned? | I fill it with a plan immediately ; I make a short list to follow ; I enjoy it but get restless later ; I love it and let it unfold
+S | How much do you rely on lists to run your week? | I have a list for everything ; I keep a to-do list for work ; I jot a list only for big days ; I keep it all in my head and improvise
+S | When something unexpected disrupts your day, what happens? | I cannot settle until I have re-planned ; I quickly adjust the plan ; I go with it without a plan ; I welcome it as a break from routine
+S | How do you handle a job with no set structure? | I create a strict structure right away ; I set a loose structure ; I let each day's needs guide me ; I thrive with no structure at all
+S | When a group trip is being planned, how involved are you? | I build the full itinerary ; I plan a few key pieces ; I give opinions but leave the planning ; I show up and go with it
+S | How do you feel when a question stays unresolved for weeks? | It bothers me constantly ; It nags at me now and then ; I barely notice ; I prefer to leave it open
+S | How early do you finish tasks before they are due? | Days before ; The day before ; On the day, with time to spare ; In the final hour
+S | How do you approach a day off? | An hour by hour plan ; A few set activities ; One idea and the rest open ; No plan at all
+S | When a new opportunity clashes with your plans, what do you do? | I stick with my plan ; I consider it only if my plan can move ; I often switch to the new thing ; I almost always switch
+S | How do you start a new project? | I write a full plan first ; I sketch the main steps ; I start and plan as I go ; I just dive in
+S | Once you commit to plans, how firmly do you hold them? | I never change a commitment ; I change only for emergencies ; I change if something better comes up ; I avoid committing so I stay free
+S | When does your plan for a free evening get decided? | Days ahead ; Over lunch that day ; When I get home ; Whenever a mood strikes
+S | How much do you like to know about an event before going? | Every detail of the schedule ; The start time and main points ; Just the place ; Nothing, I will find out there
+S | How do you manage a weekend with several things to do? | I schedule each one to the hour ; I set an order for them ; I do them in whatever order ; I push some to next weekend without worry
+S | After you make a decision, how often do you revisit it? | I close it and never revisit ; I revisit only with new facts ; I revisit whenever a new option appears ; I keep revisiting and it rarely feels final
+S | How do you set up your week at work or school? | I plan every day at the start of the week ; I plan each day the night before ; I plan each morning ; I react to whatever comes in
+S | How do you feel about surprises in your schedule? | I dislike any surprise ; I tolerate small ones ; I enjoy most of them ; I actively seek them out
+S | When you go to a big festival or fair, how do you spend the day? | I map every stop in advance ; I list the must-sees and wander between them ; I wander and check the map now and then ; I wander with no map at all
+S | When friends leave dinner plans undecided until the day, how do you respond? | I push to decide days ahead ; I suggest a plan early ; I wait for someone else to suggest ; I enjoy deciding on the spot
+S | How do you handle an assignment with vague instructions? | I ask for exact requirements before starting ; I pin down the main points then start ; I interpret it my own way ; I enjoy the freedom and experiment
+S | How often do your plans change once made? | Almost never ; Only when something forces me ; Now and then on a whim ; Most plans change before they happen
+S | How do you prepare for the next day? | Clothes, bag, and plan ready the night before ; A rough plan in my head ; I figure it out in the morning ; I figure it out as I go
+S | When choosing a weekend activity, how long do you keep your options open? | I lock it in days ahead ; I lock it in the day before ; I lock it in that morning ; I keep options open until the last moment
+N | Do you feel relieved once a decision is made, even if it was not urgent?
+N | Do you enjoy trips with no fixed itinerary?
+N | Do you make plans for your weekends in advance?
+N | Do you get restless when a plan is left undecided?
+N | Do you like to keep your options open as long as possible?
+N | Do you stick to a plan even when a tempting alternative appears?
+N | Do you enjoy last-minute invitations?
+N | Do you prefer knowing exactly what will happen at an event before you go?
+N | Do you often decide what to do only when the moment arrives?
+N | Do you plan out your week at the start of it?
+N | Do schedules make you feel more at ease?
+N | Do you tend to finish one thing before starting another?
+N | Do you like changing your plans on a whim?
+N | Do you feel uncomfortable when a meeting ends without clear next steps?
+N | Do you often leave decisions until the last possible moment?
+N | Do you enjoy improvising when a plan falls through?
+N | Do you like having your free time scheduled?
+N | When organizing a group event, do you prefer to settle the details early?
+N | Do you often agree to plans only tentatively so you can change them later?
+N | Do surprises in your day usually please you?

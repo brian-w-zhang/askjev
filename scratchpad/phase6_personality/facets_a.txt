@@ -1,0 +1,287 @@
+@node self.personality.dark_side
+C | When a friend shares good news that outshines your own, what do you usually do? | congratulate_warmly = congratulate them and mean it ; congratulate_then_mention_mine = congratulate them, then bring up your own news ; change_subject ; find_a_flaw = point out a downside to their news ; stay_quiet ; other
+C | If a cashier gave you too much change, what would you most likely do? | return_it_right_away ; return_it_if_noticed = return it only if they notice ; keep_it_quietly ; keep_it_and_feel_clever = keep it and feel pleased you got away with it ; other
+C | When you walk into a meeting or class, where do you prefer to sit? | front_and_center = where everyone can see me ; near_the_speaker = close to whoever is in charge ; wherever_is_free ; back_corner = somewhere I can watch everyone ; other
+C | When someone asks you for a favor, what goes through your mind first? | how_to_help = how I can help them ; whether_i_have_time ; what_they_owe_me = what I can get back later ; how_to_get_out_of_it ; other
+C | If you found out a coworker earned more than you for the same job, what would you most likely do? | ask_for_a_raise ; accept_it ; quietly_undermine_them = find ways to make them look worse ; complain_to_others ; other
+C | When you tell a story about something that happened in a group, how do you usually cast yourself? | as_the_hero = the one who saved the day ; as_one_of_the_group ; as_the_funny_one ; as_the_victim = the one who was wronged ; barely_in_it ; other
+C | Which kind of attention do you enjoy most? | admiration = people looking up to me ; envy = people wishing they were me ; gratitude = people thanking me ; quiet_respect ; no_attention = I prefer not to be noticed ; other
+C | When a new person joins your team, how do you size them up first? | as_a_potential_friend ; as_a_threat = someone who could outshine me ; as_someone_useful = someone who could help me ; as_a_newcomer_to_help ; no_particular_way ; other
+C | If you could get a promotion by quietly taking credit for a teammate's idea, what would you do? | refuse ; share_credit = mention the idea was theirs ; take_it_if_safe = take it if no one would find out ; take_it_gladly ; other
+C | When someone confides a weakness to you, what do you usually do with that knowledge? | keep_it_private ; use_it_to_help_them ; mention_it_to_one_person ; save_it_for_later = remember it in case I need leverage ; other
+C | How do you usually react when someone else is the center of attention at a gathering? | enjoy_watching ; join_in_and_support ; try_to_steal_the_spotlight ; get_bored_and_leave ; feel_annoyed_but_hide_it ; other
+C | When a plan of yours goes wrong because of your own mistake, who do you usually blame? | myself ; bad_luck ; the_people_around_me ; the_circumstances ; nobody = I just move on ; other
+C | If you were in charge of a group, which kind of loyalty would you want from them? | honest_disagreement = they tell me when I'm wrong ; quiet_obedience = they do what I say ; admiration = they look up to me ; independence = they manage themselves ; other
+C | When you meet someone important at an event, what do you usually do? | introduce_myself_normally ; flatter_them ; mention_mutual_connections = drop names they would know ; avoid_them ; ask_them_for_something ; other
+C | Which do you do most often when you disagree with a decision at work or school? | say_so_openly ; go_along_quietly ; work_around_it = pretend to agree and do it my way ; turn_others_against_it = get people on my side behind the scenes ; other
+C | If an ex-friend who wronged you asked for help moving house, what would you do? | help_anyway ; politely_decline ; agree_then_not_show = say yes and then not show up ; ignore_the_message ; other
+C | When someone makes a small mistake that costs you time, how do you usually respond? | let_it_go ; mention_it_calmly ; make_them_feel_bad = make sure they feel guilty ; hold_it_over_them = bring it up again later ; other
+C | Which best describes how you treat people who can't do anything for you? | same_as_everyone ; kinder_than_others ; politely_but_briefly ; mostly_ignore_them ; other
+C | When you see someone struggling to carry heavy bags up the stairs, what is your first impulse? | offer_to_help ; hold_the_door ; walk_past ; watch_with_some_amusement ; other
+C | If you had a chance to read a rival's private messages without being caught, what would you do? | leave_them_alone ; take_a_quick_look ; read_everything ; read_and_use_what_i_find ; other
+C | What do you usually do when a rule at work seems pointless to you? | follow_it_anyway ; ask_why_it_exists ; ignore_it_quietly ; ignore_it_and_expect_no_consequences = break it and expect to be let off ; other
+C | When you win a board game or card game, what do you usually do? | shake_hands_and_move_on ; celebrate_briefly ; gloat = rub it in for a while ; offer_a_rematch ; other
+C | What do you most often do when someone is late to meet you? | wait_patiently ; text_to_check ; leave_without_telling_them ; make_them_wait_next_time = pay them back by being late later ; other
+C | Which way of getting people on your side comes most naturally to you? | honest_argument = make a clear case ; charm = be likable ; favors = do things they will feel they owe ; pressure = make them uncomfortable saying no ; other
+C | When a stranger online disagrees with you, what do you usually do? | ignore_it ; explain_my_view ; mock_them ; keep_poking_until_they_crack ; other
+C | Which compliment would please you most? | you_are_kind ; you_are_brilliant ; you_are_better_than_everyone_here ; you_are_reliable ; you_are_fun ; other
+C | When a teammate gets blamed for something you did, what do you usually do? | admit_it_right_away ; admit_it_privately ; say_nothing ; add_to_the_blame ; other
+C | If you had to cut one person from a project, how would you tell them? | honestly_face_to_face ; gently_with_reasons ; by_message ; let_someone_else_tell_them ; make_it_seem_their_choice = maneuver them into quitting ; other
+C | What do you usually do when you notice someone is trying hard to impress you? | encourage_them ; appreciate_it_quietly ; play_it_cool_to_keep_the_upper_hand ; enjoy_making_them_try_harder ; other
+C | When you are waiting for a table and someone arrives after you but gets seated first, what do you do? | shrug_it_off ; ask_the_host_politely ; demand_to_be_seated_first ; make_a_scene ; other
+C | Which of these would you most enjoy about being famous? | being_admired ; having_influence ; the_money ; helping_causes ; nothing = I would not enjoy fame ; other
+C | When someone calls you out for bad behavior, what is your usual reaction? | apologize ; explain_myself ; turn_it_back_on_them = point out what they did wrong ; laugh_it_off ; cut_them_off ; other
+C | How do you usually feel watching a video of someone getting pranked badly? | uncomfortable ; mildly_amused ; thoroughly_entertained ; eager_to_try_it_on_someone ; other
+C | When you lend someone something, how do you think about it? | as_a_gift ; as_something_to_get_back ; as_a_favor_they_now_owe ; as_leverage_for_later ; other
+C | If someone snubbed you at a party, what would you most likely do? | forget_it ; ask_what_was_wrong ; snub_them_back ; spread_a_story_about_them ; other
+S | How do you react when a friend gets a compliment you think you deserved more? | I feel glad for them and forget it ; I feel a quick sting and let it go ; I stay irritated for the rest of the day ; I find a way to remind everyone of my own achievements ; I quietly try to make them look worse
+S | When you need something from a coworker who is busy, what do you usually do? | I wait until they are free ; I ask politely and accept a no ; I push a little and remind them it's urgent ; I tell them the boss wants it even if that isn't true ; I make them feel they owe me until they give in
+S | How do you usually behave when you're treated like an ordinary customer at a fancy shop? | I don't notice or care ; I notice but it doesn't bother me ; I drop hints about who I am or what I can spend ; I ask for the manager to get better treatment ; I leave and complain loudly about the service
+S | When someone you dislike asks for your advice, what do you usually give them? | My honest best advice ; Advice that is correct but brief ; Vague advice that doesn't really help ; Advice I know will lead them wrong
+S | How do you feel after you've told a lie that got you out of trouble? | I feel terrible and confess ; I feel guilty for days ; I feel a small twinge that fades ; I feel nothing at all ; I feel proud of how smoothly it went
+S | When you're driving and someone cuts you off, what do you usually do? | I let it go immediately ; I mutter under my breath ; I honk and stay annoyed ; I tailgate them to teach them a lesson ; I chase them to confront them
+S | How do you respond when a close friend is going through a hard time? | I drop everything to be there for them ; I check in regularly ; I send a message and move on ; I feel impatient with their complaining ; I pull away until they are fun again
+S | How much do you shape the image you show people online? | I post whatever happens, unfiltered ; I pick nice photos but keep it real ; I carefully choose what makes me look good ; I invent details to seem more impressive ; I run my accounts like a brand built to make people envy me
+S | When you have to work with someone you consider beneath you, how do you treat them? | Exactly as I treat anyone else ; Politely but with some distance ; I make it clear I'm doing them a favor ; I talk down to them openly
+S | How do you usually handle it when you realize you hurt someone on purpose in an argument? | I apologize the same day ; I apologize once I've cooled down ; I wait for them to bring it up ; I tell myself they deserved it ; I feel pleased it landed
+S | When a stranger asks you for directions, what do you usually do? | I walk them part of the way ; I explain carefully ; I give a quick answer ; I say I don't know to save time ; I send them the wrong way for a laugh
+S | How do you tend to act when you are in charge of a small group, like a school project? | I share the decisions with everyone ; I lead but take input ; I decide most things and inform the others ; I expect people to follow without questions ; I take credit for the group's work
+S | When you're losing a game against a friend, what do you usually do? | I keep playing cheerfully ; I get quiet and focused ; I complain about luck or the rules ; I bend the rules when they're not looking ; I quit and say the game is stupid
+S | How often do you exaggerate your achievements when meeting new people? | I tend to downplay them ; I describe them as they are ; I polish them a little ; I stretch the truth to impress ; I make up achievements outright
+S | When you see an easy chance to cut a line unnoticed, what do you usually do? | I stay where I am ; I think about it but don't ; I do it if I'm in a real hurry ; I do it whenever I can get away with it
+S | How do you treat servers or shop staff when you're in a bad mood? | Just as kindly as usual ; A little short but polite ; Curt and cold ; Openly rude ; I make a point of getting them in trouble
+S | How much do you enjoy taking a big risk just for the rush, like jumping off a high rock into water? | I would never do it ; I would do it only with safety checks ; I would do it if friends were doing it ; I'd do it without much thought ; I look for the most dangerous version I can find
+S | When you owe someone an apology, how do you usually give it? | A full, sincere apology right away ; A sincere apology after a while ; A quick sorry to smooth things over ; A sorry-you-feel-that-way non-apology ; No apology at all
+S | How do you feel when you get what you want by charming someone who didn't want to help? | Uneasy, as if I tricked them ; Neutral, it's just persuasion ; Satisfied with my skill ; Thrilled, it's a game I like winning
+S | When someone brags about something you know is fake, what do you do? | I let them have their moment ; I stay quiet but don't encourage it ; I tease them lightly ; I expose them in front of everyone
+S | How do you usually react when a friend asks you to keep a secret about someone else? | I keep it completely ; I keep it unless there's real harm ; I hint at it to a few people ; I use it when it helps me
+N | Do you often feel that rules are meant for other people, not you?
+N | Do you enjoy it when people are a little afraid of you?
+N | Do you get bored with people once they stop being useful to you?
+N | Do you often steer conversations back to yourself?
+N | Do you feel annoyed when others don't notice your talents?
+N | Have you ever pretended to like someone to get something from them?
+N | Do you find it satisfying to see a smug person get embarrassed?
+N | Do you keep secrets about people in case you need them later?
+N | Do you expect special treatment in places where people know you?
+N | Do you often act first and think about who might get hurt later?
+N | Do you like stirring up drama between other people just to watch?
+N | Do you believe most people who are kind are just after something?
+N | Do you tend to feel little sympathy when people complain about their problems?
+N | Do you enjoy winning even more when the other person takes it hard?
+
+@node self.personality.interests
+C | If your manager offered you one extra project, which would you pick? | fix_the_office_equipment ; analyze_why_sales_dropped ; redesign_the_company_logo ; mentor_new_hires ; pitch_to_a_big_client ; clean_up_the_filing_system ; other
+C | Which part of opening a new café would you want to handle? | building_the_counter_and_shelves ; testing_recipes_scientifically ; designing_the_menu_and_decor ; training_and_caring_for_staff ; finding_investors ; tracking_orders_and_costs ; other
+C | At a science fair, which booth would you want to run? | build_a_working_robot ; run_a_chemistry_experiment ; paint_a_mural_about_space ; teach_kids_simple_experiments ; sell_raffle_tickets ; organize_the_judges_schedule ; other
+C | If you volunteered at a hospital, which job would you ask for? | repairing_equipment ; helping_in_the_lab ; decorating_the_childrens_ward ; sitting_with_patients ; fundraising ; managing_records ; other
+C | Which kind of workday would you look forward to most? | hands_on_outdoors ; puzzling_over_data ; making_something_original ; helping_people_one_on_one ; leading_a_team_meeting ; keeping_things_organized ; other
+C | On a film set, which role would you want? | building_sets ; managing_the_budget_spreadsheets ; writing_the_script ; coaching_the_actors ; producing_the_whole_project ; researching_historical_accuracy ; other
+C | If you worked at a museum, what would you want to spend your days doing? | restoring_old_objects ; researching_the_collection ; designing_exhibits ; giving_tours ; raising_money_from_donors ; cataloging_items ; other
+C | Which skill would you most like to be paid to use? | fixing_engines ; solving_math_problems ; drawing_and_design ; listening_and_advising ; persuading_people ; keeping_accurate_records ; other
+C | At a farm, which job would you most enjoy? | driving_the_tractor ; testing_the_soil ; photographing_the_farm_for_marketing ; running_school_visits ; selling_at_the_market ; keeping_the_accounts ; other
+C | If you joined a tech company, which team would you want to be on? | hardware_assembly ; data_science ; user_interface_design ; customer_support ; sales ; operations_and_compliance ; other
+C | Which work problem sounds most fun to solve? | a_machine_that_keeps_breaking ; a_puzzling_pattern_in_data ; a_boring_product_that_needs_a_new_look ; an_unhappy_team_member ; a_client_who_wont_sign ; a_messy_budget ; other
+C | At a newspaper, which job would suit you best? | running_the_printing_press ; investigating_a_story ; illustrating_articles ; answering_reader_letters ; selling_advertising ; fact_checking_and_proofreading ; other
+C | Which work tool would you most enjoy mastering? | power_tools ; microscope ; camera ; a_training_curriculum ; a_sales_pitch ; spreadsheet_software ; other
+C | If you had a summer job at a national park, which would you choose? | building_trails ; studying_wildlife ; sketching_scenery_for_signs ; leading_visitor_hikes ; running_the_gift_shop ; handling_permits_and_bookings ; other
+C | Which kind of praise at work would mean the most to you? | you_fixed_what_nobody_else_could ; your_analysis_was_spot_on ; your_design_is_beautiful ; you_really_helped_me ; you_closed_the_deal ; your_records_are_flawless ; other
+C | Which job would you least like to be stuck in? | repairing_pipes ; doing_lab_research ; writing_ad_copy ; nursing_patients ; cold_calling_customers ; data_entry ; other
+C | In a school, which role would you prefer? | maintaining_the_building ; teaching_science ; teaching_art_or_music ; counseling_students ; being_principal ; running_the_front_office ; other
+C | If you worked at a car company, where would you want to be? | on_the_assembly_line ; in_crash_testing ; in_car_design ; in_driver_safety_training ; in_the_showroom_selling ; in_parts_inventory ; other
+C | Which part of planning a wedding would you most enjoy as a job? | setting_up_tents_and_lights ; figuring_out_logistics_problems ; designing_the_decorations ; calming_the_nervous_couple ; negotiating_with_vendors ; tracking_the_guest_list_and_budget ; other
+C | Which kind of result would you most like to show at the end of a workday? | something_i_built ; a_question_i_answered ; something_i_created ; a_person_i_helped ; a_deal_i_won ; a_system_i_tidied ; other
+C | If you worked on a ship, which job would you pick? | engine_room_mechanic ; marine_researcher ; onboard_entertainer ; ships_nurse ; captain ; purser_keeping_accounts ; other
+C | Which class at work would you sign up for voluntarily? | welding ; statistics ; creative_writing ; conflict_resolution ; negotiation ; bookkeeping ; none
+C | If you ran a bookstore, what would you spend most time on? | building_shelves_and_displays ; researching_rare_books ; writing_staff_picks_and_reviews ; helping_customers_choose ; growing_the_business ; keeping_inventory_straight ; other
+C | Which environment would you most like to work in? | a_workshop ; a_laboratory ; a_studio ; a_clinic_or_classroom ; a_boardroom ; a_quiet_office_with_files ; other
+C | At a zoo, which job would appeal most? | building_enclosures ; studying_animal_behavior ; designing_signs_and_exhibits ; educating_visitors ; running_marketing_campaigns ; managing_feeding_schedules ; other
+C | Which work activity would drain you the fastest? | lifting_and_carrying ; reading_technical_reports ; brainstorming_new_ideas ; comforting_upset_people ; selling_to_strangers ; checking_numbers_for_errors ; none
+C | If you worked at a radio station, which job would you choose? | maintaining_the_transmitter ; analyzing_listener_data ; hosting_a_music_show ; running_a_call_in_advice_show ; selling_ad_time ; scheduling_the_programs ; other
+C | Which kind of problem would you rather solve for a living? | how_to_make_it_work ; why_it_happens ; how_to_make_it_beautiful ; how_to_help_someone ; how_to_win_people_over ; how_to_keep_it_orderly ; other
+C | If you worked for a city, which department would you join? | road_repair ; environmental_testing ; public_art ; social_services ; economic_development ; records_and_permits ; other
+C | Which part of making a video game would you want to work on? | building_the_arcade_hardware ; testing_physics_and_bugs ; drawing_characters ; running_player_community_events ; marketing_the_launch ; tracking_the_schedule_and_budget ; other
+C | Which business would you most like to own? | auto_repair_shop ; testing_laboratory ; design_studio ; tutoring_center ; sales_agency ; accounting_firm ; other
+C | If a friend's company needed help for a week, what would you offer to do? | fix_their_equipment ; analyze_their_numbers ; redo_their_website_look ; train_their_staff ; find_them_new_customers ; organize_their_files ; other
+C | Which kind of work leaves you most satisfied at the end of the day? | physically_tired_but_done ; mentally_challenged ; creatively_inspired ; emotionally_useful ; excited_by_a_win ; calm_because_everything_is_in_order ; other
+C | Which outdoor job would appeal most to you? | forestry_crew ; field_geologist ; landscape_designer ; outdoor_camp_counselor ; real_estate_agent_showing_land ; park_permit_clerk ; none
+C | At a theater, which job would you want? | building_the_stage ; researching_the_plays_history ; acting_or_directing ; teaching_drama_workshops ; selling_season_tickets ; managing_the_box_office_records ; other
+S | How much would you enjoy a job repairing bicycles all day? | I would dread it ; I could put up with it for a while ; I would find it pleasant enough ; I would enjoy it a lot ; It sounds like my dream job
+S | How appealing is a job reviewing insurance claims for errors? | I would quit within a week ; I'd do it only for the pay ; I'd find it acceptable ; I'd find it satisfying ; I'd love the order and precision of it
+S | How would you feel about a job studying ocean currents with sensors? | It sounds dull to me ; I'd be curious for a little while ; I'd find it interesting ; I'd be fascinated by it ; I'd consider it my calling
+S | How much would you enjoy composing music for advertisements? | I would hate it ; I'd tolerate it ; I'd enjoy parts of it ; I'd enjoy it most days ; I'd jump at the chance
+S | How appealing is a job teaching adults to read? | Not at all appealing ; Slightly appealing for a short time ; Worth doing for a year or so ; A job I'd happily keep ; The kind of work I'd most want to do
+S | How would you feel about spending your days selling houses? | I'd find it miserable ; I'd do it only if I had to ; I'd find it okay ; I'd enjoy the chase ; I'd thrive on it
+S | How much would you enjoy a job installing solar panels on roofs? | I'd dread every day ; I'd put up with it ; I'd enjoy being outside and busy ; I'd really like the hands-on work ; I'd be proud to do it for years
+S | How appealing is a job analyzing survey results to spot trends? | It sounds tedious ; I could do it briefly ; It sounds fairly interesting ; I'd really enjoy it ; I'd be happy doing it for life
+S | How would you feel about a job designing book covers? | Not for me at all ; I'd try it but get bored ; I'd enjoy it sometimes ; I'd enjoy it most days ; I'd love it
+S | How much would you enjoy working as a nurse's aide in a care home? | I'd find it too hard to face ; I'd do it only out of duty ; I'd find it meaningful but draining ; I'd find it rewarding ; I'd consider it the best work there is
+S | How appealing is a job running a small team at a retail store? | Not at all ; A little, for the pay ; Moderately appealing ; Quite appealing ; I'd go for it immediately
+S | How would you feel about a job keeping payroll records for a company? | I'd hate it ; I'd tolerate it ; I'd find it calm and fine ; I'd like the routine ; I'd enjoy it thoroughly
+S | How much would you enjoy a job as a cabinet maker? | I'd find it tedious ; I'd try it for a short time ; I'd like it fine ; I'd enjoy it a lot ; I'd find it deeply satisfying
+S | How appealing would a job testing new medicines in a lab be? | Not appealing ; A bit appealing ; Somewhat appealing ; Very appealing ; It's exactly what I'd want
+S | How would you feel about a job as a wedding photographer? | I'd dread it ; I'd do it for extra money ; I'd enjoy it now and then ; I'd enjoy it most of the time ; I'd love it
+S | How much would you enjoy coaching a youth sports team as your job? | I'd find it exhausting ; I'd do it reluctantly ; I'd find it pleasant ; I'd enjoy it a lot ; I'd love it more than anything
+S | How appealing is a job pitching a startup to investors? | It sounds terrifying ; I'd do it only if pushed ; I'd manage it ; I'd enjoy the challenge ; I'd find it thrilling
+S | How would you feel about a job managing a warehouse's shipping schedules? | I'd find it mind-numbing ; I'd put up with it ; I'd find it okay ; I'd enjoy keeping it running smoothly ; I'd find it very satisfying
+S | How much would you enjoy being an electrician? | Not at all ; A little ; A fair amount ; Quite a lot ; I'd love it
+S | How appealing is a job writing articles about new scientific discoveries? | Not appealing ; Slightly appealing ; Moderately appealing ; Very appealing ; A dream job
+S | How would you feel about a job organizing charity fundraisers? | I'd find it stressful and pointless ; I'd do it once ; I'd find it worthwhile ; I'd really enjoy it ; I'd want it as my career
+N | Would you enjoy a job taking apart and rebuilding engines?
+N | Would you like a job classifying plant species in the field?
+N | Would you enjoy a job choreographing dance routines?
+N | Would you enjoy working as a speech therapist for children?
+N | Would you like a job running a sales team with monthly targets?
+N | Would you enjoy a job auditing company expense reports?
+N | Would you like a job as a park ranger doing trail maintenance?
+N | Would you enjoy a job designing experiments to test new materials?
+N | Would you like a job painting murals on public walls?
+N | Would you enjoy a job as a physical therapist helping people recover?
+N | Would you like a job as a real estate developer negotiating land deals?
+N | Would you enjoy a job keeping a library's catalog up to date?
+N | Would you like a job as a pilot flying cargo planes?
+N | Would you enjoy a job mediating disputes between neighbors?
+
+@node self.personality.humor_style
+C | When a friend trips in public but isn't hurt, what is your first reaction? | laugh_with_them ; ask_if_theyre_okay_first ; tease_them_for_days ; pretend_not_to_notice ; other
+C | What kind of joke are you most likely to tell at a family dinner? | a_harmless_pun ; a_funny_story_from_my_week ; a_gentle_tease_of_a_relative ; a_joke_at_my_own_expense ; an_edgy_joke ; i_dont_tell_jokes
+C | Which kind of meme do you share most often? | wholesome_animals ; absurd_nonsense ; relatable_everyday_struggles ; dark_humor ; clever_wordplay ; i_dont_share_memes ; other
+C | When someone tells a joke you don't get, what do you usually do? | laugh_along_anyway ; ask_them_to_explain ; admit_i_missed_it ; stay_silent ; other
+C | What makes you laugh hardest when watching something? | physical_slapstick ; witty_dialogue ; awkward_silences ; bizarre_surreal_moments ; characters_getting_what_they_deserve ; other
+C | When you're at a funeral or serious event and something funny happens, what do you do? | laugh_quietly ; hold_it_in ; make_eye_contact_with_a_friend ; feel_annoyed_at_the_interruption ; other
+C | Which role do you usually play in a group chat? | the_meme_supplier ; the_one_with_the_comebacks ; the_one_who_reacts_with_laughing_faces ; the_serious_one ; the_quiet_lurker ; other
+C | How do you usually respond when a coworker makes a bad pun? | groan_loudly ; laugh_genuinely ; top_it_with_a_worse_one ; ignore_it ; other
+C | When you're in an awkward silence with someone new, what do you do? | crack_a_light_joke ; ask_a_question ; comment_on_the_awkwardness_itself ; wait_it_out ; other
+C | Which kind of prank would you most enjoy pulling? | a_harmless_surprise ; an_elaborate_long_con ; a_silly_fake_announcement ; a_mean_scare ; i_dont_pull_pranks ; other
+C | What kind of humor do you use to flirt or charm people? | playful_teasing ; self_deprecating_jokes ; clever_wordplay ; absurd_randomness ; i_dont_use_humor_for_that ; other
+C | When you mess up at work in a minor way, how do you usually handle it? | make_a_joke_about_it ; fix_it_quietly ; apologize_seriously ; laugh_it_off_and_move_on ; other
+C | Which of these would you most like to be known for? | sharp_wit ; being_goofy ; deadpan_delivery ; great_storytelling ; laughing_easily_at_others ; none
+C | When a friend is sad, how do you most often try to cheer them up? | tell_a_silly_joke ; send_a_funny_video ; do_an_impression ; just_listen_without_jokes ; other
+C | What kind of humor bothers you most? | mean_spirited_mockery ; crude_bathroom_jokes ; puns ; forced_randomness ; stereotype_jokes_about_groups ; nothing_bothers_me ; other
+C | When you laugh really hard, what usually happens? | i_snort ; i_cry ; i_go_silent_and_shake ; i_laugh_loudly_and_clap ; i_rarely_laugh_that_hard ; other
+C | What do you usually do when your own joke falls flat? | laugh_at_the_silence ; explain_the_joke ; move_on_quickly ; try_another_joke ; feel_embarrassed_for_a_while ; other
+C | Which comedy setting do you enjoy most in real life? | improvised_banter_with_friends ; a_stand_up_show ; a_funny_movie_night ; a_game_that_gets_silly ; other
+C | When your boss makes a joke that isn't funny, what do you do? | laugh_politely ; smile_and_nod ; stay_straight_faced ; laugh_hard_to_please_them ; other
+C | Which kind of story do you most like to tell for laughs? | embarrassing_things_that_happened_to_me ; ridiculous_things_strangers_did ; exaggerated_tall_tales ; funny_things_my_pets_did ; i_dont_tell_funny_stories ; other
+C | How do you react when a friend imitates you as a joke? | laugh_along ; imitate_them_back ; feel_hurt_but_hide_it ; tell_them_to_stop ; other
+C | What kind of humor do you rely on when a conversation gets tense? | a_light_joke_to_ease_things ; sarcasm ; changing_the_subject_with_something_silly ; no_humor = I stay serious ; other
+C | Which type of birthday card would you pick for a close friend? | a_punny_card ; a_card_that_teases_their_age ; a_weird_absurd_card ; a_sweet_sincere_card ; other
+C | What do you find funniest in daily life? | peoples_odd_habits ; signs_with_typos ; animals_acting_like_humans ; my_own_mishaps ; overheard_conversations ; other
+C | Which kind of comeback do you usually give when teased? | a_quick_witty_reply ; a_self_mocking_agreement ; a_playful_insult_back ; a_laugh_and_nothing_else ; other
+C | When you are nervous in a job interview, how do you use humor? | a_small_joke_to_break_the_ice ; nervous_laughter ; i_avoid_humor_completely ; i_joke_too_much ; other
+C | Which kind of joke is your personal favorite to tell? | knock_knock_or_riddles ; one_liners ; long_shaggy_dog_stories ; observational_jokes ; impressions ; other
+C | What do you do when a friend makes a dark joke about something painful in their life? | laugh_with_them ; joke_back_gently ; ask_if_theyre_okay ; change_the_subject ; other
+C | When you watch a comedy with others, how do you laugh? | loudly_and_often ; quietly_and_often ; only_at_the_best_bits ; i_rarely_laugh_out_loud ; other
+C | Which kind of humor did you use most as a kid at school? | class_clown_antics ; sarcastic_remarks ; silly_drawings_and_notes ; i_was_the_audience_not_the_joker ; other
+C | When you see an absurd sign or product in a store, what do you do? | take_a_photo_to_share ; laugh_to_myself ; point_it_out_to_whoever_is_with_me ; dont_notice ; other
+C | How do you usually answer a friend's text about a minor disaster, like burning dinner? | a_joke_about_it ; a_funny_gif ; sympathy ; practical_advice ; other
+C | Which kind of teasing are you most comfortable receiving? | about_my_quirks ; about_my_taste ; about_my_mistakes ; about_anything_from_close_friends ; none = I dislike being teased ; other
+C | What kind of joke would you never tell? | about_someones_looks ; about_death ; about_a_friends_secret ; about_someones_family ; id_tell_any_joke ; other
+C | Which best describes your laugh? | a_big_booming_laugh ; a_giggle ; a_silent_shake ; a_short_chuckle ; a_contagious_cackle ; other
+S | How often do you make people laugh in an ordinary conversation? | I rarely try to be funny ; I get a laugh now and then ; I usually get a couple of laughs ; I often have people laughing ; People expect me to be the funny one
+S | How do you respond when a friend makes a joke about you in front of a group? | I feel hurt and go quiet ; I laugh but feel uneasy ; I laugh along easily ; I tease them right back ; I turn it into a bigger joke on myself
+S | How much do you joke about your own flaws? | I never joke about my flaws ; I joke about small quirks ; I often poke fun at my habits ; Most of my jokes are about me ; I put myself down for laughs even when it hurts
+S | When a serious meeting drags on, how likely are you to crack a joke? | I stay serious the whole time ; I smile at others' jokes ; I make a quiet remark to a neighbor ; I make a joke for the room ; I keep the room laughing throughout
+S | How edgy is the humor you enjoy with close friends? | Only clean, gentle humor ; Mild teasing and sarcasm ; Dark jokes now and then ; Very dark or shocking jokes ; Nothing is off limits
+S | How much do you use sarcasm when you're annoyed? | Not at all, I say what I mean ; A little, under my breath ; Often, to make a point ; Constantly, it's my main tone
+S | How do you use humor after a bad day at work? | I don't find anything funny then ; I watch something funny to reset ; I tell friends about it as a funny story ; I joke through the whole thing as it happens
+S | How much effort do you put into planning pranks? | I never pull pranks ; I do quick spontaneous ones ; I plan a prank now and then ; I plan elaborate pranks for special days ; Pranking is a year-round hobby for me
+S | How easily do you get the giggles at inappropriate moments? | Never, I can always keep a straight face ; Rarely, only when very tired ; Sometimes, if someone catches my eye ; Often, I struggle to stop
+S | How do you respond when someone laughs at you, not with you? | I feel crushed ; I feel embarrassed but hide it ; I shrug it off ; I laugh along to take control of it ; I make a funnier joke about myself
+S | How much do you enjoy silly wordplay in everyday talk? | It irritates me ; I tolerate it ; I smile at a good one ; I love it and join in ; I can't stop making puns
+S | How do you tend to deal with an embarrassing moment in public? | I want to disappear and never speak of it ; I blush and move on ; I laugh it off right away ; I make it into a funny story that same day ; I retell it for years as my best story
+S | How often do you share funny things you find online with friends? | Never ; A few times a year ; Every few weeks ; Several times a week ; Many times every day
+S | How do you react to a surprise practical joke from a coworker? | I get angry ; I feel annoyed but say nothing ; I laugh it off ; I laugh and plan my revenge prank
+S | How much of your humor is aimed at other people? | None, I avoid it ; A little light teasing ; A fair amount of teasing friends ; Most of my jokes are at someone's expense
+S | How quickly do you come up with a funny comeback? | I never think of one ; I think of one hours later ; I sometimes land one in the moment ; I usually have one ready instantly
+S | How much do you enjoy humor that makes no sense at all? | It annoys me ; I don't get the appeal ; It makes me smile sometimes ; I love it ; It's my favorite kind of humor
+S | How do you react when a stranger tells you a joke in a line or waiting room? | I ignore it ; I give a polite smile ; I laugh and reply ; I start trading jokes with them
+S | How often do you laugh alone at something you remember? | Never ; Once in a while ; Every week or so ; Most days
+S | How do you usually use humor when meeting a partner's or friend's family? | I stay serious to be safe ; I laugh at their jokes but don't make any ; I make a few light jokes ; I try to become the funny one in the room
+S | How much do you enjoy watching people roast each other at a party? | I find it uncomfortable ; I watch but don't laugh much ; I laugh along ; I love it and join in
+N | Do you often laugh at jokes that other people find offensive?
+N | Do you use humor to avoid talking about your feelings?
+N | Do you enjoy making up nicknames for your friends?
+N | Do you find it funny when plans go completely wrong?
+N | Do you enjoy puns so bad they make people groan?
+N | Do you often do impressions of people you know?
+N | Do you make jokes to fill silence when you feel awkward?
+N | Do you enjoy sarcastic humor more than silly humor?
+N | Do you find it hard to keep a straight face when someone is angry?
+N | Do you often put yourself down to make others laugh?
+N | Do you enjoy laughing at yourself when you make a mistake?
+N | Do you prefer being the audience rather than the joker in a group?
+N | Do you enjoy teasing friends until they give up and laugh?
+N | Do you laugh at your own mishaps soon after they happen?
+
+@node self.personality.motivation_ambition
+C | When you learn someone your age has achieved much more than you, what do you usually feel? | inspired_to_work_harder ; envious ; happy_for_them ; indifferent ; discouraged ; other
+C | Which reward would push you hardest to finish a tough project? | a_bonus ; public_recognition ; the_satisfaction_of_mastering_it ; beating_a_rival ; time_off ; other
+C | When you have a free afternoon and an unfinished goal, what do you usually do? | work_on_the_goal ; rest_first_then_work ; rest_and_plan_to_start_tomorrow ; forget_the_goal_entirely ; other
+C | What do you usually do after getting a disappointing grade or review? | study_what_went_wrong ; complain_and_move_on ; work_twice_as_hard ; give_up_on_that_area ; ask_for_feedback ; other
+C | Which statement best fits how you approach a new hobby? | aim_to_be_excellent ; aim_to_have_fun ; aim_to_beat_friends ; aim_to_try_it_and_move_on ; other
+C | When your team is behind in a competition, what do you usually do? | push_harder ; encourage_others ; accept_losing_gracefully ; lose_interest ; other
+C | What most often makes you start a task you've been putting off? | a_close_deadline ; someone_checking_in ; feeling_guilty ; a_sudden_burst_of_energy ; a_reward_i_promise_myself ; other
+C | When someone doubts you can do something, how do you usually react? | set_out_to_prove_them_wrong ; start_to_doubt_myself ; ignore_it ; agree_and_drop_it ; other
+C | If you got a big promotion tomorrow, what would you be most excited about? | the_money ; the_title ; the_new_challenges ; the_influence ; proving_myself ; i_wouldnt_want_it
+C | What do you usually do on the first day of a new goal, like a fitness plan? | go_all_in ; start_small ; plan_everything_first ; put_it_off_to_next_week ; other
+C | What kind of feedback motivates you most? | tough_honest_criticism ; encouraging_praise ; comparison_with_others ; data_on_my_progress ; other
+C | When a task becomes boring halfway through, what do you usually do? | push_through ; add_a_challenge_to_make_it_fun ; switch_to_something_else ; ask_someone_else_to_finish_it ; other
+C | Which best describes your reason for learning new skills? | curiosity ; career_advancement ; to_impress_others ; because_i_have_to ; i_rarely_learn_new_skills ; other
+C | How do you usually feel on the morning of a big competition or exam? | excited ; nervous_but_ready ; dreading_it ; calm_and_indifferent ; other
+C | When you finish a big goal, what do you usually do next? | set_a_bigger_one_right_away ; celebrate_then_plan ; rest_for_a_long_time ; feel_empty_and_lost ; other
+C | Where do you usually rank yourself when you think about your peers' careers? | ahead_and_pushing_further ; ahead_and_content ; behind_and_pushing_to_catch_up ; behind_and_at_peace ; i_dont_compare ; other
+C | What do you usually do when you're close to a deadline and not done? | pull_an_all_nighter ; ask_for_an_extension ; turn_in_whatever_i_have ; give_up_on_it ; other
+C | Which kind of project do you most enjoy taking on? | one_everyone_thinks_is_impossible ; one_i_know_ill_do_well ; one_that_helps_others ; one_with_clear_rewards ; other
+C | When you play a sport or game casually, what is your main aim? | to_win ; to_improve ; to_enjoy_the_company ; to_pass_the_time ; other
+C | Which setback would bother you most? | missing_a_promotion ; losing_to_a_rival ; failing_a_personal_challenge ; disappointing_someone_who_believed_in_me ; other
+C | How do you usually keep yourself going on a long project? | break_it_into_small_wins ; imagine_the_finish ; rely_on_deadlines ; rely_on_others_checking_in ; i_often_dont_keep_going ; other
+C | What do you usually do when a friend challenges you to a bet on something you can do? | accept_immediately ; accept_if_the_stakes_are_fun ; decline ; raise_the_stakes ; other
+C | When you're praised for work you know was mediocre, what do you do? | redo_it_properly ; accept_the_praise ; point_out_what_could_be_better ; feel_uneasy_and_do_nothing ; other
+C | Which description fits your approach to career planning? | detailed_long_term_plan ; rough_direction ; taking_opportunities_as_they_come ; no_real_plan ; other
+C | What do you usually do with an ambitious idea you get late at night? | write_it_down_and_start_tomorrow ; start_working_on_it_right_away ; forget_it_by_morning ; tell_someone_and_hope_they_do_it ; other
+C | When your effort goes unnoticed at work, what do you usually do? | keep_working_the_same ; make_sure_people_notice_next_time ; ease_off ; start_looking_elsewhere ; other
+C | Which is most likely to make you quit a goal? | slow_progress ; a_better_opportunity ; loss_of_interest ; criticism ; lack_of_time ; i_rarely_quit ; other
+C | How do you usually approach a skill you're naturally bad at? | practice_until_im_decent ; avoid_it ; find_a_workaround ; ask_someone_else_to_do_it ; other
+C | When you are ahead of everyone else in a race or contest, what do you do? | push_even_harder ; keep_steady ; ease_off_a_bit ; help_others_catch_up ; other
+C | Which picture of success appeals to you most? | being_top_of_my_field ; a_comfortable_steady_life ; being_my_own_boss ; making_a_big_difference ; being_famous ; other
+C | What usually happens to your new year goals? | i_finish_most ; i_finish_a_few ; i_forget_them_by_spring ; i_dont_set_any ; other
+C | How do you usually respond when someone offers to do a hard task for you? | refuse_and_do_it_myself ; accept_gratefully ; accept_but_feel_i_failed ; watch_and_learn ; other
+C | When you realize you're not the best in a new group, how do you feel? | motivated_to_catch_up ; relieved ; threatened ; happy_to_learn_from_others ; other
+C | Which best describes how you spend a long weekend with no plans? | working_on_personal_projects ; relaxing_completely ; a_mix_of_both ; catching_up_on_work ; other
+C | What most often gets you out of bed on a hard morning? | goals_for_the_day ; obligations_to_others ; fear_of_falling_behind ; the_alarm_and_nothing_else ; other
+S | How do you react when you narrowly miss a goal, like a target time in a run? | I shrug and forget it ; I feel disappointed for a day ; I plan to try again sometime ; I start training again the next day ; I can't rest until I beat it
+S | How much do you push yourself when no one will check your work? | I do the bare minimum ; I do what's required ; I do a bit more than required ; I do it as well as I can ; I do it better than anyone would expect
+S | When you're given a very hard assignment, what do you usually do? | I ask to be given something else ; I try briefly and then ask for help ; I work steadily and see how far I get ; I throw myself into it ; I stay up nights until it's solved
+S | How long do you usually put off a task you dislike? | I do it right away ; I do it the same day ; I leave it for a few days ; I leave it until the deadline ; I leave it past the deadline
+S | How do you feel when a friend beats you at something you're good at? | Pleased for them ; A small pang, then fine ; Annoyed for a while ; Determined to beat them next time ; Unable to let it go until I win back
+S | How much do you think about getting ahead in life on an ordinary day? | It never crosses my mind ; It comes up once in a while ; I think about it most days ; It's always in the back of my mind ; It drives almost everything I do
+S | When you start a new job or class, how hard do you work in the first weeks? | I ease in slowly ; I do what's expected ; I work harder than usual to learn ; I try to be the standout from day one
+S | How do you respond to a failure that others saw? | I avoid trying that again ; I try again after a long break ; I try again once I feel ready ; I try again right away ; I try again and aim higher
+S | How much do you need outside praise to keep working on something? | I don't need any ; A little encouragement helps ; I slow down without some praise ; I stop if no one notices ; I only work when someone is watching
+S | How do you tend to handle a goal that will take years to reach? | I don't set goals that long ; I set them but lose track ; I work on them in bursts ; I work on them steadily ; I build my whole life around them
+S | When you have several tasks due, how do you usually get started? | I scroll my phone until the last minute ; I start the easiest one ; I start the most urgent one ; I plan them all and begin at once
+S | How competitive are you in friendly games like trivia nights? | I don't care who wins ; I like winning but don't mind losing ; I play to win ; I get upset when I lose ; I treat it like a championship
+S | How much extra training do you seek out for your job or studies? | None at all ; Only what's required ; An occasional course ; Regular courses or reading ; I'm always learning something new for it
+S | When someone offers you an easier path to the same goal, what do you do? | Take it gladly ; Take it but feel a little guilty ; Consider both carefully ; Stick with the hard way to prove myself
+S | How do you feel when you have a completely unproductive day? | Relaxed and fine ; Slightly restless ; Guilty by evening ; Anxious that I'm falling behind ; Awful, as if I wasted something precious
+S | How much does the chance of losing make you try harder? | It makes me give up ; It doesn't change my effort ; It makes me try a bit harder ; It makes me fight much harder
+S | How often do you finish side projects you start? | I almost never finish them ; I finish one now and then ; I finish about half ; I finish most of them ; I finish nearly every one
+S | How do you react when your plan for the day falls apart? | I give up on the day ; I do a few small things ; I salvage the most important task ; I rework the plan and still finish most of it
+S | How much do you care about rising to a leadership position? | Not at all ; A little, if it comes naturally ; Somewhat, I'd take it if offered ; A lot, I work toward it ; It's one of my main aims in life
+S | How willing are you to sacrifice sleep to finish something important? | Never ; Only in a real emergency ; Now and then before big deadlines ; Often ; Routinely
+S | How do you usually feel after winning a prize or award? | Embarrassed by the attention ; Pleased for a moment ; Proud for a while ; Hungry for the next one right away
+N | Do you keep a written list of long-term goals?
+N | Do you often compare your progress with that of people you went to school with?
+N | Do you work better with a rival to beat?
+N | Do you keep practicing a skill after you're already good at it?
+N | Do you get restless on holidays because you aren't achieving anything?
+N | Do you often take on more work than you can handle?
+N | Do you tend to leave tasks until the night before they're due?
+N | Do you enjoy working toward a goal more than reaching it?
+N | Do you give up quickly when a new skill feels hard?
+N | Do you volunteer for the hardest task in a group?
+N | Do you feel driven to be the best at whatever you do?
+N | Do you celebrate small wins along the way to a goal?
+N | Do you tend to lose motivation once the novelty of a project wears off?
+N | Do you get more done when you work for yourself than when you work for someone else?

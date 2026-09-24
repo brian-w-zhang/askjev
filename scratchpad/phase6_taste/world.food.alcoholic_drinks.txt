@@ -1,0 +1,45 @@
+C | Which beer style is the best? | lager ; pilsner ; ipa ; stout ; wheat_beer ; sour ; porter ; other
+C | Which wine grape makes the best red wine? | cabernet_sauvignon ; pinot_noir ; merlot ; syrah ; malbec ; nebbiolo ; tempranillo ; other
+C | Which wine grape makes the best white wine? | chardonnay ; sauvignon_blanc ; riesling ; pinot_grigio ; chenin_blanc ; albarino ; other
+C | Which spirit is the best to drink neat? | whiskey ; tequila ; rum ; cognac ; mezcal ; gin ; other
+C | Which whiskey style is the best? | bourbon ; scotch_single_malt ; irish ; rye ; japanese ; other
+C | Which wine region makes the best wine? | bordeaux ; burgundy ; tuscany ; napa_valley ; rioja ; mendoza ; barossa_valley ; other
+C | Which sparkling wine is the best? | champagne ; prosecco ; cava ; cremant ; other
+C | Which summer cocktail is the best? | mojito ; margarita ; pina_colada ; aperol_spritz ; daiquiri ; paloma ; other
+C | Which winter drink is the best? | mulled_wine ; hot_toddy ; irish_coffee ; eggnog ; hot_buttered_rum ; other
+C | Which gin cocktail is the best? | gin_and_tonic ; negroni ; martini ; tom_collins ; gimlet ; french_seventy_five ; other
+C | Which whiskey cocktail is the best? | old_fashioned ; manhattan ; whiskey_sour ; mint_julep ; sazerac ; boulevardier ; other
+C | Which tequila cocktail is the best? | margarita ; paloma ; tequila_sunrise ; ranch_water ; other
+C | Which rum cocktail is the best? | mojito ; daiquiri ; mai_tai ; pina_colada ; dark_and_stormy ; other
+C | Which country makes the best wine? | france ; italy ; spain ; portugal ; argentina ; united_states ; australia ; other
+C | Which kind of wine is the best with steak? | cabernet_sauvignon ; malbec ; syrah ; zinfandel ; pinot_noir ; other
+C | Which kind of beer is the best with pizza? | lager ; ipa ; pale_ale ; amber_ale ; stout ; other
+C | Which drink goes best with sushi? | sake ; japanese_lager ; dry_white_wine ; sparkling_wine ; other
+C | Which liqueur is the best? | amaretto ; baileys ; kahlua ; grand_marnier ; limoncello ; chartreuse ; other
+C | Which kind of place is the best for drinking beer? | beer_garden ; brewery_taproom ; pub ; dive_bar ; backyard ; other
+C | Which cider style is the best? | dry_apple ; sweet_apple ; pear ; rose ; farmhouse ; other
+C | Which drink is the best to toast a celebration with? | champagne ; prosecco ; whiskey ; sake ; tequila_shot ; other
+C | Which way of serving whiskey is the best? | neat ; with_a_few_drops_of_water ; on_the_rocks ; in_a_cocktail ; with_a_mixer ; other
+C | Which martini style is the best? | classic_dry_gin ; vodka ; dirty ; espresso ; vesper ; other
+C | Which fortified wine is the best? | port ; sherry ; madeira ; marsala ; vermouth ; other
+C | Which kind of wine is the best for a picnic? | rose ; light_red ; crisp_white ; sparkling ; other
+S | How good is the Negroni as a cocktail? | It is far too bitter to enjoy ; It is an acquired taste ; It is a decent drink ; It is excellent ; It is the best cocktail ever made
+S | How good is boxed wine? | It is undrinkable ; It is fine only for cooking ; It is acceptable for casual drinking ; It is as good as most bottled wine ; It is a great value choice
+S | How good is light beer? | It is flavorless water ; It is drinkable only when ice cold ; It is fine on a hot day ; It is genuinely refreshing ; It is the best kind of beer
+S | How good is mezcal? | It tastes like smoke and nothing else ; It is an acquired taste ; It is interesting ; It is delicious ; It is the best spirit there is
+S | How good is a sour beer? | It is undrinkable ; It is a curiosity ; It is refreshing now and then ; It is delicious ; It is the best beer style
+S | How good is rose wine? | It is not serious wine ; It is fine but forgettable ; It is pleasant in summer ; It is delicious ; It is the best wine there is
+S | How good is sweet dessert wine? | It is cloying ; It is fine in tiny sips ; It is a nice treat ; It is delicious ; It is the best wine there is
+S | How good is a classic dry martini? | It tastes like pure alcohol ; It is an acquired taste ; It is a decent drink ; It is elegant and delicious ; It is the perfect cocktail
+S | How good is sake? | It is unpleasant ; It is fine with food only ; It is pleasant ; It is delicious ; It is one of the best drinks in the world
+S | How good is a stout beer? | It is too heavy to enjoy ; It is fine in winter ; It is a good beer ; It is delicious ; It is the best beer style
+S | How good is a peaty Islay Scotch? | It tastes like a campfire gone wrong ; It is an acquired taste ; It is interesting ; It is delicious ; It is the best whisky there is
+N | Is craft beer better than mass-market beer?
+N | Is a margarita better frozen than on the rocks?
+N | Is champagne worth its price over other sparkling wines?
+N | Is bourbon better than Scotch?
+N | Is a gin and tonic the best simple mixed drink?
+N | Is Belgian beer the best in the world?
+N | Is cider better than beer?
+N | Is Italian wine better than French wine?
+N | Are fruity cocktails better than spirit-forward cocktails?

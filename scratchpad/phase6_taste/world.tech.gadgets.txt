@@ -1,0 +1,35 @@
+C | Which smartphone brand makes the best-looking phones? | apple ; samsung ; google_pixel ; nothing ; sony ; oneplus ; other
+C | Which game console had the best design as hardware? | nintendo_switch ; playstation ; xbox ; game_boy ; super_nintendo ; sega_dreamcast ; nintendo_wii ; other
+C | Which kind of headphones gives the best listening experience? | over_ear_closed_back ; over_ear_open_back ; wireless_earbuds ; wired_in_ear_monitors ; bone_conduction ; other
+C | Which smartwatch is the best? | apple_watch ; samsung_galaxy_watch ; google_pixel_watch ; garmin ; fitbit ; other
+C | Which phone color finish looks the best? | black ; white ; silver ; gold ; deep_blue ; pastel ; other
+C | Which kind of camera is the most fun to shoot with? | smartphone ; mirrorless ; film_camera ; instant_camera ; action_camera ; point_and_shoot ; other
+C | Which classic gadget had the best design? | original_ipod ; sony_walkman ; motorola_razr ; nokia_brick_phone ; polaroid_camera ; game_boy ; blackberry ; other
+C | Which kind of TV screen gives the best picture? | oled ; qled ; mini_led ; plasma ; projector ; other
+C | Which handheld game console is the best? | game_boy ; nintendo_ds ; playstation_portable ; nintendo_switch ; steam_deck ; other
+C | Which kind of phone form factor is the best? | standard_slab ; compact_small_phone ; large_phablet ; flip_foldable ; book_foldable ; other
+C | Which wireless earbuds are the best? | airpods_pro ; sony_wf_series = Sony WF earbuds ; samsung_galaxy_buds ; bose_quietcomfort_earbuds ; pixel_buds ; other
+C | Which smart home gadget is the most useful? | smart_speaker ; smart_thermostat ; video_doorbell ; robot_vacuum ; smart_lights ; smart_lock ; other
+C | Which camera brand makes the best cameras? | canon ; nikon ; sony ; fujifilm ; leica ; panasonic ; other
+C | Which kind of keyboard feel is the best on a gadget? | mechanical_clicky ; mechanical_quiet ; laptop_style_low_profile ; touchscreen_keyboard ; other
+C | Which e-reader is the best? | kindle_paperwhite ; kindle_oasis ; kobo ; boox ; other
+C | Which gadget material feels the most premium in the hand? | aluminum ; glass ; titanium ; ceramic ; leather ; plastic ; other
+C | Which speaker brand makes the best portable speakers? | jbl ; bose ; sonos ; ultimate_ears ; marshall ; bang_and_olufsen ; other
+C | Which kind of phone camera feature matters most for great photos? | night_mode ; zoom_lens ; ultra_wide_lens ; portrait_mode ; video_stabilization ; other
+C | Which tablet is the best? | ipad_pro ; ipad_air ; samsung_galaxy_tab ; microsoft_surface ; amazon_fire ; other
+S | How good is the original iPhone as a piece of design? | It is clunky by any standard ; It was nice for its time ; It was a beautifully designed device ; It is one of the greatest product designs ever made
+S | How useful is a smartwatch for an ordinary person? | It is a pointless toy ; It is a nice extra for a few features ; It is genuinely useful every day ; It is as essential as a phone
+S | How good is the Nintendo Switch as hardware? | It is weak and flimsy ; It is decent for casual play ; It is a very good console ; It is one of the best consoles ever made
+S | How good is noise cancelling on premium headphones today? | It barely makes a difference ; It dulls some background noise ; It blocks most everyday noise ; It makes a busy train feel silent
+S | How appealing is a foldable phone's design? | It is awkward and fragile ; It is a fun gimmick ; It is a clever and practical design ; It is the future of phone design
+S | How good is the Steam Deck as a handheld? | It is too bulky to enjoy ; It is fine for a few games ; It is an excellent handheld ; It is the best handheld gaming device ever made
+S | How good does a flagship phone camera look compared with a real camera? | It is far worse in almost every photo ; It is good enough for casual snaps ; It matches a real camera in most daylight shots ; It beats most real cameras for everyday photos
+S | How good is the Sony Walkman as a gadget design? | It is a forgettable old gadget ; It was handy in its day ; It was a brilliant design ; It is one of the most iconic gadgets ever made
+N | Is the Apple Watch the best smartwatch on the market?
+N | Is a phone with a headphone jack better than one without?
+N | Is the Game Boy the best-designed handheld console ever?
+N | Are instant cameras more fun than digital cameras?
+N | Is a large phone screen better than a compact phone?
+N | Are mechanical keyboards more satisfying to type on than laptop keyboards?
+N | Is the Kindle the best e-reader?
+N | Are retro gadgets more charming than modern ones?

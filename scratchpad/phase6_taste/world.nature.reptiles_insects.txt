@@ -1,0 +1,15 @@
+C | Which reptile is the most beautiful? | green_tree_python ; chameleon ; gila_monster ; emerald_tree_boa ; leopard_gecko ; frilled_lizard ; other
+C | Which frog is the most striking? | poison_dart_frog ; red_eyed_tree_frog ; glass_frog ; tomato_frog ; bullfrog ; other
+C | Which butterfly is the most beautiful? | monarch ; blue_morpho ; swallowtail ; peacock_butterfly ; glasswing ; painted_lady ; other
+C | Which insect is the most fascinating to watch? | ant ; honeybee ; praying_mantis ; dragonfly ; firefly ; dung_beetle ; other
+C | Which creepy-crawly is the most unsettling? | spider ; centipede ; cockroach ; wasp ; earwig ; silverfish ; other
+C | Which turtle or tortoise is the most charming? | giant_tortoise ; sea_turtle ; box_turtle ; snapping_turtle ; pancake_tortoise ; other
+C | Which beetle is the most impressive? | stag_beetle ; rhinoceros_beetle ; jewel_beetle ; goliath_beetle ; ladybug ; other
+C | Which small creature is the cutest? | jumping_spider ; ladybug ; bumblebee ; tree_frog ; gecko ; caterpillar ; other
+S | How beautiful are fireflies on a summer night? | They are unremarkable ; They are pretty ; They are enchanting ; They are one of the most magical sights in nature
+S | How creepy are spiders? | They are not creepy at all ; They are a little creepy ; They are quite creepy ; They are the creepiest creatures there are
+S | How cool are chameleons? | They are dull ; They are interesting ; They are very cool ; They are the coolest reptiles alive
+S | How cute are bumblebees? | They are not cute ; They are somewhat cute ; They are very cute ; They are the cutest insects
+N | Are snakes beautiful?
+N | Are dragonflies more beautiful than butterflies?
+N | Are frogs cute?

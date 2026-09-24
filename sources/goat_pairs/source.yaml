@@ -1,0 +1,19 @@
+name: goat_pairs
+url: https://qlever.dev/api/wikidata (fallback https://query.wikidata.org/)
+license: CC0 (Wikidata)
+version: SPARQL + entity-API pulls cached 2026-09-24 (data/raw/goat_pairs/<category>.json)
+target: 6600
+hemisphere: world
+kind: taste (evaluative for scientists)
+notes: >
+  G3 "Jev's GOAT lists". 22 categories (films, TV series, video games, books, albums, bands, singers,
+  painters, paintings, soccer players and clubs, tennis players, F1 drivers, cities and countries to visit,
+  cuisines, dishes, board games, car brands, scientists, programming languages, mammals). Per category:
+  candidates from one SPARQL class pattern, ranked by Wikidata sitelinks, top 25 kept after filters, then one
+  Choice per unordered pair (300 per category), options in alphabetical order, no truth, template_id
+  g3.<category>. Filters: labels en then mul; non-Latin, parenthesised, and (for people) digit labels dropped;
+  mammals with only a scientific name dropped; per-series (P179) or per-artist caps so one franchise can't
+  fill a list; a small per-category exclude list in the adapter with the reason for each QID
+  (sitelink-inflated outliers, people famous for something else, contested places, non-members of the class).
+  Pairs involving Russia, Ukraine, Israel, Iran (countries) or Moscow, Kyiv (cities) carry meta.flags=["political"].
+  Inventions skipped: no clean Wikidata class.

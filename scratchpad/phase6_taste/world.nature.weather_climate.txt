@@ -1,0 +1,25 @@
+C | Which kind of weather is the most pleasant? | sunny_and_mild ; hot_and_sunny ; cool_and_crisp ; light_rain ; fresh_snowfall ; foggy ; overcast_and_calm
+C | Which season has the most beautiful scenery? | spring ; summer ; autumn ; winter
+C | Which weather phenomenon is the most beautiful to see? | rainbow ; northern_lights ; lightning_storm ; morning_fog ; frost_on_trees ; sunset_after_rain ; other
+C | Which kind of storm is the most thrilling to watch from safety? | thunderstorm ; snowstorm ; ocean_storm ; dust_storm ; hailstorm
+C | Which kind of sky is the most beautiful? | clear_blue ; puffy_white_clouds ; fiery_sunset ; starry_night ; stormy_grey ; pastel_dawn
+C | Which climate is the most pleasant to live with? | mediterranean ; tropical ; temperate_oceanic ; continental ; alpine ; desert
+C | Which kind of cloud is the most beautiful? | cumulus ; cirrus ; mammatus ; lenticular ; noctilucent ; cumulonimbus ; other
+C | Which kind of snow is the most delightful? | big_fluffy_flakes ; light_powder ; wet_packing_snow ; sleet ; hardly_any_snow
+C | Which weather sound is the most soothing? | rain_on_a_roof ; distant_thunder ; wind_in_trees ; waves_in_a_storm ; hail_on_a_window ; none
+C | Which kind of rain is the most pleasant? | light_drizzle ; warm_summer_shower ; steady_all_day_rain ; heavy_downpour ; misty_rain ; none
+C | Which part of autumn weather is the most pleasant? | crisp_sunny_mornings ; golden_afternoons ; misty_evenings ; first_frost ; windy_days
+C | Which kind of summer weather is the best? | dry_heat ; humid_heat ; warm_with_a_breeze ; cool_summer ; stormy_summer
+C | Which time of day has the most beautiful light? | dawn ; morning ; midday ; golden_hour ; blue_hour ; night
+C | Which kind of winter is the most enjoyable? | snowy_and_cold ; mild_and_rainy ; dry_and_sunny ; bitterly_cold_and_clear ; no_real_winter
+S | How pleasant is a humid summer day? | It is unbearable ; It is uncomfortable ; It is tolerable ; It is enjoyable
+S | How beautiful are the northern lights? | They are faint and disappointing ; They are pretty ; They are spectacular ; They are the most beautiful sight in the sky
+S | How enjoyable is a thunderstorm to watch? | It is frightening and unpleasant ; It is mildly interesting ; It is exciting ; It is one of the most thrilling sights in nature
+S | How pleasant is a foggy morning? | It is gloomy and depressing ; It is dull ; It is atmospheric ; It is magical
+S | How lovely is the first snowfall of winter? | It is a nuisance ; It is pretty for a moment ; It is lovely ; It is the most magical day of the year
+S | How pleasant is a windy day? | It is miserable ; It is annoying ; It is refreshing ; It is exhilarating
+N | Is autumn the most beautiful season?
+N | Is rain more pleasant than constant sunshine?
+N | Are rainbows the most beautiful weather sight?
+N | Is snow more beautiful than blossoms?
+N | Is a cool climate more pleasant than a hot one?

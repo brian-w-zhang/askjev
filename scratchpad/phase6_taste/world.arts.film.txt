@@ -1,0 +1,45 @@
+C | Which movie genre is best for a rainy evening? | mystery ; romantic_comedy ; horror ; period_drama ; animated_family ; film_noir ; fantasy_adventure ; other
+C | Which Star Wars film is the best? | a_new_hope ; the_empire_strikes_back ; return_of_the_jedi ; the_phantom_menace ; revenge_of_the_sith ; the_force_awakens ; rogue_one ; other
+C | Which Pixar film is the best? | toy_story ; finding_nemo ; the_incredibles ; ratatouille ; wall_e ; up ; inside_out ; coco
+C | Which Christopher Nolan film is the best? | memento ; the_prestige ; the_dark_knight ; inception ; interstellar ; dunkirk ; oppenheimer ; other
+C | Which film genre is the most fun to watch with a big group of friends? | horror ; action ; comedy ; disaster ; musical ; heist ; other
+C | Which Studio Ghibli film is the best? | spirited_away ; my_neighbor_totoro ; princess_mononoke ; howls_moving_castle ; kikis_delivery_service ; castle_in_the_sky ; the_boy_and_the_heron ; other
+C | Which Lord of the Rings film is the best? | the_fellowship_of_the_ring ; the_two_towers ; the_return_of_the_king
+C | Which Alfred Hitchcock film is the best? | psycho ; vertigo ; rear_window ; north_by_northwest ; the_birds ; rebecca ; other
+C | Which kind of movie ending is the most satisfying? | happy_ending ; twist_ending ; bittersweet_ending ; open_ending ; tragic_ending ; cliffhanger
+C | Which Quentin Tarantino film is the best? | reservoir_dogs ; pulp_fiction ; jackie_brown ; kill_bill ; inglourious_basterds ; django_unchained ; once_upon_a_time_in_hollywood ; other
+C | Which Disney animated classic is the best? | snow_white ; cinderella ; the_little_mermaid ; beauty_and_the_beast ; aladdin ; the_lion_king ; frozen ; other
+C | Which movie genre is best for a first date at the cinema? | romantic_comedy ; horror ; action ; animated ; thriller ; indie_drama ; other
+C | Which film franchise has the best overall quality across its entries? | the_lord_of_the_rings ; harry_potter ; mission_impossible ; toy_story ; the_godfather ; mad_max ; james_bond ; other
+C | Which Steven Spielberg film is the best? | jaws ; raiders_of_the_lost_ark ; e_t = E.T. the Extra-Terrestrial ; jurassic_park ; schindlers_list ; saving_private_ryan ; catch_me_if_you_can ; other
+C | Which kind of movie villain is the most entertaining? | charming_mastermind ; silent_unstoppable_killer ; tragic_villain_with_a_point ; cackling_campy_villain ; corrupt_authority_figure ; monster_or_creature
+C | Which Harry Potter movie is the strongest adaptation? | philosophers_stone ; chamber_of_secrets ; prisoner_of_azkaban ; goblet_of_fire ; order_of_the_phoenix ; half_blood_prince ; deathly_hallows ; other
+C | Which film genre is best watched on the biggest possible screen? | science_fiction ; war ; epic_fantasy ; nature_documentary ; action ; musical ; other
+C | Which Marvel Cinematic Universe film is the best? | iron_man ; the_avengers ; guardians_of_the_galaxy ; captain_america_the_winter_soldier ; black_panther ; avengers_endgame ; thor_ragnarok ; other
+C | Which Stanley Kubrick film is the best? | dr_strangelove ; a_clockwork_orange ; barry_lyndon ; the_shining ; full_metal_jacket ; paths_of_glory ; other
+C | Which kind of movie is the best to watch on a long flight? | light_comedy ; action_blockbuster ; animated_family ; romantic_drama ; documentary ; thriller ; other
+C | Which Wes Anderson film is the best? | rushmore ; the_royal_tenenbaums ; fantastic_mr_fox ; moonrise_kingdom ; the_grand_budapest_hotel ; isle_of_dogs ; other
+C | Which film decade had the best movies overall? | forties ; fifties ; sixties ; seventies ; eighties ; nineties ; two_thousands ; other
+C | Which Hayao Miyazaki film has the best soundtrack? | spirited_away ; my_neighbor_totoro ; howls_moving_castle ; princess_mononoke ; castle_in_the_sky ; porco_rosso ; other
+C | Which horror subgenre is the most enjoyable to watch? | slasher ; supernatural_ghost ; found_footage ; creature_feature ; psychological_horror ; zombie ; folk_horror ; other
+C | Which Pixar film has the most moving opening sequence? | up ; wall_e ; finding_nemo ; toy_story ; inside_out ; coco ; other
+S | How good is the ending of Inception? | It is a cheap trick that spoils the film ; It is a fine but forgettable ending ; It is a clever ending that sparks good debate ; It is one of the most memorable endings in modern film
+S | How well does The Matrix hold up today? | It looks badly dated and hard to take seriously ; It is fun but clearly a product of its era ; It still holds up as a great action film ; It feels as fresh and striking as ever
+S | How good is Titanic as a film? | It is an overblown melodrama ; It is a decent crowd-pleaser ; It is a very good epic with great spectacle ; It is a true masterpiece of popular filmmaking
+S | How scary is The Shining? | It is not scary at all ; It has a few creepy moments ; It is genuinely unsettling throughout ; It is one of the most frightening films ever made
+S | How enjoyable is a three-hour-long epic film in a theater? | It is an endurance test to sit through ; It is enjoyable only if the story is exceptional ; It is usually worth the time ; It is the best way to experience cinema
+S | How good are the Star Wars prequels? | They are almost unwatchable ; They are flawed films with a few great scenes ; They are underrated and mostly enjoyable ; They are as good as the original trilogy
+S | How funny is Airplane! as a comedy film? | It barely gets a laugh ; It has a handful of good gags ; It is consistently funny ; It is one of the funniest films ever made
+S | How well do silent films hold up for a modern audience? | They are nearly impossible to sit through ; They work only as film history lessons ; The best ones are still entertaining ; The best ones are as gripping as any modern film
+S | How good is Casablanca? | It is a dated old romance ; It is a pleasant classic ; It is a great film that deserves its reputation ; It is one of the finest films ever made
+S | How good is the animation in Spider-Man: Into the Spider-Verse? | It is messy and hard to follow ; It is stylish but tiring ; It is striking and inventive ; It changed what animated films can look like
+S | How well does practical effects work age compared with computer effects? | Practical effects look far more dated ; Both age about the same ; Practical effects usually age a bit better ; Practical effects age far better than computer effects
+N | Is The Empire Strikes Back better than A New Hope?
+N | Are musicals the most joyful film genre?
+N | Is Citizen Kane as great as its reputation?
+N | Do film adaptations of video games usually disappoint?
+N | Is a good movie trailer often more exciting than the movie itself?
+N | Is hand-drawn animation more beautiful than computer animation?
+N | Is Pulp Fiction better than The Shawshank Redemption?
+N | Are foreign-language films worth watching with subtitles rather than dubbing?
+N | Is The Dark Knight the best superhero film ever made?

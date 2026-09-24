@@ -1,0 +1,30 @@
+C | Which flower smells the best? | rose ; jasmine ; lavender ; gardenia ; lilac ; lily_of_the_valley ; honeysuckle ; other
+C | Which flower has the loveliest blooms in a garden bed? | rose ; peony ; orchid ; tulip ; lotus ; cherry_blossom ; sunflower ; other
+C | Which tree is the most beautiful? | japanese_maple ; oak ; weeping_willow ; baobab ; cherry_tree ; sequoia ; jacaranda ; other
+C | Which houseplant looks the best in a room? | monstera ; fiddle_leaf_fig ; snake_plant ; pothos ; peace_lily ; bird_of_paradise ; other
+C | Which kind of garden is the most beautiful? | english_cottage_garden ; japanese_zen_garden ; french_formal_garden ; wildflower_meadow ; desert_garden ; tropical_garden
+C | Which tree has the best autumn colors? | sugar_maple ; ginkgo ; japanese_maple ; aspen ; birch ; beech ; other
+C | Which flowering tree is the most stunning in bloom? | cherry ; jacaranda ; magnolia ; dogwood ; wisteria ; flame_tree ; other
+C | Which mushroom is the most striking to look at? | fly_agaric ; chanterelle ; lions_mane ; morel ; bioluminescent_mushroom ; coral_fungus ; other
+C | Which cactus or succulent is the most attractive? | saguaro ; barrel_cactus ; echeveria ; aloe ; jade_plant ; string_of_pearls ; other
+C | Which wildflower is the prettiest? | poppy ; bluebell ; cornflower ; daisy ; buttercup ; lupine ; other
+C | Which flower makes the best bouquet? | roses ; peonies ; tulips ; sunflowers ; lilies ; hydrangeas ; mixed_wildflowers
+C | Which flower color is the most beautiful in a garden? | red ; white ; purple ; yellow ; pink ; blue ; orange
+C | Which herb smells the best in a garden? | basil ; rosemary ; mint ; lavender ; thyme ; lemon_verbena ; other
+C | Which evergreen tree is the most handsome? | douglas_fir ; blue_spruce ; cedar_of_lebanon ; scots_pine ; yew ; redwood ; other
+C | Which climbing plant looks best on a house? | ivy ; wisteria ; climbing_rose ; bougainvillea ; clematis ; virginia_creeper
+C | Which kind of forest is the most beautiful to walk through? | redwood_forest ; bamboo_forest ; birch_forest ; rainforest ; pine_forest ; beech_forest
+S | How beautiful are sunflowers? | They are coarse and plain ; They are pleasant ; They are cheerful and lovely ; They are the most beautiful flowers there are
+S | How pleasant is the smell of lilies? | It is overpowering and unpleasant ; It is tolerable ; It is lovely ; It is the finest floral scent there is
+S | How impressive are giant sequoias in person? | They are just big trees ; They are impressive ; They are awe-inspiring ; They are among the most moving sights in nature
+S | How beautiful are cherry blossoms in full bloom? | They are overrated ; They are pretty ; They are gorgeous ; They are the most beautiful sight of spring
+S | How attractive are carnivorous plants? | They are ugly and creepy ; They are odd but interesting ; They are striking ; They are the coolest plants there are
+S | How appealing is moss as garden ground cover? | It looks neglected ; It is acceptable ; It is lovely and soft ; It is more beautiful than any lawn
+S | How beautiful is a field of lavender in bloom? | It is unremarkable ; It is pretty ; It is stunning ; It is one of the most beautiful sights anywhere
+S | How charming are bonsai trees? | They look sad and stunted ; They are interesting ; They are charming ; They are exquisite works of living art
+N | Are orchids the most elegant flowers?
+N | Are wildflower meadows more beautiful than manicured lawns?
+N | Are roses overrated?
+N | Is the smell of pine the best smell in nature?
+N | Are succulents more attractive than leafy houseplants?
+N | Are mushrooms beautiful?

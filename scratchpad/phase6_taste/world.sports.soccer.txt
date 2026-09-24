@@ -1,0 +1,20 @@
+C | Which kind of goal is the most beautiful? | long_range_strike ; bicycle_kick ; solo_dribble ; team_passing_move ; direct_free_kick ; header_from_a_cross
+C | Which World Cup host country staged the most memorable tournament? | brazil ; germany ; south_africa ; qatar ; russia ; mexico ; other
+C | Which national team plays the most attractive soccer? | brazil ; spain ; argentina ; netherlands ; france ; germany ; other
+C | Which national team has the most beautiful home jersey? | brazil ; italy ; argentina ; netherlands ; mexico ; nigeria ; japan ; other
+C | Which moment in a soccer match is the most thrilling? | last_minute_winner ; penalty_shootout ; comeback_from_two_goals_down ; red_card_drama ; opening_goal
+C | Which soccer position is the most fun to watch? | striker ; winger ; playmaking_midfielder ; goalkeeper ; center_back ; full_back
+C | Which soccer tournament is the most exciting to follow? | world_cup ; european_championship ; copa_america ; champions_league ; africa_cup_of_nations ; other
+C | Which kind of soccer stadium atmosphere is the best? | chanting_ultras ; drums_and_samba ; old_terraces ; modern_family_crowd ; silent_tension
+C | Which soccer skill move is the most beautiful? | rabona ; elastico ; step_over ; nutmeg ; rainbow_flick ; cruyff_turn
+C | Which surface makes soccer the most enjoyable to watch? | natural_grass ; artificial_turf ; beach_sand ; futsal_court
+C | Which soccer trophy is the most beautiful to look at? | world_cup_trophy ; champions_league_cup ; copa_america_trophy ; henri_delaunay_trophy ; fa_cup ; other
+C | Which women's soccer tournament is the most exciting? | womens_world_cup ; womens_euro ; olympic_tournament ; womens_champions_league ; other
+S | How exciting is a World Cup final? | It is usually a dull, cautious game ; It is tense but rarely entertaining ; It is a big occasion worth watching ; It is one of the most gripping events in sport ; It is the greatest spectacle in all of sport
+S | How enjoyable is a goalless draw? | It is a waste of ninety minutes ; It is dull unless the stakes are high ; It can be interesting if both teams attack ; It is often a fascinating tactical battle ; It can be as thrilling as any high-scoring game
+S | How fun is futsal to watch? | It is dull ; It is a curiosity ; It is a fun, fast variant ; It is more exciting than full-sized soccer at times ; It is the most exciting form of the game
+S | How beautiful is tiki-taka passing soccer to watch? | It is boring sideways passing ; It is impressive but slow ; It is pleasant to watch ; It is mesmerizing ; It is the most beautiful way the game has ever been played
+N | Is international soccer more exciting than club soccer?
+N | Is a counterattacking goal more thrilling than a long passing move?
+N | Is the European Championship more entertaining than the World Cup?
+N | Is women's soccer as enjoyable to watch as men's soccer?

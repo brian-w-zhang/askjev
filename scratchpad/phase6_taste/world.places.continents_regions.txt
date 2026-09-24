@@ -1,0 +1,15 @@
+C | Which region is the most rewarding for a first backpacking trip? | southeast_asia ; western_europe ; central_america ; south_america ; the_balkans ; east_africa
+C | Which region has the most beautiful beaches? | caribbean ; southeast_asia ; mediterranean ; south_pacific ; indian_ocean_islands ; other
+C | Which region is the best for a backpacking trip? | southeast_asia ; south_america ; central_america ; eastern_europe ; western_europe ; other
+C | Which region has the most beautiful countryside? | tuscany_and_central_italy ; the_scottish_highlands ; the_alps ; patagonia ; the_english_cotswolds ; provence ; other
+C | Which region has the most dramatic landscapes? | patagonia ; scandinavia ; the_himalayas ; east_africa ; the_arctic ; the_andes ; other
+C | Which region is the most romantic for a honeymoon? | mediterranean ; caribbean ; south_pacific ; indian_ocean ; alps ; southeast_asia
+C | Which part of Europe is the most charming to tour by rail? | central_europe ; the_balkans ; the_baltics ; southern_europe ; the_british_isles ; other
+C | Which region is the best for a winter escape to the sun? | caribbean ; southeast_asia ; canary_islands ; south_pacific ; north_africa ; other
+S | How appealing is Scandinavia for summer travel? | It is dull and overpriced ; It is pleasant enough ; It is lovely with long bright evenings ; It is the best summer destination anywhere
+S | How rewarding is a trip across Southeast Asia? | It is chaotic and tiring ; It is fun in a few places ; It is rewarding almost everywhere ; It is the trip of a lifetime
+S | How beautiful is the Mediterranean coast? | It is overdeveloped and ordinary ; It is pretty in places ; It is beautiful along most of it ; It is the most beautiful coast on Earth
+S | How appealing is the Arctic as a travel destination? | It is cold and empty ; It is interesting for a day ; It is magical ; It is unforgettable
+N | Is South America more rewarding to travel than Europe?
+N | Is the Caribbean more beautiful than the South Pacific?
+N | Is East Africa the best region in the world for wildlife trips?

@@ -1,0 +1,45 @@
+C | Which Harry Potter book is the best? | philosophers_stone ; chamber_of_secrets ; prisoner_of_azkaban ; goblet_of_fire ; order_of_the_phoenix ; half_blood_prince ; deathly_hallows
+C | Which book genre is best for a beach vacation? | thriller ; romance ; mystery ; fantasy ; memoir ; science_fiction ; literary_fiction ; other
+C | Which Jane Austen novel is the best? | pride_and_prejudice ; sense_and_sensibility ; emma ; persuasion ; mansfield_park ; northanger_abbey
+C | Which fantasy series is the best? | the_lord_of_the_rings ; a_song_of_ice_and_fire ; the_wheel_of_time ; discworld ; earthsea ; the_chronicles_of_narnia ; mistborn ; other
+C | Which Stephen King novel is the best? | the_shining ; it ; the_stand ; carrie ; misery ; pet_sematary ; the_dark_tower ; other
+C | Which Shakespeare play is the best to read? | hamlet ; macbeth ; king_lear ; othello ; romeo_and_juliet ; a_midsummer_nights_dream ; the_tempest ; other
+C | Which kind of book is best to read aloud to young children? | rhyming_picture_book ; fairy_tale ; funny_animal_story ; bedtime_story ; adventure_chapter_book ; other
+C | Which manga has the best story? | one_piece ; naruto ; dragon_ball ; berserk ; attack_on_titan ; death_note ; fullmetal_alchemist ; other
+C | Which Agatha Christie novel is the best? | murder_on_the_orient_express ; and_then_there_were_none ; the_murder_of_roger_ackroyd ; death_on_the_nile ; the_abc_murders ; other
+C | Which Russian novel is the best? | war_and_peace ; anna_karenina ; crime_and_punishment ; the_brothers_karamazov ; the_master_and_margarita ; dead_souls ; other
+C | Which kind of narrator makes a novel the most gripping? | first_person_hero ; unreliable_narrator ; all_knowing_third_person ; multiple_rotating_narrators ; letters_or_diary_entries
+C | Which Tolkien book is the best? | the_hobbit ; the_fellowship_of_the_ring ; the_two_towers ; the_return_of_the_king ; the_silmarillion
+C | Which superhero comic series is the best? | watchmen ; the_dark_knight_returns ; batman_year_one = Batman: Year One ; all_star_superman ; kingdom_come ; the_sandman ; other
+C | Which Charles Dickens novel is the best? | great_expectations ; a_tale_of_two_cities ; oliver_twist ; david_copperfield ; bleak_house ; a_christmas_carol ; other
+C | Which kind of poetry is the most enjoyable to read? | sonnets ; haiku ; free_verse ; epic_poetry ; limericks ; ballads ; other
+C | Which dystopian novel is the best? | nineteen_eighty_four ; brave_new_world ; fahrenheit_four_fifty_one ; the_handmaids_tale ; the_road ; the_hunger_games ; other
+C | Which science fiction novel is the best? | dune ; foundation ; neuromancer ; the_left_hand_of_darkness ; enders_game ; the_hitchhikers_guide_to_the_galaxy ; other
+C | Which Roald Dahl book is the best? | charlie_and_the_chocolate_factory ; matilda ; the_bfg ; james_and_the_giant_peach ; the_witches ; fantastic_mr_fox ; other
+C | Which kind of book cover is the most appealing? | minimalist_typography ; illustrated_artwork ; photographic ; vintage_cloth_binding ; bold_colors ; other
+C | Which children's book series is the best? | harry_potter ; the_chronicles_of_narnia ; percy_jackson ; a_series_of_unfortunate_events ; diary_of_a_wimpy_kid ; the_magic_tree_house ; other
+C | Which gothic novel is the best? | frankenstein ; dracula ; jane_eyre ; wuthering_heights ; rebecca ; the_picture_of_dorian_gray ; other
+C | Which book format is the most pleasant to read? | hardcover ; paperback ; e_reader ; audiobook ; large_print ; other
+C | Which Brontë sisters' novel is the best? | jane_eyre ; wuthering_heights ; villette ; the_tenant_of_wildfell_hall ; agnes_grey
+C | Which kind of plot twist in a mystery novel is the most satisfying? | narrator_did_it ; least_likely_suspect ; everyone_did_it ; victim_faked_death ; detective_was_wrong_all_along ; other
+C | Which American novel is the best? | the_great_gatsby ; to_kill_a_mockingbird ; moby_dick ; the_grapes_of_wrath ; beloved ; huckleberry_finn ; other
+S | How good is The Great Gatsby? | It is a dull book about shallow people ; It is a decent short novel ; It is a very fine American novel ; It is one of the greatest novels ever written
+S | How enjoyable is Moby-Dick to read? | It is a tedious slog ; It has great chapters buried among dull ones ; It is rewarding for a patient reader ; It is thrilling from start to finish
+S | How good is The Hobbit as a children's book? | It is too old-fashioned for children now ; It is a pleasant adventure ; It is an excellent children's book ; It is the best children's fantasy ever written
+S | How well does Sherlock Holmes hold up for a modern reader? | The stories feel dated and slow ; They are charming period pieces ; They are still entertaining mysteries ; They remain the best detective stories ever written
+S | How good are the later books of the Wheel of Time series? | They are unreadable padding ; They are a slog with a few highlights ; They are mostly enjoyable ; They are as strong as the early books
+S | How good is Watchmen as a graphic novel? | It is overrated and gloomy ; It is a clever superhero story ; It is a landmark of the medium ; It is as great as any prose novel
+S | How satisfying is the ending of The Lord of the Rings? | It drags on far too long ; It is fine but overlong ; It is a moving and fitting ending ; It is one of the best endings in fiction
+S | How enjoyable is poetry that does not rhyme? | It barely feels like poetry ; It is hard to enjoy most of the time ; It can be just as enjoyable as rhymed poetry ; It is often the most powerful kind of poetry
+S | How good is War and Peace? | It is too long to be worth it ; It is impressive but exhausting ; It is a rich and rewarding novel ; It is the greatest novel ever written
+S | How good is Pride and Prejudice as a romance? | It is a dated and stuffy romance ; It is a pleasant love story ; It is a witty and delightful romance ; It is the finest romance novel ever written
+S | How gripping is a typical airport thriller? | It is too silly to finish ; It is mindless but readable ; It is a fun page-turner ; It is impossible to put down
+N | Is The Lord of the Rings better than A Song of Ice and Fire?
+N | Are audiobooks as good a way to enjoy a novel as reading it?
+N | Is Dune the greatest science fiction novel?
+N | Is poetry more moving than prose fiction?
+N | Is a good mystery novel more fun than a good fantasy novel?
+N | Are book series better than standalone novels?
+N | Is Calvin and Hobbes the best comic strip ever drawn?
+N | Is Jane Eyre better than Wuthering Heights?
+N | Are illustrated editions of classic novels more enjoyable to read?

@@ -1,0 +1,60 @@
+C | Which video game genre is the most fun? | open_world ; platformer ; shooter ; role_playing ; puzzle ; racing ; strategy ; other
+C | Which video game series has the best music? | final_fantasy ; the_legend_of_zelda ; kingdom_hearts ; persona ; halo ; super_mario ; other
+C | Which Zelda game has the best world to explore? | ocarina_of_time ; breath_of_the_wild ; tears_of_the_kingdom ; majoras_mask ; the_wind_waker ; a_link_to_the_past ; other
+C | Which Pokemon starter type is the best pick? | grass ; fire ; water
+C | Which classic arcade cabinet game holds up best today? | pac_man ; space_invaders ; donkey_kong ; galaga ; street_fighter ; tetris ; other
+C | Which video game villain is the most memorable? | bowser ; ganondorf ; sephiroth ; glados ; handsome_jack ; the_joker_in_arkham ; other
+C | Which Nintendo character is the most lovable? | mario ; luigi ; kirby ; yoshi ; pikachu ; donkey_kong ; link ; other
+C | Which kind of game ending is the most satisfying? | happy_ending ; bittersweet_ending ; tragic_ending ; open_ending = left for the player to interpret ; multiple_endings = depends on player choices
+C | Which art style looks best in a video game? | photorealistic ; cel_shaded ; pixel_art ; hand_painted ; low_poly ; watercolor
+C | Which camera view makes a game the most enjoyable? | first_person ; third_person ; top_down ; side_scrolling ; isometric
+C | Which fighting game series is the most fun? | street_fighter ; tekken ; mortal_kombat ; super_smash_bros ; soulcalibur ; guilty_gear ; other
+C | Which racing game series has the best driving feel? | mario_kart ; gran_turismo ; forza_horizon ; need_for_speed ; burnout ; other
+C | Which horror game is the scariest? | resident_evil ; silent_hill ; outlast ; amnesia ; dead_space ; five_nights_at_freddys ; other
+C | Which kind of game world is the most fun to explore? | fantasy_kingdom ; post_apocalyptic_wasteland ; outer_space ; modern_city ; underwater ; wild_west ; other
+C | Which multiplayer mode is the most fun? | couch_co_op ; online_co_op ; competitive_team ; battle_royale ; free_for_all ; massively_multiplayer
+C | Which kind of boss fight is the most enjoyable? | giant_monster ; duel_with_a_rival ; puzzle_boss = must be beaten by figuring out a trick ; multi_phase_marathon ; final_boss_with_a_twist
+C | Which open-world game has the most beautiful landscapes? | red_dead_redemption_ii ; the_witcher_iii ; elden_ring ; ghost_of_tsushima ; breath_of_the_wild ; horizon_zero_dawn ; other
+C | Which game controller feels best in the hands? | playstation ; xbox ; nintendo_switch_pro ; gamecube ; nintendo_sixty_four ; keyboard_and_mouse ; other
+C | Which Mario platformer has the best level design? | super_mario_bros ; super_mario_world ; super_mario_sixty_four ; super_mario_galaxy ; super_mario_odyssey ; super_mario_bros_wonder ; other
+C | Which kind of puzzle game is the most satisfying? | falling_blocks ; physics_puzzles ; match_three ; logic_grids ; escape_rooms ; portal_style = puzzles built around movement tools
+C | Which indie game is the best? | hollow_knight ; celeste ; stardew_valley ; undertale ; hades ; minecraft ; other
+C | Which sports video game series is the most fun? | fifa_or_ea_sports_fc ; madden ; nba_two_k ; rocket_league ; tony_hawks_pro_skater ; wii_sports ; other
+C | Which game soundtrack style works best for exploration? | orchestral ; ambient ; chiptune ; lo_fi ; folk ; electronic
+C | Which game studio makes the most enjoyable games? | nintendo ; fromsoftware ; rockstar ; valve ; naughty_dog ; blizzard ; other
+C | Which kind of video game protagonist is the most compelling? | silent_hero ; wisecracking_hero ; reluctant_hero ; morally_grey_antihero ; customizable_avatar
+C | Which shooter series is the most fun? | halo ; call_of_duty ; doom ; battlefield ; overwatch ; counter_strike ; other
+C | Which Pokemon game generation is the best? | red_and_blue ; gold_and_silver ; ruby_and_sapphire ; diamond_and_pearl ; black_and_white ; sword_and_shield ; other
+C | Which video game companion is the best? | ellie ; dogmeat ; cortana ; navi ; atreus ; claptrap ; other
+C | Which kind of game difficulty is the most enjoyable? | easy_and_relaxing ; moderate_challenge ; punishing_but_fair ; brutally_hard ; adjustable_by_the_player
+C | Which esport has the most gripping grand finals? | league_of_legends ; dota ; counter_strike ; valorant ; rocket_league ; street_fighter ; other
+C | Which kind of video game story is the most gripping? | epic_quest ; mystery ; survival ; revenge ; coming_of_age ; love_story
+C | Which cozy game is the most relaxing? | stardew_valley ; animal_crossing ; unpacking ; a_short_hike ; spiritfarer ; the_sims ; other
+C | Which Final Fantasy game is the best? | final_fantasy_vi ; final_fantasy_vii ; final_fantasy_ix ; final_fantasy_x ; final_fantasy_xiv ; final_fantasy_xvi ; other
+S | How fun is Minecraft? | It is dull within minutes ; It is fun for an afternoon, then boring ; It is a solid game worth a few weeks ; It is great and people return to it for months ; It is one of the most fun games ever made
+S | How beautiful is the world of Elden Ring? | It looks drab and muddy ; It has a few nice views among dull areas ; It is often striking to look at ; It is full of breathtaking vistas ; It is one of the most beautiful game worlds ever made
+S | How good is the story of The Last of Us? | It is forgettable ; It is a decent but familiar story ; It is a strong story that holds attention ; It is moving enough to bring players to tears ; It is one of the best stories in any medium
+S | How fun is Tetris? | It is a boring relic ; It is fine for a few minutes ; It is a good way to pass time ; It is hard to put down ; It is close to the perfect game
+S | How well does the pixel art of Stardew Valley hold up? | It looks cheap and ugly ; It looks plain but serviceable ; It looks pleasant and cozy ; It looks charming in every scene ; It is some of the loveliest pixel art ever made
+S | How fun is Mario Kart with a group of friends? | It gets frustrating fast ; It is fun for a race or two ; It is a reliable good time ; It is one of the best party games around ; It is the gold standard for a game night
+S | How catchy is the Super Mario Bros theme? | It is forgettable ; It is pleasant but easy to forget ; It gets stuck in the head now and then ; It is instantly recognizable and hummable ; It is one of the catchiest tunes ever written
+S | How satisfying is beating a hard boss in a Souls game? | It feels like a chore finally over ; It brings mild relief ; It feels like a real accomplishment ; It brings a rush of pure joy ; It is one of the best feelings in all of gaming
+S | How enjoyable are Grand Theft Auto games? | They are tiresome ; They are fun for a short while ; They are solid entertainment ; They are among the most fun open worlds ; They are the best games of their generation
+S | How charming is Animal Crossing? | It feels empty and tedious ; It is mildly cute ; It is sweet and pleasant ; It is delightful from start to finish ; It is the most charming game ever made
+S | How exciting is a close finish in an esports final? | It is dull to watch ; It is mildly interesting to fans only ; It is gripping for anyone who follows the game ; It is as thrilling as any traditional sport ; It is among the most exciting moments in any competition
+S | How scary is the original Resident Evil? | It is not scary at all ; It has a few tense moments ; It is creepy throughout ; It delivers real jump scares and dread ; It is terrifying even today
+S | How well do classic sixteen-bit games hold up today? | They feel unplayable ; They are interesting only as history ; They are still fun in short sessions ; Many are as fun as modern games ; The best ones beat most modern games
+S | How good is Hollow Knight? | It is a forgettable platformer ; It is decent but frustrating ; It is a very good game ; It is a masterpiece of its genre ; It is one of the best games ever made
+S | How fun is Fall Guys? | It is annoying chaos ; It is funny for a round or two ; It is a lighthearted good time ; It is a great party game ; It is pure joy in game form
+N | Are open-world games more fun than linear games?
+N | Is couch co-op more fun than online multiplayer?
+N | Is Breath of the Wild the best Zelda game?
+N | Do retro games have more charm than modern games?
+N | Are turn-based battles more enjoyable than real-time combat?
+N | Is Super Smash Bros the best party fighting game?
+N | Are video game soundtracks as good as film scores?
+N | Is Portal the most clever puzzle game ever made?
+N | Are indie games more creative than big-budget games?
+N | Is Minecraft the most fun sandbox game?
+N | Are handheld consoles more fun than home consoles?
+N | Is Nintendo the most fun console maker?

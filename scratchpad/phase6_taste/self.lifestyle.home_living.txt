@@ -1,0 +1,119 @@
+# self.lifestyle.home_living
+C | Which kind of street would you most like to live on? | busy_high_street ; quiet_cul_de_sac ; tree_lined_avenue ; country_lane ; seafront_road ; pedestrian_only_lane ; other
+C | Which kind of kitchen counter would you pick for your home? | marble ; butcher_block_wood ; granite ; concrete ; laminate ; stainless_steel ; no_preference
+C | Which kind of front door appeals to you most? | painted_bright_color ; natural_wood ; glass_panel ; black_modern ; arched_old_style ; no_preference
+C | What would you most like your bedroom to feel like? | cozy_cave = dark, soft, and enclosed ; bright_and_airy ; minimal_and_bare ; hotel_style ; full_of_personal_things ; other
+C | Which kind of sofa would you choose for your living room? | deep_sectional ; classic_three_seater ; leather_couch ; low_modular_floor_sofa ; loveseat_and_armchairs ; futon ; other
+C | Which kind of staircase would you want in a home? | straight_and_simple ; spiral ; floating_open_steps ; grand_curved ; no_stairs_at_all ; no_preference
+C | What would you put at the center of your living room? | television ; fireplace ; big_window ; bookshelves ; coffee_table_for_games ; piano ; other
+C | Which ceiling height do you prefer in a home? | low_and_cozy ; standard ; high ; double_height_open ; sloped_attic_ceiling ; no_preference
+C | Which window style do you like best in a home? | floor_to_ceiling_glass ; bay_window ; small_cottage_panes ; skylights ; arched_windows ; no_preference
+C | What kind of dining setup would you want at home? | large_dining_table ; small_kitchen_table ; kitchen_island_stools ; eat_on_the_sofa ; outdoor_table ; other
+C | Which home office setup would you choose? | separate_room_with_door ; corner_of_living_room ; kitchen_table ; bedroom_desk ; garden_shed_office ; no_home_office
+C | Which type of bathroom would you most want? | big_soaking_tub ; walk_in_rain_shower ; both_tub_and_shower ; small_and_practical ; spa_style_with_sauna ; other
+C | What kind of bedding do you like best? | crisp_white_cotton ; soft_flannel ; linen ; silky_satin ; patterned_colorful ; heavy_quilt ; other
+C | How would you like your home to smell? | fresh_laundry ; candles ; baking_bread ; flowers ; wood_smoke ; nothing_at_all ; other
+C | Which type of wall art do you prefer at home? | family_photos ; framed_prints ; original_paintings ; posters ; mirrors ; tapestries ; bare_walls ; other
+C | Which kind of garden would you want if you had space? | lawn ; flower_beds ; vegetable_patch ; wild_meadow ; zen_rock_garden ; paved_patio ; no_garden
+C | Where would you prefer to live within a building? | ground_floor ; middle_floor ; top_floor ; penthouse ; basement_flat ; standalone_house
+C | Which kind of lighting fixture do you like most? | chandelier ; pendant_lamps ; floor_lamps ; recessed_ceiling_lights ; string_lights ; table_lamps ; no_preference
+C | What kind of furniture do you prefer? | new_flat_pack ; high_end_designer ; antique ; second_hand_vintage ; handmade ; hand_me_downs ; other
+C | Which climate would you most like your home to be in? | tropical ; mild_mediterranean ; four_distinct_seasons ; cold_snowy ; dry_desert ; other
+C | Who would you choose to share a home with? | nobody ; partner ; family ; close_friends ; roommates_you_barely_know ; multigenerational_household ; other
+C | What kind of view would you like from your bed? | garden ; city_lights ; ocean ; mountains ; forest ; a_blank_wall ; other
+C | Which home heating do you prefer? | radiators ; forced_air ; underfloor_heating ; wood_stove ; fireplace ; space_heaters ; other
+C | Which kind of rug do you like best? | shaggy_and_thick ; flat_woven ; persian_style ; jute_or_natural ; no_rugs_at_all ; other
+C | Which color scheme would you choose for your living room? | all_white ; warm_neutrals ; earthy_greens_and_browns ; bold_jewel_tones ; pastel ; dark_and_moody ; black_and_white ; other
+C | Which unusual home would you most enjoy living in? | city_apartment_with_view ; suburban_house_with_yard ; country_cottage ; houseboat ; converted_loft ; cabin_in_the_woods ; other
+C | Which kind of outdoor seating would you want at home? | porch_swing ; hammock ; deck_chairs ; balcony_bistro_set ; fire_pit_benches ; none
+C | What is your preferred bed height? | mattress_on_the_floor ; low_platform ; standard ; tall_bed_with_storage_underneath ; no_preference
+C | Which type of closet storage would you want? | walk_in_closet ; built_in_wardrobe ; freestanding_armoire ; open_clothes_rail ; chest_of_drawers ; other
+C | What would you most like to have in your home if space were no issue? | home_gym ; library ; home_cinema ; art_studio ; music_room ; indoor_pool ; game_room ; other
+C | How do you prefer your windows covered? | heavy_curtains ; sheer_curtains ; blinds ; shutters ; blackout_shades ; nothing ; other
+C | Which kind of pillow setup do you like on your bed? | one_flat_pillow ; one_thick_pillow ; two_pillows ; a_pile_of_pillows ; no_pillow ; other
+C | What kind of doorbell arrangement do you prefer at home? | classic_ringing_bell ; knocker ; video_doorbell ; no_doorbell_text_me ; no_preference
+C | Which kind of kitchen would you want? | small_galley ; big_family_kitchen ; open_kitchen_with_island ; professional_chef_style ; kitchenette ; other
+C | Where would you prefer to put your television? | living_room ; bedroom ; both ; separate_media_room ; no_television ; other
+C | What kind of place do you want to live in when you are older? | same_home_as_now ; smaller_home_nearby ; with_family ; retirement_community ; somewhere_warm ; abroad ; other
+C | Which kind of mattress feel do you prefer? | very_firm ; medium_firm ; soft ; memory_foam ; waterbed ; other
+C | Which floor plan would you want for your ideal home? | single_story ; two_story ; split_level ; one_big_open_space ; many_small_rooms ; other
+C | Which building material would you want your home made of? | brick ; stone ; wood ; concrete ; glass_and_steel ; adobe ; other
+C | Which of these features would you most want in your bedroom? | reading_nook ; en_suite_bathroom ; balcony ; walk_in_closet ; skylight ; fireplace ; other
+C | Which sound would you most like to hear from home? | waves ; birdsong ; rain_on_the_roof ; city_traffic ; church_bells ; total_silence ; other
+C | What kind of entryway do you want? | mudroom_with_hooks ; grand_foyer ; door_straight_into_the_living_room ; small_hallway ; no_preference
+C | Which kind of shelving do you like at home? | built_in_bookcases ; floating_shelves ; industrial_metal_racks ; glass_display_cabinets ; hardly_any_shelves ; other
+C | Where would you want your washing machine? | kitchen ; bathroom ; separate_laundry_room ; basement ; shared_building_laundry ; other
+C | What kind of home would you choose to rent for a whole year abroad? | apartment_in_old_town ; beach_bungalow ; farmhouse ; modern_high_rise ; room_in_a_family_home ; other
+C | What kind of neighbors would you prefer? | never_see_them ; friendly_waves_only ; occasional_chats ; close_friends ; share_meals_and_childcare
+C | What finish do you like on wooden furniture? | light_natural_wood ; medium_honey ; dark_walnut ; painted_white ; painted_color ; rustic_distressed
+C | Which kind of chair would you want for reading at home? | armchair ; recliner ; rocking_chair ; bean_bag ; window_seat ; hanging_egg_chair ; sofa_corner
+C | How do you prefer to display books at home? | by_color ; alphabetical ; by_genre ; random ; hidden_away ; no_books ; other
+C | Which area would you pick to live in, all else being equal? | near_the_center_of_things ; short_bus_ride_out ; edge_of_town ; far_from_town ; no_preference
+C | Which home temperature feels best to you in summer? | cool_like_an_office ; mildly_cool ; neutral ; warm ; hot_with_windows_open
+C | Which kind of fence or boundary would you like around your home? | no_fence ; low_picket_fence ; tall_privacy_fence ; hedge ; stone_wall ; other
+C | Which room would you most want to be large? | kitchen ; living_room ; bedroom ; bathroom ; home_office ; garden ; other
+C | What kind of hallway walls appeal to you? | gallery_of_photos ; plain_painted ; wallpapered ; mirrored ; exposed_brick ; other
+C | Which kind of houseplant arrangement would you want? | single_statement_plant ; lots_of_small_pots ; hanging_plants ; herbs_on_the_windowsill ; artificial_plants ; no_plants
+C | Which type of balcony use appeals to you most? | morning_coffee ; growing_plants ; drying_laundry ; storage ; evening_drinks ; no_balcony_needed
+C | What kind of home would you choose in a big city? | studio_in_the_center ; large_flat_in_the_suburbs ; shared_house ; townhouse ; other
+C | What wall finish do you like best? | smooth_paint ; wallpaper ; exposed_brick ; wood_paneling ; tiles ; plaster_with_texture ; other
+C | Which type of bed frame would you choose? | four_poster ; upholstered_headboard ; simple_metal ; wooden_platform ; no_frame ; bunk_or_loft_bed ; other
+C | How do you like your kitchen items stored? | everything_on_open_display ; mostly_hidden_in_cupboards ; half_and_half ; no_preference
+C | Which kind of garage use would you want? | park_the_car ; workshop ; home_gym ; storage ; music_practice ; no_garage_needed
+C | What would be your ideal way to get into your home? | private_front_door_on_street ; shared_lobby_with_doorman ; gated_community ; long_private_driveway ; other
+C | Which kind of mirrors do you like at home? | one_full_length_mirror ; big_decorative_mirror ; mirrors_in_every_room ; only_bathroom_mirror ; other
+C | What kind of home fragrance do you use most? | candles ; diffuser ; incense ; air_freshener_spray ; fresh_flowers ; none
+C | Where would you prefer to eat breakfast at home? | kitchen_table ; kitchen_counter ; in_bed ; on_the_balcony_or_porch ; in_front_of_a_screen ; standing_up ; other
+S | How much do you want your home to be a place where guests gather? | I would rather no one ever visited my home ; I host a friend now and then but prefer going out ; I have people over for occasional dinners ; My home is where friends often meet up ; My home is the default hangout for everyone I know
+S | How full do you like your bookshelves and shelves to be? | Almost bare with a single object ; A few carefully chosen pieces ; Neatly filled with some gaps ; Packed edge to edge ; Overflowing with piles on top
+S | How much would you personalize a rented apartment? | I leave it exactly as I found it ; I add a rug and a few pictures ; I bring in my own furniture and decor ; I paint the walls and swap light fixtures ; I would practically remodel it if allowed
+S | How much space do you want between your home and the nearest shop? | I want a shop in my own building ; I want a shop within a short walk ; I am fine with a short drive ; I am happy driving a long way for supplies ; I would rather be far from any shop at all
+S | How dark do you want your bedroom at night? | I sleep with a lamp on ; I like a nightlight or streetlight glow ; I want it mostly dark ; I use blackout curtains ; I need total darkness with an eye mask too
+S | How much do you care about matching furniture? | I pick every piece at random ; I loosely keep to a few colors ; I want pieces to look good together ; Every room follows one planned style ; Every item was chosen to match a single design plan
+S | How much would you spend on a good mattress compared with other furniture? | I would buy the cheapest mattress I could find ; I would pay a normal price and spend more on other things ; I would spend about the same as on a sofa ; A mattress is the most expensive item I would buy for my home
+S | How much sunlight do you want in your bedroom in the morning? | I want the room pitch black until I choose to wake ; I want a little light through the edges of the curtains ; I want soft daylight coming in ; I want the sun streaming in to wake me
+S | How far would you move to find your ideal home? | I would never leave my current neighborhood ; I would move within my city ; I would move to another part of my country ; I would move to another country ; I would move anywhere in the world
+S | How often do you change your home decor? | I have not changed it since I moved in ; I change a few things every couple of years ; I swap cushions and pictures every year ; I redecorate with the seasons ; I change something almost every month
+S | How big a role do candles play in your home? | I never light candles ; I light one on special occasions ; I light candles on cozy evenings ; I have candles burning most evenings ; My home is full of candles every day
+S | How much noise from neighbors can you tolerate? | Any sound through the walls makes me want to move ; I tolerate the odd door slam ; Regular footsteps and voices are fine ; I barely notice parties next door ; I sleep through loud music from neighbors
+S | How involved would you be in designing a home built for you? | I would buy a finished home and move in ; I would pick a few finishes from a list ; I would choose the layout and most materials ; I would work closely with an architect on every detail ; I would design and build it myself
+S | How much would you want your home to be filled with technology? | I want no smart devices at all ; I have a smart speaker and nothing else ; I have smart lights and a thermostat ; Most things in my home can be controlled by phone ; I want my entire home automated
+S | How minimal do you want your living room to be? | I want it packed with things I love ; I want it full but organized ; I want a few meaningful objects on display ; I want only the essential furniture ; I want an almost empty room
+S | How much storage space do you want in a home? | I want only the bare minimum ; I want enough for everyday things ; I want a spare cupboard for extras ; I want a whole spare room for storage ; I want a garage, attic, and basement full of storage
+S | How close would you want to live to your family? | I would want to live in a different country ; I would want to live a few hours away ; I would want to live in the same city ; I would want to live on the same street ; I would want to live in the same house
+S | How much of your home would you want to be outdoor space? | I need no outdoor space at all ; A small balcony is enough ; I want a modest garden ; I want a large yard ; I want acres of land around me
+S | How often do you buy new things for your home? | I only replace things when they break ; I buy something new every year or so ; I pick up a new item every few months ; I buy something for the home almost every month ; I buy home items nearly every week
+S | How much would you spend to live in a better location? | I would take the cheapest place regardless of location ; I would pay a little more for a shorter commute ; I would pay noticeably more for a nice neighborhood ; I would spend most of my budget on location ; I would live in a tiny place just to be in the perfect spot
+S | How much natural wood do you like in a home? | I prefer no visible wood at all ; I like a wooden table or two ; I like wooden floors and some furniture ; I like wood on floors, walls, and ceilings ; I want to live in a full log cabin
+S | How much would you want your home to feel like a hotel? | I want it to feel lived-in and a bit messy ; I want it homely with a few tidy spots ; I want it neat but personal ; I want it spotless with hotel-style bedding ; I want it to look like a luxury hotel suite at all times
+S | How long would you want your commute from home to be? | I want to live where I work ; I want a walk of a few minutes ; I am fine with a short ride ; I accept a long daily commute for a nicer home ; I would commute for hours to live somewhere I love
+S | How comfortable would you be living in a place with very few other people nearby? | I would feel uneasy without neighbors close by ; I would manage but miss people ; I would be content with a few neighbors ; I would enjoy the quiet ; I would love to live completely isolated
+S | How open do you like your home's layout? | I want every room closed off with a door ; I want a separate kitchen but open living space ; I want a combined kitchen and living area ; I want the whole floor open ; I want one open space with no internal walls at all
+S | How much color do you want on your walls? | I want only white walls ; I want soft neutral tones ; I want one bold accent wall ; I want several bold colors ; I want every room a different bright color
+S | How many throw blankets do you keep in your living room? | I keep none ; I keep one draped on the sofa ; I keep a few within reach ; I keep a whole basket of them ; Every seat has its own blanket
+S | How much do you care about the look of your home's exterior? | I never think about it ; I keep it tidy and nothing more ; I like it to look nice from the street ; I spend real effort on the front of my home ; I want the most admired house on the street
+S | How much of your furniture would you want to be antique or vintage? | I want everything brand new ; I like one vintage piece as an accent ; I like an even mix of old and new ; I want most pieces to be vintage ; I want a home that feels like an antique shop
+S | How important is a big kitchen table to you? | I would not want a table at all ; A small table for two is enough ; I want a table that seats a family ; I want a long table for big gatherings
+N | Would you like to live in a converted building such as a church, barn, or lighthouse?
+N | Would you want a home with a swimming pool?
+N | Do you prefer carpet over hard floors in the bedroom?
+N | Would you enjoy living in a houseboat?
+N | Would you want a home with a basement?
+N | Do you like having a television in your bedroom?
+N | Would you like to live in a treehouse-style home?
+N | Do you keep a welcome mat at your front door?
+N | Would you like to live in a home with a thatched roof?
+N | Do you prefer your home to feel cool rather than warm?
+N | Would you want to live right next to a park?
+N | Do you like wallpaper in your home?
+N | Would you choose to live in a gated community?
+N | Would you want to live in a home with a view of a busy street?
+N | Do you like having a clock in every room?
+N | Would you want a hot tub at home?
+N | Would you like to live above a shop or cafe?
+N | Would you be happy living in a studio apartment long term?
+N | Do you like your home filled with music most of the time?
+N | Would you like a window seat built into your home?
+N | Would you like to live somewhere that snows every winter?
+N | Would you want a home with a large attic?
+N | Would you prefer living on a hill with a view over living in a flat valley?

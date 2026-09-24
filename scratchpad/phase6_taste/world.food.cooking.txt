@@ -1,0 +1,45 @@
+C | Which cooking method makes vegetables taste best? | roasting ; steaming ; grilling ; stir_frying ; sauteing ; boiling ; raw ; other
+C | Which cooking method makes chicken taste best? | roasting ; grilling ; frying ; braising ; smoking ; poaching ; other
+C | Which cooking method makes the best potatoes? | roasting ; deep_frying ; mashing ; baking ; boiling ; smashing_then_frying ; other
+C | Which way of cooking a burger gives the best result? | charcoal_grill ; gas_grill ; cast_iron_smash ; flat_top_griddle ; broiler ; other
+C | Which fuel gives barbecue the best flavor? | charcoal ; hardwood ; gas ; pellets ; electric ; other
+C | Which wood gives smoked meat the best flavor? | hickory ; mesquite ; oak ; apple ; cherry ; pecan ; other
+C | Which cooking fat gives food the best flavor? | butter ; olive_oil ; bacon_fat ; duck_fat ; ghee ; coconut_oil ; vegetable_oil ; other
+C | Which kitchen tool is the most useful? | chefs_knife ; cast_iron_skillet ; dutch_oven ; wok ; instant_pot ; food_processor ; stand_mixer ; other
+C | Which kitchen appliance is the most overrated? | air_fryer ; bread_machine ; sous_vide_circulator ; juicer ; pressure_cooker ; rice_cooker ; other
+C | Which pan is the best all-purpose pan? | cast_iron ; stainless_steel ; nonstick ; carbon_steel ; enameled_cast_iron ; other
+C | Which cooking style is the most fun to watch? | wok_tossing ; teppanyaki ; hand_pulled_noodles ; open_fire_grilling ; pizza_tossing ; flambe ; other
+C | Which fermented food is the most delicious? | kimchi ; sauerkraut ; miso ; yogurt ; pickles ; sourdough ; other
+C | Which way of cooking eggs is the most impressive skill? | french_omelette ; poached ; souffle ; tamagoyaki ; perfect_soft_boiled ; other
+C | Which famous chef's cooking style is the most appealing? | julia_child ; anthony_bourdain ; gordon_ramsay ; jacques_pepin ; massimo_bottura ; other
+C | Which kind of cooking show is the most enjoyable? | competition ; travel_food ; instructional ; baking_contest ; restaurant_rescue ; other
+C | Which seasoning improves the most dishes? | salt ; black_pepper ; garlic ; lemon_juice ; chili_flakes ; smoked_paprika ; msg ; other
+C | Which way of cooking fish is the best? | pan_seared ; grilled ; baked ; steamed ; fried ; raw ; other
+C | Which way of preparing rice gives the best texture? | rice_cooker ; stovetop_pot ; oven_baked ; pilaf_method ; clay_pot ; other
+C | Which pickling style is the tastiest? | dill_brine ; sweet_bread_and_butter ; japanese_tsukemono ; korean_fermented ; quick_vinegar ; other
+C | Which way of cooking bacon gives the best result? | pan_fried ; oven_baked ; air_fried ; microwaved ; grilled ; other
+C | Which kind of grill makes the best cookout food? | charcoal_kettle ; gas_grill ; offset_smoker ; kamado ; campfire_grate ; other
+C | Which knife style is the most pleasing to use? | japanese_gyuto ; german_chefs_knife ; chinese_cleaver ; santoku ; nakiri ; other
+C | Which cutting board material is the best? | end_grain_wood ; edge_grain_wood ; bamboo ; plastic ; rubber ; other
+C | Which stovetop is the best to cook on? | gas ; induction ; electric_coil ; glass_electric ; other
+C | Which step matters most for a great stir-fry? | very_high_heat ; prepped_ingredients ; small_batches ; good_sauce ; right_oil ; other
+S | How much does searing meat before braising improve the dish? | It makes no difference ; It helps slightly ; It adds noticeable flavor ; It makes the dish much better ; It is the step that makes the dish
+S | How good is food cooked in an air fryer? | It is disappointing ; It is fine for reheating only ; It is decent everyday food ; It rivals deep frying ; It beats deep frying
+S | How good is slow-cooker food? | It is mushy and bland ; It is edible but dull ; It is decent and easy ; It is rich and tasty ; It is as good as any cooking method
+S | How good is microwave cooking for real meals? | It ruins food ; It is only good for reheating ; It works for a few dishes ; It makes surprisingly good meals ; It is as good as a stove for most things
+S | How much does resting meat after cooking improve it? | It makes no difference ; It helps slightly ; It makes it noticeably juicier ; It makes it much better ; It is essential for good meat
+S | How much does salting pasta water improve the pasta? | It makes no difference ; It makes a tiny difference ; It makes a noticeable difference ; It makes the pasta much better ; Unsalted pasta water ruins the dish
+S | How good is smoked brisket at its best? | It is dry and overhyped ; It is fine but not special ; It is very tasty ; It is outstanding ; It is the best meat dish there is
+S | How much does cooking with wine improve a sauce? | It adds nothing ; It helps slightly ; It adds noticeable depth ; It makes the sauce much better ; A good sauce needs it
+S | How good is a meal cooked over a campfire? | It is worse than kitchen food ; It is fine for camping only ; It is about as good ; It tastes better than kitchen food ; It is the best food there is
+S | How much does a sharp knife improve cooking? | It changes nothing ; It is slightly nicer ; It makes cooking noticeably easier ; It makes cooking much better ; It changes everything about cooking
+S | How good is sous vide steak compared with pan-seared? | It is much worse ; It is slightly worse ; It is about the same ; It is slightly better ; It is far better
+N | Is grilling better than roasting for vegetables?
+N | Is a wok better than a frying pan for most stovetop cooking?
+N | Is homemade stock much better than store-bought stock?
+N | Is charcoal grilling better than gas grilling?
+N | Is MSG a good seasoning?
+N | Is a pressure cooker worth owning?
+N | Does a well-seasoned cast-iron pan cook better food than a new one?
+N | Is deep frying the tastiest way to cook?
+N | Is baking harder than cooking?

@@ -1,0 +1,45 @@
+C | Which cuisine makes the most satisfying comfort food? | italian ; mexican ; indian ; american_southern ; korean ; chinese ; french ; other
+C | Which cuisine has the best street food? | thai ; mexican ; vietnamese ; indian ; turkish ; taiwanese ; other
+C | Which cuisine has the best breakfast tradition? | english ; american_diner ; japanese ; turkish ; mexican ; french ; indian ; other
+C | Which cuisine makes the best vegetarian dishes? | indian ; ethiopian ; lebanese ; italian ; chinese ; thai ; other
+C | Which cuisine has the most delicious soups? | vietnamese ; japanese ; thai ; french ; mexican ; korean ; polish ; other
+C | Which cuisine has the best bread tradition? | french ; german ; italian ; indian ; middle_eastern ; mexican ; other
+C | Which Asian cuisine is the most delicious? | japanese ; chinese ; thai ; korean ; vietnamese ; indian ; malaysian ; other
+C | Which European cuisine is the most delicious? | italian ; french ; spanish ; greek ; portuguese ; german ; other
+C | Which Latin American cuisine is the most delicious? | mexican ; peruvian ; brazilian ; argentine ; colombian ; cuban ; other
+C | Which Middle Eastern cuisine is the most delicious? | lebanese ; turkish ; persian ; israeli ; moroccan ; egyptian ; other
+C | Which African cuisine is the most delicious? | ethiopian ; moroccan ; nigerian ; south_african ; senegalese ; egyptian ; other
+C | Which cuisine is the best for a celebration feast? | chinese ; indian ; italian ; brazilian_churrasco ; korean_barbecue ; lebanese_mezze ; other
+C | Which cuisine is the most fun to share at a big table? | spanish_tapas ; lebanese_mezze ; chinese_dim_sum ; korean_barbecue ; ethiopian ; italian_family_style ; other
+C | Which cuisine has the most exciting flavors? | thai ; indian ; mexican ; sichuan ; korean ; peruvian ; other
+C | Which cuisine is the most elegant? | french ; japanese_kaiseki ; italian ; nordic ; cantonese ; other
+C | Which cuisine is the best on a hot summer day? | japanese ; greek ; vietnamese ; mexican ; peruvian ; thai ; other
+C | Which cuisine is the best on a cold winter night? | russian ; german ; french ; korean ; indian ; irish ; other
+C | Which regional Chinese cuisine is the most delicious? | cantonese ; sichuan ; hunan ; shanghainese ; northern_chinese ; other
+C | Which regional Indian cuisine is the most delicious? | punjabi ; south_indian ; bengali ; goan ; gujarati ; hyderabadi ; other
+C | Which regional Italian cuisine is the most delicious? | tuscan ; sicilian ; emilian ; roman ; neapolitan ; venetian ; other
+C | Which regional American cuisine is the most delicious? | southern ; cajun_creole ; tex_mex ; new_england ; californian ; hawaiian ; other
+C | Which cuisine has the best dumplings? | chinese ; japanese ; polish ; nepali ; korean ; georgian ; other
+C | Which cuisine has the best noodle dishes? | japanese ; chinese ; vietnamese ; thai ; korean ; italian ; other
+C | Which cuisine has the most underrated desserts? | indian ; turkish ; filipino ; portuguese ; mexican ; japanese ; other
+C | Which fusion cuisine works best? | tex_mex ; nikkei = Japanese Peruvian ; korean_mexican ; indo_chinese ; peranakan ; hawaiian_plate_lunch ; other
+S | How good is British cuisine at its best? | It is dull even at its best ; It has a few good dishes and little else ; It is solid and hearty but plain ; It is genuinely delicious when done well ; It rivals the great cuisines of the world
+S | How good is German cuisine? | It is heavy and forgettable ; It has good sausages and little else ; It is decent everyday food ; It is hearty and satisfying ; It is one of the great underrated cuisines
+S | How good is Scandinavian cuisine? | It is bland and forgettable ; It is interesting but rarely delicious ; It is pleasant and clean tasting ; It is exciting and delicious ; It is among the most exciting cuisines today
+S | How good is Filipino cuisine? | It is unappealing ; It has a few good dishes ; It is tasty everyday food ; It is delicious and underrated ; It deserves to be as famous as Thai food
+S | How good is Ethiopian cuisine? | It is unappealing ; It is interesting but hard to enjoy ; It is tasty and pleasant ; It is delicious and memorable ; It is one of the best cuisines in the world
+S | How good is Russian cuisine? | It is dreary and heavy ; It has a couple of good dishes ; It is filling and decent ; It is rich and delicious ; It is a hidden gem among world cuisines
+S | How good is Tex-Mex compared with traditional Mexican food? | It is a poor imitation ; It is weaker but still enjoyable ; It is different but just as good ; It is better for many dishes ; It is the better cuisine overall
+S | How good is American Chinese takeout as a cuisine of its own? | It is greasy junk ; It is an occasional guilty pleasure ; It is decent casual food ; It is a delicious tradition in its own right ; It is one of the best comfort cuisines anywhere
+S | How good is Greek cuisine? | It is plain and repetitive ; It is fine but limited ; It is fresh and pleasant ; It is consistently delicious ; It is one of the best cuisines in the world
+S | How good is Korean cuisine? | It is unappealing ; It is interesting but uneven ; It is tasty and bold ; It is delicious across the board ; It is the most exciting cuisine in the world
+S | How good is Spanish cuisine? | It is overrated ; It is fine but limited ; It is tasty and reliable ; It is delicious and varied ; It is the best cuisine in Europe
+N | Is Thai food more enjoyable than Indian food?
+N | Is Mexican food more enjoyable than Chinese food?
+N | Is Vietnamese cuisine underrated?
+N | Is Italian cuisine overrated?
+N | Is Korean food more exciting than Japanese food?
+N | Is Turkish cuisine better than Greek cuisine?
+N | Is Cajun and Creole food the best regional cuisine in the United States?
+N | Is Georgian cuisine one of the most underrated in the world?
+N | Is Brazilian food more enjoyable than Argentine food?

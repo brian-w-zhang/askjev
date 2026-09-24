@@ -1,0 +1,60 @@
+C | Which classic board game is the most fun? | chess ; monopoly ; scrabble ; clue ; risk ; checkers ; backgammon ; other
+C | Which modern board game is the best? | catan ; ticket_to_ride ; pandemic ; carcassonne ; wingspan ; codenames ; azul ; other
+C | Which traditional card game played with a standard deck is the best? | poker ; uno ; rummy ; hearts ; spades ; bridge ; go_fish ; other
+C | Which party game gets the most laughs? | codenames ; pictionary ; charades ; cards_against_humanity ; taboo ; apples_to_apples ; dixit ; other
+C | Which chess piece is the most fun to play with? | knight ; bishop ; rook ; queen ; pawn ; king
+C | Which chess opening is the most beautiful? | italian_game ; ruy_lopez ; sicilian_defense ; queens_gambit ; kings_gambit ; french_defense ; other
+C | Which trading card game is the best? | magic_the_gathering ; pokemon ; yu_gi_oh ; hearthstone ; lorcana ; other
+C | Which kind of puzzle is the most satisfying to finish? | jigsaw ; crossword ; sudoku ; rubiks_cube ; logic_grid ; word_search
+C | Which poker variant is the most fun? | texas_holdem ; omaha ; seven_card_stud ; five_card_draw ; other
+C | Which word game is the most satisfying to win? | scrabble ; boggle ; bananagrams ; codenames ; wordle ; upwords ; other
+C | Which cooperative board game is the best? | pandemic ; forbidden_island ; spirit_island ; the_crew ; hanabi ; gloomhaven ; other
+C | Which tabletop role-playing setting is the most fun? | high_fantasy ; sci_fi ; horror ; cyberpunk ; superheroes ; post_apocalyptic ; other
+C | Which game is best for two players? | chess ; go ; backgammon ; patchwork ; jaipur ; seven_wonders_duel ; cribbage ; other
+C | Which game piece design is the most iconic? | monopoly_top_hat ; chess_knight ; scrabble_tile ; trouble_pop_o_matic ; clue_candlestick ; other
+C | Which kind of board game theme is the most appealing? | fantasy ; trains_and_travel ; farming ; space ; murder_mystery ; nature_and_animals ; history
+C | Which board game has the most beautiful artwork? | wingspan ; dixit ; everdell ; azul ; mysterium ; tokaido ; other
+C | Which game is best for a large group? | werewolf ; codenames ; telestrations ; just_one ; wavelength ; charades ; other
+C | Which dice game has the best mix of luck and choice? | yahtzee ; farkle ; liars_dice ; bunco ; king_of_tokyo ; other
+C | Which game mechanic is the most enjoyable? | worker_placement ; deck_building ; tile_laying ; area_control ; bluffing ; drafting ; roll_and_write
+C | Which classic children's board game is the best? | candy_land ; chutes_and_ladders ; sorry ; trouble ; guess_who ; connect_four ; other
+C | Which strategy game is the most beautiful to play? | go ; chess ; shogi ; xiangqi ; hive ; othello
+C | Which kind of chess game is the most exciting to watch? | classical ; rapid ; blitz ; bullet ; chess_nine_sixty = pieces start in a random back-rank order
+C | Which social deduction game is the best? | werewolf ; the_resistance ; secret_hitler ; blood_on_the_clocktower ; mafia ; other
+C | Which card from a standard deck is the most satisfying to draw? | ace_of_spades ; joker ; king_of_hearts ; queen_of_hearts ; jack_of_diamonds ; other
+C | Which legacy or campaign board game is the best? | pandemic_legacy ; gloomhaven ; risk_legacy ; betrayal_legacy ; clank_legacy ; other
+C | Which style of card play makes for the best game? | trick_taking ; shedding = empty your hand first ; matching ; betting ; collectible ; solitaire
+C | Which Dungeons and Dragons class is the most fun to play? | wizard ; rogue ; fighter ; cleric ; bard ; paladin ; druid ; other
+C | Which kind of jigsaw puzzle image is the most enjoyable to assemble? | landscape ; famous_painting ; cityscape ; animals ; collage ; one_solid_color
+C | Which solitaire game is the most fun? | klondike ; spider ; freecell ; pyramid ; golf ; other
+C | Which board game has the best box and components? | wingspan ; root ; scythe ; everdell ; azul ; ticket_to_ride ; other
+C | Which game is best for a quick filler between longer games? | love_letter ; sushi_go ; the_mind ; skull ; coup ; no_thanks ; other
+C | Which part of a chess game is the most interesting? | opening ; middlegame ; endgame
+C | Which Magic the Gathering color is the most fun to play? | white ; blue ; black ; red ; green ; colorless
+S | How fun is Monopoly with a group of friends? | It usually ends in boredom or arguments ; It is fun only for the first half hour ; It is a decent way to spend an evening ; It is a genuinely fun game night ; It is the best classic board game there is
+S | How fun is Catan? | It is dull and fiddly ; It is fine once in a while ; It is a solid game worth owning ; It is a favorite that gets played again and again ; It is the best modern board game there is
+S | How exciting is a speed chess game between top players? | It is dull to watch ; It is interesting only to experts ; It is fun to follow with commentary ; It is gripping from start to finish ; It is one of the most exciting things to watch in any game
+S | How fun is Uno? | It is tedious ; It is fine with young children only ; It is a light, enjoyable card game ; It is a great chaotic party game ; It is the perfect card game for any group
+S | How satisfying is finishing a large jigsaw puzzle? | It feels like wasted time ; It brings a small sense of relief ; It feels pleasantly accomplished ; It is deeply satisfying ; It is one of the most satisfying feelings there is
+S | How fun is Scrabble? | It is a slog ; It is fun only for word lovers ; It is a solid game ; It is a great, tense game ; It is the best word game ever made
+S | How beautiful is the game of go? | It looks like dots on a grid ; It is elegant in a plain way ; It has real beauty once understood ; It is deeply beautiful ; It is the most beautiful game ever invented
+S | How fun is Codenames? | It falls flat ; It is fine once or twice ; It is a good party game ; It is a great party game worth replaying ; It is the best party game of its generation
+S | How fun is Clue? | It is boring ; It is fine for children ; It is an enjoyable mystery game ; It is a great classic ; It is the most fun deduction game there is
+S | How fun is poker played for chips with no money at stake? | It is pointless ; It is mildly fun ; It is still a good game ; It is nearly as fun as playing for money ; It is just as fun as playing for money
+S | How fun is Ticket to Ride? | It is dull ; It is fine but forgettable ; It is a solid family game ; It is a great gateway game ; It is one of the best board games ever made
+S | How fun is Candy Land for adults? | It is unbearable ; It is dull but tolerable ; It is fun with children ; It is fun for pure nostalgia ; It is genuinely fun for anyone
+S | How enjoyable is watching a world chess championship match? | It is unwatchable ; It is interesting only for highlights ; It is engaging with good commentary ; It is gripping at key moments ; It is as thrilling as any sports final
+S | How fun is a long Risk game? | It is a miserable slog ; It is fun for the first hour ; It is a decent epic game ; It is a great way to spend an afternoon ; It is the most fun war game there is
+S | How fun is Wingspan? | It is dull ; It is pretty but thin ; It is a solid, calming game ; It is a great game worth replaying ; It is one of the best games of its decade
+N | Is chess more beautiful than go?
+N | Are cooperative board games more fun than competitive ones?
+N | Is Catan better than Monopoly?
+N | Is Scrabble more fun than Boggle?
+N | Is bridge the most elegant card game?
+N | Are party games more fun than strategy games?
+N | Is Uno more fun than Crazy Eights?
+N | Is Magic the Gathering the best trading card game?
+N | Are wooden game pieces nicer than plastic ones?
+N | Is a jigsaw puzzle more relaxing than a crossword?
+N | Are quick card games more fun than long board games?
+N | Is Dungeons and Dragons the best tabletop role-playing game?

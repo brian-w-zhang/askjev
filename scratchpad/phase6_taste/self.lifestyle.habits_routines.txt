@@ -1,0 +1,121 @@
+# self.lifestyle.habits_routines — choice
+C | What time do you usually go to bed on a weeknight? | early_evening ; mid_evening ; late_evening ; around_midnight ; after_midnight ; it_varies_a_lot
+C | What time do you usually get up on a workday or school day? | before_dawn ; early_morning ; mid_morning ; late_morning ; around_noon ; it_varies
+C | Which alarm sound do you wake up to? | loud_beeping ; gentle_melody ; favorite_song ; radio ; vibration_only ; sunrise_light ; no_alarm
+C | When do you usually shower? | first_thing_in_the_morning ; after_exercise ; in_the_evening ; right_before_bed ; whenever_i_have_time
+C | Which do you usually wash first in the shower? | hair ; face ; body ; no_fixed_order
+C | How do you usually dry your hair? | air_dry ; towel_dry ; hair_dryer ; a_mix_of_towel_and_dryer ; not_applicable
+C | How do you brush your teeth? | manual_toothbrush ; electric_toothbrush ; whichever_is_nearby
+C | When do you usually brush your teeth in the morning? | before_breakfast ; after_breakfast ; both ; in_the_shower ; i_often_skip_it
+C | How do you usually make your bed? | neatly_every_morning ; a_quick_pull_of_the_covers ; only_when_guests_come ; never
+C | How many pillows do you sleep with? | none ; just_one ; two ; three_or_more ; a_whole_pile
+C | What kind of room do you like to sleep in? | pitch_dark ; a_little_light ; a_night_light ; curtains_open
+C | What sound do you prefer while falling asleep? | total_silence ; fan ; white_noise ; rain_sounds ; music ; a_podcast ; tv_on
+C | Which bedroom temperature helps you sleep best? | cold ; cool ; mild ; warm ; hot
+C | What do you usually sleep in? | pajamas ; t_shirt_and_shorts ; loungewear ; whatever_i_wore_that_day ; other
+C | Which side of the bed do you prefer? | left ; right ; middle ; the_side_nearest_the_door ; no_preference
+C | How do you usually tackle a messy room? | clean_it_all_at_once ; a_little_each_day ; only_when_it_gets_bad ; wait_for_guests_to_force_it ; ask_someone_to_help
+C | Which chore do you actually enjoy most? | vacuuming ; laundry ; dishes ; dusting ; making_the_bed ; taking_out_the_trash ; gardening ; none
+C | How do you usually fold your towels? | in_halves ; in_thirds ; rolled ; not_folded
+C | How do you usually hang toilet paper? | over ; under ; i_dont_care ; i_leave_it_on_the_counter
+C | How do you like to organize your closet? | by_color ; by_type ; by_season ; by_how_often_i_wear_it ; no_system
+C | When do you usually do laundry? | a_set_day_each_week ; when_the_basket_is_full ; when_i_run_out_of_clothes ; a_little_every_day ; someone_else_does_it
+C | How do you pair your socks? | matched_and_folded ; matched_and_balled ; tossed_loose_in_a_drawer ; i_wear_mismatched_socks
+C | How do you usually get to places on time? | leave_early ; leave_exactly_on_time ; rush_at_the_last_minute ; use_alarms_and_reminders ; im_usually_late
+C | What do you do while waiting for someone who is late? | scroll_my_phone ; read ; people_watch ; text_them_repeatedly ; leave_after_a_while ; nothing_in_particular
+C | What is your go-to way to exercise when time is short? | a_quick_run ; bodyweight_workout ; a_brisk_walk ; stretching ; stairs ; dancing ; i_skip_it
+C | Where do you prefer to exercise? | gym ; at_home ; outdoors ; pool ; studio_class ; wherever_i_am ; i_dont_exercise
+C | Who do you prefer to exercise with? | alone ; with_a_friend ; in_a_class ; with_a_trainer ; with_my_dog ; i_dont_exercise
+C | What do you usually do first when you get home? | change_clothes ; wash_my_hands ; lie_down ; greet_the_pets ; check_the_mail ; turn_on_music
+C | How do you usually relax in the evening? | read ; take_a_bath ; watch_something ; go_for_a_walk ; call_someone ; do_a_hobby ; go_straight_to_bed
+C | How do you usually keep track of appointments? | phone_calendar ; paper_planner ; wall_calendar ; notes_to_myself ; memory ; someone_reminds_me
+C | Where do you usually put your keys when you get home? | a_hook_by_the_door ; a_bowl_or_tray ; my_bag ; my_pocket ; wherever_they_land
+C | How do you usually wake yourself up on a groggy morning? | cold_water_on_my_face ; a_shower ; stretching ; opening_the_curtains ; loud_music ; coffee_or_tea ; lying_there_a_while
+C | How do you usually get dressed in the morning? | pick_the_outfit_the_night_before ; pick_it_on_the_spot ; wear_a_near_uniform ; grab_the_first_clean_thing
+C | How do you usually handle your mail? | open_it_right_away ; sort_it_into_piles ; leave_it_for_days ; someone_else_handles_it
+C | What is the first thing you do on a free Saturday morning? | sleep_in ; exercise ; clean ; go_out_for_breakfast ; run_errands ; lounge_around
+C | What does your Sunday evening routine usually look like? | prepare_for_the_week ; relax_at_home ; see_friends_or_family ; catch_up_on_chores ; no_routine
+C | When do you usually do your laundry? | weekday_evenings ; saturday_morning ; sunday ; whenever_i_run_out ; someone_else_does_it
+C | How do you usually tie your shoes? | bunny_ears ; loop_and_wrap ; double_knot ; slip_ons_only ; i_never_untie_them
+C | How do you most often deal with the dishes after cooking? | wash_them_right_away ; soak_them_overnight ; load_the_dishwasher ; leave_them_for_later ; someone_else_does_them
+C | How do you prefer to wake up on a day off? | naturally_without_an_alarm ; with_a_gentle_alarm ; with_my_usual_alarm ; someone_wakes_me ; pets_wake_me
+C | What do you usually do in the last few minutes before leaving the house? | check_the_stove ; check_the_locks ; look_in_the_mirror ; grab_a_snack ; search_for_my_keys ; nothing_in_particular
+C | How do you set your alarm on weekends? | same_as_weekdays ; a_bit_later ; much_later ; no_alarm_at_all
+C | When do you usually take a bath instead of a shower? | never ; when_im_sore ; to_relax_on_weekends ; when_im_sick ; most_days
+C | Which kind of shower do you prefer? | rainfall ; handheld ; strong_jet ; bath_with_a_shower ; no_preference
+C | How do you prefer to clean the house? | top_to_bottom_once_a_week ; a_little_each_day ; room_by_room_over_the_week ; only_when_needed ; hire_help
+C | What do you usually listen to while doing chores? | music ; podcasts ; audiobooks ; phone_calls ; silence ; tv_in_the_background
+C | How do you handle a pile of clothes on a chair? | put_it_away_daily ; clear_it_weekly ; let_it_grow_until_it_topples ; i_dont_have_a_clothes_chair
+C | How do you usually spend the first hour after waking? | exercise ; get_ready_quickly ; slow_breakfast_and_reading ; check_my_phone_in_bed ; household_tasks ; go_straight_to_work
+C | How do you decide when to go to sleep? | a_set_bedtime ; when_i_feel_tired ; when_my_show_ends ; when_someone_else_goes ; when_i_finally_put_my_phone_down
+C | What do you usually do if you can't fall asleep? | stay_in_bed_and_wait ; get_up_and_read ; listen_to_something ; meditate ; count_or_breathe ; check_my_phone
+C | What do you do when you wake up in the middle of the night? | fall_right_back_asleep ; check_the_time ; get_a_drink_of_water ; use_the_bathroom ; lie_awake_thinking ; get_up_for_a_while
+C | How do you usually take care of your plants? | a_fixed_watering_day ; whenever_they_look_dry ; i_forget_until_they_droop ; someone_else_waters_them ; i_have_no_plants
+C | Where do you usually do your thinking before a big decision? | on_a_walk ; in_the_shower ; lying_in_bed ; at_my_desk ; while_driving ; talking_to_friends
+C | How do you prefer to warm up before exercise? | light_jog ; dynamic_stretches ; static_stretches ; jumping_jacks ; i_skip_the_warm_up ; i_dont_exercise
+C | How do you usually carry your things when you leave home? | backpack ; tote_bag ; purse ; pockets_only ; small_crossbody_bag ; briefcase
+C | How do you prefer to cut your nails? | clippers ; scissors ; nail_file ; a_professional_does_it
+C | How often do you take the trash out? | when_its_full ; every_day ; on_collection_day ; when_it_smells ; someone_else_does_it
+C | How do you usually spend time on a long walk? | listen_to_music ; call_someone ; think_quietly ; take_photos ; walk_with_a_friend ; i_rarely_take_long_walks
+C | How do you usually start a free weekday evening? | a_nap ; a_workout ; a_shower ; seeing_friends ; errands ; flopping_on_the_couch
+C | How do you like to prepare the night before a busy day? | pack_my_bag ; set_out_clothes ; write_a_list ; set_several_alarms ; go_to_bed_early ; nothing_special
+C | What kind of calendar or planner do you actually stick with? | a_phone_calendar ; a_paper_planner ; a_wall_calendar ; a_bullet_journal ; none_at_all
+C | How do you usually get rid of clutter? | donate_it ; sell_it ; throw_it_away ; give_it_to_friends ; store_it_somewhere ; i_rarely_declutter
+C | How do you like to spend a rainy day at home? | nap ; tidy_up ; read ; bake ; watch_movies ; do_a_puzzle ; work_on_a_project
+C | What do you usually do right after a workout? | shower_immediately ; stretch ; rest_for_a_while ; have_a_snack ; go_straight_to_the_next_thing ; i_dont_work_out
+C | When do you prefer to nap on a day off? | late_morning ; right_after_lunch ; mid_afternoon ; early_evening ; i_dont_nap
+# score
+S | How long do you usually spend getting ready to leave the house in the morning? | I roll out of bed and go ; I am ready in a few minutes ; I take a relaxed quarter of an hour ; I spend a good half hour on it ; I need well over an hour
+S | How consistent is your wake-up time across the whole week? | It changes wildly every day ; It shifts a few hours on weekends ; It shifts an hour or so on weekends ; It shifts only a little ; It is the same every single day
+S | How cluttered is your bedroom right now? | Nothing is out of place ; A few things are lying around ; Some clothes and items are scattered ; Most surfaces are covered ; You can barely see the floor
+S | How often do you vacuum or sweep your home? | Almost never ; A few times a year ; Once a month ; Every week ; Every day
+S | How long does it usually take you to fall asleep? | I'm out the moment my head hits the pillow ; I fall asleep within a few minutes ; It takes me a quarter of an hour or so ; It usually takes me half an hour or more ; I often lie awake for hours
+S | How often do you skip your usual exercise? | I never skip it ; I skip it once in a while ; I skip it about half the time ; I skip it most weeks ; I don't have a routine to skip
+S | How many alarms do you set on a normal morning? | I don't use an alarm ; Just one ; Two ; A few spaced out ; A long chain of alarms
+S | How often do you run late to appointments? | Never ; Once in a long while ; About one time in several ; About half the time ; Nearly always
+S | How much of your morning routine happens in the same order every day? | None, every morning is different ; A step or two is fixed ; About half is fixed ; Most of it is fixed ; Every step is the same every day
+S | How often do you change your pillowcase? | I rarely think about it ; Once a month ; Every couple of weeks ; Every week ; Every few days
+S | How often do you wash your hair? | Once a week or less ; A couple of times a week ; Every other day ; Every day ; More than once a day
+S | How often do you take a walk just for fun? | Never ; A few times a year ; A few times a month ; A few times a week ; Every day
+S | How much do you tidy up as you go through the day? | Never, I let things pile up ; Rarely, only when it gets bad ; Sometimes, when I remember ; Usually, most things get put back ; Always, nothing stays out of place
+S | How many hours of sleep do you usually get on a weeknight? | Barely any ; Much less than I need ; A little less than I need ; About what I need ; More than I need
+S | How often do you sleep in past your usual wake-up time on weekends? | Never ; A few weekends a year ; About once a month ; Most weekends ; Every weekend until noon
+S | How long do you spend on your evening skincare or grooming routine? | I do nothing ; A quick splash of water ; A few minutes of basic steps ; A quarter of an hour ; A long multi-step ritual
+S | How often do you stretch or do yoga? | Never ; A few times a year ; Once a week ; A few times a week ; Every day
+S | How often do you declutter your belongings? | Never ; Only when I move ; Once a year ; Every few months ; Every month
+S | How often do you make a to-do list for your personal life? | Never ; Only before big events ; Once a week ; Most days ; Every day without fail
+S | How often do you wash your car or bike? | Never ; Only when it's filthy ; A few times a year ; Once a month ; Every week
+S | How long does your evening wind-down usually last before sleep? | I go straight to bed with no wind-down ; A few minutes ; About half an hour ; About an hour ; Several hours
+S | How much do you move around in your sleep? | I wake up in the exact same position ; I shift once or twice ; I toss and turn a bit ; I toss and turn a lot ; I end up on the other side of the bed
+S | How do you handle your alarm on a weekday morning? | I sleep through it and wake up late ; I hit snooze again and again ; I hit snooze once or twice ; I get up when it first rings ; I wake up before it ever rings
+S | How often do you take a cold shower on purpose? | Never ; Once in a while ; A few times a month ; Most days ; Every single day
+S | How long is your usual walk or commute on foot each day? | I barely walk at all ; A few minutes ; About a quarter of an hour ; About half an hour ; More than an hour
+S | How often do you wake up during the night? | Never ; Once in a while ; About once a night ; A couple of times a night ; Many times every night
+S | How quickly do you get out of bed once you're awake? | Instantly ; Within a minute or two ; After a few minutes of lying there ; After a long while ; Only when I absolutely have to
+S | How often do you iron your clothes? | Never ; Only for special events ; Once a week ; A few times a week ; Every day
+S | How often do you clean out your fridge? | Never ; Once a year ; Every few months ; Every month ; Every week
+S | How early do you start getting ready for a night out? | Five minutes before I leave ; A quarter of an hour before ; About an hour before ; A couple of hours before ; Most of the afternoon
+# noul
+N | Do you make your bed every morning?
+N | Do you keep a glass of water by your bed at night?
+N | Do you shower every day?
+N | Do you sleep with the door closed?
+N | Do you sleep with a fan running?
+N | Do you take off your shoes as soon as you get home?
+N | Do you floss before bed?
+N | Do you keep a set bedtime on weeknights?
+N | Do you use a sleep mask?
+N | Do you sleep with earplugs?
+N | Do you follow a skincare routine every morning?
+N | Do you exercise before breakfast?
+N | Do you like to clean with music playing loudly?
+N | Do you prefer baths to showers?
+N | Do you get your clothes ready for the week on Sundays?
+N | Do you tend to hum or talk to yourself while doing chores?
+N | Do you usually arrive early to meet friends?
+N | Do you often fall asleep on the couch?
+N | Do you take your shoes off as soon as you get home?
+N | Do you get your chores done before noon on days off?
+N | Do you hang your towel to dry right after using it?
+N | Do you sleep better in your own bed than anywhere else?
+N | Do you stick to the same route when walking to familiar places?

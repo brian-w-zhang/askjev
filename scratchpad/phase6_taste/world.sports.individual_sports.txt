@@ -1,0 +1,25 @@
+C | Which tennis Grand Slam is the most enjoyable to watch? | australian_open ; french_open ; wimbledon ; us_open
+C | Which Winter Olympic sport is the most exciting? | downhill_skiing ; figure_skating ; snowboard_halfpipe ; ski_jumping ; bobsled ; speed_skating ; other
+C | Which track and field event is the most thrilling? | sprint ; marathon ; pole_vault ; high_jump ; hurdles ; relay ; javelin ; other
+C | Which gymnastics event is the most beautiful? | floor_exercise ; balance_beam ; uneven_bars ; rings ; pommel_horse ; vault ; rhythmic_gymnastics
+C | Which swimming stroke is the most beautiful to watch? | freestyle ; butterfly ; backstroke ; breaststroke
+C | Which golf tournament is the most enjoyable to watch? | the_masters ; the_open_championship ; us_open ; pga_championship ; ryder_cup ; other
+C | Which cycling race is the most exciting? | tour_de_france ; giro_ditalia ; vuelta_a_espana ; paris_roubaix ; olympic_track_cycling ; other
+C | Which tennis surface produces the most entertaining matches? | grass ; clay ; hard_court ; indoor_carpet
+C | Which action sport produces the best highlight reels? | skateboarding ; surfing ; bmx ; snowboarding ; rock_climbing ; freestyle_motocross
+C | Which Summer Games sport draws viewers in the most? | athletics ; swimming ; gymnastics ; diving ; tennis ; cycling ; other
+C | Which kind of tennis player is the most fun to watch? | big_server ; baseline_grinder ; serve_and_volleyer ; all_court_artist ; shotmaker
+C | Which Olympic ceremony moment is the most moving? | torch_lighting ; parade_of_nations ; medal_ceremony ; closing_fireworks
+C | Which figure skating element is the most impressive? | quadruple_jump ; triple_axel ; spin ; death_spiral ; step_sequence ; lift
+C | Which golf shot is the most satisfying to watch? | hole_in_one ; long_drive ; chip_in ; long_putt ; bunker_shot
+S | How exciting is the men's hundred metre sprint final at the Olympics? | It is over too fast to be exciting ; It is a nice brief moment ; It is a highlight of the Games ; It is electrifying ; It is the most exciting moment in all of sport
+S | How exciting is watching golf on television? | It is sleep-inducing ; It is pleasant background viewing ; It is engaging during the final holes ; It is gripping on a Sunday at a major ; It is thrilling from start to finish
+S | How beautiful is Olympic diving? | It is unremarkable ; It is nice to see ; It is graceful and impressive ; It is breathtaking at the top level ; It is the most beautiful Olympic sport
+S | How enjoyable is watching the Tour de France? | It is endless dull riding ; It is fine for the scenery ; It is exciting on mountain stages ; It is a gripping three-week saga ; It is the best event in sport
+S | How exciting is a tennis fifth-set tiebreak? | It is tedious ; It is mildly tense ; It is tense and engaging ; It is nail-biting ; It is among the most dramatic moments in sport
+S | How fun is surfing to watch? | It is boring waiting for waves ; It is nice to look at ; It is exciting during big rides ; It is thrilling when waves are huge ; It is the most awe-inspiring sport to watch
+N | Is the Winter Olympics more fun to watch than the Summer Olympics?
+N | Is Wimbledon the most charming tennis tournament?
+N | Is figure skating more beautiful than gymnastics?
+N | Is the marathon more exciting than the sprint?
+N | Is skateboarding more fun to watch than snowboarding?

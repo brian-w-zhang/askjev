@@ -1,0 +1,40 @@
+C | Which ancient wonder is the most impressive to see in person? | pyramids_of_giza ; machu_picchu ; colosseum ; petra ; angkor_wat ; great_wall ; other
+C | Which famous tower is the most beautiful? | eiffel_tower ; big_ben ; leaning_tower_of_pisa ; tokyo_tower ; cn_tower ; burj_khalifa ; other
+C | Which cathedral is the most beautiful? | notre_dame_de_paris ; sagrada_familia ; st_peters_basilica ; cologne_cathedral ; milan_cathedral ; st_basils_cathedral ; other
+C | Which palace is the most impressive to visit? | versailles ; alhambra ; forbidden_city ; buckingham_palace ; schonbrunn ; topkapi ; other
+C | Which castle looks most like a fairy tale? | neuschwanstein ; bran_castle ; himeji_castle ; mont_saint_michel ; edinburgh_castle ; chateau_de_chambord ; other
+C | Which theme park is the most fun? | disneyland ; walt_disney_world ; universal_studios ; tokyo_disneysea ; europa_park ; efteling ; other
+C | Which temple is the most breathtaking? | angkor_wat ; borobudur ; golden_temple ; kinkaku_ji ; wat_arun ; temple_of_heaven ; other
+C | Which statue is the most iconic? | statue_of_liberty ; christ_the_redeemer ; michelangelos_david ; moai_of_easter_island ; the_great_sphinx ; the_thinker ; other
+C | Which landmark is the most overrated to visit? | mona_lisa_room ; hollywood_walk_of_fame ; manneken_pis ; times_square ; stonehenge ; leaning_tower_of_pisa ; other
+C | Which landmark looks best lit up at night? | eiffel_tower ; tower_bridge ; burj_khalifa ; sydney_opera_house ; golden_gate_bridge ; empire_state_building ; other
+C | Which ruins are the most atmospheric to walk through? | pompeii ; machu_picchu ; tikal ; ephesus ; angkor_thom ; chichen_itza ; other
+C | Which mosque is the most beautiful? | blue_mosque ; sheikh_zayed_grand_mosque ; hassan_ii_mosque ; nasir_al_mulk_mosque ; mezquita_of_cordoba ; other
+C | Which observation deck has the best view? | empire_state_building ; top_of_the_rock ; burj_khalifa ; the_shard ; tokyo_skytree ; eiffel_tower ; other
+C | Which famous square is the most pleasant to sit in? | piazza_navona ; grand_place ; plaza_mayor ; old_town_square_prague ; st_marks_square ; red_square ; other
+C | Which kind of landmark is the most rewarding to visit? | ancient_ruins ; grand_cathedral ; royal_palace ; modern_skyscraper ; famous_bridge ; historic_castle
+C | Which dam or waterworks is the most impressive to see? | hoover_dam ; three_gorges_dam ; itaipu_dam ; roman_aqueduct_of_segovia ; pont_du_gard ; other
+C | Which famous clock or clock tower is the most charming? | big_ben ; prague_astronomical_clock ; zytglogge ; munich_glockenspiel ; other
+C | Which opera house is the most beautiful building? | sydney_opera_house ; palais_garnier ; teatro_alla_scala ; vienna_state_opera ; oslo_opera_house ; other
+C | Which famous gate or arch is the most striking? | arc_de_triomphe ; brandenburg_gate ; gateway_arch ; india_gate ; torii_of_itsukushima ; other
+C | Which amusement park ride type makes a theme park the most fun? | roller_coasters ; dark_rides ; water_rides ; drop_towers ; carousels ; simulators
+C | Which famous street is the most enjoyable to walk? | champs_elysees ; las_ramblas ; fifth_avenue ; nevsky_prospekt ; royal_mile ; other
+C | Which lighthouse is the most picturesque? | peggys_cove ; portland_head_light ; neist_point ; cape_st_vincent ; other
+S | How impressive is the Great Wall of China in person? | It looks like an ordinary old wall ; It is interesting for an hour ; It is impressive on a clear day ; It is awe-inspiring and unforgettable
+S | How worthwhile is visiting the Eiffel Tower? | It is a waste of time and money ; It is fine for a quick photo ; It is worth going up once ; It is a must-see highlight of any life
+S | How magical is Disneyland for adults without children? | It is boring and overpriced for adults ; It is fun for an afternoon ; It is a genuinely great day out ; It is just as magical as it is for kids
+S | How breathtaking is Machu Picchu at sunrise? | It is a letdown after the effort ; It is pretty but not special ; It is deeply moving ; It is one of the most breathtaking sights on Earth
+S | How beautiful is the Sagrada Familia inside? | It feels cluttered and odd ; It is interesting but not beautiful ; It is beautiful in the afternoon light ; It is the most beautiful interior of any church
+S | How impressive is Stonehenge up close? | It is just a few rocks in a field ; It is mildly interesting ; It is eerie and memorable ; It is profoundly moving
+S | How enjoyable is Times Square to visit? | It is crowded and unpleasant ; It is worth a few minutes to look ; It is exciting at night ; It is one of the most thrilling places in the world
+S | How impressive is the Colosseum from the inside? | It is a disappointing shell ; It is interesting for history fans ; It is impressive for almost anyone ; It is jaw-dropping and unforgettable
+N | Is the Sydney Opera House the most beautiful modern building in the world?
+N | Is Petra more impressive to visit than the pyramids?
+N | Is the Golden Gate Bridge more beautiful than the Brooklyn Bridge?
+N | Is Angkor Wat the most breathtaking temple on Earth?
+N | Are theme parks more fun than historical landmarks?
+N | Is the Alhambra the most beautiful palace in Europe?
+N | Is Neuschwanstein more charming than any real royal palace?
+N | Is Big Ben more iconic than the Eiffel Tower?
+C | Which famous bridge is the most fun to walk across? | brooklyn_bridge ; charles_bridge ; golden_gate_bridge ; tower_bridge ; ponte_vecchio ; other
+S | How moving is the Taj Mahal at sunrise? | It feels like just another tourist stop ; It is pretty but crowded ; It is deeply beautiful ; It is one of the most moving sights on Earth

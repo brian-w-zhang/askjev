@@ -1,0 +1,45 @@
+C | Which kind of joke gets the biggest laugh at a dinner party? | clever_pun ; funny_true_story ; one_liner ; impression ; shaggy_dog_story ; self_deprecating_joke ; other
+C | Which sketch comedy show is the funniest? | monty_pythons_flying_circus ; saturday_night_live ; key_and_peele ; chappelles_show ; the_kids_in_the_hall ; a_bit_of_fry_and_laurie ; i_think_you_should_leave ; other
+C | Which stand-up comedian has the best storytelling? | richard_pryor ; mike_birbiglia ; john_mulaney ; dave_chappelle ; hannah_gadsby ; george_carlin ; other
+C | Which double act is the funniest comedy pairing? | laurel_and_hardy ; abbott_and_costello ; key_and_peele ; french_and_saunders ; cheech_and_chong ; flight_of_the_conchords ; other
+C | Which kind of stand-up special is the most enjoyable? | tight_one_liners ; long_personal_stories ; crowd_work_heavy ; musical_comedy ; character_comedy ; other
+C | Which satirical publication or show is the funniest? | the_onion ; private_eye ; mad_magazine ; the_daily_show ; last_week_tonight ; spitting_image ; other
+C | Which silent-film comedian is the funniest? | charlie_chaplin ; buster_keaton ; harold_lloyd ; laurel_and_hardy ; other
+C | Which comedic device is the most reliably funny? | callback ; rule_of_three ; misdirection ; running_gag ; exaggeration ; awkward_silence ; other
+C | Which kind of comedy is the best to watch with a big crowd? | slapstick ; stand_up ; improv ; parody ; physical_comedy ; musical_comedy ; other
+C | Which Monty Python sketch is the funniest? | the_dead_parrot ; the_ministry_of_silly_walks ; the_spanish_inquisition ; the_lumberjack_song ; spam ; the_cheese_shop ; other
+C | Which kind of prank is the funniest to watch? | harmless_hidden_camera_prank ; fake_out_scare ; elaborate_office_prank ; food_swap_prank ; other
+C | Which kind of meme is the funniest? | reaction_image ; absurd_surreal_meme ; animal_meme ; relatable_everyday_meme ; wholesome_meme ; deep_fried_meme ; other
+C | Which improv comedy format is the most fun to watch? | short_form_games ; long_form_scenes ; musical_improv ; audience_suggestion_stories ; other
+C | Which kind of comedic timing is the funniest? | rapid_fire_delivery ; long_awkward_pause ; deadpan_understatement ; sudden_loud_outburst ; other
+C | Which kind of parody is the funniest? | movie_parody ; song_parody ; news_parody ; advertisement_parody ; genre_parody ; other
+C | Which kind of joke works best in writing? | one_liner ; pun ; absurd_non_sequitur ; wry_understatement ; ironic_observation ; other
+C | Which comedic persona is the most entertaining? | lovable_idiot ; grumpy_cynic ; oblivious_egotist ; nervous_wreck ; sarcastic_straight_man ; other
+C | Which kind of humor is the funniest in a eulogy or wedding toast? | gentle_teasing ; embarrassing_story ; wordplay ; self_deprecation ; no_humor_at_all ; other
+C | Which topic makes the best material for stand-up comedy? | family_life ; dating ; work ; everyday_annoyances ; travel ; childhood ; other
+C | Which kind of comedy club show is the most fun? | open_mic_night ; headliner_showcase ; improv_night ; roast_battle ; other
+C | Which kind of animal video is the funniest? | cats_knocking_things_over ; dogs_failing_jumps ; goats_screaming ; parrots_talking ; ducks_waddling ; other
+C | Which kind of joke ages the best? | absurdist_joke ; wordplay ; observational_joke ; topical_joke ; physical_gag ; other
+C | Which kind of comedy roast joke is the funniest? | appearance_joke ; career_joke ; old_embarrassing_story ; self_burn_by_the_roaster ; other
+C | Which kind of limerick or light verse is the funniest? | limerick ; clerihew ; nonsense_verse ; parody_poem ; other
+C | Which knock-knock joke setup is the funniest? | interrupting_cow ; orange_you_glad ; boo_who ; lettuce_in ; other
+S | How funny is a good pun? | It deserves only a groan ; It earns a small smile ; It gets a real laugh ; It is one of the funniest things in language
+S | How funny is slapstick comedy for adults? | It is childish and unfunny ; It gets an occasional chuckle ; It is reliably funny ; It is the funniest comedy there is
+S | How funny are classic dad jokes? | It is painfully unfunny ; It is funny only by accident ; It is charmingly funny ; It is some of the best humor around
+S | How funny is a typical roast of a celebrity? | It is just mean and unpleasant ; It has a few good lines ; It is consistently funny ; It is one of the funniest comedy formats
+S | How funny is cringe comedy? | It is too uncomfortable to watch ; It is funny only in small doses ; It is often hilarious ; It is the funniest kind of comedy
+S | How funny is the Dead Parrot sketch today? | It no longer gets a laugh ; It raises a mild smile ; It is still funny ; It is still one of the funniest sketches ever made
+S | How funny is prop comedy? | It is a cheap gimmick ; It is amusing once in a while ; It can be really funny ; It is a great art in the right hands
+S | How good is improvised comedy compared with scripted comedy? | It is almost always worse ; It is usually a bit worse ; It is about as good ; It is often better
+S | How funny is dark humor? | It is tasteless and unfunny ; It is funny only rarely ; It is often very funny ; It is the funniest kind of humor
+S | How funny is The Onion's typical headline? | It is rarely funny ; It is mildly amusing ; It is usually very funny ; It is almost always brilliant
+S | How funny is a well-done impression of a famous person? | It is barely funny ; It gets a smile ; It gets a real laugh ; It is one of the funniest things a comedian can do
+N | Is Charlie Chaplin funnier than Buster Keaton?
+N | Is stand-up comedy funnier live than on a recorded special?
+N | Is sarcasm a good form of humor?
+N | Are knock-knock jokes funny?
+N | Is British humor funnier than American humor?
+N | Is a surprising punchline funnier than a clever build-up?
+N | Is physical comedy funnier than verbal comedy?
+N | Is deadpan delivery funnier than an energetic, animated delivery?
+N | Is improv comedy fun to watch?

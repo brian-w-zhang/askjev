@@ -1,0 +1,205 @@
+@node self.personality.big_five.conscientiousness
+# choice A
+C | When you promise a coworker you will send them a file by the end of the day, what usually happens? | sent_early = I send it well before the end of the day ; sent_on_time = I send it right at the deadline ; sent_late_with_note = I send it late but warn them first ; forgotten = I forget until they remind me ; other
+C | What does the inside of your work or school bag usually look like? | everything_in_its_pocket = each item has its own spot ; mostly_organized ; loose_but_findable = things are loose but I can find them ; crumpled_mess = old receipts, wrappers, and loose papers ; other
+C | When you finish a written assignment or report, what do you do before handing it in? | reread_twice = reread it carefully more than once ; quick_skim ; spell_check_only ; hand_it_in = hand it in without rereading ; other
+C | You borrowed a book from a friend. What usually happens to it? | returned_promptly = I return it soon after finishing ; returned_when_asked = I return it when they ask ; sits_on_shelf = it sits on my shelf for a long time ; lost_it = I end up misplacing it ; other
+C | When you have a big task due in a few weeks, when do you usually start? | right_away = the day I get it ; after_a_plan = after I map out the steps ; halfway_through ; last_few_days ; night_before ; other
+C | How do you keep track of things you need to do? | detailed_list = a written list or app I update often ; calendar_reminders ; notes_scattered = notes in several different places ; in_my_head = I just try to remember ; nothing = I deal with things as they come up
+C | When you sign up for a class or program with required readings, what do you usually do? | read_everything = do all the readings before each session ; read_most ; skim_right_before ; read_only_if_tested ; skip_readings ; other
+C | When a form asks for a lot of details, like an insurance claim, how do you fill it out? | carefully_complete = fill every field carefully and double check ; fill_what_i_know = fill what I know and guess the rest ; rush_through ; put_it_off = leave it for later and forget ; ask_someone_else = hand it to someone else to do
+C | When you are halfway through a boring but necessary task and a friend texts you to go out, what do you do? | finish_first = finish the task, then go ; quick_break_then_back ; go_and_finish_later ; go_and_drop_it = go and never come back to it ; other
+C | How do you usually handle bills and official letters that arrive? | same_day = deal with them the day they arrive ; weekly_batch = set aside a time each week ; pile_up = let them pile up until something is due ; someone_else = someone else handles them ; other
+C | When you are assigned a group project, which role do you usually end up in? | organizer = the one who sets deadlines and checks on everyone ; steady_contributor = the one who does their part on time ; last_minute_contributor ; coasting = the one who does as little as possible ; other
+C | What does your computer desktop usually look like? | clean = almost empty, everything filed in folders ; a_few_items ; cluttered_but_known = covered in files but I know where things are ; chaos = covered in files I can't sort out ; other
+C | When you notice a small mistake in something you already turned in, what do you do? | fix_and_resubmit = tell the person and send a corrected version ; mention_it ; fix_if_asked = fix it only if someone notices ; let_it_go ; other
+C | Before a job interview, how do you usually prepare? | thorough = research the company, practice answers, plan the route ; research_only ; practice_only ; look_over_quickly = glance at their website that morning ; wing_it ; other
+C | How do you usually pack for a trip you have known about for weeks? | list_days_ahead = write a list and pack days ahead ; pack_night_before ; pack_morning_of ; throw_things_in = toss in whatever I see ; other
+C | When your manager gives you a task with vague instructions, what do you do? | clarify_first = ask detailed questions before starting ; start_and_check_in ; guess_and_go = do what I think they mean ; wait = wait until they explain more ; other
+C | When you set yourself a rule, like no snacking after dinner, how long does it usually last? | holds_firm = I keep it for a long time ; lasts_weeks ; lasts_days ; breaks_first_night = I break it the first evening ; never_set_rules = I don't bother setting rules like that
+C | If you are running late for an appointment, what usually happens? | rarely_late = I am almost never late ; text_ahead = I let them know as soon as I see I'll be late ; apologize_on_arrival ; show_up_late_silently ; other
+C | When you start a new hobby that needs practice, like an instrument, what usually happens? | steady_practice = I practice on a regular schedule ; bursts = I practice in bursts when I feel like it ; fade_out = I practice a lot at first, then stop ; never_really_start = I buy the gear and barely use it ; other
+C | When someone hands you important paperwork, like a lease or warranty, where does it end up? | labeled_folder = a labeled folder or file ; one_drawer = a drawer where papers go ; photo_on_phone = I snap a photo and toss it ; random_spot = wherever I set it down ; lost = I usually can't find it later
+C | When you finish using a tool or kitchen item, what do you usually do with it? | put_back_immediately ; put_back_later = put it back later that day ; leave_it_out = leave it out until I need it again ; someone_else_puts_it_away ; other
+C | At work, when you have many small tasks, how do you decide what to do first? | prioritize = rank them by importance and deadline ; easiest_first ; whatever_is_loudest = whatever someone is asking about ; whatever_i_feel_like ; other
+C | When a coworker asks you to review their document, how thoroughly do you go through it? | line_by_line = I check every line and leave detailed notes ; main_points ; quick_read ; say_it_looks_good = I say it looks fine without really reading ; other
+C | When you have a free afternoon and a chore you have been avoiding, what usually happens? | do_the_chore = I get it done first ; do_part_of_it ; plan_to_but_dont = I plan to do it but end up relaxing ; forget_about_it ; other
+C | When you are handed a manual for a new appliance, what do you do with it? | read_fully = read it through before using the appliance ; read_the_setup_part ; keep_it_for_problems = keep it to check if something goes wrong ; toss_it ; other
+C | When you make a commitment to a club or team, how do you usually treat it? | never_miss = I show up to everything I signed up for ; miss_rarely ; show_up_when_convenient ; drop_out_quietly = I end up drifting away ; other
+C | Before sending an important email, what do you usually do? | reread_and_check = reread it and check names, dates, and attachments ; quick_glance ; send_immediately ; draft_and_forget = draft it and forget to send it ; other
+C | When you realize you forgot to do something you promised, how do you usually handle it? | fix_right_away = do it immediately and apologize ; explain_and_reschedule ; hope_they_forgot = hope they didn't notice ; make_an_excuse ; other
+C | When you get a new phone, how do you set it up? | carefully = go through every setting and organize apps into folders ; basics_only = set up the basics and leave the rest ; as_needed = change things only when they bother me ; defaults = leave it all on defaults ; other
+C | How do you handle receipts for things you might return? | keep_organized = file them where I can find them ; keep_in_wallet ; keep_somewhere = keep them but can't always find them ; throw_away ; other
+C | When your work is judged as good enough by others but you see small flaws, what do you do? | keep_polishing = keep fixing it until I'm satisfied ; fix_the_big_flaws ; leave_it = leave it since it's good enough ; didnt_notice = I usually wouldn't notice the flaws ; other
+C | When you study for a test, what does it usually look like? | spaced_over_weeks = a little each day over weeks ; few_sessions_before ; cram_night_before ; skim_morning_of ; dont_study ; other
+C | When you are asked to follow a strict procedure at work, like a safety checklist, what do you do? | follow_every_step ; follow_main_steps = follow the important steps and skip minor ones ; do_it_my_way ; ignore_unless_watched = follow it only when someone is watching ; other
+C | What does your closet usually look like? | sorted = clothes sorted by type or color ; neat_enough ; stuffed = stuffed but closeable ; clothes_everywhere = clothes are more on the floor or chair than in it ; other
+C | When a friend asks you to help them move on a weekend, what usually happens? | there_early = I show up on time and stay until the end ; show_up_late ; help_for_a_bit = help for a while then leave ; cancel_last_minute ; say_no_upfront ; other
+C | When you have an assignment you don't enjoy, how do you usually get it done? | break_it_down = split it into small steps and work through them ; force_through_in_one_go ; wait_for_pressure = wait until the deadline forces me ; ask_for_extension ; leave_it_undone ; other
+C | When you find a typo in a shared document at work that isn't yours, what do you do? | fix_it ; point_it_out ; ignore_it ; dont_notice = I usually don't notice typos ; other
+C | When your phone shows a pile of unread messages and emails, what do you usually do? | clear_them_daily = go through and answer them each day ; answer_the_important = answer important ones and ignore the rest ; let_them_pile = let hundreds build up ; mark_all_read = mark them all read without looking ; other
+C | When you rent or borrow something, like a car or a friend's apartment, how do you return it? | better_than_found = cleaner than when I got it ; same_as_found ; mostly_ok = mostly fine, a few things out of place ; messier = messier than when I got it ; other
+C | When planning a small event you are hosting, like a dinner, what do you do? | detailed_plan = a written plan with shopping list and timeline ; rough_plan ; shop_that_day ; improvise_everything ; other
+C | When you notice you are procrastinating on a work task, what do you usually do next? | start_immediately = stop and start the task right away ; set_a_timer = set a short timer to get going ; tell_myself_later ; keep_scrolling = keep doing whatever I was doing ; other
+C | How do you handle passwords for your accounts? | password_manager = a password manager with unique passwords ; written_down = a notebook or file ; a_few_reused = a few passwords reused everywhere ; reset_every_time = I reset them each time I forget ; other
+C | When your boss is away for a week, how does your work pace change? | same_pace = I work exactly as hard ; slightly_slower ; much_slower ; barely_work = I get very little done ; other
+C | When you rent an apartment, how do you treat the move-in inspection? | document_everything = photograph and note every scratch ; note_big_issues ; quick_look ; skip_it ; other
+C | When a recipe calls for measuring ingredients, what do you usually do? | measure_exactly ; measure_roughly ; eyeball_everything = eyeball everything ; ignore_recipe = I ignore recipes altogether ; other
+C | When your car or bike needs routine maintenance, when do you usually get it done? | on_schedule = right when it is due ; soon_after ; when_something_breaks ; someone_reminds_me ; other
+C | When you take notes in a meeting or class, what are they usually like? | organized = neat notes with headings I can use later ; key_points ; scattered_scribbles ; no_notes = I rarely take notes ; other
+C | When you are given a week to reply to someone, when do you reply? | same_day ; within_a_day_or_two ; right_at_the_end ; after_the_deadline ; forget_entirely ; other
+C | When you volunteer for a task at a meeting, how often does it get done? | always_done = I always do what I volunteered for ; mostly_done ; half_the_time ; rarely_done = I usually forget or let it slide ; dont_volunteer = I avoid volunteering
+C | When you are waiting on a package or refund that never arrives, what do you do? | follow_up_promptly = follow up with the company right away ; follow_up_eventually ; complain_but_do_nothing ; forget_about_it ; other
+# choice B
+C | When you buy furniture that needs assembly, how do you approach it? | follow_instructions_step_by_step ; sort_parts_first = lay out and count every part first ; glance_then_build = glance at the pictures and build ; figure_it_out = ignore the instructions entirely ; pay_someone ; other
+C | When you are asked to keep a shared kitchen at work clean, what do you usually do? | clean_up_immediately = wash my dishes right after using them ; clean_by_end_of_day ; leave_in_sink = leave dishes in the sink for later ; leave_for_others ; other
+C | When you are given a long reading list for a course you chose yourself, what usually happens? | finish_all ; finish_most ; start_strong_then_stop = start strong and stop after a few ; never_start ; other
+C | When you realize your phone storage is full, what do you do? | sort_and_delete = go through and delete carefully ; delete_the_biggest = delete a few big things ; buy_more_space ; ignore_warning = ignore the warning for weeks ; other
+C | When you get a new task at work while already busy, what do you do? | replan = rework my schedule to fit it in ; add_to_list ; start_it_right_away_and_drop_others ; forget_it_until_asked ; other
+C | When your team misses a deadline because of one missing piece, which is most often true for you? | not_mine = it is almost never my piece ; sometimes_mine ; often_mine ; dont_notice_deadlines = I rarely track team deadlines ; other
+C | When you start cleaning a room, how does it usually go? | finish_whole_room = I finish the entire room ; finish_most ; get_distracted = I get distracted by old things I find ; stop_early = I stop after a few minutes ; other
+C | When a coworker asks for help with a task at the end of the day, what do you usually do? | help_properly = help them fully even if it takes a while ; quick_help ; promise_tomorrow_and_follow_through ; promise_tomorrow_and_forget ; decline ; other
+C | When you have to wake up early for something important, how do you make sure you get up? | multiple_alarms_and_prep = set alarms and lay things out the night before ; one_alarm ; rely_on_someone = rely on someone to wake me ; hope_for_the_best ; other
+C | When you are given feedback to fix several things in your work, what do you do? | fix_every_point = fix every point and confirm ; fix_major_points ; fix_what_i_agree_with ; ignore_it ; other
+C | When your fridge has old leftovers, what usually happens? | cleared_regularly = I clear it out regularly ; cleared_when_it_smells ; someone_else_clears_it ; they_stay = they sit there until they spoil ; other
+C | When you download an app for tracking something, like spending or exercise, how long do you keep using it? | use_it_consistently = I keep using it every day ; use_it_for_weeks ; use_it_for_days ; forget_after_setup ; dont_use_trackers
+C | When you have errands to run on a day off, how do you handle them? | planned_route = plan the order and do them all ; do_most ; do_the_urgent_one ; put_them_off_to_another_day ; other
+C | When you are the last one to leave a shared space, what do you do? | check_everything = check lights, windows, and doors ; turn_off_lights ; just_leave ; other
+C | When you start keeping a journal or diary, what usually happens? | keep_it_up = I write in it regularly for a long time ; write_now_and_then ; stop_after_a_few_entries ; never_start = I buy one and never write ; not_interested
+C | When a task requires tedious data entry, how do you handle it? | careful_and_steady = work through it carefully without errors ; fast_with_some_errors ; take_many_breaks ; hand_it_off ; other
+C | When you notice a leaky tap or broken fixture at home, what do you do? | fix_or_report_same_day ; fix_within_a_week ; live_with_it = live with it for months ; wait_for_someone_else ; other
+C | When you plan to exercise on a certain day, what usually happens? | always_go ; usually_go ; often_skip ; rarely_go = I plan it and rarely go ; dont_plan_exercise
+C | When a deadline is suddenly moved earlier, how are you usually positioned? | already_done = I'm often already finished ; mostly_done ; just_started ; havent_started ; other
+C | How do you handle a job that requires handling cash or inventory counts? | double_check_everything ; check_at_the_end ; trust_my_first_count ; dislike_it_and_rush ; other
+C | When you take something apart to fix it, how do you keep track of the pieces? | labeled_trays = sort screws and parts into labeled spots ; photos_as_i_go ; one_pile ; lose_some ; dont_fix_things ; other
+C | When your plans for a productive day fall apart early, what do you do? | reset_and_restart = regroup and salvage the rest of the day ; do_one_important_thing ; write_off_the_day ; other
+C | When a friend lends you money, how do you handle paying it back? | pay_back_right_away ; pay_back_on_agreed_date ; pay_back_when_reminded ; forget_about_it ; dont_borrow = I avoid borrowing entirely
+C | When you have a dentist or doctor checkup due, what usually happens? | booked_ahead = I book it before it's due ; book_when_reminded ; put_off_for_months ; skip_it ; other
+C | When your team uses a shared task board, how up to date are your items? | always_current = I update my items as soon as anything changes ; update_weekly ; update_when_asked ; never_update ; other
+C | When you get home after a long day, what do you do with your shoes, keys, and coat? | proper_place = everything goes in its usual spot ; keys_only = I put my keys away and drop the rest ; drop_anywhere = drop everything wherever I stand ; other
+C | When you find a new job or class too demanding, what do you usually do? | work_harder = put in extra hours to meet it ; ask_for_guidance ; do_the_minimum ; quit_or_withdraw ; other
+C | When you hear an instruction once, like a coworker's login steps, what do you do? | write_it_down ; repeat_it_back ; trust_my_memory ; ask_again_later = ask them to repeat it later ; other
+C | When preparing a presentation, how many times do you usually rehearse? | many_times = I rehearse until it is smooth ; once_or_twice ; read_slides_once ; no_rehearsal ; other
+C | When you make a to-do list, how much of it usually gets done? | all_of_it ; most_of_it ; about_half ; very_little ; dont_make_lists
+C | When you are shopping for something important, like a laptop, how do you decide? | compare_specs = compare specs, reviews, and prices carefully ; read_a_few_reviews ; ask_a_friend ; buy_the_first_decent_one ; other
+C | When you are in charge of a shared expense, like splitting a group dinner bill, what do you do? | exact_split = calculate everyone's exact share and track payments ; rough_split ; pay_and_forget = pay it all and don't bother collecting ; let_someone_else ; other
+C | When your inbox has an email that needs a thoughtful reply, what happens to it? | reply_that_day ; flag_and_reply_soon ; sits_for_weeks ; never_reply ; other
+C | When you set a savings or study goal with a friend, who usually keeps it on track? | me = I keep us both on track ; both_equally ; them ; neither = we both drop it ; other
+C | When you are asked to proofread a friend's application, what do you do? | thorough_edit = check every sentence and suggest fixes ; flag_big_issues ; skim ; say_its_fine ; other
+C | When you finish a meal at home, when do the dishes get washed? | immediately ; later_that_evening ; next_day ; when_nothing_clean_is_left ; someone_else_washes ; other
+C | When you are asked to keep an event secret, like a surprise party, how do you do? | keep_it_perfectly ; nearly_slip ; slip_once ; tell_someone_close ; other
+C | When you take on a side project on top of your job, what usually happens? | finish_it ; finish_late ; stall_halfway ; abandon_early ; dont_take_side_projects ; other
+C | When your car or room gets messy over a busy week, when do you tidy it? | tidy_as_i_go = I tidy as I go so it never gets bad ; end_of_week ; when_guests_come ; almost_never ; other
+C | When a rule at work seems pointless but harmless, how do you usually act? | follow_it_anyway ; follow_it_and_question_it ; ignore_it_quietly ; ignore_it_openly ; other
+C | When you are asked to be somewhere at a set time, when do you usually arrive? | well_early ; a_few_minutes_early ; right_on_time ; a_few_minutes_late ; very_late ; other
+C | When your kitchen drawer is jammed with random things, what do you do? | sort_it_out = empty it and sort everything ; push_things_down_to_close_it ; buy_a_new_organizer_and_never_use_it ; leave_it ; other
+C | When you take on a responsibility no one else wants, how do you treat it? | fully = do it as carefully as anything else ; decently ; minimum = do the bare minimum ; avoid_taking_it ; other
+C | When a subscription you no longer use keeps charging you, what do you do? | cancel_right_away ; cancel_eventually ; keep_forgetting = keep meaning to cancel for months ; dont_notice ; other
+C | When your team is behind schedule, what do you usually do? | stay_late_to_help ; do_my_part_faster ; keep_normal_pace ; slow_down = lose motivation and slow down ; other
+C | When learning a new software at work, how do you go about it? | work_through_tutorials = go through the guide step by step ; learn_basics_and_explore ; learn_only_what_i_need ; ask_others_every_time ; other
+C | When you owe a friend a thank-you message after a favor, when does it go out? | same_day ; within_a_few_days ; weeks_later ; never_sent ; other
+C | When you notice a coworker made an error that could cause trouble later, what do you do? | flag_it_right_away ; mention_it_when_convenient ; fix_it_myself_quietly ; leave_it ; other
+C | When planning your week, which best describes your approach? | detailed_schedule = time blocks for most of the week ; key_appointments_only ; day_by_day ; no_planning ; other
+C | When you are asked to water a neighbor's plants while they are away, what usually happens? | every_scheduled_day ; most_days ; forget_a_few_times ; forget_entirely ; other
+# score
+S | When a work deadline is a week away, how does the week usually go? | I forget about it until someone asks ; I start the night before and rush ; I start a couple of days before and finish just in time ; I work on it a bit each day and finish on time ; I finish it early and use the spare time to review it
+S | How does your desk look at the end of a typical workday? | Buried in papers, cups, and wrappers ; Cluttered with things from the last few days ; A few items out but mostly clear ; Everything put away except what I need tomorrow ; Completely cleared and wiped down
+S | When you tell a friend you will call them back, what usually happens? | I forget and they have to reach out again ; I call back days later when I remember ; I call back the next day ; I call back within the hour ; I call back exactly when I said I would
+S | When you proofread something important before sending it, how careful are you? | I don't reread it at all ; I glance over the first few lines ; I read it once quickly ; I read it slowly once and fix mistakes ; I read it several times and sometimes aloud
+S | How do you handle a stack of mail that arrives while you are on vacation? | It sits unopened for weeks ; I open only what looks urgent ; I go through most of it within a few days ; I sort all of it the day I get home ; I arrange for someone to handle it while I am away
+S | When you are handed a checklist for a job, how closely do you follow it? | I ignore it and do things my own way ; I look at it once and mostly rely on memory ; I follow the main items and skip some small ones ; I follow every item in order ; I follow every item and tick each one off as I go
+S | When you finish a project, how do you leave your files and materials? | Scattered across folders and devices ; Mostly in one place with some strays ; Saved together in one folder ; Saved in one folder with clear names ; Named, organized, backed up, and with notes for next time
+S | When you commit to a new routine, like stretching every morning, what usually happens? | I never actually start ; I do it once or twice and stop ; I keep it up for about a week ; I keep it up for a few months ; It becomes a lasting part of my life
+S | How do you prepare for a trip abroad in terms of documents? | I realize I need something at the airport ; I check my passport the day before ; I check documents a week before ; I check everything weeks ahead and make copies ; I keep a standing checklist and renew documents well before they expire
+S | When you have a long boring reading for work, how do you get through it? | I don't read it and hope no one asks ; I skim the headings ; I read parts of it ; I read it all in one sitting ; I read it all and take notes on key points
+S | When a friend asks you to remember an important date for them, what happens? | I forget it completely ; I remember only after the date has passed ; I remember on the day if something reminds me ; I set a reminder and remember on the day ; I set a reminder and remind them a few days ahead
+S | How do you handle small tasks that take under a few minutes, like replying to a quick email? | They pile up for weeks ; I get to them when I'm bored ; I do them at the end of the day ; I do most of them right away ; I do every one of them the moment it comes up
+S | When you cook a meal, what does the kitchen look like when you sit down to eat? | Every surface covered in dirty dishes and spills ; A big mess I'll deal with tomorrow ; A few pots and pans left out ; Mostly clean, just the last pan left ; Spotless because I cleaned as I cooked
+S | When you make a mistake at work that no one noticed, what do you do? | I leave it and move on ; I fix it only if it causes trouble ; I fix it quietly when I have time ; I fix it right away ; I fix it and tell the people affected
+S | When you have to assemble a report from several sources, how do you check your facts? | I don't check them ; I trust what looks right ; I check the facts I'm unsure about ; I check every fact against its source ; I check every fact and have someone else review it
+S | How do you treat library books or borrowed items that have due dates? | I usually return them late and pay fines ; I return them late now and then ; I return them on the due date ; I return them a few days early ; I return them the day I finish, with the due date noted on my calendar
+S | How reliably do you show up to things you RSVP'd yes to? | I often don't show up ; I show up about half the time ; I show up unless something better comes along ; I show up unless I'm sick ; I always show up, even when it's inconvenient
+S | When learning a new skill for work, how do you practice? | I don't practice until I have to use it ; I try it once and hope it sticks ; I practice when I have free time ; I practice on a set schedule ; I practice daily and track my progress
+S | When you need to buy something for a project, how do you plan it? | I buy things as I realize I need them, often multiple trips ; I make a rough mental list ; I write a list before going ; I write a list and check what I already have ; I make a detailed list with quantities and backups
+S | When you have unfinished tasks at the end of a workday, what do you do? | I leave and don't think about them ; I leave them for tomorrow without a plan ; I note the main one to do first tomorrow ; I write a list of everything left for tomorrow ; I stay until the important ones are done and plan the rest
+S | How do you look after things you own, like clothes and electronics? | Things get broken or lost quickly ; I use them hard and replace them often ; I take normal care of them ; I clean and store them properly ; I maintain everything and it lasts for years
+S | When your manager asks for an update on your work, how ready are you? | I have no idea where things stand ; I need a while to figure out where things stand ; I can give a rough answer ; I can give a clear answer right away ; I already sent an update before they asked
+S | When you are working and a notification pops up, what usually happens? | I check it and lose the next hour ; I check it and take a while to get back ; I check it and get right back to work ; I glance at it and ignore it until a break ; My notifications are off while I work
+S | When you promise yourself you will go to bed early, what happens? | I stay up later than usual anyway ; I stay up until my normal time ; I get to bed a little earlier ; I get to bed at the time I set ; I get to bed on time and keep doing it for weeks
+S | How do you deal with a task you've been asked to do that you find pointless? | I don't do it ; I do it badly on purpose ; I do the bare minimum ; I do it properly anyway ; I do it well and suggest a better way for next time
+S | How do you keep your digital files named? | Default names like untitled and copy of copy ; Some names, mostly defaults ; Mostly clear names ; Clear names in sorted folders ; A consistent naming system I always follow
+S | When you start a new book, how does it usually end? | I rarely get past the first chapter ; I get halfway and drop it ; I finish it if it stays interesting ; I finish most books I start ; I finish every book I start, even ones I dislike
+S | How do you handle a warranty card or registration for a new appliance? | I throw it away ; I keep it but lose it ; I keep it somewhere safe ; I register the product right away ; I register it and file the receipt with it
+S | How much do you plan a weekend in which you have several chores? | I do none of them and rest ; I do whichever I feel like ; I do the most urgent one ; I get most of them done in some order ; I plan the order and finish all of them
+S | When you're asked to lead a small project, how do you track progress? | I don't track it ; I check in only when problems arise ; I ask people how things are going now and then ; I hold regular check-ins ; I keep a written plan with owners and dates and update it weekly
+S | How do you treat a recurring bill that's due each month? | I often pay it late ; I pay it when I get a reminder ; I pay it on the due date ; I pay it as soon as it arrives ; It's set to pay automatically and I review it
+S | When you are cooking from a new recipe, how closely do you follow it? | I ignore it after reading the title ; I use it only for the list of ingredients ; I follow most steps loosely ; I follow each step as written ; I gather and measure everything before starting and follow it exactly
+S | How do you spend the first part of your workday? | Scrolling and chatting until I feel like working ; Answering whatever comes in ; Getting to the task that seems most interesting ; Starting on the most important task ; Following a plan I made the day before
+S | How do you handle forms you need to sign and return, like school permission slips? | They get lost ; I return them late ; I return them on the last day ; I return them the next day ; I sign and return them the same day
+S | How well do you keep a shared calendar with a partner or roommate updated? | I never add anything ; I add things only when reminded ; I add the big events ; I add most plans soon after making them ; I add every plan the moment it is made
+S | When a friend asks you for a favor that takes time, how do you follow through? | I agree and then forget ; I do it only after several reminders ; I do it eventually ; I do it when I said I would ; I do it early and check if they need anything else
+S | How do you handle cleaning a shared bathroom with roommates? | I never clean it ; I clean it when it gets really bad ; I clean it when it's my turn if I remember ; I clean it every time it's my turn ; I clean it on schedule and restock supplies too
+S | How do you usually keep track of your spending? | I don't keep track at all ; I check my balance when a card gets declined ; I check my account now and then ; I review my spending each week ; I log every purchase and compare it to a budget
+S | When you get an instruction manual for something complicated, what do you do? | I lose the manual ; I only open it when I'm stuck ; I read the quick start page ; I read the setup section fully ; I read it cover to cover before using the thing
+S | When a coworker is out sick and you're covering their work, how do you handle it? | I let it wait until they return ; I handle only emergencies ; I handle the urgent tasks ; I handle all their tasks as best I can ; I handle all their tasks and leave them a detailed summary
+S | How do you prepare for a meeting you are attending, not leading? | I show up without knowing the topic ; I check the topic on the way in ; I skim the agenda beforehand ; I read the materials beforehand ; I read the materials and prepare questions
+S | How often do you lose things like keys, glasses, or your wallet? | Several times a day ; Most days ; Every week or so ; Rarely, a few times a year ; Almost never, because everything has its place
+S | How do you handle a job application that asks for many documents? | I give up on it ; I send what I have and skip the rest ; I gather everything in a rush near the deadline ; I gather everything a few days ahead ; I prepare everything early and check it against the requirements list
+S | When you finish work on a shared file, what state do you leave it in? | Broken or half-done without a note ; Half-done with a vague note ; Done but with loose ends ; Done and tidy ; Done, tidy, and with notes so others can pick it up
+S | When you are writing an essay or report, how do you plan it? | I just start typing and see where it goes ; I have a rough idea in my head ; I jot down a few points ; I write a clear outline first ; I write an outline, draft, and then revise several times
+S | When you have free time and an overdue chore, what usually happens? | I don't even think about the chore ; I think about it but relax anyway ; I do part of it ; I do it before relaxing ; I do it and knock out another chore too
+S | How do you keep your car, if you have one, or your bike? | Full of trash and overdue for repairs ; Messy with some problems I ignore ; Messy but running fine ; Clean enough and serviced when needed ; Clean inside and serviced on schedule
+S | When you are asked to count or measure something, how careful are you? | I estimate without counting ; I count quickly once ; I count once carefully ; I count twice to be sure ; I count twice and have someone else confirm
+S | When you plan to save a little money each month, what happens? | I never manage to save any ; I save for a month and stop ; I save some months and skip others ; I save most months ; I set it up automatically and never miss
+S | How do you respond to a message asking you to confirm an appointment? | I never respond ; I respond after they call me ; I respond on the day ; I respond within a day ; I respond right away and add it to my calendar
+S | When you volunteer to bring something to a potluck, what happens? | I forget and show up empty-handed ; I grab something from a store on the way ; I bring what I said, but late ; I bring what I said, on time ; I bring what I said, plus serving utensils and labels
+S | How carefully do you read a contract before signing it, like a phone plan or lease? | I sign without reading ; I read the price and sign ; I skim the main terms ; I read the whole thing ; I read the whole thing and ask about anything unclear
+S | How do you handle the dishes after a party you host? | They stay dirty for days ; I clean up the next afternoon ; I clean up the next morning ; I clean up that night ; I clean up throughout the party so little is left
+S | When you are learning for a certificate or license, how do you prepare? | I take the test without studying ; I skim the material the night before ; I study for a few days before ; I study for weeks with a plan ; I study for weeks and take practice tests until I pass them all
+S | How do you handle your laundry during a busy week? | I run out of clean clothes and rewear things ; I do laundry when I'm out of clothes ; I do laundry but leave it unfolded ; I wash and fold it when the basket is full ; I wash, fold, and put it away on a set day
+S | When you misplace a document you need, how quickly can you find it? | I usually never find it ; I find it after tearing the place apart ; I find it after checking a few places ; I find it quickly ; I know exactly where it is every time
+S | When your team agrees on a plan in a meeting, what do you do afterward? | I forget what we decided ; I remember only my part vaguely ; I remember my part ; I write down my part and do it ; I send everyone a written summary with next steps
+S | When you notice your to-do list getting long, what do you do? | I stop looking at it ; I add more to it and hope ; I do the easy items ; I sort it by priority and start on the top ; I sort it, schedule each item, and clear it within days
+S | When you must fill in a timesheet or log at work, how do you keep it? | I often forget to fill it in ; I fill it in from memory weeks later ; I fill it in at the end of the week ; I fill it in at the end of each day ; I fill it in as I go
+S | When a friend gives you a gift, how do you handle thanking them? | I never thank them ; I thank them only if they ask if I liked it ; I thank them when I next see them ; I send a thank-you message soon after ; I send a thoughtful thank-you note the same day
+# noul
+N | Do you usually finish work tasks before their deadline?
+N | Do you double-check a door is locked after leaving?
+N | Do you keep a written list of the things you need to get done?
+N | Do you return borrowed things without being reminded?
+N | Do you reread emails before sending them?
+N | Do you keep promises even when keeping them becomes inconvenient?
+N | Do you put things back in the same place every time you use them?
+N | Do you read the full instructions before starting a new task?
+N | Do you prepare your things for the next day the night before?
+N | Do you usually finish what you start, even when it gets dull?
+N | Do you tend to show up early to appointments?
+N | Do you keep your work files sorted into clear folders?
+N | Do you answer important messages the same day you get them?
+N | Do you follow workplace rules even when no one is checking?
+N | Do you plan out big assignments in steps before you begin?
+N | Do you check your work for errors even when you're short on time?
+N | Do you get boring paperwork done as soon as it arrives?
+N | Do you keep working on a task until it's done properly rather than just done?
+N | Do you tidy your workspace before you leave it?
+N | Do you stick to a study or work plan once you've made it?
+N | Do you write down tasks coworkers hand you so none slip through?
+N | Do you think carefully through the details before committing to a plan?
+N | Do people at work count on you to catch mistakes others miss?
+N | Do you finish household projects you start, like painting a room?
+N | Do you keep track of when things like passports and licenses expire?
+N | Do you resist checking your phone when you are supposed to be working?
+N | Do you do what you said you'd do even for small favors?
+N | Do you prepare notes before an important phone call?
+N | Do you clean up right after cooking rather than later?
+N | Do you get your tasks done without needing someone to remind you?
+N | Do you pack for trips well before the day you leave?
+N | Do you keep your belongings in good condition so they last?
+N | Do you keep commitments you made only to yourself?
+N | Do you get the hard part of a project done first?
+N | Do you stay focused on a task for long stretches without drifting off?
+N | Do you follow through on plans you make with friends?
+N | Do you often take the lead in organizing a team's to-do list?
+N | Do you write things on your calendar as soon as you agree to them?
+N | Do you practice a skill regularly once you decide to learn it?
+N | Do you correct small errors in your work even if nobody would notice?

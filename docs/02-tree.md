@@ -109,7 +109,11 @@ nodes, and uneven depth.
 1. **Backbone = Vital Articles** (L1 10 → L5 50k), a curated list whose sections already
    match the World L1s. It's fetched via the MediaWiki API
    (`list=categorymembers`, `Category:Wikipedia level-N vital articles`, then strip `Talk:`).
-   Each Vital Article is placed under an L2 by Jev and spot-checked.
+   Each Vital Article is placed under an L2 and spot-checked. **Implemented (Phase 6):** the ~1,000 Level-3
+   articles are topic nodes (`source = vital`, not locked) under their World L2, mapped through each article's
+   Vital section (`scripts/vital_l3_nodes.py`, reusing `sources/vital4`'s section map; politicians and political
+   ideology excluded). Level-4 articles are entity questions (`sources/vital4`), which sit in their L3 topic node
+   when one exists and at the L2 otherwise.
 2. **Depth only where needed** (e.g. Sports → Basketball → NBA): crawl the category graph
    from the relevant category to depth 3-4 using the **dumps** (`categorylinks.sql.gz`), then:
    - drop hidden/maintenance categories and names matching `/ by | births| deaths|stubs|lists of/`

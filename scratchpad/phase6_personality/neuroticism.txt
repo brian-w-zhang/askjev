@@ -1,0 +1,210 @@
+@node self.personality.big_five.neuroticism
+# choice: worry and anxiety
+C | When a friend takes longer than usual to answer a message, what usually goes through your mind? | nothing = I don't notice ; busy = they must be busy ; mild_wonder = I wonder briefly if something is off ; did_i_upset = I wonder if I upset them ; replay = I reread what I sent looking for mistakes
+C | On a typical night before an ordinary workday, what does your mind usually do as you try to fall asleep? | drift_off = I fall asleep without thinking much ; plan_tomorrow = I calmly run through tomorrow ; replay_day = I replay things from the day ; worry_loop = I worry about things that might go wrong ; other
+C | When your boss or teacher says "can we talk later?" without saying why, what do you usually assume? | nothing_special = it's something routine ; good_news = maybe something good ; unsure = I genuinely don't know and let it go ; trouble = I assume I did something wrong ; other
+C | When you leave the house for a long trip, what do you usually do about the stove and locks? | never_think = I don't think about it ; check_once = I check once on the way out ; recheck = I check a few times before leaving ; turn_back = I sometimes turn back to check again
+C | When you hear an unusual noise from your car or bike, what is your typical first thought? | ignore = probably nothing ; note_it = I make a note to check it sometime ; expensive = something expensive is breaking ; danger = something dangerous could happen any moment
+C | When you notice a small ache in your body that you've never had before, what do you usually do? | ignore = I ignore it ; wait = I wait to see if it goes away ; look_up = I look it up to be sure ; fear_worst = I start imagining serious causes
+C | Which kind of worry fills most of your quiet moments in a normal week? | none = I don't really worry in quiet moments ; money ; health ; work_or_school ; relationships ; small_mistakes = small things I said or did ; other
+C | When things are going unusually well in your life, how do you tend to feel? | relaxed = I just enjoy it ; grateful ; cautious = I stay a little on guard ; waiting = I wait for something bad to happen
+C | When you have to make a phone call to a stranger, like booking an appointment, what do you usually do beforehand? | just_call = I just call ; quick_think = I think briefly about what to say ; script = I rehearse what I'll say ; delay = I put it off as long as I can
+C | When you get an email with the subject line "quick question" from someone above you, how do you usually react? | open_calmly = I open it calmly ; curious ; slight_tension = I feel a small jolt before opening ; dread = I dread opening it
+C | In general, how do you feel on Sunday evenings before a new week? | fine = the same as any other evening ; looking_forward ; mild_unease = a little uneasy ; heavy_dread = a heavy sense of dread
+C | When you're running a few minutes late to meet someone, what usually happens in your head? | calm = I send a message and relax ; mild = I feel a bit rushed ; picture_anger = I picture them getting annoyed ; panic = my heart races the whole way
+C | When you think about the next few years of your life, what feeling usually comes up first? | excitement ; calm ; uncertainty ; worry ; rarely_think = I rarely think about it
+# anger and irritability
+C | When a neighbor plays music a little too loud in the evening, what do you usually do? | dont_mind = I don't mind ; close_window = close the window and forget it ; seethe = seethe quietly all evening ; bang_on_wall = bang on the wall or go complain angrily
+C | When your phone or computer freezes in the middle of something, how do you usually react? | wait_patiently = I wait patiently ; sigh = I sigh and restart ; mutter = I mutter or curse at it ; slam = I bang the keys or slam something
+C | When traffic suddenly slows to a crawl, what do you typically feel? | nothing = nothing much ; bored ; annoyed = irritated but it passes ; furious = genuinely angry
+C | How does a small annoyance in the morning, like spilled coffee, usually affect the rest of your day? | gone = forgotten in minutes ; lingers_briefly = it bugs me for an hour or so ; colors_day = it puts me in a bad mood for the day ; snowball = everything after feels like it goes wrong
+C | When someone interrupts you mid-sentence in a conversation, what do you usually do? | stop_and_listen = stop and let them talk ; finish_later = wait and finish later ; keep_talking = talk over them ; visibly_annoyed = show I'm irritated
+C | When people around you chew loudly or tap repeatedly, how do you usually respond? | dont_notice = I don't notice ; notice_fine = I notice but it's fine ; move_away = I quietly move or put on headphones ; lose_it = I get very irritated and say something
+C | When you realize you've been overcharged by a small amount at a shop, what do you typically do? | ignore = let it go ; mention = mention it politely ; firm = insist firmly on a refund ; angry = get angry at the staff
+C | In a typical week, which is most likely to make you lose your temper? | nothing = I rarely lose my temper ; people_being_slow ; things_breaking ; being_ignored ; unfairness ; being_tired_or_hungry ; other
+# low mood
+C | When you wake up on an ordinary weekday, what mood are you usually in? | upbeat ; neutral ; groggy_but_fine = groggy but fine ; low = low or heavy ; varies_wildly = it swings a lot from day to day
+C | When a rainy grey week drags on, how does it usually affect you? | no_effect = not at all ; cozy = I like it ; bit_flat = I feel a bit flat ; gloomy = it drags my mood down a lot
+C | After a fun weekend ends, what do you tend to feel on Sunday night? | satisfied ; neutral ; a_bit_sad = a bit sad it's over ; empty = empty or down
+C | When you look through old photos, what feeling usually comes up? | warmth ; amusement ; nostalgia = bittersweet nostalgia ; sadness = mostly sadness about what's gone
+C | When a small plan falls through, like a cancelled movie night, how do you usually feel? | relieved ; fine = fine, I find something else ; disappointed = disappointed for the evening ; crushed = it ruins my mood for a while
+C | When you finish a big project, how do you usually feel in the days after? | proud ; relaxed ; restless ; flat = strangely flat or down
+C | On an average day, how would you describe your background mood? | cheerful ; content ; neutral ; slightly_down = slightly down ; unsettled = tense or uneasy
+# self-consciousness
+C | When you walk into a room where people are already seated, what do you usually feel? | nothing = nothing special ; curious = curious who's there ; watched = like everyone is looking at me ; want_to_hide = like I want to disappear
+C | When you trip slightly in public, what do you usually do next? | laugh = laugh it off ; keep_going = keep walking normally ; check_who_saw = look around to see who saw ; replay_later = replay it in my head later that day
+C | When you have to eat alone in a busy restaurant, how do you tend to feel? | enjoy_it = I enjoy it ; fine ; slightly_awkward = slightly awkward ; very_exposed = very exposed, so I avoid it
+C | When you notice a stain on your shirt halfway through the day, what do you usually do? | ignore = forget about it ; cover_casually = cover it casually ; think_about_it = keep thinking about who noticed ; go_change = go home or buy a new shirt
+C | When you're asked to introduce yourself to a group, what usually happens? | easy = I do it easily ; brief_nerves = brief nerves then fine ; blank = my mind goes blank ; blush = I blush or my voice shakes
+C | After a conversation with someone new, what do you usually do? | move_on = move on ; recall_fondly = remember the good parts ; review = review what I said ; cringe = cringe at things I said
+C | When you get a group photo back, what do you usually look at first? | everyone = the whole picture ; the_moment = the moment itself ; my_face = how I look ; my_flaws = whatever looks wrong about me
+C | When a stranger laughs near you, what is your usual first thought? | nothing ; they_heard_a_joke = they heard something funny ; wonder = I wonder briefly ; about_me = they might be laughing at me
+C | When someone compliments your outfit, how do you usually take it? | thank_them = thank them happily ; shrug = shrug it off ; doubt = doubt they meant it ; uncomfortable = feel awkward being noticed
+# impulsiveness with cravings
+C | When you're stressed and there are sweets in the kitchen, what usually happens? | ignore = I leave them alone ; one_piece = I have a piece ; several = I have more than I meant to ; finish = I finish the whole thing
+C | When an online ad shows you something you want late at night, what do you tend to do? | close_it = close it ; save_it = save it for later ; think_overnight = sleep on it ; buy_now = buy it right away
+C | When you promise yourself "just one more episode", what usually happens? | stop = I stop after one ; two = I watch one or two more ; many = I keep going for hours ; all_night = I end up watching until very late
+C | When you're bored in the evening, what do you most often reach for? | a_task = a useful task ; a_book_or_hobby ; snacks ; phone = my phone ; shopping_apps = shopping apps ; other
+C | When you've decided to cut back on something like sugar or coffee, how long does it usually last? | sticks = it sticks ; weeks = a few weeks ; days = a few days ; hours = I cave almost immediately
+C | When you feel a strong urge you've promised yourself to resist, what usually happens? | resist_easily = I resist easily ; resist_with_effort = I resist with effort ; bargain = I bargain with myself and give in partly ; give_in = I give in and feel bad later
+# vulnerability to stress
+C | When several small problems hit you on the same day, how do you usually hold up? | steady = I stay steady ; handle_one_by_one = I handle them one by one ; frazzled = I get frazzled ; overwhelmed = I feel overwhelmed and freeze
+C | When a busy stretch at work or school lasts several weeks, what usually happens to you? | thrive ; cope_fine = I cope fine ; worn_down = I get worn down ; fall_apart = I start falling apart
+C | When something unexpected goes wrong right before an important event, how do you usually react? | adapt = I adapt calmly ; brief_panic = brief panic, then fix it ; rattled = I stay rattled through the event ; spiral = I spiral and can't focus
+C | When you have too many things on your to-do list, what usually happens? | prioritize = I calmly prioritize ; push_through ; paralysis = I get stuck and do none of them ; tears = I get close to tears
+C | Which best describes how you handle a week with too little sleep? | barely_affected = barely affected ; tired_but_ok = tired but okay ; short_fuse = short-tempered ; fragile = emotionally fragile
+C | When you are hungry and it's past mealtime, what are you usually like? | same_as_ever = the same as always ; quiet ; cranky ; hard_to_be_around = hard to be around
+C | When several people ask you for things at once, how do you usually feel? | energized ; fine ; flustered ; trapped = cornered and tense
+# choice batch two
+C | When you've sent an important email, what do you usually do in the minutes after? | forget_it = forget about it ; check_for_reply = check for a reply now and then ; reread = reread it looking for errors ; regret = wish I'd written it differently
+C | When you're waiting for results of any kind, like a test grade or a job answer, how do you usually spend the wait? | normal_life = living normally ; occasional_thoughts = thinking about it now and then ; constant_checking = checking constantly ; imagining_bad = imagining the bad outcome
+C | When your plans for the day depend on the weather, what do you usually do the night before? | nothing ; check_once = check the forecast once ; check_repeatedly = check the forecast repeatedly ; plan_b = prepare several backup plans
+C | When a coworker or classmate seems cold toward you one morning, what do you usually conclude? | bad_day = they're having a bad day ; nothing = I don't notice ; wonder = I wonder what's up ; my_fault = I did something to upset them
+C | When you have a small disagreement with a friend, how long does it usually stay on your mind? | minutes ; an_evening = an evening ; days ; weeks
+C | When you find a mistake in work you already turned in, what do you usually feel? | shrug = it's fine ; mild_annoyance = mild annoyance ; embarrassment ; dread = dread about what will happen
+C | When a stranger on the street asks you for directions, how do you usually feel? | happy_to_help = happy to help ; neutral ; slightly_nervous = slightly nervous I'll get it wrong ; flustered
+C | When you take an online quiz or test with a timer, how do you usually feel? | enjoy_pressure = I enjoy the pressure ; calm ; tense ; panicky
+C | When you hear a siren near your home, what is your usual first reaction? | ignore ; curious ; think_of_family = think of my family ; alarm = feel real alarm
+C | When the doorbell rings unexpectedly, what usually goes through your mind? | answer = I just answer it ; curious = curious who it is ; tense = I tense up ; hide = I wait quietly until they leave
+C | When someone gives you a gift, what do you tend to worry about? | nothing ; my_reaction = whether my reaction looks right ; returning_the_favor = whether I'll give something as good ; everything = all of the above and more
+C | When you're in a crowded train or bus, how do you usually feel? | relaxed ; people_watching = interested in people ; cramped = cramped but fine ; on_edge = on edge the whole ride
+C | When you read the news on an ordinary morning, how does it usually leave you? | informed ; unaffected ; unsettled ; anxious_for_hours = anxious for hours
+C | When you're getting ready for an event, how often do you change your outfit? | never = I wear the first thing ; once ; several_times = several times ; many_times_and_late = so many times I end up late
+C | When your friends make plans in a group chat without tagging you, what do you usually think? | they_forgot = they just forgot ; ask = I ask to join ; hurt = I feel a bit hurt ; excluded = I feel sure they don't want me there
+C | When you say goodbye to someone and they don't wave back, what do you usually think? | didnt_see = they didn't see ; nothing ; slightly_off = something's slightly off ; they_dislike_me = they don't like me
+C | When you remember an awkward thing you said years ago, how do you usually react? | laugh = laugh at it ; shrug ; wince = wince briefly ; physical_cringe = cringe hard, even out loud
+C | When you're asked a question in a meeting that you're not sure how to answer, what usually happens? | honest = I say I'll find out ; bluff_calmly = I give a calm best guess ; ramble = I ramble nervously ; freeze
+C | When you are the one hosting friends at home, how do you usually feel before they arrive? | excited ; relaxed ; busy_but_fine = busy but fine ; stressed = stressed about everything being right
+C | When you must wait in a doctor's or dentist's waiting room, how do you usually feel? | bored ; relaxed ; mild_nerves = mild nerves ; dread
+C | When you check your bank balance, what feeling usually comes first? | nothing ; curiosity ; tension ; avoidance = I avoid checking it
+C | When your partner or a close friend is quiet during dinner, what do you usually assume? | tired = they're tired ; thinking = they're lost in thought ; ask = I ask if they're okay ; upset_with_me = they're upset with me
+C | When you receive a small piece of critical feedback at work, how does the rest of your day usually go? | normal = normal ; think_it_over = I think it over and move on ; distracted = distracted by it ; ruined = it ruins the day
+C | When you get annoyed at someone close to you, how long does it usually last? | moments ; an_hour ; the_whole_day = the whole day ; days
+C | When a store clerk is rude to you, how do you usually feel afterward? | unaffected ; mildly_annoyed = mildly annoyed ; replaying = I replay what I should have said ; angry_all_day = angry for the rest of the day
+C | When someone near you is complaining loudly on the phone, what do you usually do? | tune_out = tune it out ; move ; glare ; confront = say something
+C | When your team loses a game you're playing for fun, how do you usually react? | laugh_it_off = laugh it off ; mild_disappointment = mild disappointment ; grumpy = grumpy for a while ; blow_up = get really angry
+C | When a delivery arrives damaged, what do you usually do? | calmly_report = calmly report it ; sigh = sigh and report it ; vent = vent to someone first ; angry_call = make an angry call
+C | When you wake up in the middle of the night, what usually keeps you awake? | nothing = I fall back asleep ; noise ; to_do_list = thinking of tasks ; worries = worries that grow in the dark
+C | When you've had a bad day, what do you most often feel like doing? | shake_it_off = shake it off ; talk ; be_alone = be alone ; binge = eat or shop more than I should ; cry
+C | When you look in the mirror before leaving the house, how long do you usually spend checking yourself? | barely = barely a glance ; quick_check = a quick check ; long_look = a long look ; recheck = I recheck several times and feel unsure
+C | When you're in a group and everyone laughs at a joke you didn't get, what do you do? | ask = ask what's funny ; laugh_along = laugh along ; feel_left_out = feel left out ; feel_stupid = feel stupid
+C | When someone you just met asks what you do, how do you usually feel answering? | proud ; neutral ; self_conscious = a bit self-conscious ; ashamed = ashamed of my answer
+C | When you're served the wrong dish at a restaurant, what do you usually do? | eat_it ; politely_mention = politely mention it ; embarrassed = mention it but feel embarrassed ; irritated = complain with visible irritation
+C | When you're tired and someone asks you for a favor, how do you usually respond? | happy_yes = a happy yes ; yes_anyway = yes anyway ; snappy_no = a snappy no ; resentful_yes = a resentful yes
+C | When a loud noise startles you, what usually happens afterward? | laugh = I laugh ; recover_quickly = I recover in seconds ; shaken = I stay shaken for a while ; jumpy = I stay jumpy for a long time
+C | When you see an ad for something you can't afford, how do you usually feel? | nothing ; want_it = I want it but move on ; envious = envious of people who have it ; low = down about my situation
+C | When you make a small mistake in front of others, like mispronouncing a word, what do you usually do? | laugh = laugh it off ; correct = correct myself ; blush ; dwell = dwell on it for hours
+C | When your routine is disrupted for a day, how do you tend to feel? | enjoy_it = I enjoy the change ; fine ; unsettled ; thrown_off = thrown off for days
+C | When friends go quiet in a chat after you post something, what do you usually do? | nothing ; wait = wait ; delete = consider deleting it ; overthink = overthink what I wrote
+C | When you think about a conversation that went badly, how often does it come back to you? | rarely ; once_or_twice = once or twice ; for_days = for days ; for_years = for years
+C | When you're rushing to catch a train or bus, what state are you usually in? | calm ; alert ; stressed ; frantic
+C | When you're out of your favorite snack or treat at home, what do you usually do? | nothing ; buy_next_time = buy it next time ; go_out_now = go out and buy it now ; substitute = eat something else unhealthy instead
+C | When you get a sudden craving while trying to eat healthily, what usually wins? | health = the plan ; compromise = a small compromise ; craving = the craving ; craving_then_guilt = the craving, then guilt
+C | When a fun purchase goes on sale for one day only, what do you usually do? | skip ; think_it_over = think it over ; buy_quickly = buy quickly ; buy_more = buy more than I planned
+C | When someone asks "are you okay?" on an ordinary day, what is usually true? | fine = I'm fine ; tired = I'm just tired ; stressed = I'm stressed underneath ; not_ok = I'm not okay but say I am
+C | When you have a free afternoon with nothing planned, how do you usually feel? | happy ; restless ; guilty = guilty for not being productive ; uneasy = uneasy with too much time to think
+C | When you think about getting older, what feeling comes up most? | curiosity ; calm ; nostalgia ; worry ; dread
+C | When your phone battery is low and you're away from home, how do you usually feel? | unbothered ; mildly_aware = mildly aware ; anxious ; panicked
+C | When someone you care about is traveling, how much do you worry until they arrive? | not_at_all = I don't think about it ; a_little = a little ; until_they_text = until they text me ; constantly = constantly, imagining accidents
+C | When people praise you in front of others, what do you usually feel? | pleased ; neutral ; embarrassed ; want_to_hide = like hiding
+# scores
+S | In a typical week, how much of your time goes to worrying about things that might happen? | Worries hardly ever cross my mind ; A worry pops up and fades within minutes ; I spend part of most evenings turning a worry over ; Worries follow me through most of the day ; I can barely get through an hour without a worry taking over
+S | When you're waiting for an important answer, how does it usually affect your sleep? | I sleep as usual ; I take a little longer to fall asleep ; I wake up once or twice thinking about it ; I lie awake for hours ; I barely sleep until I hear back
+S | When a friend cancels plans at short notice, how do you usually take it? | I'm happy to have a free evening ; I shrug and find something else to do ; I feel let down for the evening ; I wonder whether they are avoiding me ; I stay hurt about it for days
+S | How often do small things, like a slow internet connection, get under your skin in an ordinary week? | Things like that don't bother me ; I notice it and move on ; I grumble about it out loud ; I get properly angry and it spoils my mood ; I end up shouting or slamming things
+S | When a plan you were excited about falls through, how long does your low mood usually last? | I bounce back within minutes ; It lasts for the rest of the evening ; It carries into the next day ; It hangs over me for a week ; It drags me down for weeks
+S | How do you usually feel when walking into a party where you know only the host? | I feel perfectly at ease ; I feel a small flutter that quickly fades ; I feel awkward until I find someone to talk to ; I feel watched and stay near the wall ; I feel so exposed that I leave early
+S | When you notice someone looking at you on the street, what usually goes through your head? | I don't even notice ; I assume they're just looking around ; I quickly check whether something is wrong with me ; I spend the next few minutes wondering what they saw ; I feel shaken and replay it for hours
+S | When you get a stressful surprise, like an unexpected bill, how quickly do you settle? | I deal with it and forget it the same minute ; I feel tense for an hour or so ; It bothers me for the rest of the day ; It keeps me on edge for several days ; It knocks me off balance for weeks
+S | When someone disagrees with you sharply in a conversation, how do you usually feel inside? | Calm and curious about their view ; A little tense but steady ; Hot-faced and defensive ; Angry enough that I struggle to listen ; Furious enough that I have to walk away
+S | In a normal month, how much do your moods swing from one day to the next? | My mood stays about the same every day ; It shifts a little with how things go ; I have clear good days and bad days ; My mood can flip within a single afternoon ; I feel like I ride a rollercoaster most weeks
+S | How do you usually feel when you have to speak up in a meeting or class? | Completely comfortable ; A quick flutter before I start ; My heart pounds but I get through it ; My voice shakes and I rush to finish ; I avoid speaking up at all costs
+S | When you remember an embarrassing moment from your past, how does it usually hit you? | It makes me laugh ; I barely remember such moments ; I wince for a second ; My face gets hot as if it's happening again ; I feel sick with embarrassment all over again
+S | When there's a treat you're trying to avoid in the house, what usually happens over the evening? | I forget it's there ; I think about it once and move on ; I go back and forth before having a small piece ; I keep returning until I've eaten a lot ; I finish it and then go looking for more
+S | When your schedule gets packed for a week, how do you usually hold up? | I enjoy being busy ; I stay calm and work through it ; I get tense and short with people ; I feel frantic most days ; I feel like I'm falling apart
+S | When you think about the future in general, what is your usual tone? | Hopeful and relaxed ; Mostly calm with small doubts ; Mixed, with regular worries ; Mostly worried about what could go wrong ; Filled with dread
+S | How do you usually feel when someone asks to see your work in progress? | Happy to show it ; Fine, though I point out it's unfinished ; Nervous they'll judge it ; Anxious enough that I delay showing it ; I refuse until it's perfect
+S | When you're kept waiting by someone who is late, how does your mood change? | I don't mind at all ; I get a little impatient ; I'm clearly irritated when they arrive ; I'm angry and let them know ; I'm fuming and it ruins the meeting
+S | How often do you feel sad for no clear reason in a typical month? | I can't remember the last time ; It happens on the odd grey day ; It comes over me every week or so ; It happens most days ; It feels like my normal state
+S | How do you usually react when you realize you've forgotten someone's name mid-conversation? | I just ask again ; I work around it without fuss ; I feel a hot flush of embarrassment ; I spend the whole talk panicking about it ; I avoid that person afterward
+S | When you're tired at the end of the day, how easily do small things upset you? | No more than usual ; A little more easily than normal ; Small things irritate me noticeably ; I snap at people over nothing ; I can end up in tears over tiny things
+S | How often do you replay conversations afterward, looking for things you said wrong? | I never do that ; Only after very important talks ; After most conversations with new people ; After almost every conversation ; I replay them for days and lose sleep
+S | When you have something unpleasant scheduled, like a hard conversation, when do you start dreading it? | I don't dread it at all ; A few minutes before ; The morning of ; The night before ; From the moment it gets scheduled
+S | When you make a mistake at work or school, how hard are you on yourself? | I note it and move on ; I feel a quick sting of annoyance ; I criticize myself for the rest of the day ; I call myself names for days ; I think of it as proof I'm a failure
+S | How do you usually feel about unanswered messages piling up in your inbox? | I don't notice ; I deal with them when I have time ; They nag at me in the background ; They make me tense every time I see the count ; I avoid opening my inbox because of the dread
+S | How strongly do cravings for food, shopping, or your phone pull at you on a typical day? | I barely feel them ; I feel them but easily ignore them ; I give in about half the time ; I give in most of the time ; They run my day
+S | When someone criticizes something you care about, like your cooking or your hometown, how do you usually react? | I laugh it off ; I disagree calmly ; I feel stung and go quiet ; I get heated and defensive ; I stay angry about it long after
+S | When you're going somewhere new, like a new office or a new gym, how do you usually feel beforehand? | Excited ; Calm ; Slightly nervous ; Anxious enough to research every detail ; So anxious that I consider not going
+S | When someone takes the last of something you wanted, like the last slice, how do you usually feel? | I don't care ; A small pang ; Annoyed for a few minutes ; Irritated for the rest of the meal ; Resentful toward them for days
+S | How often do you feel on edge for no particular reason during an ordinary week? | Almost never ; On the odd day ; A couple of times a week ; Most days ; Nearly all the time
+S | When a friend teases you lightly, how does it usually land with you? | I enjoy it and tease back ; I smile and let it go ; I laugh but it stings a little ; I feel hurt and go quiet ; I feel humiliated and stay upset
+S | When you look ahead at a busy week, what does your body usually feel like? | Relaxed ; Alert and ready ; Tight in the shoulders ; Knotted stomach and restless ; Heart racing and unable to settle
+S | When you're shopping and see something you like but don't need, what usually happens? | I walk past ; I look and put it back ; I think about it for days ; I often buy it on the spot ; I buy it and a few more things too
+S | When you're alone in the evening, how often do dark or gloomy thoughts show up? | Almost never ; Now and then on a bad day ; Most evenings for a little while ; Most evenings for a long time ; They take over most of my evenings
+S | How do you usually feel when you're the center of attention, like on your birthday? | I love it ; I enjoy it with a bit of shyness ; I feel awkward and want it to pass ; I feel very uncomfortable ; I avoid it whenever possible
+S | When something small breaks at home, like a lamp, how do you usually react? | I shrug and fix or replace it ; I sigh and add it to my list ; I get irritated for an hour ; I get angry and blame someone ; It sets off a whole bad day
+S | When a friend seems distant for a few days, how do you usually feel? | I don't notice ; I assume they're busy ; I feel a bit unsure ; I worry they are upset with me ; I'm convinced the friendship is ending
+S | When you think about how you look, what is your usual feeling on an ordinary day? | Happy with it ; Mostly fine ; Aware of a few flaws ; Unhappy with how I look ; So unhappy that I avoid mirrors and photos
+S | When you receive an unexpected call from an unknown number, how do you usually feel? | Curious and pick up ; Neutral ; A little wary ; Tense and let it ring ; Anxious about what bad news it might be
+S | How do you usually feel the evening before a trip? | Excited and relaxed ; Busy but calm ; Worried I'll forget something ; Anxious and unable to sleep ; So stressed I almost want to cancel
+S | When you have a headache on a normal day, how do you tend to think about it? | I barely notice ; I take it easy ; I wonder what caused it ; I worry it's something serious ; I spend hours imagining the worst
+S | When someone speaks to you in a slightly sharp tone, how do you usually react? | I don't notice ; I assume they're stressed ; I feel a little stung ; I snap back ; I get upset and dwell on it all day
+S | How often do you start something to relieve boredom, like snacking or scrolling, and then feel bad about it? | Almost never ; Now and then ; A few times a week ; Every day ; Many times a day
+S | When you have a lot of money worries, how much do they spill into the rest of life? | Not at all ; A little, only when I look at bills ; They make me tense at times ; They color most of my days ; They take over my thoughts completely
+S | How easily do you get flustered when someone watches you do a simple task, like parallel parking? | Not at all ; I notice them but stay steady ; I make a few more mistakes than usual ; I get flustered and mess up ; I refuse to do it while being watched
+S | When a situation is uncertain, like waiting on a medical checkup result, how do you typically cope with not knowing? | I don't think about it until I know ; I think about it now and then ; I think about it every day ; I think about it most of the day ; I can think of nothing else
+S | When you're criticized by someone you barely know, how long does it stay with you? | It doesn't reach me ; A few minutes ; The rest of the day ; A few days ; I still remember such comments years later
+S | When you're in a slow checkout line, how do you usually feel? | Relaxed ; Patient enough ; Impatient and checking the time ; Irritated and sighing ; Angry enough to leave my basket
+S | How easy is it for you to shake off a bad mood in general? | I rarely get into one ; Easy, a walk or a song fixes it ; It takes a good night's sleep ; It takes several days ; It can hang on for weeks
+S | When plans for the evening are uncertain, how does that usually feel? | Freeing ; Fine ; A little unsettling ; Stressful ; Very stressful until everything is settled
+S | How do you usually feel when you have to ask a stranger for help, like at a shop? | Totally at ease ; Fine ; A bit awkward ; Anxious enough that I try to manage alone ; I'd rather go without than ask
+S | When an argument is over, how long does your anger usually last? | It's gone by the end of the argument ; A few minutes ; An hour or so ; The rest of the day ; I carry it for days
+S | How often do you feel like you're about to be found out for not being good enough, in general? | Never ; On rare occasions ; Every so often ; Often ; Nearly every day
+S | When you've had a small win, like a good grade, how long does the good feeling usually last before a worry replaces it? | The good feeling lasts for days ; It lasts through the day ; It lasts a few hours ; It fades within minutes ; I immediately start worrying about the next thing
+S | How do you usually feel when an important decision is left hanging? | At peace ; A little restless ; Uneasy ; Stressed and distracted ; Unable to think of anything else
+S | How much does a single rude comment from a stranger affect your day? | Not at all ; For a moment ; For an hour or two ; For the whole day ; For several days
+S | When you're about to try something you've never done, like a dance class, how nervous do you usually get? | Not at all ; A few butterflies ; Nervous but I go ; Very nervous, I nearly back out ; So nervous I usually don't go
+S | How do you usually feel when you've been alone all weekend? | Rested and content ; Fine ; A little lonely ; Quite low ; Very low and empty
+S | When your friends seem to be having more fun than you on social media, how does it usually hit you? | It doesn't ; I'm happy for them ; A small pang of envy ; I feel left behind ; I feel miserable for the evening
+S | How quickly does your temper usually flare in a normal week? | It almost never flares ; Only when something big happens ; A few times a week over small things ; Daily over small things ; I feel close to snapping most of the time
+S | How do you usually feel after a social event where you talked a lot? | Energized ; Pleasantly tired ; A bit worried about what I said ; Anxious about several things I said ; Sick with regret over what I said
+# noul
+N | Do you often lie awake at night worrying about ordinary things?
+N | Do you usually check that the door is locked more than once before bed?
+N | Do you tend to imagine the worst when someone is late getting home?
+N | Do small delays, like a slow elevator, usually irritate you?
+N | Do you often feel down on days when nothing in particular has gone wrong?
+N | Do you usually replay awkward moments in your head long after they happen?
+N | Do you tend to blush easily when people look at you?
+N | Do you often eat more than you meant to when you're stressed?
+N | Do you usually feel overwhelmed when several things go wrong in the same day?
+N | Do you often snap at people when you're tired?
+N | Do you tend to assume a vague message from your boss means bad news?
+N | Do you often feel nervous before ordinary phone calls?
+N | Do your moods tend to shift quickly over the course of a day?
+N | Do you usually hold on to irritation long after the cause is gone?
+N | Do you often feel embarrassed to eat or drink in front of people you don't know?
+N | Do you tend to buy things on impulse when you're feeling low?
+N | Do you often worry that people are talking about you behind your back?
+N | Do you usually feel tense for days before a medical appointment?
+N | Do you often feel on edge in crowded places?
+N | Do you tend to lose your temper over things that later seem trivial?
+N | Do you often feel like everything is going wrong at once?
+N | Do you usually feel a sinking feeling on Sunday evenings?
+N | Do you often find it hard to stop yourself once you start snacking?
+N | Do you tend to feel hurt by teasing that others find harmless?
+N | Do you often feel gloomy when the weather is grey for a few days?
+N | Do you tend to worry about money even when your bills are paid?
+N | Do you often feel self-conscious when walking past a group of people?
+N | Do you usually get flustered when you're rushed?
+N | Do you often expect things to go wrong even when they are going well?
+N | Do you tend to get angry at objects, like a stuck drawer or a jammed printer?
+N | Do you often feel sad after a fun event ends?
+N | Do you usually feel anxious when you don't hear back from someone quickly?
+N | Do you often stay up late scrolling even though you want to sleep?
+N | Do you tend to feel crushed by small setbacks?
+N | Do you often worry about your health over minor aches?
+N | Do you usually feel nervous when someone watches you work?
+N | Do you often feel irritable when you are hungry?
+N | Do you tend to feel uneasy when your day has no plan?
+N | Do you usually take a long time to calm down after being startled?

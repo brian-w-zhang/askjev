@@ -1,0 +1,122 @@
+# self.lifestyle.this_or_that
+C | Sunrise or sunset? | sunrise ; sunset
+C | Texting or calling? | texting ; calling
+C | Books or movies? | books ; movies
+C | Sci-fi or fantasy? | sci_fi ; fantasy
+C | Mystery novels or adventure novels? | mystery ; adventure
+C | Marvel or DC? | marvel ; dc
+C | Star Wars or Star Trek? | star_wars ; star_trek
+C | Vinyl or streaming? | vinyl ; streaming
+C | Radio or your own playlist? | radio ; own_playlist
+C | Musicals or plays? | musicals ; plays
+C | Documentaries or reality shows? | documentaries ; reality_shows
+C | Subtitles or dubbing? | subtitles ; dubbing
+C | Originals or remakes? | originals ; remakes
+C | Plot twist or happy ending? | plot_twist ; happy_ending
+C | Comics or novels? | comics ; novels
+C | Poetry or prose? | poetry ; prose
+C | Fairy tales or ghost stories? | fairy_tales ; ghost_stories
+C | Pirates or ninjas? | pirates ; ninjas
+C | Robots or aliens? | robots ; aliens
+C | Dragons or unicorns? | dragons ; unicorns
+C | Circus or carnival? | circus ; carnival
+C | Aquarium or planetarium? | aquarium ; planetarium
+C | Ferris wheel or carousel? | ferris_wheel ; carousel
+C | Theme park or water park? | theme_park ; water_park
+C | Bowling or mini golf? | bowling ; mini_golf
+C | Frisbee or kite? | frisbee ; kite
+C | Hide and seek or tag? | hide_and_seek ; tag
+C | Skiing or snowboarding? | skiing ; snowboarding
+C | Running or swimming? | running ; swimming
+C | Yoga or weightlifting? | yoga ; weightlifting
+C | Tennis or badminton? | tennis ; badminton
+C | Scrabble or Monopoly? | scrabble ; monopoly
+C | Sudoku or word searches? | sudoku ; word_searches
+C | Watercolors or oil paints? | watercolors ; oil_paints
+C | Notebook or sticky notes? | notebook ; sticky_notes
+C | Emails or letters? | emails ; letters
+C | Woods or meadows? | woods ; meadows
+C | Rivers or waterfalls? | rivers ; waterfalls
+C | Sand or grass under bare feet? | sand ; grass
+C | Gloves or mittens? | gloves ; mittens
+C | Wolves or foxes? | wolves ; foxes
+C | Butterflies or fireflies? | butterflies ; fireflies
+C | Snowman or snow angel? | snowman ; snow_angel
+C | Stickers or stamps? | stickers ; stamps
+C | Whiteboard or chalkboard? | whiteboard ; chalkboard
+C | Math or English class? | math ; english
+C | History or science class? | history ; science
+C | Clowns or mimes? | clowns ; mimes
+C | Batman or Superman? | batman ; superman
+C | Wizards or knights? | wizards ; knights
+C | Mermaids or fairies? | mermaids ; fairies
+C | Sledding or snowball fights? | sledding ; snowball_fights
+C | Rainbows or lightning? | rainbows ; lightning
+C | Tulips or daisies? | tulips ; daisies
+C | Comets or eclipses? | comets ; eclipses
+C | Soccer or basketball? | soccer ; basketball
+C | Volleyball or dodgeball? | volleyball ; dodgeball
+C | Trampolines or bouncy castles? | trampolines ; bouncy_castles
+C | Kayaking or rowing? | kayaking ; rowing
+C | Pottery or knitting? | pottery ; knitting
+C | Riddles or tongue twisters? | riddles ; tongue_twisters
+C | Jokes or stories? | jokes ; stories
+C | Harry Potter or The Lord of the Rings? | harry_potter ; lord_of_the_rings
+C | Game shows or talent shows? | game_shows ; talent_shows
+C | Bubbles or balloons? | bubbles ; balloons
+C | Snow globes or music boxes? | snow_globes ; music_boxes
+C | Opera or ballet? | opera ; ballet
+C | Juggling or beatboxing? | juggling ; beatboxing
+S | Early showing or late showing at the cinema? | I always go to the first morning showing ; I prefer an afternoon showing ; Any time of day is fine ; I prefer an evening showing ; I always pick the last late-night showing
+S | Board games or video games: what do you reach for on a free evening with friends? | Always a video game ; Usually a video game ; Whatever the group wants ; Usually a board game ; Always a board game
+S | Loud cheering or quiet watching at a live game? | I sit silently the whole game ; I clap politely at big moments ; I cheer when my side scores ; I cheer loudly for most of the game ; I lose my voice by the end
+S | Subtitles or no subtitles when watching in your own language? | I always turn subtitles off ; I turn them on only when the audio is hard to hear ; I turn them on about half the time ; I usually have them on ; I always watch with subtitles on
+S | Spoilers or no spoilers? | I read the ending before I start ; I don't mind if someone tells me the twist ; I'd rather not know but I won't be upset ; I avoid reviews until I've seen it ; I mute friends and leave rooms to avoid any spoiler
+S | Silence or background noise while you read? | I need total silence ; I prefer quiet with a little ambient sound ; I don't notice either way ; I like soft music on ; I read best in a busy café
+S | Big party or small gathering: which do you pick for a night out? | I only go to dinners with one or two friends ; I prefer a handful of close friends ; I enjoy both equally ; I lean toward a big crowd ; I always pick the biggest party going
+S | Sequels or originals: how do you feel about a new sequel to a film you loved? | I refuse to watch sequels ; I watch them only if reviews are great ; I give them a fair chance ; I get excited when a sequel is announced ; I see every sequel on opening day
+S | Paperback or hardcover: what does your bookshelf look like? | Every book I own is a paperback ; Mostly paperbacks with a few hardcovers ; About an even mix ; Mostly hardcovers ; I buy only hardcovers
+S | Cursive or print: how do you write a note by hand? | I print every letter separately ; I print with a few joined letters ; I mix both styles freely ; I write mostly in cursive ; I write everything in full joined cursive
+S | Guitar or piano: which would you rather hear someone play at a gathering? | I'd only want to hear piano ; I'd lean toward piano ; I'd enjoy either ; I'd lean toward guitar ; I'd only want to hear guitar
+S | Voice notes or typed messages: how do you reply to a long message? | I only ever type ; I type unless my hands are busy ; I switch depending on mood ; I send voice notes more often than not ; I reply to almost everything with a voice note
+S | Emoji or words: how do you react to a friend's good news in a chat? | I write a full sentence with no emoji ; I write a sentence and add one emoji ; I send a short phrase and a few emoji ; I send a string of emoji ; I react with a single emoji and nothing else
+S | Summer or winter: which do you count the days until? | I count down to winter every year ; I look forward a little more to winter ; I feel the same about both ; I look forward a little more to summer ; I count down to summer every year
+S | Day or night: when do you feel most like yourself? | Only in the middle of the night ; Mostly in the evening ; At no particular time ; Mostly in the daytime ; Only in the bright part of the day
+S | Clouds or clear skies: what kind of day makes you want to go outside? | I go out only when it's overcast ; I prefer a few clouds for shade ; Either works for me ; I prefer mostly blue sky ; I go out only when there isn't a cloud in sight
+S | Old movies or new movies: what's in your usual rotation? | I watch only recent releases ; I mostly watch new films with a rare classic ; A mix of old and new ; I mostly watch older films ; I watch almost nothing made in my lifetime
+S | Rock or pop: what's on your playlist? | It is all pop ; Mostly pop with a little rock ; About half and half ; Mostly rock with a little pop ; It is all rock
+S | Team sports or solo sports: how do you like to play? | I only play solo sports ; I mostly play solo with an occasional team game ; I enjoy both equally ; I mostly play on teams ; I only play team sports
+S | Swimming pool or open water: where do you swim when you can choose? | I refuse to swim anywhere but a pool ; I prefer a pool but will swim in the sea ; I like both equally ; I prefer lakes and the sea ; I avoid pools and always swim in open water
+S | Library or bookstore: where do you get most of your books? | I borrow every book I read ; I borrow most and buy a few favorites ; About half borrowed and half bought ; I buy most and borrow now and then ; I buy every book I read
+S | Horror or thriller: what do you pick for a scary movie night? | I pick a thriller every time ; I lean toward thrillers ; I pick whichever looks better ; I lean toward horror ; I pick full horror every time
+S | Drawing or painting: what do you reach for when you want to make a picture? | Always a pencil or pen ; Usually a pencil with a bit of color ; Whatever is nearby ; Usually paints ; Always paints
+S | Lined paper or blank paper: what do you write on? | I only write on blank paper ; I prefer blank but use lined when needed ; I use either ; I prefer lined paper ; I refuse to write on anything but lined paper
+S | Umbrella or raincoat: what do you grab when it starts to rain? | Neither, I just get wet ; A hood and nothing else ; Whatever is by the door ; A raincoat ; A sturdy umbrella every time
+S | Concerts or festivals: how do you like to see live music? | I only go to single-artist concerts ; I mostly go to concerts ; I go to both equally ; I mostly go to festivals ; I only go to multi-day festivals
+S | Magicians or comedians: whose show would you rather see live? | Only a comedian ; Probably a comedian ; Either would be fun ; Probably a magician ; Only a magician
+S | Video call or phone call when catching up with a friend? | I always choose voice only ; I prefer voice but will turn on video ; I have no preference ; I prefer video ; I insist on video every time
+S | Blue ink or black ink: what's in your pen? | Only black ink ; Mostly black ink ; Whatever pen is closest ; Mostly blue ink ; Only blue ink
+S | Crayons or markers: what would you pick for a coloring page? | I'd always pick crayons ; I'd lean toward crayons ; Either one ; I'd lean toward markers ; I'd always pick markers
+N | Do you prefer karaoke nights to trivia nights?
+N | Do you prefer anime to western animation?
+N | Do you prefer detective stories to love stories?
+N | Do you prefer jazz to classical music?
+N | Do you prefer rap to country music?
+N | Do you prefer watching sports to playing sports?
+N | Do you prefer roller skates to ice skates?
+N | Do you prefer hiking to cycling?
+N | Do you prefer sunflowers to roses?
+N | Do you prefer owls to eagles?
+N | Do you prefer dolphins to whales?
+N | Do you prefer lighthouses to windmills?
+N | Do you prefer thunderstorms to snowstorms?
+N | Do you prefer escape rooms to arcades?
+N | Do you prefer biographies to memoirs?
+N | Do you prefer short films to feature films?
+N | Do you prefer black-and-white photos to color photos?
+N | Do you prefer handwritten cards to e-cards?
+N | Do you prefer quiz shows to talk shows?
+N | Do you prefer ping-pong to pool?
+N | Do you prefer fog to drizzle?
+N | Do you prefer kites to paper airplanes?
+N | Do you prefer the violin to the cello?

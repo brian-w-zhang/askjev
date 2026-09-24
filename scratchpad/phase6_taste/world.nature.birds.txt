@@ -1,0 +1,20 @@
+C | Which bird of prey is the most majestic? | bald_eagle ; golden_eagle ; peregrine_falcon ; harpy_eagle ; snowy_owl ; osprey ; other
+C | Which owl is the most beautiful? | snowy_owl ; barn_owl ; great_horned_owl ; eurasian_eagle_owl ; burrowing_owl ; great_grey_owl
+C | Which bird is the cutest? | puffin ; penguin ; robin ; chickadee ; owlet ; hummingbird ; other
+C | Which penguin is the most charming? | emperor ; king ; adelie ; gentoo ; rockhopper ; little_blue
+C | Which songbird is the most pleasant to hear at dawn? | robin ; blackbird ; wren ; skylark ; cardinal ; mockingbird ; other
+C | Which parrot is the most beautiful? | scarlet_macaw ; hyacinth_macaw ; rainbow_lorikeet ; cockatoo ; african_grey ; kakapo ; other
+C | Which bird is the most graceful in flight? | swallow ; albatross ; swan ; frigatebird ; kite ; heron ; other
+C | Which water bird is the most elegant? | swan ; heron ; crane ; flamingo ; egret ; loon ; other
+C | Which bird has the most entertaining courtship display? | bird_of_paradise ; peacock ; bowerbird ; blue_footed_booby ; sage_grouse ; manakin ; other
+C | Which garden bird is the most welcome visitor? | robin ; blue_tit ; cardinal ; goldfinch ; hummingbird ; woodpecker ; other
+C | Which bird has the funniest appearance? | shoebill ; puffin ; pelican ; toucan ; ostrich ; dodo_reconstruction ; other
+S | How beautiful is a peacock's display? | It is gaudy and overdone ; It is pretty ; It is stunning ; It is the most beautiful sight in the animal world
+S | How pleasant is the sound of seagulls? | It is grating and annoying ; It is tolerable ; It is pleasantly nostalgic ; It is one of the most lovely sounds of the seaside
+S | How charming are pigeons? | They are dirty pests ; They are unremarkable ; They are quite charming ; They are delightful birds
+S | How cute are ducklings? | They are not cute ; They are somewhat cute ; They are very cute ; They are the cutest baby animals of all
+S | How impressive is a murmuration of starlings? | It is just a cloud of birds ; It is mildly interesting ; It is mesmerizing ; It is one of the great spectacles of nature
+N | Are crows beautiful birds?
+N | Are hummingbirds more beautiful than butterflies?
+N | Are owls the most charming birds?
+N | Is birdsong the most pleasant natural sound?

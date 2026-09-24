@@ -1,0 +1,119 @@
+# self.lifestyle.pets
+C | What size of dog would you choose to keep? | toy ; small ; medium ; large ; giant ; no_dog
+C | What kind of coat would you want your pet dog or cat to have? | short_and_sleek ; long_and_fluffy ; curly ; wiry ; hairless ; no_preference
+C | Which personality would you want in a pet cat? | cuddly_lap_cat ; independent ; playful_and_chatty ; calm_and_quiet ; curious_explorer ; no_cat
+C | Which personality would you want in a pet dog? | energetic_athlete ; gentle_couch_potato ; loyal_guardian ; clownish_goofball ; clever_learner ; no_dog
+C | Where would you want your cat to spend its time? | indoors_only ; indoors_with_a_catio ; free_to_roam_outside ; supervised_outside_on_a_leash ; no_cat
+C | What kind of bed would you get for a pet? | fancy_orthopedic_bed ; simple_cushion ; old_blanket ; heated_pad ; crate_with_bedding ; my_own_bed ; other
+C | What would you most enjoy doing with a pet dog? | long_walks ; playing_fetch ; hiking ; cuddling_on_the_sofa ; training_tricks ; running_together ; other
+C | Which kind of small pet would you choose? | hamster ; guinea_pig ; rabbit ; rat ; gerbil ; ferret ; chinchilla ; none
+C | Which kind of pet bird would you keep? | budgie ; parrot ; canary ; cockatiel ; finch ; chickens ; none
+C | Which kind of fish setup would you want? | single_goldfish_bowl ; small_tropical_tank ; large_community_aquarium ; saltwater_reef_tank ; garden_pond ; none
+C | Which kind of reptile would you keep as a pet? | bearded_dragon ; leopard_gecko ; corn_snake ; tortoise ; chameleon ; none
+C | What would you name a new puppy? | human_name ; food_name ; funny_pun ; name_from_a_book_or_film ; classic_dog_name ; let_someone_else_choose
+C | Which kind of collar would you put on your dog? | plain_leather ; bright_nylon ; one_with_a_bow_or_bandana ; harness_instead ; smart_gps_collar ; no_dog
+C | Where would your pet's food bowl go? | kitchen ; laundry_room ; hallway ; dining_area ; outside ; other
+C | How would you choose a specific pet from a litter or shelter? | the_one_that_picks_me ; the_calmest ; the_most_playful ; the_one_that_has_waited_longest ; the_best_looking ; other
+C | What would be the ideal age for your next pet? | baby ; young ; adult ; senior ; no_preference
+C | Which kind of pet would suit your current home best? | dog ; cat ; fish ; small_rodent ; bird ; reptile ; no_pet
+C | How would you exercise an energetic dog? | long_walks_every_day ; dog_park_visits ; running_or_cycling_with_it ; hire_a_dog_walker ; backyard_play ; other
+C | Which toy would you most likely buy for a pet? | squeaky_toy ; ball ; puzzle_feeder ; rope_toy ; feather_wand ; scratching_post ; none
+C | Which kind of place would you most like to take a dog on holiday? | beach_cottage ; mountain_cabin ; city_hotel ; campsite ; relatives_house ; no_dog
+C | How would you handle pet hair on your clothes? | lint_roller_always_in_hand ; wear_colors_that_hide_it ; ignore_it ; keep_the_pet_out_of_the_bedroom ; other
+C | Which pet trick would you most want to teach? | sit_and_stay ; high_five ; roll_over ; fetch_slippers ; play_dead ; ring_a_bell ; none
+C | What would you do with your pet on a weekend trip? | bring_it_along ; pet_sitter_at_home ; boarding_kennel ; friend_or_family_takes_it ; skip_the_trip ; other
+C | Which kind of pet photo would you most likely take? | sleeping_pose ; dressed_up_costume ; action_shot ; selfie_together ; none
+C | Which grooming would you do for a dog yourself? | bathing ; brushing ; nail_clipping ; haircuts ; teeth_brushing ; none_i_use_a_groomer
+C | Which farm animal would you most like to keep at home? | chickens ; goats ; ducks ; pigs ; sheep ; alpacas ; none
+C | Which kind of pet would you want as a child's first pet? | goldfish ; hamster ; guinea_pig ; cat ; dog ; hermit_crab ; none
+C | What kind of treats would you give a pet? | store_bought ; homemade ; human_food_scraps ; only_healthy_ones ; none
+C | Which pet accessory would you splurge on? | designer_carrier ; fancy_bed ; cat_tree ; smart_feeder ; winter_coat ; none
+C | How would you want to meet a new pet? | shelter_visit ; breeder ; friend_whose_pet_had_babies ; rescue_group_event ; found_a_stray ; other
+C | Which pet would you choose for a small apartment? | cat ; small_dog ; fish ; rabbit ; bird ; no_pet
+C | Where would a pet cat's litter box go in your home? | bathroom ; laundry_room ; hallway ; hidden_cabinet ; balcony ; no_cat
+C | How would you like to spend a lazy day with a pet? | napping_together ; watching_films_with_it_on_my_lap ; sitting_in_the_garden ; short_stroll ; other
+C | Which pet would you choose if you traveled often? | cat ; fish ; tortoise ; small_dog_that_travels_along ; none
+C | What would you most want a pet to do when you come home? | run_to_greet_me ; ignore_me_then_come_over ; bring_me_a_toy ; stay_asleep ; no_pet
+C | Which pet would you keep in a garden? | rabbits ; chickens ; tortoise ; pond_fish ; bees ; none
+C | Which dog activity would you sign up for? | obedience_class ; agility_course ; dog_swimming ; herding_lessons ; therapy_dog_training ; none
+C | How would you celebrate getting a new pet? | photos_for_friends ; welcome_party ; special_toy ; quiet_day_at_home ; nothing_special
+C | What would you do if your pet was bored at home? | new_toys ; longer_walks ; get_a_second_pet ; puzzle_feeder ; hire_a_pet_sitter ; other
+C | Which pet name style do you like for a cat? | regal_name ; silly_name ; food_name ; classic_name ; name_based_on_color ; other
+C | What would be your main source of pet advice? | vet ; online_forums ; books ; friends_with_pets ; breeder_or_shelter_staff ; trial_and_error
+C | Which season would you most enjoy with a dog? | spring ; summer ; autumn ; winter ; no_dog
+C | Which kind of pet would you choose if allergies were no issue? | dog ; cat ; rabbit ; bird ; horse ; none
+C | How would you handle a pet begging at the table? | give_it_scraps ; firmly_ignore_it ; move_it_to_another_room ; train_it_to_lie_down ; other
+C | Where would you walk a dog most often? | around_the_block ; park ; beach ; forest_trails ; city_streets ; no_dog
+C | Which kind of horse riding would you enjoy with your own horse? | trail_riding ; show_jumping ; dressage ; western_riding ; just_caring_for_it ; no_horse
+C | Which feeding routine would you set for a pet? | fixed_meal_times ; free_feeding ; automatic_feeder ; whenever_it_asks ; other
+C | Which kind of pet would you pick for its intelligence? | parrot ; border_collie ; rat ; pig ; octopus ; none
+C | How would you want your pet to behave with guests? | friendly_and_social ; calm_and_polite ; hide_away ; protective ; no_preference
+C | Which pet would you get to keep a dog company? | second_dog ; cat ; nothing ; no_dog
+C | Which kind of vet would you prefer to use? | nearby_clinic ; big_animal_hospital ; mobile_vet_who_visits_home ; cheapest_option ; other
+C | Which kind of photo of your pet would you most likely share? | sleeping ; mid_zoomie ; in_a_costume ; with_family ; a_funny_face ; i_dont_share_pet_photos
+C | What kind of pet door would you want? | none ; simple_flap ; microchip_flap ; sliding_door_left_open ; no_pet
+C | What would you most want a pet sitter to do? | send_photos ; stick_to_the_routine ; play_a_lot ; stay_overnight ; just_feed_it ; no_pet
+C | Which kind of dog would you choose for jogging? | lean_hound ; herding_dog ; retriever ; small_terrier ; none
+C | Which amphibian or bug would you keep as a pet? | frog ; axolotl ; tarantula ; stick_insect ; ant_farm ; none
+C | Which kind of pet would you pick for a quiet life? | old_cat ; goldfish ; tortoise ; lazy_old_dog ; none
+C | Which kind of pet clothing would you buy? | rain_coat ; winter_sweater ; holiday_costume ; bandana ; boots ; none
+C | Which pet sound would bother you most? | barking ; meowing_at_night ; bird_squawking ; hamster_wheel_squeaking ; none
+C | Where would your pet travel with you? | car_trips ; public_transport ; flights ; hiking ; cafes ; nowhere
+C | Which kind of pet memorial would you choose? | photo_frame ; burial_in_the_garden ; urn_of_ashes ; planting_a_tree ; paw_print_keepsake ; nothing
+C | Which pet would you most want to raise from a baby? | puppy ; kitten ; duckling ; lamb ; foal ; none
+C | Which kind of leash would you use for a dog? | standard_leather_lead ; retractable_leash ; hands_free_waist_leash ; harness_and_long_line ; no_leash ; no_dog
+C | Which kind of pet enclosure would you set up with care? | big_hamster_habitat ; elaborate_fish_tank ; cat_tree_tower ; rabbit_hutch_with_run ; reptile_terrarium ; none
+C | How many walks a day would you give a dog? | one ; two ; three_or_more ; whenever_it_asks ; no_dog
+S | How much do you want your pet to be trained? | I let it do whatever it likes ; I teach it a few basics ; I train it to be polite in public ; I train it to follow many commands ; I train it to competition level
+S | How much would you spend on a pet's food? | I buy the cheapest food ; I buy a normal supermarket brand ; I buy premium food ; I buy fresh or specialty diets ; I cook gourmet meals for my pet
+S | How much would a pet change your travel plans? | I would travel exactly as before ; I would take slightly shorter trips ; I would plan trips around pet care ; I would only take trips where my pet can come ; I would stop traveling altogether
+S | How much would you let a pet on your furniture? | Never, not even the floor rugs ; Only on its own blanket ; On the sofa but not the bed ; Anywhere except the kitchen counters ; Anywhere it wants
+S | How closely would you track your pet's health? | I only take it to the vet in emergencies ; I go for yearly checkups ; I follow every vet recommendation ; I track its weight and diet closely ; I monitor it with health apps and cameras
+S | How much of your home would you adapt for a pet? | I would change nothing ; I would add a bed and bowls ; I would fence the yard or balcony ; I would buy furniture that suits the pet ; I would redesign my home around the pet
+S | How upset would you be if your pet damaged furniture? | It would not bother me at all ; I would be mildly annoyed ; I would be quite upset ; I would rehome the pet if it kept happening
+S | How much would you talk about your pet with others? | I rarely mention it ; I mention it when asked ; I share a story now and then ; I bring it up in most conversations ; My pet is my main topic of conversation
+S | How much do you want a pet that needs a lot of attention? | I want a pet that barely needs me ; I want a pet that is fine alone during the day ; I want a pet that needs daily play ; I want a pet that wants me all the time
+S | How many hours a day would you be willing to spend with a pet? | I could spare only a few minutes ; I could spare about an hour ; I could spare a few hours ; I would spend most of my day with it
+S | How involved would you want to be in choosing a pet's breed or type? | Any animal that needs a home is fine ; I would have a rough idea ; I would research a few breeds ; I would pick a specific breed after long research ; I would wait years for one exact breed from a chosen breeder
+S | How much do you enjoy other people's pets? | I avoid them ; I say hello and move on ; I pet them if they come over ; I seek them out at parties ; I spend the whole visit with the pet
+S | How much would you let a pet decide when you wake up? | I would never let a pet wake me ; I would get up if it was truly urgent ; I would feed it early and go back to sleep ; I would wake up whenever it asked
+S | How messy a pet would you accept? | I want no mess at all ; A bit of shedding is fine ; Regular hair and muddy paws are fine ; Chewed shoes and scratched furniture are fine ; Any mess is fine if the pet is happy
+S | How much would you want your pet included in family photos? | Never ; Only in casual snapshots ; In most photos ; In every formal portrait too
+S | How willing are you to clean up after a pet on walks? | I would not get a pet that needs it ; I would do it grudgingly ; I would do it as a normal chore ; It would not bother me at all
+S | How much would you pay for a pet sitter while you are away? | I would only use free help from friends ; I would pay a small fee ; I would pay a fair market rate ; I would pay for a premium live-in sitter
+S | How strongly would you want your pet to be affectionate? | I prefer a pet that keeps its distance ; I like occasional affection ; I want regular cuddles ; I want a pet that is always on my lap
+S | How much would you want a pet to join you in bed? | Never in the bedroom ; In the bedroom but not the bed ; At the foot of the bed ; Under the covers with me
+S | How much do you want a pet to be social with other animals? | I would keep it away from other animals ; I would allow the odd meeting ; I would take it to parks to play ; I would arrange regular playdates for it
+S | How much noise from a pet would you tolerate? | I want a silent pet ; A little chirping or meowing is fine ; Barking at the door is fine ; A loud, vocal pet is fine
+S | How much would you want your pet to come on day trips with you? | I would always leave it at home ; I would bring it on the odd walk in the park ; I would bring it to pet-friendly cafes ; I would bring it on most outings ; I would take it everywhere I go
+S | How much would a pet influence where you live? | I would never choose a home for a pet ; I would check if pets are allowed ; I would want a yard for the pet ; I would move to a new area for the pet's sake
+S | How much do you like caring for a pet's routine every day? | I would find it a burden ; I would do it without complaint ; I would enjoy the routine ; It would be the highlight of my day
+S | How far would you go to find a lost pet? | I would wait for it to come home ; I would walk the neighborhood ; I would put up posters and post online ; I would take time off to search every day ; I would hire a pet detective
+S | How much would you spoil a pet? | I would give it only what it needs ; I would give it the occasional treat ; I would buy it toys regularly ; I would give it gifts on holidays ; I would treat it better than myself
+S | How often would you bathe a dog? | Only when it rolls in something ; A few times a year ; Every month ; Every week ; No dog
+S | How much do you want a pet that you can train to do tricks? | I would not want to train it at all ; I would teach it one or two tricks ; I would teach it several tricks ; I would train it for shows or contests
+S | How long would you leave a pet alone at home? | I would never leave it alone ; A couple of hours at most ; A normal working day ; A night with food left out ; A whole weekend with an automatic feeder
+S | How much would you want your pet to be well known in your neighborhood? | I would keep it mostly to myself ; A few neighbors would know its name ; Most of the street would know it ; It would be a local celebrity
+N | Would you get a pet from a shelter rather than a breeder?
+N | Would you want a dog that can go off-leash?
+N | Would you enjoy owning a horse?
+N | Would you get a microchip for your pet?
+N | Would you let your cat walk on the kitchen counter?
+N | Would you want your pet to wear a bell on its collar?
+N | Would you take your dog to work if allowed?
+N | Would you enjoy fostering animals from a shelter?
+N | Would you dress your dog in a raincoat?
+N | Would you get two kittens instead of one?
+N | Would you want a pet that lives longer than most dogs?
+N | Would you take your pet to a professional photographer?
+N | Would you let your dog swim in the sea?
+N | Would you hire a professional trainer for your dog?
+N | Would you keep a pet rabbit indoors?
+N | Would you keep chickens for their eggs?
+N | Would you buy a stroller for a small dog?
+N | Would you want a pet that is active mainly at night?
+N | Would you choose a mixed-breed dog over a purebred?
+N | Would you buy matching accessories for yourself and your pet?
+N | Would you enjoy volunteering to walk shelter dogs?
+N | Would you learn to cook special meals for your pet?
+N | Would you let your pet meet every guest who visits?

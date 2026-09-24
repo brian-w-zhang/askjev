@@ -1,0 +1,20 @@
+C | Which sea creature is the most beautiful? | manta_ray ; seahorse ; lionfish ; mandarinfish ; sea_slug ; moon_jellyfish ; other
+C | Which shark is the most impressive to see? | great_white ; whale_shark ; hammerhead ; tiger_shark ; mako ; basking_shark ; other
+C | Which fish is the most colorful? | mandarinfish ; clownfish ; parrotfish ; betta ; discus ; angelfish ; other
+C | Which sea creature is the cutest? | seahorse ; pufferfish ; dumbo_octopus ; sea_bunny_slug ; clownfish ; axolotl ; other
+C | Which creature is the most fascinating to watch in an aquarium? | octopus ; jellyfish ; seahorse ; shark ; ray ; cuttlefish ; other
+C | Which coral reef creature is the most delightful to spot while snorkeling? | sea_turtle ; clownfish ; octopus ; reef_shark ; moray_eel ; parrotfish ; other
+C | Which deep-sea creature is the most striking? | anglerfish ; giant_squid ; vampire_squid ; barreleye ; gulper_eel ; siphonophore ; other
+C | Which sea creature is the creepiest-looking? | anglerfish ; goblin_shark ; frilled_shark ; blobfish ; sea_spider ; hagfish ; other
+C | Which freshwater fish is the most handsome? | rainbow_trout ; koi ; arowana ; brook_trout ; pike ; discus ; other
+C | Which aquarium exhibit is the most mesmerizing? | jellyfish_tank ; shark_tunnel ; coral_reef_tank ; touch_pool ; kelp_forest ; open_ocean_tank
+C | Which kind of shell is the most beautiful? | conch ; nautilus ; scallop ; cowrie ; abalone ; sand_dollar ; other
+S | How beautiful are jellyfish in an aquarium tank? | They are dull blobs ; They are mildly pretty ; They are hypnotic ; They are the most beautiful thing in any aquarium
+S | How charming are octopuses? | They are creepy ; They are interesting ; They are charming ; They are the most captivating animals in the sea
+S | How impressive is swimming near a whale shark? | It is scary and unpleasant ; It is a nice experience ; It is thrilling ; It is the highlight of a lifetime
+S | How appealing is a kelp forest to explore? | It is murky and dull ; It is somewhat interesting ; It is beautiful ; It is magical
+S | How cute are sea turtles? | They are not cute ; They are a bit cute ; They are very cute ; They are adorable
+N | Are sharks beautiful animals?
+N | Is a coral reef more beautiful than a rainforest?
+N | Are seahorses the most charming fish?
+N | Is the anglerfish the ugliest sea creature?

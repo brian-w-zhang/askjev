@@ -1,0 +1,50 @@
+C | Which city looks the most magical at night? | paris ; hong_kong ; budapest ; tokyo ; venice ; dubai ; other
+C | Which city has the best food scene for visitors? | tokyo ; paris ; bangkok ; mexico_city ; istanbul ; new_orleans ; lima ; other
+C | Which city has the most charming old town? | prague ; tallinn ; dubrovnik ; quebec_city ; kyoto ; cartagena ; other
+C | Which city is the most romantic to visit? | paris ; venice ; vienna ; florence ; santorini_fira ; kyoto ; other
+C | Which city has the best nightlife? | berlin ; ibiza_town ; new_york ; bangkok ; buenos_aires ; las_vegas ; other
+C | Which city is the most fun to explore on foot? | paris ; amsterdam ; rome ; lisbon ; barcelona ; san_francisco ; other
+C | Which city has the most beautiful waterfront? | sydney ; cape_town ; vancouver ; rio_de_janeiro ; stockholm ; istanbul ; other
+C | Which city has the prettiest canals? | amsterdam ; venice ; bruges ; copenhagen ; suzhou ; annecy ; other
+C | Which city has the most beautiful public parks? | london ; new_york ; paris ; singapore ; munich ; vancouver ; other
+C | Which city has the most impressive night lights? | tokyo ; las_vegas ; hong_kong ; shanghai ; new_york ; dubai ; other
+C | Which city has the best street markets? | marrakech ; bangkok ; istanbul ; mexico_city ; barcelona ; hanoi ; other
+C | Which city is the most pleasant to cycle through? | amsterdam ; copenhagen ; utrecht ; berlin ; portland ; kyoto ; other
+C | Which city has the most colorful houses? | lisbon ; valparaiso ; copenhagen ; burano ; cape_town ; san_francisco ; other
+C | Which city feels the most relaxed for a visitor? | lisbon ; copenhagen ; melbourne ; vancouver ; chiang_mai ; seville ; other
+C | Which city has the best coffee culture? | melbourne ; vienna ; rome ; seattle ; oslo ; istanbul ; other
+C | Which city has the best museums to visit? | paris ; london ; new_york ; berlin ; florence ; washington ; other
+C | Which city has the most beautiful rooftop views? | rome ; paris ; lisbon ; istanbul ; barcelona ; new_york ; other
+C | Which city is the most exciting for a first big trip abroad? | london ; paris ; tokyo ; new_york ; barcelona ; rome ; other
+C | Which kind of city neighborhood is the most pleasant to stroll through? | historic_old_quarter ; leafy_residential_streets ; waterfront_promenade ; artsy_district ; busy_shopping_street ; market_quarter
+C | Which city has the best beach within its limits? | rio_de_janeiro ; sydney ; barcelona ; tel_aviv ; miami ; cape_town ; other
+C | Which Italian city is the most beautiful? | rome ; florence ; venice ; naples ; siena ; bologna ; other
+C | Which Spanish city is the most enjoyable to visit? | barcelona ; madrid ; seville ; granada ; valencia ; san_sebastian ; other
+C | Which Japanese city is the most enjoyable to visit? | tokyo ; kyoto ; osaka ; nara ; sapporo ; hiroshima ; other
+C | Which American city is the most fun to visit? | new_york ; new_orleans ; chicago ; san_francisco ; austin ; los_angeles ; other
+C | Which Latin American city is the most vibrant? | mexico_city ; buenos_aires ; rio_de_janeiro ; havana ; bogota ; lima ; other
+C | Which Asian city has the best street food? | bangkok ; hanoi ; taipei ; penang ; singapore ; seoul ; other
+C | Which city is the most magical at Christmastime? | vienna ; strasbourg ; new_york ; prague ; copenhagen ; nuremberg ; other
+S | How beautiful is Paris for a first-time visitor? | Most visitors leave disappointed ; Visitors find it pleasant but ordinary ; Visitors find a few spots truly lovely ; Visitors are charmed on most streets ; Visitors call it the most beautiful place they have seen
+S | How enjoyable is New York to walk around? | Walking there is mostly stressful and unpleasant ; Walking there is fine only in a few areas ; Walking there is interesting in most neighborhoods ; Walking there is a highlight of any trip ; Walking there is one of the great joys of travel
+S | How charming is Venice once you get past the crowds? | It feels like a theme park with no charm left ; It has a few quiet corners worth seeing ; Its back canals are genuinely lovely ; It is enchanting almost everywhere you turn
+S | How appealing is Las Vegas as a place to visit? | Most people find it tacky and draining ; It is fun for one night at most ; It makes a good weekend of shows and food ; It is one of the most exciting cities to visit
+S | How beautiful is Kyoto in autumn? | It looks like any other city in autumn ; A few temple gardens look nice ; Much of the city glows with red maples ; It is one of the most beautiful sights in the world
+S | How pleasant is London's weather for sightseeing? | Rain ruins most sightseeing days ; The grey skies dampen the mood often ; It is mild enough that it rarely matters ; It is pleasant for sightseeing most of the year
+S | How fun is Tokyo for someone who does not speak Japanese? | It is confusing and frustrating most of the time ; It is manageable but tiring ; It is easy and fun with a little planning ; It is thrilling and effortless to explore
+S | How appealing is Dubai's skyline? | It looks cold and artificial ; It is impressive for a photo but little more ; It is striking and memorable ; It is one of the most stunning skylines anywhere
+S | How lively is Barcelona in the evening? | The streets are quiet after dark ; A few squares have some life ; Most neighborhoods buzz with people ; The whole city feels like one long street party
+S | How beautiful is Rio de Janeiro's setting between mountains and sea? | The setting is nothing special ; The views are nice from a few spots ; The views are striking from most of the city ; It is the most dramatic city setting on Earth
+S | How cozy does Copenhagen feel to a visitor? | It feels cold and distant ; It feels tidy but plain ; It feels warm and welcoming ; It feels like the coziest city in the world
+S | How rewarding is a trip to Istanbul? | It is not worth the trip ; It is worth a short stopover ; It is worth a full week ; It is one of the most rewarding cities to visit
+S | How charming are small European villages compared with big capitals? | They are dull next to the capitals ; They are nice for a brief detour ; They are as charming as the capitals ; They are far more charming than any capital
+N | Is San Francisco more beautiful than Los Angeles?
+N | Is Lisbon the most charming capital in Europe?
+N | Is Hong Kong's skyline more impressive than Manhattan's?
+N | Is Rome more rewarding to visit than Paris?
+N | Is Melbourne a more enjoyable city than Sydney?
+N | Is Vienna the most elegant city in Europe?
+N | Are coastal cities more enjoyable to visit than inland ones?
+N | Is Edinburgh the most atmospheric city in Britain?
+N | Is Buenos Aires the most beautiful city in South America?
+N | Is Chicago's architecture the most impressive of any American city?

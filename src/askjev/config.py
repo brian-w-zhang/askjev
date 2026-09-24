@@ -20,8 +20,8 @@ JEV_MODEL = "typesafe-ai/jev"  # the ONLY gateway model this project may call
 
 # Gateway context is 32k tokens; leave headroom for tokenizer mismatch (we estimate ~4 chars/token).
 REQUEST_TOKEN_BUDGET = 24_000
-MAX_WORKERS = 8
-REQUESTS_PER_SECOND = 18  # under the 1,200 req/min limit
+MAX_WORKERS = int(os.environ.get("ASKJEV_WORKERS", 8))
+REQUESTS_PER_SECOND = float(os.environ.get("ASKJEV_RPS", 18))  # under the 1,200 req/min limit; lower it when running processes in parallel
 
 EMBED_MODEL = "BAAI/bge-small-en-v1.5"
 EMBED_DIM = 384

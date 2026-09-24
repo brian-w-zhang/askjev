@@ -1,0 +1,119 @@
+# self.lifestyle.favorites
+C | Which number from one to ten do you like best? | one ; two ; three ; four ; five ; six ; seven ; other
+C | Which month of the year is your favorite? | january_to_march = a winter or early spring month ; april_to_june = a spring or early summer month ; july_to_september = a summer or early autumn month ; october_to_december = an autumn or early winter month
+C | Which single month do you look forward to most? | october ; december ; june ; july ; may ; april ; september ; other
+C | Which kind of animal would you call your favorite? | mammal ; bird ; fish ; reptile ; amphibian ; insect ; other
+C | Which wild animal is your favorite? | wolf ; elephant ; fox ; owl ; dolphin ; bear ; tiger ; other
+C | Which sea creature do you like best? | octopus ; whale ; sea_turtle ; seahorse ; shark ; jellyfish ; otter ; other
+C | If you had to pick a favorite bird, which would it be? | owl ; hummingbird ; penguin ; crow ; eagle ; parrot ; robin ; other
+C | Which insect or bug do you like best? | butterfly ; ladybug ; bee ; dragonfly ; firefly ; beetle ; none
+C | Which dinosaur is your favorite? | tyrannosaurus = T. rex ; triceratops ; stegosaurus ; velociraptor ; brachiosaurus ; pterodactyl ; other
+C | Which mythical creature do you like most? | dragon ; unicorn ; phoenix ; mermaid ; griffin ; kraken ; other
+C | Which gemstone do you find prettiest? | diamond ; ruby ; sapphire ; emerald ; amethyst ; opal ; pearl ; other
+C | Which metal finish do you find most attractive? | gold ; silver ; rose_gold ; copper ; bronze ; black_metal
+C | Which planet do you find most beautiful? | mercury ; venus ; mars ; jupiter ; saturn ; uranus ; neptune ; earth
+C | Which shape do you like drawing most? | circle ; star ; heart ; spiral ; triangle ; square ; hexagon
+C | Which pattern do you like best? | stripes ; polka_dots ; plaid ; floral ; paisley ; geometric ; plain = no pattern
+C | Which texture do you find nicest to touch? | velvet ; silk ; wool ; smooth_stone ; sand ; moss ; fur
+C | Which holiday decoration do you enjoy most? | string_lights ; carved_pumpkins ; wreaths ; paper_lanterns ; streamers_and_balloons ; candles ; none
+C | Which kind of holiday do you like most? | winter_holiday ; new_year ; harvest_or_thanksgiving ; spring_holiday ; your_birthday ; summer_festival ; other
+C | Which celebration of the year do you enjoy most? | new_years_eve ; halloween ; valentines_day ; midsummer ; lunar_new_year ; other
+C | Which color would you pick for a new car? | black ; white ; silver ; red ; blue ; green ; yellow ; other
+C | Which color would you never choose for your things? | brown ; orange ; yellow ; pink ; purple ; beige ; gray ; other
+C | Which shade of green do you like best? | mint ; emerald ; olive ; forest ; lime ; sage ; teal
+C | When you pick something red, which shade do you reach for? | crimson ; scarlet ; burgundy ; coral ; cherry ; brick
+C | Which neutral color do you like best? | black ; white ; gray ; beige ; navy ; cream ; brown
+C | Which season has your favorite smell? | spring ; summer ; autumn ; winter ; none
+C | Which part of autumn do you enjoy most? | changing_leaves ; cool_air ; harvest_foods ; cozy_clothes ; halloween ; early_darkness
+C | What do you look forward to most once winter arrives? | snowfall ; holidays ; staying_in ; winter_sports ; crisp_clear_days ; nothing
+C | What do you enjoy most about summer? | long_evenings ; swimming ; warm_nights ; holidays_off ; storms ; fresh_fruit ; nothing
+C | What is the best thing about spring for you? | blossoms ; birdsong ; longer_days ; rain_showers ; first_warm_day ; fresh_green_leaves
+C | Which kind of rain do you enjoy being out in? | light_drizzle ; steady_rain ; heavy_downpour ; summer_shower ; rain_with_thunder ; none
+C | What kind of snowfall do you enjoy most? | big_fluffy_flakes ; fine_powder ; wet_packing_snow ; light_flurries ; none
+C | What kind of breeze do you enjoy most on a walk? | gentle_breeze ; strong_gusts ; warm_wind ; cold_crisp_wind ; still_air
+C | Which time of year has your favorite light? | spring ; summer ; autumn ; winter ; no_preference
+C | Which hour of the evening feels best to you? | golden_hour = just before sunset ; sunset ; dusk ; early_night ; midnight
+C | Which kind of night sky do you love most? | full_moon ; crescent_moon ; starry_moonless ; meteor_shower ; northern_lights ; cloudy_glow
+C | Which moon phase do you like best? | full_moon ; crescent ; half_moon ; new_moon ; gibbous ; no_preference
+C | Which constellation do you like best? | orion ; big_dipper ; cassiopeia ; southern_cross ; scorpius ; pleiades ; none
+C | Which of the Chinese zodiac animals appeals to you most? | rat ; ox ; tiger ; rabbit ; dragon ; snake ; horse ; other
+C | Which star sign symbol do you find most appealing? | lion = Leo ; scorpion = Scorpio ; fish = Pisces ; twins = Gemini ; archer = Sagittarius ; ram = Aries ; other
+C | Which element do you like most in a landscape? | water ; rock ; trees ; sand ; ice ; open_sky
+C | Which tree do you find most beautiful? | oak ; pine ; willow ; birch ; palm ; maple ; cherry_blossom ; other
+C | Which kind of sound do you find most soothing? | rain_on_a_roof ; ocean_waves ; crackling_fire ; birdsong ; wind_in_trees ; distant_thunder ; white_noise
+C | Which everyday sound do you like most? | kettle_boiling ; cat_purring ; pages_turning ; keyboard_typing ; coffee_pouring ; laughter ; none
+C | Which everyday scent makes you stop and breathe in? | fresh_cut_grass ; rain_on_pavement ; old_books ; campfire_smoke ; clean_laundry ; pine_trees ; vanilla
+C | Which flower scent do you like most? | rose ; lavender ; jasmine ; lilac ; gardenia ; lily ; none
+C | Which letter of the alphabet do you find ugliest? | q ; x ; z ; j ; k ; none
+C | Which kind of word do you enjoy saying out loud? | long_words ; funny_sounding_words ; words_from_other_languages ; old_fashioned_words ; onomatopoeia = words that sound like what they mean ; no_preference
+C | Which punctuation mark do you like best? | period ; comma ; exclamation_mark ; question_mark ; semicolon ; ellipsis ; dash
+C | Which symbol would you choose to represent yourself? | star ; heart ; infinity_sign ; moon ; lightning_bolt ; spiral ; other
+C | Which style of lettering appeals to you most? | serif = classic book style ; sans_serif = clean modern style ; handwritten ; typewriter ; bold_display ; no_preference
+C | Which kind of weekday evening do you like best? | monday ; tuesday ; wednesday ; thursday ; friday ; no_preference
+C | Which day of the week do you dread most? | monday ; tuesday ; wednesday ; thursday ; friday ; saturday ; sunday ; none
+C | Which stretch of the weekend feels best to you? | friday_night ; saturday_morning ; saturday_night ; sunday_morning ; sunday_afternoon
+C | Which weather lifts your mood the most? | clear_and_sunny ; partly_cloudy ; light_rain ; snowy ; misty ; windy ; stormy
+C | Which weather do you find most unpleasant to be out in? | heat_wave ; freezing_cold ; drizzle ; heavy_rain ; strong_wind ; humidity ; fog
+C | Which sunrise color do you like best? | pink ; orange ; gold ; purple ; pale_blue
+C | Which color combination do you like best? | black_and_white ; blue_and_white ; black_and_gold ; green_and_brown ; pink_and_purple ; red_and_black ; other
+C | Which type of cloud do you like watching most? | puffy_cumulus ; wispy_cirrus ; towering_storm_clouds ; flat_gray_blanket ; clear_sky_no_clouds
+C | Which color of flower do you like best? | red ; yellow ; white ; pink ; purple ; blue ; orange
+C | Which kind of animal do you think is the cutest? | puppy ; kitten ; baby_panda ; duckling ; bunny ; baby_otter ; other
+C | Which farm animal is your favorite? | cow ; pig ; goat ; sheep ; horse ; chicken ; donkey
+C | Which kind of landscape color do you like most? | desert_orange ; forest_green ; ocean_blue ; snow_white ; autumn_red
+C | Which gem of nature do you like best? | seashells ; sea_glass ; pinecones ; smooth_river_stones ; feathers ; crystals ; none
+C | Which rainbow color do you like best? | red ; orange ; yellow ; green ; blue ; indigo ; violet
+C | Which kind of number do you like better? | odd_numbers ; even_numbers ; no_preference
+S | How do you feel about the color green? | I avoid green whenever I can ; I find green a bit dull ; I have no feelings about green ; I like green in small touches ; Green is one of my top colors ; Green is my favorite color by far
+S | How drawn are you to the color purple? | I dislike purple ; I rarely choose anything purple ; I am neutral about purple ; I pick purple now and then ; Purple is my favorite color
+S | How fond are you of the color black? | I find black gloomy and avoid it ; I use black only when I must ; I am indifferent to black ; I often choose black ; Nearly everything I pick is black
+S | How much do you like the color red? | Red makes me uncomfortable ; I rarely choose red ; I am neutral about red ; I like red as an accent ; Red is my favorite color
+S | How do you feel about hot summer days? | I dread them and stay inside ; I put up with them ; They are fine but nothing special ; I enjoy them ; They are my favorite days of the year
+S | How do you feel about the first snowfall of the year? | It puts me in a bad mood ; I barely notice it ; I find it mildly pleasant ; It makes me happy ; I rush outside to enjoy it
+S | How do you feel about windy days? | I hate going out on windy days ; I find them annoying ; I do not mind them ; I find them refreshing ; I love a wild windy day
+S | How do you feel about very early mornings before sunrise? | I hate being awake then ; I tolerate them when I must ; They are neither good nor bad ; I like the quiet ; They are my favorite time of day
+S | How do you feel about the smell of rain on dry ground? | I find it unpleasant ; I don't notice it ; It is nice enough ; I love it ; I stop whatever I am doing to breathe it in
+S | How do you feel about Friday afternoons? | They feel the same as any afternoon ; They feel a little lighter ; I feel noticeably happier ; They are one of the best moments of my week
+S | How much do you enjoy winter as a season? | I dread winter every year ; I just get through winter ; Winter is fine ; I enjoy most of winter ; Winter is my favorite season
+S | How do you feel when summer finally arrives? | I dread summer every year ; I just get through summer ; Summer is fine ; I enjoy most of summer ; Summer is my favorite season
+S | How much do you like the sound of thunder? | It frightens me ; It makes me uneasy ; I don't mind it ; I find it cozy ; I open the window to hear it better
+S | How much do you enjoy Halloween? | I ignore it entirely ; I put out a few treats and that is it ; I enjoy it a little ; I dress up most years ; I plan my costume months ahead
+S | How much do you enjoy thunderstorms? | They frighten me ; I would rather they pass quickly ; I do not mind them ; I like watching them ; I love them and go out to watch
+S | How much do you enjoy hot humid weather? | I find it unbearable ; I dislike it ; I can live with it ; I rather like it ; I feel at my best in it
+S | How much do you enjoy freezing cold, clear days? | I hate them ; I put up with them ; They are fine ; I enjoy them ; They are my favorite kind of day
+S | How much do you like spiders? | I cannot be in the same room as one ; I avoid them ; I leave them alone ; I find them interesting ; I think they are wonderful
+S | How do you feel about snakes? | Even pictures of them scare me ; I avoid them ; I neither like nor dislike them ; I find them fascinating ; Snakes are among my favorite animals
+S | How much do you like the number thirteen? | I avoid it on purpose ; It makes me a little uneasy ; It is just another number ; I kind of like it ; It is my lucky number
+S | How much do you like sunsets? | I never stop to look at them ; I notice them now and then ; I enjoy a good one ; I often stop to watch them ; I plan my evenings around watching them
+S | How much do you like the sound of rain? | It bothers me ; I barely notice it ; It is pleasant enough ; I find it very soothing ; I play rain sounds even when it is dry
+S | How much do you like foggy weather? | It makes me gloomy ; I find it a bit dreary ; I have no feeling about it ; I find it atmospheric ; It is my favorite weather
+S | How much do you like pastel colors? | I dislike them ; I rarely choose them ; I am neutral about them ; I choose them often ; They are my favorite colors
+S | How much do you like bright neon colors? | I find them hard to look at ; I avoid them ; They are fine in small doses ; I like them ; I love wearing and using them
+S | How much do you look forward to your own birthday each year? | I would rather it passed unnoticed ; I barely mark it ; I enjoy it quietly ; I look forward to it ; I count down the days to it
+S | How much do you enjoy long summer evenings? | I find them tiresome ; I do not care either way ; They are pleasant ; I love them ; They are my favorite part of the year
+S | How much do you like owls? | I find them creepy ; I do not care about them ; I like them well enough ; I really like them ; Owls are my favorite animal
+S | How much do you like the letter Z? | I find it ugly ; I do not like it much ; It is just a letter ; I like how it looks ; It is my favorite letter
+S | How much do you like the shape of a star? | I find it tacky ; I do not care for it ; It is fine ; I like it a lot ; I draw stars on everything
+N | Would you call green your favorite color?
+N | Is autumn your favorite season?
+N | Is seven your favorite number?
+N | Do you have a favorite constellation?
+N | Would you say dogs are your favorite animal?
+N | Is the cat your favorite animal?
+N | Would you pick Saturday as the best day of the week?
+N | Is your favorite holiday in winter?
+N | Do you love the hour around sunset more than any other?
+N | Is December your favorite month?
+N | Do you find the color gray appealing?
+N | Do you like purple more than any other color?
+N | Do you have a favorite typeface?
+N | Is a circle your favorite shape?
+N | Do you prefer warm weather to cold weather?
+N | Do you like rainy days more than sunny days?
+N | Is your favorite season the one you were born in?
+N | Is your favorite animal a sea creature?
+N | Do you like the smell of rain?
+N | Is the full moon your favorite thing in the night sky?
+N | Do you have a favorite gemstone?
+N | Is your favorite color the same as it was when you were a child?
+N | Do you like the color white more than the color black?

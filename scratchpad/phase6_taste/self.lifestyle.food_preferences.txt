@@ -1,0 +1,119 @@
+# self.lifestyle.food_preferences
+C | Which cuisine do you order most often when you eat out? | italian ; chinese ; mexican ; indian ; japanese ; thai ; american ; other
+C | What do you usually drink with dinner? | water ; soda ; juice ; milk ; tea ; wine_or_beer ; nothing
+C | How do you like your toast? | lightly_golden ; medium_brown ; dark ; almost_burnt ; no_toast = I don't eat toast
+C | What do you spread on your toast most often? | butter ; jam ; peanut_butter ; avocado ; honey ; cheese ; nothing
+C | How do you eat a slice of pizza? | folded ; flat_by_hand ; knife_and_fork ; crust_first ; leave_the_crust
+C | Which part of a sandwich matters most to you? | bread ; main_filling ; sauce ; cheese ; crunchy_extras
+C | Which kind of chocolate do you reach for? | dark ; milk ; white ; none
+C | What do you snack on while watching a film at home? | popcorn ; candy ; chips ; nuts ; fruit ; nothing
+C | How do you take your tea? | plain ; with_milk ; with_lemon ; with_honey ; with_sugar ; dont_drink_tea
+C | What do you do with the crusts of your bread? | eat_them ; cut_them_off ; leave_them_on_the_plate ; eat_them_last
+C | Which kind of breakfast cereal do you prefer? | sugary ; plain_flakes ; granola ; muesli ; hot_oatmeal ; no_cereal
+C | Which noodle dish do you order most? | ramen ; pho ; pad_thai ; spaghetti ; lo_mein ; udon ; other
+C | Which fruit do you eat most often? | apples ; bananas ; berries ; grapes ; oranges ; mango ; other
+C | Which vegetable do you refuse to eat? | brussels_sprouts ; broccoli ; eggplant ; beets ; okra ; celery ; none
+C | Which sauce do you add to almost anything? | ketchup ; hot_sauce ; mayonnaise ; soy_sauce ; mustard ; barbecue_sauce ; none
+C | How do you like your ice cream served? | cone ; cup ; sundae ; milkshake ; straight_from_the_tub
+C | Which ice cream flavor do you choose most? | vanilla ; chocolate ; strawberry ; mint_chip ; cookie_dough ; pistachio ; other
+C | Which cheese do you like eating most? | cheddar ; mozzarella ; brie ; parmesan ; blue_cheese ; feta ; goat_cheese ; other
+C | Which bread do you buy most often? | white ; whole_wheat ; sourdough ; rye ; baguette ; bagels ; none
+C | How do you usually eat rice? | plain_white ; brown ; fried ; seasoned ; sticky ; rarely_eat_rice
+C | What soup do you crave on a cold day? | chicken_noodle ; tomato ; ramen ; lentil ; minestrone ; pho ; other
+C | Which meat ends up on your plate most? | chicken ; beef ; pork ; fish ; lamb ; none
+C | Which pasta shape do you choose when you cook? | spaghetti ; penne ; fusilli ; macaroni ; lasagna_sheets ; ravioli ; other
+C | What do you reach for when you want something salty? | chips ; pretzels ; popcorn ; nuts ; crackers ; pickles
+C | Which fast-food item do you order most? | burger ; fries ; fried_chicken ; tacos ; pizza ; sandwich ; none
+C | Where do you sit down to eat lunch on a workday? | at_my_desk ; at_a_table ; outdoors ; at_a_cafe ; in_the_car ; standing_up
+C | When do you usually eat dinner? | late_afternoon ; early_evening ; mid_evening ; late_night ; no_set_time
+C | Which cooking method do you use most at home? | stovetop ; oven ; microwave ; air_fryer ; grill ; slow_cooker ; rarely_cook
+C | Which kind of fries do you like best? | thin_and_crispy ; thick_cut ; curly ; waffle ; sweet_potato ; none
+C | What drink do you have when you want a treat? | milkshake ; soda ; fancy_coffee ; bubble_tea ; smoothie ; hot_chocolate ; cocktail
+C | Which salad do you actually enjoy eating? | caesar ; greek ; garden ; caprese ; cobb ; none
+C | How do you order a burger? | plain ; with_cheese ; with_bacon ; with_everything ; veggie_patty ; no_burgers
+C | Which coffee drink do you order most at a café? | espresso ; latte ; cappuccino ; americano ; drip_coffee ; cold_brew ; no_coffee
+C | Which tea do you drink most? | black ; green ; herbal ; chai ; oolong ; iced_tea ; none
+C | What kind of water do you usually drink? | tap ; filtered ; bottled ; sparkling ; flavored
+C | Which breakfast would you pick at a diner? | pancakes ; waffles ; eggs_and_bacon ; omelet ; french_toast ; breakfast_burrito
+C | What do you put on your pancakes? | maple_syrup ; butter ; fruit ; chocolate_chips ; whipped_cream ; nothing
+C | Which kind of popcorn do you prefer? | buttered ; lightly_salted ; caramel ; kettle_corn ; cheese ; none
+C | Which nut butter do you like best? | peanut ; almond ; cashew ; hazelnut_spread ; none
+C | How do you eat a sandwich cookie with cream in the middle? | whole ; twist_it_apart ; dunk_it_in_milk ; lick_the_cream_first
+C | How do you like your chicken cooked? | grilled ; fried ; roasted ; in_a_curry ; as_wings ; dont_eat_chicken
+C | Which sushi do you order first? | salmon_nigiri ; tuna_nigiri ; california_roll ; spicy_tuna_roll ; tempura_roll ; vegetable_roll ; no_sushi
+C | How do you prefer to eat corn? | on_the_cob ; cut_off_the_cob ; as_popcorn ; avoid_corn
+C | Which seasoning do you use most when you cook? | garlic ; black_pepper ; chili ; cumin ; basil ; oregano ; cinnamon ; other
+C | How do you like your bacon? | chewy ; crispy ; very_crispy ; dont_eat_bacon
+C | Which citrus fruit do you enjoy most? | orange ; lemon ; lime ; grapefruit ; mandarin ; none
+C | Which berry do you like best? | strawberry ; blueberry ; raspberry ; blackberry ; cranberry ; none
+C | What do you order at a bakery? | croissant ; muffin ; cinnamon_roll ; donut ; bagel ; loaf_of_bread
+C | Which kind of candy do you grab first? | chocolate ; gummies ; sour_candy ; hard_candy ; licorice ; mints ; none
+C | What do you want to eat when you feel sick? | soup ; toast ; crackers ; rice ; nothing ; comfort_food
+C | How do you like your cookies? | chewy ; crispy ; soft_and_cakey ; slightly_underbaked
+C | What do you reach for as a late-night snack? | cereal ; leftovers ; chips ; toast ; ice_cream ; instant_noodles ; nothing
+C | How do you eat at a buffet? | one_careful_plate ; a_bit_of_everything ; dessert_first ; only_my_favorites ; many_rounds
+C | Which topping do you always add to a bowl of ramen? | soft_boiled_egg ; sliced_pork ; chili_oil ; corn ; seaweed ; extra_noodles ; none
+C | What do you order at a café when you don't want coffee? | tea ; hot_chocolate ; juice ; smoothie ; sparkling_water ; chai
+C | How do you like to eat avocado? | guacamole ; on_toast ; sliced_in_salad ; in_sushi ; dont_like_avocado
+C | Which sour food do you enjoy most? | pickles ; kimchi ; sauerkraut ; sour_candy ; plain_lemon ; none
+C | How do you like your fish cooked? | fried ; grilled ; raw ; smoked ; baked ; dont_eat_fish
+C | Which dip do you like best with chips? | salsa ; guacamole ; queso ; hummus ; onion_dip ; none
+C | Which melon do you reach for in summer? | watermelon ; cantaloupe ; honeydew ; none
+C | How do you like your oatmeal? | plain ; with_fruit ; with_brown_sugar ; savory ; overnight_oats ; dont_eat_oatmeal
+C | What kind of potato chip flavor do you buy? | plain_salted ; salt_and_vinegar ; barbecue ; sour_cream_and_onion ; cheese ; spicy ; none
+C | How do you like your steak sauce? | none_needed ; peppercorn ; mushroom ; chimichurri ; ketchup ; dont_eat_steak
+C | Which pastry do you choose with your morning coffee? | croissant ; danish ; scone ; muffin ; nothing
+C | What do you usually put in a smoothie? | berries ; banana ; greens ; yogurt ; protein_powder ; dont_drink_smoothies
+S | How often do you eat fast food? | I never eat fast food ; I eat it only on long drives ; I eat it once or twice a month ; I eat it most weeks ; I eat it several times a week
+S | How much plain water do you drink during a normal day? | I rarely drink plain water ; I drink a glass or two ; I drink several glasses ; I carry a bottle and refill it all day
+S | How often do you eat dessert after dinner? | I never eat dessert ; I eat dessert only on special occasions ; I eat dessert on weekends ; I eat dessert most nights ; I eat dessert every single night
+S | How much do you like bitter foods such as dark greens or grapefruit? | I spit them out ; I eat them only when they are hidden in something ; I eat them when they are served ; I enjoy them ; I seek them out
+S | How often do you order food delivery? | I never order delivery ; I order only on special occasions ; I order a couple of times a month ; I order most weeks ; I order several nights a week
+S | How much do you care about buying organic food? | I never think about it ; I buy organic only when it is on sale ; I buy organic for a few items ; I buy organic whenever I can ; I buy nothing that isn't organic
+S | How strict are you about eating at regular times? | I eat whenever I happen to be hungry ; I eat meals at rough times ; I eat at the same times most days ; I get cranky if a meal is late ; I set reminders so I never miss a mealtime
+S | How much garlic do you use when you cook? | I never use garlic ; I add just a hint ; I use what the recipe says ; I double what the recipe says ; I add whole heads of garlic
+S | How much do you enjoy sour foods? | I cannot stand anything sour ; I tolerate a little sourness ; I enjoy sour things now and then ; I love sour candy and pickles ; I happily bite into plain lemons
+S | How often do you eat breakfast at a café? | I never eat breakfast out ; I eat breakfast out only on holidays ; I eat breakfast out about once a month ; I eat breakfast out most weekends ; I eat breakfast out most days
+S | How much do you like raw fish? | I will not touch it ; I would try a single bite ; I eat it now and then ; I order it often ; It is my favorite thing to eat
+S | How willing are you to eat food that fell on the floor? | I throw it away every time ; I eat it only if it is still wrapped ; I eat it if I pick it up at once ; I eat it unless it looks dirty ; I eat it no matter what
+S | How cold do you like your drinks? | I drink everything at room temperature ; I like drinks cool but without ice ; I add a few ice cubes ; I fill the glass with ice ; I chew the ice when the drink is gone
+S | How much ketchup do you use on fries? | None at all ; A small dab on the side ; A dip for each fry ; I cover them ; I drown them
+S | How big is your usual plate at dinner? | A small plate I often don't finish ; A modest plate ; A normal full plate ; A full plate and usually seconds ; Seconds and often thirds
+S | How often do you eat meat? | I never eat meat ; I eat meat only on occasion ; I eat meat a few meals a week ; I eat meat about once a day ; I eat meat at nearly every meal
+S | How much do you enjoy eating leftovers? | I throw leftovers away ; I eat them only if there is nothing else ; I eat them happily ; I cook extra on purpose to have leftovers ; I like most dishes better the next day
+S | How often do you drink soda? | I never drink soda ; I drink it only at parties ; I drink a few cans a week ; I drink one a day ; I drink several a day
+S | How often do you eat vegetables? | I rarely eat vegetables ; I eat them a few times a week ; I eat them about once a day ; I eat them with most meals ; I eat them at every meal and as snacks
+S | How fast do you eat compared with the people at your table? | I am always the last to finish ; I eat a bit slower than most ; I eat at about the same pace ; I usually finish first ; I finish before everyone else has started
+S | How much salt do you add at the table? | I never add salt ; I add salt only to bland dishes ; I add a pinch to most meals ; I salt my food before tasting it ; I salt everything heavily
+S | How often do you try a new recipe? | I never try new recipes ; I try one about once a year ; I try one a few times a year ; I try one most months ; I try a new one every week
+S | How do you feel about strong-smelling cheese? | I leave the room when it comes out ; I avoid it ; I eat it if it is served ; I enjoy it ; I seek out the smelliest cheese I can find
+S | How often do you bake at home? | I never bake ; I bake only for holidays ; I bake every few months ; I bake about once a month ; I bake every week
+S | How much do you like eating with your hands? | I use cutlery even for pizza ; I use my hands only for finger food ; I use my hands whenever it is acceptable ; I would eat almost everything with my hands if I could
+S | How much do you like mixing sweet and salty flavors? | I keep sweet and salty strictly apart ; I dislike most sweet and salty mixes ; I like a few classics like salted caramel ; I enjoy sweet and salty mixes often ; I put sweet toppings on savory food all the time
+S | How central is tea to your day? | I never drink tea ; I have a cup now and then ; I have a cup most days ; I have several cups every day ; I always have a pot of tea brewing
+S | How often do you eat on the go instead of sitting down? | I always sit down to eat ; I eat on the go only when rushed ; I eat on the go some days ; I eat most lunches on the go ; I eat almost every meal on the go
+S | How far ahead do you plan your meals? | I decide at each mealtime ; I decide in the morning ; I have a rough plan for the next few days ; I plan every dinner for the week ; I cook all my meals for the week in advance
+S | How much do you like very sweet desserts? | I find them sickening ; I can manage a few bites ; I enjoy a normal slice ; I often go back for more ; I could eat the whole thing
+N | Do you drink coffee every day?
+N | Do you enjoy blue cheese?
+N | Do you like anchovies?
+N | Do you eat the skin on your apples?
+N | Do you enjoy raw onions?
+N | Do you like black licorice?
+N | Do you put milk in your tea?
+N | Do you prefer sparkling water to still water?
+N | Do you eat spicy food for breakfast?
+N | Do you like coconut?
+N | Do you dip your fries in a milkshake?
+N | Do you enjoy liver or other organ meats?
+N | Do you like raisins in baked goods?
+N | Do you eat the same lunch most days?
+N | Do you enjoy eating alone at a restaurant?
+N | Do you like pickles?
+N | Do you drink milk on its own?
+N | Do you avoid gluten?
+N | Do you enjoy peanut butter?
+N | Do you like the taste of beer?
+N | Do you sometimes eat dessert before dinner?
+N | Do you order the hottest dish on the menu when you can?
+N | Do you like raw tomatoes?

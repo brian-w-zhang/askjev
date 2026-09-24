@@ -1,0 +1,119 @@
+# self.lifestyle.style_appearance
+C | Which type of coat would you pick for winter? | puffer_jacket ; wool_overcoat ; parka ; trench_coat ; leather_jacket ; peacoat ; other
+C | What kind of bag do you usually carry? | backpack ; tote_bag ; crossbody_bag ; handbag ; messenger_bag ; fanny_pack ; no_bag ; other
+C | Which kind of sunglasses do you prefer? | aviators ; classic_square_frames ; round_frames ; cat_eye ; sporty_wraparound ; oversized ; no_sunglasses
+C | Which type of trousers do you wear most? | jeans ; chinos ; tailored_trousers ; sweatpants ; leggings ; cargo_pants ; shorts ; other
+C | What kind of top do you reach for most often? | plain_t_shirt ; graphic_t_shirt ; button_down_shirt ; sweater ; hoodie ; blouse ; polo_shirt ; other
+C | Which kind of shoes do you wear for dressing up? | leather_dress_shoes ; loafers ; heels ; boots ; clean_white_sneakers ; flats ; other
+C | Which metal do you prefer for jewelry or accessories? | gold ; silver ; rose_gold ; mixed_metals ; no_metal_jewelry ; no_preference
+C | How do you usually wear your hair on a normal day? | loose ; tied_back ; in_a_bun ; braided ; under_a_hat ; short_so_nothing_to_do ; other
+C | Which kind of watch would you choose to wear? | classic_analog ; digital ; smartwatch ; sports_watch ; vintage_heirloom ; no_watch
+C | Which dress code do you like best for a party? | black_tie ; cocktail ; smart_casual ; casual ; costume_theme ; no_dress_code
+C | Which kind of sweater do you like most? | chunky_knit ; fine_merino ; cardigan ; turtleneck ; fleece ; sweatshirt ; other
+C | What is your go-to pajama style? | matching_pajama_set ; old_t_shirt_and_shorts ; nightgown ; onesie ; sweats ; nothing_special ; other
+C | Which kind of hat would you choose to wear? | baseball_cap ; beanie ; bucket_hat ; wide_brim_sun_hat ; fedora ; beret ; no_hat
+C | Which kind of scarf do you prefer? | thick_wool_scarf ; light_silk_scarf ; infinity_scarf ; bandana ; no_scarf ; other
+C | What kind of look do you aim for at a job interview? | full_suit ; smart_blazer_no_tie ; neat_business_casual ; what_i_wear_every_day ; depends_on_the_company
+C | Which style era would you most like to dress in every day? | roaring_twenties ; fifties ; sixties_mod ; seventies ; eighties ; nineties ; present_day ; other
+C | Which kind of eyeglass frames would you choose? | thin_metal ; thick_black_plastic ; tortoiseshell ; rimless ; colorful ; round_vintage ; no_glasses
+C | What kind of socks do you like to wear? | plain_black ; plain_white ; bright_patterned ; novelty_prints ; no_show_socks ; wool_hiking_socks ; other
+C | What kind of fragrance do you like to wear? | fresh_citrus ; woody ; floral ; sweet_vanilla ; spicy ; musky ; no_fragrance
+C | Which hair color would you pick if you could change it for free? | keep_my_own ; blonde ; black ; red ; brown ; silver_grey ; bright_unnatural_color
+C | What kind of swimwear do you prefer? | swim_shorts ; one_piece ; bikini ; wetsuit ; rash_guard ; board_shorts ; other
+C | What style of gym clothes do you wear? | matching_set ; old_t_shirt_and_shorts ; brand_name_athletic_wear ; leggings_and_tank_top ; whatever_is_clean ; i_do_not_work_out
+C | What kind of nail look do you like on yourself? | bare_and_short ; neatly_manicured ; clear_polish ; bold_color ; nail_art ; long_acrylics ; no_preference
+C | Which kind of boots do you like wearing most? | ankle_boots ; knee_high_boots ; cowboy_boots ; hiking_boots ; work_boots ; rain_boots ; no_boots
+C | Which kind of jacket do you wear most in spring? | denim_jacket ; bomber_jacket ; blazer ; light_rain_jacket ; windbreaker ; cardigan ; no_jacket
+C | Which color would you choose for a formal outfit? | black ; navy ; grey ; white ; a_bold_color ; pastel ; other
+C | What kind of print would you wear on a shirt? | stripes ; checks_or_plaid ; florals ; polka_dots ; animal_print ; camouflage ; no_prints
+C | How do you like your shirts tucked? | always_tucked_in ; front_tuck_only ; always_untucked ; depends_on_the_outfit
+C | Which kind of earrings would you wear? | small_studs ; hoops ; dangling_earrings ; ear_cuffs ; none
+C | Which kind of necklace do you like wearing? | thin_chain ; pendant ; chunky_chain ; pearls ; choker ; beaded ; none
+C | What kind of sleeves do you prefer on a shirt? | sleeveless ; short_sleeves ; three_quarter_sleeves ; long_sleeves ; rolled_up_long_sleeves ; no_preference
+C | What kind of look do you want for a relaxed weekend? | athleisure ; jeans_and_a_tee ; sundress ; cozy_knitwear ; outdoor_gear ; still_dressed_up ; other
+C | Which kind of wedding guest outfit would you choose? | classic_suit ; colorful_suit ; long_gown ; cocktail_dress ; traditional_cultural_dress ; smart_separates ; other
+C | Which facial hair style would you pick for yourself if you could grow any? | clean_shaven ; stubble ; short_beard ; full_beard ; mustache ; goatee ; not_applicable
+C | Which clothing detail do you notice most on yourself in the mirror? | fit ; color ; shoes ; hair ; accessories ; overall_vibe ; other
+C | Which kind of sneakers do you prefer? | classic_white_leather ; chunky_retro ; running_shoes ; canvas_high_tops ; slip_ons ; no_sneakers
+C | How do you like your jeans cut? | skinny ; slim ; straight ; bootcut ; wide_leg ; baggy ; i_do_not_wear_jeans
+C | How do you like your jeans washed? | dark_raw_denim ; mid_blue ; light_faded ; black ; ripped_distressed ; colored ; i_do_not_wear_jeans
+C | What kind of belt do you usually wear? | plain_leather ; woven ; statement_buckle ; fabric ; no_belt
+C | What kind of hairstyle do you prefer for yourself? | buzz_cut ; short_and_neat ; medium_and_textured ; long_and_straight ; curly_and_natural ; locs_or_braids ; other
+C | Which fabric do you most like for summer clothes? | cotton ; linen ; silk ; performance_synthetics ; denim ; other
+C | Which kind of wallet do you carry? | bifold ; card_holder ; long_zip_wallet ; phone_case_wallet ; money_clip ; no_wallet
+C | Which kind of tattoo would you choose if you got one? | small_symbol ; words_or_a_name ; flower_or_nature ; animal ; portrait ; large_sleeve ; none
+C | Where would you prefer to get a tattoo if you got one? | wrist ; ankle ; back ; arm ; shoulder ; behind_the_ear ; nowhere
+C | Where do you most like to get your hair cut? | cheap_walk_in_barber ; regular_stylist ; high_end_salon ; friend_or_family_member ; cut_it_myself ; other
+C | Which kind of umbrella would you carry? | compact_folding ; big_golf_umbrella ; clear_bubble ; patterned_statement ; none_i_use_a_hood
+C | What kind of gloves do you wear in cold weather? | leather ; knitted ; mittens ; touchscreen_gloves ; ski_gloves ; none
+C | What look do you prefer for a first day at a new place? | overdressed ; slightly_dressed_up ; exactly_like_everyone_else ; casual_and_relaxed ; other
+C | Which kind of skincare routine do you follow? | none ; just_soap ; cleanser_and_moisturizer ; several_steps ; elaborate_routine ; other
+C | Which kind of makeup look do you prefer on yourself? | none ; very_natural ; everyday_light ; bold_lips ; dramatic_eyes ; full_glam ; other
+C | How do you prefer your clothes to be cared for? | machine_wash_only ; some_hand_washing ; dry_clean_regularly ; whatever_the_label_says ; no_preference
+C | Which fashion aesthetic describes you best? | classic_preppy ; streetwear ; minimalist ; bohemian ; sporty ; punk_or_goth ; vintage ; other
+C | What do you wear to lounge around the house? | pajamas ; sweatpants_and_hoodie ; robe ; what_i_wore_all_day ; shorts_and_t_shirt ; other
+C | Which kind of raincoat would you pick? | classic_trench ; bright_yellow_slicker ; technical_shell ; poncho ; no_raincoat
+C | Which feature would you most want in a pair of shoes? | comfort ; style ; durability ; waterproofing ; price ; easy_to_slip_on
+C | Which kind of hair product do you use most? | none ; gel ; wax_or_pomade ; mousse ; hairspray ; oil_or_serum ; other
+C | How do you like your clothes to be sourced? | new_from_big_brands ; new_from_small_labels ; second_hand ; hand_me_downs ; handmade ; no_preference
+C | Which kind of ring would you wear every day? | plain_band ; signet_ring ; stacked_thin_rings ; gemstone_ring ; mood_ring ; none
+C | Which kind of shorts do you prefer? | tailored_shorts ; denim_shorts ; athletic_shorts ; cargo_shorts ; board_shorts ; no_shorts
+C | What is your preferred shirt collar? | crew_neck ; v_neck ; button_down_collar ; polo_collar ; turtleneck ; scoop_neck ; no_preference
+C | Which part of an outfit do you like spending money on? | shoes ; coat ; bag ; jeans ; jewelry ; watch ; nothing
+C | Which kind of hairstyle would you choose for a big event? | same_as_every_day ; freshly_cut ; professionally_styled ; updo ; slicked_back ; other
+C | What kind of tie would you choose? | solid_color ; striped ; patterned ; bow_tie ; skinny_tie ; no_tie
+C | What kind of outfit do you feel best in? | tailored_and_sharp ; loose_and_comfy ; sporty ; colorful_and_fun ; all_black ; other
+C | What kind of piercings appeal to you for yourself? | none ; earlobes_only ; several_ear_piercings ; nose ; eyebrow ; other
+S | How much do you plan your outfits for trips? | I throw things in the bag at the last minute ; I pack a rough mix of basics ; I pack items that go together ; I plan an outfit for each day ; I lay out and photograph every outfit before packing
+S | How much color do you wear on a typical day? | I wear only black, grey, and white ; I add one muted color ; I wear a mix of neutrals and colors ; I wear one bright piece most days ; I wear head-to-toe bright colors
+S | How long do you keep clothes before getting rid of them? | I clear out my wardrobe every season ; I replace things after a year or two ; I keep things for several years ; I wear things until they fall apart ; I still wear clothes from many years ago
+S | How much do you dress for the weather rather than for looks? | I wear what looks good even if I freeze ; I add a jacket only when it is very cold ; I balance warmth and style ; I dress mainly to stay comfortable ; I wear full weather gear at the first sign of rain
+S | How much do you spend on a single piece of clothing? | I buy only the cheapest options ; I spend a modest amount on most things ; I splurge on a few key pieces ; I regularly buy premium pieces ; I buy designer clothing without thinking about price
+S | How much do you care about wearing the same outfit twice in a week? | I would wear the same outfit every day ; I repeat outfits often without thinking ; I try to vary what I wear ; I avoid repeating an outfit within a week ; I never wear the same outfit twice in a row
+S | How much jewelry do you wear on a normal day? | I wear none ; I wear one small item ; I wear two or three pieces ; I wear several rings and necklaces ; I wear a lot of jewelry every day
+S | How much effort do you put into your hair each morning? | I don't touch it ; I run my fingers through it ; I brush or comb it ; I style it with products ; I blow-dry and style it fully
+S | How much do you dress up to go grocery shopping? | I go in pajamas ; I go in whatever I am wearing ; I put on clean casual clothes ; I dress in a nice outfit ; I dress as if I might be photographed
+S | How much would you change your look for a new job? | I would not change anything ; I would buy a couple of new shirts ; I would update my work wardrobe ; I would change my hairstyle too ; I would reinvent my whole look
+S | How tight do you like your clothes around your waist? | Very loose with an elastic waistband ; Loose and relaxed ; Neatly fitted ; Snug ; As tight as I can wear comfortably
+S | How much do you care about matching your socks? | I grab any two socks ; I match them if I have time ; I always wear a matching pair ; I match socks to my outfit ; I coordinate socks, shoes, and belt every time
+S | How much do you notice when your clothes are wrinkled? | I never notice wrinkles ; I notice but don't care ; I smooth out obvious creases ; I change if something looks wrinkled ; I refuse to leave the house with any wrinkle
+S | How many pairs of shoes do you own? | I own one pair ; I own a few pairs ; I own around ten pairs ; I own dozens of pairs ; I have a whole room of shoes
+S | How much do you use fragrance? | I never wear any ; I wear it for special events ; I wear it on some days ; I wear it every day ; I reapply it several times a day
+S | How much do you care about your shoes being clean? | I wear them muddy and scuffed ; I wipe them occasionally ; I clean them when they look dirty ; I clean them after most wears ; I keep them spotless at all times
+S | How adventurous are you with haircuts? | I have had the same haircut all my life ; I make small changes now and then ; I try a new style every few years ; I change my cut often ; I try something dramatic almost every visit
+S | How much sun protection do you wear as part of your look? | I never think about it ; I wear sunglasses on bright days ; I wear sunscreen on hot days ; I wear sunscreen and a hat outdoors ; I wear full protection year-round
+S | How much of your wardrobe is second-hand? | None of it ; A few pieces ; About half ; Most of it ; All of it
+S | How casual is your preferred look for dinner with friends? | Sweatpants and slippers ; Jeans and a hoodie ; Jeans and a nice top ; A smart outfit ; A full dressed-up look
+S | How well organized is your wardrobe? | Clothes are in piles on the floor ; Things are stuffed into drawers ; Items are roughly sorted by type ; Everything is folded and grouped ; Everything is color-coded and in perfect rows
+S | How much do you care about wearing comfortable underwear over nice-looking underwear? | I always pick the nicest-looking pair ; I mostly pick nice-looking ones ; I pick whichever is clean ; I mostly pick comfortable ones ; I always pick the most comfortable pair
+S | How long does it take you to choose an outfit for a big night out? | I wear the first thing I see ; I choose in a few minutes ; I try on a couple of options ; I try on many outfits ; I plan it days in advance
+S | How visible do you want your tattoos or body art to be? | I want none ; I would want only hidden ones ; I would want one that shows sometimes ; I would want several visible ones ; I would want them covering large areas
+S | How much do you care about the fit of your clothes being tailored? | I buy off the rack and wear it as is ; I get trousers shortened when needed ; I get a few items altered ; I have most good clothes tailored ; I have almost everything made to measure
+S | How bold are your glasses or sunglasses frames? | I wear none ; I choose invisible or rimless frames ; I pick classic simple frames ; I pick statement frames ; I own several bold pairs to match outfits
+S | How much do you dress to stand out in a crowd? | I want to blend in completely ; I wear something a little different ; I add one striking item ; I often wear eye-catching outfits ; I always want to be the most noticeable person
+S | How much do you coordinate your bag with your outfit? | I carry the same bag with everything ; I have one bag for work and one for going out ; I switch bags for special occasions ; I pick a bag to match most outfits ; I match my bag to every outfit I wear
+S | How much do you care about following seasonal colors in your wardrobe? | I wear the same colors all year ; I wear slightly darker clothes in winter ; I change my palette with the seasons ; I buy new pieces in each season's shades ; I rebuild my wardrobe around each season's trend colors
+S | How dressed up do you get for a flight? | I wear pajamas or loungewear ; I wear comfy casual clothes ; I wear a neat casual outfit ; I dress smartly ; I dress as if heading to a meeting
+N | Do you usually wear something with a visible logo?
+N | Would you wear the same style of outfit every day like a uniform if you could?
+N | Do you own a suit or formal dress you actually like?
+N | Would you wear a kilt or a sarong in public?
+N | Do you prefer to wear clothes in muted earthy tones?
+N | Would you get a matching tattoo with a friend?
+N | Do you enjoy wearing hats as a fashion statement?
+N | Would you shave your head completely?
+N | Do you prefer to shop for clothes in person rather than online?
+N | Do you wear bright colors in winter?
+N | Would you wear socks with sandals?
+N | Do you wear clothes with your name or initials on them?
+N | Would you grow your hair very long?
+N | Do you prefer slip-on shoes over lace-ups?
+N | Would you wear a vintage fur or leather coat?
+N | Do you enjoy trying on clothes in a changing room?
+N | Would you ever wear matching clothes with your family in a photo?
+N | Do you like wearing sunglasses even on cloudy days?
+N | Do you wear a signature scent?
+N | Would you wear a bold patterned suit to a formal event?
+N | Do you like the feel of wool against your skin?
+N | Do you enjoy getting your nails done?
+N | Would you pierce your ears if you had not already?

@@ -25,6 +25,8 @@
 | 2026-09-24 | Bulk placement keeps the **beam** walk (held-out: 90.1% exact) over the fast path (hemisphere step + nearest-node Choice: 84.9%, 2 requests instead of ~4-5); fast is used only for batches over 20k. Most sources place deterministically from exact hints |
 | 2026-09-24 | Coverage growth added 6 hand nodes (Politics & Government [hidden content], Identity & Demographics, Personal Care, Telecom & Networks, Moving Abroad, Memories & Life Story), so every question has a home |
 | 2026-09-24 | Dedupe keeps the plain "same question?" Noul (F1 0.66 on Quora pairs); a contrastive variant measured worse (0.54) |
+| 2026-09-24 | Phase 6: Vital Level-3 articles became 965 topic nodes (tree ≈ 1,220 nodes); Level-4 articles became entity questions (recognition Noul + importance Score); 22 GOAT pairwise categories (G3, top-25 by sitelinks); volume datasets (AITA, Social Chemistry, ETHICS, BoolQ, OpenTDB sweep) plus authored taste/personality/love/mind banks to rebalance kinds |
+| 2026-09-24 | Parallel Jev processes are throttled with `ASKJEV_RPS` / `ASKJEV_WORKERS` so their combined rate stays under 1,200 req/min |
 | 2026-09-24 | **Search is instant-first:** local embeddings (`bge-small`, free) + pgvector + trigram in ~50 ms; one Jev rerank request after; tree animations are human-paced and independent of latency |
 | 2026-09-24 | **Jev is the only gateway model.** No other LLM or embedding model on the gateway. Authoring (descriptions, synthetic questions, transforms) is done by Claude Code and its subagents; embeddings come from a local open model. No spending cap needed for Jev |
 | 2026-09-24 | Stack: Python pipeline first; Next.js UI later |

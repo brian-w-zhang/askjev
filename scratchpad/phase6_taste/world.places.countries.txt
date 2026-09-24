@@ -1,0 +1,25 @@
+C | Which country has the best food for travelers? | italy ; japan ; mexico ; thailand ; france ; india ; other
+C | Which country is the most fun to road-trip through? | united_states ; australia ; iceland ; new_zealand ; south_africa ; scotland ; other
+C | Which country has the most beautiful countryside? | italy ; england ; ireland ; france ; switzerland ; new_zealand ; other
+C | Which country has the best beaches? | australia ; thailand ; greece ; brazil ; mexico ; the_philippines ; other
+C | Which country is the most rewarding for a first trip to Asia? | japan ; thailand ; south_korea ; vietnam ; singapore ; indonesia ; other
+C | Which country has the friendliest reputation among travelers? | ireland ; canada ; new_zealand ; thailand ; portugal ; japan ; other
+C | Which country has the most beautiful national dress? | japan ; india ; scotland ; south_korea ; ghana ; mexico ; other
+C | Which country has the most charming villages? | france ; italy ; england ; germany ; portugal ; japan ; other
+C | Which Scandinavian country is the most beautiful? | norway ; sweden ; denmark ; finland ; iceland
+C | Which country is the best for a winter trip? | switzerland ; austria ; finland ; japan ; canada ; norway ; other
+C | Which country has the best mountains for travelers? | switzerland ; nepal ; peru ; canada ; new_zealand ; italy ; other
+C | Which country is the best for island hopping? | greece ; the_philippines ; indonesia ; croatia ; thailand ; other
+C | Which African country is the most rewarding to visit? | morocco ; kenya ; south_africa ; egypt ; tanzania ; namibia ; other
+C | Which country has the most beautiful language to hear spoken? | italy ; france ; brazil ; spain ; ireland ; japan ; other
+S | How rewarding is a trip to Iceland? | It is expensive and underwhelming ; It is worth a short stopover ; It is a memorable week ; It is one of the most rewarding trips anywhere
+S | How beautiful is New Zealand's scenery? | It is pleasant but ordinary ; It is pretty in a few places ; It is stunning almost everywhere ; It is the most beautiful country on Earth
+S | How enjoyable is Italy for a first trip to Europe? | It is overcrowded and tiring ; It is fine but overrated ; It is a wonderful first trip ; It is the perfect first trip to Europe
+S | How appealing is Switzerland despite its high prices? | The prices spoil the trip ; It is worth it for a few days ; It is well worth the cost ; It is worth any price
+S | How much fun is Mexico for a vacation? | It is not much fun ; It is fun at the resorts ; It is fun almost everywhere ; It is one of the most fun places to vacation
+S | How charming is Portugal as a travel destination? | It is dull ; It is pleasant enough ; It is charming ; It is the most charming country in Europe
+N | Is Japan the most enjoyable country for tourists?
+N | Is Greece more beautiful than Italy?
+N | Is Canada more scenic than the United States?
+N | Is Ireland the greenest-looking country in Europe?
+N | Is Peru more rewarding to visit than Chile?
