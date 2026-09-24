@@ -136,7 +136,7 @@ export function Search() {
 
   return (
     <div className="search">
-      <div className="search-field">
+      <div className="search-field" data-title="Search.Questions 1.1">
         <input
           data-testid="search"
           value={q}
@@ -155,7 +155,7 @@ export function Search() {
         {latency !== null && <span className="search-meta num" data-testid="latency">{Math.round(latency)} ms</span>}
       </div>
       {open && q.trim() && (
-        <div className="results" id="search-results" role="listbox" ref={listRef}>
+        <div className="results" id="search-results" role="listbox" ref={listRef} data-title="Results">
           <div className="results-status">
             <span className="num">{hits.length} match{hits.length === 1 ? "" : "es"}</span>
             <span className={rerank.state === "done" ? "jev" : ""}>
@@ -181,7 +181,7 @@ export function Search() {
                 {h.jev_p != null && (
                   <>
                     {Math.round(h.jev_p * 100)}%
-                    <span className="pbar"><i style={{ width: `${h.jev_p * 100}%` }} /></span>
+                    <span className="pbar"><i style={{ ["--p" as string]: `${h.jev_p * 100}%` }} /></span>
                   </>
                 )}
               </span>
@@ -200,16 +200,18 @@ export function Search() {
         </div>
       )}
       {!open && walk.state !== "idle" && showJevPath && (
-        <div className="walkcard" data-testid="walkcard">
+        <div className="walkcard" data-testid="walkcard" data-title="Jev.Walk">
+          <p className="walk-body">
           {walk.state === "walking" && <>Jev is walking the tree for this query</>}
           {walk.state === "error" && <>Jev&apos;s walk is unavailable: {walk.error}</>}
           {walk.state === "done" && w && (
             <>
               <span className="gold">Jev&apos;s walk</span> ends at <b>{label(w.node)}</b>{" "}
               <span className="num">({Math.round(w.confidence * 100)}% path confidence)</span>.{" "}
-              {agrees ? "Same place as the embedding match." : <>The embedding match sits under <b>{label(walk.embedNode!)}</b>; the gold light shows where they part.</>}
+              {agrees ? "Same place as the embedding match." : <>The embedding match sits under <b>{label(walk.embedNode!)}</b>; the green light shows where they part.</>}
             </>
           )}
+          </p>
         </div>
       )}
     </div>

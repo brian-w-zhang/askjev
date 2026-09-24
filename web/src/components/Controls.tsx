@@ -23,12 +23,12 @@ export function Controls() {
   const setFilter = (k: keyof typeof filters, v: string) => set({ filters: { ...filters, [k]: v } });
 
   return (
-    <div className="controls" data-collapsed={collapsed}>
+    <div className="controls" data-collapsed={collapsed} data-title="Color.Tool 1.1">
       <button className="controls-collapse iconbtn" style={{ width: "100%", marginBottom: collapsed ? 0 : 8 }} onClick={() => setCollapsed(!collapsed)}>
         {collapsed ? "Color and filters" : "Hide"}
       </button>
       <div className="controls-inner">
-        <h2>Color stars by</h2>
+        <h2>Color the sky by</h2>
         <div className="seg" role="group" aria-label="Color by indicator">
           {INDICATORS.map((i) => (
             <button key={i.id} aria-pressed={indicator === i.id} onClick={() => set({ indicator: i.id })} title={i.hint}>

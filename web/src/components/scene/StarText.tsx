@@ -1,8 +1,7 @@
 "use client";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
-import { Billboard, Html, Text } from "@react-three/drei";
-import { Vector3, type Group, type Mesh, type PerspectiveCamera } from "three";
+import { Vector3, type PerspectiveCamera } from "three";
 import { useStore } from "@/lib/store";
 import { anim, now } from "@/lib/anim";
 import { starAttention } from "@/lib/color";
@@ -10,19 +9,18 @@ import { loadTexts, metric, starData, starText, starWorld } from "@/lib/stars";
 import { openQuestion } from "@/lib/actions";
 import { flyTo } from "./CameraRig";
 import { overlaps, uiRects } from "@/lib/uirects";
+import { assign, cards, moveCard, place, publish, STAR_LABELS, starSlots } from "@/lib/overlay";
 import type { Placed } from "@/lib/layout";
 import type { Indicator } from "@/lib/types";
 
 // Question text on approach (docs/07-ui.md): close to a topic, its texts load and the stars nearest
 // the middle of the screen (and the ones worth a look) get labels, never overlapping, at most POOL.
-const FONT = "/fonts/schibsted-grotesk-latin-500-normal.woff";
-const POOL = 24;
+const POOL = STAR_LABELS;
 const TEXT_PX = 90; // a node's ball must cover this radius on screen before its texts load
 const PICK_PX = 12; // ...and this much before its stars can be hovered one by one
-const LABEL_PX = 11.5;
+const LABEL_PX = 16; // VT323 at 16px
+const CHARS_PER_LINE = 36;
 const MAX_CHARS = 90;
-
-type TroikaText = Mesh & { fillOpacity: number; outlineOpacity: number; text: string; sync: () => void };
 
 const trim = (s: string) => (s.length > MAX_CHARS ? s.slice(0, MAX_CHARS - 1).trimEnd() + "…" : s);
 
@@ -61,10 +59,7 @@ function nodesOnScreen(cam: PerspectiveCamera, w: number, h: number, minPx: numb
 export function StarText() {
   const ready = useStore((s) => s.starsReady);
   const [, bump] = useState(0);
-  // label slots: fixed objects mutated every frame (never through React state)
-  const [slots] = useState<{ g: Group | null; t: TroikaText | null; star: number; o: number; want: boolean }[]>(() =>
-    Array.from({ length: POOL }, () => ({ g: null, t: null, star: -1, o: 0, want: false })),
-  );
+  const slots = starSlots;
   const frame = useRef(0);
   const v = useMemo(() => new Vector3(), []);
   const w: [number, number, number] = useMemo(() => [0, 0, 0], []);
@@ -94,9 +89,9 @@ export function StarText() {
           const center = Math.hypot(v.x, v.y);
           const a = starAttention(starMetric(s.indicator, i), s.indicator) ?? 0;
           const text = starText(i)!.label;
-          const cw = Math.min(text.length, 34) * LABEL_PX * 0.52;
-          const lines = Math.min(3, Math.ceil(Math.min(text.length, MAX_CHARS) / 34));
-          cands.push({ i, pri: -center * 2 - dist * 0.02 + a * 1.2, x, y, w: cw, h: lines * LABEL_PX * 1.25 });
+          const cw = Math.min(text.length, CHARS_PER_LINE) * LABEL_PX * 0.42 + 10;
+          const lines = Math.min(3, Math.ceil(Math.min(text.length, MAX_CHARS) / CHARS_PER_LINE));
+          cands.push({ i, pri: -center * 2 - dist * 0.02 + a * 1.2, x, y, w: cw, h: lines * LABEL_PX + 4 });
         }
       }
       cands.sort((a, b) => b.pri - a.pri);
@@ -109,81 +104,35 @@ export function StarText() {
         rects.push(r);
         chosen.add(c.i);
       }
-      // keep stars that stay chosen in their slot; hand free slots to new ones
-      const pool = slots;
-      for (const sl of pool) sl.want = sl.star >= 0 && chosen.has(sl.star);
-      for (const sl of pool) if (sl.want) chosen.delete(sl.star);
-      const fresh = [...chosen];
-      for (const sl of pool) {
-        if (sl.want || sl.o > 0.05 || !fresh.length) continue;
-        sl.star = fresh.pop()!;
-        sl.want = true;
-        if (sl.t) {
-          sl.t.text = trim(starText(sl.star)?.label ?? "");
-          sl.t.sync();
-        }
-      }
+      assign(slots, [...chosen]);
     }
     const k = 1 - Math.exp(-dt * 7);
-    const tanHalf = Math.tan(((cam.fov ?? 45) * Math.PI) / 360);
+    // text and class go to React (only renders when they change); position and fade go straight to the ref
+    publish("stars", slots.map((sl) => {
+      if (sl.key === null) return { text: "", cls: "" };
+      const a = starAttention(starMetric(s.indicator, sl.key), s.indicator) ?? 0;
+      return { text: trim(starText(sl.key)?.label ?? ""), cls: "q" + (a > 0.6 ? " hot" : "") };
+    }));
     for (const sl of slots) {
-      if (!sl.g || !sl.t) continue;
-      sl.o += ((sl.want ? 1 : 0) - sl.o) * k;
-      sl.g.visible = sl.o > 0.02 && sl.star >= 0;
-      if (!sl.g.visible) continue;
-      const p = anim.placed.get(d.nodeIds[d.node[sl.star]]);
-      if (!p) continue;
-      starWorld(sl.star, p, t, w);
-      sl.g.position.set(w[0], w[1], w[2]);
-      const dist = cam.position.distanceTo(sl.g.position);
-      const ppu = size.height / (2 * dist * tanHalf);
-      sl.g.scale.setScalar(LABEL_PX / ppu); // constant on-screen size
-      sl.t.fillOpacity = sl.o * 0.92;
-      sl.t.outlineOpacity = sl.o * 0.7;
+      if (sl.key === null) continue;
+      const p = anim.placed.get(d.nodeIds[d.node[sl.key]]);
+      if (!p) { place(sl, null, 0, k); continue; }
+      starWorld(sl.key, p, t, w);
+      v.set(w[0], w[1], w[2]).project(cam);
+      if (v.z > 1) { place(sl, null, 0, k); continue; }
+      place(sl, ((v.x + 1) / 2) * size.width, ((1 - v.y) / 2) * size.height - 7, k);
     }
   });
 
-  return (
-    <group>
-      {slots.map((sl, i) => (
-        <Billboard key={i} ref={(g) => { sl.g = g; }} visible={false}>
-          <Text
-            ref={(t) => { sl.t = t as unknown as TroikaText; }}
-            font={FONT}
-            fontSize={1}
-            position={[0, 0.9, 0]}
-            color="#E6E8F7"
-            anchorX="center"
-            anchorY="bottom"
-            maxWidth={20}
-            textAlign="center"
-            lineHeight={1.15}
-            outlineWidth={0.14}
-            outlineColor="#050811"
-            fillOpacity={0}
-            outlineOpacity={0}
-            renderOrder={11}
-            material-depthTest={false}
-          >
-            {" "}
-          </Text>
-        </Billboard>
-      ))}
-      <StarPicker />
-    </group>
-  );
+  return <StarPicker />;
 }
 
 /** Hover a star to read it; click to open its question card. */
 function StarPicker() {
   const { gl, camera, size } = useThree();
-  const hoverStar = useStore((s) => s.hoverStar);
-  const [, loaded] = useState(0);
   const mouse = useRef<{ x: number; y: number; dirty: boolean; down: [number, number] | null }>({ x: -1, y: -1, dirty: false, down: null });
   const v = useMemo(() => new Vector3(), []);
   const w: [number, number, number] = useMemo(() => [0, 0, 0], []);
-  const marker = useRef<Group>(null);
-
   useEffect(() => {
     const el = gl.domElement;
     const move = (e: PointerEvent) => {
@@ -227,16 +176,6 @@ function StarPicker() {
     };
   }, [gl, w]);
 
-  // hover text comes from the text cache; this only makes sure the node's texts are loading
-  useEffect(() => {
-    const d = starData();
-    if (hoverStar < 0 || !d || starText(hoverStar)) return;
-    let live = true;
-    loadTexts(d.nodeIds[d.node[hoverStar]]).then(() => live && loaded((x) => x + 1));
-    return () => { live = false; };
-  }, [hoverStar]);
-  const text = hoverStar >= 0 ? starText(hoverStar) : undefined;
-
   useFrame(() => {
     const d = starData();
     const t = now();
@@ -264,26 +203,13 @@ function StarPicker() {
       if (best !== s.hoverStar) s.set({ hoverStar: best });
       document.body.style.cursor = best >= 0 || s.hovered ? "pointer" : "";
     }
-    const g = marker.current;
-    if (!g) return;
-    g.visible = !!d && s.hoverStar >= 0;
-    if (!g.visible || !d) return;
-    const p = anim.placed.get(d.nodeIds[d.node[s.hoverStar]]);
-    if (!p) return;
+    // the hover card (rendered by <SkyOverlay>) follows the star
+    const p = d && s.hoverStar >= 0 ? anim.placed.get(d.nodeIds[d.node[s.hoverStar]]) : undefined;
+    if (!p) return moveCard(cards.star, null, 0);
     starWorld(s.hoverStar, p, t, w);
-    g.position.set(w[0], w[1], w[2]);
+    v.set(w[0], w[1], w[2]).project(camera);
+    moveCard(cards.star, v.z > 1 ? null : ((v.x + 1) / 2) * size.width, ((1 - v.y) / 2) * size.height);
   });
 
-  return (
-    <group ref={marker} visible={false}>
-      <Html style={{ pointerEvents: "none" }} zIndexRange={[20, 0]}>
-        {text ? (
-          <div className="hovercard star-card">
-            {text.text}
-            {text.label !== text.text && <div className="hovercard-meta">{text.label}</div>}
-          </div>
-        ) : null}
-      </Html>
-    </group>
-  );
+  return null;
 }

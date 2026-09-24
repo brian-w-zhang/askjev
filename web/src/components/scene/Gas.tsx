@@ -1,15 +1,15 @@
 "use client";
 import { useEffect, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
-import { AdditiveBlending, Color, InstancedBufferAttribute, InstancedBufferGeometry, PlaneGeometry, ShaderMaterial } from "three";
+import { NormalBlending, Color, InstancedBufferAttribute, InstancedBufferGeometry, PlaneGeometry, ShaderMaterial } from "three";
 import { useStore } from "@/lib/store";
 import { now } from "@/lib/anim";
 import { attention, branchColor, rampColor } from "@/lib/color";
 import { edgePoint, type Placed } from "@/lib/layout";
 import { branchShades } from "./Stars";
 
-// Nebula gas (docs/07-ui.md): soft, slowly drifting puffs around every node's ball and along the big
-// branches. Colored by the node's indicator, so where Jev is jagged shows as weather from far away.
+// Clouds (docs/07-ui.md): slowly drifting cumulus puffs around every node's ball and along the big branches,
+// in the hemisphere's color, or by the node's indicator, so where Jev is jagged shows as weather from far away.
 const vert = /* glsl */ `
   attribute vec3 aPos; attribute vec3 aColor; attribute float aSize; attribute float aAlpha; attribute float aSeed;
   uniform float uTime;
@@ -22,7 +22,7 @@ const vert = /* glsl */ `
     mv.xy += position.xy * aSize * breathe; // camera-facing quad
     // fade puffs as the camera enters them, so you never fly into a flat wall of fog
     float dist = -mv.z;
-    vAlpha *= smoothstep(aSize * 0.35, aSize * 1.6, dist);
+    vAlpha *= smoothstep(aSize * 0.9, aSize * 3.2, dist);
     gl_Position = projectionMatrix * mv;
   }`;
 
@@ -37,8 +37,9 @@ const frag = /* glsl */ `
     vec2 q = vUv - 0.5;
     float r = length(q) * 2.0;
     float fall = exp(-r * r * 3.2);
-    float wisps = fbm(q * 3.0 + vSeed * 17.0 + vec2(uTime * 0.012, -uTime * 0.009));
-    float a = fall * (0.35 + 0.95 * wisps * wisps) * vAlpha;
+    // cumulus: billowy fbm edges inside a soft falloff (the dither pass turns it into stipple)
+    float billow = fbm(q * 2.6 + vSeed * 17.0 + vec2(uTime * 0.01, -uTime * 0.008));
+    float a = smoothstep(0.28, 0.72, fall * 0.9 + billow * 0.55 - 0.18) * vAlpha;
     if (a < 0.002) discard;
     gl_FragColor = vec4(vColor, a);
   }`;
@@ -66,7 +67,7 @@ export function Gas({ placed }: { placed: Map<string, Placed> }) {
   const indicator = useStore((s) => s.indicator);
 
   const material = useMemo(
-    () => new ShaderMaterial({ vertexShader: vert, fragmentShader: frag, transparent: true, depthWrite: false, blending: AdditiveBlending, uniforms: { uTime: { value: 0 } } }),
+    () => new ShaderMaterial({ vertexShader: vert, fragmentShader: frag, transparent: true, depthWrite: false, blending: NormalBlending, uniforms: { uTime: { value: 0 } } }),
     [],
   );
 
@@ -82,7 +83,7 @@ export function Gas({ placed }: { placed: Map<string, Placed> }) {
       for (let i = 0; i < k; i++) {
         const u = r() * 2 - 1, th = r() * Math.PI * 2, rad = p.ball * 0.8 * Math.cbrt(r());
         const s = Math.sqrt(1 - u * u);
-        out.push({ x: p.x + rad * s * Math.cos(th), y: p.y + rad * u, z: p.z + rad * s * Math.sin(th), size: p.ball * (1.4 + r() * 1.4) + 0.8, alpha: 0.05 + 0.04 * r(), seed: r(), node: p.id });
+        out.push({ x: p.x + rad * s * Math.cos(th), y: p.y + rad * u, z: p.z + rad * s * Math.sin(th), size: p.ball * (1.4 + r() * 1.4) + 0.8, alpha: 0.22 + 0.12 * r(), seed: r(), node: p.id });
       }
       // along the branch from the parent, for the big arms (hemisphere → L1 → L2)
       const parent = n.parent_id ? placed.get(n.parent_id) : undefined;
@@ -91,7 +92,7 @@ export function Gas({ placed }: { placed: Map<string, Placed> }) {
         for (let i = 0; i < m; i++) {
           edgePoint(parent, p, 0.15 + 0.75 * ((i + r()) / m), pt);
           const scale = p.depth === 1 ? 7 : p.depth === 2 ? 4 : 2.2;
-          out.push({ x: pt[0] + (r() - 0.5) * scale, y: pt[1] + (r() - 0.5) * scale, z: pt[2] + (r() - 0.5) * scale, size: scale * (1.6 + r()), alpha: p.depth === 1 ? 0.035 : 0.03, seed: r(), node: p.id });
+          out.push({ x: pt[0] + (r() - 0.5) * scale, y: pt[1] + (r() - 0.5) * scale, z: pt[2] + (r() - 0.5) * scale, size: scale * (1.6 + r()), alpha: p.depth === 1 ? 0.2 : 0.16, seed: r(), node: p.id });
         }
       }
     }
@@ -109,7 +110,7 @@ export function Gas({ placed }: { placed: Map<string, Placed> }) {
       for (let i = 0; i < 14; i++) {
         const u = r() * 2 - 1, th = r() * Math.PI * 2, rad = spread * 0.9 * Math.cbrt(r());
         const s = Math.sqrt(1 - u * u);
-        out.push({ x: c[0] + rad * s * Math.cos(th), y: c[1] + rad * u, z: c[2] + rad * s * Math.sin(th), size: spread * (0.7 + 0.5 * r()), alpha: 0.03, seed: r(), node: h });
+        out.push({ x: c[0] + rad * s * Math.cos(th), y: c[1] + rad * u, z: c[2] + rad * s * Math.sin(th), size: spread * (0.6 + 0.4 * r()), alpha: 0.09, seed: r(), node: h });
       }
     }
     return out;
@@ -143,14 +144,16 @@ export function Gas({ placed }: { placed: Map<string, Placed> }) {
     const col = geometry.getAttribute("aColor") as InstancedBufferAttribute;
     const shade = branchShades(nodes);
     const c = new Color();
+    const white = new Color("#FEFEFE");
     puffs.forEach((p, i) => {
       const n = nodes[p.node];
       if (!n) return;
       const a = indicator === "hemisphere" ? null : attention(n, indicator);
       if (a === null) {
-        branchColor(n.hemisphere, shade.get(n.id) ?? 0.5, c);
-        if (indicator !== "hemisphere") c.multiplyScalar(0.35);
-      } else rampColor(a, c).multiplyScalar(0.6 + 0.9 * a);
+        if (indicator === "hemisphere") branchColor(n.hemisphere, shade.get(n.id) ?? 0.5, c);
+        else c.set("#FEFEFE"); // no data: plain white cloud
+      } else rampColor(a, c);
+      c.lerp(white, 0.3); // lighter than the stars, so the stipple reads as cloud, not ink
       col.setXYZ(i, c.r, c.g, c.b);
     });
     col.needsUpdate = true;

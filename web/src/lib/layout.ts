@@ -186,10 +186,11 @@ export function edgePoint(p: Placed, c: Placed, t: number, out: V3 = [0, 0, 0]):
 }
 
 export const HEMI_COLOR: Record<Hemisphere, string> = {
-  root: "#EDEBFA",
-  world: "#62C6E8",
-  self: "#F3A861",
-  machine: "#A993FF",
+  root: "#1E1E1E",
+  world: "#09AEA1",
+  self: "#F386A1",
+  machine: "#4B5BD6",
 };
-export const PATH_A_COLOR = "#E9F6FF"; // embedding path: cold white
-export const PATH_B_COLOR = "#FFD27A"; // Jev's walk: gold
+export const INK = "#1E1E1E";
+export const PATH_A_COLOR = "#1E1E1E"; // embedding path: ink
+export const PATH_B_COLOR = "#03AA5C"; // Jev's walk: Jev green

@@ -50,7 +50,7 @@ export function WorthALook() {
 
   if (!top.length) return null;
   return (
-    <div className="worth" data-open={open}>
+    <div className="worth" data-open={open} data-title="Worth.A.Look 1.0">
       <div className="worth-head">
         <button className="worth-title" onClick={() => setOpen(!open)} aria-expanded={open}>
           Worth a look <span>by {label.toLowerCase()}</span>
@@ -66,7 +66,7 @@ export function WorthALook() {
               <button aria-current={selected === n.id} onClick={() => { set({ tour: false }); selectNode(n.id); }}>
                 <i style={{ background: HEMI_COLOR[n.hemisphere] }} />
                 <span className="worth-label">{n.label}</span>
-                <span className="worth-meter"><b style={{ width: `${Math.round(a * 100)}%` }} /></span>
+                <span className="worth-meter"><b style={{ ["--a" as string]: `${Math.round(a * 100)}%` }} /></span>
               </button>
             </li>
           ))}

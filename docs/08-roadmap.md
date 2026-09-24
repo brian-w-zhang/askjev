@@ -35,6 +35,7 @@
 | 2026-09-24 | **Decided (approved via the /goal run):** rewording "universes" as overlays on the one tree (same nodes and question ids, transformed probe text); they replace the paraphrase experiment (`05-experiments.md` §1) |
 | 2026-09-24 | **Decided (approved via the /goal run):** per-question core metadata + screen request / answer bundle (`03-questions.md` §8) |
 | 2026-09-24 | Main view is a **3D nebula** (`07-ui.md`): every node and every displayable question drawn as stars; detail on approach. High-volume Machine templates (≥100 instances) become topic nodes |
+| 2026-09-24 | UI follows **TypeSafe's brand** (`07-ui.md` Look): light dithered sky and clouds, ink stipple stars, OS-window panels, pixel type; free stand-ins for their licensed fonts |
 
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)

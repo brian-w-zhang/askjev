@@ -115,7 +115,7 @@ export function QuestionCard({ id, note, onClose }: { id: string; note?: string;
           </div>
           <p className="qtext">{q.text}</p>
           {q.state != null && (
-            <pre className="note" style={{ whiteSpace: "pre-wrap", fontSize: 12, background: "var(--surface-2)", padding: 10, borderRadius: 8, marginTop: 10 }}>
+            <pre className="note" style={{ whiteSpace: "pre-wrap", fontSize: 12, background: "var(--win)", padding: 10, marginTop: 10, color: "var(--ink)", boxShadow: "inset 0 0 0 1px var(--ink)" }}>
               {typeof q.state === "string" ? q.state : JSON.stringify(q.state, null, 2)}
             </pre>
           )}

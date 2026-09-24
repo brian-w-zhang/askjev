@@ -5,7 +5,7 @@ import { Color, InstancedMesh, Object3D, type PerspectiveCamera } from "three";
 import { useStore } from "@/lib/store";
 import { anim, now, progress } from "@/lib/anim";
 import { nodeColor } from "@/lib/color";
-import type { Placed } from "@/lib/layout";
+import { INK, PATH_B_COLOR, type Placed } from "@/lib/layout";
 import type { TreeNode } from "@/lib/types";
 
 const MAX = 4096;
@@ -66,31 +66,34 @@ export function Nodes({ placed, onPick }: { placed: Map<string, Placed>; onPick:
       const age = (t * 1000 - (s.born[id] ?? 0)) / 450;
       const grow = age >= 1 ? 1 : Math.max(0, back(Math.max(0, age)));
       let k = 1;
-      let bright = n.depth <= 1 ? 1.6 : 1.15;
+      let tone: "ink" | "path" | "jev" | "sel" | "dim" = "ink";
       const ka = idxA.get(id);
       const kb = idxB.get(id);
       if (ka !== undefined && pa >= ka) {
         const since = pa - ka;
         k *= 1 + 0.9 * Math.exp(-since * 3) + 0.25;
-        bright = 2.4;
+        tone = "path";
       }
       if (kb !== undefined && pb >= kb) {
         k *= 1.2;
-        bright = Math.max(bright, 2.2);
+        if (tone !== "path") tone = "jev";
       }
       if (s.hovered === id) k *= 1.35;
-      if (s.selected === id) { k *= 1.3; bright = Math.max(bright, 2.2); }
-      if (filtersActive && n.n_match === 0) bright *= 0.22;
+      if (s.selected === id) { k *= 1.3; tone = "sel"; }
+      if (filtersActive && n.n_match === 0) tone = "dim";
       const twinkle = 1 + 0.05 * Math.sin(t * 1.7 + i * 1.37);
       dummy.position.set(p.x, p.y, p.z);
       const ppu = size.height / (2 * Math.max(0.1, camera.position.distanceTo(dummy.position)) * tanHalf);
       const r = Math.min(Math.max(nodeSize(n), MIN_PX / ppu), MAX_PX[Math.min(n.depth, MAX_PX.length - 1)] / ppu);
       dummy.scale.setScalar(r * k * grow * twinkle);
+      dummy.quaternion.copy(camera.quaternion); // squares face the camera
       dummy.updateMatrix();
       m.setMatrixAt(i, dummy.matrix);
-      nodeColor(n, s.indicator, c);
-      if (kb !== undefined && pb >= kb && !(ka !== undefined && pa >= ka)) c.set("#FFD27A");
-      c.multiplyScalar(bright);
+      // ink squares like the slider markers on typesafe.ai; Jev green where Jev is (its walk, the selection)
+      if (tone === "jev" || tone === "sel") c.set(PATH_B_COLOR);
+      else if (tone === "dim") c.set("#C9C9C9");
+      else if (s.indicator === "hemisphere" || tone === "path") c.set(INK);
+      else nodeColor(n, s.indicator, c);
       m.setColorAt(i, c);
     }
     m.count = ids.length;
@@ -122,8 +125,8 @@ export function Nodes({ placed, onPick }: { placed: Map<string, Placed>; onPick:
       }}
     >
       <instancedBufferAttribute attach="instanceColor" args={[colors, 3]} />
-      <icosahedronGeometry args={[1, 3]} />
-      <meshBasicMaterial toneMapped={false} transparent opacity={0.95} />
+      <boxGeometry args={[1.5, 1.5, 1.5]} />
+      <meshBasicMaterial toneMapped={false} />
     </instancedMesh>
   );
 }

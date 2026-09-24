@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
-import { AdditiveBlending, BufferAttribute, BufferGeometry, Color, ShaderMaterial } from "three";
+import { NormalBlending, BufferAttribute, BufferGeometry, Color, ShaderMaterial } from "three";
 import { useStore } from "@/lib/store";
 import { anim, now, progress } from "@/lib/anim";
 import { edgePoint, HEMI_COLOR, PATH_A_COLOR, PATH_B_COLOR, type Placed } from "@/lib/layout";
@@ -29,21 +29,24 @@ const frag = /* glsl */ `
     float grown = clamp((uTime - vBorn) / 0.7, 0.0, 1.0);
     if (vT > grown * 1.05) discard;                         // new branches draw outward from the parent
     float drift = 0.5 + 0.5 * sin(vPos * 9.0 - uTime * 1.4); // slow outward flow on every branch
-    vec3 col = vColor * (0.20 + 0.06 * drift + 0.55 * vRel) * vDim;
-    float alpha = (0.30 + 0.45 * vRel) * vDim;
+    // thin ink filaments tinted by hemisphere; the dither pass turns them into dotted lines
+    vec3 col = mix(vec3(0.118), vColor, 0.35);
+    float alpha = (0.22 + 0.08 * drift + 0.55 * vRel) * vDim;
     if (vA > 0.5 && uProgA >= 0.0) {
       float trail = step(vPos, uProgA);
       float d = (vPos - uProgA) * 4.5;
       float head = exp(-d * d);
-      col += uColA * (trail * 0.85 + head * 3.2);
-      alpha = max(alpha, max(trail * 0.9, head));
+      float k = max(trail * 0.9, head);
+      col = mix(col, uColA, k);
+      alpha = max(alpha, k);
     }
     if (vB > 0.5 && uProgB >= 0.0) {
       float trail = step(vPos, uProgB);
       float d = (vPos - uProgB) * 4.5;
       float head = exp(-d * d);
-      col += uColB * (trail * 0.85 + head * 3.2);
-      alpha = max(alpha, max(trail * 0.9, head));
+      float k = max(trail * 0.95, head);
+      col = mix(col, uColB, k);
+      alpha = max(alpha, k);
     }
     gl_FragColor = vec4(col, alpha);
   }`;
@@ -63,7 +66,7 @@ export function Edges({ placed }: { placed: Map<string, Placed> }) {
         fragmentShader: frag,
         transparent: true,
         depthWrite: false,
-        blending: AdditiveBlending,
+        blending: NormalBlending,
         uniforms: {
           uTime: { value: 0 },
           uProgA: { value: -1 },

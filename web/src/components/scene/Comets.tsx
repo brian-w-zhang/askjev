@@ -1,7 +1,7 @@
 "use client";
 import { useMemo, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { AdditiveBlending, CanvasTexture, Group, Mesh, Sprite, Vector3, type Camera, type PerspectiveCamera } from "three";
+import { NormalBlending, CanvasTexture, Group, Mesh, Sprite, Vector3, type Camera, type PerspectiveCamera } from "three";
 import { anim, headPosition, now, progress } from "@/lib/anim";
 import { useStore } from "@/lib/store";
 import { PATH_A_COLOR, PATH_B_COLOR } from "@/lib/layout";
@@ -48,7 +48,7 @@ function Comet({ which, color }: { which: "A" | "B"; color: string }) {
   return (
     <group ref={g} visible={false}>
       <sprite ref={sprite}>
-        <spriteMaterial map={tex} color={color} transparent depthWrite={false} blending={AdditiveBlending} toneMapped={false} />
+        <spriteMaterial map={tex} color={color} transparent depthWrite={false} blending={NormalBlending} toneMapped={false} />
       </sprite>
       <mesh ref={core}>
         <sphereGeometry args={[1, 16, 16]} />
@@ -100,7 +100,7 @@ function Selection() {
   return (
     <mesh ref={m} visible={false}>
       <ringGeometry args={[1.25, 1.32, 64, 1, 0, Math.PI * 1.6]} />
-      <meshBasicMaterial color="#EDEBFA" transparent opacity={0.8} toneMapped={false} depthWrite={false} />
+      <meshBasicMaterial color="#1E1E1E" transparent opacity={0.95} toneMapped={false} depthWrite={false} />
     </mesh>
   );
 }

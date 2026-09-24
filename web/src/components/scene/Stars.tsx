@@ -1,16 +1,16 @@
 "use client";
 import { useEffect, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
-import { AdditiveBlending, BufferAttribute, BufferGeometry, Color, ShaderMaterial, type PerspectiveCamera } from "three";
+import { BufferAttribute, BufferGeometry, Color, NormalBlending, ShaderMaterial, type PerspectiveCamera } from "three";
 import { useStore } from "@/lib/store";
 import { now } from "@/lib/anim";
-import { branchColor, rampColor, starAttention } from "@/lib/color";
+import { rampColor, starAttention } from "@/lib/color";
 import { metric, starData } from "@/lib/stars";
 import type { Placed } from "@/lib/layout";
 import type { Indicator } from "@/lib/types";
 
-// Every displayable question as one star, in a single draw call (docs/07-ui.md).
-// Stars twinkle by instability, flare at random as if asked again, and turn slowly around their node.
+// Every displayable question as one ink dot, in a single draw call (docs/07-ui.md).
+// Dots twinkle by instability, flare magenta at random as if asked again, and turn slowly around their node.
 const vert = /* glsl */ `
   attribute vec3 aLocal; attribute vec3 aColor;
   attribute float aSpin; attribute float aSize; attribute float aTw; attribute float aSeed; attribute float aDim; attribute float aNode;
@@ -32,24 +32,22 @@ const vert = /* glsl */ `
     vAlpha = clamp(px / minPx, 0.06, 1.0) * aDim * tw * (1.0 + flare * 2.5) * (1.0 + 0.7 * sel);
     vHot = flare;
     vColor = aColor;
-    gl_PointSize = clamp(px, minPx, (16.0 + 40.0 * flare) * uPR);
+    gl_PointSize = clamp(px, minPx, (6.5 + 14.0 * flare) * uPR);
     gl_Position = projectionMatrix * mv;
   }`;
 
+// ink stipple: a hard round dot with a one-pixel soft edge (the dither pass does the rest)
 const frag = /* glsl */ `
   varying vec3 vColor; varying float vAlpha; varying float vHot;
   void main() {
     vec2 q = gl_PointCoord - 0.5;
-    float d = dot(q, q) * 4.0;
-    float core = exp(-d * 16.0);
-    float halo = exp(-d * 3.2) * 0.38;
-    float a = (core + halo) * vAlpha;
-    if (a < 0.003) discard;
-    vec3 col = mix(vColor, vec3(1.0), core * (0.45 + 0.5 * vHot));
-    gl_FragColor = vec4(col, a);
+    float r = length(q) * 2.0;
+    float a = (1.0 - smoothstep(0.72, 1.0, r)) * vAlpha;
+    if (a < 0.02) discard;
+    gl_FragColor = vec4(mix(vColor, vec3(0.83, 0.357, 0.714), vHot), min(1.0, a));
   }`;
 
-const BASE = 0.085;
+const BASE = 0.07;
 
 export function Stars({ placed }: { placed: Map<string, Placed> }) {
   const ready = useStore((s) => s.starsReady);
@@ -65,7 +63,7 @@ export function Stars({ placed }: { placed: Map<string, Placed> }) {
         fragmentShader: frag,
         transparent: true,
         depthWrite: false,
-        blending: AdditiveBlending,
+        blending: NormalBlending,
         uniforms: { uTime: { value: 0 }, uScale: { value: 500 }, uPR: { value: 1 }, uSel: { value: -1 } },
       }),
     [],
@@ -112,9 +110,8 @@ export function Stars({ placed }: { placed: Map<string, Placed> }) {
     const size = geometry.getAttribute("aSize") as BufferAttribute;
     const tw = geometry.getAttribute("aTw") as BufferAttribute;
     const dim = geometry.getAttribute("aDim") as BufferAttribute;
-    const shade = branchShades(nodes);
     const c = new Color();
-    const hemiDim = new Color();
+    const ink = new Color("#1E1E1E");
     const prim = filters.primitive ? { noul: 0, choice: 1, score: 2 }[filters.primitive] : undefined;
     const nodeMetric = (ind: Indicator, i: number) =>
       ind === "stability" ? metric(d.stability[i]) : ind === "human_gap" ? metric(d.humanGap[i]) : ind === "frame_gap" ? metric(d.frameGap[i])
@@ -123,17 +120,15 @@ export function Stars({ placed }: { placed: Map<string, Placed> }) {
       const nid = d.nodeIds[d.node[i]];
       const n = nodes[nid];
       const seed = ((i * 2654435761) % 1000003) / 1000003;
-      const tint = shade.get(nid) ?? 0.5;
-      branchColor(n?.hemisphere ?? "root", Math.min(1, Math.max(0, tint + (seed - 0.5) * 0.18)), hemiDim);
       let s = BASE * (0.7 + 0.6 * seed);
       if (indicator === "hemisphere" || indicator === "calibration_ece") {
-        c.copy(hemiDim);
-        if (indicator === "calibration_ece" && d.correct[i] === 2) { c.set("#FF5D86"); s *= 1.6; }
-        else if (indicator === "calibration_ece") c.multiplyScalar(0.35);
+        c.copy(ink); // stipple in ink; the clouds carry the hemisphere color
+        if (indicator === "calibration_ece" && d.correct[i] === 2) { c.set("#D45BB6"); s *= 1.6; }
+        else if (indicator === "calibration_ece") c.set("#ABBAB9");
       } else {
         const a = starAttention(nodeMetric(indicator, i), indicator);
         if (a === null) {
-          c.copy(hemiDim).multiplyScalar(0.28);
+          c.set("#C9C9C9");
         } else {
           rampColor(a, c);
           s *= 0.8 + 1.8 * a * a;

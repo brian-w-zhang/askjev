@@ -7,6 +7,9 @@ import { Controls } from "./Controls";
 import { Panel } from "./panel/Panel";
 import { WorthALook } from "./WorthALook";
 
+// the vertical caption, as on typesafe.ai: base64 of "askjev: every closed question, answered by Jev"
+const B64 = "YXNramV2OiBldmVyeSBjbG9zZWQgcXVlc3Rpb24sIGFuc3dlcmVkIGJ5IEpldg==";
+
 const Scene = dynamic(() => import("./scene/Scene"), { ssr: false });
 
 export default function App() {
@@ -31,7 +34,7 @@ export default function App() {
       <div className="topleft">
         <div className="wordmark">
           <h1>askjev</h1>
-          <p>Every closed question on one tree, answered by Jev</p>
+          <p>Every closed question, answered by Jev</p>
         </div>
         <Search />
       </div>
@@ -41,7 +44,9 @@ export default function App() {
       <Controls />
       <WorthALook />
       <Panel />
-      <p className="intro">Every dot is a question. Drag to orbit, scroll into a cloud to read it, click a star to open it</p>
+      <i className="crop tl" /><i className="crop tr" /><i className="crop bl" /><i className="crop br" />
+      <span className="b64" aria-hidden>{B64}</span>
+      <p className="intro">Every dot is a question · drag to orbit · scroll into a cloud to read · click a dot to open</p>
     </main>
   );
 }
