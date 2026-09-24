@@ -5,7 +5,7 @@ rate on a scale), filled with real questions answered by [Jev](https://docs.type
 TypeSafe AI's System One model. The goal is to understand Jev: its capabilities, its defaults, and
 where its judgments are jagged. **It is not a benchmark.** Private project (Brian + TypeSafe).
 
-**Status:** planning complete, no code yet. Next: gateway and determinism spikes, then the tree skeleton.
+**Status:** MVP built: ~99.5k questions answered by Jev on a 1,319-node tree, Python pipeline, and a 3D Next.js explorer. See [docs/mvp-status.md](docs/mvp-status.md) and [docs/findings-preview.md](docs/findings-preview.md).
 
 ## Docs (canonical; read in order)
 | Doc | What |
@@ -20,8 +20,16 @@ where its judgments are jagged. **It is not a benchmark.** Private project (Bria
 | [07-ui](docs/07-ui.md) | Sunburst, question cards, findings page, search, private ask box |
 | [08-roadmap](docs/08-roadmap.md) | Decisions log, milestones, open questions |
 | [09-mvp-plan](docs/09-mvp-plan.md) | The phased autonomous build plan (hard rules, phases 1-6) |
+| [mvp-status](docs/mvp-status.md) | What was built, verification results, counts vs targets, known issues, next steps |
 
 Agents: see [CLAUDE.md](CLAUDE.md).
+
+## Run
+```bash
+uv sync && uv run askjev migrate && uv run askjev tree   # schema + tree
+uv run askjev pipeline                                   # place, screen, answer, dedupe, measure, rollup
+cd web && npm install && npm run build && npm start      # explorer at http://localhost:3000
+```
 
 ## Setup
 `cp .env.example .env`, then set `AI_GATEWAY_API_KEY` (Jev = `typesafe-ai/jev` via Vercel AI Gateway; the

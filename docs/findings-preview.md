@@ -38,21 +38,21 @@ All ground-truth questions: n=36251, accuracy 0.81, mean confidence 0.87, ECE 0.
 
 ## 2. Position bias (Choice, option shuffles)
 
-Mean probability on whichever option is listed first: **0.269** vs 0.271 if position
-didn't matter (n=102874 shuffled probes). Excess: -0.001.
+Mean probability on whichever option is listed first: **0.263** vs 0.265 if position
+didn't matter (n=113242 shuffled probes). Excess: -0.002.
 
 ## 3. Shuffle stability by kind (share of shuffles keeping the same top answer)
 
 | kind | n | mean stability | fragile (<0.67) |
 |---|---|---|---|
-| evaluative | 10491 | 0.829 | 17.4% |
+| evaluative | 10503 | 0.829 | 17.4% |
 | perception | 2000 | 0.850 | 15.0% |
-| personality | 2310 | 0.899 | 10.4% |
+| personality | 3370 | 0.901 | 10.7% |
 | machine:score | 3332 | 0.921 | 7.9% |
-| social | 6975 | 0.950 | 5.3% |
-| values | 10375 | 0.967 | 5.3% |
+| social | 7073 | 0.950 | 5.4% |
+| values | 11488 | 0.962 | 5.9% |
+| taste | 11405 | 0.967 | 4.7% |
 | machine:rank | 809 | 0.974 | 2.6% |
-| taste | 8374 | 0.978 | 3.6% |
 | factual | 3706 | 0.985 | 2.6% |
 | machine:route | 1996 | 0.991 | 1.6% |
 | machine:classify | 7895 | 0.992 | 1.6% |
@@ -64,14 +64,14 @@ didn't matter (n=102874 shuffled probes). Excess: -0.001.
 
 | kind | n | mean TVD | top answer differs |
 |---|---|---|---|
-| personality | 2593 | 0.288 | 45.4% |
+| personality | 4057 | 0.276 | 41.5% |
 | perception | 2000 | 0.191 | 31.2% |
-| taste | 8561 | 0.123 | 13.5% |
-| evaluative | 10884 | 0.106 | 17.1% |
-| values | 14914 | 0.102 | 11.0% |
+| taste | 12367 | 0.170 | 21.2% |
+| values | 16407 | 0.108 | 11.9% |
+| evaluative | 10896 | 0.106 | 17.1% |
 | factual | 9929 | 0.048 | 5.3% |
 | forecast | 676 | 0.043 | 8.3% |
-| social | 16551 | 0.030 | 3.6% |
+| social | 16685 | 0.031 | 3.6% |
 
 ## 5. Human gap: Jev's 'most people' answer vs real human distributions
 
@@ -91,22 +91,46 @@ didn't matter (n=102874 shuffled probes). Excess: -0.001.
 
 ## 6. Metacognition (does Jev know where it's jagged?)
 
-- corr(Jev's own 'ambiguous' rating, shuffle stability) = **+0.002** (n=58945; negative = it anticipates its fragility)
-- corr(Jev's 'people would disagree' rating, its own answer entropy) = **+0.440**
+- corr(Jev's own 'ambiguous' rating, shuffle stability) = **+0.004** (n=64258; negative = it anticipates its fragility)
+- corr(Jev's 'people would disagree' rating, its own answer entropy) = **+0.472**
 
 ## 7. Defaults: IPIP Big Five items (Jev's self frame; mean level 0-4, by keying)
 
 | trait | keyed | n items | mean level |
 |---|---|---|---|
-| agreeableness | - | 67 | 0.47 |
-| agreeableness | + | 61 | 1.57 |
-| conscientiousness | - | 57 | 0.49 |
-| conscientiousness | + | 74 | 1.97 |
-| extraversion | - | 45 | 1.21 |
-| extraversion | + | 72 | 1.00 |
-| neuroticism | - | 39 | 1.85 |
-| neuroticism | + | 72 | 0.48 |
-| openness | - | 43 | 0.89 |
-| openness | + | 69 | 1.72 |
+| agreeableness | - | 5 | 1.05 |
+| agreeableness | + | 8 | 1.41 |
+| kindness_cooperation | - | 30 | 0.40 |
+| kindness_cooperation | + | 37 | 1.63 |
+| trust_modesty_temper | - | 32 | 0.44 |
+| trust_modesty_temper | + | 16 | 1.49 |
+| conscientiousness | - | 8 | 0.42 |
+| conscientiousness | + | 12 | 2.04 |
+| drive_self_discipline | - | 24 | 0.41 |
+| drive_self_discipline | + | 26 | 1.93 |
+| order_caution | - | 25 | 0.59 |
+| order_caution | + | 36 | 1.97 |
+| extraversion | - | 2 | 0.42 |
+| extraversion | + | 2 | 1.67 |
+| body_language_voice | - | 1 | 0.96 |
+| body_language_voice | + | 4 | 0.72 |
+| sociability_energy | - | 42 | 1.26 |
+| sociability_energy | + | 66 | 0.99 |
+| neuroticism | - | 1 | 2.04 |
+| neuroticism | + | 6 | 0.73 |
+| fear_worry | - | 2 | 1.93 |
+| fear_worry | + | 9 | 0.53 |
+| impulses_coping | - | 11 | 1.87 |
+| impulses_coping | + | 15 | 0.48 |
+| self_consciousness | - | 6 | 1.59 |
+| self_consciousness | + | 8 | 0.41 |
+| temper_moodiness | - | 19 | 1.90 |
+| temper_moodiness | + | 34 | 0.44 |
+| openness | - | 11 | 1.04 |
+| openness | + | 17 | 1.72 |
+| convention_politics | - | 10 | 0.93 |
+| convention_politics | + | 7 | 0.98 |
+| ideas_imagination | - | 22 | 0.79 |
+| ideas_imagination | + | 45 | 1.84 |
 
 Reported as defaults, not preferences; only claimable once they survive rewording universes.

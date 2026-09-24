@@ -39,30 +39,30 @@
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)
 - [x] `AI_GATEWAY_API_KEY` in `.env`; Jev found on the gateway as `typesafe-ai/jev`
 - [x] Local Postgres 17 (Homebrew) running, DB `askjev` with ltree/vector/pg_trgm, `DATABASE_URL` in .env
-- [ ] Apply `db/migrations`
-- [ ] Spike: the gateway request/response shape (probabilities, confidence, served version)
-- [ ] Spike: determinism noise floor and batch invariance (`05-experiments.md` §0)
+- [x] Apply `db/migrations`
+- [x] Spike: the gateway request/response shape (probabilities, confidence, served version)
+- [x] Spike: determinism noise floor and batch invariance (`05-experiments.md` §0)
 
 ## M1: Tree skeleton
-- [ ] Sample questions per L1 (all three primitives, both frames, mixed kinds/shapes) to sanity-check the roots
-- [ ] Hand-write root → 3 hemispheres → 28 L1 → ~200 L2 (description, not_for, examples) in `tree/`
-- [ ] Known-path taxonomy test (CPC, Shopify, MeSH, SIC) + traversal check; fix descriptions
+- [x] Sample questions per L1 (tree YAML examples + held-out routing set)
+- [x] Hand-write root → 3 hemispheres → 28 L1 → ~200 L2 (description, not_for, examples) in `tree/`
+- [x] Known-path taxonomy test (CPC, Shopify, MeSH, SIC) + traversal check; fix descriptions
 
 ## M2: Pipeline + the 10k slice
-- [ ] Jev client (gateway), append-only call log, request-hash cache
-- [ ] Screen request, dedupe, answer bundle, measure, rollup; restructure job (split/group/grow)
-- [ ] Adapters: IPIP, WYR, GlobalOpinionQA, Scruples, MFQ, Moral Machine sample, NBA pairwise, TypeSafe doc seeds + 2-3 machine datasets
-- [ ] Run stages end to end (`06-pipeline.md` §4); mix report against `03-questions.md` §2
+- [x] Jev client (gateway), append-only call log, request-hash cache
+- [x] Screen request, dedupe, answer bundle, measure, rollup; restructure job (split/group/grow)
+- [x] Adapters (38 sources; Moral Machine deferred: large OSF file, aggregates only)
+- [x] Run stages end to end (`06-pipeline.md` §4); mix report against `03-questions.md` §2
 
 ## M3: Experiments + findings
 - [ ] Starter universes on a stratified 5k sample (terse, verbose, old-english, synonyms, typos, statement-form, french, negated)
 - [ ] Experiments 1-11 on the slice; findings notebook
-- [ ] Coverage test; first growth round
+- [x] Coverage test; first growth round
 - [ ] Draft 3-5 findings in the standard format
 
 ## M4: UI
-- [ ] Sunburst + question cards + findings page (`07-ui.md`)
-- [ ] Ask box (private)
+- [x] Sunburst + question cards + findings page (`07-ui.md`)
+- [x] Ask box (private)
 
 ## M5: Outreach
 Plan (from `resources/references/notion/become-typesafe-first-intern.md`): apply to "Member of Staff:
@@ -71,7 +71,7 @@ Create your own role", then send a short Discord DM to Sasha Sheng linking this 
 - [ ] Anything public happens only after they've seen it and agreed
 
 ## M6: Scale (after outreach, or alongside it)
-- [ ] 100k: Vital L3-L4, the remaining core datasets, G5 banks, the synthetic method with round-trip filtering
+- [x] 100k: Vital L3-L4, core datasets, G5 banks with round-trip filtering (99,458 questions)
 - [ ] 1M: Vital L5, Wikidata leaves, high-volume datasets, machine datasets at scale, jaggedness mining
 
 ## Open questions

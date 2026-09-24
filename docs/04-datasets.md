@@ -1,5 +1,8 @@
 # Datasets: every source, with a verdict
 
+> **What is actually ingested** (counts, licenses, truth/human coverage) is generated in `docs/corpus.md`
+> (`scripts/corpus_report.py`). Moral Machine, WVS/ESS/GSS microdata, MovieLens and PhilPapers are not ingested yet.
+
 **License posture: private project** (`00-vision.md`). Non-commercial and unclear-license data is
 usable. Sources are **excluded** only where the terms ban AI/ML *use* or scraping: YouGov,
 Kalshi, either.io. If the project ever goes public, re-review everything, using the License column.
