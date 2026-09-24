@@ -8,82 +8,91 @@ rewording universes and repeats (docs/05-experiments.md).
 
 | L1 | n | accuracy | mean confidence (p_top) | ECE |
 |---|---|---|---|---|
-| machine.research | 507 | 0.65 | 0.89 | 0.235 |
-| machine.ai_systems | 477 | 0.80 | 0.92 | 0.126 |
-| machine.trust_safety | 422 | 0.97 | 0.93 | 0.039 |
-| machine.support | 420 | 0.85 | 0.92 | 0.080 |
-| world.society | 416 | 0.90 | 0.91 | 0.012 |
-| world.arts | 278 | 0.89 | 0.87 | 0.049 |
-| world.science | 247 | 0.97 | 0.94 | 0.034 |
-| machine.search | 215 | 0.66 | 0.89 | 0.234 |
-| machine.finance | 210 | 0.92 | 0.94 | 0.026 |
-| machine.code | 208 | 0.99 | 0.99 | 0.013 |
-| machine.commerce | 202 | 0.60 | 0.82 | 0.225 |
-| machine.legal | 200 | 0.84 | 0.88 | 0.070 |
-| world.sports | 200 | 0.87 | 0.89 | 0.023 |
-| world.history | 114 | 0.89 | 0.89 | 0.044 |
-| world.future | 100 | 0.63 | 0.67 | 0.118 |
-| world.health | 93 | 0.99 | 0.96 | 0.030 |
-| world.tech | 69 | 0.94 | 0.95 | 0.068 |
-| world.money | 60 | 0.92 | 0.91 | 0.059 |
-| world.nature | 57 | 1.00 | 0.98 | 0.019 |
-| world.places | 52 | 0.90 | 0.92 | 0.065 |
+| self.values | 4000 | 0.95 | 0.86 | 0.095 |
+| machine.legal | 3051 | 0.81 | 0.87 | 0.065 |
+| machine.research | 2653 | 0.60 | 0.87 | 0.271 |
+| machine.search | 2288 | 0.65 | 0.89 | 0.234 |
+| machine.commerce | 2269 | 0.59 | 0.83 | 0.241 |
+| machine.trust_safety | 2066 | 0.98 | 0.93 | 0.046 |
+| machine.finance | 2036 | 0.87 | 0.89 | 0.032 |
+| machine.support | 2025 | 0.81 | 0.91 | 0.099 |
+| world.society | 1726 | 0.81 | 0.83 | 0.019 |
+| world.arts | 1698 | 0.81 | 0.82 | 0.017 |
+| machine.code | 1508 | 0.99 | 0.99 | 0.008 |
+| world.sports | 1396 | 0.77 | 0.78 | 0.024 |
+| machine.people | 1314 | 0.82 | 0.87 | 0.057 |
+| machine.ai_systems | 1277 | 0.80 | 0.91 | 0.119 |
+| machine.documents | 1235 | 0.94 | 0.89 | 0.049 |
+| world.places | 1076 | 0.85 | 0.86 | 0.013 |
+| world.science | 901 | 0.87 | 0.89 | 0.024 |
+| world.nature | 619 | 0.86 | 0.84 | 0.021 |
+| world.future | 600 | 0.62 | 0.68 | 0.066 |
+| world.tech | 483 | 0.82 | 0.85 | 0.038 |
+| world.history | 462 | 0.85 | 0.88 | 0.032 |
+| world.food | 462 | 0.77 | 0.80 | 0.048 |
+| world.health | 422 | 0.84 | 0.85 | 0.021 |
+| world.money | 401 | 0.75 | 0.82 | 0.070 |
+| world. | 283 | 0.93 | 0.94 | 0.033 |
 
-All ground-truth questions: n=4633, accuracy 0.84, mean confidence 0.91, ECE 0.063.
+All ground-truth questions: n=36251, accuracy 0.81, mean confidence 0.87, ECE 0.058.
 
 ## 2. Position bias (Choice, option shuffles)
 
-Mean probability on whichever option is listed first: **0.283** vs 0.279 if position
-didn't matter (n=19089 shuffled probes). Excess: +0.004.
+Mean probability on whichever option is listed first: **0.269** vs 0.271 if position
+didn't matter (n=102874 shuffled probes). Excess: -0.001.
 
 ## 3. Shuffle stability by kind (share of shuffles keeping the same top answer)
 
 | kind | n | mean stability | fragile (<0.67) |
 |---|---|---|---|
-| perception | 300 | 0.863 | 13.7% |
-| personality | 836 | 0.904 | 9.9% |
-| machine:score | 247 | 0.923 | 7.7% |
-| evaluative | 475 | 0.941 | 9.5% |
-| taste | 1380 | 0.946 | 7.5% |
-| values | 1354 | 0.959 | 5.2% |
-| social | 857 | 0.976 | 4.6% |
-| factual | 1401 | 0.990 | 1.8% |
-| machine:route | 391 | 0.991 | 1.5% |
-| machine:classify | 734 | 0.998 | 0.7% |
+| evaluative | 10491 | 0.829 | 17.4% |
+| perception | 2000 | 0.850 | 15.0% |
+| personality | 2310 | 0.899 | 10.4% |
+| machine:score | 3332 | 0.921 | 7.9% |
+| social | 6975 | 0.950 | 5.3% |
+| values | 10375 | 0.967 | 5.3% |
+| machine:rank | 809 | 0.974 | 2.6% |
+| taste | 8374 | 0.978 | 3.6% |
+| factual | 3706 | 0.985 | 2.6% |
+| machine:route | 1996 | 0.991 | 1.6% |
+| machine:classify | 7895 | 0.992 | 1.6% |
+| machine:verify | 653 | 0.996 | 0.6% |
 | forecast | 14 | 1.000 | 0.0% |
 | machine:extract | 15 | 1.000 | 0.0% |
-| machine:verify | 207 | 1.000 | 0.0% |
 
 ## 4. Frame gap: Jev's default vs its 'most people' answer
 
 | kind | n | mean TVD | top answer differs |
 |---|---|---|---|
-| personality | 896 | 0.311 | 44.3% |
-| social | 888 | 0.307 | 34.3% |
-| perception | 300 | 0.190 | 29.0% |
-| values | 1556 | 0.167 | 20.2% |
-| taste | 1535 | 0.163 | 21.4% |
-| evaluative | 805 | 0.128 | 17.5% |
-| factual | 1624 | 0.066 | 5.8% |
-| forecast | 176 | 0.051 | 9.7% |
+| personality | 2593 | 0.288 | 45.4% |
+| perception | 2000 | 0.191 | 31.2% |
+| taste | 8561 | 0.123 | 13.5% |
+| evaluative | 10884 | 0.106 | 17.1% |
+| values | 14914 | 0.102 | 11.0% |
+| factual | 9929 | 0.048 | 5.3% |
+| forecast | 676 | 0.043 | 8.3% |
+| social | 16551 | 0.030 | 3.6% |
 
 ## 5. Human gap: Jev's 'most people' answer vs real human distributions
 
 | source | n | mean TVD (pooled populations) | Jev's top = humans' top (largest population) |
 |---|---|---|---|
 | scruples | 600 | 0.198 | 75.0% |
-| manifold | 100 | 0.230 | 63.0% |
-| wyr | 500 | 0.235 | 66.8% |
-| lancaster | 300 | 0.354 | 41.0% |
+| manifold | 600 | 0.215 | 65.7% |
+| wyr | 1000 | 0.254 | 64.5% |
+| lancaster | 2000 | 0.344 | 42.0% |
+| social_chem | 5999 | 0.365 | 48.3% |
+| scruples_anecdotes | 8000 | 0.393 | 57.4% |
 | jester | 100 | 0.428 | 35.0% |
 | protoqa | 150 | 0.441 | 47.3% |
-| ipip | 49 | 0.489 | 12.2% |
+| openpsych | 1018 | 0.450 | 25.9% |
+| ipip | 265 | 0.526 | 6.8% |
 | globalopinionqa | 815 | 0.612 | 18.0% |
 
 ## 6. Metacognition (does Jev know where it's jagged?)
 
-- corr(Jev's own 'ambiguous' rating, shuffle stability) = **+0.000** (n=8211; negative = it anticipates its fragility)
-- corr(Jev's 'people would disagree' rating, its own answer entropy) = **+0.625**
+- corr(Jev's own 'ambiguous' rating, shuffle stability) = **+0.002** (n=58945; negative = it anticipates its fragility)
+- corr(Jev's 'people would disagree' rating, its own answer entropy) = **+0.440**
 
 ## 7. Defaults: IPIP Big Five items (Jev's self frame; mean level 0-4, by keying)
 
