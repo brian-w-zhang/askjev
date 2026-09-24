@@ -1,0 +1,85 @@
+{
+  "type": "split",
+  "node": "world.arts.television",
+  "n_questions": 787,
+  "clusters": [
+    {
+      "size": 202,
+      "samples": [
+        "Which kind of reality show is the most entertaining?\ndating / docusoap / survival / home_renovation / talent_contests / competition_cooking",
+        "How often does a reboot of a classic TV show live up to the original?\nReboots are nearly always disappointments that fans reject / Occasionally a reboot works, but most fall flat / About as many reboots succeed as fail / Most reboots are welcomed as worthy successors",
+        "Which of these would most people name first when asked: \"Name something a celebrity might discuss on a talk show.\"\nBook / Movie / Family / Romance / Losing weight / Drugs/addiction",
+        "Is Friends overrated?",
+        "Did the final season of Game of Thrones ruin the show?",
+        "Is releasing a whole season at once better than releasing one episode a week?",
+        "Has prestige TV become a more important art form than film?",
+        "In season one of the Netflix political drama \"House of Cards\", what government position does Frank Underwood hold?\nHouse Majority Whip / Attorney General / President / Chief of Staff",
+        "In the Netflix show, Stranger Things, what song would Will sing to himself as he was missing?\nAfrica / Should I Stay or Should I Go? / This Charming Man / Love Will Tear Us Apart",
+        "In the Sci-Fi television show Doctor Who, who plays the Tenth Doctor?\nDavid Tennant / Peter Davison / Peter Capaldi / William Hartnell",
+        "Prior to working at Wizards of the Coast, \"Mark Rosewater\" was a writer for which show?\nBoy Meets World / Roseanne / The X-Files / NYPD Blue",
+        "What NBC sitcom once saw two of its characters try to pitch NBC on a sitcom about nothing?\nFrasier / Becker / Friends / Seinfeld"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 278,
+      "samples": [
+        "Which anime series would most anime fans call the best?\nother / one_piece / death_note / cowboy_bebop / attack_on_titan / neon_genesis_evangelion / fullmetal_alchemist_brotherhood",
+        "Which of these would most people name first when asked: \"Name a cartoon you watched as a kid.\"\nSpongebob / Bugs bunny / Scooby-doo / Flintstones / Looney tunes / Tom and jerry",
+        "Which of these would most people name first when asked: \"Name a cartoon character whose head you might find at the top of a pez dispenser.\"\nSnoopy / Bugs bunny / Donald duck / Mickey mouse",
+        "Baron Silas Greenback is the arch nemesis of which cartoon hero?\nBananaman / Danger Mouse / Captain Star / SuperTed",
+        "In \"Breaking Bad\", Walter White is a high school teacher diagnosed with which form of cancer?\nProstate Cancer / Testicular Cancer / Brain Cancer / Lung Cancer",
+        "In AMC's TV Series \"The Walking Dead\" what are \"Zombies\" referred to as?\nCreepers / Hell Pigs / Walkers / Maggots",
+        "In Breaking Bad, the initials W.W. refer to which of the following?\nWilliam Wolf / Wally Walrus / Walter White / Willy Wonka",
+        "In DuckTales, what is the name of the city where all the main characters live?\nDuckwing / Wingford / Tailspin / Duckburg",
+        "In the Black Mirror episode \"Bandersnatch\", PAC-MAN stands for:\nPolitical Action Committee Man / Postgraduate Aplications Centre Man / Physics & Astronomy Classification Man / Program And Control Man",
+        "In the TV show \"Mad Men\", what was Donald Draper's birthname?\nRichard \"Dick\" Whitman / John Ashbury / Donald Draper / Michael \"Mikey\" Wilhelm",
+        "In the show \"Dragonball Z\", what is the name of Cell's most powerful attack?\nCell Kamehameha / Super Kamehameha / Android Kamehameha / Solar Kamehameha",
+        "In the show \"Futurama\" what is Fry's full name?\nFry Philip / Fry J. Philip / Philip J. Fry / Fry Rodríguez"
+      ],
+      "child": {
+        "key": "cartoons_anime",
+        "label": "Cartoons & anime",
+        "description": "Questions about animated TV series (cartoons and anime), including ranking them and facts about their characters and plots.",
+        "not_for": "Live-action shows go to TV series.",
+        "examples": [
+          "Is Cowboy Bebop the best anime series?",
+          "Does DuckTales take place in Duckburg?"
+        ]
+      }
+    },
+    {
+      "size": 307,
+      "samples": [
+        "Which TV drama is the greatest of all time?\nother / mad_men / the_wire / twin_peaks / breaking_bad / the_sopranos / game_of_thrones",
+        "Which popular sitcom has aged the worst?\nfriends / seinfeld / the_office / two_and_a_half_men / the_big_bang_theory / how_i_met_your_mother",
+        "Which of these TV series is your favorite?\nFriends / Mad Men / Seinfeld / The Wire / The Office / Breaking Bad / The Simpsons / The Sopranos / Game of Thrones / Stranger Things",
+        "Which of these TV series is the greatest?\nFriends / Mad Men / Seinfeld / The Wire / The Office / Breaking Bad / The Simpsons / The Sopranos / Game of Thrones / Stranger Things",
+        "Which of these TV series is the most overrated?\nFriends / Mad Men / Seinfeld / The Wire / The Office / Breaking Bad / The Simpsons / The Sopranos / Game of Thrones / Stranger Things",
+        "Which of these TV series is the most underrated?\nFriends / Mad Men / Seinfeld / The Wire / The Office / Breaking Bad / The Simpsons / The Sopranos / Game of Thrones / Stranger Things",
+        "Which is the better TV series?\nPrison Break / Supernatural",
+        "Which is the better TV series?\nTeletubbies / Prison Break",
+        "Which is the better TV series?\nPrison Break / The Big Bang Theory",
+        "Which is the better TV series?\nThe Office / Prison Break",
+        "Which is the better TV series?\nPrison Break / The Sopranos",
+        "Which is the better TV series?\nPrison Break / The Vampire Diaries"
+      ],
+      "child": {
+        "key": "tv_series",
+        "label": "TV series",
+        "description": "Questions about particular live-action TV series (dramas, sitcoms and other scripted shows), such as comparing or ranking them, or facts about their plots, characters and cast.",
+        "not_for": "Animated series go to Cartoons & anime.",
+        "examples": [
+          "Is Breaking Bad better than The Sopranos?",
+          "Did the final season of Game of Thrones ruin the show?"
+        ]
+      }
+    }
+  ]
+}

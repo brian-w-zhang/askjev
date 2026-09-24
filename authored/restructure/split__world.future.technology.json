@@ -1,0 +1,136 @@
+{
+  "type": "split",
+  "node": "world.future.technology",
+  "n_questions": 159,
+  "clusters": [
+    {
+      "size": 25,
+      "samples": [
+        "Will the Apple Vision Pro be successful enough to revive interest in mixed reality and the metaverse?",
+        "Will Apple release a new iPad by April 2024?",
+        "Will Apple announce an iPhone with a USB-C port by the end of 2023?",
+        "Will the Apple Vision Pro go on sale before the end of January, 2024?",
+        "Will Apple Inc. have the highest market cap at the end of 2024?",
+        "Will Apple's market cap go up during 2023?",
+        "Will Apple announce a foldable iPhone by the end of 2026?",
+        "Will Apple show an AR headset (like Apple Glasses) by the end of 2023?",
+        "Will Tesla announce a new consumer vehicle model during 2023?",
+        "Will Apple release another Vision product in 2025?",
+        "Will Apple's first AR/VR headset have an outward facing screen that shows your eyes?",
+        "Will Apple release a smart ring wearable product by the end of 2025?"
+      ],
+      "child": {
+        "key": "companies_products",
+        "label": "Tech companies & products",
+        "description": "Questions about predicting what technology companies will do, such as product launches, market value, acquisitions, rebrands and competition between firms like Apple, Google and Nvidia.",
+        "not_for": "Predictions centered on one tech executive's personal actions go to Tech leaders; whether a kind of technology will become widespread goes to Emerging technologies.",
+        "examples": [
+          "Will Apple release a foldable iPhone by 2026?",
+          "Will Nvidia be the world's largest company by market cap at year end?"
+        ]
+      }
+    },
+    {
+      "size": 23,
+      "samples": [
+        "Will a Neuralink device be implanted in a human brain by the end of 2024?",
+        "How widespread will lab-grown meat become within a generation?\nIt will remain a lab curiosity / It will be a niche product in specialty stores / It will be common in supermarkets alongside regular meat / It will replace most farmed meat",
+        "Will the name of Nintendo's next console include a number?",
+        "Will the smartphone still be people's main personal device a generation from now?",
+        "Will most new cars be able to drive themselves with no one ready to take over?",
+        "Will quantum computers become useful tools for ordinary businesses?",
+        "Will brain-computer interfaces become common consumer products?",
+        "Will passwords disappear in favor of biometric logins?",
+        "Will gene editing be used routinely to cure inherited diseases?",
+        "Will 3D printers become a common household appliance?",
+        "Will supersonic passenger flights return and become common?",
+        "Will solid-state batteries replace lithium-ion batteries in most devices?"
+      ],
+      "child": {
+        "key": "emerging_tech",
+        "label": "Emerging technologies",
+        "description": "Questions about whether new kinds of technology, such as self-driving cars, quantum computers, brain implants, gene editing or lab-grown meat, will work or become widespread.",
+        "not_for": "Predictions about one company's specific products or finances go to Tech companies & products.",
+        "examples": [
+          "Will quantum computers become useful tools for ordinary businesses?",
+          "Will 3D printers become a common household appliance?"
+        ]
+      }
+    },
+    {
+      "size": 36,
+      "samples": [
+        "Will SpaceX’s next Starship test flight involve a “rapid unscheduled disassembly“?",
+        "Tomorrowland Cancelled?",
+        "Will the Vesuvius Challenge grand prize be claimed?",
+        "Will the subreddits return by friday?",
+        "Will monkeypox be renamed?",
+        "Will the Doomsday Clock next move be forward?",
+        "Will the passengers in the missing Titanic tourist submersible be safely rescued by this week?",
+        "Were there explosives in the Pager devices that blew up in Lebanon?",
+        "Will ContraPoints release another video in 2023?",
+        "Will the doomsday clock be closer to midnight than 2023?",
+        "Did US life expectancy increase in 2022?",
+        "Will Pope Francis live past the end of February?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 48,
+      "samples": [
+        "Will there be an open source model that catches up to ChatGPT this year?",
+        "Will Stable Diffusion have more Google Trends search interest than DALL-E, at the end of October?",
+        "Will Kanye West buy Parler by end of year?",
+        "Will Unity revert their Runtime fee before the end of September?",
+        "Will Elon acquire Polymarket?",
+        "Will there be an onchain BDSM slave market by 2024?",
+        "Will Google Chrome be the most popular browser at the end of 2025?",
+        "Will Nvidia be the largest company in the world by market cap at the end of 2024?",
+        "Will the flashy X.com logo sign on top of the Twitter building be there until September 2023?",
+        "Will \"X\" change back to Twitter by the end of 2025?",
+        "Will Google develop a cryptocurrency by the end of 2023?",
+        "Will Nvidia (NVDA) become the largest company in the world by market cap again in 2024?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 27,
+      "samples": [
+        "Will Elon announce before June that he's bringing back Vine?",
+        "Will Musk win Tech Won't Save Us' worst person in tech competition?",
+        "Will Elon Musk be the first trillionare ?",
+        "Will Elon Musk buy TikTok?",
+        "Will Elon Musk be interviewed by Jon Stewart in 2025?",
+        "Will Elon Musk be SpaceX CEO through 2023?",
+        "Will Elon Musk make Lex Fridman Twitter's CEO by the end of 2023?",
+        "Will Mark Zuckerberg be revealed to be an evil mud monster mage named \"Dark Muckerberg\" by the end of 2023?",
+        "Will Mark Zuckerberg actually grow a beard by the end of 2024?",
+        "Will Sam Altman be a co-founder of a serious OpenAI competitor by EOY 2024?",
+        "Will Elon Musk win his case against Sam Altman?",
+        "Will Elon Musk be Tesla's CEO through 2023?"
+      ],
+      "child": {
+        "key": "tech_leaders",
+        "label": "Tech leaders",
+        "description": "Questions about predicting the actions and fortunes of individual technology figures such as Elon Musk, Mark Zuckerberg and Sam Altman.",
+        "not_for": "Predictions about a company's products or stock that do not center on one person go to Tech companies & products.",
+        "examples": [
+          "Will Elon Musk remain Tesla's CEO through the year?",
+          "Will Sam Altman co-found a rival AI company?"
+        ]
+      }
+    }
+  ]
+}

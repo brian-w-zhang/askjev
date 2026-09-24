@@ -1,0 +1,157 @@
+{
+  "type": "split",
+  "node": "world.arts.music",
+  "n_questions": 1983,
+  "clusters": [
+    {
+      "size": 389,
+      "samples": [
+        "Which decade produced the best popular music?\n1960s / 1970s / 1980s / 1990s / 2000s / 2010s",
+        "How much has streaming changed the way hit songs are written?\nSongwriting works essentially the same as before streaming / A few habits changed, such as shorter intros / Song structure is now commonly shaped around playlists and skips / Hit songwriting has been fundamentally rebuilt around streaming",
+        "Which instrument is the hardest to master?\noboe / drums / other / piano / guitar / violin / french_horn",
+        "Is Mozart overrated as a composer?",
+        "Is auto-tune a legitimate artistic tool rather than a crutch for weak singers?",
+        "A Caixa Malacacheta is what kind of musical instrument which is commonly used in Latin American music?\nBass Drum / Maraca / Snare Drum / Cow Bell",
+        "EDM producer Marshmello performs live wearing clothes and a marshmallow mask of what colour?\nYellow / Black / Blue / White",
+        "Ellie Goulding's earliest album was named?\nLights / Bright Lights / Halcyon Days / Halcyon",
+        "From which country did the song \"Gangnam Style\" originate from?\nSouth Korea / North Korea / China / Japan",
+        "In Prokofiev's 'Peter and the Wolf', the wolf itself is represented by a trio of which musical instrument?\nFrench horn / Cello / Clarinet / Oboe",
+        "In the Panic! At the Disco's song \"Nothern Downpour\", which lyric follows 'I know the world's a broken bone'.\n\"So start a fire in their cold stone\" / \"So melt your headaches call it home\" / \"So let them know they're on their own\" / \"So sing your song until you're home\"",
+        "Kanye West's \"Gold Digger\" featured which Oscar-winning actor?\nAlec Baldwin / Jamie Foxx / Dwayne Johnson / Bruce Willis"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 286,
+      "samples": [
+        "How important is \"Album\" to understanding music?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Album', 'd",
+        "How important is \"Choir\" to understanding music?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Choir', 'd",
+        "How important is \"Concert\" to understanding music?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Concert'",
+        "How important is \"Counterpoint\" to understanding music?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Cou",
+        "How important is \"Harmony\" to understanding music?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Harmony'",
+        "How important is \"Chord\" to understanding music?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Chord (mus",
+        "How important is \"Melody\" to understanding music?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Melody', ",
+        "How important is \"Musician\" to understanding music?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Musicia",
+        "How important is \"Musicology\" to understanding music?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Music",
+        "How important is \"Music theory\" to understanding music?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Mus",
+        "How important is \"Music video\" to understanding music?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Musi",
+        "How important is \"Musical notation\" to understanding music?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': "
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 300,
+      "samples": [
+        "Who is the greater singer?\nAriana Grande / Freddie Mercury",
+        "Who is the greater singer?\nFreddie Mercury / Whitney Houston",
+        "Who is the greater singer?\nAriana Grande / Avril Lavigne",
+        "Who is the greater singer?\nBeyoncé / Ariana Grande",
+        "Who is the greater singer?\nBob Dylan / Ariana Grande",
+        "Who is the greater singer?\nBob Marley / Ariana Grande",
+        "Who is the greater singer?\nAriana Grande / Britney Spears",
+        "Who is the greater singer?\nCéline Dion / Ariana Grande",
+        "Who is the greater singer?\nAriana Grande / Elvis Presley",
+        "Who is the greater singer?\nEminem / Ariana Grande",
+        "Who is the greater singer?\nJohn Lennon / Ariana Grande",
+        "Who is the greater singer?\nJudy Garland / Ariana Grande"
+      ],
+      "child": {
+        "key": "musicians_bands",
+        "label": "Musicians & bands",
+        "description": "Questions about particular singers, bands, rappers, composers and other named music artists, such as comparing or ranking them, or facts about them.",
+        "not_for": "A question about one specific song or album goes to Albums & songs; artists with their own topic (e.g. The Beatles, Mozart, Michael Jackson) go there.",
+        "examples": [
+          "Who is the greater singer: Freddie Mercury or Whitney Houston?",
+          "Is Bob Dylan overrated?"
+        ]
+      }
+    },
+    {
+      "size": 610,
+      "samples": [
+        "Which sounds better on a slow ballad?\nsolo_piano / string_quartet / acoustic_guitar / synthesizer_pads",
+        "Which band had the greatest influence on later rock music?\nother / nirvana / pink_floyd / the_beatles / led_zeppelin / the_rolling_stones / the_velvet_underground",
+        "Which music genre would most people around the world say they enjoy the most?\npop / rock / latin / other / country / hip_hop / classical / electronic",
+        "Which of these music genres is your favorite?\nPop / R&B / Folk / Jazz / Rock / Blues / Metal / Reggae / Country / Hip hop / Classical / Electronic",
+        "Which of these music genres is the greatest?\nPop / R&B / Folk / Jazz / Rock / Blues / Metal / Reggae / Country / Hip hop / Classical / Electronic",
+        "Which of these music genres is the most overrated?\nPop / R&B / Folk / Jazz / Rock / Blues / Metal / Reggae / Country / Hip hop / Classical / Electronic",
+        "Which of these music genres is the most underrated?\nPop / R&B / Folk / Jazz / Rock / Blues / Metal / Reggae / Country / Hip hop / Classical / Electronic",
+        "Which Daft Punk album is the song \"Harder, Better, Faster, Stronger\" from?\nDiscovery / Homework / Human After All / Random Access Memories",
+        "Which of these bands is the oldest?\nAC/DC / Pink Floyd / Metallica / Red Hot Chili Peppers",
+        "Which is the better album?\nMaster of Puppets (Metallica) / A Night at the Opera (Queen)",
+        "Which is the better album?\nMeteora (Linkin Park) / A Night at the Opera (Queen)",
+        "Which is the better album?\nNevermind (Nirvana) / A Night at the Opera (Queen)"
+      ],
+      "child": {
+        "key": "albums_songs",
+        "label": "Albums & songs",
+        "description": "Questions about particular named albums, songs, symphonies, operas and other musical works, such as comparing or ranking them, or facts about them.",
+        "not_for": "A question about the artist rather than the work goes to Musicians & bands; a question about a whole genre goes to that genre's topic.",
+        "examples": [
+          "Which is the better album: Nevermind or Master of Puppets?",
+          "Is Bohemian Rhapsody the greatest rock song?"
+        ]
+      }
+    },
+    {
+      "size": 110,
+      "samples": [
+        "How much do you experience \"piano\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ex",
+        "How much do you experience \"piano\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I ",
+        "How much do you experience \"piano\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I ",
+        "How much do you experience \"piano\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways ",
+        "How much do you experience \"piano\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touc",
+        "How much do you experience \"drum\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I exp",
+        "How much do you experience \"drum\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I e",
+        "How much do you experience \"drum\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I e",
+        "How much do you experience \"drum\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways I",
+        "How much do you experience \"drum\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touch",
+        "How much do you experience \"violin\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I e",
+        "How much do you experience \"violin\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 288,
+      "samples": [
+        "How hard is it for an adult beginner to learn the violin well enough to play simple melodies in tune?\nA beginner gets there within a few weeks of casual practice / Most people get there after a few months of regular practice / It takes a year or more of steady practice / Only people who practice ser",
+        "Which of these would most people name first when asked: \"Name a classical music composer that most know about.\"\nBach / Mozart / Beethoven / Tchaikovsy",
+        "Would most adults have heard of \"Album\"?\n{'topic': 'Album', 'description': 'Collection of audio recordings'}",
+        "Would most adults have heard of \"Choir\"?\n{'topic': 'Choir', 'description': 'Ensemble of singers'}",
+        "Would most adults have heard of \"Concert\"?\n{'topic': 'Concert', 'description': 'Live performance of music in front of an audience'}",
+        "Would most adults have heard of \"Counterpoint\"?\n{'topic': 'Counterpoint', 'description': 'Polyphonic music with separate melodies'}",
+        "Would most adults have heard of \"Harmony\"?\n{'topic': 'Harmony', 'description': 'Aspect of music'}",
+        "Would most adults have heard of \"Chord\"?\n{'topic': 'Chord (music)', 'description': 'Harmonic grouping of notes'}",
+        "Would most adults have heard of \"Melody\"?\n{'topic': 'Melody', 'description': 'Linear succession of tones in the foreground of a musical work'}",
+        "Would most adults have heard of \"Musician\"?\n{'topic': 'Musician', 'description': 'Person who composes, conducts or performs music'}",
+        "Would most adults have heard of \"Musicology\"?\n{'topic': 'Musicology', 'description': 'Scholarly study of music'}",
+        "Would most adults have heard of \"Music theory\"?\n{'topic': 'Music theory', 'description': 'Study of the practices and possibilities of music'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

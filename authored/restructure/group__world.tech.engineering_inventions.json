@@ -1,0 +1,219 @@
+{
+  "type": "group",
+  "node": "world.tech.engineering_inventions",
+  "clusters": [
+    {
+      "members": [
+        "world.tech.engineering_inventions.coal",
+        "world.tech.engineering_inventions.fossil_fuel",
+        "world.tech.engineering_inventions.natural_gas",
+        "world.tech.engineering_inventions.petroleum",
+        "world.tech.engineering_inventions.nuclear_power",
+        "world.tech.engineering_inventions.hydropower",
+        "world.tech.engineering_inventions.renewable_energy",
+        "world.tech.engineering_inventions.solar_energy",
+        "world.tech.engineering_inventions.wind_power",
+        "world.tech.engineering_inventions.electric_battery"
+      ],
+      "samples": [
+        "coal",
+        "fossil_fuel",
+        "natural_gas",
+        "petroleum",
+        "nuclear_power",
+        "hydropower",
+        "renewable_energy",
+        "solar_energy",
+        "wind_power",
+        "electric_battery"
+      ],
+      "child": {
+        "key": "energy_power",
+        "label": "Energy & Power",
+        "description": "Questions about energy sources and power generation: fossil fuels, coal, oil, gas, nuclear, hydro, solar, wind and renewables.",
+        "not_for": "Other invention groups under Engineering & Inventions take their own items.",
+        "examples": []
+      }
+    },
+    {
+      "members": [
+        "world.tech.engineering_inventions.metallurgy",
+        "world.tech.engineering_inventions.glass",
+        "world.tech.engineering_inventions.concrete",
+        "world.tech.engineering_inventions.plastic",
+        "world.tech.engineering_inventions.natural_rubber",
+        "world.tech.engineering_inventions.wood",
+        "world.tech.engineering_inventions.paper",
+        "world.tech.engineering_inventions.pottery",
+        "world.tech.engineering_inventions.masonry",
+        "world.tech.engineering_inventions.explosive"
+      ],
+      "samples": [
+        "metallurgy",
+        "glass",
+        "concrete",
+        "plastic",
+        "natural_rubber",
+        "wood",
+        "paper",
+        "pottery",
+        "masonry",
+        "explosive"
+      ],
+      "child": {
+        "key": "materials",
+        "label": "Materials & Crafts",
+        "description": "Questions about materials and material crafts: metals, glass, concrete, plastics, rubber, wood, paper, pottery and masonry.",
+        "not_for": "Other invention groups under Engineering & Inventions take their own items.",
+        "examples": []
+      }
+    },
+    {
+      "members": [
+        "world.tech.engineering_inventions.animal_husbandry",
+        "world.tech.engineering_inventions.domestication",
+        "world.tech.engineering_inventions.irrigation",
+        "world.tech.engineering_inventions.fertilizer",
+        "world.tech.engineering_inventions.garden",
+        "world.tech.engineering_inventions.oven",
+        "world.tech.engineering_inventions.sanitation",
+        "world.tech.engineering_inventions.waste"
+      ],
+      "samples": [
+        "animal_husbandry",
+        "domestication",
+        "irrigation",
+        "fertilizer",
+        "garden",
+        "oven",
+        "sanitation",
+        "waste"
+      ],
+      "child": {
+        "key": "agriculture_living",
+        "label": "Farming & Daily Living",
+        "description": "Questions about farming, food production and household technology: domestication, animal husbandry, irrigation, fertilizer, gardens, ovens, sanitation and waste.",
+        "not_for": "Other invention groups under Engineering & Inventions take their own items.",
+        "examples": []
+      }
+    },
+    {
+      "members": [
+        "world.tech.engineering_inventions.building",
+        "world.tech.engineering_inventions.bridge",
+        "world.tech.engineering_inventions.dam",
+        "world.tech.engineering_inventions.civil_engineering",
+        "world.tech.engineering_inventions.infrastructure"
+      ],
+      "samples": [
+        "building",
+        "bridge",
+        "dam",
+        "civil_engineering",
+        "infrastructure"
+      ],
+      "child": {
+        "key": "infrastructure",
+        "label": "Buildings & Infrastructure",
+        "description": "Questions about civil works and infrastructure: buildings, bridges, dams and civil engineering.",
+        "not_for": "Other invention groups under Engineering & Inventions take their own items.",
+        "examples": []
+      }
+    },
+    {
+      "members": [
+        "world.tech.engineering_inventions.wheel",
+        "world.tech.engineering_inventions.lever",
+        "world.tech.engineering_inventions.simple_machine",
+        "world.tech.engineering_inventions.machine",
+        "world.tech.engineering_inventions.tool",
+        "world.tech.engineering_inventions.engine",
+        "world.tech.engineering_inventions.steam_engine",
+        "world.tech.engineering_inventions.internal_combustion_engine",
+        "world.tech.engineering_inventions.electric_motor",
+        "world.tech.engineering_inventions.robot",
+        "world.tech.engineering_inventions.mechanical_engineering"
+      ],
+      "samples": [
+        "wheel",
+        "lever",
+        "simple_machine",
+        "machine",
+        "tool",
+        "engine",
+        "steam_engine",
+        "internal_combustion_engine",
+        "electric_motor",
+        "robot",
+        "mechanical_engineering"
+      ],
+      "child": {
+        "key": "machines_engines",
+        "label": "Machines & Engines",
+        "description": "Questions about machines, engines and mechanical inventions: the wheel, levers, simple machines, steam and combustion engines, electric motors and robots.",
+        "not_for": "Other invention groups under Engineering & Inventions take their own items.",
+        "examples": []
+      }
+    },
+    {
+      "members": [
+        "world.tech.engineering_inventions.clock",
+        "world.tech.engineering_inventions.calendar",
+        "world.tech.engineering_inventions.compass",
+        "world.tech.engineering_inventions.navigation",
+        "world.tech.engineering_inventions.lens",
+        "world.tech.engineering_inventions.microscope",
+        "world.tech.engineering_inventions.telescope",
+        "world.tech.engineering_inventions.camera",
+        "world.tech.engineering_inventions.photography",
+        "world.tech.engineering_inventions.laser",
+        "world.tech.engineering_inventions.radar"
+      ],
+      "samples": [
+        "clock",
+        "calendar",
+        "compass",
+        "navigation",
+        "lens",
+        "microscope",
+        "telescope",
+        "camera",
+        "photography",
+        "laser",
+        "radar"
+      ],
+      "child": {
+        "key": "optics_instruments",
+        "label": "Instruments & Optics",
+        "description": "Questions about measuring, navigation and optical instruments: clocks, calendars, compasses, lenses, microscopes, telescopes, cameras, lasers and radar.",
+        "not_for": "Other invention groups under Engineering & Inventions take their own items.",
+        "examples": []
+      }
+    },
+    {
+      "members": [
+        "world.tech.engineering_inventions.electrical_engineering",
+        "world.tech.engineering_inventions.electronics",
+        "world.tech.engineering_inventions.engineering",
+        "world.tech.engineering_inventions.technology",
+        "world.tech.engineering_inventions.nikola_tesla",
+        "world.tech.engineering_inventions.thomas_edison"
+      ],
+      "samples": [
+        "electrical_engineering",
+        "electronics",
+        "engineering",
+        "technology",
+        "nikola_tesla",
+        "thomas_edison"
+      ],
+      "child": {
+        "key": "electrical_general",
+        "label": "Electricity & Engineering",
+        "description": "Questions about electrical engineering, electronics, engineering and technology in general, and famous inventors like Edison and Tesla.",
+        "not_for": "Other invention groups under Engineering & Inventions take their own items.",
+        "examples": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "type": "split",
+  "node": "self.lifestyle.would_you_rather",
+  "n_questions": 1000,
+  "clusters": [
+    {
+      "size": 166,
+      "samples": [
+        "Which would you rather?\nBe Zeus / Be Poseidon",
+        "Which would you rather?\nSlay the dragon / Rescue the princess",
+        "Which would you rather?\nBe a dinosaur / Be a narwhal",
+        "Which would you rather?\nFight a crocodile with a bow / Fight an elephant with a shotgun",
+        "Which would you rather?\nLive happily ever after with your favorite romance novel hero / Live happily ever after with your favorite movie/TV show hero",
+        "Which would you rather?\nFight all of the origional Power Rangers in their Megazord robot / Fight Optimus Prime",
+        "Which would you rather?\nRun into a full grown Alien from Alien / Run into Predator",
+        "Which would you rather?\nBe a Montague / Be a Capulet",
+        "Which would you rather?\nHave a lightsaber (Star Wars) / Have a phaser (Star Trek)",
+        "Which would you rather?\nBe on GUTS / Be on Legends of the Hidden Temple",
+        "Which would you rather?\nBe painted by Van Gogh / Be painted by Da Vinci",
+        "Which would you rather?\nHave the ability to teleport / Be able to time travel"
+      ],
+      "child": {
+        "key": "characters_pop_culture",
+        "label": "Characters & Pop Culture",
+        "description": "Questions about choosing between fictional characters, celebrities, franchises, games, mythical figures, or famous creatures to be, fight, own, or meet.",
+        "not_for": "Choices about your own looks or body (use Body & Appearance); eating or gross-out dares (use Food & Gross-Outs); injuries, dangers, or ways to die (use Pain, Danger & Death).",
+        "examples": [
+          "Which would you rather? Be Batman / Be Superman",
+          "Which would you rather? Only watch Star Wars / Only watch Star Trek"
+        ]
+      }
+    },
+    {
+      "size": 289,
+      "samples": [
+        "Which would you rather?\nFacebook / Twitter",
+        "Which would you rather?\nHave the first dibs every time / Always have the last laugh",
+        "Which would you rather?\nSee how or what created civilization / See how or what ends civilization",
+        "Which would you rather?\nHave it facing the wall / Have it facing away from the wall",
+        "Which would you rather?\nBe able to only speak in lolspeak / Be able to only type in 1337 speak",
+        "Which would you rather?\nErase Canada off the map / Erase New Jersey off the map",
+        "Which would you rather?\nHave a child in 7th grade and raise it / Never have kids/adopt",
+        "Which would you rather?\nDance like Michael Jackson / Sing like Freddie Mercury",
+        "Which would you rather?\nHave the first name Refrigerator / Have the first name Dishwasher",
+        "Which would you rather?\nHave Sarah Palin be president / Have Michele Bachmann be president",
+        "Which would you rather?\nSpeak in only ebonics / Understand no slang whatsoever",
+        "Which would you rather?\nLive in a penthouse in the city / Live in a mansion in the country"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 220,
+      "samples": [
+        "Which would you rather?\nBe barefoot for the rest of your life / Wear Crocks for the rest of your life",
+        "Which would you rather?\nBe covered in feathers / Be covered in fur",
+        "Which would you rather?\nWear pants too high / Wear pants too low",
+        "Which would you rather?\nBe a spouse of a polygamist / Never have a relationship last longer than 2 years",
+        "Which would you rather?\nHave a large painting of yourself / Have a life size sculpture of yourself",
+        "Which would you rather?\nBe a very fat and ugly person with a ton of friends that will never get someone of the opposite sex / Be a very skinny and attractive person that has no friends but can get any person of the opposite sex they want",
+        "Which would you rather?\nNever be able to compliment / Never be able to complain",
+        "Which would you rather?\nBe attractive and poor / Be ugly and rich",
+        "Which would you rather?\nWear only skin tight clothing / Wear clothes that are much too big",
+        "Which would you rather?\nOnly date people with severe OCD / Only date chain smokers",
+        "Which would you rather?\nBe a spokesperson for an erectile-dysfunction treatment / Be a spokesperson for a diarrhea/constipation remedy",
+        "Which would you rather?\nHave a Pinocchio nose / Have Dumbo ears"
+      ],
+      "child": {
+        "key": "body_appearance",
+        "label": "Body & Appearance",
+        "description": "Questions about choosing between changes to your own looks, body parts, hair, voice, or clothing, or how attractive you would be.",
+        "not_for": "Picking a fictional character or celebrity to be (use Characters & Pop Culture); disgusting things to eat or bodily-function embarrassments (use Food & Gross-Outs); losing limbs through injury or painful harm (use Pain, Danger & Death).",
+        "examples": [
+          "Which would you rather? Have blue skin / Have green hair",
+          "Which would you rather? Only wear pajamas / Only wear suits"
+        ]
+      }
+    },
+    {
+      "size": 158,
+      "samples": [
+        "Which would you rather?\nTake the Cinnamon Challenge / Take the Gallon Challenge",
+        "Which would you rather?\nNot brush your teeth for a month / Not shower for a month",
+        "Which would you rather?\nSneeze every three minutes / Always have the sensation to sneeze and never do",
+        "Which would you rather?\nEat what you find in a dump / Eat sealife from the bottom of the sea",
+        "Which would you rather?\nEat only hamburgers for the rest of your life / Eat only pizza for the rest of your life",
+        "Which would you rather?\nMountain Dew / Dr. Pepper",
+        "Which would you rather?\nHave your testicles sandpapered off / Be locked in a room full of your dead family members and the only way to survive is to eat them",
+        "Which would you rather?\nNever be able to eat Chipotle again / Never eat dessert again",
+        "Which would you rather?\nLick peanut butter off of a hobo's foot / Lose 250 dollars in the stock market",
+        "Which would you rather?\nGet gas every time you are around the sex you are attracted to / Burp after every time you kiss",
+        "Which would you rather?\nEat every meal mixed with Carbonara sauce / Drink every drink mixed with Four Loco",
+        "Which would you rather?\nGive your friend a blowjob and escape / Stay in the room for an entire week, without food or water"
+      ],
+      "child": {
+        "key": "food_gross_outs",
+        "label": "Food & Gross-Outs",
+        "description": "Questions about choosing between foods, drinks, disgusting things to eat or lick, and embarrassing bodily functions like farting or not showering.",
+        "not_for": "Changes to how you look (use Body & Appearance); physical pain, danger, or death (use Pain, Danger & Death).",
+        "examples": [
+          "Which would you rather? Eat only pizza forever / Eat only tacos forever",
+          "Which would you rather? Lick a subway pole / Eat a bug"
+        ]
+      }
+    },
+    {
+      "size": 167,
+      "samples": [
+        "Which would you rather?\nBe woken up at 3AM every morning and forced to watch Mrs. Doubtfire / Get punched in the face by an average man once every two months",
+        "Which would you rather?\nWork recycling human poop for the rest of your life / Work with dangerous and explosive chemicals for the rest of your life",
+        "Which would you rather?\nBe stalked by a ghost for your entire life / Be stalked by a demon for three days then die",
+        "Which would you rather?\nChop off your own arm / Chop off a complete strangers arm, but they come back to kill you in 30 years",
+        "Which would you rather?\nSlam your hand on top of a thumbtack with a half inch pin / Shoot yourself in the top of the foot with a nail gun",
+        "Which would you rather?\nBe able to survive any injury or fall / Be able to pull out any Acme Corporation product out of your pocket",
+        "Which would you rather?\nAttempt to survive a computer uprising (Terminator) / Attempt to survive a zombie outbreak (Dawn of the Dead)",
+        "Which would you rather?\nKnow for sure who killed JFK / Know for sure what happened to Amelia Earhart",
+        "Which would you rather?\nBring back someone you love who died / Bring back someone famous who died",
+        "Which would you rather?\nLose the ability to feel emotions / Be physically paralyzed",
+        "Which would you rather?\nBe a gangster / Be a freemason",
+        "Which would you rather?\nBe an amazing security guard / Be a terrible FBI agent"
+      ],
+      "child": {
+        "key": "pain_danger_death",
+        "label": "Pain, Danger & Death",
+        "description": "Questions about choosing between painful injuries, dangerous situations, punishments, grim fates, or ways to die.",
+        "not_for": "Harmless changes to your looks (use Body & Appearance); disgusting food or bodily-function dares (use Food & Gross-Outs); picking fictional characters to be (use Characters & Pop Culture).",
+        "examples": [
+          "Which would you rather? Be stung by a jellyfish / Be bitten by a snake",
+          "Which would you rather? Go to jail for a year / Lose all your money"
+        ]
+      }
+    }
+  ]
+}

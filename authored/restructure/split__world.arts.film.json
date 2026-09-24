@@ -1,0 +1,157 @@
+{
+  "type": "split",
+  "node": "world.arts.film",
+  "n_questions": 1013,
+  "clusters": [
+    {
+      "size": 145,
+      "samples": [
+        "Which director has had the greatest influence on modern filmmaking?\nother / orson_welles / akira_kurosawa / martin_scorsese / stanley_kubrick / alfred_hitchcock / steven_spielberg",
+        "Which animation studio would most moviegoers call the best?\nlaika / other / pixar / dreamworks / studio_ghibli / walt_disney_animation",
+        "Which is the hardest challenge for a film actor?\ncrying_on_cue / comedic_timing / playing_a_convincing_villain / playing_against_a_green_screen / playing_a_real_historical_person",
+        "Which of these film directors is your favorite?\nOrson Welles / Akira Kurosawa / Hayao Miyazaki / Martin Scorsese / Stanley Kubrick / Alfred Hitchcock / Steven Spielberg / Christopher Nolan / Quentin Tarantino / Francis Ford Coppola",
+        "Which of these film directors is the greatest?\nOrson Welles / Akira Kurosawa / Hayao Miyazaki / Martin Scorsese / Stanley Kubrick / Alfred Hitchcock / Steven Spielberg / Christopher Nolan / Quentin Tarantino / Francis Ford Coppola",
+        "Which of these film directors is the most overrated?\nOrson Welles / Akira Kurosawa / Hayao Miyazaki / Martin Scorsese / Stanley Kubrick / Alfred Hitchcock / Steven Spielberg / Christopher Nolan / Quentin Tarantino / Francis Ford Coppola",
+        "Which of these film directors is the most underrated?\nOrson Welles / Akira Kurosawa / Hayao Miyazaki / Martin Scorsese / Stanley Kubrick / Alfred Hitchcock / Steven Spielberg / Christopher Nolan / Quentin Tarantino / Francis Ford Coppola",
+        "Which of these would most people name first when asked: \"Name a hollywood tough guy.\"\nThe rock / Vin diesel / Bruce willis / Sylvester stallone / Arnold schwarzene..",
+        "Which of these would most people name first when asked: \"Name a movie featuring a horse.\"\nDreamer / Seabiscuit / Black beauty / Black stallion / Horse whisperer / National velvet",
+        "Which of these would most people name first when asked: \"Tell me something you would see in a blues brothers movie.\"\nHats / Dancing / Sunglasses / Black suits / Musical insruments",
+        "In \"ALF\", what was ALF's real name?\nGordon Shumway / Gordon von Gam / Gordon Foster / Gordon Milipp",
+        "In \"Jurassic World\", what is the name of the dinosaur that is a genetic hybrid?\nTyrannosaurus Rex / Mosasaurus / Indominus Rex / Pteranodon"
+      ],
+      "child": {
+        "key": "filmmakers_actors",
+        "label": "Filmmakers & actors",
+        "description": "Questions about particular film directors, actors and studios, such as ranking or comparing them, or facts about their careers and awards.",
+        "not_for": "A question about one specific movie goes to Specific films; Charlie Chaplin and Walt Disney have their own topics.",
+        "examples": [
+          "Is Stanley Kubrick the greatest film director?",
+          "Has Tom Hanks ever won an Academy Award?"
+        ]
+      }
+    },
+    {
+      "size": 169,
+      "samples": [
+        "How important is \"Anime\" to understanding film?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Anime', 'de",
+        "How important is \"Computer animation\" to understanding film?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic':",
+        "How important is \"Traditional animation\" to understanding film?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topi",
+        "How important is \"Silent film\" to understanding film?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Silen",
+        "How important is \"Filmmaking\" to understanding film?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Filmma",
+        "How important is \"Cinematography\" to understanding film?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Ci",
+        "How important is \"Special effect\" to understanding film?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Sp",
+        "How important is \"Studio system\" to understanding film?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Stu",
+        "How important is \"Television show\" to understanding film?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'T",
+        "How important is \"Cinema of the United States\" to understanding film?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n",
+        "How important is \"Cinema of France\" to understanding film?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': '",
+        "How important is \"Cinema of India\" to understanding film?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'C"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 306,
+      "samples": [
+        "Which film genre ages the worst over time?\naction / comedy / horror / musical / romance / science_fiction",
+        "Is The Godfather overrated?",
+        "Are movie sequels usually worse than the original film?",
+        "Is seeing a new film in a theater a meaningfully better experience than watching it at home?",
+        "Do black-and-white films look better than color films?",
+        "Which film has been critically regarded as the best film of all time?\nThe Godfather Part II / Citizen Kane / Avatar / The Room",
+        "Which is the better film?\nBack to the Future / The Shawshank Redemption",
+        "Which is the better film?\nBack to the Future / The Silence of the Lambs",
+        "Which is the better film?\nFight Club / Star Wars: Episode IV – A New Hope",
+        "Which is the better film?\nGladiator / Harry Potter and the Philosopher's Stone",
+        "Which is the better film?\nSchindler's List / Gone with the Wind",
+        "Which is the better film?\nGone with the Wind / Star Wars: Episode IV – A New Hope"
+      ],
+      "child": {
+        "key": "specific_films",
+        "label": "Specific films",
+        "description": "Questions about particular named movies, such as comparing or ranking them, their plots, sequels and casts, or whether they are based on a true story.",
+        "not_for": "A question about a director's or actor's career goes to Filmmakers & actors; animation as an art form goes to Animation.",
+        "examples": [
+          "Is The Godfather overrated?",
+          "Is Cinderella Man based on a true story?"
+        ]
+      }
+    },
+    {
+      "size": 169,
+      "samples": [
+        "Would most adults have heard of \"Anime\"?\n{'topic': 'Anime', 'description': 'Japanese animation'}",
+        "Would most adults have heard of \"Computer animation\"?\n{'topic': 'Computer animation', 'description': 'Art of creating moving images using computers'}",
+        "Would most adults have heard of \"Traditional animation\"?\n{'topic': 'Traditional animation', 'description': 'Animation technique in which frames are hand-drawn'}",
+        "Would most adults have heard of \"Silent film\"?\n{'topic': 'Silent film', 'description': 'Motion pictures without synchronized recorded sound'}",
+        "Would most adults have heard of \"Filmmaking\"?\n{'topic': 'Filmmaking', 'description': 'Process of making a motion picture'}",
+        "Would most adults have heard of \"Cinematography\"?\n{'topic': 'Cinematography', 'description': 'Art of motion picture photography'}",
+        "Would most adults have heard of \"Special effect\"?\n{'topic': 'Special effect', 'description': 'Illusions or tricks to change appearance'}",
+        "Would most adults have heard of \"Studio system\"?\n{'topic': 'Studio system', 'description': 'Method of film production'}",
+        "Would most adults have heard of \"Television show\"?\n{'topic': 'Television show', 'description': 'Audiovisual content intended for broadcast or digital distribution on television'}",
+        "Would most adults have heard of \"Cinema of the United States\"?\n{'topic': 'Cinema of the United States', 'description': ''}",
+        "Would most adults have heard of \"Cinema of France\"?\n{'topic': 'Cinema of France', 'description': ''}",
+        "Would most adults have heard of \"Cinema of India\"?\n{'topic': 'Cinema of India', 'description': ''}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 151,
+      "samples": [
+        "How well does winning the Best Picture Oscar predict a film's lasting reputation?\nWinners are usually forgotten within a decade / Some winners endure but many fade / Most winners are still widely watched and respected decades later / Winners reliably become the defining classics of their year",
+        "Are superhero movies bad for cinema as an art form?",
+        "Does Silence of the Lambs come before Hannibal?",
+        "Is there more than one National Treasure movie?",
+        "Do they find the body in Stand by Me?",
+        "Has Tom Hanks ever won an academy award?",
+        "Is Watcher in the Woods a Disney movie?",
+        "Is the Avengers and Avengers assemble the same film?",
+        "Does Eddie Murphy really sing Party All the Time?",
+        "Do they actually film movies at universal studios?",
+        "Is the Last Key the last Insidious movie?",
+        "Does the same actor play twins on Deception?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 73,
+      "samples": [
+        "Was the Five Heartbeats based on a real group?",
+        "Is les choristes based on a true story?",
+        "Is switched at Birth based on a real story?",
+        "Is Cinderella Man based on a true story?",
+        "Is Safe Haven based on a true story?",
+        "Is the Blues Brothers movie a true story?",
+        "The Shawshank Redemption was it a true story?",
+        "Is Scott and Sid based on a true story?",
+        "Was Imitation of Life based on a true story?",
+        "Is movie Bernie based on a true story?",
+        "Is Blue Valentine based on a true story?",
+        "Is Hocus Pocus based on a true story?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

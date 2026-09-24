@@ -1,0 +1,127 @@
+{
+  "type": "split",
+  "node": "world.tech.engineering_inventions",
+  "n_questions": 885,
+  "clusters": [
+    {
+      "size": 354,
+      "samples": [
+        "How important is \"James Watt\" to understanding the history of technology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the fi",
+        "How important is \"Montgolfier brothers\" to understanding the history of technology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics",
+        "How important is \"Alessandro Volta\" to understanding the history of technology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of ",
+        "How important is \"Nicéphore Niépce\" to understanding the history of technology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of ",
+        "How important is \"Robert Fulton\" to understanding the history of technology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the",
+        "How important is \"George Stephenson\" to understanding the history of technology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of",
+        "How important is \"Louis Daguerre\" to understanding the history of technology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of th",
+        "How important is \"Samuel Morse\" to understanding the history of technology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the ",
+        "How important is \"Isambard Kingdom Brunel\" to understanding the history of technology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining top",
+        "How important is \"Nicolaus Otto\" to understanding the history of technology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the",
+        "How important is \"Gustave Eiffel\" to understanding the history of technology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of th",
+        "How important is \"Alfred Nobel\" to understanding the history of technology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the "
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 360,
+      "samples": [
+        "Which invention did the most to change ordinary daily life?\nother / internet / telephone / automobile / refrigerator / steam_engine / electric_light / printing_press",
+        "Which of these inventions is your favorite?\nthe wheel / the compass / the airplane / the internet / the telephone / the transistor / the refrigerator / the steam engine / the printing press / the mechanical clock / the electric light bulb",
+        "Which of these inventions is the greatest?\nthe wheel / the compass / the airplane / the internet / the telephone / the transistor / the refrigerator / the steam engine / the printing press / the mechanical clock / the electric light bulb",
+        "Which of these inventions is the most overrated?\nthe wheel / the compass / the airplane / the internet / the telephone / the transistor / the refrigerator / the steam engine / the printing press / the mechanical clock / the electric light bulb",
+        "Which of these inventions is the most underrated?\nthe wheel / the compass / the airplane / the internet / the telephone / the transistor / the refrigerator / the steam engine / the printing press / the mechanical clock / the electric light bulb",
+        "Is the shipping container one of the most underrated inventions?",
+        "Would most adults have heard of \"Stable\"?\n{'topic': 'Stable', 'description': 'Building for horses and other livestock'}",
+        "Would most adults have heard of \"James Watt\"?\n{'topic': 'James Watt', 'description': 'Scottish inventor, engineer and chemist (1736–1819)'}",
+        "Would most adults have heard of \"Montgolfier brothers\"?\n{'topic': 'Montgolfier brothers', 'description': '18th-century French inventors'}",
+        "Would most adults have heard of \"Alessandro Volta\"?\n{'topic': 'Alessandro Volta', 'description': 'Italian chemist and physicist (1745–1827)'}",
+        "Would most adults have heard of \"Nicéphore Niépce\"?\n{'topic': 'Nicéphore Niépce', 'description': 'French inventor (1765–1833)'}",
+        "Would most adults have heard of \"Robert Fulton\"?\n{'topic': 'Robert Fulton', 'description': 'American engineer and inventor (1765–1815)'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 42,
+      "samples": [
+        "Are suspension bridges a more impressive kind of engineering than arch bridges?",
+        "Was the Hoover Dam the most impressive engineering project of its century?",
+        "Is the Panama Canal a greater engineering feat than the Suez Canal?",
+        "Is the Golden Gate Bridge the biggest Bridge in the world?",
+        "Is there a Canal from Birmingham to London?",
+        "Is there a toll on the Mackinac Bridge?",
+        "Is there a Tunnel between Denmark and Sweden?",
+        "Is there a bridge connecting Sweden and Denmark?",
+        "Does the Queens Midtown Tunnel have a toll?",
+        "Is the Clark Memorial bridge a toll bridge?",
+        "Is the rhine and the rhone the same river?",
+        "Is Ackley Bridge the same as Waterloo Road?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 90,
+      "samples": [
+        "How much do you experience \"hammer\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I e",
+        "How much do you experience \"hammer\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I",
+        "How much do you experience \"hammer\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I",
+        "How much do you experience \"hammer\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways",
+        "How much do you experience \"hammer\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its tou",
+        "How much do you experience \"knife\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ex",
+        "How much do you experience \"knife\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I ",
+        "How much do you experience \"knife\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I ",
+        "How much do you experience \"knife\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways ",
+        "How much do you experience \"knife\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touc",
+        "How much do you experience \"sandpaper\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways ",
+        "How much do you experience \"sandpaper\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main way"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 39,
+      "samples": [
+        "How much has air conditioning changed where people can comfortably live?\nHardly at all; people lived in hot places just as comfortably before / A little, mostly in office buildings / Considerably; hot regions became far more pleasant to live and work in / Enormously; whole booming cities would barel",
+        "Was the steam engine a more important invention than electric power?",
+        "Can a gas mix into a liquid explain?",
+        "Do you have to pay for a warning ticket?",
+        "Can you sue the Army Corps of Engineers?",
+        "Is Army Corps of Engineers part of Army?",
+        "Do all the states have daylight savings time?",
+        "Is automobile engineering a branch of mechanical engineering?",
+        "Is Straight Talk the same as Total Wireless?",
+        "Can I use a TracFone on Straight Talk?",
+        "Is metro and t mobile the same company?",
+        "Can a hydraulic pump be used as a hydraulic motor?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

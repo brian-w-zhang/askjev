@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.love.family_parenting",
+  "n_questions": 1131,
+  "clusters": [
+    {
+      "size": 749,
+      "samples": [
+        "How many people would agree: \"A family is supposed to stick together and support each other no matter what\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with",
+        "How many people would agree: \"As a parent you're expected to be there to support your child\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Calling your sibling names out of love is OK\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Children are expected to attend school\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Children are expected to believe the same religion as their parents\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Children are expected to communicate with their parents\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Children are expected to go to school\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Children are expected to love their parents\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Children are expected to respect their parents\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Children are expected to show respect to their mother\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Children are expected to speak in a respectful manner to their parents\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Children should be supervised while using electronics\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it"
+      ],
+      "child": {
+        "key": "family_rules_of_thumb",
+        "label": "Family Rules of Thumb",
+        "description": "Questions about how many people would agree with a general rule of thumb about family, parents, children, or siblings, rated from \"practically no one\" to \"practically everyone\".",
+        "not_for": "Questions about what the answerer would do, prefers, or experienced in family life, or what most people would name (use Family Situations & Choices).",
+        "examples": [
+          "How many people would agree: \"Children are expected to respect their parents\"?",
+          "How many people would agree: \"It is okay to not get along with family members\"?"
+        ]
+      }
+    },
+    {
+      "size": 382,
+      "samples": [
+        "Is it fine for adult children to move back home?",
+        "Which parenting style do you think works best?\nstrict / relaxed / hands_off / firm_but_warm",
+        "Which of these would most people name first when asked: \"Name something a child can do to earn money.\"\nChores / Mow lawn / Babysitting / Paper route / Lemonade stand",
+        "Which of these would most people name first when asked: \"Name something some parents have that makes other parents jealous.\"\nMoney / Nanny / Nice car / Big house / Good kids / Loving family",
+        "Which of these would most people name first when asked: \"Name something in your house that children are not allowed to touch.\"\nGuns / Stove / Knives / Computer / Fine china / Television",
+        "Which of these would most people name first when asked: \"Name a high school subject that kids consider difficult be specific.\"\nAlgebra / English / Physics / Calculus / Geometry / Chemistry",
+        "Which of these would most people name first when asked: \"Name a reason why a teen might swear off love.\"\nToo young / Broken heart / Scared of it / Parents foebid it",
+        "Which of these would most people name first when asked: \"Name a gift that a new mom is bound to get duplicates of at a baby shower.\"\nBibs / Bottles / Clothes / Diapers / Blankets / Diaper bag",
+        "Which of these would most people name first when asked: \"Name something babies throw out of the crib.\"\nBottle / Pillow / Rattle / Blanket / Pacifier",
+        "Which of these would most people name first when asked: \"Tell me something in a teenager's room that they wouldn't want touched.\"\nTv / Diary / Music / Clothes / Computer / Magazines",
+        "Which of these would most people name first when asked: \"As well as a baby, name something you need to bath a baby.\"\nSoap / Water / Washer / Bathtub / Shampoo / Baby oil",
+        "Which of these would most people name first when asked: \"Name something babies love to throw.\"\nFood / Toys / Bottle / Tantrum / Pacifier"
+      ],
+      "child": {
+        "key": "family_situations",
+        "label": "Family Situations & Choices",
+        "description": "Questions about how the answerer would handle or has experienced specific family situations, such as parenting decisions, sibling fights, aging parents, holidays, in-laws, and adult children at home.",
+        "not_for": "Ratings of how many people would agree with a stated rule of thumb about family (use Family Rules of Thumb).",
+        "examples": [
+          "Should parents let siblings settle their own fights?",
+          "Should adult children who move home pay rent?"
+        ]
+      }
+    }
+  ]
+}

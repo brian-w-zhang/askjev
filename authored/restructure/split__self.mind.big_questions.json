@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.mind.big_questions",
+  "n_questions": 177,
+  "clusters": [
+    {
+      "size": 97,
+      "samples": [
+        "Is human nature fixed or can it change?\nfixed / highly_changeable / slowly_changeable / no_such_thing_as_human_nature",
+        "Which gives life the most meaning?\nlove / work / knowledge / creativity / experiences / helping_others",
+        "Do humans deserve praise and blame for what they do?\nno / yes_fully / yes_partly / only_as_a_useful_practice",
+        "Where does the meaning of a life come from?\nthere_is_no_meaning / it_exists_objectively / we_create_it_ourselves / relationships_with_others / contributing_to_something_bigger",
+        "Which best describes the moral nature of people when they are born?\na_mix_of_both / basically_bad / basically_good / neither_shaped_by_circumstance",
+        "Which matters more in shaping who a person becomes?\nluck / genes / upbringing / all_equally / choices_they_make",
+        "Which statement about progress fits your view?\nprogress_comes_and_goes / progress_is_an_illusion / things_are_getting_worse / humanity_is_steadily_getting_better",
+        "Is there a single truth about how to live, or many?\na_single_truth / a_few_good_ways / no_truth_at_all / endless_valid_ways",
+        "What makes a person the same person across their life?\ntheir_body / their_story / nothing_really / their_memories / their_personality",
+        "Do you think humans are special compared to other animals?\nnot_special / fundamentally_special / special_only_in_degree / less_special_than_we_think",
+        "What best describes selfishness in human nature?\npeople_are_mostly_selfish / people_are_mostly_generous / it_depends_on_the_situation / people_are_selfish_but_cooperative",
+        "How much do you agree that humans have genuine free will?\nEvery choice is fully determined by prior causes / Choices feel free but are mostly determined / Choices are partly free and partly determined / Most choices are truly free / Every choice we make is completely free"
+      ],
+      "child": {
+        "key": "meaning_human_nature",
+        "label": "Meaning & Human Nature",
+        "description": "Questions about what gives a life meaning or value, what is worth doing for its own sake, and what human beings are basically like, such as cooperative, cruel, or driven by emotion.",
+        "not_for": "Free will, determinism, why anything exists, the nature of reality, and whether the universe has a purpose (use Free Will & Reality).",
+        "examples": [
+          "Do we create our own meaning in life?",
+          "Are humans basically cooperative?"
+        ]
+      }
+    },
+    {
+      "size": 80,
+      "samples": [
+        "Is the universe indifferent to us?\ncant_be_known / completely_indifferent / somehow_friendly_to_life / indifferent_but_that_is_fine",
+        "How much do you believe the universe has an underlying purpose?\nIt has none / Probably none / I can't tell / Probably some / It clearly has one",
+        "Which view of free will is closest to yours?\nunsure / we_have_real_free_will / free_will_is_an_illusion / determined but still free in the sense that matters",
+        "Is reality basically what it appears to be?\nyes_mostly / we_cant_know / no_it_is_very_different / roughly_but_with_big_gaps",
+        "If life has no built-in purpose, what follows?\nnothing_really_matters / we_should_make_our_own / we_should_reduce_suffering / we_should_just_enjoy_ourselves",
+        "What is the biggest mystery humans still face?\nthe_nature_of_time / why_anything_exists / whether_we_are_alone / what_consciousness_is / what_happens_after_death",
+        "Which question would you most want answered for certain?\nare_we_alone / is_there_free_will / what_is_reality_made_of / does_life_have_a_purpose / why_is_there_something_rather_than_nothing",
+        "Would humanity be better off knowing the answers to the biggest questions?\nworse_off / much_better / no_different / a_little_better",
+        "Is it possible to live a meaningful life without asking big questions?\nno / yes_easily / yes_but_its_shallower",
+        "How much does the size of the universe affect how you see your own life?\nIt makes my life feel pointless / It makes me feel very small / It doesn't affect how I see my life / It makes my life feel precious / It fills me with awe and purpose",
+        "How optimistic are you about humanity's long-term future?\nI expect humanity to go extinct / I expect a grim future / I expect it to stay much the same / I expect a better future / I expect a wonderful future",
+        "How much do you believe that everything in the universe follows fixed laws?\nNothing does; it's all chaos / Some things do / Most things do / Everything does, without exception"
+      ],
+      "child": {
+        "key": "free_will_reality",
+        "label": "Free Will & Reality",
+        "description": "Questions about free will and determinism, why anything exists, whether reality is as it appears, and whether the universe has a purpose or cares about us.",
+        "not_for": "What gives a person's life meaning or value and what humans are like (use Meaning & Human Nature).",
+        "examples": [
+          "Do you believe in free will?",
+          "Does the universe have a purpose?"
+        ]
+      }
+    }
+  ]
+}

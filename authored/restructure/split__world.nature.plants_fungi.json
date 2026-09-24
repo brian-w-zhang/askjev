@@ -1,0 +1,103 @@
+{
+  "type": "split",
+  "node": "world.nature.plants_fungi",
+  "n_questions": 764,
+  "clusters": [
+    {
+      "size": 287,
+      "samples": [
+        "Would most adults have heard of \"Green algae\"?\n{'topic': 'Green algae', 'description': 'Paraphyletic group of eukaryotes'}",
+        "Would most adults have heard of \"Pine\"?\n{'topic': 'Pine', 'description': 'Genus of coniferous trees'}",
+        "Would most adults have heard of \"Philodendron\"?\n{'topic': 'Philodendron', 'description': 'Genus of flowering plants'}",
+        "Would most adults have heard of \"Agave\"?\n{'topic': 'Agave', 'description': 'Genus of flowering plants'}",
+        "Would most adults have heard of \"Amaryllis\"?\n{'topic': 'Amaryllis', 'description': 'Genus of plants'}",
+        "Would most adults have heard of \"Cooking banana\"?\n{'topic': 'Cooking banana', 'description': 'Banana commonly used in cooking'}",
+        "Would most adults have heard of \"Bromeliaceae\"?\n{'topic': 'Bromeliaceae', 'description': 'Family of monocot flowering plants'}",
+        "Would most adults have heard of \"Oryza sativa\"?\n{'topic': 'Oryza sativa', 'description': 'Species of plant'}",
+        "Would most adults have heard of \"Anise\"?\n{'topic': 'Anise', 'description': 'Species of flowering plant'}",
+        "Would most adults have heard of \"Plant anatomy\"?\n{'topic': 'Plant anatomy', 'description': 'Study of the internal structure of plants'}",
+        "Would most adults have heard of \"Plant morphology\"?\n{'topic': 'Plant morphology', 'description': 'Study of the structure of plants'}",
+        "Would most adults have heard of \"Berry\"?\n{'topic': 'Berry (botany)', 'description': 'Botanical fruit with fleshy pericarp, containing one or many seeds'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 287,
+      "samples": [
+        "How important is \"Mycelium\" to understanding biology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Mycel",
+        "How important is \"Plant anatomy\" to understanding botany?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'P",
+        "How important is \"Plant morphology\" to understanding botany?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic':",
+        "How important is \"Berry\" to understanding botany?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Berry (bo",
+        "How important is \"Nut\" to understanding botany?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Nut (fruit)",
+        "How important is \"Leaf\" to understanding botany?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Leaf', 'de",
+        "How important is \"Root\" to understanding botany?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Root', 'de",
+        "How important is \"Plant stem\" to understanding botany?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Plan",
+        "How important is \"Bark\" to understanding botany?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Bark (bota",
+        "How important is \"Trunk\" to understanding botany?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Trunk (bo",
+        "How important is \"Stoma\" to understanding botany?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Stoma', '",
+        "How important is \"Shrub\" to understanding botany?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Shrub', '"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 105,
+      "samples": [
+        "How much do you experience \"rose\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I exp",
+        "How much do you experience \"rose\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I e",
+        "How much do you experience \"rose\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I e",
+        "How much do you experience \"rose\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways I",
+        "How much do you experience \"rose\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touch",
+        "How much do you experience \"pine\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I exp",
+        "How much do you experience \"pine\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I e",
+        "How much do you experience \"pine\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I e",
+        "How much do you experience \"pine\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways I",
+        "How much do you experience \"pine\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touch",
+        "How much do you experience \"grass\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ex",
+        "How much do you experience \"grass\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I "
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 85,
+      "samples": [
+        "Which houseplant would most people say is the easiest to keep alive?\ncactus / pothos / zz_plant / peace_lily / snake_plant / spider_plant",
+        "Which flower is the most beautiful?\nrose / lotus / peony / tulip / orchid / sunflower / cherry_blossom",
+        "Which tree is the most majestic?\noak / banyan / baobab / coast_redwood / giant_sequoia / cedar_of_lebanon",
+        "How hard is it to keep a fiddle-leaf fig alive indoors?\nNearly impossible to kill / Easy with basic care / Fussy; many owners lose one / Most die within months in typical homes",
+        "Which of these flowers is your favorite?\nLily / Rose / Daisy / Lotus / Peony / Tulip / Dahlia / Orchid / Lavender / Hydrangea / Sunflower / Cherry blossom",
+        "Which of these flowers is the greatest?\nLily / Rose / Daisy / Lotus / Peony / Tulip / Dahlia / Orchid / Lavender / Hydrangea / Sunflower / Cherry blossom",
+        "Which of these flowers is the most overrated?\nLily / Rose / Daisy / Lotus / Peony / Tulip / Dahlia / Orchid / Lavender / Hydrangea / Sunflower / Cherry blossom",
+        "Which of these flowers is the most underrated?\nLily / Rose / Daisy / Lotus / Peony / Tulip / Dahlia / Orchid / Lavender / Hydrangea / Sunflower / Cherry blossom",
+        "Are orchids overrated as houseplants?",
+        "Are fungi more fascinating than plants?",
+        "Is the Venus flytrap the most remarkable plant?",
+        "Which of these is a carnivorous plant?\nivy / fern / aloe_vera / venus_flytrap"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

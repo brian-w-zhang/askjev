@@ -1,0 +1,104 @@
+{
+  "type": "group",
+  "node": "world.science.chemistry",
+  "clusters": [
+    {
+      "members": [
+        "world.science.chemistry.dmitri_mendeleev",
+        "world.science.chemistry.periodic_table",
+        "world.science.chemistry.hydrogen",
+        "world.science.chemistry.carbon",
+        "world.science.chemistry.nitrogen",
+        "world.science.chemistry.oxygen",
+        "world.science.chemistry.silicon",
+        "world.science.chemistry.iron",
+        "world.science.chemistry.copper",
+        "world.science.chemistry.silver",
+        "world.science.chemistry.gold",
+        "world.science.chemistry.metal",
+        "world.science.chemistry.bronze",
+        "world.science.chemistry.steel",
+        "world.science.chemistry.alloy"
+      ],
+      "samples": [
+        "Dmitri Mendeleev",
+        "Periodic table",
+        "Hydrogen",
+        "Carbon",
+        "Nitrogen",
+        "Oxygen",
+        "Silicon",
+        "Iron",
+        "Copper",
+        "Silver",
+        "Gold",
+        "Metal",
+        "Bronze",
+        "Steel",
+        "Alloy"
+      ],
+      "child": {
+        "key": "elements_metals",
+        "label": "Elements & metals",
+        "description": "Questions about individual chemical elements, the periodic table and its creator Mendeleev, and metals and alloys such as iron, copper, gold, silver, bronze and steel.",
+        "not_for": "Compounds, reactions and chemistry as a field go to Chemistry concepts.",
+        "examples": [
+          "Is gold the most useful metal?",
+          "Is oxygen the most abundant element in Earth's crust?"
+        ]
+      }
+    },
+    {
+      "members": [
+        "world.science.chemistry.antoine_lavoisier",
+        "world.science.chemistry.chemistry",
+        "world.science.chemistry.analytical_chemistry",
+        "world.science.chemistry.inorganic_chemistry",
+        "world.science.chemistry.organic_chemistry",
+        "world.science.chemistry.physical_chemistry",
+        "world.science.chemistry.substance_chemistry",
+        "world.science.chemistry.chemical_element",
+        "world.science.chemistry.chemical_compound",
+        "world.science.chemistry.acid",
+        "world.science.chemistry.base_chemistry",
+        "world.science.chemistry.carbon_dioxide",
+        "world.science.chemistry.chemical_bond",
+        "world.science.chemistry.molecule",
+        "world.science.chemistry.water",
+        "world.science.chemistry.chemical_reaction",
+        "world.science.chemistry.catalysis",
+        "world.science.chemistry.fire"
+      ],
+      "samples": [
+        "Antoine Lavoisier",
+        "Chemistry",
+        "Analytical chemistry",
+        "Inorganic chemistry",
+        "Organic chemistry",
+        "Physical chemistry",
+        "Substance (chemistry)",
+        "Chemical element",
+        "Chemical compound",
+        "Acid",
+        "Base (chemistry)",
+        "Carbon dioxide",
+        "Chemical bond",
+        "Molecule",
+        "Water",
+        "Chemical reaction",
+        "Catalysis",
+        "Fire"
+      ],
+      "child": {
+        "key": "chemistry_concepts",
+        "label": "Chemistry concepts",
+        "description": "Questions about chemistry as a science (its branches and pioneers such as Lavoisier) and about compounds, molecules, chemical bonds, acids and bases, water, and chemical reactions such as combustion and catalysis.",
+        "not_for": "A specific element, the periodic table, or a metal or alloy goes to Elements & metals.",
+        "examples": [
+          "Is organic chemistry the hardest branch of chemistry?",
+          "Is fire a chemical reaction?"
+        ]
+      }
+    }
+  ]
+}

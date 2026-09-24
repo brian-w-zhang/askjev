@@ -15,16 +15,16 @@ export async function GET(req: NextRequest) {
   const vec = toVector(await embed(text));
   const t1 = performance.now();
   const vis = hidden ? "true" : "display_ok";
-  // Trigram catches exact keywords (names, jargon) the embedding can blur. Full-string similarity
-  // on long queries is slow on a GIN index and adds little over the embedding, so keep it to short ones.
-  const useTrgm = text.split(/\s+/).length <= 4;
+  // Trigram catches exact keywords (names, jargon) the embedding can blur. It uses the GiST trigram
+  // index as a nearest-neighbour lookup (`<->`), which stays fast at 100k+ rows for any query length.
+  const useTrgm = text.trim().length >= 3;
   const [byVec, byTrgm, nodes] = await Promise.all([
     q<Hit>(`select id, text, primitive, node_id, hemisphere, 1 - (embedding <=> $1::vector) as sim, similarity(text, $2) as trgm
               from questions where embedding is not null and ${vis}
              order by embedding <=> $1::vector limit 20`, [vec, text]),
     useTrgm
       ? q<Hit>(`select id, text, primitive, node_id, hemisphere, coalesce(1 - (embedding <=> $1::vector), 0) as sim, similarity(text, $2) as trgm
-                  from questions where text % $2 and ${vis} order by similarity(text, $2) desc limit 10`, [vec, text])
+                  from questions where ${vis} order by text <-> $2 limit 10`, [vec, text])
       : Promise.resolve([] as Hit[]),
     q<{ id: string; label: string; hemisphere: string; sim: number }>(
       `select id, label, hemisphere, 1 - (embedding <=> $1::vector) as sim from nodes

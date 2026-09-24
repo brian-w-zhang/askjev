@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.mind.epistemics",
+  "n_questions": 226,
+  "clusters": [
+    {
+      "size": 87,
+      "samples": [
+        "What, if anything, can a person be completely certain of?\nnothing_at_all / yes_many_things / only_logic_and_math / only_my_own_existence",
+        "What is the best sign that someone is a good thinker?\nthey_are_consistent / they_know_many_facts / they_admit_uncertainty / they_change_their_mind / they_ask_good_questions",
+        "Which is the most common reason smart people believe false things?\noverconfidence / they_rarely_do / lack_of_information / motivated_reasoning / trusting_the_wrong_people",
+        "What is the right attitude toward a belief you've held since childhood?\ndoubt_it_by_default / keep_it_until_disproven / re_examine_it_from_time_to_time",
+        "How much can people ever know about the world beyond their senses?\nNothing / Very little / A good deal / Almost everything, in principle",
+        "How much do you trust your own memory of events from years ago?\nNot at all / Only the broad outline / Most details / Every detail",
+        "How much of what you currently believe do you expect will turn out to be wrong?\nNone of it / A few small things / A fair share / Much of it",
+        "How willing are you to say you're certain about something?\nNever / Only for logic and math / For well-established facts / For most things I believe",
+        "Is absolute certainty ever justified?",
+        "Is intuition a reliable guide to truth?",
+        "Should you believe something just because most experts agree?",
+        "Have you changed your mind about something important in the last year?"
+      ],
+      "child": {
+        "key": "knowledge_certainty",
+        "label": "Knowledge & Certainty",
+        "description": "Questions about what knowledge is, whether certainty is possible, and the answerer's own habits of doubt, confidence, and changing their mind.",
+        "not_for": "Which kinds of evidence, sources, experts, or media to trust (use Evidence & Sources).",
+        "examples": [
+          "Is absolute certainty ever justified?",
+          "Can a false belief still be useful?"
+        ]
+      }
+    },
+    {
+      "size": 139,
+      "samples": [
+        "When someone presents strong evidence against a belief you hold, what do you usually do?\nkeep_my_belief / change_it_slowly / change_my_mind_right_away / look_for_counter_evidence",
+        "How much weight does a famous scientist's opinion deserve on a topic outside their specialty?\nless_than_a_layperson / no_more_than_a_layperson / as_much_as_in_their_field / a_little_more_than_a_layperson",
+        "When your gut feeling and the evidence disagree, which do you follow?\nevidence / gut_feeling / depends_on_the_stakes / look_for_more_information",
+        "What is the most reliable source of knowledge?\ntrusted_people / expert_consensus / scientific_studies / personal_experience / reasoning_it_out_myself",
+        "Which is worse: believing something false or failing to believe something true?\nequally_bad / missing_something_true / believing_something_false",
+        "What should you do when experts disagree with each other?\nsuspend_judgment / follow_the_majority / look_at_the_evidence_myself / follow_the_most_credentialed",
+        "How should you treat a claim you read on social media?\nassume_its_false / check_the_source / look_for_other_sources / believe_it_if_it_seems_right",
+        "Which kind of evidence convinces you most?\nstatistics / a_vivid_story / a_trusted_person / seeing_it_myself / a_logical_argument",
+        "What is the best response to a belief that can't be tested?\nignore_it / reject_it / hold_it_lightly / believe_it_if_it_helps",
+        "Which is more trustworthy?\nan_ai_system / a_single_expert / my_own_judgment / a_large_crowd_of_non_experts",
+        "What should you do if a well-supported scientific finding clashes with your experience?\nhold_both / trust_the_science / trust_my_experience / look_into_it_further",
+        "What makes a source trustworthy to you?\ncredentials / independence / track_record / agrees_with_what_i_know / transparency_about_methods"
+      ],
+      "child": {
+        "key": "evidence_sources",
+        "label": "Evidence & Sources",
+        "description": "Questions about which evidence, sources, experts, statistics, news, or gut feelings to trust when deciding whether a claim is true.",
+        "not_for": "What knowledge is, whether anything is certain, and personal habits of doubt (use Knowledge & Certainty).",
+        "examples": [
+          "Do you trust a vivid story more than a statistic?",
+          "Should you follow the experts when they disagree with your gut?"
+        ]
+      }
+    }
+  ]
+}

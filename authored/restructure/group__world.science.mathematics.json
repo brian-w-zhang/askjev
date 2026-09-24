@@ -1,0 +1,139 @@
+{
+  "type": "group",
+  "node": "world.science.mathematics",
+  "clusters": [
+    {
+      "members": [
+        "world.science.mathematics.leonhard_euler",
+        "world.science.mathematics.carl_friedrich_gauss",
+        "world.science.mathematics.kurt_g_del",
+        "world.science.mathematics.mathematics",
+        "world.science.mathematics.discrete_mathematics",
+        "world.science.mathematics.mathematical_proof",
+        "world.science.mathematics.number_theory",
+        "world.science.mathematics.algebra",
+        "world.science.mathematics.abstract_algebra",
+        "world.science.mathematics.linear_algebra",
+        "world.science.mathematics.mathematical_analysis",
+        "world.science.mathematics.calculus",
+        "world.science.mathematics.infinity",
+        "world.science.mathematics.series_mathematics",
+        "world.science.mathematics.arithmetic",
+        "world.science.mathematics.exponentiation",
+        "world.science.mathematics.logarithm",
+        "world.science.mathematics.geometry",
+        "world.science.mathematics.circle",
+        "world.science.mathematics.three_dimensional_space",
+        "world.science.mathematics.topology",
+        "world.science.mathematics.statistics"
+      ],
+      "samples": [
+        "Leonhard Euler",
+        "Carl Friedrich Gauss",
+        "Kurt Gödel",
+        "Mathematics",
+        "Discrete mathematics",
+        "Mathematical proof",
+        "Number theory",
+        "Algebra",
+        "Abstract algebra",
+        "Linear algebra",
+        "Mathematical analysis",
+        "Calculus",
+        "Infinity",
+        "Series (mathematics)",
+        "Arithmetic",
+        "Exponentiation",
+        "Logarithm",
+        "Geometry",
+        "Circle",
+        "Three-dimensional space",
+        "Topology",
+        "Statistics"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "members": [
+        "world.science.mathematics.algorithm",
+        "world.science.mathematics.function_mathematics",
+        "world.science.mathematics.set_mathematics",
+        "world.science.mathematics.e_mathematical_constant",
+        "world.science.mathematics.variable_mathematics",
+        "world.science.mathematics.limit_mathematics",
+        "world.science.mathematics.angle",
+        "world.science.mathematics.trigonometry",
+        "world.science.mathematics.area",
+        "world.science.mathematics.line_geometry",
+        "world.science.mathematics.polygon",
+        "world.science.mathematics.triangle",
+        "world.science.mathematics.volume",
+        "world.science.mathematics.probability"
+      ],
+      "samples": [
+        "Algorithm",
+        "Function (mathematics)",
+        "Set (mathematics)",
+        "E (mathematical constant)",
+        "Variable (mathematics)",
+        "Limit (mathematics)",
+        "Angle",
+        "Trigonometry",
+        "Area",
+        "Line (geometry)",
+        "Polygon",
+        "Triangle",
+        "Volume",
+        "Probability"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "members": [
+        "world.science.mathematics.arabic_numerals",
+        "world.science.mathematics.number",
+        "world.science.mathematics.natural_number",
+        "world.science.mathematics.prime_number",
+        "world.science.mathematics.integer",
+        "world.science.mathematics.0",
+        "world.science.mathematics.real_number",
+        "world.science.mathematics.pi",
+        "world.science.mathematics.fraction",
+        "world.science.mathematics.complex_number",
+        "world.science.mathematics.equation"
+      ],
+      "samples": [
+        "Arabic numerals",
+        "Number",
+        "Natural number",
+        "Prime number",
+        "Integer",
+        "0",
+        "Real number",
+        "Pi",
+        "Fraction",
+        "Complex number",
+        "Equation"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "type": "split",
+  "node": "world.places.physical_geography",
+  "n_questions": 1109,
+  "clusters": [
+    {
+      "size": 378,
+      "samples": [
+        "How important is \"Hemispheres of Earth\" to understanding physical geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the",
+        "How important is \"Equator\" to understanding physical geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topi",
+        "How important is \"Tropic of Cancer\" to understanding physical geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the fie",
+        "How important is \"Tropic of Capricorn\" to understanding physical geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the ",
+        "How important is \"Arctic Circle\" to understanding physical geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n",
+        "How important is \"Antarctic Circle\" to understanding physical geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the fie",
+        "How important is \"North Pole\" to understanding physical geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'t",
+        "How important is \"South Pole\" to understanding physical geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'t",
+        "How important is \"Prime meridian\" to understanding physical geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field",
+        "How important is \"International Date Line\" to understanding physical geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of ",
+        "How important is \"Baltic Sea\" to understanding physical geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'t",
+        "How important is \"Bay of Biscay\" to understanding physical geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 58,
+      "samples": [
+        "How hard is it for a fit amateur hiker to climb Kilimanjaro?\nAn easy day hike / A tough but routine multi-day trek for most fit people / Many fit hikers fail because of altitude / Only experienced mountaineers should attempt it",
+        "Which natural wonder is the most breathtaking?\nother / ha_long_bay / grand_canyon / iguazu_falls / mount_everest / victoria_falls / great_barrier_reef",
+        "Which US national park is the best?\nzion / glacier / yosemite / yellowstone / grand_canyon / great_smoky_mountains",
+        "Which of these natural wonders is your favorite?\nMatterhorn / Mount Fuji / Ha Long Bay / Yellowstone / Grand Canyon / Iguazu Falls / Mount Everest / Niagara Falls / Sahara Desert / Victoria Falls / Amazon Rainforest / Great Barrier Reef",
+        "Which of these natural wonders is the greatest?\nMatterhorn / Mount Fuji / Ha Long Bay / Yellowstone / Grand Canyon / Iguazu Falls / Mount Everest / Niagara Falls / Sahara Desert / Victoria Falls / Amazon Rainforest / Great Barrier Reef",
+        "Which of these natural wonders is the most underrated?\nMatterhorn / Mount Fuji / Ha Long Bay / Yellowstone / Grand Canyon / Iguazu Falls / Mount Everest / Niagara Falls / Sahara Desert / Victoria Falls / Amazon Rainforest / Great Barrier Reef",
+        "Is climbing Mount Everest still worth it given the crowds?",
+        "Is Niagara Falls overrated?",
+        "Which desert covers much of northern Africa?\ngobi / sahara / atacama / kalahari",
+        "What is the highest mountain in the world?\nMount Godwin Austen / Annapurna / Mt. Everest / Kangchenjunga",
+        "Which of these natural wonders is the most overrated?\nMatterhorn / Mount Fuji / Ha Long Bay / Yellowstone / Grand Canyon / Iguazu Falls / Mount Everest / Niagara Falls / Sahara Desert / Victoria Falls / Amazon Rainforest / Great Barrier Reef",
+        "Is Lake Tahoe the deepest lake in the world?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 378,
+      "samples": [
+        "Would most adults have heard of \"Hemispheres of Earth\"?\n{'topic': 'Hemispheres of Earth', 'description': 'Division of the globe into equal halves'}",
+        "Would most adults have heard of \"Equator\"?\n{'topic': 'Equator', 'description': \"Imaginary line halfway between Earth's North and South poles\"}",
+        "Would most adults have heard of \"Tropic of Cancer\"?\n{'topic': 'Tropic of Cancer', 'description': 'Line of northernmost latitude at which the Sun can be directly overhead'}",
+        "Would most adults have heard of \"Tropic of Capricorn\"?\n{'topic': 'Tropic of Capricorn', 'description': 'Line of southernmost latitude at which the Sun can be directly overhead'}",
+        "Would most adults have heard of \"Arctic Circle\"?\n{'topic': 'Arctic Circle', 'description': 'Boundary of the Arctic'}",
+        "Would most adults have heard of \"Antarctic Circle\"?\n{'topic': 'Antarctic Circle', 'description': 'Boundary of the Antarctic'}",
+        "Would most adults have heard of \"North Pole\"?\n{'topic': 'North Pole', 'description': 'Northernmost point on Earth'}",
+        "Would most adults have heard of \"South Pole\"?\n{'topic': 'South Pole', 'description': 'Southernmost point on Earth'}",
+        "Would most adults have heard of \"Prime meridian\"?\n{'topic': 'Prime meridian', 'description': 'Line of longitude, at which longitude is defined to be 0°'}",
+        "Would most adults have heard of \"International Date Line\"?\n{'topic': 'International Date Line', 'description': 'Line dividing one calendar day from the next'}",
+        "Would most adults have heard of \"Baltic Sea\"?\n{'topic': 'Baltic Sea', 'description': 'Sea in northern Europe'}",
+        "Would most adults have heard of \"Bay of Biscay\"?\n{'topic': 'Bay of Biscay', 'description': 'Gulf of the northeast Atlantic Ocean located south of the Celtic Sea'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 90,
+      "samples": [
+        "How much do you experience \"ocean\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ex",
+        "How much do you experience \"ocean\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I ",
+        "How much do you experience \"ocean\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I ",
+        "How much do you experience \"ocean\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways ",
+        "How much do you experience \"ocean\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touc",
+        "How much do you experience \"volcano\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ",
+        "How much do you experience \"volcano\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways ",
+        "How much do you experience \"volcano\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways ",
+        "How much do you experience \"volcano\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main way",
+        "How much do you experience \"volcano\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its to",
+        "How much do you experience \"valley\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I e",
+        "How much do you experience \"valley\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 205,
+      "samples": [
+        "Which island would most people call a tropical paradise?\nbali / fiji / maui / maldives / bora_bora / seychelles",
+        "Is the Dead Sea worth visiting?",
+        "Which river is the longest in South America?\namazon / parana / orinoco / sao_francisco",
+        "Which ocean lies between Africa and Australia?\narctic / indian / pacific / atlantic",
+        "Santorini is an island belonging to what European Country?\nTurkey / Spain / Greece / Italy",
+        "What is the name of the formerly rich fishing grounds off the island of Newfoundland, Canada?\nGrand Banks / Hudson Bay / Mariana Trench / Great Barrier Reef",
+        "What is the name of the ocean that Hawaii is located in?\nIndian / Atlantic / Pacific / Arctic",
+        "Which of the following geographic features is a ring-shaped coral reef, island, or series of islets?\nDelta / Atoll / Peninsula / Isthmus",
+        "Is there border between Ireland and Northern Ireland?",
+        "Are there two Colorado rivers in the United States?",
+        "Can u really hear the ocean in a shell?",
+        "Is the Isle of Man part of Great Britain?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

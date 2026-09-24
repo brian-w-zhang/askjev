@@ -1,0 +1,157 @@
+{
+  "type": "split",
+  "node": "world.society.crime_law",
+  "n_questions": 774,
+  "clusters": [
+    {
+      "size": 114,
+      "samples": [
+        "What books are banned in Ireland?\nUlysses by James Joyce. / Very few books are banned but an exception is a book by Jean Martin. / Borstal Boy. / Catcher in the Rye by J.D. Salinger is banned. / Books banned in Ireland include Catcher in the Rye, Brave New World and Ulysses. / Balzac.",
+        "What kind of clothing is illegal in the US?\nHemp clothing is illegal. / Cannabis or weed clothing. / In the US, it's illegal to wear hemp. / Most clothing is legal in the US with the exception of certain masks.",
+        "It is illegal to drive in the UK if you are wearing what?\nWearing flip-flops is illegal when driving in the UK. / It is illegal to drive in the UK if you are wearing a swimsuit. / I have no comment. / It is illegal to drive in a bikini in the UK. / Jeans. / Swimming gear.",
+        "What is it illegal to do to the flag in the UK?\nIn the UK it's not illegal to do anything to a flag. / In the UK it's illegal to burn a flag. / Burning the English flag is illegal. / Burning the Union Jack flag is illegal in the UK. / You must not burn the British flag. / Burning a flag is illegal.",
+        "Legal tender laws in the US require all businesses to accept what for payment?\nThere are no requirements on businesses in the US. / Legal tender laws in the US require all business to accept cash (dollars). / All business in the US must accept cash. / It is illegal for a business to be cash-free in ",
+        "UK businesses must accept what as payment?\nUK businesses must accept pounds as payment. / There are no requirements on businesses in the UK. / Businesses must accept credit-cards. / In the UK, businesses can't be cash-free. / Cash and credit cards.",
+        "Who are you not allowed to marry in the UK?\nYou are not allowed to marry your cousin in the UK. / You are not allowed to marry your first cousin in the UK. / You are not allowed to marry your parents, children or siblings in the UK. / Parents or grandparents or cousin. / Your parents, children, sibl",
+        "What are the laws around hitting your children in the UK?\nHitting your children is legal in most of the UK provided it is \"reasonable\". / Hitting your children is illegal in most of the UK. / Hitting your children is illegal in the UK. / Hitting your children is not allowed. / In the UK, hitting or ",
+        "Is it legal to own an assault rifle?\nIt depends on which country you are in. / No, it is illegal to own an assault rifle. / Yes, it is legal to own an assault rifle.",
+        "What are examples of films that remain banned by British censors?\nThe film A Clockwork Orange remains banned in Britain. / The Exorcist remains banned in Britain, Texas Chainsaw Massacre. / The film Texas Chainsaw Massacre remains banned in Britain. / Cannibal Holocaust. / Antichrist remains banned ",
+        "What can you not do to your child in Florida?\nYou cannot abuse your child in Florida. / Spanking. / It is illegal to hit your child in Florida. / You cannot spank your child in Florida.",
+        "Where in the Americas can you legally use magic mushrooms?\nMagic mushrooms are effectively legal in Brazil and Jamaica. / You can legally use magic mushrooms in Mexico. / You can legally use magic mushrooms in the United States. / You can legally use magic mushrooms in California. / You can legally "
+      ],
+      "child": {
+        "key": "legal_where",
+        "label": "What's legal where",
+        "description": "Questions about whether a specific activity, item or practice is legal, banned or required in a particular country or state, such as drug use, marriage rules, censorship or smacking children.",
+        "not_for": "Owning, carrying or licensing guns goes to Gun laws; constitutional rules about government go to Constitution.",
+        "examples": [
+          "Is it illegal to burn a flag in the UK?",
+          "Are magic mushrooms legal in Jamaica?"
+        ]
+      }
+    },
+    {
+      "size": 199,
+      "samples": [
+        "How reliable is eyewitness testimony in criminal trials?\nVery reliable; eyewitnesses are usually right / Mostly reliable, with occasional honest mistakes / Shaky; errors are common under stress and suggestion / Deeply unreliable; it is a leading cause of wrongful convictions",
+        "Is the Zodiac Killer case the most famous unsolved crime in America?",
+        "Is fingerprint evidence as reliable as crime dramas portray it?",
+        "Is real detective work mostly paperwork rather than chasing leads?",
+        "In the U.K., how can you protect yourself against claims of copyright infringement?\nYou can protect yourself against claims of copyright infringement by declaring that no copyright infringement was intended. / You can protect yourself against claims of copyright infringement by not making any money ",
+        "What are situations where you are required to use an attorney in the US?\nI have no comment. / You are required to use an attorney in the US if are sued. / For a divorce. / You are required to use an attorney in the US if you face criminal charges. / You are required to use an attorney in the US if y",
+        "In the U.S., what happens if a cop lies?\nA cop who lies will be fired. / A cop who lies will be put in jail. / It is illegal for a cop to lie. / A cop who lies will be prosecuted. / It depends on the circumstances of the lie.",
+        "Legally, what does it mean if a lawsuit is frivolous?\nIf a lawsuit is frivolous, it lacks a legal argument. / If a lawsuit is frivolous, it involves petty issues. / If a lawsuit is frivolous, it concerns a trivial disagreement.",
+        "What happens if American police do not inform you of your Miranda rights when you are taken into custody?\nIf the police do not inform you of your Miranda rights, they cannot use your statements as evidence against you in a criminal trial. / If the police do not inform you of your Miranda rights, the",
+        "What happens if your parents die in debt in America?\nIf your parents die in debt, you are responsible for paying off the debt. / If your parents die in debt, their estate is responsible for paying off the debt. / If your parents die in debt, you will inherit the debt.",
+        "Can lawyers lie on their clients' behalf in the U.S.?\nYes, confidentiality requires that lawyers lie for their clients. / Yes, lawyers can lie on behalf of their clients. / Yes, lawyers have an obligation to lie for their clients. / No, lawyers are not allowed to lie.",
+        "Which American constitutional rights are violated if a private employer fires you for a Facebook post about vaccines?\nThe employer has violated the First Amendment. / Your constitutional rights to freedom of speech has been violated. / Your First Amendment rights have been violated. / No constitutio"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 85,
+      "samples": [
+        "Can you open carry a rifle in Maryland?",
+        "Can you shoot a gun without a license?",
+        "Do you need a Gun permit in Vermont?",
+        "Do you need a license to carry in New Hampshire?",
+        "Can I open carry without a permit in Tennessee?",
+        "Can I carry a Gun in my car in Idaho?",
+        "Do u need a gun license to go to a shooting range?",
+        "Is it legal to carry a Gun in New Hampshire?",
+        "Can a felon own a Gun in nj?",
+        "Do u need a licence for an air rifle in UK?",
+        "Can I carry a Gun in my car South Carolina?",
+        "Do I need a concealed carry permit in nh?"
+      ],
+      "child": {
+        "key": "gun_laws",
+        "label": "Gun laws",
+        "description": "Questions about the rules for owning, carrying, buying or licensing firearms in a particular country or state.",
+        "not_for": "Laws about other activities go to What's legal where.",
+        "examples": [
+          "Do you need a permit to carry a gun in Vermont?",
+          "Can a felon own a gun in New Jersey?"
+        ]
+      }
+    },
+    {
+      "size": 85,
+      "samples": [
+        "How important is \"Lawsuit\" to understanding law?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Lawsuit', ",
+        "How important is \"Negligence\" to understanding law?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Neglige",
+        "How important is \"Freedom of speech\" to understanding law?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': '",
+        "How important is \"Suffrage\" to understanding law?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Suffrage'",
+        "How important is \"Blackbeard\" to understanding the history of crime?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{",
+        "How important is \"Jack the Ripper\" to understanding the history of crime?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the fi",
+        "How important is \"Al Capone\" to understanding the history of crime?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'",
+        "How important is \"Pablo Escobar\" to understanding the history of crime?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the fiel",
+        "How important is \"Alternative dispute resolution\" to understanding law?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the fiel",
+        "How important is \"Appeal\" to understanding law?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Appeal', 'd",
+        "How important is \"Capital punishment\" to understanding law?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': ",
+        "How important is \"Contract\" to understanding law?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Contract'"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 132,
+      "samples": [
+        "The National Security Law should be abolished.\nAgree / Disagree / Strongly agree / Strongly disagree",
+        "Could a president run for a third term?",
+        "Is it illegal to seek asylum in the US?",
+        "Does the constitution give us the right to vote?",
+        "Is the Electoral College written in the Constitution?",
+        "Is president bound to accept the advice of Council of Ministers?",
+        "Do you need to be on us soil to claim asylum?",
+        "Does Vice president have to be born in us?",
+        "Does the US president have to be a natural born citizen?",
+        "Does the icc has jurisdiction in the United States?",
+        "Does each Australian state have its own constitution?",
+        "Can a us citizen hold a foreign Title?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 159,
+      "samples": [
+        "Which famous heist was the most impressive?\nother / lufthansa_heist / mona_lisa_theft / great_train_robbery / antwerp_diamond_heist / isabella_stewart_gardner_museum_theft",
+        "Which of these would most people name first when asked: \"Name a moving violation you might get ticketed for.\"\nSpeeding / Broken tail light / Running a red light / Running a stop sign",
+        "How important is it to have the following things in our country? Is it very important, somewhat important, not too important or not important at all? a. there is a judicial system that treats everyone in the same way\nDK/Refused / Very important / Not too important / Somewhat important / Not importan",
+        "Please tell me what kind of influence the group is having on the way things are going in your country. Is the influence of court system very good, somewhat good, somewhat bad or very bad in your country?\nVery bad / DK/Refused / Very good / Somewhat bad / Somewhat good",
+        "Thinking about your country's future, how important is it that: c. there is a judicial system that treats everyone in the same way? Is it very important, somewhat important, not too important or not important at all?\nVery important / Not too important / Somewhat important",
+        "Thinking about conditions in our country today, for each of the following please tell me whether it is getting better, worse, or staying about the same, compared with the past?...Law and order\nWorse / Better / About the same",
+        "(What kind of influence the group is having on the way things are going in your country.) Is the influence of...court system very good, somewhat good, somewhat bad or very bad in your country?\nVery bad / DK/Refused / Very good / Somewhat bad / Somewhat good",
+        "Does this statement describe your country very well, somewhat well, not too well, or not well at all? d. Most people live in areas where it is dangerous to walk around at night\nDK/Refused / Very well / Not too well / Somewhat well / Not well at all",
+        "As I read a list of things that you can and cannot do in some countries, please tell me how important each is to you. How important is it to you to live in a country where law and order is maintained ? Is it very important, somewhat important, not too important or not important at all?\nVery importan",
+        "As I read each one, please tell me if you think it is a very big problem, a moderately big problem, a small problem or not a problem at all...Crime\nDK/Refused / Small problem / Very big problem / Not a problem at all / Moderately big problem",
+        "Here is a list of things that may be problems in our country. As I read each one, please tell me if you think it is a very big problem, a moderately big problem, a small problem, or not a problem at all...crime.\nDK/Refused / Small problem / Very big problem / Not a problem at all / Moderately big pr",
+        "As I read each one, please tell me if you think it is a very big problem, a moderately big problem, a small problem or not a problem at all. a. crime\nDK/Refused / Small problem / Very big problem / Not a problem at all / Moderately big problem"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

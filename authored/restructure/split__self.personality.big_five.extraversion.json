@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.personality.big_five.extraversion",
+  "n_questions": 253,
+  "clusters": [
+    {
+      "size": 26,
+      "samples": [
+        "How often is this statement true of you: \"I use my hands and arms to gesture while talking to people.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I touch others on the shoulder or arm while talking to them.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I use a monotone or dull voice while talking to people.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I look over or away from others while talking to them.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I move away from others when they touch me while we are talking.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I have a relaxed body position when I talk to people.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I frown while talking to people.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I avoid eye contact while talking to people.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I have a tense body position while talking to people.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I sit close or stand close to people while talking with them.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"My voice is monotonous or dull when I talk to people.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I use a variety of vocal expressions when I talk to people.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me"
+      ],
+      "child": {
+        "key": "body_language_voice",
+        "label": "Body Language & Voice",
+        "description": "Questions about the answerer's body language and voice while talking to people: eye contact, gestures, facial expression, posture, distance, and vocal variety.",
+        "not_for": "How sociable, talkative, assertive, energetic, or thrill-seeking the answerer is in general (use Sociability & Energy).",
+        "examples": [
+          "Do you maintain eye contact while talking?",
+          "Do you gesture a lot when you talk?"
+        ]
+      }
+    },
+    {
+      "size": 227,
+      "samples": [
+        "How well does this statement describe you: \"I tell people about it when I'm irritated.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I hate being the center of attention.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I feel that I have a lot of inner strength.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am skilled in handling social situations.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I don't mind being the center of attention.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I don't talk a lot.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I feel comfortable around people.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I start conversations.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I talk to a lot of different people at parties.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I keep in the background.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I have little to say.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I don't like to draw attention to myself.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well"
+      ],
+      "child": {
+        "key": "sociability_energy",
+        "label": "Sociability & Energy",
+        "description": "Questions about how sociable, talkative, assertive, cheerful, energetic, or thrill-seeking the answerer is, and whether they enjoy crowds and attention.",
+        "not_for": "Eye contact, gestures, posture, facial expression, and tone of voice during conversation (use Body Language & Voice).",
+        "examples": [
+          "Do you start conversations with strangers?",
+          "Do you enjoy being the center of attention?"
+        ]
+      }
+    }
+  ]
+}

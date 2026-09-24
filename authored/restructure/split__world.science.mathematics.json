@@ -1,0 +1,79 @@
+{
+  "type": "split",
+  "node": "world.science.mathematics",
+  "n_questions": 776,
+  "clusters": [
+    {
+      "size": 301,
+      "samples": [
+        "How important is \"Gerolamo Cardano\" to understanding mathematics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'to",
+        "How important is \"Pierre de Fermat\" to understanding mathematics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'to",
+        "How important is \"Blaise Pascal\" to understanding mathematics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic",
+        "How important is \"Gottfried Wilhelm Leibniz\" to understanding mathematics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the f",
+        "How important is \"Jacob Bernoulli\" to understanding mathematics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'top",
+        "How important is \"Johann Bernoulli\" to understanding mathematics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'to",
+        "How important is \"Daniel Bernoulli\" to understanding mathematics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'to",
+        "How important is \"Jean Le Rond d'Alembert\" to understanding mathematics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the fie",
+        "How important is \"Joseph-Louis Lagrange\" to understanding mathematics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field",
+        "How important is \"Gaspard Monge\" to understanding mathematics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic",
+        "How important is \"Adrien-Marie Legendre\" to understanding mathematics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field",
+        "How important is \"Pierre-Simon Laplace\" to understanding mathematics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 303,
+      "samples": [
+        "Which branch of mathematics is the hardest to learn?\ntopology / number_theory / real_analysis / abstract_algebra / probability_theory / differential_geometry",
+        "How hard is it for an average adult to understand an intuitive explanation of calculus?\nEasy after one clear explanation / Manageable with a few examples / It takes weeks of study / Most adults never really get it",
+        "Would most adults have heard of \"Gerolamo Cardano\"?\n{'topic': 'Gerolamo Cardano', 'description': 'Italian Renaissance polymath (1501–1576)'}",
+        "Would most adults have heard of \"Pierre de Fermat\"?\n{'topic': 'Pierre de Fermat', 'description': 'French mathematician and lawyer (1601–1665)'}",
+        "Would most adults have heard of \"Blaise Pascal\"?\n{'topic': 'Blaise Pascal', 'description': 'French polymath (1623–1662)'}",
+        "Would most adults have heard of \"Gottfried Wilhelm Leibniz\"?\n{'topic': 'Gottfried Wilhelm Leibniz', 'description': 'German polymath (1646–1716)'}",
+        "Would most adults have heard of \"Jacob Bernoulli\"?\n{'topic': 'Jacob Bernoulli', 'description': 'Swiss mathematician (1655–1705)'}",
+        "Would most adults have heard of \"Johann Bernoulli\"?\n{'topic': 'Johann Bernoulli', 'description': 'Swiss mathematician (1667–1748)'}",
+        "Would most adults have heard of \"Daniel Bernoulli\"?\n{'topic': 'Daniel Bernoulli', 'description': 'Swiss mathematician and physicist (1700–1782)'}",
+        "Would most adults have heard of \"Jean Le Rond d'Alembert\"?\n{'topic': \"Jean Le Rond d'Alembert\", 'description': 'French mathematician (1717–1783)'}",
+        "Would most adults have heard of \"Joseph-Louis Lagrange\"?\n{'topic': 'Joseph-Louis Lagrange', 'description': 'Italian-French scientist (1736–1813)'}",
+        "Would most adults have heard of \"Gaspard Monge\"?\n{'topic': 'Gaspard Monge', 'description': 'French mathematician (1746–1818)'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 172,
+      "samples": [
+        "Who is the greatest mathematician of all time?\nother / euclid / archimedes / isaac_newton / leonhard_euler / bernhard_riemann / carl_friedrich_gauss",
+        "Which famous open problem would most mathematicians most like to see solved?\np_vs_np / navier_stokes / collatz_conjecture / riemann_hypothesis / goldbach_conjecture / twin_prime_conjecture",
+        "Which kind of mathematics is the most beautiful?\ncalculus / geometry / topology / probability / combinatorics / number_theory",
+        "Which of these mathematicians is your favorite?\nEuclid / Archimedes / Kurt Godel / Alan Turing / Emmy Noether / Isaac Newton / David Hilbert / Leonhard Euler / Bernhard Riemann / Srinivasa Ramanujan / Carl Friedrich Gauss",
+        "Which of these mathematicians is the greatest?\nEuclid / Archimedes / Kurt Godel / Alan Turing / Emmy Noether / Isaac Newton / David Hilbert / Leonhard Euler / Bernhard Riemann / Srinivasa Ramanujan / Carl Friedrich Gauss",
+        "Which of these mathematicians is the most overrated?\nEuclid / Archimedes / Kurt Godel / Alan Turing / Emmy Noether / Isaac Newton / David Hilbert / Leonhard Euler / Bernhard Riemann / Srinivasa Ramanujan / Carl Friedrich Gauss",
+        "Are all Christians Christian?\nNo, not all Christians are Christians. / Yes, all Christians are Christians. / No, only some are Christians.",
+        "Are there cats that aren't cats?\nNo, all cats are cats. / Yes, there are cats that aren't cats. / Yes, not all cats are cats.",
+        "Is the correct answer to the Monty Hall problem intuitive?",
+        "Is mathematics discovered rather than invented?",
+        "Are all women women?\nYes, all women are women. / No, only some are women. / No, not all women are women.",
+        "Are all Jews actually Jews?\nNo, not all Jews are Jews. / Yes, all Jews are Jews. / No, only some are Jews."
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

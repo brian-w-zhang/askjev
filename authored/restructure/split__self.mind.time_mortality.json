@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.mind.time_mortality",
+  "n_questions": 167,
+  "clusters": [
+    {
+      "size": 91,
+      "samples": [
+        "If you could, how long would you choose to live?\nforever / less_than_normal / a_normal_lifespan / several_centuries / a_few_extra_decades",
+        "Which do you think about more: the past, the present, or the future?\nthe_past / the_future / all_equally / the_present",
+        "What is the ideal age to be?\nold_age / thirties / twenties / childhood / middle_age / teenage_years",
+        "Which regret is worse: something you did, or something you never tried?\nequally_bad / something_i_did / something_i_never_tried",
+        "What is the best thing about getting older?\nwisdom / nothing / confidence / deeper_relationships / caring_less_what_others_think",
+        "What is the hardest thing about getting older?\nlosing_time / losing_looks / losing_health / losing_people / feeling_irrelevant",
+        "If you could stop aging at one point, what would you choose?\nmiddle_age / prime_of_career / young_adulthood / wouldnt_stop_aging",
+        "How do you usually feel about the passage of time?\njust_right / i_dont_notice_it / it_goes_too_fast / it_goes_too_slow",
+        "What kind of legacy matters most?\nimpact_on_others / things_i_created / no_legacy_matters / children_and_family / work_and_achievements",
+        "If you could relive one decade of your life, which would it be?\nnone / teens / twenties / childhood / most_recent_decade",
+        "What would you do differently if you had a year left to live?\ntravel / quit_my_job / nothing_much / finish_a_project / spend_time_with_family",
+        "Is nostalgia a good or bad feeling?\nbad / good / depends / bittersweet"
+      ],
+      "child": {
+        "key": "aging_lifespan",
+        "label": "Aging & Lifespan",
+        "description": "Questions about growing older, how time feels as it passes, stages of life, how long the answerer would want to live, and regrets looking back.",
+        "not_for": "Death itself, dying, funerals, last words, and how you want to be remembered (use Death & Legacy).",
+        "examples": [
+          "Would you take a pill that stopped aging?",
+          "Does time seem to pass faster as you get older?"
+        ]
+      }
+    },
+    {
+      "size": 76,
+      "samples": [
+        "How often do you think about your own death?\nNever / Only at funerals or near misses / A few times a year / Every week / Every day",
+        "Should people plan their own funerals?\nyes_in_detail / leave_simple_wishes / no_leave_it_to_family",
+        "How should death be viewed?\na_mystery / a_natural_end / a_tragedy_to_fight / the_thing_that_gives_life_meaning",
+        "If a test could reveal the year you will die, what would you do?\ntake_the_test / refuse_the_test / take_it_only_if_the_result_could_be_changed",
+        "What would you most want to be remembered for?\nmy_work / my_family / my_kindness / my_adventures / my_creativity / not_remembered",
+        "How would you prefer to die, if you could choose?\nsuddenly_in_my_sleep / surrounded_by_family / doing_something_i_love / with_time_to_say_goodbye",
+        "What should happen to your body after you die?\nburial / cremation / no_preference / natural_burial / donated_to_science",
+        "Would you want your social media accounts kept up after your death?\ndeleted / dont_care / handed_to_family / kept_as_a_memorial",
+        "What is the best way to honor someone who has died?\na_private_memory / a_celebration_of_life / a_traditional_funeral / telling_their_stories / carrying_on_their_work",
+        "What is the most important thing to do before you die?\nsee_the_world / leave_something_behind / make_peace_with_the_past / say_what_matters_to_people",
+        "How much does fear of death affect your daily life?\nNot at all / Only in scary moments / It sometimes stops me from taking risks / It weighs on me most days",
+        "How important is it to be remembered after you die?\nNot important at all / Nice but not necessary / Fairly important / Very important"
+      ],
+      "child": {
+        "key": "death_legacy",
+        "label": "Death & Legacy",
+        "description": "Questions about death and dying, talking about death, funerals and memorials, last words, belongings left behind, and how you want to be remembered.",
+        "not_for": "Aging, lifespan, stages of life, and how time passes (use Aging & Lifespan).",
+        "examples": [
+          "Should people plan their own funerals?",
+          "Are you comfortable talking about death?"
+        ]
+      }
+    }
+  ]
+}

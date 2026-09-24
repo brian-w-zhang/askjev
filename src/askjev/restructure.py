@@ -153,7 +153,7 @@ async def _route(qs: list[dict], crit: dict) -> dict[str, tuple[str, float, floa
 def apply(path: str, min_child: int = MIN_CHILD) -> str:
     prop = orjson.loads(Path(path).read_bytes())
     if prop["type"] == "group":
-        return "group apply: not needed yet (no node exceeds the child cap); skipped"
+        return apply_group(prop)
     node = prop["node"]
     children = [c["child"] for c in prop["clusters"] if c["child"].get("label")]
     if len(children) < 2:
@@ -221,3 +221,60 @@ def restructure(dry_run: bool = False, apply_path: str | None = None) -> str:
         c = candidates()
         return f"split={[(r['id'], r['c']) for r in c['split']]} group={[(r['id'], r['c']) for r in c['group']]} grow={[(r['id'], r['c']) for r in c['grow']]}"
     return propose()
+
+
+def apply_group(prop: dict, min_agree: float = 0.8) -> str:
+    """Insert intermediate grouping nodes under an over-wide node. Member ids never change; their paths (and their
+    descendants' and questions' paths) gain one level. Accept only if Jev routes >= min_agree of sampled member
+    questions (or member labels, for empty members) to the group that contains that member."""
+    node = prop["node"]
+    groups = [c for c in prop["clusters"] if c["child"].get("label") and c.get("members")]
+    if len(groups) < 2:
+        return "group proposal needs >= 2 labeled clusters"
+    for g in groups:
+        g["child"]["key"] = g["child"].get("key") or "_".join(g["child"]["label"].lower().replace("&", "and").split())[:30]
+    member_group = {m: g["child"]["key"] for g in groups for m in g["members"]}
+    with db.connect() as conn:
+        parent = conn.execute("select * from nodes where id=%s", (node,)).fetchone()
+        samples = []
+        for m in member_group:
+            qs = conn.execute("select id, text, options, state from questions where path <@ (select path from nodes where id=%s) limit 3", (m,)).fetchall()
+            if not qs:
+                lab = conn.execute("select label, description from nodes where id=%s", (m,)).fetchone()
+                qs = [{"id": f"label:{m}", "text": f"{lab['label']}: {lab['description']}", "options": None, "state": None}]
+            samples += [dict(q, _member=m) for q in qs]
+    crit = {g["child"]["key"]: _card(g["child"]) for g in groups}
+    routed = asyncio.run(_route(samples, crit))
+    agree = [routed.get(q["id"], ("",))[0] == member_group[q["_member"]] for q in samples]
+    rate = sum(agree) / max(len(agree), 1)
+    ok = rate >= min_agree
+    metrics = {"agreement": rate, "n": len(agree), "groups": {g["child"]["key"]: len(g["members"]) for g in groups}}
+    with db.connect() as conn:
+        conn.execute("insert into tree_events (type, node_ids, proposal, metrics, accepted) values ('group',%s,%s,%s,%s)",
+                     ([node], db.Jsonb(prop), db.Jsonb(metrics), ok))
+        if ok:
+            vecs = embed([f"{g['child']['label']}: {g['child']['description']}" for g in groups])
+            for i, (g, v) in enumerate(zip(groups, vecs)):
+                ch = g["child"]
+                gid = f"{node}.{ch['key']}"
+                conn.execute(
+                    """insert into nodes (id, parent_id, path, depth, hemisphere, label, description, not_for, examples,
+                         source, locked, ord, choice_card, embedding)
+                       values (%s,%s,(select path from nodes where id=%s) || %s::ltree,%s,%s,%s,%s,%s,%s,'grown',false,%s,%s,%s)
+                       on conflict (id) do nothing""",
+                    (gid, node, node, ch["key"], parent["depth"] + 1, parent["hemisphere"], ch["label"], ch["description"],
+                     ch.get("not_for"), ch.get("examples") or [], 200 + i, db.Jsonb(_card(ch)), to_pg(v)),
+                )
+                for m in g["members"]:
+                    old = conn.execute("select path from nodes where id=%s", (m,)).fetchone()["path"]
+                    # descendants (incl. the member) and their questions gain the group level
+                    conn.execute(
+                        """update nodes set path = (select path from nodes where id=%s) || subpath(path, nlevel(%s::ltree) - 1),
+                                            depth = depth + 1
+                           where path <@ %s::ltree""", (gid, old, old))
+                    conn.execute("update nodes set parent_id=%s where id=%s", (gid, m))
+                    conn.execute(
+                        """update questions set path = (select path from nodes where id=%s) || subpath(path, nlevel(%s::ltree) - 1)
+                           where path <@ %s::ltree""", (gid, old, old))
+        conn.commit()
+    return f"{'ACCEPTED' if ok else 'REJECTED'} group of {node}: {metrics}"

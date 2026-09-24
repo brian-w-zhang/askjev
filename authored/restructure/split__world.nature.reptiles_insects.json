@@ -1,0 +1,103 @@
+{
+  "type": "split",
+  "node": "world.nature.reptiles_insects",
+  "n_questions": 444,
+  "clusters": [
+    {
+      "size": 140,
+      "samples": [
+        "How important is \"Arachnid\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Arach",
+        "How important is \"Mite\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Mite', 'd",
+        "How important is \"Pseudoscorpion\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': ",
+        "How important is \"Scorpion\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Scorp",
+        "How important is \"Spider\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Spider'",
+        "How important is \"Jumping spider\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': ",
+        "How important is \"Tarantula\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Tara",
+        "How important is \"Tick\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Tick', 'd",
+        "How important is \"Hexapoda\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Hexap",
+        "How important is \"Springtail\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Spr",
+        "How important is \"Pterygota\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Pter",
+        "How important is \"Cockroach\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Cock"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 69,
+      "samples": [
+        "Which small creature is the creepiest?\nwasp / leech / snake / spider / centipede / cockroach",
+        "Which insect is the most impressive?\nant / honeybee / dragonfly / dung_beetle / praying_mantis / monarch_butterfly",
+        "How dangerous is a typical garden spider to a person?\nCompletely harmless / A bite might sting briefly / A bite needs medical attention / Potentially deadly",
+        "Which reptile would most people call the most frightening?\nalligator / king_cobra / black_mamba / gila_monster / komodo_dragon / saltwater_crocodile",
+        "Which insect is the most beautiful?\nladybug / dragonfly / luna_moth / jewel_beetle / orchid_mantis / monarch_butterfly",
+        "Which of these reptiles and insects is the greatest?\nAnt / Frog / Snake / Spider / Turtle / Honeybee / Butterfly / Chameleon / Crocodile / Dragonfly / Komodo dragon / Praying mantis",
+        "Which of these reptiles and insects is the most overrated?\nAnt / Frog / Snake / Spider / Turtle / Honeybee / Butterfly / Chameleon / Crocodile / Dragonfly / Komodo dragon / Praying mantis",
+        "Which of these reptiles and insects is the most underrated?\nAnt / Frog / Snake / Spider / Turtle / Honeybee / Butterfly / Chameleon / Crocodile / Dragonfly / Komodo dragon / Praying mantis",
+        "Are snakes unfairly hated?",
+        "Do spiders do more good than harm for people?",
+        "Are bees the most important insects on Earth?",
+        "Which of these is an amphibian?\ngecko / lizard / turtle / salamander"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 95,
+      "samples": [
+        "How much do you experience \"snake\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ex",
+        "How much do you experience \"snake\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I ",
+        "How much do you experience \"snake\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I ",
+        "How much do you experience \"snake\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways ",
+        "How much do you experience \"snake\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touc",
+        "How much do you experience \"bee\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I expe",
+        "How much do you experience \"bee\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I ex",
+        "How much do you experience \"bee\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I ex",
+        "How much do you experience \"bee\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways I ",
+        "How much do you experience \"bee\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touch ",
+        "How much do you experience \"mosquito\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I",
+        "How much do you experience \"mosquito\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 140,
+      "samples": [
+        "Would most adults have heard of \"Pseudoscorpion\"?\n{'topic': 'Pseudoscorpion', 'description': 'Order of arachnids'}",
+        "Would most adults have heard of \"Arachnid\"?\n{'topic': 'Arachnid', 'description': 'Class of arthropods'}",
+        "Would most adults have heard of \"Mite\"?\n{'topic': 'Mite', 'description': 'Small eight-legged arthropod'}",
+        "Would most adults have heard of \"Scorpion\"?\n{'topic': 'Scorpion', 'description': 'Predatory order of arachnids'}",
+        "Would most adults have heard of \"Spider\"?\n{'topic': 'Spider', 'description': 'Order of arachnids'}",
+        "Would most adults have heard of \"Jumping spider\"?\n{'topic': 'Jumping spider', 'description': 'Family of spiders'}",
+        "Would most adults have heard of \"Tarantula\"?\n{'topic': 'Tarantula', 'description': 'Family of spiders'}",
+        "Would most adults have heard of \"Tick\"?\n{'topic': 'Tick', 'description': 'Order of arachnids in the arthropod phylum'}",
+        "Would most adults have heard of \"Hexapoda\"?\n{'topic': 'Hexapoda', 'description': 'Subphylum of arthropods'}",
+        "Would most adults have heard of \"Springtail\"?\n{'topic': 'Springtail', 'description': 'Class of arthropods'}",
+        "Would most adults have heard of \"Pterygota\"?\n{'topic': 'Pterygota', 'description': 'Subclass of insects'}",
+        "Would most adults have heard of \"Cockroach\"?\n{'topic': 'Cockroach', 'description': 'Insects of the order Blattodea'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

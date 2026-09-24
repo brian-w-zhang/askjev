@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.values.honesty_trust",
+  "n_questions": 193,
+  "clusters": [
+    {
+      "size": 29,
+      "samples": [
+        "If a friend asks whether you like a haircut you think looks bad, what should you say?\nother / Change the subject or give a vague answer / Say you love it / Say it's not your favorite but mention something that works / Tell them plainly you don't like it",
+        "When is keeping a secret for a friend no longer right?\nA promised secret should always be kept / other / When it involves a crime / Whenever keeping it makes you uncomfortable / When someone could be seriously harmed / When it hurts another person you care about",
+        "Should you trust a stranger by default, or should trust be earned?\nTrust has to be earned over time / Assume good faith until shown otherwise / Trust small things by default, big things only when earned",
+        "Which is worse: a lie told to gain an advantage, or a lie told to avoid punishment?\nequally_bad / gain_advantage / avoid_punishment",
+        "Which kind of dishonesty bothers you most?\nLeaving out important facts / Inflating the truth / Insincere praise / Stating things known to be false / Saying you'll do something and not doing it",
+        "Is it more important to keep a promise or to do what turns out best when circumstances change?\ndo_what_is_best / keep_the_promise / depends_on_the_promise",
+        "When a surprise party requires lying to the guest of honor, is that kind of lie acceptable?\nNo, it's still lying / Completely fine / Better to be evasive than to lie outright / Fine, but lie as little as possible",
+        "If you could read your partner's messages without them ever knowing, would checking be a breach of trust?\nno / yes_always / only_without_good_reason",
+        "Should you tell someone about a mistake of yours that they will never discover?\nNo, it would only cause pain / Yes, always / Only if it affects them",
+        "What should you do if a close friend asks you to lie to their boss to cover for them?\nRefuse / Cover for them this once / Avoid lying but don't volunteer information / Cover for them whenever asked",
+        "Which is a bigger betrayal of trust?\nRepeating something told in confidence / Breaking an important promise / Lying directly when asked",
+        "Is cheating in a casual board game with friends a real breach of honesty?\nNo, it's part of the fun / Yes, cheating is cheating / Only a minor one"
+      ],
+      "child": {
+        "key": "honesty_dilemmas",
+        "label": "Honesty Dilemmas",
+        "description": "Questions about what the answerer thinks is right in specific dilemmas about lying, white lies, painful truths, keeping promises, and rebuilding trust.",
+        "not_for": "Ratings of how many people would agree with a rule of thumb about honesty or trust (use Honesty Rules of Thumb).",
+        "examples": [
+          "Is it okay to lie about liking a gift?",
+          "Should you keep a promise to someone who has died?"
+        ]
+      }
+    },
+    {
+      "size": 164,
+      "samples": [
+        "How many people would agree: \"If someone is cheating but not on you, it's better to stay out of it\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you don't care about something, you should be honest about it\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you have a problem with lying, you should get some help\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you violate someone's trust, you should accept the consequences\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is bad to be bluntly honest with other people\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is bad to keep secrets\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is bad to keep sexual harassment secret\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is bad to lie\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is bad to lie about things\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is bad to lie to people\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is good to be honest about your feelings\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is good to be honest with other people\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it"
+      ],
+      "child": {
+        "key": "honesty_rules_of_thumb",
+        "label": "Honesty Rules of Thumb",
+        "description": "Questions about how many people would agree with a general rule of thumb about lying, secrets, cheating, or trust, rated from \"practically no one\" to \"practically everyone\".",
+        "not_for": "Questions about what the answerer thinks is right in a specific honesty dilemma (use Honesty Dilemmas).",
+        "examples": [
+          "How many people would agree: \"It is bad to lie\"?",
+          "How many people would agree: \"You should not accept a cheater back\"?"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "type": "group",
+  "node": "world.science.astronomy_space",
+  "clusters": [
+    {
+      "members": [
+        "world.science.astronomy_space.solar_system",
+        "world.science.astronomy_space.sun",
+        "world.science.astronomy_space.mercury_planet",
+        "world.science.astronomy_space.venus",
+        "world.science.astronomy_space.earth",
+        "world.science.astronomy_space.mars",
+        "world.science.astronomy_space.jupiter",
+        "world.science.astronomy_space.saturn",
+        "world.science.astronomy_space.uranus",
+        "world.science.astronomy_space.neptune",
+        "world.science.astronomy_space.asteroid",
+        "world.science.astronomy_space.natural_satellite",
+        "world.science.astronomy_space.planet",
+        "world.science.astronomy_space.moon",
+        "world.science.astronomy_space.comet"
+      ],
+      "samples": [
+        "Solar System",
+        "Sun",
+        "Mercury (planet)",
+        "Venus",
+        "Earth",
+        "Mars",
+        "Jupiter",
+        "Saturn",
+        "Uranus",
+        "Neptune",
+        "Asteroid",
+        "Natural satellite",
+        "Planet",
+        "Moon",
+        "Comet"
+      ],
+      "child": {
+        "key": "solar_system_bodies",
+        "label": "Solar System",
+        "description": "Questions about the Sun, the planets, moons (including Earth's Moon), asteroids and comets of our Solar System.",
+        "not_for": "Stars, galaxies and the wider universe go to Stars & cosmology; rockets, satellites and space missions (including Moon landings) go to Spaceflight.",
+        "examples": [
+          "Is Jupiter the largest planet?",
+          "Is Pluto still considered a planet?"
+        ]
+      }
+    },
+    {
+      "members": [
+        "world.science.astronomy_space.nicolaus_copernicus",
+        "world.science.astronomy_space.galileo_galilei",
+        "world.science.astronomy_space.astronomy",
+        "world.science.astronomy_space.universe",
+        "world.science.astronomy_space.big_bang",
+        "world.science.astronomy_space.black_hole",
+        "world.science.astronomy_space.galaxy",
+        "world.science.astronomy_space.milky_way",
+        "world.science.astronomy_space.physical_cosmology",
+        "world.science.astronomy_space.star",
+        "world.science.astronomy_space.supernova"
+      ],
+      "samples": [
+        "Nicolaus Copernicus",
+        "Galileo Galilei",
+        "Astronomy",
+        "Universe",
+        "Big Bang",
+        "Black hole",
+        "Galaxy",
+        "Milky Way",
+        "Physical cosmology",
+        "Star",
+        "Supernova"
+      ],
+      "child": {
+        "key": "stars_cosmos",
+        "label": "Stars & cosmology",
+        "description": "Questions about astronomy as a science and its history (e.g. Copernicus, Galileo), and about objects beyond the Solar System: stars, supernovae, black holes, galaxies, the Milky Way, the Big Bang and the universe as a whole.",
+        "not_for": "The Sun, planets, moons and comets go to Solar System; space travel goes to Spaceflight.",
+        "examples": [
+          "Is the universe infinite?",
+          "Can anything escape a black hole?"
+        ]
+      }
+    },
+    {
+      "members": [
+        "world.science.astronomy_space.outer_space",
+        "world.science.astronomy_space.rocket",
+        "world.science.astronomy_space.satellite",
+        "world.science.astronomy_space.space_exploration",
+        "world.science.astronomy_space.spaceflight"
+      ],
+      "samples": [
+        "Outer space",
+        "Rocket",
+        "Satellite",
+        "Space exploration",
+        "Spaceflight"
+      ],
+      "child": {
+        "key": "rockets_spaceflight",
+        "label": "Spaceflight",
+        "description": "Questions about space travel and exploration: rockets, artificial satellites, astronauts, space missions, and the conditions of outer space.",
+        "not_for": "Natural objects such as planets, moons and stars go to Solar System or Stars & cosmology, unless the question is about a mission to them.",
+        "examples": [
+          "Should humans send astronauts to Mars?",
+          "Is space exploration worth its cost?"
+        ]
+      }
+    }
+  ]
+}

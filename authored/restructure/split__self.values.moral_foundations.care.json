@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.values.moral_foundations.care",
+  "n_questions": 433,
+  "clusters": [
+    {
+      "size": 325,
+      "samples": [
+        "How many people would agree: \"It is bad to ignore someones wishes\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you want to run from your problems, you should see a therapist\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If all your hair falls out, you should go to the doctor\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If someone doesn't speak English, and you speak their language, it is polite to help them\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyon",
+        "How many people would agree: \"Doctors are expected to heal their patients\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Don't stay in relationships that aren't working\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you have period pain you should consider taking a painkiller\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If something is making you miserable, you shouldn't do it anymore\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you can't afford healthcare, you should get some government assistance\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you can't empathize with people, you should get some therapy\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you can't go on, you should get some help\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you do not agree with someone a sick person does it is generally unacceptable to voice that opinion\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practi"
+      ],
+      "child": {
+        "key": "wellbeing_help_seeking",
+        "label": "Wellbeing & Getting Help",
+        "description": "Questions about how many people would agree with a rule of thumb about looking after health and wellbeing, getting medical or mental-health help, and staying in safe relationships, rated from \"practically no one\" to \"practically everyone\".",
+        "not_for": "Rules about avoiding danger, accidents, emergencies, and feeling scared (use Safety & Fear).",
+        "examples": [
+          "How many people would agree: \"You should see a doctor when you are sick\"?",
+          "How many people would agree: \"It is okay to ask for help when you need it\"?"
+        ]
+      }
+    },
+    {
+      "size": 108,
+      "samples": [
+        "How well does this statement describe you: \"Caring for people who have suffered is an important virtue.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I believe that compassion for those who are suffering is one of the most crucial virtues.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"We should all care for people who are in emotional pain.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am empathetic toward those people who have suffered in their lives.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"Everyone should try to comfort people who are going through something hard.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"It pains me when I see someone ignoring the needs of another human being.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "When you decide whether something is right or wrong, how relevant is this consideration: \"Whether or not someone suffered emotionally\"?\nI never take this into account when judging right and wrong / I take this into account only in unusual cases / This is a minor factor among many when I judge right ",
+        "How well does this statement describe you: \"Compassion for those who are suffering is the most crucial virtue.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "When you decide whether something is right or wrong, how relevant is this consideration: \"Whether or not someone cared for someone weak or vulnerable\"?\nI never take this into account when judging right and wrong / I take this into account only in unusual cases / This is a minor factor among many whe",
+        "When you decide whether something is right or wrong, how relevant is this consideration: \"Whether or not someone was cruel\"?\nI never take this into account when judging right and wrong / I take this into account only in unusual cases / This is a minor factor among many when I judge right and wrong /",
+        "How well does this statement describe you: \"One of the worst things a person could do is hurt a defenseless animal.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"It can never be right to kill a human being.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well"
+      ],
+      "child": {
+        "key": "safety_fear",
+        "label": "Safety & Fear",
+        "description": "Questions about how many people would agree with a rule of thumb about avoiding danger and accidents, handling emergencies, and feeling or causing fear, rated from \"practically no one\" to \"practically everyone\".",
+        "not_for": "Rules about health, self-care, and seeking medical or emotional help (use Wellbeing & Getting Help).",
+        "examples": [
+          "How many people would agree: \"You should be careful when driving in snow\"?",
+          "How many people would agree: \"It is understandable to feel scared\"?"
+        ]
+      }
+    }
+  ]
+}

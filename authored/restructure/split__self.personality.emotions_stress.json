@@ -1,0 +1,115 @@
+{
+  "type": "split",
+  "node": "self.personality.emotions_stress",
+  "n_questions": 171,
+  "clusters": [
+    {
+      "size": 66,
+      "samples": [
+        "How well does this statement describe you: \"I can tell if someone is masking their true emotion.\"\nThis does not describe me at all / This describes me a little / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I can easily tell if someone else wants to enter a conversation.\"\nThis does not describe me at all / This describes me a little / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I prefer animals to humans.\"\nThis does not describe me at all / This describes me a little / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I try to keep up with the current trends and fashions.\"\nThis does not describe me at all / This describes me a little / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I find it difficult to explain to others things that I understand easily, when they don't understand it first time.\"\nThis does not describe me at all / This describes me a little / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I dream most nights.\"\nThis does not describe me at all / This describes me a little / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I really enjoy caring for other people.\"\nThis does not describe me at all / This describes me a little / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I try to solve my own problems rather than discussing them with others.\"\nThis does not describe me at all / This describes me a little / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I find it hard to know what to do in a social situation.\"\nThis does not describe me at all / This describes me a little / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am at my best first thing in the morning.\"\nThis does not describe me at all / This describes me a little / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"People often tell me that I went too far in driving my point home in a discussion.\"\nThis does not describe me at all / This describes me a little / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"It doesn't bother me too much if I am late meeting a friend.\"\nThis does not describe me at all / This describes me a little / This describes me well / This describes me very well"
+      ],
+      "child": {
+        "key": "empathy_social_reading",
+        "label": "Empathy & Social Reading",
+        "description": "Questions about noticing and caring about other people's feelings, reading social situations, and showing affection.",
+        "not_for": "How the answerer handles and expresses their own emotions (use Coping & Expressing Emotions); past-week stress or mood symptoms (use Recent Stress & Mood); mindful awareness of your own feelings and senses (use Mindfulness & Self-Awareness).",
+        "examples": [
+          "Does seeing people cry upset you?",
+          "Can you easily tell when someone is bored with what you are saying?"
+        ]
+      }
+    },
+    {
+      "size": 24,
+      "samples": [
+        "Do you prefer to deal with a problem right away or wait until you feel calmer?\nright_away / wait_until_calm",
+        "When you have had a terrible day, what helps you most?\nother / Sleeping it off / Writing it down / Exercise / Time alone / A show or game to distract you / Talking to someone",
+        "When you are angry at someone, what do you usually do?\nother / Avoid them for a while / Keep it inside / Vent to someone else / Cool down, then talk / Tell them right away",
+        "When you are sad, do you prefer company or to be left alone?\nalone / company / depends",
+        "How do you usually act under heavy pressure, like a tight deadline?\nAvoid the task / other / Freeze up / Become frantic but get it done / Get calm and focused",
+        "Where are you most likely to cry?\nOnly when alone / Almost never cry / other / At movies or books / Anywhere when it hits / In front of people you trust",
+        "When a friend is upset, which do you notice first?\nTheir body language / Their face / Their tone of voice / What they say / You often miss it",
+        "After an argument, how long does it usually take you to calm down?\nAbout a day / A few hours / Much longer / A few minutes",
+        "When you get bad news by text, what is your first move?\nother / Keep busy right away / Sit with it quietly / Call someone / Look for a solution",
+        "Which feeling do you find hardest to show to others?\njoy / fear / anger / sadness / affection / embarrassment",
+        "When someone criticizes your work harshly, how do you respond in the moment?\nother / Go quiet / Get teary / Argue back / Make a joke / Stay composed",
+        "How openly do you show your feelings at work or school?\nYou hide them completely / You show only small hints / You show them when they are strong / People can always tell exactly how you feel"
+      ],
+      "child": {
+        "key": "coping_expressing",
+        "label": "Coping & Expressing Emotions",
+        "description": "Questions about how the answerer handles and shows their own emotions, such as anger, crying, venting, calming down, and dealing with stress or bad news.",
+        "not_for": "Reading other people's feelings (use Empathy & Social Reading); how much stress or low mood you had in the past week (use Recent Stress & Mood).",
+        "examples": [
+          "Do you bottle up anger?",
+          "Do you feel better after venting to someone?"
+        ]
+      }
+    },
+    {
+      "size": 42,
+      "samples": [
+        "How much did this statement apply to you over the past week: \"I felt scared without any good reason.\"\nThis did not apply to me at all in the past week / This applied to me to some degree, or some of the time, in the past week / This applied to me to a considerable degree, or a good part of the time,",
+        "How much did this statement apply to you over the past week: \"I found myself getting upset by quite trivial things.\"\nThis did not apply to me at all in the past week / This applied to me to some degree, or some of the time, in the past week / This applied to me to a considerable degree, or a good pa",
+        "How much did this statement apply to you over the past week: \"I was aware of dryness of my mouth.\"\nThis did not apply to me at all in the past week / This applied to me to some degree, or some of the time, in the past week / This applied to me to a considerable degree, or a good part of the time, in",
+        "How much did this statement apply to you over the past week: \"I couldn't seem to experience any positive feeling at all.\"\nThis did not apply to me at all in the past week / This applied to me to some degree, or some of the time, in the past week / This applied to me to a considerable degree, or a go",
+        "How much did this statement apply to you over the past week: \"I experienced breathing difficulty (eg, excessively rapid breathing, breathlessness in the absence of physical exertion).\"\nThis did not apply to me at all in the past week / This applied to me to some degree, or some of the time, in the p",
+        "How much did this statement apply to you over the past week: \"I just couldn't seem to get going.\"\nThis did not apply to me at all in the past week / This applied to me to some degree, or some of the time, in the past week / This applied to me to a considerable degree, or a good part of the time, in ",
+        "How much did this statement apply to you over the past week: \"I tended to over-react to situations.\"\nThis did not apply to me at all in the past week / This applied to me to some degree, or some of the time, in the past week / This applied to me to a considerable degree, or a good part of the time, ",
+        "How much did this statement apply to you over the past week: \"I had a feeling of shakiness (eg, legs going to give way).\"\nThis did not apply to me at all in the past week / This applied to me to some degree, or some of the time, in the past week / This applied to me to a considerable degree, or a go",
+        "How much did this statement apply to you over the past week: \"I found it difficult to relax.\"\nThis did not apply to me at all in the past week / This applied to me to some degree, or some of the time, in the past week / This applied to me to a considerable degree, or a good part of the time, in the ",
+        "How much did this statement apply to you over the past week: \"I found myself in situations that made me so anxious I was most relieved when they ended.\"\nThis did not apply to me at all in the past week / This applied to me to some degree, or some of the time, in the past week / This applied to me to",
+        "How much did this statement apply to you over the past week: \"I felt that I had nothing to look forward to.\"\nThis did not apply to me at all in the past week / This applied to me to some degree, or some of the time, in the past week / This applied to me to a considerable degree, or a good part of th",
+        "How much did this statement apply to you over the past week: \"I found myself getting upset rather easily.\"\nThis did not apply to me at all in the past week / This applied to me to some degree, or some of the time, in the past week / This applied to me to a considerable degree, or a good part of the "
+      ],
+      "child": {
+        "key": "recent_stress_mood",
+        "label": "Recent Stress & Mood",
+        "description": "Questions about how much the answerer felt anxiety, tension, low mood, or hopelessness over the past week.",
+        "not_for": "Lasting habits of handling or expressing emotion (use Coping & Expressing Emotions).",
+        "examples": [
+          "Did you find it hard to wind down this past week?",
+          "Did you feel sad and depressed this past week?"
+        ]
+      }
+    },
+    {
+      "size": 39,
+      "samples": [
+        "How often is this statement true of you: \"I notice changes in my body, such as whether my breathing slows down or speeds up.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I'm good at finding the words to describe my feelings.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"When I do things, my mind wanders off and I'm easily distracted.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I criticize myself for having irrational or inappropriate emotions.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I pay attention to whether my muscles are tense or relaxed.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I can easily put my beliefs, opinions, and expectations into words.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"When I'm doing something, I'm only focused on what I'm doing, nothing else.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I tend to evaluate whether my perceptions are right or wrong.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"When I'm walking, I deliberately notice the sensations of my body moving.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I'm good at thinking of words to express my perceptions, such as how things taste, smell, or sound.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always ",
+        "How often is this statement true of you: \"I drive on 'automatic pilot' without paying attention to what I'm doing.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I tell myself that I shouldn't be feeling the way I'm feeling.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me"
+      ],
+      "child": {
+        "key": "mindfulness_awareness",
+        "label": "Mindfulness & Self-Awareness",
+        "description": "Questions about paying attention to the present moment, noticing bodily sensations and feelings, putting feelings into words, and judging your own thoughts.",
+        "not_for": "Handling or expressing emotions (use Coping & Expressing Emotions); reading other people's feelings (use Empathy & Social Reading).",
+        "examples": [
+          "Do you notice the sensations of water in the shower?",
+          "Do you tell yourself you shouldn't feel the way you feel?"
+        ]
+      }
+    }
+  ]
+}

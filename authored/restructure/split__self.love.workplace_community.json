@@ -1,0 +1,88 @@
+{
+  "type": "split",
+  "node": "self.love.workplace_community",
+  "n_questions": 379,
+  "clusters": [
+    {
+      "size": 167,
+      "samples": [
+        "Is it fine to talk about coworkers who aren't present?",
+        "How should online acquaintances you've never met be treated?\nwith_caution / like_real_friends / like_friendly_strangers / not_as_real_relationships",
+        "Under what conditions is dating a coworker acceptable?\nnever / yes_no_problem / only_in_a_different_team / only_if_neither_is_the_others_boss",
+        "How friendly should you be with your boss?\nclose_friends / friendly_at_work_only / strictly_professional / friends_outside_work_too",
+        "Should you connect with your boss on personal social media?\nnever / yes_if_they_ask / only_after_leaving_the_job / only_professional_networks",
+        "What should you do when a coworker takes credit for your work?\nlet_it_go / tell_your_manager / document_it_quietly / confront_them_privately / correct_it_in_the_meeting",
+        "Which kind of coworker do you most enjoy working with?\nfunny_and_chatty / highly_organized / quiet_and_focused / supportive_and_warm / creative_and_chaotic",
+        "How should you respond to a coworker who constantly vents to you?\navoid_them / gently_redirect / listen_every_time / tell_them_honestly_its_too_much",
+        "Should you tell coworkers about your personal life?\nopenly / nothing_at_all / only_basic_details / only_with_one_or_two_trusted_coworkers",
+        "Should you attend a coworker's wedding if invited?\ndecline / always_go / go_if_close / decline_with_a_gift",
+        "How should you handle a coworker who always asks you to cover their shifts?\nkeep_helping / ask_for_a_trade / say_no_sometimes / tell_the_manager",
+        "What should you do when a club you belong to changes in a way you dislike?\nquietly_stay / leave_the_club / speak_up_at_meetings / run_for_a_leadership_role"
+      ],
+      "child": {
+        "key": "coworkers_contacts",
+        "label": "Coworkers & Contacts",
+        "description": "Questions about how to act with coworkers, bosses, classmates, teachers, professional contacts, or online acquaintances.",
+        "not_for": "Neighbors, roommates, and belonging to a local community (use Neighbors & Roommates); ratings of how many people agree with a rule of thumb (use Community Rules of Thumb).",
+        "examples": [
+          "Should you connect with your boss on social media?",
+          "Is it okay to talk about coworkers who are not present?"
+        ]
+      }
+    },
+    {
+      "size": 68,
+      "samples": [
+        "What should you do if you don't get along with your roommate?\nmove_out / talk_it_out / avoid_each_other / set_written_house_rules",
+        "What is the best way to get to know new neighbors?\ndont_bother / wave_and_wait / invite_them_over / bring_a_small_gift / knock_and_introduce_yourself",
+        "What should you do about a neighbor who plays loud music late at night?\nleave_a_note / put_up_with_it / call_the_authorities / talk_to_the_landlord / knock_and_ask_politely",
+        "What should you do if your neighbor's tree drops leaves in your yard?\ncomplain_to_the_city / clean_them_up_yourself / ask_the_neighbor_to_help / ask_them_to_trim_the_tree",
+        "Should neighbors watch each other's homes while away?\nno / yes_always / only_if_asked / only_if_already_friendly",
+        "What should you do when a neighbor keeps parking in front of your house?\nignore_it / leave_a_note / ask_them_nicely / park_in_front_of_theirs",
+        "Is it okay to borrow tools or ingredients from a neighbor?\nno / yes_anytime / only_in_an_emergency / only_if_you_know_them_well",
+        "Where do you feel the strongest sense of community?\nschool / nowhere / workplace / hobby_groups / neighborhood / online_communities",
+        "What makes a good neighbor?\nquiet / helpful / friendly / respects_privacy / keeps_their_property_tidy",
+        "How well do you know your neighbors?\nI don't know what they look like / I recognize them but have never spoken / We nod and say hello / We chat when we meet outside / We visit each other's homes",
+        "How involved are you in your local community?\nNot at all / I attend a local event once in a while / I go to community events regularly / I volunteer for local causes / I help lead a local group",
+        "How much should you tolerate a noisy neighbor before saying something?\nSpeak up the first time / Speak up after a few nights / Speak up only if it goes on for weeks / Never say anything"
+      ],
+      "child": {
+        "key": "neighbors_roommates",
+        "label": "Neighbors & Roommates",
+        "description": "Questions about getting along with neighbors and roommates and feeling part of the local community where you live.",
+        "not_for": "Coworkers, bosses, classmates, or online contacts (use Coworkers & Contacts); ratings of how many people agree with a rule of thumb (use Community Rules of Thumb).",
+        "examples": [
+          "Should you complain to a neighbor about loud music?",
+          "Do you know your neighbors by name?"
+        ]
+      }
+    },
+    {
+      "size": 144,
+      "samples": [
+        "How many people would agree: \"Businesses should treat customers with courtesy if they expect them to return\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees wit",
+        "How many people would agree: \"Employers are expected to let employees go when business is down\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Employers don't have to provide laid-off employees with any benefits if they don't want to\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyo",
+        "How many people would agree: \"If a teacher has mistreated you, it's a good thing to report it\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you get reprimanded at work, it's fine to feel hurt\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you run a store, you're expected to have the sizes your customers want\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It can be very rewarding to complete a job on your own\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It goes against office etiquette to take food that belongs to co-workers\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is acceptable for you to not want your girlfrind to care about a colleague\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees wit",
+        "How many people would agree: \"It is appropriate to be upset at your neighbor if they call the police on you\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees wit",
+        "How many people would agree: \"It is bad it be irritated with your neighbors\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is bad to live with a roommate you have feelings for if they do not feel the same way\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone"
+      ],
+      "child": {
+        "key": "community_rules_of_thumb",
+        "label": "Community Rules of Thumb",
+        "description": "Questions about how many people would agree with a general rule of thumb about coworkers, bosses, customers, teachers, neighbors, or roommates, rated from \"practically no one\" to \"practically everyone\".",
+        "not_for": "Questions about what the answerer would do or prefers with coworkers (use Coworkers & Contacts) or neighbors and roommates (use Neighbors & Roommates).",
+        "examples": [
+          "How many people would agree: \"You should not deceive your coworkers\"?",
+          "How many people would agree: \"It is okay to complain about rude neighbors\"?"
+        ]
+      }
+    }
+  ]
+}

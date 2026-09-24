@@ -1,0 +1,103 @@
+{
+  "type": "split",
+  "node": "world.science.chemistry",
+  "n_questions": 710,
+  "clusters": [
+    {
+      "size": 264,
+      "samples": [
+        "How important is \"Robert Boyle\" to understanding chemistry?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': ",
+        "How important is \"Joseph Priestley\" to understanding chemistry?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topi",
+        "How important is \"John Dalton\" to understanding chemistry?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': '",
+        "How important is \"Joseph Louis Gay-Lussac\" to understanding chemistry?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field",
+        "How important is \"Humphry Davy\" to understanding chemistry?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': ",
+        "How important is \"Jöns Jacob Berzelius\" to understanding chemistry?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'",
+        "How important is \"Friedrich Wöhler\" to understanding chemistry?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topi",
+        "How important is \"Justus von Liebig\" to understanding chemistry?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'top",
+        "How important is \"Josiah Willard Gibbs\" to understanding chemistry?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'",
+        "How important is \"Jacobus Henricus van 't Hoff\" to understanding chemistry?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the ",
+        "How important is \"Svante Arrhenius\" to understanding chemistry?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topi",
+        "How important is \"Fritz Haber\" to understanding chemistry?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': '"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 264,
+      "samples": [
+        "Would most adults have heard of \"Robert Boyle\"?\n{'topic': 'Robert Boyle', 'description': 'Anglo-Irish scientist (1627–1691)'}",
+        "Would most adults have heard of \"Joseph Priestley\"?\n{'topic': 'Joseph Priestley', 'description': 'English chemist and polymath (1733–1804)'}",
+        "Would most adults have heard of \"John Dalton\"?\n{'topic': 'John Dalton', 'description': 'British chemist and physicist (1766–1844)'}",
+        "Would most adults have heard of \"Joseph Louis Gay-Lussac\"?\n{'topic': 'Joseph Louis Gay-Lussac', 'description': 'French chemist and physicist (1778–1850)'}",
+        "Would most adults have heard of \"Humphry Davy\"?\n{'topic': 'Humphry Davy', 'description': 'British chemist and inventor (1778–1829)'}",
+        "Would most adults have heard of \"Jöns Jacob Berzelius\"?\n{'topic': 'Jöns Jacob Berzelius', 'description': 'Swedish chemist (1779–1848)'}",
+        "Would most adults have heard of \"Friedrich Wöhler\"?\n{'topic': 'Friedrich Wöhler', 'description': 'German chemist (1800–1882)'}",
+        "Would most adults have heard of \"Justus von Liebig\"?\n{'topic': 'Justus von Liebig', 'description': 'German chemist (1803–1873)'}",
+        "Would most adults have heard of \"Josiah Willard Gibbs\"?\n{'topic': 'Josiah Willard Gibbs', 'description': 'American scientist (1839–1903)'}",
+        "Would most adults have heard of \"Jacobus Henricus van 't Hoff\"?\n{'topic': \"Jacobus Henricus van 't Hoff\", 'description': 'Dutch physical and organic chemist (1852–1911)'}",
+        "Would most adults have heard of \"Svante Arrhenius\"?\n{'topic': 'Svante Arrhenius', 'description': 'Swedish scientist (1859–1927)'}",
+        "Would most adults have heard of \"Fritz Haber\"?\n{'topic': 'Fritz Haber', 'description': 'German chemist (1868–1934)'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 60,
+      "samples": [
+        "How much do you experience \"soap\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I exp",
+        "How much do you experience \"soap\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I e",
+        "How much do you experience \"soap\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I e",
+        "How much do you experience \"soap\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways I",
+        "How much do you experience \"soap\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touch",
+        "How much do you experience \"perfume\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ",
+        "How much do you experience \"perfume\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways ",
+        "How much do you experience \"perfume\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways ",
+        "How much do you experience \"perfume\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main way",
+        "How much do you experience \"perfume\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its to",
+        "How much do you experience \"smoke\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ex",
+        "How much do you experience \"smoke\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I "
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 122,
+      "samples": [
+        "Which gas would most people guess makes up most of Earth's atmosphere?\nargon / oxygen / hydrogen / nitrogen / carbon_dioxide",
+        "Which chemical element is the most fascinating?\ngold / other / carbon / helium / oxygen / mercury / uranium",
+        "Which chemistry demonstration is the most impressive to watch?\nthermite / sodium_in_water / burning_magnesium / elephant_toothpaste / mentos_and_diet_coke",
+        "What happens when bleach and ammonia are mixed at home?\nNothing noticeable / An unpleasant smell only / Toxic fumes that can injure you / Fumes that can kill in a closed room",
+        "Which chemistry phenomenon is the most beautiful?\nflame_colors / crystal_growth / soap_bubble_films / color_changing_indicators / glow_of_chemiluminescence",
+        "Which of these chemical elements is your favorite?\nGold / Iron / Neon / Carbon / Helium / Oxygen / Sodium / Mercury / Silicon / Uranium / Hydrogen / Plutonium",
+        "Which of these chemical elements is the greatest?\nGold / Iron / Neon / Carbon / Helium / Oxygen / Sodium / Mercury / Silicon / Uranium / Hydrogen / Plutonium",
+        "Which of these chemical elements is the most overrated?\nGold / Iron / Neon / Carbon / Helium / Oxygen / Sodium / Mercury / Silicon / Uranium / Hydrogen / Plutonium",
+        "Which of these chemical elements is the most underrated?\nGold / Iron / Neon / Carbon / Helium / Oxygen / Sodium / Mercury / Silicon / Uranium / Hydrogen / Plutonium",
+        "Is the periodic table the greatest organizing chart in science?",
+        "Is 'chemical-free' a meaningless label?",
+        "Which element has the chemical symbol Au?\ngold / argon / silver / aluminum"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

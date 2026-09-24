@@ -1,0 +1,88 @@
+{
+  "type": "split",
+  "node": "self.love.friendship",
+  "n_questions": 679,
+  "clusters": [
+    {
+      "size": 366,
+      "samples": [
+        "How many people would agree: \"It's rude to swear at a friend\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"After you break up with someone, it's bad to tell them who they can be friends with\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agre",
+        "How many people would agree: \"Friends are expected to be loyal to each other\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Friends are expected to be there for each other\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Friends are expected to do favors for one another\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Friends are expected to do nice things for each other\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Friends are expected to enjoy spending time together\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Friends are expected to help each other\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Friends are expected to remain together\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Friends are expected to want to spend time with each other\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Friends should accept each others' differences\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Friends should be supportive of each other\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it"
+      ],
+      "child": {
+        "key": "friendship_rules_of_thumb",
+        "label": "Friendship Rules of Thumb",
+        "description": "Questions about how many people would agree with a general rule of thumb about friends and friendship, rated from \"practically no one\" to \"practically everyone\".",
+        "not_for": "Questions about the answerer's own friendship habits (use Friendship Habits) or how to handle a specific problem with a friend (use Friend Conflicts).",
+        "examples": [
+          "How many people would agree: \"Friends are expected to be loyal to each other\"?",
+          "How many people would agree: \"It is rude to swear at a friend\"?"
+        ]
+      }
+    },
+    {
+      "size": 163,
+      "samples": [
+        "How many close friends do you have that you could call at midnight?\nNone / One / Two or three / A handful / More than I could list quickly",
+        "Who do you most want as a friend?\nsomeone_calm_and_easy / someone_very_different / someone_who_challenges_me / someone_very_similar_to_me",
+        "Is it okay to have a best friend, or should all close friends be equal?\ndepends_on_the_group / friends_should_be_equal / a_best_friend_is_natural",
+        "Can men and women be close friends without romance getting involved?\nno / yes_easily / yes_but_its_rare / only_if_one_is_not_attracted",
+        "How do you most often make new friends as an adult?\nonline / neighbors / through_work / i_rarely_make_new_ones / through_existing_friends / through_hobbies_or_classes",
+        "Which of these would most people name first when asked: \"Name something about which friends say, \"keep looking. you can do better.\".\"\nJob / Mate / Clothes / Living space",
+        "Which of these would most people name first when asked: \"Name something a friend has that they brag is better than yours.\"\nCar / Job / House / Spouse / Children / Television",
+        "Which kind of friend group do you prefer?\none_tight_group / several_overlapping_groups / separate_friends_who_dont_know_each_other",
+        "Which of these would most people name first when asked: \"Name something a good neighborhood kid might do for his elderly neighbor.\"\nMow lawn / Rake leaves / Shovel snow / Take out trash",
+        "What is your preferred way to keep in touch with friends who live far away?\ngroup_chat / phone_calls / video_calls / social_media / visiting_in_person / letters_or_postcards",
+        "Do you prefer a small inner circle of friends or a wide social network?\na_balance_of_both / a_few_close_friends / a_large_casual_circle",
+        "What makes someone a true friend?\nmakes_you_laugh / keeps_your_secrets / tells_you_the_truth / accepts_you_as_you_are / shows_up_in_hard_times"
+      ],
+      "child": {
+        "key": "friendship_habits",
+        "label": "Friendship Habits",
+        "description": "Questions about how the answerer makes, keeps, and arranges friendships: how many close friends, what kind of friends and groups they prefer, and how they stay in touch.",
+        "not_for": "Handling a friend who hurt, annoyed, or let you down, or a conflict between friends (use Friend Conflicts); ratings of how many people agree with a rule of thumb (use Friendship Rules of Thumb).",
+        "examples": [
+          "Do you prefer a few close friends or a wide circle?",
+          "How do you usually keep in touch with friends far away?"
+        ]
+      }
+    },
+    {
+      "size": 150,
+      "samples": [
+        "What is the most unforgivable thing a friend could do?\nbetray_a_secret / date_your_partner / lie_to_you_repeatedly / abandon_you_in_a_crisis / talk_badly_behind_your_back",
+        "If your best friend gets into a relationship and disappears, what should you do?\nmove_on / give_them_space / keep_inviting_them / tell_them_you_miss_them",
+        "How should you tell a friend you can't make their important event?\ncall_them / text_them / tell_them_in_person / send_a_gift_with_a_note",
+        "What is the best way to end a friendship that has become harmful?\na_clear_message / gradually_pull_away / honest_conversation / block_and_cut_contact",
+        "When a friend is upset, what do you usually do first?\nlisten / give_advice / distract_them / give_them_space / offer_practical_help",
+        "If a friend repays only part of a loan and seems to have forgotten the rest, what should you do?\nlet_it_go / drop_hints / remind_them_directly / stop_lending_to_them",
+        "What is your rule for lending money to friends?\nnever / only_small_amounts / yes_whatever_they_need / give_it_as_a_gift_instead / only_what_you_can_afford_to_lose",
+        "How should you respond if a friend asks your honest opinion on a bad decision they've already made?\nfull_honesty / gentle_honesty / focus_on_support / tell_them_what_they_want_to_hear",
+        "What should you do when a friend's partner treats them badly?\nhint_gently / stay_out_of_it / tell_them_directly / confront_the_partner",
+        "If two close friends have a falling out, what should you do?\nstay_neutral / see_them_separately / try_to_help_them_make_up / side_with_the_older_friend / side_with_whoever_is_right",
+        "What should you do if you discover a friend lied to you about something small?\nlet_it_go / confront_them / mention_it_lightly / trust_them_less_quietly",
+        "What should you do if a friend keeps canceling plans at the last minute?\naccept_it / tell_them_it_bothers_you / stop_making_plans_with_them / make_plans_that_are_easy_to_cancel"
+      ],
+      "child": {
+        "key": "friend_conflicts",
+        "label": "Friend Conflicts",
+        "description": "Questions about what to do when a friendship hits a problem, such as betrayal, canceled plans, unpaid loans, jealousy, a friend's bad partner, drifting apart, or ending the friendship.",
+        "not_for": "Everyday friendship habits and preferences with no problem involved (use Friendship Habits); ratings of how many people agree with a rule of thumb (use Friendship Rules of Thumb).",
+        "examples": [
+          "Should you remind a friend who forgot to repay a loan?",
+          "Is it okay to date a friend's ex?"
+        ]
+      }
+    }
+  ]
+}

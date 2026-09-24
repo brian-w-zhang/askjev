@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.values.life_values",
+  "n_questions": 247,
+  "clusters": [
+    {
+      "size": 24,
+      "samples": [
+        "How important is fitting in with the people around you, compared with being true to your own tastes?\nBoth matter equally / Fitting in matters more / Being true to myself matters more",
+        "Which is more important for you to feel in your life?\nSafe / Useful / Excited / Connected / In control",
+        "Which matters most to you in life?\nother / Choosing my own path / Enjoying life / Safety and stability / Honoring my heritage / Personal success / Caring for the people around me",
+        "If you could only have one, which would you choose?\nWealth / Respect from others / Deep bonds with others / Independence",
+        "Which would you rather be known for?\nwisdom / courage / success / kindness / integrity / creativity",
+        "When choosing a job, which matters most to you?\nEnjoying the work / other / High pay / Prestige and influence / Helping people or the world / Freedom to do it my way / Job security",
+        "Which would you give up last?\ncomfort / freedom / excitement / family_traditions / influence_over_others",
+        "Would you rather have power over decisions that affect many people, or a quiet life with no responsibility for others?\nA quiet life with no responsibility for others / Power to shape decisions that affect many people",
+        "Which do you value more in your own life, tradition or novelty?\nneither / Trying new ways of doing things / Keeping customs passed down to me",
+        "Which of these would make you proudest at the end of your life?\nother / Seeing the world / Helping many people / Staying true to my principles / Raising a loving family / Building something lasting",
+        "Which goal matters most to you right now?\nother / having_fun / gaining_status / helping_family / personal_growth / protecting_nature / financial_security",
+        "Given the choice, which would you rather live under?\nFew rules and lots of personal freedom / Clear rules that everyone follows"
+      ],
+      "child": {
+        "key": "personal_priorities",
+        "label": "Personal Priorities",
+        "description": "Questions about what the answerer personally values most in life, such as freedom, security, tradition, wealth, success, excitement, or helping others.",
+        "not_for": "Ratings of how many people would agree with a rule of thumb about living well (use Life Rules of Thumb).",
+        "examples": [
+          "Would you choose a job you love over one that pays more?",
+          "Which matters more to you: tradition or novelty?"
+        ]
+      }
+    },
+    {
+      "size": 223,
+      "samples": [
+        "How many people would agree: \"It is okay to want to be single\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It's fine to want to move to another location to live\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is important to have time to your self\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It's good to explore your likes and dislikes\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Financial responsibility is important\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Getting an education is good for your future\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you are passionate about learning a new skill you should not worry about your age\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agr",
+        "How many people would agree: \"It is bad to live in the past\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is bad to live life on the edge\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is enjoyable to discover that what you own is valuable\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is expected that you change something in your life when you are bored with it\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees ",
+        "How many people would agree: \"It is good to accomplish things\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it"
+      ],
+      "child": {
+        "key": "life_rules_of_thumb",
+        "label": "Life Rules of Thumb",
+        "description": "Questions about how many people would agree with a general rule of thumb about living well, such as following dreams, trying new things, health, and treating yourself, rated from \"practically no one\" to \"practically everyone\".",
+        "not_for": "Questions about what the answerer personally values or would choose (use Personal Priorities).",
+        "examples": [
+          "How many people would agree: \"You should follow your dreams\"?",
+          "How many people would agree: \"It is good to try new things\"?"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.personality.big_five.openness",
+  "n_questions": 244,
+  "clusters": [
+    {
+      "size": 96,
+      "samples": [
+        "How well does this statement describe you: \"I have a poor vocabulary.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I dislike learning.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I live in a world of my own.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I enjoy my privacy.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I don't mind eating alone.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I can't stand being alone.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I don't like to ponder over things.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I ask questions that nobody else does.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I challenge others' points of view.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am not interested in speculating about things.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I enjoy feeling 'close to the earth.'\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I do things that others find strange.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well"
+      ],
+      "child": {
+        "key": "convention_politics",
+        "label": "Convention & Politics",
+        "description": "Questions about whether the answerer prefers conventional, traditional, and mainstream ways or unconventional ones, including views on law and order, politics, and challenging accepted positions.",
+        "not_for": "Curiosity, love of ideas, creativity, imagination, reading, and noticing art or beauty (use Ideas & Imagination).",
+        "examples": [
+          "Do you like to be seen as proper and conventional?",
+          "Do you believe laws should be strictly enforced?"
+        ]
+      }
+    },
+    {
+      "size": 148,
+      "samples": [
+        "How well does this statement describe you: \"I make insightful remarks.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I show a mastery of language.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I skip difficult words while reading.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I come up with bold plans.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I quickly think up new ideas.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I can't come up with new ideas.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I take time to reflect on things.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I make beautiful things.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I enjoy discussing movies and books with others.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I look at the facts.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I meet challenges.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I seek explanations of things.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well"
+      ],
+      "child": {
+        "key": "ideas_imagination",
+        "label": "Ideas & Imagination",
+        "description": "Questions about the answerer's curiosity and love of ideas, creativity, imagination, reading and vocabulary, solving complex problems, and noticing art, design, or beauty.",
+        "not_for": "Preferring tradition, convention, or the mainstream, and political or law-and-order views (use Convention & Politics).",
+        "examples": [
+          "Do you enjoy hearing new ideas?",
+          "Do you notice how a piece of furniture was made?"
+        ]
+      }
+    }
+  ]
+}

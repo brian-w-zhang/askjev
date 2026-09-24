@@ -1,0 +1,151 @@
+{
+  "type": "split",
+  "node": "world.society.education",
+  "n_questions": 269,
+  "clusters": [
+    {
+      "size": 51,
+      "samples": [
+        "How much does a university's prestige affect what its students actually learn?\nNot at all; the material is the same everywhere / A little, through slightly better teaching / Noticeably, through stronger peers and resources / A great deal; students at top universities learn far more",
+        "As I read each one, please tell me if you think it is a very important, somewhat important, not too important, or not at all important reason why people in your country move to other countries. c. To find better educational opportunities\nDK/Refused / Very important / Not too important / Somewhat imp",
+        "Please tell me whether you completely agree, mostly agree or completely disagree with the following statements: Children need to learn a foreign language to succeed in the world today\nMostly agree / Mostly disagree / Completely agree / Completely disagree",
+        "Do you agree or disagree with the following statement? A university education is more important for a boy than for a girl. Do you completely agree, mostly agree, mostly disagree or completely disagree?\nMostly agree / Mostly disagree / Completely agree / Completely disagree",
+        "Which one of the following statements comes closest to your opinion about educating children?\nIt is more important for boys than for girls / It is more important for girls than for boys / It is equally important for boys and girls",
+        "In general, what kind of influence has the increasing use of the Internet in our country had on each of the following things. Has the increasing use of the Internet had a good influence, a bad influence, or no influence at all?...education\nNo influence / Bad influence / Good influence",
+        "In general, do you think your country's parents put too much pressure on their children to do well in school, not enough pressure, or about the right amount of pressure?\nToo much / Not enough / About the right amount",
+        "When children today in your country grow up, do you think each of the following things will be much better than it is today in our country, somewhat better, about the same, somewhat worse or much worse? a. education\nDK/Refused / Much worse / Much better / About the same / Somewhat worse / Somewhat b",
+        "How much responsibility should each of the following have in making sure that the your nationality workforce has the right skills and education to be successful in the future? c. schools\nNone / Some / A lot / DK/Refused / Only a little",
+        "In your country today, when it comes to Getting a good education do you think …?\nDK/Refused / Opportunities are generally about the same for both / Men generally have more opportunities / Women generally have more opportunities",
+        "As I read each one, please tell me if you think it is a very important, somewhat important, not too important or not at all an important reason why many people do not have jobs. a. schools do not teach the necessary skills\nDK/Refused / Very important / Not too important / Somewhat important / Not at",
+        "Thinking about the future of your country, please tell me whether you feel generally optimistic or generally pessimistic about the following areas. d. Our country's education system\nNeither / DK/Refused / Optimistic / Pessimistic"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 49,
+      "samples": [
+        "How important is \"Early childhood education\" to understanding education?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the fie",
+        "How important is \"Primary education\" to understanding education?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'top",
+        "How important is \"Secondary education\" to understanding education?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'t",
+        "How important is \"Tertiary education\" to understanding education?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'to",
+        "How important is \"Skill\" to understanding education?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Skill'",
+        "How important is \"Pedagogy\" to understanding education?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Ped",
+        "How important is \"Curriculum\" to understanding education?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'C",
+        "How important is \"Exam\" to understanding education?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Exam', ",
+        "How important is \"Homework\" to understanding education?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Hom",
+        "How important is \"Lesson\" to understanding education?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Lesso",
+        "How important is \"Teacher\" to understanding education?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Teac",
+        "How important is \"College\" to understanding education?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Coll"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 49,
+      "samples": [
+        "Would most adults have heard of \"Lesson\"?\n{'topic': 'Lesson', 'description': 'Structured period of time where learning is intended to occur'}",
+        "Would most adults have heard of \"Bachelor's degree\"?\n{'topic': \"Bachelor's degree\", 'description': 'Undergraduate educational qualification'}",
+        "Would most adults have heard of \"Early childhood education\"?\n{'topic': 'Early childhood education', 'description': 'Teaching of children from birth to age eight'}",
+        "Would most adults have heard of \"Primary education\"?\n{'topic': 'Primary education', 'description': 'First stage of education for children'}",
+        "Would most adults have heard of \"Secondary education\"?\n{'topic': 'Secondary education', 'description': 'Education between primary and higher education'}",
+        "Would most adults have heard of \"Tertiary education\"?\n{'topic': 'Tertiary education', 'description': 'Third stage of education for adults'}",
+        "Would most adults have heard of \"Skill\"?\n{'topic': 'Skill', 'description': 'Ability to carry out a task'}",
+        "Would most adults have heard of \"Pedagogy\"?\n{'topic': 'Pedagogy', 'description': 'Theory and practice of education'}",
+        "Would most adults have heard of \"Curriculum\"?\n{'topic': 'Curriculum', 'description': 'Educational plan'}",
+        "Would most adults have heard of \"Exam\"?\n{'topic': 'Exam', 'description': 'Educational assessment'}",
+        "Would most adults have heard of \"Homework\"?\n{'topic': 'Homework', 'description': 'Educational practice'}",
+        "Would most adults have heard of \"Teacher\"?\n{'topic': 'Teacher', 'description': 'Person who helps others learn'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 31,
+      "samples": [
+        "Do you have to have a college degree to take the bar exam?",
+        "Is an associates degree the same as a bachelor's degree?",
+        "Is a paralegal the same as an attorney?",
+        "Is graduate school the same as a masters degree?",
+        "Can you get a PhD and an MD?",
+        "Is a bachelor's degree considered a graduate degree?",
+        "Is a hnd the same as a degree?",
+        "Is a baccalaureate degree the same as a bachelor's?",
+        "Is a DPT the same as a phd?",
+        "Do you need a law degree to take the bar in California?",
+        "Can a holder of DBA use Dr. with in his name?",
+        "Do all master's degrees require a thesis?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 32,
+      "samples": [
+        "Do you use a computer at your workplace, at school, at home, or anywhere else on at least an occasional basis?\nNo / Yes",
+        "Are standardized tests a fair way to measure students?",
+        "Do most people remember their school years fondly?",
+        "Should schools still teach cursive handwriting?",
+        "Are school uniforms good for students?",
+        "If they study really really hard, can anyone make it to Harvard?\nYes, anyone can make it to Harvard if they study really really hard. / Yes, if you study hard enough, you can get into Harvard. / No, many people study hard but will not obtain high enough grades to get into Harvard. / If you study har",
+        "What's the only way to get a perfect SAT score?\nThe only way to get a perfect SAT score is to cheat. / The only way to get a perfect SAT score is go to test prep. / The only way to get a perfect SAT score is to remember all the answers. / The only way to get a perfect SAT score is to take it twice. ",
+        "What happens to class attendance if video recordings of lectures are provided?\nVideo recordings of lectures are a substitute for class, so attendance decreases. / Students stop going to class if they can watch video recordings of lectures instead. / Class attendance drops if video recordings of lect",
+        "Can you buy a car in Wisconsin on Sunday?",
+        "Does Sweden pay students to go to school?",
+        "The Irregular at Magic High School are they really siblings?",
+        "Does the Clery Act apply to high schools?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 57,
+      "samples": [
+        "Which of these universities is your favorite?\nMIT / Yale / Oxford / Harvard / Sorbonne / Stanford / Cambridge / Princeton / ETH Zurich / University of Tokyo",
+        "Which of these universities is the greatest?\nMIT / Yale / Oxford / Harvard / Sorbonne / Stanford / Cambridge / Princeton / ETH Zurich / University of Tokyo",
+        "Which of these universities is the most overrated?\nMIT / Yale / Oxford / Harvard / Sorbonne / Stanford / Cambridge / Princeton / ETH Zurich / University of Tokyo",
+        "Which of these universities is the most underrated?\nMIT / Yale / Oxford / Harvard / Sorbonne / Stanford / Cambridge / Princeton / ETH Zurich / University of Tokyo",
+        "At school of university, have you ever taken part in any course or activity about entrepreneurship – that is turning ideas into action, developing your own projects?\nNo / Yes",
+        "Which country in Northern Europe has the best scores on PISA since 2015?\nNorway has the best scores on PISA since 2015. / Estonia has the best scores on PISA since 2015. / Finland. / Sweden. / China. / Sweden has the best scores on PISA since 2015. / Singapore. / Finland has the best scores on PISA ",
+        "Is the University of Oxford older than the University of Cambridge?",
+        "What is the biggest university in the country?\nThe biggest university in the country is Texas A&M. / The biggest university in the country is the University of Phoenix. / The biggest university in the country is the University of Central Florida. / It depends on which country you are in. / The bigge",
+        "Was the Hudson River School an actual school?",
+        "Did Morris Brown College get their accreditation back?",
+        "Is University of the Philippines a state university?",
+        "Is Lana Lang and Lois Lane the same person?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

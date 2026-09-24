@@ -1,0 +1,104 @@
+{
+  "type": "group",
+  "node": "world.society.identity_demographics",
+  "clusters": [
+    {
+      "members": [
+        "world.society.identity_demographics.family",
+        "world.society.identity_demographics.friendship",
+        "world.society.identity_demographics.human_sexuality",
+        "world.society.identity_demographics.sexual_intercourse",
+        "world.society.identity_demographics.sexual_orientation",
+        "world.society.identity_demographics.gender",
+        "world.society.identity_demographics.man",
+        "world.society.identity_demographics.woman",
+        "world.society.identity_demographics.communication",
+        "world.society.identity_demographics.information",
+        "world.society.identity_demographics.sexism",
+        "world.society.identity_demographics.pollution",
+        "world.society.identity_demographics.violence",
+        "world.society.identity_demographics.birth_control"
+      ],
+      "samples": [
+        "Family",
+        "Friendship",
+        "Human sexuality",
+        "Sexual intercourse",
+        "Sexual orientation",
+        "Gender",
+        "Man",
+        "Woman",
+        "Communication",
+        "Information",
+        "Sexism",
+        "Pollution",
+        "Violence",
+        "Birth control"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "members": [
+        "world.society.identity_demographics.society",
+        "world.society.identity_demographics.community",
+        "world.society.identity_demographics.power_political_science",
+        "world.society.identity_demographics.social_class",
+        "world.society.identity_demographics.social_science",
+        "world.society.identity_demographics.anthropology",
+        "world.society.identity_demographics.sociology",
+        "world.society.identity_demographics.ethnicity",
+        "world.society.identity_demographics.indigenous_peoples",
+        "world.society.identity_demographics.peace",
+        "world.society.identity_demographics.trade_union",
+        "world.society.identity_demographics.disability",
+        "world.society.identity_demographics.discrimination",
+        "world.society.identity_demographics.racism",
+        "world.society.identity_demographics.famine",
+        "world.society.identity_demographics.feminism",
+        "world.society.identity_demographics.human_migration",
+        "world.society.identity_demographics.human_rights",
+        "world.society.identity_demographics.liberty",
+        "world.society.identity_demographics.slavery",
+        "world.society.identity_demographics.social_equality",
+        "world.society.identity_demographics.poverty"
+      ],
+      "samples": [
+        "Society",
+        "Community",
+        "Power (political science)",
+        "Social class",
+        "Social science",
+        "Anthropology",
+        "Sociology",
+        "Ethnicity",
+        "Indigenous peoples",
+        "Peace",
+        "Trade union",
+        "Disability",
+        "Discrimination",
+        "Racism",
+        "Famine",
+        "Feminism",
+        "Human migration",
+        "Human rights",
+        "Liberty",
+        "Slavery",
+        "Social equality",
+        "Poverty"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

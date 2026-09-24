@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "world.places.travel",
+  "n_questions": 188,
+  "clusters": [
+    {
+      "size": 137,
+      "samples": [
+        "Which seat is the best on a long-haul flight?\naisle / middle / window / bulkhead / exit_row",
+        "Which is the best way to travel between major cities in Europe?\nbus / car / plane / train",
+        "Which airline would most frequent flyers call the best?\nana / other / emirates / qatar_airways / cathay_pacific / singapore_airlines",
+        "How stressful is a typical connecting flight through a large hub airport?\nRelaxing and smooth / Mildly stressful / Often stressful because of long walks and tight connections / Frequently a nightmare",
+        "Which of these airlines is your favorite?\nANA / Delta / Ryanair / Emirates / Lufthansa / Southwest / Air France / Qatar Airways / Cathay Pacific / British Airways / Turkish Airlines / Singapore Airlines",
+        "Which of these airlines is the greatest?\nANA / Delta / Ryanair / Emirates / Lufthansa / Southwest / Air France / Qatar Airways / Cathay Pacific / British Airways / Turkish Airlines / Singapore Airlines",
+        "Which of these airlines is the most overrated?\nANA / Delta / Ryanair / Emirates / Lufthansa / Southwest / Air France / Qatar Airways / Cathay Pacific / British Airways / Turkish Airlines / Singapore Airlines",
+        "Are budget airlines worth it?",
+        "Are cruises a good way to see the world?",
+        "Is renting a home through Airbnb better than staying in a hotel?",
+        "What is Japan's high-speed rail network called?\nave / ice / tgv / shinkansen",
+        "Which of these airlines is the most underrated?\nANA / Delta / Ryanair / Emirates / Lufthansa / Southwest / Air France / Qatar Airways / Cathay Pacific / British Airways / Turkish Airlines / Singapore Airlines"
+      ],
+      "child": {
+        "key": "transport_lodging",
+        "label": "Transport & lodging",
+        "description": "Questions about how travelers get around and where they stay, such as airlines, flights, airports, trains, cruises, hotels and home rentals.",
+        "not_for": "Entry rules, visas and passports go to Visas & passports; destinations themselves go to Tourism.",
+        "examples": [
+          "Is a window seat better than an aisle seat on a long-haul flight?",
+          "Is renting through Airbnb better than staying in a hotel?"
+        ]
+      }
+    },
+    {
+      "size": 51,
+      "samples": [
+        "Is the UK part of the Schengen zone?",
+        "Can you travel to Turkey with a french ID card?",
+        "Do I need a visa to go to Iraq?",
+        "Do I need a tourist visa for Taiwan?",
+        "Are us and Canadian passports the same size?",
+        "Can I travel to New Zealand without a passport?",
+        "Can I use my Passport Card as proof of citizenship?",
+        "Can you use a Passport Card to board a plane?",
+        "Do I need a visa for Bhutan from India?",
+        "Do you need a visa for north Cyprus?",
+        "Is a us passport valid if not signed?",
+        "Can a us citizen Travel to North Korea?"
+      ],
+      "child": {
+        "key": "visas_passports",
+        "label": "Visas & passports",
+        "description": "Questions about travel documents and border entry rules, such as visas, passports, ID cards, and which countries a traveler may enter.",
+        "not_for": "Flights, trains and accommodation go to Transport & lodging.",
+        "examples": [
+          "Do I need a tourist visa to visit Taiwan?",
+          "Is the UK part of the Schengen zone?"
+        ]
+      }
+    }
+  ]
+}

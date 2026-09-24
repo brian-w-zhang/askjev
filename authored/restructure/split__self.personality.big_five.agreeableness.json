@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.personality.big_five.agreeableness",
+  "n_questions": 168,
+  "clusters": [
+    {
+      "size": 62,
+      "samples": [
+        "How well does this statement describe you: \"I am hard to convince.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am easily annoyed.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I love children.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am interested in people.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am hard to get to know.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I have a soft heart.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I have a good word for everyone.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I show my gratitude.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I believe in human goodness.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I think that all will be well.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I would never cheat on my taxes.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I stick to the rules.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well"
+      ],
+      "child": {
+        "key": "trust_modesty_temper",
+        "label": "Trust, Modesty & Temper",
+        "description": "Questions about whether the answerer trusts people, stays modest rather than boasting, deals honestly rather than for personal gain, and stays easy-going rather than critical or easily annoyed.",
+        "not_for": "Caring about, helping, or cooperating with other people versus confronting, controlling, or getting back at them (use Kindness & Cooperation).",
+        "examples": [
+          "Do you believe most people are basically good?",
+          "Do you tend to boast about your achievements?"
+        ]
+      }
+    },
+    {
+      "size": 106,
+      "samples": [
+        "How well does this statement describe you: \"I inquire about others' well-being.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I know how to comfort others.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I sympathize with others' feelings.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I take time out for others.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I feel others' emotions.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I make people feel at ease.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am not really interested in others.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I insult people.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am not interested in other people's problems.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I feel little concern for others.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am on good terms with nearly everyone.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I think of others first.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well"
+      ],
+      "child": {
+        "key": "kindness_cooperation",
+        "label": "Kindness & Cooperation",
+        "description": "Questions about how the answerer treats others: sympathizing with their feelings, helping and making time for them, forgiving, and cooperating versus demanding, controlling, or retaliating.",
+        "not_for": "Trusting people, modesty, honesty for gain, and being easily annoyed or critical (use Trust, Modesty & Temper).",
+        "examples": [
+          "Do you go out of your way to help others?",
+          "Do you get back at people who wrong you?"
+        ]
+      }
+    }
+  ]
+}

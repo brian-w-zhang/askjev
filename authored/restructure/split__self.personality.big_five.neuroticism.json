@@ -1,0 +1,163 @@
+{
+  "type": "split",
+  "node": "self.personality.big_five.neuroticism",
+  "n_questions": 161,
+  "clusters": [
+    {
+      "size": 29,
+      "samples": [
+        "How well does this statement describe you: \"I can't concentrate.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I don't lose my head.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I feel crushed by setbacks.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I talk even when I know I shouldn't.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I shoot my mouth off.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I blurt out whatever comes into my mind.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I barge in on conversations.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am often down in the dumps.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I get caught up in my problems.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I grumble about things.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I stumble over my words.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I often eat too much.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well"
+      ],
+      "child": {
+        "key": "impulses_coping",
+        "label": "Impulses & Coping",
+        "description": "Questions about resisting cravings and impulses, bingeing, saying or doing things you regret, and coping with or being crushed by setbacks and problems.",
+        "not_for": "Fear, panic, and worry (use Fear & Worry); self-esteem and what others think (use Self-Consciousness); anger, irritability, and mood swings (use Temper & Moodiness).",
+        "examples": [
+          "Can you control your cravings?",
+          "Do you bounce back quickly from setbacks?"
+        ]
+      }
+    },
+    {
+      "size": 27,
+      "samples": [
+        "How well does this statement describe you: \"I can stand criticism.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I let others finish what they are saying.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I demand attention.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I like to gossip.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I wear my heart on my sleeve.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I demand obedience.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I keep up an appearance.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I have a low opinion of myself.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I feel comfortable with myself.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am very pleased with myself.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I only feel comfortable with friends.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am not bothered by difficult social situations.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well"
+      ],
+      "child": {
+        "key": "self_consciousness",
+        "label": "Self-Consciousness",
+        "description": "Questions about self-esteem, needing approval, caring what others think, feeling judged or talked about, and handling criticism.",
+        "not_for": "Fear of danger and general worry (use Fear & Worry); anger and mood swings (use Temper & Moodiness).",
+        "examples": [
+          "Do you need other people's approval?",
+          "Do you have a low opinion of yourself?"
+        ]
+      }
+    },
+    {
+      "size": 28,
+      "samples": [
+        "How well does this statement describe you: \"I react intensely.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I cry during movies.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I have crying fits.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am always in the same mood.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am relaxed most of the time.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I change my mood a lot.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I have frequent mood swings.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I get overwhelmed by emotions.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am often in a bad mood.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I lose my temper.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I keep my cool.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I become overwhelmed by events.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well"
+      ],
+      "child": {
+        "key": "temper_moodiness",
+        "label": "Temper & Moodiness",
+        "description": "Questions about how easily the answerer gets upset, angry, irritated, offended, or tearful, how much their moods swing, and whether they stay calm under pressure.",
+        "not_for": "Fear of danger, panic, and worry (use Fear & Worry); self-esteem and approval (use Self-Consciousness); cravings and coping with setbacks (use Impulses & Coping).",
+        "examples": [
+          "Do you get irritated easily?",
+          "Do your moods change often?"
+        ]
+      }
+    },
+    {
+      "size": 23,
+      "samples": [
+        "How well does this statement describe you: \"I tend to feel the same every day.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I seldom feel blue.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I often feel blue.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I rarely get irritated.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I seldom get mad.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I rarely complain.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I feel desperate.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I feel that my life lacks direction.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I rarely overindulge.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I never spend more than I can afford.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I never splurge.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I rarely lose my composure.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 26,
+      "samples": [
+        "How well does this statement describe you: \"I am easily frightened.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I panic easily.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I worry about things.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I feel threatened easily.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I fear for the worst.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am afraid of many things.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I don't worry about things that have already happened.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am afraid that I will do the wrong thing.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am afraid to draw attention to myself.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am comfortable in unfamiliar situations.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am filled with doubts about things.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I love dangerous situations.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well"
+      ],
+      "child": {
+        "key": "fear_worry",
+        "label": "Fear & Worry",
+        "description": "Questions about fearfulness, panic in danger, willingness to take physical risks, and worrying about things that might go wrong.",
+        "not_for": "Worry about what people think of you (use Self-Consciousness); anger and irritability (use Temper & Moodiness).",
+        "examples": [
+          "Do you panic easily?",
+          "Would you be afraid walking alone at night?"
+        ]
+      }
+    },
+    {
+      "size": 28,
+      "samples": [
+        "How well does this statement describe you: \"I am easily hurt.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am easily offended.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am easily confused.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I often make a fuss.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am easily excited.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I cry easily.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I burst into tears.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am easily moved to tears.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I want everything to add up perfectly.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I get angry easily.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I get stressed out easily.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am easily disturbed.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

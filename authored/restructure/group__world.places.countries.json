@@ -1,0 +1,166 @@
+{
+  "type": "group",
+  "node": "world.places.countries",
+  "clusters": [
+    {
+      "members": [
+        "world.places.countries.ethiopia",
+        "world.places.countries.kenya",
+        "world.places.countries.tanzania",
+        "world.places.countries.algeria",
+        "world.places.countries.democratic_republic_of_the_congo",
+        "world.places.countries.egypt",
+        "world.places.countries.morocco",
+        "world.places.countries.nigeria",
+        "world.places.countries.south_africa"
+      ],
+      "samples": [
+        "Ethiopia",
+        "Kenya",
+        "Tanzania",
+        "Algeria",
+        "Democratic Republic of the Congo",
+        "Egypt",
+        "Morocco",
+        "Nigeria",
+        "South Africa"
+      ],
+      "child": {
+        "key": "africa",
+        "label": "Africa",
+        "description": "Questions about countries in Africa, including Egypt, Morocco, Algeria, Nigeria, Ethiopia, Kenya, Tanzania, the Democratic Republic of the Congo and South Africa.",
+        "not_for": "Middle Eastern countries such as Saudi Arabia, Israel and Iran go to Asia.",
+        "examples": [
+          "Is Kenya the best country for a safari?",
+          "Is Nigeria the most populous country in Africa?"
+        ]
+      }
+    },
+    {
+      "members": [
+        "world.places.countries.china",
+        "world.places.countries.japan",
+        "world.places.countries.south_korea",
+        "world.places.countries.bangladesh",
+        "world.places.countries.india",
+        "world.places.countries.pakistan",
+        "world.places.countries.indonesia",
+        "world.places.countries.malaysia",
+        "world.places.countries.myanmar",
+        "world.places.countries.philippines",
+        "world.places.countries.thailand",
+        "world.places.countries.vietnam",
+        "world.places.countries.singapore",
+        "world.places.countries.iran",
+        "world.places.countries.israel",
+        "world.places.countries.saudi_arabia"
+      ],
+      "samples": [
+        "China",
+        "Japan",
+        "South Korea",
+        "Bangladesh",
+        "India",
+        "Pakistan",
+        "Indonesia",
+        "Malaysia",
+        "Myanmar",
+        "Philippines",
+        "Thailand",
+        "Vietnam",
+        "Singapore",
+        "Iran",
+        "Israel",
+        "Saudi Arabia"
+      ],
+      "child": {
+        "key": "asia",
+        "label": "Asia",
+        "description": "Questions about countries in Asia and the Middle East, including China, Japan, South Korea, India, Pakistan, Bangladesh, Indonesia, Thailand, Vietnam, the Philippines, Malaysia, Myanmar, Singapore, Iran, Israel and Saudi Arabia.",
+        "not_for": "Russia and Turkey go to Europe; Egypt goes to Africa; Australia goes to Oceania.",
+        "examples": [
+          "Is Japan the safest country to visit in Asia?",
+          "Is Singapore a city-state?"
+        ]
+      }
+    },
+    {
+      "members": [
+        "world.places.countries.turkey",
+        "world.places.countries.france",
+        "world.places.countries.germany",
+        "world.places.countries.italy",
+        "world.places.countries.poland",
+        "world.places.countries.spain",
+        "world.places.countries.united_kingdom",
+        "world.places.countries.russia"
+      ],
+      "samples": [
+        "Turkey",
+        "France",
+        "Germany",
+        "Italy",
+        "Poland",
+        "Spain",
+        "United Kingdom",
+        "Russia"
+      ],
+      "child": {
+        "key": "europe",
+        "label": "Europe",
+        "description": "Questions about countries in Europe, including the United Kingdom, France, Germany, Italy, Spain, Poland, Russia and Turkey.",
+        "not_for": "Countries of the Middle East go to Asia.",
+        "examples": [
+          "Is Italy overrated as a tourist destination?",
+          "Is Russia the largest country in the world?"
+        ]
+      }
+    },
+    {
+      "members": [
+        "world.places.countries.canada",
+        "world.places.countries.mexico",
+        "world.places.countries.united_states",
+        "world.places.countries.argentina",
+        "world.places.countries.brazil",
+        "world.places.countries.colombia"
+      ],
+      "samples": [
+        "Canada",
+        "Mexico",
+        "United States",
+        "Argentina",
+        "Brazil",
+        "Colombia"
+      ],
+      "child": {
+        "key": "americas",
+        "label": "Americas",
+        "description": "Questions about countries in North, Central and South America, including the United States, Canada, Mexico, Brazil, Argentina and Colombia.",
+        "not_for": "",
+        "examples": [
+          "Is Canada more interesting than people give it credit for?",
+          "Is Brazil the largest country in South America?"
+        ]
+      }
+    },
+    {
+      "members": [
+        "world.places.countries.australia"
+      ],
+      "samples": [
+        "Australia"
+      ],
+      "child": {
+        "key": "oceania",
+        "label": "Oceania",
+        "description": "Questions about countries in Oceania, including Australia, New Zealand and the Pacific island nations.",
+        "not_for": "Southeast Asian countries such as Indonesia go to Asia.",
+        "examples": [
+          "Is Australia's capital Canberra?",
+          "Is Australia worth the long flight for a vacation?"
+        ]
+      }
+    }
+  ]
+}

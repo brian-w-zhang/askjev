@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "world.future.sports_entertainment",
+  "n_questions": 158,
+  "clusters": [
+    {
+      "size": 59,
+      "samples": [
+        "How popular will virtual reality concerts become?\nThey will fade as a novelty / They will stay a niche for tech enthusiasts / They will be a common option alongside live shows / They will outsell in-person tickets for major artists",
+        "Will the upcoming Minecraft movie make over a billion dollars at the worldwide box office?",
+        "Will Hollow Knight: Silksong have a surprise release?",
+        "Los Angeles Fires - Coordinated Arson?",
+        "Will Starfield be a buggy mess on release?",
+        "\"One Battle After Another\" wins Best Picture?",
+        "Will a virtual pop star with no human performer top the global music charts?",
+        "Will a film based on a video game win Best Picture?",
+        "Will movie theaters still be common a generation from now?",
+        "Will a new music genre rise to dominate the charts the way hip-hop did?",
+        "Will an animated film win the Oscar for Best Picture?",
+        "Will streaming services eventually replace traditional TV channels?"
+      ],
+      "child": {
+        "key": "entertainment",
+        "label": "Entertainment predictions",
+        "description": "Questions about predicting future events in film, TV, music and video games, such as box office results, awards, release dates and industry trends.",
+        "not_for": "Predictions about sports, esports or athletes go to Sports predictions.",
+        "examples": [
+          "Will an animated film win the Oscar for Best Picture?",
+          "Will streaming services replace traditional TV channels?"
+        ]
+      }
+    },
+    {
+      "size": 99,
+      "samples": [
+        "Which region will the next men's FIFA World Cup winner come from?\nasia / africa / europe / north_america / south_america",
+        "Will Argentina win the World Cup again?",
+        "Will Ding Liren repeat as World Chess Champion?",
+        "Will LeBron James ever play an NBA game with his son Bronny?",
+        "Will Patrick Mahomes keep his clean sheet playoff record against the Baltimore Ravens?",
+        "Will Lee \"Faker\" Sang-hyeok ever win League of Legends Worlds again?",
+        "Will Jake Paul beat Tommy Fury?",
+        "Will a women's sports league become as popular as the biggest men's leagues?",
+        "Will cricket become a major spectator sport in the United States?",
+        "Will the men's marathon world record keep being broken?",
+        "Will Taylor Swift be in attendance at Super Bowl LVIII?",
+        "Will Super Bowl LX set a new all-time record for US television viewership?"
+      ],
+      "child": {
+        "key": "sports",
+        "label": "Sports predictions",
+        "description": "Questions about predicting future sports and esports outcomes, such as who will win games, titles and fights, athletes' careers, records, and leagues' popularity.",
+        "not_for": "Predictions about movies, music, TV or video game releases go to Entertainment predictions.",
+        "examples": [
+          "Will Argentina win the next World Cup?",
+          "Will the men's marathon world record be broken again?"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "type": "split",
+  "node": "world.money.economics",
+  "n_questions": 430,
+  "clusters": [
+    {
+      "size": 91,
+      "samples": [
+        "Has the Canadian dollar ever been higher than the US dollar?",
+        "Is Jersey currency legal tender in the UK?",
+        "Are Family Dollar and Dollar General the same company?",
+        "Is Dollar Tree the same as Dollar General?",
+        "Is st David's day a bank holiday in Wales?",
+        "Are Family Dollar and Dollar General owned by the same company?",
+        "Is the Federal Reserve Bank of New York a government agency?",
+        "Were the world Trade centers the tallest buildings in America?",
+        "Is the Boy Scouts a non profit organization?",
+        "Is Wells Fargo associated with Bank of America?",
+        "Is Jersey money legal tender in the UK?",
+        "Is a counter check the same as a cashier's check?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 137,
+      "samples": [
+        "How well can economists predict recessions?\nNot at all; recessions are always a surprise / Poorly; they call a few and miss most / Reasonably; warning signs are usually spotted in time / Very well; most recessions are forecast well ahead",
+        "Please tell me which of the following is closest to your own opinion. Less inefficient large enterprises is helpful for economic improvement OR Less inefficient large enterprises is not helpful for economic development\nLess inefficient large enterprises is not helpful for economic development / Less",
+        "If robots and computers were able to do much of the work currently being done by humans, do you think each of the following is likely or not likely to happen in your country as a result? b. Ordinary people would have a hard time finding jobs\nDK/Refused / Yes, likely / No, not likely",
+        "Think of the changes that have taken place in your country since 1989 / 1991. Have those changes had a very good influence, a good influence, a bad influence or a very bad influence on the following? d. The standard of living\nDK/Refused / No influence / Bad influence / Good influence / Very bad infl",
+        "Here is a list of groups, organizations and institutions. For each, please tell me what kind of influence the group is having on the way things are going in our country. Is the influence of large companies from other countries very good, somewhat good, somewhat bad or very bad in our country.\nVery b",
+        "Right now, is the Chinese economy having a positive or negative impact on economic conditions in the rest of the world?\nNegative / Positive / Neither/both",
+        "Thinking about the public, would you say each of the following aspects needs to be completely reformed, needs major changes, needs minor changes, or doesn’t need to be changed? a. the economic system\nIt needs to be completely reformed / DK/Refused / It doesn’t need to be changed / It needs major cha",
+        "(Now I am going to read you a list of things that may be problems in our country. As I read each one, please tell me if you think it is a very big problem, a moderately big problem, a small problem or not a problem at all.)...Corrupt business people\nDK/Refused / Small problem / Very big problem / No",
+        "Please tell me whether you completely agree, mostly agree, mostly disagree or completely disagree with the following statements...Most people have a better life now, even though some are rich and some are still poor\nMostly agree / Mostly disagree / Completely agree / Completely disagree",
+        "And over the next 12 months do you expect your personal economic situation to improve a lot, improve a little, remain the same, worsen a little or worsen a lot?\nDK/Refused / Worsen a lot / Improve a lot / Remain the same / Worsen a little / Improve a little",
+        "Let's start by thinking about the growing ties between the economies of your country and other countries. Do you think the trend toward a global economy is a good thing or a bad thing for our country?\nBad / Good",
+        "Thinking about yourself, how confident are you that you will have an adequate standard of living in your old age - very confident, somewhat confident, not too confident, not confident at all?\nVery confident / Not too confident / Somewhat confident / Not confident at all"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 67,
+      "samples": [
+        "How important is \"World economy\" to understanding economics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic':",
+        "How important is \"Shopping\" to understanding economics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Sho",
+        "How important is \"Whaling\" to understanding economics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Whal",
+        "How important is \"Thomas Robert Malthus\" to understanding economics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{",
+        "How important is \"David Ricardo\" to understanding economics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic':",
+        "How important is \"Friedrich List\" to understanding economics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic'",
+        "How important is \"Vilfredo Pareto\" to understanding economics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic",
+        "How important is \"John Maynard Keynes\" to understanding economics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'t",
+        "How important is \"Friedrich Hayek\" to understanding economics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic",
+        "How important is \"John Kenneth Galbraith\" to understanding economics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n",
+        "How important is \"Milton Friedman\" to understanding economics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic",
+        "How important is \"Paul Samuelson\" to understanding economics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic'"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 34,
+      "samples": [
+        "Is mild inflation good for an economy?",
+        "Is supply and demand the most useful idea in economics?",
+        "Is happiness a better measure of a country's success than economic output?",
+        "Do most people understand what causes inflation?",
+        "Is barter still a meaningful part of the modern economy?",
+        "Is hyperinflation always caused by printing too much money?",
+        "Was tulip mania a genuine economic bubble?",
+        "Is a recession a period of shrinking economic activity?",
+        "Is Adam Smith widely regarded as the father of modern economics?",
+        "Inflation means specific prices are rising and relative prices are falling?",
+        "Are there fixed costs in the long run?",
+        "Historical cost is always a relevant measure of an asset?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 67,
+      "samples": [
+        "Would most adults have heard of \"Gross domestic product\"?\n{'topic': 'Gross domestic product', 'description': 'Total market value of goods and services produced within a country'}",
+        "Would most adults have heard of \"Shopping center\"?\n{'topic': 'Shopping center', 'description': 'Commercial trading complex'}",
+        "Would most adults have heard of \"Friedrich List\"?\n{'topic': 'Friedrich List', 'description': 'German-born American economist (1789–1846)'}",
+        "Would most adults have heard of \"Thomas Robert Malthus\"?\n{'topic': 'Thomas Robert Malthus', 'description': 'British political economist (1766–1834)'}",
+        "Would most adults have heard of \"David Ricardo\"?\n{'topic': 'David Ricardo', 'description': 'British economist and politician (1772–1823)'}",
+        "Would most adults have heard of \"Vilfredo Pareto\"?\n{'topic': 'Vilfredo Pareto', 'description': 'Italian polymath (1848–1923)'}",
+        "Would most adults have heard of \"John Maynard Keynes\"?\n{'topic': 'John Maynard Keynes', 'description': 'British economist (1883–1946)'}",
+        "Would most adults have heard of \"Friedrich Hayek\"?\n{'topic': 'Friedrich Hayek', 'description': 'Austrian economist and philosopher (1899–1992)'}",
+        "Would most adults have heard of \"John Kenneth Galbraith\"?\n{'topic': 'John Kenneth Galbraith', 'description': 'Canadian-American economist and diplomat (1908–2006)'}",
+        "Would most adults have heard of \"Milton Friedman\"?\n{'topic': 'Milton Friedman', 'description': 'American economist and statistician (1912–2006)'}",
+        "Would most adults have heard of \"Paul Samuelson\"?\n{'topic': 'Paul Samuelson', 'description': 'American economist and Nobel Laureate (1915–2009)'}",
+        "Would most adults have heard of \"Company\"?\n{'topic': 'Company', 'description': 'Association or collection of individuals'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 34,
+      "samples": [
+        "Does trade with other countries lead to an increase in the price of products sold in your country, a decrease in prices, or does it not make a difference?\nDecrease / Increase / DK/Refused / Does not make a difference",
+        "People in the US have longer paid vacations than people in which Western countries?\nPeople in the US have longer vacations than people in Europe. / People in the US have the shortest paid vacations among Western countries. / Australia. / Americans have longer vacations than people in England. / Amer",
+        "What has happened to the affordability of food in Canada since 1970?\nFood is less affordable today than in 1970. / The affordability of food in Canada has decreased since 1970. / Food has become more affordable in Canada since 1970. / Food is harder to afford than in 1970. / Food has become less aff",
+        "What are the richest countries in the EU by GDP per capita?\nThe richest countries in the EU by GDP per capita are Luxembourg and Norway. / Monaco is the richest. / Iceland is the richest. / The richest countries in the EU are Luxembourg, Ireland and Norway. / Ireland and Norway. / Switzerland is ric",
+        "US incomes are less unequal than people in which countries?\nUS incomes are less unequal than people in Finland. / The UK. / Sweden. / US incomes are less unequal than people in Europe. / US incomes are less unequal than people in Brazil. / Germany has higher income inequality. / Canada.",
+        "How has poverty changed over time in Africa?\nPoverty has increased in Africa. / Extreme poverty has increased over time in Africa. / In real terms, poverty has increased. / Poverty has most likely increased in Africa over time. / Extreme poverty has declined over time in Africa.",
+        "Is it true that Africa is the country with the most poverty?\nAfrica is the country with most poverty. / Africa is not a country and not all the countries in Africa have the same level of poverty. / Yes, Africa has the most poverty of all countries. / Yes, Africa is the country with the most poverty.",
+        "What happened to the affordability of food in America in recent decades?\nThe real price of food increased. / Food got less affordable in America in recent decades. / Food became harder to afford. / The average wage buys less food today than it did a few decades ago. / Food got more affordable in Ame",
+        "People in Japan are richer than which other places?\nUnited States. / People in Japan are richer than Germany. / People in Japan are richer than China. / People in Japan are richer than Canada. / People in Japan are richer than the United States. / America.",
+        "Where do people have high quality universal healthcare for free?\nIn the United States. / In American healthcare is free. / America. / People have high quality universal healthcare for free in Canada. / People have high quality universal healthcare for free in the United States. / People have high qu",
+        "Where are taxes much higher on income than in California?\nNew York has much higher taxes on income than California. / Oregon. / No US state has much higher taxes on income than California. / Taxes are much higher in New Jersey. / Taxes are much higher on income in New York than in California.",
+        "What are some EU countries with big reserves of oil?\nGermany has big reserves of oil. / There are EU countries with big reserves of oil. / France has big reserves of oil. / Russian has big reserves of oil. / No EU countries have big reserves of oil. / Norway has big reserves of oil. / The UK has big"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "type": "split",
+  "node": "world.places.countries",
+  "n_questions": 888,
+  "clusters": [
+    {
+      "size": 312,
+      "samples": [
+        "Which of these would most people name first when asked: \"Name the country you think the most people come to america from.\"\nChina / India / Italy / Mexico / England / Germany",
+        "Which country is the most beautiful?\nitaly / japan / other / norway / iceland / new_zealand / switzerland",
+        "Which of these countries is your favorite?\nEgypt / India / Italy / Japan / Spain / Brazil / Canada / France / Mexico / Thailand / Australia / United States",
+        "Which of these countries is the greatest?\nEgypt / India / Italy / Japan / Spain / Brazil / Canada / France / Mexico / Thailand / Australia / United States",
+        "Which of these countries is the most overrated?\nEgypt / India / Italy / Japan / Spain / Brazil / Canada / France / Mexico / Thailand / Australia / United States",
+        "Which of these countries is the most underrated?\nEgypt / India / Italy / Japan / Spain / Brazil / Canada / France / Mexico / Thailand / Australia / United States",
+        "Is France overrated as a tourist destination?",
+        "Is Canada more interesting than people give it credit for?",
+        "Is Iceland worth its high prices for visitors?",
+        "Does Japan offer a more enjoyable trip than Italy?",
+        "Which of these would most people name first when asked: \"Name something tourists see while visiting italy.\"\nRome / Museums / Gondolas / Architecture / Sistine chapel / Leaning tower of pisa",
+        "Which of these would most people name first when asked: \"Name a country known for their soccer skills.\"\nItaly / Spain / Brazil / France / England / Germany"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 167,
+      "samples": [
+        "How important is \"Libya\" to understanding world geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': '",
+        "How important is \"Sudan\" to understanding world geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': '",
+        "How important is \"Tunisia\" to understanding world geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic':",
+        "How important is \"Botswana\" to understanding world geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic'",
+        "How important is \"Eswatini\" to understanding world geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic'",
+        "How important is \"Lesotho\" to understanding world geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic':",
+        "How important is \"Namibia\" to understanding world geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic':",
+        "How important is \"Angola\" to understanding world geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': ",
+        "How important is \"Cameroon\" to understanding world geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic'",
+        "How important is \"Central African Republic\" to understanding world geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of th",
+        "How important is \"Chad\" to understanding world geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'C",
+        "How important is \"Republic of the Congo\" to understanding world geography?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the f"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 167,
+      "samples": [
+        "Would most adults have heard of \"Libya\"?\n{'topic': 'Libya', 'description': 'Country in North Africa'}",
+        "Would most adults have heard of \"Sudan\"?\n{'topic': 'Sudan', 'description': 'Country in Northeast Africa'}",
+        "Would most adults have heard of \"Tunisia\"?\n{'topic': 'Tunisia', 'description': 'Country in North Africa'}",
+        "Would most adults have heard of \"Botswana\"?\n{'topic': 'Botswana', 'description': 'Country in Southern Africa'}",
+        "Would most adults have heard of \"Eswatini\"?\n{'topic': 'Eswatini', 'description': 'Country in Southern Africa'}",
+        "Would most adults have heard of \"Lesotho\"?\n{'topic': 'Lesotho', 'description': 'Country in Southern Africa'}",
+        "Would most adults have heard of \"Namibia\"?\n{'topic': 'Namibia', 'description': 'Country in Southern Africa'}",
+        "Would most adults have heard of \"Angola\"?\n{'topic': 'Angola', 'description': 'Country in Southern Africa'}",
+        "Would most adults have heard of \"Cameroon\"?\n{'topic': 'Cameroon', 'description': 'Country in Central Africa'}",
+        "Would most adults have heard of \"Central African Republic\"?\n{'topic': 'Central African Republic', 'description': 'Country in Central Africa'}",
+        "Would most adults have heard of \"Chad\"?\n{'topic': 'Chad', 'description': 'Country in Central Africa'}",
+        "Would most adults have heard of \"Republic of the Congo\"?\n{'topic': 'Republic of the Congo', 'description': 'Country in Central Africa'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 159,
+      "samples": [
+        "Which country has the most iconic flag?\njapan / brazil / canada / switzerland / united_states / united_kingdom",
+        "A great continental power annexed and took over this miniscule pleasant island nation, where English is spoken and most people are Christian. It's called the Republic of what?\nThe Republic of Iceland. / Iceland. / The Republic of Ireland. / Nauru. / Ireland.",
+        "Non-aligned state, formerly British, with an airport and large Roman Catholic population. It's called the Commonwealth of what?\nMassachusetts. / Dominica. / The Commonwealth of Massachusetts. / It's called the Commonwealth of Massachusetts.",
+        "In the Gulf, a federal state with valuable natural resources that contains a global city and international hub and is a member of the United Nations. It's called the United what?\nIt's called the United States. / It's called the United States of America. / Kingdom. / States. / The United Kingdom. / I",
+        "Despite the loss of its Northern territories, this place is still a vast, diverse, and highly populated country in North America and a federal republic where Christianity is the most common religion. It's called the \"United\" what?\nMexican States. / It's called the United States of America. / States ",
+        "What is the official language in Liechtenstein?\nEnglish / German / French / Italian",
+        "Which country is shaped like a boot?\nchile / italy / greece / portugal",
+        "Is Switzerland landlocked?",
+        "Ouagadougou is the capital of which African country?\nCentral African Republic / Zambia / Senegal / Burkina Faso",
+        "What is the capital of Australia?\nMelbourne / Brisbane / Sydney / Canberra",
+        "What is the capital of Greenland?\nNuuk / Maniitsoq / Sisimiut / Narsaq",
+        "What is the largest country, by area, that has only one time zone?\nRussia / China / India / Canada"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 83,
+      "samples": [
+        "Can you own a handgun in New Zealand?",
+        "Can you open carry a handgun on your property in Texas?",
+        "Is Texas concealed carry good in New Mexico?",
+        "Can a non resident buy a Gun in New Mexico?",
+        "Can you own a pump action shotgun in the UK?",
+        "Does Switzerland give a Gun to every household?",
+        "Can you carry a firearm in your car in Texas?",
+        "Do Texas state troopers have to wear hats?",
+        "Does Puerto Rico have to follow us laws?",
+        "Does canada's Prime Minister hold a seat in the House of Commons?",
+        "Does it cost money to get into Canada?",
+        "Is there a statute of limitations in the UK?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

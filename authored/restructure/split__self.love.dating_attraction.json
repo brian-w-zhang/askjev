@@ -1,0 +1,85 @@
+{
+  "type": "split",
+  "node": "self.love.dating_attraction",
+  "n_questions": 485,
+  "clusters": [
+    {
+      "size": 99,
+      "samples": [
+        "Would you rather date someone you're intensely drawn to but share little with, or someone very compatible whom you find only mildly attractive?\nintense_attraction / strong_compatibility",
+        "How comfortable would you be approaching a stranger you find attractive?\nI would never approach and would let the moment pass / I would approach only if they had clearly signaled interest first / I would approach if a friend pushed me to / I would approach on my own if the setting felt natural / I w",
+        "What do you tend to notice first about someone you find attractive?\neyes / face / smile / style / voice / confidence",
+        "Which do you find more attractive in someone you just met?\nno_preference / quiet_modesty / bold_confidence",
+        "Which trait matters most to you when deciding whether to date someone?\nhumor / looks / ambition / kindness / intelligence / emotional_stability",
+        "How much does it matter to you if a potential partner is much older or younger than you?\nI would rule them out immediately / I'd hesitate and need a strong reason / I'd consider it if we really clicked / It wouldn't cross my mind",
+        "Is it okay to date more than one person before agreeing to be exclusive?",
+        "Is it okay to ask someone out by text rather than in person?",
+        "Have you ever had a crush on someone you never actually spoke to?",
+        "Can being 'too nice' make someone less attractive?",
+        "Do you think you have a clear 'type' that you're always drawn to?",
+        "Do you think dating apps have made dating worse?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 92,
+      "samples": [
+        "How many people would agree: \"Dating a co-worker could create conflicts of interest with your work and your boss\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agree",
+        "How many people would agree: \"Generally, people think it's a bad idea to date your boss\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Generally, people think it's a bad idea to date your co-workers\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If a friend is dating someone who treats them badly, it's good to encourage them to break up with them\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practi",
+        "How many people would agree: \"If you aren't ready to start dating, you shouldn't go on dates\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you don't want to be in a relationship, you should tell the person you are dating\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agr",
+        "How many people would agree: \"It is brave to ask someone on a date\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is creepy to harass coworkers into dates\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is expected for someone to pay when on a date\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is expected that you date people reasonably close to your own age group\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with i",
+        "How many people would agree: \"It is good to date others and to see tat there are good people out there\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is good to turn someone down if they want to date and they are your best friends ex\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone a"
+      ],
+      "child": {
+        "key": "dating_rules_of_thumb",
+        "label": "Dating Rules of Thumb",
+        "description": "Questions about how many people would agree with a general rule of thumb about dating, flirting, or attraction, rated from \"practically no one\" to \"practically everyone\".",
+        "not_for": "Questions about what the answerer personally prefers, would do, or has done when dating (use Dating Choices & Preferences).",
+        "examples": [
+          "How many people would agree: \"It is rude to cancel a date at the last minute\"?",
+          "How many people would agree: \"It is okay to date a coworker\"?"
+        ]
+      }
+    },
+    {
+      "size": 294,
+      "samples": [
+        "What matters most to you on a first date?\ninstant_spark / easy_conversation / laughing_together / feeling_comfortable",
+        "What is the best topic to talk about on a first date?\nfamily / travel / hobbies / work_or_studies / big_life_questions / movies_music_and_shows",
+        "Which is the bigger warning sign in someone you're starting to date?\nneither / just_got_out_of_one / never_had_a_long_relationship",
+        "Would you rather date someone who shares your interests or someone with different ones?\nan_even_mix / mostly_shared_interests / mostly_different_interests",
+        "Who do you think should pay on a first date?\nwhoever asked the other out / split_evenly / the_higher_earner / the_man_by_tradition / whoever_offers_first",
+        "Which first date would you most enjoy?\ncoffee / dinner / drinks / walk_in_a_park / bowling, mini golf, climbing / museum_or_gallery",
+        "Who do you tell first when you have a new crush?\nnobody / parent / sibling / group_chat / best_friend",
+        "How should someone show you they're interested?\nflirt_playfully / say_it_directly / small_gifts_or_favors / ask_you_out_right_away / ask_your_friends_about_you",
+        "What do you think most single people want most from dating right now?\ncasual_fun / validation / companionship / a_long_term_partner / not_sure_themselves",
+        "What kind of voice do you find most attractive?\ndeep_and_calm / no_preference / soft_and_gentle / bright_and_lively / accent_different_from_mine",
+        "Which dating app photo makes the best impression on you?\ntravel_photo / doing_a_hobby / photo_with_a_pet / candid_laughing_shot / simple_clear_portrait",
+        "What is the best opening message on a dating app?\na_joke / a_compliment / simple_hello / a_pickup_line / question_about_their_profile"
+      ],
+      "child": {
+        "key": "dating_choices",
+        "label": "Dating Choices & Preferences",
+        "description": "Questions about what the answerer finds attractive, prefers, would do, or has done when meeting, asking out, or dating someone, or what most daters prefer.",
+        "not_for": "Ratings of how many people would agree with a stated rule of thumb about dating (use Dating Rules of Thumb).",
+        "examples": [
+          "Who should pay on a first date?",
+          "Have you ever ghosted someone after a date?"
+        ]
+      }
+    }
+  ]
+}

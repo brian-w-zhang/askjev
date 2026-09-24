@@ -1,0 +1,79 @@
+{
+  "type": "split",
+  "node": "world.food.dishes_ingredients",
+  "n_questions": 1089,
+  "clusters": [
+    {
+      "size": 306,
+      "samples": [
+        "Which cheese is the greatest?\nbrie / other / cheddar / gruyere / roquefort / mozzarella / parmigiano_reggiano",
+        "Which food would most people say is best eaten with their hands?\npizza / sushi / tacos / burgers / french_fries / fried_chicken",
+        "Which of these dishes is your favorite?\nPho / Pizza / Ramen / Sushi / Tacos / Paella / Biryani / Lasagna / Pad thai / Dumplings / Hamburger / Fried chicken",
+        "Which of these dishes is the greatest?\nPho / Pizza / Ramen / Sushi / Tacos / Paella / Biryani / Lasagna / Pad thai / Dumplings / Hamburger / Fried chicken",
+        "Which of these dishes is the most overrated?\nPho / Pizza / Ramen / Sushi / Tacos / Paella / Biryani / Lasagna / Pad thai / Dumplings / Hamburger / Fried chicken",
+        "Which of these dishes is the most underrated?\nPho / Pizza / Ramen / Sushi / Tacos / Paella / Biryani / Lasagna / Pad thai / Dumplings / Hamburger / Fried chicken",
+        "Which dish would you rather eat?\nBaklava / Bibimbap",
+        "Which dish would you rather eat?\nBigos / Baklava",
+        "Which dish would you rather eat?\nBaklava / Biryani",
+        "Which dish would you rather eat?\nBaklava / Burrito",
+        "Which dish would you rather eat?\nBaklava / Carbonara",
+        "Which dish would you rather eat?\nChili / Baklava"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 465,
+      "samples": [
+        "How much do you experience \"lemon\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ex",
+        "How much do you experience \"lemon\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I ",
+        "How much do you experience \"lemon\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I ",
+        "How much do you experience \"lemon\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways ",
+        "How much do you experience \"lemon\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touc",
+        "How much do you experience \"onion\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ex",
+        "How much do you experience \"onion\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I ",
+        "How much do you experience \"onion\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I ",
+        "How much do you experience \"onion\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways ",
+        "How much do you experience \"onion\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touc",
+        "How much do you experience \"garlic\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I e",
+        "How much do you experience \"garlic\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 318,
+      "samples": [
+        "How much does truffle actually improve a dish?\nMost diners can't taste any difference / It adds a small, pleasant note / It clearly elevates the dish / It transforms the dish into something else",
+        "Is cilantro overrated as an ingredient?",
+        "Which spice comes from the stigmas of a crocus flower?\npaprika / saffron / cardamom / turmeric",
+        "Is the green paste served as wasabi at most sushi restaurants outside Japan usually real wasabi?",
+        "Do you burn more calories than you eat celery?",
+        "Would most adults have heard of \"Biscuit\"?\n{'topic': 'Biscuit', 'description': 'Sweet baked item'}",
+        "How important is \"Biscuit\" to understanding food and cooking?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic'",
+        "Would most adults have heard of \"Breakfast cereal\"?\n{'topic': 'Breakfast cereal', 'description': 'Processed food made from grain'}",
+        "How important is \"Breakfast cereal\" to understanding food and cooking?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field",
+        "Would most adults have heard of \"Curry\"?\n{'topic': 'Curry', 'description': 'Spiced Asian-inspired sauces and dishes'}",
+        "How important is \"Curry\" to understanding food and cooking?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': ",
+        "Would most adults have heard of \"Dessert\"?\n{'topic': 'Dessert', 'description': 'Dish of sweet foods'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

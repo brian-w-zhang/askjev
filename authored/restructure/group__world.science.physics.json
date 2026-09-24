@@ -1,0 +1,204 @@
+{
+  "type": "group",
+  "node": "world.science.physics",
+  "clusters": [
+    {
+      "members": [
+        "world.science.physics.energy",
+        "world.science.physics.mass",
+        "world.science.physics.matter",
+        "world.science.physics.state_of_matter",
+        "world.science.physics.solid",
+        "world.science.physics.liquid",
+        "world.science.physics.gas",
+        "world.science.physics.plasma_physics",
+        "world.science.physics.atom",
+        "world.science.physics.vacuum",
+        "world.science.physics.temperature"
+      ],
+      "samples": [
+        "Energy",
+        "Mass",
+        "Matter",
+        "State of matter",
+        "Solid",
+        "Liquid",
+        "Gas",
+        "Plasma (physics)",
+        "Atom",
+        "Vacuum",
+        "Temperature"
+      ],
+      "child": {
+        "key": "matter_energy",
+        "label": "Matter & energy",
+        "description": "Questions about matter and energy: atoms, mass, the states of matter (solid, liquid, gas, plasma), vacuums, temperature, and energy itself.",
+        "not_for": "Subatomic particles and the fundamental forces go to Particles & forces; units of measurement go to Time & measurement.",
+        "examples": [
+          "Is plasma the most common state of matter?",
+          "Can energy be created or destroyed?"
+        ]
+      }
+    },
+    {
+      "members": [
+        "world.science.physics.gravity",
+        "world.science.physics.electromagnetism",
+        "world.science.physics.strong_interaction",
+        "world.science.physics.weak_interaction",
+        "world.science.physics.magnetism",
+        "world.science.physics.particle_physics",
+        "world.science.physics.standard_model",
+        "world.science.physics.subatomic_particle",
+        "world.science.physics.electron",
+        "world.science.physics.neutron",
+        "world.science.physics.proton",
+        "world.science.physics.quantum_mechanics",
+        "world.science.physics.radioactive_decay"
+      ],
+      "samples": [
+        "Gravity",
+        "Electromagnetism",
+        "Strong interaction",
+        "Weak interaction",
+        "Magnetism",
+        "Particle physics",
+        "Standard Model",
+        "Subatomic particle",
+        "Electron",
+        "Neutron",
+        "Proton",
+        "Quantum mechanics",
+        "Radioactive decay"
+      ],
+      "child": {
+        "key": "particles_forces",
+        "label": "Particles & forces",
+        "description": "Questions about subatomic particles (electrons, protons, neutrons), quantum mechanics, radioactivity, and the fundamental forces: gravity, electromagnetism and magnetism, and the strong and weak interactions.",
+        "not_for": "Whole atoms and states of matter go to Matter & energy; Einstein's relativity goes to Physicists & relativity.",
+        "examples": [
+          "Is gravity the weakest fundamental force?",
+          "Is quantum mechanics the most successful theory in physics?"
+        ]
+      }
+    },
+    {
+      "members": [
+        "world.science.physics.physics",
+        "world.science.physics.classical_mechanics",
+        "world.science.physics.force",
+        "world.science.physics.motion",
+        "world.science.physics.newton_s_laws_of_motion",
+        "world.science.physics.velocity",
+        "world.science.physics.photon",
+        "world.science.physics.space",
+        "world.science.physics.speed_of_light",
+        "world.science.physics.wave",
+        "world.science.physics.light",
+        "world.science.physics.color",
+        "world.science.physics.optics",
+        "world.science.physics.sound"
+      ],
+      "samples": [
+        "Physics",
+        "Classical mechanics",
+        "Force",
+        "Motion",
+        "Newton's laws of motion",
+        "Velocity",
+        "Photon",
+        "Space",
+        "Speed of light",
+        "Wave",
+        "Light",
+        "Color",
+        "Optics",
+        "Sound"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "members": [
+        "world.science.physics.electricity",
+        "world.science.physics.thermodynamics",
+        "world.science.physics.heat",
+        "world.science.physics.electromagnetic_radiation",
+        "world.science.physics.semiconductor"
+      ],
+      "samples": [
+        "Electricity",
+        "Thermodynamics",
+        "Heat",
+        "Electromagnetic radiation",
+        "Semiconductor"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "members": [
+        "world.science.physics.isaac_newton",
+        "world.science.physics.michael_faraday",
+        "world.science.physics.james_clerk_maxwell",
+        "world.science.physics.marie_curie",
+        "world.science.physics.albert_einstein",
+        "world.science.physics.theory_of_relativity"
+      ],
+      "samples": [
+        "Isaac Newton",
+        "Michael Faraday",
+        "James Clerk Maxwell",
+        "Marie Curie",
+        "Albert Einstein",
+        "Theory of relativity"
+      ],
+      "child": {
+        "key": "physicists",
+        "label": "Physicists & relativity",
+        "description": "Questions about famous physicists such as Isaac Newton, Michael Faraday, James Clerk Maxwell, Marie Curie and Albert Einstein, and about Einstein's theory of relativity.",
+        "not_for": "Questions about a physical concept that do not center on the person go to that concept's topic.",
+        "examples": [
+          "Was Einstein a greater physicist than Newton?",
+          "Is time travel possible under general relativity?"
+        ]
+      }
+    },
+    {
+      "members": [
+        "world.science.physics.measurement",
+        "world.science.physics.year",
+        "world.science.physics.international_system_of_units",
+        "world.science.physics.time",
+        "world.science.physics.day"
+      ],
+      "samples": [
+        "Measurement",
+        "Year",
+        "International System of Units",
+        "Time",
+        "Day"
+      ],
+      "child": {
+        "key": "time_units",
+        "label": "Time & measurement",
+        "description": "Questions about measurement and units, including the SI system and units of time such as the second, day and year, and the nature of time itself.",
+        "not_for": "Questions about relativity's effects on time go to Physicists & relativity.",
+        "examples": [
+          "Should the US switch to the metric system?",
+          "Is a day exactly 24 hours long?"
+        ]
+      }
+    }
+  ]
+}

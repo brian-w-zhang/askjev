@@ -1,0 +1,55 @@
+{
+  "type": "split",
+  "node": "self.values.moral_foundations",
+  "n_questions": 311,
+  "clusters": [
+    {
+      "size": 184,
+      "samples": [
+        "When you decide whether something is right or wrong, how relevant is this consideration: \"Whether or not some people were treated differently than others\"?\nI never take this into account when judging right and wrong / I take this into account only in unusual cases / This is a minor factor among many",
+        "When you decide whether something is right or wrong, how relevant is this consideration: \"Whether or not someone acted unfairly\"?\nI never take this into account when judging right and wrong / I take this into account only in unusual cases / This is a minor factor among many when I judge right and wr",
+        "When you decide whether something is right or wrong, how relevant is this consideration: \"Whether or not someone was denied his or her rights\"?\nI never take this into account when judging right and wrong / I take this into account only in unusual cases / This is a minor factor among many when I judg",
+        "How well does this statement describe you: \"When the government makes laws, the number one principle should be ensuring that everyone is treated fairly.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me ver",
+        "How well does this statement describe you: \"Justice is the most important requirement for a society.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I think it's morally wrong that rich children inherit a lot of money while poor children inherit nothing.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very w",
+        "How many people would agree: \"It's allowed to find annoying things irritating\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It's understandable to feel annoyed with someone\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is best to make a clean break in a relationship\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Feeling bad for not knowing how to do something is silly\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you aren't happy with the way your life is, you should fix it\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you don't like yourself and your identity, you should make some changes to your life\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone "
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 127,
+      "samples": [
+        "How many people would agree: \"One should always read the fine print in a deal\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It's fine to want to be alone\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is expected that you can set rules for your possessions\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is good to accept things about yourself that you cannot change\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is good to be grateful for what you have\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is good to be happy about something someone just gave you\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is good to be humble\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is good to be patient\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is good to be persistent\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is good to be proud of yourself\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is good to be with the one you love\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is good to do things that make you happy\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

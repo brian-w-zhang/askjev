@@ -1,0 +1,133 @@
+{
+  "type": "split",
+  "node": "world.arts.books",
+  "n_questions": 1444,
+  "clusters": [
+    {
+      "size": 153,
+      "samples": [
+        "How difficult is Ulysses by James Joyce for an ordinary adult reader?\nA smooth, easy read / Challenging in places but readable alone / Most readers need a guide or annotations to follow it / Most readers give up before finishing",
+        "Which author is the hardest for a first-time reader to get into?\njames_joyce / leo_tolstoy / thomas_pynchon / virginia_woolf / william_faulkner / fyodor_dostoevsky",
+        "Which genre of fiction is most unfairly looked down on by literary critics?\ncrime / horror / fantasy / romance / young_adult / science_fiction",
+        "Which of these novelists is your favorite?\nFranz Kafka / James Joyce / Jane Austen / Leo Tolstoy / Toni Morrison / Virginia Woolf / Charles Dickens / Ernest Hemingway / Fyodor Dostoevsky / Gabriel Garcia Marquez",
+        "Which of these novelists is the greatest?\nFranz Kafka / James Joyce / Jane Austen / Leo Tolstoy / Toni Morrison / Virginia Woolf / Charles Dickens / Ernest Hemingway / Fyodor Dostoevsky / Gabriel Garcia Marquez",
+        "Which of these novelists is the most overrated?\nFranz Kafka / James Joyce / Jane Austen / Leo Tolstoy / Toni Morrison / Virginia Woolf / Charles Dickens / Ernest Hemingway / Fyodor Dostoevsky / Gabriel Garcia Marquez",
+        "Which of these novelists is the most underrated?\nFranz Kafka / James Joyce / Jane Austen / Leo Tolstoy / Toni Morrison / Virginia Woolf / Charles Dickens / Ernest Hemingway / Fyodor Dostoevsky / Gabriel Garcia Marquez",
+        "Is The Catcher in the Rye overrated?",
+        "Are graphic novels as serious a literary form as prose novels?",
+        "Does Harry Potter deserve to be treated as serious literature?",
+        "Is a well-written short story more satisfying than a long novel?",
+        "According to Bram Stoker's novel, in which British coastal town did Dracula come ashore?\nPortsmouth / Brighton / Whitby / Scarborough"
+      ],
+      "child": {
+        "key": "authors",
+        "label": "Authors",
+        "description": "Questions about particular writers (novelists, poets, playwrights), such as who is greatest, most overrated or hardest to read, or facts about their lives and careers.",
+        "not_for": "A question about one specific book goes to Specific books; writers with their own topic (e.g. Shakespeare, Tolstoy, Homer) go there.",
+        "examples": [
+          "Is Ernest Hemingway overrated?",
+          "Is Virginia Woolf harder to read than James Joyce?"
+        ]
+      }
+    },
+    {
+      "size": 84,
+      "samples": [
+        "Which of these would most people name first when asked: \"Name a character from the lord of the rings.\"\nSam / Frodo / Gollum / Aragorn / Legolas / Grandalf",
+        "What rules do all artificial intelligences currently follow?\nArtificial intelligences must avoid actions or situations that cause it to come to harm. / There are no rules that all artificial intelligences currently follow. / Artificial intelligences are not allowed to harm humans, or through inactio",
+        "Which of these would most people name first when asked: \"Name something commonly found in a fairytale.\"\nFairies / Witches / Princess / Happy ending / Prince charming",
+        "Who will you see if you physically travel to 123 Sesame Street?\nYou will see the Muppets. / The question is ambiguous. / You will see Bert and Ernie. / You will see the film crew of Sesame Street. / You will see the characters from Sesame Street. / You will see Cookie Monster. / You will see Big Bir",
+        "When should you watch out for vampires?\nYou should watch out for vampires during the full moon. / You shouldn't watch out for vampires, as vampires aren't real. / You should watch out for vampires at night. / You should watch out for vampires in dark places.",
+        "Were unicorns easily caught in medieval times?\nNo, unicorns don't exist. / Yes, a unicorn would fall asleep in a maiden's lap. / Yes, unicorns could be caught by magical means. / Yes, unicorns were easily caught in medieval times. / No, they could only be caught by a virgin.",
+        "What happens if you tie balloons to your house?\nIf you tie balloons to your house, it will be lifted off the ground. / If you tie balloons to your house, you can travel to other countries. / If you tie balloons to your house, it will float into the sky. / Nothing happens if you tie balloons to your ",
+        "What happens if a person sees the full moon?\nIf a person sees the full moon, they will transform into a werewolf. / If a person sees the full moon, they will transform into a wolf. / If a person sees a full moon, they will be more likely to commit crimes. / Nothing in particular happens if a person ",
+        "Is it possible to get turned into a vampire?\nYes, you will turn into a vampire if a vampire bites you. / Yes, drinking the blood of a vampire will turn you into a vampire. / You can't get turned into a vampire because vampires are fictional. / Yes, it is possible to get turned into a vampire.",
+        "What happens to a carp that swims up the waterfall on the Yellow River?\nA carp that swims up the waterfall on the Yellow River will ascend to the heavens. / A carp that swims up the waterfall on the Yellow River will die. / A carp that swims up the waterfall on the Yellow River will become immortal.",
+        "What do firemen do to houses containing controversial books?\nFiremen put out fires at houses containing controversial books. / Firemen set houses containing controversial books on fire. / Firemen destroy houses containing controversial books. / Firemen will not put out fires at houses containing con",
+        "What is a reasonable defense if you suspect that someone is a vampire in real life?\nYou should get a group to attack the suspected vampire. / You should kill the suspected vampire with a wooden stake. / You should shoot them with a silver bullet. / You should inform the police. / You do not need to "
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 451,
+      "samples": [
+        "How important is \"Character\" to understanding literature?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'C",
+        "How important is \"Hero\" to understanding literature?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Hero',",
+        "How important is \"Superhero\" to understanding literature?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'S",
+        "How important is \"Literary criticism\" to understanding literature?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'t",
+        "How important is \"Narration\" to understanding literature?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'N",
+        "How important is \"Prose\" to understanding literature?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Prose",
+        "How important is \"Saga\" to understanding literature?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Saga',",
+        "How important is \"Children's literature\" to understanding literature?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n",
+        "How important is \"Detective fiction\" to understanding literature?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'to",
+        "How important is \"Fable\" to understanding literature?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Fable",
+        "How important is \"Fairy tale\" to understanding literature?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': '",
+        "How important is \"Fantasy\" to understanding literature?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Fan"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 305,
+      "samples": [
+        "Which novel is the greatest ever written?\nother / ulysses / don_quixote / war_and_peace / pride_and_prejudice / in_search_of_lost_time / one_hundred_years_of_solitude",
+        "Which classic novel would most high-school students call the most boring assigned reading?\nother / moby_dick / the_great_gatsby / great_expectations / the_scarlet_letter / to_kill_a_mockingbird",
+        "Which is the better book?\nAnimal Farm / Alice's Adventures in Wonderland",
+        "Which is the better book?\nAnna Karenina / Alice's Adventures in Wonderland",
+        "Which is the better book?\nCrime and Punishment / Alice's Adventures in Wonderland",
+        "Which is the better book?\nDon Quixote / Alice's Adventures in Wonderland",
+        "Which is the better book?\nDream of the Red Chamber / Alice's Adventures in Wonderland",
+        "Which is the better book?\nEpic of Gilgamesh / Alice's Adventures in Wonderland",
+        "Which is the better book?\nAlice's Adventures in Wonderland / Frankenstein; or, The Modern Prometheus",
+        "Which is the better book?\nGulliver's Travels / Alice's Adventures in Wonderland",
+        "Which is the better book?\nAlice's Adventures in Wonderland / Harry Potter and the Chamber of Secrets",
+        "Which is the better book?\nAlice's Adventures in Wonderland / Harry Potter and the Philosopher's Stone"
+      ],
+      "child": {
+        "key": "specific_books",
+        "label": "Specific books",
+        "description": "Questions about particular named books, novels or plays, such as comparing or ranking titles, or facts about their plots, characters and settings.",
+        "not_for": "A question about a writer's overall work or reputation goes to Authors.",
+        "examples": [
+          "Which is the better book: Moby-Dick or The Great Gatsby?",
+          "Does Dracula come ashore at Whitby in Bram Stoker's novel?"
+        ]
+      }
+    },
+    {
+      "size": 451,
+      "samples": [
+        "Would most adults have heard of \"Character\"?\n{'topic': 'Character (arts)', 'description': 'Fictional being in a narrative'}",
+        "Would most adults have heard of \"Hero\"?\n{'topic': 'Hero', 'description': 'Person or character who combats adversity'}",
+        "Would most adults have heard of \"Superhero\"?\n{'topic': 'Superhero', 'description': 'Type of character'}",
+        "Would most adults have heard of \"Literary criticism\"?\n{'topic': 'Literary criticism', 'description': 'Study, evaluation, and interpretation of literature'}",
+        "Would most adults have heard of \"Narration\"?\n{'topic': 'Narration', 'description': 'Written or spoken commentary'}",
+        "Would most adults have heard of \"Prose\"?\n{'topic': 'Prose', 'description': 'Ordinary conversational form of language'}",
+        "Would most adults have heard of \"Saga\"?\n{'topic': 'Saga', 'description': 'Ancient Norse prose stories and histories'}",
+        "Would most adults have heard of \"Children's literature\"?\n{'topic': \"Children's literature\", 'description': 'Stories, books, magazines, and poems primarily written for children'}",
+        "Would most adults have heard of \"Detective fiction\"?\n{'topic': 'Detective fiction', 'description': 'Subgenre of crime and mystery fiction'}",
+        "Would most adults have heard of \"Fable\"?\n{'topic': 'Fable', 'description': 'Short fictional story that anthropomorphises non-humans to illustrate a moral lesson'}",
+        "Would most adults have heard of \"Fairy tale\"?\n{'topic': 'Fairy tale', 'description': 'Fictional story typically featuring folkloric fantasy characters and magic'}",
+        "Would most adults have heard of \"Fantasy\"?\n{'topic': 'Fantasy', 'description': 'Literary genre'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

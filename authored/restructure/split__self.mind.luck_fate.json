@@ -1,0 +1,85 @@
+{
+  "type": "split",
+  "node": "self.mind.luck_fate",
+  "n_questions": 188,
+  "clusters": [
+    {
+      "size": 28,
+      "samples": [
+        "Were the opportunities you missed often meant to be missed?",
+        "Is there one person you're destined to be with?",
+        "Would you walk under a ladder without a second thought?",
+        "Have you ever had a premonition that came true?",
+        "Is it possible that you have lived a past life?",
+        "Have you ever made a wish on a shooting star?",
+        "Have you ever felt that someone was watching over you during a close call?",
+        "Would you stay a night alone in a house said to be haunted?",
+        "Do you believe you are a lucky person?",
+        "Have you ever kept a coin or object because you found it at a lucky moment?",
+        "Do you believe your life would be very different if one chance event had not happened?",
+        "Have you ever blown out birthday candles and kept the wish a secret so it would come true?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 80,
+      "samples": [
+        "How much do you think coincidences carry hidden meaning?\nNever / Rarely / Sometimes / Often / Always",
+        "Do you think some people are naturally luckier than others?\nyes / no_its_all_chance / no_they_just_notice_opportunities_more",
+        "When something bad happens to you, which view do you lean toward?\nunsure / things_just_happen / it_happened_for_a_reason / sometimes_it_serves_a_purpose",
+        "Which comes closest to your view on fate?\nno_such_thing / our_lives_are_fated / we_make_our_own_path / some_major_events_are_fated",
+        "What best explains a remarkable coincidence?\nfate / pure_chance / a_sign_or_message / hidden_connections_we_dont_see",
+        "Which view of karma is closest to yours?\nno / only_as_a_metaphor / yes_it_always_comes_back / loosely_good_deeds_tend_to_return",
+        "Which best describes your view of ghosts?\nno / yes / maybe / i_have_had_an_experience_i_cant_explain",
+        "What is a 'soulmate' most likely to be?\na_myth / someone_fated_for_you / someone_you_grow_to_fit / one_of_many_possible_matches",
+        "When something bad happens to a bad person, how do you see it?\nfate / karma / coincidence / natural_consequence_of_their_actions",
+        "Which phrase best describes how life works?\nlife_is_a_lottery / you_reap_what_you_sow / fortune_favors_the_bold / whatever_will_be_will_be",
+        "Do you think people can make their own luck?\nno / partly / yes_fully",
+        "What is your view of fate when it comes to meeting important people in your life?\nlucky_accident / we_were_meant_to_meet / a_mix_of_choice_and_chance"
+      ],
+      "child": {
+        "key": "luck_and_fate",
+        "label": "Luck & Fate",
+        "description": "Questions about how much luck, chance, destiny, or fate shapes life, success, and relationships, and whether things happen for a reason.",
+        "not_for": "Superstitions, omens, charms, horoscopes, and rituals to bring or avoid bad luck (use Superstitions & Omens).",
+        "examples": [
+          "Do things happen for a reason?",
+          "How much of success is luck?"
+        ]
+      }
+    },
+    {
+      "size": 80,
+      "samples": [
+        "Which superstition do you actually follow?\nnone / knock_on_wood / lucky_charm_or_item / avoid_the_number_thirteen / avoid_walking_under_ladders",
+        "Do you have a lucky number, item, or ritual?\nnone / several / lucky_item / lucky_number / lucky_ritual",
+        "What do you do when you break a mirror?\nfeel_a_little_uneasy / clean_it_up_and_forget_it / do_something_to_undo_the_luck / joke_about_seven_years_bad_luck",
+        "What is your view of fortune telling, like tarot or palm reading?\na_scam / harmless_fun / it_can_help_reflection / it_can_reveal_the_future",
+        "What do you do when you find a penny on the ground?\nleave_it / pick_it_up_for_luck / pick_it_up_its_money",
+        "What should you do after a string of bad luck?\nchange_something / nothing_its_random / wait_for_it_to_pass / do_a_ritual_or_cleanse",
+        "How superstitious are you?\nI follow no superstitions at all / I follow one or two just for fun / I follow a few and feel uneasy if I skip them / I follow many and plan around them / I rarely do anything without checking for bad signs",
+        "How much stock do you put in your horoscope?\nI never read it / I read it for fun and forget it / I read it and sometimes think about it / I let it shape some decisions / I plan my days around it",
+        "How much would you pay for an item said to bring good luck?\nNothing / A small amount as a fun keepsake / A fair amount / A lot, if it really worked",
+        "How much do you rely on lucky rituals before important events?\nNever / I do one small thing out of habit / I do a few rituals / I feel I can't succeed without them",
+        "How would you react to a fortune teller predicting bad news for you?\nLaugh it off / Forget it by the next day / Think about it for weeks / Change my plans because of it",
+        "How much do you avoid 'tempting fate', like saying a plan can't fail?\nI say whatever I like / I sometimes catch myself / I usually avoid it / I always avoid it and knock on wood"
+      ],
+      "child": {
+        "key": "superstitions_omens",
+        "label": "Superstitions & Omens",
+        "description": "Questions about superstitions, omens, jinxes, curses, lucky charms and numbers, horoscopes, and tarot, and how the answerer reacts to them.",
+        "not_for": "Broad beliefs about luck, chance, destiny, or fate in life (use Luck & Fate).",
+        "examples": [
+          "Does Friday the 13th make you nervous?",
+          "Do you knock on wood after jinxing something?"
+        ]
+      }
+    }
+  ]
+}

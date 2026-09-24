@@ -1,0 +1,103 @@
+{
+  "type": "split",
+  "node": "world.science.physics",
+  "n_questions": 910,
+  "clusters": [
+    {
+      "size": 150,
+      "samples": [
+        "Which idea in physics is the most mind-bending?\ntime_dilation / curved_spacetime / quantum_tunneling / quantum_entanglement / uncertainty_principle / wave_particle_duality",
+        "Which interpretation of quantum mechanics is the most convincing?\nqbism / copenhagen / pilot_wave / many_worlds / objective_collapse",
+        "Which fundamental force would most people say they understand least?\ngravity / electromagnetism / weak_nuclear_force / strong_nuclear_force",
+        "Which of these physics theories is your favorite?\nChaos theory / String theory / Thermodynamics / Electromagnetism / Quantum mechanics / General relativity / Special relativity / The Standard Model / Newtonian mechanics / Quantum field theory",
+        "Which of these physics theories is the greatest?\nChaos theory / String theory / Thermodynamics / Electromagnetism / Quantum mechanics / General relativity / Special relativity / The Standard Model / Newtonian mechanics / Quantum field theory",
+        "Which of these physics theories is the most overrated?\nChaos theory / String theory / Thermodynamics / Electromagnetism / Quantum mechanics / General relativity / Special relativity / The Standard Model / Newtonian mechanics / Quantum field theory",
+        "Which of these physics theories is the most underrated?\nChaos theory / String theory / Thermodynamics / Electromagnetism / Quantum mechanics / General relativity / Special relativity / The Standard Model / Newtonian mechanics / Quantum field theory",
+        "Is quantum mechanics the most successful theory in physics?",
+        "Is time travel to the past physically possible?",
+        "Is string theory a dead end?",
+        "Is the idea of curved spacetime more beautiful than quantum theory?",
+        "Which particle carries a negative electric charge?\nphoton / proton / neutron / electron"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 363,
+      "samples": [
+        "How hard is it for a non-scientist to grasp the basic idea of special relativity?\nEasy after one clear explanation / Manageable with a good analogy or two / It takes real study to get / Most people never really get it",
+        "Would most adults have heard of \"William Gilbert\"?\n{'topic': 'William Gilbert (physicist)', 'description': 'English physician and natural philosopher (1544?-1603)'}",
+        "Would most adults have heard of \"Christiaan Huygens\"?\n{'topic': 'Christiaan Huygens', 'description': 'Dutch mathematician and physicist (1629–1695)'}",
+        "Would most adults have heard of \"Robert Hooke\"?\n{'topic': 'Robert Hooke', 'description': 'English polymath (1635–1703)'}",
+        "Would most adults have heard of \"Mikhail Lomonosov\"?\n{'topic': 'Mikhail Lomonosov', 'description': 'Russian polymath (1711–1765)'}",
+        "Would most adults have heard of \"Henry Cavendish\"?\n{'topic': 'Henry Cavendish', 'description': 'English natural philosopher, and scientist (1731–1810)'}",
+        "Would most adults have heard of \"Thomas Young\"?\n{'topic': 'Thomas Young (scientist)', 'description': 'English polymath (1773–1829)'}",
+        "Would most adults have heard of \"André-Marie Ampère\"?\n{'topic': 'André-Marie Ampère', 'description': 'French physicist and mathematician (1775–1836)'}",
+        "Would most adults have heard of \"Amedeo Avogadro\"?\n{'topic': 'Amedeo Avogadro', 'description': 'Italian scientist (1776–1856)'}",
+        "Would most adults have heard of \"Hans Christian Ørsted\"?\n{'topic': 'Hans Christian Ørsted', 'description': 'Danish chemist and physicist (1777–1851)'}",
+        "Would most adults have heard of \"Augustin-Jean Fresnel\"?\n{'topic': 'Augustin-Jean Fresnel', 'description': 'French optical physicist (1788–1827)'}",
+        "Would most adults have heard of \"Georg Ohm\"?\n{'topic': 'Georg Ohm', 'description': 'German mathematician and physicist (1789–1854)'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 362,
+      "samples": [
+        "How important is \"William Gilbert\" to understanding physics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic':",
+        "How important is \"Christiaan Huygens\" to understanding physics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topi",
+        "How important is \"Robert Hooke\" to understanding physics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'R",
+        "How important is \"Mikhail Lomonosov\" to understanding physics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic",
+        "How important is \"Henry Cavendish\" to understanding physics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic':",
+        "How important is \"Thomas Young\" to understanding physics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'T",
+        "How important is \"André-Marie Ampère\" to understanding physics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topi",
+        "How important is \"Amedeo Avogadro\" to understanding physics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic':",
+        "How important is \"Hans Christian Ørsted\" to understanding physics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'t",
+        "How important is \"Augustin-Jean Fresnel\" to understanding physics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'t",
+        "How important is \"Georg Ohm\" to understanding physics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Geor",
+        "How important is \"Nicolas Léonard Sadi Carnot\" to understanding physics?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the fie"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 35,
+      "samples": [
+        "How much do you experience \"ice\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I expe",
+        "How much do you experience \"ice\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I ex",
+        "How much do you experience \"ice\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I ex",
+        "How much do you experience \"ice\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways I ",
+        "How much do you experience \"ice\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touch ",
+        "How much do you experience \"echo\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I exp",
+        "How much do you experience \"echo\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I e",
+        "How much do you experience \"echo\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I e",
+        "How much do you experience \"echo\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways I",
+        "How much do you experience \"echo\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touch",
+        "How much do you experience \"heat\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I exp",
+        "How much do you experience \"heat\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I e"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

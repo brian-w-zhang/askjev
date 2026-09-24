@@ -1,0 +1,55 @@
+{
+  "type": "split",
+  "node": "self.mind.memories_life_story",
+  "n_questions": 175,
+  "clusters": [
+    {
+      "size": 122,
+      "samples": [
+        "What is your earliest clear memory mostly about?\nI have no clear early memory / a_place / a_person / a party, trip, or holiday / being scared, happy, or lost / a_toy_or_object",
+        "Which sense is strongest in your childhood memories?\nsight / smell / sound / taste / touch / none_stands_out",
+        "Which smell most instantly takes you back to childhood?\nrain / other / the_sea / cut_grass / sunscreen / a grandparent or relative's house / a_school_classroom / a_family_meal_cooking",
+        "Which childhood toy or object do you remember most fondly?\nbooks / a_ball / a_bicycle / a_video_game / building_blocks / a_stuffed_animal / dolls_or_figures / none_in_particular",
+        "Which part of your childhood do you remember most vividly?\nsummers / moving_home / school_days / none_stands_out / time_with_family / time_with_friends / a_difficult_period / holidays_and_celebrations",
+        "What was your favorite place to hide or be alone as a child?\nmy_bedroom / I did not have one / somewhere_outside / a_tree_or_treehouse / a_closet_or_cupboard / under_a_table_or_bed",
+        "Which family tradition from your childhood do you remember best?\nnone / a_game_night / an_annual_trip / a_holiday_ritual / a_weekend_outing / a_bedtime_routine / a_regular_family_meal",
+        "What is the first thing that comes to mind when you think of your school days?\nother / boredom / a_success / a_teacher / lunch_or_recess / a_particular_friend / a_classroom_or_building / a_moment_of_embarrassment",
+        "Which kind of memory comes back to you most often without trying?\nsad_moments / happy_moments / big_milestones / none_in_particular / embarrassing_moments / ordinary_everyday_scenes",
+        "What has been the biggest turning point in your life so far?\na_loss / moving to a new place / none_yet / a_health_event / a_relationship / a_chance_meeting / becoming_a_parent / a_school_or_career_choice",
+        "Which experience changed you the most as a person?\na_loss / travel / a_failure / a_success / a_hardship / a_relationship / none_stands_out / a_new_responsibility",
+        "Who has shaped who you are the most?\nother / a_friend / a_parent / a_partner / a_sibling / a_grandparent / myself_mostly / a_teacher_or_mentor"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 53,
+      "samples": [
+        "Is there a conversation from years ago you still replay in your head?",
+        "Do you have a clear memory from before you started school?",
+        "Is there a single experience you would call the turning point of your life?",
+        "Did you have an imaginary friend as a child?",
+        "Do you still own something you had as a young child?",
+        "Do you have a childhood memory you are not sure really happened?",
+        "Did you grow up in the same home the whole time?",
+        "Is there a mistake from your teens you still think about?",
+        "Have you ever gone back to visit your old school?",
+        "Do you remember the name of your first teacher?",
+        "Is there a smell that instantly brings back a specific memory for you?",
+        "Do you have a recurring dream that comes from something in your past?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

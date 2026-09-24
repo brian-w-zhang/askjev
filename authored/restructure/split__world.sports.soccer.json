@@ -1,0 +1,85 @@
+{
+  "type": "split",
+  "node": "world.sports.soccer",
+  "n_questions": 237,
+  "clusters": [
+    {
+      "size": 58,
+      "samples": [
+        "Has VAR been good for soccer?",
+        "Is a penalty shootout a fair way to decide a knockout match?",
+        "Is a 1-0 tactical soccer match more enjoyable to watch than a 4-3 shootout?",
+        "What does a soccer referee show a player to send them off?\nred_card / blue_card / green_card / yellow_card",
+        "Does Penalty shoot out goals count for golden boot?",
+        "Do the Winners of the Europa league qualify for the Champions League?",
+        "Can you score off a kickoff in soccer?",
+        "Can a World Cup final go to penalties?",
+        "Is Barcelona on the south coast of spain?",
+        "Do you have to kick the ball forward at kick off?",
+        "Can you pass to the goalie in soccer?",
+        "Can you be offsides on a corner kick?"
+      ],
+      "child": {
+        "key": "rules",
+        "label": "Rules of the game",
+        "description": "Questions about soccer's laws and officiating, such as offside, penalties, kickoffs, cards, VAR, and how matches are decided.",
+        "not_for": "Questions specific to the FIFA World Cup go to World Cup; specific clubs and players go to Clubs & Players.",
+        "examples": [
+          "Can you be offside from a corner kick?",
+          "Has VAR been good for soccer?"
+        ]
+      }
+    },
+    {
+      "size": 136,
+      "samples": [
+        "Is the World Cup the greatest sporting event in the world?",
+        "Which country won the first FIFA World Cup?\nitaly / brazil / uruguay / argentina",
+        "Have any teams played each other twice in the World Cup?",
+        "Does the World Cup final go to penalties?",
+        "Has england won any World Cup in Cricket?",
+        "Did Wales ever qualify for the World Cup?",
+        "Did China ever qualify for FIFA World Cup?",
+        "Are England in the World Cup semi finals?",
+        "Has the US ever gone to the World Cup?",
+        "Has Croatia ever won a World Cup final?",
+        "Have England ever not qualified for the World Cup?",
+        "Has Tunisia ever been in the World Cup?"
+      ],
+      "child": {
+        "key": "world_cup",
+        "label": "World Cup",
+        "description": "Questions about the FIFA World Cup, such as its history, winners, qualification, and which national teams have played in it.",
+        "not_for": "General rules of play go to Rules of the game; clubs and players go to Clubs & Players.",
+        "examples": [
+          "Did China ever qualify for the FIFA World Cup?",
+          "Did Uruguay win the first World Cup?"
+        ]
+      }
+    },
+    {
+      "size": 43,
+      "samples": [
+        "Which tactical style is the most beautiful to watch?\ntiki_taka / catenaccio / gegenpressing / total_football / counterattacking",
+        "How serious a problem is diving and simulation in top-level soccer?\nRare and not really a problem / Occasional and mildly annoying / Common enough to spoil many matches / So widespread it undermines the sport",
+        "What would most people outside North America call the sport?\ncalcio / futbol / soccer / football",
+        "Which national team has the most prestigious history?\nitaly / other / spain / brazil / france / germany / argentina",
+        "Which domestic league is the most entertaining to watch?\nmls / la_liga / ligue_1 / serie_a / bundesliga / premier_league",
+        "Which of these men's national soccer teams is your favorite?\nItaly / Spain / Brazil / France / England / Germany / Uruguay / Portugal / Argentina / Netherlands",
+        "Which of these men's national soccer teams is the greatest?\nItaly / Spain / Brazil / France / England / Germany / Uruguay / Portugal / Argentina / Netherlands",
+        "Which of these men's national soccer teams is the most overrated?\nItaly / Spain / Brazil / France / England / Germany / Uruguay / Portugal / Argentina / Netherlands",
+        "Which of these men's national soccer teams is the most underrated?\nItaly / Spain / Brazil / France / England / Germany / Uruguay / Portugal / Argentina / Netherlands",
+        "Would most adults have heard of \"Association football\"?\n{'topic': 'Association football', 'description': 'Team sport played with a ball'}",
+        "How important is \"Association football\" to understanding sports?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'top",
+        "Would most adults have heard of \"Copa América\"?\n{'topic': 'Copa América', 'description': 'Association football tournament'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

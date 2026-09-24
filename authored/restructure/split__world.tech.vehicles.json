@@ -1,0 +1,127 @@
+{
+  "type": "split",
+  "node": "world.tech.vehicles",
+  "n_questions": 698,
+  "clusters": [
+    {
+      "size": 158,
+      "samples": [
+        "How close are today's driver-assistance systems to driving a car on their own?\nNowhere close; they only help with parking and warnings / They handle lane keeping on highways but need constant supervision / They handle most highway driving but struggle in cities / They can drive most trips with the d",
+        "Which of these would most people name first when asked: \"What might somebody do while driving that would make you think they're probably arrogant?\"\nHonk / Speed / Tailgate / Cut you off / Apply make up / Talk on phone",
+        "Is a manual transmission more fun to drive than an automatic?",
+        "Were airships a dead end in aviation technology?",
+        "Is riding a motorcycle more dangerous than driving a car?",
+        "What are the cylinder-like parts that pump up and down within the engine?\nLeaf Springs / Radiators / ABS / Pistons",
+        "What car manufacturer gave away their patent for the seat-belt in the interest of saving lives?\nFord / Renault / Volvo / Ferrari",
+        "What part of an automobile engine uses lobes to open and close intake and exhaust valves, and allows an air/fuel mixture into the engine?\nDrive shaft / Piston / Camshaft / Crankshaft",
+        "Which Variable Valve Timing technology is used by BMW?\nVVT-iw / MultiAir / VANOS / VVEL",
+        "Which car tire manufacturer is famous for its \"Eagle\" brand of tires, and is the official tire supplier of NASCAR?\nBridgestone / Michelin / Goodyear / Pirelli",
+        "Which of these companies does NOT manufacture motorcycles?\nHonda / Yamaha / Kawasaki / Toyota",
+        "Do most electric cars use a single-speed transmission?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 331,
+      "samples": [
+        "Which type of car body is the best all-round choice?\nsuv / sedan / minivan / hatchback / pickup_truck / station_wagon",
+        "Which of these car models is your favorite?\nHonda Civic / Mini Cooper / Porsche 911 / Ford Model T / Ford Mustang / Jeep Wrangler / Tesla Model 3 / Toyota Corolla / Volkswagen Beetle / Land Rover Defender",
+        "Which of these car models is the greatest?\nHonda Civic / Mini Cooper / Porsche 911 / Ford Model T / Ford Mustang / Jeep Wrangler / Tesla Model 3 / Toyota Corolla / Volkswagen Beetle / Land Rover Defender",
+        "Which of these car models is the most overrated?\nHonda Civic / Mini Cooper / Porsche 911 / Ford Model T / Ford Mustang / Jeep Wrangler / Tesla Model 3 / Toyota Corolla / Volkswagen Beetle / Land Rover Defender",
+        "Which of these car models is the most underrated?\nHonda Civic / Mini Cooper / Porsche 911 / Ford Model T / Ford Mustang / Jeep Wrangler / Tesla Model 3 / Toyota Corolla / Volkswagen Beetle / Land Rover Defender",
+        "Are hybrid cars a better choice than fully electric cars for most drivers?",
+        "Is the Toyota Corolla a better car design than the Volkswagen Beetle?",
+        "Complete the following analogy: Audi is to Volkswagen as Infiniti is to ?\nSubaru / Hyundai / Nissan / Honda",
+        "Jaguar Cars was previously owned by which car manfacturer?\nChrysler / General Motors / Ford / Fiat",
+        "What animal is pictured on the logo of the automobile manufacturer Porsche?\nHorse / Bull / Cheetah / Lion",
+        "What is the fastest road legal car in the world?\nKoenigsegg Agera RS / Hennessy Venom GT / Pagani Huayra BC / Bugatti Veyron Super Sport",
+        "What is the name of Nissan's most popular electric car?\nLeaf / Deer / Roots / Tree"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 55,
+      "samples": [
+        "How much do you experience \"bus\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I expe",
+        "How much do you experience \"bus\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I ex",
+        "How much do you experience \"bus\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I ex",
+        "How much do you experience \"bus\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways I ",
+        "How much do you experience \"bus\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touch ",
+        "How much do you experience \"car\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I expe",
+        "How much do you experience \"car\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I ex",
+        "How much do you experience \"car\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I ex",
+        "How much do you experience \"car\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways I ",
+        "How much do you experience \"car\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touch ",
+        "How much do you experience \"truck\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ex",
+        "How much do you experience \"truck\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I "
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 78,
+      "samples": [
+        "Which of these would most people name first when asked: \"Name something people do to avoid traffic.\"\nWalk / Carpool / Stay home / Leave early / Public transit / Alternate route",
+        "Which of these would most people name first when asked: \"Name a reason why someone might make fun of a car.\"\nOld / Size / Color / Dents / Rusty",
+        "Would most adults have heard of \"Land transport\"?\n{'topic': 'Land transport', 'description': 'Mode of transport'}",
+        "Would most adults have heard of \"Highway\"?\n{'topic': 'Highway', 'description': 'Public road or other public way on land'}",
+        "Would most adults have heard of \"Cycling\"?\n{'topic': 'Cycling', 'description': 'Activity of riding a bicycle'}",
+        "Would most adults have heard of \"Taxi\"?\n{'topic': 'Taxi', 'description': 'Type of vehicle for hire with a driver'}",
+        "Would most adults have heard of \"Filling station\"?\n{'topic': 'Filling station', 'description': 'Facility that sells gasoline and diesel'}",
+        "Would most adults have heard of \"Saddle\"?\n{'topic': 'Saddle', 'description': 'Supportive structure for a rider or load'}",
+        "Would most adults have heard of \"Rail transport\"?\n{'topic': 'Rail transport', 'description': 'Mode of transport'}",
+        "Would most adults have heard of \"High-speed rail\"?\n{'topic': 'High-speed rail', 'description': 'Fastest rail-based transport systems'}",
+        "Would most adults have heard of \"Airplane\"?\n{'topic': 'Airplane', 'description': 'Powered aircraft with wings'}",
+        "Would most adults have heard of \"Airport\"?\n{'topic': 'Airport', 'description': 'Facility with a runway for aircraft'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 76,
+      "samples": [
+        "How important is \"Airplane\" to understanding transportation?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic':",
+        "How important is \"Wing\" to understanding transportation?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Wi",
+        "How important is \"Boat\" to understanding transportation?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Bo",
+        "How important is \"Canoe\" to understanding transportation?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'C",
+        "How important is \"Public transport\" to understanding transportation?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{",
+        "How important is \"Travel\" to understanding transportation?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': '",
+        "How important is \"Freight transport\" to understanding transportation?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n",
+        "How important is \"Cargo\" to understanding transportation?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'C",
+        "How important is \"Land transport\" to understanding transportation?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'t",
+        "How important is \"Passport\" to understanding transportation?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic':",
+        "How important is \"Road transport\" to understanding transportation?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'t",
+        "How important is \"Highway\" to understanding transportation?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': "
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

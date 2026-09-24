@@ -1,0 +1,127 @@
+{
+  "type": "split",
+  "node": "world.nature.weather_climate",
+  "n_questions": 285,
+  "clusters": [
+    {
+      "size": 56,
+      "samples": [
+        "How important is \"Air mass\" to understanding weather and climate?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'to",
+        "How important is \"Atmospheric pressure\" to understanding weather and climate?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of th",
+        "How important is \"Atmospheric science\" to understanding weather and climate?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the",
+        "How important is \"Ozone depletion\" to understanding weather and climate?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the fie",
+        "How important is \"Aurora\" to understanding weather and climate?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topi",
+        "How important is \"Mirage\" to understanding weather and climate?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topi",
+        "How important is \"Rainbow\" to understanding weather and climate?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'top",
+        "How important is \"Sky\" to understanding weather and climate?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic':",
+        "How important is \"Climatology\" to understanding weather and climate?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{",
+        "How important is \"Greenhouse effect\" to understanding weather and climate?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the f",
+        "How important is \"Climate variability and change\" to understanding weather and climate?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining to",
+        "How important is \"El Niño–Southern Oscillation\" to understanding weather and climate?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topi"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 65,
+      "samples": [
+        "How much do you experience \"thunder\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ",
+        "How much do you experience \"thunder\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways ",
+        "How much do you experience \"thunder\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways ",
+        "How much do you experience \"thunder\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main way",
+        "How much do you experience \"thunder\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its to",
+        "How much do you experience \"rain\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I exp",
+        "How much do you experience \"rain\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I e",
+        "How much do you experience \"rain\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I e",
+        "How much do you experience \"rain\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways I",
+        "How much do you experience \"rain\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touch",
+        "How much do you experience \"snow\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I exp",
+        "How much do you experience \"snow\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I e"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 75,
+      "samples": [
+        "Would you say that each of the following is doing a very good, somewhat good, somewhat bad, or very bad job dealing with global climate change? b. the public\nDK/Refused / Very bad job / Very good job / Somewhat bad job / Somewhat good job",
+        "Now I will read a list of some things that have happened in the world recently. For each one,please tell me if you've heard of it or not...the environmental problem of global warming. Have you heard of it or not?\nNo, have not heard of it / Yes, have heard of it",
+        "How much, if anything would you be willing to change about how you live and work to help reduce the effects of global climate change? Would you be willing to make a lot of changes, some changes, only a few changes or no changes at all?\nDK/Refused / Some changes / A lot of changes / No changes at all",
+        "How confident are you that actions taken by the international community will significantly reduce the effects of global climate change – very confident, somewhat confident, not too confident, or not at all confident?\nDK/Refused / Very confident / Not too confident / Somewhat confident / Not at all c",
+        "I’d like your opinion about some possible international concerns. Do you think that global climate change is a major threat, a minor threat or not a threat to your country?\nDK/Refused / Major threat / Minor threat / Not a threat",
+        "Please tell me whether you think the following statements apply to the United Nations or not. The United Nations… g. Promotes action on climate change\nNo / Yes / DK/Refused",
+        "I’d like your opinion about some possible international concerns for your country. Do you think that global climate change is a major threat, a minor threat or not a threat to your country?\nDK/Refused / Major threat / Minor threat / Not a threat",
+        "Which of these would most people name first when asked: \"In summer, name something people like to do under a shady tree.\"\nRead / Sleep/rest / Picnic/drink / Kiss/make love",
+        "I am going to read you a list of possible effects of global climate change. Which one of these effects concerns you most?...Droughts or water shortages, severe weather, like floods or intense storms, long periods of unusually hot weather, rising sea levels\nDK/Refused / Rising sea levels / Long perio",
+        "Please tell me whether you agree or disagree with the following statement: People should be willing to pay higher prices in order to address global climate change?\nAgree / Disagree",
+        "On another topic, in your view, is global climate change a very serious problem, somewhat serious, not too serious, or not a problem?\nVery serious / Not a problem / Not too serious / Somewhat serious",
+        "Do you think actions taken by the international community to address global climate change, such as the Paris climate agreement, will mostly benefit the public’s economy, mostly harm the public’s economy, or have no impact?\nDK/Refused / No impact / Mostly harm / Mostly benefit"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 40,
+      "samples": [
+        "Which kind of weather is the most underrated?\nfog / windy / drizzle / overcast / crisp_cold / thunderstorms",
+        "Which weather event is the most frightening?\ntornado / blizzard / hailstorm / hurricane / sandstorm / lightning_storm",
+        "Which climate would most people call the most pleasant to live in?\ndesert / tropical / subarctic / continental / mediterranean / temperate_oceanic",
+        "How much does high humidity change how hot a warm day feels?\nNo noticeable difference / It feels a little stickier / It feels clearly hotter / It can make a warm day feel dangerous",
+        "Which season has the best weather?\nautumn / spring / summer / winter",
+        "Which of these weather phenomena is your favorite?\nFog / Aurora / Monsoon / Rainbow / Tornado / Snowfall / Hailstorm / Heat wave / Hurricane / Thunderstorm",
+        "Which of these weather phenomena is the greatest?\nFog / Aurora / Monsoon / Rainbow / Tornado / Snowfall / Hailstorm / Heat wave / Hurricane / Thunderstorm",
+        "What city has the most miserable weather all the time?\nYakutsk has the most miserable weather all the time. / Beijing has the most miserable weather all the time. / London has the most miserable weather all the time. / There is no city that has the most miserable weather all the time. / Kuwait has t",
+        "Where does it never ever stop snowing?\nIt is always snowing in Russia. / It is always snowing at the South Pole. / It is always snowing on Mount Everest. / There is no place where it never stops snowing. / It is always snowing in Nagano. / It is always snowing at the North Pole. / It is always snowi",
+        "Which of these would most people name first when asked: \"On a hot day name something a person might do in the nude.\"\nSwim / Sleep / Sun tan / Clean the house",
+        "Which of these would most people name first when asked: \"Name an activity you wouldn't want to do in the rain.\"\nGolf / Walk / Drive / Garden / Picnic / Baseball",
+        "Are weather forecasts more reliable than people give them credit for?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 49,
+      "samples": [
+        "What is the calm center of a hurricane called?\neye / core / front / funnel",
+        "Was the French Quarter affected by Hurricane Katrina?",
+        "Did Hurricane Audrey create a recorded storm surge?",
+        "Does a tornado watch mean there is a tornado?",
+        "Has California ever been hit by a hurricane?",
+        "Has there ever been a tornado in Connecticut?",
+        "Can there be rain and fog at the same time?",
+        "Can you have fog and rain at the same time?",
+        "Has a hurricane ever come up the Chesapeake bay?",
+        "Did the Storming of the Bastille start the French Revolution?",
+        "Can it rain without clouds in the sky?",
+        "Has Tampa Florida ever had a direct hit from a hurricane?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

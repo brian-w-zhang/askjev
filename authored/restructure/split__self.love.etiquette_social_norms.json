@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.love.etiquette_social_norms",
+  "n_questions": 1670,
+  "clusters": [
+    {
+      "size": 1400,
+      "samples": [
+        "How many people would agree: \"After making dinner you should clean up your mess\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Alcoholism is frowned upon\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"An airline doesn't wait for a late passenger\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Approaching someone to sell them something is often frowned upon\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"As long as you show up before closing time it is ok to walk into a shop at the end of their hours\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically",
+        "How many people would agree: \"Bandmates are expected to get along with each other\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Bathroom attendants get plenty of tips from other people so you do not have to tip the attendant\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically ",
+        "How many people would agree: \"Being untidy can be seen as uncaring and disrespectful\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Buying health-related holiday gifts for people you love is OK\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"City vehicles should not expect to park wherever they please\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Dressing nice can make you look good to others\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Dressing up in a Confederate costume will make you look racist\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it"
+      ],
+      "child": {
+        "key": "social_rules_of_thumb",
+        "label": "Social Rules of Thumb",
+        "description": "Questions about how many people would agree with a general rule of thumb about manners, social behavior, or what is expected of people, rated from \"practically no one\" to \"practically everyone\".",
+        "not_for": "Questions asking what the answerer thinks is the polite thing to do in a specific situation (use Everyday Manners).",
+        "examples": [
+          "How many people would agree: \"It is rude to leave a party without saying goodbye\"?",
+          "How many people would agree: \"You should tip your server\"?"
+        ]
+      }
+    },
+    {
+      "size": 270,
+      "samples": [
+        "What should you do if you're running late to meet someone?\ncall_them / message_when_you_arrive / apologize_in_person_only / message_as_soon_as_you_know",
+        "When should you reply to a text from a friend?\nsame_day / within_minutes / within_a_few_hours / whenever_convenient",
+        "How do you prefer to greet someone you've just met?\nhug / nod / wave / handshake / cheek_kiss",
+        "What should a guest bring to a dinner party?\ndessert / flowers / wine_or_drinks / a_dish_to_share / nothing_unless_asked",
+        "What is the right way to thank someone for a gift?\nphone_call / text_message / handwritten_note / thanking_in_person / no_formal_thanks_needed",
+        "What should you do when someone's phone keeps ringing in a quiet place?\nignore_it / give_them_a_look / politely_point_it_out / ask_staff_to_handle_it",
+        "When is it okay to use your phone at the dinner table?\nnever / anytime / only_for_urgent_calls / only_when_everyone_is_on_theirs",
+        "How late can you arrive at a party and still be polite?\na_little_late / exactly_on_time / fashionably_late / anytime_before_it_ends",
+        "Who should hold the door for whom?\nmen_for_women / nobody_needs_to / younger_for_older / whoever_arrives_first",
+        "What should you do if you receive a gift you dislike?\nsay_nothing / thank_them_warmly / tell_them_honestly / thank_them_and_later_exchange_it",
+        "When is it okay to leave a voicemail instead of texting?\nalways_fine / never_just_text / only_for_older_people / only_for_urgent_matters",
+        "What is the right amount of time to stay as a houseguest?\na_weekend / one_night / up_to_a_week / as_long_as_the_host_allows"
+      ],
+      "child": {
+        "key": "everyday_manners",
+        "label": "Everyday Manners",
+        "description": "Questions about the polite thing to do in a specific everyday situation, such as gifts, hosting, greetings, phones, texting, lateness, shoes, bills, or behavior in public.",
+        "not_for": "Ratings of how many people would agree with a stated rule of thumb (use Social Rules of Thumb).",
+        "examples": [
+          "Should you take your shoes off in someone's home?",
+          "Is it rude to leave a text on read?"
+        ]
+      }
+    }
+  ]
+}

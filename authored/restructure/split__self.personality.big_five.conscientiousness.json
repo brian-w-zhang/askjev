@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.personality.big_five.conscientiousness",
+  "n_questions": 179,
+  "clusters": [
+    {
+      "size": 86,
+      "samples": [
+        "How well does this statement describe you: \"I push myself very hard to succeed.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I do too little work.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am always prepared.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I get chores done right away.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I follow a schedule.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am exacting in my work.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I shirk my duties.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I do things according to a plan.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I continue until everything is perfect.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I make plans and stick to them.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I neglect my duties.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I do things in a half-way manner.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well"
+      ],
+      "child": {
+        "key": "drive_self_discipline",
+        "label": "Drive & Self-Discipline",
+        "description": "Questions about getting started on tasks, following through, working hard, procrastinating, and planning to get things done.",
+        "not_for": "Tidiness, attention to detail, caution, and acting or spending on impulse (use Order & Caution).",
+        "examples": [
+          "Do you put off unpleasant tasks?",
+          "Do you follow through on your commitments?"
+        ]
+      }
+    },
+    {
+      "size": 93,
+      "samples": [
+        "How well does this statement describe you: \"I make careless mistakes.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I pay attention to details.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I like order.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I leave my belongings around.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I make a mess of things.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I often forget to put things back in their proper place.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I love order and regularity.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I like to tidy up.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I waste my time.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I leave a mess in my room.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I am sure of my ground.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well",
+        "How well does this statement describe you: \"I misjudge situations.\"\nThis does not describe me at all / This describes me a little / This describes me moderately well / This describes me well / This describes me very well"
+      ],
+      "child": {
+        "key": "order_caution",
+        "label": "Order & Caution",
+        "description": "Questions about keeping things tidy and orderly, paying attention to detail, taking precautions, and thinking before acting or spending versus acting on impulse.",
+        "not_for": "Getting started, working hard, following through, and procrastination (use Drive & Self-Discipline).",
+        "examples": [
+          "Do you keep your belongings tidy?",
+          "Do you often buy things on impulse?"
+        ]
+      }
+    }
+  ]
+}

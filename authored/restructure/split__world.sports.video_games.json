@@ -1,0 +1,55 @@
+{
+  "type": "split",
+  "node": "world.sports.video_games",
+  "n_questions": 922,
+  "clusters": [
+    {
+      "size": 309,
+      "samples": [
+        "Which video game is the greatest of all time?\nother / tetris / minecraft / the_witcher_3 / super_mario_64 / red_dead_redemption_2 / the_legend_of_zelda_breath_of_the_wild",
+        "Which of these video game franchises is your favorite?\nFIFA / Halo / Tetris / Pokemon / Minecraft / Super Mario / Call of Duty / Final Fantasy / Street Fighter / Grand Theft Auto / The Elder Scrolls / The Legend of Zelda",
+        "Which of these video game franchises is the greatest?\nFIFA / Halo / Tetris / Pokemon / Minecraft / Super Mario / Call of Duty / Final Fantasy / Street Fighter / Grand Theft Auto / The Elder Scrolls / The Legend of Zelda",
+        "Which of these video game franchises is the most overrated?\nFIFA / Halo / Tetris / Pokemon / Minecraft / Super Mario / Call of Duty / Final Fantasy / Street Fighter / Grand Theft Auto / The Elder Scrolls / The Legend of Zelda",
+        "Which of these video game franchises is the most underrated?\nFIFA / Halo / Tetris / Pokemon / Minecraft / Super Mario / Call of Duty / Final Fantasy / Street Fighter / Grand Theft Auto / The Elder Scrolls / The Legend of Zelda",
+        "Is Fortnite overrated?",
+        "Are video games an art form?",
+        "Are microtransactions ruining video games?",
+        "Is esports a real sport?",
+        "Which is the better video game?\nAmong Us / Call of Duty 4: Modern Warfare",
+        "Which is the better video game?\nAmong Us / Clash of Clans",
+        "Which is the better video game?\nAmong Us / Counter-Strike"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 613,
+      "samples": [
+        "Which console era had the best games?\nnes / playstation_2 / snes_and_genesis / xbox_360_and_ps3 / current_generation / playstation_and_n64",
+        "Which game franchise would most gamers call the most influential?\nother / pokemon / super_mario / call_of_duty / final_fantasy / grand_theft_auto / the_legend_of_zelda",
+        "How hard is Dark Souls for a first-time player?\nEasy to finish / Challenging, but most players finish / Many players quit before the end / Most players never beat the first major boss",
+        "Does pixel art look better than realistic 3D graphics?",
+        "Gordon Freeman is said to have burnt and destroyed what food in the break room microwave?\nChicken Soup / Pepperoni Pizza / Sub Sandwich / Casserole",
+        "In \"A Hat in Time\", what must Hat Kid collect to finish a level\nA time piece / A heart fragment / A hat / A relic fragment",
+        "In Skylanders Giants, why was Zaps' Wow Pow named \"For Riley\" ?\nAs a reference to a film / As a tribute to a fan who passed away / After a voice actor / After one of the writers of the game",
+        "In Stardew Valley, what is the reward for completing all of the Bulletin Board bundles?\nBus is repaired / Glittering Boulder removed / Additional Friendship points / Greenhouse",
+        "In Terraria, what does the Wall of Flesh not drop upon defeat?\nPicksaw / Pwnhammer / Breaker Blade / Laser Rifle",
+        "In Terraria, which debuff does the ankh charm not provide immunity to?\nCursed / Venom / Bleeding / Slow",
+        "In Touhou: Embodiment of Scarlet Devil, what song plays during Flandre Scarlet's boss fight?\nU.N. Owen Was Her / Septette for the Dead Princess / Flowering Night / Pierrot of the Star-Spangled Banner",
+        "In World of Warcraft lore, who organized the creation of the Paladins?\nSargeras, The Daemon Lord / Alexandros Mograine / Uther the Lightbringer / Alonsus Faol"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "type": "split",
+  "node": "self.personality.humor_style",
+  "n_questions": 159,
+  "clusters": [
+    {
+      "size": 23,
+      "samples": [
+        "Which kind of joke makes you laugh hardest?\nDeadpan, dry wit / Dark or morbid jokes / Wordplay and puns / other / Absurd, surreal humor / Physical comedy and pratfalls / Observations about everyday life",
+        "When a group conversation gets awkward, what do you usually do?\nother / Crack a joke to ease it / Stay quiet and wait / Tease someone playfully / Make fun of yourself",
+        "What role do you usually play when your friends are joking around?\nother / The one roasting others / The one laughing / The one telling the jokes / The one who stays serious / The one others joke about",
+        "Which humor do you use most with people you just met?\nother / Sarcasm / Light, friendly jokes / Jokes at your own expense / None until you know them better",
+        "When something bad happens to you, how do you usually use humor?\nRarely joke about your own troubles / other / Joke about it only much later / Joke so people won't see you are upset / Find the funny side to cope",
+        "What makes a joke fall flat for you most often?\nother / It is too mean / It is too crude / The timing is off / It tries too hard to be clever / It is too predictable",
+        "How do you react when someone makes a joke at your expense?\nTell them it wasn't funny / Shrug it off / Feel hurt but hide it / Fire one back / Laugh along",
+        "Which do you find funnier: a clever one-liner or a long, rambling story that builds up?\none_liner / long_story",
+        "Do you laugh more at jokes that are clever or jokes that are silly?\nsilly / clever",
+        "How often do you use sarcasm in everyday conversation?\nAlmost never / Only with close friends / A few times in most conversations / It is how you talk most of the time",
+        "How dark can a joke get before you stop finding it funny?\nAny joke about death or tragedy puts you off / Mild gallows humor is fine / You enjoy most dark jokes / Almost nothing is too dark for you",
+        "How much do you enjoy puns and wordplay?\nYou groan and wish people would stop / You tolerate them / You smile at a good one / You make them constantly"
+      ],
+      "child": {
+        "key": "humor_habits_tastes",
+        "label": "Humor Habits & Tastes",
+        "description": "Questions about how the answerer uses and enjoys humor, such as teasing, self-deprecating jokes, joking under stress, and preferred kinds of jokes, including self-description statements.",
+        "not_for": "Rating how funny one specific supplied joke is (use Joke Ratings).",
+        "examples": [
+          "Do you use humor to cope with stress?",
+          "Do you prefer clever jokes or silly ones?"
+        ]
+      }
+    },
+    {
+      "size": 36,
+      "samples": [
+        "How often is this statement true of you: \"I usually don't laugh or joke around much with other people.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"If I am feeling depressed, I can usually cheer myself up with humor.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"If someone makes a mistake, I will often tease them about it.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I let people laugh at me or make fun at my expense more than I should.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I don't have to work very hard at making other people laugh-I seem to be a naturally humorous person.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or alway",
+        "How often is this statement true of you: \"Even when I'm by myself, I'm often amused by the absurdities of life.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"People are never offended or hurt by my sense of humor.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"I will often get carried away in putting myself down if it makes my family or friends laugh.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of",
+        "How often is this statement true of you: \"I rarely make other people laugh by telling funny stories about myself.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very often or always true of me",
+        "How often is this statement true of you: \"If I am feeling upset or unhappy I usually try to think of something funny about the situation to make myself feel better.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This i",
+        "How often is this statement true of you: \"When telling jokes or saying funny things, I am usually not very concerned about how other people are taking it.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is very oft",
+        "How often is this statement true of you: \"I often try to make people like or accept me more by saying something funny about my own weaknesses, blunders, or faults.\"\nThis is never or very rarely true of me / This is rarely true of me / This is sometimes true of me / This is often true of me / This is"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 100,
+      "samples": [
+        "How funny is this joke?\nNot funny at all: it falls flat or annoys me / Barely funny: I get it, but there's no real reaction / Mildly amusing: a faint smile / Funny: a genuine laugh / Hilarious: laughing out loud, one of the funniest jokes I know\n{'joke': 'A guy goes into confession and says to the p",
+        "How funny is this joke?\nNot funny at all: it falls flat or annoys me / Barely funny: I get it, but there's no real reaction / Mildly amusing: a faint smile / Funny: a genuine laugh / Hilarious: laughing out loud, one of the funniest jokes I know\n{'joke': 'On the first day of college, the Dean addres",
+        "How funny is this joke?\nNot funny at all: it falls flat or annoys me / Barely funny: I get it, but there's no real reaction / Mildly amusing: a faint smile / Funny: a genuine laugh / Hilarious: laughing out loud, one of the funniest jokes I know\n{'joke': 'One day the first grade teacher was reading ",
+        "How funny is this joke?\nNot funny at all: it falls flat or annoys me / Barely funny: I get it, but there's no real reaction / Mildly amusing: a faint smile / Funny: a genuine laugh / Hilarious: laughing out loud, one of the funniest jokes I know\n{'joke': \"A radio conversation of a US naval ship with",
+        "How funny is this joke?\nNot funny at all: it falls flat or annoys me / Barely funny: I get it, but there's no real reaction / Mildly amusing: a faint smile / Funny: a genuine laugh / Hilarious: laughing out loud, one of the funniest jokes I know\n{'joke': 'Do you believe in life after death? the boss",
+        "How funny is this joke?\nNot funny at all: it falls flat or annoys me / Barely funny: I get it, but there's no real reaction / Mildly amusing: a faint smile / Funny: a genuine laugh / Hilarious: laughing out loud, one of the funniest jokes I know\n{'joke': 'Reaching the end of a job interview, the hum",
+        "How funny is this joke?\nNot funny at all: it falls flat or annoys me / Barely funny: I get it, but there's no real reaction / Mildly amusing: a faint smile / Funny: a genuine laugh / Hilarious: laughing out loud, one of the funniest jokes I know\n{'joke': \"There once was a man and a woman that both g",
+        "How funny is this joke?\nNot funny at all: it falls flat or annoys me / Barely funny: I get it, but there's no real reaction / Mildly amusing: a faint smile / Funny: a genuine laugh / Hilarious: laughing out loud, one of the funniest jokes I know\n{'joke': 'Two Rednecks were seated at the end of a bar",
+        "How funny is this joke?\nNot funny at all: it falls flat or annoys me / Barely funny: I get it, but there's no real reaction / Mildly amusing: a faint smile / Funny: a genuine laugh / Hilarious: laughing out loud, one of the funniest jokes I know\n{'joke': 'Judy was having trouble with her computer, s",
+        "How funny is this joke?\nNot funny at all: it falls flat or annoys me / Barely funny: I get it, but there's no real reaction / Mildly amusing: a faint smile / Funny: a genuine laugh / Hilarious: laughing out loud, one of the funniest jokes I know\n{'joke': 'An explorer in the deepest Amazon suddenly f",
+        "How funny is this joke?\nNot funny at all: it falls flat or annoys me / Barely funny: I get it, but there's no real reaction / Mildly amusing: a faint smile / Funny: a genuine laugh / Hilarious: laughing out loud, one of the funniest jokes I know\n{'joke': 'One Sunday morning William burst into the li",
+        "How funny is this joke?\nNot funny at all: it falls flat or annoys me / Barely funny: I get it, but there's no real reaction / Mildly amusing: a faint smile / Funny: a genuine laugh / Hilarious: laughing out loud, one of the funniest jokes I know\n{'joke': 'What a woman says:\\n\\n\"This place is a mess!"
+      ],
+      "child": {
+        "key": "joke_ratings",
+        "label": "Joke Ratings",
+        "description": "Questions about how funny one specific supplied joke is.",
+        "not_for": "How the answerer uses humor or which kinds of humor they enjoy in general (use Humor Habits & Tastes).",
+        "examples": [
+          "How funny is this joke?",
+          "Does this pun make you laugh?"
+        ]
+      }
+    }
+  ]
+}

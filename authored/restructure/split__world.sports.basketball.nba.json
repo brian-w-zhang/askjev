@@ -1,0 +1,55 @@
+{
+  "type": "split",
+  "node": "world.sports.basketball.nba",
+  "n_questions": 414,
+  "clusters": [
+    {
+      "size": 310,
+      "samples": [
+        "Which NBA franchise would most fans call the most iconic?\nother / chicago_bulls / boston_celtics / new_york_knicks / los_angeles_lakers / golden_state_warriors",
+        "Who is the greatest NBA player of all time?\nother / kobe_bryant / bill_russell / lebron_james / magic_johnson / michael_jordan / kareem_abdul_jabbar",
+        "Which NBA dynasty was the most dominant?\nduncan_spurs / jordan_bulls / curry_warriors / russell_celtics / showtime_lakers / shaq_kobe_lakers",
+        "How much should championship rings count in NBA greatest-of-all-time debates?\nThey barely matter; individual play decides it / They are one factor among many / They are a major factor that often settles close debates / They are the single deciding factor",
+        "Which of these NBA players is your favorite?\nLarry Bird / Tim Duncan / Kobe Bryant / Bill Russell / Kevin Durant / LeBron James / Magic Johnson / Stephen Curry / Michael Jordan / Shaquille O'Neal / Wilt Chamberlain / Kareem Abdul-Jabbar",
+        "Which of these NBA players is the greatest?\nLarry Bird / Tim Duncan / Kobe Bryant / Bill Russell / Kevin Durant / LeBron James / Magic Johnson / Stephen Curry / Michael Jordan / Shaquille O'Neal / Wilt Chamberlain / Kareem Abdul-Jabbar",
+        "Which of these NBA players is the most overrated?\nLarry Bird / Tim Duncan / Kobe Bryant / Bill Russell / Kevin Durant / LeBron James / Magic Johnson / Stephen Curry / Michael Jordan / Shaquille O'Neal / Wilt Chamberlain / Kareem Abdul-Jabbar",
+        "Which of these NBA players is the most underrated?\nLarry Bird / Tim Duncan / Kobe Bryant / Bill Russell / Kevin Durant / LeBron James / Magic Johnson / Stephen Curry / Michael Jordan / Shaquille O'Neal / Wilt Chamberlain / Kareem Abdul-Jabbar",
+        "Is LeBron James overrated?",
+        "Did Stephen Curry change the NBA more than any other player of his generation?",
+        "Was the NBA of the 1990s better than today's NBA?",
+        "Who is the greater basketball player?\nBill Russell / Allen Iverson"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 104,
+      "samples": [
+        "Which NBA team has the best-looking jerseys?\nother / miami_heat / chicago_bulls / boston_celtics / los_angeles_lakers / golden_state_warriors",
+        "Is the NBA regular season too long?",
+        "Which team did Michael Jordan win all of his NBA championships with?\nchicago_bulls / new_york_knicks / los_angeles_lakers / washington_wizards",
+        "Which team originally drafted Kobe Bryant?\nnew_jersey_nets / charlotte_hornets / los_angeles_lakers / philadelphia_76ers",
+        "Did Michael Jordan play for the Chicago Bulls?",
+        "Did Michael Jordan play for the San Antonio Spurs?",
+        "Did Michael Jordan play for the Utah Jazz?",
+        "Did Michael Jordan play for the Washington Wizards?",
+        "Did Kobe Bryant play for the Denver Nuggets?",
+        "Did Kobe Bryant play for the Houston Rockets?",
+        "Did Kobe Bryant play for the Los Angeles Lakers?",
+        "Did Kobe Bryant play for the San Antonio Spurs?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

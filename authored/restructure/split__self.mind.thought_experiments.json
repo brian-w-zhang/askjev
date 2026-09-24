@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.mind.thought_experiments",
+  "n_questions": 238,
+  "clusters": [
+    {
+      "size": 72,
+      "samples": [
+        "If every plank of a ship is replaced one by one, and the old planks are rebuilt into a second ship, which is the original?\nboth / neither / the_rebuilt_ship / the_repaired_ship",
+        "In Newcomb's problem, a near-perfect predictor has put a fortune in a closed box only if it predicted you'd take just that box. Do you take one box or both?\nunsure / one_box / both_boxes",
+        "If a perfect copy of you were made and both of you woke up, which one would be you?\nboth / neither / the_copy / the_original",
+        "In the simulation argument, which is most likely to be true?\nthe_argument_is_flawed / we_live_in_a_simulation / civilizations_never_reach_that_level / advanced_civilizations_choose_not_to_simulate",
+        "A scientist who knows every physical fact about color but has only lived in black and white sees red for the first time. Does she learn something new?\nunsure / yes_something_new / no_she_already_knew_it / she_gains_a_skill_not_a_fact",
+        "If your twin on a distant planet were identical in every physical way but used a word to mean something different, which view fits?\nunsure / meaning_is_in_the_head / meaning_depends_on_the_world",
+        "In the 'veil of ignorance', you design a society without knowing who you'll be in it. What would you prioritize?\nreward_effort / maximize_freedom / maximize_the_average / protect_the_worst_off",
+        "If an exact duplicate of Earth existed far away, would your duplicate there be you?\nyes / unsure / no_a_different_person",
+        "How much of the Ship of Theseus has to be replaced before it's a different ship?\nA single plank / About half its planks / All but one plank / Even replacing every plank keeps it the same ship",
+        "How confident are you that you're not a brain in a vat right now?\nNot confident at all / Somewhat doubtful / Fairly confident / Completely confident",
+        "How much does it bother you that the rebuilt Ship of Theseus puzzle has no clear answer?\nNot at all / A little / Somewhat / It really bothers me",
+        "In Newcomb's problem, how confident are you in your choice between one box and two?\nI have no idea / I lean one way but could easily switch / I'm fairly sure / I'm certain and the other side is clearly wrong"
+      ],
+      "child": {
+        "key": "classic_puzzles",
+        "label": "Classic Puzzles & Paradoxes",
+        "description": "Questions about classic philosophical puzzles about objects, choices, and knowledge, such as the Ship of Theseus, the sorites heap, Newcomb's problem, the Chinese room, dream tests, and the veil of ignorance.",
+        "not_for": "Scenarios about your own identity, memories, or experiences, such as teleporters, mind uploads, memory erasure, or experience machines (use Mind & Identity Scenarios).",
+        "examples": [
+          "In Newcomb's problem, do you take one box?",
+          "Is a ship with every plank replaced the same ship?"
+        ]
+      }
+    },
+    {
+      "size": 166,
+      "samples": [
+        "If you had a pill that erased a painful memory, but also the lessons it taught you, would you take it?\ntake_it / refuse_it / depends_on_the_memory",
+        "If you lost all your memories but kept your personality, would you still be the same person?\nno / yes / partly",
+        "If a machine could guarantee your happiness but you'd never achieve anything real, would that be a good life?\npartly_good / no_achievement_matters / yes_happiness_is_enough",
+        "If you could plug into a machine that gives you a perfect simulated life, but you'd forget it was simulated, would you plug in?\nnever_plug_in / plug_in_for_life / plug_in_for_a_while",
+        "If you split into two identical people, each with half of your brain, which would be you?\nboth / neither / the_left_half / the_right_half",
+        "If a teleporter scans you, destroys your body, and rebuilds an exact copy on Mars, what happens to you?\nboth_are_me / i_travel_to_mars / unclear_there_is_no_fact / i_die_and_a_copy_lives_on",
+        "If you learned you were a brain in a vat being fed perfect experiences, what would change?\ni_would_want_out / i_would_want_to_stay / everything_would_feel_meaningless / nothing_my_life_is_still_real_to_me",
+        "If your mind were uploaded to a computer while your body died, would the upload be you?\nno / yes / unsure / a_new_person_with_my_memories",
+        "If you gradually replaced your neurons with silicon chips one at a time, when would you stop being you?\nnever / right_at_the_end / after_the_first_chip / at_some_point_in_the_middle",
+        "If a demon could make you doubt everything except that you're thinking, what could you still be sure of?\nnothing_at_all / my_own_feelings / only_that_i_exist / basic_logic_and_math",
+        "If you woke up in a world where everyone else is a perfect actor with no inner life, how would you tell?\ni_could_tell / it_wouldnt_matter / i_could_never_tell",
+        "If time travel let you meet your younger self, what would you do?\navoid_them / just_observe / give_them_advice / warn_them_about_a_mistake"
+      ],
+      "child": {
+        "key": "mind_identity_scenarios",
+        "label": "Mind & Identity Scenarios",
+        "description": "Questions about imagined scenarios that change your own mind, memories, body, or experiences, such as teleporters, mind uploads, memory-erasing pills, experience machines, and living other lives.",
+        "not_for": "Classic puzzles about objects, predictors, knowledge, or society such as the Ship of Theseus or Newcomb's problem (use Classic Puzzles & Paradoxes).",
+        "examples": [
+          "Would you plug into an experience machine?",
+          "Is an uploaded copy of your mind still you?"
+        ]
+      }
+    }
+  ]
+}

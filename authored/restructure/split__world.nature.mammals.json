@@ -1,0 +1,127 @@
+{
+  "type": "split",
+  "node": "world.nature.mammals",
+  "n_questions": 925,
+  "clusters": [
+    {
+      "size": 156,
+      "samples": [
+        "How dangerous is a hippopotamus to people who get close to it?\nHarmless / Only dangerous if cornered / Often aggressive and able to kill / One of the deadliest large animals in Africa",
+        "Are giant pandas overrated as an animal?",
+        "Are dolphins smarter than chimpanzees?",
+        "Are wolves more beautiful than lions?",
+        "Which of these mammals lays eggs?\nkoala / kangaroo / platypus / armadillo",
+        "Is a bat a mammal?",
+        "Is a whale a fish?",
+        "Is a wolverine the same as a Badger?",
+        "Are pumas cougars and mountain lions the same animal?",
+        "Is there such a thing as a Coywolf?",
+        "Do guinea pigs come from papua new guinea?",
+        "Is a cougar and a mountain lion the same thing?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 308,
+      "samples": [
+        "Which wild mammal would most people call the cutest?\nkoala / quokka / red_panda / sea_otter / fennec_fox / baby_elephant",
+        "Which wild mammal is the most intelligent besides humans?\norca / other / gorilla / elephant / orangutan / chimpanzee / bottlenose_dolphin",
+        "Which big cat is the most impressive predator?\nlion / tiger / jaguar / cheetah / leopard / snow_leopard",
+        "Who would win a fight between a grizzly bear and a silverback gorilla?\ngrizzly_bear / silverback_gorilla",
+        "Which of these wild mammals is the greatest?\nLion / Wolf / Tiger / Cheetah / Giraffe / Gorilla / Elephant / Blue whale / Chimpanzee / Giant panda / Grizzly bear / Bottlenose dolphin",
+        "Which of these wild mammals is the most underrated?\nLion / Wolf / Tiger / Cheetah / Giraffe / Gorilla / Elephant / Blue whale / Chimpanzee / Giant panda / Grizzly bear / Bottlenose dolphin",
+        "Which of these wild mammals is your favorite?\nLion / Wolf / Tiger / Cheetah / Giraffe / Gorilla / Elephant / Blue whale / Chimpanzee / Giant panda / Grizzly bear / Bottlenose dolphin",
+        "Which of these wild mammals is the most overrated?\nLion / Wolf / Tiger / Cheetah / Giraffe / Gorilla / Elephant / Blue whale / Chimpanzee / Giant panda / Grizzly bear / Bottlenose dolphin",
+        "Which animal do you like more?\nCheetah / Northern giraffe",
+        "Which animal do you like more?\nGiant panda / Eurasian badger",
+        "Which animal do you like more?\nGrey wolf / Eurasian badger",
+        "Which animal do you like more?\nHouse mouse / Eurasian badger"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 158,
+      "samples": [
+        "Would most adults have heard of \"Sirenia\"?\n{'topic': 'Sirenia', 'description': 'Order of aquatic herbivorous mammals'}",
+        "Would most adults have heard of \"Vampire bat\"?\n{'topic': 'Vampire bat', 'description': 'Subfamily of bats'}",
+        "Would most adults have heard of \"Polar bear\"?\n{'topic': 'Polar bear', 'description': 'Species of bear native to the Arctic'}",
+        "Would most adults have heard of \"Fox\"?\n{'topic': 'Fox', 'description': 'Group of carnivorous mammals'}",
+        "Would most adults have heard of \"Cheetah\"?\n{'topic': 'Cheetah', 'description': 'Large feline of the genus Acinonyx'}",
+        "Would most adults have heard of \"Lynx\"?\n{'topic': 'Lynx', 'description': 'Genus of medium-sized wild cats'}",
+        "Would most adults have heard of \"Mustelidae\"?\n{'topic': 'Mustelidae', 'description': 'Family of mammals'}",
+        "Would most adults have heard of \"Sea otter\"?\n{'topic': 'Sea otter', 'description': 'Species of marine mammal'}",
+        "Would most adults have heard of \"Skunk\"?\n{'topic': 'Skunk', 'description': 'Common name of mammals'}",
+        "Would most adults have heard of \"Gaur\"?\n{'topic': 'Gaur', 'description': 'Largest species of the bovid family'}",
+        "Would most adults have heard of \"Water buffalo\"?\n{'topic': 'Water buffalo', 'description': 'Species of large bovine'}",
+        "Would most adults have heard of \"Bactrian camel\"?\n{'topic': 'Bactrian camel', 'description': 'Species of mammal of Asia'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 145,
+      "samples": [
+        "How much do you experience \"dog\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I expe",
+        "How much do you experience \"dog\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I ex",
+        "How much do you experience \"dog\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I ex",
+        "How much do you experience \"dog\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways I ",
+        "How much do you experience \"dog\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touch ",
+        "How much do you experience \"cat\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I expe",
+        "How much do you experience \"cat\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I ex",
+        "How much do you experience \"cat\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I ex",
+        "How much do you experience \"cat\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways I ",
+        "How much do you experience \"cat\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touch ",
+        "How much do you experience \"horse\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ex",
+        "How much do you experience \"horse\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I "
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 158,
+      "samples": [
+        "How important is \"Aardvark\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Aardv",
+        "How important is \"Armadillo\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Arma",
+        "How important is \"Hyrax\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Hyrax', ",
+        "How important is \"Pangolin\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Pango",
+        "How important is \"Sirenia\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Sireni",
+        "How important is \"Bat\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Bat', 'des",
+        "How important is \"Megabat\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Megaba",
+        "How important is \"Microbat\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Micro",
+        "How important is \"Pteropus\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Ptero",
+        "How important is \"Vampire bat\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Va",
+        "How important is \"Carnivora\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Carn",
+        "How important is \"Bear\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Bear', 'd"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "type": "split",
+  "node": "world.health.human_body",
+  "n_questions": 456,
+  "clusters": [
+    {
+      "size": 46,
+      "samples": [
+        "Is smell the most underrated human sense?",
+        "How much do you experience \"eye\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I expe",
+        "How much do you experience \"eye\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I ex",
+        "How much do you experience \"eye\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I ex",
+        "How much do you experience \"eye\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways I ",
+        "How much do you experience \"eye\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touch ",
+        "How much do you experience \"sweat\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ex",
+        "How much do you experience \"sweat\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I ",
+        "How much do you experience \"sweat\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I ",
+        "How much do you experience \"sweat\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways ",
+        "How much do you experience \"sweat\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touc",
+        "How much do you experience \"heartbeat\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways "
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 21,
+      "samples": [
+        "Paths from the cerebral cortex to the spinal cord are called the corticospinal tracts?",
+        "Is guillain barre syndrome a lower motor neuron disease?",
+        "Is the limbic system the oldest part of the brain?",
+        "Is the cerebrum and the cerebral cortex the same?",
+        "Is the basal ganglia part of the brain stem?",
+        "Is the spinal cord part of the brain?",
+        "Is the limbic system part of the cerebral cortex?",
+        "Is a tract part of the Central nervous system?",
+        "In most cases does als affect the brain?",
+        "Is the amygdala part of the sympathetic nervous system?",
+        "Is the cerebellum and cerebral cortex the same thing?",
+        "Is the hippocampus located in the limbic system?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 81,
+      "samples": [
+        "Americans are taller on average than which other places?\nAmericans are taller than Canadians. / UK. / Finland. / Americans are taller on average than the Dutch. / People in the US are on average taller than Europeans. / The Netherlands. / Americans are taller than Scandinavians. / Americans are tall",
+        "When women live together, what happens to their menstrual cycles?\nNothing in particular happens to their menstrual cycles. / Their periods will start at the same time. / They will have their menstrual cycles at the same time. / Their menstrual cycles will sync.",
+        "What happens if you cross your eyes for too long?\nIf you cross your eyes for too long, you will permanently damage them. / If you cross your eyes for too long, your eyes might feel fatigued. / If you cross your eyes for too long, they will get stuck that way. / If you cross your eyes for too long, t",
+        "Do fingerprints form before birth?",
+        "Brits are taller on average than which other places?\nBrits are taller on average than people in India. / The Dutch. / Brits are taller on average than people in the Netherlands. / Brits are taller than the Dutch. / Brits are taller than Germans. / Brits are taller than people in Sweden.",
+        "Do you need to fast for Random glucose test?",
+        "Is electrode potential the same as reduction potential?",
+        "Is it normal for guys to dribble after peeing?",
+        "Can you see Alpha Centauri without a telescope?",
+        "Can you blink one eye at a time?",
+        "Can a person have both female and male parts?",
+        "Was Brown Eyed Girl originally Brown skinned Girl?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 98,
+      "samples": [
+        "How much can an adult's sense of taste change over a lifetime?\nNot at all; taste is fixed by adulthood / Slightly, mostly for a few foods / Noticeably; many adults come to like foods they once hated / Dramatically; taste keeps reshaping throughout life",
+        "Would most adults have heard of \"Antibody\"?\n{'topic': 'Antibody', 'description': \"Protein(s) forming a major part of an organism's immune system\"}",
+        "Would most adults have heard of \"Endocrine system\"?\n{'topic': 'Endocrine system', 'description': 'Hormone-producing glands of a body'}",
+        "Would most adults have heard of \"Adrenal gland\"?\n{'topic': 'Adrenal gland', 'description': 'Endocrine gland'}",
+        "Would most adults have heard of \"Thyroid\"?\n{'topic': 'Thyroid', 'description': 'Endocrine gland in the neck'}",
+        "Would most adults have heard of \"Gland\"?\n{'topic': 'Gland', 'description': 'Type of animal organ'}",
+        "Would most adults have heard of \"Abdomen\"?\n{'topic': 'Abdomen', 'description': 'Part of the body between the chest and pelvis'}",
+        "Would most adults have heard of \"Head\"?\n{'topic': 'Head', 'description': 'Cephalic part of an animal'}",
+        "Would most adults have heard of \"Thorax\"?\n{'topic': 'Thorax', 'description': \"Frontal part of an animal's body, between its head and abdomen\"}",
+        "Would most adults have heard of \"Venom\"?\n{'topic': 'Venom', 'description': 'Toxin secreted by an animal'}",
+        "Would most adults have heard of \"Artery\"?\n{'topic': 'Artery', 'description': 'Blood vessels that carry blood away from the heart'}",
+        "Would most adults have heard of \"Red blood cell\"?\n{'topic': 'Red blood cell', 'description': 'Oxygen-delivering blood cell and the most common type of blood cell'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 113,
+      "samples": [
+        "Which human organ is the most impressive?\neyes / skin / brain / heart / liver / lungs / kidneys",
+        "Which of these organs is your favorite?\neyes / skin / brain / heart / liver / lungs / kidneys / stomach / pancreas / intestines",
+        "Which of these organs is the greatest?\neyes / skin / brain / heart / liver / lungs / kidneys / stomach / pancreas / intestines",
+        "Which of these organs is the most underrated?\neyes / skin / brain / heart / liver / lungs / kidneys / stomach / pancreas / intestines",
+        "Is the heart a muscle?",
+        "Is blood inside the body blue until it meets oxygen?",
+        "Is the femur the longest bone in the human body?",
+        "Is the human body's ability to heal itself underrated?",
+        "Is the immune system the most complex system in the human body?",
+        "Can muscle turn into fat if you don't exercise?\nNo, muscle and fat are entirely different tissues. / Yes, muscle turns into fat if you don't exercise.",
+        "Can the sex of a baby be determined by the fetal heart rate?\nNo, the fetal heart rate does not vary with the sex of the baby. / Yes, if the fetal heart rate is below 140 beats per minute, the baby is a boy. / Yes, boys and girls have different fetal heart rates. / Yes, if the fetal heart rate is abo",
+        "Can the human liver regrow after part of it is removed?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 97,
+      "samples": [
+        "How important is \"Endocrine system\" to understanding anatomy?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic'",
+        "How important is \"Adrenal gland\" to understanding anatomy?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': '",
+        "How important is \"Thyroid\" to understanding anatomy?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Thyroi",
+        "How important is \"Gland\" to understanding anatomy?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Gland', ",
+        "How important is \"Antibody\" to understanding anatomy?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Antib",
+        "How important is \"Abdomen\" to understanding anatomy?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Abdome",
+        "How important is \"Head\" to understanding anatomy?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Head', 'd",
+        "How important is \"Thorax\" to understanding anatomy?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Thorax'",
+        "How important is \"Venom\" to understanding anatomy?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Venom', ",
+        "How important is \"Artery\" to understanding anatomy?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Artery'",
+        "How important is \"Red blood cell\" to understanding anatomy?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': ",
+        "How important is \"White blood cell\" to understanding anatomy?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic'"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

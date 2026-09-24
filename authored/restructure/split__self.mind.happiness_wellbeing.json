@@ -1,0 +1,55 @@
+{
+  "type": "split",
+  "node": "self.mind.happiness_wellbeing",
+  "n_questions": 160,
+  "clusters": [
+    {
+      "size": 46,
+      "samples": [
+        "Does wanting less make people happier?",
+        "Is happiness a choice?\nfully / partly / no_it_happens_to_you",
+        "Is chasing happiness a good goal in itself?\nyes / only_indirectly / no_it_makes_you_less_happy",
+        "How much can a person be happy alone, without close relationships?\nNot at all / Only a little / Moderately / Fully",
+        "Would a much higher income make you noticeably happier?",
+        "Is happiness mostly a matter of choice?",
+        "Do experiences bring more happiness than possessions?",
+        "Can you be happy without being successful?",
+        "Is it possible to be too happy?",
+        "Is a simple life the happiest kind?",
+        "Are people who help others happier?",
+        "Is suffering necessary to appreciate happiness?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 114,
+      "samples": [
+        "What is the biggest obstacle to happiness for most people?\nloneliness / poor_health / money_worries / lack_of_purpose / comparing_to_others",
+        "What role should gratitude play in a happy life?\nnone / helpful / essential / overrated",
+        "Which view of money and happiness is closest to yours?\nno / yes / up_to_a_point / only_if_spent_on_others_or_experiences",
+        "If forced to choose, which life would you pick?\nhappy_but_unremarkable / meaningful_but_often_stressful",
+        "What contributes most to a happy life?\nmoney / health / freedom / purpose / gratitude / relationships",
+        "Which should you spend money on for the most happiness?\nthings / experiences / other_people / saving_for_security / time_saving_services",
+        "What is the secret to contentment?\nno_secret / wanting_less / achieving_more / being_grateful / being_with_loved_ones",
+        "Which matters more for a good life: pleasure or achievement?\npleasure / achievement / both_equally",
+        "What does a good life mostly consist of?\nfeeling_good / being_a_good_person / getting_what_you_want / loving_and_being_loved / reaching_your_potential",
+        "Which would make you happier?\na_big_raise / better_health / a_new_close_friend / an_extra_day_off_each_week",
+        "Which person is living the better life?\ncant_compare / a_content_person_with_simple_goals / a_restless_person_achieving_great_things",
+        "Which is more important for happiness: what happens to you or how you respond?\nboth_equally / what_happens / how_you_respond"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

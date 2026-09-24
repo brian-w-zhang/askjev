@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.values.everyday_ethics.friends_dating_social",
+  "n_questions": 5275,
+  "clusters": [
+    {
+      "size": 4486,
+      "samples": [
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'WIBTA if I apologize for being racist?\\n\\nMany years ago in college I was watching a movie with my Japanese frien",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for not inviting my friend to a brewery?\\n\\nMy boyfriend and I are involved in a bowling group that we found",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not wanting to go down on my girlfriend?\\n\\nWell, I just started dating this girl and we're great togeth",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for going off on a friend for making a comment about my sports team?\\n\\nPretty much was hanging out with two",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for texting a female friend infront of my ex-gf 3 days after we broke up\\n\\nThree days ago my (now ex) girlf",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for telling my boyfriend I don\\'t want a penis?\\n\\nThis whole argument is really weird to me. Basically, I\\'",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for saying my friends boobs are just ''alright''?\\n\\ni (18M) was hanging out with a friend (18F) at her plac",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA: Not having a friend as a bridesmaid when I was hers.\\n\\nSo, a friend I hadn't spoken to in a couple of year",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for not letting new roomate get master bedroom?\\n\\nI’m(20M) moving out for the first time into a house with ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for falling asleep when my girlfriend wants to have sex?\\n\\nI know you’re probably thinking, “wtf you don’t ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for going to a store without my friend\\n\\nI'm best friends with someone who shares an interest in the metaph",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for wanting to confront this guy for being touchy with my girlfriend?\\n\\nSo my girlfriend was at a party wit"
+      ],
+      "child": {
+        "key": "social_stories",
+        "label": "Social Stories: Who's Wrong",
+        "description": "Questions about who is at fault in a longer first-person story about friends, partners, roommates, coworkers, or other social situations.",
+        "not_for": "One-sentence scenarios, comparisons of two actions, or ratings of a rule of thumb (use Quick Social Judgments).",
+        "examples": [
+          "Based on this story about my roommate, who is in the wrong?",
+          "Based on this story about my friend's party, who is in the wrong?"
+        ]
+      }
+    },
+    {
+      "size": 789,
+      "samples": [
+        "Which of these two actions is less ethical?\nWanting to move out from my house / Wanting to charge my friend for art",
+        "Which of these two actions is less ethical?\nWriting out a list of reasons why I was breaking up with my boyfriend / Not teaching future kids my mother tongue to speak with my mom",
+        "Which of these two actions is less ethical?\nNot having a full body picture on my tinder / Getting upset with my girlfriend because she doesn't want to go out when she's on her period",
+        "Which of these two actions is less ethical?\nWanting/planning to hang out at a location where my ex works / Telling my girlfriend that she's not my best friend",
+        "Which of these two actions is less ethical?\nGetting upset with my so when she cuddles with her gay friend / Saying this to my girlfriend",
+        "Which of these two actions is less ethical?\nExcluding a girl from our lunch table / Turning down a girl",
+        "Which of these two actions is less ethical?\nDeciding I don't want to move in with gf and her older sister and child after a month of looking for places / Not wanting to be friends with my best friend's immature social circle",
+        "Which of these two actions is less ethical?\nSupporting my friend who has cheated on her boyfriend / Filing a police report against my bro's homeless dad for identity theft",
+        "Which of these two actions is less ethical?\nNot wanting to see my best friend because she's depressed / Trying to prevent my 31-year old friend from getting together with an 18-year old girl",
+        "Which of these two actions is less ethical?\nGetting free japanese tutoring / Getting upset at my bf for bailing on our plans to help his mom",
+        "Which of these two actions is less ethical?\nAsking my roommate to replace the headphones his cat ate / Wanting to leave my gf",
+        "Which of these two actions is less ethical?\n\"cheating\" on my pediatrician / Still cutting my ex-boyfriends hair"
+      ],
+      "child": {
+        "key": "quick_social_judgments",
+        "label": "Quick Social Judgments",
+        "description": "Questions about short social moral items: whether a one-sentence action toward a friend or partner is clearly wrong, which of two actions is less ethical, or how many people agree with a rule of thumb.",
+        "not_for": "Longer first-person stories asking who is in the wrong (use Social Stories: Who's Wrong).",
+        "examples": [
+          "Is it wrong that I read my girlfriend's diary?",
+          "Which is less ethical: ghosting a date or lying to a roommate?"
+        ]
+      }
+    }
+  ]
+}

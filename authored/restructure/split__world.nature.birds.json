@@ -1,0 +1,103 @@
+{
+  "type": "split",
+  "node": "world.nature.birds",
+  "n_questions": 377,
+  "clusters": [
+    {
+      "size": 114,
+      "samples": [
+        "How important is \"Eagle\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Eagle', ",
+        "How important is \"Seabird\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Seabir",
+        "How important is \"Bird of prey\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'B",
+        "How important is \"Palaeognathae\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': '",
+        "How important is \"Archaeopteryx\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': '",
+        "How important is \"Accipiter\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Acci",
+        "How important is \"Golden eagle\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'G",
+        "How important is \"Falcon\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Falcon'",
+        "How important is \"Peregrine falcon\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic'",
+        "How important is \"New World vulture\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic",
+        "How important is \"Old World vulture\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic",
+        "How important is \"Osprey\" to understanding zoology?\nA minor detail that most overviews of the field skip / Worth a sentence in an overview of the field / Deserves its own paragraph in an overview of the field / A central topic of the field / One of the defining topics of the field\n{'topic': 'Osprey'"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 44,
+      "samples": [
+        "Which bird would most people call the most majestic?\nswan / peacock / flamingo / albatross / snowy_owl / bald_eagle",
+        "How intelligent are crows compared with other animals?\nNot notably smart / Smart for a bird / They match a young child on some puzzle tasks / Among the smartest animals on Earth",
+        "Which bird is the most intelligent?\nkea / crow / raven / magpie / pigeon / african_grey_parrot",
+        "Which bird has the most beautiful song?\ncanary / lyrebird / blackbird / nightingale / song_thrush / wood_thrush",
+        "Which bird of prey is the most impressive?\nosprey / bald_eagle / harpy_eagle / golden_eagle / great_horned_owl / peregrine_falcon",
+        "Which bird has the most beautiful plumage?\npeacock / flamingo / mandarin_duck / scarlet_macaw / golden_pheasant / resplendent_quetzal",
+        "Which of these birds is your favorite?\nOwl / Crow / Swan / Parrot / Pigeon / Peacock / Penguin / Flamingo / Albatross / Bald eagle / Hummingbird / Peregrine falcon",
+        "Which of these birds is the greatest?\nOwl / Crow / Swan / Parrot / Pigeon / Peacock / Penguin / Flamingo / Albatross / Bald eagle / Hummingbird / Peregrine falcon",
+        "Which of these birds is the most overrated?\nOwl / Crow / Swan / Parrot / Pigeon / Peacock / Penguin / Flamingo / Albatross / Bald eagle / Hummingbird / Peregrine falcon",
+        "Which of these birds is the most underrated?\nOwl / Crow / Swan / Parrot / Pigeon / Peacock / Penguin / Flamingo / Albatross / Bald eagle / Hummingbird / Peregrine falcon",
+        "Are pigeons underrated birds?",
+        "Are flamingos the most striking-looking bird?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 105,
+      "samples": [
+        "How much do you experience \"owl\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I expe",
+        "How much do you experience \"owl\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I ex",
+        "How much do you experience \"owl\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I ex",
+        "How much do you experience \"owl\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways I ",
+        "How much do you experience \"owl\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its touch ",
+        "How much do you experience \"parrot\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I e",
+        "How much do you experience \"parrot\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I",
+        "How much do you experience \"parrot\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I",
+        "How much do you experience \"parrot\" by smelling?\nNot at all: smelling plays no part in experiencing it / Slightly: its smell comes up only now and then, as a minor detail / Moderately: its smell is one noticeable part of experiencing it, alongside others / Strongly: its smell is one of the main ways",
+        "How much do you experience \"parrot\" by feeling through touch?\nNot at all: feeling through touch plays no part in experiencing it / Slightly: its touch comes up only now and then, as a minor detail / Moderately: its touch is one noticeable part of experiencing it, alongside others / Strongly: its tou",
+        "How much do you experience \"crow\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I exp",
+        "How much do you experience \"crow\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I e"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 114,
+      "samples": [
+        "Would most adults have heard of \"Swallow\"?\n{'topic': 'Swallow', 'description': 'Family of songbirds'}",
+        "Would most adults have heard of \"Eagle\"?\n{'topic': 'Eagle', 'description': 'Large bird of prey'}",
+        "Would most adults have heard of \"Antbird\"?\n{'topic': 'Antbird', 'description': 'Passerine bird family found across subtropical and tropical Central and South America'}",
+        "Would most adults have heard of \"Frigatebird\"?\n{'topic': 'Frigatebird', 'description': 'Family of seabirds (Fregatidae)'}",
+        "Would most adults have heard of \"Stork\"?\n{'topic': 'Stork', 'description': 'Type of wading bird'}",
+        "Would most adults have heard of \"Woodpecker\"?\n{'topic': 'Woodpecker', 'description': 'Family of birds'}",
+        "Would most adults have heard of \"Budgerigar\"?\n{'topic': 'Budgerigar', 'description': 'Small, long-tailed, seed-eating parakeet'}",
+        "Would most adults have heard of \"Moa\"?\n{'topic': 'Moa', 'description': 'Extinct order of birds'}",
+        "Would most adults have heard of \"Eurasian eagle-owl\"?\n{'topic': 'Eurasian eagle-owl', 'description': 'Species of owl'}",
+        "Would most adults have heard of \"Golden eagle\"?\n{'topic': 'Golden eagle', 'description': 'Species of eagle'}",
+        "Would most adults have heard of \"Goose\"?\n{'topic': 'Goose', 'description': 'Common name for a group of waterfowl'}",
+        "Would most adults have heard of \"Auk\"?\n{'topic': 'Auk', 'description': 'Family of birds'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

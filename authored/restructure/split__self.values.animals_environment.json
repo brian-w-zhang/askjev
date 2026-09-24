@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.values.animals_environment",
+  "n_questions": 164,
+  "clusters": [
+    {
+      "size": 42,
+      "samples": [
+        "Do fish deserve the same moral consideration as mammals?\nless / none / same",
+        "What is your moral stance on eating meat?\nCompletely acceptable / other / Wrong / Acceptable but people should eat less / Acceptable if animals are raised humanely",
+        "Is testing medicines on animals acceptable?\nNo, never / Yes, human health comes first / Only when no alternative exists",
+        "Is testing cosmetics on animals acceptable?\nno / yes / only_with_minimal_harm",
+        "Which is more morally acceptable: hunting animals for food or buying meat from factory farms?\nEqually acceptable / Neither / Buying factory-farmed meat / Hunting animals for food",
+        "What is the moral status of hunting for sport?\nWrong / Acceptable / Acceptable only to manage populations",
+        "Which animals deserve the most moral concern?\nCompanion animals / Endangered species / All animals equally / The most intelligent ones / Any that can feel pain",
+        "Is it wrong to eat an animal that is as intelligent as a dog, such as a pig?\nno / yes / no_more_wrong_than_other_meat",
+        "Which kinds of zoos, if any, do you consider morally acceptable?\nNo / Yes / Only sanctuaries for rescued animals / Only if focused on conservation",
+        "Is it wrong to wear real fur?\nNo / Yes / Only if newly bought; vintage is fine",
+        "Is it wrong to keep a bird in a cage?\nno / yes / only_if_small_cage",
+        "Which is worse for the environment to do personally?\nLittering / Wasting food / Flying often / Not recycling / Using lots of single-use plastic"
+      ],
+      "child": {
+        "key": "animal_nature_dilemmas",
+        "label": "Animal & Nature Dilemmas",
+        "description": "Questions about what the answerer thinks is right in dilemmas about eating and killing animals, zoos and circuses, pests, wildlife, and protecting nature or resources.",
+        "not_for": "Ratings of how many people would agree with a rule of thumb about pets or animals (use Animal Rules of Thumb).",
+        "examples": [
+          "Is it wrong to eat pigs but not dogs?",
+          "Are zoos morally acceptable?"
+        ]
+      }
+    },
+    {
+      "size": 122,
+      "samples": [
+        "How many people would agree: \"Getting rid of a dog because it is too much work is selfish\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If a new dog is not nice it is ok to dislike it\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you adopt a dog you are expected to keep it\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you agree to take care of someones dog it is cruel to neglect the dog\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you feel out of place in an environment, you should go where you're more comfortable\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone ",
+        "How many people would agree: \"Is thrifty to cook the animal you've accidentally killed\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It can be unsafe to allow your dog to lick you\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is bad to endanger animals\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is bad to get rid of an animal for no reason\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is common for people to enjoy the company of animals\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is common to hire someone to walk your pets for you\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It is expected that you care for your pets\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it"
+      ],
+      "child": {
+        "key": "animal_rules_of_thumb",
+        "label": "Animal Rules of Thumb",
+        "description": "Questions about how many people would agree with a general rule of thumb about caring for pets, treating animals, or littering, rated from \"practically no one\" to \"practically everyone\".",
+        "not_for": "Questions about what the answerer thinks is right in a specific animal or environmental dilemma (use Animal & Nature Dilemmas).",
+        "examples": [
+          "How many people would agree: \"You should not abandon your pets\"?",
+          "How many people would agree: \"Littering is wrong\"?"
+        ]
+      }
+    }
+  ]
+}

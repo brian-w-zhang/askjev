@@ -1,0 +1,85 @@
+{
+  "type": "split",
+  "node": "self.love.romance_partnership",
+  "n_questions": 939,
+  "clusters": [
+    {
+      "size": 327,
+      "samples": [
+        "Which of these would most people name first when asked: \"Name something it might be ok to lie to a partner about in order to spare their feelings.\"\nEx / How they look / Being faithful / Satisfaction in bed",
+        "Which household arrangement would you want with a partner?\nhire_help / split_chores_evenly / whoever_has_more_time / each_does_what_they_prefer",
+        "Which matters more in a long relationship?\npassion / equal_both / companionship",
+        "Which proposal would you prefer?\nplanned_together / big_trip_or_event / no_proposal_needed / private_and_simple / surprise_in_public",
+        "What kind of wedding would you want?\ncourthouse / no_wedding / big_celebration / destination_wedding / small_with_close_family",
+        "How would you prefer a breakup to happen?\nphone_call / face_to_face / long_message / gradual_mutual_drift",
+        "Which of these would most people name first when asked: \"Name something a woman might ask her husband to get rid of once they have kids.\"\nDog / Gun / Motorcycle / Sports car / Smoking habit / Girly magazines",
+        "Which of these would most people name first when asked: \"Tell me something a husband is afraid to admit to his spouse.\"\nBroke / Affairs / Losing job / They're scared / Admit they're wrong",
+        "Which of these would most people name first when asked: \"Name a reason why a spouse might end up spending the night on the couch.\"\nSick / Drunk / Snoring / Argument / Came home late / Tired/fell asleep",
+        "Which of these would most people name first when asked: \"Tell me something many wives encourage their husbands to do as they get older.\"\nRetire / Dye hair / Exercise / Lose weight / Eat healthier / Go to the doctor",
+        "Which of these would most people name first when asked: \"Name something you should never wear as the guest at someones wedding.\"\nCap / Jeans / Shorts / T shirt / All black / White dress",
+        "Which of these would most people name first when asked: \"Name something that couples in love always have a favourite one of.\"\nSong / Child / Movie / Picture / Nickname / Restaurant"
+      ],
+      "child": {
+        "key": "relationship_choices",
+        "label": "Relationship Choices & Habits",
+        "description": "Questions about what the answerer does, prefers, or thinks is right in a committed relationship, such as marriage, chores, jealousy, phones, exes, arguments, breakups, and attachment style.",
+        "not_for": "Ratings of how many people would agree with a stated rule of thumb about partners (use Relationship Rules of Thumb).",
+        "examples": [
+          "Should couples live together before marriage?",
+          "Do you tend to get jealous in relationships?"
+        ]
+      }
+    },
+    {
+      "size": 484,
+      "samples": [
+        "How many people would agree: \"A husband and wife are expected to be understanding of each other's problems\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with",
+        "How many people would agree: \"Abusing your spouse is wrong\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Boyfriends are expected to help their girlfriends with personal hygiene things\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees wi",
+        "How many people would agree: \"Cheating on a significant other is wrong\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"Going on a vacation without a partner can make them jealous\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you can't get over your partner's sexual history, it's okay to end the relationship\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone a",
+        "How many people would agree: \"If you don't want to be in the dating fast lane with your partner, it's okay to ask for time apart\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practicall",
+        "How many people would agree: \"If you have a good reason to ignore your wife's calls you need to communicate that to them\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyo",
+        "How many people would agree: \"If you're lonely, you should get a partner\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"If you're married to someone, you should be proud of your choice and do what you can to maintain your love for them\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree wit",
+        "How many people would agree: \"If your boyfriend hurt you they deserve to be confronted\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it",
+        "How many people would agree: \"It can be okay to marry someone out of convenience\"?\nPractically no one agrees with it / A small minority of people agree with it / About half of people agree with it / A clear majority of people agree with it / Practically everyone agrees with it"
+      ],
+      "child": {
+        "key": "relationship_rules_of_thumb",
+        "label": "Relationship Rules of Thumb",
+        "description": "Questions about how many people would agree with a general rule of thumb about partners, spouses, or romantic relationships, rated from \"practically no one\" to \"practically everyone\".",
+        "not_for": "Questions about what the answerer personally does, prefers, or would do in a relationship (use Relationship Choices & Habits).",
+        "examples": [
+          "How many people would agree: \"Cheating on a partner is wrong\"?",
+          "How many people would agree: \"It is important to be honest with your partner\"?"
+        ]
+      }
+    },
+    {
+      "size": 128,
+      "samples": [
+        "Should couples live together before getting married?",
+        "Do you tend to get jealous in relationships?",
+        "Should couples go to bed at the same time?",
+        "Would you want a prenuptial agreement before marriage?",
+        "When is it fine to remain close with a former partner?\nno_never / yes_always / only_after_time_apart / only_if_the_new_partner_agrees",
+        "Is it ever okay to get back together with an ex?",
+        "Is it a red flag if a partner has no close friends?",
+        "Should partners check each other's phones?\nnever / anytime_its_open / only_with_permission / only_with_real_suspicion",
+        "If you found out a partner had emotionally confided in someone else instead of you for months, how would you see it?\na_warning_sign / normal_and_fine / a_form_of_cheating",
+        "How much contact with an ex is acceptable while in a new relationship?\nNone at all / Only for practical matters like returning belongings / Occasional friendly texts / Meeting up one on one as friends / Staying close friends and talking often",
+        "How acceptable is it for a partner to have close friends of the gender they're attracted to?\nCompletely fine with no conditions / Fine as long as I've met them / Fine only in group settings / Not acceptable",
+        "Would you move to another country for a partner's career?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}
