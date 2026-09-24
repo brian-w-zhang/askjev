@@ -16,3 +16,4 @@ notes: >
   other side), else self.values.everyday_ethics. Same content filters as scruples: slurs, sexual violence
   terms, and sexual content co-occurring with minor terms are dropped; sexual, self-harm, and violent keywords
   flag "sensitive" (over-inclusive on long stories). Contested-politics keywords flag "political".
+  Filters extend scruples with a few sexual terms (butt, groping, intercourse, underwear...) and minor terms (young girls/boys, step-children, babies, toddlers) via scruples_anecdotes.drop().

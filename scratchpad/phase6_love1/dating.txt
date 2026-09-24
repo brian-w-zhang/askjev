@@ -1,0 +1,379 @@
+# self.love.dating_attraction — choice batch A
+C | taste | What kind of smile do you find most attractive? | wide_toothy_grin ; shy_half_smile ; crooked_smirk ; smile_with_the_eyes = a warm smile that reaches the eyes ; no_preference
+C | taste | Which setting makes you feel most confident flirting? | at_a_party ; at_work_or_school ; online_or_by_text ; through_mutual_friends ; at_a_hobby_or_class ; nowhere_really
+C | values | What is the best way to end a first date you did not enjoy? | honest_goodbye = say thanks and make no promises ; polite_hug_and_leave ; text_later_saying_no_spark ; say_nothing_and_let_it_fade ; other
+C | taste | Which first-date activity lets you get to know someone best? | coffee ; dinner ; long_walk ; museum_or_gallery ; mini_golf_or_bowling ; cooking_together ; concert
+C | values | When is it fine to cancel a first date? | only_for_emergencies ; if_you_feel_unwell ; if_you_lost_interest_before_meeting ; any_time_with_some_notice ; any_time_at_all
+C | taste | What time of day is best for a first date? | morning ; lunchtime ; afternoon ; early_evening ; late_night
+C | values | Who should suggest the place for a first date? | whoever_asked ; whoever_knows_the_area ; the_other_person ; decide_together ; does_not_matter
+C | taste | What are you most drawn to in a stranger across the room? | their_laugh ; the_way_they_dress ; their_eyes ; their_confidence ; how_they_treat_others ; their_body_language
+C | taste | Which dating app prompt answer impresses you most? | a_funny_one ; a_very_specific_one ; a_vulnerable_one ; a_clever_question_back ; a_shared_interest
+C | values | What should you do if you realize halfway through a date that you are not interested? | finish_politely ; say_so_kindly_right_then ; cut_it_short_with_an_excuse ; keep_it_friendly_and_decide_later
+C | values | How should you turn down someone who asks you out in person? | direct_no_thanks ; kind_explanation ; say_you_are_seeing_someone_even_if_untrue ; change_the_subject ; other
+C | taste | Which kind of compliment from a date means the most to you? | on_your_looks ; on_your_humor ; on_your_intelligence ; on_your_style ; on_your_kindness ; on_something_you_made
+C | personality | When a date goes quiet for a while, what do you usually do? | ask_a_question ; tell_a_story ; make_a_joke ; enjoy_the_silence ; check_my_phone
+C | values | What is the right response when someone you met once stops replying? | let_it_go ; send_one_follow_up ; ask_them_directly_what_happened ; unmatch_or_delete_their_number
+C | social | Which dating app behavior would most people consider the most annoying? | ghosting_after_matching ; one_word_replies ; asking_for_social_media_right_away ; never_suggesting_a_meeting ; old_or_misleading_photos
+C | taste | Which dating app photo turns you off the most? | group_photo_where_you_cannot_tell_who ; sunglasses_in_every_photo ; car_or_gym_mirror_selfie ; holding_a_fish ; heavily_filtered_face ; photo_with_an_ex_cropped_out
+C | values | What is the most honest way to describe yourself on a dating profile? | list_flaws_too ; highlight_the_best_but_true ; keep_it_vague ; let_friends_write_it
+C | values | When should two people who met on an app switch to texting by phone? | right_after_matching ; after_a_few_good_messages ; after_setting_up_a_date ; after_the_first_date ; never_until_serious
+C | taste | Which kind of person are you most often attracted to? | the_class_clown ; the_quiet_thinker ; the_ambitious_go_getter ; the_creative_type ; the_caretaker ; the_adventurer ; no_pattern
+C | values | What should happen if both people want to pay on a first date? | split_it ; the_asker_pays ; take_turns_next_time ; whoever_grabs_the_bill_first ; the_other_pays_for_drinks_after
+C | taste | What is your favorite sign that a date likes you? | they_lean_in ; they_ask_follow_up_questions ; they_laugh_at_your_jokes ; they_suggest_another_date ; they_lose_track_of_time ; they_touch_your_arm
+C | values | What is the right amount of personal history to share on a first date? | only_light_topics ; hobbies_and_work ; family_background ; past_relationships ; anything_that_comes_up
+C | personality | How do you usually prepare for a first date? | plan_outfit_days_ahead ; research_the_venue ; prepare_topics ; just_show_up ; talk_to_a_friend_for_advice
+C | taste | Which scent on a date is most appealing to you? | fresh_soap ; light_perfume_or_cologne ; strong_perfume_or_cologne ; natural_scent ; no_noticeable_scent
+C | social | What would most people say is the biggest first-date turn-off? | being_on_the_phone ; talking_only_about_themselves ; being_rude_to_staff ; showing_up_late ; drinking_too_much ; complaining_a_lot
+C | taste | Which kind of eyes do you find most striking? | dark_brown ; light_blue ; green ; hazel ; grey ; no_preference
+C | taste | Which hair length do you tend to find most attractive? | very_short ; short ; medium ; long ; no_preference
+C | taste | What kind of laugh do you find most charming? | loud_and_unrestrained ; quiet_giggle ; snorting_laugh ; deep_chuckle ; no_preference
+C | values | How should you let a date know you want to see them again? | tell_them_at_the_end ; text_that_night ; text_the_next_day ; wait_for_them_to_ask ; propose_a_specific_plan
+C | taste | What would be your ideal way to meet someone at a wedding? | seated_together_at_dinner ; on_the_dance_floor ; introduced_by_the_couple ; at_the_bar ; after_party
+C | values | What is the right thing to do if you are set up by friends and do not like the person? | tell_your_friends_honestly ; go_on_one_date_anyway ; decline_without_explanation ; say_you_are_busy
+C | taste | How would you most like to flirt with someone? | teasing_banter ; direct_compliments ; lingering_eye_contact ; playful_texting ; doing_small_favors ; rarely_flirt
+C | values | What is the fairest way to decide who pays when dating someone a lot richer than you? | they_always_pay ; split_evenly ; each_pays_by_their_means ; alternate_but_choose_cheaper_places_on_my_turn
+C | taste | What kind of dating app bio do you prefer? | short_and_funny ; long_and_detailed ; list_of_interests ; no_bio_just_photos ; a_single_quote
+C | values | When should you tell a date about a serious health condition? | first_date ; within_the_first_few_dates ; once_it_becomes_exclusive ; only_if_it_comes_up ; never_unless_asked
+C | taste | Which activity would you rather do on a third date? | cook_dinner_together ; take_a_day_trip ; see_live_music ; play_a_sport ; go_to_a_party_with_friends ; stay_in_and_watch_a_movie
+C | social | Which dating platform would most people say has the worst reputation? | swipe_apps ; paid_matchmaking_sites ; social_media_messages ; video_dating ; speed_dating_events
+C | values | What should you do if your date is clearly drunk when they arrive? | end_it_and_make_sure_they_get_home ; stay_and_see_how_it_goes ; reschedule ; leave_immediately
+# choice batch B
+C | values | What should a person do if they are dating several people at once? | tell_everyone_up_front ; tell_anyone_who_asks ; keep_it_private ; stop_and_pick_one
+C | taste | Which quality in a voice note from a match do you like most? | calm_tone ; enthusiasm ; a_nice_accent ; humor ; dislike_voice_notes
+C | personality | When you feel nervous before a date, what do you usually do? | text_a_friend ; listen_to_music ; exercise ; have_a_drink ; overthink_everything ; do_not_get_nervous
+C | values | Which topic should be avoided on a first date? | exes ; money ; religion ; family_problems ; health ; nothing_is_off_limits
+C | taste | What is the most attractive thing a date can order at a restaurant? | something_adventurous ; something_simple ; exactly_what_they_crave ; something_to_share ; whatever_the_waiter_recommends ; no_opinion
+C | values | What is the best reason to delete a dating app? | wanting_to_meet_people_offline ; feeling_worse_about_yourself ; starting_to_see_someone ; wasting_too_much_time ; no_good_matches
+C | taste | Which kind of style do you find most attractive in a date? | smart_and_tailored ; casual_and_relaxed ; sporty ; artsy_and_unusual ; vintage ; no_preference
+C | social | Who would most people say should send the first message after matching on an app? | the_man ; the_woman ; whoever_is_more_interested ; whoever_matched_second ; does_not_matter
+C | values | How should you respond if a date makes a comment you find mildly offensive? | call_it_out_right_away ; ask_what_they_meant ; let_it_go_but_note_it ; end_the_date ; laugh_it_off
+C | taste | What kind of message do you most like to get the morning after a first date? | thanks_for_last_night ; a_joke_about_the_date ; asking_for_a_second_date ; a_photo_or_song_related_to_the_date ; nothing_prefer_space
+C | personality | How do you usually act around someone you have a crush on? | extra_chatty ; quiet_and_awkward ; overly_casual ; very_flirty ; avoid_them ; exactly_like_normal
+C | values | What is the best way to tell someone you only want something casual? | before_the_first_date ; on_the_first_date ; once_you_see_they_are_serious ; in_your_profile ; never_say_it_outright
+C | values | When is the right moment to have the talk about being exclusive? | after_a_few_dates ; after_a_month_or_so ; when_one_person_brings_it_up ; when_you_stop_seeing_others ; it_should_be_obvious_without_talking
+C | taste | Which hobby would make you least interested in dating someone? | hunting ; online_gaming_all_night ; collecting_dolls_or_figures ; extreme_sports ; crypto_trading ; none_of_these
+C | social | What would most people say is the best age gap in dating? | same_age ; a_few_years_older_man ; a_few_years_older_woman ; any_gap_between_adults ; depends_on_life_stage
+C | values | What should you do if a friend asks whether they can date your ex? | say_yes ; say_no ; yes_but_need_time ; tell_them_it_is_their_choice ; depends_on_how_it_ended
+C | personality | What is your usual reaction when someone you are not interested in flirts with you? | play_along_politely ; shut_it_down_kindly ; pretend_not_to_notice ; feel_flattered ; feel_uncomfortable
+C | values | What is the most respectful way to decline a dating app match's request to meet? | honest_not_feeling_it ; say_you_are_busy ; unmatch_without_reply ; keep_chatting_but_do_not_meet
+C | taste | What is the most romantic weather for a first date? | sunny_afternoon ; light_rain ; snowy_evening ; warm_summer_night ; crisp_autumn_day ; does_not_matter
+C | taste | Which kind of dancing on a date appeals to you most? | salsa_lessons ; club_dancing ; slow_dancing ; silly_dancing_at_home ; no_dancing_please
+C | values | Which is the best way to handle a date who keeps checking their phone? | ask_if_everything_is_ok ; point_it_out ; check_yours_too ; end_the_date_early ; ignore_it
+C | social | What would most people say is the most common reason people ghost? | avoiding_an_awkward_talk ; lost_interest ; met_someone_else ; got_busy ; felt_overwhelmed
+C | taste | Which dating app feature would you most like to exist? | verified_photos ; video_before_meeting ; compatibility_quizzes ; friends_can_recommend_you ; limit_on_daily_matches ; reason_required_to_unmatch
+C | values | How should you respond if your date asks about your past relationships on the first date? | answer_honestly ; give_a_short_summary ; deflect_politely ; say_it_is_too_early
+C | taste | Which of these would you most want in someone you date? | good_listener ; great_storyteller ; problem_solver ; cheerleader ; calm_presence
+C | values | What should you do if you run into a date's ex while out with them? | be_friendly ; stay_polite_but_brief ; let_your_date_handle_it ; leave_to_give_them_space
+C | taste | Which city date would you most enjoy? | rooftop_bar ; food_market ; late_night_diner ; art_walk ; comedy_club ; bookstore_browse
+C | taste | Which outdoor date would you most enjoy? | hiking ; picnic ; beach_day ; kayaking ; stargazing ; bike_ride
+C | values | How soon is it fine to introduce someone you are dating to your friends? | first_few_dates ; once_you_are_exclusive ; after_a_couple_of_months ; only_when_it_is_serious
+C | social | What would most people say is the best place to meet someone in person? | through_friends ; at_a_bar ; at_work ; at_the_gym ; at_church_or_community_group ; at_a_party
+C | values | What should you do if your date orders something much more expensive than you expected when they are paying? | nothing ; offer_to_split ; order_less_yourself ; bring_it_up_later ; decide_against_a_second_date
+C | taste | Which physical feature do you notice least in a potential partner? | height ; hair ; hands ; teeth ; shoes ; weight
+C | personality | How do you typically handle rejection from someone you asked out? | shrug_it_off ; feel_embarrassed_for_days ; ask_why ; try_again_later ; tell_friends_and_laugh_about_it
+C | values | What is the best way to reject someone's dating app message? | polite_no_thanks ; unmatch ; leave_it_unread ; reply_once_then_stop
+C | taste | Which kind of hug at the end of a first date feels best? | quick_friendly_hug ; long_warm_hug ; side_hug ; no_hug_just_a_wave ; kiss_on_the_cheek
+C | taste | What kind of conversation do you enjoy most on a date? | deep_and_philosophical ; silly_and_playful ; sharing_stories ; debating_opinions ; talking_about_dreams
+C | values | How should you handle being attracted to your friend's sibling? | keep_it_to_yourself ; ask_your_friend_first ; pursue_it_openly ; wait_to_see_if_it_passes
+# choice batch C
+C | values | What should you do if you start to like someone you are only casually seeing? | tell_them ; keep_it_casual_and_hope ; pull_back_to_protect_yourself ; drop_hints ; end_it
+C | taste | Which trait makes a person most fun to date? | spontaneity ; curiosity ; playfulness ; generosity ; optimism ; a_sense_of_adventure
+C | values | What is the right way to respond to a compliment from a stranger you are not interested in? | thank_them_and_move_on ; smile_and_ignore ; say_you_are_taken ; return_the_compliment
+C | personality | Which role do you usually take in the early stage of dating? | the_pursuer ; the_one_being_pursued ; equal_partners ; the_planner ; the_go_with_the_flow_one
+C | taste | Which setting feels least romantic to you for a first date? | fast_food_restaurant ; movie_theater ; loud_nightclub ; their_place ; a_work_event ; a_gym
+C | values | When should you delete a dating app after you start seeing someone? | after_the_first_great_date ; after_a_few_dates ; once_you_agree_to_be_exclusive ; when_they_delete_theirs ; no_need_to_delete
+C | social | Which dating stage would most people say is the most stressful? | waiting_for_a_reply ; the_first_date ; deciding_whether_to_say_how_you_feel ; the_exclusivity_talk ; meeting_their_friends
+C | taste | What kind of gift would you most like from someone you have only been on a few dates with? | a_book_they_think_you_would_like ; flowers ; a_small_snack_you_mentioned ; a_playlist ; nothing_too_early
+C | values | What should you do if your date shows up with a friend unannounced? | go_along_with_it ; ask_to_reschedule_one_on_one ; leave ; say_something_but_stay
+C | taste | Which game would make the most fun date? | board_games ; arcade ; trivia_night ; escape_room ; pool_or_darts ; video_games
+C | values | What is the right response when someone you rejected keeps asking you out? | firmly_repeat_no ; block_them ; involve_a_friend ; stop_replying ; agree_to_one_date_to_end_it
+C | personality | How do you usually spend the hour before a date? | getting_ready_slowly ; rushing_from_work ; chatting_with_friends ; reading_or_relaxing ; going_over_what_to_talk_about
+C | taste | Which kind of energy do you like in a date? | calm_and_grounded ; bubbly_and_loud ; mysterious ; warm_and_nurturing ; sharp_and_witty
+C | values | Who should drive or arrange transport on a first date? | the_asker ; each_person_gets_themselves_there ; whoever_has_a_car ; the_person_who_lives_closer
+C | social | Which first-date location would most people say is safest? | busy_coffee_shop ; public_park ; restaurant ; bar ; someone_s_home
+C | values | How should you handle a match who asks for personal details too quickly? | answer_openly ; answer_vaguely ; ask_why_they_want_to_know ; unmatch
+C | taste | What kind of music taste in a date appeals to you most? | same_as_mine ; completely_different_from_mine ; very_broad ; very_niche ; does_not_matter
+C | personality | Which describes your approach to finding a partner? | actively_searching ; open_but_not_looking ; letting_friends_set_me_up ; taking_a_break ; leaving_it_to_fate
+C | values | What is the best way to ask someone out after meeting at a party? | ask_for_their_number_there ; follow_them_on_social_media ; ask_the_host_for_contact ; wait_to_run_into_them_again
+C | taste | What would be your ideal cheap date? | picnic_in_the_park ; street_food_crawl ; free_museum_day ; cooking_at_home ; sunset_walk ; thrift_shopping
+C | taste | What would be your ideal fancy date? | tasting_menu_dinner ; theater_show ; weekend_away ; rooftop_cocktails ; opera_or_ballet ; hot_air_balloon
+C | values | How should you handle a date who is much less experienced in dating than you? | go_slowly ; talk_about_expectations ; treat_it_like_any_date ; avoid_dating_them
+C | social | What would most people say is a red flag on a dating profile? | no_photos_of_face ; list_of_demands ; mentions_an_ex ; only_group_photos ; says_not_looking_for_drama ; says_just_ask
+C | taste | Which kind of humor do you find most attractive? | dry_and_sarcastic ; goofy_and_silly ; clever_wordplay ; self_deprecating ; dark_humor ; observational
+C | values | What should you do if someone you are dating asks you to delete your dating app before you are ready? | delete_it ; explain_you_are_not_ready ; say_yes_but_keep_it ; end_things
+C | taste | Which trait would you most want a partner's friends to see in you? | fun ; kind ; interesting ; easygoing ; good_for_them
+C | values | Whose job is it to keep the conversation going early on by text? | both_equally ; whoever_is_more_interested ; the_one_who_asked_for_the_number ; the_one_who_texted_last_should_wait
+C | personality | How do you usually decide whether to give someone a chance? | gut_feeling ; list_of_must_haves ; friends_opinions ; how_they_treat_me ; shared_goals
+C | taste | Which surprise on a date would delight you most? | reservation_at_a_place_you_mentioned ; a_small_gift ; a_handwritten_card ; an_unplanned_adventure ; tickets_to_a_show
+C | values | What is the fairest rule for splitting costs over the first few dates? | always_split ; take_turns_paying ; the_asker_pays_each_time ; the_higher_earner_pays_more ; no_rule_just_go_with_it
+C | social | What would most people say men are most attracted to? | looks ; kindness ; humor ; confidence ; intelligence ; loyalty
+C | social | What would most people say women are most attracted to? | looks ; kindness ; humor ; confidence ; intelligence ; financial_stability
+C | taste | What kind of weekend habits would you want a date to have? | early_riser_and_active ; lazy_brunch_lover ; social_butterfly ; homebody ; always_traveling
+C | values | What should you do if you and a friend have a crush on the same person? | talk_to_your_friend ; step_aside ; let_the_person_choose ; pursue_it_quietly ; both_back_off
+C | personality | How do you usually find out whether a crush is single? | ask_them_directly ; check_their_social_media ; ask_a_mutual_friend ; look_for_clues_in_conversation ; assume_and_hope
+C | taste | Which kind of profile photo makes you most likely to swipe right? | smiling_close_up ; doing_a_hobby ; travel_photo ; with_a_pet ; candid_laughing ; dressed_up_for_an_event
+C | values | What should you do if a first date wants to go back to their place? | decline_politely ; go_if_you_trust_them ; suggest_another_public_place ; end_the_date_there
+C | taste | How would you most like a date to dress for coffee? | casual_jeans_and_tshirt ; smart_casual ; dressed_up ; athletic_wear ; no_expectation
+C | values | What is the right way to respond when a date is late without warning? | wait_and_say_nothing ; wait_and_mention_it ; leave_after_a_short_while ; text_to_ask_where_they_are
+C | personality | Which best describes your dating history? | serial_monogamist ; mostly_single ; lots_of_casual_dating ; long_gaps_between_relationships ; just_starting_out
+C | taste | Which setting do you find most romantic for a first kiss? | at_the_door_after_a_date ; under_the_stars ; during_a_slow_dance ; in_the_rain ; spontaneous_in_the_middle_of_the_date
+C | values | What should you do if you find out your date lied about their height or age on their profile? | laugh_it_off ; bring_it_up ; end_the_date ; decide_no_second_date ; depends_on_how_big_the_lie
+C | social | What would most people name as the best first-date question? | what_do_you_do_for_fun ; where_did_you_grow_up ; what_are_you_passionate_about ; what_is_your_dream_trip ; what_made_you_swipe_on_me
+C | taste | Which quality makes someone seem most mature to you? | handles_conflict_calmly ; knows_what_they_want ; takes_care_of_their_home ; good_with_money ; apologizes_easily ; keeps_their_word
+C | values | How should you handle a crush on your married coworker? | ignore_it_completely ; keep_a_professional_distance ; talk_to_a_friend_about_it ; look_for_another_job ; it_will_pass_on_its_own
+C | taste | Which trait would make you date someone even if they were not your usual type? | incredible_kindness ; making_you_laugh_constantly ; shared_life_goals ; deep_conversation ; strong_chemistry
+C | personality | When dating, which do you tend to be? | the_one_who_falls_first ; the_one_who_takes_longer_to_warm_up ; about_equal ; the_one_who_loses_interest_first
+# choice batch D
+C | taste | Which pet would you most like a date to own? | dog ; cat ; bird ; reptile ; fish ; no_pets
+C | values | What should you do if a date's dog does not like you? | laugh_it_off ; try_to_win_it_over ; take_it_as_a_bad_sign ; avoid_their_place
+C | taste | Which cuisine makes the best first-date dinner? | italian ; japanese ; mexican ; indian ; thai ; tapas_or_small_plates ; burgers
+C | values | Which is the least acceptable excuse for canceling a date last minute? | too_tired ; work_ran_late ; forgot ; something_better_came_up ; bad_weather
+C | social | What would most people say is the ideal length of a first date? | under_an_hour ; about_an_hour ; a_couple_of_hours ; the_whole_evening ; as_long_as_it_goes_well
+C | taste | Which dating app would you choose if you could only use one type? | swipe_based ; long_profile_matchmaking ; interest_based_groups ; video_first ; none
+C | personality | How do you usually react when a date pays for everything without asking? | feel_grateful ; feel_uncomfortable ; insist_on_paying_next_time ; feel_it_is_old_fashioned ; feel_charmed
+C | values | What should you do if you realize you have been on a date with your friend's ex? | tell_your_friend_right_away ; stop_seeing_them ; ask_your_friend_how_they_feel ; keep_going_quietly
+C | taste | Which trait makes a dating profile feel most genuine? | unposed_photos ; specific_details ; self_deprecating_humor ; honest_about_what_they_want ; no_cliches
+C | values | Is it better to say what you are looking for in your first message or on the first date? | in_the_profile ; in_early_messages ; on_the_first_date ; after_a_few_dates ; only_when_asked
+C | taste | What kind of adventure would you most like to share with a new date? | trying_a_new_cuisine ; road_trip ; learning_a_skill_together ; a_concert_in_another_city ; volunteering
+C | social | Which dating cliche would most people say they are tired of? | love_to_travel ; partner_in_crime ; work_hard_play_hard ; looking_for_my_other_half ; fluent_in_sarcasm
+C | personality | When a date suggests something you have never tried, how do you usually respond? | jump_at_it ; agree_but_feel_nervous ; suggest_something_else ; say_no_thanks
+C | values | Which is the kindest way to decline a friend's offer to set you up? | say_you_are_not_ready ; say_you_prefer_meeting_on_your_own ; ask_for_more_details_first ; accept_to_be_polite
+C | taste | Which of these would you most like a date to be passionate about? | art ; sports ; science ; cooking ; music ; social_causes ; their_career
+C | values | How should you respond if a date asks for your phone to add their number but then scrolls through it? | take_it_back_and_say_something ; laugh_it_off ; end_the_date ; ignore_it
+C | social | What would most people say is the worst day of the week for a first date? | monday ; tuesday ; friday ; saturday ; sunday
+C | taste | Which dating app message timing do you like best? | instant_replies ; replies_within_a_few_hours ; one_reply_a_day ; whenever_they_have_time
+C | personality | Which kind of dating mistake are you most likely to make? | moving_too_fast ; being_too_guarded ; ignoring_red_flags ; being_too_picky ; overthinking_texts
+C | values | What should you do if you have a crush on your best friend's partner? | keep_it_to_yourself ; distance_yourself_from_them ; tell_your_best_friend ; tell_the_partner
+C | taste | Which trait in how someone talks do you find most appealing? | slow_and_thoughtful ; fast_and_excited ; lots_of_questions ; great_stories ; confident_opinions
+C | taste | What kind of sibling situation do you find appealing in a date? | only_child ; oldest_sibling ; youngest_sibling ; middle_child ; no_preference
+C | social | Where would most people say they met their last partner? | through_friends ; online ; at_work ; at_school ; at_a_bar_or_party ; other
+C | taste | Which is the most attractive way for a date to handle a mistake? | laugh_at_themselves ; apologize_sincerely ; fix_it_quickly ; shrug_and_move_on
+C | values | How should you handle a date who talks badly about all their exes? | ask_about_it ; take_it_as_a_warning ; give_them_the_benefit_of_the_doubt ; end_things
+C | personality | How do you feel right after a date that went very well? | giddy_and_excited ; calm_and_content ; anxious_it_will_not_last ; eager_to_tell_friends ; already_planning_the_next
+C | taste | What would you most like a date to cook for you? | homemade_pasta ; a_family_recipe ; breakfast ; a_fancy_dessert ; takeout_is_fine
+C | values | When should you tell a new date that you have a child? | in_your_profile ; before_the_first_date ; on_the_first_date ; after_a_few_dates ; once_it_is_serious
+C | social | What would most people say is the most attractive job? | doctor ; firefighter ; teacher ; musician ; chef ; pilot ; entrepreneur
+C | taste | Which setting do you like best for a date that runs late? | cozy_bar ; all_night_diner ; walking_around_the_city ; late_movie ; a_park_bench
+C | values | What should you do if your date is rude to you but charming to everyone else? | say_something ; end_the_date ; give_them_another_chance ; not_see_them_again
+C | personality | What do you do after a first date when you are unsure how it went? | wait_for_them_to_text ; text_them_first ; ask_friends_to_analyze_it ; let_it_go
+C | taste | Which kind of eye contact do you find most attractive? | steady_and_confident ; shy_glances ; playful_and_teasing ; soft_and_warm
+C | values | What is the most honest way to handle meeting someone attractive while you are dating someone else casually? | tell_the_person_you_are_dating ; pursue_both ; ignore_the_new_attraction ; end_the_casual_thing
+C | social | Which dating move would most people call old-fashioned? | asking_in_person ; calling_instead_of_texting ; bringing_flowers ; asking_permission_to_kiss ; holding_the_door ; paying_for_everything
+C | values | What should you do if you feel no attraction but really like someone's personality? | give_it_more_dates ; suggest_friendship ; end_it_kindly ; keep_going_and_hope
+C | personality | Which dating advice do you most often ignore? | play_it_cool ; do_not_text_first ; do_not_talk_about_exes ; be_yourself ; take_it_slow
+C | taste | Which social media behavior in someone you are dating do you find most attractive? | posts_rarely ; shares_funny_things ; posts_about_hobbies ; has_private_accounts ; no_social_media
+# score batch A
+S | personality | How do you usually feel before a first date? | I feel completely relaxed, like meeting any friend ; I feel a small flutter but stay calm ; I feel nervous and change my outfit several times ; I feel so anxious I consider canceling
+S | taste | How do you feel about a date who shows up in gym clothes? | It would put me off for good ; I would find it a bit careless ; I would not mind at all ; I would find it refreshingly relaxed
+S | values | How acceptable is it to ghost someone after a single date? | It is never acceptable ; It is okay only if they were rude or unsafe ; It is fine if you never promised anything ; It is completely normal and expected
+S | taste | How much does a potential partner's taste in music affect your interest? | I would drop someone whose music I dislike ; It would make me hesitate a little ; I would barely notice ; It does not matter to me at all
+S | personality | How do you act when someone attractive starts talking to you? | I freeze up and barely speak ; I answer but struggle to keep it going ; I chat normally ; I flirt back with confidence
+S | values | How much should looks matter when choosing someone to date? | They should not matter at all ; They matter a little as a starting point ; They matter as much as personality ; They matter more than anything else
+S | taste | How do you feel about a date who orders for you without asking? | I find it rude and controlling ; I find it a little odd ; I do not mind either way ; I find it charming
+S | values | How much should a date's financial situation matter to you? | Not at all ; Only if they are in serious debt ; I want them to be stable ; I want them to earn at least as much as me ; I want them to be wealthy
+S | personality | How often do you develop crushes? | I almost never get crushes ; I get a crush now and then ; I often have a crush on someone ; I always have a crush on someone
+S | taste | How do you feel about a date suggesting a double date early on? | I would refuse ; I would feel uneasy but go ; I would be fine with it ; I would love the idea
+S | values | How much effort should someone put into planning a first date? | Just pick a nearby coffee shop ; Choose a place with some thought ; Plan an activity based on what I like ; Plan a full surprise evening
+S | personality | How comfortable are you with silence on a first date? | Any pause makes me panic ; Short pauses make me uneasy ; I can handle pauses fine ; I enjoy quiet moments together
+S | taste | How do you feel when a date is very physically affectionate early on? | It makes me want to leave ; It makes me a bit uncomfortable ; I am neutral about it ; I like it a lot
+S | values | How many dates should you go on before deciding someone is not right for you? | One date is enough to know ; Two dates to be fair ; A few dates to really tell ; Many dates because chemistry can grow
+S | personality | How much do you rely on your friends' opinions of someone you are dating? | I ignore what they think ; I listen but decide for myself ; I weigh it heavily ; I would end it if they disapproved
+S | taste | How much does a date's cooking skill matter to you? | Not at all ; It is a small bonus ; It is a real plus ; I would find it very hard to date someone who cannot cook
+S | social | How acceptable would most people say it is to date someone much younger? | Most would find it creepy ; Most would raise an eyebrow ; Most would not care ; Most would think it is fine and even admirable
+S | taste | How do visible tattoos affect your interest in a date? | I would decline a date because of them ; I would go but they would count against them ; I would not notice them either way ; I would ask about them with real interest ; They would be part of why I said yes
+S | values | How honest should a dating profile be? | A little exaggeration is fine ; Good angles are fine but facts must be true ; Everything should be accurate ; It should even list your flaws
+S | personality | How do you usually feel on dating apps? | I enjoy them and have fun ; I find them fine but tiring ; I find them draining ; I find them miserable
+S | taste | How much do you care if a date is punctual? | I do not care if they are late ; A short delay is fine ; I notice lateness and it bothers me ; I would not see someone again if they were late
+S | values | How much should you change your appearance to attract a partner? | Not at all ; Just dress well for dates ; Make some lasting changes ; Change as much as it takes
+S | personality | How much do you overthink texts from someone you like? | I send whatever comes to mind ; I reread before sending ; I draft and redraft ; I show every text to a friend before sending
+S | taste | How much do you enjoy being set up on dates by friends? | I refuse to be set up ; I go reluctantly ; I am happy to go ; I actively ask friends to set me up
+S | values | How important is it that a date has similar religious views? | It does not matter at all ; It would be nice ; It matters a lot ; It is a dealbreaker
+S | personality | How patient are you when someone is slow to show interest? | I move on right away ; I give them a little time ; I wait quite a while ; I wait as long as it takes
+S | taste | How appealing is a date who is very close with their mother? | It worries me ; I am neutral ; It is a nice sign ; It is one of the most attractive traits
+S | values | How much is it okay to talk about your ex on a first date? | Not at all ; A passing mention ; A short honest summary ; As much as you like
+S | personality | How much do you plan ahead when going on a date? | I plan nothing ; I pick a place ; I plan the place and backup ideas ; I plan every detail and topic
+S | taste | How do you feel about long messages from a new match? | I skip them ; I find them a bit much ; I enjoy them ; I love them and write back just as long
+S | values | How soon should someone say they want a serious relationship? | Never say it outright ; Only after a few months ; Within the first few dates ; On the very first date or profile
+S | taste | How do you feel about a date who is shy? | I lose interest ; I find it a little hard ; It does not affect me ; I find it endearing
+S | personality | How do you usually react when a date disagrees with you? | I avoid the topic after that ; I agree to keep things smooth ; I calmly share my view ; I enjoy a good debate
+S | values | How acceptable is it to stay friends with someone you went on a few dates with? | It never works ; It is awkward but possible ; It is fine ; It is a great outcome
+S | personality | How much do you enjoy flirting just for fun? | I never flirt ; I flirt only when I am interested ; I flirt now and then for fun ; I flirt with almost everyone
+S | social | How acceptable would most people say it is to split the bill on a first date? | Most would find it rude ; Most would find it a bit unromantic ; Most would find it normal ; Most would expect it
+S | personality | How quickly do you fall for someone new? | It takes me many months ; It takes a few weeks ; It takes a few dates ; I fall almost immediately
+S | taste | How much do you enjoy a date who teases you? | I hate being teased ; I tolerate a little ; I enjoy it ; I love it and tease back
+S | values | How much should a date's past relationships affect your view of them? | I would never ask or care about them ; I would only care if they cheated before ; I would care about any pattern of messy endings ; I would want to hear about each one before a second date
+S | personality | How often do you initiate conversations on dating apps? | I never start conversations ; I start only with people I really like ; I start about half the time ; I almost always start
+S | taste | How do you feel about a date who brings you flowers? | I would find it over the top ; I would feel a little awkward ; I would find it sweet ; I would be delighted
+S | values | How much should friends' approval matter in who you date? | Not at all ; A little ; A lot ; It should decide it
+S | taste | How would you feel dating someone very ambitious who works late most nights? | I would end it because I want more time together ; I would stay but feel neglected ; I would accept it as long as weekends are ours ; I would admire it and fill my own time happily ; I would find it one of their most attractive traits
+S | personality | How do you usually handle a date who is more talkative than you? | I get bored and zone out ; I listen politely ; I enjoy the break from talking ; I love it
+S | taste | How much does a date's laugh affect your interest? | Not at all ; A bad laugh bothers me a little ; A great laugh makes me like them more ; A laugh can make or break it for me
+S | values | How acceptable is it to use a dating app while you are in the early stages of seeing someone? | Never acceptable ; Only before the second date ; Fine until you agree to be exclusive ; Fine anytime until the relationship is serious
+S | personality | How do you react when you see a crush's name on your phone? | I feel nothing special ; I smile ; My heart races ; I have to put the phone down and calm down
+S | taste | How much do shared hobbies matter when choosing a date? | I prefer different hobbies ; Not at all ; They are a nice bonus ; I only date people who share my hobbies
+# score batch B
+S | personality | How do you usually end a date you enjoyed? | I say goodbye and wait to see what happens ; I say I had a good time ; I say I would like to see them again ; I ask them out again on the spot
+S | taste | How do you react when a match's photos are all selfies? | I swipe left right away ; I hesitate but read the bio ; I do not notice ; I like seeing their face clearly
+S | values | How should you respond to someone who is not your type but asks you out kindly? | Say no without hesitation ; Say no but thank them warmly ; Go on one date to see ; Say yes gladly
+S | personality | How do you handle waiting for a reply from someone you like? | I forget about it and get on with my day ; I check my phone now and then ; I check my phone every few minutes ; I cannot focus on anything else until they reply
+S | taste | How would you feel if a date took you to their favorite restaurant? | Bored, I prefer somewhere new to both of us ; Fine either way ; Pleased to see something they love ; Thrilled, it feels personal
+S | values | What should you do when your date asks to split a bill you expected them to cover? | Refuse to see them again ; Pay but feel annoyed ; Pay without a second thought ; Offer to pay the whole thing
+S | personality | How do you behave on social media when you have a new crush? | I do not look at their profile ; I glance at their recent posts ; I scroll through their photos ; I look through years of their posts
+S | taste | How do you feel when a date speaks a language you do not know on the phone during the date? | Annoyed that they took a call ; Curious but a little left out ; Not bothered ; Impressed
+S | personality | How do you act if you realize you like someone more than they like you? | I pull back right away ; I keep things light and wait ; I keep showing interest ; I tell them how I feel anyway
+S | values | How should you respond if someone you went on one date with asks why you did not text back? | Ignore the message ; Reply with a vague excuse ; Give a short honest reason ; Explain in detail and apologize
+S | taste | What do you prefer on a first date when there is live music playing loudly? | I would leave to find a quieter place ; I would put up with it ; I would enjoy it but talk less ; I would love dancing instead of talking
+S | personality | How do you act when you run into a crush unexpectedly? | I pretend I did not see them ; I wave and keep walking ; I stop and chat briefly ; I use it as a chance to ask them out
+S | taste | How do you feel about a date who brings up future plans together on the first date? | It scares me off ; It makes me uneasy ; It amuses me ; I find it exciting
+S | values | How much should you share about your dating life on social media? | Post nothing at all ; Post only once it is serious ; Post occasional hints ; Post freely from the start
+S | personality | How do you typically respond when asked out by someone you are unsure about? | I say no to be safe ; I ask for time to think ; I say yes to a short coffee ; I say yes to a full date
+S | taste | How do you feel about a date who asks lots of personal questions? | I feel interrogated and want to leave ; I find it a little much ; I appreciate their interest ; I love it and answer everything
+S | values | How should you handle attraction to someone who is clearly taken? | Cut off contact ; Keep a friendly distance ; Stay friends as normal ; Hint at your feelings in case things change
+S | personality | How do you act after a date cancels on you last minute? | I never reschedule ; I wait for them to suggest another time ; I suggest a new time myself ; I happily reschedule right away
+S | taste | How appealing do you find someone who is always busy with plans? | It puts me off since they have no time ; It makes me a little wary ; It is a neutral trait ; It makes them more attractive
+S | personality | How do you usually respond when a friend offers to set you up? | I say no before hearing about them ; I ask for details then usually decline ; I usually agree to one meeting ; I say yes without asking questions
+S | taste | How do you feel about a date who cries during a sad movie with you? | It would make me uncomfortable ; I would not mind ; I would find it sweet ; I would find it very attractive
+S | personality | What do you do if you get no reply after sending a message to a match? | I unmatch right away ; I wait and forget about it ; I send one more message later ; I keep sending messages until they answer
+S | taste | How much do you like a date who shows off their knowledge? | I find it a turn-off ; I tolerate it if it is short ; I find it interesting ; I find it very attractive
+S | values | How far should you go to make a good first impression on a date? | Just be yourself as you are on any day ; Dress nicely and be on time ; Pick a great venue and prepare topics ; Act like the person you think they want
+S | personality | How do you react when your date is clearly more attractive than you? | I feel too intimidated to enjoy it ; I feel a bit self-conscious ; I barely think about it ; I feel lucky and confident
+S | taste | How do you feel about a date who is very into fitness? | It would put me off ; It would make me feel a little pressured ; It does not matter to me ; I find it very attractive
+S | values | How should dating app matches be handled when you have no interest in them? | Leave them without doing anything ; Unmatch quietly ; Send a short no thanks message then unmatch ; Always explain why before unmatching
+S | personality | How do you behave when you see a crush with someone else at a party? | I leave the party ; I keep away from them ; I act as normal ; I go over and join them
+S | taste | How much do you like dates that involve meeting a group of their friends? | I would decline ; I would go but feel on edge ; I would be fine ; I would love it
+S | social | How would most people react if a date took a phone call in the middle of dinner? | Most would leave ; Most would be annoyed but stay ; Most would not care much ; Most would think it is normal
+S | social | How would most people feel about being asked out by a stranger at the grocery store? | Most would feel creeped out ; Most would feel awkward ; Most would feel flattered ; Most would say yes
+S | social | How would most people view a first date at someone's home? | Most would refuse ; Most would feel uneasy ; Most would think it is fine ; Most would prefer it
+S | social | How would most people judge someone who asks their date's zodiac sign? | Most would find it a turn-off ; Most would roll their eyes ; Most would not mind ; Most would find it fun
+S | social | How would most people react if a date showed up with flowers for a coffee meeting? | Most would find it too much ; Most would feel awkward ; Most would find it sweet ; Most would be charmed
+S | taste | How do you feel about a date who is a vegetarian when you are not? | It would stop me from dating them ; It would be a small worry ; It would not matter ; I would find it interesting
+S | personality | How do you handle a date who is rude to you? | I say nothing and suffer through it ; I become cold and short ; I call it out politely ; I leave immediately
+S | taste | How do you react when a date lights up talking about books they love? | I tune out and change the subject ; I listen politely but it does nothing for me ; I ask what they are reading now ; I leave wanting a second date because of it
+S | personality | How confident are you that you know what you want in a partner? | I have no idea ; I have a vague sense ; I know most of what I want ; I could write a precise list
+S | taste | How do you feel about a date who talks a lot about their pet? | I find it tiresome ; I tolerate it ; I enjoy it ; I love it
+S | personality | How easily do you feel chemistry with new people? | I rarely ever feel it ; I feel it with a few people ; I feel it with many people ; I feel it with almost everyone
+S | taste | How do you react when a date turns out to be a great dancer? | It makes no difference to me ; I enjoy watching but stay seated ; I let them pull me onto the dance floor ; It becomes the moment I start falling for them
+S | values | What is the right way to handle a date who is kind but boring? | End it after the first date ; Give it one more date ; Give it several dates ; Keep dating since kindness matters most
+S | taste | How appealing is dating someone who lives in another city? | I would never try it ; I would only if they planned to move ; I would try for a while ; I would love the adventure
+S | personality | How much do you enjoy being the center of attention on a date? | I hate it ; I tolerate it briefly ; I enjoy it now and then ; I love it
+S | taste | How do you feel about dates planned around a sports game? | I would say no ; I would go but be bored ; I would enjoy it ; I would love it
+S | personality | How do you feel when a date wants to meet your friends early on? | I feel pressured and back away ; I feel a bit uneasy ; I feel pleased ; I feel thrilled
+S | taste | How much do you like a date who is very spontaneous? | It stresses me out ; It is fine now and then ; I enjoy it ; I love it
+S | values | How acceptable is it to date two people from the same friend group? | It is never okay ; It is okay only one after another with time between ; It is okay if everyone knows ; It is completely fine
+S | personality | How much does rejection from a crush affect you? | I forget about it the same day ; I feel sad for a day or two ; I feel down for weeks ; It shakes my confidence for months
+S | taste | How appealing is a date who is extremely tidy? | It seems rigid to me ; It is fine ; It is a plus ; It is a big turn-on
+S | values | How much should a date's relationship with their family matter? | Not at all ; Only if it affects us ; Quite a bit ; It is one of the most important things
+S | personality | How do you usually decide what to wear on a first date? | I wear whatever I have on ; I pick something clean and nice ; I try on a few outfits ; I buy something new
+# noul batch
+N | personality | Have you ever asked someone out in person?
+N | personality | Have you ever been on a blind date?
+N | personality | Have you ever ghosted someone after a date?
+N | personality | Have you ever been ghosted by someone you liked?
+N | values | Is it okay to go on a date just to avoid being lonely?
+N | values | Is it fine to use an old photo on your dating profile if you still look similar?
+N | taste | Would you date someone who has never had a partner before?
+N | taste | Would you date someone who works night shifts?
+N | values | Is it okay to date your best friend's sibling?
+N | values | Is it okay to date a friend's ex after some time has passed?
+N | taste | Would you go on a date with someone who is much shorter than you?
+N | values | Should you tell a date you are also seeing other people?
+N | taste | Would you date someone who does not like animals?
+N | taste | Would you date someone with very different taste in food?
+N | values | Is it acceptable to ask someone out who is in a group of friends at a bar?
+N | personality | Do you believe you have a soulmate?
+N | values | Is it okay to reject someone because of their job?
+N | taste | Would you date someone who is a big gamer?
+N | taste | Would you date someone who is always on their phone?
+N | values | Is it rude to check your phone on a first date?
+N | personality | Have you ever fallen for someone you met while traveling?
+N | values | Is it okay to flirt with a server or bartender?
+N | taste | Do you find confidence more attractive than good looks?
+N | taste | Would you date someone who is shy?
+N | values | Is it fine to go on a date with someone you are not attracted to just to be nice?
+N | personality | Have you ever had a crush on a teacher or boss?
+N | values | Should you date someone your parents dislike?
+N | taste | Would you date someone who has a very different daily schedule from yours?
+N | taste | Would you go on a date with someone you met in a video game?
+N | values | Is it okay to say you are busy instead of admitting you are not interested?
+N | personality | Do you tend to go after people who are hard to get?
+N | taste | Do you find it attractive when someone is a little mysterious?
+N | values | Should a date offer to pay even if they did the asking?
+N | values | Is it okay to ask a date how much they earn?
+N | taste | Would you date someone who does not want to travel?
+N | personality | Have you ever pretended to like something to impress a date?
+N | taste | Would you date someone who is much more outgoing than you?
+N | taste | Would you date someone who does not like your favorite hobby?
+N | social | Would most people say dating apps are the easiest way to meet someone?
+N | social | Would most people say it is fine for a woman to ask a man out?
+N | social | Would most people say ghosting is worse than an awkward rejection?
+N | social | Would most people say first impressions are usually right?
+N | social | Would most people say it is creepy to message someone you found on social media?
+N | social | Would most people say that confidence is the most attractive trait?
+N | social | Would most people say it is rude to leave a date early?
+N | social | Would most people say that dating is harder now than it used to be?
+N | social | Would most people say that friends make the best matchmakers?
+N | values | Is it okay to ask for a second date right at the end of the first?
+N | taste | Would you go on a date at a place you have been with an ex?
+N | personality | Do you get nervous around people you find attractive?
+N | values | Is it okay to have a checklist of traits for a partner?
+N | taste | Would you date someone who has very different fashion sense from yours?
+N | values | Should you date someone who is still close friends with their ex?
+N | personality | Have you ever used a dating app just for an ego boost?
+N | taste | Would you date someone who is a lot messier than you?
+N | values | Is it okay to ask a mutual friend whether your crush likes you?
+N | taste | Would you date someone who has a very loud laugh?
+N | values | Is it okay to end a first date early if there is no spark?
+N | taste | Would you enjoy a date that involves meeting their dog first?
+N | values | Is it okay to invite a date to a family event early on?
+N | personality | Have you ever asked a friend to call you with a fake emergency during a date?
+N | taste | Would you date someone who does not use any social media?
+N | values | Should dating apps require identity checks?
+N | personality | Do you prefer being asked out over doing the asking?
+N | taste | Would you date someone who is always late?
+N | values | Is it okay to flirt with someone while you are dating someone else casually?
+N | personality | Have you ever dated someone mainly because of their looks?
+N | taste | Would you date someone with a very different religion from yours?
+N | values | Should you tell a crush how you feel before they move away?
+N | taste | Do you like dating profiles that include a lot of details?
+N | personality | Do you stay in touch with people you went on a few dates with?
+N | values | Is it okay to go on dates while still getting over a breakup?
+N | taste | Would you date someone who wants to live in a completely different part of the world?
+N | personality | Have you ever been on a date you knew was a mistake from the start?
+N | values | Is it okay to ask a coworker's friend out?
+N | taste | Do you find it attractive when someone knows a lot about wine or food?
+N | personality | Do you get bored quickly once someone shows they like you?
+N | values | Is it okay to reject someone because of their height?
+N | taste | Would you date someone who is very competitive?
+N | values | Should people wait for a crush to become single?
+N | personality | Have you ever confessed feelings to a crush in writing?
+N | taste | Would you date someone who does not drink coffee or tea?
+N | social | Would most people say love at first sight is just attraction at first sight?
+N | values | Is it okay to keep a dating profile active after the first date goes well?
+N | taste | Would you go on a date that starts early in the morning?
+N | personality | Have you ever tried speed dating?
+N | taste | Would you date someone who shares your exact first name?
+# extra batch
+S | values | What kind of first date is appropriate to spend on? | A walk or anything free ; Coffee or a single drink ; A casual dinner ; An expensive dinner or show
+S | social | How would most people describe the role of photos on dating apps? | Most would say photos barely affect who they match with ; Most would say photos matter as much as the bio ; Most would say photos decide most swipes ; Most would say they never read bios at all
+C | values | How should you handle a situationship that has gone on for months without a label? | ask_what_this_is ; keep_enjoying_it ; slowly_pull_away ; end_it ; start_seeing_other_people
+C | taste | Which meeting story would you most like to tell about how you met a partner? | met_by_chance_in_public ; set_up_by_friends ; childhood_friends ; met_while_traveling ; swiped_right ; met_at_a_class
+S | personality | How do you behave in the early weeks of seeing someone new? | I keep my usual life and see them rarely ; I see them once a week or so ; I see them several times a week ; I spend nearly every free moment with them
+N | values | Is it okay to go on a date with someone you met at a funeral?
+C | values | What is the right thing to do if a date reveals a dealbreaker partway through the evening? | finish_the_date_kindly ; tell_them_honestly_then_leave ; leave_early_with_an_excuse ; ignore_it_for_tonight
+C | taste | Which dealbreaker matters most to you? | wants_different_things_about_kids ; smokes ; rude_to_others ; no_ambition ; poor_hygiene ; lives_far_away ; very_different_values
+S | taste | How much would a date's loud chewing bother you? | I would not notice ; I would notice but let it go ; It would make me less keen ; I would not see them again
+N | personality | Have you ever gone on a date with someone a friend set you up with?
+C | social | Which dating app behavior would most people say is the most common? | swiping_while_bored ; matching_but_never_messaging ; messaging_but_never_meeting ; using_it_for_compliments ; actually_going_on_dates
+S | values | How acceptable is it to break a date's heart gently by text after two dates? | Never, it must be done in person ; Only if a call is not possible ; Text is fine after a couple of dates ; Text is fine at any stage of early dating
+C | personality | When a date goes badly, how do you usually tell the story afterward? | laugh_about_it_with_friends ; keep_it_to_myself ; complain_about_it ; wonder_what_went_wrong
+N | taste | Do you enjoy the thrill of a crush more than actually dating?
+S | personality | How do you usually respond when a match asks to video call before meeting? | I refuse and suggest just meeting ; I agree but feel awkward ; I am happy to do it ; I ask for a video call myself before any date
+C | values | What is the best way to meet someone without dating apps? | join_a_club_or_class ; ask_friends_to_introduce_you ; go_to_parties ; volunteer ; talk_to_strangers_more ; attend_singles_events
+N | values | Is it fine to date someone you met through work training or a conference?
+C | taste | What quality makes a first kiss go well? | right_timing ; asking_first ; confidence ; the_setting ; mutual_nervousness
+S | social | How would most people react if their date asked to be exclusive after the first date? | Most would run ; Most would feel uneasy ; Most would feel flattered but unsure ; Most would say yes happily
+N | social | Would most people say it is okay to date a friend's ex?
+C | taste | What kind of first date lets you relax the most? | activity_with_something_to_do ; sit_down_talk ; walk_and_talk ; group_setting ; home_cooked_meal
+S | taste | How much does someone's handwriting or texting style affect your attraction? | Not at all, I never think about it ; I notice odd habits but move on ; A charming style makes me like them more ; The wrong style can end my interest
+C | values | What should you do if you are asked out by someone you have turned down before? | say_no_again_firmly ; reconsider_now ; say_yes_if_you_changed_your_mind ; avoid_them
+N | personality | Have you ever had a crush that lasted for years?

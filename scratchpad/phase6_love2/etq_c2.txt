@@ -1,0 +1,53 @@
+C|s|Which bad manner do you think most people are guilty of?|checking_phones_mid_conversation;being_late;interrupting;not_saying_thank_you;talking_loudly_in_public;not_replying_to_messages
+C|s|Which etiquette rule do you think most people have stopped following?|thank_you_notes;rsvps;table_manners;holding_doors;dressing_up_for_events;phone_free_meals
+C|s|Which rude habit do you think annoys most people the most?|loud_chewing;phone_use_at_meals;lateness;cutting_in_line;interrupting;not_tipping
+C|s|What do most guests forget to do after a dinner party?|say_thank_you;offer_to_help_clean;send_a_follow_up_message;return_the_container;invite_the_host_back
+C|p|What do you usually do when a waiter asks how the meal is and it's mediocre?|say_it_is_great;say_it_is_fine;say_exactly_what_was_wrong;just_nod
+C|p|How do you usually end a text conversation?|a_goodbye;an_emoji;a_thanks;i_just_stop_replying;i_wait_for_them_to_end_it
+C|p|When someone holds a door for you from far away, what do you do?|speed_up_to_a_jog;walk_normally;wave_them_on;thank_them_warmly
+C|p|What is your usual reaction when someone is rude to you in public?|say_something;ignore_it;give_them_a_look;complain_to_friends_later;stew_on_it_all_day
+C|p|Which manners did your parents stress most when you were growing up?|please_and_thank_you;table_manners;greeting_elders;being_on_time;writing_thank_you_notes;not_interrupting
+C|p|When you are a guest, what do you usually bring?|wine;flowers;dessert;a_small_gift;nothing;whatever_the_host_asks
+C|t|Which kind of party would you rather attend?|sit_down_dinner;cocktail_party;backyard_barbecue;game_night;dance_party;quiet_gathering
+C|t|Which way of giving thanks feels most meaningful to you when you receive it?|a_handwritten_note;a_phone_call;a_thoughtful_text;a_small_gift;a_public_shout_out;a_hug
+C|t|Which kind of gift do you most enjoy giving?|something_practical;something_funny;something_handmade;an_experience;a_book;a_gift_card
+C|v|What should you do when you realize you were overcharged at a small local shop?|mention_it_politely;ask_for_a_refund;let_it_go;never_shop_there_again
+C|v|What should you do when someone gives you a gift that seems too expensive?|accept_graciously;accept_and_give_something_back;politely_refuse;ask_them_why
+C|v|What should you do when a friend asks you to proofread a wedding speech that is bad?|give_honest_notes;fix_it_quietly;say_it_is_great;suggest_they_shorten_it
+C|v|What is the best way to respond when a stranger compliments your child?|thank_them;have_the_child_thank_them;smile_and_walk_on;compliment_them_back
+C|v|How should you act when you walk into a room where a meeting has already started?|slip_in_quietly;apologize_aloud;wait_outside;wave_and_sit
+C|v|What should you do when someone tells a joke you find offensive at a party?|say_something_right_away;do_not_laugh;talk_to_them_privately;laugh_along;walk_away
+C|v|What is the polite way to ask a guest to take off their shoes?|a_sign_by_the_door;ask_as_they_arrive;put_out_slippers;take_yours_off_and_hope_they_follow
+C|v|What should you do when your hosts' child plays loud music while you visit?|ignore_it;ask_the_child_to_turn_it_down;ask_the_host;leave_early
+C|v|What is the best way to respond to a wedding invitation you receive late?|reply_warmly_anyway;ask_the_couple_why_it_was_late;decline;ignore_it
+S|p|How much do table manners matter to you in a friend?|Not at all;A little;Somewhat;A lot;They are a dealbreaker
+S|p|How much do you notice other people's bad manners?|Never;Only if extreme;Sometimes;Often;Constantly
+S|p|How formal are your manners around new people?|Very casual;Mostly casual;Balanced;Mostly formal;Very formal
+S|p|How much do you care about arriving at the exact start time for events?|Not at all;A little;Somewhat;A lot;It is my top priority
+S|p|How awkward do you feel when someone gives you a gift and you have nothing for them?|Not at all;A little;Somewhat;Very;So awkward I rush out to buy something
+S|p|How often do you forget to reply to messages?|Never;Rarely;Sometimes;Often;All the time
+S|p|How much do you enjoy sending gifts to people for no reason?|Never do it;Rarely;Sometimes;Often;It's one of my favorite things
+S|s|How often do you think people forget to say thank you these days?|Never;Rarely;Sometimes;Often;Almost always
+S|s|How common do you think it is for guests to arrive late to parties?|Very rare;Uncommon;About half;Common;Nearly everyone
+S|s|How many people do you think still write thank-you notes by hand?|Almost nobody;A small minority;About half;Most;Nearly everyone
+S|s|How much do you think manners have declined over time?|Not at all, they've improved;They're about the same;A little;A lot;They've nearly vanished
+S|s|How many people do you think check their phones during dinner with others?|Almost nobody;A small minority;About half;Most;Nearly everyone
+S|t|How much do you enjoy formal events with strict etiquette?|I hate them;I tolerate them;They're fine;I enjoy them;I love them
+S|t|How fancy do you like a party you host to be?|Paper plates and pizza;Casual homemade food;A nice spread and decorations;A formal sit-down dinner;A catered affair with a dress code
+S|v|How much should a guest compliment the host's home decor?|Never;A general compliment;A specific compliment;Compliments throughout the visit
+S|v|How much should you offer to share snacks with people around you on a long trip?|Never;Only with people I know;With my seatmate;With everyone nearby
+N|p|Have you ever been scolded for your table manners?
+N|p|Have you ever pretended to like a gift?
+N|p|Have you ever re-gifted a present?
+N|p|Have you ever walked out of a restaurant because of rude service?
+N|p|Do you say "bless you" when strangers sneeze?
+N|p|Have you ever forgotten to RSVP to a party?
+N|p|Do you usually stay until the end of a party?
+N|p|Have you ever asked a stranger to be quieter in public?
+N|t|Do you prefer being a host to being a guest?
+N|t|Would you rather get a handwritten letter than a text?
+N|s|Do you think most people tip more when someone is watching?
+N|s|Do you think most people are secretly relieved when plans get cancelled?
+N|v|Is it rude to leave a restaurant review without talking to the staff first?
+N|v|Is it okay to bring leftovers home from someone else's party?
+N|v|Is it rude to fall asleep at someone's home while visiting?

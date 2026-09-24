@@ -1,0 +1,273 @@
+C | taste | How would you most want to spend your last full day alive? | with_family; with_close_friends; alone_in_nature; traveling_somewhere_new; doing_a_favorite_hobby; eating_favorite_food; at_home_as_usual=an ordinary day at home; other
+C | values | Who would you most want beside you on your last day? | partner; parents; children; closest_friend; a_crowd_of_loved_ones; no_one=you would prefer to be alone; other
+C | taste | Where would you most like to spend your final day? | at_home; by_the_sea; in_the_mountains; in_a_city_you_love; where_you_grew_up; somewhere_you_never_visited; other
+C | values | What would you most want to say to people on your last day? | thank_you; i_love_you; i_am_sorry; advice_for_their_lives; a_joke_to_lighten_it; nothing_special=you would rather just be with them
+C | taste | What would you eat for your last meal? | childhood_favorite=a dish from when you were young; something_expensive=a luxury meal you never tried; home_cooking=a meal made by someone you love; street_food; dessert_only; whatever_is_in_the_fridge; other
+C | evaluative | Which feeling do you expect to have most when you think about your life near its end? | pride; gratitude; peace; regret; curiosity_about_what_is_next; fear; other
+C | taste | How would you like to be remembered at a gathering after you die? | a_party=a lively celebration; a_quiet_ceremony; a_walk_in_nature; a_shared_meal; no_gathering; other
+C | taste | Which song mood would you want played at your memorial? | upbeat_and_joyful; calm_and_peaceful; sad_and_moving; funny_and_ironic; no_music; other
+C | values | What would you do with your belongings after you are gone? | leave_to_family; give_to_friends; donate_to_charity; sell_and_give_the_money; let_others_decide; other
+C | evaluative | What is the biggest advantage of being young? | energy; health; time_ahead; freedom_from_responsibility; looks; willingness_to_take_risks; other
+C | taste | What would you most like to be doing in old age? | traveling; gardening; spending_time_with_grandchildren; still_working; learning_new_things; volunteering; relaxing_at_home; other
+C | taste | Where would you most like to live when you are old? | where_you_live_now; near_your_children; somewhere_warm; the_countryside; a_busy_city; a_retirement_community; with_family; other
+C | personality | How do you usually react when you notice a new sign of aging on yourself? | laugh_it_off; feel_a_bit_sad; try_to_hide_it; accept_it_calmly; do_not_notice_such_things; other
+C | values | Which do you value more: a long life or a full life? | a_long_life; a_full_life; both_equally
+C | values | If you could only have one, which would you choose? | a_long_healthy_life_that_is_ordinary; a_shorter_life_that_is_extraordinary
+C | values | If you could live forever, who would you want to share it with? | no_one; your_partner; your_family; your_friends; everyone; other
+C | evaluative | What do you think would be the hardest part of living forever? | watching_others_die; boredom; losing_purpose; the_world_changing_too_much; loneliness; nothing=it would be wonderful
+C | evaluative | Which best describes how time seems to pass for you lately? | it_flies; it_drags; it_is_steady; it_depends_on_the_day
+C | personality | When do you feel time passes fastest? | on_holiday; at_work; with_friends; while_absorbed_in_a_hobby; while_sleeping_in; on_screens; other
+C | personality | When does time feel slowest for you? | waiting_in_line; in_boring_meetings; when_sick; when_anxious; when_bored_at_home; while_waiting_for_news; other
+C | personality | Which best describes how you plan for the future? | detailed_long_term_plans; rough_goals; plan_only_the_next_step; take_it_as_it_comes; other
+C | values | Which do you think is the biggest waste of time? | worrying; scrolling_on_a_phone; commuting; arguing_online; waiting_for_the_perfect_moment; holding_grudges; watching_television; other
+C | personality | What do you do most often when you have unexpected free time? | rest; see_people; do_a_hobby; catch_up_on_chores; scroll_on_a_phone; go_outside; other
+C | taste | Which item would you put in a time capsule to be opened long after you are gone? | a_letter; a_photo; a_favorite_object; a_piece_of_music; a_newspaper; a_piece_of_clothing; other
+C | taste | Who would you write a letter to be read after you die? | your_partner; your_children; your_parents; your_friends; your_future_descendants; no_one; other
+C | taste | What would a letter to your future self most likely say? | a_reminder_of_your_goals; advice; a_warning; a_description_of_your_life_now; a_joke; an_apology; other
+C | taste | Which keepsake of yours would you most want someone to keep after you are gone? | a_piece_of_jewelry; a_photo_album; handwritten_letters; a_favorite_book; a_recipe; a_piece_of_clothing; none; other
+C | taste | Which bucket list item appeals to you most? | see_the_northern_lights; learn_a_new_language; run_a_marathon; skydive; write_a_book; live_abroad; meet_a_hero; other
+C | personality | How would you describe your bucket list? | written_down; kept_in_your_head; you_do_not_have_one; you_have_finished_most_of_it
+C | evaluative | What is the best way to make the most of limited time? | say_yes_to_more; say_no_to_more; focus_on_people; focus_on_goals; slow_down; other
+C | values | What would you stop doing first if you learned you had little time left? | working; worrying; pleasing_people; saving_money; arguing; nothing; other
+C | evaluative | Which milestone in life do you think matters most? | finishing_school; first_job; moving_out; marriage_or_partnership; having_children; retirement; other
+C | taste | How do you like to mark your birthday? | a_big_party; a_small_dinner; a_trip; a_quiet_day_alone; ignore_it; other
+C | personality | How do you feel on your birthday most years? | excited; reflective; a_little_sad; indifferent; anxious_about_getting_older; other
+C | taste | Which anniversary do you care most about marking? | a_relationship_anniversary; a_work_anniversary; the_anniversary_of_a_loss; the_anniversary_of_a_move; none; other
+C | evaluative | What most makes someone seem old? | their_attitudes; their_health; their_looks; their_taste_in_music_and_tech; their_energy; other
+C | evaluative | What most keeps someone young at heart? | curiosity; humor; friendships; exercise; learning; play; other
+C | values | Which would you rather keep into old age: a sharp mind or a strong body? | a_sharp_mind; a_strong_body
+C | values | If you could reverse aging for one part of yourself, which would you pick? | your_energy; your_memory; your_looks; your_joints; your_eyesight; other
+C | evaluative | What is the best age to fall in love? | as_a_teenager; in_young_adulthood; in_midlife; in_later_life; age_does_not_matter
+C | evaluative | What is the best age to start something new? | as_early_as_possible; after_some_experience; in_midlife; in_retirement; any_age
+C | taste | Which era of your own life do you feel most nostalgic for? | early_childhood; school_years; student_years; early_career; recent_years; none
+C | evaluative | Which kind of nostalgia do you feel most often? | for_places; for_people; for_music; for_food; for_a_way_of_life; for_how_you_used_to_feel; none
+C | personality | What usually triggers your nostalgia? | a_song; a_smell; a_photo; a_place; a_food; a_conversation; other
+C | values | What do you think is the right attitude toward death? | acceptance; curiosity; fear; defiance; avoidance; peace; other
+C | social | Who would you most want to talk to about your own death? | your_partner; your_family; a_close_friend; a_counselor; a_stranger; no_one
+C | values | What matters more for how you will be remembered? | what_you_achieved; how_you_treated_people; what_you_created; who_you_loved; other
+C | evaluative | Who is usually remembered longest? | the_famous; the_kind; the_creative; the_rich; the_brave; the_ones_with_big_families; other
+C | taste | Which way of being remembered sounds best to you? | a_bench_with_your_name; a_tree_planted_for_you; a_scholarship; a_photo_on_a_family_wall; a_story_told_by_friends; none
+C | values | If a treatment could double your healthy lifespan, would you take it? | yes_right_away; yes_after_others_tried_it; only_if_loved_ones_could_too; no; unsure
+C | evaluative | Which invention would most change how people feel about aging? | a_cure_for_memory_loss; a_pill_to_stop_wrinkles; robot_caregivers; ageless_bodies; perfect_health_monitoring; other
+C | values | Which is more precious to you right now: time or money? | time; money; equal
+C | values | Would you trade some of your income for more free time? | yes_a_lot; yes_a_little; no; unsure
+C | evaluative | Which season of the year makes you most aware of time passing? | spring; summer; autumn; winter; none
+C | evaluative | Which moment of the day feels most reflective to you? | early_morning; midday; sunset; late_night; none
+C | personality | How often do you think about what your life will look like far in the future? | daily; weekly; now_and_then; rarely; never
+C | taste | Which way of measuring your life feels most meaningful? | the_people_you_loved; the_places_you_went; the_things_you_made; the_problems_you_solved; the_fun_you_had; other
+C | values | Which do you most want more of before life ends? | adventure; calm; love; knowledge; laughter; accomplishment; other
+C | social | How do you usually respond when an older relative talks about death? | listen_openly; change_the_subject; make_a_joke; reassure_them; feel_uncomfortable_and_stay_quiet; other
+C | social | How do you think children should first learn about death? | through_a_pet; through_books; through_honest_family_talks; through_a_funeral; when_they_ask; other
+C | values | Should people talk openly about death at the dinner table? | yes_freely; only_when_it_comes_up; only_among_adults; rarely; no
+C | taste | Which epitaph style suits you? | a_joke; a_quote; a_simple_name_only; a_message_to_visitors; a_line_about_what_you_loved; none
+C | values | Who should decide how you are remembered? | you_in_advance; your_family; your_friends; whoever_cares_most; no_one
+C | personality | How often do you look at your old messages or journals? | often; sometimes; rarely; never; you_do_not_keep_them
+C | values | Would you rather be remembered by a few people deeply or by many people briefly? | a_few_deeply; many_briefly
+C | evaluative | Which is the best thing to pass down to the next generation? | family_stories; values; money; a_home; skills; heirlooms; other
+C | taste | Which family heirloom would you most want to inherit? | jewelry; a_watch; furniture; recipes; letters_and_photos; a_musical_instrument; none; other
+C | evaluative | What makes an elderly person most admirable? | staying_curious; staying_kind; staying_active; staying_independent; sharing_wisdom; humor; other
+C | personality | Which describes your attitude to getting older right now? | looking_forward_to_it; accepting_it; mildly_dreading_it; strongly_dreading_it; not_thinking_about_it
+C | taste | How would you want to look as you age? | natural_and_gray; youthful_as_possible; stylish_in_a_new_way; whatever_happens; other
+C | values | Would you use cosmetic procedures to look younger? | yes_many; yes_a_few; maybe_later; no
+C | evaluative | When do you think someone becomes old? | when_their_body_slows; when_they_stop_learning; when_they_retire; when_they_feel_old; when_their_friends_start_passing; other
+C | evaluative | Which do you fear losing more with age? | your_independence; your_memory; your_looks; your_friends; your_purpose; none
+C | taste | What would you like your final words to be about? | love; gratitude; a_joke; advice; a_goodbye; no_preference
+C | values | If you knew your time was short, would you tell people? | everyone; close_family_only; only_your_partner; no_one; unsure
+C | values | Would you spend your final months working on something or resting? | working_on_something; resting; a_mix
+C | evaluative | Which is harder to accept: your own mortality or the mortality of loved ones? | your_own; loved_ones; equally_hard
+C | personality | How do you react when you realize how much time has passed since something? | shocked; wistful; amused; unbothered; anxious; other
+C | taste | Which clock would you want in your home? | a_ticking_grandfather_clock; a_silent_digital_clock; no_visible_clock; a_sundial; other
+C | personality | How do you usually spend the last evening of a vacation? | savoring_every_minute; already_packing_and_planning; feeling_sad_it_is_ending; doing_nothing_special
+C | values | Which is the better way to live? | as_if_every_day_is_the_last; as_if_you_will_live_forever; somewhere_in_between
+C | evaluative | Which phrase about time do you agree with most? | time_heals_everything; time_is_money; time_flies_when_having_fun; better_late_than_never; the_best_is_yet_to_come; none
+C | personality | Which describes your relationship with your calendar? | fully_scheduled; loosely_planned; mostly_empty; you_do_not_use_one
+C | values | How should you spend a rare free weekend? | resting; adventuring; seeing_loved_ones; finishing_projects; learning_something; other
+C | taste | Which would you rather receive on a milestone birthday? | a_surprise_party; a_trip; letters_from_loved_ones; a_meaningful_gift; a_quiet_day; nothing
+C | evaluative | Which age do people tend to romanticize most? | childhood; the_teen_years; the_college_years; young_parenthood; retirement; other
+C | personality | Which future event are you most looking forward to? | a_trip; a_family_event; a_career_step; retirement; something_you_are_building; nothing_in_particular; other
+C | evaluative | What most helps people accept aging gracefully? | good_health; close_relationships; a_sense_of_humor; purpose; financial_security; spiritual_practice; other
+C | values | Which would you rather leave your descendants? | a_fortune; a_famous_name; a_great_story; strong_values; a_family_home; other
+C | values | If you could preserve your mind digitally after death, would you? | yes; only_for_family_to_talk_to; no; unsure
+C | evaluative | Would a digital version of you that talks to your family be comforting or unsettling? | comforting; unsettling; both; neither
+C | taste | Which way of recording your life appeals most? | a_journal; photo_albums; videos; a_memoir; social_media_posts; none
+C | values | What should happen to your private diaries after you die? | destroyed_unread; given_to_family; published; kept_but_sealed; you_do_not_keep_diaries
+C | personality | How do you feel on New Year's Eve? | hopeful; reflective; melancholy; excited; indifferent
+C | taste | How do you like to see in the New Year? | a_big_party; with_close_family; with_a_few_friends; asleep_early; alone_quietly; other
+C | personality | What do you do with resolutions for a new year? | make_and_keep_them; make_and_forget_them; do_not_make_them; set_vague_intentions
+C | evaluative | Which life stage passes the quickest? | childhood; the_teen_years; young_adulthood; parenthood; midlife; old_age
+C | evaluative | What do older people understand best that younger people do not? | that_time_is_short; what_really_matters; that_most_worries_never_happen; the_value_of_health; other
+C | evaluative | What do younger people understand better than older people? | technology; new_ideas; taking_risks; enjoying_the_moment; nothing_in_particular; other
+C | social | What do you most want to learn from the elders in your life? | family_history; life_advice; recipes; skills; their_regrets; nothing_in_particular
+C | social | How often do you ask older relatives about their lives? | often; sometimes; rarely; never; you_have_no_older_relatives_to_ask
+C | taste | Which kind of time do you treasure most? | early_mornings_alone; long_dinners_with_friends; lazy_weekends; time_outdoors; holidays_with_family; other
+C | values | What would you do if you had one extra free hour every day? | sleep; exercise; read; see_people; work_on_a_passion; do_nothing; other
+C | values | If you could buy back time from your past, what would you trade it away from? | work; worrying; screen_time; bad_relationships; commuting; nothing
+C | personality | Which describes how you think about your own death? | calmly; with_curiosity; with_dread; with_sadness; you_avoid_the_thought
+C | values | Which do you think gives a person a good death? | being_surrounded_by_loved_ones; having_no_regrets; being_at_peace; being_at_home; having_said_goodbye; other
+C | values | Which would you rather know: the day you will die, or how you will die? | the_day; how; neither
+C | evaluative | Which age do you feel inside, compared to your actual age? | younger; about_the_same; older
+C | values | Should people get to choose when to retire? | yes_always; mostly; only_with_enough_savings; no; unsure
+C | taste | Which retirement lifestyle appeals to you most? | full_leisure; part_time_work; volunteering; traveling_constantly; starting_something_new; never_retiring
+C | personality | Which best describes the pace you live at? | always_rushing; busy_but_steady; relaxed; slow_and_deliberate; it_changes_a_lot
+C | values | Which would you rather have at the end of your life? | many_stories_to_tell; a_few_deep_relationships; a_body_of_work; a_quiet_mind; other
+C | evaluative | Which word best describes midlife to you? | crisis; peak; transition; freedom; routine; other
+C | taste | What would you want to be doing at the very moment you turn old? | laughing_with_friends; traveling; working_on_a_passion; holding_a_grandchild; sitting_quietly_outdoors; other
+C | social | How do you feel about lying about your age? | it_is_harmless_fun; it_is_a_bit_silly; it_is_dishonest; you_have_done_it; you_never_would
+C | evaluative | Which object best symbolizes the passing of time to you? | an_hourglass; a_calendar; a_growing_child; falling_leaves; old_photographs; a_clock; other
+C | values | What should a person make time for no matter how busy they are? | family; sleep; exercise; friends; a_hobby; quiet_reflection; other
+C | taste | Which would you rather collect over a lifetime? | photographs; letters; souvenirs_from_trips; books; recipes; friendships; other
+C | personality | When a good moment is happening, what do you usually do? | take_a_photo; tell_yourself_to_remember_it; just_enjoy_it; think_about_when_it_will_end; share_it_online; other
+C | values | Which is the better gift to your future self? | savings; good_health_habits; strong_friendships; skills; good_memories; other
+C | evaluative | What do you think is the best reason to want to live longer? | seeing_loved_ones_grow; finishing_your_goals; seeing_the_future; enjoying_more_experiences; curiosity; other
+C | values | If you could live one extra lifetime, how would you use it? | the_same_way; a_totally_different_career; somewhere_else_in_the_world; mostly_at_rest; helping_others; other
+S | personality | How do you react when someone asks how old you are? | I refuse to answer ; I dodge with a joke ; I answer but feel a little uneasy ; I answer without a thought ; I proudly volunteer my age before anyone asks
+S | personality | How much do you plan your life ahead? | I rarely know what I am doing tomorrow ; I plan the week ahead ; I plan the coming months ; I have goals mapped out for the coming years ; I have a written plan for my whole life
+S | personality | How often do you stop to savor an ordinary moment? | I almost never notice ordinary moments ; I savor one now and then when someone points it out ; I catch myself savoring a moment most weeks ; I pause to savor something nearly every day ; I make savoring small moments a deliberate daily habit
+S | personality | How do you feel when you think about the fact that you will die someday? | I push the thought away immediately ; I feel a knot of anxiety ; I feel a little sad but move on ; I feel calm about it ; I feel it makes each day feel more precious
+S | personality | How do you feel on a birthday that ends a decade of your life? | I dread it for weeks beforehand ; I feel a pang of unease on the day ; It feels like any other birthday ; I celebrate it as a fun milestone ; I throw a big party and love every minute
+S | personality | How often do you feel nostalgic? | I almost never feel nostalgic ; A song or photo sets it off now and then ; I feel it most weeks ; I spend part of most days lost in the past
+S | personality | How often do you feel you are wasting your time? | I rarely feel my time is wasted ; I feel it after an unproductive weekend ; I feel it a few times a week ; I feel it most days ; I feel it almost constantly
+S | personality | How well do you keep track of time during the day? | I lose track of time constantly and am often late ; I often look up surprised at how late it is ; I usually know roughly what time it is ; I always know the time without checking
+S | personality | How patient are you when waiting for something you want? | I cannot stand waiting and give up quickly ; I wait but complain the whole time ; I wait with some restlessness ; I wait calmly without much thought ; I enjoy the anticipation of waiting
+S | personality | How comfortable are you visiting a cemetery? | I avoid cemeteries entirely ; I go only when I must and leave quickly ; I can visit without discomfort ; I find cemeteries peaceful and sometimes walk through them for pleasure
+S | personality | How do you feel when you find a new gray hair or wrinkle? | I feel upset and hide it right away ; I feel a small sting of sadness ; I shrug and move on ; I feel proud of it as a mark of life
+S | personality | How often do you think about your own old age? | I never picture myself old ; I picture it on rare occasions ; I think about it when I see older relatives ; I think about it regularly and plan for it
+S | personality | How do you react when a friend mentions a classmate who has died? | I change the subject quickly ; I feel shaken for days ; I feel sad for a while and reflect ; I reach out to their family or others who knew them
+S | social | How openly do you talk about your wishes for the end of your life? | I have never mentioned them to anyone ; I have hinted at them once ; I have told one close person ; I have talked them through with my family ; I have written them down and shared them with everyone who needs to know
+S | values | How ready are your affairs if something happened to you tomorrow? | I have nothing arranged at all ; I have thought about it but done nothing ; I have a few things sorted, like passwords ; I have a will but it is out of date ; I have everything written down and up to date
+S | personality | How often do you look at old photos of yourself? | I never look at them ; I look when someone else brings them out ; I look now and then on my own ; I look through them often
+S | personality | How do you feel when a year comes to an end? | I barely notice the year ending ; I feel mild surprise at how fast the year went ; I sit down and reflect on the year ; I write a detailed review and plans for the next year
+S | personality | How much does the speed of time passing bother you? | It never bothers me ; It crosses my mind at birthdays ; It bothers me when I see children growing ; It bothers me most weeks ; It fills me with dread often
+S | personality | How much do you look forward to your later years? | I dread my later years ; I avoid thinking about my later years ; I have no strong feelings about my later years ; I look forward to parts of my later years ; I am eager for my later years
+S | values | How much do you want to know about what the world will be like after you are gone? | I have no interest at all ; I am mildly curious ; I often wonder about it ; I would give a lot to see it
+S | personality | How do you handle the last day of a good trip? | I spend it sulking that it is ending ; I spend it half distracted by going home ; I enjoy it as much as any other day ; I squeeze every possible experience into it
+S | personality | How often do you daydream about the future? | I rarely daydream about the future ; I do it when I am bored ; I do it most days ; I spend hours imagining the future
+S | personality | How likely are you to keep a keepsake from an important day? | I throw everything away ; I keep a photo on my phone ; I save a ticket or small item ; I keep a box full of mementos from important days
+S | social | How often do you tell people you love them, knowing time is limited? | I almost never say it ; I say it on special occasions ; I say it when saying goodbye ; I say it almost every time we talk
+S | personality | How do you feel about milestones like graduations and retirements? | I skip them whenever I can ; I attend but feel little ; I enjoy them ; I find them deeply moving and cry every time
+S | personality | How much do you fear running out of time to achieve your goals? | I never worry about that ; It crosses my mind occasionally ; I worry about it on bad days ; It drives much of how I spend my days
+S | personality | How often do you put off things you want to do someday? | I do the things I want as soon as I can ; I put off a few bigger dreams ; I put off many things for someday ; Almost everything I want to do is on hold for someday
+S | personality | How do you react when you realize you have become like your parents in some way? | I feel horrified ; I feel a little uneasy ; I laugh about it ; I feel proud of it
+S | values | How strongly would you want to live to see the far future? | I have no wish to ; I would like to see a little of it ; I would love to see it ; I would give almost anything to see it
+S | personality | How much do you mark the passing of seasons? | I barely notice the seasons change ; I notice when the weather shifts ; I enjoy seasonal foods and traditions ; I have rituals to celebrate every season
+S | values | How much should you enjoy life now versus save for later? | I spend freely and enjoy everything now ; I lean toward enjoying now with small savings ; I balance now and later evenly ; I lean toward saving and delaying pleasures ; I save almost everything for later
+S | personality | How often do you write things down so you will remember them in the future? | I never write anything down ; I jot down a few important things ; I keep a regular journal ; I record almost every day in detail
+S | personality | How comfortable are you with the idea of growing old alone? | The idea of growing old alone terrifies me ; The idea of growing old alone worries me often ; The idea of growing old alone concerns me a little ; I would be at ease growing old alone
+S | social | How much time do you spend with people much older than you? | Almost none ; I see them at family gatherings ; I see some every week ; Several of my close friends are much older than me
+S | social | How much time do you spend with people much younger than you? | Almost none ; I see them at family gatherings ; I see some every week ; Several of my close friends are much younger than me
+S | personality | How do you feel when you hear a song from years ago? | I feel nothing special ; I feel a flicker of recognition ; I feel pulled back to that time ; I feel overwhelmed with emotion
+S | values | How much do you think about the world you will leave to future generations? | I never think about it ; I think about it occasionally ; I think about it when making big choices ; It shapes much of how I live
+S | personality | How do you handle unstructured time with no plans? | I feel anxious and fill it immediately ; I feel restless after a short while ; I enjoy it for a while ; I love it and could drift for days
+S | personality | How do you feel about time you spend doing nothing? | I feel guilty about it ; I feel it is sometimes needed ; I enjoy it without guilt ; I treasure it as the best time of my week
+S | values | How acceptable is it to spend your savings on experiences rather than leaving an inheritance? | It is unacceptable, I should leave everything I can ; I would spend a little and leave most ; I would spend about half ; I would spend almost all of it on experiences
+S | personality | How often do you think about the people you have lost? | I almost never think about people I have lost ; I think of them on anniversaries and holidays ; Someone I lost comes to mind most weeks ; I think of someone I lost nearly every day
+S | personality | How much do you look forward to birthdays now compared to when you were young? | I dread them now ; I care less about them ; I feel the same ; I enjoy them even more now
+S | values | How much would you want advance notice before your life ended? | I would rather it came as a surprise ; I would want a few days ; I would want a few months ; I would want as much warning as possible
+S | personality | How do you usually spend your birthday morning? | I forget it is my birthday ; I go about my normal routine ; I treat myself to something small ; I take the day off and plan something special
+S | personality | How often do you reread letters or messages from people who are no longer in your life? | I never reread old letters or messages ; I reread one once in a long while ; I reread old letters a few times a year ; I reread old letters and messages often
+S | values | How much would you want a say in your own memorial service? | None, it is for the living to decide ; I would share a few wishes if asked ; I would leave clear instructions on the main points ; I would plan every detail myself
+S | personality | How much do you rush through your days? | I move slowly and take my time with everything ; I rush only when I am late ; I rush through most of my weekdays ; I feel like I am sprinting from the moment I wake up
+S | personality | How much do you enjoy hearing older people's life stories? | I find them tedious ; I listen politely ; I enjoy them ; I seek them out and ask many questions
+S | values | How much should old age be spent resting rather than working? | Old age should be all rest ; Mostly rest with a little work ; An even mix ; Mostly work with some rest ; People should work as long as they can
+S | personality | How much do you plan for your retirement? | I have never thought about it ; I think about it vaguely ; I save a little for it ; I have a detailed plan and save steadily
+S | personality | How do you feel when you realize a chapter of your life is ending? | I feel crushed and cling to it ; I feel sad for a while ; I feel bittersweet but ready ; I feel excited for what comes next
+S | personality | How often do you think about what you would do if you had very little time left? | I never think about it ; I think about it only after hearing sad news ; I think about it now and then ; I think about it often enough that it shapes my choices
+S | personality | How do you feel looking at a photo of yourself as a young adult? | I cannot bear to look ; I feel a twinge of loss ; I smile and move on ; I feel warmly grateful for that person
+S | values | How much should people change their lives after a brush with mortality? | Not at all, life should go on as normal ; A little, like hugging family more ; A lot, rethinking priorities ; Completely, starting a new kind of life
+S | personality | How often do you do something you have always meant to do someday? | Almost never ; Once in a long while ; A few times a year ; Every month I tick something off
+S | personality | How often do you catch yourself saying things were better in the old days? | I never say things were better in the old days ; I say it only as a joke ; I say it when something new annoys me ; I say it most days
+S | values | How much should people prepare for their own death while healthy? | People need not prepare anything while healthy ; People should cover the basics, like naming who gets what ; People should write a clear will and wishes ; People should plan everything down to the music
+S | personality | How much does a ticking clock in a quiet room bother you? | I find it soothing ; I do not notice it ; It distracts me a little ; It makes me feel uneasy about time passing
+S | personality | How much do you dwell on how short life is? | I never think about it ; I think about it at funerals ; I think about it a few times a month ; I think about it most days
+S | personality | How easily do you let go of old possessions? | I throw things out without a second thought ; I keep a few sentimental items ; I keep many things for their memories ; I cannot throw anything away
+S | social | How often do you visit graves of relatives? | I never visit graves of relatives ; I visit graves only when attending a service ; I visit graves on special anniversaries ; I visit graves of relatives several times a year
+S | values | How much should birthdays be celebrated as adults get older? | Adult birthdays should pass unmarked ; Adult birthdays deserve a quiet acknowledgment ; Adult birthdays deserve a nice dinner ; Adult birthdays deserve a big celebration every year
+S | personality | How do you react to being called old by someone younger? | I get offended ; I feel a little hurt ; I laugh it off ; I take it as a compliment
+S | personality | How often do you imagine what your life will look like in old age? | I never imagine my life in old age ; I imagine it once in a great while ; I imagine it every few months ; I imagine it every week or more
+S | personality | How much do you value routines that stay the same year after year? | I hate repeating anything ; I like a few habits ; I enjoy steady routines ; I love doing the same things every year
+S | values | How much weight do you give to the wishes of the dead? | None, the living decide everything ; A little, if convenient ; A lot, I would honor them in most cases ; Complete, I would follow them exactly
+S | personality | How do you feel on the anniversary of a loss? | I do not track such anniversaries ; I notice it quietly ; I set aside time to remember ; I hold a ritual or gathering every year
+S | personality | How much do you look back on the past year when it ends? | I never look back ; I glance back briefly ; I think it over for an evening ; I write out a full reflection
+S | values | How much should older people step aside to make room for the young? | Older people should never step aside because of age ; Older people should step aside in a few roles ; Older people should step aside from most leadership roles ; Older people should step aside completely once they reach old age
+S | personality | How much would you want to know about your future if a reliable source offered it? | I would want to know nothing about my future ; I would want to know only whether I will be happy ; I would want to know the major events ; I would want to know every detail
+S | personality | How often do you think about how much time you spend on screens? | I never think about my screen time ; I think about my screen time once in a while ; I think about my screen time every week ; I regret my screen time every day
+S | personality | How do you feel when you notice your parents getting older? | I do not notice it much ; I feel a small jolt ; I feel sad for a while ; I feel a deep ache and fear of losing them
+S | values | How much should you stay in touch with friends as you age? | Not much, people drift apart naturally ; Enough to keep the closest few ; Regularly with all good friends ; Constantly, friendships are what matter most
+S | personality | How do you spend the quiet moments before falling asleep? | I fall asleep immediately ; I replay the day ; I plan tomorrow ; I think about the distant past or future
+S | personality | How often do you think about a younger version of yourself? | I never think about my younger self ; I think about my younger self only on birthdays ; I think about my younger self now and then ; I think about my younger self often
+S | personality | How willing are you to try new things as you get older? | I stick strictly to what I know ; I try something new rarely ; I try new things now and then ; I seek out new things constantly
+S | personality | How much do you fear being forgotten? | The thought of being forgotten never bothers me ; It crosses my mind at funerals and then fades ; It nags at me often enough that I keep records for others ; It is one of the fears that shapes how I live
+S | values | How much should people take big risks while they are young? | Young people should avoid big risks entirely ; Young people should take only small risks ; Young people should take a few meaningful risks ; Young people should take as many bold risks as they can
+S | personality | How do you feel when summer ends? | I am glad to see it go ; I barely notice the change ; I feel wistful for a day or two ; I mourn it for weeks
+S | personality | How often do you think you have plenty of time left? | I feel time is running out for me ; I rarely feel I have plenty of time ; I usually feel I have plenty of time ; I feel I have all the time in the world
+S | personality | How much do you enjoy anniversaries and reunions? | I avoid them ; I go but feel awkward ; I enjoy them ; I help organize them and love them
+S | personality | How do you feel when a place from your past has changed completely? | I shrug and move on ; I note the change with mild surprise ; I feel sad for what was lost ; I am upset for days and avoid going back
+N | values | Would you want to live to see your great-grandchildren?
+N | personality | Do you have a written bucket list?
+N | personality | Have you ever written a letter to your future self?
+N | personality | Have you ever made a time capsule?
+N | values | Have you made a will?
+N | values | Would you prefer a simple farewell to a formal funeral?
+N | personality | Do you feel older than your actual age?
+N | personality | Do you feel younger than your actual age?
+N | personality | Do you celebrate your birthday every year?
+N | personality | Do you enjoy getting older?
+N | values | Would you spend your last day doing something ordinary rather than something extraordinary?
+N | values | Would you want a big crowd at your memorial?
+N | personality | Do you think about death more now than you did a few years ago?
+N | personality | Do you keep a box of keepsakes?
+N | values | Would you want to donate your organs after you die?
+N | personality | Do you often feel there is not enough time in the day?
+N | personality | Do you find it easy to live in the present?
+N | personality | Do you feel time is speeding up as you get older?
+N | values | Is it better to grow old gracefully than to fight aging?
+N | values | Would you want to be remembered with a public memorial, like a plaque or bench?
+N | personality | Have you ever visited a place from your past just for the nostalgia?
+N | personality | Do you look forward to retirement?
+N | values | Would you want to live in a world where no one ever died?
+N | values | Would you want your loved ones to hold a celebration of life rather than a mourning ceremony?
+N | personality | Do you keep old voicemails or recordings of people you love?
+N | personality | Have you ever lied about your age?
+N | values | Would you want to keep working well into old age?
+N | values | Is it worth sacrificing enjoyment now for a longer life?
+N | personality | Do you tend to save the best things for later?
+N | personality | Do you often lose track of time when absorbed in something?
+N | values | Should older adults get priority for seats on public transport?
+N | personality | Do you mark the anniversaries of loved ones' deaths?
+N | personality | Have you ever thought about what you want your last words to be?
+N | personality | Do you tend to romanticize the past?
+N | personality | Are you excited about what the future holds for you?
+N | values | Would you trade years off the end of your life for a more exciting youth?
+N | personality | Do you sometimes feel you are running out of time to do what you want?
+N | personality | Do you count down the days to things you are looking forward to?
+N | personality | Have you talked with your family about your end-of-life wishes?
+N | personality | Do you dye your hair or use products to hide signs of aging?
+N | personality | Do you feel a pang of sadness when a holiday season ends?
+N | values | Would you want to relive your life from the start with the same choices?
+N | values | Would you want to relive your life from the start knowing what you know now?
+N | personality | Do you think often about what the world will be like after you are gone?
+N | personality | Do you feel uncomfortable around very old people?
+N | personality | Do you enjoy spending time with grandparents or elderly relatives?
+N | values | Would you want a family member to write your life story?
+N | personality | Have you ever written your own obituary for fun?
+N | values | Would you want to be remembered for something you made rather than something you did?
+N | personality | Do you keep a journal so your future self can look back?
+N | personality | Do you get sentimental on the last day of something, like a job or school year?
+N | personality | Do you think you will be a happy old person?
+N | personality | Do you often wish you could pause time?
+N | personality | Do you often wish you could skip ahead in time?
+N | values | Is patience one of the most important virtues?
+N | values | Would you want to leave most of your money to a cause rather than to relatives?
+N | personality | Have you ever planted a tree hoping it would outlive you?
+N | personality | Do you have a favorite age you have been so far?
+N | values | Would you want everyone to know your age by looking at you?
+N | personality | Do you still have things you have been meaning to do for a long time?
+N | personality | Have you ever changed your life after realizing how short it is?
+N | values | Is it wise to plan for decades ahead?
+N | personality | Do you find the sight of an old building or ruin moving?
+N | personality | Do you feel calm when you think about the end of your life?
+N | values | Would you want to receive a letter your parents wrote to you before they died?
+N | personality | Do you take photos mainly so you can look back on them later?
+N | values | Would you rather age in your own home than move somewhere with care?
+N | personality | Do you believe your best years are still ahead of you?
+N | personality | Do you make a point of marking the first day of each new season?

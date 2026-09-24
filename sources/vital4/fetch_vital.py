@@ -69,19 +69,22 @@ def get(url: str, params: dict | None = None, allow_404: bool = False) -> dict |
         _throttle()
         try:
             r = client.get(url, params=params)
-        except httpx.HTTPError:
+        except httpx.HTTPError as e:
+            print(f"  retry ({type(e).__name__}) {url[:60]}", flush=True)
             time.sleep(delay)
             delay *= 2
             continue
         if r.status_code == 404 and allow_404:
             return None
         if r.status_code in (429, 500, 502, 503, 504) or "too many requests" in r.text[:200].lower():
+            print(f"  retry (HTTP {r.status_code}) {url[:60]}", flush=True)
             time.sleep(float(r.headers.get("retry-after", delay)))
             delay *= 2
             continue
         r.raise_for_status()
         d = r.json()
         if isinstance(d, dict) and d.get("error", {}).get("code") == "maxlag":
+            print(f"  maxlag: {d['error'].get('info', '')[:80]}", flush=True)
             time.sleep(float(r.headers.get("retry-after", 5)))
             continue
         return d
@@ -192,7 +195,8 @@ def sitelinks(qids: list[str]) -> dict[str, int]:
     todo = sorted({q for q in qids if q and q not in cache})
     for i in range(0, len(todo), 50):
         batch = todo[i : i + 50]
-        d = get(WD_API, {"action": "wbgetentities", "ids": "|".join(batch), "props": "sitelinks", "format": "json", "maxlag": 5})
+        d = get(WD_API, {"action": "wbgetentities", "ids": "|".join(batch), "props": "sitelinks", "format": "json"})
+        time.sleep(1.0)  # Wikidata rate-limits large entity responses harder than enwiki
         for qid, e in d.get("entities", {}).items():
             cache[qid] = len(e.get("sitelinks", {}))
         if i // 50 % 20 == 0:

@@ -50,3 +50,7 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
 - Flag contested politics in `meta["flags"] = ["political"]` (don't drop it). Drop sexual content involving
   minors and slurs outright; flag other sexual or self-harm content with `"sensitive"`.
 - Deterministic sampling (seeded) so reruns produce identical ids.
+- Scaling a source up (Phase 6): keep the original seeded sample untouched and grow it with
+  `askjev.sampling.top_up` (salted-hash order, so a larger target contains a smaller one). Targets come from
+  `ASKJEV_TARGET_<NAME>` (unset = the original target, byte-identical output); secondary templates over the
+  same inputs from `ASKJEV_EXTRA_<NAME>` (unset = 0). `scripts/phase6_sources.sh` sets them all.

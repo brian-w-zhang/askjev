@@ -1,0 +1,83 @@
+S|p|How much do you enjoy small talk with coworkers?|I avoid it and keep to my work;I answer politely but don't start it;I chat briefly when we cross paths;I enjoy a good chat most days;I seek out coworkers just to talk
+S|v|How much should coworkers know about each other's family lives?|Nothing beyond names;Whether someone has kids or a partner;Big family news like a new baby or a loss;Everyday family stories and photos;Everything, like close friends
+S|v|How much should you cover for a coworker who is struggling personally?|Not at all, everyone does their own work;A small task now and then;Their urgent work for a week or two;A large share of their work for months
+S|v|How often should a manager check in on each team member?|Only when there is a problem;A quick check-in every few weeks;A short one-on-one every week;Several check-ins a week;Constant check-ins throughout the day
+S|v|How much should a boss know about why an employee needs a day off?|Nothing, a request is enough;Just a general category like "personal";A short reason;Full details
+S|p|How comfortable are you asking your boss for help?|I would never ask;Only as a last resort;When I have tried on my own first;Whenever I am unsure;I ask about almost everything
+S|p|How comfortable are you telling a coworker they made a mistake?|I would never mention it;I would hint at it indirectly;I would tell them privately and gently;I would tell them straight away;I would point it out in front of the team
+S|v|How much should coworkers celebrate each other's birthdays?|Not at all;A quick "happy birthday" in passing;A signed card from the team;Cake in the break room;A full team outing
+S|v|How much should you tell coworkers about your health problems?|Nothing at all;Only that I have an appointment;The general issue if it affects my work;Full details to anyone who asks
+S|p|How much do you mind a coworker who is always cheerful?|It really grates on me;It gets tiring now and then;I don't notice it much;I enjoy it;It makes my whole day better
+S|v|How much should you help a coworker who is failing at their job?|Not at all, that is their manager's job;Answer questions if they ask;Offer tips when I notice problems;Spend my own time training them;Do parts of their work to keep them afloat
+S|p|How much does a bad relationship with a coworker affect your mood?|Not at all;It bothers me only when I see them;It lingers through the workday;It follows me home at night;It makes me want to quit
+S|v|How much should managers praise employees in public?|Never, praise is private;Rarely, for major wins only;For good work now and then;Often, for every good contribution
+S|p|How much do you try to impress your boss?|Not at all, I just do my job;A little, on big projects;A fair amount, I make sure they see my work;A lot, I plan my work around what they notice
+S|v|How much socializing should be expected at a company retreat?|None, just the work sessions;A shared dinner;A dinner plus an evening activity;Activities every evening;Constant group activities from morning to night
+S|p|How much do you look forward to the office holiday party?|I dread it;I go only because it is expected;It is fine for an hour or so;I enjoy it;It is a highlight of the year
+S|v|How friendly should you be with coworkers from other departments?|Strictly work contact;A nod in the hallway;Friendly chats in the kitchen;Regular lunches;Close friendships
+S|p|How much do you share on a team group chat?|I only read it;I reply when someone tags me;I post work updates;I share jokes and personal news;I start most of the conversations
+S|v|How much should you keep your desk area personal?|Completely bare;A single photo or plant;A few personal items;Lots of photos and decorations;It feels like a second home
+S|v|How quickly should you reply to a coworker's message during work hours?|Whenever I get to it that day;Within a few hours;Within the hour;Within a few minutes;Immediately, always
+S|p|How much would you miss your coworkers if you left your job?|Not at all;A little, a person or two;A fair bit, I'd keep in touch with some;A lot, they are like family
+S|p|How much do you trust your coworkers to have your back?|Not at all;Only a trusted colleague or two;Most of them in most situations;All of them completely
+S|p|How willing are you to stay late to help a coworker finish a project?|Never;Only if the boss asks;If they would do the same for me;Whenever they need it;I offer before they even ask
+S|v|How much should a manager share about company problems with the team?|Nothing;Only what directly affects them;The general picture;Full details and numbers
+S|v|How much should new hires be expected to join after-work events?|Not at all;Attend the welcome event only;Attend a few events;Attend most events;Attend every event
+S|v|How much should coworkers dress to match each other's style?|Wear whatever you like;Follow the dress code loosely;Match the general style of the team;Dress to impress the boss every day
+S|p|How much do you talk about work with friends outside work?|Never;Only big news;Now and then;Often;It is most of what I talk about
+S|p|How much do you care about being liked by your neighbors?|Not at all;A little, I don't want enemies;Somewhat, I try to be friendly;A lot, I go out of my way;It matters to me more than most things
+S|v|How much should neighbors help each other with chores like mowing?|Never;Only in an emergency;Now and then as a favor;Regularly, like a team
+S|v|How much should neighbors keep an eye on each other's kids?|Never, not their business;Only if they see danger;Casually while kids play outside;Watching them for an afternoon when asked;Acting like second parents
+S|v|How much noise from neighbors is acceptable on a weekend afternoon?|Only quiet conversation;Normal household noise;Music you can hear through the wall;A lively party;Anything goes until night
+S|v|How early is it acceptable for a neighbor to start using a lawnmower on a weekend?|Only after late morning;After the middle of the morning;Once most people are up;At sunrise
+S|v|How much should neighbors coordinate on how their homes look?|Not at all, it's each person's property;Keep yards reasonably tidy;Agree on things like fence colors;Follow strict shared rules for every house
+S|p|How much would you trust a neighbor with a key to your home?|Never;Only in an emergency;For a planned trip;Anytime, they have a spare key already
+S|v|How much should a landlord be involved in a tenant's life?|Not at all beyond repairs;Occasional check-ins about the building;Friendly chats when they meet;Regular visits and personal interest
+S|v|How much should apartment neighbors greet each other?|No greetings needed;A nod in the hallway;A friendly hello every time;Stopping for a short chat
+S|v|How much should a club expect members to attend meetings?|Attendance is fully optional;Members come when they can;Members should come most of the time;Members who miss too many are asked to leave
+S|p|How committed are you to clubs or groups you join?|I drop out quickly;I go now and then;I attend regularly;I never miss a meeting;I end up running the group
+S|v|How much should long-time club members welcome new members?|Newcomers must prove themselves;A polite hello;An introduction and a chat;A buddy assigned to guide them;A special welcome event
+S|p|How much do you enjoy meeting strangers at community events?|I avoid it completely;I stick to people I know;I talk to a new person or two;I enjoy meeting many new people;I try to meet everyone there
+S|v|How much should community groups raise money from their members?|Nothing, it should be free;A small yearly fee;Dues plus the occasional fundraiser;Regular fundraising asks
+S|v|How much should volunteers be thanked for their work?|No thanks needed;A quick thank you;A thank-you note;A public thank you;A special event in their honor
+S|p|How much time do you spend volunteering in your community?|None;A single event a year;A few times a year;About monthly;Every week
+S|p|How much do you care about local news and events?|Not at all;I hear about big events from others;I skim local news now and then;I follow it closely;I attend local meetings
+S|v|How much should a classmate share their notes with others?|Never;Only with close friends;With anyone who asks nicely;With the whole class;Post them for everyone automatically
+S|p|How much do you speak up when working in a group of classmates?|I stay silent;I speak only when asked;I share ideas now and then;I share ideas often;I lead the discussion
+S|v|How much should group project members be graded on individual effort?|Everyone gets the same grade;Mostly the same with some adjustment;Half individual, half group;Mostly individual grades;Completely individual grades
+S|v|How much should you follow up with a new professional contact?|Never;A single thank-you message;A message every few months;Regular check-ins
+S|p|How close do you feel to people in online communities you belong to?|Not at all;Like acquaintances;Like friendly regulars;Like real friends;Closer than my offline friends
+S|v|How much personal information should you share with online acquaintances?|Nothing beyond a username;A first name and general interests;My city and job;Photos and details of my life;Everything I'd tell a close friend
+S|v|How strict should an online community's moderators be?|No moderation at all;Remove only spam;Remove rude posts;Remove anything off-topic;Ban people for a single slip
+S|p|How much do you participate in online forums?|I never visit;I read but never post;I post now and then;I post often;I am a regular everyone knows
+S|v|How much should roommates share food?|Never, everything is labeled;Only basics like salt and oil;Sharing snacks now and then;Mostly shared groceries;Everything is shared
+S|v|How clean should shared spaces in a roommate home be?|Messy is fine;Dishes done within a day or so;Tidy at the end of each day;Spotless at all times
+S|p|How close do you usually get to your roommates?|We rarely speak;We say hello and little else;We hang out now and then;We are good friends;We are like family
+S|v|How much should roommates tell each other before having guests over?|No notice needed;A quick text before;A day's notice;Permission needed each time
+S|v|How much should a mentor be involved in a mentee's decisions?|Only when asked;A check-in now and then;Regular guidance on big choices;Directing most of their choices
+S|p|How much would you want your boss to be your mentor?|Not at all, I'd keep it separate;A little career advice now and then;Regular coaching;A full mentor for my whole career
+S|v|How much should you tell a coworker about a mistake your manager made?|Nothing;Only if it affects them;A casual mention;Every detail
+S|v|How much should coworkers attend each other's weddings?|Never;Only if they are close friends;If invited, go;Always go and bring a gift
+S|v|How much should coworkers chip in for a boss's birthday gift?|Nothing, gifts should flow down, not up;A signature on a card only;A small contribution;A generous contribution
+S|p|How often do you keep in touch with former classmates?|Never;Only at reunions;A few times a year;Monthly;Every week
+S|p|How much do you enjoy group activities like team sports leagues?|I avoid them;I join only if pushed;I enjoy them now and then;I join a league every season;I organize them
+S|v|How much should neighbors help an elderly neighbor who lives alone?|Not at all;Wave and say hello;Check in now and then;Help with groceries and errands;Visit them daily
+S|p|How much would you go out of your way to help a neighbor you dislike?|Not at all;Only in an emergency;Small favors if asked;As much as any other neighbor
+S|v|How much should a community group mix social time with its purpose?|All business;Mostly business, a little chat;Half business, half social;Mostly social
+S|v|How much should a boss comment on employees' appearance?|Never;Only if it breaks the dress code;Friendly compliments now and then;Frequent comments
+S|p|How much would you speak up if you saw a coworker being mistreated?|I'd say nothing;I'd talk to them privately afterward;I'd tell a manager;I'd step in on the spot
+S|v|How much should coworkers lend each other money?|Never;Small amounts for lunch;Moderate amounts in emergencies;Whatever is needed
+S|v|How much should older workers mentor younger ones?|Not their job;If asked;Some informal help;A formal duty for every senior person
+S|v|How friendly should you be with staff at shops you visit often?|Strictly polite;Friendly hellos;Chatting about their day;Knowing their names and lives
+S|p|How much do you feel part of your workplace community?|Not at all;A little;Somewhat;A lot;It's a core part of who I am
+S|v|How much should companies organize social events for staff?|Never;A yearly party;A few events each year;Monthly events;Weekly events
+S|v|How much should you help a stranger who seems lost in your neighborhood?|Not at all;Point them the right way if they ask;Offer help if they look confused;Walk them where they need to go
+S|v|How much should neighbors split costs for shared things like a fence?|Each pays for their own side;Split only if both agree it's needed;Always split evenly;The richer neighbor pays more
+S|p|How much would you trust a coworker with a personal secret?|Never;Only a close work friend;Most of my coworkers;Any of them
+S|v|How much should a team leader involve members in decisions?|The leader decides alone;The leader asks for input on big things;The team votes on most things;The team decides everything
+S|p|How nervous are you on the first day at a new job?|Not at all;A little;Moderately;Very;So nervous I can barely sleep the night before
+S|v|How much should you get involved in a dispute between two neighbors?|Not at all;Listen if they talk to me;Try to help them talk it out;Take a side
+S|p|How much do you share your personal opinions in team meetings?|Never;Only if asked;Now and then;Often;In every meeting
+S|v|How long should a new coworker be given to settle in before being judged?|A day or so;A couple of weeks;A few months;Up to a year
+S|p|How much does your job shape your identity?|Not at all;A little;Somewhat;A lot;It is who I am
+S|v|How much should a neighborhood association control what homeowners do?|No association at all;Only safety rules;Rules on noise and trash;Rules on paint colors and lawns;Rules on nearly everything

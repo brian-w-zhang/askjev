@@ -11,3 +11,4 @@ notes: >
   text, seeded sample balanced 2,000 wrong / 2,000 not wrong from train + test (test_hard and ambiguous sets
   unused). No human distribution: labels are MTurk-validated majority labels, so they go to truth only.
   node_hint self.values.everyday_ethics. Same content filters as scruples; political keywords flag "political".
+  Filters extend scruples with a few sexual terms (butt, groping, intercourse, underwear...) and minor terms (young girls/boys, step-children, babies, toddlers) via scruples_anecdotes.drop().

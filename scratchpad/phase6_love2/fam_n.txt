@@ -1,0 +1,80 @@
+N|v|Should parents ever spank a child?
+N|v|Is it okay to bribe a toddler with candy to behave in public?
+N|v|Should children have to finish everything on their plate?
+N|v|Should toddlers be allowed to use tablets?
+N|v|Should children address their parents' friends as aunt and uncle?
+N|v|Should kids be allowed to have a lock on their bedroom door?
+N|v|Should parents tell children about their own teenage mistakes?
+N|v|Should children be required to write thank-you cards for birthday gifts?
+N|v|Is it okay to tell kids that a toy store is closed when it isn't?
+N|v|Should siblings be expected to share their toys?
+N|v|Should parents use a baby monitor with video?
+N|v|Should children be allowed to call their parents by their first names?
+N|v|Should parents let a teenager date?
+N|v|Should parents be allowed to choose their child's friends?
+N|v|Is it good for children to see their parents disagree?
+N|v|Should kids have to go to every family event?
+N|v|Should parents give children the same presents so nobody feels left out?
+N|v|Should older siblings get more privileges than younger ones?
+N|v|Is it okay to compare siblings out loud?
+N|v|Should a family have one night a week reserved for family time?
+N|v|Is it fine for parents to take vacations without their children?
+N|v|Should grandparents be told about every parenting decision?
+N|v|Is it okay for in-laws to have a key to your home?
+N|v|Should couples spend every holiday with family?
+N|v|Is it okay to skip a family reunion to go on a trip with friends?
+N|v|Should adult children call their parents every week?
+N|v|Is it selfish to move far away from aging parents?
+N|v|Should adult children be paid by their parents for caregiving?
+N|v|Is it okay to put an aging parent in a nursing home?
+N|v|Should adult children tell parents when they are going through a hard time?
+N|v|Should an adult child lend money to a parent?
+N|v|Is it okay to have a favorite sibling?
+N|v|Should brothers and sisters be treated differently when it comes to chores?
+N|v|Should children be allowed to skip a family meal if they're not hungry?
+N|v|Is it okay for a parent to say "because I said so"?
+N|v|Should children have a say in what the family eats for dinner?
+N|v|Is it okay for parents to read bedtime stories from a screen instead of a book?
+N|v|Should children be allowed to stay home from school for a mental health day?
+N|v|Should parents punish a child for bad grades?
+N|v|Should parents keep secrets from each other about the kids?
+N|v|Is it okay to tell your child that you love them as much as your other children if it isn't quite true?
+N|v|Should parents set up a savings account for each child at birth?
+N|v|Should children earn their own spending money before their teens?
+N|v|Should children be told about family illness?
+N|v|Should parents attend every school event?
+N|v|Should parents let children see them apologize to each other?
+N|v|Should parents help pay for their adult child's wedding?
+N|v|Should parents tell a child who their real favorite relative is?
+N|v|Is it okay to regift a present from a family member to another relative?
+N|v|Is it fine to celebrate holidays without any family at all?
+N|v|Should aging parents give up driving at a certain point even if they feel fine?
+N|v|Is it okay to decline to be a godparent?
+N|v|Should relatives be invited to a child's school performance?
+N|v|Should a new mother's parents stay with the couple after the birth?
+N|v|Is it okay to ask relatives not to visit for the first weeks after a baby arrives?
+N|v|Should children be raised to speak the family's heritage language?
+N|v|Should a family keep a family heirloom even if nobody likes it?
+N|v|Is it okay to miss a family member's wedding for work?
+N|v|Should family recipes be kept secret from people outside the family?
+N|v|Should children be told when a parent loses their job?
+N|v|Should parents let their children pick their own haircut?
+N|v|Is it okay for grandparents to post photos of grandchildren without asking?
+N|v|Should parents tell a child that they were an unplanned pregnancy?
+N|v|Is it okay to use the television as a babysitter now and then?
+N|p|Did your family eat dinner together most nights when you were growing up?
+N|p|Did you have a curfew as a teenager?
+N|p|Were you paid for chores growing up?
+N|p|Did you share a bedroom with a sibling growing up?
+N|p|Have you ever stopped speaking to a relative for a long time?
+N|p|Do you have a family group chat that is active?
+N|p|Would you like to live near your extended family?
+N|p|Have you ever taken care of a sick relative for an extended time?
+N|p|Did you spend a lot of time with your grandparents as a child?
+N|p|Do you still celebrate a tradition from your childhood?
+N|p|Have you ever hosted a big family holiday meal?
+N|p|Do you get along with your partner's family?
+N|p|Have you ever been the one to settle a family fight?
+N|t|Do you enjoy family board game nights?
+N|t|Would you rather spend a holiday with your family than with friends?
+N|v|Should a family have a set of written house rules on the fridge?

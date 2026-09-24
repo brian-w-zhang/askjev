@@ -1,0 +1,278 @@
+C | values | When a friend lands their dream job, what do you think mostly got them there? | talent; hard_work; connections; timing; luck; a_mix=no single factor stands out
+C | evaluative | Which superstition do you find the silliest? | friday_the_thirteenth; black_cats; broken_mirrors; walking_under_ladders; opening_umbrellas_indoors; spilling_salt; none=I don't find any of them silly
+C | personality | What do you usually say or do right after you mention that things are going well? | knock_on_wood; say_touch_wood=say it aloud without touching anything; cross_fingers; take_it_back=add a quick disclaimer; nothing
+C | taste | Which lucky symbol do you like the most? | four_leaf_clover; horseshoe; rabbit_foot; lucky_cat=the waving cat figurine; evil_eye_charm; ladybug; shooting_star; none
+C | personality | When you open a fortune cookie, what do you do with the fortune? | read_and_toss; read_and_keep; read_it_aloud_to_others; add_a_joke_ending=add a silly phrase to the end; ignore_it
+C | values | Which explanation fits best when someone keeps getting lucky breaks? | they_prepare_well; they_take_more_chances; they_know_the_right_people; they_are_simply_fortunate; it_evens_out_later
+C | personality | Where do you usually make a wish? | birthday_candles; shooting_star; wishbone; coin_in_a_fountain; eyelash; clock_showing_matching_times=a clock with repeating digits; never
+C | evaluative | Which best describes astrology to you? | real_guide=a real guide to personality and events; fun_entertainment; conversation_starter; harmless_nonsense; misleading
+C | social | How do you react when a friend tells you their horoscope predicted something that came true? | share_the_excitement; ask_for_more_details; play_along_politely; point_out_coincidence; tease_them
+C | personality | If you dreamed that something bad happened to a loved one, what would you do the next morning? | call_or_text_them; tell_someone_about_it; think_about_it_all_day; shrug_it_off; forget_it_immediately
+C | values | Which do you believe more about a near miss, like just avoiding an accident? | someone_was_watching_over_me; i_was_lucky; i_reacted_well; pure_chance; it_was_not_my_time
+C | taste | If you owned a lucky item, what would it most likely be? | piece_of_jewelry; article_of_clothing; coin; small_toy_or_figurine; stone_or_crystal; photo; none
+C | evaluative | What best explains why some people win the lottery and others never do? | random_chance; destiny; buying_more_tickets; good_karma; something_else
+C | personality | What do you do before an exam or big interview to bring luck? | wear_something_lucky; follow_a_set_routine; eat_a_certain_meal; ask_someone_to_wish_me_luck; say_a_phrase_to_myself; nothing_special
+C | values | When you get a lucky break, what do you feel most? | grateful; relieved; proud_i_was_ready; guilty; suspicious_it_will_not_last
+C | social | When someone says "good luck" to you, how do you respond? | thank_them; say_break_a_leg_back; say_i_will_not_need_it; tell_them_to_not_jinx_it; nothing
+C | evaluative | Which paranormal claim seems most plausible to you? | ghosts; psychic_premonitions; telepathy; haunted_places; past_lives; none_of_them
+C | values | What role do you think luck played in who your closest friends are? | almost_everything; a_large_role; a_small_role; almost_none=I chose them deliberately
+C | taste | Which lucky color would you choose for yourself? | red; gold; green; white; black; blue; none
+C | personality | What kind of lucky habit are you most likely to have? | lucky_seat; lucky_clothing; lucky_route; lucky_phrase; lucky_food; none
+C | evaluative | Which is the best explanation for a feeling of deja vu? | brain_glitch; memory_of_a_dream; sign_i_am_on_the_right_path; glimpse_of_a_past_life; not_sure
+C | values | If you had to credit one thing for how your life has turned out, what would it be? | my_own_effort; my_family; luck; my_choices; the_people_i_met; fate
+C | personality | How do you pick lottery numbers, if you play? | birthdays_and_anniversaries; random_quick_pick; lucky_numbers; same_numbers_every_time; i_never_play
+C | social | Which friend would you want beside you in a casino? | the_lucky_one; the_careful_one; the_one_who_knows_the_odds; the_fun_one; i_would_not_go
+C | values | When something wonderful happens by chance, which phrase fits best? | it_was_meant_to_be; i_got_lucky; the_universe_rewarded_me; right_place_right_time; no_phrase
+C | personality | Which way do you usually lean after a run of good luck? | expect_more_good_things; expect_the_luck_to_turn; stay_humble_and_quiet; take_bigger_risks; no_change
+C | taste | Which luck tradition from another culture appeals to you most? | eating_grapes_at_new_year; red_envelopes; throwing_rice; breaking_plates; wearing_new_clothes_for_new_year; none
+C | evaluative | What do you think a recurring dream usually means? | unresolved_stress; a_message_or_warning; random_brain_activity; a_memory_resurfacing; nothing
+C | values | Which is the fairest way to settle a tie? | coin_flip; drawing_straws; rock_paper_scissors; a_rematch; talking_it_out
+C | personality | When a coin flip decides something for you, what happens? | i_accept_the_result; i_realize_what_i_wanted_and_ignore_it; i_ask_for_best_of_three; i_rarely_use_coin_flips
+C | social | If a friend refused to fly on a plane because of a bad feeling, what would you do? | respect_it; gently_talk_them_out_of_it; share_the_odds_with_them; tease_them; i_would_feel_uneasy_too
+C | evaluative | What most often explains a string of bad luck? | coincidence; bad_decisions; stress_and_fatigue; bad_energy; karma; other
+C | values | Which do you think matters most in finding a romantic partner? | luck; effort; timing; destiny; compatibility
+C | taste | Which item would you most like to receive as a good luck gift? | horseshoe; coin; charm_bracelet; plant; figurine; i_would_prefer_something_practical
+C | personality | Which superstition would you feel most uneasy breaking? | opening_an_umbrella_indoors; walking_under_a_ladder; saying_a_plan_cannot_fail; stepping_on_cracks; whistling_indoors; none
+C | evaluative | Which word best describes people who strongly believe in luck? | hopeful; naive; humble; lazy; realistic; no_opinion
+C | values | Where do you think your talents come from? | luck_of_birth; practice; family_encouragement; destiny; a_mix
+C | social | If a coworker got promoted over you, what would you most likely think? | they_earned_it; they_got_lucky; they_knew_the_right_people; it_was_not_my_time; i_need_to_work_harder
+C | personality | What do you do when you see a shooting star? | make_a_wish; point_it_out_to_others; take_a_moment_to_watch; nothing_special
+C | evaluative | Which kind of fortune telling seems the most convincing to you? | tarot; palm_reading; astrology_charts; tea_leaves; numerology; none
+C | taste | Which lucky charm would you be most likely to carry? | coin; stone; small_figure; ribbon_or_bracelet; photo; i_carry_none
+C | evaluative | What best describes a haunted house to you? | a_real_place_with_spirits; a_place_with_odd_acoustics_or_drafts; a_fun_story; a_marketing_trick; not_sure
+C | values | Which do you think has shaped your career path the most? | planning; luck; mentors; passion; necessity; i_do_not_have_a_career_yet
+C | social | Would you tell a friend about a bad omen you noticed about their plans? | yes_immediately; yes_but_gently; only_if_asked; no_i_would_keep_quiet; i_do_not_notice_omens
+C | personality | How do you feel on Friday the thirteenth? | a_bit_nervous; extra_careful; amused; i_do_not_notice; i_think_it_is_lucky
+C | evaluative | What best explains why someone always seems to meet the right person at the right time? | social_skills; luck; destiny; openness_to_new_people; they_talk_to_more_people
+C | taste | Which lucky animal do you like the most? | cat; rabbit; elephant; ladybug; fish; frog; dragon; none
+C | values | If you won a big prize by pure luck, what would you do? | keep_it_all; share_it_with_family; give_some_away; donate_most; save_it
+C | personality | How do you react when your team starts winning while you wear a particular shirt? | keep_wearing_it; wash_it_and_keep_wearing_it; joke_about_it_but_wear_it; ignore_it; i_do_not_follow_sports
+C | evaluative | Which best describes intuition to you? | a_sign_from_something_greater; the_brain_noticing_patterns; random_feeling; often_wrong; not_sure
+C | values | Which do you think explains most success in business? | luck; persistence; timing; skill; connections; money_to_start_with
+C | social | How would you react if a stranger gave you a lucky charm? | keep_it_and_carry_it; thank_them_and_keep_it_somewhere; give_it_away; throw_it_away; feel_suspicious
+C | personality | What do you do if you spill salt? | throw_some_over_my_shoulder; wipe_it_up_and_move_on; laugh_about_it; feel_uneasy
+C | evaluative | What best describes a psychic who gets things right? | good_at_reading_people; lucky_guesses; truly_gifted; running_a_trick; not_sure
+C | taste | Which way of wishing do you enjoy the most? | birthday_candles; wishing_well; dandelion_seeds; wishbone; shooting_star; none
+C | values | How do you view people who are born wealthy? | lucky; privileged; blessed; destined_for_it; no_different_from_anyone
+C | personality | What do you do if you keep seeing the same symbol or number pattern everywhere? | look_up_its_meaning; take_it_as_a_sign; mention_it_to_friends; notice_it_and_move_on; never_happens_to_me
+C | evaluative | What most likely explains thinking of someone right before they call you? | coincidence; a_real_connection; you_think_of_them_often_anyway; sixth_sense; not_sure
+C | values | Which matters most for getting through a hard stretch of life? | luck_turning; my_own_effort; help_from_others; patience; faith_in_fate
+C | taste | Which lucky tradition would you most like to start in your home? | horseshoe_over_the_door; lucky_plant; wind_chimes; charm_by_the_entrance; new_year_ritual; none
+C | social | When a friend credits all their success to luck, how do you respond? | agree_with_them; remind_them_of_their_hard_work; tell_them_they_are_being_modest; say_nothing
+C | personality | How do you choose between two equally good options? | flip_a_coin; wait_for_a_sign; go_with_my_gut; make_a_list; ask_someone_else
+C | evaluative | What do you think explains a lucky streak at a card table? | random_chance; skill; confidence; a_hot_hand; the_house_letting_you_win
+C | values | Which view about deserved fortune is closest to yours? | people_get_what_they_deserve; people_mostly_get_what_they_deserve; fortune_is_mostly_random; the_unlucky_are_often_the_most_deserving
+C | taste | Which story about fate do you like best? | star_crossed_lovers; the_prophecy_that_comes_true_anyway; the_hero_who_defies_destiny; a_chance_meeting_that_changes_everything; none
+C | personality | What do you do with a wishbone after a meal? | pull_it_with_someone; save_it_to_dry; throw_it_away; never_thought_about_it
+C | evaluative | What do you think of lucky numbers? | they_really_bring_luck; they_are_a_fun_habit; they_are_meaningless; i_have_never_had_one
+C | values | How much credit should a lucky winner get? | full_credit; some_credit_for_trying; very_little_credit; none_it_was_all_chance
+C | social | If a friend's palm reading predicted a wonderful future, what would you say? | that_is_great_news; i_hope_it_comes_true; do_not_take_it_seriously; i_want_mine_read_too
+C | personality | How do you usually explain a surprising success of your own? | i_worked_for_it; i_got_lucky; it_was_meant_to_be; good_timing; i_had_help
+C | evaluative | Which is the most convincing kind of sign from the universe? | repeating_numbers; a_meaningful_song_on_the_radio; a_bird_or_animal_appearing; a_chance_meeting; none_are_convincing
+C | taste | Which zodiac tradition interests you most? | western_sun_signs; chinese_zodiac_animals; vedic_astrology; birthstones; none
+C | values | When luck helps you avoid a bad outcome, what should you do? | be_grateful; learn_from_it; tell_others; forget_it_and_move_on
+C | personality | How do you handle a superstition that a family member cares about? | follow_it_to_please_them; follow_it_only_around_them; politely_ignore_it; debate_it_with_them
+C | evaluative | Which best explains beginner's luck? | the_beginner_is_relaxed; pure_chance; people_forget_the_beginners_who_lose; the_universe_welcomes_newcomers; not_sure
+C | social | Which kind of friend would you trust to read your tarot? | a_skeptic_having_fun; a_believer; a_professional_reader; nobody
+C | values | Which statement best reflects how you see opportunity? | it_comes_to_those_who_are_ready; it_comes_at_random; it_is_created_through_effort; it_is_handed_out_by_fate
+C | taste | Which lucky meal tradition sounds best to you? | long_noodles_for_long_life; lentils_for_wealth; black_eyed_peas_and_greens; round_fruit_for_prosperity; dumplings_for_fortune; none
+C | personality | What would you do if you had a strong bad feeling right before a trip? | cancel_the_trip; delay_it; go_but_stay_alert; go_as_planned; i_rarely_get_such_feelings
+C | evaluative | Which is a better explanation for a remarkable escape from danger? | luck; quick_thinking; protection_from_something_greater; it_was_not_their_time; training
+C | values | What do you think about blaming bad luck for failures? | it_is_usually_an_excuse; it_is_sometimes_fair; it_is_usually_fair; it_depends_on_the_person
+C | personality | When you lose something important, what do you do first? | retrace_my_steps; say_a_little_ritual_phrase; ask_someone_to_help; wait_for_it_to_turn_up; assume_it_is_gone
+C | evaluative | What best describes the evil eye? | a_real_danger_to_protect_against; a_cultural_tradition_worth_keeping; decorative_symbol; pure_superstition; never_heard_of_it
+C | social | If a friend wanted to name their child based on an astrologer's advice, how would you react? | support_them; suggest_they_also_pick_a_name_they_love; think_it_is_odd_but_stay_quiet; try_to_talk_them_out_of_it
+C | taste | Which lucky plant would you keep at home? | bamboo; money_tree; jade_plant; basil; four_leaf_clover_pot; none
+C | personality | What do you do if a fortune teller at a fair offers you a free reading? | accept_eagerly; accept_for_fun; politely_decline; walk_away
+C | evaluative | Which is the best way to describe a coincidence that changed your life? | fate_at_work; lucky_accident; the_result_of_being_open_to_chance; just_randomness; i_have_not_had_one
+C | values | How should a person treat their good fortune? | quietly_enjoy_it; share_it_generously; protect_it_carefully; use_it_to_take_more_chances
+C | social | Would you share your lucky ritual with teammates? | yes_and_invite_them_to_join; yes_but_keep_it_private_otherwise; no_it_would_lose_its_power; no_it_is_embarrassing; i_have_no_ritual
+C | personality | When you get a text from someone you were just thinking about, what goes through your mind? | spooky; nice_timing; it_means_something; i_think_about_them_a_lot_anyway; nothing
+C | evaluative | Which is the most believable ghost story setting? | old_hotel; castle; hospital; family_home; ship; none_are_believable
+C | taste | What kind of fortune would you most like to find in a fortune cookie? | romantic_prediction; career_prediction; wise_saying; funny_saying; blank_paper
+C | values | Which do you think is more common in the stories of successful people? | luck_is_underplayed; luck_is_overplayed; luck_is_described_fairly
+C | personality | When you are waiting for important news, what do you do? | keep_my_fingers_crossed; avoid_talking_about_it; distract_myself; prepare_for_both_outcomes; check_constantly
+C | evaluative | Which best describes crystals said to bring luck or healing? | they_really_work; they_help_through_focus_and_belief; they_are_just_pretty_rocks; they_are_a_waste_of_money
+C | values | Which do you believe about people who seem to have it all? | they_were_born_lucky; they_worked_for_it; they_are_hiding_problems; they_are_fated_for_it
+C | social | Which is the most polite way to decline a friend's offer to read your palm? | say_i_am_not_interested; make_a_joke; say_i_prefer_not_to_know; let_them_do_it_anyway
+C | taste | Which is your favorite kind of story about a lucky break? | underdog_wins; lost_item_found; chance_meeting_leads_to_love; last_minute_escape; accidental_discovery
+C | personality | What do you do when someone points out that you just jinxed something? | knock_on_wood; laugh_it_off; feel_slightly_worried; argue_that_jinxes_are_not_real
+C | evaluative | Which best describes your view of personality types based on birth month? | accurate; loosely_true; fun_but_false; completely_false
+C | values | Which is more important to teach children? | you_make_your_own_luck; some_things_are_out_of_your_control; both_equally; neither
+C | social | How would you feel if a friend avoided sitting in a certain seat because it was unlucky? | find_it_charming; find_it_odd; would_swap_with_them; would_avoid_it_too
+C | personality | How do you react to good luck coming after hard times? | believe_it_is_a_reward; think_it_is_coincidence; feel_i_earned_it; fear_it_will_not_last
+C | evaluative | What do you think explains ghost sightings? | real_spirits; tricks_of_light_and_shadow; tiredness_or_fear; hoaxes; not_sure
+C | taste | Which lucky jewelry would you wear? | evil_eye_bracelet; red_string; horseshoe_pendant; clover_pendant; birthstone_ring; none
+C | personality | If you could see your future in a crystal ball, what would you look at first? | love_life; career; health; family; i_would_not_look
+C | social | When a friend asks you to toss a coin for them over a big decision, what do you do? | toss_it_happily; ask_them_what_they_are_hoping_for; talk_through_the_decision_instead; refuse
+C | evaluative | Which kind of person do you think is most likely to see ghosts? | believers; imaginative_people; tired_people; sensitive_people; anyone_by_chance
+C | personality | When you narrowly miss something bad, how long does it stay on your mind? | a_few_moments; the_rest_of_the_day; for_weeks; it_becomes_a_story_i_tell_for_years
+C | taste | Which lucky decoration do you like most? | lucky_cat_statue; dreamcatcher; horseshoe; wind_chime; prayer_flags; none
+C | evaluative | What do you think is the main reason people follow superstitions? | habit_from_childhood; comfort_in_uncertainty; fear; fun; belief_that_they_work
+C | personality | How do you feel about accepting a gift of a knife or scissors, which some cultures consider unlucky? | give_a_coin_back=offer a small coin in return; accept_it_without_thought; feel_a_little_uneasy; decline_it
+C | evaluative | Which is the most reasonable reason to avoid a haunted house tour? | fear_of_real_ghosts; jump_scares; waste_of_money; it_feels_disrespectful; no_reason_to_avoid_it
+C | values | Which kind of luck would you choose to have for life? | luck_in_love; luck_with_money; luck_with_health; luck_in_friendships; luck_in_work
+C | social | When your group wins a raffle, who deserves the prize? | whoever_bought_the_ticket; everyone_equally; whoever_needs_it_most; decided_by_another_draw
+C | taste | Which superstition do you find the most charming? | wishing_on_eyelashes; knocking_on_wood; lucky_pennies; wishing_on_dandelions; carrying_a_rabbit_foot; none
+C | personality | When playing a board game with dice, what do you do before rolling? | blow_on_the_dice; shake_them_a_certain_way; say_a_phrase; just_roll
+C | evaluative | Which is the most likely reason a dream seems to predict the future? | coincidence; the_mind_noticing_clues; genuine_foresight; memory_changing_after_the_event; not_sure
+S | personality | How would you act if you had to walk past a spot you believe is haunted at night? | I would walk past without a second thought ; I would feel a small chill but keep going ; I would walk faster and avoid looking at it ; I would take a longer route to avoid it ; I would not go out at all
+S | evaluative | How meaningful do you find it when you keep bumping into the same stranger around town? | It means nothing, we just have similar routines ; It is a fun thing to notice ; It makes me wonder if we are meant to talk ; I would introduce myself because it feels like a sign ; I would treat it as fate bringing us together
+S | personality | How do you respond when a friend offers to read your tarot cards? | I refuse outright ; I agree only to be polite ; I agree for fun and laugh at the results ; I take the reading seriously for a day or two ; I use the reading to guide a real decision
+S | personality | How attached are you to a lucky object you own? | I own no lucky object ; I have one but forget about it ; I bring it along to important events ; I feel uneasy if I leave it behind ; I would turn back home to get it
+S | evaluative | How convincing do you find stories of people who sensed danger before it happened? | They are made up or exaggerated ; They are coincidences people remember selectively ; Some of them may involve real intuition ; Many of them show a real sixth sense ; They prove that people can sense the future
+S | personality | How do you react to breaking a superstition by accident, like opening an umbrella indoors? | I do not notice at all ; I notice and laugh ; I feel a brief flicker of worry ; I do something to undo it ; I worry about it for the rest of the day
+S | values | How much do you think where and to whom you were born shaped your life? | It barely matters, people make their own path ; It gave me a starting point but little more ; It shaped a fair share of my chances ; It shaped most of what my life has become ; It decided nearly everything about my life
+S | personality | How do you feel about going ahead with a big event on a day considered unlucky? | I would not even notice ; I would notice but go ahead happily ; I would go ahead but feel a bit uneasy ; I would move it if it were easy to do ; I would move it no matter the cost
+S | personality | How do you use your intuition when making a big decision? | I ignore gut feelings and go by facts ; I note my gut feeling but rely on facts ; I weigh my gut feeling and the facts equally ; I usually follow my gut feeling ; I treat my gut feeling as a sign and follow it
+S | social | How willing are you to tell others about a superstition you follow? | I would never admit to one ; I would admit it only to close friends ; I would mention it if it came up ; I talk about it openly and happily ; I encourage others to follow it too
+S | personality | How much do you rely on luck when you gamble or play games of chance? | I never gamble or play games of chance ; I play only with an eye on the odds ; I play for fun and hope luck helps ; I trust my lucky streaks and raise my bets ; I feel I can sense when luck is on my side
+S | evaluative | How much stock do you put in dreams as signs about your future? | Dreams are random and mean nothing about the future ; Dreams reflect my worries, nothing more ; Some dreams may hint at what is coming ; I often treat dreams as warnings or signs ; I make decisions based on what my dreams show me
+S | values | How much do you believe you are on a path that was set for you? | My life has no set path at all ; I mostly create my path, with a few surprises ; My path seems partly guided ; My life feels largely laid out for me ; I believe every step of my life was set in advance
+S | personality | How do you treat a fortune cookie message? | I do not even read it ; I read it and forget it ; I read it and joke about it ; I keep the good ones ; I think about whether it will come true
+S | evaluative | How fair do you think luck has been to you? | Luck has worked against me at every turn ; Luck has been a bit unkind to me ; Luck has given me as much as it has taken ; Luck has been generous to me ; I feel like one of the luckiest people alive
+S | values | How much do you think hard work can overcome bad luck? | Hard work cannot change bad luck at all ; Hard work helps a little against bad luck ; Hard work can overcome ordinary bad luck ; Hard work can overcome almost any bad luck ; Hard work makes luck irrelevant
+S | personality | How often do you look for signs before making a decision? | I never look for signs ; I notice signs only when they are obvious ; I sometimes wait for a sign when unsure ; I usually look for a sign first ; I will not decide anything without a sign
+S | social | How do you react when a friend's superstition affects shared plans? | I would argue until they drop it ; I would go along but grumble ; I would go along without comment ; I would happily adjust the plans ; I would adopt the superstition myself
+S | values | How much do you think luck, rather than skill, decides who wins a sporting match? | Skill decides it every time ; Skill decides most matches, luck a few ; Luck and skill matter about equally ; Luck decides most close matches ; Luck decides almost every match
+S | values | How much do you believe your life story was written before you were born? | Not at all, I write it myself ; Only the broad setting was decided ; Some key moments were meant to happen ; Most of it was meant to happen ; All of it was set in advance
+S | personality | How do you act on a day when everything seems to go wrong? | I carry on as usual ; I laugh about my bad luck ; I get cautious for the rest of the day ; I cancel plans to avoid more trouble ; I stay home and wait for the day to end
+S | social | How much would a partner's zodiac sign affect your interest in them? | I would never ask about it ; I would ask out of curiosity only ; I would notice if it matched mine ; I would be cautious with some signs ; I would avoid dating certain signs
+S | values | How much do you think you deserve the good luck you have had? | Not at all, it was undeserved ; I deserved a little of it ; I deserved about half of it ; I deserved most of it ; I deserved every bit of it
+S | personality | How do you act when you feel a lucky streak happening? | I carry on exactly as before ; I enjoy it but stay careful ; I take a few more chances than usual ; I push my luck as far as it will go
+S | evaluative | How believable do you find reports of haunted places? | I think every report is invented or mistaken ; I think most are mistakes and a few are hoaxes ; I think some may involve something unexplained ; I think many places really are haunted
+S | personality | How do you treat an old family superstition passed down to you? | I have dropped it completely ; I remember it but do not follow it ; I follow it when family is around ; I follow it on my own too ; I have passed it on to others
+S | personality | How do you respond when something seems too good to be true? | I enjoy it fully ; I enjoy it with a little caution ; I wait for a catch before enjoying it ; I brace for bad luck to follow ; I reject it because I expect a trap
+S | personality | How do you handle wearing a lucky piece of clothing on a big day? | I have no lucky clothing ; I own a lucky item but rarely think to wear it ; I wear it when I remember ; I always wear it on big days ; I refuse to face a big day without it
+S | personality | How do you react when you see a single magpie or another bird that some call a bad omen? | I have never heard of such omens ; I know the saying but ignore it ; I say the rhyme or greeting as a joke ; I say the greeting to be safe ; I feel uneasy for the rest of the day
+S | evaluative | How much do you think astrology can tell you about compatibility between two people? | Astrology tells you nothing about a couple ; Astrology only reflects what the couple reads into it ; Astrology hints at a match now and then by broad chance ; Astrology shows a fair amount about how a couple will get along ; Astrology reliably predicts whether a couple will work
+S | values | How much do you credit luck when you succeed at something? | I credit only my own effort ; I credit luck a small amount ; I credit luck and effort equally ; I credit luck more than my effort ; I credit luck for nearly all of it
+S | values | How much do you credit bad luck when you fail at something? | I blame only my own mistakes ; I blame bad luck a little ; I blame bad luck and myself equally ; I mostly blame bad luck ; I blame bad luck for nearly all of it
+S | personality | How do you react when a psychic hotline advert or fortune booth catches your eye? | I never notice them ; I notice and walk on ; I stop to look out of curiosity ; I consider trying it ; I go in or call
+S | evaluative | How much do you think people's success is due to being in the right place at the right time? | Almost never, skill always shows through ; Once in a while for a lucky few ; Often, alongside hard work ; Usually, timing matters more than anything ; Nearly always, timing is everything
+S | personality | How do you respond to a chain message that promises luck if you forward it? | I delete it straight away ; I laugh and ignore it ; I feel a small pull to forward it but do not ; I forward it just in case ; I forward it and worry if I forget
+S | personality | How do you feel about stepping on cracks in the pavement? | I never notice them ; I noticed as a kid but not now ; I sometimes avoid them as a game ; I usually avoid them ; I carefully avoid every crack
+S | values | How much do you believe that suffering is balanced by later good fortune? | Suffering is never balanced out ; It is sometimes followed by good things by chance ; It is often followed by something good ; It is usually repaid with good fortune ; It is always repaid in full
+S | personality | How do you use a good luck charm given to you by someone you love? | I put it away and forget it ; I keep it somewhere safe ; I display it at home ; I carry it with me often ; I carry it with me always
+S | evaluative | How accurate do you think a palm reading can be? | It cannot be accurate at all ; It is accurate only through general statements ; It can pick up on a few true things ; It can be quite revealing ; It can reveal a person's future
+S | social | How do you respond when someone says your good news was just luck? | I agree completely ; I laugh it off ; I feel a little stung ; I explain the work I put in ; I feel insulted and argue
+S | personality | How do you feel on the day after a strange or vivid dream? | I have forgotten it by breakfast ; I remember it but it does not affect me ; I think about what it might mean ; I look up its meaning ; I change my plans because of it
+S | personality | How do you respond when you notice a clock showing matching digits? | I never notice ; I notice but think nothing of it ; I smile at the coincidence ; I make a wish ; I take it as a meaningful sign
+S | evaluative | How much can a person's energy or aura bring good or bad luck to those around them? | A person's energy has no effect on anyone's luck ; A person affects others only through their mood and actions ; Some people bring a little luck in ways hard to explain ; Some people clearly carry good or bad luck with them ; Some people are simply bad luck to be near, no matter what they do
+S | personality | How willing are you to visit a place with a reputation for being haunted? | I would visit happily at any hour ; I would visit during the day without worry ; I would visit only with friends ; I would visit only if I had to ; I would never set foot there
+S | social | How do you react when someone tells you a ghost story they swear is true? | I tell them it cannot be true ; I listen politely but do not believe it ; I enjoy it and keep an open mind ; I find it unsettling and half believe it ; I believe them completely
+S | personality | How do you pick a seat on a flight or bus when given the choice? | I take whatever is free ; I pick for comfort only ; I pick for comfort and avoid seats that feel unlucky ; I always pick a seat that feels lucky
+S | personality | How do you handle a big purchase or signing on a day you feel is unlucky? | I never think about lucky days ; I notice but go ahead ; I go ahead with some hesitation ; I wait a day if I can ; I always wait for a luckier day
+S | personality | How do you respond when a new job or relationship begins with a series of odd mishaps? | I ignore the mishaps entirely ; I laugh them off ; I feel a little doubt ; I start to see them as a warning ; I back out because of them
+S | values | How much should luck be taken into account when judging someone's achievements? | Not at all, results are results ; A little, to add context ; A fair amount, luck skews results ; A great deal, luck explains most results
+S | social | How do you react when a friend wins a raffle for the second time? | I am simply happy for them ; I joke that they are lucky ; I ask them to buy my ticket next time ; I think something fishy is going on ; I feel envious for days
+S | personality | How much do you rely on a lucky phrase or saying before a challenge? | I have no such phrase ; I say one only when very nervous ; I say one before most challenges ; I say one before every challenge ; I cannot start a challenge without it
+S | evaluative | How much meaning do you see in finding a four-leaf clover? | None, it is just a plant mutation ; It is a nice little surprise ; It is a pleasant sign of luck ; It means good things are coming ; It means I have been chosen for good fortune
+S | personality | How do you feel about a bird flying into your home? | It is just a bird to shoo out ; I think of the old superstition and smile ; I feel a moment of unease ; I worry it is a bad omen ; I am upset for days
+S | values | How much do you think your good qualities are down to the luck of your upbringing? | They are entirely my own doing ; My upbringing helped a little ; My upbringing and my effort share the credit ; Mostly down to the luck of my upbringing ; Entirely down to the luck of my upbringing
+S | personality | How do you act when something you wished for comes true? | I credit my own work ; I think it would have happened anyway ; I feel a small thrill that the wish worked ; I make more wishes ; I believe my wishes have real power
+S | social | How do you feel about a friend who blames every setback on bad luck? | I respect that view ; I understand but think they could do more ; I find it frustrating at times ; I find it very frustrating ; I stop listening to them about it
+S | personality | How do you react when your lucky ritual is interrupted? | I have no lucky ritual ; I barely notice ; I shrug and carry on ; I feel off for a while ; I start the ritual over from the beginning
+S | personality | How do you respond when a colleague warns you that a project is cursed? | I laugh at them ; I ignore the comment ; I joke about it with them ; I feel slightly uneasy about the project ; I ask to be moved off the project
+S | social | How openly do you talk about your good fortune? | I tell everyone right away ; I tell friends and family ; I tell only my closest people ; I keep it to myself so it does not vanish ; I hide it even from those close to me
+S | personality | How do you react to a fortune that says your wish will come true? | I ignore it ; I smile and move on ; I feel a small boost of hope ; I keep it as a reminder ; I act as though it is guaranteed
+S | values | How much do you believe that a person's choices can change their fate? | Choices change nothing, fate is fixed ; Choices change small details only ; Choices change some of what happens ; Choices change most of what happens ; Choices decide everything, there is no fate
+S | evaluative | How much do you trust your first impression of whether a place has good or bad energy? | I do not believe places have energy ; I notice the feeling but dismiss it ; I trust it a little ; I usually trust it ; I always act on it
+S | social | How would you react if a date told you your signs are incompatible? | I would laugh it off ; I would be curious to hear more ; I would feel a little hurt ; I would wonder if they were right ; I would expect the relationship to fail
+S | values | How much should people plan for bad luck? | Not at all, worrying invites it ; A little, for the big things ; A fair amount, for most things ; A great deal, for everything
+S | evaluative | How much do you think there is a hidden pattern behind random events? | None, random is random ; A little, some things look patterned by chance ; Some, there may be a pattern we cannot see ; A lot, most events follow a hidden pattern ; Everything follows a hidden pattern
+S | personality | How do you treat a lucky coin you found? | I spend it like any other coin ; I keep it for a while ; I put it somewhere special ; I carry it every day ; I would never part with it
+S | social | How much do you encourage friends to follow your superstitions? | I have none to share ; I keep mine to myself ; I mention them if relevant ; I suggest them often ; I insist they follow them
+S | personality | How do you feel about moving into a home with a sad history? | It would not bother me at all ; It would cross my mind briefly ; I would feel uneasy for a while ; I would want it cleansed or blessed first ; I would refuse to move in
+S | personality | How do you react to hearing an owl at night? | I just hear an owl ; I enjoy the sound ; I think of the old omen and smile ; I feel uneasy ; I worry that something bad is coming
+S | personality | How do you approach games of pure chance at a fair or arcade? | I skip them entirely ; I play once for fun ; I play a few times hoping to win ; I keep playing because I feel a win coming ; I keep playing until I win
+S | social | How do you react when a friend gives you a charm to protect you from bad luck? | I politely decline it ; I accept it and put it away ; I accept it and keep it visible ; I carry it to please them ; I carry it and trust it to protect me
+S | personality | How do you feel on your birthday about luck for the coming year? | I do not think about luck on my birthday ; I make a wish just for fun ; I make a wish and hope it comes true ; I follow a birthday ritual for luck ; I feel the whole year depends on my birthday rituals
+S | personality | How do you decide whether to buy a raffle or lottery ticket? | I never buy them ; I buy one only for a good cause ; I buy one when the prize is huge ; I buy one whenever I feel lucky ; I buy them as a regular habit
+S | social | How would you respond if your partner wanted to consult an astrologer before your wedding? | I would refuse to take part ; I would allow it but ignore the advice ; I would go along for their sake ; I would join in with real interest ; I would insist on it myself
+S | evaluative | How much do you think lucky breaks explain the careers of famous artists? | Talent alone explains them ; Luck helped only at the margins ; Talent and luck share the credit ; Luck mattered more than talent ; Luck explains almost all of their fame
+S | personality | How do you respond to a sudden run of small mishaps in one morning? | I keep going as normal ; I laugh about my clumsy morning ; I slow down and pay more attention ; I expect more mishaps to follow ; I try to undo the bad luck with a ritual
+S | values | How much do you believe you can earn good luck by being a good person? | Being good has nothing to do with luck ; Being good helps through the goodwill of others ; Being good attracts some good fortune ; Being good reliably brings good fortune
+S | personality | How do you respond when you get the exact thing you were hoping for by pure chance? | I call it a coincidence ; I call it lucky and move on ; I feel grateful to the universe ; I feel it proves my wishes are heard
+N | personality | Do you have a lucky seat that you try to sit in whenever you can?
+N | personality | Have you ever worn the same clothing again because you did well the last time you wore it?
+N | values | Do you think luck matters more than talent in getting a first job?
+N | evaluative | Do you think a psychic could know something about you that they could not have guessed?
+N | personality | Have you ever made a decision based on a sign you noticed?
+N | personality | Have you ever made a wish on a shooting star?
+N | evaluative | Do you think some houses are genuinely haunted?
+N | personality | Do you read the fortune in a fortune cookie before eating the cookie?
+N | values | Do you believe that bad people eventually get what they deserve?
+N | personality | Have you ever felt that someone was watching over you during a close call?
+N | personality | Would you stay a night alone in a house said to be haunted?
+N | evaluative | Do you think astrology is a science?
+N | social | Would you give a lucky charm to a friend going into surgery?
+N | personality | Do you believe you are a lucky person?
+N | personality | Have you ever kept a coin or object because you found it at a lucky moment?
+N | evaluative | Do you think tarot readings can give useful advice?
+N | personality | Would you let a coin toss decide a big life decision?
+N | values | Do you believe your life would be very different if one chance event had not happened?
+N | personality | Do you know your rising sign?
+N | personality | Do you know your Chinese zodiac animal?
+N | social | Would you think less of a friend who consults a psychic regularly?
+N | evaluative | Do you think people who believe in luck are happier?
+N | personality | Have you ever felt a strong sense that you had been somewhere before when you had not?
+N | personality | Have you ever blown out birthday candles and kept the wish a secret so it would come true?
+N | values | Do you believe that meeting your best friend was meant to happen?
+N | personality | Would you buy a house on a street with a number some consider unlucky?
+N | evaluative | Do you think lucky streaks in sports are real?
+N | personality | Have you ever changed your route because of a bad feeling?
+N | personality | Do you get uneasy when someone opens an umbrella indoors?
+N | social | Would you date someone who makes big choices based on astrology?
+N | personality | Have you ever thrown a coin into a fountain and made a wish?
+N | evaluative | Do you think ghosts can communicate with the living?
+N | personality | Do you think you have a sixth sense?
+N | personality | Would you consult a fortune teller before a big move?
+N | values | Do you believe hard work always pays off in the end?
+N | personality | Have you ever felt a coincidence was too perfect to be chance?
+N | social | Would you tell a friend if you thought their success was mostly luck?
+N | evaluative | Do you think that saying something bad out loud can make it more likely to happen?
+N | personality | Have you ever had a lucky break that changed the course of your career?
+N | values | Do you think luck is the main reason some people find lasting love?
+N | personality | Would you wear a piece of jewelry to ward off the evil eye?
+N | evaluative | Do you think a curse can really harm someone?
+N | personality | Have you ever felt certain something was a sign, only for it to mean nothing?
+N | social | Would you refuse to sit in a friend's lucky seat if they asked you to move?
+N | values | Do you think it is fair that luck decides so much in life?
+N | personality | Have you ever pulled a wishbone with someone?
+N | personality | Would you carry an item of clothing that brought you luck into a job interview?
+N | personality | Have you ever felt that a stranger you met by chance was meant to cross your path?
+N | personality | Would you feel uneasy if a fortune teller refused to read your fortune?
+N | values | Do you think you would have succeeded without any luck?
+N | personality | Do you believe you have ever experienced something paranormal?
+N | social | Would you share a superstition with your children?
+N | evaluative | Do you think crystals can change a person's luck?
+N | personality | Have you ever avoided an activity because of a bad omen?
+N | personality | Do you believe you were born at the right time for your life to go well?
+N | values | Do you think a lucky person should feel humble about their success?
+N | personality | Would you wish on a dandelion as an adult?
+N | evaluative | Do you think serendipity plays a big role in great discoveries?
+N | personality | Have you ever had a strange coincidence you still cannot explain?
+N | social | Would you be comfortable if a friend placed a protective charm in your home?
+N | personality | Do you believe your intuition has saved you from a bad situation?
+N | personality | Would you name a pet after something you consider lucky?
+N | evaluative | Do you think lucky charms work for people who believe in them?
+N | personality | Have you ever felt that bad luck was following you?
+C | personality | What do you do when a ladybug lands on you? | make_a_wish; let_it_walk_off_on_its_own; gently_brush_it_away; count_its_spots; feel_nothing_special
+C | evaluative | Which best explains why a gambler keeps playing after a near win? | hope_that_luck_is_turning; the_thrill; belief_they_are_due_a_win; habit; other
+C | values | Which thought comforts you most when plans fall through? | something_better_is_coming; it_was_not_meant_to_be; i_can_try_again; it_was_bad_luck_this_time; none_of_these
+C | taste | Which lucky ritual for a new home appeals to you most? | carrying_in_bread_and_salt; burning_sage; hanging_a_horseshoe; stepping_in_right_foot_first; a_housewarming_blessing; none
+C | social | When a friend narrowly misses a disaster, what do you tell them? | you_were_so_lucky; someone_was_looking_out_for_you; good_thing_you_were_careful; it_was_not_your_time; i_just_hug_them
+C | evaluative | Which is the most likely reason a lucky charm seems to work? | it_boosts_confidence; people_remember_only_the_hits; it_carries_real_power; it_is_pure_coincidence; not_sure
+S | personality | How do you react when a friend tells you a place gives them a bad feeling? | I tell them it is all in their head ; I listen but stay put ; I pay closer attention to the place ; I suggest we leave soon ; I leave straight away with them
+S | evaluative | How much do you think luck shaped which city or town you ended up living in? | Not at all, I chose it deliberately ; A little, a chance offer tipped the scales ; About as much as my own choice ; Mostly, I ended up here by chance ; Entirely, I just drifted here
+S | personality | How do you respond when you get a lucky seat upgrade or free extra? | I take it without a thought ; I enjoy it quietly ; I tell a friend about my luck ; I take it as a sign the day will go well ; I expect a stroke of bad luck to balance it
+S | values | How much do you believe that people you meet by chance are sent for a reason? | Every meeting is simple chance ; A few meetings feel special but are still chance ; Some people seem to arrive exactly when needed ; Most important people in my life were sent for a reason ; Everyone I meet was sent for a reason
+S | personality | How do you act after hearing a fortune teller's warning about a certain day? | I forget it immediately ; I remember it but act normally ; I am a little more careful that day ; I avoid anything risky that day ; I stay home all day
+S | social | How do you react when a group decides something by drawing straws and you lose? | I accept it immediately ; I accept it with a joke ; I ask for a redraw ; I argue that it was unfair
+N | personality | Have you ever gone back into your home because you forgot your lucky item?
+N | values | Do you think your biggest opportunities came to you by chance?
+N | evaluative | Do you think some objects can carry bad luck with them?
+N | personality | Would you keep a gift you were told was cursed?
+N | social | Would you tell a friend their new home has bad energy if you felt it did?
+N | personality | Do you feel lucky to have been born in the place you were born?

@@ -4,6 +4,7 @@ download: HF parquet export, configs jailbreak_2023_12_25 (1,405) and regular_20
 license: MIT
 version: 2023-12-25 snapshot
 target: 600
+target_phase6: 1200 (ASKJEV_TARGET_JAILBREAKS)
 hemisphere: machine
 shape: detect
 notes: >
@@ -13,3 +14,4 @@ notes: >
   normalized-prefix dedup across both configs. Sexual keywords -> meta.flags ["sensitive"]; sexual
   keywords + minor terms, or slurs -> dropped. Note: "regular" prompts include many role-play /
   persona system prompts that are not jailbreaks by the dataset's definition, which is useful signal.
+  Phase 6: each class takes a longer prefix of its seeded shuffle; jailbreaks get half of the target or all of them if fewer (544 short jailbreaks survive dedup and drops) and regular prompts fill the rest (656).

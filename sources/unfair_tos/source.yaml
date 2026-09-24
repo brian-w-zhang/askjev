@@ -4,6 +4,7 @@ download: https://huggingface.co/api/datasets/coastalcph/lex_glue/parquet/unfair
 license: CC-BY-4.0
 version: LexGLUE unfair_tos config (9,414 sentences from 50 Terms of Service; 8 unfair-clause types)
 target: 200
+target_phase6: 4000 (ASKJEV_TARGET_UNFAIR_TOS) + 1,500 (ASKJEV_EXTRA_UNFAIR_TOS)
 hemisphere: machine
 shape: detect
 notes: >
@@ -11,3 +12,4 @@ notes: >
   8 clause types spelled out in the criteria. Truth = sentence has any unfair label. Light
   detokenization (source text is lowercased and space-tokenized), case-insensitive dedup, 40-1,500
   chars, seeded 100 unfair + 100 fair across all splits. meta.label_raw keeps the clause types.
+  Phase 6: the original 200 plus a hash-order top-up, unfair clauses up to half while they last (1,007 unfair / 2,993 fair). Secondary template unfair_tos.clause_type: Choice over the 8 clause types + none on 750 unfair + 750 fair sampled sentences; truth = the single label, none for fair sentences, null when a sentence has 2+ labels.

@@ -1,0 +1,25 @@
+name: people_docs
+url: https://github.com/anhaidgroup/deepmatcher/blob/master/Datasets.md ; https://github.com/J535D165/recordlinkage ; https://www.onetcenter.org/database.html
+download: >
+  DeepMatcher Structured exp_data zips (Amazon-Google, Walmart-Amazon, DBLP-ACM) from
+  pages.cs.wisc.edu/~anhai/data1/deepmatcher_data/; FEBRL dataset4a/4b CSVs from the recordlinkage repo;
+  O*NET 29.2 "Alternate Titles.txt" from onetcenter.org
+license: DeepMatcher benchmarks (research use); FEBRL via recordlinkage (BSD-3-Clause); O*NET 29.2 (CC-BY-4.0, USDOL/ETA)
+version: DeepMatcher 2018 exp_data (train+valid+test pairs); FEBRL dataset 4 (5,000 + 5,000 synthetic records); O*NET 29.2
+target: 2500 (ASKJEV_TARGET_PEOPLE_DOCS; shares 16% per ER dataset, 24% FEBRL, 28% O*NET)
+hemisphere: machine
+shape: verify, classify
+notes: >
+  Covers the thin machine.documents and machine.people branches, all with truth.
+  er.same_product / er.same_paper (machine.documents.entity_resolution): Noul "Do `record_a` and
+  `record_b` describe the same product/paper?" over DeepMatcher pairs, state = the two records' non-empty
+  attributes. 400 per dataset, 200 match / 200 non-match; non-matches are the benchmark's blocked
+  look-alike candidates. Pairs deduped on record content (the tables repeat some records). DBLP-ACM
+  HTML entities are decoded but left space-separated as the benchmark tokenized them ("gr é gory"),
+  since rejoining is ambiguous. people.same_person (machine.people.duplicate_records): FEBRL 4
+  synthetic Australian person records vs their corrupted duplicates, 300 true pairs + 300 hard
+  negatives (another person's duplicate sharing surname, else postcode, else suburb); meta.synthetic.
+  people.occupation_group (machine.people.lead_fit, persona/function classification): Choice over the
+  23 SOC major groups for an O*NET alternate job title; titles mapping to more than one major group are
+  dropped; round-robin ~30 per group. All parts sampled in salted hash order (prefix-stable).
+  Considered and skipped: DeepMatcher Textual/Company (91 MB, long company pages beyond 1,500 chars).

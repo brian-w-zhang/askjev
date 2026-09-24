@@ -4,9 +4,11 @@ download: https://huggingface.co/api/datasets/ucirvine/sms_spam/parquet/plain_te
 license: CC-BY-4.0
 version: HF ucirvine/sms_spam plain_text/train (5,574 messages; 747 spam)
 target: 700
+target_phase6: 3000 (ASKJEV_TARGET_SMS_SPAM) + 1,500 (ASKJEV_EXTRA_SMS_SPAM)
 hemisphere: machine
 shape: detect
 notes: >
   Template sms.spam: Noul "Is `message` spam?" with true/false criteria. Truth = dataset label
   (spam=true). Exact-text dedup (case-insensitive, whitespace collapsed), then a seeded sample of
   280 spam + 420 ham (40% spam).
+  Phase 6: the original 700 plus a hash-order top-up, spam first up to 40% while it lasts (only 642 unique spam exist, so 642 spam / 2,358 ham). Secondary template sms.call_to_action (Noul: asks the reader to click a link or call/text a number; no truth) on 1,500 of the sampled messages.

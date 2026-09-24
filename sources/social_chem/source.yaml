@@ -17,3 +17,4 @@ notes: >
   honesty, giving, fairness), else by majority rot-categorization (social-norms -> etiquette_social_norms,
   morality-ethics -> values.everyday_ethics), else self.values for advice/description rules so placement walks
   from the Values root. Same content filters as scruples; political keywords flag "political".
+  Filters extend scruples with a few sexual terms (butt, groping, intercourse, underwear...) and minor terms (young girls/boys, step-children, babies, toddlers) via scruples_anecdotes.drop().

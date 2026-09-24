@@ -4,6 +4,7 @@ download: https://huggingface.co/api/datasets/microsoft/ms_marco/parquet/v1.1/va
 license: MS MARCO terms (non-commercial research)
 version: MS MARCO v1.1 validation (10,047 queries, ~10 passages each)
 target: 200
+target_phase6: 4000 (ASKJEV_TARGET_MSMARCO_RELEVANCE) + 1,500 (ASKJEV_EXTRA_MSMARCO_RELEVANCE)
 hemisphere: machine
 shape: rank
 notes: >
@@ -12,3 +13,4 @@ notes: >
   with a selected passage and an answer; seeded 100 true + 100 false. Negatives are unselected
   passages from the same query (hard negatives), skipping any that contain the annotator's short
   answer string, since MS MARCO has known false negatives (some remain). query + passage <= 1,500 chars.
+  Phase 6: the original 200 plus a top-up over the remaining queries in hash order, split by parity into positive and negative streams (still one pair per query, 2,000/2,000). Secondary template msmarco.relevance_level: Score over 4 concrete relevance levels on 1,500 of the sampled pairs, truth null (is_selected is in meta).

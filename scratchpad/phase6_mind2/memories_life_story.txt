@@ -1,0 +1,281 @@
+C | personality | What is your earliest clear memory mostly about? | a_place; a_person; a_toy_or_object; an_event=a party, trip, or holiday; a_feeling=being scared, happy, or lost; none=I have no clear early memory
+C | personality | Which sense is strongest in your childhood memories? | sight; sound; smell; taste; touch; none_stands_out
+C | taste | Which smell most instantly takes you back to childhood? | a_family_meal_cooking; cut_grass; the_sea; a_school_classroom; rain; a_relative_home=a grandparent or relative's house; sunscreen; other
+C | personality | Where did you spend most of your free time as a child? | outdoors; at_home_inside; at_friends_homes; at_a_relative_home; in_organized_activities=sports, lessons, or clubs; at_a_library; other
+C | personality | Who was the most important adult in your childhood besides your parents? | a_grandparent; an_aunt_or_uncle; a_teacher; a_coach; a_family_friend; a_neighbor; an_older_sibling; none
+C | personality | What kind of child were you, looking back? | quiet_and_observant; loud_and_social; curious_and_questioning; rule_following; mischievous; imaginative_dreamer; anxious_worrier; other
+C | personality | Which childhood toy or object do you remember most fondly? | a_stuffed_animal; building_blocks; a_bicycle; a_video_game; dolls_or_figures; books; a_ball; none_in_particular
+C | personality | What did you most want to be when you grew up, as a young child? | an_athlete; a_doctor_or_vet; a_teacher; an_artist_or_performer; an_astronaut_or_scientist; a_firefighter_or_police; an_animal_keeper; something_else
+C | personality | Which part of your childhood do you remember most vividly? | holidays_and_celebrations; school_days; summers; time_with_family; time_with_friends; a_difficult_period; moving_home; none_stands_out
+C | personality | What was your favorite place to hide or be alone as a child? | my_bedroom; a_closet_or_cupboard; a_tree_or_treehouse; under_a_table_or_bed; somewhere_outside; I_never_hid=I did not have one
+C | personality | Which best describes the home you grew up in? | lively_and_noisy; calm_and_quiet; strict_and_orderly; relaxed_and_loose; crowded; often_changing=we moved a lot; other
+C | personality | Which family tradition from your childhood do you remember best? | a_holiday_ritual; a_regular_family_meal; an_annual_trip; a_bedtime_routine; a_weekend_outing; a_game_night; none
+C | personality | Which school subject do you remember loving as a child? | reading_and_writing; math; science; art; music; sports_and_gym; history; none
+C | personality | What is the first thing that comes to mind when you think of your school days? | a_particular_friend; a_teacher; a_classroom_or_building; a_moment_of_embarrassment; a_success; lunch_or_recess; boredom; other
+C | personality | Which kind of memory comes back to you most often without trying? | happy_moments; embarrassing_moments; sad_moments; ordinary_everyday_scenes; big_milestones; none_in_particular
+C | personality | What has been the biggest turning point in your life so far? | a_move=moving to a new place; a_relationship; a_loss; a_school_or_career_choice; a_health_event; becoming_a_parent; a_chance_meeting; none_yet
+C | personality | Which experience changed you the most as a person? | a_failure; a_success; a_loss; travel; a_relationship; a_new_responsibility; a_hardship; none_stands_out
+C | social | Who has shaped who you are the most? | a_parent; a_sibling; a_grandparent; a_friend; a_partner; a_teacher_or_mentor; myself_mostly; other
+C | personality | What kind of regret do you carry most? | words_I_said; words_I_never_said; a_chance_I_did_not_take; a_relationship_I_let_go; how_I_treated_someone; time_I_wasted; none
+C | personality | What was your first job, or the first work you were paid for? | babysitting; food_service; retail; yard_or_house_chores; tutoring; office_work; manual_labor; never_had_one
+C | personality | Which first experience do you remember most clearly? | first_day_of_school; first_time_away_from_home; first_friendship; first_crush; first_job; first_trip_abroad; first_time_driving; none_stands_out
+C | personality | What was the biggest mistake you learned from growing up? | lying_to_someone; not_studying; trusting_the_wrong_person; giving_up_too_soon; being_unkind; spending_carelessly; none_comes_to_mind
+C | values | Which memory do you most wish you could relive exactly as it was? | a_family_holiday; a_moment_with_a_friend; a_time_with_someone_now_gone; a_personal_triumph; an_ordinary_day; a_trip; none
+C | personality | How do you mostly keep your memories? | photos; videos; a_journal; saved_objects_and_keepsakes; social_media; only_in_my_head; other
+C | taste | Which keepsake from your past would you save first in a fire? | a_photo_album; a_letter; a_childhood_toy; a_piece_of_jewelry; a_journal; a_gift_from_someone; none=I am not attached to objects
+C | personality | When you look back on your teenage years, what feeling comes first? | fondness; embarrassment; relief_they_are_over; longing; indifference; mixed_feelings
+C | personality | Which period of your life do you remember least clearly? | early_childhood; middle_childhood; teenage_years; early_adulthood; the_last_few_years; none_all_feel_clear
+C | personality | Which best describes how you tell stories about your past? | I_make_them_funny; I_make_them_dramatic; I_keep_them_short; I_rarely_tell_them; I_tell_them_exactly_as_they_happened
+C | social | Who do you most often reminisce with? | family; old_friends; a_partner; new_friends; nobody_I_reminisce_alone; nobody
+C | personality | What kind of moment made you feel grown up for the first time? | earning_money; living_on_my_own; a_loss_in_the_family; getting_a_license; being_trusted_with_responsibility; traveling_alone; still_waiting
+C | values | Which lesson from your parents or caregivers has stuck with you most? | work_hard; be_kind; be_honest; save_money; family_comes_first; think_for_yourself; none
+C | personality | Which best describes a childhood summer for you? | outdoors_all_day; at_a_camp; traveling_with_family; at_a_relative_home; working_or_helping_out; mostly_bored_at_home; other
+C | personality | What is the bravest thing you remember doing as a child? | standing_up_to_a_bully; trying_something_scary=a high dive, a ride, or a stage; telling_a_hard_truth; going_somewhere_alone; making_a_new_friend; none_I_remember
+C | personality | Which moment from your past are you proudest of? | an_achievement_at_school; a_sports_or_arts_moment; helping_someone; getting_through_a_hard_time; a_career_milestone; a_personal_change; none_stands_out
+C | personality | What was your first real heartbreak about? | a_romance; a_friendship_ending; losing_a_pet; a_family_change; a_missed_dream; never_had_one
+C | personality | Which pet from your life do you remember most? | a_dog; a_cat; a_small_animal=a hamster, rabbit, or guinea pig; a_fish; a_bird; a_neighbor_or_relative_pet; never_had_one
+C | personality | What do you remember most about your first home of your own? | the_freedom; the_mess; the_loneliness; the_neighbors; decorating_it; the_bills; never_had_one
+C | taste | Which song or kind of music most brings back a specific time in your life? | songs_from_my_teens; music_my_parents_played; a_song_from_a_relationship; a_song_from_a_trip; school_or_camp_songs; none
+C | personality | What kind of photo of yourself from the past do you look at most? | baby_photos; school_photos; holiday_snapshots; photos_with_friends; milestone_photos=graduations, weddings; none_I_avoid_old_photos
+C | personality | Which best describes your memory of your own past overall? | sharp_and_detailed; clear_for_big_moments_only; hazy_and_patchy; mostly_forgotten
+C | personality | If you wrote a memoir, what would the first chapter be about? | my_family; where_I_grew_up; an_early_hardship; a_defining_moment; a_funny_story; I_would_never_write_one
+C | personality | Which kind of decision changed your life most? | where_to_live; what_to_study; who_to_be_with; which_job_to_take; whether_to_have_children; whether_to_speak_up; none_stands_out
+C | personality | When someone mentions your hometown, what do you feel first? | warmth; nostalgia; relief_I_left; indifference; pride; mixed_feelings; I_never_left
+C | personality | What was the hardest goodbye you have had to say? | to_a_family_member; to_a_friend; to_a_partner; to_a_pet; to_a_home_or_place; to_a_job_or_team; none_yet
+C | personality | Which childhood fear do you remember most? | the_dark; monsters_or_ghosts; being_left_alone; dogs_or_animals; deep_water; doctors_or_needles; getting_in_trouble; none
+C | personality | What did you do most with your friends as a teenager? | hang_out_at_someone_home; play_sports; play_video_games; wander_around_town; go_to_parties; make_things=music, art, or videos; other
+C | personality | Which describes your first time living away from your family? | exciting; lonely; overwhelming; freeing; a_nonevent; hasnt_happened
+C | personality | What is the kindest thing a stranger has done for you that you still remember? | helped_me_when_lost; gave_me_something_I_needed; stood_up_for_me; comforted_me; returned_something_I_lost; none_comes_to_mind
+C | personality | What kind of mistake from your past still makes you cringe? | something_I_said_in_public; a_social_blunder; a_fashion_choice; a_message_I_sent; a_performance_that_went_wrong; none
+C | evaluative | Which period of your life would you title as the happiest? | early_childhood; later_childhood; teenage_years; student_years; early_working_life; right_now; none_stands_out
+C | evaluative | Which period of your life was the hardest? | childhood; teenage_years; early_adulthood; a_recent_period; right_now; none_stands_out
+C | personality | What habit from childhood do you still have? | a_bedtime_routine; a_food_I_always_eat; a_way_of_sleeping; biting_nails_or_similar; a_hobby; a_saying_or_phrase; none
+C | personality | Which describes the first big trip you remember? | a_family_road_trip; a_flight_somewhere_new; a_school_trip; a_camping_trip; a_visit_to_relatives; none_I_remember
+C | taste | Which childhood food do you still crave? | a_family_recipe; a_school_lunch_food; a_candy_or_snack; a_holiday_dish; a_fast_food_treat; a_grandparent_cooking; none
+C | social | What was your role among your childhood friends? | the_leader; the_joker; the_peacemaker; the_follower; the_brain; the_outsider; other
+C | evaluative | Which best describes how you feel about your past self? | proud; embarrassed; protective; distant_as_if_a_stranger; grateful; mixed
+C | social | Which relationship from your past do you think about most? | a_lost_friendship; a_former_partner; a_relative_who_died; a_teacher_or_mentor; a_childhood_neighbor; none
+C | personality | What kind of experience first made you realize the world was bigger than your home? | travel; a_book; a_film_or_show; meeting_someone_from_elsewhere; moving; the_internet; other
+C | personality | How did the biggest change in your life mostly happen? | I_chose_it; it_was_forced_on_me; it_happened_by_chance; it_came_slowly_over_time; no_big_change_yet
+C | personality | Which moment do you consider the start of your adult life? | leaving_school; moving_out; getting_a_first_job; a_family_crisis; a_relationship; becoming_a_parent; it_has_not_started
+C | taste | Which childhood game do you remember playing most? | tag_or_chase; hide_and_seek; pretend_or_make_believe; board_games; card_games; video_games; ball_games; other
+C | personality | What was your biggest childhood achievement in your own eyes? | learning_to_ride_a_bike; learning_to_swim; winning_something; making_a_best_friend; reading_a_big_book; a_school_award; none_I_remember
+C | personality | Which kind of teacher do you remember best? | one_who_believed_in_me; one_who_was_strict; one_who_was_funny; one_who_was_unfair; one_who_changed_my_interests; none_stands_out
+C | personality | How did you mostly feel on the first day at a new school? | excited; nervous; lonely; curious; indifferent; never_changed_schools
+C | personality | Which describes your birthdays as a child? | big_parties; small_family_gatherings; one_special_outing; barely_marked; mixed_from_year_to_year
+C | personality | When did you first feel truly independent? | handling_money_on_my_own; traveling_alone; making_a_big_decision_alone; living_alone; I_still_do_not
+C | personality | What is the most common subject of your dreams about the past? | school; a_childhood_home; people_from_the_past; old_friends; an_old_job; I_do_not_dream_about_the_past
+C | personality | Which describes the neighborhood you grew up in? | a_big_city; a_suburb; a_small_town; the_countryside; several_places; other
+C | personality | What do you remember most about your grandparents? | their_cooking; their_stories; their_home; their_strictness; their_kindness; I_did_not_know_them
+C | personality | Which formative mistake taught you the most about money? | overspending; lending_to_a_friend; a_bad_purchase; not_saving; getting_scammed; none_yet
+C | personality | Which formative mistake taught you the most about friendship? | betraying_a_secret; drifting_away; choosing_the_wrong_friends; not_showing_up_for_someone; holding_a_grudge; none
+C | personality | Which experience first taught you that life can be unfair? | losing_despite_trying_hard; being_blamed_for_something; seeing_someone_treated_badly; a_family_hardship; a_loss; never_learned_it_that_way
+C | personality | What kind of story does your family still tell about you as a child? | something_funny_I_said; a_time_I_got_lost; a_time_I_got_in_trouble; a_talent_I_showed_early; a_time_I_was_brave; none
+C | social | Which describes your relationship with your siblings growing up? | best_friends; rivals; mostly_separate_lives; I_looked_after_them; they_looked_after_me; no_siblings
+C | personality | What did you collect as a child? | cards; stickers; rocks_or_shells; toys_or_figures; stamps_or_coins; books; nothing
+C | personality | What is your most vivid memory of weather? | a_huge_storm; a_first_snow; a_heatwave_summer; a_flood_or_power_cut; a_perfect_sunny_day; none_stands_out
+C | personality | Which describes the first time you failed at something that mattered to you? | a_test_or_exam; a_tryout_or_audition; a_job_application; a_relationship; a_competition; cannot_remember_one
+C | personality | Which moment from your past would you most like to apologize for? | something_I_said_to_family; how_I_ended_a_friendship; how_I_treated_a_partner; teasing_someone_at_school; letting_someone_down; none
+C | personality | Which describes your first love? | a_childhood_crush; a_teenage_romance; a_college_romance; a_later_romance; still_waiting
+C | personality | What was the first big purchase you made with your own money? | a_phone_or_gadget; a_vehicle; clothes; a_trip; a_musical_instrument; a_video_game_or_console; none_yet
+C | taste | Which childhood book or story stayed with you the longest? | a_fairy_tale; an_adventure_series; a_picture_book; a_story_a_relative_told; a_school_reading; none
+C | evaluative | Which describes how your life has turned out compared to what you expected as a child? | much_better; somewhat_better; about_as_expected; different_but_fine; worse; I_had_no_expectations
+C | personality | Which chance meeting changed your life the most? | meeting_a_partner; meeting_a_close_friend; meeting_a_mentor; meeting_a_future_employer; none
+C | personality | Which describes your memory of learning to swim? | a_parent_taught_me; lessons_at_a_pool; I_taught_myself; it_was_scary; I_never_learned
+C | personality | Which describes your holidays with extended family growing up? | big_gatherings; small_quiet_visits; tense_or_stressful; rare_or_never; always_traveling_to_see_them
+C | personality | Which item from your childhood bedroom do you remember most? | a_poster; a_nightlight; a_bookshelf; a_favorite_blanket; a_window_view; the_wallpaper; none
+C | values | Which kind of advice from your past do you now think was wrong? | about_careers; about_money; about_love; about_friends; about_how_to_behave; none
+C | personality | Which describes the first time you spoke in front of a crowd? | a_school_presentation; a_performance; a_speech_at_an_event; a_sports_moment; it_has_never_happened
+C | values | Which part of your upbringing are you most grateful for? | the_love_I_received; the_freedom_I_had; the_discipline_I_learned; the_values_I_was_taught; the_opportunities_I_got; none
+C | values | Which part of your upbringing would you most change? | more_attention; more_freedom; more_structure; more_money; more_stability; less_conflict; nothing
+C | social | Which kind of old friend would you most like to hear from again? | a_childhood_best_friend; a_school_friend; a_former_roommate; a_former_coworker; a_pen_pal_or_online_friend; none
+C | personality | Which describes the biggest risk you have ever taken? | a_career_change; a_move; a_confession_of_feelings; an_investment; a_physical_challenge; a_creative_leap; none
+C | personality | When you think of a turning point in your life, what comes first? | a_phone_call; a_conversation; a_letter_or_message; a_decision_alone; an_accident_or_surprise; none_comes_to_mind
+C | personality | Which describes the moment you realized your parents were ordinary people? | seeing_them_make_a_mistake; seeing_them_upset; a_hard_conversation; becoming_an_adult_myself; it_never_felt_like_a_moment
+C | evaluative | Which of your first experiences was the most overhyped? | first_kiss; first_party; first_paycheck; first_trip_alone; first_day_of_college; first_apartment; none
+C | evaluative | Which of your first experiences turned out better than you expected? | first_job; first_trip_abroad; first_time_living_alone; first_concert; first_date; first_pet; none
+C | personality | Which describes your memory of learning to ride a bike? | a_parent_running_behind_me; a_sibling_teaching_me; I_taught_myself; lots_of_falls; I_never_learned
+C | personality | Which describes the way you left your childhood home? | for_school; for_work; for_a_partner; a_family_move; in_a_hurry; I_still_live_there
+C | personality | What is the most important thing a friend ever said to you? | an_honest_criticism; a_word_of_encouragement; an_apology; a_confession; a_piece_of_advice; nothing_stands_out
+C | personality | What was your relationship with rules as a child? | always_followed_them; followed_them_when_watched; questioned_them; broke_them_often; other
+C | personality | Which describes your teenage bedroom walls? | covered_in_posters; covered_in_photos; plain; covered_in_my_own_art; shared_a_room; other
+C | personality | Which kind of moment most often brings back a memory for you? | hearing_a_song; smelling_something; visiting_a_place; seeing_an_old_photo; meeting_an_old_friend; a_date_in_the_calendar; none
+C | taste | How would you like your life story told? | as_a_comedy; as_an_adventure; as_a_drama; as_a_quiet_family_story; as_a_coming_of_age_story; as_a_love_story; not_at_all
+C | personality | Which describes how you remember your parents fighting when you were young? | often; sometimes; rarely; never; I_do_not_remember
+C | personality | Which moment do you consider the end of your childhood? | starting_secondary_school; a_family_change; a_move; my_first_job; a_loss; I_never_noticed_it_end
+C | social | Who taught you the most about how to treat people? | a_parent; a_grandparent; a_sibling; a_friend; a_teacher; a_stranger; I_learned_by_mistakes
+C | personality | What did you mostly do after school as a child? | homework; played_outside; watched_tv; played_games; went_to_activities; helped_at_home; other
+C | personality | Which describes the first time you were truly scared as a child? | getting_lost; a_storm; a_scary_film; being_alone_at_night; an_accident; I_do_not_remember
+C | personality | Which describes how you remember holidays at school breaks? | endless_and_free; busy_with_trips; spent_working; boring; lonely; other
+C | personality | Which of these first times do you remember most vividly? | first_time_on_a_plane; first_time_seeing_the_sea; first_time_seeing_snow; first_time_in_a_big_city; first_concert; none
+C | personality | Which describes the person you were at the end of your school years? | confident; lost; eager_to_leave; sad_to_leave; indifferent; other
+C | personality | Which describes the most formative job you have had? | a_first_job_that_taught_discipline; a_bad_job_that_taught_me_what_I_did_not_want; a_job_where_I_met_a_mentor; a_job_that_became_my_career; none
+C | personality | Which describes your relationship with your childhood self now? | I_still_feel_like_that_child; I_barely_recognize_that_child; I_feel_protective_of_them; I_feel_I_let_them_down; I_feel_they_would_be_proud
+C | personality | Which describes a moment that restored your faith in people? | a_stranger_helped_me; a_friend_forgave_me; a_community_came_together; someone_returned_what_I_lost; none_comes_to_mind
+C | social | Which relative's stories about the past did you love hearing most? | a_grandparent; a_parent; an_aunt_or_uncle; an_older_cousin; family_friend; none
+C | personality | What is your oldest friendship based on now? | shared_memories; still_shared_interests; family_ties; habit; I_have_no_old_friendships
+C | personality | Which describes the biggest thing you ever lost and never found? | a_toy_or_keepsake; a_piece_of_jewelry; photos_or_files; a_letter; a_pet; nothing_significant
+C | personality | Which describes how you usually react to finding an old diary or letter of yours? | read_it_eagerly; read_it_and_cringe; put_it_away_unread; throw_it_out; I_never_kept_any
+C | taste | Which kind of experience made you most confident as a young person? | winning_or_being_good_at_something; being_praised; making_friends; getting_through_a_challenge; being_trusted; none
+C | personality | Which describes your first experience with death of a pet or relative? | it_shaped_me_deeply; it_confused_me; I_was_shielded_from_it; I_barely_remember_it; it_has_not_happened
+C | personality | Where does your most peaceful memory take place? | by_water; in_the_mountains; in_a_garden_or_park; at_home; at_a_relative_home; somewhere_abroad; none
+C | personality | What was the first thing you remember being really good at? | drawing; reading; a_sport; making_friends; music; building_things; making_people_laugh; nothing
+C | personality | Which describes your childhood Sundays? | family_time; chores; outings; lazy_days; religious_or_community_gatherings; dreading_the_school_week
+C | values | Which moment from your life so far would you choose to freeze forever? | a_moment_with_family; a_moment_with_a_partner; a_moment_with_friends; a_moment_alone_in_nature; a_moment_of_success; none
+C | personality | Which describes the first time you traveled without family? | a_school_trip; a_trip_with_friends; a_solo_trip; a_work_trip; never_have
+C | personality | What was the source of your first real sense of pride? | good_grades; a_game_or_match; something_I_built_or_made; helping_someone; earning_money; none_I_remember
+C | personality | Which describes where your life story would take a surprising twist? | in_childhood; in_my_teens; in_my_early_adulthood; recently; it_has_had_no_twists
+S | personality | How far back can you clearly remember your own life? | I remember very little before my teenage years ; My clear memories start around the time I began school ; I remember a few scenes from before I started school ; I remember scenes from when I was a toddler
+S | personality | How often do you think about your childhood? | I almost never think about my childhood ; It crosses my mind on holidays or visits home ; Something reminds me of it every week or so ; I think about my childhood nearly every day
+S | evaluative | How happy was your childhood, looking back? | My childhood was mostly painful and I am glad it is over ; My childhood had more hard times than good ones ; My childhood was a mix of good and hard times ; My childhood was mostly happy with a few rough patches ; My childhood was happy almost all the way through
+S | personality | How much do your childhood experiences still shape your daily life? | My childhood has no noticeable effect on how I live now ; A few habits from childhood remain but nothing important ; My childhood shows up in how I handle some relationships ; My childhood shapes most of my big reactions and choices
+S | personality | How much do you regret the biggest mistake you have made? | I do not regret any mistake, because each one taught me something ; I regret it a little but rarely think about it ; I still wince when it comes to mind ; It still keeps me up at night sometimes
+S | personality | How many turning points has your life had that you would call truly life-changing? | My life has followed one steady path without turning points ; My life has had a single moment that changed everything ; My life has had a handful of big turning points ; My life feels like it has turned in a new direction again and again
+S | personality | How vivid is your most important memory? | I know it happened but cannot picture it anymore ; I can recall the general scene but few details ; I can picture it clearly, including what people said ; I can relive it almost like watching a film, with sounds and smells
+S | personality | How often do you look through old photos of yourself? | I never look at old photos of myself ; I look at them only when someone else brings them out ; I scroll through old photos every few months ; I look at old photos of myself most weeks
+S | evaluative | How much do you trust your own memories of the past? | I assume much of what I remember is probably distorted ; I trust the big events but doubt the details ; I trust most of my memories, details included ; I would bet heavily that my memories are exactly right
+S | personality | How often do embarrassing memories suddenly pop into your head? | Embarrassing memories almost never come back to me ; One pops up every so often and passes quickly ; They come up weekly and make me cringe ; They surface almost daily and can ruin my mood
+S | personality | How different are you now from who you were as a teenager? | I am essentially the same person I was as a teenager ; I have the same core but different habits ; I have changed in most ways that matter ; My teenage self would not recognize me at all
+S | personality | How much did your parents influence the person you became? | I became who I am mostly in spite of or apart from my parents ; My parents shaped a few of my habits ; My parents shaped many of my values and habits ; Almost everything about me traces back to my parents
+S | social | How much do you share stories from your past with new people? | I keep my past almost completely private ; I share only light, funny stories ; I share important stories once I trust someone ; I openly tell new people about the big moments of my life
+S | personality | How often do you replay a past conversation you wish had gone differently? | I almost never replay past conversations ; I replay one now and then when something reminds me ; I replay some conversation most weeks ; I replay old conversations almost every day
+S | personality | How much of your childhood home could you draw from memory? | I could barely sketch the outside of it ; I could draw the main rooms roughly ; I could draw every room and where the furniture was ; I could draw it down to the objects on the shelves
+S | personality | How much do you miss the place you grew up? | I am glad to be away from it and never miss it ; I miss it briefly when I see pictures of it ; I miss it enough to visit whenever I can ; I long to go back and live there again
+S | personality | How much has a single mistake changed the direction of your life? | No single mistake has changed my path ; A mistake cost me something but I got back on course ; A mistake closed one door and pushed me down another path ; A mistake completely redirected my life
+S | personality | How often do you think about the path you would have taken if one past decision had gone the other way? | I never wonder about other paths ; It crosses my mind once in a while ; I think about it whenever things get hard ; I think about that other life very often
+S | personality | How well do you remember your first day at school? | I remember nothing about it ; I remember a single image or feeling ; I remember a few specific moments ; I remember the day in clear detail
+S | social | How close are you today with your childhood friends? | I have no contact with anyone I knew as a child ; I follow a few of them online but never talk ; I catch up with one or two of them now and then ; My closest friends today are people I knew as a child
+S | personality | How much did moving homes shape your childhood? | I lived in the same home my whole childhood ; I moved once and it barely mattered ; I moved a few times and it changed my friendships ; I moved so often that I never felt settled anywhere
+S | personality | How much of your past have you written down? | I have never written anything about my life ; I wrote a diary for a short while ; I have kept a journal on and off for many years ; I have written a detailed record of most of my life
+S | personality | How much do you dwell on your regrets? | I let regrets go almost as soon as they form ; I think about my regrets when something reminds me ; I carry a few regrets that come up regularly ; My regrets are on my mind most days
+S | personality | How much did one teacher change your life? | No teacher made much difference to me ; A teacher encouraged me in a subject I liked ; A teacher changed what I chose to study or do ; A teacher changed the whole direction of my life
+S | personality | How strongly do certain songs bring back specific memories for you? | Music does not bring back memories for me ; Some songs remind me vaguely of a period ; Certain songs take me straight back to a specific place ; Some songs bring a memory back so strongly I can hardly listen to them
+S | personality | How much did your school years shape who you are today? | My school years left almost no mark on me ; My school years gave me a few friends and habits ; My school years shaped my confidence and interests ; My school years made me who I am
+S | values | How much would you change about your past if you could? | I would change nothing, since it all led me here ; I would fix a small mistake or two ; I would redo a few big decisions ; I would change most of my past if I could
+S | personality | How much of your childhood did you spend outdoors? | I stayed indoors almost all the time ; I went outside mostly for school or errands ; I played outside most afternoons ; I spent nearly every free hour outside
+S | personality | How often do you dream about places from your past? | I never dream about places from my past ; I dream about them once in a long while ; I dream about an old home or school every so often ; Places from my past show up in most of my dreams
+S | personality | How much did a hardship early in life make you stronger? | I had no real hardship early in life ; A hardship left me more fragile than before ; A hardship taught me some useful lessons ; A hardship made me far tougher than I would otherwise be
+S | personality | How much did your first job teach you? | My first job taught me nothing I still use ; My first job taught me to show up on time ; My first job taught me how to deal with people ; My first job shaped my whole attitude to work
+S | personality | How much do you remember about your grandparents' lives? | I know almost nothing about their lives ; I know where they lived and what they did ; I know a few of their stories ; I could tell their life stories in detail
+S | personality | How often do you retell the same story from your past? | I rarely tell stories from my past ; I have a few stories I tell once in a while ; Friends have heard my favorite stories several times ; People could finish my favorite stories for me
+S | personality | How strongly do you remember your first crush? | I do not remember having a first crush ; I remember who it was but little else ; I remember how they made me feel ; I remember specific moments with them clearly
+S | personality | How much have you forgiven yourself for past mistakes? | I still blame myself for most of my past mistakes ; I have forgiven the small ones but not the big ones ; I have forgiven most of them but a few still sting ; I have fully made peace with my past mistakes
+S | evaluative | How much do you look back on your life with pride? | I feel mostly let down when I look back ; I feel proud of a few moments ; I feel proud of most of what I have done ; I feel deeply proud of the life I have built
+S | personality | How often did you get in trouble as a child? | I almost never got in trouble ; I got in trouble only for small things now and then ; I got in trouble regularly ; I was in trouble so often it became a family joke
+S | personality | How much did travel change you when you were young? | I did not travel when I was young ; I traveled but it did not change much ; A trip opened my eyes to other ways of living ; A trip completely changed what I wanted from life
+S | personality | How much of your adult personality was clear when you were a child? | Nothing about my adult self was visible as a child ; A few traits were visible early ; Most of my personality was already clear ; People who knew me as a child say I have not changed at all
+S | personality | How often do you think about someone from your past you lost touch with? | I rarely think about people I lost touch with ; Someone crosses my mind once in a while ; I think about a particular person every few weeks ; I think about someone I lost touch with almost every day
+S | personality | How much do family photos match your own memory of your childhood? | The photos show a childhood I do not remember living ; The photos show the good moments but miss the hard ones ; The photos mostly match what I remember ; The photos feel exactly like my memories
+S | personality | How much have you kept from your childhood? | I kept nothing from my childhood ; I kept one or two small keepsakes ; I kept a box of things that matter to me ; I kept a large collection of childhood things
+S | personality | How much did a single conversation ever change your mind about your life? | No single conversation has changed my plans ; A conversation made me reconsider something small ; A conversation made me change a big plan ; A conversation turned my whole life in a new direction
+S | personality | How often do you visit the places where you grew up? | I have not been back since I left ; I go back only for rare family occasions ; I go back a few times a year ; I go back whenever I can or I still live nearby
+S | evaluative | How much do you idealize the past? | I remember the past as worse than the present ; I see the past as neither better nor worse ; I remember the past as a bit rosier than it was ; I see the past as a golden time I long for
+S | personality | How much did a friendship in your youth shape who you are? | No childhood friendship left a lasting mark on me ; A friendship gave me a few good memories ; A friendship shaped my interests and taste ; A friendship made me who I am today
+S | personality | How openly did your family talk about its own past when you were growing up? | My family never talked about its past ; My family shared a few light stories ; My family told many stories about where we came from ; My family talked about its history constantly
+S | personality | How much does your family's history shape how you see yourself? | My family's history plays no part in how I see myself ; I find my family's history interesting but not defining ; My family's history shapes some of my values ; My family's history is central to who I am
+S | personality | How much do you remember of what you learned in school? | I remember almost nothing I learned in school ; I remember the basics like reading and arithmetic ; I remember a lot from my favorite subjects ; I still remember a surprising amount from most subjects
+S | personality | How much did becoming independent change you? | Moving into independence changed nothing about me ; I became a bit more organized ; I became more confident and self-reliant ; I became a completely different person
+S | social | How often do you tell people about a regret you have? | I never tell anyone about my regrets ; I have told only a very close person ; I mention my regrets to friends when it fits ; I talk openly about my regrets with almost anyone
+S | personality | How emotional do you get looking at your own baby photos? | I feel nothing looking at them ; I find them mildly amusing ; I feel a warm pull of affection ; They can bring me to tears
+S | personality | How much did a loss in your early life shape you? | I did not experience a loss early in life ; A loss affected me for a while and then faded ; A loss changed how I approach relationships ; A loss shaped almost everything about me
+S | personality | How often do you think about your first home of your own? | I never think about it ; It comes up when I pass a similar place ; I think of it fondly every so often ; I think of it often and wish I could go back
+S | personality | How brave were you as a child compared to now? | I was much more timid as a child than now ; I was a bit more timid as a child ; I am about as brave now as I was then ; I was far braver as a child than I am now
+S | personality | How much did a failure early in life change your later choices? | No early failure changed my choices ; An early failure made me more careful for a while ; An early failure steered me away from a whole field ; An early failure set the course for the rest of my life
+S | personality | How complete is your record of photos from your own life? | There are almost no photos of me growing up ; There are a few photos from big occasions ; There are photos of most years of my life ; There is a thorough photo record of nearly every stage of my life
+S | personality | How much do you rely on others to remind you of your own past? | I remember my past well without help ; Family fills in a few details now and then ; I often need someone else to remind me of events ; I know most of my childhood only from what others told me
+S | personality | How much of your youth did you spend with extended family? | I rarely saw relatives beyond my immediate family ; I saw relatives on holidays ; I spent most weekends with relatives ; Relatives were part of my daily life
+S | personality | How much did your early friendships teach you about trust? | My early friendships taught me nothing about trust ; I learned a small lesson from a friend's slip ; A betrayal taught me to be careful who I trust ; My early friendships defined how I trust people to this day
+S | personality | How strongly do you remember the day your life changed the most? | I cannot name a single day my life changed ; I remember the day but not the details ; I remember that day clearly from start to end ; I remember that day down to the smallest detail
+S | personality | How much did you rebel as a teenager? | I never rebelled as a teenager ; I argued with my parents now and then ; I broke rules regularly and stayed out late ; I rebelled against almost everything
+S | social | How often do you wonder what happened to people you went to school with? | I never wonder about them ; I wonder about one or two occasionally ; I look some of them up online now and then ; I keep close track of what most of them are doing
+S | personality | How much did your childhood hobbies carry into adult life? | None of my childhood hobbies survived ; I occasionally return to a childhood hobby ; One childhood hobby is still a regular part of my life ; A childhood hobby became my career or main passion
+S | personality | How much do you still carry a nickname from your childhood? | No one calls me by a childhood nickname ; Only family uses a childhood nickname ; Old friends and family still use it ; Everyone knows me by my childhood nickname
+S | evaluative | How peaceful do you feel about your past overall? | My past troubles me whenever I think about it ; There are parts of my past I still avoid ; I am at peace with most of my past ; I am completely at peace with my past
+S | personality | How much did your family's money situation growing up shape you? | My family's money situation had no effect on me ; It shaped a few of my spending habits ; It shaped how I think about work and security ; It shaped nearly every major choice I have made
+S | personality | How clearly do you remember the moment you met your closest friend? | I have no memory of meeting them ; I remember roughly where we met ; I remember where we were and what we did ; I remember our first conversation almost word for word
+S | personality | How often do you reread old messages or letters? | I never reread old messages ; I stumble on them now and then and read a few ; I sometimes go looking for old messages to reread ; I regularly reread old letters and messages
+S | personality | How much did a single trip change the way you live now? | No trip has changed how I live ; A trip gave me a new habit or taste ; A trip changed some of my values ; A trip changed where or how I live
+S | personality | How much did being teased or bullied affect you growing up? | I was not teased or bullied ; I was teased a bit and shrugged it off ; Being teased made me more guarded for years ; Being bullied shaped much of who I became
+S | personality | How much did you help at home as a child? | I did almost no chores ; I did small chores when asked ; I had regular chores every week ; I carried a large share of the household work
+S | personality | How much do your memories of a place change when you revisit it? | Revisiting a place leaves my memories unchanged ; Revisiting makes the place feel a bit smaller ; Revisiting shows me I misremembered a lot ; Revisiting changes the memory completely
+S | evaluative | How fondly do you remember your teenage years? | I would never want to relive my teenage years ; I remember a few good times among many bad ones ; I remember them as mostly good ; I remember them as the best years of my life
+S | personality | How much does your past explain your current fears? | None of my fears trace back to my past ; One fear comes from something that happened to me ; Several of my fears come from my past ; Almost all my fears trace back to specific experiences
+S | personality | How much did your parents' work shape your own career choices? | My parents' work had no influence on my career ; I learned what I did not want from their work ; I picked up some interests from their work ; I ended up in the same line of work as a parent
+S | personality | How often did your family eat dinner together when you were a child? | We almost never ate together ; We ate together on special occasions ; We ate together a few nights a week ; We ate together nearly every night
+S | personality | How much of your life so far has gone according to plan? | My life has gone nothing like I planned ; A few things went as planned ; Most of the big things went as planned ; My life has gone almost exactly as I planned
+S | personality | How much did a mentor shape your early adult life? | I never had a mentor ; Someone gave me useful advice once or twice ; A mentor guided several of my big decisions ; A mentor shaped the whole start of my adult life
+S | personality | How much did the first time you lived away from home change you? | Living away from home changed nothing about me ; I picked up some practical skills ; I became noticeably more independent and confident ; I came back a different person
+S | personality | How detailed is your memory of your own wedding, graduation, or similar big day? | I remember almost nothing of the day ; I remember a few highlights ; I remember most of the day clearly ; I can recall the day almost minute by minute
+S | personality | How much did your birth order among siblings shape your personality? | Birth order had no effect on who I am ; It shaped a few habits ; It shaped how I act in groups ; It shaped my whole personality
+S | personality | How often do you catch yourself saying something your parents used to say? | I never hear my parents in what I say ; It happens once in a while and surprises me ; It happens most weeks ; I sound like my parents all the time
+S | personality | How much did one kind act from someone in your past shape you? | No single kind act stands out in my life ; A kind act gave me a good memory ; A kind act changed how I treat others ; A kind act changed the course of my life
+N | personality | Do you have a clear memory from before you started school?
+N | personality | Is there a single experience you would call the turning point of your life?
+N | personality | Did you have an imaginary friend as a child?
+N | personality | Do you still own something you had as a young child?
+N | personality | Do you have a childhood memory you are not sure really happened?
+N | personality | Did you grow up in the same home the whole time?
+N | personality | Is there a mistake from your teens you still think about?
+N | personality | Did a teacher ever change the way you saw yourself?
+N | personality | Have you ever gone back to visit your old school?
+N | personality | Do you keep a journal or diary of your life?
+N | personality | Is there a conversation from years ago you still replay in your head?
+N | personality | Did you have a best friend in early childhood?
+N | personality | Do you remember the name of your first teacher?
+N | personality | Is there a smell that instantly brings back a specific memory for you?
+N | personality | Do you have a recurring dream that comes from something in your past?
+N | personality | Have you ever cried at an old photo of yourself?
+N | personality | Is there a moment from your past you wish you could redo?
+N | personality | Did you have a nickname as a child that you disliked?
+N | personality | Were you afraid of the dark as a child?
+N | personality | Did you ever run away from home, even for an afternoon, as a child?
+N | personality | Have you ever returned to your childhood home after moving away?
+N | evaluative | Do you think your childhood prepared you well for adult life?
+N | personality | Did you spend a lot of time with your grandparents growing up?
+N | values | Is there someone from your past you never got to thank properly?
+N | values | Is there someone from your past you still owe an apology?
+N | personality | Did you have a pet as a child?
+N | personality | Did a move to a new place change the direction of your life?
+N | personality | Has a stranger ever changed your life in a lasting way?
+N | personality | Do you remember your first day at your first job?
+N | personality | Were you a shy child?
+N | personality | Did you like school as a child?
+N | personality | Do you remember your dreams for the future from when you were a teenager?
+N | personality | Have you achieved something your younger self dreamed about?
+N | evaluative | Would your childhood self be proud of who you are now?
+N | personality | Is there a year of school you would gladly erase from memory?
+N | personality | Have you ever found a letter or note you wrote long ago?
+N | personality | Did you ever write a letter to your future self?
+N | personality | Did an injury or illness in your past change your plans?
+N | personality | Is there a song you cannot listen to because of a memory?
+N | personality | Did your family have a tradition you have carried into your own life?
+N | personality | Did your parents often tell you stories about their own childhoods?
+N | personality | Did a failure ever turn out to be the best thing that happened to you?
+N | personality | Is there a decision you made young that you still defend proudly?
+N | personality | Did you have a hero you looked up to as a child?
+N | personality | Did you share a bedroom with a sibling growing up?
+N | personality | Have you ever been surprised to learn a memory of yours was wrong?
+N | personality | Is your happiest memory from your childhood?
+N | personality | Do you remember your first kiss clearly?
+N | personality | Do you remember what you wanted to be when you grew up at every stage of childhood?
+N | personality | Did you experience a big loss before becoming an adult?
+N | personality | Did you have to grow up faster than most children you knew?
+N | personality | Is there a place from your childhood that no longer exists?
+N | personality | Do you have a scar with a story you like to tell?
+N | personality | Did you ever win a prize or award as a child that you still remember?
+N | social | Have you ever reconnected with an old friend after many years apart?
+N | personality | Was there a book that changed your life?
+N | personality | Did you change who you were when you started at a new school or job?
+N | personality | Is there a moment when you realized you had truly grown up?
+N | personality | Do you remember the first time you felt real independence?
+N | personality | Has a single piece of advice from your past stayed with you for life?
+N | personality | Did your parents divorce or separate while you were growing up?
+N | personality | Were you ever the new kid at school?
+N | personality | Is there a smell, sound, or taste from childhood you seek out on purpose?
+N | personality | Have you ever kept a secret from your childhood that you have never told anyone?
+N | personality | Did you break something valuable as a child and hide it?
+N | social | Do you and your siblings remember your childhood very differently?
+N | social | Do you enjoy hearing other people talk about their childhoods?
+N | social | Would you want your children or younger relatives to read your old diaries someday?
+N | values | Would you want to see a recording of your entire childhood if one existed?
+N | evaluative | Do you think your earliest memories are mostly real rather than reconstructed from photos and stories?

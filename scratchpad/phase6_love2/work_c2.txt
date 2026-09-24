@@ -1,0 +1,60 @@
+C|s|What do you think coworkers complain about most behind the scenes?|the_boss;workload;pay;a_lazy_coworker;meetings;office_temperature
+C|s|What do most people dislike most about office holiday parties?|forced_small_talk;bad_food;drinking_culture;being_seen_by_the_boss;it_eats_into_personal_time;awkward_games
+C|s|What do you think is the most common reason people dislike their neighbors?|noise;parking;pets;messy_yards;nosiness;rudeness
+C|s|Which kind of coworker do most people find hardest to work with?|the_slacker;the_know_it_all;the_gossip;the_complainer;the_credit_taker;the_micromanaging_peer
+C|s|What do you think most people want most from a boss?|fairness;clear_direction;praise;flexibility;career_growth;being_left_alone
+C|s|Why do you think most people join community clubs?|to_meet_people;for_the_activity;to_feel_useful;because_a_friend_asked;to_fight_loneliness;to_build_their_resume
+C|p|What do you usually talk about with coworkers?|work_only;weekend_plans;tv_and_movies;family_news;food;complaints_about_work
+C|p|How did you meet most of the people you know in your city?|work;school;neighbors;clubs_or_hobbies;friends_of_friends;online
+C|p|What usually makes you trust a new coworker?|they_keep_promises;they_admit_mistakes;they_help_without_being_asked;they_are_friendly;they_are_honest_about_problems;it_takes_a_long_time
+C|p|When a new person joins your team, what do you usually do?|introduce_myself_right_away;invite_them_to_lunch;offer_to_answer_questions;wait_for_them_to_come_to_me;nothing_special
+C|t|Which kind of community event would you most want to attend?|farmers_market;street_festival;outdoor_concert;local_sports_game;craft_fair;neighborhood_potluck
+C|t|Which kind of volunteer work appeals to you most?|working_with_animals;working_with_kids;working_with_the_elderly;outdoor_cleanups;food_banks;skilled_help_like_tutoring;none
+C|t|Which kind of local group would you most like to lead?|a_book_club;a_sports_team;a_volunteer_crew;a_neighborhood_association;a_hobby_meetup;none
+C|v|What is the best way to ask a noisy upstairs neighbor for quiet without starting a feud?|friendly_chat_in_person;polite_note_with_your_name;bring_a_small_treat_and_ask;go_through_the_landlord;invite_them_over_first
+C|v|What should you do when a neighbor's security camera points at your yard?|ask_them_to_adjust_it;put_up_a_screen;complain_to_the_city;ignore_it
+C|v|What is the best way to thank a neighbor who helped you in an emergency?|a_card;baked_goods;a_gift;returning_the_favor_later;a_heartfelt_thank_you_in_person
+C|v|What should you do when a coworker you like is struggling with the new software everyone uses?|show_them_quickly;send_them_a_guide;tell_the_manager_training_is_needed;let_them_figure_it_out
+C|v|What should a team do when a member's pet dies?|send_a_card;a_kind_message_from_each_person;give_them_a_day_off;nothing_it_is_personal
+C|v|What should you do when a coworker keeps mispronouncing your name?|correct_them_kindly;let_it_go;correct_them_in_front_of_others;ask_the_manager_to_help
+C|v|What should you do when your boss asks about your weekend on Monday morning?|share_a_short_story;say_it_was_fine;share_lots_of_details;ask_about_theirs
+C|v|What should a manager do when a team member is always excluded from lunch plans?|invite_them_personally;talk_to_the_team;organize_a_team_lunch;stay_out_of_it
+C|v|What should you do when you move to a new neighborhood?|knock_on_doors;attend_a_local_event;join_the_neighborhood_chat;wave_and_wait;keep_to_yourself
+S|p|How much do you look forward to going to work because of the people?|Not at all;A little;Somewhat;A lot;They are the main reason I go
+S|p|How quickly do you make friends at a new job?|I never make friends at work;It takes a year or more;It takes a few months;Within weeks;Within the first days
+S|p|How much do you enjoy being the host of a neighborhood event?|I would never host;I would host if pushed;I would host once;I enjoy hosting;I host every chance I get
+S|p|How nervous do you get when meeting your new neighbors?|Not at all;A little;Somewhat;Very;So nervous I avoid them
+S|p|How much do you tend to mediate conflicts among coworkers?|Never;Rarely;Sometimes;Often;I'm the go-to peacemaker
+S|p|How much do you enjoy chatting with strangers at a bus stop?|I avoid it;I respond if they start it;I enjoy a short chat;I often start the chat
+S|p|How much do you care about being popular at work?|Not at all;A little;Somewhat;A lot;It matters to me more than my work
+S|p|How much do you miss your classmates from school?|Not at all;A little;Somewhat;A lot;Very much
+S|s|How many of your coworkers do you think would help you move house?|None;One or two;A handful;Most of them;All of them
+S|s|How common do you think it is for neighbors to know each other's names?|Very rare;Uncommon;About half do;Common;Almost everyone does
+S|s|How many people do you think actually enjoy networking events?|Almost nobody;A small minority;About half;Most;Nearly everyone
+S|s|How often do you think people gossip about coworkers?|Never;Rarely;Sometimes;Often;Constantly
+S|s|How much do you think most people trust their boss?|Not at all;A little;Somewhat;A lot;Completely
+S|s|How common do you think it is to have a close friend at work?|Very rare;Uncommon;About half;Common;Nearly universal
+S|t|How much do you enjoy team sports leagues through work?|I avoid them;I join only if pushed;They are fine;I enjoy them;I love them
+S|t|How much do you enjoy potluck-style office lunches?|I dislike them;They are okay;I enjoy them;I love them and always bring something
+S|v|How much should a new neighbor be expected to introduce themselves?|Not at all;Only to the immediate neighbors;To the whole street;To everyone in the area
+S|v|How much should coworkers go out of their way to include a quiet colleague?|Not at all;A casual invite now and then;Regular invites;Always make sure they're included
+N|p|Have you ever had a boss you considered a friend?
+N|p|Do you remember the name of your first boss?
+N|p|Have you ever organized a neighborhood event?
+N|p|Have you ever been in a book club?
+N|p|Have you ever quit a club because of one person?
+N|p|Have you ever helped a neighbor in an emergency?
+N|p|Do you keep in touch with any of your former teachers?
+N|p|Have you ever been a moderator of an online group?
+N|p|Have you ever gone to a coworker's home for dinner?
+N|p|Do you usually eat lunch alone at work or school?
+N|t|Would you enjoy living in a neighborhood with regular block parties?
+N|t|Would you like to work at a company where everyone socializes after hours?
+N|s|Do you think most people secretly dislike team-building activities?
+N|s|Do you think most people know too little about their neighbors?
+N|v|Should you bring a gift when your boss invites the team to their home?
+N|v|Is it okay to decline to join a coworker's fundraising walk?
+N|v|Should a manager ever be told about a coworker's personal struggles?
+N|v|Is it okay to ask a neighbor to keep their kids from playing near your car?
+N|v|Is it okay to skip the neighborhood meeting every time?
+N|v|Should you say hello to other regulars at your gym?

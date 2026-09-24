@@ -1,0 +1,406 @@
+# commitment and defining the relationship
+C | values | Who should be the one to bring up making a relationship official? | whoever_feels_it_first ; the_one_who_asked_first = whoever started the dating ; either_it_should_be_mutual = it should come up naturally for both ; the_more_anxious_one ; nobody_it_should_just_be_understood
+N | values | Do you think a couple needs an explicit conversation before calling themselves exclusive?
+C | taste | How would you most like a relationship to become official? | direct_conversation ; a_romantic_gesture ; changing_a_social_media_status ; introducing_each_other_as_partner ; it_just_happens_without_words
+S | personality | How do you handle the uncertain stage before a relationship is defined? | I enjoy the ambiguity and never push for labels ; I wait patiently for the other person to raise it ; I drop small hints until they bring it up ; I ask directly once I know how I feel ; I cannot relax until we have had the talk
+C | values | What is the strongest sign that someone is truly committed to you? | they_introduce_you_to_family ; they_make_long_term_plans_with_you ; they_show_up_in_hard_times ; they_change_habits_for_you ; they_are_consistent_every_day ; they_say_it_outright
+N | values | Is a situationship ever a good idea?
+C | social | What would most people say is the clearest sign a relationship has become serious? | meeting_the_parents ; saying_i_love_you ; leaving_belongings_at_their_place ; a_holiday_together ; posting_them_online ; sharing_a_lease
+S | values | How important is it to you that a partner shares the same vision for the future? | I do not need us to agree on the future at all ; It is nice but I would adapt to almost anything ; We need to agree on a few big things ; We need to agree on where we live and how we live ; I would end things if our long term plans differed
+N | personality | Do you find it easy to say I love you first?
+C | values | When is the right time to say I love you for the first time? | as_soon_as_you_feel_it ; after_a_few_months ; once_you_are_exclusive ; when_you_are_sure_they_will_say_it_back ; after_a_big_shared_experience ; no_rule
+N | values | Is it okay to say I love you before your partner is ready to say it back?
+S | personality | How would you feel if you said I love you and your partner did not say it back? | It would not bother me at all ; I would feel a little awkward for a moment ; I would feel hurt for a day or two ; I would start to doubt the relationship ; I would probably end things
+C | personality | What scares you most about long term commitment? | losing_my_freedom ; picking_the_wrong_person ; getting_hurt ; becoming_bored ; changing_who_i_am ; nothing_scares_me
+C | values | How should couples decide whether they are ready for the next step? | talk_openly_about_it ; follow_gut_feeling ; follow_a_rough_timeline ; see_what_friends_think ; wait_until_one_partner_proposes_it ; other
+S | values | How much should a relationship move at a pace both partners are comfortable with? | The eager partner should set the pace ; The eager partner should slow down a little ; They should meet in the middle ; The slower partner should always set the pace ; Neither should move until both feel fully ready
+N | values | Would you stay with someone who says they never want to get married if you do?
+C | values | What would you do if you wanted marriage and your long term partner did not? | leave_the_relationship ; stay_and_hope_they_change ; stay_and_give_up_on_marriage ; set_a_private_deadline ; seek_couples_counseling ; other
+N | values | Is a long engagement a warning sign?
+# jealousy
+C | values | Which of these would make you feel most jealous? | partner_texting_an_ex ; partner_liking_attractive_photos ; partner_spending_long_hours_with_a_coworker ; partner_confiding_in_a_friend_before_you ; partner_flirting_playfully_with_a_stranger ; none_of_these
+S | values | How acceptable is it for a partner to like other people's revealing photos online? | Completely fine and not worth noticing ; Fine as long as it is not constant ; A little disrespectful ; Clearly disrespectful and worth a talk ; A reason to question the relationship
+N | values | Is a little jealousy a healthy sign in a relationship?
+C | personality | When you feel jealous, what do you usually do? | tell_my_partner_right_away ; keep_it_to_myself ; get_quiet_and_distant ; ask_questions_to_find_out_more ; check_their_social_media ; talk_to_a_friend
+S | values | How should you react if a partner gets jealous of your close friend? | Ignore it since it is their problem ; Reassure them once and move on ; Reassure them and include them more with that friend ; Spend less time with that friend ; End the friendship for the sake of the relationship
+C | social | What would most people say is the most common cause of jealousy in couples? | social_media ; exes ; coworkers ; close_friends ; lack_of_attention ; insecurity
+N | values | Would you want a partner to tell you when they feel jealous, even over small things?
+C | values | Which is the most reasonable thing to ask a jealous partner to do? | talk_through_their_feelings ; see_a_therapist ; trust_you_without_proof ; meet_the_person_they_worry_about ; give_it_time ; other
+N | personality | Do you ever feel jealous of a partner's hobbies or the time they spend on them?
+S | personality | How would you feel if a partner kept a close friendship with someone who used to like them romantically? | Totally fine with it ; Fine but a bit curious ; Uneasy but I would say nothing ; Uneasy enough to bring it up ; I would ask them to keep distance
+N | values | Is it acceptable to ask a partner to stop following someone online who makes you jealous?
+# privacy and phones
+C | values | Which should a partner be able to see without asking? | nothing_private ; my_location ; my_calendar ; my_messages ; my_photos ; everything
+N | values | Would you share your phone location with a partner at all times?
+S | values | How acceptable is it to read a partner's messages when they leave their phone unlocked? | Never acceptable under any circumstances ; Only in a genuine emergency ; Only if you already have strong suspicions ; Fine if you mention it afterwards ; Completely fine because couples should have no secrets
+C | values | What should you do if you suspect your partner is hiding something on their phone? | ask_them_directly ; look_when_they_are_not_around ; wait_and_watch_for_more_signs ; ask_a_mutual_friend ; let_it_go ; other
+N | personality | Have you ever looked through a partner's phone without permission?
+C | values | Which kind of secret is acceptable to keep from a long term partner? | a_friends_confided_secret ; embarrassing_past_stories ; small_purchases ; private_thoughts_and_feelings ; health_worries ; none
+S | taste | How much do you want a partner to share about their day? | I do not need to hear about it ; Just the highlights at dinner ; The main events and how they felt ; Most details including small ones ; A running commentary by text all day
+C | social | Which privacy habit would most people consider a red flag in a partner? | always_face_down_phone ; deleting_message_history ; changing_passcode_suddenly ; taking_calls_in_another_room ; hidden_social_accounts ; none
+N | values | Is it okay to keep in touch with someone your partner has asked you to stop talking to?
+# love languages / affection
+C | taste | Which way of receiving love means the least to you? | words_of_affirmation ; quality_time ; gifts ; acts_of_service ; physical_touch
+C | personality | How do you most naturally show a partner that you love them? | saying_it ; doing_chores_for_them ; planning_time_together ; buying_or_making_gifts ; hugs_and_affection ; other
+N | values | Should partners try to show love in the other person's preferred way rather than their own?
+S | taste | How much do you like cute nicknames between partners? | I dislike them and would ask a partner not to use them ; I tolerate them in private ; I like one or two in private ; I enjoy them and use them often ; I use them even in front of friends and family
+N | taste | Do you like receiving love notes or handwritten cards from a partner?
+C | taste | Which surprise from a partner would you like most? | a_planned_weekend_away ; breakfast_in_bed ; a_thoughtful_small_gift ; a_note_in_my_bag ; tidying_my_space ; a_surprise_visit ; none_i_dislike_surprises
+S | taste | How much do you enjoy holding hands in public with a partner? | I avoid it entirely ; I will do it if my partner starts it ; I like it on walks sometimes ; I like it most of the time we are out ; I would hold hands everywhere if I could
+C | values | What matters more in showing love over the years? | grand_gestures ; small_daily_gestures ; both_equally
+S | taste | How often would you want a partner to tell you why they love you? | Never, it would feel strange ; Only on special occasions ; Every so often out of the blue ; Every week or so ; Every single day
+N | values | Would you be hurt if your partner forgot your birthday?
+C | taste | What is your ideal way to spend a lazy day with a partner? | movie_marathon_at_home ; cooking_together ; long_walk ; separate_hobbies_in_the_same_room ; sleeping_in ; seeing_friends_together
+# conflict and apologies
+C | personality | When you are upset with a partner, how do you usually let them know? | tell_them_calmly_right_away ; wait_until_i_cool_down ; drop_hints ; go_quiet ; complain_to_a_friend_first ; never_bring_it_up
+N | values | Should couples never go to bed angry?
+S | personality | How much do you need space after a fight before talking again? | I want to talk it out immediately ; I need a few minutes alone ; I need a few hours ; I need to sleep on it ; I need several days before I can talk
+C | values | What makes an apology from a partner feel real to you? | naming_what_they_did ; changed_behavior_afterwards ; saying_sorry_without_excuses ; a_gesture_or_gift ; showing_they_feel_bad ; asking_how_to_make_it_right
+N | personality | Do you find it hard to say sorry first after an argument?
+C | values | Which fighting habit is the most damaging in a relationship? | name_calling ; silent_treatment ; bringing_up_old_fights ; yelling ; walking_out ; threatening_to_break_up
+S | values | How acceptable is it to raise your voice during an argument with a partner? | Never acceptable ; Understandable once in a rare while ; Normal in heated moments if you apologize ; Normal and nothing to apologize for ; Healthy because it clears the air
+N | values | Is it ever okay to give a partner the silent treatment?
+C | values | Who should apologize when both partners were partly at fault? | both_at_once ; whoever_cools_down_first ; whoever_was_more_wrong ; whoever_started_it ; the_one_who_cares_more ; nobody_just_move_on
+N | values | Is it okay to argue in front of friends?
+C | taste | Where would you rather have a serious conversation with a partner? | at_home_on_the_couch ; on_a_walk ; in_the_car ; over_text ; at_a_quiet_cafe ; on_the_phone
+N | values | Is it acceptable to settle a serious disagreement over text?
+S | personality | When a partner criticizes you, how do you usually react? | I listen and thank them ; I listen but feel a bit hurt ; I explain my side right away ; I get defensive ; I shut down or walk away
+C | social | What would most people say couples argue about most? | money ; chores ; time_spent_together ; in_laws ; phones ; jealousy
+C | values | What is the best way to end an argument that is going nowhere? | take_a_break_and_return_later ; agree_to_disagree ; one_person_gives_in ; ask_a_trusted_friend ; sleep_on_it ; use_humor
+N | personality | Do you tend to replay arguments with a partner in your head long afterwards?
+S | values | How much should a partner apologize for something they did not mean to hurt you with? | No apology is needed at all ; A quick sorry is enough ; A sincere sorry and a promise to be careful ; A sincere sorry and a real conversation ; The same as if they had meant it
+N | values | Is it healthy for a couple to never fight at all?
+C | values | What should a couple do about a disagreement that keeps coming back? | see_a_couples_therapist ; write_down_a_compromise ; accept_it_as_permanent ; let_one_person_decide_that_topic ; question_the_relationship ; other
+N | values | Would you go to couples therapy even if things felt mostly fine?
+S | values | How willing would you be to try couples counseling? | I would never go ; Only as a last resort before a breakup ; If we had a serious ongoing problem ; If either of us asked for it ; As a regular check-up even in good times
+C | personality | During a fight, which of these are you most likely to do? | cry ; go_silent ; get_sarcastic ; over_explain ; leave_the_room ; stay_calm
+N | values | Is it okay to bring up a partner's past mistakes during a new argument?
+C | values | What should happen after a big fight is resolved? | never_mention_it_again ; talk_about_what_you_learned ; do_something_fun_together ; give_each_other_space ; write_down_the_agreement ; other
+# living together and chores
+C | values | How should couples split household chores? | exactly_half ; by_who_likes_which_task ; by_who_has_more_free_time ; by_who_earns_less ; hire_help ; whoever_notices_does_it
+S | taste | How tidy would you need a shared home to be? | I would not care how messy it got ; Messy is fine if the kitchen is clean ; Tidy common areas and messy personal spaces ; Tidy everywhere most of the time ; Spotless at all times
+C | taste | What would bother you most about living with a partner? | different_sleep_schedules ; their_mess ; loss_of_alone_time ; their_noise ; different_temperature_preferences ; sharing_the_bathroom ; nothing
+N | taste | Would you rather live in a smaller place together than keep two bigger separate places?
+S | values | How much should one partner decide how a shared home is decorated? | One person decides everything ; Mostly one person with a few vetoes ; Each person decorates certain rooms ; Every item needs both to agree ; We would each keep a separate home
+C | values | What should you do if a partner keeps not doing their share of chores? | talk_about_it_calmly ; make_a_chore_chart ; stop_doing_their_share_too ; do_it_and_resent_it ; hire_a_cleaner ; other
+N | values | Is living apart together a good arrangement for a long term couple?
+C | taste | If you moved in with a partner, whose place would you prefer? | my_place ; their_place ; a_new_place_together ; whichever_is_cheaper ; whichever_is_nicer ; no_preference
+N | values | Should a couple who moves in together sign a written agreement about rent and bills?
+S | personality | How easily do you adapt to a partner's habits when sharing a home? | I expect them to adapt to me ; I adapt a little but grumble ; I meet them halfway ; I adapt without much fuss ; I happily change almost everything
+C | values | Who should do the cooking in a couple? | whoever_cooks_better ; whoever_enjoys_it ; take_turns ; whoever_gets_home_first ; cook_together ; order_in_mostly
+C | social | What would most people name as the hardest adjustment when first living with a partner? | chores ; bathroom_habits ; sleep_schedules ; less_alone_time ; money ; cooking
+N | values | Is it reasonable to move in with a partner mostly to save money on rent?
+S | taste | How would you feel about a partner's friends dropping by your shared home without warning? | I would hate it and ask them to stop ; I would tolerate it rarely ; Fine if it is once in a while ; Fine most of the time ; I would love an open-door home
+C | values | How should a couple handle one partner working from home while the other goes out to work? | the_home_partner_does_more_chores ; split_chores_the_same ; the_home_partner_gets_quiet_time ; set_clear_house_rules ; other
+# money
+C | values | How should couples pay for dates once they are in a long relationship? | always_split ; take_turns ; the_higher_earner_pays ; a_shared_fund ; whoever_suggested_it ; no_system
+S | values | How acceptable is it for a partner to make a large purchase without telling you? | Completely fine since it is their money ; Fine if it came from their own savings ; Fine if they tell me soon after ; Only acceptable in an emergency ; Never acceptable
+N | values | Should couples pay for shared costs in proportion to their incomes?
+C | values | What money habit in a partner would bother you most? | overspending ; being_stingy ; hiding_debt ; gambling ; lending_money_to_family ; never_planning_ahead ; none
+N | values | Should a partner tell you about their debts before you move in together?
+C | values | What should happen if one partner earns much more than the other? | they_pay_more_of_shared_costs ; everything_still_split_equally ; all_money_becomes_shared ; the_lower_earner_does_more_chores ; other
+S | values | How much should a partner's debt affect your decision to marry them? | It would not matter at all ; It would matter only if they hid it ; It would matter if they had no plan to pay it off ; It would make me delay the wedding ; It would make me call off the wedding
+C | taste | Which kind of anniversary gift would you prefer? | an_experience ; jewelry_or_accessory ; something_handmade ; a_practical_item ; a_letter ; no_gifts
+N | values | Is it okay for one partner to support the other financially while they study or change careers?
+S | values | How much should your partner know about your spending? | Nothing, it is my business ; Only big purchases ; A rough sense of my monthly spending ; All purchases on shared cards ; Every purchase I make
+C | social | What would most people say is the biggest money mistake couples make? | not_talking_about_money ; hiding_purchases ; mixing_money_too_soon ; never_saving ; overspending_on_a_wedding ; lending_to_family
+N | values | Should couples have a shared savings goal?
+# marriage, weddings, proposals
+C | values | Who should propose? | the_man ; the_woman ; whoever_is_ready_first ; nobody_decide_together ; no_preference
+N | values | Should someone ask a partner's parents for permission before proposing?
+C | taste | Where would you most like to be proposed to? | at_home ; somewhere_meaningful_to_us ; on_a_trip ; in_front_of_family ; at_a_fancy_restaurant ; in_public_with_strangers ; i_do_not_want_a_proposal
+S | values | How much should an engagement ring cost relative to what a person can afford? | It should cost almost nothing ; A modest amount that is easy to afford ; A noticeable amount that takes some saving ; A large amount that takes months of saving ; As much as possible to show commitment
+N | values | Is it okay to say no to a proposal and still stay together?
+C | values | What would you do if a partner proposed and you were not ready? | say_no_but_stay_together ; say_yes_and_have_a_long_engagement ; ask_for_time_to_think ; say_yes_anyway ; end_the_relationship ; other
+C | taste | Which part of a wedding matters most to you? | the_vows ; the_party ; the_food ; the_dress_or_outfit ; the_location ; the_guests ; the_honeymoon
+N | taste | Would you rather elope than have a big wedding?
+S | values | How much of a couple's savings should go toward a wedding? | None at all ; A small share with the rest saved ; About what a nice holiday costs ; Most of their savings ; More than their savings, even with loans
+C | values | Who should have the final say on a wedding guest list? | the_couple_only ; whoever_pays ; the_bride ; both_families_equally ; split_evenly_between_partners ; other
+N | values | Would you invite an ex to your wedding?
+C | social | What would most people say is the most stressful part of planning a wedding? | the_budget ; the_guest_list ; family_opinions ; choosing_a_venue ; seating_plans ; the_dress_or_outfit
+C | values | What should vows focus on? | promises_for_the_future ; stories_from_our_past ; humor ; traditional_words ; personal_feelings ; no_vows
+S | taste | How traditional would you want your wedding to be? | Nothing traditional at all ; A few nods to tradition ; A mix of old and new ; Mostly traditional with small twists ; Fully traditional in every detail
+N | values | Would you still want to marry if it changed nothing legally or financially?
+C | values | Which is the best reason to renew wedding vows? | a_milestone_anniversary ; after_getting_through_a_hard_time ; the_first_wedding_was_small ; to_include_family_members ; there_is_no_good_reason
+S | values | How much should married couples keep separate lives? | We should share everything ; Share almost everything with a few solo hobbies ; Keep our own friends and hobbies ; Keep our own friends, hobbies, and money ; Live largely separate lives under one roof
+N | values | Would you consider marrying someone after knowing them for only a short time?
+C | taste | What kind of honeymoon would you want? | beach_relaxing ; city_sightseeing ; adventure_trip ; road_trip ; staying_home ; no_honeymoon
+C | values | What should a couple agree on before marrying? | children ; where_to_live ; money ; religion ; careers ; household_roles ; all_of_these
+# in-laws
+C | values | Whose side should you take when your partner and your parent disagree? | always_my_partner ; always_my_parent ; whoever_is_right ; stay_out_of_it ; depends_on_the_topic
+N | values | Should a partner be expected to call your parents regularly?
+S | values | How much say should your parents have in your relationship decisions? | None at all ; I listen but ignore their advice ; I consider their advice seriously ; I need their approval for big steps ; They have the final word
+N | values | Would you end a relationship if your family strongly disapproved of your partner?
+C | values | What should you do if your partner's parent is rude to you? | tell_my_partner_privately ; confront_the_parent_politely ; ignore_it ; avoid_that_parent ; ask_my_partner_to_handle_it ; other
+N | taste | Would you be happy living near your partner's parents?
+C | social | What would most people say is the most common in-law complaint? | unwanted_advice ; dropping_by_unannounced ; holiday_demands ; criticizing_the_partner ; money_issues ; favoring_one_sibling
+S | values | How much should you change your habits when visiting your partner's family? | Not at all, they take me as I am ; A little, like dressing nicer ; Follow their house rules while I am there ; Follow their rules and traditions closely ; Act as they expect even when it feels fake
+N | values | Should couples ever let a parent move in with them?
+C | values | How should a couple handle in-laws who give unwanted advice? | the_related_partner_speaks_up ; nod_and_ignore ; set_firm_boundaries_together ; see_them_less ; follow_the_advice_to_keep_peace ; other
+# long distance
+C | values | What matters most for making a long-distance relationship work? | regular_video_calls ; visits ; a_plan_to_close_the_gap ; trust ; daily_messages ; shared_online_activities
+S | taste | How often would you want to talk with a long-distance partner? | Only when we see each other ; A call every week or so ; A few calls a week ; A call every day ; Constant contact all day
+N | values | Would you move cities to end a long-distance relationship?
+C | values | Who should move when a long-distance couple decides to close the gap? | whoever_has_the_more_flexible_job ; whoever_is_less_rooted ; whoever_earns_less ; both_move_somewhere_new ; whoever_offers ; other
+N | personality | Could you handle a long-distance relationship in which you rarely saw each other?
+C | taste | Which long-distance ritual sounds best to you? | watching_a_show_together_online ; sending_letters ; playing_online_games ; eating_dinner_on_video ; good_night_calls ; none
+S | values | How much independence should partners in a long-distance relationship keep? | Very little, we should be in touch constantly ; We check in several times a day ; We check in once a day ; We talk a few times a week ; We live our own lives and connect now and then
+N | values | Is it fair to start a relationship knowing it will soon become long distance?
+C | social | Would most people rather be in a long-distance relationship or single? | long_distance ; single ; depends_on_the_person
+N | values | Is it okay to go to parties without your long-distance partner knowing?
+S | personality | How would you feel if a long-distance partner missed your scheduled call? | I would not notice ; I would shrug it off ; I would feel a bit let down ; I would feel upset and want an explanation ; I would see it as a sign they are losing interest
+# attachment and security
+S | personality | How much do you need reassurance from a partner that things are okay between you? | I almost never need reassurance ; Only after a fight ; Now and then when I feel low ; Most weeks I need to hear it ; Almost every day
+N | personality | Do you pull away when a relationship starts getting very close?
+C | personality | When a partner takes a long time to reply to a message, what do you usually think? | they_are_busy ; they_are_upset_with_me ; they_are_losing_interest ; they_are_with_someone_else ; i_do_not_notice
+S | personality | How comfortable are you depending on a partner for emotional support? | I avoid depending on anyone ; I lean on them only in a crisis ; I lean on them for big things ; I lean on them for most things ; They are the only person I lean on
+N | personality | Do you tend to feel suffocated when a partner wants a lot of closeness?
+C | personality | Which describes you best in relationships? | i_need_lots_of_closeness ; i_need_lots_of_space ; i_swing_between_both ; i_am_comfortable_either_way
+N | personality | Have you ever tested a partner to see if they really cared?
+S | personality | How easily do you trust a new partner? | I trust them fully from the start ; I trust them unless they give me a reason not to ; I trust them after a few months ; I trust them only after they prove it many times ; I never fully trust a partner
+N | personality | Do you find it easy to be vulnerable with a partner?
+C | social | What would most people say makes someone feel most secure in a relationship? | consistent_communication ; words_of_love ; being_introduced_to_friends ; plans_for_the_future ; honesty_about_everything ; quality_time
+N | personality | Do you tend to overthink small changes in a partner's mood?
+# keeping romance alive
+C | values | What is the best way to keep a long relationship exciting? | trying_new_things_together ; travel ; surprises ; regular_date_nights ; time_apart ; shared_goals ; flirting_like_new
+N | values | Is it normal for the early spark in a relationship to fade?
+S | values | How much effort should couples put into dressing up for each other after years together? | None, comfort comes first ; Only for special occasions ; For date nights ; Often enough to keep it fresh ; Always, as if it were early days
+C | taste | Which is the most romantic everyday habit? | morning_coffee_together ; good_morning_texts ; cooking_dinner_together ; evening_walks ; bedtime_talks ; slow_dancing_in_the_kitchen
+N | values | Should couples keep celebrating the anniversary of their first date?
+S | taste | How much do you like planned romance compared to spontaneous romance? | I only like planned romance ; I mostly like it planned with a few surprises ; I like an even mix ; I mostly like spontaneous moments ; I only like spontaneous romance
+C | values | What most often kills romance in a long relationship? | routine ; stress ; phones ; kids ; lack_of_effort ; unresolved_conflict ; taking_each_other_for_granted
+C | taste | What kind of trip with a partner would you enjoy most? | relaxing_beach ; busy_city ; hiking_and_nature ; road_trip ; cruise ; staycation
+N | values | Should couples still flirt with each other after many years?
+S | taste | How much do you care about celebrating Valentine's Day with a partner? | I refuse to celebrate it ; I would do nothing unless they wanted to ; A card or small gesture is enough ; I want a proper date that day ; I want a big planned celebration
+N | social | Would most people say Valentine's Day is overrated?
+# gifts and anniversaries
+C | values | Which anniversary should a couple celebrate? | the_day_they_met ; the_first_date ; the_day_they_became_official ; the_wedding_day ; all_of_them ; none
+S | values | How upset would you be if a partner gave you a clearly last-minute gift? | Not at all, it is the thought that counts ; A little amused ; Quietly disappointed ; Openly disappointed ; Hurt enough to argue about it
+C | values | How should couples decide how much to spend on gifts for each other? | agree_on_a_limit ; spend_whatever_feels_right ; match_what_the_other_spends ; spend_based_on_income ; no_gifts_at_all
+N | values | Should partners tell each other exactly what they want as gifts?
+C | taste | Which gift from a partner would disappoint you most? | a_gift_card ; clothing_in_the_wrong_size ; a_household_appliance ; something_they_wanted_themselves ; a_generic_gift_set ; nothing_would
+S | taste | How much do you enjoy planning surprises for a partner? | I avoid it completely ; I do it only when expected ; I enjoy it for big occasions ; I enjoy it often ; I am always planning the next one
+# social media and public life
+N | values | Would you mind if a partner could log in to your social media accounts?
+C | values | How soon should a new partner appear on your social media? | as_soon_as_we_are_official ; after_a_few_months ; once_it_feels_serious ; only_when_engaged ; never ; no_rule
+S | values | How much should a couple post about each other online? | Never post about each other ; Only on big milestones ; An occasional photo ; Regular posts about our life ; Posts almost every day
+N | values | Would you be hurt if a long term partner never posted about you online?
+C | social | Which couple behavior online do most people find most annoying? | constant_affectionate_posts ; public_arguments_in_comments ; vague_sad_posts_after_fights ; matching_profile_pictures ; joint_accounts ; none
+S | values | How acceptable is it to post a photo of your partner without asking? | Never acceptable ; Only if it is a flattering group photo ; Fine for nice photos ; Fine for most photos ; Fine for any photo, even silly ones
+# time together and independence
+C | values | How should a couple spend weekends? | always_together ; mostly_together ; half_and_half ; mostly_apart ; plan_each_one_fresh
+N | values | Should partners have separate friend groups?
+S | taste | How would you feel about a partner going on a trip with their friends for a week without you? | I would be completely against it ; I would accept it but be unhappy ; I would be fine if they checked in daily ; I would be fine and enjoy the time alone ; I would encourage it often
+C | values | What should a couple do when they want very different amounts of time together? | meet_in_the_middle ; the_one_who_wants_less_gives_more ; the_one_who_wants_more_finds_other_outlets ; schedule_it ; question_the_match ; other
+C | personality | What do you most need to protect in your own life when in a relationship? | time_with_friends ; alone_time ; my_career ; my_hobbies ; my_money ; my_family_time ; nothing
+N | personality | Have you ever lost touch with friends because of a relationship?
+S | values | How much should partners check in when out with friends? | No check-ins needed ; One message to say I got home ; A message or two during the night ; Regular updates through the night ; A call every hour or so
+# careers
+C | values | What should a couple do if one partner gets a dream job in another city? | move_together ; go_long_distance ; turn_down_the_job ; break_up ; other
+N | values | Would you give up a promotion to keep your relationship happy?
+S | values | How much should a partner support your long working hours? | They should accept them without complaint ; Accept them for a while during busy times ; Accept them if I make up for it on weekends ; Push back when it goes on too long ; Ask me to change jobs if needed
+N | values | Is it okay for one partner to stay home while the other earns all the money?
+C | social | What would most people say is the hardest thing about both partners having demanding careers? | little_time_together ; deciding_whose_career_comes_first ; stress_at_home ; chores_piling_up ; moving_for_work ; other
+# cheating and emotional affairs
+C | values | Which of these counts as cheating to you? | secretly_texting_an_ex ; kissing_someone_else ; having_a_dating_app_profile ; flirting_online ; sharing_deep_secrets_with_someone_else ; only_physical_affairs
+N | values | Is an emotional affair as bad as a physical one?
+S | values | How much does it matter whether a partner confessed to cheating or you found out yourself? | It makes no difference at all ; Confessing helps a little ; Confessing makes forgiveness possible ; Confessing makes a big difference ; Confessing is the only way I could ever forgive it
+N | values | Would you want to know if your partner had cheated once long ago and it was truly over?
+C | values | If a friend told you they saw your partner with someone else, what would you do first? | ask_my_partner_directly ; ask_the_friend_for_details ; look_for_evidence ; wait_and_watch ; dismiss_it ; other
+S | values | How acceptable is it for a partner to keep an active dating app profile just to browse? | Completely fine ; Odd but harmless ; Uncomfortable and worth a talk ; A serious breach of trust ; The same as cheating
+C | social | What would most people say is the main reason people cheat? | boredom ; feeling_neglected ; opportunity ; revenge ; low_self_esteem ; falling_out_of_love
+N | values | Can trust ever be fully rebuilt after cheating?
+C | values | What should a couple do after one partner cheats? | break_up ; couples_therapy ; take_a_break ; stay_and_rebuild_quietly ; depends_on_the_circumstances
+N | values | Is it cheating to have a secret crush you never act on?
+S | personality | How suspicious are you when a partner starts guarding their phone more than usual? | I would not notice ; I would notice but not care ; I would wonder quietly ; I would ask what is going on ; I would assume they are hiding something serious
+N | values | Is it acceptable to go through a partner's things if you strongly suspect cheating?
+C | values | Which is the worse betrayal? | a_one_night_mistake ; a_long_emotional_affair ; lying_about_money ; sharing_your_secrets_with_others ; all_equally_bad
+# breakups
+C | values | What is the most valid reason to end a long relationship? | falling_out_of_love ; wanting_different_futures ; constant_fighting ; growing_apart ; lack_of_respect ; cheating
+N | values | Is it okay to end a relationship without giving a reason?
+S | personality | How long do you usually take to decide to break up once you start doubting a relationship? | I end it right away ; A few weeks ; A few months ; Many months of going back and forth ; I wait until the other person ends it
+C | taste | Where is the best place to break up with someone? | at_their_home ; at_my_home ; a_neutral_public_place ; on_a_walk ; over_the_phone ; by_video_call
+N | values | Should you break up with someone just before their birthday or a holiday?
+C | values | Who should move out after a breakup when living together? | whoever_ended_it ; whoever_is_not_on_the_lease ; whoever_can_afford_it_less ; whoever_has_somewhere_to_go ; decide_together ; other
+S | values | How much should exes split the belongings they bought together? | Whoever paid keeps it ; Whoever uses it more keeps it ; Split everything evenly by value ; Sell everything and split the money ; The person who was dumped gets first pick
+N | values | Is it okay to take a break instead of fully breaking up?
+C | social | What would most people say is the worst way to be broken up with? | ghosting ; a_text_message ; through_a_friend ; in_public ; on_a_holiday ; a_social_media_status_change
+S | personality | How do you usually handle being dumped? | I move on within days ; I feel sad for a few weeks ; I grieve for a few months ; I struggle for a year or more ; I never quite get over some of them
+C | personality | What helps you most after a breakup? | friends ; staying_busy ; exercise ; crying_it_out ; travel ; new_haircut_or_look ; dating_again
+C | values | What should you do with gifts from an ex? | keep_them ; give_them_back ; donate_them ; throw_them_away ; sell_them ; depends_on_the_gift
+N | values | Should you unfollow an ex on social media right after a breakup?
+S | personality | How much do you tend to blame yourself when a relationship ends? | I almost never blame myself ; I take a small share of the blame ; I usually think the blame is equal ; I usually think it was mostly my fault ; I blame myself for nearly everything
+N | values | Is it okay to ask for closure from an ex months after a breakup?
+C | values | Which breakup rule matters most? | no_contact_for_a_while ; do_not_badmouth_the_ex ; return_their_things ; do_not_date_their_friends ; do_not_post_about_it ; tell_friends_quickly
+N | values | Would you expect mutual friends to stay neutral after your breakup?
+C | personality | Which do you tend to do after a breakup? | reread_old_messages ; check_their_social_media ; block_them ; talk_about_them_constantly ; avoid_places_we_went ; none_of_these
+# exes
+S | values | How much should your new partner know about why your last relationship ended? | Nothing at all ; Just that it ended ; The main reason in one sentence ; The full story if they ask ; Every detail whether they ask or not
+N | values | Is it okay to compare a current partner to an ex out loud?
+C | values | What should you do if your partner is still close friends with their ex? | trust_it ; ask_to_meet_the_ex ; ask_for_less_contact ; ask_them_to_end_it ; end_the_relationship ; other
+C | social | What would most people say is the most common reason people stay friends with an ex? | shared_friends ; they_still_care ; hoping_to_reunite ; shared_pets_or_belongings ; working_together ; being_civil
+N | values | Should your partner tell you when their ex contacts them?
+C | taste | How would you want to react if you ran into an ex in public? | stop_and_chat ; wave_and_keep_going ; pretend_not_to_see_them ; hide ; depends_on_the_breakup
+# getting back together
+C | values | What is the best reason to get back together with an ex? | the_problem_that_ended_it_is_fixed ; you_still_love_each_other ; you_both_have_grown ; loneliness ; convenience ; there_is_no_good_reason
+S | values | How much time apart should pass before an ex couple tries again? | None, they should reunite as soon as they want ; A few weeks ; A few months ; A year or more ; They should never try again
+N | values | Is breaking up and making up again and again a sign a couple should end it for good?
+C | social | Would most people say getting back with an ex usually works out? | usually_works ; sometimes_works ; rarely_works ; never_works
+# grief and recovery
+C | values | What is the best way to get over someone? | time ; focusing_on_yourself ; dating_someone_new ; talking_it_through ; cutting_all_contact ; writing_about_it
+S | personality | How much does a breakup affect your daily routine? | Not at all, life goes on ; I feel down but keep up my routine ; I skip some plans for a while ; My sleep and eating change for weeks ; I can barely function for a long time
+N | values | Is it healthy to stay single for a while after a long relationship?
+# rebounds
+N | values | Is a rebound relationship ever a good idea?
+C | values | What is the biggest risk of a rebound relationship? | hurting_the_new_person ; not_healing ; comparing_them_to_the_ex ; moving_too_fast ; making_the_ex_jealous_on_purpose ; there_is_no_real_risk
+S | values | How would you feel about dating someone who just ended a long relationship? | I would happily date them right away ; I would date them but take it slowly ; I would be cautious and wary ; I would wait a few months first ; I would not date them at all
+N | social | Would most people say rebounds rarely last?
+# honesty and communication
+N | values | Is it okay to tell a partner you love a gift you actually dislike?
+S | values | How honest should you be when a partner asks how they look before going out? | Always say they look great ; Say something kind and skip the flaws ; Mention a flaw only if it is easy to fix ; Point out anything I would change ; Give my full blunt opinion every time
+C | values | Which white lie is most acceptable in a relationship? | liking_their_cooking ; being_fine_when_tired ; enjoying_their_friends ; the_price_of_a_purchase ; being_on_the_way_when_not ; none
+N | values | Should partners tell each other about every crush they get?
+C | personality | How do you usually bring up a small annoyance with a partner? | mention_it_right_away ; joke_about_it ; wait_for_a_good_moment ; save_it_up ; never_mention_it
+S | personality | How openly do you share your feelings with a partner? | I keep almost everything inside ; I share only when asked ; I share the big feelings ; I share most feelings as they come ; I share every feeling in detail
+N | values | Should couples schedule regular check-in talks about the relationship?
+C | values | What is the most important thing to be honest about with a partner? | past_relationships ; money ; health ; feelings_for_others ; what_you_want_in_future ; everything_equally
+N | personality | Do you expect a partner to know what you want without being told?
+C | social | What would most people say is the most common communication problem in couples? | not_listening ; assuming ; avoiding_hard_topics ; criticizing ; talking_over_each_other ; texting_instead_of_talking
+S | taste | How much do you like a partner to text you during the workday? | Not at all ; One message at lunch ; A handful of messages ; Regular chatting through the day ; A near constant conversation
+# support through hard times
+C | values | What should you do when a partner is going through a very hard time? | listen_without_advice ; offer_practical_help ; give_them_space ; encourage_professional_help ; distract_them_with_fun ; other
+S | values | How much should you put your own life on hold to care for a partner who is seriously ill? | Not at all ; A little, like changing some plans ; A lot, like reducing work hours ; Almost entirely ; Completely, whatever it takes
+N | values | Would you stay with a partner through a long period of unemployment?
+C | personality | When you are stressed, what do you most want from a partner? | a_hug ; to_be_left_alone ; help_with_tasks ; someone_to_listen ; advice ; distraction
+N | personality | Do you hide your problems from a partner so they will not worry?
+S | values | How much should a partner cheer you on when you take a big risk like quitting your job? | They should try to talk me out of it ; They should voice doubts but accept it ; They should stay neutral ; They should support me with some caution ; They should back me fully no matter what
+N | values | Should a partner be your main source of emotional support?
+C | values | What should a partner do when you are grieving a family member? | be_present_quietly ; handle_daily_tasks ; talk_about_the_person ; help_plan_arrangements ; keep_life_normal ; give_space
+# growth and change
+N | values | Should partners push each other to improve themselves?
+S | values | How acceptable is it for a partner to ask you to change your appearance? | Never acceptable ; Only for health reasons ; Fine as a gentle suggestion once ; Fine as an ongoing request ; Fine, partners should shape each other's look
+C | values | What would you do if a partner changed a lot over the years? | adapt_to_the_new_them ; try_to_change_them_back ; grow_in_a_similar_direction ; end_things ; other
+N | personality | Have you ever changed a major habit because a partner asked?
+C | values | Which change in a partner would be hardest for you to accept? | a_new_religion ; a_new_career_path ; losing_interest_in_shared_hobbies ; a_new_friend_group ; moving_away_from_family ; big_change_in_looks
+N | values | Can two people grow apart without either doing anything wrong?
+# sleep and home life
+C | taste | Which sleeping habit of a partner would bother you most? | snoring ; stealing_blankets ; phone_in_bed ; different_bedtimes ; tossing_and_turning ; wanting_it_warm ; none
+S | taste | How much do you want to share a morning routine with a partner? | We should wake and start the day separately ; A quick good morning is enough ; Breakfast together on weekends ; Breakfast together most days ; We do our whole morning routine together
+C | taste | Which household task would you most want a partner to take over? | cooking ; dishes ; laundry ; cleaning_the_bathroom ; grocery_shopping ; bills_and_paperwork ; taking_out_trash
+# holidays and traditions
+C | values | How should a couple split holidays between two families? | alternate_years ; split_each_holiday_day ; host_everyone_together ; start_their_own_traditions ; spend_with_whoever_lives_closer ; other
+N | values | Should couples create holiday traditions of their own?
+S | values | How much should you join a partner's religious or cultural traditions? | Not at all ; Attend big events only ; Join in the main holidays ; Join in most traditions ; Fully adopt their traditions
+N | values | Could you be happy long term with a partner whose religious beliefs differ from yours?
+C | taste | Which shared tradition would you most like with a partner? | a_yearly_trip ; a_weekly_meal_together ; a_holiday_ritual ; anniversary_letters ; a_shared_photo_album ; none
+# decisions and power
+C | values | Who should make the final call on big decisions in a couple? | both_must_agree ; whoever_it_affects_most ; whoever_knows_more_about_it ; take_turns ; the_higher_earner ; other
+S | values | How much should one partner be allowed to veto the other's big plans? | No vetoes at all ; A veto only on money matters ; A veto on anything that affects both of us ; A veto on most plans ; A veto on anything at all
+N | values | Is it okay for one partner to be the main decision maker in a relationship?
+C | personality | In your relationships, who usually plans what you do together? | mostly_me ; mostly_them ; we_share_it ; nobody_we_wing_it
+N | personality | Do you usually give in to keep the peace in a relationship?
+# pets and shared life
+N | values | Would you break up with someone who refused to live with your pet?
+C | values | What should a couple do if one partner wants a pet and the other does not? | no_pet ; get_the_pet ; try_fostering_first ; wait_a_while ; choose_a_small_pet ; other
+S | taste | How much do you want to share hobbies with a partner? | We should keep all hobbies separate ; We should share one hobby at most ; We should share a few hobbies ; We should share most hobbies ; We should do every hobby together
+# partner's friends
+S | values | How much should you like a partner's friends? | It does not matter at all ; I should be polite with them ; I should get along with most of them ; I should become friends with them ; I need to love them all
+N | values | Is it a warning sign if a partner does not introduce you to their friends?
+C | values | What should you do if you dislike your partner's best friend? | keep_it_to_myself ; tell_my_partner_gently ; avoid_the_friend ; try_harder_to_like_them ; ask_my_partner_to_see_them_less ; other
+# couple social norms
+C | social | What would most people say is the clearest sign a couple will last? | they_laugh_together ; they_fight_fairly ; they_share_goals ; they_have_similar_backgrounds ; they_are_best_friends ; they_give_each_other_space
+N | social | Would most people consider it rude for a couple to be affectionate at a dinner party?
+C | social | Which would most people say matters more in a long relationship, passion or friendship? | passion ; friendship ; both_equally
+N | social | Would most people say marrying young is a mistake?
+C | social | What would most people say is the biggest sacrifice people make for love? | moving_cities ; changing_careers ; giving_up_friends ; giving_up_freedom ; changing_religion ; giving_up_hobbies
+S | social | How would most people react to learning a couple sleeps in separate rooms? | They would not think twice ; They would be mildly curious ; They would assume there is a snoring problem ; They would assume the couple is unhappy ; They would assume the couple is about to split
+N | social | Would most people say a couple should never go a whole day without talking?
+# more relationship dynamics
+C | personality | Which role do you usually play in a relationship? | the_planner ; the_caretaker ; the_fun_one ; the_calm_one ; the_worrier ; the_problem_solver
+N | personality | Do you tend to lose yourself in a relationship?
+S | personality | How much do your moods depend on how your relationship is going? | Not at all ; A little on bad days ; Noticeably when we fight ; A lot most of the time ; Completely, my whole mood follows the relationship
+C | values | What is the most important quality in a long term partner once you are together? | reliability ; kindness ; humor ; loyalty ; patience ; honesty ; ambition
+N | values | Should partners be equals in every part of the relationship?
+S | values | How much teasing between partners is healthy? | None, it always stings ; A little gentle teasing now and then ; Regular playful teasing ; Constant teasing about almost anything ; Harsh teasing is fine if both laugh
+C | taste | Which inside joke style do you most enjoy with a partner? | silly_voices ; running_nicknames ; references_to_shared_memories ; playful_insults ; made_up_words ; none
+C | values | What should you do if you fall out of love but nothing is wrong? | leave ; stay_and_wait_for_it_to_return ; tell_the_partner_honestly ; try_counseling ; stay_for_comfort ; other
+N | values | Can you love someone and still not want to be with them?
+S | values | How much should a relationship feel like hard work? | It should never feel like work ; It should take effort only in rough patches ; It should take steady light effort ; It should take real effort every week ; It should always feel like hard work
+N | social | Would most people say love alone is enough to keep a relationship going?
+C | values | Which is more important in a partner over the long run? | shared_values ; shared_interests ; physical_attraction ; emotional_connection ; similar_lifestyle
+N | values | Is it okay to stay in a relationship mainly because it is comfortable?
+S | personality | How often do you think about whether you are with the right person? | Never ; Only after a big fight ; Every few months ; Most weeks ; Almost every day
+C | values | What is the right response if your partner forgets an important plan you made together? | laugh_it_off ; mention_it_calmly ; ask_for_a_makeup_plan ; show_that_you_are_hurt ; stay_quiet_but_remember ; other
+N | values | Should partners always attend each other's family events?
+C | personality | How do you act when a partner is in a bad mood? | cheer_them_up ; give_them_space ; ask_what_is_wrong ; take_it_personally ; ignore_it ; get_in_a_bad_mood_too
+N | personality | Do you find it hard to ask a partner for help?
+S | values | How much should couples share friends after years together? | Each keeps entirely separate friends ; We share a few couple friends ; Half of our friends are shared ; Most of our friends are shared ; All of our friends are shared
+C | taste | Which kind of date night appeals to you most in a long relationship? | a_fancy_dinner ; a_cozy_night_in ; trying_a_new_activity ; a_concert_or_show ; revisiting_a_first_date_spot ; a_night_with_friends
+C | values | What is the fairest way to choose where a couple lives? | near_his_or_her_family ; near_the_best_job ; somewhere_both_love ; the_cheapest_option ; take_turns_over_the_years ; other
+S | values | How much should a partner adapt to your diet? | Not at all ; Cook what I eat when we share meals ; Keep my foods stocked at home ; Mostly eat what I eat ; Fully switch to my diet
+C | social | What would most people say is the hardest year of a relationship? | the_first ; after_moving_in ; after_marriage ; after_a_big_move ; after_losing_a_job ; none_in_particular
+C | values | How should you respond to a partner's small annoying habit like chewing loudly? | tell_them_kindly ; joke_about_it ; tolerate_it_silently ; leave_the_room ; complain_to_friends ; other
+S | values | How much should couples discuss their relationship with a therapist even when things are fine? | Never ; Only in a crisis ; When stuck on a big decision ; Once in a while as a tune-up ; Regularly as a habit
+N | values | Should couples ever split up if they still love each other?
+C | values | Which is worse in a relationship? | too_much_distance ; too_much_closeness ; equally_bad
+N | personality | Would you rather be the one who loves more in a relationship?
+S | values | How much should a partner's job title or status matter once you are together? | Not at all ; Only if they were unhappy in it ; A little for our shared finances ; A fair amount for our lifestyle ; A great deal, I want a successful partner
+C | personality | What do you miss most about being single? | freedom ; time_alone ; meeting_new_people ; the_excitement_of_dating ; my_own_space ; nothing
+C | personality | What do you like most about being in a relationship? | having_a_companion ; feeling_secure ; shared_adventures ; someone_to_care_for ; being_known_deeply ; physical_affection
+N | values | Is it reasonable to stay with someone you love but do not fully respect?
+S | values | How much would it bother you if a partner never wanted to marry but promised lifelong commitment? | Not at all ; A little at first ; Enough to discuss it several times ; Enough to rethink our future ; Enough to leave
+N | social | Would most people say couples who met online are as happy as those who met in person?
+C | values | Which kind of love would you rather have with a partner? | a_calm_steady_love ; a_passionate_rollercoaster ; no_preference
+S | values | How much should couples keep their fights private from family? | Family should never know ; Family can know we had a fight but no details ; Close family can know the main issue ; Family can hear the full story ; Family should help settle our fights
+C | values | What is the most important promise partners make to each other? | faithfulness ; honesty ; support_in_hard_times ; respect ; putting_each_other_first ; staying_together_forever
+C | social | What would most people say keeps a marriage strong through old age? | companionship ; humor ; shared_routines ; family ; good_health ; patience
+# added scores
+S | personality | How do you usually act the first time you meet a partner's parents? | I stay quiet and let my partner talk ; I am polite but reserved ; I chat easily and ask questions ; I try hard to charm everyone ; I act like I have known them for years
+S | values | How acceptable is it for a partner to keep in touch with someone they once had feelings for? | Completely fine ; Fine if I know about it ; Fine only in group settings ; Uncomfortable and worth a talk ; Not acceptable at all
+S | taste | How much do you enjoy celebrating a partner's birthday in a big way? | I prefer to skip birthdays entirely ; A card and dinner is plenty ; A special day with a gift ; A surprise party or trip ; A whole week of celebrations
+S | values | How much should couples plan their finances together before marriage? | Not at all, it can wait ; A casual chat about spending ; A talk about debts and savings ; A full budget together ; Merged accounts and a written plan
+S | personality | How do you usually respond when a partner makes a plan without asking you? | I happily go along ; I go along but mention it later ; I ask them to check next time ; I refuse to go unless it suits me ; I get upset and argue about it
+S | values | How long should a couple date before getting engaged? | A few weeks can be enough ; Several months ; About a year ; A few years ; Many years, marriage can wait
+S | personality | How often do you say I love you to a long term partner? | Almost never ; Only on special occasions ; Every so often ; Most days ; Many times a day
+S | values | How much should partners share passwords to streaming and shopping accounts? | Never, each keeps their own ; Only for one or two shared services ; For most household services ; For every account except banking ; For absolutely every account
+S | taste | How much do you enjoy traveling with a partner compared to traveling alone? | I much prefer traveling alone ; I like alone trips a bit more ; I enjoy both equally ; I like trips with a partner a bit more ; I only ever want to travel with a partner
+S | personality | How quickly do you move on from minor disagreements with a partner? | Within minutes ; Within an hour ; By the end of the day ; After a few days ; I hold on to them for weeks
+S | values | How much should a new partner be included in your family's holidays in the first year? | Not at all ; A short visit on one holiday ; One full holiday together ; Most holidays together ; Every family event
+S | personality | How much do you share about your relationship problems with your family? | Nothing at all ; Only that things are rough ; The general issue ; Most of the details ; Everything, as it happens
+S | values | How much should couples compromise on where they spend holidays each year? | One partner always chooses ; The partner with the closer family chooses ; We take turns each year ; We split every holiday down the middle ; We skip family and go away alone
+S | values | How much time should pass after a breakup before you can be friends with an ex? | We can be friends right away ; A few weeks of no contact ; A few months ; A year or more ; We can never be friends
+S | personality | How much do you still think about your past relationships? | Never ; Only when something reminds me ; Now and then without much feeling ; Often, with some longing ; Almost every day
+S | values | How much should a partner prioritize you over their friends? | Not at all, friends come first ; Equally with friends ; Above friends for big things ; Above friends for most things ; Above friends always
+S | values | How much should a couple be willing to sacrifice to stay in the same city? | Nothing, careers come first ; Small job opportunities ; A promotion ; A dream job ; Anything at all
+S | personality | How much do you look forward to spending evenings with a long term partner? | I often wish for evenings alone ; I enjoy it now and then ; I like it most evenings ; I look forward to it every day ; It is the best part of my day
+S | taste | How much do you like a partner to take care of you when you are sick? | I want to be left completely alone ; A quick check-in is enough ; Bring me food and medicine ; Stay home with me ; Take care of everything and fuss over me
+S | values | How much should a couple change their plans because one partner is tired? | Not at all ; Leave a little early ; Swap to a quieter plan ; Stay in together ; Cancel everything without discussion
+S | values | How serious is it when a partner lies about something small like where they ate lunch? | Not serious at all ; A little odd ; Worth asking about ; A real breach of trust ; A sign of bigger lies
+S | personality | How much do you rely on a partner to plan your social life? | Not at all ; For a few couple plans ; For about half our plans ; For most of our plans ; For everything
+S | values | How much should a partner support a hobby that takes a lot of your time? | They should ask me to drop it ; They should tolerate it quietly ; They should accept it if I balance it ; They should support it happily ; They should join me in it
+S | values | How much should a couple's shared money be spent on each partner's family? | None, family is separate ; Only for gifts ; For gifts and emergencies ; For regular support if needed ; As much as either family needs
+S | personality | How often do you plan something special just for your partner? | Almost never ; Only for birthdays and anniversaries ; A few times a year ; Every month or so ; Every week
+S | values | How acceptable is it for a partner to spend a holiday apart to be with their own family? | Never acceptable ; Only in an emergency ; Fine once in a while ; Fine most years ; Fine every year
+# added choices
+C | values | What should you do if a partner keeps canceling plans with you? | talk_about_it ; stop_making_plans ; make_plans_with_others ; accept_it ; question_the_relationship ; other
+C | personality | What is your usual reaction to a partner's surprise gift? | delighted ; awkward ; grateful_but_worried_about_cost ; want_to_give_back_right_away ; indifferent
+C | values | Which topic should couples discuss before moving in together? | chores ; money ; guests ; alone_time ; pets ; all_of_these
+C | taste | Which is the most romantic way to spend an anniversary? | a_dinner_out ; a_weekend_trip ; recreating_our_first_date ; a_quiet_day_at_home ; exchanging_letters ; doing_nothing_special
+C | values | What should you do if you find out a partner lied about their past? | forgive_and_move_on ; ask_for_the_full_truth ; take_some_space ; end_the_relationship ; depends_on_the_lie
+C | social | What would most people say is the clearest sign of maturity in a partner? | taking_responsibility ; handling_money_well ; staying_calm_in_conflict ; keeping_promises ; being_independent ; knowing_what_they_want
+C | values | How should a couple divide mental load, like remembering birthdays and appointments? | whoever_is_better_at_it ; split_evenly ; use_a_shared_calendar ; each_handles_their_own_side ; one_person_by_default
+C | values | What should you do if your partner wants to move somewhere you dislike? | go_anyway ; refuse ; try_it_for_a_while ; find_a_compromise_place ; stay_behind ; other
+C | personality | What do you do when you notice the spark fading in a relationship? | plan_something_new ; talk_about_it ; wait_it_out ; look_elsewhere ; accept_it_as_normal ; end_things
+C | values | What is the best way to reconnect after a busy period apart? | a_long_talk ; a_trip_together ; a_quiet_night_in ; a_date_night ; physical_affection ; just_resume_normal_life
+C | values | Which boundary is most important in a relationship? | respecting_alone_time ; not_reading_messages ; not_insulting_each_others_families ; keeping_fights_private ; honesty_about_other_people ; respecting_money_decisions
+C | taste | Which shared goal would you most like with a partner? | buying_a_home ; traveling_the_world ; starting_a_business ; getting_fit ; learning_a_skill ; building_a_community
+C | social | What would most people say ends most long relationships? | poor_communication ; cheating ; money_problems ; growing_apart ; family_pressure ; boredom
+C | values | How should a couple handle one partner snoring loudly? | sleep_in_separate_rooms ; earplugs ; see_a_doctor ; the_snorer_sleeps_on_the_couch ; just_live_with_it
+C | values | Which is the kindest way to tell a partner you need more space? | be_honest_and_direct ; suggest_regular_solo_nights ; take_up_a_new_hobby ; plan_a_solo_trip ; say_it_is_about_work
+C | personality | What kind of partner are you when your partner has big news? | the_first_to_celebrate ; the_one_who_asks_questions ; the_calm_one ; the_worrier ; the_one_who_tells_everyone
+C | values | What should you do if a partner's friend flirts with you? | tell_my_partner ; shut_it_down_quietly ; ignore_it ; tell_the_friend_to_stop ; avoid_that_friend ; other
+C | values | What should happen to shared friends after a breakup? | they_choose ; split_them_by_who_knew_them_first ; share_them ; avoid_them_both ; other
+C | personality | Which describes how you handle a partner's past? | i_want_to_know_everything ; i_want_the_basics ; i_prefer_not_to_know ; i_only_care_about_the_present
+C | values | Which gesture best repairs trust after a partner breaks a promise? | keeping_the_next_promise ; a_sincere_apology ; making_up_for_it ; explaining_why ; small_daily_efforts ; nothing_can_repair_it
+C | taste | Which shared activity would most bring you closer to a partner? | cooking_together ; traveling ; volunteering ; exercising_together ; building_something ; reading_the_same_book
+C | social | What would most people say is the most romantic song topic? | first_love ; lost_love ; lifelong_love ; forbidden_love ; love_at_first_sight ; heartbreak

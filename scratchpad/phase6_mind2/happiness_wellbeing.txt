@@ -1,0 +1,278 @@
+C | taste | Which small daily pleasure lifts your mood the most? | morning_coffee_or_tea; a_good_meal; time_outdoors; music; a_long_shower; reading; chatting_with_someone; other
+C | values | Which matters most for a good life? | close_relationships; good_health; meaningful_work; freedom; financial_security; personal_growth; other
+C | evaluative | Which usually makes you happier: planning a trip or taking it? | planning_it; taking_it; remembering_it_afterward; all_the_same
+C | personality | When something good happens to you, what do you usually do first? | tell_someone; savor_it_quietly; post_about_it; move_on_to_the_next_thing; worry_it_wont_last
+C | values | Which kind of happiness do you value more? | calm_contentment=a steady, quiet sense that things are fine; excitement=high moments of joy and thrill; both_equally
+C | evaluative | Which do you think brings more lasting satisfaction? | finishing_a_hard_project; a_relaxing_vacation; a_great_night_with_friends; buying_something_you_wanted
+C | taste | What is your ideal way to spend a free afternoon? | outside_in_nature; with_friends; alone_with_a_book_or_show; working_on_a_hobby; napping; exploring_somewhere_new; other
+C | personality | How do you most often notice you are happy? | in_the_moment; only_looking_back; when_someone_points_it_out; rarely_notice
+C | values | Which would you choose for a better life: more time or more money? | more_time; more_money; it_depends
+C | evaluative | What most often gets in the way of your own happiness? | not_enough_time; worry_about_the_future; comparing_to_others; work_stress; loneliness; money; health; nothing_much
+C | social | Whose happiness affects your own the most? | partner; family; close_friends; coworkers; nobody_in_particular
+C | values | Which would add the most to your happiness right now? | more_rest; more_friends; a_better_job; more_money; better_health; more_adventure; nothing_i_am_content
+C | taste | Which setting makes you feel most at peace? | by_the_sea; in_the_mountains; in_a_forest; in_a_busy_city; at_home; in_a_garden
+C | evaluative | Which is the better recipe for a happy life? | low_expectations; high_hopes; realistic_expectations
+C | personality | When you reach a goal, how long does the good feeling usually last? | a_few_moments; about_a_day; a_few_weeks; a_long_time; i_rarely_feel_it
+C | values | Which is more important to you: being content or being ambitious? | being_content; being_ambitious; a_balance
+C | evaluative | Which do you think makes people happiest over a lifetime? | love; work_they_care_about; friendship; health; money; faith_or_philosophy; adventure
+C | taste | Which season makes you happiest? | spring; summer; autumn; winter; no_difference
+C | taste | Which time of day do you enjoy most? | early_morning; late_morning; afternoon; evening; late_night
+C | personality | How do you usually express gratitude? | saying_thank_you; writing_notes; doing_favors_in_return; quietly_in_my_head; i_rarely_express_it
+C | values | Which kind of success would make you happiest? | respect_from_peers; financial_freedom; creative_achievement; a_happy_family; helping_many_people; personal_mastery
+C | evaluative | What best describes a truly good day for you? | productive; relaxing; social; adventurous; peaceful
+C | social | Who do you think is usually happier? | people_with_many_friends; people_with_a_few_close_friends; people_who_prefer_solitude; no_difference
+C | evaluative | Which is a better source of happiness: novelty or routine? | novelty; routine; a_mix
+C | values | If you could improve one area of your life, which would it be? | work; relationships; health; finances; free_time; living_situation; personal_growth
+C | taste | Which simple pleasure would be hardest for you to give up? | hot_showers; good_food; music; sunlight; sleeping_in; conversations; pets
+C | personality | When you have a quiet moment, what do you usually do? | enjoy_the_stillness; check_my_phone; plan_ahead; daydream; start_a_task
+C | evaluative | Which do you think matters more for happiness: where you live or who you live with? | where_you_live; who_you_live_with; equally
+C | values | What would you trade some income for? | shorter_commute; more_meaningful_work; more_flexible_hours; nicer_coworkers; living_near_family; nothing
+C | evaluative | Which age group do you think is happiest? | children; teenagers; young_adults; middle_aged_adults; older_adults; no_difference
+C | personality | How do you tend to feel on a Sunday evening? | relaxed_and_content; anxious_about_the_week; excited_for_the_week; indifferent
+C | taste | What kind of vacation makes you happiest? | beach_relaxation; city_exploration; outdoor_adventure; visiting_family; staying_home; cultural_trip
+C | values | Which is the better goal for a life? | to_be_happy; to_be_useful; to_be_remembered; to_be_free; to_be_loved
+C | evaluative | Which usually makes people happier: giving a gift or receiving one? | giving; receiving; the_same
+C | personality | Which describes how you handle good news? | celebrate_right_away; wait_until_it_is_certain; downplay_it; share_it_with_everyone
+C | evaluative | Which feeling do you think is closest to real happiness? | peace; joy; pride; love; excitement; relief
+C | taste | Which activity puts you most in the zone, losing track of time? | making_things; playing_sports; reading; gaming; cooking; working; music; none
+C | values | What does having enough mean to you? | no_money_worries; time_for_what_i_love; people_who_care_about_me; good_health; i_never_feel_i_have_enough
+C | social | Whose advice about happiness would you trust most? | a_grandparent; a_close_friend; a_therapist; a_philosopher; a_parent; my_own_experience
+C | evaluative | Which is the bigger threat to happiness today? | too_much_screen_time; overwork; social_comparison; isolation; money_pressure; too_many_choices
+C | personality | How do you most often recharge? | sleeping; being_alone; being_with_people; exercising; getting_outside; doing_a_hobby
+C | values | Which would make you happier: a big house far from friends or a small place near them? | big_house_far; small_place_near
+C | evaluative | Which contributes more to a good week for you? | getting_things_done; seeing_people_i_love; having_fun; getting_enough_rest
+C | taste | Which sound makes you feel happiest? | rain; birdsong; laughter; waves; a_favorite_song; silence
+C | values | What would you most want your children or younger relatives to learn about happiness? | appreciate_small_things; do_meaningful_work; build_strong_friendships; dont_compare; take_care_of_your_health; other
+C | evaluative | Which is more likely to make you happy in the long run? | achieving_your_dreams; letting_go_of_some_dreams; both_equally
+C | personality | Which best describes your happiness over a typical week? | steady; up_and_down; mostly_low; mostly_high
+C | taste | Which comfort do you reach for on a gloomy day? | a_warm_drink; a_favorite_movie; comfort_food; a_blanket_and_nap; calling_a_friend; a_walk
+C | values | Which do you prefer: a life with high highs and low lows or an even, steady life? | high_highs_and_low_lows; even_and_steady
+C | evaluative | Which do you think has the biggest effect on everyday happiness? | sleep; relationships; work; weather; money; exercise
+C | social | How does seeing a friend succeed usually make you feel? | genuinely_happy; happy_but_a_little_envious; mostly_envious; indifferent
+C | taste | Which meal of the day brings you the most joy? | breakfast; lunch; dinner; snacks; none
+C | values | Which would you rather have: a job you love that pays little or a job you dislike that pays well? | love_it_pays_little; dislike_it_pays_well
+C | evaluative | Which do people tend to underestimate for happiness? | sleep; friendship; nature; free_time; purpose; gratitude; health
+C | evaluative | Which do people tend to overestimate for happiness? | money; fame; looks; possessions; a_bigger_home; career_status; being_single_or_married
+C | personality | How do you feel after a long stretch of doing nothing? | refreshed; restless; guilty; bored; content
+C | taste | Which of these would make an ordinary day feel special? | an_unexpected_message_from_a_friend; a_great_meal; finishing_a_task; nice_weather; a_small_surprise_gift; learning_something_new
+C | values | Which do you see as the heart of a good life? | loving_and_being_loved; doing_good_work; enjoying_the_journey; growing_as_a_person; being_free
+C | evaluative | Which is a better predictor of whether someone is happy? | their_friendships; their_income; their_job; their_health; their_outlook
+C | social | Which kind of gathering makes you happiest? | a_big_party; a_small_dinner; a_one_on_one_chat; a_family_holiday; a_group_activity; none
+C | personality | When you are happy, how do other people usually notice? | i_talk_more; i_smile_a_lot; i_get_more_generous; i_get_quiet_and_calm; they_dont_notice
+C | values | Which kind of wealth would you most want? | money; time; friends; knowledge; health; peace_of_mind
+C | evaluative | Which is the better approach to a happy life? | chase_what_you_want; want_what_you_have; a_bit_of_both
+C | taste | Which hobby do you think brings the most lasting happiness? | gardening; playing_music; sports; cooking; volunteering; crafts; reading; other
+C | personality | Which describes how you react to a small win, like finding a great parking spot? | it_makes_my_day; i_smile_and_forget; i_barely_notice
+C | evaluative | Which usually leaves you happier at the end of a day? | a_day_of_hard_work; a_day_of_rest; a_day_with_friends; a_day_of_learning
+C | values | Which would you pick to improve your happiness for a whole year? | a_long_trip; a_new_close_friend; a_promotion; a_calmer_schedule; a_new_skill; a_pet
+C | social | Which describes the people who seem happiest to you? | they_are_generous; they_are_busy; they_are_relaxed; they_are_grateful; they_are_curious; they_are_well_off
+C | evaluative | Which is the most reliable path to a satisfying life? | strong_relationships; a_good_career; staying_healthy; a_rich_inner_life; helping_others
+C | taste | Which view would you most like to wake up to every day? | the_ocean; mountains; a_city_skyline; a_garden; a_forest; a_lake
+C | personality | How do you tend to think about your happiest moments? | revisit_them_often; keep_photos_of_them; rarely_think_about_them; feel_sad_they_are_over
+C | values | What would make you feel your life was going well? | being_at_peace; being_proud_of_my_work; being_close_to_loved_ones; being_financially_secure; being_healthy; having_fun
+C | evaluative | Which matters more for happiness: having choices or having fewer decisions to make? | having_many_choices; having_fewer_decisions; it_depends
+C | social | When you are feeling down, who do you want around? | a_partner; a_close_friend; family; a_pet; no_one
+C | evaluative | Which is more important to a good life: adventure or stability? | adventure; stability; both_equally
+C | taste | Which smell makes you happiest? | fresh_bread; coffee; rain_on_pavement; cut_grass; the_sea; a_campfire; flowers
+C | personality | Which describes your relationship with rest? | i_rest_easily; i_rest_but_feel_guilty; i_struggle_to_rest; i_rest_too_much
+C | values | Which would bring you more fulfillment? | mastering_one_thing; trying_many_things
+C | evaluative | Which do you think is the main reason people stay unhappy? | bad_habits; bad_luck; bad_relationships; unrealistic_expectations; not_knowing_what_they_want; circumstances
+C | social | Which gives you a stronger sense of belonging? | family; friends; neighbors; coworkers; an_online_community; a_club_or_team; none
+C | taste | Which weather puts you in the best mood? | sunny_and_warm; cool_and_crisp; rainy; snowy; overcast
+C | evaluative | Which is the better way to spend a windfall for happiness? | a_trip; paying_off_debt; gifts_for_others; saving_it; a_treat_for_yourself; donating_it
+C | personality | How often do you stop to appreciate something beautiful? | several_times_a_day; most_days; now_and_then; rarely
+C | values | Which comes first in your idea of a good life: comfort or growth? | comfort; growth; a_balance
+C | evaluative | Which do you think is the key to a happy old age? | good_friends; good_health; financial_security; staying_curious; family_nearby; a_sense_of_purpose
+C | taste | Which kind of evening feels most satisfying to you? | cooking_a_nice_dinner; going_out; a_quiet_night_in; a_long_walk; a_game_night; working_on_a_project
+C | personality | Which best describes your sense of satisfaction with your accomplishments? | i_am_proud_of_them; i_think_they_are_fine; i_always_want_more; i_rarely_think_about_them
+C | values | Which do you think is more important for a good life: being liked or being respected? | being_liked; being_respected; both_equally
+C | evaluative | Which kind of person do you think is happiest? | the_optimist; the_realist; the_hard_worker; the_free_spirit; the_caretaker
+C | social | Which relationship adds the most to your happiness right now? | partner; parents; siblings; friends; children; pets; coworkers
+C | evaluative | Which is more important for being happy at work? | good_coworkers; interesting_tasks; good_pay; a_fair_boss; flexibility; feeling_useful
+C | taste | Which do you enjoy most on a lazy morning? | sleeping_in; a_slow_breakfast; reading_the_news; a_morning_walk; staying_in_bed_with_my_phone
+C | values | Which kind of life would make you proudest to look back on? | a_kind_life; an_adventurous_life; a_successful_life; a_creative_life; a_loving_life
+C | personality | How do you usually celebrate your own achievements? | a_special_meal; buying_myself_something; sharing_with_friends; quietly_moving_on; i_dont_celebrate
+C | evaluative | Which is a better sign that someone is content? | they_rarely_complain; they_seem_calm; they_are_generous; they_smile_often; they_dont_chase_more
+C | taste | Which kind of place feels most like a happy place to you? | a_favorite_cafe; a_park; a_childhood_home; a_library; a_beach; my_own_bedroom
+C | evaluative | Which is more important for a happy home? | laughter; tidiness; comfort; good_food; privacy; shared_routines
+C | personality | When you get something you really wanted, what usually happens next? | i_enjoy_it_for_a_long_time; i_quickly_want_something_else; i_feel_a_bit_let_down; i_forget_about_it
+C | social | Which do you think makes someone a good influence on your happiness? | they_make_me_laugh; they_listen; they_push_me_to_grow; they_are_calm; they_share_my_interests
+C | evaluative | Which is the most underrated source of joy? | walking; cooking; singing; good_sleep; talking_to_strangers; learning; tidying_up
+C | taste | Which kind of music makes you happiest? | upbeat_pop; classical; jazz; rock; folk; hip_hop; electronic; other
+C | values | Which is more important to you: a life full of experiences or a life full of close bonds? | experiences; close_bonds; both_equally
+C | personality | How do you react when a happy moment is interrupted? | laugh_it_off; get_annoyed; try_to_get_back_to_it; move_on_quickly
+C | evaluative | Which is a better daily habit for happiness? | writing_down_good_things; exercising; calling_a_friend; spending_time_outside; meditating; getting_enough_sleep
+C | social | Which kind of kindness from others makes you happiest? | a_thoughtful_gift; kind_words; help_with_a_task; their_time; a_surprise_visit
+C | values | Which would you give up first for more peace of mind? | status; money; some_ambitions; social_media; a_busy_social_life; nothing
+C | evaluative | What do you think is the best measure of a life well lived? | how_much_you_loved; how_much_you_achieved; how_much_you_enjoyed; how_much_you_helped; how_much_you_learned
+C | taste | Which treat do you most associate with a happy moment? | ice_cream; chocolate; a_fresh_pastry; a_cold_drink; a_warm_meal; fruit
+C | personality | How do you feel when you have nothing planned for the weekend? | delighted; relieved; restless; lonely; indifferent
+C | values | Which matters more for your happiness: freedom or security? | freedom; security; both_equally
+C | evaluative | Which is the bigger source of unhappiness for most people? | wanting_what_they_cant_have; not_appreciating_what_they_have; both_equally
+C | social | Which describes how you feel around very cheerful people? | uplifted; drained; skeptical; it_depends_on_the_person
+C | evaluative | Which is more important for a happy day: how it starts or how it ends? | how_it_starts; how_it_ends; neither_matters_more
+C | taste | Which type of trip leaves you happiest when you return home? | a_relaxing_one; an_exhausting_adventure; a_short_getaway; a_visit_to_loved_ones
+C | values | Which do you think is the wiser attitude toward what you have? | always_improve_it; be_grateful_for_it; a_little_of_each
+C | personality | How often do you daydream about a better life? | constantly; often; sometimes; rarely; never
+C | evaluative | Which is a more lasting source of joy: people or projects? | people; projects; equally
+C | social | When friends ask how you are, how honestly do you describe your happiness? | fully_honest; mostly_honest; i_say_fine_regardless; i_exaggerate_how_well_i_am
+C | evaluative | Which is the best age to start focusing on happiness rather than success? | as_early_as_possible; once_established_in_a_career; midlife; retirement; never_one_over_the_other
+C | taste | Which small luxury feels most worth it to you? | good_bedding; fresh_flowers; nice_coffee; a_massage; takeout_meals; a_comfortable_chair
+C | values | Which would you rather have at the end of each day? | a_sense_of_accomplishment; a_sense_of_peace; a_sense_of_connection; a_sense_of_fun
+C | evaluative | Which is the better way to handle wanting more out of life? | work_toward_it; accept_what_you_have; change_what_you_want
+C | personality | Which describes how you feel about your ordinary routine? | i_love_it; it_is_fine; it_bores_me; i_dont_really_have_one
+C | evaluative | Which makes a place a happy place to live? | friendly_neighbors; green_space; things_to_do; low_cost_of_living; good_weather; being_near_family
+S | personality | How often do you stop to savor a good moment while it is happening? | I almost never notice good moments until they are over ; I sometimes realize I am enjoying something and pause briefly ; I often slow down to take in a good moment ; I deliberately savor good moments nearly every day
+S | personality | How do you feel when you wake up on a typical weekday? | I dread getting out of bed ; I feel flat and just go through the motions ; I feel okay and ready enough ; I feel glad to start the day ; I wake up eager for what the day holds
+S | evaluative | How satisfied are you with how you spend your free time? | I feel my free time is mostly wasted ; I enjoy some of it but let much of it slip away ; I spend most of it on things I enjoy ; My free time is spent almost exactly how I would want
+S | evaluative | How satisfied are you with your friendships? | I feel I have no real friends ; I have friends but feel distant from them ; I have a few friends I am happy with ; I have close friends who make my life much better
+S | evaluative | How satisfied are you with your home? | I dislike where I live and want to leave ; My home is tolerable but not pleasant ; My home is comfortable and I like it ; I love my home and would not trade it
+S | evaluative | How satisfied are you with your work or main daily activity? | I dread it most days ; I put up with it for what it provides ; I find parts of it rewarding ; I find it deeply fulfilling
+S | personality | How often do you feel grateful for small things, like a good meal or a kind word? | I rarely notice small good things at all ; I feel grateful only when someone points something out ; I notice and appreciate a small thing a few times a week ; I stop to appreciate small things several times every day
+S | personality | How often do you write down or say out loud things you are grateful for? | I never do this ; I have done it a few times in my life ; I do it now and then ; I do it as a regular habit
+S | personality | How much do you compare your life to other people's? | I almost never think about how others are doing ; I notice others' lives but it rarely affects me ; I often compare and sometimes feel worse ; I constantly compare and it shapes how I feel about my life
+S | personality | How quickly do you get used to good things, like a raise or a new phone? | The good feeling lasts a long time ; It fades after a while but I still appreciate it ; Within a few weeks it feels normal ; It feels ordinary almost immediately
+S | values | How much do you want more out of life than you have now? | I have everything I want ; I would like a few small improvements ; I want some big changes ; I want a completely different life
+S | evaluative | How much has your happiness changed compared with a few years ago? | I am much less happy now ; I am a little less happy now ; I am about as happy as I was ; I am a little happier now ; I am much happier now
+S | personality | How often do you find yourself completely absorbed in something you are doing? | I cannot remember the last time I lost track of time doing something ; I get absorbed only on rare special occasions ; I lose track of time in an activity a few times a week ; I lose myself in something I am doing nearly every day
+S | personality | How much do you enjoy looking forward to things? | I rarely look forward to anything ; I look forward to big events only ; I usually have something small I am looking forward to ; Anticipation is one of my favorite parts of life
+S | evaluative | How much time do you spend in nature? | I almost never go outdoors for pleasure ; I get outside on the occasional weekend ; I spend some time outdoors most weeks ; I am outside in nature nearly every day
+S | evaluative | How much does being in nature improve your mood? | It makes no difference to me ; It helps a little ; It clearly lifts my mood ; It is one of the most reliable ways I feel happy
+S | personality | How well do you rest when you have time off? | I cannot switch off at all ; I rest but keep thinking about obligations ; I mostly relax once I settle in ; I fully relax and come back refreshed
+S | social | How connected do you feel to your local community? | I do not know anyone nearby ; I recognize a few neighbors ; I have some friendly ties nearby ; I feel part of a close community
+S | social | How often do you laugh with other people? | I go weeks without sharing a real laugh with anyone ; I share a laugh with someone now and then ; I laugh with someone on most days ; I laugh with people many times every day
+S | evaluative | How close is your life to your idea of a good life? | It is far from what I would want ; It has some parts of a good life ; It is mostly what I would want ; It is very close to my ideal
+S | personality | How much do small annoyances affect your mood? | A small annoyance can ruin my whole day ; Small annoyances bother me for a few hours ; They bother me briefly ; I barely notice them
+S | personality | How much do you enjoy doing nothing in particular? | I find it unbearable ; I can manage it for a short while ; I enjoy it now and then ; I love it and seek it out
+S | values | How much do you prioritize enjoying today over building for tomorrow? | I sacrifice almost all enjoyment now for the future ; I lean toward saving effort for the future ; I balance today and tomorrow evenly ; I lean toward enjoying today ; I live almost entirely for today
+S | evaluative | How often do you feel that your life is interesting? | My days feel dull and the same ; Something interesting happens to me once in a while ; Most weeks bring something that catches my interest ; My life feels interesting nearly all the time
+S | personality | How much does your happiness depend on other people's approval? | It hardly depends on others at all ; Approval is nice but not needed ; Disapproval noticeably dampens my mood ; I feel good only when others approve of me
+S | personality | How often do you catch yourself thinking you will be happy once some future thing happens? | I almost never tie my happiness to a future event ; I catch myself thinking it now and then ; I often think I will be happy once something changes ; I am almost always waiting for the next thing to make me happy
+S | evaluative | How balanced does your life feel between work and everything else? | Work takes over nearly everything ; Work crowds out much of what I enjoy ; It feels mostly balanced ; I have plenty of time for everything that matters
+S | personality | How much do you enjoy your own company? | I dislike being alone with my thoughts ; I tolerate being alone ; I enjoy time alone ; Some of my happiest moments are alone
+S | evaluative | How much do you enjoy your daily routine? | My daily routine drains me ; I put up with my routine to get through the day ; I like most parts of my daily routine ; I genuinely look forward to my daily routine
+S | personality | How often do you feel a sense of wonder or awe? | I cannot remember ever feeling true awe ; I have felt awe only a few times in my life ; I feel awe now and then, usually on trips or in nature ; I feel wonder often, even in ordinary moments
+S | values | How much would you give up for a calmer, simpler life? | I would give up nothing ; I would cut back on a few extras ; I would take a lower income ; I would change my whole lifestyle
+S | evaluative | How much do you think your happiness is in your own hands? | It is almost entirely decided by things outside my control ; Outside forces decide most of it ; It is about half up to me ; Most of it is up to me ; It is almost entirely up to me
+S | personality | How much do you enjoy celebrations like birthdays and holidays? | I would rather skip celebrations altogether ; I go along with celebrations but get little from them ; I enjoy celebrations when they come around ; Celebrations are the highlights of my year
+S | social | How much do you enjoy helping others with small favors? | I find it a burden ; I do it but get little from it ; It gives me a small lift ; It is one of the best parts of my day
+S | evaluative | How rested do you feel on a typical day? | I feel exhausted most of the time ; I often feel tired ; I feel rested enough ; I feel fully rested and energetic
+S | personality | How easily can you enjoy something without feeling you should be doing something else? | I almost always feel guilty when I relax ; I often feel a pull to be productive ; I can usually let myself enjoy it ; I enjoy things freely without guilt
+S | evaluative | How much joy do you get from your hobbies? | I do not really have hobbies ; My hobbies pass the time ; My hobbies bring me real enjoyment ; My hobbies are among the best things in my life
+S | personality | How often do you notice beauty in ordinary things, like light through a window? | I almost never notice beauty in ordinary things ; I notice it once in a while when I slow down ; I stop to notice ordinary beauty fairly often ; I notice something beautiful nearly every day
+S | evaluative | How content are you with your appearance? | I am unhappy with it ; I accept it with some complaints ; I am mostly happy with it ; I am completely at ease with it
+S | evaluative | How content are you with your financial situation? | It causes me constant worry ; It is a frequent source of stress ; It is okay and I rarely worry ; I feel completely secure
+S | values | How much would you trade happiness now for bigger success later? | I would not trade any happiness ; I would trade a little ; I would trade a fair amount ; I would trade almost all of it
+S | personality | How much do you tend to replay happy memories? | I rarely think back on happy times ; I recall them when something reminds me ; I often revisit them on purpose ; Revisiting them is a regular source of joy for me
+S | evaluative | How often do you have days you would happily live again? | I almost never have a day I would want to repeat ; I have such a day a few times a year ; I have such a day a few times a month ; I have a day I would gladly relive most weeks
+S | personality | How much do you enjoy trying new things for the fun of it? | I avoid new things ; I try new things only if pushed ; I enjoy trying new things now and then ; I seek out new experiences constantly
+S | social | How much does spending time with family lift your mood? | It usually brings me down ; It has little effect ; It usually lifts my mood ; It is one of my greatest joys
+S | evaluative | How much do you think you would enjoy a slower pace of life? | I would find it boring and frustrating ; I would enjoy it for a short while ; I would enjoy it quite a lot ; I would love it and never go back
+S | personality | How often do you feel you have enough of what you need? | I almost always feel I am short of something I need ; I feel I have enough only in good stretches ; I feel I have enough most of the time ; I nearly always feel I have all I need
+S | evaluative | How much do you enjoy the moment of finishing a task? | It feels like nothing special ; It brings mild relief ; It brings real satisfaction ; It is one of my favorite feelings
+S | personality | How optimistic are you on an ordinary morning? | I expect the day to go badly ; I expect a mediocre day ; I expect a decent day ; I expect good things to happen
+S | evaluative | How much meaning do you find in simple chores like cooking or tidying? | They feel completely pointless ; They are just things to get through ; They sometimes feel satisfying ; I often find them calming and meaningful
+S | personality | How much do you plan ahead for fun things? | I never plan fun, it just happens or it does not ; I plan fun only for big occasions ; I plan something fun most months ; I always have something fun on the calendar
+S | evaluative | How much does good sleep affect your happiness the next day? | It makes no difference ; It helps a little ; It makes a clear difference ; My whole mood depends on it
+S | evaluative | How much does exercise affect your happiness? | I do not notice any effect ; It helps a little ; It clearly lifts my mood ; It is one of my main sources of feeling good
+S | personality | How much do you enjoy being busy? | I hate being busy ; I tolerate busy periods ; I like being fairly busy ; I am happiest when my schedule is full
+S | social | How much do you enjoy meeting new people? | I find it draining and avoid it ; I do it when necessary ; I enjoy it now and then ; I love it and seek it out
+S | values | How much should people settle for good enough in life? | People should never settle ; People should settle only in small things ; People should settle in most areas ; Good enough is almost always the wiser choice
+S | evaluative | How much does your happiness change with the weather? | It does not change at all ; Gray days dampen me slightly ; Weather noticeably changes my mood ; My mood follows the weather closely
+S | evaluative | How often do you feel that life is going in a good direction? | I feel my life is heading the wrong way ; I feel my life is going well only in brief stretches ; I feel my life is heading in a good direction most of the time ; I nearly always feel my life is on a good path
+S | personality | How easily do you let go of a disappointing day? | I carry it with me for many days ; It stays with me until the next day ; I get over it by evening ; I shrug it off almost immediately
+S | evaluative | How much do you enjoy your mornings? | I dread getting up every morning ; I just get through my mornings ; I like my mornings ; Mornings are my favorite part of the day
+S | evaluative | How much joy do pets bring to your life? | I do not care for animals and get no joy from pets ; I like other people's pets in passing ; Pets brighten my days noticeably ; Pets are one of my biggest sources of happiness
+S | social | How much does a friend's good news make your own day better? | A friend's good news does not change my day ; A friend's good news gives me a brief lift ; A friend's good news puts me in a good mood for the day ; A friend's good news feels almost like my own
+S | personality | How often do you do something just for fun, with no other purpose? | I almost never do anything purely for fun ; I do something just for fun now and then ; I do something just for fun a few times a week ; I do something just for fun every day
+S | values | How much do you believe material things can make you happy? | They cannot make me happy at all ; They give a brief lift at most ; Some things bring me lasting joy ; The right possessions make me much happier
+S | evaluative | How satisfied are you with how much you have grown as a person lately? | I feel stuck or worse ; I have grown a little ; I have grown noticeably ; I have grown a great deal
+S | personality | How much do you enjoy a good meal? | Food is just fuel for me ; I enjoy it briefly ; A good meal is a real highlight ; A good meal can make my whole day
+S | evaluative | How much does music affect your mood? | It has no effect ; It helps a little ; It can clearly change my mood ; It is one of my most powerful mood lifters
+S | personality | How often do you feel carefree? | I cannot remember the last time I felt carefree ; I feel carefree only on holidays ; I feel carefree on a fair number of ordinary days ; I feel carefree most of the time
+S | values | How much should people chase big dreams rather than enjoy what they already have? | People should mostly enjoy what they have ; People should mostly enjoy what they have with small dreams ; People should balance both ; People should mostly chase big dreams
+S | evaluative | How much do you think your happiness is shaped by your childhood? | My childhood has little to do with how happy I am now ; My childhood set a few patterns I still notice ; My childhood shaped much of how happy I am ; My happiness today comes almost entirely from my childhood
+S | social | How much do you enjoy making other people laugh? | I do not try ; I enjoy it now and then ; I enjoy it a lot ; It is one of my favorite things
+S | personality | How much do you enjoy quiet moments with a warm drink? | They do nothing for me ; They are pleasant enough ; I look forward to them ; They are a treasured daily ritual
+S | evaluative | How often do you end a day feeling it was worthwhile? | I rarely end a day feeling it was worthwhile ; I feel a day was worthwhile now and then ; I feel most days were worthwhile ; I end nearly every day feeling it was worthwhile
+S | personality | How much do setbacks shake your overall sense of happiness? | A small setback makes me feel my whole life is going wrong ; Setbacks shake me for a while ; Setbacks sting but I stay mostly steady ; My overall happiness barely moves
+S | social | How often do you share a meal with people you care about? | I almost always eat alone ; I share a meal with loved ones only on special occasions ; I share a meal with loved ones a few times a month ; I share a meal with loved ones several times a week
+S | evaluative | How much has social media added to or taken from your happiness? | It has taken a lot from my happiness ; It has taken a little ; It has made no difference ; It has added a little ; It has added a lot
+S | personality | How much do you enjoy learning something new? | I find learning new things tedious ; I learn new things only when I need to ; I enjoy picking up something new ; Learning new things is one of my great loves
+S | evaluative | How free do you feel to live the way you want? | I feel trapped in a life I did not choose ; I feel held back in many parts of my life ; I feel free in most parts of my life ; I feel completely free to live as I want
+S | personality | How often do you feel proud of how you spent your day? | I rarely feel proud of how I spent a day ; I feel proud of a day now and then ; I feel proud of how I spent most days ; I feel proud of how I spent nearly every day
+S | values | How much do you believe a person should aim for joy rather than comfort? | Comfort should always come first ; Comfort matters more but joy counts ; Both matter equally ; Joy matters more but comfort counts ; Joy should always come first
+S | evaluative | How much of your day do you spend doing things you enjoy? | I spend almost none of my day doing things I enjoy ; I get a small slice of each day for things I enjoy ; I spend about half my day on things I enjoy ; I spend most of my day doing things I enjoy
+S | personality | How much do you appreciate everyday comforts like running water and a warm bed? | I never think about them ; I appreciate them when they break ; I appreciate them now and then ; I feel thankful for them often
+N | personality | Do you keep a gratitude journal or a similar habit?
+N | evaluative | Are you happier now than you were as a teenager?
+N | values | Would you take a lower-paying job if it made you noticeably happier?
+N | personality | Do you usually have something you are looking forward to?
+N | evaluative | Did you have a genuinely good day yesterday?
+N | values | Is having enough more important to you than having the most?
+N | personality | Do you find it easy to enjoy the present moment?
+N | evaluative | Do you think you are happier than most people you know?
+N | social | Does spending time with friends reliably make you happier?
+N | personality | Do you often feel that happiness is just around the corner?
+N | values | Would you rather be content than be impressive?
+N | evaluative | Do you think people were happier in simpler times?
+N | personality | Do you enjoy your own birthday?
+N | evaluative | Is your current life close to the life you imagined when you were younger?
+N | taste | Is a walk outside one of your favorite ways to feel better?
+N | values | Do you think a good life requires some hardship?
+N | personality | Do you tend to notice what is going well more than what is going wrong?
+N | evaluative | Would a better night's sleep make you happier than a raise?
+N | social | Do you feel happier after giving something away?
+N | personality | Do you get bored easily when life is calm?
+N | values | Would you choose a quiet life in the countryside over an exciting life in a big city?
+N | evaluative | Do you think the happiest people are usually the busiest?
+N | personality | Do you have a favorite ritual that makes your day better?
+N | evaluative | Has buying something ever made you happy for a long time?
+N | values | Is peace of mind worth more to you than success?
+N | social | Do you think you would be happier with more friends?
+N | personality | Do you tend to lose track of time when doing something you love?
+N | evaluative | Do you think you could be happy living with far fewer possessions?
+N | values | Would you rather have a meaningful life that is hard than an easy life that feels empty?
+N | personality | Do you often thank people for small things?
+N | evaluative | Are there parts of your life you would not change at all?
+N | taste | Do you enjoy long, slow weekend breakfasts?
+N | personality | Do you feel restless when you have nothing to do?
+N | evaluative | Do you think your happiness is mostly shaped by your personality?
+N | social | Do you feel happiest when you are around lots of people?
+N | values | Do you believe you can be happy without a romantic partner?
+N | evaluative | Do you think you will be happier later in life than you are now?
+N | personality | Do you tend to put off enjoying things until your work is done?
+N | evaluative | Has a period of hardship ever made you appreciate life more?
+N | values | Would you give up your phone for a month if it made you calmer?
+N | personality | Do you often feel a quiet sense that things are okay?
+N | evaluative | Do you think most people know what would make them happy?
+N | social | Do you feel happier when you help a stranger?
+N | taste | Is sitting by the water one of your favorite ways to relax?
+N | values | Do you think striving for more is a healthy part of a happy life?
+N | personality | Do you easily get used to good things and stop noticing them?
+N | evaluative | Would you describe yourself as a happy person?
+N | evaluative | Do you think the happiness of a whole day can be decided by its first hour?
+N | social | Does seeing other people happy make you happier?
+N | values | Would you rather live a short, joyful stretch of freedom than a long, comfortable routine?
+N | personality | Do you actively look for ways to make your days more enjoyable?
+N | evaluative | Is there a simple pleasure you enjoy almost every day?
+N | taste | Do you enjoy the feeling of a completely empty schedule?
+N | values | Do you think a good life should include time spent alone?
+N | evaluative | Do you think your happiest days are still ahead of you?
+N | social | Do you feel happier in a neighborhood where people know each other?
+N | personality | Do you stop to take in a nice view when you come across one?
+N | values | Is feeling useful to others essential to your happiness?
+N | evaluative | Do you think it is harder to be happy today than it was for your grandparents?
+N | personality | Do you celebrate small wins, not just big ones?
+N | evaluative | Would you be happy to live your current week over again?
+N | values | Would you choose more free time over more career success?
+N | taste | Does a clean, tidy space make you noticeably happier?
+N | social | Do you think happiness is contagious between people?
+N | personality | Do you tend to wish you were somewhere else?
+N | evaluative | Do you think you have found the right balance between ambition and contentment?
+N | values | Would you move somewhere with fewer opportunities if it meant a happier daily life?
+N | personality | Do you enjoy the quiet anticipation before a trip as much as the trip itself?
+N | evaluative | Is there one change that would make your life much better?
+N | social | Do you feel happier after a long conversation with someone you care about?
+N | taste | Do you feel happier when you have fresh flowers or plants around you?
+N | values | Do you think people should aim to feel satisfied rather than happy?

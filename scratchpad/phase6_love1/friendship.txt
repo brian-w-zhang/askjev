@@ -1,0 +1,373 @@
+C | taste | Where would you most like to make a new friend as an adult? | hobby_class = a class, club, or team ; through_existing_friends ; work_or_school ; online_community ; neighborhood ; gym_or_sports ; volunteering ; other
+C | personality | What usually turns an acquaintance into a friend for you? | shared_activity = doing something together regularly ; deep_conversation ; shared_crisis = getting through something hard together ; same_sense_of_humor ; mutual_friends ; they_kept_inviting_me ; other
+C | personality | Who usually makes the first move to turn a new acquaintance into a friend? | always_me ; mostly_me ; about_equal ; mostly_them ; always_them
+C | taste | Which quality matters most to you in a close friend? | loyalty ; honesty ; humor ; reliability ; kindness ; shared_interests ; good_listener ; other
+C | taste | What is your favorite way to catch up with a friend you haven't seen in a while? | long_dinner ; walk_together ; drinks_at_a_bar ; phone_call ; video_call ; coffee ; doing_an_activity ; other
+C | values | If a close friend asks to borrow a large sum of money, what would you most likely do? | lend_it_all ; lend_part ; give_it_as_a_gift ; help_another_way = help them find another solution ; say_no
+C | values | If a friend tells you a secret and another close friend asks about it directly, what do you do? | deny_knowing ; say_i_cant_share ; change_the_subject ; tell_them ; other
+C | values | Your friend's partner is cheating on them and you know it. What do you do? | tell_friend_directly ; confront_the_partner_first ; drop_hints ; stay_out_of_it ; other
+C | values | Which is the hardest betrayal for a friendship to survive? | sharing_a_secret ; dating_an_ex ; lying_about_something_big ; talking_behind_my_back ; not_showing_up_in_a_crisis ; stealing_money ; other
+C | personality | When a friend does something that bothers you, what do you usually do? | tell_them_right_away ; bring_it_up_later ; hint_at_it ; let_it_go ; pull_back_quietly ; vent_to_someone_else
+C | taste | What role do you usually play in your friend group? | planner ; comedian ; listener ; mediator ; wild_card ; quiet_one ; host ; other
+C | taste | Which kind of group chat do you prefer? | constant_chatter ; memes_only ; plans_only ; quiet_but_alive = quiet most days but active when needed ; i_avoid_group_chats
+C | personality | How do you usually handle a busy group chat you're in? | read_everything ; skim ; mute_it ; reply_to_everything ; react_with_emojis ; leave_it_unread
+C | social | What do most people consider the most annoying group chat habit? | leaving_people_on_read ; spamming_memes ; voice_messages ; side_conversations ; arguing_in_the_chat ; making_plans_that_never_happen ; other
+C | values | A friend's new partner is someone you strongly dislike. What do you do? | tell_friend_honestly ; keep_quiet_and_be_polite ; see_friend_alone_more ; avoid_the_couple ; give_them_a_chance ; other
+C | values | Your friend wants to date your ex. What is your reaction? | totally_fine ; fine_if_they_ask_first ; hurt_but_would_accept ; it_would_end_the_friendship ; depends_on_how_long_ago
+C | values | Which is the best way to handle envy when a friend succeeds where you haven't? | celebrate_them_anyway ; admit_it_to_them ; use_it_as_motivation ; give_it_some_distance ; talk_to_someone_else_about_it ; other
+C | personality | When a close friend gets big good news, what is your first honest feeling? | pure_joy ; happy_with_a_bit_of_envy ; mostly_envy ; motivated ; indifferent
+C | taste | Which gift from a friend would you appreciate most? | handmade_item ; experience_together ; something_from_my_wishlist ; a_thoughtful_note ; a_surprise_visit ; food_or_drink ; no_gifts_needed
+C | values | How should friends handle splitting a restaurant bill? | split_evenly ; pay_for_what_you_ordered ; take_turns_paying ; higher_earner_pays_more ; whoever_invited_pays
+C | values | A friend keeps cancelling on you but says they still value the friendship. What is fairest? | keep_inviting ; wait_for_them_to_invite ; tell_them_how_it_feels ; stop_making_plans ; other
+C | taste | What kind of friend do you most want to be to others? | the_reliable_one ; the_fun_one ; the_honest_one ; the_wise_one ; the_generous_one ; the_loyal_one ; other
+C | personality | After an argument with a friend, who usually reaches out first? | me ; them ; whoever_was_wrong ; nobody_we_just_move_on ; it_varies
+C | personality | How do you most often end up losing touch with a friend? | a_move ; new_relationship ; different_life_stages ; a_fight ; slow_fade_no_reason ; new_job ; having_kids ; other
+C | taste | Which setting is best for making friends as an adult? | recurring_class ; sports_league ; religious_or_spiritual_community ; volunteering ; social_app ; parties ; workplace ; other
+C | values | What should you do if a friend asks you to lie for them to their family? | do_it ; refuse ; do_it_only_for_small_things ; stay_vague ; other
+C | values | What should you do when a friend asks for your honest opinion on their outfit and it looks bad? | say_it_directly ; gently_suggest_something_else ; point_out_one_good_thing ; say_it_looks_fine
+C | values | What should you do if you find out a friend has been gossiping about you? | confront_them ; ask_them_calmly ; distance_yourself ; gossip_back ; ignore_it ; end_the_friendship
+C | taste | What is the best way to celebrate a close friend's birthday? | throw_a_party ; one_on_one_dinner ; group_outing ; a_thoughtful_gift ; a_trip ; just_a_message ; other
+C | social | What do most people say is the biggest reason adult friendships fade? | no_time ; moving_away ; romantic_partners ; kids ; different_interests ; money_differences ; a_conflict ; other
+C | personality | What kind of friends do you tend to attract? | people_like_me ; opposites ; people_who_need_help ; high_energy_people ; quiet_people ; mixed
+C | values | Should a best friend be always honest or always supportive? | always_honest ; always_supportive
+C | values | Would you rather have a friend who shows up in a crisis or one who is fun on ordinary days? | shows_up_in_a_crisis ; fun_on_ordinary_days
+C | taste | Which of these friendship types matters most to you? | childhood_friends ; school_or_college_friends ; friends_from_work ; friends_from_hobbies ; online_friends ; family_friends
+C | values | A friend is moving across the country. What do you do? | help_them_move ; throw_a_goodbye_party ; plan_a_visit ; say_goodbye_casually ; nothing_special
+C | personality | When a friend is going through a hard time, what do you tend to offer? | practical_help ; advice ; just_listening ; distraction ; my_presence = just being there ; space ; other
+C | taste | How do you prefer friends to comfort you when you're down? | listen_without_advice ; give_advice ; distract_me ; leave_me_alone ; show_up_in_person ; send_something_kind
+C | values | What should you do when a friend's drinking seems to be getting out of hand? | talk_to_them_directly ; talk_to_mutual_friends ; talk_to_their_family ; avoid_drinking_events_with_them ; mind_my_own_business ; other
+C | values | A friend is about to make a big life decision you think is a mistake. What do you do? | say_so_once_then_support ; argue_it_hard ; stay_quiet_and_support ; ask_questions_to_make_them_think ; distance_myself
+C | values | If two of your friends start dating and then break up, what do you do? | stay_friends_with_both ; pick_one ; see_them_separately ; stay_out_of_the_drama ; other
+C | taste | What is your ideal friend group size? | just_one_close_friend ; two_or_three = a handful ; a_medium_group ; a_large_group ; several_separate_groups
+C | social | Which quality would most people say makes someone the best friend to have? | loyalty ; humor ; honesty ; generosity ; reliability ; kindness ; other
+C | values | What should you do if a friend always arrives very late? | tell_them_it_bothers_you ; give_them_an_earlier_time ; start_without_them ; accept_it ; stop_inviting_them
+C | values | Who should reach out after a long silence between friends? | the_one_who_went_quiet ; whoever_misses_the_other ; the_one_with_more_time ; it_doesnt_matter
+C | personality | What do you do when you realize a friendship has become one-sided? | say_something ; pull_back_to_match ; keep_giving ; let_it_end ; other
+C | taste | Which friend activity do you enjoy most? | games_night ; cooking_together ; traveling ; sports_or_exercise ; going_out ; long_talks ; watching_something ; other
+C | values | A friend asks you to be a reference or cosigner for an apartment. What do you do? | reference_yes_cosign_yes ; reference_yes_cosign_no ; neither ; depends_on_the_friend
+C | values | What is the right response when a friend forgets something important you told them? | remind_them_kindly ; let_it_go ; tell_them_it_hurt ; take_it_as_a_sign
+C | taste | What kind of friend do you find hardest to be around? | always_complaining ; always_competing ; always_late ; always_flaking ; always_bragging ; always_needing_help ; other
+C | values | Which friendship rule matters most to you? | no_secrets_shared ; show_up_when_it_matters ; no_dating_exes ; be_honest ; keep_in_touch ; pay_back_debts ; other
+C | personality | How do you usually hear about a friend's big news? | they_tell_me_directly ; group_chat ; social_media ; from_mutual_friends ; it_varies
+C | values | If you hear about a friend's big news on social media before they tell you, how do you see it? | no_big_deal ; slightly_hurt ; very_hurt ; a_sign_we_are_drifting
+C | values | What should happen if a friend breaks something valuable at your home? | they_replace_it ; they_pay_part ; they_apologize_and_thats_enough ; depends_on_value ; nothing
+C | taste | Which trip would you most enjoy with friends? | beach_house ; city_trip ; camping ; road_trip ; festival ; skiing ; cabin_weekend ; other
+C | values | How should friends split costs on a shared trip? | split_everything_evenly ; everyone_pays_their_own ; shared_kitty = a common pot for group costs ; one_pays_others_repay ; other
+C | personality | On a group trip, which role do you usually take? | organizer ; navigator ; cook ; entertainer ; go_with_the_flow ; money_keeper
+C | values | If one friend in the group has much less money, what should the group do? | choose_cheaper_plans ; others_cover_more ; offer_options_at_different_prices ; carry_on_as_usual ; ask_them_what_they_prefer
+C | social | What do most people say is the worst thing to do at a friend's wedding? | get_too_drunk ; wear_white ; give_a_bad_speech ; bring_uninvited_guest ; skip_it_last_minute ; make_it_about_yourself ; other
+C | values | Your friend's wedding falls on a day you have a conflict. Which should win? | always_the_wedding ; my_family_event ; an_important_work_event ; depends_on_how_close_we_are
+C | values | If a friend loses their job, what is the most helpful thing to do? | offer_leads ; treat_them_to_meals ; just_listen ; offer_money ; keep_things_normal ; other
+C | taste | Which conversations do you most want with close friends? | deep_personal_talks ; silly_banter ; talking_about_ideas ; gossip ; planning_adventures ; mix_of_everything
+C | personality | Which describes how you keep friendships going? | scheduled_catchups ; spontaneous_texts ; seeing_them_through_groups ; they_keep_it_going ; i_let_them_drift
+C | values | A friend reveals they've been struggling for months without telling you. How do you react? | hurt_they_didnt_tell_me ; glad_they_told_me_now ; worried_i_missed_it ; understanding
+C | values | Which is more acceptable between friends? | a_white_lie_to_spare_feelings ; a_hurtful_truth
+C | personality | What do you do when invited to a friend's event you don't want to attend? | go_anyway ; make_an_excuse ; say_honestly_i_cant ; go_briefly ; ignore_it
+C | taste | How do you prefer to be invited to a friend's gathering? | personal_message ; group_chat ; phone_call ; in_person ; event_invite_link
+C | values | A friend confides they did something wrong that hurt someone else. What do you do? | keep_it_between_us ; urge_them_to_fix_it ; tell_the_person_hurt ; judge_them_privately ; other
+C | values | Which is worse from a friend? | forgetting_my_birthday ; forgetting_something_i_told_them_in_confidence ; missing_my_big_event ; never_asking_how_i_am
+C | personality | How do you usually end a friendship that isn't working? | slow_fade ; honest_conversation ; a_final_fight ; a_message_explaining ; it_just_happens
+C | social | What do most people consider the best way to end a friendship? | honest_conversation ; slow_fade ; a_written_message ; just_block_them ; let_it_die_naturally
+C | taste | What kind of friend group gatherings do you like best? | dinner_parties ; bar_nights ; house_parties ; outdoor_activities ; game_nights ; weekend_trips ; low_key_hangouts
+C | values | When a friend is drunk and wants to drive, what do you do? | take_their_keys ; call_them_a_ride ; drive_them ; let_them_stay_over ; all_of_the_above
+C | values | How should you respond when a friend asks you to keep a secret from their partner? | agree ; refuse ; depends_on_the_secret ; agree_but_urge_honesty
+C | values | What should a friend do if they see your partner on a dating app? | tell_me_immediately ; confront_my_partner ; screenshot_and_tell_me ; say_nothing ; other
+C | personality | What makes you trust a new friend? | they_keep_secrets ; they_show_up ; they_are_honest_with_me ; time ; shared_vulnerability ; mutual_friends_vouch ; other
+C | taste | Which setting do you feel most yourself with friends? | one_on_one ; small_group ; big_group ; online ; doing_an_activity
+C | values | Is it better to have friends who are like you or different from you? | mostly_similar ; mostly_different ; a_mix
+C | values | A friend asks you to watch their pet for a week. What do you do? | happily_yes ; yes_if_they_return_the_favor ; yes_but_resentfully ; suggest_a_pet_sitter ; no
+C | personality | When you move to a new city, how do you usually make friends? | join_clubs ; use_apps ; through_work ; friends_of_friends ; neighbors ; i_rarely_do ; other
+C | values | If you and your best friend both want the same job, what should happen? | both_apply ; talk_about_it_first ; one_steps_aside ; whoever_wants_it_more ; other
+C | social | According to most people, what is the most important thing a best friend should do? | keep_secrets ; show_up_in_hard_times ; tell_the_truth ; make_you_laugh ; stay_in_touch ; other
+C | values | What is the right response when a friend owes you money and asks for more? | lend_again ; say_no_until_repaid ; remind_them_of_the_first_debt ; give_it_as_a_gift ; end_the_lending
+C | taste | Which kind of friend do you most wish you had more of? | adventurous ; intellectual ; emotionally_open ; reliable ; funny ; older_and_wise ; other
+C | values | A friend's child is badly behaved in your home. What do you do? | say_something_to_the_child ; mention_it_to_friend ; hint ; ignore_it ; avoid_hosting_them
+C | personality | Which describes your friendships best? | a_few_deep_ones ; many_light_ones ; one_core_group ; separate_circles ; not_many_friends
+C | values | Your friend asks you to help them move on a weekend you had free. What do you do? | help_all_day ; help_for_a_few_hours ; offer_pizza_money_instead ; make_an_excuse ; say_honestly_no
+C | values | What is fair when a friend always picks the restaurant? | say_i_want_to_choose ; suggest_taking_turns ; go_along ; stop_going ; it_doesnt_bother_me
+C | personality | When a friend cancels plans on you, how do you usually feel? | relieved ; disappointed ; annoyed ; hurt ; indifferent
+C | values | What should you do when you realize you've been a bad friend lately? | apologize_directly ; make_it_up_with_actions ; explain_what_happened ; quietly_do_better ; other
+C | taste | Which kind of message from a friend makes your day most? | a_random_i_miss_you ; a_funny_meme ; a_photo_of_a_shared_memory ; a_long_update ; a_voice_note ; an_invitation
+C | values | If a friend repeatedly shows up empty-handed to dinners you host, what do you do? | say_nothing ; ask_them_to_bring_something ; stop_inviting ; hint ; it_doesnt_matter
+C | social | What do most people consider the proper thing to bring to a friend's dinner party? | wine_or_drinks ; dessert ; flowers ; a_side_dish ; nothing ; ask_the_host
+C | values | A close friend starts dating someone much younger or older who seems to be using them. What do you do? | voice_concern_once ; keep_raising_it ; stay_silent ; talk_to_other_friends ; other
+C | values | What should you do if a friend asks you to keep something from another friend in the group? | agree ; refuse ; agree_for_small_things_only ; tell_them_it_puts_me_in_a_tough_spot
+C | taste | Which friend would you call first with great news? | best_friend ; family_member ; partner ; group_chat ; oldest_friend ; whoever_is_awake
+C | taste | Which friend would you call first in a crisis? | best_friend ; family_member ; partner ; most_practical_friend ; nearest_friend ; nobody
+C | personality | What stops you most from making new friends? | no_time ; shyness ; no_places_to_meet ; already_have_enough ; fear_of_rejection ; low_energy ; nothing
+C | values | What should you do if a friend makes a joke that crosses a line about you in public? | laugh_it_off ; call_it_out_right_there ; talk_privately_later ; joke_back ; leave
+C | values | If your best friend and your partner don't get along, what should you do? | keep_them_apart ; push_them_to_get_along ; side_with_partner ; side_with_friend ; talk_to_each_separately ; other
+C | values | When a friend asks for feedback on their business idea that seems bad, what do you do? | point_out_flaws ; encourage_them ; ask_probing_questions ; suggest_they_ask_an_expert ; other
+C | taste | What is the best way to stay close to a friend who lives in another country? | regular_video_calls ; voice_notes ; letters_or_packages ; visits ; social_media ; shared_online_games ; other
+C | personality | How do you feel about friends showing up at your home unannounced? | love_it ; fine_for_close_friends ; mildly_uncomfortable ; hate_it
+C | values | Your friend confesses romantic feelings for you, and you don't feel the same. What do you do? | stay_friends_as_before ; take_some_space ; talk_it_through_honestly ; slowly_drift ; end_the_friendship
+C | values | Who should host when a friend group gets together regularly? | take_turns ; whoever_has_the_biggest_space ; the_one_who_likes_hosting ; always_go_out_instead
+C | values | Which is the bigger friendship foul? | canceling_last_minute ; not_showing_up_at_all ; always_being_late ; never_initiating
+C | taste | What kind of friend-group tradition would you most enjoy? | annual_trip ; holiday_dinner ; weekly_game_night ; birthday_rituals ; shared_sports_team ; book_club ; none
+C | values | What should you do if you can't afford a friend's expensive birthday plans? | say_so_honestly ; go_and_overspend ; skip_with_an_excuse ; suggest_a_cheaper_option ; join_for_part
+C | personality | How do you respond when a friend repeatedly vents about the same problem? | keep_listening ; give_blunter_advice ; tell_them_i_need_a_break ; change_the_subject ; pull_back
+C | values | A friend asks you to be in their wedding party but you can't afford it. What do you do? | accept_and_budget ; decline_honestly ; accept_and_ask_for_help ; suggest_a_smaller_role
+C | social | Which do most people value more in a friend? | loyalty ; honesty
+C | values | If a friend confides a serious problem and asks you not to tell anyone, when would you break that promise? | never ; if_their_life_is_at_risk ; if_someone_else_is_at_risk ; if_i_couldnt_handle_it_alone ; other
+C | taste | What do you most enjoy doing alone with your best friend? | talking_for_hours ; cooking ; walking ; traveling ; watching_shows ; doing_nothing_together ; other
+C | values | When friends grow apart, whose responsibility is it? | both ; the_one_who_changed ; the_one_who_stopped_reaching_out ; nobody ; other
+C | personality | What do you do on social media when you drift from a friend? | keep_following ; mute_them ; unfollow ; still_like_their_posts ; nothing_changes
+C | values | What is the best way to reconnect with a friend after years apart? | a_simple_message ; invite_them_for_coffee ; a_call ; comment_on_their_post ; through_mutual_friends ; wait_for_a_chance_meeting
+C | values | Should you tell a friend when their partner flirts with you? | tell_friend ; tell_the_partner_to_stop ; both ; say_nothing ; depends_how_serious
+C | values | Your friend group starts excluding one member. What do you do? | include_them_myself ; call_it_out ; go_along ; ask_why ; stay_neutral
+C | personality | How do you usually feel about joining an established friend group? | excited ; nervous ; like_an_outsider ; indifferent ; it_depends_on_the_group
+C | taste | Which do you prefer at a friend's party? | a_few_people_i_know ; lots_of_new_people ; a_mix
+C | values | If a friend gets rich and you don't, what should change? | nothing ; they_should_pay_more ; plans_should_adapt ; nothing_unless_they_offer
+C | values | Should a friend share credit when you helped them succeed? | always ; if_the_help_was_big ; privately_is_enough ; not_necessary
+C | taste | How do you prefer to celebrate your own birthday with friends? | big_party ; small_dinner ; one_friend ; a_trip ; no_celebration ; whatever_friends_plan
+C | values | What should you do if a friend's pet bit you? | tell_them_calmly ; ask_them_to_pay_for_care ; stop_visiting ; say_nothing ; other
+C | values | A friend starts pushing a side business or sales scheme on you. What do you do? | buy_to_support ; decline_politely ; tell_them_it_bothers_me ; avoid_them ; mute_their_posts
+C | social | According to most people, what should friends do when one friend has a baby? | visit_with_food ; give_them_space ; offer_to_babysit ; send_a_gift ; keep_inviting_them_out ; other
+C | values | Your best friend has a baby and suddenly has no time for you. What do you do? | adapt_to_their_schedule ; wait_it_out ; tell_them_i_miss_them ; find_other_friends ; drift
+C | personality | Which kind of plan are you most likely to flake on? | early_morning_plans ; big_parties ; plans_made_long_ago ; plans_with_new_people ; i_never_flake
+C | values | What should you do when a close friend's core beliefs change a lot over time? | talk_about_it ; avoid_the_topic ; drift_apart ; embrace_the_change ; other
+C | values | When is it okay to read a friend's messages over their shoulder? | never ; if_they_show_me ; if_its_funny ; if_its_about_me
+C | taste | Which trait makes a new friend most fun? | spontaneity ; good_stories ; curiosity ; sarcasm ; enthusiasm ; calm ; other
+C | values | What should you do if your friend's partner confides something serious to you? | tell_my_friend ; keep_it_secret ; urge_them_to_tell_my_friend ; stay_out_of_it
+C | personality | How do you feel when friends tease you? | enjoy_it ; fine_from_close_friends ; tolerate_it ; dislike_it ; hate_it
+C | values | What should a friend do when asked to take sides in your divorce or breakup? | stay_neutral ; take_my_side ; take_whoever_was_wronged ; keep_both_but_separately
+C | taste | Which way of keeping a friendship alive do you like most? | regular_rituals ; spontaneous_meetups ; constant_texting ; occasional_long_calls ; annual_visits
+C | values | Is it okay to invite only some members of a friend group to an event? | yes_always ; yes_if_its_small ; only_if_kept_quiet ; no_invite_everyone
+C | personality | If you realize you're the only one who plans things in the group, what do you do? | keep_planning ; stop_and_see_what_happens ; say_something ; share_planning_duties ; other
+C | values | What is the best response when a friend apologizes for a serious hurt? | forgive_fully ; forgive_but_keep_distance ; need_time ; not_forgive ; depends
+C | values | Which would bother you more from a close friend? | lying_to_protect_me ; telling_a_painful_truth
+C | taste | What would be your ideal friendship reunion? | weekend_away ; big_dinner ; revisit_old_places ; party ; low_key_hangout
+C | values | What should you do if you run into an old friend you drifted from? | stop_and_chat ; wave_and_move_on ; suggest_meeting_up ; pretend_not_to_see_them
+C | values | Your friend's parent dies. What is the best thing to do? | attend_the_funeral ; bring_food ; send_a_card ; call_them ; check_in_weeks_later ; all_of_these
+C | social | What do most people say is the best way to support a grieving friend? | just_being_there ; practical_help ; sending_messages ; bringing_food ; giving_space ; other
+C | values | Should old friends be invited to your wedding even if you've drifted apart? | yes ; only_if_budget_allows ; only_if_we_still_talk ; no
+C | taste | What would you most like to share with a close friend? | apartment ; business ; vacation_home ; car ; pet ; nothing
+C | values | What is the fairest way to handle a friend always borrowing your things? | set_limits ; stop_lending ; ask_for_returns ; its_fine ; ask_them_to_buy_their_own
+C | personality | What do you tend to do when a friend is visibly jealous of you? | downplay_my_news ; talk_about_it ; ignore_it ; distance_myself ; reassure_them
+C | values | What is the right thing to do if you like your friend's ex? | ask_friend_first ; never_act_on_it ; wait_a_long_time ; go_for_it ; depends_on_the_relationship
+C | social | According to most people, what is the biggest friendship red flag? | always_needs_something ; gossips ; never_asks_about_you ; competitive ; unreliable ; controlling ; other
+C | values | When a friend cancels because a date came up, how do you see it? | fine ; understandable_once ; rude ; unforgivable
+C | taste | Which type of friend do you have the most of? | school_friends ; work_friends ; hobby_friends ; neighborhood_friends ; online_friends ; friends_of_family
+C | values | A friend is being bullied at school or online. What do you do? | stand_up_for_them_publicly ; support_them_privately ; report_it ; help_them_ignore_it ; stay_out_of_it
+C | personality | What is your typical reaction to a friend's surprise party for you? | love_it ; enjoy_it_but_embarrassed ; feel_uncomfortable ; dislike_it
+C | values | Your friend asks to stay at your home for a few weeks. What do you do? | yes_gladly ; yes_with_rules ; yes_for_a_shorter_time ; help_find_another_place ; no
+C | values | What should happen when roommates who are friends stop getting along? | talk_it_out ; set_house_rules ; one_moves_out ; wait_until_the_lease_ends ; other
+C | taste | Would you rather live with a close friend or a stranger? | close_friend ; stranger ; acquaintance ; neither
+C | values | Which household issue is most likely to ruin a friendship between roommates? | cleaning ; noise ; guests ; money_and_bills ; shared_food ; partners_staying_over ; other
+C | values | What should you do when a friend always talks about themselves? | point_it_out_gently ; interrupt_with_my_news ; ask_less_questions ; accept_it ; see_them_less
+C | personality | How do you respond to a friend's bad news in a group chat? | reply_right_away ; message_them_privately ; call_them ; react_with_emoji ; wait_for_others
+C | values | Should you cover for a friend who calls in sick but is really at the beach? | yes ; only_if_it_doesnt_involve_me ; no ; depends_on_who_asks
+C | taste | Where would you prefer to hang out with friends? | my_place ; their_place ; bar_or_restaurant ; outdoors ; cafe ; anywhere
+C | values | A friend misses your big event without explanation. What do you do? | ask_what_happened ; wait_for_them_to_explain ; tell_them_im_hurt ; let_it_go ; take_it_as_a_sign
+C | values | Which friendship arrangement seems healthiest? | friends_meet_each_other ; separate_friend_circles ; one_big_group
+C | social | Which gift do most people consider appropriate for a friend's housewarming? | plant ; wine ; kitchen_item ; candle ; food ; nothing
+C | values | When your friend has a big achievement, how should you celebrate? | public_post ; private_message ; take_them_out ; small_gift ; toast_at_next_gathering
+C | personality | Which describes how you handle friends' secrets? | vault = never tell anyone ; tell_my_partner_only ; slip_up_sometimes ; forget_them_quickly
+C | values | Is it okay to tell your partner a secret a friend told you? | yes_always ; only_if_partner_wont_share ; only_minor_ones ; never
+C | values | A friend keeps asking you for rides. What do you do? | keep_giving_them ; ask_for_gas_money ; limit_the_rides ; say_no ; suggest_other_options
+S | personality | How often do you initiate plans with friends? | I never initiate and wait to be invited ; I initiate only with my closest friend ; I initiate about as often as my friends do ; I am usually the one who suggests plans ; I plan almost every gathering my friends have
+S | personality | How do you respond when a friend texts you? | I often leave messages unanswered for days ; I reply within a day or so ; I reply within a few hours ; I reply almost right away
+S | values | How much effort would you put into a friend's surprise party? | I would just show up ; I would chip in money ; I would help decorate or bring food ; I would help organize it ; I would plan the whole thing myself
+S | personality | How easily do you make new friends as an adult? | I have not made a new friend in years ; I make a new friend only when circumstances force it ; I make a new friend every so often ; I make new friends fairly easily ; I make friends almost everywhere I go
+S | personality | How much do you rely on friends for emotional support? | I never talk to friends about my feelings ; I talk to friends only about minor worries ; I lean on friends when something big happens ; Friends are my main source of emotional support
+S | values | How far would you go to help a friend in trouble at night? | I would give advice over the phone ; I would call someone who could help them ; I would drive across town to help ; I would drop anything and travel far to reach them
+S | values | How honest are you when a friend asks for feedback on their creative work? | I only say positive things ; I praise it and hint at one small issue ; I give balanced praise and criticism ; I tell them exactly what doesn't work
+S | personality | How competitive are you with your friends? | I never compare myself to friends ; I notice differences but they don't bother me ; I sometimes feel a quiet sense of rivalry ; I often feel I need to keep up with friends ; I openly compete with friends in most things
+S | personality | How do you feel when a friend is more successful than you? | I feel purely happy for them ; I feel happy with a small twinge of envy ; I feel noticeably envious for a while ; I find it hard to be around them
+S | values | How much money would you lend a close friend without expecting it back? | I would not lend money at all ; I would lend enough to cover a meal ; I would lend enough to cover a bill ; I would lend enough to cover rent ; I would lend a large amount without hesitation
+S | personality | How much do you share friends' secrets with others? | I never repeat anything told in confidence ; I occasionally tell my partner ; I sometimes share secrets with one trusted person ; I often let secrets slip
+S | personality | How often do you see your closest friend in person? | I have not seen them in years ; I see them about once a year ; I see them every few months ; I see them every month or so ; I see them almost every week
+S | values | How quickly should a friend pay you back? | Whenever they happen to remember ; Within a few months ; Within a few weeks ; By their next payday ; Within a day or two
+S | personality | How do you handle group events where you know only the host? | I avoid going ; I go but leave early ; I stay near the host all night ; I chat with a few new people ; I work the room and meet everyone
+S | values | How much should friends get involved in each other's family conflicts? | Friends should stay out entirely ; Friends should only listen ; Friends should give advice when asked ; Friends should step in and help directly
+S | personality | How much do your friends know about your finances? | They know nothing about my money ; They know roughly what my job pays ; They know about my money worries ; They know exact figures about my income and debts
+S | personality | How often do you check in on friends who are going through a hard time? | I wait for them to reach out ; I check in once ; I check in every week or so ; I check in almost every day
+S | personality | How much of your free time goes to friends? | Almost none of my free time ; A small slice of my free time ; About half my free time ; Most of my free time
+S | values | How acceptable is it for a friend to show up late? | Any lateness is rude ; A few minutes late is fine ; Being a quarter hour late is fine with a text ; Being an hour late is fine if they come ; Time doesn't matter to me at all
+S | personality | How do you act when you're new to a friend group? | I stay silent until spoken to ; I answer questions but don't start conversations ; I join conversations when there's an opening ; I quickly start jokes and conversations
+S | personality | How often do you say no to a friend's request? | I almost never say no to friends ; I say no only when it's impossible ; I say no when it costs me a lot ; I say no whenever I don't want to do it
+S | values | How much should friendship survive distance? | Friendships naturally end when someone moves ; Friendships should shift to occasional check-ins ; Friendships should stay close with effort ; Friendships should feel unchanged by distance
+S | personality | How do you feel after spending a whole day with friends? | Completely drained ; A bit tired and ready to be alone ; About the same as before ; Energized ; Buzzing and wanting more
+S | personality | How easily do you open up to new friends? | I take years to share anything personal ; I share personal things after many months ; I share once we've had a few deep talks ; I share personal things within the first few meetings ; I tell new friends almost everything right away
+S | values | How much should you sacrifice for a best friend's wedding? | I would attend only if it's convenient ; I would attend even if it means a long trip ; I would take unpaid leave to attend ; I would spend a large chunk of savings to be there
+S | personality | How do you handle conflict with a close friend? | I avoid it and hope it passes ; I drop hints until they notice ; I bring it up when the timing seems right ; I address it directly as soon as it happens
+S | values | How much should friends tell each other about their romantic lives? | Nothing at all ; Only that they are seeing someone ; The main ups and downs ; Almost every detail
+S | personality | How many friend groups do you belong to? | I don't belong to any friend group ; I belong to one friend group ; I move between a couple of groups ; I am part of many separate groups
+S | values | How much do you expect friends to remember important dates in your life? | I don't expect anything ; I hope they remember my birthday ; I expect them to remember my birthday ; I expect them to remember my birthday and big milestones
+S | personality | How often do you lose touch with friends after changing jobs or schools? | I keep almost all of those friendships ; I keep most of those friendships ; I keep one or two of those friendships ; I lose touch with nearly everyone
+S | values | How much should you defend a friend who isn't present when others criticize them? | Say nothing ; Change the subject ; Offer a mild defense ; Firmly stand up for them
+S | personality | How long do you hold a grudge against a friend? | I forget about it within a day ; I get over it within a week ; It takes me months to let go ; I never fully let go
+S | values | How much should a best friend put your friendship before their new partner? | The partner should always come first ; The partner usually comes first ; The friendship and the partner should be equal ; The friendship should usually come first
+S | personality | How often do you reach out to old friends you haven't heard from in years? | I never reach out to old friends ; I reach out only if I need something ; I reach out when something reminds me of them ; I regularly reach out to keep old ties alive
+S | personality | How do you behave in a group chat? | I have muted most group chats ; I read along but rarely post ; I post now and then ; I am one of the most active posters
+S | values | How involved should friends be in planning each other's big events? | Friends should just attend ; Friends should help with small tasks ; Friends should take on a major role ; Friends should help plan everything
+S | personality | How comfortable are you asking friends for help? | I never ask friends for help ; I ask only in emergencies ; I ask for small favors ; I ask freely for all kinds of help
+S | personality | How much do you enjoy hosting friends at home? | I never host ; I host only when I have to ; I host now and then ; I love hosting and do it often
+S | values | How far should you go to include a friend who has social anxiety? | I invite them once ; I invite them now and then ; I invite them every time ; I plan events around their comfort
+S | personality | How do you react when a friend gives you tough criticism? | I get defensive and argue ; I stay quiet but feel hurt ; I take time and then consider it ; I thank them and take it on board right away
+S | values | How much should a friendship change after one friend gets married? | It should not change at all ; It should shift a little ; It should shift a lot ; It should usually fade
+S | personality | How often do you think about friends you've lost touch with? | They rarely cross my mind ; I think of them on their birthdays ; I think of them when a song or place reminds me ; I think about them most weeks
+S | personality | How often do you text your closest friend? | Rarely, only for plans ; A few times a month ; A few times a week ; Every day ; Constantly throughout the day
+S | values | How acceptable is it to ask a friend to help with a big physical job? | I would never ask ; I would ask only if I pay them ; I would ask and repay with food ; I would ask freely because friends help
+S | personality | How willing are you to travel to visit a friend? | I would not travel to visit a friend ; I would take a short drive ; I would take a long drive or train ; I would fly across the country ; I would fly overseas to see them
+S | values | How much should friends share when they succeed together? | Each keeps what they earn ; A small thank-you gift is enough ; Credit should be shared publicly ; Rewards should be split equally
+S | personality | How easily do you let go of a friendship that's fading? | I fight hard to save every friendship ; I try once or twice to revive it ; I accept it after a while ; I let it go almost immediately
+S | personality | How much do you rely on one best friend versus many friends? | I spread my trust across many friends ; I lean on a small handful ; I lean mostly on one or two ; I lean entirely on one best friend
+S | values | How acceptable is it for a friend to borrow your car? | Never acceptable ; Only in an emergency ; For short errands ; For a weekend trip ; Anytime they ask
+S | personality | How often do you give friends advice they didn't ask for? | I only give advice when asked ; I offer advice only when I see a real danger ; I offer advice when I think I know better ; I give my opinion on almost everything they tell me
+S | values | How much should friends match each other's spending when going out? | Everyone should spend what they can ; Plans should suit the one with the least money ; Richer friends should cover more ; Everyone should spend about the same
+S | personality | How do you feel about friends of friends joining your plans? | I dislike it and prefer the original plan ; I tolerate it ; I'm fine with it ; I love meeting new people that way
+S | social | How much do most people think adults should work at making new friends? | Adults don't need new friends ; Adults should make friends only when it happens naturally ; Adults should make some effort to meet people ; Adults should actively seek new friends
+S | personality | How often do you end up as the one listening in your friendships? | I mostly do the talking ; It is roughly balanced ; I mostly listen ; I almost always listen and rarely share
+S | values | How long should you wait for a friend who is late before leaving? | I would leave right away ; I would wait a short while ; I would wait about an hour ; I would wait as long as it takes
+C | personality | Which way of spending time with friends do you prefer? | one_on_one ; small_group = three or four people ; large_group ; mix_of_both ; no_preference
+S | values | How much should friends support each other's side businesses? | Not at all ; With likes and shares ; By buying once in a while ; By buying regularly and promoting them
+S | personality | How much do you gossip about friends with other friends? | Never ; Only about harmless news ; Sometimes about their problems ; Often, including their private matters
+S | personality | How well do you keep in touch after a friend moves away? | We lose touch quickly ; We talk a few times a year ; We talk every month or so ; We talk every week
+S | values | How much should friends remember and ask about each other's problems? | It's fine to forget ; Asking now and then is enough ; Friends should follow up on anything big ; Friends should track and ask about everything
+S | personality | How do you react when your friends disagree with your choices? | I change my choice to match theirs ; I feel shaken but keep my choice ; I listen and weigh their view ; I ignore their view entirely
+S | values | How much would you risk your own reputation to defend a friend? | None at all ; A little, in private ; A lot, in public ; I would risk everything for them
+S | personality | How often do you remember friends' birthdays without reminders? | I rely completely on reminders ; I remember one or two without help ; I remember most close friends' birthdays ; I remember nearly everyone's birthday
+S | social | How much do most people expect a best friend to know about their life? | Only the basics ; Their main worries ; Most of what happens ; Everything, with no secrets
+S | personality | How much do you change your behavior around different friend groups? | I am exactly the same with everyone ; I shift my tone a little ; I act noticeably different in each group ; I feel like a different person in each group
+S | values | How long can a close friendship go without contact and still be close? | A few weeks ; A few months ; A year or so ; Many years
+S | personality | How do you handle a friend's bad habit that annoys you? | I put up with it silently ; I tease them about it ; I mention it once ; I keep bringing it up until it changes
+S | values | How much should friends share big purchases, like a vacation home or boat? | Never share big purchases with friends ; Only small shared items ; Maybe with a clear written plan ; Sharing big purchases is great
+S | personality | How much do you like being the center of attention among friends? | I avoid it completely ; I tolerate it now and then ; I enjoy it sometimes ; I love it and seek it out
+S | values | How much should a friend apologize for a small slight? | No apology is needed ; A quick sorry is enough ; A sincere conversation is needed ; A real effort to make it up is needed
+S | personality | How do you react to a friend's new partner? | I keep my distance at first ; I am polite but guarded ; I am friendly and open ; I try hard to befriend them right away
+S | values | How much should a friend do when you're sick? | A message is enough ; A call to check in ; Dropping off food or medicine ; Staying with me to help
+S | personality | How much do you enjoy meeting strangers through friends? | I skip events where I won't know people ; I go but stick to my friend ; I chat with a few new people ; I go hoping to make new friends
+S | personality | How much do you tell your friends about arguments with your family? | Nothing ; A vague mention ; The main points ; Every detail
+S | values | How much should a close friend be told about your health problems? | Nothing ; Only the diagnosis ; What it means for my life ; Every detail of treatment
+S | personality | How do you feel about long phone calls with friends? | I let calls go to voicemail and text back ; I take a call only if it's short ; I enjoy a long call now and then ; I spend hours on the phone with friends regularly
+S | values | How much should you change plans when a friend needs you? | I keep my plans ; I shift small plans ; I cancel most plans ; I cancel anything, even travel
+S | personality | How often do you feel left out by your friends? | I can't remember the last time I felt left out ; I feel left out when I miss one event ; I often see photos of plans I wasn't told about ; I feel like an outsider in most of my friend groups
+S | personality | How do you handle a friend who owes you money and hasn't mentioned it? | I write it off silently ; I wait for them to bring it up ; I gently remind them ; I directly ask for repayment
+S | values | How much should friends talk about money with each other? | Never discuss money ; Only in general terms ; Share costs and prices ; Share exact salaries and debts
+S | personality | How much do you plan activities with friends in advance? | Everything is last minute ; A few days ahead ; A couple of weeks ahead ; Months ahead
+S | values | How acceptable is it for friends to comment on each other's weight or appearance? | Never acceptable ; Only compliments ; Only when asked ; Anything goes between close friends
+S | personality | How much do your friendships rely on shared activities? | We just talk ; We sometimes do things together ; We mostly bond through activities ; We only meet for an activity
+S | personality | How much do you try to keep friends from different parts of your life separate? | I mix all my friends together ; I mix them now and then ; I keep them mostly separate ; I keep them entirely separate
+S | values | How much should you step in when a friend's family treats them badly? | Stay out of it ; Listen and comfort ; Help them plan a response ; Confront the family myself
+S | personality | How often do you tell friends you appreciate them? | I never say it out loud ; I say it only in birthday cards ; I say it after they help me with something ; I tell them regularly, even for no reason
+S | values | How much of a friend's wrongdoing would you overlook? | None, I call out everything ; Small white lies ; Occasional rudeness to others ; Serious mistakes that hurt others
+S | personality | How do you react to a friend's jealousy of your other friends? | I reassure them constantly ; I reassure them once ; I ignore it ; I get annoyed and pull back
+S | social | How much do most people think close friends should keep in touch? | A few times a year is enough ; Monthly contact is ideal ; Weekly contact is ideal ; Daily contact is ideal
+S | personality | How much do you trust new friends with your keys or home? | Never ; Only after years ; After some months ; Almost right away
+S | values | How far should friends go to keep a group together after a fight between two members? | Let the group split ; Invite each separately ; Push them to reconcile ; Make them talk it out
+S | personality | How often do you reconnect with childhood friends? | I have no contact with childhood friends ; I see them only at reunions or weddings ; I catch up with one about once a year ; I still see childhood friends regularly
+S | personality | How much do you depend on friends for fun on weekends? | I usually spend weekends alone ; I see friends on some weekends ; I see friends most weekends ; Friends fill almost every weekend
+S | values | How much should friends go out of their way to attend each other's performances or games? | They don't need to come ; They should come to the big ones ; They should come to most ; They should come to every one
+S | personality | How much do you enjoy friends' inside jokes that you weren't part of? | I feel shut out when they come up ; I smile along without getting them ; I ask for the story and enjoy it ; I start using the jokes myself
+S | personality | How much do you rely on friends' advice for big life choices? | I never ask ; I ask only for information ; I ask and weigh their views ; I follow their advice closely
+S | values | How much should you help a friend who is moving? | Wish them well ; Lend some boxes ; Help pack for an afternoon ; Help for the whole move
+S | personality | How do you handle a friend who always turns conversations to themselves? | I keep listening without comment ; I steer it back gently ; I point it out ; I see them less
+S | values | How much should you forgive a friend who forgot a big promise? | I would not forgive it ; I would forgive after a real apology ; I would forgive with a brief talk ; I would forgive instantly
+S | personality | How fast do new friendships become close for you? | I rarely get close to new people at all ; It takes me years to feel close ; It takes several months of regular contact ; I feel close after a few good conversations ; I feel close to someone after one evening
+S | personality | How much do you share photos of your friends online? | I never post friends ; I post friends only at weddings or big events ; I post group photos from most outings ; I post friends almost every time we meet
+S | values | How much should friends ask before posting photos of you? | They never need to ask ; They should ask for unflattering ones ; They should ask for anything personal ; They should ask for every photo
+S | personality | How much do you rely on social media to know what friends are up to? | I learn everything directly from them ; I check their posts now and then ; I learn most of their news from their posts ; I would know almost nothing without social media
+S | personality | How often do you invite a friend you don't know well to hang out? | I never invite someone I don't know well ; I invite them only as part of a group ; I invite them one-on-one if we clicked ; I invite new acquaintances out all the time
+S | values | How quickly should a friend reply to an urgent message? | Within the day ; Within a few hours ; Within an hour ; Within minutes
+S | personality | How do you react when your friend group changes plans without asking you? | I don't mind at all ; I feel a bit annoyed ; I feel hurt ; I feel betrayed
+S | personality | How do you usually find out a friendship has ended? | We had an honest talk about it ; We had a fight and never made up ; I noticed they stopped replying ; I only realized years later that we hadn't spoken
+S | values | How much should a friend adjust when you stop drinking? | They don't need to change anything ; They should offer me a non-alcoholic option ; They should suggest some sober activities ; They should mostly stop meeting at bars
+S | personality | How do you behave when a friend is grieving? | I avoid them until they seem better ; I send a message once ; I check in regularly for a few weeks ; I stay close for months and keep showing up
+S | values | How much should a friend expect you to be at their big life events? | Only if it's easy for me ; For weddings and funerals ; For weddings, funerals, and big birthdays ; For every milestone, big or small
+S | personality | How do you respond when a friend asks you to keep a secret you find heavy? | I tell someone right away ; I keep it but it weighs on me ; I keep it without much trouble ; I forget it almost immediately
+S | social | How much do most people think a friend should pay back small debts like a coffee? | Small amounts don't need repaying ; Buying the next round evens it out ; They should pay back when they remember ; They should pay back every cent promptly
+N | personality | Do you have a friend you could call for help in the middle of the night?
+N | values | Is it okay to be friends with your ex's best friend?
+N | values | Should friends always be honest about each other's partners?
+N | values | Is it acceptable to cancel plans with a friend for a date?
+N | personality | Have you ever lost a friend over money?
+N | values | Is it okay to stay friends with someone who treated your best friend badly?
+N | values | Should you tell a friend if you heard someone badmouthing them?
+N | personality | Do you find it hard to make friends as an adult?
+N | values | Is it okay to go to a party your close friend wasn't invited to?
+N | personality | Have you ever been ghosted by a friend?
+N | personality | Have you ever ghosted a friend?
+N | values | Should close friends split restaurant bills evenly no matter what each person ordered?
+N | values | Is it okay to post a group photo without asking everyone in it?
+N | social | Would most people say it's fine to have different friends for different parts of life?
+N | values | Is it okay to befriend your friend's ex?
+N | personality | Are most of your close friends people you met in school?
+N | values | Is it rude to bring an uninvited friend to a friend's party?
+N | values | Should friends be able to criticize each other's parenting?
+N | personality | Do you have a friend you haven't seen in years but still consider close?
+N | values | Is it okay to ask a friend for a discount at their business?
+N | values | Should a friend always choose your side in a public argument?
+N | personality | Do you tend to be the friend others come to for advice?
+N | values | Is it okay to keep a friendship going only out of guilt?
+N | social | Would most people say friendships matter as much as family?
+N | values | Is it okay to have friends your partner doesn't like?
+N | personality | Would you rather have fewer friends if it meant every one was close?
+N | values | Is it acceptable to ask friends to pay for their own food at your birthday dinner?
+N | values | Should a best friend be the first to know your big news?
+N | personality | Have you ever had a falling out with a friend that you later regretted?
+N | values | Is it okay to tell a friend they've changed for the worse?
+N | values | Should you mention to a friend that their partner seems to be controlling them?
+N | personality | Do you keep in touch with friends mainly through a group chat?
+N | values | Is it okay to invite a friend's partner without inviting your friend?
+N | social | Would most people consider it a betrayal to date a friend's crush?
+N | values | Is it okay to secretly be relieved when a friend cancels?
+N | personality | Do you have a friend who is much older or younger than you?
+N | values | Should you attend a friend's wedding if you think the marriage is a mistake?
+N | values | Is it fair to expect friends to travel for your wedding?
+N | personality | Have you ever made a close friend through an online game or forum?
+N | values | Is it okay to borrow a friend's things without returning them for months?
+N | values | Should friends be expected to help each other move?
+N | personality | Do you get jealous when your best friend spends time with other friends?
+N | values | Is it okay to share a friend's news with others before they announce it?
+N | social | Would most people say you can't be close friends with someone you only text?
+N | values | Is it okay to rekindle a friendship only when you need something?
+N | values | Should old friends forgive each other for things said as teenagers?
+N | personality | Do you still talk to anyone from your first job?
+N | values | Is it ever okay to read a friend's diary or private messages?
+N | values | Is it okay to end a friendship over a single argument?
+N | personality | Would you go to a party alone if none of your friends could come?
+N | values | Is it fine for a friend to regift something you gave them?
+N | values | Should friends pay each other for professional services like haircuts or photos?
+N | personality | Do you find it easy to tell friends when you're hurt?
+N | social | Would most people say that a true friend tells you hard truths?
+N | values | Is it okay to pretend to like a friend's cooking?
+N | values | Should friends get each other birthday gifts every year?
+N | personality | Have you ever been part of a friend group that split into sides?
+N | values | Is it okay for a friend to tell you your partner is wrong for you?
+N | personality | Do you have a friend you consider a sibling?
+N | values | Is it acceptable to skip a friend's baby shower or bachelor party?
+N | values | Should a friend who hurt you have to make the first move to repair things?
+N | personality | Would you rather go on vacation with friends than with family?
+N | social | Would most people consider it fine to un-invite a friend from a trip?
+N | values | Is it okay for friends to compete for the same job or opportunity?
+N | personality | Do you have more close friends now than you did when you were in school?
+N | values | Should friends keep score of who paid last time?
+N | personality | Have you ever reconnected with a friend after a long falling out?
+N | values | Is it okay to share a friend's embarrassing story at their wedding?
+N | values | Should you tell a friend their business is failing if they haven't noticed?
+N | personality | Do you prefer to keep friends and romantic partners completely separate?
+N | social | Would most people agree that friendships take more work in adulthood than in school?
+N | values | Is it okay to set up two friends on a date without telling them?
+N | values | Is it okay to invite yourself to a friend's plans?
+N | personality | Have you ever felt closer to a friend than to your family?
+N | values | Is it okay to bring up a friend's past mistakes in front of their new friends?
+N | values | Should a friend always say yes to being a bridesmaid or groomsman?
+N | personality | Do you keep old messages and photos from friendships that ended?
+N | values | Is it okay to be friends with someone mainly because they're useful to you?
+N | social | Would most people say friends from childhood are the most important?
+N | values | Is it okay to tell mutual friends why you ended a friendship?
+N | personality | Would you let a close friend move in with you for a few months?
+N | values | Is it okay to have a friend you only see when you're drinking?
+N | values | Should friends keep lending to someone who never repays?
+N | personality | Do you tend to keep friendships going long after they stop feeling good?
+N | social | Would most people say it's acceptable to tell a friend you need a break from them?
+N | values | Is it okay to ask a friend to change something about how they act around you?
+N | personality | Have you ever felt like the backup friend in a group?
+N | values | Is it okay to celebrate a holiday with friends instead of family?
+N | personality | Do you secretly compare your life to your friends' lives?
+N | values | Should friends who live together split chores exactly evenly?
+N | values | Is it ever okay to take a friend's side against your own sibling?
+N | personality | Have you ever stayed friends with someone mostly because your friend groups overlap?
+N | values | Is it okay to stop inviting a friend who always says no?
+N | personality | Do you have a friend you met as an adult who now feels like an old friend?

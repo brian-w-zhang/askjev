@@ -1,0 +1,144 @@
+C|s|What is the best way to greet a new coworker on their first day?|stop_by_their_desk;invite_them_to_lunch;send_a_welcome_message;wait_for_them_to_approach;introduce_them_to_others
+C|v|What should you do when a coworker keeps eating your lunch from the shared fridge?|confront_them_directly;leave_a_note_on_the_fridge;tell_the_manager;label_your_food;bring_lunch_they_would_hate;let_it_go
+C|v|What should you do when a coworker constantly interrupts you in meetings?|call_it_out_in_the_moment;talk_to_them_privately;tell_the_manager;keep_talking_over_them;ask_an_ally_to_redirect_back_to_you;accept_it
+C|v|How should you respond when a coworker asks you to lie for them to the boss?|refuse_flatly;refuse_and_warn_them;go_along_with_it_once;tell_the_boss_yourself;dodge_the_question
+C|v|What should you do when a coworker is always late to shared tasks?|cover_for_them;remind_them_early;talk_to_them_privately;report_it;work_around_them
+C|t|Which kind of boss would you least like to work for?|micromanager;absent_boss;moody_boss;boss_who_plays_favorites;boss_who_never_gives_feedback;boss_who_wants_to_be_friends
+C|v|What should you do when your boss messages you late at night?|reply_right_away;reply_in_the_morning;ignore_it_until_asked;reply_only_if_urgent;set_a_boundary_about_hours
+C|v|What should you do if a coworker confides that they are job hunting?|keep_it_secret;tell_your_manager;offer_help;tell_other_coworkers;encourage_them_to_stay
+C|v|How should you handle a coworker who takes personal phone calls loudly at their desk?|ask_them_to_step_away;wear_headphones;tell_the_manager;move_desks;say_nothing
+C|v|What should you do when a coworker you dislike is promoted to be your boss?|stay_professional;look_for_another_job;try_to_start_fresh;complain_to_hr;keep_your_head_down
+C|v|What should you do when you are promoted above a close work friend?|talk_openly_with_them;keep_things_the_same;create_some_distance;decline_the_promotion;treat_them_like_everyone_else
+C|v|What is the best way to give a coworker critical feedback?|in_private_face_to_face;in_writing;through_the_manager;softened_with_praise;bluntly_and_quickly;not_at_all
+C|v|Who should organize a farewell for a coworker who is leaving?|their_manager;their_closest_coworker;whoever_volunteers;the_whole_team_together;nobody_it_is_not_needed
+C|v|What is the best farewell gift for a departing coworker?|a_group_card;a_small_gift;a_farewell_lunch;a_gift_card;a_framed_photo_of_the_team;nothing
+C|v|How much should you contribute to a collection for a coworker's baby shower?|a_small_token_amount;whatever_others_are_giving;a_generous_amount;nothing_if_not_close;sign_the_card_only
+C|t|Which work perk do you think builds the most team spirit?|free_lunch;team_outings;office_games;shared_hobby_clubs;volunteer_days;holiday_party
+C|v|What should you do when a coworker keeps asking about your personal life?|share_freely;give_short_answers;politely_say_you_keep_it_private;change_the_subject;ask_them_questions_back
+C|v|What is the best way to handle office gossip about you?|confront_the_source;ignore_it;talk_to_your_manager;address_it_openly_with_the_team;laugh_it_off
+C|v|What should you do when a coworker complains about the boss to you?|listen_and_stay_quiet;agree_with_them;defend_the_boss;change_the_subject;tell_the_boss
+C|p|Which kind of coworker are you usually?|the_helper;the_quiet_worker;the_social_one;the_organizer;the_problem_solver;the_joker
+C|p|At a work happy hour, what do you usually do?|stay_the_whole_time;make_a_short_appearance;skip_it;stick_with_close_colleagues;talk_to_new_people;talk_with_the_boss
+C|v|What is the best topic for small talk with a coworker you barely know?|weekend_plans;the_weather;work_projects;food;sports;pets_or_family
+C|v|Which topic is off-limits in conversation with coworkers?|salary;health;religion;dating_life;family_problems;none
+C|v|What should you do when your manager asks you to train your own replacement?|do_it_well;ask_what_is_happening;start_job_hunting;do_it_slowly;refuse
+C|v|What should you do when a coworker keeps sending you tasks that aren't yours?|politely_decline;do_them_quietly;ask_the_manager_to_clarify_roles;do_them_but_track_the_time;send_them_back
+C|v|What should you do when a coworker is visibly upset at their desk?|ask_if_they_are_okay;give_them_space;bring_them_coffee;tell_their_manager;send_a_private_message
+C|v|How should you respond when a coworker invites you to join their side business?|politely_decline;hear_them_out;join;report_it_to_hr;change_the_subject
+C|v|What should you do when a coworker keeps selling products to the team?|buy_something_to_be_nice;politely_decline_every_time;ask_them_to_stop;tell_the_manager;ignore_the_pitch
+C|v|Who should pay when a boss takes the team out to lunch?|the_boss;the_company;split_evenly;each_pays_their_own
+C|v|What should you do when your boss invites you to their home?|accept_happily;accept_but_leave_early;politely_decline;bring_a_nice_gift_and_go;ask_coworkers_whether_they_are_going
+C|v|What should a manager do when two team members refuse to work together?|mediate_a_meeting;separate_their_tasks;tell_them_to_act_like_adults;move_one_to_another_team;involve_hr
+C|v|What should you do when a work friend starts slacking and it affects you?|talk_to_them_as_a_friend;tell_the_manager;cover_for_them;distance_yourself;do_nothing
+C|v|What is the best way to ask a coworker for a favor?|in_person;in_a_quick_message;offer_something_in_return;through_the_manager;only_in_an_emergency
+C|v|What should you do when a coworker's music is too loud in a shared space?|ask_them_to_turn_it_down;put_on_headphones;tell_the_manager;move_to_another_room;tolerate_it
+C|t|Where would you most like to sit in an office?|near_the_window;in_a_quiet_corner;in_the_middle_of_the_team;near_the_boss;near_the_kitchen;near_the_exit
+C|v|What should you do when a colleague from another team is rude to you in a meeting?|respond_calmly_in_the_moment;talk_to_them_later;tell_your_manager;ignore_it;be_rude_back
+C|v|What should you do when a coworker asks to borrow money?|lend_it;lend_a_small_amount;politely_decline;offer_a_different_kind_of_help;tell_them_to_ask_hr
+C|v|What should you do when you get invited to a coworker's baby shower during work hours?|go;send_a_gift_instead;sign_the_card_only;skip_it
+C|v|Which is the best way to celebrate a coworker's birthday?|cake_in_the_break_room;a_team_lunch;a_card_signed_by_everyone;a_quick_message;nothing;decorate_their_desk
+C|v|What should you do when a new manager changes everything your team built?|give_them_a_chance;share_concerns_privately;push_back_openly;go_along_with_it;start_job_hunting
+C|v|How should you handle a coworker who always wants to chat when you are busy?|tell_them_you_are_busy;put_on_headphones;book_a_later_time_to_chat;chat_anyway;hide_somewhere
+C|v|What should you do when you realize you made a mistake that made a coworker look bad?|tell_everyone_it_was_you;apologize_privately_to_them;fix_it_quietly;tell_the_manager;say_nothing
+C|v|What should you do after a heated argument with a coworker?|apologize_first;wait_for_them_to_apologize;pretend_it_did_not_happen;talk_it_through_calmly;involve_the_manager
+C|v|What is the best way to leave a work group chat you find noisy?|just_leave_quietly;mute_it;announce_that_you_are_leaving;ask_to_be_removed;stay_and_skim_it
+C|t|Which team-building activity would you enjoy most?|escape_room;cooking_class;volunteer_day;sports_game;trivia_night;retreat_away;none
+C|t|Which team-building activity would you most dread?|trust_falls;karaoke;overnight_retreat;sharing_personal_stories;sports_competition;public_speaking_games
+C|v|Who should get the best office or desk?|most_senior;the_boss;whoever_has_been_there_longest;whoever_needs_it_most;lottery;best_performer
+C|v|What should you do when a coworker has an annoying habit like humming?|mention_it_kindly;wear_headphones;tell_the_manager;make_a_joke_about_it;put_up_with_it
+C|v|How should you respond when a coworker brags about their accomplishments constantly?|congratulate_them;change_the_topic;ignore_them;call_it_out;brag_back
+C|v|How should a manager announce layoffs to the team?|in_person_to_each_person_individually;in_a_team_meeting;by_email;through_hr_only;as_early_as_possible_with_honest_detail
+C|v|When you disagree with your boss's decision, what should you do?|voice_it_privately;voice_it_in_the_meeting;follow_it_quietly;go_over_their_head;ignore_the_decision
+C|v|What is the best way to ask your boss for a raise?|in_a_scheduled_meeting;at_a_performance_review;by_email;after_a_big_win;with_an_offer_from_another_company
+C|v|Who should you ask first when you are stuck on a work problem?|your_manager;a_trusted_coworker;an_expert_on_another_team;search_on_your_own_first;the_newest_person
+C|p|How would your coworkers most likely describe you?|reliable;friendly;quiet;funny;ambitious;helpful;blunt
+C|v|What is the best way to make friends at a new job?|eat_lunch_with_the_team;join_social_events;ask_for_help;offer_help;find_shared_hobbies;wait_for_them_to_come_to_you
+C|v|What should you do when a coworker keeps borrowing your stapler and never returns it?|ask_for_it_back;label_it;buy_another;hide_it;let_them_keep_it
+C|v|What should you do if a coworker's kid keeps interrupting their video calls?|laugh_it_off;wave_to_the_kid;ask_them_to_mute;say_nothing;suggest_rescheduling
+C|v|What should you do when you find a coworker crying in the bathroom?|ask_if_they_want_to_talk;give_them_privacy;offer_a_tissue_and_leave;tell_their_manager;check_in_later
+C|v|What should you do when a coworker takes the last coffee and doesn't make more?|make_more_yourself;leave_a_note;remind_them_nicely;tell_the_team;go_to_a_cafe
+C|t|What kind of neighbor would you most like to have?|friendly_and_chatty;quiet_and_private;helpful_handyman;family_with_kids;retired_couple;a_fellow_gardener
+C|t|What kind of neighbor would you least like to have?|nosy;noisy;messy_yard;barking_dog;constant_parties;one_who_complains_about_everything
+C|v|What should you do when a neighbor's dog barks all day?|talk_to_the_neighbor;leave_a_note;call_animal_control;complain_to_the_landlord;put_up_with_it;buy_earplugs
+C|v|What should you do when a neighbor's package gets delivered to you?|walk_it_over;leave_it_at_their_door;wait_for_them_to_ask;text_them;return_it_to_the_carrier
+C|v|What should you do when a neighbor keeps borrowing things and not returning them?|ask_for_them_back;stop_lending;say_you_need_them_now;let_it_go;keep_a_list
+C|v|What should you do about a neighbor's overgrown yard?|talk_to_them;offer_to_help;complain_to_the_city;report_to_the_hoa;ignore_it
+C|v|What should you do when your neighbor throws a loud party on a weeknight?|knock_and_ask_them_to_quiet_down;text_them;call_the_police;wait_until_morning_to_mention_it;put_on_headphones;join_the_party
+C|v|What is the best way to handle a shared fence repair with a neighbor?|split_the_cost;whoever_wants_it_pays;take_turns;the_one_who_broke_it_pays;hire_someone_together
+C|v|What should you do when a neighbor keeps putting their trash in your bin?|ask_them_to_stop;lock_the_bin;leave_a_note;say_nothing;put_it_back_in_theirs
+C|t|Which neighborhood event would you most enjoy?|block_party;yard_sale;potluck;holiday_lights_walk;community_cleanup;outdoor_movie_night
+C|v|What should you do when your upstairs neighbor walks loudly at night?|knock_and_ask_politely;leave_a_note;talk_to_the_landlord;buy_earplugs;bang_on_the_ceiling
+C|v|What should you do when you see a neighbor's car lights left on?|knock_on_their_door;leave_a_note;text_them;ignore_it
+C|v|What is the best way to meet other people in your apartment building?|say_hello_in_the_elevator;join_a_building_event;host_a_gathering;use_the_building_chat;chat_in_the_laundry_room;not_bother
+C|v|What should you do when you notice a neighbor you rarely see hasn't collected their mail for days?|knock_to_check;call_a_family_member_of_theirs;call_the_police_for_a_welfare_check;ask_other_neighbors;mind_your_own_business
+C|v|How should you respond when a neighbor asks you to water their plants while they are away?|agree_happily;agree_if_they_return_the_favor;agree_for_a_small_payment;decline_politely;suggest_someone_else
+C|v|What should you do when a neighbor's kids keep kicking balls into your yard?|throw_them_back;talk_to_the_parents;let_the_kids_come_get_them;keep_the_balls;put_up_a_net
+C|v|What should you do when a neighbor's cat keeps using your garden?|talk_to_the_owner;use_a_cat_deterrent;enjoy_the_visits;call_animal_control;ignore_it
+C|v|Who should shovel the snow on a shared sidewalk?|whoever_is_up_first;take_turns;each_does_their_own_part;the_landlord;the_most_able_bodied
+C|t|What kind of neighborhood would you most like to live in?|tight_knit_where_everyone_knows_each_other;friendly_but_private;busy_and_anonymous;quiet_and_spread_out;lots_of_families;lots_of_retirees
+C|v|What should you do when your neighbors start a group chat for the street?|join_and_chat;join_and_mute;decline;ask_what_it_is_for_first
+C|p|How do you usually react when a neighbor waves at you?|wave_back_and_smile;stop_to_chat;nod_and_keep_going;pretend_not_to_see
+C|v|What should you do when a neighbor starts a renovation that makes noise every morning?|ask_about_the_schedule;complain_to_the_city;leave_during_the_day;tolerate_it;ask_them_to_start_later
+C|v|What should you do when a neighbor pushes you to join a neighborhood committee you have no interest in?|join_to_keep_the_peace;politely_decline;attend_a_single_meeting;offer_to_help_in_a_smaller_way;avoid_them
+C|v|What should you do when a neighbor keeps offering unwanted advice about your lawn?|thank_them_and_ignore_it;take_some_of_it;tell_them_to_stop;ask_them_to_do_it_for_you;avoid_them
+C|v|Which is the best way to resolve a dispute between neighbors?|talk_face_to_face;write_a_letter;use_a_mediator;involve_the_hoa_or_landlord;take_it_to_court;just_move
+C|v|What should you do when a club member keeps dominating every discussion?|talk_to_them_privately;ask_the_leader_to_step_in;interrupt_them;quit_the_club;let_it_go
+C|v|What is the best reason to join a local club?|meeting_new_people;learning_a_skill;staying_active;giving_back;networking;having_a_routine
+C|v|What should you do when you want to quit a club you've been in for a long time?|tell_the_leader_in_person;send_a_message;fade_out_quietly;wait_until_a_natural_break;announce_it_to_the_group
+C|v|Who should lead a volunteer group?|the_most_experienced;the_most_enthusiastic;whoever_is_elected;the_founder;rotating_leaders
+C|v|What should you do when a club leader makes a decision you disagree with?|speak_up_at_the_meeting;talk_to_the_leader_privately;go_along_with_it;rally_others_against_it;leave_the_club
+C|v|How should a club handle a member who never pays dues?|remind_them_privately;remove_them;let_it_slide;announce_the_rule_to_everyone;have_them_volunteer_instead
+C|t|What would most make you want to join a community group?|a_friend_invites_me;a_cause_i_care_about;a_hobby_i_enjoy;being_new_in_town;the_social_events;nothing_would
+C|p|What role do you usually take in a club or volunteer group?|leader;organizer;regular_member;occasional_attender;treasurer_or_record_keeper;the_social_glue
+C|v|What should you do when a new member at a club seems left out?|introduce_yourself;introduce_them_to_others;invite_them_to_join_your_group;tell_the_leader;let_them_find_their_way
+C|t|Which community space do you use most?|the_library;a_park;a_community_center;a_gym;a_coffee_shop;a_place_of_worship;none
+C|v|What should you do when someone in your running group is always much slower?|slow_down_for_them;keep_your_pace;suggest_a_different_group;split_into_pace_groups;run_ahead_and_loop_back
+C|v|What is the best way to thank a volunteer?|a_personal_note;public_recognition;a_small_gift;a_thank_you_event;a_simple_verbal_thanks
+C|v|What should you do when you see a classmate being left out of a group project?|invite_them_to_your_group;tell_the_teacher;talk_to_them;ask_their_group_to_include_them;do_nothing
+C|v|What should you do when a group project member does no work?|do_their_part;tell_the_teacher;confront_them;give_them_a_small_task;leave_their_name_off
+C|v|How should you treat a classmate you don't like?|politely;ignore_them;be_friendly_anyway;avoid_them;tell_others_about_them
+C|v|What should you do when a classmate you barely know invites you to their party?|go;go_with_a_friend;politely_decline;ignore_the_invite;send_a_small_gift
+C|v|What is the best way to stay in touch with classmates after graduating?|a_group_chat;social_media;reunions;occasional_messages;do_not_bother
+C|v|Which is the best way to network at an event where you know nobody?|introduce_yourself_to_someone_alone;stick_near_the_food_table;ask_the_host_for_introductions;go_with_a_friend;leave_early
+C|v|What should you do after meeting someone useful at a networking event?|connect_online_the_same_day;send_a_follow_up_message_later;wait_for_them_to_reach_out;ask_for_a_coffee_meeting;do_nothing
+C|v|How should you respond when a stranger online asks for a job referral?|refer_them;chat_first;politely_decline;ignore_the_message;point_them_to_the_job_page
+C|v|What should you do when an online acquaintance asks to meet in person?|meet_in_a_public_place;video_call_first;bring_a_friend;politely_decline;keep_it_online
+C|t|Which online community do you spend the most time in?|a_discussion_forum;a_group_chat;a_gaming_community;a_social_media_group;a_hobby_site;none
+C|v|What should you do when someone in an online community is rude to you?|block_them;report_them;reply_calmly;ignore_them;reply_rudely
+C|v|What should a moderator do with a well-liked member who breaks the rules?|warn_them_privately;remove_them;treat_them_like_anyone_else;let_it_slide;post_a_public_warning
+C|v|What should you do when a roommate never does their share of cleaning?|talk_to_them;make_a_chore_chart;clean_it_yourself;leave_their_mess;move_out
+C|v|How should roommates split shared groceries?|split_everything_evenly;each_buys_their_own;take_turns_buying;split_only_basics;one_pays_the_other_cooks
+C|v|What should you do when a roommate keeps having guests over?|talk_to_them;set_house_rules;ask_guests_to_pay_a_share;put_up_with_it;look_for_a_new_place
+C|v|Which roommate habit is most annoying?|leaving_dishes;being_loud_late;eating_your_food;never_paying_on_time;messy_bathroom;having_guests_constantly
+C|t|Which kind of roommate would you most want?|a_close_friend;a_stranger_who_keeps_to_themselves;a_social_roommate;a_neat_freak;someone_with_a_pet;nobody
+C|v|What is the best way to find a mentor at work?|ask_someone_directly;join_a_mentoring_program;build_a_relationship_first;ask_your_manager_to_suggest_someone;find_one_outside_work
+C|v|What should a mentor do when their mentee makes a big mistake?|let_them_learn;help_them_fix_it;take_over;give_honest_feedback;shield_them_from_consequences
+C|v|What should you do when a former coworker asks you for a job reference?|write_a_glowing_one;write_an_honest_one;decline_politely;ask_them_to_write_a_draft;only_confirm_dates_and_role
+C|v|What should you do when a coworker keeps talking about their dating life?|listen_politely;change_the_subject;tell_them_it_is_too_much;share_your_own;avoid_them
+C|v|What should a manager do when a team member cries during a meeting?|pause_the_meeting;offer_a_break;talk_to_them_afterward;keep_going;ask_what_is_wrong_in_front_of_everyone
+C|v|How should you handle a coworker who always replies-all?|ask_them_to_stop;ignore_it;mute_the_thread;talk_to_the_manager;reply_all_back
+C|v|What should you do when a coworker keeps scheduling meetings during your lunch?|decline_those_times;block_lunch_on_your_calendar;tell_them;eat_during_the_meeting;skip_lunch
+C|v|What should you do when a coworker keeps microwaving smelly fish?|ask_them_nicely;leave_a_note;tell_the_manager;say_nothing;make_a_joke_about_it
+C|v|What should you do when you overhear a coworker badmouthing you?|confront_them_now;talk_to_them_later;tell_your_manager;ignore_it;badmouth_them_back
+C|v|What should you do when a coworker invites you to church or a religious event?|go_once_to_be_polite;politely_decline;ask_them_what_it_is_about;decline_and_ask_them_not_to_ask_again
+C|v|How should you split the check at a team lunch?|evenly;each_pays_for_their_order;the_most_senior_person_pays;the_company_pays;whoever_invited_pays
+C|v|What should you do when you forget a coworker's name?|ask_them_again;wait_for_someone_else_to_say_it;look_it_up;avoid_using_it;confess_with_a_joke
+C|v|What should a new hire bring on their first day to make a good impression?|nothing_special;snacks_for_the_team;a_notebook_and_questions;a_friendly_attitude;coffee_for_their_manager
+C|v|What should you do when your coworker is always negative about everything?|stay_positive_around_them;avoid_them;call_it_out;listen_and_move_on;talk_to_the_manager
+C|v|What is the fairest way to split office holiday party planning?|a_committee;whoever_volunteers;the_manager_plans_it;rotate_each_year;hire_someone
+C|v|What should you do when a coworker gets engaged?|congratulate_them_in_person;send_a_message;give_a_small_gift;organize_a_card;nothing_special
+C|v|What should you do when a coworker's family member dies?|send_a_card;attend_the_funeral;give_a_condolence_message;organize_a_team_gift;cover_their_work;nothing_unless_close
+C|v|How should you respond when your boss asks for honest feedback on their leadership?|give_honest_detailed_feedback;give_mild_positive_feedback;give_feedback_anonymously;dodge_the_question
+C|v|What should you do when a coworker keeps asking you for rides home?|agree_every_time;ask_them_to_split_gas;make_an_excuse;say_no_directly;agree_sometimes
+C|v|What should you do when your neighbor asks you to sign for their packages while they are on vacation?|agree_happily;agree_but_ask_them_to_keep_it_brief;decline_politely;suggest_a_package_locker
+C|v|What is the best way to handle a local business owner who was rude to you?|tell_them_directly;leave_an_online_review;never_go_back;tell_friends;let_it_go
+C|p|Which regulars in your life do you know by name?|a_barista;a_mail_carrier;a_shop_owner;a_hairdresser;a_gym_staff_member;a_neighbor;none
+C|v|What should you do when a local shop you love is struggling?|shop_there_more;tell_friends;leave_good_reviews;buy_gift_cards;nothing_much
+C|v|How should a community group handle a member who keeps missing their volunteer shifts?|talk_to_them;replace_them;give_them_easier_tasks;remind_them_each_time;let_it_slide
+C|t|Which community event would you most likely volunteer for?|food_drive;park_cleanup;charity_run;school_fair;animal_shelter_event;holiday_toy_drive;none
+C|v|What should you do when a coworker you trained ends up earning more than you?|ask_for_a_raise;congratulate_them;look_for_another_job;complain_to_hr;accept_it
+C|v|What is the best way to handle a coworker who copies your work style?|take_it_as_a_compliment;talk_to_them;tell_the_manager;change_your_style;ignore_it
+C|v|What should you do when you are invited to a former boss's retirement party?|attend;send_a_card;send_a_gift;decline;call_them_instead
+C|v|How should you end a conversation with a chatty neighbor when you are in a rush?|say_you_are_late;promise_to_chat_later;keep_walking_while_talking;stay_anyway;cut_them_off
+C|v|What should you do when a person you met at a conference keeps messaging you?|reply_politely_sometimes;reply_every_time;mute_them;tell_them_you_are_busy;block_them
+C|v|What should you do when a classmate copies your answers on a test?|cover_your_paper;tell_the_teacher;confront_them_after;ignore_it

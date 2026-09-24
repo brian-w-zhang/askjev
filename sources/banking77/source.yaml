@@ -4,6 +4,7 @@ download: https://raw.githubusercontent.com/PolyAI-LDN/task-specific-datasets/ma
 license: CC-BY-4.0
 version: test split (3,080 queries, 77 intents)
 target: 800
+target_phase6: 3000 (ASKJEV_TARGET_BANKING77) + 1,500 per secondary template (ASKJEV_EXTRA_BANKING77)
 hemisphere: machine
 shape: route
 notes: >
@@ -11,3 +12,4 @@ notes: >
   lowercased; descriptions hand-written). Truth = dataset label. Stratified round-robin across intents
   (~10 each), seeded, case-insensitive text dedup. The HF repo is script-based with no parquet export,
   so the CSV comes from PolyAI's GitHub repo the loading script points at.
+  Phase 6: the round-robin continues to 3,000 (the 800 are its prefix). Secondary templates on 1,500 of the sampled messages (salted hash order), no truth: banking77.urgency (Score, 4 concrete levels, machine.support.urgency_frustration) and banking77.money_left (Noul, money already taken from the account with something wrong, machine.support.churn_refund); meta.intent keeps the label.

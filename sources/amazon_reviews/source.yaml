@@ -4,6 +4,7 @@ download: https://huggingface.co/api/datasets/mteb/amazon_reviews_multi/parquet/
 license: Amazon MARC license (non-commercial research)
 version: Multilingual Amazon Reviews Corpus, English test split (5,000 reviews, 1,000 per star)
 target: 200
+target_phase6: 4000 (ASKJEV_TARGET_AMAZON_REVIEWS) + 1,500 (ASKJEV_EXTRA_AMAZON_REVIEWS)
 hemisphere: machine
 shape: score
 notes: >
@@ -11,3 +12,4 @@ notes: >
   situations (warns others away / let down / torn / pleased with a minor reservation / delighted).
   Truth = stars - 1 (the reviewer's own rating). State review = title + body as in the MTEB mirror.
   40-1,500 chars, case-insensitive dedup, seeded 40 per star.
+  Phase 6: the original 200 plus a per-star hash-order top-up to 800 per star. Secondary template amazon.topic: Choice main topic of complaint or praise over {quality, price, shipping, fit_size, customer_service, other}, no truth, on 1,500 of the sampled reviews.

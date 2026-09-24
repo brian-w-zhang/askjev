@@ -1,0 +1,37 @@
+C|p|When you were a child, which parent did you usually go to with a problem?|mother;father;either_one;a_grandparent;an_older_sibling;nobody
+C|p|Which parent are you more like?|my_mother;my_father;both_equally;neither;a_grandparent_more_than_either
+C|p|When your family argues, how do you usually react?|speak_up_right_away;go_quiet;leave_the_room;try_to_calm_everyone;crack_a_joke;take_a_side
+C|p|How did your parents mostly discipline you as a child?|grounding;taking_away_things;yelling;long_talks;time_outs;they_rarely_disciplined_me
+C|t|Which holiday do you most enjoy spending with family?|winter_holidays;thanksgiving_style_harvest_meal;new_year;a_spring_holiday;summer_holidays;birthdays
+C|t|Which dish would you most want at a family holiday meal?|a_roast;a_family_casserole;homemade_pie;dumplings;a_big_salad;grandma_s_signature_dish
+C|s|At a typical family holiday dinner, what do most families end up arguing about?|current_events;money;old_grudges;who_does_the_dishes;the_food;nothing_much
+C|s|What do you think is the most common reason adult siblings drift apart?|distance;different_lifestyles;spouses;an_old_fight;money;simply_busy_lives
+C|s|What do you think most new parents find hardest?|lack_of_sleep;less_time_for_themselves;money;changes_to_their_relationship;constant_worry;unsolicited_advice
+C|s|What do most grandparents enjoy most about grandchildren?|playing_with_them;spoiling_them;giving_them_back_at_the_end_of_the_day;passing_on_stories;watching_them_grow
+C|s|What do most teenagers complain about most at home?|chores;curfews;screen_limits;lack_of_privacy;siblings;being_nagged
+C|t|Which family board or card game would you pick for a holiday night?|monopoly_style_trading_game;a_card_game;a_word_game;charades;a_trivia_game;a_puzzle
+C|p|What did you most want to be allowed to do as a kid that your parents forbade?|stay_up_late;eat_junk_food;have_a_pet;play_video_games;go_out_alone;dye_my_hair;nothing_they_were_relaxed
+C|p|How do you usually spend time with your grandparents or older relatives?|over_meals;on_the_phone;watching_tv_together;helping_with_errands;hearing_their_stories;rarely_at_all
+S|p|How much do you feel responsible for keeping your family together?|Not at all;A little, I show up when asked;Somewhat, I help plan gatherings;A lot, I keep everyone in touch;Completely, I am the one who holds it all together
+S|p|How often do you visit your parents' home?|Almost never;For major holidays only;A few times a year;Monthly;Every week or more
+S|p|How homesick do you get when away from family?|Never;Only after a very long time;Now and then on holidays;Often;Constantly
+S|t|How much do you enjoy family photo sessions?|I avoid them;I tolerate them;They are fine;I enjoy them;I organize them
+S|p|How much do you rely on your siblings for emotional support?|Not at all;Only in a crisis;Now and then;Often;They are my main support
+S|p|How protective are you of your younger relatives?|Not at all;A little;Moderately;Very;Fiercely, like a parent
+S|s|How many families do you think still eat dinner together most nights?|Almost none;A small minority;About half;Most;Nearly all
+S|s|How common do you think it is for adult children to live with their parents?|Very rare;Uncommon;Fairly common;Very common;The norm
+S|s|How often do you think grandparents quietly break the parents' rules?|Never;Rarely;Sometimes;Often;Almost always
+S|p|How much do you plan to raise children the way your parents raised you?|Not at all;A little;About half;Mostly;Exactly the same
+S|t|How much do you enjoy cooking big meals for family?|I never do it;I help only if asked;I enjoy it now and then;I love it;It is my favorite part of family life
+S|p|How much do you tease your siblings?|Never;Rarely;Sometimes;Often;Constantly
+S|p|How much do you still turn to your parents for advice?|Never;Only for big crises;Sometimes;Often;For almost every decision
+N|p|Are you the oldest child in your family?
+N|p|Did your parents often compare you with a sibling or cousin?
+N|p|Do you have a nickname only your family uses?
+N|p|Have you ever lived with your grandparents?
+N|p|Did your family have a pet when you were growing up?
+N|p|Do you call your parents more often than they call you?
+N|t|Would you rather host a family holiday than travel to one?
+N|t|Would you enjoy a family vacation with your extended family?
+N|s|Do you think most parents secretly have a favorite child?
+N|s|Do you think most people become more like their parents as they age?

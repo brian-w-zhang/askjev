@@ -4,6 +4,7 @@ download: https://huggingface.co/datasets/takala/financial_phrasebank/resolve/ma
 license: CC-BY-NC-SA-3.0
 version: FinancialPhraseBank v1.0, Sentences_AllAgree (2,264 sentences, unanimous annotator label)
 target: 200
+target_phase6: 2200 (ASKJEV_TARGET_FINANCIAL_PHRASEBANK)
 hemisphere: machine
 shape: classify
 notes: >
@@ -12,3 +13,4 @@ notes: >
   finance background). Light detokenization, case-insensitive dedup, seeded 67/67/66 across labels.
   File is latin-1 encoded. Node is machine.finance.risk_scoring (financial documents turned into risk
   indicators); the finance L2s do not have a dedicated news-sentiment leaf.
+  Phase 6: the balanced 200 plus a hash-order top-up across labels (follows the natural mix: 1,354 neutral / 552 positive / 294 negative).

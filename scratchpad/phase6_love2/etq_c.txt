@@ -1,0 +1,142 @@
+C|v|How should you tip when a restaurant server gave terrible service?|the_usual_tip;a_smaller_tip;no_tip;the_usual_tip_and_a_word_with_the_manager;a_note_explaining_why
+C|v|Who should you tip when staying at a hotel?|housekeeping;the_bellhop;the_doorman;the_concierge;room_service_staff;nobody_beyond_the_bill
+C|v|Which service worker do you think deserves a tip the most?|restaurant_server;delivery_driver;hairdresser;taxi_driver;bartender;movers;hotel_housekeeper
+C|v|How should you tip a bartender for a single drink?|a_little_cash_per_drink;a_percentage_of_the_bill;round_up;no_tip_for_one_drink;tip_at_the_end_of_the_night
+C|v|What should you do when a tip screen appears at a self-service kiosk?|always_tip;skip_it;tip_only_if_someone_helped;pick_the_lowest_option;feel_guilty_and_tip
+C|v|When you split a restaurant bill with friends, how should the tip be handled?|split_evenly;each_tips_on_their_share;the_person_who_ordered_most_tips_more;one_person_covers_it_and_gets_repaid
+C|v|What should a host do with a bottle of wine a guest brings?|open_it_that_night;save_it_for_later;ask_the_guest_what_they_prefer;put_it_away_without_comment
+C|v|What should a host do with flowers a guest brings to dinner?|put_them_in_water_right_away;set_them_aside_until_later;thank_them_and_leave_them_in_the_wrapper;hand_them_to_someone_else_to_handle
+C|v|What should you give as a wedding gift when there is no registry?|cash_or_a_check;a_practical_home_item;an_experience;a_handmade_gift;ask_the_couple;nothing
+C|v|What is the best way to give a cash gift?|in_a_card;by_bank_transfer;in_a_decorated_envelope;hand_it_over_in_person;a_gift_card_instead
+C|t|Which gift would you most like to receive for your birthday?|cash;a_gift_card;a_surprise_item;an_experience;something_homemade;a_charity_donation_in_my_name;nothing
+C|v|How long do you have to send a thank-you note after a wedding?|within_a_week;within_a_month;within_a_few_months;within_a_year;anytime_is_fine
+C|v|What is the best way to say thank you for a thoughtful favor?|a_handwritten_note;a_text;a_phone_call;a_small_gift;returning_the_favor;saying_it_in_person
+C|v|When should you open a gift someone hands you in person?|right_away_in_front_of_them;later_in_private;whatever_the_giver_prefers;at_the_end_of_the_party
+C|v|What should you say when you receive a gift you already own?|pretend_it_is_new_to_you;tell_the_truth_and_thank_them;ask_for_the_receipt;say_nothing_and_regift_it_later
+C|v|What should you do when someone gives you a gift and you didn't get them one?|thank_them_warmly;apologize;get_them_something_later;explain_you_did_not_expect_it
+C|v|What should you do when you RSVP yes and then can't go?|tell_the_host_as_soon_as_possible;send_a_gift;just_not_show_up;send_someone_in_your_place;apologize_after
+C|v|What is the best way to invite people to a casual party?|a_group_text;individual_texts;a_phone_call;an_online_invitation;a_social_media_event;telling_them_in_person
+C|v|What should a host do when a guest arrives very early?|welcome_them_in;give_them_a_task;ask_them_to_wait_outside;finish_getting_ready_while_they_wait
+C|v|What should a host do when a guest arrives very late to a dinner?|serve_them_what_is_left;start_the_next_course_without_them;keep_food_warm_for_them;say_something_about_it;act_like_nothing_happened
+C|v|How should you signal to a guest that it is time to leave?|start_cleaning;yawn_and_mention_the_time;say_it_directly;stop_refilling_drinks;walk_them_to_the_door
+C|v|What should a guest do after staying overnight at someone's home?|strip_the_bed;make_the_bed;leave_it_as_is;ask_the_host_what_they_prefer;wash_the_sheets
+C|v|What is the best thank-you for a weekend houseguest stay?|a_handwritten_note;a_gift_left_behind;treating_the_host_to_a_meal;a_text_afterward;inviting_them_back
+C|v|What should a houseguest do about groceries during a long stay?|buy_some_groceries;cook_a_meal;offer_money;eat_what_is_offered;take_the_host_out_to_eat
+C|v|What should you do when your host serves a dish you are allergic to?|explain_the_allergy_politely;quietly_skip_it;eat_around_it;eat_it_anyway;leave_early
+C|v|When should you tell a host about a dietary restriction?|when_you_rsvp;a_day_before;at_the_meal;never_eat_around_it;bring_your_own_food
+C|v|What is the proper way to eat bread at a formal dinner?|tear_off_small_pieces;bite_the_whole_roll;butter_the_whole_thing_first;skip_bread_at_formal_dinners
+C|v|Where should your napkin go during a meal?|on_your_lap;tucked_into_your_collar;on_the_table;on_your_chair_when_you_step_away
+C|v|What should you do with your elbows at the dinner table?|keep_them_off_the_table_always;allowed_between_courses;put_them_wherever_you_like;off_while_eating_on_while_talking
+C|v|What should you do when you need to leave the table during a meal?|say_excuse_me;just_leave;wait_until_everyone_is_done;announce_where_you_are_going
+C|v|What is the polite way to pass dishes at a family-style meal?|to_the_right;to_the_left;either_direction;whoever_asks_first;the_host_serves_everyone
+C|v|What should you do if food is stuck in your teeth at dinner?|excuse_yourself_to_the_restroom;use_a_toothpick_at_the_table;ignore_it;cover_your_mouth_and_fix_it
+C|v|What should you do when you notice food on someone's face?|tell_them_quietly;gesture_at_your_own_face;hand_them_a_napkin;say_nothing
+C|v|What should you do when you spill a drink at someone's home?|clean_it_up_right_away;tell_the_host;offer_to_pay_for_cleaning;pretend_it_did_not_happen
+C|v|What is the polite way to eat noodle soup at a restaurant?|slurp_quietly;slurp_loudly;no_slurping;twirl_on_a_spoon;it_depends_on_the_cuisine
+C|v|Who should start eating first at a dinner party?|the_host;the_eldest_guest;the_guest_of_honor;everyone_once_all_are_served;whoever_gets_food_first
+C|v|What should you do with your phone at a restaurant with friends?|put_it_away;face_down_on_the_table;keep_it_on_silent_in_your_pocket;use_it_freely;check_it_only_for_urgent_things
+C|v|What should you do when you get a call during dinner with friends?|ignore_it;answer_and_step_away;answer_at_the_table;text_that_you_will_call_back;decline_it_and_apologize
+C|v|What should you do when someone near you on a train is on a loud phone call?|ask_them_to_lower_their_voice;move_seats;put_on_headphones;give_them_a_look;put_up_with_it
+C|v|What is the rudest thing to do on a phone in public?|speakerphone_calls;loud_video_calls;playing_videos_without_headphones;taking_photos_of_strangers;texting_while_walking_into_people
+C|v|What is the polite way to end a phone call that is dragging on?|say_you_have_to_go;make_an_excuse;say_goodbye_warmly;let_the_line_drop;wait_for_them_to_end_it
+C|v|How should you answer a phone call from an unknown number?|hello;my_name;who_is_this;let_it_ring
+C|v|How long should you wait before calling back a missed call from a friend?|right_away;within_the_hour;the_same_day;within_a_few_days;only_if_they_leave_a_message
+C|v|What should you do when a friend leaves you on read?|message_again;wait_patiently;call_them;ask_if_everything_is_okay;ignore_it
+C|t|How do you prefer to be contacted by friends?|text;phone_call;voice_note;video_call;social_media_messages;email;in_person
+C|v|When is it acceptable to call someone without texting first?|anytime;only_family;only_close_friends;only_in_an_emergency;never
+C|v|What should you do when you realize you were on mute during a video call?|repeat_what_you_said;make_a_joke;apologize_and_move_on;say_nothing
+C|v|How early should you arrive for a dinner reservation with friends?|right_on_time;a_few_minutes_early;a_little_late_is_fine;it_depends_on_who_booked
+C|v|What should you do when a friend is always late?|tell_them_an_earlier_time;talk_to_them_about_it;leave_after_a_while;start_without_them;accept_it
+C|v|How early should you arrive for a formal event like a wedding?|well_before_it_starts;just_before_it_starts;exactly_on_time;a_little_late
+C|v|What should you do when you're running late for a job interview?|call_ahead;email_ahead;arrive_and_apologize;reschedule;show_up_and_say_nothing
+C|v|What is the proper way to say sorry for a mistake that hurt a friend?|in_person;by_phone;by_text;a_handwritten_letter;with_a_gift
+C|v|What makes an apology feel sincere to you?|taking_full_responsibility;no_excuses;a_promise_to_change;changed_behavior;saying_it_in_person;a_gift
+C|v|What should you do when someone apologizes to you but you're still upset?|accept_it_anyway;say_you_need_time;tell_them_you_are_still_upset;refuse_the_apology;act_like_it_is_fine
+C|v|Which apology phrase annoys you most?|sorry_if_you_were_offended;sorry_but;mistakes_were_made;my_bad;i_am_sorry_you_feel_that_way
+C|v|What is the polite response when someone compliments you?|a_simple_thank_you;return_the_compliment;downplay_it;explain_where_you_got_it
+C|v|What is the best way to greet a friend's parents?|handshake;hug;wave;a_verbal_hello;follow_their_lead
+C|v|How should you introduce two people who don't know each other?|say_both_names;add_something_they_share;let_them_introduce_themselves;introduce_the_older_one_first
+C|v|What is the best way to greet a new colleague from another country?|handshake;bow_or_nod;a_smile_and_hello;follow_their_lead;research_their_custom_first
+C|v|How firm should a handshake be?|light;medium;firm;very_firm;match_the_other_person
+C|v|Which greeting do you prefer from an acquaintance?|handshake;hug;cheek_kiss;wave;nod;fist_bump
+C|v|What should you do when someone goes for a hug and you expected a handshake?|hug_them;turn_it_into_a_handshake;awkward_half_hug;laugh_it_off
+C|v|What should you do when you see an acquaintance across a store?|say_hello;wave_from_afar;pretend_not_to_see;walk_over_for_a_chat;avoid_that_aisle
+C|v|Who should hold the elevator for whom?|whoever_is_inside_holds_it;whoever_is_closest_to_the_button;nobody;only_for_people_with_bags
+C|v|Who should get off a crowded bus first?|people_nearest_the_door;elderly_people;parents_with_children;everyone_else_waits_for_those_exiting
+C|v|What should you do when someone ahead of you in line lets you go first?|thank_them_and_go;decline_politely;pay_it_forward;insist_they_go
+C|v|What should you do when someone lets a door close in your face?|say_something;ignore_it;mutter_under_your_breath;give_them_a_look
+C|v|Which public behavior annoys you most?|loud_phone_calls;cutting_in_line;blocking_the_sidewalk;littering;spitting;not_covering_a_cough
+C|v|What should you do when you accidentally bump into someone?|say_sorry;say_excuse_me;keep_walking;give_a_nod
+C|v|What is the polite way to walk on a busy sidewalk?|keep_to_the_right;keep_to_the_left;walk_in_the_middle;single_file;no_rule
+C|v|Where should you stand on an escalator?|stand_on_one_side_walk_on_the_other;anywhere;walk_always;stand_in_the_middle
+C|v|What should you do when you sneeze in public?|cover_with_your_elbow;cover_with_your_hand;cover_with_a_tissue;say_excuse_me;nothing
+C|v|What should you do when you have a cold and must go out?|wear_a_mask;stay_home_if_possible;keep_distance;go_as_normal
+C|v|What should you do when someone is talking loudly in a library?|shush_them;ask_them_politely_to_quiet_down;tell_the_librarian;move_away;ignore_it
+C|v|How should you ask a stranger to take your photo?|politely_ask_someone_nearby;offer_to_take_theirs_first;ask_someone_who_looks_friendly;do_not_ask;use_a_selfie_stick
+C|v|What is the polite way to eat on a crowded train?|small_quiet_snacks_only;anything_goes;nothing_at_all;only_food_that_does_not_smell
+C|v|What should you do when someone puts their feet on the seat next to you on a train?|ask_them_to_move_their_feet;give_them_a_look;tell_a_conductor;ignore_it
+C|v|What should you do when someone is watching a video without headphones on a plane?|ask_them_to_use_headphones;tell_the_flight_attendant;put_on_your_own_headphones;put_up_with_it
+C|v|Who should get the window shade decision on a plane?|window_seat_passenger;majority_of_the_row;whoever_asks_first;flight_attendant
+C|v|What should you do when the passenger behind you keeps kicking your seat?|turn_and_ask_them_to_stop;tell_the_flight_attendant;recline_further;put_up_with_it
+C|v|What should you do when someone takes your reserved seat on a train?|politely_show_your_ticket;find_another_seat;call_the_conductor;stand_until_they_leave
+C|v|What is the polite way to get past people in a movie theater row?|face_them;face_the_screen;wait_for_a_break_in_the_movie;apologize_as_you_go
+C|v|What should you do when your phone rings during a movie?|silence_it_immediately;step_out_to_answer;answer_quietly;let_it_ring
+C|v|What should you do when someone near you is talking during a movie?|shush_them;ask_them_to_stop;tell_the_staff;move_seats;ignore_it
+C|v|What should you do when you need to cough during a concert?|step_out;cough_into_your_elbow;wait_for_a_loud_part;hold_it_in
+C|v|Which is the rudest thing to do at a concert?|filming_the_whole_show;talking_loudly;standing_when_others_sit;singing_loudly_off_key;pushing_to_the_front
+C|v|What should you do with a gift receipt?|include_it_with_every_gift;include_it_only_for_clothes;never_include_it;keep_it_in_case_they_ask
+C|v|What should you do with a wedding invitation you can't attend?|decline_and_send_a_gift;decline_without_a_gift;ignore_it;send_a_card
+C|v|How much notice should a party host give guests?|a_few_days;a_week;a_couple_of_weeks;a_month_or_more;it_depends_on_the_party
+C|v|What should you bring to a potluck when you can't cook?|store_bought_food;drinks;plates_and_napkins;ice;dessert_from_a_bakery;nothing_just_help_clean
+C|v|What is the best way to leave a big party?|say_goodbye_to_the_host;slip_out_quietly;say_goodbye_to_everyone;text_the_host_later
+C|v|What should a host do when two guests start arguing at dinner?|change_the_subject;separate_them;ask_them_to_take_it_outside;let_them_finish;make_a_joke
+C|v|What should you do when you forget a friend's birthday?|apologize_and_celebrate_late;send_a_gift;act_like_you_remembered;say_nothing
+C|v|What is the best way to wish a friend happy birthday?|a_phone_call;a_text;a_social_media_post;a_card;in_person;a_gift
+C|v|How should you sign a birthday card for a coworker you barely know?|just_your_name;a_short_generic_wish;a_funny_line;a_personal_note
+C|v|What should you do when a friend asks for your honest opinion on their outfit and you dislike it?|tell_the_truth_kindly;say_it_looks_great;suggest_a_small_change;dodge_the_question
+C|v|What should you do when someone asks personal questions you don't want to answer?|politely_decline;change_the_subject;give_a_vague_answer;make_a_joke;tell_the_truth
+C|v|Which question is rudest to ask someone you just met?|what_they_earn;how_old_they_are;why_they_are_single;what_they_weigh;whether_they_have_kids;what_their_religion_is
+C|v|What should you do when a stranger mispronounces your name?|correct_them_politely;let_it_go;correct_them_only_if_you_will_meet_again;laugh_about_it
+C|v|What is the best way to decline a food someone offers you?|no_thank_you;say_you_are_full;say_you_have_an_allergy;take_it_and_not_eat_it
+C|v|What should you do when a friend's pet jumps on you?|pet_it;gently_push_it_away;ask_the_owner_to_call_it;say_nothing
+C|v|What should you do when your child misbehaves at someone else's home?|correct_them_right_away;apologize_to_the_host;take_them_outside;leave_early;let_the_host_decide
+C|v|When is it okay to bring children to a party?|only_when_they_are_invited;always_if_it_is_a_family_friend;never_without_asking;only_to_daytime_parties
+C|v|How should you respond to a wedding invitation that says adults only?|leave_the_kids_at_home;ask_for_an_exception;decline;bring_them_anyway
+C|v|What should you do when a friend always forgets to pay you back?|remind_them;send_a_payment_request;stop_covering_them;let_it_go;bring_it_up_in_front_of_others
+C|v|How soon should you pay back a friend who covered your meal?|immediately;the_same_day;within_a_week;next_time_you_go_out;whenever_you_remember
+C|v|What should you do when a friend's cooking is bad at a dinner they host?|eat_it_and_compliment_something;eat_it_quietly;eat_little_and_fill_up_later;tell_them_honestly_later
+C|v|What should you bring when visiting someone in the hospital?|flowers;a_book;snacks;a_card;nothing_just_come;check_what_is_allowed_first
+C|v|How long should you stay when visiting someone in the hospital?|a_short_visit;an_hour_or_so;as_long_as_you_like;as_long_as_they_want
+C|v|What should you bring to a funeral?|flowers;a_card;food_for_the_family;a_donation;nothing
+C|v|What should you wear to a funeral?|black;dark_colors;whatever_the_family_asks;normal_clothes;bright_colors_in_celebration
+C|v|What should you say to someone who has lost a loved one?|i_am_so_sorry;let_me_know_if_you_need_anything;share_a_memory;nothing_just_a_hug;i_know_how_you_feel
+C|v|How soon should you send condolences after hearing of a death?|right_away;within_a_week;before_the_funeral;whenever_you_can
+C|v|What should you do when you see a friend in public with someone they might not want to be seen with?|say_hello_normally;pretend_not_to_see;text_them_later;wave_from_afar
+C|v|What should you do when someone next to you at a restaurant is being loud?|ask_them_to_quiet_down;ask_the_server_to_help;move_tables;ignore_it
+C|v|What should you do when a server brings you a drink you didn't order?|send_it_back;drink_it_and_mention_it;keep_it_and_pay;keep_it_and_refuse_to_pay
+C|v|How should you get a busy server's attention?|make_eye_contact;raise_a_hand;say_excuse_me;wave;snap_your_fingers;wait_for_them_to_come_by
+C|v|What should you do when your meal at a restaurant is cold?|send_it_back;eat_it_and_complain_later;eat_it_and_say_nothing;ask_for_a_discount
+C|v|What should you do when a friend's child is rude to you?|correct_them_gently;tell_the_parent;ignore_it;be_rude_back_jokingly
+C|v|What is the polite way to use a shared armrest at the movies?|first_come_first_served;share_it_front_and_back;leave_it_to_the_person_on_the_aisle;never_use_it
+C|v|What should you do when you disagree with a friend's parenting in front of you?|say_nothing;mention_it_privately;speak_up_right_away;make_a_joke
+C|v|What should you do when a guest overstays at your home?|hint_about_the_time;ask_them_directly_to_leave;start_cleaning;let_them_stay
+C|v|What should you do when your neighbor waves and you don't remember their name?|wave_back;ask_their_name;call_them_neighbor;pretend_not_to_see
+C|v|What is the best way to respond to an invitation you're unsure about?|say_maybe;ask_for_time;say_yes_and_decide_later;say_no;ignore_it
+C|v|How should you ask a friend to return something they borrowed?|ask_directly;hint_at_it;ask_them_to_bring_it_next_time;let_it_go
+C|v|What is the polite way to ask guests to bring something to your party?|ask_everyone;suggest_it_on_the_invite;only_ask_close_friends;never_ask
+C|v|What should you do when a friend posts an unflattering photo of you?|ask_them_to_take_it_down;untag_yourself;comment_a_joke;say_nothing
+C|v|What should you do when you accidentally like an old photo while scrolling someone's profile?|unlike_it_right_away;leave_it;message_them_about_it;log_off_in_shame
+C|v|When should you take off a hat indoors?|always;at_meals;in_places_of_worship;only_if_asked;never
+C|v|What should you do when you get to a party and don't know anyone?|introduce_yourself;find_the_host;stand_near_the_food;leave_early;wait_for_someone_to_approach
+C|v|Which gift is inappropriate for a coworker?|clothing;perfume;alcohol;cash;a_personal_book;none
+C|v|What should you do when a gift arrives broken in the mail?|tell_the_sender;contact_the_store_quietly;thank_them_and_say_nothing;throw_it_out
+C|v|What is the polite way to leave a group conversation at a party?|say_excuse_me;say_you_need_a_drink;wait_for_a_pause;just_walk_away;bring_someone_in_to_replace_you
+C|v|How should you respond when a stranger asks for directions and you don't know?|say_you_do_not_know;look_it_up_on_your_phone;point_them_somewhere_anyway;ask_someone_else
+C|v|What should you do when someone offers you their seat on the bus and you don't need it?|accept_to_be_polite;decline_with_thanks;decline_and_explain
+C|v|What should you do when your dog barks at someone on a walk?|apologize;pull_the_dog_away;say_it_is_friendly;keep_walking
+C|v|What should you do when you realize you took someone else's order at a counter?|give_it_back_right_away;tell_staff;keep_it_if_it_is_similar;offer_to_pay
+C|v|How should you ask someone to stop smoking near you?|ask_politely;move_away;cough_pointedly;tell_security;put_up_with_it
+C|v|What should you do when you get a gift card to a store you never use?|use_it_anyway;regift_it;sell_it;leave_it_in_a_drawer;tell_the_giver
+C|v|What is the polite way to refuse a second helping from a host?|say_you_are_full;say_it_was_delicious_but_no;take_a_tiny_bit;accept_anyway
+C|v|What should you do when someone gives a toast you don't agree with?|raise_your_glass_anyway;stay_still;leave_the_room;speak_up_after
+C|v|What is the best way to thank a teacher at the end of the year?|a_card;a_small_gift;a_group_gift_from_the_class;a_thank_you_in_person;nothing

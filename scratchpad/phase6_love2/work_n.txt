@@ -1,0 +1,78 @@
+N|v|Should you bring treats to the office on your own birthday?
+N|v|Should you tell your boss you're job hunting?
+N|v|Is it rude to wear headphones all day at work?
+N|v|Should you give your boss a holiday gift?
+N|v|Is it okay to hug a coworker?
+N|v|Should you attend a coworker's funeral if you weren't close?
+N|v|Is it okay to ask a coworker how old they are?
+N|v|Is it okay to cry at work?
+N|v|Should you apologize to a coworker for a mistake nobody noticed?
+N|v|Is it okay to decline a coworker's request to follow you on social media?
+N|v|Should a manager attend a team member's wedding?
+N|v|Is it fine to vent about your job to coworkers?
+N|v|Is it okay to sell raffle tickets for your child's school at work?
+N|v|Should you correct your boss in front of others?
+N|v|Is it okay to leave work early when the boss is away?
+N|v|Is it okay to ask a coworker to swap vacation days?
+N|v|Should you sign a group card for a coworker you've never met?
+N|v|Is it okay to microwave fish in the office kitchen?
+N|v|Should you text a coworker on the weekend about work?
+N|v|Is it okay to decline a team dinner that falls on your evening off?
+N|v|Should you keep a friendship going with a coworker after one of you leaves the company?
+N|v|Is it okay to bring your dog to work if it's allowed?
+N|v|Is it okay to skip a coworker's retirement party?
+N|v|Should you tell a new coworker which colleagues to avoid?
+N|v|Is it fine to call your boss by a nickname?
+N|v|Should managers know their employees' birthdays?
+N|v|Is it okay to ask for a raise after only a short time on the job?
+N|v|Should you shovel snow from an elderly neighbor's walkway without asking?
+N|v|Should you tell a neighbor that their dog got loose?
+N|v|Is it okay to pick fruit from a neighbor's tree that hangs over your fence?
+N|v|Should you give neighbors a heads-up before throwing a party?
+N|v|Is it okay to hang laundry outside where neighbors can see it?
+N|v|Should you return a neighbor's borrowed dish with something in it?
+N|v|Is it okay to use a neighbor's open wifi without asking?
+N|v|Should you knock on a neighbor's door to complain rather than leave a note?
+N|v|Is it okay to peek into a neighbor's window when their lights are on?
+N|v|Should neighbors exchange phone numbers?
+N|v|Is it okay to feed a neighbor's cat when it wanders into your yard?
+N|v|Is it okay to let your dog use a neighbor's lawn?
+N|v|Should you tell a neighbor when their car alarm is going off?
+N|v|Is it okay to put up a tall fence without talking to your neighbor?
+N|v|Should you give neighbors holiday cards?
+N|v|Should community members be expected to attend local town meetings?
+N|v|Is it okay to join a club just to meet potential business contacts?
+N|v|Should a book club member finish the book before every meeting?
+N|v|Is it okay to quit a volunteer role without notice?
+N|v|Should a club have a written code of conduct?
+N|v|Is it okay to bring a friend to a club meeting without asking?
+N|v|Should long-time members of a club get special privileges?
+N|v|Is it okay to leave a group chat without saying goodbye?
+N|v|Should you volunteer if your only goal is to boost your resume?
+N|v|Is it okay to ask classmates to share their grades?
+N|v|Should you help a classmate who is struggling even if it hurts your grade curve?
+N|v|Is it okay to ask a stranger online for career advice?
+N|v|Should you accept a connection request from someone you've never met?
+N|v|Is it okay to ask for a favor from someone you met only once at an event?
+N|v|Should you tell online friends your real name?
+N|v|Should you split rent with a roommate based on room size?
+N|v|Is it okay to eat a roommate's food if you replace it later?
+N|v|Should roommates have a written agreement?
+N|v|Is it okay to have a partner sleep over often in a shared apartment?
+N|p|Have you ever had a serious conflict with a neighbor?
+N|p|Have you ever been part of a sports league or team as an adult?
+N|p|Do you belong to any club or community group right now?
+N|p|Have you ever made a lasting friend through an online community?
+N|p|Have you ever cried at work?
+N|p|Would you want to be your team's manager someday?
+N|p|Have you ever reported a coworker to a manager?
+N|p|Do you usually go to your workplace's social events?
+N|p|Have you ever left a job because of a coworker?
+N|p|Have you ever lent money to a coworker?
+N|p|Do you have a mentor?
+N|p|Have you ever mentored someone?
+N|p|Have you ever volunteered in your community?
+N|p|Would you run for a local community board?
+N|p|Have you ever lived with a roommate you didn't get along with?
+N|p|Do you have a nickname at work?
+N|t|Would you rather live in an apartment building than a house with no shared walls?

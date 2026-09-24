@@ -1,0 +1,52 @@
+name: openpsych
+url: https://openpsychometrics.org/_rawdata/
+license: >
+  Open Psychometrics raw data (no license stated on the data page). Item texts come from each zip's codebook,
+  except GCBS (Brotherton, French & Pickering 2013, Table A1) and Grit-12 (Duckworth et al. 2007), whose
+  codebooks only give item numbers or first words; those texts are in the adapter.
+version: >
+  27 zips from openpsychometrics.org/_rawdata (fetched 2026-09-24): 16PF, HEXACO, AMBI_data_Dec2019, AS+SC+AD+DO,
+  CFCS, DASS_data_21.02.19, ECR-data-1March2018, EQSQ, FBPS-ValidationData, FTI-data, GCBS, HSNS+DD, HSQ, KIMS,
+  MACH_data, MIES_Dev_Data, NIS_data, NPAS-data-16December2018, NPI, NR-6-data-OSPP2024, OHBDS-data,
+  OSRI44_dev_data, PWE_data, RIASEC_data12Dec2018, RSE, SD3, Wagner, duckworth-grit-scale-data
+target: 1234
+hemisphere: self
+kind: personality (values for GCBS, NR-6, PWE)
+notes: >
+  One question per distinct item statement, every item of every included instrument (no sampling), each with a
+  per-item response distribution over the respondents who gave a valid answer to that item
+  (population "OpenPsychometrics web (<instrument>)"). An item that appears in several instruments is one
+  question with one HumanDist per instrument (meta.also_in). Items identical to the 50 IPIP Big-Five markers
+  are skipped (sources/ipip has them with n=603k). Other items whose wording matches an item in sources/ipip get
+  the same question id on purpose, so ingest attaches these distributions to the existing ipip questions.
+
+  Framing: first-person statements are asked "How well does this statement describe you"; statements about
+  people or the world (MACH-IV, PWE, GCBS, SD3 maxims, 4 FTI items) are asked "How much do you agree";
+  HSQ/KIMS/NIS use "How often is this statement true of you"; DASS uses "over the past week"; RIASEC asks
+  "How much would you enjoy this work activity". NPI-40 and the FTI's 6 forced-choice items are choice
+  questions with the two statements as options; the Wagner Preference Inventory is a 4-option choice.
+  Scales: 5-point scales map 1..5 -> levels 0..4. 7-point scales (HEXACO, AMBI, TIPI) collapse to 5 levels
+  1->0, 2-3->1, 4->2, 5-6->3, 7->4. 4-point scales without a midpoint (EQ/SQ, FTI, RSE, DASS) keep 4 levels.
+  Grit's "Very much like me (1) .. Not like me at all (5)" is reversed onto levels 4..0. meta.level_map records the
+  mapping and meta.scale_raw the original labels.
+
+  meta.keyed is relative to meta.scale's named pole (e.g. "C: Emotional Stability", "Attachment anxiety").
+  keyed_from "published" = the instrument's scoring key (codebook scoring code or the source paper);
+  "data" = signs of item vs rest-score correlations within the scale on up to 50k complete responses, oriented
+  by a known anchor item (item 1 of each HEXACO facet, 16PF factor, etc.). The method reproduces the published
+  Grit-12 key exactly. AMBI and FBPS have no subscale key (keyed null). node_hint follows the instrument's
+  domain (16PF/HEXACO factors -> the closest Big Five trait, HEXACO H -> big_five parent; dark_side for
+  NPI/MACH/SD3/HSNS/Dirty Dozen; interests for RIASEC/Wagner; humor_style for HSQ; emotions_stress for DASS,
+  KIMS, EQ; romance_partnership for ECR; motivation_ambition for Grit/PWE; epistemics for GCBS).
+
+  Flags: DASS items are all "sensitive", plus items on worthlessness/meaninglessness or physical attacks.
+  "political": GCBS items about governments or secret control of world politics (1,2,6,7,11,12), religion items
+  (16PF F3, AMBI 53/54/156), voting (AMBI 76), the national anthem (16PF F5), euthanasia (MACH-IV 19).
+  Dropped: SD3 P8 (sexual). 16PF P10 has no text in the codebook.
+
+  Not included: IPIP-FFM and BIG5 (sources/ipip); RWAS (political authoritarianism); MSSCQ and SCS (sexual
+  self-concept / sexual compulsivity, out of scope); TMA (Taylor Manifest Anxiety) and WPI (Woodworth
+  Psychoneurotic Inventory), clinical screening with somatic symptom items; FPS (item texts not in the
+  codebook, and contested politics); APS (image pairs); EBFMT (memory test, HEXACO-PI-R stems truncated);
+  itemsgen (free text); MGKT, VIQT, IQ1, FSIQ, SENTANCES, randomnumber (ability/knowledge tests, not Self);
+  LSRP (zip returns 404).

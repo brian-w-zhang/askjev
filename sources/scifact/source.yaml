@@ -4,6 +4,7 @@ download: https://huggingface.co/datasets/allenai/scifact/tree/refs%2Fconvert%2F
 license: CC-BY-NC-2.0
 version: SciFact v1 train + validation claims (1,711 claim rows), corpus of 5,183 abstracts
 target: 200
+target_phase6: all that fit (ASKJEV_TARGET_SCIFACT=100000 -> 646)
 hemisphere: machine
 shape: verify
 notes: >
@@ -14,3 +15,4 @@ notes: >
   dataset's NOINFO convention). Pairs are deduped on (claim id, doc id) and kept only when claim +
   evidence fit in 1,500 chars (evidence never truncated). Seeded, balanced 67/67/66. The HF repo is
   script-based, so files come from its auto-converted parquet branch. Test claims are unlabelled.
+  Phase 6: the balanced 200 plus a hash-order top-up across labels until the pool runs out (646 after 4 exact duplicate claim/evidence pairs; unbalanced: 291 says_nothing, 258 supports, 97 contradicts).

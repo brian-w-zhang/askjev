@@ -1,0 +1,87 @@
+N|v|Is it rude to not tip a restaurant server?
+N|v|Should you tip the owner of a salon who cuts your hair?
+N|v|Is it okay to tip less when paying with a card?
+N|v|Should you tip on the total before or after a discount?
+N|v|Is it rude to leave coins as a tip?
+N|v|Should you tip a flight attendant?
+N|v|Should you tip a mail carrier at the holidays?
+N|v|Is it okay to give cash as a birthday gift?
+N|v|Should you bring a gift to a baby shower you can't attend?
+N|v|Is it rude to ask for a specific gift?
+N|v|Is it okay to return a gift someone gave you?
+N|v|Should you send a thank-you note for a birthday gift?
+N|v|Is it rude to open gifts at a child's birthday party in front of everyone?
+N|v|Is it okay to give a gift card as a wedding present?
+N|v|Should you bring a gift to a housewarming party?
+N|v|Is it rude to give a used item as a gift?
+N|v|Is it okay to put a price tag limit on a holiday gift exchange?
+N|v|Should you RSVP to a child's birthday party?
+N|v|Is it rude to ask who else is invited before RSVPing?
+N|v|Is it okay to decline an invitation without giving a reason?
+N|v|Is it rude to invite some coworkers but not others to a party?
+N|v|Should you invite someone who invited you to their party?
+N|v|Is it okay to host a party and ask guests to pay?
+N|v|Should a host eat before guests arrive?
+N|v|Is it rude to use your host's bathroom without asking?
+N|v|Should a guest ask before opening the host's fridge?
+N|v|Is it rude to arrive exactly on time to a house party?
+N|v|Is it okay to leave a dinner party right after dessert?
+N|v|Is it rude to ask a host for the recipe?
+N|v|Is it rude to add salt before tasting your food at someone's home?
+N|v|Is it okay to use your fingers to eat pizza at a formal dinner?
+N|v|Is it rude to chew gum while talking to someone?
+N|v|Is it okay to put ketchup on food at a fancy restaurant?
+N|v|Is it rude to eat while on a video call?
+N|v|Is it rude to reach across the table for the salt?
+N|v|Should you wait for everyone to finish before leaving the table?
+N|v|Is it rude to lick your fingers at the table?
+N|v|Is it okay to take photos of your food at a restaurant?
+N|v|Is it rude to talk on speakerphone in public?
+N|v|Is it okay to video call in a coffee shop?
+N|v|Is it rude to text while walking with a friend?
+N|v|Is it okay to screenshot a private conversation and share it?
+N|v|Should you ask before adding someone to a group chat?
+N|v|Is it rude to use all caps in a message?
+N|v|Should you answer your phone while paying at a register?
+N|v|Is it rude to decline a phone call and then text instead?
+N|v|Is it rude to leave a group chat after a party?
+N|v|Is it okay to cancel plans on the same day?
+N|v|Should you apologize if you're only a few minutes late?
+N|v|Is it rude to arrive early to someone's home?
+N|v|Is it okay to be late to a casual gathering?
+N|v|Is it rude to say "no problem" instead of "you're welcome"?
+N|v|Should you say thank you to a cashier?
+N|v|Should you apologize when someone else bumps into you?
+N|v|Should you apologize by text if you can't do it in person?
+N|v|Is it okay to accept an apology but not forgive the person?
+N|v|Is it rude not to say "bless you" when someone sneezes?
+N|v|Is it rude to ask someone where they are from?
+N|v|Should you greet everyone in a small room when you walk in?
+N|v|Is it rude to keep your hands in your pockets while talking to someone?
+N|v|Is it okay to hug someone the first time you meet them?
+N|v|Is it rude not to shake hands when someone offers?
+N|v|Should men still open doors for women?
+N|v|Is it rude to walk in front of someone taking a photo?
+N|v|Is it okay to take a phone call in a public restroom?
+N|v|Is it rude to walk slowly in a crowded area?
+N|v|Is it okay to ask a stranger to switch seats on a plane?
+N|v|Is it rude to talk to your seatmate on a flight when they have headphones on?
+N|v|Is it rude to clap when a plane lands?
+N|v|Is it rude to listen to music without headphones in a park?
+N|v|Should you let people off an elevator before you get on?
+N|v|Is it rude to stand close to someone at an ATM?
+N|v|Is it okay to ask a stranger to watch your bag in a cafe?
+N|v|Is it rude to use a laptop at a busy cafe for hours?
+N|v|Is it rude to not return a shopping cart to its spot?
+N|v|Should you pick up litter that isn't yours?
+N|v|Is it okay to bring a baby to a fancy restaurant?
+N|v|Is it rude to ask a pregnant woman if you can touch her belly?
+N|v|Is it rude to correct someone's grammar in conversation?
+N|v|Is it okay to interrupt someone to correct a fact?
+N|v|Is it rude to yawn in front of someone?
+N|v|Is it rude to leave dishes in a shared sink?
+N|p|Do you usually arrive early to appointments?
+N|p|Do you still send physical birthday cards?
+N|p|Have you ever left a restaurant without tipping?
+N|p|Do you apologize easily?
+N|t|Do you enjoy formal dinner parties?

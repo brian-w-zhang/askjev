@@ -1,0 +1,85 @@
+S|v|How much should you tip for takeout food you pick up yourself?|Nothing at all;A few coins from the change;A small tip on the card;The same as a sit-down meal
+S|v|How much should you tip a taxi driver for a short ride?|Nothing;Round up to the nearest bill;A small percentage;A generous percentage
+S|v|How much should you tip movers who carried your furniture?|Nothing, it's their job;Cold drinks and snacks;A modest cash tip each;A generous cash tip each
+S|v|How much should you tip a hotel housekeeper for a long stay?|Nothing;A little on the last day;A little each day;A generous amount each day
+S|v|How much should you tip at a buffet restaurant?|Nothing;A small tip for drink refills;A regular tip;A generous tip
+S|v|How much should you tip a tour guide on a free walking tour?|Nothing, it says free;A few coins;A moderate tip;What you'd pay for a paid tour
+S|p|How much do you worry about tipping the right amount?|Never think about it;A quick thought and move on;I sometimes check online;I stress over it every time
+S|v|How much should you spend on a gift for a coworker in a gift exchange?|Nothing, skip it;The minimum amount set;The set amount exactly;Well above the set amount
+S|v|How much should you spend on a host gift for a weekend stay?|Nothing;A small token like chocolates;A nice bottle or plant;An expensive gift
+S|v|How much should a gift cost compared with what the giver received from you last time?|No thought to cost;Roughly similar;Exactly matching;Always more
+S|p|How much effort do you put into wrapping gifts?|No wrapping at all;A gift bag;Paper and tape;Paper, ribbon, and a bow;Handmade wrapping with decorations
+S|v|How personal should a thank-you note be?|A single line;A short standard note;A note mentioning the gift and how you'll use it;A long heartfelt letter
+S|v|How quickly should you send a thank-you after a job interview?|No thank-you needed;Within a week;The next day;The same day
+S|v|How much should you thank someone for holding a door?|No thanks needed;A nod;A quick "thanks";A warm thank you and a smile
+S|v|How much should you tell a host you enjoyed their meal?|Nothing, it's understood;A quick "thanks for dinner";Praise for a specific dish;A follow-up message the next day
+S|v|How much notice should you give when canceling a dinner reservation?|No notice;A few hours;A day;Several days
+S|v|What is the latest you can arrive for a doctor's appointment without being rude?|Early enough to check in before the appointment time;Right at the appointment time;A few minutes past the appointment time;Well past it, since doctors usually run late anyway
+S|v|How long should you wait for a friend who is late before leaving?|I leave the moment they are late;I wait a few minutes, then go;I wait a good while if they text me an update;I wait as long as it takes
+S|p|How punctual are you usually?|Always late;Usually a little late;Usually right on time;Usually early;Always very early
+S|v|How formal should you dress for a restaurant dinner with friends?|Whatever I'm wearing;Clean casual;Smart casual;Dressy
+S|v|How much should guests follow a party's dress code?|Ignore it;Follow it loosely;Follow it closely;Go beyond it
+S|p|How comfortable are you going to a party alone?|I would never go alone;I'd go only if I know the host well;I'd go and find someone to talk to;I'd go happily and mingle
+S|v|How much should a host prepare for guests' dietary needs?|Not at all;A vegetarian option;Asking everyone ahead of time;A separate dish for each need
+S|v|How long should a casual dinner party last?|A quick meal;A couple of hours;Most of the evening;Late into the night
+S|v|How much should a host push food on guests?|Never offer seconds;Offer seconds once;Offer seconds repeatedly;Serve seconds without asking
+S|p|How much do you enjoy hosting guests at your home?|I dread it;I host only when I must;I enjoy it now and then;I love it;I host whenever I can
+S|v|How tidy should your home be before guests arrive?|No cleaning;A quick tidy of the main room;A full clean of shared areas;Every room spotless
+S|v|How much should houseguests follow the host's routine?|Do their own thing;Follow meal times;Follow meals and quiet hours;Join in every activity
+S|v|How much should a houseguest clean up after themselves?|Not at all;Their own dishes;Their room and dishes;Help clean the whole house
+S|v|How much should you use your phone during a date?|Not at all;For an emergency only;A quick check now and then;Freely
+S|p|How often do you check your phone while talking to someone?|Never;Rarely;Sometimes;Often;Constantly
+S|v|How rude is it to text during a movie at a theater?|Not rude at all;A little distracting;Rude;Very rude
+S|v|How rude is it to leave a voicemail without a message?|Not rude at all;Slightly annoying;Rude;Very rude
+S|v|How quickly should you reply to a text from your parent?|Whenever I get around to it;Within a day;Within a few hours;Within minutes
+S|v|How much should group chat members respond to every message?|Never, just read;Only when directly asked;Now and then to keep up;To most messages
+S|v|How rude is it to talk loudly at a restaurant?|Not rude at all;Slightly rude;Rude;Very rude
+S|v|How much should you acknowledge strangers on a quiet walking path?|Not at all;A nod;A smile and a nod;A friendly hello
+S|v|How much should you apologize when you bump into someone?|Not at all;A quick "sorry";A sincere apology;A long apology
+S|v|How much should you apologize for being late?|Not at all;A quick "sorry";A sincere apology with a reason;A sincere apology and making it up to them
+S|p|How easily do you apologize when you're wrong?|I never apologize;Only if pushed;After some time to think;Right away
+S|p|How often do you say "sorry" for things that aren't your fault?|Never;Rarely;Sometimes;Often;All the time
+S|v|How much should parents make children apologize to others?|Never force an apology;Only for serious things;For most things;For every mistake
+S|v|How acceptable is it to take off your shoes on a plane?|Never;Only on long flights;Fine if your feet don't smell;Always fine
+S|v|How acceptable is it to talk to your seatmate on a long flight?|Not at all;A quick hello only;A short chat;A long conversation
+S|v|How much should you help a stranger lift a bag into an overhead bin?|Not at all;Only if they ask;Offer if they look like they're struggling;Always offer
+S|v|How much should you give up your seat for someone who is pregnant?|Never;Only if they ask;If they look tired;Always right away
+S|v|How much personal space should you give strangers in a queue?|Right up behind them;A small gap;An arm's length;Several steps back
+S|v|How much should you compliment a stranger's outfit?|Never;Only if it's truly striking;Now and then;Freely
+S|v|How much should you talk to your hairdresser during a haircut?|Not at all;Only about the haircut;Light small talk;Full conversations
+S|v|How much should you tidy a restaurant table before leaving?|Not at all;Stack a plate or two;Stack plates and gather napkins;Clean the whole table
+S|v|How much should you complain to a manager about bad service?|Never;Only if it's very bad;Whenever something goes wrong;Every small problem
+S|v|How much do you speak up when someone is being rude in public?|Never;Rarely;Sometimes;Often;Always
+S|v|How much should adults curse in front of children?|Never;Only mild words;Now and then;Freely
+S|v|How loud should music be at a house party?|Background level;Loud enough to dance to;Loud enough to feel it;As loud as possible
+S|v|How much should you ask the host before bringing a plus-one?|Never bring one uninvited;Always ask first;Just tell them you're bringing someone;Bring them without saying anything
+S|v|How much should you RSVP when an invite says "RSVP regrets only"?|Reply either way;Reply only if not coming;Don't reply at all;Reply only if curious
+S|v|How much should a host follow up with guests who haven't RSVPed?|Not at all;A single reminder;Several reminders;Call each one
+S|v|How much should you insist on paying when someone offers to treat you?|Accept right away;Offer once, then accept;Insist several times;Refuse and pay
+S|v|How much should gift-givers expect a thank-you?|No thanks expected;A quick verbal thanks;A text or call;A written note
+S|v|How much should you comment on someone's weight change?|Never;Only if they bring it up;A kind compliment if they seem happy;Freely
+S|v|How rude is it to ask a couple when they are having kids?|Not rude;Slightly rude;Rude;Very rude
+S|v|How rude is it to ask someone about their religion when you first meet?|Not rude;Slightly rude;Rude;Very rude
+S|v|How much should you shake hands when you meet someone new at a party?|Never;Only if they offer;With most people;With everyone
+S|v|How much should you use formal titles like Mr. or Dr. when meeting someone older?|Never;Only if they introduce themselves that way;Until they say otherwise;Always
+S|v|How much should you respond to a sneeze from a stranger?|Not at all;A quiet "bless you";A clear "bless you";A "bless you" and a tissue
+S|v|How much should you keep your voice down in a hospital waiting room?|No need;Normal tone;Quiet tone;Whisper only
+S|v|How much should you acknowledge a gift from a distant relative?|Not at all;A quick text;A phone call;A written note
+S|v|How rude is it to leave a restaurant without finishing your meal?|Not rude;Slightly rude;Rude;Very rude
+S|v|How acceptable is it to ask for a doggy bag at a nice restaurant?|Not acceptable;Only at casual places;Fine;Always fine
+S|v|How much should you eat when someone cooks for you?|Only what I want;A little of everything;A full plate;Seconds of everything
+S|v|How much should you share a table or bench with strangers at a crowded cafe?|Never;Only if asked;Offer when it's crowded;Always offer
+S|v|How much should you tip at a cafe with table service?|Nothing;Round up;A small percentage;A full restaurant tip
+S|v|How much should dog owners clean up after their dog in public?|Not at all;Only on sidewalks;Almost everywhere;Everywhere, always
+S|v|How much should you let a child run around in a restaurant?|Never;Only in a play area;Some wandering near the table;Freely
+S|v|How much should you talk during a religious service you're visiting?|Not at all;Whispers only when needed;Quiet talking;Normal talking
+S|v|How strict should dress codes be at weddings?|No dress codes;General guidelines;Specific guidelines;Strict rules
+S|v|How much should guests post photos from a wedding on social media?|Never;Only after the couple posts;With permission;Freely during the event
+S|v|How rude is it to leave a party early?|Not rude at all;Slightly rude;Rude;Very rude
+S|v|How much should you comment on a friend's home when visiting for the first time?|Nothing;A general compliment;Specific compliments;A full tour and comments
+S|v|How much should you reply to holiday cards you receive?|Not at all;A thank-you text;A card in return;A card and a call
+S|v|How much should you keep the peace at a family dinner with a difficult relative?|Say whatever I think;Speak up only on big things;Stay polite on most things;Stay silent no matter what
+S|v|How much should you use your phone at a funeral?|Not at all;On silent, never touched;A quick check outside;Freely
+S|v|How much should you respect a request for no gifts?|Bring a gift anyway;Bring a small token;Bring a card only;Bring nothing
+S|v|How rude is it to eat food off someone else's plate without asking?|Not rude;Slightly rude;Rude;Very rude
+S|v|How much should you shield others from your cough in public?|Not at all;Cover my mouth;Cough into my elbow;Wear a mask

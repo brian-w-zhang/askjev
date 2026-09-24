@@ -4,6 +4,7 @@ download: https://huggingface.co/api/datasets/christopher/rosetta-code/parquet/d
 license: GFDL-1.2
 version: christopher/rosetta-code HF dump (79,013 task x language solutions)
 target: 200
+target_phase6: 1500 (ASKJEV_TARGET_CODE_LANG)
 hemisphere: machine
 shape: classify
 notes: >
@@ -14,3 +15,4 @@ notes: >
   Dart, R. 120-1,500 chars, one per (task, language), exact-code dedup; snippets naming their own
   language are dropped; TypeScript must use TS-only syntax. bigcode/the-stack-smol was the first
   choice but is gated (needs a login).
+  Phase 6: named languages get max(25, 3/4 of the target / 6) = 187 each (the original 25 plus a hash-order top-up); TypeScript has only 32 usable snippets; the 'other' round-robin continues to fill (533).

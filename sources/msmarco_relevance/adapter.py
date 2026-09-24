@@ -101,24 +101,24 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
         want[label] -= 1
         items.append((qid, pi, query, qtype, text, url, label, answers))
 
-    # Phase 6 top-up: remaining queries in hash order, alternating labels, passage picked by hash order.
-    # Deterministic and prefix-stable in TARGET.
+    # Phase 6 top-up: remaining queries in hash order, split by position parity into a positive stream
+    # (even) and a negative stream (odd), each taking its first `want` usable pairs, passage picked by hash
+    # order. No decision depends on TARGET, so the top-up is prefix-stable (one pair per query still holds).
     used = {x[0] for x in items}
-    want = {True: TARGET // 2 - sum(x[6] for x in items), False: 0}
+    want = {True: TARGET // 2 - sum(x[6] for x in items)}
     want[False] = TARGET - len(items) - want[True]
     rest = hash_order([c for c in cands if c[0] not in used], lambda c: c[0], "msmarco.topup")
-    for i, (qid, query, qtype, answers, passages) in enumerate(rest):
-        if want[True] <= 0 and want[False] <= 0:
-            break
-        label = i % 2 == 0
-        if want[label] <= 0:
-            label = not label
-        pool = _pool(passages, query, label, answers)
-        if not pool:
-            continue
-        pi, text, url = hash_order(pool, lambda p: p[0], f"msmarco.{qid}")[0]
-        want[label] -= 1
-        items.append((qid, pi, query, qtype, text, url, label, answers))
+    for label in (True, False):
+        n = 0
+        for qid, query, qtype, answers, passages in rest[0 if label else 1 :: 2]:
+            if n >= want[label]:
+                break
+            pool = _pool(passages, query, label, answers)
+            if not pool:
+                continue
+            pi, text, url = hash_order(pool, lambda p: p[0], f"msmarco.{qid}")[0]
+            n += 1
+            items.append((qid, pi, query, qtype, text, url, label, answers))
     items.sort(key=lambda x: (x[0], x[1]))
 
     for qid, pi, query, qtype, text, url, label, answers in items:

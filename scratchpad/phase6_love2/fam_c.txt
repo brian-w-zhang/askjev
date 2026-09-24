@@ -1,0 +1,164 @@
+C|v|When a toddler throws a tantrum in a grocery store, what do you think a parent should do first?|ignore_it=wait it out calmly;leave_the_store;distract=offer a toy or snack;firm_warning;give_in=buy what they want to stop it;comfort=pick them up and soothe them
+C|v|Which consequence do you think works best for a school-age child who lies to a parent?|lost_privilege=losing screen time or a treat;extra_chore;talk_it_through=a serious conversation, no punishment;natural_consequence=let the lie catch up with them;time_out;other
+C|v|What should a parent do when a child hits a sibling?|separate_them;time_out;make_them_apologize;remove_privilege;ask_both_sides=find out what happened first;other
+C|v|Which approach to bedtime do you think is best for young children?|fixed_early_bedtime;flexible=bedtime shifts with the day;child_decides=sleep when tired;routine_matters_more=same steps every night, time varies
+C|v|Who do you think should help a child with homework?|parent_who_is_home;the_parent_better_at_the_subject;older_sibling;tutor;nobody=the child should work alone;teacher_at_school
+C|t|What kind of school would you most want your children to attend?|local_public_school;private_school;homeschool;boarding_school;language_immersion_school;whatever_they_choose
+C|v|What should parents do when a young child refuses to eat dinner?|no_other_food=nothing else until the next meal;make_something_else;insist_on_a_few_bites;let_it_go_calmly;offer_a_reward=dessert for finishing
+C|v|How should parents respond when a child uses a swear word for the first time?|calm_explanation;punish;ignore_it;laugh_it_off;ask_where_they_heard_it
+C|v|What should parents do when a teenager's grades suddenly drop?|talk_first=ask what is going on;take_away_phone;hire_a_tutor;contact_the_teacher;give_them_space
+C|t|Which kind of family vacation do you most enjoy?|beach;road_trip;theme_park;camping;visiting_relatives;city_sightseeing;staying_home_together
+C|s|Where does your family usually spend the biggest holiday of the year?|our_home;parents_home=my parents' home;in_laws_home;rotating_between_homes;traveling_somewhere;we_do_not_gather
+C|v|When a couple has two families wanting them for the same holiday, what is the fairest arrangement?|alternate_years;split_the_day=visit both on the same day;host_both_families_together;go_to_whoever_is_older;stay_home_alone;whichever_family_is_closer
+C|t|Which holiday meal role do you most like to have at a family gathering?|cooking;setting_the_table;washing_dishes;entertaining_the_kids;carving_or_serving;just_eating
+C|v|Who should be in charge of the family group chat's plans for a reunion?|the_eldest_relative;whoever_offers;the_most_organized_person;the_host;take_turns_each_time
+C|v|What should an adult child do when a parent keeps asking when they will have kids?|answer_honestly;change_the_subject;ask_them_to_stop_directly;joke_about_it;ignore_the_question
+C|v|What is the best response when a mother-in-law criticizes your cooking?|thank_her_and_move_on;ask_for_her_tips;defend_your_cooking;let_your_partner_handle_it;say_nothing
+C|v|Who should deal with a difficult in-law, you or your partner?|my_partner=their own parent is their job;me=I handle it directly;both_together;neither=let it slide
+C|v|What should you call your parents-in-law?|mom_and_dad;first_names;mr_and_mrs=formal titles;whatever_they_ask;avoid_names_entirely
+C|v|What should happen to a family home when both parents have died?|sell_and_split;one_child_buys_out_the_others;keep_it_shared;the_child_who_cared_for_them_gets_it;follow_the_will_no_matter_what
+C|v|What should adult siblings do with a parent's cherished heirloom that several of them want?|draw_lots;the_eldest_gets_it;whoever_asked_first;whoever_was_closest_to_the_parent;sell_it_and_split;share_it_in_turns
+C|v|When an aging parent should stop driving, who should tell them?|their_doctor;the_eldest_child;the_child_they_trust_most;all_the_children_together;their_spouse;let_them_decide_themselves
+C|v|How should adult siblings split the work of caring for an aging parent?|equally;by_distance=whoever lives closest does the most;by_money=richer ones pay, others give time;by_ability;the_unmarried_one_does_most;hire_help_and_split_the_cost
+C|v|What should you do when a widowed parent starts dating someone new?|welcome_it;get_to_know_the_person;stay_neutral;tell_them_it_is_too_soon;keep_your_distance
+C|v|What is the best way to keep an elderly relative who lives alone connected?|daily_phone_calls;video_calls;regular_visits;a_neighbor_checks_in;a_senior_center;a_pet_to_keep_them_company
+C|v|What is the best age for a child to start doing their own laundry?|early_grade_school;late_grade_school;middle_school;high_school;only_when_they_move_out
+C|v|Which chore do you think every child should learn before leaving home?|cooking_a_meal;doing_laundry;cleaning_a_bathroom;budgeting;basic_repairs;grocery_shopping
+C|v|What should parents do when a child does a chore badly on purpose?|make_them_redo_it;do_it_yourself;give_a_harder_chore;ignore_it;explain_why_it_matters
+C|v|How should chores be split between siblings of different ages?|by_age=older kids do more;equally;by_preference;rotating_each_week;by_who_makes_the_mess
+C|p|Which role do you usually play among your siblings?|the_peacemaker;the_leader;the_rebel;the_joker;the_quiet_one;the_responsible_one;no_siblings
+C|p|Growing up, what did you and your siblings fight about most?|toys_or_belongings;attention_from_parents;the_tv_or_devices;chores;personal_space;we_rarely_fought;no_siblings
+C|v|When siblings fight over a toy, what should a parent do?|take_the_toy_away;set_a_timer_to_share;let_them_work_it_out;give_it_to_whoever_had_it_first;give_it_to_the_younger_one
+C|v|Which trait do you think matters most in a good older sibling?|protectiveness;patience;being_a_role_model;honesty;fun;standing_up_for_them
+C|v|What should parents do when one child is far more successful than another?|treat_them_the_same;quietly_support_the_one_struggling;praise_each_for_different_things;never_compare_out_loud;celebrate_success_openly
+C|v|Who should inherit the most from parents?|all_children_equally;the_child_in_most_need;the_child_who_gave_care;the_eldest;charity_over_children
+C|v|What should parents tell children about the reason for a divorce?|the_full_truth;a_simple_honest_version;only_that_it_is_not_their_fault;nothing_until_older
+C|v|What is the best custody arrangement after divorce when both parents are good parents?|equal_time;primary_home_with_visits;kids_stay_in_one_home_parents_rotate;kids_choose;whatever_is_closest_to_school
+C|v|What should a step-parent be called by the stepchildren?|first_name;mom_or_dad;a_nickname_they_choose;whatever_the_child_wants
+C|v|How much say should a step-parent have in discipline?|full_equal_say;backup_only=support the biological parent;none_at_first=earn it over time;none_ever
+C|t|What kind of birthday party would you want to throw for a young child?|big_party_with_classmates;small_party_with_family;one_friend_outing;themed_party_at_home;party_at_a_venue;no_party_a_special_day_instead
+C|v|Who should be invited to a young child's birthday party?|the_whole_class;close_friends_only;family_only;whoever_the_child_picks;same_number_of_kids_as_their_age
+C|v|What should parents do about a child's friend they dislike?|forbid_the_friendship;limit_time_together;invite_the_friend_over_to_watch;say_nothing;talk_to_their_child_about_it
+C|v|What is the best way for parents to teach kids to save money?|piggy_bank;savings_account;matching_what_they_save;let_them_waste_money_once;make_them_wait_for_big_purchases
+C|v|What should parents do if their teenager wants a part-time job?|encourage_it;allow_it_only_in_summer;forbid_it_during_school;let_them_decide
+C|v|What should parents do when a teenager wants to dye their hair a bright color?|allow_it;allow_it_if_they_pay;wait_until_summer_break;forbid_it;let_them_try_temporary_dye_first
+C|v|How should parents handle a teen who spends every evening in their room?|let_them_be;require_family_dinner;check_in_quietly;remove_devices_from_the_room;plan_family_activities
+C|v|What should parents do when a young child says they are afraid of the dark?|night_light;stay_until_they_sleep;let_them_sleep_in_the_parents_bed;explain_there_is_nothing_to_fear;leave_the_door_open
+C|v|Where should a baby sleep in the first months?|parents_bed;crib_in_parents_room;own_room;whatever_lets_everyone_sleep
+C|v|What should parents do when a child gets a bad report card?|punish;review_it_together;reward_improvement_next_time;talk_to_the_teacher;shrug_it_off
+C|v|What is the best reward for a child who does well in school?|praise;a_treat_or_outing;money;extra_screen_time;no_reward_needed
+C|v|Which is the worst mistake a parent can make?|being_too_strict;being_too_lenient;comparing_siblings;breaking_promises;not_listening;being_absent
+C|t|Which kind of pet would you most want for a family with young children?|dog;cat;fish;hamster_or_guinea_pig;rabbit;bird;no_pet
+C|v|Who should take care of a family pet that a child begged for?|the_child;the_parents;the_whole_family;whoever_has_time
+C|v|How should parents explain a pet's death to a young child?|the_plain_truth;a_gentle_story=it went to live on a farm;hold_a_little_funeral;replace_the_pet_quickly;let_the_child_ask_questions
+C|v|How should parents talk to a young child about a grandparent's death?|plain_honest_words;gentle_comforting_story;bring_them_to_the_funeral;keep_them_away_from_the_funeral;wait_until_they_ask
+C|v|Should young children attend funerals of close family members?|yes_always;yes_if_they_want;only_older_children;no
+C|v|What should adult children do with their parents' old family photos?|split_them_up;scan_and_share_digitally;give_them_to_one_keeper;make_albums_for_everyone;throw_most_away
+C|t|Which gathering with extended family do you look forward to most?|holiday_dinner;summer_barbecue;wedding;reunion_weekend;birthday_party;none
+C|p|At a large family gathering, where are you usually found?|in_the_kitchen;with_the_kids;talking_with_older_relatives;on_my_phone;outside;helping_the_host
+C|v|What should you do when a relative asks at dinner how much you earn?|tell_them;give_a_vague_answer;joke_it_off;politely_refuse;change_the_subject
+C|v|How should a family handle a relative who always shows up late to gatherings?|start_without_them;tell_them_an_earlier_time;wait_for_them;speak_to_them_directly;accept_it
+C|v|What is the best gift for grandparents?|a_photo_book;a_visit;a_handmade_gift_from_the_grandkids;a_practical_item;an_experience_together;a_regular_phone_call
+C|v|What should grandparents do when they disagree with how their grandchildren are raised?|say_so_privately_to_the_parents;say_nothing;tell_the_grandchildren;hint_at_it;only_speak_if_the_children_are_at_risk
+C|v|How should adult children respond when parents give unsolicited advice on raising their kids?|listen_and_thank_them;argue_back;ignore_it;set_a_clear_boundary;take_the_useful_parts
+C|v|What should a family do about a relative who gossips about everyone?|confront_them;share_nothing_with_them;invite_them_less;laugh_it_off;warn_other_relatives
+C|v|Who should pay for a family holiday dinner?|the_host;split_among_households;everyone_brings_a_dish;the_eldest_generation;whoever_earns_most
+C|t|What do you like most about family holidays?|the_food;seeing_relatives;the_traditions;time_off_work;gifts;quiet_downtime
+C|t|What do you like least about family holidays?|travel;arguments;cooking_and_cleaning;small_talk;spending_money;lack_of_privacy;nothing
+C|v|How should gifts work among adult siblings at the holidays?|everyone_buys_for_everyone;draw_names=each person buys for one;gifts_only_for_kids;no_gifts;a_shared_experience_instead
+C|v|What should parents do when a child dislikes a gift from a grandparent?|make_them_say_thank_you_anyway;let_them_be_honest;exchange_it_quietly;talk_to_them_privately_later
+C|v|What should adult children do when parents want to give them a large sum of money?|accept_gratefully;accept_as_a_loan;refuse;ask_them_to_save_it_for_their_old_age;split_it_with_siblings
+C|v|Who should decide where a child goes to college?|the_child;the_parents;both_together;whoever_is_paying
+C|v|What should parents do when an adult child keeps asking for money?|keep_giving;give_with_conditions;lend_not_give;stop_entirely;help_them_budget_instead
+C|v|What is the best way for adult children living at home to contribute?|pay_rent;do_chores;buy_groceries;save_for_moving_out_instead;nothing_needed
+C|v|What should parents do if an adult child moves back home?|charge_rent;set_a_move_out_timeline;same_rules_as_before;treat_them_as_a_roommate;welcome_them_freely
+C|v|What is the best age for a child to stay home alone for a short time?|early_grade_school;late_grade_school;middle_school;high_school;it_depends_on_the_child
+C|v|What should parents do when a child breaks something valuable by accident?|nothing_accidents_happen;make_them_pay_part;a_talk_about_being_careful;a_small_punishment;help_them_fix_it
+C|v|When should a child get their own house key?|early_grade_school;late_grade_school;middle_school;high_school;never_use_a_keypad
+C|v|What should parents do when a teenager wants to go on a trip with friends without adults?|allow_it;allow_with_check_ins;allow_only_if_they_know_the_families;wait_until_they_are_older;forbid_it
+C|v|What should parents do when a teen gets caught sneaking out?|ground_them;talk_it_through;take_away_the_phone;tighten_curfew;involve_the_other_kids_parents
+C|v|How should parents respond when their child is the bully?|immediate_punishment;make_them_apologize_in_person;find_out_why;involve_a_counselor;work_with_the_school
+C|v|What should parents do when a child comes home with a toy they took from a store?|return_it_with_the_child;return_it_quietly;talk_about_it_at_home;throw_it_away;punish_them
+C|t|Which type of family meal do you enjoy most?|big_sunday_dinner;weekday_family_dinner;weekend_brunch;takeout_in_front_of_the_tv;cooking_together;eating_out
+C|v|Who should cook in a family with two working parents?|whoever_gets_home_first;split_evenly;whoever_enjoys_it;take_turns_by_day;older_kids_help;order_in_more
+C|v|What should parents do when a child wants to become vegetarian?|support_it;allow_it_if_they_learn_to_cook;make_them_wait_until_older;refuse;talk_to_a_doctor_first
+C|v|How should family members settle disagreements at home?|family_meeting;talk_one_on_one;the_parents_decide;vote;cool_off_and_move_on
+C|t|What do you think makes a house feel most like a family home?|shared_meals;photos_on_the_walls;noise_and_activity;a_pet;a_well_used_kitchen;family_rituals
+C|v|What should parents do about a child who is much shyer than their siblings?|push_them_to_join_activities;let_them_be;find_a_quiet_hobby;give_them_one_on_one_time;talk_to_a_teacher
+C|v|How should parents handle a child who wants to spend all their time with grandparents?|allow_it_freely;set_limits;encourage_friends_instead;be_happy_about_it
+C|v|What should adult siblings do when one of them never visits their parents?|confront_them;let_it_go;ask_them_to_help_in_other_ways;tell_the_parents_it_is_not_fair;do_more_yourself
+C|v|What should you do when your partner's family has a tradition you find odd?|join_in;politely_skip_it;ask_about_its_meaning;suggest_changing_it;make_fun_of_it_privately
+C|v|Which family member do you think usually keeps an extended family together?|a_grandmother;a_grandfather;an_aunt;the_eldest_sibling;whoever_hosts;nobody_it_drifts_apart
+C|p|Who in your family do you talk to most often?|mother;father;a_sibling;a_grandparent;a_cousin;an_aunt_or_uncle;nobody_often
+C|p|Which relative outside your parents and siblings are you closest to?|a_grandparent;an_aunt_or_uncle;a_cousin;a_niece_or_nephew;a_godparent;none
+C|t|How would you prefer to spend time with your parents?|a_meal_together;phone_calls;a_trip_together;watching_something;working_on_a_project;visiting_their_home
+C|v|What should you do when your parent keeps telling the same stories?|listen_like_it_is_new;gently_say_you_have_heard_it;finish_it_for_them;change_the_topic;record_them_for_the_family
+C|v|What should adult children do when a parent refuses to see a doctor?|keep_asking;book_the_appointment_for_them;get_a_sibling_to_help;respect_their_choice;ask_their_friend_to_persuade_them
+C|v|When should adult children step in on an aging parent's finances?|at_the_first_sign_of_confusion;after_a_serious_mistake;only_if_asked;never;when_a_doctor_recommends_it
+C|v|What is the kindest way to move a parent into a care home?|visit_several_together_first;let_them_choose;move_quickly_to_avoid_stress;decide_for_them_and_explain;delay_as_long_as_possible
+C|v|Which reason is most valid for adult siblings not speaking to each other?|a_money_dispute;a_betrayal;an_insult_to_a_partner;different_values;a_fight_over_parent_care;none_is_enough
+C|v|What should parents do when their adult children are not speaking to each other?|push_them_to_reconcile;stay_out_of_it;see_them_separately;host_a_meeting;take_a_side
+C|v|What is the best way to name a baby?|family_name=after a relative;a_name_the_parents_love;a_unique_name;a_classic_common_name;a_name_that_honors_heritage
+C|v|Should a new baby be named after a living relative?|yes_it_is_an_honor;only_a_middle_name;only_if_the_relative_asks;no_it_causes_confusion
+C|v|What should parents do when relatives criticize the baby's name?|ignore_it;explain_the_meaning;change_it;tell_them_to_keep_opinions_to_themselves
+C|v|How long should visitors wait before meeting a newborn?|come_right_away;after_the_first_week;after_the_first_month;when_the_parents_invite_them
+C|v|Who should be allowed to hold a newborn?|anyone_the_parents_trust;close_family_only;parents_only_at_first;anyone_who_washes_their_hands
+C|v|What is the most helpful thing to bring new parents?|a_home_cooked_meal;diapers;an_offer_to_babysit;a_gift_card;cleaning_help;nothing_just_a_short_visit
+C|v|What should parents do when a child loses a game and cries?|comfort_them;tell_them_to_toughen_up;talk_about_good_sportsmanship;let_them_calm_down_alone;play_again_right_away
+C|v|What is the best activity for a parent and child to share?|reading_together;cooking;sports;board_games;walks;building_things;music
+C|t|Which kind of family game night game do you prefer?|board_games;card_games;charades;trivia;video_games;puzzles;no_game_nights
+C|v|What should parents do when a teenager refuses to go on a family vacation?|make_them_come;let_them_stay_with_a_relative;let_them_bring_a_friend;cancel_the_trip;let_them_stay_home_alone
+C|v|What should a parent say when a child asks if the parent has a favorite child?|no_never;i_love_you_all_differently;joke_about_it;tell_the_truth
+C|v|How should parents show love to their children?|saying_it_often;physical_affection;spending_time;doing_things_for_them;gifts;being_consistent
+C|p|How did your family usually show affection when you were growing up?|words;hugs;shared_meals;gifts;acts_of_help;teasing;not_much
+C|v|What should parents do when a child asks a question they cannot answer?|admit_they_do_not_know;look_it_up_together;make_something_up;say_ask_your_teacher;change_the_subject
+C|v|What should parents do when a young child asks where babies come from?|simple_honest_answer;a_childrens_book;change_the_subject;a_made_up_story;say_when_you_are_older
+C|v|How should parents handle a child's imaginary friend?|play_along;gently_ignore_it;tell_them_it_is_not_real;worry_about_it
+C|v|What is the best way to wake a teenager for school?|alarm_clock_only;parent_wakes_them;open_the_curtains;make_breakfast_smell;let_them_be_late_once
+C|v|What should parents do if a child is afraid of a grandparent?|find_out_why;keep_visits_short;make_them_visit_anyway;stop_visits;have_the_grandparent_try_a_gentler_approach
+C|v|Where should a family spend a free Saturday?|at_home;outdoors_in_nature;visiting_relatives;at_a_museum_or_zoo;doing_errands_together;each_person_does_their_own_thing
+C|t|What kind of home would you want to raise children in?|house_in_the_suburbs;apartment_in_the_city;house_in_the_country;near_grandparents_wherever_they_live;small_town
+C|v|What should parents do when a child is not invited to a classmate's party?|comfort_them;call_the_other_parent;plan_a_fun_alternative_that_day;explain_that_it_happens;ignore_it
+C|v|What should a family do when a relative becomes seriously ill?|everyone_takes_a_role;the_closest_relative_leads;hire_help;visit_as_often_as_possible;set_up_a_meal_rotation
+C|v|What is the best way to handle a family member who borrowed money and never paid it back?|ask_directly;forget_it;never_lend_again;bring_it_up_at_a_gathering;take_it_out_of_a_future_gift
+C|v|Who should set rules for grandchildren staying at grandparents' house?|the_parents;the_grandparents;both_together;the_grandchildren_decide
+C|v|What should an adult child do when a parent refuses to accept their partner?|keep_trying_to_bring_them_together;visit_parents_alone;cut_contact;give_it_time;ask_a_relative_to_help
+C|v|Which is the fairest way to handle a sibling who contributes nothing to a parent's care but expects an equal inheritance?|accept_it;talk_to_them;ask_the_parent_to_adjust_the_will;keep_a_record_of_care;let_it_go_for_peace
+C|v|What should a family do with a relative's home after they move into care?|sell_it_to_pay_for_care;rent_it_out;keep_it_empty_for_their_return;a_family_member_moves_in
+C|v|Which family member should give a toast at a milestone birthday?|the_eldest_child;the_spouse;a_sibling;the_best_storyteller;nobody_no_toasts
+C|v|When parents are too tired to cook, what should the family do?|order_takeout;simple_sandwiches;kids_make_dinner;leftovers;skip_it_and_snack
+C|v|What should parents do about a child who wants the same meal every day?|allow_it;require_one_new_food_a_week;make_them_eat_what_everyone_eats;offer_choices_within_limits
+C|v|What should a parent say when a child asks why another family has more money?|explain_honestly;say_every_family_is_different;talk_about_gratitude;avoid_the_question
+C|v|How should parents split time with extended family on each side?|equally;by_distance;by_who_the_kids_prefer;by_who_needs_it_most;whoever_invites_first
+C|v|What should parents do when a young child refuses to hug a relative?|respect_it;suggest_a_wave_or_high_five;insist_on_the_hug;apologize_to_the_relative
+C|v|What should parents do when a child keeps interrupting adult conversations?|teach_a_signal_for_waiting;scold_them;answer_them_right_away;send_them_away;ignore_the_interruptions
+C|v|What should parents do when a toddler bites another child at daycare?|firm_no_and_remove_them;apologize_to_the_other_parents;talk_with_the_staff;punish_at_home;treat_it_as_a_normal_phase
+C|v|What is the best way to prepare a child for a new baby sibling?|involve_them_in_preparations;read_books_about_it;give_them_a_gift_from_the_baby;keep_their_routine_the_same;do_not_make_a_big_deal
+C|v|What should parents do when an older child feels jealous of a new baby?|special_one_on_one_time;give_them_a_helper_role;reassure_them_often;ignore_it_it_will_pass
+C|t|Which do you think is the best position in a family?|oldest;middle;youngest;only_child;twin
+C|v|What should parents do about twins who want to be treated differently?|separate_classes;different_birthday_parties;different_clothes;let_them_decide_how;treat_them_the_same_anyway
+C|v|How much should adopted children be told about their birth family?|everything_they_ask;the_basics_early;only_when_they_are_adults;only_if_they_ask
+C|v|What should adult children do when their parents divorce late in life?|stay_neutral;support_the_parent_they_are_closer_to;try_to_keep_them_together;help_both_move_on;stay_out_of_it
+C|v|How should a new couple decide which family traditions to keep?|mix_both;pick_one_family;create_new_ones;alternate_years;keep_whatever_the_kids_like
+C|v|What should you do when your sibling asks you to be their child's guardian if something happens?|accept;ask_for_time_to_think;decline;accept_but_discuss_details
+C|v|How should adult children handle a parent who constantly calls them?|answer_every_time;set_regular_call_times;text_back_instead;let_calls_go_to_voicemail;ask_a_sibling_to_share
+C|v|When a family road trip starts to get tense, what should happen?|stop_for_a_break;play_music;silence_for_a_while;a_car_game;push_on_to_arrive
+C|v|What should parents do when a child wants to drop out of college?|support_them;insist_they_finish;suggest_a_break;cut_financial_support;help_them_make_a_plan
+C|v|What should a family do when a grandparent has a favorite grandchild?|talk_to_the_grandparent;make_up_for_it_with_the_others;ignore_it;accept_it_as_natural
+C|v|What should parents do when a child is embarrassed by them in public?|give_them_space;keep_acting_normal;tease_them_more;talk_about_it_later
+C|v|What should you do when a family member forgets your birthday?|remind_them_kindly;say_nothing;let_them_know_it_hurt;forget_theirs_too;laugh_it_off
+C|v|What is the best way to celebrate a parent's milestone birthday?|a_surprise_party;a_family_dinner;a_trip;a_photo_slideshow;letters_from_everyone;whatever_they_ask_for
+C|v|What should adult siblings do when their parent remarries someone they dislike?|be_polite;speak_up_to_the_parent;keep_distance;give_them_a_fair_chance;skip_the_wedding
+C|p|What role do you usually play in family arguments?|the_mediator;the_one_who_starts_them;the_one_who_leaves_the_room;the_one_who_takes_sides;the_one_who_stays_quiet;we_do_not_argue
+C|v|What should parents do when a teenager asks to switch schools?|hear_them_out_and_consider_it;refuse;switch_right_away;find_out_what_is_behind_it
+C|v|What should a family do with a relative's belongings after a death?|sort_it_all_quickly;wait_a_long_time;keep_everything;donate_most;let_each_person_pick_keepsakes_first
+C|v|How should a family decide on a family pet's name?|the_kids_choose;family_vote;the_parents_choose;whoever_cares_for_it_most
+C|v|What should parents do when a child begs for a pet the family cannot care for?|say_no_clearly;offer_a_smaller_pet;promise_it_later;volunteer_at_a_shelter_together;get_the_pet_anyway
+C|v|Where should a young adult live after finishing school?|with_parents_to_save;with_roommates;alone;near_family;wherever_the_job_is
+C|v|What is the best way for parents to stay close to adult children who live far away?|regular_video_calls;family_group_chat;yearly_visits;care_packages;joint_trips
+C|t|Which kind of family photo do you like best?|posed_studio_portrait;candid_snapshots;holiday_group_shot;vacation_photos;old_black_and_white_photos;no_family_photos
+C|v|What should parents do when their child picks a sport the parents dislike?|support_it_fully;allow_it_but_stay_distant;push_a_different_sport;let_them_pay_for_it
+C|v|How should parents behave at their child's sports games?|cheer_quietly;cheer_loudly;coach_from_the_sidelines;not_attend;stay_silent
+C|v|Which quality do you most hope to pass on to your children?|kindness;honesty;resilience;curiosity;work_ethic;humor;independence
+C|v|What should parents do when a child's teacher is unfair to them?|meet_the_teacher;go_to_the_principal;teach_the_child_to_cope;ask_for_a_class_change;wait_and_watch
+C|v|How should grandparents who live far away stay part of their grandchildren's lives?|video_calls;letters_and_packages;long_visits;paying_for_trips;sharing_family_stories
