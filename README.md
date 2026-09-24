@@ -19,6 +19,7 @@ where its judgments are jagged. **It is not a benchmark.** Private project (Bria
 | [06-pipeline](docs/06-pipeline.md) | Stack, stages, batching, data model, invariants, adapter contract |
 | [07-ui](docs/07-ui.md) | Sunburst, question cards, findings page, search, private ask box |
 | [08-roadmap](docs/08-roadmap.md) | Decisions log, milestones, open questions |
+| [09-mvp-plan](docs/09-mvp-plan.md) | The phased autonomous build plan (hard rules, phases 1-6) |
 
 Agents: see [CLAUDE.md](CLAUDE.md).
 

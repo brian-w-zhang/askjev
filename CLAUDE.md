@@ -5,7 +5,7 @@ ask, answered by Jev, for understanding Jev's capabilities, defaults, and jagged
 outreach to TypeSafe. See `README.md`.
 
 ## Source of truth
-- `docs/00-08` are **canonical** and consistent with each other. When they conflict with
+- `docs/00-09` are **canonical** and consistent with each other. When they conflict with
   anything else, the docs win.
 - `docs/08-roadmap.md` has a **decisions log**. Don't reopen settled decisions (name, 35/35/30
   hemispheres, private, gateway-only access, not-a-benchmark framing...) without asking Brian.
