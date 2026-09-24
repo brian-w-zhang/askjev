@@ -15,7 +15,7 @@ export async function GET(req: NextRequest) {
     params = [expand.split(",")];
   } else {
     const root = sp.get("root") || "root";
-    const depth = Math.min(Math.max(Number(sp.get("depth") ?? 2), 0), 4);
+    const depth = Math.min(Math.max(Number(sp.get("depth") ?? 2), 0), 12);
     where = "n.path <@ r.path and n.depth <= r.depth + $2";
     params = [root, depth];
   }

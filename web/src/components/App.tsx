@@ -5,6 +5,7 @@ import { useStore } from "@/lib/store";
 import { Search } from "./Search";
 import { Controls } from "./Controls";
 import { Panel } from "./panel/Panel";
+import { WorthALook } from "./WorthALook";
 
 const Scene = dynamic(() => import("./scene/Scene"), { ssr: false });
 
@@ -38,8 +39,9 @@ export default function App() {
         Ask Jev a question
       </button>
       <Controls />
+      <WorthALook />
       <Panel />
-      <p className="intro">Drag to orbit, scroll to zoom, click a star to open its topic</p>
+      <p className="intro">Every dot is a question. Drag to orbit, scroll into a cloud to read it, click a star to open it</p>
     </main>
   );
 }

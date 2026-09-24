@@ -17,7 +17,7 @@ where its judgments are jagged. **It is not a benchmark.** Private project (Bria
 | [04-datasets](docs/04-datasets.md) | Every source with a license and a verdict, Machine seeds, structure sources |
 | [05-experiments](docs/05-experiments.md) | The jaggedness experiments and the finding format |
 | [06-pipeline](docs/06-pipeline.md) | Stack, stages, batching, data model, invariants, adapter contract |
-| [07-ui](docs/07-ui.md) | Sunburst, question cards, findings page, search, private ask box |
+| [07-ui](docs/07-ui.md) | 3D nebula (every question a star), question cards, findings page, search, private ask box |
 | [08-roadmap](docs/08-roadmap.md) | Decisions log, milestones, open questions |
 | [09-mvp-plan](docs/09-mvp-plan.md) | The phased autonomous build plan (hard rules, phases 1-6) |
 | [mvp-status](docs/mvp-status.md) | What was built, verification results, counts vs targets, known issues, next steps |
@@ -28,6 +28,7 @@ Agents: see [CLAUDE.md](CLAUDE.md).
 ```bash
 uv sync && uv run askjev migrate && uv run askjev tree   # schema + tree
 uv run askjev pipeline                                   # place, screen, answer, dedupe, measure, rollup
+uv run python scripts/star_layout.py                     # star positions for the nebula (data/stars/)
 cd web && npm install && npm run build && npm start      # explorer at http://localhost:3000
 ```
 

@@ -9,6 +9,7 @@ export const anim = {
   fork: -1, // index in pathB where it leaves pathA (-1: none)
   userMoved: 0,
   placed: new Map() as Map<string, import("./layout").Placed>,
+  labelRects: [] as import("./uirects").Rect[], // node labels on screen (question labels avoid them)
 };
 
 export const now = () => performance.now() / 1000;

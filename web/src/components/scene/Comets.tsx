@@ -1,7 +1,7 @@
 "use client";
 import { useMemo, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { AdditiveBlending, CanvasTexture, Group, Mesh, Sprite } from "three";
+import { AdditiveBlending, CanvasTexture, Group, Mesh, Sprite, Vector3, type Camera, type PerspectiveCamera } from "three";
 import { anim, headPosition, now, progress } from "@/lib/anim";
 import { useStore } from "@/lib/store";
 import { PATH_A_COLOR, PATH_B_COLOR } from "@/lib/layout";
@@ -20,11 +20,18 @@ function glowTexture() {
   return new CanvasTexture(c);
 }
 
+/** World units that cover `px` screen pixels at `at` (so rings and comets keep one on-screen size). */
+function pxToWorld(camera: Camera, at: Vector3, h: number, px: number) {
+  const tanHalf = Math.tan((((camera as PerspectiveCamera).fov ?? 45) * Math.PI) / 360);
+  return (px * 2 * camera.position.distanceTo(at) * tanHalf) / h;
+}
+
 function Comet({ which, color }: { which: "A" | "B"; color: string }) {
   const g = useRef<Group>(null);
   const sprite = useRef<Sprite>(null);
+  const core = useRef<Mesh>(null);
   const tex = useMemo(() => glowTexture(), []);
-  useFrame(() => {
+  useFrame(({ camera, size }) => {
     const l = anim[which];
     const h = headPosition(l);
     if (!g.current) return;
@@ -33,16 +40,18 @@ function Comet({ which, color }: { which: "A" | "B"; color: string }) {
     g.current.position.set(h[0], h[1], h[2]);
     const pr = progress(l);
     const moving = pr < l.path.length - 1;
-    const s = moving ? 3.2 : 2.2 + 0.4 * Math.sin(now() * 3);
+    const unit = pxToWorld(camera, g.current.position, size.height, 1);
+    const s = (moving ? 46 : 32 + 6 * Math.sin(now() * 3)) * unit;
     sprite.current?.scale.set(s, s, 1);
+    core.current?.scale.setScalar(4 * unit);
   });
   return (
     <group ref={g} visible={false}>
       <sprite ref={sprite}>
         <spriteMaterial map={tex} color={color} transparent depthWrite={false} blending={AdditiveBlending} toneMapped={false} />
       </sprite>
-      <mesh>
-        <sphereGeometry args={[0.22, 16, 16]} />
+      <mesh ref={core}>
+        <sphereGeometry args={[1, 16, 16]} />
         <meshBasicMaterial color={color} toneMapped={false} />
       </mesh>
     </group>
@@ -52,7 +61,7 @@ function Comet({ which, color }: { which: "A" | "B"; color: string }) {
 /** Ring that marks where Jev's walk leaves the embedding path. */
 function Fork() {
   const m = useRef<Mesh>(null);
-  useFrame(({ camera }) => {
+  useFrame(({ camera, size }) => {
     const mesh = m.current;
     if (!mesh) return;
     const k = anim.fork;
@@ -63,8 +72,7 @@ function Fork() {
     if (!visible || !p) return;
     mesh.position.set(p.x, p.y, p.z);
     mesh.quaternion.copy(camera.quaternion);
-    const s = 1.1 + 0.25 * Math.sin(now() * 4);
-    mesh.scale.set(s, s, s);
+    mesh.scale.setScalar((1.1 + 0.25 * Math.sin(now() * 4)) * pxToWorld(camera, mesh.position, size.height, 18));
   });
   return (
     <mesh ref={m} visible={false}>
@@ -77,7 +85,7 @@ function Fork() {
 /** Slow halo around the selected node. */
 function Selection() {
   const m = useRef<Mesh>(null);
-  useFrame(({ camera }) => {
+  useFrame(({ camera, size }) => {
     const mesh = m.current;
     if (!mesh) return;
     const id = useStore.getState().selected;
@@ -87,6 +95,7 @@ function Selection() {
     mesh.position.set(p.x, p.y, p.z);
     mesh.quaternion.copy(camera.quaternion);
     mesh.rotateZ(now() * 0.6);
+    mesh.scale.setScalar(pxToWorld(camera, mesh.position, size.height, 22));
   });
   return (
     <mesh ref={m} visible={false}>

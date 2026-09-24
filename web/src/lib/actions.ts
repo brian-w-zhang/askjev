@@ -1,9 +1,8 @@
 "use client";
 import { anim, lightMs, startLight } from "./anim";
 import { ensurePath, filterQuery, loadSubtree, useStore } from "./store";
-import { flyTo } from "@/components/scene/CameraRig";
+import { flyTo, frameDist } from "@/components/scene/CameraRig";
 
-const DIST = [82, 50, 34, 24, 19, 16, 14];
 const PER_LEVEL = 0.4; // seconds per tree level: slow enough for the eye to follow
 
 const frames = (n = 2) => new Promise<void>((r) => {
@@ -16,7 +15,7 @@ export function selectNode(id: string, opts: { fly?: boolean; panel?: boolean } 
   s.set({ selected: id, ...(opts.panel === false ? {} : { panel: { kind: "node", id } }) });
   const p = anim.placed.get(id);
   const n = s.nodes[id];
-  if (p && n && opts.fly !== false) flyTo([p.x, p.y, p.z], DIST[Math.min(n.depth, DIST.length - 1)]);
+  if (p && n && opts.fly !== false) flyTo([p.x, p.y, p.z], frameDist(id));
   if (n && n.n_children > 0 && !s.children[id]) loadSubtree(id, 2);
 }
 
@@ -65,19 +64,19 @@ export async function showJevWalk(query: string): Promise<Walk | { error: string
       const pa = anim.placed.get(a[a.length - 1]);
       const pb = anim.placed.get(path[path.length - 1]);
       if (!pa || !pb || anim.userMoved > anim.B.t0) return;
-      const span = Math.hypot(pa.x - pb.x, pa.z - pb.z);
-      flyTo([(pa.x + pb.x) / 2, (pa.y + pb.y) / 2, (pa.z + pb.z) / 2], Math.max(24, span * 1.35 + 10), 1.4);
+      const span = Math.hypot(pa.x - pb.x, pa.y - pb.y, pa.z - pb.z);
+      flyTo([(pa.x + pb.x) / 2, (pa.y + pb.y) / 2, (pa.z + pb.z) / 2], Math.max(14, span * 1.4 + 8), 1.4);
     }, lightMs(anim.fork + 1, PER_LEVEL));
   }
   return walk;
 }
 
-/** Refresh `n_match` on everything loaded after a filter change. */
+/** Refresh `n_match` on every node after a filter change (the whole tree is loaded, so ask for all of it). */
 export async function refreshFilters() {
   const s = useStore.getState();
   const expanded = Object.keys(s.children);
   if (!expanded.length) return;
-  const r = await fetch(`/api/tree?expand=${expanded.map(encodeURIComponent).join(",")}${filterQuery(s.filters, s.showHidden)}`);
+  const r = await fetch(`/api/tree?root=root&depth=12${filterQuery(s.filters, s.showHidden)}`);
   const { nodes } = await r.json();
   for (const n of nodes) if (!("n_match" in n)) n.n_match = undefined;
   useStore.getState().mergeNodes(nodes, expanded);

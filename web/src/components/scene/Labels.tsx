@@ -7,14 +7,17 @@ import { useStore } from "@/lib/store";
 import { anim } from "@/lib/anim";
 import { HEMI_COLOR, type Placed } from "@/lib/layout";
 import { nodeSize } from "./Nodes";
+import { overlaps, uiRects } from "@/lib/uirects";
 import type { TreeNode } from "@/lib/types";
 
 const FONT = "/fonts/schibsted-grotesk-latin-500-normal.woff";
 const SIZE = [0, 1.05, 0.62, 0.4, 0.36, 0.33];
-// Labels fade in once the camera is within this distance of the node, by depth.
-const NEAR = [0, 400, 110, 46, 32, 26];
-// Labels never grow past these on-screen sizes (px) when the camera gets close.
+// A label shows once its node's subtree (or star ball) covers this many px on screen, by depth.
+const SHOW_PX = [0, 0, 0, 55, 70, 80];
+// On-screen text size (px) stays within these bounds at any distance.
+const MIN_PX = [0, 16, 12.5, 11.5, 11, 11];
 const MAX_PX = [0, 26, 19, 15, 14, 13];
+const BUDGET = 60;
 
 type TroikaText = Mesh & { fillOpacity: number; outlineOpacity: number };
 
@@ -26,7 +29,7 @@ export function Labels({ placed }: { placed: Map<string, Placed> }) {
   const shown = useRef(new Set<string>());
   const v = useMemo(() => new Vector3(), []);
 
-  useFrame(({ camera, size }, dt) => {
+  useFrame(({ camera, size, gl }, dt) => {
     const s = useStore.getState();
     const cam = camera as PerspectiveCamera;
     // Every few frames: pick which labels to show. Candidates within their fade distance are
@@ -56,30 +59,39 @@ export function Labels({ placed }: { placed: Map<string, Placed> }) {
       for (const [id, r] of registry) {
         const n = s.nodes[id];
         if (!n) continue;
+        const p = placed.get(id);
+        if (!p) continue;
         const d = cam.position.distanceTo(r.g.position);
-        const near = NEAR[Math.min(n.depth, NEAR.length - 1)];
+        const ppu = size.height / (2 * d * tanHalf);
+        const di = Math.min(n.depth, SHOW_PX.length - 1);
+        const extPx = (p.ext > p.ball + 0.01 ? p.ext : p.ball) * ppu;
         const forced = onPath.has(id) || sel === id || s.hovered === id;
-        if (!forced && d > near && !kids.has(id)) continue;
+        if (!forced && extPx < SHOW_PX[di] && !kids.has(id)) continue;
         v.copy(r.g.position).project(cam);
         if (v.z > 1 || Math.abs(v.x) > 1.1 || Math.abs(v.y) > 1.1) continue;
-        const ppu = size.height / (2 * d * tanHalf);
-        const fs = SIZE[Math.min(n.depth, SIZE.length - 1)];
-        const px = Math.min(fs * ppu, MAX_PX[Math.min(n.depth, MAX_PX.length - 1)]);
+        const fs = SIZE[di];
+        const px = Math.max(MIN_PX[di], Math.min(fs * ppu, MAX_PX[di]));
         r.g.scale.setScalar(px / (fs * ppu));
         const w = Math.min(n.label.length, 28) * px * 0.6;
         const h = px * 1.25;
-        const pri = (forced ? 10000 : 0) + (kids.has(id) ? 3000 : 0) + (6 - n.depth) * 400 + Math.min(300, n.n_questions);
+        const pri = (forced ? 10000 : 0) + (kids.has(id) ? 3000 : 0) + (6 - n.depth) * 400 + Math.min(390, extPx);
         cands.push({ id, pri, x: ((v.x + 1) / 2) * size.width, y: ((1 - v.y) / 2) * size.height, w, h });
       }
       cands.sort((a, b) => b.pri - a.pri);
       const next = new Set<string>();
+      const ui = uiRects(gl.domElement);
+      const labelRects: typeof placedRects = [];
       for (const c of cands) {
+        if (next.size >= BUDGET) break;
         const rect = { x0: c.x - c.w / 2 - 4, x1: c.x + c.w / 2 + 4, y0: c.y - c.h - 5, y1: c.y + 5 };
         if (!(c.pri >= 10000 && c.id === sel) && placedRects.some((o) => o.owner !== c.id && rect.x0 < o.x1 && rect.x1 > o.x0 && rect.y0 < o.y1 && rect.y1 > o.y0)) continue;
+        if (overlaps(rect, ui)) continue;
         placedRects.push(rect);
+        labelRects.push(rect);
         next.add(c.id);
       }
       shown.current = next;
+      anim.labelRects = labelRects;
     }
     const k = 1 - Math.exp(-dt * 8);
     for (const [id, r] of registry) {
@@ -113,7 +125,7 @@ function Label({ id, p, n, registry }: { id: string; p: Placed; n: TreeNode; reg
   }, [id, registry]);
   const size = SIZE[Math.min(n.depth, SIZE.length - 1)];
   return (
-    <Billboard ref={g} position={[p.x, p.y + nodeSize(n) * 1.9 + size * 0.5, p.z]}>
+    <Billboard ref={g} position={[p.x, p.y + Math.max(nodeSize(n) * 1.9, p.ball * 1.05) + size * 0.5, p.z]}>
       <Text
         ref={t as never}
         font={FONT}

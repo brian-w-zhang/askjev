@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useMemo, useRef } from "react";
 import { useFrame, type ThreeEvent } from "@react-three/fiber";
-import { Color, InstancedMesh, Object3D } from "three";
+import { Color, InstancedMesh, Object3D, type PerspectiveCamera } from "three";
 import { useStore } from "@/lib/store";
 import { anim, now, progress } from "@/lib/anim";
 import { nodeColor } from "@/lib/color";
@@ -9,14 +9,17 @@ import type { Placed } from "@/lib/layout";
 import type { TreeNode } from "@/lib/types";
 
 const MAX = 4096;
+// On-screen radius bounds (px) by depth: node stars stay points of light, never planets or specks.
+const MAX_PX = [16, 12, 9, 7, 6, 5];
+const MIN_PX = 1.6;
 
 export function nodeSize(n: TreeNode): number {
-  if (n.depth === 0) return 0.9;
-  if (n.depth === 1) return 0.55;
-  // log-scaled but capped per depth so stars never outgrow their parents as the corpus grows (10k → 1M)
-  const cap = n.depth === 2 ? 0.42 : n.depth === 3 ? 0.3 : 0.22;
-  const base = n.depth === 2 ? 0.2 : 0.1;
-  return Math.min(cap, base + 0.022 * Math.log2(1 + n.n_questions));
+  // the bright star at the heart of each node's ball; capped per depth so parents stay brighter
+  if (n.depth === 0) return 1.4;
+  if (n.depth === 1) return 1.1;
+  const cap = n.depth === 2 ? 0.7 : n.depth === 3 ? 0.45 : 0.32;
+  const base = n.depth === 2 ? 0.4 : 0.18;
+  return Math.min(cap, base + 0.03 * Math.log2(1 + n.n_questions));
 }
 
 const back = (x: number) => 1 + 2.2 * Math.pow(x - 1, 3) + 1.2 * Math.pow(x - 1, 2);
@@ -44,10 +47,11 @@ export function Nodes({ placed, onPick }: { placed: Map<string, Placed>; onPick:
     m.computeBoundingSphere();
   }, [ids, placed, dummy]);
 
-  useFrame(() => {
+  useFrame(({ camera, size }) => {
     const m = ref.current;
     if (!m) return;
     const s = useStore.getState();
+    const tanHalf = Math.tan((((camera as PerspectiveCamera).fov ?? 45) * Math.PI) / 360);
     const t = now();
     const pa = progress(anim.A, t);
     const pb = progress(anim.B, t);
@@ -79,7 +83,9 @@ export function Nodes({ placed, onPick }: { placed: Map<string, Placed>; onPick:
       if (filtersActive && n.n_match === 0) bright *= 0.22;
       const twinkle = 1 + 0.05 * Math.sin(t * 1.7 + i * 1.37);
       dummy.position.set(p.x, p.y, p.z);
-      dummy.scale.setScalar(nodeSize(n) * k * grow * twinkle);
+      const ppu = size.height / (2 * Math.max(0.1, camera.position.distanceTo(dummy.position)) * tanHalf);
+      const r = Math.min(Math.max(nodeSize(n), MIN_PX / ppu), MAX_PX[Math.min(n.depth, MAX_PX.length - 1)] / ppu);
+      dummy.scale.setScalar(r * k * grow * twinkle);
       dummy.updateMatrix();
       m.setMatrixAt(i, dummy.matrix);
       nodeColor(n, s.indicator, c);
@@ -117,7 +123,7 @@ export function Nodes({ placed, onPick }: { placed: Map<string, Placed>; onPick:
     >
       <instancedBufferAttribute attach="instanceColor" args={[colors, 3]} />
       <icosahedronGeometry args={[1, 3]} />
-      <meshBasicMaterial toneMapped={false} />
+      <meshBasicMaterial toneMapped={false} transparent opacity={0.95} />
     </instancedMesh>
   );
 }

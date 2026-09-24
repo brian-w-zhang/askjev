@@ -19,6 +19,9 @@ interface State {
   panel: PanelView;
   selected: string | null;
   hovered: string | null;
+  hoverStar: number; // star index under the pointer, -1 for none
+  starsReady: boolean;
+  tour: boolean; // auto-fly through the "worth a look" list
   pathA: string[]; // embedding path (root → result node)
   pathB: string[]; // Jev's own walk
   relevance: Record<string, number>; // node id -> 0..1 search relevance (branches brighten)
@@ -37,6 +40,9 @@ export const useStore = create<State>((set) => ({
   panel: { kind: "none" },
   selected: null,
   hovered: null,
+  hoverStar: -1,
+  starsReady: false,
+  tour: false,
   pathA: [],
   pathB: [],
   relevance: {},

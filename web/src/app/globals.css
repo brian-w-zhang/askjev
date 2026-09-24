@@ -229,3 +229,22 @@ select.pop { background: var(--surface-2); border: 1px solid var(--line); border
   .controls[data-collapsed="true"] .controls-inner { display: none; }
   .intro { display: none; }
 }
+
+/* Worth a look: bottom right, beside the panel */
+.worth { position: fixed; right: 20px; bottom: 20px; z-index: 20; width: 290px; background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 10px; backdrop-filter: blur(14px); transition: right 320ms var(--ease-out); }
+body.panel-open .worth { right: 460px; }
+.worth-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.worth-title { background: none; border: 0; padding: 4px; font-weight: 500; font-size: 13px; text-align: left; }
+.worth-title span { color: var(--faint); font-weight: 400; margin-left: 4px; }
+.worth-tour { font-size: 12px; padding: 4px 10px; border-radius: 8px; border: 1px solid var(--line-2); background: transparent; color: var(--muted); }
+.worth-tour[aria-pressed="true"] { border-color: var(--gold); color: var(--gold); }
+.worth ol { list-style: none; margin: 6px 0 0; padding: 0; }
+.worth li button { width: 100%; display: grid; grid-template-columns: 7px 1fr 54px; gap: 10px; align-items: center; background: none; border: 0; border-radius: 8px; padding: 6px 6px; text-align: left; font-size: 13px; }
+.worth li button:hover, .worth li button[aria-current="true"] { background: var(--surface-2); }
+.worth li i { width: 7px; height: 7px; border-radius: 50%; }
+.worth-label { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.worth-meter { height: 3px; background: var(--line); border-radius: 2px; overflow: hidden; }
+.worth-meter b { display: block; height: 100%; background: linear-gradient(90deg, #9d86f0, #ff5d86); }
+.worth-home { width: 100%; margin-top: 6px; padding: 6px; border-radius: 8px; border: 1px dashed var(--line-2); background: none; color: var(--muted); font-size: 12px; }
+.star-card { white-space: normal; width: max-content; max-width: 320px; font-size: 13px; line-height: 1.35; }
+@media (max-width: 800px) { .worth { display: none; } }

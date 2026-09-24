@@ -34,6 +34,7 @@
 | 2026-09-24 | **Decided (approved via the /goal run):** questions are never tree nodes; follow-ups are `question_links`; overload handled by dedupe → split → group, as batch jobs (`02-tree.md` §8) |
 | 2026-09-24 | **Decided (approved via the /goal run):** rewording "universes" as overlays on the one tree (same nodes and question ids, transformed probe text); they replace the paraphrase experiment (`05-experiments.md` §1) |
 | 2026-09-24 | **Decided (approved via the /goal run):** per-question core metadata + screen request / answer bundle (`03-questions.md` §8) |
+| 2026-09-24 | Main view is a **3D nebula** (`07-ui.md`): every node and every displayable question drawn as stars; detail on approach. High-volume Machine templates (≥100 instances) become topic nodes |
 
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)
@@ -61,7 +62,8 @@
 - [ ] Draft 3-5 findings in the standard format
 
 ## M4: UI
-- [x] Sunburst + question cards + findings page (`07-ui.md`)
+- [x] Constellation view + question cards + findings page (`07-ui.md`)
+- [ ] Nebula main view: every node and question drawn, detail on approach (`07-ui.md`)
 - [x] Ask box (private)
 
 ## M5: Outreach

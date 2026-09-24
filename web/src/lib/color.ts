@@ -43,3 +43,25 @@ export function nodeColor(n: TreeNode, ind: Indicator, out = new Color()): Color
   if (a === null) return out.copy(NODATA);
   return rampColor(a, out);
 }
+
+// Nebula palette: each hemisphere spans a small hue range, and each L1 branch takes its own shade of it,
+// so neighbouring branches read as different clouds.
+const PALETTE: Record<string, Color[]> = {
+  world: [new Color("#3FA9FF"), new Color("#5FD4F0"), new Color("#6FF0C8")],
+  self: [new Color("#FF8A6B"), new Color("#FFB35C"), new Color("#FFD98A")],
+  machine: [new Color("#7C7CFF"), new Color("#A993FF"), new Color("#E08BFF")],
+  root: [new Color("#EDEBFA"), new Color("#EDEBFA"), new Color("#EDEBFA")],
+};
+
+/** Branch shade: `t` in 0..1 is the L1 branch's position among its siblings. */
+export function branchColor(hemisphere: string, t: number, out = new Color()): Color {
+  const p = PALETTE[hemisphere] ?? PALETTE.root;
+  if (t <= 0.5) return out.copy(p[0]).lerp(p[1], t / 0.5);
+  return out.copy(p[1]).lerp(p[2], (t - 0.5) / 0.5);
+}
+
+/** Attention 0..1 for one question's own metric (same scale as `attention` for nodes). */
+export function starAttention(v: number | null, ind: Indicator): number | null {
+  if (v === null || ind === "hemisphere") return null;
+  return attention({ [ind]: v } as unknown as TreeNode, ind);
+}
