@@ -1,0 +1,16 @@
+name: wands_relevance
+url: https://github.com/wayfair/WANDS
+download: https://github.com/wayfair/WANDS/raw/main/dataset/{label,query,product}.csv
+license: MIT
+version: WANDS v1 (480 queries, 42,994 products, 233,448 judgments), fetched 2026-09-25
+target: 4000
+hemisphere: machine
+shape: score + rank
+notes: >
+  Wayfair ANnotation DataSet (Chen et al., ECIR 2022): real customer search queries on Wayfair with
+  products judged Exact / Partial / Irrelevant by trained annotators.
+  wands.fit (Score, 3 concrete levels, machine.search.relevance): 2,000 single query-product judgments
+  balanced across labels, round-robin over queries. wands.pairwise (Choice listing_a/listing_b,
+  machine.search.reranking): 2,000 pairs of an Exact product vs a Partial (half) or Irrelevant (half)
+  product for the same query; the Exact one alternates position. Products never repeat within a query
+  across both templates. Product text = name, type, category path, description (600 chars), features (500 chars).

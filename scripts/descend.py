@@ -15,15 +15,16 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--cap", type=int, default=1500)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--hemispheres", default="world,self,machine", help="comma-separated; Machine templates usually go to template-split instead")
     a = ap.parse_args()
     sql = """with over as (select node_id from questions where display_ok group by 1 having count(*) > %(cap)s),
                   parents as (select distinct parent_id from nodes where status='active')
              select q.id, q.node_id from questions q
              join placements p on p.question_id=q.id and p.method='deterministic' and p.node_id=q.node_id
              where q.node_id in (select node_id from over) and q.node_id in (select parent_id from parents)
-               and not q.meta ? 'descended_from'"""
+               and not q.meta ? 'descended_from' and q.hemisphere = any(%(hems)s)"""
     with db.connect() as conn:
-        rows = conn.execute(sql, {"cap": a.cap}).fetchall()
+        rows = conn.execute(sql, {"cap": a.cap, "hems": a.hemispheres.split(",")}).fetchall()
         by = {}
         for r in rows:
             by[r["node_id"]] = by.get(r["node_id"], 0) + 1

@@ -350,3 +350,50 @@ medqp.same_question:
   label: Medical Question Matching
   description: "Questions a program asks about two patient questions to decide whether they ask the same medical question and need the same answer."
   examples: ["Do these two questions ask the same medical question?"]
+
+# Wave 5
+amazon_helpful.helpful:
+  key: review_helpfulness
+  label: Review Helpfulness
+  description: "Questions a program asks about a product review to decide whether it is helpful to a shopper deciding whether to buy, judged against shoppers' helpfulness votes."
+  examples: ["Is this review helpful to a shopper deciding whether to buy the product?"]
+legalbench.definition:
+  key: term_definitions
+  label: Term Definitions in Opinions
+  description: "Questions a program asks about a sentence from a court opinion to decide whether it defines a term."
+  examples: ["Does this sentence from a court opinion define a term?"]
+legalbench.legal_area:
+  key: legal_help_areas
+  label: Legal Help Areas
+  description: "Questions a program asks about a person's request for legal help to decide whether it raises an issue in a given area of law: housing, family, employment, debt, immigration, crime and so on."
+  examples: ["Does this legal-help request raise an issue in housing law?"]
+legalbench.overruling:
+  key: overruling_detection
+  label: Overruling Detection
+  description: "Questions a program asks about a sentence from a court opinion to decide whether it overrules a previous case."
+  examples: ["Does this sentence from a court opinion overrule a previous case?"]
+legalbench.decision_section:
+  key: decision_sections
+  label: Court Decision Sections
+  description: "Questions a program asks about a paragraph from a court decision to classify the function it serves: facts, procedural history, issue, rule, analysis, conclusion."
+  examples: ["What function does this paragraph serve in the court decision?"]
+legalbench.cuad_provision:
+  key: cuad_provisions
+  label: Commercial Contract Provisions
+  description: "Questions a program asks about a clause from a commercial contract to decide whether it contains a specific kind of provision, such as non-compete, exclusivity, change of control or audit rights."
+  examples: ["Does this clause contain a non-compete provision?"]
+scicite.intent:
+  key: citation_intent
+  label: Citation Intent
+  description: "Questions a program asks about a sentence from a scientific paper to decide why it cites another work: as background, for its method, or to compare results."
+  examples: ["Why does this sentence cite the work?"]
+evidence_inference.effect:
+  key: clinical_trial_effects
+  label: Clinical Trial Effects
+  description: "Questions a program asks about evidence from a clinical trial report to decide how an intervention affected an outcome compared with a comparator: significantly increased, decreased, or no significant difference."
+  examples: ["According to this evidence, how did the intervention affect blood pressure compared with placebo?"]
+trec_qc.answer_type:
+  key: answer_types
+  label: Question Answer Types
+  description: "Questions a program asks about a user's question to decide what kind of answer it is looking for: a person, a place, a number, a definition, an entity, or an abbreviation."
+  examples: ["What kind of answer is this question looking for?"]

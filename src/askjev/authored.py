@@ -98,7 +98,11 @@ def ingest_authored(paths: list[str] | None = None, round_trip: bool = True) -> 
     g5 = [(q, n) for q, n in g5 if q.id not in have]
     kept, rejected = [], []
     if round_trip and g5:
-        res = asyncio.run(place_many([{"id": q.id, "text": q.text, "options": q.options, "state": q.state} for q, _ in g5]))
+        # the walk starts at the intended hemisphere (the author already fixed it; the root step only spends a call):
+        # still blind to the intended branch below it
+        starts = {q.id: node.split(".")[0] for q, node in g5}
+        res = asyncio.run(place_many([{"id": q.id, "text": q.text, "options": q.options, "state": q.state} for q, _ in g5],
+                                     starts=starts))
         for q, node in g5:
             r = res.get(q.id, {})
             placed = r.get("node", "root")

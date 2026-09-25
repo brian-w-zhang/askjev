@@ -1,0 +1,14 @@
+name: dbpedia_entity_rel
+url: https://github.com/iai-group/DBpedia-Entity
+download: https://huggingface.co/datasets/BeIR/dbpedia-entity (+ BeIR/dbpedia-entity-qrels test + validation), HF parquet API
+license: CC-BY-SA-3.0 (DBpedia abstracts); judgments public; BEIR CC-BY-SA-4.0
+version: DBpedia-Entity v2 via BEIR (467 queries, 4.6M entities; 49k judgments), fetched 2026-09-25
+target: 2500
+hemisphere: machine
+shape: rank
+notes: >
+  Entity search with graded crowd judgments on pooled results (0 irrelevant, 1 relevant, 2 highly relevant).
+  dbpedia_entity.pair (Choice entity_a/entity_b, machine.search.reranking): a highly relevant (2) vs an
+  irrelevant (0) entity for the same query, both from the judged pool; the relevant one alternates position.
+  Round-robin across queries, each entity used at most once per query. Entity text = title + abstract
+  (cut at a sentence boundary near 700 chars). Queries naming politicians/elections/parties are flagged political.

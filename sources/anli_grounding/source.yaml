@@ -1,0 +1,13 @@
+name: anli_grounding
+url: https://github.com/facebookresearch/anli
+download: https://huggingface.co/api/datasets/facebook/anli/parquet/plain_text/{dev,test}_r{1,2,3}/0.parquet
+license: CC-BY-NC-4.0
+version: ANLI v1.0 dev + test, rounds 1-3 (6,400 pairs)
+target: 1500
+hemisphere: machine
+shape: verify
+notes: >
+  Template anli.backed_up (Choice backed_up / ruled_out / left_open, node machine.ai_systems.extraction_verification):
+  "Does `context` back up `claim`, rule it out, or leave it open?" Hypotheses are human-written (adversarial
+  against a model, then verified by other workers); truth = gold label. 500 per label, round-robin over the
+  three rounds, salted hash order. ASKJEV_TARGET_ANLI_GROUNDING (default 1,500).

@@ -1,0 +1,18 @@
+name: color_favorites
+url: https://osf.io/v6h48/ ; https://osf.io/ucrxq/
+download: https://osf.io/download/pa75e/ (Cohen, "color preference survey 9-17-10.xlsx", sheet raw); https://osf.io/download/4frcn/ (Jonauskaite et al., Stage_2_DATA_personality_aggregated.csv)
+license: Public OSF open data, no license stated (Cohen 2013, Sociological Forum; Jonauskaite, Thalmayer, Müller et al. 2021, Psychological Science). Cite both.
+version: Cohen raw sheet (2,103 responses, 2010); Jonauskaite aggregated file (323 participants)
+target: 72
+hemisphere: self
+kind: taste
+notes: >
+  Favorite-color Choices with human shares. (1) Cohen 2010 US online survey "Which of these colors do you most
+  prefer?" with 7 named swatches (purple, blue, green, yellow, orange, red, pink) + other; shares from the raw sheet
+  (write-ins, including comments, count as other; blank answers dropped; minors not removed). (2) Jonauskaite et
+  al. 2021 open-answer favourite and least-favourite colour, coded by the authors into 13 categories. Pairs "Which
+  color do you like better: X or Y?" over the union of colors, human split = among respondents whose favorite was
+  X or Y, the share for each (one HumanDist per survey that has both colors with at least 20 such respondents).
+  This is derived from a single favorite pick, not a direct paired comparison. No per-color rating data with
+  individual responses was found publicly (Berkeley Color Project preference ratings are means only; the
+  SchlossVRL repos hold color-emotion, not preference, ratings).

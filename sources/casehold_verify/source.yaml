@@ -1,0 +1,14 @@
+name: casehold_verify
+url: https://huggingface.co/datasets/coastalcph/lex_glue
+download: https://huggingface.co/api/datasets/coastalcph/lex_glue/parquet/case_hold/{validation,test}/0.parquet
+license: Apache-2.0 (CaseHOLD; LexGLUE card CC-BY-4.0)
+version: LexGLUE case_hold config (Zheng et al. 2021), validation + test splits (7,500 citing contexts)
+target: 2500
+hemisphere: machine
+shape: verify
+notes: >
+  Template casehold.holding_fits: Noul "Is `holding` the holding of the case cited at <HOLDING> in
+  `excerpt`...?" over real US court opinion passages. Alternating rows show the real holding (truth true)
+  or one of the four distractor holdings of other cases (truth false, seeded pick), so 50/50. Contexts
+  200-1,500 chars, deduplicated, salted-hash sample. Sexual-crime / suicide wording flagged sensitive.
+  -> machine.legal (no deeper legal node fits case-law verification).

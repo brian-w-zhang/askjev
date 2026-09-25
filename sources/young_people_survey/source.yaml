@@ -1,0 +1,25 @@
+name: young_people_survey
+url: https://www.kaggle.com/datasets/miroslavsabo/young-people-survey
+download: https://raw.githubusercontent.com/FHU/young-people-survey/master/{responses,columns}.csv (public GitHub copy of the Kaggle files; Kaggle itself needs a login)
+license: CC0 1.0 (Miroslav Sabo, Kaggle 2016)
+version: responses.csv 1,010 respondents x 150 columns (collected 2013 by FSEV UK Bratislava students, Slovak, translated to English)
+target: 872
+hemisphere: self
+kind: taste
+notes: >
+  One question per survey item with the respondents' share at each answer (population "Slovak young people aged
+  15-30 (2013 survey)", n = non-missing answers). Scores (5 levels, level 0 = the survey's low anchor, level 4 =
+  its high anchor, middle levels written as concrete situations): 17 music genres "How much do you enjoy
+  listening to X?" (Don't enjoy at all .. Enjoy very much), 11 movie genres "How much do you enjoy watching X?",
+  32 hobbies/interests "How interested are you in X?" (Not interested .. Very interested), 10 fears "How afraid
+  are you of X?" (Not afraid at all .. Very afraid of; none involve self-harm), slow vs fast songs, 64 agree/disagree
+  statements (general music/movie enjoyment, health, personality, views, spending) as "How well does this
+  statement describe you" with the standard 5 describe-me levels (Strongly disagree .. Strongly agree), and
+  internet time (4 levels). Choices with shares: smoking, drinking, timekeeping, lying. Statement wording follows
+  columns.csv with its typos fixed. Demographics (age, height, gender, education, home) are skipped.
+  Pairs: every within-block pair of music genres (136), movie genres (55), interests (496), and fears (45), e.g.
+  "Which would you rather listen to: swing and jazz or metal and hard rock?"; human split = among respondents
+  who rated the two items differently, the share rating each higher; ties excluded (count in meta.ties), n =
+  respondents with a strict preference. This is a derived comparison of two independent ratings, not a stated
+  forced choice. Kind taste for genres/interests, personality for fears and habits, values for a few belief items.
+  ASKJEV_TARGET_YOUNG_PEOPLE_SURVEY_PAIRS caps pairs (default: all 732).

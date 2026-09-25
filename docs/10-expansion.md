@@ -156,6 +156,12 @@ Another session is changing the UI at the same time. The expansion agent must no
   ≤ 60% in wave 1 and adds world-only items in wave 2; Ecchi and Hentai anime are dropped rather than flagged; beer pairs capped
   at 2,000 (many craft beers aren't widely known); scruples capped at 2,000 and moral_stories at 3,000 because values is over
   target; the weakest synthetic Score shape ("How should X handle Y" with one sensible level) is dropped before round trip.
+- **Round-trip walk starts at the intended hemisphere** (2026-09-25): the author fixes the hemisphere, so the root step only spent a
+  call (~20% of round-trip cost). The walk is still blind below it; a bank item can no longer be rejected for landing in another
+  hemisphere (rare in earlier banks; rejects were almost all sibling nodes).
+- **Throughput** (2026-09-25): requests pack up to 64 questions / ~5k tokens (measured sweet spot; larger requests mostly 503);
+  gateway pinned to TypeSafe's own provider; adaptive rate backs off 10% when > 30% of requests are throttled; packing several
+  Machine inputs per request was tested and rejected (accuracy 84.5 → 82.5%).
 - **Vital L3 nodes** are single entities (not topic groupings), so Vital L4 entities correctly sit on hand topic nodes;
   nothing to re-home (§1 corrected).
 

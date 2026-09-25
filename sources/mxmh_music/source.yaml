@@ -1,0 +1,18 @@
+name: mxmh_music
+url: https://www.kaggle.com/datasets/catherinerasgaitis/mxmh-survey-results
+download: https://raw.githubusercontent.com/crasgaitis/mxmh/main/mxmh_survey_results.csv (the dataset author's public GitHub copy; Kaggle needs a login)
+license: CC0 1.0 (Catherine Rasgaitis, Kaggle 2022)
+version: mxmh_survey_results.csv, 736 respondents (Google Form, Aug-Nov 2022)
+target: 144
+hemisphere: self
+kind: taste
+notes: >
+  Music & Mental Health survey. 16 genre Scores "How often do you listen to X?" with the survey's own 4 answers as
+  levels (Never, Rarely, Sometimes, Very frequently) and the respondents' shares; favorite genre (16-option Choice,
+  the form's forced pick); primary streaming service and "does music improve/worsen your mental health" Choices;
+  5 habit Nouls (music while working, exploring new artists, foreign-language lyrics, instrumentalist, composer).
+  Pairs: all 120 genre pairs "Which do you listen to more often: X or Y?"; human split = among respondents who
+  reported different frequencies for the two, the share listening more often to each (ties excluded, count in
+  meta.ties). Worded "more often" (not "rather") because the data is listening frequency. The anxiety/depression/
+  insomnia/OCD 0-10 self-ratings, age, hours per day, and BPM are skipped (clinical self-reports / not taste).
+  Population: an online convenience sample recruited via Reddit, Discord, and social media (median age ~21).
