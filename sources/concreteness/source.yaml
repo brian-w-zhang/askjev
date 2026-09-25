@@ -1,0 +1,14 @@
+name: concreteness
+url: https://doi.org/10.3758/s13428-013-0403-5
+license: Research use (Brysbaert, Warriner & Kuperman 2014, Behavior Research Methods, supplementary data)
+version: 13428_2013_403_MOESM1_ESM.xlsx (Springer supplementary, 39,954 lemmas), fetched 2026-09-25
+target: 3000
+hemisphere: world
+kind: perception
+notes: >
+  "How concrete is the word X?" (template_id concreteness.concreteness) with five concrete levels and the raters'
+  mean/SD mapped to a normal(mean, max(SD, 0.3)) cut at 1.5, 2.5, 3.5, 4.5 of the 1-5 scale; n = raters who knew
+  the word. Pool: single lowercase words (no bigrams), SUBTLEX-US count >= 150 (about 3 per million), known by
+  >= 95% of raters, and not in the Glasgow Norms (glasgow_norms must be fetched first), so the two sources never
+  overlap. Salted-hash sample of ASKJEV_TARGET_CONCRETENESS (default 3000). node_hint: boolq keyword rules on the
+  word, else `world`. Also holds the shared word-norm helpers used by lancaster and glasgow_norms.

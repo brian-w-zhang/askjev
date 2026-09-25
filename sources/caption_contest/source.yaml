@@ -1,0 +1,20 @@
+name: caption_contest
+url: https://github.com/nextml/caption-contest-data
+download: nextml/caption-contest-data gh-pages summaries/<contest>*.csv (raw.githubusercontent.com) + jmhessel/newyorker_caption_contest matching/*.parquet (text columns only, via HTTP range reads)
+license: Caption votes - nextml/caption-contest-data (Jain et al. 2020, "The New Yorker Cartoon Caption Contest dataset", NEXT), public GitHub release with no explicit license, research use with citation; cartoon descriptions - Hessel et al. 2023, CC BY 4.0
+version: caption-contest-data gh-pages + newyorker_caption_contest main, downloaded 2026-09-25
+target: 3000
+hemisphere: self
+kind: taste
+notes: >
+  "How funny is this caption for the cartoon?" as a 3-level Score (template_id caption_contest.funny), state
+  {"cartoon_scene", "cartoon", "caption"}. Replaces the brief's "jokes_ratings" slot: the only public joke corpus
+  found with a real per-item rating distribution (Jester is already used; rJokes/Short Jokes have no per-person
+  ratings). Contest summaries give each submitted caption's unfunny / somewhat funny / funny vote counts from
+  newyorker.com visitors; the cartoon (an image) is replaced by Hessel et al.'s written scene, description and
+  "uncanny" note, so only contests with such a description are used (contests 510-763 overlap). Per contest the
+  summary file with the most votes; captions need 3+ words, >= 100 votes, counts that add up, and a vote at every level
+  (drops seeded test captions); 15 captions per contest, 5 from each funniness tier (top 10%, middle, bottom
+  half by mean), salted-hash order. Human distribution = vote shares, n = votes. Keyword flags: political
+  (Trump, elections, immigration...), sensitive (sexual, bodily, suicide). No truth.
+  Node self.personality.humor_style.joke_ratings. Target via ASKJEV_TARGET_CAPTION_CONTEST.

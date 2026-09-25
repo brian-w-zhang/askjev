@@ -20,7 +20,8 @@ def main():
                   parents as (select distinct parent_id from nodes where status='active')
              select q.id, q.node_id from questions q
              join placements p on p.question_id=q.id and p.method='deterministic' and p.node_id=q.node_id
-             where q.node_id in (select node_id from over) and q.node_id in (select parent_id from parents)"""
+             where q.node_id in (select node_id from over) and q.node_id in (select parent_id from parents)
+               and not q.meta ? 'descended_from'"""
     with db.connect() as conn:
         rows = conn.execute(sql, {"cap": a.cap}).fetchall()
         by = {}

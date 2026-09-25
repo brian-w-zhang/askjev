@@ -1,0 +1,18 @@
+name: esci_attributes
+url: https://github.com/amazon-science/esci-data
+download: https://huggingface.co/api/datasets/tasksource/esci/parquet/default/test/0.parquet (fetch hard-links esci_rerank's copy when present)
+license: Apache-2.0
+version: Shopping Queries Dataset (Reddy et al. 2022), test shard 0 of tasksource/esci, unique US products (~82.7k)
+target: 2500
+hemisphere: machine
+shape: extract
+notes: >
+  Template esci.color (node machine.commerce.attribute_extraction): Choice "What color is the product in
+  `listing`?" over 16 base colors + other (keys black, white, gray, silver, gold, brown, beige, red, pink,
+  orange, yellow, green, blue, purple, clear, multicolor, other). State = title, brand and bullet points
+  (description if no bullets), 900 chars, with the color field withheld. Truth = the seller's color field
+  mapped to a base color (exact values like "Navy Blue" -> blue, "Charcoal" -> gray; values that are not a
+  plain color are skipped). Kept only when the color word appears in the shown text and the title names no
+  other base color, so the label is answerable and unambiguous. Title dedup; ~157 per color (orange 147,
+  all it has), salted hash order. Adult-product keywords flagged "sensitive".
+  ASKJEV_TARGET_ESCI_ATTRIBUTES (cap 3,000).

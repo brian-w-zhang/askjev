@@ -1,0 +1,16 @@
+name: yahoo_closed
+url: https://huggingface.co/datasets/community-datasets/yahoo_answers_topics
+license: "Yahoo! Answers Comprehensive Q&A (Yahoo Webscope L6): non-commercial research use"
+version: community-datasets/yahoo_answers_topics train parquet (1,400,000 questions, 2 files), fetched 2026-09-25
+target: 8000
+hemisphere: world
+kind: factual, evaluative, forecast, social
+notes: >
+  Real closed questions people asked on Yahoo! Answers (question titles only). Uses quora_closed's filter chain,
+  choice parsing, dedupe key and tagger unchanged (imported): one standalone closed question, not personal, not a
+  request, no homework, no unseen context, no passed-moment wording, no typos (vocabulary built from all titles),
+  "Which is better, A or B?" / "Would you rather A or B?" -> Choice, else Noul. Extra drops: the whole Family &
+  Relationships category, titles about Yahoo! Answers itself (points, best answer) or mid-2000s gadgets, SHOUTED
+  titles, and names/events of the 2005-2007 news cycle. Self-tagged questions dropped (world only). Deduped by
+  normalized text; salted-hash sample of ASKJEV_TARGET_YAHOO_CLOSED (default 8000). No node_hint, no truth.
+  Contested politics flagged political, sexual/health/drug/violence flagged sensitive (quora_closed's regexes).

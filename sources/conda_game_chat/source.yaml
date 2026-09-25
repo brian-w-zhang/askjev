@@ -1,0 +1,15 @@
+name: conda_game_chat
+url: https://github.com/usydnlp/CONDA
+download: https://raw.githubusercontent.com/usydnlp/CONDA/main/data/CONDA_{train,valid}.csv
+license: No license file in the repo; public research dataset, cite Weld et al. 2021 (ACL-IJCNLP)
+version: CONDA train + valid (the labelled files; the test file is unannotated), Dota 2 in-game chat
+target: 2500
+hemisphere: machine
+shape: detect
+notes: >
+  Template conda.toxic (node machine.trust_safety.game_chat): Noul "Is `chat` toxic toward other
+  players?" Truth = utterance intent E (explicit toxicity) or I (implicit toxicity); O (other) = false;
+  A (action request, e.g. "report sf pls") rows are left out as ambiguous. [SEPA]-joined consecutive
+  messages shown with " / ". Utterances under three words and exact duplicates dropped. Balanced
+  1,250 / 1,250 in salted hash order. Sexual wording and "kill yourself"-type lines flagged "sensitive".
+  ASKJEV_TARGET_CONDA_GAME_CHAT (cap 3,000).

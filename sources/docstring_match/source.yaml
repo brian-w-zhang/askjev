@@ -1,0 +1,17 @@
+name: docstring_match
+url: https://github.com/github/CodeSearchNet
+download: https://huggingface.co/api/datasets/code-search-net/code_search_net/parquet/{python,javascript,java,go}/test/0.parquet
+license: CodeSearchNet functions come from repositories under permissive open-source licenses (each repo's own license)
+version: CodeSearchNet (Husain et al. 2019) test splits, HF code-search-net/code_search_net (python 22,176 / javascript 6,483 / java 26,909 / go 14,291)
+target: 2500
+hemisphere: machine
+shape: verify
+notes: >
+  Template docstring_match.accurate (Noul, node machine.code.code_review): "Does `docstring` accurately
+  describe what `code` does?" 625 per language. Half true pairs (the function's own docstring), half
+  mismatched: the docstring of another function in the same repository and language (different name,
+  different opening words), chosen in salted hash order. Only repos with >= 2 usable functions.
+  Docstring = summary paragraph (comment markers and tag lines such as @param / :param / Args: dropped,
+  {@code x} unwrapped, 4-60 words, >= 95% ASCII, no inheritDoc, case-insensitive dedup). Python bodies
+  have their docstring removed; Go comments lose a leading function name. Functions <= 1,200 chars;
+  pairs whose summary text also appears in the code are dropped. ASKJEV_TARGET_DOCSTRING_MATCH (default 2,500).

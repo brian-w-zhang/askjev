@@ -16,3 +16,5 @@ notes: >
   distribution: among co-raters, share rating each book higher, ties split; n = co-raters. No truth.
   Flags from shelves (>= 5% of a book's shelvings): erotica/bdsm -> sensitive, politics -> political; books by politicians or polemicists (Obama, Clinton, Marx, Zinn...) -> political.
   Node self.lifestyle.leisure_hobbies. Target via ASKJEV_TARGET_GOODREADS_PAIRS.
+  Wave 3: run with ASKJEV_TARGET_GOODREADS_PAIRS=5000 (the per-text cap; stands in for the Book-Crossing slot, whose
+  co-ratings were too sparse); rows 1-3000 are unchanged.

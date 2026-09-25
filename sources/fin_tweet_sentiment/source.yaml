@@ -1,0 +1,15 @@
+name: fin_tweet_sentiment
+url: https://huggingface.co/datasets/zeroshot/twitter-financial-news-sentiment
+download: https://huggingface.co/api/datasets/zeroshot/twitter-financial-news-sentiment/parquet/default/{train,validation}/0.parquet
+license: MIT
+version: HF zeroshot/twitter-financial-news-sentiment train (9,543) + validation (2,388); labels bearish / bullish / neutral
+target: 2500
+hemisphere: machine
+shape: classify
+notes: >
+  Template fin_tweet.market_signal (node machine.commerce.demand_signals, "market chatter"): Choice
+  "Is `post` a bearish, bullish or neutral signal for the stock or market it mentions?" with keys
+  bearish / bullish / neutral (short descriptions). Truth = dataset label. t.co links stripped, exact dedup,
+  834 / 833 / 833 in salted hash order. Tweets naming politicians, parties or elections flagged
+  "political". Different data from fin_news_topic (that is the topic companion set).
+  ASKJEV_TARGET_FIN_TWEET_SENTIMENT (cap 3,000).

@@ -1,0 +1,13 @@
+name: cola_grammar
+url: https://nyu-mll.github.io/CoLA/
+download: https://huggingface.co/api/datasets/nyu-mll/glue/parquet/cola/{train,validation}/0.parquet
+license: CoLA terms (sentences from published linguistics literature, released for research via GLUE)
+version: CoLA train (8,551) + in-domain validation (1,043), GLUE copy nyu-mll/glue
+target: 2000
+hemisphere: machine
+shape: detect
+notes: >
+  Template cola.grammatical (node machine.code.semantic_lint, "writing guidelines ordinary linters
+  can't check"): Noul "Is `sentence` grammatical English?" Truth = the source linguist's acceptability
+  mark (acceptable = true). Sentences under 3 words and exact duplicates dropped, balanced 1,000 / 1,000
+  in salted hash order. ASKJEV_TARGET_COLA_GRAMMAR (cap 3,000).

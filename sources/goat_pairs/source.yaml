@@ -3,6 +3,7 @@ url: https://qlever.dev/api/wikidata (fallback https://query.wikidata.org/)
 license: CC0 (Wikidata)
 version: SPARQL + entity-API pulls cached 2026-09-24 (data/raw/goat_pairs/<category>.json)
 target: 6600
+target_wave4: 11100 (ASKJEV_TARGET_GOAT_PAIRS; picks TARGET // 300 categories in order, unset = the original 22, byte-identical)
 hemisphere: world
 kind: taste (evaluative for scientists)
 notes: >
@@ -17,3 +18,12 @@ notes: >
   (sitelink-inflated outliers, people famous for something else, contested places, non-members of the class).
   Pairs involving Russia, Ukraine, Israel, Iran (countries) or Moscow, Kyiv (cities) carry meta.flags=["political"].
   Inventions skipped: no clean Wikidata class.
+  Wave 4 (ASKJEV_TARGET_GOAT_PAIRS=11100) appends 15 categories after the original 22, 300 pairs each, same
+  construction: composers (>= 5 credited symphonies/operas/concertos/sonatas/quartets/compositions), film directors
+  (>= 8 directed films), poets and philosophers (hand-picked allowlists of 31-33 QIDs from the top 150 by sitelinks,
+  because Wikidata's occupation tags put Marx, Einstein, Picasso and Mao among them), architects (>= 5 credited
+  buildings), fashion designers (singers/actors/models/politicians/businesspeople with clothing lines removed by
+  occupation), operas (dramatico-musical works with genre opera, "(composer)" in the name, at most 3 per composer),
+  animated TV series, video game console models, sports car models, dog breeds, national parks, islands (not
+  sovereign states), cathedrals, and stadiums. kind taste except philosophers (evaluative). Xbox consoles are
+  missing: their Wikidata items don't carry the console-model class.

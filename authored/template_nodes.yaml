@@ -199,3 +199,55 @@ movielens_pairs.watch:
   label: Movie Matchups
   description: "Head-to-head choices between two well-known films of the same genre and era: which one you would rather watch."
   examples: ["Which movie would you rather watch: Scream 2 or Strange Days?"]
+
+# Wave 2
+guardrail.jailbreak:
+  key: jailbreak_detection
+  label: Jailbreak Detection
+  description: "Questions a program asks about a message sent to an AI assistant to detect whether it tries to make the assistant ignore, override or reveal its instructions, or role-play as an AI with no rules."
+  examples: ["Does this message try to get the assistant to ignore its instructions?"]
+unsafe_responses.unsafe:
+  key: unsafe_replies
+  label: Unsafe Replies
+  description: "Questions a program asks about an AI assistant's reply to a user's prompt to decide whether the reply gives harmful or unsafe help."
+  examples: ["Is the assistant's response to this prompt harmful or unsafe?"]
+unsafe_responses.harm_kind:
+  key: reply_harm_kind
+  label: Kind of Harm in Replies
+  description: "Questions a program asks about an AI assistant's reply to name which kind of harm it contains or enables, if any: violence, weapons, drugs, fraud, privacy violation, hate, self-harm and so on."
+  examples: ["Which kind of harm, if any, does the assistant's response enable?"]
+scifact.claim_support:
+  key: scientific_claims
+  label: Scientific Claim Support
+  description: "Questions a program asks about a scientific claim and a passage from a research abstract to decide whether the evidence supports, contradicts, or says nothing about the claim."
+  examples: ["How does this evidence from an abstract relate to the claim?"]
+fever_claims.verdict:
+  key: encyclopedic_claims
+  label: Encyclopedic Claim Checks
+  description: "Questions a program asks about a factual claim and sentences from Wikipedia to decide whether the sentences support it, refute it, or don't give enough information."
+  examples: ["What do these Wikipedia sentences say about the claim?"]
+massive_en.scenario:
+  key: assistant_scenarios
+  label: Smart-Assistant Scenarios
+  description: "Questions a program asks about a spoken command to a smart assistant to decide which scenario it belongs to: alarms, music, calendar, weather, smart home, shopping lists and so on."
+  examples: ["Which smart-assistant scenario does this command belong to?"]
+snips_intents.intent:
+  key: voice_intents
+  label: Voice Assistant Intents
+  description: "Questions a program asks about a voice command to decide the exact action the user wants: play music, add to a playlist, book a restaurant, get the weather, rate a book, search for a show, find a movie schedule."
+  examples: ["What does the user want the voice assistant to do in this command?"]
+moral_machine.av:
+  key: self_driving_dilemmas
+  label: Self-Driving Car Dilemmas
+  description: "Dilemmas where a self-driving car's brakes fail and it must either stay on course or swerve, choosing who dies: passengers or pedestrians, young or old, humans or pets, law-abiding or jaywalking."
+  examples: ["Should the car stay on course, killing two elderly pedestrians, or swerve, killing its two young passengers?"]
+onet_interests.enjoy:
+  key: work_activities
+  label: Enjoyment of Work Activities
+  description: "How much you would enjoy doing specific real work activities and tasks for a living, from repairing engines to teaching children to analyzing data."
+  examples: ["How much would you enjoy this work activity: \"Build kitchen cabinets\"?"]
+ethics_other.excuse:
+  key: excuses
+  label: Excuses and Obligations
+  description: "Whether an excuse is a reasonable reason for not doing what someone asked or what a role requires."
+  examples: ["Is \"I was sick\" a reasonable excuse for not returning the book?"]

@@ -1,0 +1,19 @@
+name: esci_rerank
+url: https://github.com/amazon-science/esci-data
+download: https://huggingface.co/api/datasets/tasksource/esci/parquet/default/test/0.parquet
+license: Apache-2.0
+version: Shopping Queries Dataset (Reddy et al. 2022), test split shard 0 of the HF joined copy tasksource/esci (163,123 judgments; 124,212 US)
+target: 3500
+hemisphere: machine
+shape: score, rank
+notes: >
+  US locale only. Product text = title, brand, color and bullet points (HTML stripped; description when
+  bullets are missing), capped at 900 chars (600 in pairs).
+  Template esci.match (Score, node machine.search.relevance): "How well does the product in `product`
+  match the shopping query `query`?" with four situation levels Irrelevant < Complement < Substitute <
+  Exact. Truth = level index. 500 per label, at most one product per query per label, salted hash order.
+  Template esci.pairwise (Choice, node machine.search.reranking): two products for one query (queries not
+  used by esci.match) with different labels; truth = the higher ESCI label. 250 pairs for each of the
+  six label pairings; which side holds the better product is set by hash.
+  ASKJEV_TARGET_ESCI_MATCH (default 2,000), ASKJEV_TARGET_ESCI_PAIR (default 1,500).
+  Adult-product keywords flagged "sensitive".

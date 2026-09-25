@@ -1,0 +1,15 @@
+name: contract_nli
+url: https://stanfordnlp.github.io/contract-nli/
+download: https://huggingface.co/api/datasets/kiddothe2b/contract-nli/parquet/contractnli_a/{train,validation,test}/0.parquet
+license: CC-BY-4.0 (ContractNLI, Koreeda & Manning 2021); HF copy kiddothe2b/contract-nli tagged CC-BY-NC-SA-4.0
+version: ContractNLI task A (evidence spans as premise) via HF kiddothe2b/contract-nli, 9,788 pairs over 17 hypotheses
+target: 2500
+hemisphere: machine
+shape: verify
+notes: >
+  Template contract_nli.entailment (Choice, node machine.legal.clause_detection, the best-fitting legal
+  node: the 17 hypotheses are NDA clause checks): "Does `contract_excerpt` entail, contradict, or not
+  mention `hypothesis`?" with keys entailed / contradicted / not_mentioned. Truth = label. All splits
+  pooled (meta.split), excerpts > 1,500 chars dropped, exact (excerpt, hypothesis) dedup. All 1,044
+  contradictions kept (rarest class); the rest split evenly between entailed and not_mentioned,
+  round-robin over hypotheses in salted hash order. ASKJEV_TARGET_CONTRACT_NLI (default 2,500).

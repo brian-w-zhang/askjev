@@ -1,0 +1,15 @@
+name: fin_news_topic
+url: https://huggingface.co/datasets/zeroshot/twitter-financial-news-topic
+download: https://huggingface.co/api/datasets/zeroshot/twitter-financial-news-topic/parquet/default/{train,validation}/0.parquet
+license: MIT
+version: Twitter Financial News Topic, HF zeroshot/twitter-financial-news-topic (16,990 train + 4,117 validation, 20 topics)
+target: 2500
+hemisphere: machine
+shape: classify
+notes: >
+  Template fin_news_topic.topic (Choice, node machine.finance: no finance leaf covers news-topic tagging,
+  so placement walks down from the parent): "What is the financial news post in `post` about?" over the
+  20 topics (snake_case keys with short descriptions). Truth = label. Splits pooled (meta.split); HTML
+  entities unescaped; dedup on text without URLs. Round-robin over topics in salted hash order (~132 per
+  topic; gold_metals_materials and ipo have only 68 and 54 unique posts). Politics-topic posts and posts naming politicians or contested issues flagged "political".
+  ASKJEV_TARGET_FIN_NEWS_TOPIC (default 2,500).

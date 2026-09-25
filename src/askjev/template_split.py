@@ -42,7 +42,9 @@ def split(dry_run: bool = False) -> str:
     spec = yaml.safe_load(SPEC.read_text()) if SPEC.exists() else {}
     # only templates with an authored label split out (a label is the judgment that the template is a topic)
     missing = sorted({r["template_id"] for v in by_node.values() for r in v if r["template_id"] not in spec})
-    by_node = {k: [t for t in v if t["template_id"] in spec] for k, v in by_node.items()}
+    # labeled templates only, and never one already sitting in its own template node
+    by_node = {k: [t for t in v if t["template_id"] in spec and not k.endswith("." + spec[t["template_id"]]["key"])]
+               for k, v in by_node.items()}
     by_node = {k: v for k, v in by_node.items() if v}
     if dry_run:
         lines = [f"{n}: " + ", ".join(f"{r['template_id']}={r['c']}" for r in v) for n, v in by_node.items()]

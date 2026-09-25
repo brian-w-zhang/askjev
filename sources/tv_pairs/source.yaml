@@ -1,0 +1,19 @@
+name: tv_pairs
+url: https://archive.org/details/nf_prize_dataset.tar
+download: https://archive.org/download/nf_prize_dataset.tar/nf_prize_dataset.tar.gz (700 MB, streamed once; only TV-season ratings kept)
+license: Netflix Prize dataset (2006) usage license - research use only, no redistribution, no commercial use, no Netflix endorsement. Public mirror on archive.org (the official download was withdrawn in 2010). Private use only.
+version: nf_prize_dataset.tar.gz (archive.org upload 2016-02-04 of the 2006 release), streamed 2026-09-25
+target: 3000
+hemisphere: self
+kind: taste
+notes: >
+  Pairwise taste Choices "Which TV series would you rather watch?" (template_id tv_pairs.watch). Netflix listed
+  TV as season DVDs; only titles of the form "<Series>: Season|Series N" are used (bonus-material discs "The Best of ..." compilations, and adult
+  reality series dropped) and each is mapped to its series. A customer's series score = mean of their 1-5 star
+  ratings over that series' seasons. Series need >= 1,000 raters (220 series); a pair needs a different franchise (Star Trek
+  spin-offs never meet) and >= 200 co-raters. Salted-hash order (prefix-stable), at most 40 pairs per series.
+  Options = slug keys with "<Series> (TV series)" descriptions, alphabetical. Human distribution: among
+  co-raters, the share scoring each series higher, ties split; n = co-raters. No truth. A hand list flags
+  sensitive (Oz, Sex and the City, Nip/Tuck, South Park...) and political (The West Wing, The Awful Truth, The Apprentice...) series.
+  fetch() streams the tar.gz (movie_titles.txt, then training_set.tar) and writes tv_season_ratings.parquet.
+  Node self.lifestyle.screens_media. Target via ASKJEV_TARGET_TV_PAIRS.

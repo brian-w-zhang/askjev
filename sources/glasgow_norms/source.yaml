@@ -1,0 +1,17 @@
+name: glasgow_norms
+url: https://doi.org/10.3758/s13428-018-1099-3
+license: CC BY 4.0 (Scott, Keitel, Becirspahic, Yao & Sereno 2019, Behavior Research Methods)
+version: 13428_2018_1099_MOESM2_ESM.csv (Springer supplementary, 5,553 words), fetched 2026-09-25
+target: 9000
+hemisphere: world
+kind: perception (valence, arousal, size, imageability), evaluative (familiarity, age of acquisition)
+notes: >
+  One Score question per (word, dimension), template_id glasgow_norms.<dimension>. Defaults per dimension:
+  valence 2000, arousal 1500, size 1500 (only words with concreteness >= 5 of 7), imageability 1000,
+  familiarity 1500, age of acquisition 1500 (env ASKJEV_GLASGOW_<DIM>), words drawn per dimension in salted-hash
+  order. Levels are concrete situations; the raters' mean and SD become a normal(mean, max(SD, 0.3)) cut into five
+  equal bands of the 1-9 or 1-7 scale (AoA: the scale's own seven age bands). n = raters for that word and scale
+  (about 30). Words with a sense ("aim (objective)") are asked as '"aim" (in the sense "objective")'.
+  Skipped: gender association (sensitive), dominance (no concrete level wording), concreteness (the concreteness
+  source asks it over a larger word list). node_hint: boolq keyword rules on the word, else `world`.
+  Slurs dropped; sexual/violent words flagged sensitive, contested-politics words flagged political.

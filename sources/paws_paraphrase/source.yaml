@@ -1,0 +1,14 @@
+name: paws_paraphrase
+url: https://github.com/google-research-datasets/paws
+download: https://huggingface.co/api/datasets/google-research-datasets/paws/parquet/labeled_final/test/0.parquet
+license: PAWS license (free use for any purpose; attribution to Google LLC requested)
+version: PAWS-Wiki labeled_final test split (8,000 pairs; 3,536 paraphrases)
+target: 2500
+hemisphere: machine
+shape: verify
+notes: >
+  Template paws.same_meaning (Noul, node machine.documents.entity_resolution, the closest
+  same-or-different matching node): "Do `sentence_a` and `sentence_b` mean the same thing?" Truth =
+  label (1 = paraphrase). Tokenised spacing undone (" , " -> ", ", " 's" -> "'s", brackets, quotes).
+  Identical-after-cleaning pairs dropped. Balanced 1,250 / 1,250, salted hash order.
+  ASKJEV_TARGET_PAWS_PARAPHRASE (default 2,500).

@@ -1,0 +1,16 @@
+name: pubmed_rct_sections
+url: https://github.com/Franck-Dernoncourt/pubmed-rct
+download: https://raw.githubusercontent.com/Franck-Dernoncourt/pubmed-rct/master/PubMed_20k_RCT/{dev,test}.txt
+license: No license file in the repo; public research dataset (Dernoncourt & Lee 2017), abstracts from PubMed/MEDLINE
+version: PubMed 20k RCT, numbers-kept version, dev + test files (~60k sentences from ~5,000 abstracts)
+target: 2500
+hemisphere: machine
+shape: classify
+notes: >
+  Template pubmed_rct.section (node machine.documents.structure_recovery, "which blocks are headings /
+  which part a line belongs to"): Choice "Which section of a structured research abstract does `sentence`
+  belong to?" over background / objective / methods / results / conclusions (one-line descriptions).
+  Truth = the heading the abstract's authors put the sentence under (so a few are the authors' own
+  mis-shelving). Tokenized text re-spaced around punctuation. 6-80 word sentences, exact dedup, at most
+  one sentence per abstract, 500 per section in salted hash order.
+  ASKJEV_TARGET_PUBMED_RCT_SECTIONS (cap 3,000).

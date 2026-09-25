@@ -1,0 +1,19 @@
+name: math_routing
+url: https://github.com/hendrycks/math
+download: https://huggingface.co/api/datasets/EleutherAI/hendrycks_math/parquet/<subject>/{train,test}/0.parquet
+license: MIT
+version: MATH (Hendrycks et al. 2021), 12,500 problems, 7 subjects x train/test, via EleutherAI/hendrycks_math
+target: 4500
+hemisphere: machine
+shape: route
+notes: >
+  Node machine.ai_systems.model_routing (which specialist or model tier should take a request).
+  Template math.subject: Choice "Which area of competition mathematics is `problem` from?" over the 7 MATH
+  subjects (keys prealgebra, algebra, intermediate_algebra, counting_and_probability, number_theory,
+  geometry, precalculus, each with a one-line scope description). Truth = the dataset subject. 357-358 per
+  subject in salted hash order. ASKJEV_TARGET_MATH_SUBJECT (default 2,500).
+  Template math.hardest: Noul "Is `problem` among the hardest `subject` problems in high-school competition
+  mathematics?" (MATH levels are relative to the subject, so the subject name is in the state.)
+  Truth = Level 5 (true) vs Levels 1-2 (false); Levels 3-4 are left out so the label is a clear
+  contrast. 1,000 / 1,000, disjoint from math.subject. ASKJEV_TARGET_MATH_HARD (default 2,000).
+  Problems over 1,500 characters (mostly long Asymptote diagrams) and exact duplicates dropped.

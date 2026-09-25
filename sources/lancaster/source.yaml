@@ -4,6 +4,7 @@ license: CC BY 4.0 (Lynott et al. 2020, Behavior Research Methods)
 version: Lancaster_sensorimotor_norms_for_39707_words.csv (OSF Data component rwhs6, file 48wsc, fetched 2026-09-24)
 target: 300
 target_phase6: 2000 (ASKJEV_TARGET_LANCASTER; 400 words x 5 senses)
+target_wave3: 10000 (ASKJEV_TARGET_LANCASTER=10000; 2,000 words x 5 senses, 2,000 rows per sense)
 hemisphere: world
 kind: perception
 notes: >
@@ -16,3 +17,10 @@ notes: >
   Phase 6 (ASKJEV_TARGET_LANCASTER=2000): the 60 words stay first, then 340 more from a hand-written lexicon of
   common concrete nouns by world node (LEXICON in the adapter; homographs like "bat", "saw", "date" excluded),
   keeping only words with Max_strength.perceptual >= 3.5 and Percent_known >= 0.8, taken in salted-hash order.
+  Wave 3 (ASKJEV_TARGET_LANCASTER=10000): once LEXICON is exhausted, 1,600 more words from the whole norms that are
+  single lowercase words with Max_strength.perceptual >= 3.5, Percent_known >= 0.95, and (from Brysbaert et al.
+  2014, downloaded into the same raw folder) concreteness >= 4.0 of 5 and SUBTLEX-US count >= 100, taken in
+  salted-hash order ("lancaster.v3"); node_hint from boolq's keyword rules on the word, else `world`. Earlier rows
+  are byte-identical (the 2,000-row output is a prefix). Slurs excluded; sexual/violent words flagged sensitive,
+  political-identity words flagged political. template_id stays unset (as in earlier waves), so every text is its
+  own template; each sense has 2,000 rows.

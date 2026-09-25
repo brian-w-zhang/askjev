@@ -1,0 +1,28 @@
+name: wildchat_closed
+url: https://huggingface.co/datasets/allenai/WildChat-4.8M
+license: ODC-BY (allenai/WildChat-4.8M); supplements MIT (Anthropic/hh-rlhf), Apache-2.0 (OpenAssistant/oasst2), CC-BY-SA-3.0 (databricks/databricks-dolly-15k), set per row
+version: >
+  allenai/WildChat-4.8M (86 train parquet shards, ungated; fetch keeps only English, non-toxic, non-redacted,
+  moderation-unflagged first user turns of <= 300 chars as data/raw/wildchat_closed/prompts_NN.parquet and deletes
+  each shard: 551,380 first turns, 356,957 distinct) + Anthropic/hh-rlhf helpful-base/-online/-rejection-sampled
+  first human turns + OpenAssistant/oasst2 English root prompter messages + Dolly open_qa/general_qa/classification
+  instructions without context. Fetched 2026-09-25.
+target: 10000 (pool is 4,124, so the output is 4,124)
+hemisphere: world + self (self = questions addressed to the assistant about itself, and the answerer's opinions/values)
+kind: factual, evaluative, social, forecast, values, taste, personality
+notes: >
+  Real closed questions people typed to an AI assistant as their opening message. Greetings ("Hi,", "Hey there!",
+  "Quick question:") and "answer yes or no" wrappers are stripped; the prompt must be one line. Two paths:
+  (1) questions about the assistant itself ("Are you conscious?", "Do you ever get lonely?", "Would you rather be a
+  bot or a human?", "What's your favorite X: A, B or C?") -> self, kind taste/personality/values/social;
+  (2) everything else through the quora_closed filter chain (loaded as a private module copy with its political
+  regex fixed so `elect\w*` no longer matches electricity, and MIN_WORD_FREQ raised to 5) plus chat-specific
+  rejects: "Can you <verb>" unless the verb is a generic-you fact ("Can you freeze cooked rice?"), programming /
+  tool minutiae (Python, SQL, API, app, model...) unless it is an A-or-B Choice, Title Case prompt-template lines,
+  stray single letters. Yes/no -> Noul; A-or-B -> Choice with the options as keys. Deduped on normalized text
+  (WildChat wins ties). Hemisphere/kind via quora_closed's tagger. Self first (all 189), world fills to the target
+  in salted-hash order of the conversation id. Yield: WildChat 1,849, HH-RLHF 2,057, Dolly 136, oasst2 82. The
+  opening-message filter is strict, and most WildChat openers are tasks (write/translate/code), so the pool is far
+  below 10,000; lmsys-chat-1m is gated and was not used. No truth, no node_hint (beam walk). meta.dataset and
+  meta.prompt keep the provenance and the raw opener. Contested politics flagged political; sexual/health/drug/
+  violence flagged sensitive (quora_closed's generous regexes).

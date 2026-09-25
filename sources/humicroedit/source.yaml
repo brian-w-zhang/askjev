@@ -1,0 +1,20 @@
+name: humicroedit
+url: https://github.com/n-hossain/semeval-2020-task-7-humicroedit
+download: https://www.cs.rochester.edu/u/nhossain/semeval-2020-task-7-dataset.zip (subtask-1 train/dev/test + train_funlines)
+license: SemEval-2020 Task 7 dataset (Humicroedit, Hossain et al. 2019; FunLines, Hossain et al. 2020); public research release, no explicit license; cite the papers
+version: semeval-2020-task-7-dataset.zip (2020-05-21 release, full test labels), downloaded 2026-09-25
+target: 5000
+hemisphere: self
+kind: taste
+notes: >
+  "How funny is this edited news headline?" as a 4-level Score (template_id humicroedit.funny), state
+  {"original_headline", "edited_headline"}: a real news headline (2017-2019, Reddit news) with one word or entity
+  swapped to make it funny. Both corpora: Humicroedit (15k edits graded by 5 MTurk judges) and FunLines (8k
+  edits graded by FunLines players). Grades 0 not funny / 1 slightly / 2 moderately / 3 funny map to the four
+  levels; human distribution = the share of judges giving each grade, n = judges (5, sometimes 6-15). Rows whose
+  grade string is "0" (judge count lost) or disagrees with meanGrade are dropped; tokenization spaces are undone;
+  duplicate edited headlines dropped; slurs dropped. Headlines are mostly US politics: rows matching a broad
+  keyword list (politicians, parties, elections, guns, immigration, world leaders, FBI/Russia probe...) are flagged
+  political and sampled only after every non-political row (each group in salted-hash order, prefix-stable).
+  Sex, violence, death, drugs and toilet humor are flagged sensitive (over-inclusive keyword list).
+  No truth. Node self.personality.humor_style.joke_ratings. Target via ASKJEV_TARGET_HUMICROEDIT.

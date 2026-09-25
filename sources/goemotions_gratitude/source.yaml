@@ -1,0 +1,16 @@
+name: goemotions_gratitude
+url: https://github.com/google-research/google-research/tree/master/goemotions
+download: https://huggingface.co/api/datasets/google-research-datasets/go_emotions/parquet/simplified/train/0.parquet
+license: Apache-2.0
+version: GoEmotions simplified config, train split (43,410 Reddit comments; labels kept when >= 2 raters agreed)
+target: 2000
+hemisphere: machine
+shape: detect
+notes: >
+  Template goemotions.gratitude (node machine.research.qualitative_coding): Noul "Does `comment` express
+  gratitude?" Truth = gratitude among the comment's rater-agreed labels. 1,000 positives; 500 negatives
+  from other warm comments (admiration, amusement, approval, caring, joy, love, optimism) so positivity
+  alone does not decide it, 500 from all other comments. Comments under 4 words and exact duplicates
+  dropped; [NAME]/[RELIGION] placeholders kept as released. Sexual / self-harm wording flagged
+  "sensitive", party/politician/election wording flagged "political". Different template from `emotion`
+  (dair-ai 6-way). ASKJEV_TARGET_GOEMOTIONS_GRATITUDE (cap 3,000).

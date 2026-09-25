@@ -1,0 +1,15 @@
+name: qnli_gating
+url: https://gluebenchmark.com/tasks (QNLI, built from SQuAD 1.1)
+download: https://huggingface.co/api/datasets/nyu-mll/glue/parquet/qnli/validation/0.parquet
+license: CC-BY-SA-4.0 (SQuAD 1.1 / Wikipedia text)
+version: GLUE QNLI validation split (5,463 question-sentence pairs; test labels are hidden)
+target: 2500
+hemisphere: machine
+shape: verify
+notes: >
+  Template qnli.contains_answer (node machine.search.rag_gating: include a retrieved passage only if it
+  holds answer evidence): Noul "Does `passage` contain the answer to `question`?" State = the SQuAD
+  question + one sentence from the Wikipedia paragraph that answers it (negatives are other sentences of
+  the same paragraph, so same-topic distractors). Truth = entailment. At most one pair per question,
+  sentences under 30 chars dropped, balanced 1,250 / 1,250 in salted hash order. Contested-politics
+  keywords flagged "political". ASKJEV_TARGET_QNLI_GATING (cap 3,000).

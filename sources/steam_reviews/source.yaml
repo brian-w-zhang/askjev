@@ -1,0 +1,15 @@
+name: steam_reviews
+url: https://huggingface.co/datasets/SebastianHops/steam-reviews-english
+download: https://huggingface.co/datasets/SebastianHops/steam-reviews-english/resolve/main/part.0.parquet
+license: No license stated on the HF copy; review text and verdicts from the public Steam store reviews API
+version: part.0.parquet only (~273k English reviews over ~1,070 games)
+target: 2500
+hemisphere: machine
+shape: detect
+notes: >
+  Template steam.recommends (node machine.trust_safety.game_chat, "player reviews of a game ... player
+  frustration or churn"): Noul "Does the player who wrote `review` recommend `game`?" State = game name +
+  review text. Truth = the author's own thumbs-up (voted_up), so the label is the reviewer's verdict.
+  Steam BBCode tags ([h1], [b], [spoiler]...) stripped. 8-250 word reviews that are mostly letters, exact-text dedup, one review per author, at most 8 per game
+  per label; balanced 1,250 / 1,250 in salted hash order. Sexual / self-harm wording flagged "sensitive".
+  ASKJEV_TARGET_STEAM_REVIEWS (cap 3,000).

@@ -1,0 +1,16 @@
+name: fake_job_posts
+url: http://emscad.samos.aegean.gr/
+download: https://huggingface.co/api/datasets/victor/real-or-fake-fake-jobposting-prediction/parquet/default/train/0.parquet
+license: CC0-1.0 (Kaggle/HF release of EMSCAD)
+version: EMSCAD (Vidros et al. 2017) via HF victor/real-or-fake-fake-jobposting-prediction, 17,880 ads (866 fraudulent)
+target: 2000
+hemisphere: machine
+shape: detect
+notes: >
+  Template fake_job_posts.fraudulent (Noul, node machine.trust_safety.spam_phishing: job scams are a
+  platform-scam check; the people.* nodes are about candidates and prospects, not ads): "Is
+  `job_posting` a fraudulent listing?" Truth = fraudulent. Posting rebuilt from the text fields with
+  per-field caps (description 650, company profile 300, requirements 300, benefits 200 chars; total
+  <= 1,500); empty fields left out; the release's #URL_…# / #EMAIL_…# / #PHONE_…# placeholders shown as "[url removed]" etc. Sentences glued by the release's stripped line breaks are re-spaced.
+  Dedup on title + description; descriptions < 50 chars dropped. All 653 unique fraudulent posts kept (~33%),
+  the rest real (salted hash order). ASKJEV_TARGET_FAKE_JOB_POSTS (default 2,000).

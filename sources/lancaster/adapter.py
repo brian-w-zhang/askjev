@@ -7,20 +7,35 @@ import math
 from pathlib import Path
 from typing import Iterator
 
+import importlib.util
+import re
+import sys
+
 import httpx
 
 from askjev.model import HumanDist, Question
 from askjev.sampling import env_int, top_up
+
+_spec = importlib.util.spec_from_file_location(
+    "sources.concreteness", Path(__file__).parents[1] / "concreteness" / "adapter.py")
+_c = importlib.util.module_from_spec(_spec)
+sys.modules["sources.concreteness"] = _c
+_spec.loader.exec_module(_c)
 
 NAME = "lancaster"
 FILE = "Lancaster_sensorimotor_norms_for_39707_words.csv"
 URL = "https://osf.io/download/48wsc/"  # OSF node rwhs6 (Data component of 7emr6)
 LICENSE = "CC BY 4.0 (Lynott, Connell, Brysbaert, Brand & Carney 2020)"
 TARGET_V1 = 300  # 60 words x 5 senses, kept as-is so their ids stay stable
-TARGET = env_int("TARGET_LANCASTER", TARGET_V1)  # Phase 6: 2,000 (400 words)
+TARGET = env_int("TARGET_LANCASTER", TARGET_V1)  # Phase 6: 2,000 (400 words); wave 3: 10,000 (2,000 words)
 MIN_PERCEPTUAL = 3.5
 MIN_KNOWN = 0.8
 MIN_SD = 0.3  # floor so a unanimous 0.0 mean still gives a proper (near point-mass) distribution
+# Wave 3 pool, used only once the hand-written LEXICON is exhausted: common concrete words from the whole norms,
+# judged common/concrete by Brysbaert et al. 2014 (SUBTLEX-US count and concreteness, downloaded alongside).
+MIN_KNOWN_V3 = 0.95
+MIN_CONCRETE_V3 = 4.0  # of 5
+MIN_SUBTLEX_V3 = 100  # raw SUBTLEX-US count, about 2 per million
 
 # 60 common concrete words, hand-picked to spread across senses and topics. word -> node_hint.
 WORDS = {
@@ -124,11 +139,11 @@ def _levels(gerund: str, noun: str) -> list[str]:
 
 def fetch(raw_dir: Path) -> None:
     out = raw_dir / FILE
-    if out.exists():
-        return
-    r = httpx.get(URL, follow_redirects=True, timeout=300)
-    r.raise_for_status()
-    out.write_bytes(r.content)
+    if not out.exists():
+        r = httpx.get(URL, follow_redirects=True, timeout=300)
+        r.raise_for_status()
+        out.write_bytes(r.content)
+    _c.fetch_brysbaert(raw_dir)  # wave 3 pool (frequency + concreteness)
 
 
 def _phi(x: float) -> float:
@@ -144,8 +159,9 @@ def discretize(mean: float, sd: float) -> dict[str, float]:
     return {str(i): v / s for i, v in enumerate(p)}
 
 
-def _words(rows: dict[str, dict]) -> dict[str, str]:
-    """WORDS, then (Phase 6) qualifying LEXICON words in salted-hash order up to TARGET / 5 words in all."""
+def _words(rows: dict[str, dict], raw_dir: Path) -> dict[str, str]:
+    """WORDS, then (Phase 6) qualifying LEXICON words, then (wave 3) common concrete words from the whole norms,
+    each list in salted-hash order, up to TARGET / 5 words in all."""
     k = TARGET // len(SENSES)
     words = dict(list(WORDS.items())[:k])
     cands: dict[str, str] = {}
@@ -158,13 +174,27 @@ def _words(rows: dict[str, dict]) -> dict[str, str]:
                 cands[w] = node
     for w in top_up(list(words), cands, k - len(words), lambda w: w, "lancaster.v2"):
         words[w] = cands[w]
+    if len(words) < k:  # wave 3: LEXICON exhausted, so earlier word lists (and their rows) are unchanged
+        brys = _c.read_brysbaert(raw_dir / _c.FILE)
+        more = []
+        for r in rows.values():
+            w = r["Word"].lower()
+            b = brys.get(w)
+            if (b is None or w in words or w in cands or w in AMBIGUOUS or not re.fullmatch(r"[a-z]{3,}", w)
+                    or _c.SLURS.match(w)):
+                continue
+            if (float(r["Max_strength.perceptual"]) >= MIN_PERCEPTUAL and float(r["Percent_known.perceptual"]) >= MIN_KNOWN_V3
+                    and b["conc_m"] >= MIN_CONCRETE_V3 and b["subtlex"] >= MIN_SUBTLEX_V3 and b["bigram"] == 0):
+                more.append(w)
+        for w in top_up(list(words), more, k - len(words), lambda w: w, "lancaster.v3"):
+            words[w] = _c.word_node(w)
     return words
 
 
 def normalize(raw_dir: Path) -> Iterator[Question]:
     with open(raw_dir / FILE, newline="", encoding="utf-8") as fh:
         rows = {r["Word"]: r for r in csv.DictReader(fh)}
-    for word, node in _words(rows).items():
+    for word, node in _words(rows, raw_dir).items():
         r = rows[word.upper()]
         n = int(float(r["N_known.perceptual"]))
         for dim, (gerund, noun) in SENSES.items():
@@ -190,6 +220,7 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
                     )
                 ],
                 meta={
+                    **({"flags": fl} if (fl := _c.word_flags(word)) else {}),
                     "word": word,
                     "dimension": dim.lower(),
                     "mean_0_5": mean,

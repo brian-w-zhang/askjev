@@ -1,0 +1,16 @@
+name: movielens_recs
+url: https://grouplens.org/datasets/movielens/32m/
+download: https://files.grouplens.org/datasets/movielens/ml-32m.zip (fetch hard-links movielens_pairs' extracted ratings.parquet + movies.csv when present)
+license: MovieLens 32M usage license (GroupLens; research use, non-commercial, cite Harper & Konstan 2015)
+version: ml-32m (32M ratings, 200,948 users, 87,585 films)
+target: 2500
+hemisphere: machine
+shape: detect
+notes: >
+  Template movielens.will_enjoy (node machine.search.recommendation): Noul "Based on `profile`, will this
+  user enjoy `candidate`?" State = the user's profile (5 films they rated 4.5-5 and 3 they rated <= 2,
+  shown as "Title (year)") + a candidate film they also rated. Truth = the user's own rating of the
+  candidate: >= 4.5 (true) or <= 2 (false); middling ratings never used, so the label is the user's clear
+  verdict. Only well-known films (>= 2,000 ratings). One question per user, users in salted hash order,
+  labels split ~50/50 by user hash. A few explicit / contested-politics films flagged (same lists as
+  movielens_pairs). ASKJEV_TARGET_MOVIELENS_RECS (cap 3,000).

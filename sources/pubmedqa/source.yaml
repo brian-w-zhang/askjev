@@ -1,0 +1,17 @@
+name: pubmedqa
+url: https://pubmedqa.github.io/
+download: https://huggingface.co/api/datasets/qiaojin/PubMedQA/parquet/{pqa_labeled,pqa_artificial}/train/0.parquet
+license: MIT
+version: PubMedQA (Jin et al. 2019), HF qiaojin/PubMedQA pqa_labeled (1,000) + pqa_artificial (211,269)
+target: 2500
+hemisphere: machine
+shape: verify
+notes: >
+  Template pubmedqa.answer (Choice, node machine.research.claim_support): "Based on `abstract`, what is
+  the answer to `question`?" over yes / no / maybe. The abstract is the structured context sections
+  ("BACKGROUND: ...", "RESULTS: ...") without the conclusion (the long_answer), as in the original task.
+  Truth = final_decision.
+  All 1,000 expert-labeled items (meta.split=labeled; abstracts over 2,000 chars cut at a sentence
+  boundary, meta.truncated) + 1,500 artificial items (meta.split=artificial; heuristic labels, 750 yes /
+  750 no since that set has no maybe; abstracts 300-1,800 chars; salted hash order).
+  ASKJEV_TARGET_PUBMEDQA_ARTIFICIAL (default 1,500).

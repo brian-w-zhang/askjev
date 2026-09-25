@@ -1,0 +1,22 @@
+name: stackexchange_closed
+url: https://huggingface.co/datasets/flax-sentence-embeddings/stackexchange_title_best_voted_answer_jsonl
+license: CC BY-SA (Stack Exchange content; HF card lists CC BY-NC-SA 4.0)
+version: flax-sentence-embeddings/stackexchange_title_best_voted_answer_jsonl per-site train parquet (56 non-programming sites, 810,778 titles), fetched 2026-09-25
+target: 10000
+hemisphere: world + self (mostly world)
+kind: factual, evaluative, social, forecast, values
+notes: >
+  Real question titles from 56 non-programming Stack Exchange sites (skeptics, travel, cooking, english, parenting,
+  fitness, money, diy, gardening, movies, scifi, bicycles, outdoors, pets, philosophy, history, academia, law,
+  space, biology, ...). Religion and politics sites, language-learning sites, worldbuilding and rpg are left out.
+  Each title runs the quora_closed filter chain (closed opener, one standalone question of 25-160 ASCII chars,
+  no rare-word typos, no I/me/my, not a request, not homework math, no unseen context, not dated) loaded as a
+  private module copy with its political regex fixed (quora_closed's `elect\w*` matched electricity/electronics;
+  here only elect/elected/electoral/election...). Titles that ask to identify a work, or use tabletop-RPG jargon,
+  are dropped. Yes/no -> Noul; "Which is better, A or B?" -> Choice with the options as keys (only ~10 survive).
+  Deduped on normalized text; sampled in salted-hash order with at most 8% of the output from any one site (4%
+  for gaming, scifi, aviation, law, mechanics, anime, photo, boardgames, homebrew, whose titles are mostly
+  game/fiction/equipment minutiae). Hemisphere/kind from quora_closed's tagger (about 97% world). No truth, no
+  node_hint (beam walk). Pool after filters: 84,801, so ASKJEV_TARGET_STACKEXCHANGE_CLOSED can grow it a lot.
+  Contested politics flagged political, sexual/health/drug/violence flagged sensitive (quora_closed's generous
+  regexes).

@@ -1,0 +1,14 @@
+name: medical_question_pairs
+url: https://github.com/curai/medical-question-pair-dataset
+download: https://huggingface.co/api/datasets/curaihealth/medical_questions_pairs/parquet/default/train/0.parquet
+license: No license stated (HF card "unknown"); public research dataset, cite McCreery et al. 2020 (KDD)
+version: 3,048 pairs (1,524 real patient questions x one doctor-written rewording + one related-but-different question)
+target: 2000
+hemisphere: machine
+shape: verify
+notes: >
+  Template medqp.same_question (node machine.documents.entity_resolution, with PAWS: are two texts the
+  same thing): Noul "Do `question_a` and `question_b` ask the same medical question?" Truth = the doctors'
+  label (similar = true). Hard negatives by design (related question, different answer). Order of the two
+  questions set by hash. Balanced 1,000 / 1,000 in salted hash order. Sexual-health, self-harm and
+  abortion wording flagged "sensitive". ASKJEV_TARGET_MEDICAL_QUESTION_PAIRS (cap 3,000).

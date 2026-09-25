@@ -1,0 +1,15 @@
+name: clickbait_headlines
+url: https://github.com/bhargaviparanjape/clickbait
+download: https://raw.githubusercontent.com/bhargaviparanjape/clickbait/master/dataset/{clickbait_data,non_clickbait_data}.gz
+license: No license file in the repo; public research dataset, cite Chakraborty et al. 2016 (ASONAM)
+version: Stop Clickbait enlarged release (16,000 clickbait + 16,000 non-clickbait headlines)
+target: 2500
+hemisphere: machine
+shape: detect
+notes: >
+  Template clickbait.is_clickbait (node machine.trust_safety.brand_safety, alongside sarcasm_headlines):
+  Noul "Is `headline` clickbait?" Truth = the file (clickbait outlets BuzzFeed, Upworthy, ViralNova,
+  Thatscoop, Scoopwhoop, ViralStories vs WikiNews, NYT, Guardian, The Hindu), so labels follow the outlet
+  and a few plain BuzzFeed headlines count as clickbait. Headlines under 4 words, mis-encoded lines and exact duplicates dropped; balanced
+  1,250 / 1,250 in salted hash order. Contested politics flagged "political", sexual / self-harm wording
+  "sensitive". ASKJEV_TARGET_CLICKBAIT_HEADLINES (cap 3,000).
