@@ -23,7 +23,7 @@ const IND: { k: Indicator | "fragile_share"; label: string; fmt: (v: number) => 
   { k: "calibration_ece", label: "Calibration error", fmt: (v) => v.toFixed(3) },
   { k: "fragile_share", label: "Fragile questions", fmt: (v) => `${Math.round(v * 100)}%` },
 ];
-const KIND_COLORS = ["#09AEA1", "#F386A1", "#4B5BD6", "#03AA5C", "#D45BB6", "#1E1E1E", "#ABBAB9", "#E9A23B"];
+const KIND_COLORS = ["#4B5BD6", "#F386A1", "#E8663D", "#D45BB6", "#7D89E6", "#1E1E1E", "#ABBAB9", "#E9A23B"];
 
 export function NodeView({ id, onClose }: { id: string; onClose: () => void }) {
   const filters = useStore((s) => s.filters);

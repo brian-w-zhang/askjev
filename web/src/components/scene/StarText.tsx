@@ -82,7 +82,7 @@ export function StarText() {
           v.set(w[0], w[1], w[2]);
           const dist = cam.position.distanceTo(v);
           v.project(cam);
-          if (v.z > 1 || Math.abs(v.x) > 0.8 || Math.abs(v.y) > 0.8 || i === s.hoverStar) continue;
+          if (v.z > 1 || Math.abs(v.x) > 0.8 || Math.abs(v.y) > 0.8 || i === s.hoverStar || i === s.focusStar) continue;
           const x = ((v.x + 1) / 2) * size.width;
           const y = ((1 - v.y) / 2) * size.height;
           const center = Math.hypot(v.x, v.y);

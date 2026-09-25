@@ -6,7 +6,7 @@ import { Color, Uniform, Vector2, Vector3 } from "three";
 // Ordered (Bayer 8x8) dither onto TypeSafe's palette at chunky pixel cells (docs/07-ui.md, Look).
 // Each cell samples the scene once at its center, nudges it by the Bayer threshold, and snaps to the
 // nearest palette color, so gradients and clouds come out as halftone stipple like typesafe.ai.
-export const PALETTE = ["#D6EAF8", "#FEFEFE", "#F386A1", "#D45BB6", "#09AEA1", "#4B5BD6", "#03AA5C", "#1E1E1E", "#BFDDF3"];
+export const PALETTE = ["#D6EAF8", "#FEFEFE", "#F386A1", "#D45BB6", "#4B5BD6", "#7D89E6", "#E8663D", "#03AA5C", "#1E1E1E", "#BFDDF3"];
 
 const frag = /* glsl */ `
   uniform vec3 uPalette[${PALETTE.length}];

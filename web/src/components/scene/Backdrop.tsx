@@ -4,8 +4,7 @@ import { useFrame } from "@react-three/fiber";
 import { BackSide, Color, ShaderMaterial, type Mesh } from "three";
 import { now } from "@/lib/anim";
 
-// The sky (docs/07-ui.md, Look): light blue overhead, paler toward the horizon, with far pink cumulus
-// banks like the typesafe.ai hero. A sphere that follows the camera, drawn at the far plane.
+// The sky (docs/07-ui.md, Look): flat brand blue with low white cumulus banks near the horizon. A sphere that follows the camera, drawn at the far plane.
 const vert = /* glsl */ `
   varying vec3 vDir;
   void main() {
@@ -48,8 +47,8 @@ export function Backdrop() {
           uTime: { value: 0 },
           uTop: { value: new Color("#D6EAF8") }, // flat brand sky: only clouds and particles get stippled
           uLow: { value: new Color("#D6EAF8") },
-          uCloud: { value: new Color("#F386A1") },
-          uCloud2: { value: new Color("#F7B8CB") },
+          uCloud: { value: new Color("#FEFEFE") }, // white cumulus: pink belongs to the Self hemisphere
+          uCloud2: { value: new Color("#EAF3FB") },
         },
       }),
     [],

@@ -187,9 +187,9 @@ export function edgePoint(p: Placed, c: Placed, t: number, out: V3 = [0, 0, 0]):
 
 export const HEMI_COLOR: Record<Hemisphere, string> = {
   root: "#1E1E1E",
-  world: "#09AEA1",
+  world: "#4B5BD6",
   self: "#F386A1",
-  machine: "#4B5BD6",
+  machine: "#E8663D",
 };
 export const INK = "#1E1E1E";
 export const PATH_A_COLOR = "#1E1E1E"; // embedding path: ink

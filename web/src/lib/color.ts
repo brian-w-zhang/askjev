@@ -28,7 +28,7 @@ export function attention(n: TreeNode, ind: Indicator): number | null {
 const clamp = (x: number) => Math.max(0, Math.min(1, x));
 
 // steady = calm blue, worth a look = magenta (TypeSafe palette); no data fades into the sky
-const RAMP = [new Color("#4B5BD6"), new Color("#F386A1"), new Color("#D45BB6")];
+const RAMP = [new Color("#7D89E6"), new Color("#F386A1"), new Color("#D45BB6")];
 const NODATA = new Color("#BFDDF3");
 
 export function rampColor(t: number, out = new Color()): Color {
@@ -36,7 +36,7 @@ export function rampColor(t: number, out = new Color()): Color {
   return out.copy(RAMP[1]).lerp(RAMP[2], (t - 0.5) / 0.5);
 }
 
-export const RAMP_CSS = "linear-gradient(90deg, #4B5BD6, #F386A1, #D45BB6)";
+export const RAMP_CSS = "linear-gradient(90deg, #7D89E6, #F386A1, #D45BB6)";
 
 export function nodeColor(n: TreeNode, ind: Indicator, out = new Color()): Color {
   if (ind === "hemisphere") return out.set(HEMI_COLOR[n.hemisphere]);
@@ -48,9 +48,9 @@ export function nodeColor(n: TreeNode, ind: Indicator, out = new Color()): Color
 // Nebula palette: each hemisphere spans a small hue range, and each L1 branch takes its own shade of it,
 // so neighbouring branches read as different clouds.
 const PALETTE: Record<string, Color[]> = {
-  world: [new Color("#07998E"), new Color("#09AEA1"), new Color("#4CC9BE")],
+  world: [new Color("#3A48B8"), new Color("#4B5BD6"), new Color("#7D89E6")],
   self: [new Color("#E86F90"), new Color("#F386A1"), new Color("#F7A8BC")],
-  machine: [new Color("#3A48B8"), new Color("#4B5BD6"), new Color("#7D89E6")],
+  machine: [new Color("#D9542B"), new Color("#E8663D"), new Color("#F09A6E")],
   root: [new Color("#1E1E1E"), new Color("#1E1E1E"), new Color("#1E1E1E")],
 };
 

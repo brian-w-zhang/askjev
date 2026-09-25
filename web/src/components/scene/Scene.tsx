@@ -19,6 +19,7 @@ import { Backdrop } from "./Backdrop";
 import { StarText } from "./StarText";
 import { Dither } from "./Dither";
 import { SkyOverlay } from "./SkyOverlay";
+import { Journey } from "./Journey";
 
 /** Everything in the canvas is dithered onto TypeSafe's palette in 2 CSS px cells (docs/07-ui.md, Look). */
 function DitherPass() {
@@ -72,6 +73,7 @@ export default function Scene() {
         <Labels placed={placed} />
         <StarText />
         <Comets />
+        <Journey placed={placed} />
         <CameraRig />
         <OrbitControls makeDefault enableDamping dampingFactor={0.07} minDistance={1.2} maxDistance={900} autoRotateSpeed={0.18} zoomSpeed={1.1} />
         <DitherPass />

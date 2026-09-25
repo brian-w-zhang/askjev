@@ -26,6 +26,13 @@ export function frameDist(id: string): number {
 }
 
 /** The whole nebula: aim at the middle of its bounding box, back far enough to hold nearly every node. */
+const smooth = (x: number) => x * x * (3 - 2 * x);
+
+/** How far back the camera sits while following a walk past `id`: its subtree, a bit tighter than framing it. */
+function followDist(id: string) {
+  return Math.max(9, frameDist(id) * 0.75);
+}
+
 export function home(dur = 1.6) {
   const ps = [...anim.placed.values()];
   if (!ps.length) return;
@@ -88,14 +95,20 @@ export function CameraRig() {
       const l = anim[anim.follow];
       const h = headPosition(l, t);
       if (h) {
-        const pr = progress(l, t);
-        const k = 1 - Math.exp(-dt * 3.5);
-        controls.target.lerp(tmpT.set(h[0], h[1], h[2]), k);
-        // pull in as the light goes deeper: frame the node the light is passing
-        const at = l.path[Math.min(Math.round(pr), l.path.length - 1)];
-        const want = Math.max(8, frameDist(at) * 0.8);
-        dir.copy(camera.position).sub(controls.target).normalize().lerp(UP_VIEW, 0.02).normalize();
-        camera.position.lerp(tmpP.copy(controls.target).addScaledVector(dir, want), k);
+        const pr = Math.max(0, progress(l, t));
+        const i = Math.min(Math.floor(pr), l.path.length - 1);
+        const j = Math.min(i + 1, l.path.length - 1);
+        const e = smooth(pr - i);
+        // look a little ahead of the walker, toward the node it is heading for
+        const next = anim.placed.get(l.path[j]);
+        tmpT.set(h[0], h[1], h[2]);
+        if (next) tmpT.lerp(tmpP.set(next.x, next.y, next.z), 0.22 * (1 - e));
+        // distance glides between the framing of this level and the next (log space, so zooming feels even)
+        const d = Math.exp(Math.log(followDist(l.path[i])) * (1 - e) + Math.log(followDist(l.path[j])) * e);
+        const k = 1 - Math.exp(-dt * 2.6); // critically damped: no jumps between levels
+        controls.target.lerp(tmpT, k);
+        dir.copy(camera.position).sub(controls.target).normalize().lerp(UP_VIEW, 0.012).normalize();
+        camera.position.lerp(tmpP.copy(controls.target).addScaledVector(dir, d), k);
         controls.update();
       }
     }

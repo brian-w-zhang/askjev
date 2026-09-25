@@ -2,7 +2,7 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useStore } from "@/lib/store";
 import { HEMI_COLOR } from "@/lib/layout";
-import { feelingLucky, goToQuestion, selectNode, showJevWalk, travel, type Walk } from "@/lib/actions";
+import { feelingLucky, journey } from "@/lib/actions";
 import type { NodeHit, SearchHit } from "@/lib/types";
 
 interface Rerank { state: "idle" | "waiting" | "done" | "error"; ms?: number; cached?: boolean; error?: string }
@@ -15,9 +15,9 @@ export function Search() {
   const [active, setActive] = useState(0);
   const [latency, setLatency] = useState<number | null>(null);
   const [rerank, setRerank] = useState<Rerank>({ state: "idle" });
-  const [walk, setWalk] = useState<{ state: "idle" | "walking" | "done" | "error"; data?: Walk; error?: string; embedNode?: string }>({ state: "idle" });
   const showHidden = useStore((s) => s.showHidden);
   const showJevPath = useStore((s) => s.showJevPath);
+  const walk = useStore((s) => s.jevWalk);
   const nodes = useStore((s) => s.nodes);
   const seq = useRef(0);
   const rerankTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -99,19 +99,13 @@ export function Search() {
     const top = hits[0]?.score || 1;
     for (const r of hits) for (const p of r.path) rel[p.id] = Math.max(rel[p.id] ?? 0, Math.max(0, r.score / top) * 0.8);
     useStore.getState().set({ relevance: rel, panel: { kind: "none" } });
-    const path = h.path.map((p) => p.id);
-    if (!showJevPath) setWalk({ state: "idle" });
-    const walkP = showJevPath ? startWalk(q.trim(), path[path.length - 1]) : null;
-    await goToQuestion(path, h.id);
-    await walkP;
+    await journey({ query: q.trim(), path: h.path.map((p) => p.id), questionId: h.id });
   }
 
   async function chooseNode(n: NodeHit) {
     setOpen(false);
-    setWalk({ state: "idle" });
     useStore.getState().set({ relevance: {} });
-    await travel(n.path.map((p) => p.id));
-    selectNode(n.id, { fly: false });
+    await journey({ query: q.trim(), path: n.path.map((p) => p.id) });
   }
 
   function ask() {
@@ -121,16 +115,8 @@ export function Search() {
 
   async function lucky() {
     setOpen(false);
-    setWalk({ state: "idle" });
     useStore.getState().set({ relevance: {} });
     await feelingLucky();
-  }
-
-  async function startWalk(text: string, embedNode: string) {
-    setWalk({ state: "walking", embedNode });
-    const r = await showJevWalk(text);
-    if ("error" in r) setWalk({ state: "error", error: r.error, embedNode });
-    else setWalk({ state: "done", data: r, embedNode });
   }
 
   const onKey = (e: React.KeyboardEvent) => {
@@ -142,9 +128,7 @@ export function Search() {
   };
 
   const label = (id: string) => nodes[id]?.label ?? id.split(".").pop();
-  const w = walk.data;
-  const walkEnd = w?.node;
-  const agrees = walkEnd && walk.embedNode && walkEnd === walk.embedNode;
+  const agrees = walk.node && walk.node === walk.target;
 
   return (
     <div className="search">
@@ -220,15 +204,15 @@ export function Search() {
       {!open && walk.state !== "idle" && showJevPath && (
         <div className="walkcard" data-testid="walkcard" data-title="Jev.Walk">
           <p className="walk-body">
-          {walk.state === "walking" && <>Jev is walking the tree for this query</>}
-          {walk.state === "error" && <>Jev&apos;s walk is unavailable: {walk.error}</>}
-          {walk.state === "done" && w && (
-            <>
-              <span className="gold">Jev&apos;s walk</span> ends at <b>{label(w.node)}</b>{" "}
-              <span className="num">({Math.round(w.confidence * 100)}% path confidence)</span>.{" "}
-              {agrees ? "Same place as the embedding match." : <>The embedding match sits under <b>{label(walk.embedNode!)}</b>; the green light shows where they part.</>}
-            </>
-          )}
+            {walk.state === "walking" && <>Jev is walking the tree for &ldquo;{walk.query}&rdquo;, one decision per level.</>}
+            {walk.state === "error" && <>Jev&apos;s walk is unavailable ({walk.error}), so the tree path runs alone.</>}
+            {walk.state === "done" && walk.node && (
+              <>
+                <span className="gold">Jev</span> filed it under <b>{label(walk.node)}</b>{" "}
+                <span className="num">({Math.round((walk.confidence ?? 0) * 100)}% path confidence)</span>.{" "}
+                {agrees ? "The question you picked lives there too." : <>The question you picked lives under <b>{label(walk.target!)}</b>; the ink hop shows where the paths part.</>}
+              </>
+            )}
           </p>
         </div>
       )}

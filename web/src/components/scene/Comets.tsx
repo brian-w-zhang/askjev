@@ -1,62 +1,17 @@
 "use client";
-import { useMemo, useRef } from "react";
+import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { NormalBlending, CanvasTexture, Group, Mesh, Sprite, Vector3, type Camera, type PerspectiveCamera } from "three";
-import { anim, headPosition, now, progress } from "@/lib/anim";
+import { Mesh, Vector3, type Camera, type PerspectiveCamera } from "three";
+import { anim, now, progress } from "@/lib/anim";
 import { useStore } from "@/lib/store";
-import { starData, starWorld } from "@/lib/stars";
-import { PATH_A_COLOR, PATH_B_COLOR } from "@/lib/layout";
+import { PATH_B_COLOR } from "@/lib/layout";
 
-function glowTexture() {
-  const c = document.createElement("canvas");
-  c.width = c.height = 128;
-  const g = c.getContext("2d")!;
-  const grd = g.createRadialGradient(64, 64, 0, 64, 64, 64);
-  grd.addColorStop(0, "rgba(255,255,255,1)");
-  grd.addColorStop(0.18, "rgba(255,255,255,0.55)");
-  grd.addColorStop(0.5, "rgba(255,255,255,0.12)");
-  grd.addColorStop(1, "rgba(255,255,255,0)");
-  g.fillStyle = grd;
-  g.fillRect(0, 0, 128, 128);
-  return new CanvasTexture(c);
-}
+// Rings in the sky: where Jev's walk leaves the tree path, and the selected node.
 
-/** World units that cover `px` screen pixels at `at` (so rings and comets keep one on-screen size). */
+/** World units that cover `px` screen pixels at `at` (so rings keep one on-screen size). */
 function pxToWorld(camera: Camera, at: Vector3, h: number, px: number) {
   const tanHalf = Math.tan((((camera as PerspectiveCamera).fov ?? 45) * Math.PI) / 360);
   return (px * 2 * camera.position.distanceTo(at) * tanHalf) / h;
-}
-
-function Comet({ which, color }: { which: "A" | "B"; color: string }) {
-  const g = useRef<Group>(null);
-  const sprite = useRef<Sprite>(null);
-  const core = useRef<Mesh>(null);
-  const tex = useMemo(() => glowTexture(), []);
-  useFrame(({ camera, size }) => {
-    const l = anim[which];
-    const h = headPosition(l);
-    if (!g.current) return;
-    g.current.visible = !!h;
-    if (!h) return;
-    g.current.position.set(h[0], h[1], h[2]);
-    const pr = progress(l);
-    const moving = pr < l.path.length - 1;
-    const unit = pxToWorld(camera, g.current.position, size.height, 1);
-    const s = (moving ? 46 : 32 + 6 * Math.sin(now() * 3)) * unit;
-    sprite.current?.scale.set(s, s, 1);
-    core.current?.scale.setScalar(4 * unit);
-  });
-  return (
-    <group ref={g} visible={false}>
-      <sprite ref={sprite}>
-        <spriteMaterial map={tex} color={color} transparent depthWrite={false} blending={NormalBlending} toneMapped={false} />
-      </sprite>
-      <mesh ref={core}>
-        <sphereGeometry args={[1, 16, 16]} />
-        <meshBasicMaterial color={color} toneMapped={false} />
-      </mesh>
-    </group>
-  );
 }
 
 /** Ring that marks where Jev's walk leaves the embedding path. */
@@ -106,39 +61,11 @@ function Selection() {
   );
 }
 
-/** Ring on the question dot a search, "feeling lucky" or click landed on. */
-function Focus() {
-  const m = useRef<Mesh>(null);
-  const w = useMemo<[number, number, number]>(() => [0, 0, 0], []);
-  useFrame(({ camera, size }) => {
-    const mesh = m.current;
-    if (!mesh) return;
-    const i = useStore.getState().focusStar;
-    const d = starData();
-    const p = d && i >= 0 ? anim.placed.get(d.nodeIds[d.node[i]]) : undefined;
-    mesh.visible = !!p;
-    if (!p) return;
-    starWorld(i, p, now(), w);
-    mesh.position.set(w[0], w[1], w[2]);
-    mesh.quaternion.copy(camera.quaternion);
-    mesh.scale.setScalar((1 + 0.12 * Math.sin(now() * 3)) * pxToWorld(camera, mesh.position, size.height, 11));
-  });
-  return (
-    <mesh ref={m} visible={false} renderOrder={5}>
-      <ringGeometry args={[1, 1.35, 40]} />
-      <meshBasicMaterial color={PATH_B_COLOR} toneMapped={false} depthTest={false} depthWrite={false} />
-    </mesh>
-  );
-}
-
 export function Comets() {
   return (
     <>
-      <Comet which="A" color={PATH_A_COLOR} />
-      <Comet which="B" color={PATH_B_COLOR} />
       <Fork />
       <Selection />
-      <Focus />
     </>
   );
 }

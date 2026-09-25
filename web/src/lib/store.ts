@@ -8,6 +8,9 @@ export type PanelView =
   | { kind: "ask"; text?: string }
   | { kind: "none" };
 
+/** Jev's live walk of the current query (the green journey). `target` is where the chosen question lives. */
+export interface JevWalk { state: "idle" | "walking" | "done" | "error"; query?: string; node?: string; confidence?: number; error?: string; target?: string }
+
 interface State {
   nodes: Record<string, TreeNode>;
   children: Record<string, string[]>; // parent id -> ordered child ids (present once expanded)
@@ -22,6 +25,7 @@ interface State {
   hoverStar: number; // star index under the pointer, -1 for none
   starsReady: boolean;
   focusStar: number; // the question dot a search or "feeling lucky" flight landed on, -1 for none
+  jevWalk: JevWalk;
   pathA: string[]; // embedding path (root → result node)
   pathB: string[]; // Jev's own walk
   relevance: Record<string, number>; // node id -> 0..1 search relevance (branches brighten)
@@ -43,6 +47,7 @@ export const useStore = create<State>((set) => ({
   hoverStar: -1,
   starsReady: false,
   focusStar: -1,
+  jevWalk: { state: "idle" },
   pathA: [],
   pathB: [],
   relevance: {},

@@ -18,9 +18,10 @@
   --faint: rgba(30, 30, 30, 0.45);
   --line: rgba(30, 30, 30, 0.22);
   --line-2: rgba(30, 30, 30, 0.5);
-  --world: #09aea1;
+  --world: #4b5bd6;
   --self: #f386a1;
-  --machine: #4b5bd6;
+  --machine: #e8663d;
+  --orange: #e8663d;
   --gold: #03aa5c; /* Jev's own path / answers: Jev green */
   --hot: #d45bb6;
   --sans: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
@@ -285,6 +286,22 @@ input, textarea, select { font: inherit; color: inherit; }
 .skylabel.d4 { font-family: var(--pixel); font-size: 17px; line-height: 17px; background: var(--win); color: var(--ink); padding: 0 4px; box-shadow: 0 0 0 1px var(--ink); }
 .skylabel.q { font-family: var(--pixel); font-size: 16px; line-height: 15px; color: var(--ink); background: rgba(254, 254, 254, 0.86); padding: 1px 4px 2px; white-space: normal; width: max-content; max-width: 250px; text-align: center; }
 .skylabel.hot { background: var(--magenta); color: var(--paper); }
+.skylabel.d1, .skylabel.d2, .skylabel.d3, .skylabel.d4 { pointer-events: auto; cursor: pointer; }
+.skylabel.d2:hover, .skylabel.d3:hover, .skylabel.d4:hover { background: var(--green); color: var(--paper); }
+.skylabel.d1:hover { text-decoration: underline; text-decoration-thickness: 2px; }
+
+/* the journey: Jev's walker glows (above the dither, so it can), the destination dot is lit and labeled */
+.walker { display: flex; align-items: center; gap: 10px; z-index: 4; }
+.walker-dot { width: 16px; height: 16px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px var(--green), 0 0 22px 10px rgba(3, 170, 92, 0.55), 0 0 60px 26px rgba(3, 170, 92, 0.25); animation: walker 1.1s ease-in-out infinite; }
+.walker[data-who="path"] .walker-dot { background: var(--ink); box-shadow: 0 0 0 3px var(--paper), 0 0 0 5px var(--ink), 0 0 18px 8px rgba(30, 30, 30, 0.3); }
+.walker-chip { position: absolute; left: 22px; top: 50%; transform: translateY(-50%); white-space: nowrap; font-family: var(--pixel); font-size: 19px; line-height: 20px; padding: 1px 7px; background: var(--green); color: var(--paper); box-shadow: 0 0 0 1px var(--ink); }
+.walker-chip b { font-weight: 400; letter-spacing: 0.06em; }
+.walker[data-who="path"] .walker-chip { background: var(--ink); }
+@keyframes walker { 50% { transform: scale(1.18); } }
+.dest { z-index: 4; }
+.dest-ring { display: block; width: 26px; height: 26px; border-radius: 50%; border: 3px solid var(--green); box-shadow: 0 0 0 2px var(--paper), 0 0 24px 8px rgba(3, 170, 92, 0.45); animation: dest 1.6s ease-in-out infinite; }
+.dest-callout { position: absolute; left: 50%; bottom: calc(100% + 10px); transform: translateX(-50%); width: max-content; max-width: 320px; font-size: 17px; line-height: 1.15; font-weight: 500; letter-spacing: -0.02em; background: var(--paper); color: var(--ink); padding: 6px 9px 7px; box-shadow: 0 0 0 1px var(--ink), 3px 3px 0 var(--green); text-align: center; }
+@keyframes dest { 50% { transform: scale(1.15); } }
 .skylabel.sel { background: var(--green); color: var(--paper); }
 
 @media (max-width: 1100px) {

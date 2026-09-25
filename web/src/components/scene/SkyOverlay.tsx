@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { useStore } from "@/lib/store";
 import { cards, nodeSlots, starSlots, useOverlay } from "@/lib/overlay";
+import { selectNode } from "@/lib/actions";
 import { loadTexts, starData, starText } from "@/lib/stars";
 
 // HTML over the canvas (docs/07-ui.md, Look): node labels, question labels, and hover cards.
@@ -13,7 +14,13 @@ export function SkyOverlay() {
   return (
     <div className="skylabels" aria-hidden>
       {nodes.map((l, i) => (
-        <div key={`n${i}`} ref={(el) => { nodeSlots[i].el = el; }} className={`skylabel ${l.cls}`} style={{ opacity: 0 }}>
+        <div
+          key={`n${i}`}
+          ref={(el) => { nodeSlots[i].el = el; }}
+          className={`skylabel ${l.cls}`}
+          style={{ opacity: 0 }}
+          onClick={() => { const id = nodeSlots[i].key; if (id) selectNode(id); }}
+        >
           {l.text}
         </div>
       ))}
@@ -24,6 +31,44 @@ export function SkyOverlay() {
       ))}
       <NodeCard />
       <StarCard />
+      <Walker />
+      <Destination />
+    </div>
+  );
+}
+
+/** The journey's walker: a glowing dot with a chip saying who is walking, where, and how sure Jev was. */
+function Walker() {
+  const w = useOverlay((s) => s.walker);
+  return (
+    <div ref={(el) => { cards.walker = el; }} className="walker skycard" data-who={w?.who ?? "jev"} style={{ visibility: "hidden" }}>
+      <i className="walker-dot" />
+      {w && (
+        <span className="walker-chip">
+          <b>{w.who === "jev" ? "JEV" : "PATH"}</b> ▸ {w.label}
+          {w.p !== null && <span className="num"> · {Math.round(w.p * 100)}%</span>}
+        </span>
+      )}
+    </div>
+  );
+}
+
+/** Where the journey ends: a lit ring on the question's dot, with its text. */
+function Destination() {
+  const i = useStore((s) => s.focusStar);
+  const [, loaded] = useState(0);
+  useEffect(() => {
+    const d = starData();
+    if (i < 0 || !d || starText(i)) return;
+    let live = true;
+    loadTexts(d.nodeIds[d.node[i]]).then(() => live && loaded((x) => x + 1));
+    return () => { live = false; };
+  }, [i]);
+  const q = i >= 0 ? starText(i) : undefined;
+  return (
+    <div ref={(el) => { cards.dest = el; }} className="dest skycard" style={{ visibility: "hidden" }}>
+      <i className="dest-ring" />
+      {q && <div className="dest-callout">{q.label}</div>}
     </div>
   );
 }

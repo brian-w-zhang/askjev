@@ -15,13 +15,26 @@ const slots = <K,>(n: number): Slot<K>[] => Array.from({ length: n }, () => ({ e
 /** Filled by <SkyOverlay> refs, moved by the scene every frame. */
 export const nodeSlots = slots<string>(NODE_LABELS);
 export const starSlots = slots<number>(STAR_LABELS);
-export const cards = { star: null as HTMLDivElement | null, node: null as HTMLDivElement | null };
+export const cards = {
+  star: null as HTMLDivElement | null,
+  node: null as HTMLDivElement | null,
+  walker: null as HTMLDivElement | null, // the journey's walker: glow + chip
+  dest: null as HTMLDivElement | null, // the question dot a journey landed on
+};
+
+export interface WalkerView { who: "jev" | "path"; label: string; p: number | null }
 
 const EMPTY: LabelView = { text: "", cls: "" };
-export const useOverlay = create<{ nodes: LabelView[]; stars: LabelView[] }>(() => ({
+export const useOverlay = create<{ nodes: LabelView[]; stars: LabelView[]; walker: WalkerView | null }>(() => ({
   nodes: Array(NODE_LABELS).fill(EMPTY),
   stars: Array(STAR_LABELS).fill(EMPTY),
+  walker: null,
 }));
+
+/** The walker's chip changes once per tree level, so this renders a handful of times per journey. */
+export function publishWalker(w: WalkerView | null) {
+  useOverlay.setState({ walker: w });
+}
 
 /** Hand the overlay new label text/classes; a no-op (no React render) when nothing changed. */
 export function publish(which: "nodes" | "stars", views: LabelView[]) {
@@ -51,19 +64,21 @@ export function place<K>(s: Slot<K>, x: number | null, y: number, k: number) {
   if (!el) return;
   if (s.o < 0.02 || x === null) {
     if (el.style.opacity !== "0") el.style.opacity = "0";
+    if (el.style.visibility !== "hidden") el.style.visibility = "hidden"; // faded labels take no clicks
     return;
   }
+  el.style.visibility = "visible";
   el.style.opacity = s.o.toFixed(3);
   el.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px) translate(-50%, -100%)`;
 }
 
-/** Show a hover card beside a screen point, or hide it (x = null). */
-export function moveCard(el: HTMLDivElement | null, x: number | null, y: number) {
+/** Show a card beside a screen point (or centered on it), or hide it (x = null). */
+export function moveCard(el: HTMLDivElement | null, x: number | null, y: number, center = false) {
   if (!el) return;
   if (x === null) {
     if (el.style.visibility !== "hidden") el.style.visibility = "hidden";
     return;
   }
   el.style.visibility = "visible";
-  el.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px) translate(14px, -50%)`;
+  el.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px) ${center ? "translate(-50%, -50%)" : "translate(14px, -50%)"}`;
 }

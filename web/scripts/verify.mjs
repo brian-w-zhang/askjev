@@ -90,7 +90,7 @@ try {
   await page.getByTestId("question-card").waitFor({ timeout: 15000 });
   step("path animation landed, card open", { ms: Date.now() - tSel });
   try {
-    await page.getByTestId("walkcard").getByText(/ends at/).waitFor({ timeout: 30000 });
+    await page.getByTestId("walkcard").getByText(/filed it under/).waitFor({ timeout: 30000 });
     await page.waitForTimeout(3500);
     step("jev walk", { text: (await page.getByTestId("walkcard").textContent()).slice(0, 200) });
   } catch { fail("Jev walk did not finish within 30 s"); }
@@ -102,7 +102,7 @@ try {
   await page.waitForTimeout(300);
   await input.press("Enter");
   try {
-    await page.getByTestId("walkcard").getByText(/ends at/).waitFor({ timeout: 30000 });
+    await page.getByTestId("walkcard").getByText(/filed it under/).waitFor({ timeout: 30000 });
     await page.waitForTimeout(4500);
     step("jev walk (fork)", { text: (await page.getByTestId("walkcard").textContent()).slice(0, 220) });
   } catch { fail("Jev walk (fork) did not finish within 30 s"); }
