@@ -183,7 +183,9 @@ TEMPLATES: dict[str, dict[str, dict]] = {
     "machine.legal.prohibited_claims": {
         "claim_type": dict(
             shape="classify", primitive="choice", keys=["copy"],
-            text="Which restricted claim, if any, does `copy` make? Pick the most serious one.",
+            text="Which restricted claim, if any, does `copy` make? If it makes several, pick the most serious: "
+                 "a disease claim, then a guaranteed return, then an unsupported proof claim, then a comparison, "
+                 "then an environmental claim.",
             options={
                 "disease_claim": "Says the product treats, cures, prevents or mitigates a disease or medical "
                                  "condition",
@@ -206,7 +208,8 @@ TEMPLATES: dict[str, dict[str, dict]] = {
             shape="detect", primitive="noul", keys=["copy"],
             text="Does `copy` promise guaranteed or risk-free investment returns?",
             options=_noul("It promises a return is certain, guaranteed or without risk of loss",
-                          "It makes no such promise, or states that returns are not guaranteed")),
+                          "It makes no such promise, states that returns are not guaranteed, or quotes the "
+                          "rate on an insured bank deposit")),
     },
     "machine.research.methods_checks": {
         "sample_size_justified": dict(
@@ -239,7 +242,7 @@ TEMPLATES: dict[str, dict[str, dict]] = {
             shape="score", primitive="score", keys=["competency", "resume"],
             text="How much evidence of `competency` does `resume` show?",
             options=[
-                "The resume shows no sign of this competency",
+                "The resume shows no sign of this competency (a related skill alone does not count)",
                 "It is only listed as a skill, or appears in coursework, a certificate or a hobby project",
                 "The resume describes using it in a job or substantial project",
                 "The resume describes years of hands-on work with it, including leading or designing substantial "

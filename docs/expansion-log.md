@@ -2,6 +2,41 @@
 
 _One section per wave (`docs/10-expansion.md` §3). Newest first._
 
+## Wave 4: 373k → 478k (gated 2026-09-25)
+**478,407 canonical questions** (+105,817), all placed and answered; 1,568 active nodes (+164); star layout 450,737 stars in
+1,540 nodes. Hemispheres: World 40.0 · Self 30.7 · Machine 29.3.
+
+| | Wave 4 | Rule |
+|---|---|---|
+| Anchored | 60,500 (**57%**) | ≥ 60% ❌ (missed by 3 points) |
+| Synthetic | 6,702 (6%): Self taste bank, **84%** round-trip accept | ≤ 15% ✅ |
+
+**Why the anchored share missed:** the wave took 30,000 Stack Exchange titles (the adapter's pool was extended to 30k by the
+wave 5 sourcing agent before this wave's ingest read it) plus 4,000 chatbot first turns: real asked questions with no truth or
+human data. Accepted and logged; `10-expansion.md` §8 now makes real asked questions a priority and allows the share to drift
+to ~55-60%. Wave 5 is Machine- and survey-heavy to pull it back.
+
+**Added:** World: Stack Exchange 29,995 (56 non-programming sites), fictional-character trait ratings 15,000 (each rater's
+own slider rating, median n 81), 15 new GOAT categories 4,500, WildChat/hh-rlhf/oasst closed first turns 4,120. Self: Moral
+Machine +10,000, Social IQa +5,000, Self taste bank 6,702. Machine (12 templates, 30,500): game-chat toxicity, Steam
+recommendations, financial-tweet signals, competition-math subject and difficulty (model routing), PubMed RCT sections, MovieLens
+"will this user enjoy", ESCI color extraction, QNLI answer gating, CoLA grammar, GoEmotions gratitude, clickbait, medical question pairs.
+
+**Measurements:** most informative: MovieLens recommendations 0.71 (never decisive), math difficulty/subject 0.67, PubMed sections
+0.72, CoLA 0.74, CONDA game chat 0.79. Saturated: ESCI color 0.97. Character traits are decisive 42% of the time and track the
+rater majority closely on the obvious pairs.
+
+**Tree:** template split for 3 Machine nodes; Moral Machine split by scenario type (women/men, young/old, fit/unfit, humans/pets);
+character traits split into 155 per-work nodes ("Game of Thrones Characters"...); descend of 11,090 hint-placed questions; the lane
+also left 34,115 unhinted Stack Exchange/WildChat questions answered but unplaced (ingest outran its place stage) — found at the
+gate, placed with the fast path (hemisphere + nearest-node Choice) because the batch was > 20k; the lane now also counts unplaced
+rows. Two hand nodes added for §8: Buying Decisions, Everyday Practical Questions.
+
+**Known issues:** Jev's screen flagged about half of the Moral Machine rows where children die as sensitive, so they are hidden
+from the map (still answered and measured); 1,673 real asked questions sit at the root (fast placement found no confident
+hemisphere); split candidates left for a later pass: everyday_ethics, video_games, dishes_ingredients, coworkers, family
+situations, psychology_neuroscience, Reading People children (all 1.6-2.2k direct).
+
 ## Wave 3: 300k → 373k (gated 2026-09-25)
 **372,590 canonical questions** (+72,727), all placed and answered; 1,404 active nodes; 177,991 distinct texts; 195,737 with
 ground truth; 116,391 human distributions; 783k cached Jev calls. Hemispheres: World 37.3 · Self 33.3 · Machine 29.4.

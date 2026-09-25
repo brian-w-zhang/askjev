@@ -5,7 +5,7 @@ download: >
   author's label.
 license: authored (askjev)
 version: wave 6 (2026-09-25)
-target: ~7,000 (every authored line; 250 per template, 350 for the two competency_evidence templates)
+target: 7,450 (every authored line; 250 per template, 350 for the two competency_evidence templates)
 hemisphere: machine
 shape: verify, detect, route, classify, score
 notes: >
