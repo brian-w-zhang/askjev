@@ -1,0 +1,15 @@
+name: amazon_helpful
+url: https://cseweb.ucsd.edu/~jmcauley/datasets/amazon/links.html
+download: http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_{Cell_Phones_and_Accessories,Tools_and_Home_Improvement,Toys_and_Games,Grocery_and_Gourmet_Food,Office_Products,Baby,Pet_Supplies}_5.json.gz
+license: Research use (McAuley Amazon product data)
+version: Amazon product data 2014 (He & McAuley 2016), 5-core review files for 7 categories
+target: 2500
+hemisphere: machine
+shape: classify
+notes: >
+  Template amazon_helpful.helpful: Noul "Is `review` helpful to a shopper deciding whether to buy the
+  product?" with product category, star rating, review title and review text (40-1,500 chars, untruncated)
+  in state. Only reviews with >= 10 "Was this review helpful?" votes and a clear vote (>= 85% or <= 40%
+  helpful). HumanDist = the shopper vote share (n = total votes). Truth = clear majority. 40% unhelpful /
+  60% helpful, round-robin over categories in salted hash order. Caveat: votes also reflect agreement with
+  the reviewer's opinion, not just informativeness.

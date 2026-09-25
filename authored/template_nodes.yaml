@@ -333,3 +333,20 @@ glasgow_norms.valence:
   label: Word Pleasantness
   description: "How pleasant or unpleasant a word feels to most people."
   examples: ["How pleasant does the word \"sunshine\" feel?"]
+
+# Wave 4
+cola.grammatical:
+  key: grammatical_acceptability
+  label: Grammatical Acceptability
+  description: "Questions a program asks about a sentence to decide whether it is grammatical, acceptable English."
+  examples: ["Is this sentence grammatical English?"]
+steam.recommends:
+  key: player_recommendations
+  label: Player Recommendations
+  description: "Questions a program asks about a video game review to decide whether the player who wrote it recommends the game."
+  examples: ["Does the player who wrote this review recommend the game?"]
+medqp.same_question:
+  key: medical_question_matching
+  label: Medical Question Matching
+  description: "Questions a program asks about two patient questions to decide whether they ask the same medical question and need the same answer."
+  examples: ["Do these two questions ask the same medical question?"]

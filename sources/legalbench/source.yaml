@@ -1,0 +1,20 @@
+name: legalbench
+url: https://huggingface.co/datasets/nguha/legalbench
+download: https://huggingface.co/api/datasets/nguha/legalbench/parquet/<task>/{train,test}/0.parquet + task_metadata.json
+license: LegalBench card CC-BY-4.0; per-task source licenses recorded per template (OPP-115 CC-BY-NC, Learned Hands CC-BY-NC-SA-4.0, CUAD CC-BY-4.0, ...)
+version: LegalBench (Guha et al. 2023), parquet export; train + test pooled
+target: 12100
+hemisphere: machine
+shape: verify|detect|route|classify
+notes: >
+  Seven expert-labelled LegalBench tasks as Machine templates. legalbench.privacy_practice (OPP-115, 9
+  binary tasks, practice definition in `practice`, balanced, 2,500) and legalbench.consumer_contracts_qa
+  (Terms of Service excerpt <= 3,000 chars + consumer yes/no question, ~240) -> machine.legal.policy_checks;
+  legalbench.cuad_provision (CUAD, 38 binary tasks, provision definition in `provision`, 2,500) ->
+  machine.legal.clause_detection; legalbench.legal_area (Learned Hands r/legaladvice posts <= 1,500 chars,
+  16 areas, 2,500), legalbench.overruling (2,400), legalbench.definition (~1,345), legalbench.decision_section
+  (7-way Choice, ~370) -> machine.legal. Criterion wording comes from LegalBench's task instructions.
+  Binary families are round-robin across subtasks and balanced yes/no in salted hash order. Inputs are
+  never truncated (over-length rows skipped). Skipped: privacy_policy_qa (near-random labels on
+  inspection), privacy_policy_entailment (labels often unsupported by the segment), supply_chain_disclosure
+  (too long), synthetic or < 300-example tasks.

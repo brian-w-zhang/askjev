@@ -2,7 +2,7 @@ name: stackexchange_closed
 url: https://huggingface.co/datasets/flax-sentence-embeddings/stackexchange_title_best_voted_answer_jsonl
 license: CC BY-SA (Stack Exchange content; HF card lists CC BY-NC-SA 4.0)
 version: flax-sentence-embeddings/stackexchange_title_best_voted_answer_jsonl per-site train parquet (56 non-programming sites, 810,778 titles), fetched 2026-09-25
-target: 10000
+target: 30000 (ASKJEV_TARGET_STACKEXCHANGE_CLOSED; first 10000 = the original sample, top-up prefix-stable)
 hemisphere: world + self (mostly world)
 kind: factual, evaluative, social, forecast, values
 notes: >

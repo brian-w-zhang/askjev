@@ -28,7 +28,8 @@ NAME = "stackexchange_closed"
 BASE = ("https://huggingface.co/api/datasets/flax-sentence-embeddings/stackexchange_title_best_voted_answer_jsonl/"
         "parquet/{site}/train/0.parquet")
 LICENSE = "CC BY-SA (Stack Exchange content; HF card lists CC BY-NC-SA 4.0)"
-TARGET = env_int("TARGET_STACKEXCHANGE_CLOSED", 10000)
+BASE_TARGET = 10000  # the original sample; a larger TARGET keeps it and tops up (prefix-stable)
+TARGET = env_int("TARGET_STACKEXCHANGE_CLOSED", 30000)
 SITE_CAP = env_int("STACKEXCHANGE_CLOSED_SITE_CAP_PCT", 8) / 100
 # Sites whose titles are mostly game/fiction/equipment minutiae get half the cap.
 NICHE = {"gaming", "scifi", "aviation", "law", "mechanics", "anime", "photo", "boardgames", "homebrew"}
@@ -104,16 +105,23 @@ def _pool(raw_dir: Path) -> list[dict]:
 
 def normalize(raw_dir: Path) -> Iterator[Question]:
     pool = _pool(raw_dir)
-    cap = int(TARGET * SITE_CAP)
     per_site: Counter = Counter()
     picked = []
-    for it in hash_order(pool, lambda x: x["key"], SALT):
-        if per_site[it["site"]] >= (cap // 2 if it["site"] in NICHE else cap):
-            continue
-        per_site[it["site"]] += 1
-        picked.append(it)
-        if len(picked) == TARGET:
-            break
+    order = hash_order(pool, lambda x: x["key"], SALT)
+    taken: set = set()
+    # Pass 1 reproduces the original 10k sample (site cap from BASE_TARGET); pass 2 tops up to TARGET over the
+    # remaining pool in the same hash order, with the site cap recomputed from TARGET. A larger TARGET therefore
+    # contains the smaller one.
+    for goal in (min(TARGET, BASE_TARGET), TARGET):
+        cap = int(max(goal, BASE_TARGET) * SITE_CAP)
+        for it in order:
+            if len(picked) >= goal:
+                break
+            if it["key"] in taken or per_site[it["site"]] >= (cap // 2 if it["site"] in NICHE else cap):
+                continue
+            per_site[it["site"]] += 1
+            picked.append(it)
+            taken.add(it["key"])
     FUNNEL["picked"] = len(picked)
     for it in sorted(picked, key=lambda x: x["key"]):
         q = it["q"]

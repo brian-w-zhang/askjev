@@ -7,7 +7,7 @@ version: >
   pair: count below 50 / at 50 / above 50, sum, sum of squares), then the 1.2 GB zip is deleted. Character names and
   works from SWCPQ-Features-Aggregated-Dataset-January2025 (codebook), same character ids (raw means and n match the
   aggregated file). Fetched 2026-09-25.
-target: 15000 (ASKJEV_TARGET_CHARACTER_TRAITS; salted-hash order, prefix-stable)
+target: 19000 (ASKJEV_TARGET_CHARACTER_TRAITS; salted-hash order, prefix-stable)
 hemisphere: world
 kind: evaluative
 notes: >

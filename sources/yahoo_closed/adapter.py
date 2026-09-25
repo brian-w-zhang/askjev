@@ -40,7 +40,8 @@ BASE = ("https://huggingface.co/api/datasets/community-datasets/yahoo_answers_to
         "yahoo_answers_topics/train")
 FILES = {f"train_{i}.parquet": f"{BASE}/{i}.parquet" for i in (0, 1)}
 LICENSE = "Yahoo! Answers Comprehensive Q&A (Yahoo Webscope L6): non-commercial research use"
-TARGET = env_int("TARGET_YAHOO_CLOSED", 8000)
+BASE_TARGET = 8000  # the original sample; a larger TARGET keeps it and tops up (prefix-stable)
+TARGET = env_int("TARGET_YAHOO_CLOSED", 12000)
 SALT = "yahoo_closed-20260925"
 TOPICS = ["society_culture", "science_mathematics", "health", "education_reference", "computers_internet", "sports",
           "business_finance", "entertainment_music", "family_relationships", "politics_government"]
@@ -162,11 +163,24 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
     pool = _pool(raw_dir)
     FUNNEL.update({f"7_pool_kind_{k}": v for k, v in Counter(x["kind"] for x in pool).items()})
     order = hash_order(pool, lambda x: x["raw"], SALT)
-    picked = []
-    for kind, share in KIND_SHARE.items():
-        picked += [x for x in order if x["kind"] == kind][: int(TARGET * share)]
-    have = {id(x) for x in picked}
-    picked += [x for x in order if x["kind"] not in KIND_SHARE and id(x) not in have][: TARGET - len(picked)]
+
+    def select(cands: list[dict], n: int) -> list[dict]:
+        out = []
+        for kind, share in KIND_SHARE.items():
+            out += [x for x in cands if x["kind"] == kind][: int(n * share)]
+        have = {id(x) for x in out}
+        return out + [x for x in cands if x["kind"] not in KIND_SHARE and id(x) not in have][: n - len(out)]
+
+    # The original sample is the kind-share selection at BASE_TARGET; a larger TARGET tops it up with the same
+    # selection over the rest of the pool (then anything left, if a kind runs dry), so it contains the smaller one.
+    picked = select(order, min(TARGET, BASE_TARGET))
+    if TARGET > BASE_TARGET:
+        have = {id(x) for x in picked}
+        rest = [x for x in order if id(x) not in have]
+        extra = select(rest, TARGET - BASE_TARGET)
+        have |= {id(x) for x in extra}
+        extra += [x for x in rest if id(x) not in have][: TARGET - BASE_TARGET - len(extra)]
+        picked += extra
     picked = sorted(picked, key=lambda x: x["raw"])
     FUNNEL.update({f"8_picked_kind_{k}": v for k, v in Counter(x["kind"] for x in picked).items()})
     FUNNEL["8_picked"] = len(picked)

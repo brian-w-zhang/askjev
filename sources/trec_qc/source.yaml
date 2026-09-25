@@ -1,0 +1,15 @@
+name: trec_qc
+url: https://cogcomp.seas.upenn.edu/Data/QA/QC/
+download: https://cogcomp.seas.upenn.edu/Data/QA/QC/{train_5500.label,TREC_10.label}
+license: Research use (CogComp UIUC)
+version: Li & Roth 2002 question classification (5,452 train + 500 TREC-10 questions)
+target: 2500
+hemisphere: machine
+shape: classify
+notes: >
+  Template trec_qc.answer_type: Choice "What kind of answer is `question` looking for?" over the 6 coarse
+  answer types (abbreviation, description, entity, human, location, numeric) with one-line descriptions;
+  truth = coarse label, meta.fine_label keeps the fine class. All 94 abbreviation questions, the rest split
+  evenly over the other 5 types in salted hash order. Light detokenization; case-insensitive dedup.
+  HF CogComp/trec is script-only, so the original CogComp files are used. Placed at machine.search
+  (query understanding before retrieval; no deeper leaf fits).

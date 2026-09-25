@@ -2,7 +2,7 @@ name: yahoo_closed
 url: https://huggingface.co/datasets/community-datasets/yahoo_answers_topics
 license: "Yahoo! Answers Comprehensive Q&A (Yahoo Webscope L6): non-commercial research use"
 version: community-datasets/yahoo_answers_topics train parquet (1,400,000 questions, 2 files), fetched 2026-09-25
-target: 8000
+target: 12000 (ASKJEV_TARGET_YAHOO_CLOSED; first 8000 = the original sample, top-up prefix-stable)
 hemisphere: world
 kind: factual, evaluative, forecast, social
 notes: >

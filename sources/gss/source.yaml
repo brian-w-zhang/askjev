@@ -1,0 +1,19 @@
+name: gss
+url: https://gss.norc.org/us/en/gss/get-the-data.html
+license: GSS public-use data (NORC at the University of Chicago); free for research use with citation
+version: GSS 1972-2024 cumulative cross-section, Release 3a (gss7224_r3a.dta, Stata zip), fetched 2026-09-25
+target: 366 (all authored items)
+hemisphere: self (most) + world (institutions, science, medicine, media, technology)
+kind: personality, values, social, evaluative, taste, factual
+notes: >
+  Non-political GSS attitude/behavior items, one question per item, wording authored from the 2024/2022/2021 year
+  codebooks and the 1972-2018 cumulative codebook, in the self frame. Choice over the item's substantive answer
+  categories (volunteered / can't choose / does-not-apply dropped and shares renormalized); yes/no and true/false
+  items are Noul. Human: weighted (WTSSPS) shares in the item's latest GSS year with >= 300 answers ("US adults
+  <year>") plus, when asked >= 15 years earlier, the year closest to 1990 (second population, same question). Two
+  ranking batteries (qualities for a child; job attributes) are one Choice each over "ranked first". Contested
+  politics skipped entirely (party/vote, abortion, guns, immigration, race attitudes, spending and government-role
+  items, civil liberties, policing, same-sex marriage, climate policy, national identity), as are demographics,
+  paradata, sexual behavior, and vignette items whose vignette text is not in the file. Religion and sexual morality
+  flagged sensitive; suicide-right items flagged sensitive. NSF science-literacy items carry truth. Items with a
+  conditional universe (e.g. job satisfaction) report the answering subpopulation's shares.

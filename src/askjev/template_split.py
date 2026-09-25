@@ -45,7 +45,7 @@ def split(dry_run: bool = False) -> str:
     # only templates with an authored label split out (a label is the judgment that the template is a topic)
     missing = sorted({r["template_id"] for v in by_node.values() for r in v if r["template_id"] not in spec})
     # labeled templates only, and never one already sitting in its own template node
-    by_node = {k: [t for t in v if t["template_id"] in spec and not k.endswith("." + spec[t["template_id"]]["key"])]
+    by_node = {k: [t for t in v if t["template_id"] in spec and f'.{spec[t["template_id"]]["key"]}.' not in f"{k}."]
                for k, v in by_node.items()}
     by_node = {k: v for k, v in by_node.items() if v}
     if dry_run:

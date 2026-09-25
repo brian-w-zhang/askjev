@@ -1,0 +1,15 @@
+name: scicite
+url: https://github.com/allenai/scicite
+download: https://s3-us-west-2.amazonaws.com/ai2-s2-research/scicite/scicite.tar.gz
+license: Apache-2.0
+version: SciCite (Cohan et al. 2019), train + dev + test pooled (11,020 citation sentences)
+target: 2500
+hemisphere: machine
+shape: classify
+notes: >
+  Template scicite.intent: Choice "Why does `sentence` from a scientific paper cite the work at `citation`?"
+  over background / method / result_comparison; `citation` is the marked citation span. Crowd rows with
+  label_confidence < 0.75 are skipped. Balanced over the 3 intents (~833 each), salted hash order,
+  case-insensitive dedup, 40-1,500 chars. HF allenai/scicite is script-only, so the original AllenAI tarball
+  is used. ACL-ARC was considered and skipped (the public HF copy has unnamed integer labels whose mapping
+  could not be verified and several classes looked inconsistent on inspection).

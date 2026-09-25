@@ -158,3 +158,36 @@ Another session is changing the UI at the same time. The expansion agent must no
   target; the weakest synthetic Score shape ("How should X handle Y" with one sensible level) is dropped before round trip.
 - **Vital L3 nodes** are single entities (not topic groupings), so Vital L4 entities correctly sit on hand topic nodes;
   nothing to re-home (§1 corrected).
+
+## 8. Coverage map and priorities for 500k → 1M (agreed with Brian, 2026-09-25)
+Measured at 478k (World 40.0 / Self 30.7 / Machine 29.3; 71% anchored; 7.6% synthetic).
+
+**Well covered (don't grow further unless a wave needs volume):** factual knowledge (20% vs 15%), moral dilemmas and values
+(ETHICS, AITA, Moral Machine, Social Chemistry), entertainment taste pairs, arts and fictional characters, word-perception norms,
+Machine text classification (spam, toxicity, intents, topics, sentiment, relevance, claims).
+
+**Underrepresented vs targets:** personality 4.1% (9), Self › Love 2.8% (5), Self › Mind 2.6% (5), World › food 1.1 (3),
+history 1.3 (3), sports 1.8 (4), tech 1.8 (3), money 1.4 (2); Machine › people 0.5 (2), finance 1.0 (2); Machine shapes extract
+and rank; empty TypeSafe leaves (claims triage, KYC/AML, ad alignment, listing compliance, moderation enforcement, response
+verification) with no public labeled data.
+
+**Missing relative to what people actually ask:** real asked questions are only ~15% of the corpus; everything is English
+(US/India skew); practical and consumer decisions have no node; health/personal advice and politics/religion are excluded or
+hidden by design (kept that way); math and logic reasoning nearly absent; forecasting 1.1%.
+
+**Priorities for waves 6+ (in this order):**
+1. **Real asked questions**, the biggest mission gap: Stack Exchange and Yahoo remainders, Quora world pool, Reddit r/polls (with
+   vote counts as human data, from public dumps), Natural Questions, more chatbot first turns, Metaculus/Manifold forecasts with
+   resolutions. The anchored share may drift toward ~55-60% because of this; that is accepted and logged per wave.
+2. **New hand nodes for practical decisions:** `world.money.buying_decisions` (which product or service to buy, is X worth it)
+   and `world.society.everyday_how_to` (home, DIY, consumer rights, everyday practical judgments), fed by the real asked questions.
+3. **Human-answer surveys behind a free login** (World Values Survey, European Social Survey, Pew, Eurobarometer): the best fix for
+   Self and for non-US populations. The rules forbid signing up automatically; if Brian downloads them into `data/raw/<name>/`,
+   they are ingested in the next wave.
+4. **TypeSafe's empty Machine leaves:** realistic inputs authored by subagents, with labels decided at authoring time, marked
+   `origin=synthetic` and `meta.synthetic_input=true`, counted inside the 15% synthetic cap, and reported separately (their labels
+   are the author's judgment, not independent ground truth).
+5. **A multilingual slice:** existing questions reworded into other languages as universes (overlays, never new questions), plus
+   native-language real questions where the license allows.
+6. **Kind gaps:** personality and Love/Mind through round-trip-filtered synthetic banks; food, history, sports, tech and money
+   through real asked questions and new datasets; math/logic through a small closed-form reasoning set with truth.

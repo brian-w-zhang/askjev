@@ -40,6 +40,7 @@
 | 2026-09-24 | Expansion mix rules: ≤ 5,000 rows per question text (3,000 per Machine template; over-cap sources frozen), ≥ 60% anchored per wave, synthetic ≤ 15% per wave (no `other` escape options, no personal-biography questions, no synthetic factual), node cap 1,500 direct questions → split, stop scaling a source that is ≥ 95% correct and ≥ 60% decisive |
 | 2026-09-24 | While the UI is in flux, the expansion agent adds nodes but never changes existing node ids or paths (no group or retire), writes only additive migrations from `005`, runs Jev at `ASKJEV_RPS=16`, and commits only its own paths |
 | 2026-09-25 | Expansion tree rules: high-volume templates split into their own child only when an authored label says the template is a topic (`authored/template_nodes.yaml`); single-template nodes are bounded by the template cap; hint-placed questions on overfull parents are re-walked by Jev from the parent ("descend") (`10-expansion.md` §7) |
+| 2026-09-25 | Waves 6+ priorities (`10-expansion.md` §8): real asked questions first (anchored share may drift to ~55-60%, logged); new hand nodes for buying decisions and everyday how-to; login-gated surveys ingested if Brian downloads them; TypeSafe's empty Machine leaves get authored inputs marked `synthetic_input` inside the 15% cap; a multilingual slice as universes |
 
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)

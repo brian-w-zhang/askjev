@@ -1,0 +1,14 @@
+name: entity_typing
+url: https://huggingface.co/datasets/tner/conll2003 ; https://huggingface.co/datasets/tner/wnut2017
+download: https://huggingface.co/api/datasets/tner/{conll2003,wnut2017}/parquet/<config>/{train,validation,test}/0.parquet
+license: CoNLL-2003 research use (Reuters RCV1 text); WNUT-17 CC-BY-4.0
+version: CoNLL-2003 English NER; WNUT-17 emerging entities (tner parquet mirrors)
+target: 4500
+hemisphere: machine
+shape: classify
+notes: >
+  Two templates, same text "What type of entity is `span` in `sentence`?" but different option sets:
+  entity_typing.conll_type (person / organization / location / other, 2,500) and entity_typing.wnut_type
+  (person / location / corporation / product / creative_work / group, up to 2,000). One gold span per
+  sentence, span text unique within the sentence, types balanced (smallest first) in salted hash order,
+  light detokenization, sentences >= 6 (CoNLL) / 5 (WNUT) tokens, <= 1,000 chars. Sensitive words flagged.

@@ -1,0 +1,14 @@
+name: atis_intents
+url: https://huggingface.co/datasets/tuetschek/atis
+download: https://huggingface.co/api/datasets/tuetschek/atis/parquet/default/{train,test}/0.parquet
+license: Unspecified on the HF mirror (ATIS originally distributed by LDC)
+version: ATIS intent/slot data (tuetschek/atis mirror, 4,978 train + 893 test)
+target: 2200
+hemisphere: machine
+shape: route
+notes: >
+  Template atis_intents.request: Choice "What travel information does `request` ask for?" over 15 ATIS
+  intents with one-line descriptions; truth = dataset intent. Multi-intent rows and intents with < 10
+  utterances skipped; exact-duplicate utterances dropped. "flight" capped at 700 (ASKJEV_TARGET_ATIS_FLIGHT),
+  all other intents in full. Distinct from CLINC/MASSIVE/SNIPS: one narrow domain with fine-grained
+  information types. Utterances are lowercased transcripts of speech.

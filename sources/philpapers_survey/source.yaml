@@ -1,0 +1,16 @@
+name: philpapers_survey
+url: https://huggingface.co/datasets/gmpj/philpapers-survey-2020
+license: CC BY-NC 4.0 (PhilPapers Survey 2020 aggregate results, published on HF with PhilPapers' permission)
+version: gmpj/philpapers-survey-2020 philpapers-survey-2020.json (100 main questions), fetched 2026-09-25
+target: 98
+hemisphere: self
+kind: values
+notes: >
+  The 2020 PhilPapers Survey (Bourget & Chalmers 2023). survey2020.philpeople.org is behind a Cloudflare browser
+  challenge, so the aggregate JSON on Hugging Face is used; it has the 100 main questions only (the ~40 additional
+  questions are not available without the site). One Choice per question, asking the answerer's own view, options =
+  the survey's positions plus "other" (alternative view / undecided / no fact of the matter / too unclear). Human:
+  target faculty "accept or lean toward" percentages, renormalized to sum to 1 (several positions could be accepted;
+  raw percentages in meta). Other minds and philosophical methods (reported only as reject rates) are left out.
+  Texts authored with a short gloss of each position. Abortion, capital punishment, capitalism/socialism, political
+  philosophy, gender, race, gender/race categories flagged political; God and arguments for theism sensitive.

@@ -1,0 +1,13 @@
+name: evidence_inference
+url: https://github.com/jayded/evidence-inference
+download: https://raw.githubusercontent.com/jayded/evidence-inference/master/annotations/{annotations_merged,prompts_merged}.csv
+license: MIT
+version: Evidence Inference 2.0 merged annotations (12,865 prompts over PMC RCT articles)
+target: 2500
+hemisphere: machine
+shape: classify
+notes: >
+  Template evidence_inference.effect: Choice "According to `evidence` from a clinical trial report, how did
+  `intervention` affect `outcome` compared with `comparator`?" over significantly increased / decreased /
+  no significant difference. Only prompts with >= 2 valid annotators who all agree; evidence = first such
+  annotator's span (30-1,000 chars, table rows skipped). Balanced over the 3 labels in salted hash order.
