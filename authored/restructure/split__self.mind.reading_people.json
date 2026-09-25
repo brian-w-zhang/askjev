@@ -1,0 +1,69 @@
+{
+  "type": "split",
+  "node": "self.mind.reading_people",
+  "n_questions": 3816,
+  "clusters": [
+    {
+      "size": 1827,
+      "samples": [
+        "In `context`, how would Kai feel afterwards?\nvery happy / like he was crying / ecstatic at the movie\n{'context': 'Kai cried every time when he watched the sad movie.'}",
+        "In `context`, how would Kai feel as a result?\npissed at Robin / bad that she stole from Kai / ashamed that she stole from Kai\n{'context': \"Robin entered Kai's room without her permission and took a shirt.\"}",
+        "In `context`, how would Riley feel afterwards?\nrich / ethical / a treasure hunter\n{'context': 'Riley told Taylor they found gold after digging for hours at the site.'}",
+        "In `context`, how would Bailey feel as a result?\nhappy / upset / bad for pushing kendall\n{'context': 'Kendall was giving Bailey such a hard time. Kendall pushed Bailey over the edge that she had to scream.'}",
+        "In `context`, how would you describe Carson?\nlazy / helpful / like capable warriors\n{'context': 'Carson sent them to the fight after teaching them everything he knew.'}",
+        "In `context`, how would Quinn feel after waiting for an hour?\nangry and forgotten / patient and satiated / well served and pleased\n{'context': 'Quinn waited an hour for food after ordering take out and was convinced they forgot his order.'}",
+        "In `context`, how would you describe Jesse?\ngives up easily / positive outlook / pessimistic outlook\n{'context': 'Jesse faced every challenge with an upbeat attitude.'}",
+        "In `context`, how would you describe Tracy?\nlike a failure / someone bad at public speaking / someone bad at public observation\n{'context': 'Tracy spent all week practicing the speech, and still ended up stuttering through the whole thing.'}",
+        "In `context`, how would Bailey feel afterwards?\nlazy / relieved / competent\n{'context': 'Bailey paid their cable bill on time and got to watch some good shows later.'}",
+        "In `context`, how would you describe Kendall?\nhelp others / a good salesperson / a professional athlete\n{'context': 'Kendall was a doctor. They helped ease the pain.'}",
+        "In `context`, how would Kai feel afterwards?\ndedicated / exhausted / full of energy\n{'context': 'Kai has a practises every single day, which are really hard and fast paced.'}",
+        "In `context`, how would Addison feel afterwards?\nproud / annoyed / regretful\n{'context': 'Addison was finding one of his university courses incredibly difficult. Addison felt like giving up, but continued on his course and passed it with good grades.'}",
+        "In `context`, how would you describe Ash?\nsatisfied / consistent / Someone who values routine\n{'context': 'Ash had the same breakfast of toast and scrambed eggs every day.'}",
+        "In `context`, how would you describe Carson?\nfurious / untalented / like a terrible player\n{'context': 'Carson lost another game after trying for the fourth time in a row.'}",
+        "In `context`, how would you describe Addison?\nhappy about their day / content with their day / someone who loses track of time\n{'context': 'Addison loved being on the water in her boat. She planned on being out for the morning, but Addison fished all day.'}"
+      ],
+      "child": {
+        "key": "reading_feelings",
+        "label": "Reading Feelings & Character",
+        "description": "Questions about how a person in a short everyday scene would feel as a result, or how you would describe that person's character from what they did.",
+        "not_for": "Why the person acted, what they needed to do first, or what they or others will do next (use Reading Motives & Plans). Preferences about dating, partners, friends, family or coworkers (use those sibling nodes).",
+        "examples": [
+          "Riley stayed up all night to finish the project. How would Riley feel afterwards?",
+          "Jordan gave his lunch to a hungry classmate. How would you describe Jordan?",
+          "Casey's friend forgot her birthday. How would Casey feel as a result?"
+        ]
+      }
+    },
+    {
+      "size": 1989,
+      "samples": [
+        "In `context`, what does Aubrey need to do beforehand?\nchange the tyre / needed to be driving / check for their spare tyre\n{'context': 'Aubrey was driving when she suddenly got a flat tire. Aubrey decided to pull over and check it out.'}",
+        "In `context`, what does Ash need to do before this?\nneeded to shop for furniture / wanted to decorate the apartment / wanted to make the place look nicer\n{'context': 'Ash bought some modern furniture for his new condo he recently got.'}",
+        "In `context`, what will Carson want to do next?\nKick the jar / Throw the jar / Continue trying\n{'context': 'Carson could not open the jar and began to become frustrated.'}",
+        "In `context`, what will happen to Remy?\ngo home / go to lunch / win the case\n{'context': \"Remy pleaded bailey's case to the jury, but it didn't seem to convince them.\"}",
+        "In `context`, what will Sydney want to do next?\nride a bike / open an account / play video games\n{'context': 'Sydney went to the bank and asked if she had an account.'}",
+        "In `context`, why did Lee do this?\nhe didn't care / pass the test / he wanted to fail\n{'context': 'Lee eliminated every possibility to solve the equation in the exam.'}",
+        "In `context`, what did Skylar do?\nstylish / bought a new book / gave Casey a hair cut\n{'context': \"Skylar died Casey's hair blue and gave her an asymmetrical bob cut.\"}",
+        "In `context`, why did Addison do this?\nbetter / Wash it with soap / break the splinter\n{'context': 'Bailey had a large splinter so Addison made an incision on Bailey.'}",
+        "In `context`, what will Alex want to do next?\ndo it again / take a break / did this to clean up\n{'context': 'Alex pulled the desk apart to throw it away at the dump.'}",
+        "In `context`, what will Jan want to do next?\ngive up / hear the news / get ahold of her\n{'context': 'Kendall had important news and wanted Jan to answer immediately.'}",
+        "In `context`, why did Lee do this?\nwas angry / had the money / go to a shoe store\n{'context': 'After his shoes got a hole in the sole, Lee decided to buy a new pair.'}",
+        "In `context`, what does Ash need to do before this?\nsit quietly / get a coupon / forget coupons\n{'context': 'Ash bought lunch at a price that was cheaper than usual.'}",
+        "In `context`, what does Austin need to do before this?\nOpen it up / Find out whats inside / look at the signature before this\n{'context': 'Austin derived their their signature from the consent for to verify that they had received the delivery.'}",
+        "In `context`, what will Riley want to do next?\nknock on the front door / be on guard just in case / be prepared for an attack\n{'context': 'Riley walked toward the house and kept their hands loosely at their sides, ready for any sudden movement.'}",
+        "In `context`, what does Riley need to do before this?\nlisten to Riley's poetry / ask Kendall how they felt / see everyone's reaction to the poetry\n{'context': \"Riley expressed Kendall's feelings through poetry which they recited in front of everyone.\"}"
+      ],
+      "child": {
+        "key": "reading_motives",
+        "label": "Reading Motives & Plans",
+        "description": "Questions about why a person in a short everyday scene did something, what they had to do beforehand, and what they or others will want to do or will happen next.",
+        "not_for": "How the person feels or what their character is like (use Reading Feelings & Character). Preferences about dating, partners, friends, family or coworkers (use those sibling nodes).",
+        "examples": [
+          "Lee bought new shoes after his old ones got a hole. Why did Lee do this?",
+          "Aubrey got a flat tire and pulled over. What will Aubrey want to do next?",
+          "Ash hosted a dinner party. What did Ash need to do before this?"
+        ]
+      }
+    }
+  ]
+}

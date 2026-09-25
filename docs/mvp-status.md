@@ -2,6 +2,11 @@
 
 _Living status of the autonomous build (docs/09-mvp-plan.md). Newest first._
 
+## Expansion (after the MVP)
+The corpus is growing toward 1M in gated waves (`docs/10-expansion.md`); per-wave numbers are in `docs/expansion-log.md`.
+**2026-09-25, wave 1 gated: 239,319 questions** (World 37.3% / Self 35.3% / Machine 27.3%), 1,365 nodes, 89% of new
+questions anchored. Wave 2 is in progress.
+
 ## Final summary (2026-09-24)
 
 **Phases 1-5 complete and verified; phase 6 grew the corpus to 99,458 canonical questions (99,457 answered by Jev).**

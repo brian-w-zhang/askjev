@@ -5,6 +5,7 @@ and even that is recovered from the request cache on rerun)."""
 import time
 
 from . import db
+from .config import DATA
 from .answer import answer_pending, screen_pending
 from .dedupe import dedupe
 from .measure import measure_all, rollup
@@ -21,7 +22,10 @@ def _pending(sql: str) -> int:
 
 def run_all(limit: int | None = None):
     t = time.time()
-    print(f"[place] {place_pending(limit=limit)} ({time.time() - t:.0f}s)", flush=True)
+    if (DATA / "logs" / "place.lock").exists():  # a separate placement job (e.g. scripts/descend.py) owns the unplaced rows
+        print("[place] skipped: data/logs/place.lock present", flush=True)
+    else:
+        print(f"[place] {place_pending(limit=limit)} ({time.time() - t:.0f}s)", flush=True)
     for name, fn, sql in [
         ("screen", screen_pending,
          "select count(*) c from questions q left join question_meta m on m.question_id=q.id where m.objective is null"),

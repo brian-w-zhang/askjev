@@ -1,7 +1,7 @@
 # Datasets: every source, with a verdict
 
 > **What is actually ingested** (counts, licenses, truth/human coverage) is generated in `docs/corpus.md`
-> (`scripts/corpus_report.py`). Moral Machine, WVS/ESS/GSS microdata, MovieLens and PhilPapers are not ingested yet.
+> (`scripts/corpus_report.py`). WVS/ESS/GSS microdata and PhilPapers are not ingested yet; Moral Machine is queued for wave 2.
 
 **License posture: private project** (`00-vision.md`). Non-commercial and unclear-license data is
 usable. Sources are **excluded** only where the terms ban AI/ML *use* or scraping: YouGov,
@@ -104,6 +104,46 @@ emotion (GoEmotions), systematic-review screening sets, product categorization, 
 resume-to-role, support tickets. The Hugging Face hub has thousands more. Selection criteria: real
 inputs, trustworthy labels, and a clean mapping to one Machine L2 and one shape. Synthetic inputs
 are a last resort, because their labels are just LLM opinions.
+
+## Expansion sources (wave 1, 2026-09-24/25)
+Added by the expansion (`10-expansion.md`); counts, truth and human coverage are in `docs/corpus.md`, per-wave numbers in
+`docs/expansion-log.md`. **Verdict key for this table:** **Scale** = keep growing it · **Hold** = keep, don't grow
+(template cap, weak signal, or noisy labels) · **Saturated** = Jev ≥ 95% correct and ≥ 60% decisive, stop growing.
+
+| Source | Hemisphere / node | n | Anchor | Jev correct | Verdict |
+|---|---|---|---|---|---|
+| civil_comments (toxicity + harm kind) | Machine T&S toxicity | 4,500 | truth + rater share | 0.73 | **Scale** (informative) |
+| halueval (QA, dialogue, summary grounding) | Machine AI answer grounding | 4,500 | truth | 0.76 | **Scale** |
+| clinc150 (domain, in-scope) | Machine support routing | 3,500 | truth | 0.88 | Hold (template cap) |
+| pii_detect | Machine personal data | 3,000 | truth | 0.92 | Hold (synthetic LLM texts; Ai4Privacy license: individuals only) |
+| function_calls (ToolACE verify + pick) | Machine tool calls | 3,000 | truth | 0.96 | **Saturated** |
+| arxiv_screen | Machine paper screening | 3,000 | truth | 0.91 | Hold |
+| massive_en | Machine commands | 2,500 | truth | 0.90 | Hold |
+| ledgar | Machine contract provisions | 2,500 | truth | 0.95 | Hold (near-saturated) |
+| github_issues | Machine issue triage | 2,500 | truth | 0.73 | Hold (template cap; noisy labels) |
+| phishing_email | Machine spam/phishing | 2,500 | truth | 0.97 | Hold |
+| yahoo_topics, ag_news, dbpedia14 | Machine taxonomy | 5,000 | truth | 0.74 / 0.89 / 0.99 | Hold; dbpedia14 **Saturated** |
+| skill_select (MetaTool) | Machine skill selection | 1,468 | truth | 0.87 | Hold (dataset exhausted) |
+| resume_match | Machine resume categories | 1,000 | truth (noisy) | 0.61 | Hold (labels are filing categories) |
+| mmlu | World factual (57 subjects) | 9,763 | truth | 0.93 | Hold (pool used) |
+| arc, sciq, openbookqa | World science | 13,267 | truth | 0.99 / 0.97 / 0.95 | **Saturated** |
+| strategyqa | World factual (implicit reasoning) | 2,000 | truth | 0.76 | Hold (dataset exhausted) |
+| boolq (remainder) | World factual | +3,143 | truth | 0.79 | Hold (pool exhausted) |
+| wikidata_g4 (8 fact + 7 comparison templates) | World places, people, science | 16,395 | truth | 0.96 | **Saturated** |
+| quora_closed | World + Self, real asked | 5,549 | none | — | **Scale** (world side) |
+| social_iqa | Self social | 10,000 | truth | 0.85 | Hold (social over target) |
+| movielens / goodreads / boardgame / anime / music / beer pairs | Self taste | 25,000 | co-rater human share | — | Hold at the template cap; beer capped at 2,000 (obscure items) |
+| moral_stories | Self values | 3,000 | truth | 0.91 | Hold (values over target) |
+| scruples dilemmas (top-up) | Self values | +1,400 | n=10 votes | — | Hold |
+| moralchoice | Self values | 1,366 | truth (low-ambiguity) | 1.00 | **Saturated** (low-ambiguity half) |
+| daily_dilemmas | Self values | 1,360 | none | — | Hold (dataset exhausted) |
+| ipip (full pool) | Self personality | +2,466 | none | — | Hold (pool exhausted) |
+| openpsych (SWCPQ word pairs) | Self personality | +340 | human (n≈300k) | — | Hold |
+| icar_sapa (EPQ-R) | Self personality | 80 | human | — | Hold |
+| g5_w1 banks (lifestyle/love, mind/personality, world thin) | Self + World thin nodes | round-trip filtered | none | — | accept 71% / 49% / see log |
+
+**Skipped:** recipe pairs (no public Food.com copy with recipe ids; ratings mostly ties), video-game pairs (no clean per-user
+preference), SciERC (no public labeled copy), xLAM function calling (gated).
 
 ## Structure sources (the tree, not questions)
 | Source | Role | License |

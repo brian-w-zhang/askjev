@@ -130,3 +130,72 @@ arxiv.is_ml:
   label: Machine Learning Paper
   description: "Questions a program asks about a paper's title and abstract to decide whether the paper is about machine learning, for screening a literature search."
   examples: ["Is this paper about machine learning?"]
+
+# Self: pairwise taste sets (human distributions from co-raters)
+boardgame_pairs.play:
+  key: board_game_matchups
+  label: Board Game Matchups
+  description: "Head-to-head choices between two well-known board games: which one you would rather play."
+  examples: ["Which board game would you rather play: Catan or Ticket to Ride?"]
+music_pairs.listen:
+  key: artist_matchups
+  label: Music Artist Matchups
+  description: "Head-to-head choices between two popular music artists who share an audience: which one you would rather listen to."
+  examples: ["Which artist would you rather listen to: Radiohead or Coldplay?"]
+goodreads_pairs.read:
+  key: book_matchups
+  label: Book Matchups
+  description: "Head-to-head choices between two popular books of the same genre by different authors: which one you would rather read."
+  examples: ["Which book would you rather read: Holes or If I Stay?"]
+anime_pairs.watch:
+  key: anime_matchups
+  label: Anime Matchups
+  description: "Head-to-head choices between two popular anime series or films of the same genre: which one you would rather watch."
+  examples: ["Which anime would you rather watch: Barakamon or Haikyuu!!?"]
+beer_pairs.drink:
+  key: beer_matchups
+  label: Beer Matchups
+  description: "Head-to-head choices between two well-reviewed beers of the same style: which one you would rather drink."
+  examples: ["Which beer would you rather drink: Samuel Adams Boston Lager or Birra Moretti?"]
+
+# World: fact templates that are topics in their own right
+g4.more_people:
+  key: city_populations
+  label: City Populations
+  description: "Questions comparing which of two well-known cities has more people living within its city limits."
+  examples: ["Which city has more people living within its city limits: Lyon or Marseille?"]
+g4.continent:
+  key: city_continents
+  label: City Continents
+  description: "Questions about which continent a well-known city is in."
+  examples: ["Which continent is the city of Depok in?"]
+g4.longer_river:
+  key: river_lengths
+  label: River Lengths
+  description: "Questions comparing which of two rivers is longer."
+  examples: ["Which river is longer: the Danube or the Rhine?"]
+g4.higher_mountain:
+  key: mountain_heights
+  label: Mountain Heights
+  description: "Questions comparing which of two mountains has the higher summit above sea level."
+  examples: ["Which mountain's summit is higher above sea level: Mont Blanc or the Matterhorn?"]
+g4.larger_area:
+  key: country_areas
+  label: Country Areas
+  description: "Questions comparing which of two countries is larger by area."
+  examples: ["Which country is larger by area: Chile or Argentina?"]
+g4.atomic_number:
+  key: atomic_numbers
+  label: Atomic Number Comparisons
+  description: "Questions comparing which of two chemical elements has the higher atomic number."
+  examples: ["Which element has the higher atomic number: iron or copper?"]
+g4.founded_first:
+  key: company_founding
+  label: Company Founding Dates
+  description: "Questions comparing which of two well-known companies was founded earlier."
+  examples: ["Which company was founded earlier: Nokia or Sony?"]
+movielens_pairs.watch:
+  key: movie_matchups
+  label: Movie Matchups
+  description: "Head-to-head choices between two well-known films of the same genre and era: which one you would rather watch."
+  examples: ["Which movie would you rather watch: Scream 2 or Strange Days?"]

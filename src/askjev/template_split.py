@@ -39,13 +39,14 @@ def split(dry_run: bool = False) -> str:
     by_node: dict[str, list[dict]] = {}
     for r in rows:
         by_node.setdefault(r["node_id"], []).append(r)
-    # split when it separates something: 2+ big templates, or one big template beside >= MIN_TEMPLATE other questions
-    by_node = {k: v for k, v in by_node.items() if len(v) >= 2 or v[0]["total"] - v[0]["c"] >= MIN_TEMPLATE}
     spec = yaml.safe_load(SPEC.read_text()) if SPEC.exists() else {}
+    # only templates with an authored label split out (a label is the judgment that the template is a topic)
     missing = sorted({r["template_id"] for v in by_node.values() for r in v if r["template_id"] not in spec})
-    if dry_run or missing:
+    by_node = {k: [t for t in v if t["template_id"] in spec] for k, v in by_node.items()}
+    by_node = {k: v for k, v in by_node.items() if v}
+    if dry_run:
         lines = [f"{n}: " + ", ".join(f"{r['template_id']}={r['c']}" for r in v) for n, v in by_node.items()]
-        return "\n".join(lines + ([f"MISSING labels in {SPEC.name}: {missing}"] if missing else []))
+        return "\n".join(lines + ([f"unlabeled (stay put): {missing}"] if missing else []))
     out = []
     with db.connect() as conn:
         for node, temps in by_node.items():

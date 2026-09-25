@@ -138,3 +138,23 @@ Another session is changing the UI at the same time. The expansion agent must no
 - **Jev.** One pipeline process at `ASKJEV_RPS=16` leaves headroom for the UI's search rerank and ask box.
 - **Tree additions allowed in wave 1:** hand nodes for consumer and practical decisions ("should I buy X or
   Y", home and DIY, tenant and consumer rights) and internet culture, if Quora placement shows they have no home.
+
+## 7. Decisions made during the expansion
+- **Template split** (`askjev template-split`, labels in `authored/template_nodes.yaml`): a node over the cap whose load is
+  a high-volume template gets one grown child per template *that has an authored label*. The label is the judgment that the
+  template is a topic: Machine dataset templates, pairwise taste sets (movie, book, board game, anime, music, beer matchups),
+  and World fact templates about a topic (river lengths, city populations...). Generic templates ("have most adults heard of
+  X?", GOAT pairs, "which century") stay on their topic node. Moves are deterministic and logged in `tree_events`.
+- **Single-template nodes** (one Machine dataset, one pairwise set, one AITA template) are bounded by the template cap
+  (3,000 Machine / 5,000 otherwise), not the node cap: splitting one template by its answer labels would leak the answer.
+- **Descend** (`scripts/descend.py`): questions an adapter hint placed deterministically on an overfull *parent* go back
+  to Jev's beam walk starting at that parent, so they settle into the right child or stay (`here`). Ids and answers don't change.
+- **Ingest** skips rows already stored and embeds in length order (≈2× faster); NUL characters are stripped.
+- **Jev lane** runs at `ASKJEV_RPS=16` with 40 workers (8 or 20 workers left the bucket half empty because screen
+  requests are slow); round-trip filtering of synthetic banks runs beside it at 3 rps.
+- **Source-level calls:** `moral_disputes` (MMLU) stays World factual (it asks what philosophers argue); Quora keeps world
+  ≤ 60% in wave 1 and adds world-only items in wave 2; Ecchi and Hentai anime are dropped rather than flagged; beer pairs capped
+  at 2,000 (many craft beers aren't widely known); scruples capped at 2,000 and moral_stories at 3,000 because values is over
+  target; the weakest synthetic Score shape ("How should X handle Y" with one sensible level) is dropped before round trip.
+- **Vital L3 nodes** are single entities (not topic groupings), so Vital L4 entities correctly sit on hand topic nodes;
+  nothing to re-home (§1 corrected).

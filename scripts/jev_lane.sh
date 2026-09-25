@@ -3,7 +3,7 @@
 # One process only; ASKJEV_RPS leaves headroom for the web app's rerank and ask box.
 cd "$(dirname "$0")/.."
 export ASKJEV_RPS="${ASKJEV_RPS:-16}"
-export ASKJEV_WORKERS="${ASKJEV_WORKERS:-20}"
+export ASKJEV_WORKERS="${ASKJEV_WORKERS:-40}"
 mkdir -p data/logs
 while true; do
   pending=$(psql "$(grep DATABASE_URL .env | cut -d= -f2-)" -Atc "select count(*) from questions q where not exists (select 1 from probes p join answers a on a.probe_id=p.id where p.question_id=q.id)")
