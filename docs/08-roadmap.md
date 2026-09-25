@@ -36,6 +36,9 @@
 | 2026-09-24 | **Decided (approved via the /goal run):** per-question core metadata + screen request / answer bundle (`03-questions.md` §8) |
 | 2026-09-24 | Main view is a **3D nebula** (`07-ui.md`): every node and every displayable question drawn as stars; detail on approach; one search/ask box, "I'm feeling lucky", and search as a root-to-question journey. High-volume Machine templates (≥100 instances) become topic nodes |
 | 2026-09-24 | UI follows **TypeSafe's brand** (`07-ui.md` Look): light dithered sky, questions as colored particles, OS-window panels, pixel type; free stand-ins for their licensed fonts |
+| 2026-09-24 | **Expansion to 1M runs in waves of ~100k** (`10-expansion.md`), each sourced, answered, measured, split, and committed before the next; sourcing overlaps with Jev answering (stream, don't stockpile) |
+| 2026-09-24 | Expansion mix rules: ≤ 5,000 rows per question text (3,000 per Machine template; over-cap sources frozen), ≥ 60% anchored per wave, synthetic ≤ 15% per wave (no `other` escape options, no personal-biography questions, no synthetic factual), node cap 1,500 direct questions → split, stop scaling a source that is ≥ 95% correct and ≥ 60% decisive |
+| 2026-09-24 | While the UI is in flux, the expansion agent adds nodes but never changes existing node ids or paths (no group or retire), writes only additive migrations from `005`, runs Jev at `ASKJEV_RPS=16`, and commits only its own paths |
 
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)
@@ -75,7 +78,7 @@ Create your own role", then send a short Discord DM to Sasha Sheng linking this 
 
 ## M6: Scale (after outreach, or alongside it)
 - [x] 100k: Vital L3-L4, core datasets, G5 banks with round-trip filtering (99,458 questions)
-- [ ] 1M: Vital L5, Wikidata leaves, high-volume datasets, machine datasets at scale, jaggedness mining
+- [ ] 200k → 1M in waves of ~100k (`10-expansion.md`; progress in `expansion-log.md`)
 
 ## Open questions
 - Local embedding model: `BAAI/bge-small-en-v1.5` (384 dims); upgrade only if the search-recall test is poor

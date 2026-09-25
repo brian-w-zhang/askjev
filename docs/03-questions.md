@@ -125,17 +125,17 @@ Pitch: "an automated jaggedness miner over a coverage tree."
 ## 7. Scale ladder (hemisphere ratios hold at every stage)
 | Stage | What it adds | Depth | Synthetic share |
 |---|---|---|---|
-| **10k** (the first slice, ready for findings) | Tree through L2 (~200 nodes). Core datasets: IPIP, WYR, GlobalOpinionQA, Scruples, MFQ, Moral Machine sample. NBA pairwise. Machine seed: TypeSafe doc questions over their cookbook inputs + 2-3 labeled datasets. G2 on L2 nodes | L2-L3 | < 15% |
-| **100k** | Vital L3-L4 (~10k nodes) with G2/G4/G6. Remaining core datasets (Open Psychometrics, SAPA, Manifold sample, surveys × country). More machine datasets. G5 banks for Self | L4 | ~30% |
-| **1M** | Vital L5 + category depth + Wikidata leaves. G3 across about 20 GOAT categories. G4 at scale. High-volume datasets (Social Chemistry, AITA, Lancaster). Machine datasets at scale | L5-L7 | ~40% |
+| **10k** (done) | Tree through L2 (~200 nodes). Core datasets: IPIP, WYR, GlobalOpinionQA, Scruples, MFQ. NBA pairwise. Machine seed: TypeSafe doc questions + labeled datasets. G2 on L2 nodes | L2-L3 | < 15% |
+| **100k** (done) | Vital L3-L4 with G2/G6, 22 GOAT categories, volume datasets (AITA, Social Chemistry, ETHICS, BoolQ), machine datasets scaled, G5 banks for Self | L4 | 12% |
+| **200k → 1M** | Waves of ~100k (`10-expansion.md`): new question texts over new rows of old templates. Empty Machine leaves filled with new labeled datasets; factual sets with truth (MMLU, ARC, SciQ, Wikidata G4); real asked questions (Quora, WildChat, Stack Exchange); personality items with norms; Vital L5 and other volume under a per-template cap | L4-L6 | ≤ 15% per wave |
 
-Cost at 1M:
-- **Jev:**
-  - World/Self: ~700k × ~3 questions each (frames + gates) × ~100 tokens ≈ 210M tokens.
-  - Machine: ~300k questions × ~500-token inputs ≈ 150M tokens.
-  - Total ≈ 360M tokens ≈ **$15**.
+Every wave keeps ≥ 60% of its questions anchored (truth or a human distribution), caps any one question
+text at 5,000 rows (3,000 for a Machine template), and splits nodes past 1,500 direct questions.
+
+Time and cost at 1M:
+- **Jev** is the bottleneck: ~12 answered questions/s under the 1,200 req/min limit, so ~2.5-4 hours per
+  100k including screen and placement, and ~1.5-2 days of calls for the remaining 900k. Cost is $0 on the gateway today.
 - **Authoring (G5 + universe transforms):** done by Claude Code subagents, so there's no gateway cost.
-- **Time:** about 3-4M questions at about 20 per request ≈ 2-3 hours of Jev.
 
 ## 8. Per-question metadata and the answer bundle
 Metadata comes from four sources. Only a small **core** is stored per question. Everything else lives in

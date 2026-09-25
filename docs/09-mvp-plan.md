@@ -70,6 +70,11 @@ source of truth; this file only sequences the work. Stay inside this repo.
     subagent-written G5 banks. Run restructure rounds as nodes fill up. If 1M isn't realistic, stop at a solid,
     balanced number and explain why.
 
+## Phase 7: Expansion to 1M (`10-expansion.md`)
+11. Grow in waves of ~100k with a gate after each (all answered, measured, split, reported in
+    `docs/expansion-log.md`, committed). Sourcing overlaps with Jev answering; the mix rules and the rules
+    for working next to the frontend agent are in `10-expansion.md`.
+
 ## Throughout
 Keep `docs/mvp-status.md` current: what's done, counts by hemisphere/kind/source vs targets, known issues, and
 decisions. Keep the docs consistent with the code. Finish with a final summary and next steps (experiments,
