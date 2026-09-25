@@ -1,0 +1,15 @@
+name: trec_covid
+url: https://ir.nist.gov/trec-covid/ ; https://huggingface.co/datasets/BeIR/trec-covid
+download: https://huggingface.co/api/datasets/BeIR/trec-covid/parquet/{corpus,queries}/... + BeIR/trec-covid-qrels test
+license: CORD-19 dataset license (Allen AI; per-paper licenses); TREC-COVID judgments public (NIST); BEIR CC-BY-SA-4.0
+version: BEIR TREC-COVID (50 questions, 171k CORD-19 abstracts, 66k expert judgments, round 5 cumulative)
+target: 2500 pairs (ASKJEV_TARGET_TREC_COVID_PAIR) + 1500 single-document scores (ASKJEV_TARGET_TREC_COVID_REL)
+hemisphere: machine
+shape: rank
+notes: >
+  Template trec_covid.pair: Choice "Which of `document_a` and `document_b` better answers `query`?" over a
+  judged-relevant (2) and a judged-not-relevant (0) abstract for the same question (both pooled from real
+  retrieval runs, so the losing one is on topic); better position alternates 50/50; round-robin over the 50
+  questions. Template trec_covid.relevance: Score, 3 concrete levels matching the NIST grades, truth = grade,
+  500 per grade. Abstracts 300-1,300 chars (title + abstract), deduplicated; every document used once across
+  both templates. Nodes machine.search.reranking / machine.search.relevance.

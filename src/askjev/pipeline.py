@@ -42,6 +42,10 @@ def run_all(limit: int | None = None):
             print(f"[{name}] {n} pending → {fn(limit=min(CHUNK, limit or CHUNK))} ({time.time() - t:.0f}s)", flush=True)
             if limit:
                 break
+    import os
+    if os.environ.get("ASKJEV_LIGHT"):  # Jev lane: corpus-wide stages run at wave gates instead of every pass
+        print("[light] skipped dedupe/measure/rollup/mix (run them at the gate)", flush=True)
+        return
     for name, fn in [("dedupe", dedupe), ("measure", measure_all), ("rollup", rollup)]:
         t = time.time()
         print(f"[{name}] {fn()} ({time.time() - t:.0f}s)", flush=True)

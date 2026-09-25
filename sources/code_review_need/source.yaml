@@ -1,0 +1,14 @@
+name: code_review_need
+url: https://github.com/microsoft/CodeBERT/tree/master/CodeReviewer ; https://zenodo.org/records/6900648
+download: https://huggingface.co/datasets/fasterinnerlooper/codereviewer/resolve/main/quality/cls-test.jsonl (first 29,000 lines streamed, "oldf" dropped)
+license: CodeReviewer data (Microsoft, Zenodo 6900648); the HF mirror carries no license tag
+version: CodeReviewer diff-quality estimation test set, first 29,000 of ~31k hunks
+target: 2000 (ASKJEV_TARGET_CODE_REVIEW_NEED)
+hemisphere: machine
+shape: detect
+notes: >
+  Template code_review_need.needs_comment: Noul "Does the code change in `diff` need a review comment before
+  it is merged?" over one diff hunk from a real GitHub pull request (9 languages). Truth = the dataset label
+  (a human reviewer commented on the hunk). The label is the real review outcome, so it is noisier than an
+  annotation (published classifiers reach ~70-73%); kept at 2,000, 50/50, hunks 80-1,500 chars, exact
+  duplicates dropped. meta.review_comment keeps the reviewer's comment for positives. Node machine.code.code_review.

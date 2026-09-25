@@ -1,0 +1,16 @@
+name: linkedin_jobs
+url: https://www.kaggle.com/datasets/arshkon/linkedin-job-postings ; https://huggingface.co/datasets/xanderios/linkedin-job-postings
+download: https://huggingface.co/api/datasets/xanderios/linkedin-job-postings/parquet/default/train/0.parquet
+license: CC-BY-SA-4.0 (Kaggle arshkon/linkedin-job-postings); HF mirror MIT
+version: 33,246 LinkedIn job postings (US, 2023 snapshot)
+target: 2500 seniority (ASKJEV_TARGET_LINKEDIN_SENIORITY) + 2000 work type (ASKJEV_TARGET_LINKEDIN_WORK_TYPE)
+hemisphere: machine
+shape: classify
+notes: >
+  Template linkedin_jobs.seniority: Choice "What experience level is `job_posting` hiring for?" over LinkedIn's
+  6 levels; truth = the level the employer selected (formatted_experience_level), round-robin balanced
+  (internship/executive run short at ~260). Template linkedin_jobs.work_type: Choice "What kind of employment
+  does `job_posting` offer?" over 6 types ("Other" dropped); truth = formatted_work_type, round-robin
+  (temporary/internship/volunteer run short); postings disjoint from the seniority set. Posting = title +
+  description (>= 300 chars, near-duplicate descriptions dropped); long descriptions keep the head and the
+  last ~400 chars joined by " [...] " to stay within 1,500 chars. Node machine.people.

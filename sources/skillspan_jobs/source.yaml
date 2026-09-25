@@ -1,0 +1,13 @@
+name: skillspan_jobs
+url: https://github.com/kris927b/SkillSpan ; https://huggingface.co/datasets/jjzha/skillspan
+download: https://huggingface.co/api/datasets/jjzha/skillspan/parquet/default/{train,validation,test}/0.parquet
+license: CC-BY-4.0
+version: SkillSpan (11,543 job-posting sentences, expert skill and knowledge span annotation)
+target: 2500 (ASKJEV_TARGET_SKILLSPAN_JOBS)
+hemisphere: machine
+shape: detect
+notes: >
+  Template skillspan_jobs.requires_skill: Noul "Does `sentence` from a job posting name a skill or knowledge the
+  job asks for?"; truth = at least one annotated skill or knowledge span. Sentences >= 8 tokens, detokenised,
+  case-insensitive dedup, 50/50. Anonymisation placeholders (<ORGANIZATION>, <LOCATION>) kept as in the
+  source. Node machine.people.

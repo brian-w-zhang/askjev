@@ -1,0 +1,16 @@
+name: squad2_spans
+url: https://rajpurkar.github.io/SQuAD-explorer/
+download: https://huggingface.co/api/datasets/rajpurkar/squad_v2/parquet/squad_v2/validation/0.parquet
+license: CC-BY-SA-4.0
+version: SQuAD 2.0 dev set (11,873 questions, ~50% unanswerable)
+target: 2500 (ASKJEV_TARGET_SQUAD2_SPANS)
+hemisphere: machine
+shape: extract
+notes: >
+  Template squad2_spans.answer_span: Choice "Which span from `passage` answers `question`?" with 4 candidate
+  spans (keys = the span text) plus not_in_passage. Candidates: the most common crowd answer and answers to
+  other questions about the same paragraph (real spans of the same passage; none overlaps a gold answer or
+  another candidate; spans <= 60 chars; passages <= 1,500 chars, never truncated). Unanswerable questions (adversarially written by crowdworkers) get
+  4 such spans and truth not_in_passage. 60/40 answerable/unanswerable, salted hash order. Differs from
+  qnli_gating (SQuAD 1.1 sentence-level Noul): this is span choice with a no-answer gate. Keyword flag
+  "political" on contested topics. Node machine.search.rag_gating.

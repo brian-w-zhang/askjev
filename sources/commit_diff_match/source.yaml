@@ -1,0 +1,15 @@
+name: commit_diff_match
+url: https://huggingface.co/datasets/Maxscha/commitbench
+download: https://huggingface.co/api/datasets/Maxscha/commitbench/parquet/default/test/0.parquet
+license: CC-BY-NC-4.0 (CommitBench, Schall et al. 2024)
+version: CommitBench test split (249,688 commits, 6 languages)
+target: 2500 (ASKJEV_TARGET_COMMIT_DIFF_MATCH)
+hemisphere: machine
+shape: verify
+notes: >
+  Template commit_diff_match.message_fits: Noul "Does `commit_message` describe the change in `diff`?".
+  One commit per repository (salted hash order over repositories): alternately its own message (truth true)
+  or the message of another commit from the same repository touching different files (truth false), 50/50.
+  Diffs <= 1,500 chars (CommitBench pre-truncates long diffs); messages 4-60 words, deduplicated;
+  conventional-commit messages excluded, so no overlap with commit_messages (CommitBench's conventional
+  subset, message-only change-type question). Node machine.code.pr_classification.

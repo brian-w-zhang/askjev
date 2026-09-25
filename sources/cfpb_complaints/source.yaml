@@ -1,0 +1,19 @@
+name: cfpb_complaints
+url: https://www.consumerfinance.gov/data-research/consumer-complaints/ ; https://huggingface.co/datasets/BEE-spoke-data/consumer-finance-complaints
+download: https://huggingface.co/datasets/BEE-spoke-data/consumer-finance-complaints/resolve/main/has-text/train-00000-of-00003.parquet
+license: Public domain (US Government work, CFPB Consumer Complaint Database); mirror BEE-spoke-data CC0-1.0
+version: CFPB complaints with consumer narratives, has-text shard 0 (563k complaints, 2015-03 to 2024-02)
+target: 2500 product (ASKJEV_TARGET_CFPB_PRODUCT) + 2000 issue (ASKJEV_TARGET_CFPB_ISSUE)
+hemisphere: machine
+shape: classify
+notes: >
+  The live CFPB CSV and search API no longer publish narratives (checked 2026-09), so this reads a CC0 HF
+  mirror captured while they were. Template cfpb_complaints.product: Choice "Which financial product is
+  `complaint` about?" over 11 product keys (the current CFPB products; legacy product names mapped, with
+  sub-product deciding card/prepaid, consumer-loan and credit-repair splits), round-robin balanced (~227
+  each). Template cfpb_complaints.issue: Choice "Which issue does `complaint` raise about `product`?"; options =
+  the issues filed under the same product name (>= 2% share), complaints received on/after 2017-04-24 only
+  (the CFPB taxonomy change, so old and new issue names never mix), 200 per product name, <= 40% from one
+  issue. Truth = what the consumer selected when filing (the consumer's own label, so some issue pairs
+  overlap). Narratives: whitespace collapsed, CFPB XXXX redactions kept, >= 30 words, truncated at 1,500
+  chars, near-duplicates dropped; the two templates use disjoint complaints. Node machine.finance.

@@ -1,0 +1,13 @@
+name: multiwoz_domain
+url: https://github.com/budzianowski/multiwoz
+download: https://raw.githubusercontent.com/budzianowski/multiwoz/master/data/MultiWOZ_2.2/{train,dev,test}/dialogues_00{1,2}.json
+license: MIT
+version: MultiWOZ 2.2, first two dialogue files of each split (~2,600 train/dev/test dialogues)
+target: 2000 (ASKJEV_TARGET_MULTIWOZ_DOMAIN)
+hemisphere: machine
+shape: route
+notes: >
+  Template multiwoz_domain.service: Choice "Which service does the user want in `message`?" over 7 services.
+  Only user turns that open a new service (exactly one active intent, not active on the user's previous turn),
+  >= 4 words, case-insensitive dedup; truth = that service (MultiWOZ 2.2 dialogue-state annotation). Round-robin
+  over services (hospital/police are small). Node machine.support.routing.

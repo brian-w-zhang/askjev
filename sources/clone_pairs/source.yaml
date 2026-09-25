@@ -1,0 +1,13 @@
+name: clone_pairs
+url: https://huggingface.co/datasets/google/code_x_glue_cc_clone_detection_big_clone_bench
+download: https://huggingface.co/api/datasets/google/code_x_glue_cc_clone_detection_big_clone_bench/parquet/default/test/0.parquet
+license: C-UDA-1.0 (CodeXGLUE); BigCloneBench (Svajlenko et al. 2014)
+version: CodeXGLUE BigCloneBench test split, first parquet shard (138,472 pairs of 912 Java methods)
+target: 2500 (ASKJEV_TARGET_CLONE_PAIRS)
+hemisphere: machine
+shape: verify
+notes: >
+  Template clone_pairs.same_function: Noul "Do `code_a` and `code_b` implement the same functionality?"
+  over a pair of Java methods; truth = the BigCloneBench clone label. Both methods <= 1,500 characters
+  (never truncated), identical-text pairs and repeated text pairs dropped, each method in at most 12 pairs, 50% clones, salted
+  hash order. Node machine.code.code_review.

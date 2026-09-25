@@ -4,6 +4,7 @@
 cd "$(dirname "$0")/.."
 export ASKJEV_RPS="${ASKJEV_RPS:-16}"
 export ASKJEV_WORKERS="${ASKJEV_WORKERS:-40}"
+export ASKJEV_LIGHT="${ASKJEV_LIGHT:-1}"  # corpus-wide dedupe/measure/rollup only at gates
 mkdir -p data/logs
 while true; do
   # unanswered, plus unplaced (rows ingested after a pass's place stage get answered but still need a node)
@@ -14,5 +15,5 @@ while true; do
     echo "[$(date +%H:%M:%S)] pipeline done"
   fi
   [ -f data/logs/jev_lane.stop ] && exit 0
-  sleep 60
+  sleep 15
 done

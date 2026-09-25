@@ -1,0 +1,16 @@
+name: abcd_flows
+url: https://github.com/asappresearch/abcd
+download: https://raw.githubusercontent.com/asappresearch/abcd/master/data/abcd_v1.1.json.gz
+license: MIT
+version: ABCD v1.1 (10,042 customer-service chats, 10 flows, 55 subflows)
+target: 2500 flow (ASKJEV_TARGET_ABCD_FLOW) + 1500 subflow (ASKJEV_TARGET_ABCD_SUBFLOW)
+hemisphere: machine
+shape: route
+notes: >
+  Human-human chats (crowdworker customer with a scenario, trained crowdworker agent) for a fictional clothing
+  store. Template abcd_flows.flow: Choice "What does the customer need help with in `conversation`?" over the 10
+  flows (hand-written descriptions), state = the chat opening before the agent's first system action, 250 per
+  flow. Template abcd_flows.subflow: Choice "Which request does the customer make in `conversation` about
+  `topic`?" (topic = the flow description), options = that flow's subflows, state = the whole chat with system
+  actions removed (<= 1,500 chars), round-robin over the 55 subflows. Truth = the scenario label. Chats
+  disjoint between templates. Node machine.support.intent_topic.

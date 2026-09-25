@@ -1,0 +1,15 @@
+name: gold_headlines
+url: https://www.kaggle.com/datasets/ankurzing/sentiment-analysis-in-commodity-market-gold ; https://huggingface.co/datasets/FinGPT/fingpt-headline
+download: https://huggingface.co/api/datasets/FinGPT/fingpt-headline/parquet/default/{train,test}/0.parquet
+license: Research dataset (Sinha & Khandait 2021); FinGPT HF mirror carries no license tag
+version: 10,924 unique gold-market news headlines (2000-2019), 9 human-annotated Yes/No dimensions
+target: 2500 direction (ASKJEV_TARGET_GOLD_DIRECTION) + 1500 comparison (ASKJEV_TARGET_GOLD_COMPARISON)
+hemisphere: machine
+shape: classify
+notes: >
+  Template gold_headlines.direction: Choice "Does `headline` report the gold price going up, going down, or
+  neither?" (up/down/neither) built from the "price going up" and "price going down" dimensions (both-yes
+  dropped), 1/3 each. Template gold_headlines.asset_comparison: Noul "Does `headline` compare gold with another
+  asset?", 50/50, headlines disjoint from the direction template. Headlines with conflicting duplicate labels
+  dropped. The mirror's "talks about price" and "price staying constant" columns have identical counts (a
+  conversion error), so they are unused. Node machine.finance (as fin_tweet_sentiment).

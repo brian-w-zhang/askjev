@@ -1,0 +1,15 @@
+name: finer_xbrl
+url: https://huggingface.co/datasets/nlpaueb/finer-139
+download: https://huggingface.co/api/datasets/nlpaueb/finer-139/parquet/finer-139/test/0.parquet (+ tag names from the datasets-server info API)
+license: CC-BY-SA-4.0
+version: FiNER-139 test split (108,378 sentences from SEC 10-K/10-Q filings, 139 XBRL concepts)
+target: 2500 (ASKJEV_TARGET_FINER_XBRL)
+hemisphere: machine
+shape: extract
+notes: >
+  Template finer_xbrl.concept: Choice "Which XBRL concept does the number `value` in `sentence` report?" over the
+  30 most frequent concepts (readable snake_case keys with descriptions; US-GAAP element in meta.us_gaap).
+  Truth = the tag the filing company attached in its XBRL filing. Only numbers that occur once in their
+  sentence and whose unit agrees with the concept (% for rates, $ for amounts, years/months for periods,
+  neither for counts; drops FiNER's misaligned tags); sentences <= 1,200 chars, one question per sentence per
+  concept; ~84 per concept (2 concepts run short). Node machine.finance.

@@ -1,0 +1,13 @@
+name: wikiqa_select
+url: https://www.microsoft.com/en-us/download/details.aspx?id=52419
+download: https://huggingface.co/api/datasets/microsoft/wiki_qa/parquet/default/{train,validation,test}/0.parquet
+license: Microsoft Research Data License Agreement (WikiQA); Wikipedia text CC-BY-SA
+version: WikiQA all splits (3,047 questions, 29,258 candidate sentences)
+target: all eligible (ASKJEV_TARGET_WIKIQA_SELECT, default 2500 cap)
+hemisphere: machine
+shape: rank
+notes: >
+  Template wikiqa_select.answer_sentence: Choice "Which sentence in `sentences` answers `question`?" over the
+  candidate sentences of the question's Wikipedia summary (keys sentence_1..n in document order, window of
+  at most 10 around the gold sentence). Only questions with exactly one crowd-labelled correct sentence and
+  >= 3 candidates. Questions are real Bing queries. Node machine.search.reranking.

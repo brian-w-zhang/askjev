@@ -1,0 +1,13 @@
+name: poj_clones
+url: https://huggingface.co/datasets/google/code_x_glue_cc_clone_detection_poj104
+download: https://huggingface.co/api/datasets/google/code_x_glue_cc_clone_detection_poj104/parquet/default/test/0.parquet
+license: C-UDA-1.0 (CodeXGLUE); POJ-104 (Mou et al. 2016)
+version: CodeXGLUE POJ-104 test split (12,000 C/C++ programs, 24 problems)
+target: 2000 (ASKJEV_TARGET_POJ_CLONES)
+hemisphere: machine
+shape: verify
+notes: >
+  Template poj_clones.same_problem: Noul "Do `program_a` and `program_b` solve the same programming problem?"
+  Truth = both programs were submitted to the same online-judge problem. Programs <= 1,500 characters,
+  exact-duplicate code and programs with garbled comments ("??") dropped, each program used once; 50% same-problem pairs (round-robin over the 24
+  problems), 50% cross-problem pairs rotating over problem partners. Node machine.code.code_review.
