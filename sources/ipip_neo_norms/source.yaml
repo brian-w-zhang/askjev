@@ -1,0 +1,14 @@
+name: ipip_neo_norms
+url: https://osf.io/tbmh5/
+license: IPIP items public domain; IPIP-NEO data shared openly by J. A. Johnson on OSF (no license stated)
+version: IPIP300.dat (N=307,313) and IPIP120.dat (N=619,150), OSF wxvth, fetched 2026-09-25
+target: 0
+hemisphere: self
+kind: personality
+notes: >
+  Norms only, no new questions. `uv run python sources/ipip_neo_norms/adapter.py` writes
+  data/normalized/ipip_neo_norms_dists.jsonl: per-item shares at levels 0-4 (Very Inaccurate..Very Accurate, reverse-keyed
+  items flipped back to the raw response) for every IPIP-NEO-300 / IPIP-NEO-120 item that is an existing `ipip`
+  question (ids taken from the ipip adapter). `scripts/attach_human_dists.py <file>` inserts them into human_dists.
+  419 rows anchoring 300 ipip questions (300 from the 300-item form, 119 from the 120-item form; the 120's
+  "Feel comfortable around other people." is not an ipip question and is left out).

@@ -34,6 +34,7 @@ from .config import (
     GATEWAY_KEY,
     GATEWAY_URL,
     JEV_MODEL,
+    JEV_PROVIDERS,
     MAX_WORKERS,
     REQUEST_TOKEN_BUDGET,
     REQUESTS_PER_SECOND,
@@ -157,6 +158,7 @@ class JevClient:
         )
         self.log = CallLog()
         self.stats = {"sent": 0, "cached": 0, "retries": 0, "errors": 0, "input_tokens": 0}
+        self.max_rps, self.recent = rps, []  # adaptive rate: last ~60 outcomes (True = 503/429)
 
     async def close(self):
         await self.http.aclose()
@@ -201,11 +203,12 @@ class JevClient:
             async with self.sem:
                 t0 = time.monotonic()
                 try:
-                    r = await self.http.post(GATEWAY_URL, content=canonical(req.body))
+                    r = await self.http.post(GATEWAY_URL, content=canonical(self._wire(req.body)))
                 except (httpx.TransportError, httpx.TimeoutException):
                     r = None
                 latency = int((time.monotonic() - t0) * 1000)
             if r is not None and r.status_code == 200:
+                self._observe(False)
                 resp = r.json()
                 self.log.write(
                     {"hash": req.hash, "repeat": req.repeat_idx, "t": time.time(), "latency_ms": latency,
@@ -216,6 +219,7 @@ class JevClient:
                 self.stats["input_tokens"] += (resp.get("usage") or {}).get("inputTokens") or 0
                 return resp
             code = None if r is None else r.status_code
+            self._observe(code in (429, 503, 529))
             if code is not None and code < 500 and code not in (408, 429):
                 self.stats["errors"] += 1
                 raise JevError(code, r.text[:500], req)
@@ -230,6 +234,27 @@ class JevClient:
             delay = min(delay * 2, 30)
         self.stats["errors"] += 1
         raise JevError(code, "retries exhausted", req)
+
+    @staticmethod
+    def _wire(body: dict) -> dict:
+        """What goes over the wire: the request body plus gateway routing options. Routing is not part of the request
+        hash, so pinning a provider never invalidates the cache or re-sends an identical request."""
+        if not JEV_PROVIDERS:
+            return body
+        return {**body, "providerOptions": {"gateway": {"only": JEV_PROVIDERS}}}
+
+    def _observe(self, throttled: bool):
+        """Back off ~10% when over 30% of the last 60 requests were 429/503/529; creep back when under 5%."""
+        self.recent = (self.recent + [throttled])[-60:]
+        if len(self.recent) < 30:
+            return
+        share = sum(self.recent) / len(self.recent)
+        if share > 0.30 and self.bucket.rate > 8:
+            self.bucket.rate = max(8.0, self.bucket.rate * 0.9)
+            self.recent = []
+            print(f"[jev] throttled share {share:.0%}; rate → {self.bucket.rate:.1f} rps", flush=True)
+        elif share < 0.05 and self.bucket.rate < self.max_rps:
+            self.bucket.rate = min(self.max_rps, self.bucket.rate * 1.05)
 
     async def run(self, reqs: list[Request]) -> dict[str, dict]:
         """Returns {request_hash: response} for every request, using the cache where possible."""
@@ -262,12 +287,16 @@ def answers(resp: dict) -> dict[str, Answer]:
     return {k: parse_answer(v) for k, v in (resp.get("answers") or {}).items()}
 
 
-MAX_QUESTIONS_PER_REQUEST = 24  # larger batches intermittently return 503 through the gateway (measured 2026-09-24)
+# Measured 2026-09-25 (scripts/probe_batch.py, gateway under load): 48-64 questions / ~4-5.5k tokens per request succeed
+# about as often as 24 did; above ~6.5k tokens most requests 503, above ~13k all do. Latency barely grows (~200 → ~330 ms).
+MAX_QUESTIONS_PER_REQUEST = int(os.environ.get("ASKJEV_MAX_Q", 64))
+REQUEST_TOKEN_TARGET = int(os.environ.get("ASKJEV_REQ_TOKENS", 5000))
 
 
-def pack(state: Any, questions: dict[str, dict], budget: int = REQUEST_TOKEN_BUDGET,
+def pack(state: Any, questions: dict[str, dict], budget: int | None = None,
          max_q: int = MAX_QUESTIONS_PER_REQUEST) -> list[Request]:
     """Split questions over one state into as few requests as fit the token budget and question cap."""
+    budget = budget or min(REQUEST_TOKEN_BUDGET, REQUEST_TOKEN_TARGET)
     base = estimate_tokens({"state": state})
     reqs, cur, size = [], {}, base
     for qid, q in questions.items():

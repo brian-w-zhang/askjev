@@ -17,6 +17,9 @@ DATABASE_URL = os.environ.get("DATABASE_URL", "postgresql://localhost:5432/askje
 GATEWAY_KEY = os.environ.get("AI_GATEWAY_API_KEY", "")
 GATEWAY_URL = "https://ai-gateway.vercel.sh/v1/evaluate"
 JEV_MODEL = "typesafe-ai/jev"  # the ONLY gateway model this project may call
+# Gateway provider pinning: Jev is also served through DigitalOcean, which returned most of our 503s (2026-09-25);
+# route only to TypeSafe's own endpoint. Comma-separated gateway provider slugs; empty = let the gateway choose.
+JEV_PROVIDERS = [p for p in os.environ.get("ASKJEV_PROVIDERS", "typesafe-ai").split(",") if p]
 
 # Gateway context is 32k tokens; leave headroom for tokenizer mismatch (we estimate ~4 chars/token).
 REQUEST_TOKEN_BUDGET = 24_000

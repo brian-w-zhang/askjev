@@ -1,0 +1,17 @@
+name: pisa_questionnaire
+url: https://www.oecd.org/en/data/datasets/pisa-2022-database.html
+license: OECD PISA data, free to use with attribution (OECD Terms and Conditions)
+version: PISA 2022 STU_QQQ (CY08MSP_STU_QQQ.SAV) and PISA 2018 STU_QQQ (CY07_MSU_STU_QQQ.sav), webfs.oecd.org, fetched 2026-09-25
+target: 160
+hemisphere: self
+kind: personality (growth-mindset items social, reading enjoyment taste)
+notes: >
+  Public no-login SPSS downloads (webfs.oecd.org). One Choice question per general self-description item of the student
+  questionnaire, over its agreement / frequency categories: PISA 2022 social-emotional scales (persistence, impulse
+  control, curiosity, cooperation, empathy, trust, perspective taking, assertiveness, stress resistance, emotional
+  control), creativity/openness items, growth mindset, life satisfaction (0-10); PISA 2018 fear of failure,
+  competitiveness, work mastery, resilience, meaning in life, reading enjoyment, feelings. Items about school,
+  classmates, teachers, homework, or exams are skipped, not reworded. HumanDist: "15-year-old students, OECD average"
+  (mean of OECD countries' W_FSTUWT-weighted shares, the PISA convention) plus the United States, Japan, Germany,
+  Brazil, Indonesia, and Mexico when they have >= 300 answers. The optional well-being questionnaire (WB*, ~13
+  countries) is not used.

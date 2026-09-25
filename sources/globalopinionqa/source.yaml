@@ -13,3 +13,10 @@ notes: >
   several questions, 0-10 numeric scales, unfillable "____" blanks, context-free "this"/Statement #N items.
   Non-substantive codes (No answer, Missing, INAP, Total N=) are removed and shares renormalized;
   Don't know / Refused is kept as the option "dont_know".
+  Expansion (wave 6, ASKJEV_TARGET_GLOBALOPINIONQA > 815; unset = the original 815 rows byte-identical): the 39
+  non-political rows the original parser rejected, appended in salted-hash order. 0-10 / 1-10 rating scales become
+  Choice over the scale points (endpoint keys carry their label), garbled Pew rows are repaired by keeping only the
+  options quoted in the question and the countries that answered them, plus WVS justifiability items and the Pew
+  "ladder of life". Items about the respondent's own life, priorities and values are hemisphere self (24 of 39).
+  Skipped: South Korea-only national WVS items (machine-translated, truncated scales), "____" blanks, context-free rows.
+  The other ~1,600 unsampled rows all match the political regex and stay out.

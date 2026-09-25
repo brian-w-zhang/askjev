@@ -1,8 +1,8 @@
 name: reddit_polls
 url: https://arctic-shift.photon-reddit.com (Arctic Shift public Reddit archive API, no login)
 license: Reddit user content via the Arctic Shift public archive (research use; Reddit User Agreement)
-version: r/polls + r/WouldYouRather submissions with poll_data, whole UTC days (1st, 8th, 15th, 22nd of each month, 2020-01..2024-12), fetched 2026-09-25
-target: 15000 (ASKJEV_TARGET_REDDIT_POLLS)
+version: r/polls + r/WouldYouRather submissions with poll_data, every whole UTC day 2020-01-01..2024-12-31 (the first 15,000 rows come from the original 1st/8th/15th/22nd-of-month sample), fetched 2026-09-25
+target: 15000 (ASKJEV_TARGET_REDDIT_POLLS; up to 60000 appends new titles)
 hemisphere: self + world
 kind: taste, evaluative, social, values
 notes: >
@@ -23,3 +23,12 @@ notes: >
   evaluative. Contested politics flagged political (Politics flairs + quora_closed's regex with the elect\w* fix),
   sexual/drug/health/violence/profanity flagged sensitive. Salted-hash sample, at most 15% of the output per flair
   and 25% from r/WouldYouRather. No truth, no node_hint (beam walk).
+  Growth (prefix-stable): with ASKJEV_TARGET_REDDIT_POLLS unset the output is the original 15,000 rows, byte-identical
+  (built from the original sample days only, with that sample's vocabulary and caps). A larger target appends new
+  titles from every day of 2020-2024 (same filters, n >= 100, typo vocabulary over all fetched titles), skipping any
+  title already in the first 15,000, in salted-hash order, with the flair and r/WouldYouRather caps taken as shares
+  of the new total. Fetch is polite: at most ~1 request/s, exponential backoff, one cached file per subreddit-day
+  under data/raw/reddit_polls/. 2019 was probed and skipped (the archive has no poll_data before 2020-04). Other
+  poll subreddits were probed (polls_for_fun, PollsForFun, SampleSize, ThisOrThat, HypotheticalSituation,
+  whowouldwin, unpopularopinion, ShouldIbuythisgame...) and not added: no archived posts, no native polls, or only
+  the asker's own decisions.

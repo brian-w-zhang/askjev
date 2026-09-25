@@ -61,28 +61,51 @@ POLITICAL_EXTRA = re.compile(r"\b(non.?binary|enby|trans (people|person|women|wo
 
 
 def _days() -> list[dt.date]:
+    """The original sample: the 1st, 8th, 15th and 22nd of each month, 2020-2024 (the first 15,000 rows)."""
     return [dt.date(y, m, d) for y in YEARS for m in range(1, 13) for d in DAYS]
 
 
+def _all_days() -> list[dt.date]:
+    """Every UTC day of 2020-2024, original sample days first. 2019 was probed and is skipped: the archive has no
+    poll_data for r/polls or r/WouldYouRather before 2020-04 (native polls rolled out in late 2019)."""
+    legacy = set(_days())
+    rest = [d for y in YEARS for d in (dt.date(y, 1, 1) + dt.timedelta(i) for i in range(366)) if d.year == y
+            and d not in legacy]
+    return sorted(legacy) + rest
+
+
+MIN_INTERVAL = 1.05  # seconds between requests (at most ~1 request/s)
+_last = [0.0]
+
+
 def _get(c: httpx.Client, params: dict) -> list[dict]:
-    for attempt in range(8):
+    for attempt in range(10):
+        wait = MIN_INTERVAL - (time.monotonic() - _last[0])
+        if wait > 0:
+            time.sleep(wait)
+        _last[0] = time.monotonic()
+        retry_after = None
         try:
             r = c.get(API, params=params)
             if r.status_code == 200:
                 body = r.json()
                 if body.get("data") is not None:
                     return body["data"]
-        except (httpx.HTTPError, json.JSONDecodeError):
+            elif r.status_code == 429:
+                reset = r.headers.get("retry-after") or r.headers.get("x-ratelimit-reset")
+                retry_after = float(reset) if reset and reset.replace(".", "", 1).isdigit() else None
+        except (httpx.HTTPError, json.JSONDecodeError, ValueError):
             pass
-        time.sleep(2 + 3 * attempt)
+        time.sleep(min(retry_after or 0, 120) or min(2 * 2 ** attempt, 300))  # exponential backoff
     raise RuntimeError(f"Arctic Shift request failed: {params}")
 
 
 def fetch(raw_dir: Path) -> None:
+    """One cached file per (subreddit, UTC day): data/raw/reddit_polls/<sub>/<YYYY-MM-DD>.jsonl, poll posts only."""
     with httpx.Client(timeout=120, headers={"User-Agent": "askjev-research/0.1"}) as c:
-        for sub in SUBS:
-            (raw_dir / sub).mkdir(parents=True, exist_ok=True)
-            for day in _days():
+        for day in _all_days():
+            for sub in SUBS:
+                (raw_dir / sub).mkdir(parents=True, exist_ok=True)
                 out = raw_dir / sub / f"{day.isoformat()}.jsonl"
                 if out.exists():
                     continue
@@ -97,7 +120,6 @@ def fetch(raw_dir: Path) -> None:
                         break
                     nxt = data[-1]["created_utc"]
                     after = nxt if nxt > after else after + 1
-                    time.sleep(0.3)
                 tmp = out.with_suffix(".tmp")
                 tmp.write_text("".join(json.dumps(r) + "\n" for r in rows.values()))
                 tmp.rename(out)
@@ -319,20 +341,30 @@ def _parse(p: dict, sub: str) -> dict | None:
 VOCAB: Counter = Counter()
 
 
-def _pool(raw_dir: Path) -> list[dict]:
+def _files(raw_dir: Path, sub: str, legacy: bool) -> list[Path]:
+    """Cached day files; `legacy` = only the original 1st/8th/15th/22nd sample (what the first 15,000 rows saw)."""
+    legacy_names = {f"{d.isoformat()}.jsonl" for d in _days()}
+    return [f for f in sorted((raw_dir / sub).glob("*.jsonl")) if not legacy or f.name in legacy_names]
+
+
+def _title_key(q: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", q.lower()).strip()
+
+
+def _pool(raw_dir: Path, legacy: bool) -> list[dict]:
     # typo check (quora_closed's): a lowercase word seen in fewer than 3 poll titles is treated as a misspelling
     VOCAB.clear()
     VOCAB.update(Q._vocab([json.loads(line).get("title") or "" for sub in SUBS
-                           for f in sorted((raw_dir / sub).glob("*.jsonl")) for line in f.read_text().splitlines()]))
+                           for f in _files(raw_dir, sub, legacy) for line in f.read_text().splitlines()]))
     best: dict[str, dict] = {}
     for sub in SUBS:
-        for f in sorted((raw_dir / sub).glob("*.jsonl")):
+        for f in _files(raw_dir, sub, legacy):
             for line in f.read_text().splitlines():
                 FUNNEL["0_polls"] += 1
                 it = _parse(json.loads(line), sub)
                 if not it:
                     continue
-                key = re.sub(r"[^a-z0-9]+", " ", it["q"].lower()).strip()
+                key = _title_key(it["q"])
                 old = best.get(key)
                 if old is None or (it["n"], it["id"]) > (old["n"], old["id"]):
                     if old is not None:
@@ -346,15 +378,15 @@ def _pool(raw_dir: Path) -> list[dict]:
 
 GROUP_CAP_PCT = env_int("REDDIT_POLLS_GROUP_CAP_PCT", 15)  # at most this share of the output from one flair
 WYR_CAP_PCT = env_int("REDDIT_POLLS_WYR_CAP_PCT", 25)  # and from r/WouldYouRather
+BASE = 15000  # the original sample (legacy days, its own vocabulary and caps); kept byte-identical
 
 
-def normalize(raw_dir: Path) -> Iterator[Question]:
-    pool = _pool(raw_dir)
-    cap, wyr_cap = TARGET * GROUP_CAP_PCT // 100, TARGET * WYR_CAP_PCT // 100
-    per: Counter = Counter()
+def _take(pool: list[dict], k: int, total: int, per: Counter) -> list[dict]:
+    """First k of `pool` in salted-hash order, with the flair / r/WouldYouRather caps taken as shares of `total`."""
+    cap, wyr_cap = total * GROUP_CAP_PCT // 100, total * WYR_CAP_PCT // 100
     picked = []
     for it in hash_order(pool, lambda x: x["id"], SALT):
-        if len(picked) >= TARGET:
+        if len(picked) >= k:
             break
         g = f"{it['sub']}:{it['flair']}"
         if per[g] >= cap or (it["sub"] == "WouldYouRather" and per["wyr"] >= wyr_cap):
@@ -362,26 +394,52 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
         per[g] += 1
         per["wyr"] += it["sub"] == "WouldYouRather"
         picked.append(it)
-    FUNNEL["11_picked"] = len(picked)
-    for it in sorted(picked, key=lambda x: x["id"]):
-        meta = {"subreddit": it["sub"], "flair": it["flair"], "reddit_title": it["raw_title"], "created": it["created"],
-                "closed_when_archived": it["closed_when_archived"]}
-        if it["flags"]:
-            meta["flags"] = it["flags"]
-        yield Question(
-            text=it["q"],
-            primitive="choice",
-            hemisphere=it["hemisphere"],
-            kind=it["kind"],
-            origin="dataset",
-            source=NAME,
-            options=it["options"],
-            source_item_id=f"{it['sub']}:{it['id']}",
-            license=LICENSE,
-            human=[HumanDist(population=f"r/{it['sub']} voters", distribution=it["dist"], n=it["n"],
-                             source="Reddit native poll vote counts (Arctic Shift archive; 'see results' options "
-                                    "dropped, shares over the remaining options)")],
-            meta=meta,
-        )
-    print("reddit_polls funnel:", dict(sorted(FUNNEL.items())))
+    return picked
+
+
+def _question(it: dict) -> Question:
+    meta = {"subreddit": it["sub"], "flair": it["flair"], "reddit_title": it["raw_title"], "created": it["created"],
+            "closed_when_archived": it["closed_when_archived"]}
+    if it["flags"]:
+        meta["flags"] = it["flags"]
+    return Question(
+        text=it["q"],
+        primitive="choice",
+        hemisphere=it["hemisphere"],
+        kind=it["kind"],
+        origin="dataset",
+        source=NAME,
+        options=it["options"],
+        source_item_id=f"{it['sub']}:{it['id']}",
+        license=LICENSE,
+        human=[HumanDist(population=f"r/{it['sub']} voters", distribution=it["dist"], n=it["n"],
+                         source="Reddit native poll vote counts (Arctic Shift archive; 'see results' options "
+                                "dropped, shares over the remaining options)")],
+        meta=meta,
+    )
+
+
+def normalize(raw_dir: Path) -> Iterator[Question]:
+    """Rows 1..15,000: the original sample from the legacy days (sorted by poll id, unchanged). Rows after that
+    (ASKJEV_TARGET_REDDIT_POLLS > 15000): new unique titles from every day of 2020-2024, in salted-hash order."""
+    base_target = min(TARGET, BASE)
+    per: Counter = Counter()
+    base = _take(_pool(raw_dir, legacy=True), base_target, base_target, per)
+    FUNNEL["11_picked"] = len(base)
+    print("reddit_polls base funnel:", dict(sorted(FUNNEL.items())))
+    for it in sorted(base, key=lambda x: x["id"]):
+        yield _question(it)
+    if TARGET <= BASE:
+        print("picked by group:", dict(per.most_common(25)))
+        return
+    FUNNEL.clear()
+    have_keys, have_ids = {_title_key(it["q"]) for it in base}, {it["id"] for it in base}
+    pool = [it for it in _pool(raw_dir, legacy=False) if _title_key(it["q"]) not in have_keys
+            and it["id"] not in have_ids]
+    FUNNEL["11_new_pool"] = len(pool)
+    extra = _take(pool, TARGET - len(base), TARGET, per)
+    FUNNEL["12_new_picked"] = len(extra)
+    print("reddit_polls full funnel:", dict(sorted(FUNNEL.items())))
     print("picked by group:", dict(per.most_common(25)))
+    for it in extra:
+        yield _question(it)

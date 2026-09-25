@@ -1,0 +1,15 @@
+name: afrobarometer
+url: https://www.afrobarometer.org/data/merged-data/
+license: Afrobarometer data, free for non-commercial use with citation (afrobarometer.org)
+version: R9.Merge_39ctry.20Nov23.final_.release_Updated.4Jun25 + R8 merge 34ctry 2023-03-01 (SPSS), fetched 2026-09-25
+target: 36
+hemisphere: self
+kind: personality / social / values / taste
+notes: >
+  Round 9 (2021-2023, 39 countries, N=53,444), a direct no-login download. One Choice question per non-political R9 item
+  about the respondent (living conditions, lived poverty, feeling unsafe, news and phone/internet use, trust in kinds of
+  people, neighbour tolerance, family norms, gender-norm and physical-discipline items flagged "sensitive"); one HumanDist
+  per country (withinwt_hh) plus the pooled 39-country sample (Combinwt_new_hh). Refused / Don't know / Missing dropped.
+  Six Round 8 items not repeated in Round 9 are taken from R8 (generalized trust, elders vs youth, diverse vs similar
+  communities, comfort with mother tongue / traditional dress in public, feared neighbourhood violence). Religion
+  importance is in neither round. Political modules are not taken.
