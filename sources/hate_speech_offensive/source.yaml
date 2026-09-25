@@ -1,0 +1,17 @@
+name: hate_speech_offensive
+url: https://github.com/t-davidson/hate-speech-and-offensive-language
+download: https://huggingface.co/api/datasets/tdavidson/hate_speech_offensive/parquet/default/train/0.parquet
+license: MIT
+version: Davidson et al. 2017, 24,783 tweets with CrowdFlower counts (hate / offensive / neither)
+target: 2000
+hemisphere: machine
+shape: classify
+notes: >
+  Template hate_speech_offensive.class: Choice "Is `post` hate speech, offensive but not hate speech, or neither?"
+  over hate_speech / offensive / neither; truth = majority class; HumanDist = annotator shares (n = annotators,
+  usually 3). Balanced 700 hate / 650 offensive / 650 neither. @handles -> @user, URLs -> [link], HTML entities
+  unescaped, exact dups dropped. Slurs kept (the hate class is mostly slur-based) but every hate/offensive tweet
+  and every tweet with slurs or sexual words is flagged sensitive; political keywords flagged political.
+  Node machine.trust_safety.toxicity_harassment (hate against protected groups; brand_safety is about ad
+  adjacency and game_chat about games, neither fits). Upstream repo MIT; the HF card says unknown.
+  Target: ASKJEV_TARGET_HATE_SPEECH_OFFENSIVE.

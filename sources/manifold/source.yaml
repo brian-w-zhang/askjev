@@ -4,6 +4,7 @@ license: Manifold public API, no auth for reads (docs/04 notes non-commercial du
 version: search-markets (filter=resolved, BINARY, most-popular, 1,000 per topic) + bets, fetched 2026-09-24
 target: 100
 target_phase6: 600 (ASKJEV_TARGET_MANIFOLD)
+target_wave2: 2600 (ASKJEV_TARGET_MANIFOLD=2600; the 600 rows stay byte-identical as the prefix)
 hemisphere: world
 kind: forecast
 notes: >
@@ -24,3 +25,8 @@ notes: >
   shares of the target (ai .18, technology .20, space .12, climate .10, economy .14, sports/entertainment .20,
   society .06; digit-free first, then year-only), shortfalls filled one per node in turn. The top-up also drops
   LGBT/drag/legalization/ban/criminal-case/religion questions and profanity. Same filters and midlife human dist.
+  Wave 2 (ASKJEV_TARGET_MANIFOLD above 600): the 600 rows unchanged and first, then a top-up appended (sorted by
+  id) from the same v1 + v2 pools, since the >= 50-bettor pool is used up: the bettor floor drops to
+  ASKJEV_MANIFOLD_EXTRA_MIN_BETTORS (20), per node to the QUOTA_V2 shares, digit-free first then year-only, salted
+  hash order, shortfalls one per node in turn. Same filters (incl. the Phase 6 drops) and the same midlife human
+  distribution; n = uniqueBettorCount says how thin each market was.

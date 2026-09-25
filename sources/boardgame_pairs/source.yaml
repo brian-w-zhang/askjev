@@ -15,3 +15,4 @@ notes: >
   among co-raters, share rating each game higher, ties split half-half; n = co-raters. No truth. Games in BGG's
   "Mature / Adult" category (Cards Against Humanity, Joking Hazard...) flagged sensitive. Node
   self.lifestyle.leisure_hobbies. Target via ASKJEV_TARGET_BOARDGAME_PAIRS.
+  Wave 2: run with ASKJEV_TARGET_BOARDGAME_PAIRS=5000 (the template cap); rows 1-4000 are unchanged.

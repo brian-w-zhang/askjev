@@ -1,0 +1,15 @@
+name: code_defects
+url: https://huggingface.co/datasets/google/code_x_glue_cc_defect_detection
+download: https://huggingface.co/api/datasets/google/code_x_glue_cc_defect_detection/parquet/default/{train,validation,test}/0.parquet
+license: C-UDA-1.0 (Computational Use of Data Agreement, per the CodeXGLUE card)
+version: CodeXGLUE Defect-detection (Devign; FFmpeg + QEMU C functions), train/validation/test, 27,318 functions
+target: 2000
+hemisphere: machine
+shape: detect
+notes: >
+  Template code_defects.vulnerable: Noul "Does the function in `code` contain a security vulnerability or
+  memory-safety bug?" Truth = Devign `target` (function touched by a vulnerability-fixing commit; the
+  labels are known to be noisy). Only functions <= 1,500 chars after dropping blank lines (Devign doubles every newline) and trailing
+  whitespace; whitespace-normalised dedup; balanced 1,000 / 1,000 in salted hash order.
+  Node per the wave-2 plan: machine.code.semantic_lint (code_review would also fit).
+  ASKJEV_TARGET_CODE_DEFECTS (cap 3,000).

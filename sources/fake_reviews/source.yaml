@@ -1,0 +1,16 @@
+name: fake_reviews
+url: https://osf.io/tyue9/
+download: https://huggingface.co/api/datasets/theArijitDas/Fake-Reviews-Dataset/parquet/default/train/0.parquet
+license: CC-BY-4.0 (Salminen et al. 2022 via OSF/Kaggle); the HF copy is tagged Apache-2.0
+version: Fake Reviews Dataset (Salminen, Kandpal, Kamel, Jung & Jansen 2022), 40,432 reviews (20k OR Amazon, 20k CG by fine-tuned GPT-2), HF copy theArijitDas/Fake-Reviews-Dataset
+target: 2000
+hemisphere: machine
+shape: detect
+notes: >
+  Template fake_reviews.generated: Noul "Was `review` written by a computer program rather than a real
+  customer?" Truth = label (CG = true, OR = false). The HF copy's 94 extra AI-written rows (in
+  categories outside the original 10, e.g. Food, Gardening) are dropped. Whitespace-normalised,
+  case-insensitive dedup, reviews < 20 chars dropped. Balanced 1,000 / 1,000, round-robin over the 10
+  product categories in salted hash order. meta keeps category and star rating.
+  ASKJEV_TARGET_FAKE_REVIEWS (cap 3,000).
+  Sexual / self-harm wording flagged "sensitive" by keyword.

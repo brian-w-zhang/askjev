@@ -1,0 +1,16 @@
+name: swe_trajectories
+url: https://huggingface.co/datasets/nebius/SWE-agent-trajectories
+download: https://huggingface.co/api/datasets/nebius/SWE-agent-trajectories/parquet/default/train/{0..5}.parquet
+license: CC-BY-4.0
+version: HF nebius/SWE-agent-trajectories default/train, parquet shards 0-5 of 12 (~40k of 80,036 SWE-agent runs by swe-agent-llama 8b/70b/405b)
+target: 1500
+hemisphere: machine
+shape: verify
+notes: >
+  Template swe_trajectories.completed: Noul "Did the agent in `trace` complete the task it was given?"
+  Truth = dataset `target` (the submitted patch resolved the issue per the SWE-bench-style eval).
+  State `trace` = compact text: the GitHub issue (<=450 chars), then as many of the final agent actions
+  (first sentence of reasoning + command) and observations (<=160 chars each) as fit in 1,500 chars total;
+  the count of omitted earlier steps is stated. System prompt and SWE-agent prompt footers dropped.
+  Balanced 750 resolved / 750 not, salted hash order, at most 2 runs per (issue, outcome), exact-trace dedup.
+  meta keeps instance_id, model and exit_status. ASKJEV_TARGET_SWE_TRAJECTORIES (cap 3,000).

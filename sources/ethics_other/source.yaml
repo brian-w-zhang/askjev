@@ -1,0 +1,18 @@
+name: ethics_other
+url: https://github.com/hendrycks/ethics
+license: MIT (hendrycks/ethics)
+version: ETHICS virtue + deontology (ethics.tar from people.eecs.berkeley.edu/~hendrycks, reused from data/raw/ethics_cs; train + test splits)
+target: 6000
+hemisphere: self
+kind: personality (virtue), values (deontology)
+notes: >
+  Three templates, all with truth, no human distribution (labels are MTurk-validated majority labels).
+  (1) ethics_other.virtue: Choice "Which character trait does the person in `scenario` show?" over the item's
+  3-5 candidate traits (slug keys, alphabetical), truth = the trait labeled 1; one item per distinct scenario.
+  kind personality; node_hint = the Big Five facet / personality node that best fits the true trait (hand map,
+  unmapped traits -> self.personality). Items with gendered/body "traits" (effeminate, manly, masculine, fat,
+  thin) or terroristic are skipped. (2) ethics_other.excuse: Noul "Is `excuse` a reasonable excuse for not doing
+  what `request` asks?" (node self.values.honesty_trust). (3) ethics_other.role: Noul "Is `duty` a reasonable duty
+  for the person described in `role`?" (node self.values; placement walks). Deontology is balanced true/false with
+  at most one row per scenario per label. Salted-hash order (prefix-stable per template). Same content filters as
+  ethics_cs. Targets via ASKJEV_TARGET_ETHICS_OTHER_VIRTUE (3000), _EXCUSE (2000), _ROLE (1000).

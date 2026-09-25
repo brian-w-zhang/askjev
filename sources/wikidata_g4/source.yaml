@@ -3,6 +3,7 @@ url: https://query.wikidata.org/ (heavy pulls via https://qlever.dev/api/wikidat
 license: CC0 (Wikidata)
 version: SPARQL pulls cached 2026-09-24 (data/raw/wikidata_g4/<query>.json)
 target: 8345
+target_wave2: 16395 (ASKJEV_WIKIDATA_G4_COMPARE_PER_TEMPLATE=1150 appends 7 comparison templates; unset/0 = the original 8,345 rows byte-identical)
 hemisphere: world
 kind: factual
 notes: >
@@ -28,3 +29,12 @@ notes: >
   contested (Jerusalem holy sites, anything placed in Palestine) are skipped. Node hints by entity type and
   occupation. WDQS for the small class queries; the human/city/landmark sitelink rankings time out on WDQS,
   so they go to QLever first (same data). 1 request/s.
+  Wave 2 comparison templates (appended after the original rows, <= ASKJEV_WIKIDATA_G4_COMPARE_PER_TEMPLATE each,
+  Choice over the two names, truth = the right one, A/B order randomized per pair, each entity in a bounded number of
+  pairs): more_people ("Which city has more people living within its city limits: A or B?"; both >= 60 sitelinks,
+  population ratio >= 1.5, Chinese prefecture-level "cities" and disputed states skipped), larger_area (sovereign
+  countries, area ratio >= 1.5, realm entries for Denmark/Netherlands skipped), longer_river (length ratio >= 1.25),
+  higher_mountain ("Which mountain's summit is higher above sea level"; ratio >= 1.1), born_first (famous people,
+  year-precision births >= 20 years apart), founded_first ("Which company was founded earlier"; items whose own P31
+  is a kind of company, >= 15 years apart), atomic_number (any two of the 118 elements). Quantities: preferred rank
+  if present, else normal; skipped when a value's statements disagree by > 20%; units converted to km / m / km2.

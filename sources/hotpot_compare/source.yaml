@@ -1,0 +1,17 @@
+name: hotpot_compare
+url: https://huggingface.co/datasets/hotpotqa/hotpot_qa
+license: CC BY-SA 4.0
+version: hotpotqa/hotpot_qa distractor config, train + validation parquet (HF parquet API), fetched 2026-09-24
+target: 3000
+hemisphere: world
+kind: factual
+notes: >
+  HotpotQA comparison questions (type == comparison; 18,943 in train + validation) asked closed-book: no passage
+  or context is passed. Yes/no ones become Noul (truth = the answer); the others become Choice over the two
+  supporting-fact article subjects (title minus any "(disambiguator)"), kept only when both subjects are named in
+  the question and the gold answer matches exactly one of them (token containment or Jaccard >= 0.5), options in
+  the order the question names them. Question text as written (whitespace/"?" tidied); items with digits other
+  than 4-digit years, over 200 characters, pinned to the present (deceased/alive/currently/still), or open wh-answers ("What occupation do A and B share?") are dropped;
+  near-duplicate questions merged. Sample: 60% Choice, 40% Noul split evenly yes/no, salted-hash order
+  (ASKJEV_TARGET_HOTPOT_COMPARE). node_hint: boolq's keyword map on the question and the first article title,
+  else `world`. Content flags from the shared mmlu helper.

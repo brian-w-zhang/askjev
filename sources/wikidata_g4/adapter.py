@@ -25,6 +25,8 @@ UA = "askjev/0.1 (https://github.com/brian-w-zhang/askjev; research, cached pull
 LICENSE = "CC0 (Wikidata)"
 MIN_SL = 40
 PER_TEMPLATE = env_int("WIKIDATA_G4_PER_TEMPLATE", 1500)
+# Pairwise comparison templates (wave 2) are appended after the original eight; 0 keeps the original output.
+COMPARE_PER_TEMPLATE = env_int("WIKIDATA_G4_COMPARE_PER_TEMPLATE", 0)
 SALT = "wikidata_g4.v1"
 PREFIXES = """PREFIX wd: <http://www.wikidata.org/entity/>
 PREFIX wdt: <http://www.wikidata.org/prop/direct/>
@@ -49,6 +51,15 @@ def _top(pattern: str, limit: int) -> str:
 CITIES = _top("?item wdt:P31/wdt:P279* wd:Q515 .", 40000)
 LANDMARKS = _top("?item wdt:P31/wdt:P279* wd:Q811979 .", 8000)
 HUMANS = _top("?item wdt:P31 wd:Q5 .", 25000)
+RIVERS = _top("?item wdt:P31/wdt:P279* wd:Q4022 .", 4000)
+MOUNTAINS = _top("?item wdt:P31/wdt:P279* wd:Q8502 .", 4000)
+COMPANIES = _top("?item wdt:P31/wdt:P279* wd:Q4830453 .", 6000)
+
+
+def _quantity(where: str, prop: str) -> str:
+    """Every non-deprecated statement's amount + unit + rank (the pull keeps ranks; normalize picks)."""
+    return (f"SELECT DISTINCT ?item ?a ?u ?r WHERE {{ {where} ?item p:{prop} ?s . ?s psv:{prop} ?n ; wikibase:rank ?r . "
+            f"?n wikibase:quantityAmount ?a ; wikibase:quantityUnit ?u . }}")
 
 
 def _base(where: str) -> str:
@@ -84,6 +95,20 @@ QUERIES: list[tuple[str, tuple[str, str], str]] = [
     ("humans_birth_country", HEAVY, _prop(HUMANS, "wdt:P19/wdt:P17")),
     ("humans_P569", HEAVY, f"SELECT DISTINCT ?item ?t ?pr WHERE {{ {HUMANS} ?item p:P569/psv:P569 ?n . "
                           f"?n wikibase:timeValue ?t ; wikibase:timePrecision ?pr . }}"),
+    # pairwise comparison templates (wave 2)
+    ("cities_P1082", HEAVY, f"SELECT DISTINCT ?item ?pop WHERE {{ {CITIES} ?item wdt:P1082 ?pop . }}"),
+    ("countries_P2046", SMALL, _quantity(SOVEREIGN, "P2046")),
+    ("rivers", HEAVY, _base(RIVERS)),
+    ("rivers_P2043", HEAVY, _quantity(RIVERS, "P2043")),
+    ("mountains", HEAVY, _base(MOUNTAINS)),
+    ("mountains_P2044", HEAVY, _quantity(MOUNTAINS, "P2044")),
+    ("companies", HEAVY, _base(COMPANIES)),
+    ("companies_P571", HEAVY, f"SELECT DISTINCT ?item ?t ?pr ?r WHERE {{ {COMPANIES} ?item p:P571 ?s . ?s psv:P571 ?n ; "
+                              f"wikibase:rank ?r . ?n wikibase:timeValue ?t ; wikibase:timePrecision ?pr . }}"),
+    ("companies_P452", HEAVY, _prop(COMPANIES, "wdt:P452")),
+    ("companies_P31", HEAVY, _prop(COMPANIES, "wdt:P31")),
+    ("elements", SMALL, "SELECT DISTINCT ?item ?sl ?z ?label WHERE { ?item wdt:P31 wd:Q11344 ; wdt:P1086 ?z ; "
+                        "wikibase:sitelinks ?sl . OPTIONAL { ?item rdfs:label ?label " + EN.format(v="label") + " } }"),
 ]
 
 
@@ -630,7 +655,7 @@ def _capital(w: World) -> Iterator[Question]:
     n = 0
     for q in sorted(w.countries, key=lambda q: (-w.countries[q]["sl"], q)):
         caps = w.capital.get(q, set())
-        cont = w.continent.get(q) or next(iter(w.continents.get(q) or {"europe"}))
+        cont = w.continent.get(q) or min(w.continents.get(q) or {"europe"})  # min: set order varies per run
         if len(caps) != 1 or q in SKIP_CAPITAL:
             continue
         (cap,) = caps
@@ -719,6 +744,214 @@ STATE_MIN_SL = 60  # first-level subdivisions: bot-created wikis inflate provinc
 CENTURY_CAP = {20: 500, 19: 400}  # keep the century template from being mostly 20th-century people
 
 
+
+# ---------------------------------------------------------------------------------------------- comparisons
+# "Which X has more Y: A or B?" with truth from Wikidata. Pairs need a clear gap (ratio or years) so small data
+# disagreements can't flip the answer. A/B order is randomized per pair so the truth is on either side.
+UNIT_KM = {"Q828224": 1.0, "Q253276": 1.609344, "Q11573": 0.001}  # km, mile, metre
+UNIT_M = {"Q11573": 1.0, "Q3710": 0.3048}  # metre, foot
+UNIT_KM2 = {"Q712226": 1.0, "Q25343": 1e-6, "Q232291": 2.589988, "Q35852": 0.01}  # km2, m2, sq mile, hectare
+CITY_CMP_MIN_SL = 60  # comparisons need both cities to be recognizable, not just present in 40 wikis
+NO_AREA = {"Q756617", "Q29999"}  # realms: the area includes Greenland / the Caribbean islands
+# The "business" class also reaches universities, clubs, leagues, NGOs and wikis: keep items whose own P31 is a kind
+# of company and none is an institution of another sort.
+COMPANY_TYPE = re.compile(r"compan|corporation|enterprise|business|manufacturer|airline|conglomerate|automaker|"
+                          r"car brand|automobile marque|chain|brand|retailer|studio|developer|publisher|\bbank\b|"
+                          r"brewery|record label|broadcaster|holding|multinational|startup|firm\b|operator|carrier", re.I)
+NOT_COMPANY = re.compile(r"universit|college|school|institut|academy|library|museum|organi[sz]ation|league|club|"
+                         r"association|federation|union\b|agency|government|ministry|foundation|charity|wiki|"
+                         r"website|mosque|church|party|team|society|council|sports|stadium|hospital|newspaper|"
+                         r"magazine|television channel|radio station|[ée]cole|metro|rapid transit|theat|alliance|central bank", re.I)
+ADULT = re.compile(r"porn|playboy|brazzers|onlyfans|xvideos|xhamster", re.I)
+TECH_INDUSTRY = re.compile(r"software|internet|computer|electronic|semiconductor|telecom|information technology|"
+                           r"video game|social media|e-commerce|online|cloud|artificial intelligence", re.I)
+
+
+def _quantities(raw_dir: Path, name: str, units: dict[str, float], max_spread: float = 1.2) -> dict[str, float]:
+    """One value per item: preferred-rank statements if any, else normal; skipped when they disagree."""
+    by: dict[str, dict[str, list[float]]] = {}
+    for r in _load(raw_dir, name):
+        rank = r["r"].rsplit("#", 1)[-1]
+        if "Deprecated" in rank or r["u"] not in units or not re.fullmatch(r"[-+]?\d+(\.\d+)?(E[-+]?\d+)?", r["a"]):
+            continue
+        v = float(r["a"]) * units[r["u"]]
+        if v > 0:
+            by.setdefault(r["item"], {}).setdefault("pref" if "Preferred" in rank else "norm", []).append(v)
+    out = {}
+    for q, d in by.items():
+        vs = d.get("pref") or d["norm"]
+        if max(vs) / min(vs) <= max_spread:
+            out[q] = max(vs)
+    return out
+
+
+def _label_ok(rows: dict[str, dict], min_sl: int) -> dict[str, str]:
+    seen: dict[str, int] = {}
+    for it in rows.values():
+        if it["label"]:
+            seen[it["label"]] = seen.get(it["label"], 0) + 1
+    return {q: it["label"] for q, it in rows.items()
+            if it["sl"] >= min_sl and _clean(it["label"]) and seen[it["label"]] == 1}
+
+
+def _pairs(tid: str, items: list[str], ok, cap: int) -> list[tuple[str, str]]:
+    """Up to `cap` distinct pairs over `items`; each item appears a bounded number of times (spread, not hubs)."""
+    if cap <= 0 or len(items) < 2:
+        return []
+    per = max(2, -(-2 * cap // len(items)))
+    uses: dict[str, int] = {}
+    seen: set[tuple[str, str]] = set()
+    out = []
+    for rnd in range(per):
+        for a in hash_order(items, lambda q: q, f"{SALT}|{tid}|{rnd}"):
+            if len(out) >= cap:
+                return out
+            if uses.get(a, 0) >= per:
+                continue
+            r = _rng(tid, a, rnd)
+            for _ in range(40):
+                b = items[r.randrange(len(items))]
+                key = tuple(sorted((a, b)))
+                if b == a or uses.get(b, 0) >= per or key in seen or not ok(a, b):
+                    continue
+                seen.add(key)
+                uses[a], uses[b] = uses.get(a, 0) + 1, uses.get(b, 0) + 1
+                out.append((a, b) if r.random() < 0.5 else (b, a))
+                break
+    return out
+
+
+def _cmp(tid: str, text: str, a: tuple[str, str], b: tuple[str, str], winner: str, node: str, meta: dict) -> Question | None:
+    """a/b = (qid, display name) in the order shown; `winner` = qid of the correct one."""
+    ka, kb = _slug(a[1]), _slug(b[1])
+    if not ka or not kb or ka == kb:
+        return None
+    key = "-".join(sorted((a[0], b[0])))
+    return _q(text.format(a=a[1], b=b[1]), {ka: a[1], kb: b[1]}, ka if winner == a[0] else kb, node, tid, key,
+              {"entities": [a[1], b[1]], "entity_ids": [a[0], b[0]], **meta})
+
+
+def _ratio(x: float, y: float) -> float:
+    return max(x, y) / min(x, y)
+
+
+def _cmp_cities(w: World, raw_dir: Path, cities: list[str]) -> Iterator[Question]:
+    pops = {}
+    for r in _load(raw_dir, "cities_P1082"):
+        if re.fullmatch(r"\d+(\.\d+)?", r["pop"]):  # "unknown value" arrives as a blank-node id
+            pops.setdefault(r["item"], []).append(float(r["pop"]))
+    pop = {q: max(v) for q, v in pops.items() if min(v) > 0 and max(v) / min(v) <= 1.5}
+    # Chinese "cities" are prefecture-level areas with large rural hinterlands: population isn't comparable.
+    items = [q for q in cities if q in pop and pop[q] >= 1000 and w.cities[q]["sl"] >= CITY_CMP_MIN_SL and next(iter(w.city_country[q])) not in ("Q148", *DISPUTED)]
+    for a, b in _pairs("more_people", items, lambda a, b: _ratio(pop[a], pop[b]) >= 1.5, COMPARE_PER_TEMPLATE):
+        na, nb = w.cities[a]["label"], w.cities[b]["label"]
+        flags = ["political"] if DISPUTED_WORDS.search(na + " " + nb) else []
+        q = _cmp("more_people", "Which city has more people living within its city limits: {a} or {b}?",
+                 (a, na), (b, nb), a if pop[a] > pop[b] else b, "world.places.cities",
+                 {"values": [pop[a], pop[b]], "unit": "people", "flags": flags})
+        if q:
+            yield q
+
+
+def _cmp_countries(w: World, raw_dir: Path) -> Iterator[Question]:
+    area = _quantities(raw_dir, "countries_P2046", UNIT_KM2)
+    items = sorted(q for q in w.countries if q in area and q not in NO_AREA and q not in DISPUTED)
+    for a, b in _pairs("larger_area", items, lambda a, b: _ratio(area[a], area[b]) >= 1.5, COMPARE_PER_TEMPLATE):
+        ca, cb = w.continent.get(a), w.continent.get(b)
+        node = f"world.places.countries.{CONTINENT_NODE[ca]}" if ca and ca == cb else "world.places.countries"
+        q = _cmp("larger_area", "Which country is larger by area: {a} or {b}?", (a, w.country_label[a]),
+                 (b, w.country_label[b]), a if area[a] > area[b] else b, node,
+                 {"values": [area[a], area[b]], "unit": "km2"})
+        if q:
+            yield q
+
+
+def _cmp_quantity(raw_dir: Path, tid: str, base: str, prop: str, units: dict[str, float], min_ratio: float,
+                  text: str, node: str, unit: str) -> Iterator[Question]:
+    labels = _label_ok(_base_rows(raw_dir, base), MIN_SL)
+    val = _quantities(raw_dir, prop, units)
+    items = sorted(q for q in labels if q in val)
+    for a, b in _pairs(tid, items, lambda a, b: _ratio(val[a], val[b]) >= min_ratio, COMPARE_PER_TEMPLATE):
+        la, lb = labels[a][0].upper() + labels[a][1:], labels[b][0].upper() + labels[b][1:]
+        flags = ["political"] if DISPUTED_WORDS.search(la + " " + lb) else []
+        q = _cmp(tid, text, (a, la), (b, lb), a if val[a] > val[b] else b, node,
+                 {"values": [val[a], val[b]], "unit": unit, "flags": flags})
+        if q:
+            yield q
+
+
+def _cmp_born(w: World) -> Iterator[Question]:
+    items = sorted(q for q in w.humans if w.person_ok(q) and w.born(q) is not None and w.birth_precise.get(q)
+                   and w.born(q) >= 1)
+    for a, b in _pairs("born_first", items, lambda a, b: abs(w.born(a) - w.born(b)) >= 20, COMPARE_PER_TEMPLATE):
+        ya, yb = w.born(a), w.born(b)
+        na, nb = w.person_node(a, ya), w.person_node(b, yb)
+        node = na if na == nb else "world.history.figures"
+        q = _cmp("born_first", "Who was born first: {a} or {b}?", (a, w.humans[a]["label"]), (b, w.humans[b]["label"]),
+                 a if ya < yb else b, node, {"values": [ya, yb], "unit": "birth year",
+                                             "flags": sorted(set(w.person_flags(a)) | set(w.person_flags(b)))})
+        if q:
+            yield q
+
+
+def _cmp_companies(raw_dir: Path) -> Iterator[Question]:
+    labels = _label_ok(_base_rows(raw_dir, "companies"), MIN_SL)
+    years: dict[str, set[int]] = {}
+    for r in _load(raw_dir, "companies_P571"):
+        if "Deprecated" in r["r"] or int(r["pr"]) < 9 or not re.match(r"\d{4}-", r["t"]):
+            continue
+        years.setdefault(r["item"], set()).add(int(r["t"][:4]))
+    year = {q: next(iter(v)) for q, v in years.items() if len(v) == 1}
+    ind_labels: dict[str, str] = {}
+    industry = _values(raw_dir, "companies_P452", ind_labels)
+    tech = {q for q, vs in industry.items() if any(TECH_INDUSTRY.search(ind_labels.get(v, "")) for v in vs)}
+    t_labels: dict[str, str] = {}
+    types = _values(raw_dir, "companies_P31", t_labels)
+    company = {q for q, ts in types.items()
+               if any(COMPANY_TYPE.search(t_labels.get(t, "")) for t in ts)
+               and not any(NOT_COMPANY.search(t_labels.get(t, "")) for t in ts)}
+    items = sorted(q for q in labels if q in year and q in company)
+    for a, b in _pairs("founded_first", items, lambda a, b: abs(year[a] - year[b]) >= 15, COMPARE_PER_TEMPLATE):
+        node = "world.tech.companies" if a in tech and b in tech else "world.money.companies_brands"
+        q = _cmp("founded_first", "Which company was founded earlier: {a} or {b}?", (a, labels[a]), (b, labels[b]),
+                 a if year[a] < year[b] else b, node, {"values": [year[a], year[b]], "unit": "founding year",
+                 "flags": ["sensitive"] if ADULT.search(labels[a] + " " + labels[b]) else []})
+        if q:
+            yield q
+
+
+def _cmp_elements(raw_dir: Path) -> Iterator[Question]:
+    best: dict[int, tuple[int, str, str]] = {}
+    for r in _load(raw_dir, "elements"):
+        z = float(r["z"])
+        if z != int(z) or not 1 <= z <= 118 or not _clean(r.get("label")):
+            continue
+        cur = best.get(int(z))
+        if not cur or int(r["sl"]) > cur[0]:
+            best[int(z)] = (int(r["sl"]), r["item"], r["label"])
+    zof = {qid: z for z, (_, qid, _) in best.items()}
+    name = {qid: lab[0].upper() + lab[1:] for _, qid, lab in best.values()}
+    for a, b in _pairs("atomic_number", sorted(zof), lambda a, b: zof[a] != zof[b], COMPARE_PER_TEMPLATE):
+        q = _cmp("atomic_number", "Which element has the higher atomic number: {a} or {b}?", (a, name[a]), (b, name[b]),
+                 a if zof[a] > zof[b] else b, "world.science.chemistry.elements_metals",
+                 {"values": [zof[a], zof[b]], "unit": "atomic number"})
+        if q:
+            yield q
+
+
+def _comparisons(w: World, raw_dir: Path, cities: list[str]) -> Iterator[Question]:
+    yield from _cmp_cities(w, raw_dir, cities)
+    yield from _cmp_countries(w, raw_dir)
+    yield from _cmp_quantity(raw_dir, "longer_river", "rivers", "rivers_P2043", UNIT_KM, 1.25,
+                             "Which river is longer: {a} or {b}?", "world.places.physical_geography", "km")
+    yield from _cmp_quantity(raw_dir, "higher_mountain", "mountains", "mountains_P2044", UNIT_M, 1.1,
+                             "Which mountain's summit is higher above sea level: {a} or {b}?",
+                             "world.places.physical_geography", "m")
+    yield from _cmp_born(w)
+    yield from _cmp_companies(raw_dir)
+    yield from _cmp_elements(raw_dir)
+
+
 def normalize(raw_dir: Path) -> Iterator[Question]:
     w = World(raw_dir)
     cities = _eligible_cities(w)
@@ -733,3 +966,5 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
     yield from _language(w)
     yield from _capital(w)
     yield from _century(w)
+    if COMPARE_PER_TEMPLATE > 0:
+        yield from _comparisons(w, raw_dir, cities)

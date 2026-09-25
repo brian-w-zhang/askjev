@@ -1,0 +1,14 @@
+name: wine_notes
+url: https://huggingface.co/datasets/GroNLP/ik-nlp-22_winemag
+download: https://huggingface.co/api/datasets/GroNLP/ik-nlp-22_winemag/parquet/default/{train,validation,test}/0.parquet
+license: CC-BY-SA-4.0 per the HF card (the original zackthoutt Kaggle scrape of Wine Enthusiast is CC-BY-NC-SA-4.0)
+version: GroNLP/ik-nlp-22_winemag (Wine Enthusiast winemag-data-130k subset used in the TypeSafe cookbook), train+validation+test
+target: 2000
+hemisphere: machine
+shape: score
+notes: >
+  Template wine_notes.rating: Score "How highly does the critic rate the wine in `note`?" State = the
+  tasting note only (no price, variety or region fields). Five situation levels mapped from Wine
+  Enthusiast point bands 80-84 / 85-87 / 88-90 / 91-93 / 94-100; truth = band index. Whitespace and
+  case-insensitive dedup of notes, notes < 40 chars dropped. Balanced 400 per band in salted hash order.
+  meta keeps points, price, country, province, variety. ASKJEV_TARGET_WINE_NOTES (cap 3,000).

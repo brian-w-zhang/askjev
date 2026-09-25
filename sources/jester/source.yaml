@@ -13,3 +13,5 @@ notes: >
   aligned to the bipolar scale (middle bin = "mildly amusing"). Seeded sample of 100 of the 140 jokes with
   1,000+ ratings. Slurs and sexual content involving minors are dropped; sexual, ethnic/religious stereotype,
   profanity, or death jokes are flagged "sensitive" and political jokes "political" (keyword, over-inclusive).
+  Wave 2: ASKJEV_TARGET_JESTER grows the sample past the original 100 with a salted-hash top-up (prefix-stable;
+  unset = the original 100). 127 jokes pass the filters, so any target >= 127 takes all of them.

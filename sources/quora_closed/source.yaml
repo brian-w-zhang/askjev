@@ -3,7 +3,7 @@ url: https://huggingface.co/datasets/sentence-transformers/quora-duplicates
 license: Quora Question Pairs (research use)
 version: sentence-transformers/quora-duplicates pair-class train parquet (404,290 pairs, 537,362 unique questions), fetched 2026-09-24
 target: 10000
-target_phase6: 10000 (ASKJEV_TARGET_QUORA_CLOSED); world share cap ASKJEV_QUORA_CLOSED_WORLD_PCT (default 60)
+target_phase6: 10000 (ASKJEV_TARGET_QUORA_CLOSED); world share cap ASKJEV_QUORA_CLOSED_WORLD_PCT (default 60); ASKJEV_QUORA_CLOSED_WORLD_EXTRA appends N more world-only items after the base rows (default 0; wave 2 runs 12000 -> 17,550)
 hemisphere: world + self (at most 60% world)
 kind: factual, evaluative, forecast, values, social, taste
 notes: >

@@ -1,0 +1,18 @@
+name: unsafe_responses
+url: https://huggingface.co/datasets/PKU-Alignment/BeaverTails
+download: https://huggingface.co/api/datasets/PKU-Alignment/BeaverTails/parquet/default/{30k_train,30k_test}/0.parquet
+license: CC-BY-NC-4.0
+version: BeaverTails 30k_train + 30k_test (~30k prompt/reply pairs, is_safe + 14 harm categories)
+target: 3000
+hemisphere: machine
+shape: detect, classify
+notes: >
+  Pairs of a user prompt to an AI assistant and the assistant's reply (Alpaca-7B), annotated safe/unsafe
+  with multi-label harm categories. Node machine.ai_systems.guardrails (AI-assistant replies; the
+  trust_safety.unsafe_advice node excludes them). One pair per prompt text; the two templates use disjoint pairs.
+  Template unsafe_responses.unsafe (Noul, 1,600, 50/50): truth = not is_safe.
+  Template unsafe_responses.harm_kind (Choice, 1,400) over 12 harm kinds + none: truth = the single category of
+  single-label unsafe pairs, none = safe pairs (25%), water-filled across kinds.
+  Dropped: child_abuse pairs, sexual content mentioning minors, prompt + reply > 1,500 chars, safe pairs
+  that carry a category, duplicates. Flags: sensitive (sexual or self-harm category or words), political
+  (politics category or keywords). Targets: ASKJEV_TARGET_UNSAFE_RESPONSES, ASKJEV_TARGET_UNSAFE_RESPONSES_KIND.

@@ -19,7 +19,9 @@ NAME = "manifold"
 API = "https://api.manifold.markets/v0"
 LICENSE = "Manifold public API (read access allowed; market text by Manifold users)"
 TARGET_V1 = 100  # the original seeded sample, kept as-is so its ids stay stable
-TARGET = env_int("TARGET_MANIFOLD", TARGET_V1)  # Phase 6: 600
+TARGET = env_int("TARGET_MANIFOLD", TARGET_V1)  # Phase 6: 600; wave 2: 2600
+TARGET_P6 = 600  # the Phase 6 sample; a target above it keeps those rows and appends a top-up (wave 2)
+EXTRA_MIN_BETTORS = env_int("MANIFOLD_EXTRA_MIN_BETTORS", 20)  # the >= 50-bettor pool is used up at 600
 SEED = "manifold-20260924"
 MIN_BETTORS = 50
 # Resolved binary markets, 1,000 most popular per non-political topic. Order matters: a market listed
@@ -123,13 +125,13 @@ DROP_V2 = re.compile(
 NUMBERY = re.compile(r"[$%<>]|\b\d+(\.\d+)?\s*(k|m|b|million|billion|trillion|percent|points?|views|followers)\b", re.I)
 YEAR_ONLY = re.compile(r"^\D*((19|20)\d\d\D*)*$")  # digits only as 4-digit years
 
-def _eligible(m: dict) -> bool:
+def _eligible(m: dict, min_bettors: int = MIN_BETTORS) -> bool:
     q = m.get("question", "").strip()
     return (
         m.get("outcomeType") == "BINARY"
         and m.get("isResolved")
         and m.get("resolution") in ("YES", "NO")
-        and (m.get("uniqueBettorCount") or 0) >= MIN_BETTORS
+        and (m.get("uniqueBettorCount") or 0) >= min_bettors
         and q.endswith("?")
         and not re.match(r"(which|what|who|how|when|where|why)\b", q, re.I)
         and 20 <= len(q) <= 160
@@ -142,12 +144,12 @@ def _eligible(m: dict) -> bool:
     )
 
 
-def _eligible_by_node(markets: list[dict]) -> dict[str, list[dict]]:
+def _eligible_by_node(markets: list[dict], min_bettors: int = MIN_BETTORS) -> dict[str, list[dict]]:
     by_node: dict[str, list[dict]] = {}
     seen = set()
     for m in markets:
         key = re.sub(r"\W+", " ", m.get("question", "").lower()).strip()
-        if m["id"] in seen or key in seen or not _eligible(m):
+        if m["id"] in seen or key in seen or not _eligible(m, min_bettors):
             continue
         seen |= {m["id"], key}
         by_node.setdefault(m["_node"], []).append(m)
@@ -182,17 +184,55 @@ def select_v1(markets: list[dict]) -> list[dict]:
     return sorted(picked[:TARGET_V1], key=lambda m: m["id"])
 
 
-def select(raw_dir: Path) -> list[dict]:
-    """The v1 sample, then (Phase 6) a prefix-stable top-up per node from the v1 + v2 pools: each node is filled to
-    its QUOTA_V2 share, digit-free questions first, then year-only ones; shortfalls are filled from the other nodes."""
+def _pools(raw_dir: Path) -> tuple[list[dict], list[dict]]:
     v1 = json.loads((raw_dir / "markets.json").read_text())
-    picked = select_v1(v1)
-    if TARGET <= TARGET_V1:
-        return picked[:TARGET]
     v1_ids = {m["id"] for m in v1}
     nodes = {**TOPICS, **EXTRA_TOPICS}
     v2 = [{**m, "_node": nodes[m["_topic"]]} for m in json.loads((raw_dir / "markets_v2.json").read_text())]
-    pool = v1 + [m for m in v2 if m["id"] not in v1_ids]
+    return v1, v1 + [m for m in v2 if m["id"] not in v1_ids]
+
+
+def _qkey(m: dict) -> str:
+    return re.sub(r"\W+", " ", m["question"].lower()).strip()
+
+
+def select(raw_dir: Path) -> list[dict]:
+    """Up to 600: `_select`. Above (wave 2): the 600 rows unchanged, then a top-up from the same v1 + v2 pools with
+    the bettor floor lowered to EXTRA_MIN_BETTORS, per node to the QUOTA_V2 shares (digit-free first, then
+    year-only; salted-hash order), shortfalls filled one per node in turn. Appended after, so the 600 keep their order."""
+    if TARGET <= TARGET_P6:
+        return _select(raw_dir, TARGET)
+    picked = _select(raw_dir, TARGET_P6)
+    n = TARGET - len(picked)
+    _, pool = _pools(raw_dir)
+    have_ids, have_keys = {m["id"] for m in picked}, {_qkey(m) for m in picked}
+    by_node = {node: [m for m in ms if m["id"] not in have_ids and _qkey(m) not in have_keys
+                      and not DROP_V2.search(m["question"])]
+               for node, ms in _eligible_by_node(pool, EXTRA_MIN_BETTORS).items()}
+    key = lambda m: m["id"]  # noqa: E731
+    extra: list[dict] = []
+    rest: dict[str, list[dict]] = {}
+    for node, share in QUOTA_V2.items():
+        ms = by_node.get(node, [])
+        ranked = top_up([], [m for m in ms if _clean(m)], len(ms), key, f"manifold.w2.{node}") + \
+            top_up([], [m for m in ms if _years_only(m)], len(ms), key, f"manifold.w2.{node}.years")
+        want = round(share * n)
+        extra += ranked[:want]
+        rest[node] = ranked[want:]
+    while len(extra) < n and any(rest.values()):
+        for node in QUOTA_V2:
+            if len(extra) < n and rest[node]:
+                extra.append(rest[node].pop(0))
+    return picked + sorted(extra[:n], key=key)
+
+
+def _select(raw_dir: Path, target: int) -> list[dict]:
+    """The v1 sample, then (Phase 6) a prefix-stable top-up per node from the v1 + v2 pools: each node is filled to
+    its QUOTA_V2 share, digit-free questions first, then year-only ones; shortfalls are filled from the other nodes."""
+    v1, pool = _pools(raw_dir)
+    picked = select_v1(v1)
+    if target <= TARGET_V1:
+        return picked[:target]
     have_keys = {re.sub(r"\W+", " ", m["question"].lower()).strip() for m in picked}
     by_node = {
         node: [m for m in ms if re.sub(r"\W+", " ", m["question"].lower()).strip() not in have_keys
@@ -203,17 +243,17 @@ def select(raw_dir: Path) -> list[dict]:
     rest: dict[str, list[dict]] = {}
     for node, share in QUOTA_V2.items():
         ms = by_node.get(node, [])
-        want = round(share * TARGET) - sum(m["_node"] == node for m in picked)
+        want = round(share * target) - sum(m["_node"] == node for m in picked)
         clean = top_up(picked, [m for m in ms if _clean(m)], len(ms), key, f"manifold.{node}")
         years = top_up(picked, [m for m in ms if _years_only(m)], len(ms), key, f"manifold.{node}.years")
         ranked = clean + years
         picked += ranked[: max(want, 0)]
         rest[node] = ranked[max(want, 0) :]
-    while len(picked) < TARGET and any(rest.values()):  # fill shortfalls one market per node in turn
+    while len(picked) < target and any(rest.values()):  # fill shortfalls one market per node in turn
         for node in QUOTA_V2:
-            if len(picked) < TARGET and rest[node]:
+            if len(picked) < target and rest[node]:
                 picked.append(rest[node].pop(0))
-    return sorted(picked[:TARGET], key=lambda m: m["id"])
+    return sorted(picked[:target], key=lambda m: m["id"])
 
 
 def _window(m: dict) -> tuple[int, int]:

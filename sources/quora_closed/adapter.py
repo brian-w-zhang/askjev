@@ -30,6 +30,7 @@ LICENSE = "Quora Question Pairs (research use)"
 TARGET = env_int("TARGET_QUORA_CLOSED", 10000)
 WORLD_SHARE = env_int("QUORA_CLOSED_WORLD_PCT", 60) / 100  # world is at most this share of the output
 SALT = "quora_closed-20260924"
+WORLD_EXTRA = env_int("QUORA_CLOSED_WORLD_EXTRA", 0)  # extra world-only items appended after the base sample
 MIN_WORD_FREQ = 3  # a lowercase word seen fewer times in the 537k questions is treated as a typo
 
 FUNNEL: Counter = Counter()
@@ -396,12 +397,13 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
     n_self = min(len(self_pool), TARGET - n_world)
     if n_self < TARGET - n_world:  # self runs short: shrink world so it stays at most WORLD_SHARE of the total
         n_world = min(n_world, int(n_self * WORLD_SHARE / (1 - WORLD_SHARE)))
-    picked = hash_order(self_pool, lambda x: x["raw"], SALT)[:n_self] + \
-        hash_order(world_pool, lambda x: x["raw"], SALT)[:n_world]
+    world_order = hash_order(world_pool, lambda x: x["raw"], SALT)
+    picked = hash_order(self_pool, lambda x: x["raw"], SALT)[:n_self] + world_order[:n_world]
+    extra = world_order[n_world:n_world + WORLD_EXTRA]  # appended after the base rows so their order is untouched
     FUNNEL.update({"12_pool_self": len(self_pool), "12_pool_world": len(world_pool),
-                   "13_picked_self": n_self, "13_picked_world": n_world})
+                   "13_picked_self": n_self, "13_picked_world": n_world, "14_world_extra": len(extra)})
 
-    for it in sorted(picked, key=lambda x: x["raw"]):
+    for it in sorted(picked, key=lambda x: x["raw"]) + sorted(extra, key=lambda x: x["raw"]):
         q = it["q"]
         flags = []
         if POLITICAL.search(q):

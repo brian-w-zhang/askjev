@@ -1,0 +1,17 @@
+name: fever_claims
+url: https://fever.ai/dataset/fever.html
+download: https://huggingface.co/api/datasets/copenlu/fever_gold_evidence/parquet/default/validation/0.parquet
+license: CC-BY-SA-3.0
+version: FEVER 1.0 shared-task dev set with evidence text (copenlu/fever_gold_evidence validation, 15,935 rows / 9,743 claims)
+target: 2500
+hemisphere: machine
+shape: verify
+notes: >
+  Template fever_claims.verdict: Choice "What do the Wikipedia sentences in `evidence` say about `claim`?" over
+  supports / refutes / not_enough_info; truth = FEVER label. Evidence = gold sentences for verifiable claims,
+  copenlu's retrieved sentences for NOT ENOUGH INFO claims; detokenized and prefixed with the page title.
+  One evidence set per claim (salted hash), claims with conflicting labels dropped, claim + evidence <= 1,500 chars.
+  Balanced ~833 per label. Worded differently from SciFact's template (different options). Node
+  machine.research.claim_support (claim vs. cited source; not an AI answer). Flag political by keyword.
+  fever/fever on HF is script-only; the copenlu copy carries the evidence text (card lists cc-by-sa-3.0, gpl-3.0).
+  Target: ASKJEV_TARGET_FEVER_CLAIMS.

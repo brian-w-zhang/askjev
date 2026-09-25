@@ -1,0 +1,19 @@
+name: onet_interests
+url: https://www.onetcenter.org/database.html
+download: https://www.onetcenter.org/dl_files/database/db_31_0_csv/ (interests_illustrative_activities, gwas_to_iwas_to_dwas, task_statements, career_interest_types)
+license: CC BY 4.0 (O*NET 31.0 Database by USDOL/ETA; attribution required)
+version: O*NET 31.0 database (CSV), downloaded 2026-09-24
+target: 5000
+hemisphere: self
+kind: personality
+notes: >
+  Score 'How much would you enjoy this work activity: "<activity>"' with openpsych's 5 enjoyment levels
+  (template_id onet_interests.enjoy, origin template). Pools in fixed order so a larger target only appends:
+  (1) all Interest Profiler illustrative activities (RIASEC career types + specific interest areas),
+  (2) all plain Detailed Work Activities, (3) plain occupation task statements, Core before Supplemental, in
+  salted-hash order up to the target. "Plain" = at most 100 characters, at most one comma, no digits, parentheses,
+  slashes, semicolons, acronyms, "such as"/"etc", and no word longer than 12 letters. Trailing periods dropped;
+  deduplicated by normalized text, and texts already asked by openpsych's RIASEC items are skipped. meta has the
+  pool, the interest area (IP items) or the occupation and its top RIASEC interest (tasks). Political/religious
+  activities flagged political, autopsy/embalming/slaughter flagged sensitive. No human data, no truth.
+  Node self.personality.interests. Target via ASKJEV_TARGET_ONET_INTERESTS.

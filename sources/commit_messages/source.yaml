@@ -1,0 +1,18 @@
+name: commit_messages
+url: https://huggingface.co/datasets/djtereano/commitbench_conventional
+download: https://huggingface.co/api/datasets/djtereano/commitbench_conventional/parquet/default/train/0.parquet
+license: CC-BY-NC-4.0 (CommitBench, Schall et al. 2024; the HF subset carries no license tag of its own)
+version: HF djtereano/commitbench_conventional train (44,472 CommitBench commits whose message uses a Conventional Commits prefix; 6,207 repos)
+target: 1500
+hemisphere: machine
+shape: classify
+notes: >
+  Template commit_messages.type: Choice "What kind of change does `commit_message` describe?" over
+  fix / feat / refactor / test / docs / chore / style / perf / ci / other (with one-line descriptions).
+  Truth = the author's own `type(scope)!:` prefix, which is stripped from the message Jev sees (the
+  scope goes too). "(#<I>)" PR-number placeholders removed, bodies truncated to 800 chars. Dropped:
+  messages whose body repeats a conventional prefix (squash lists would leak the answer), bodies < 12
+  chars, case/whitespace duplicates. Quotas: fix 285, feat 285, refactor 240, test 195, chore 195,
+  docs 165, style 60, perf 45, ci 30; at most 2 per repo, salted hash order. `other` never holds the truth.
+  Labels are authors' self-labels, so some are noisy (e.g. feat vs fix).
+  ASKJEV_TARGET_COMMIT_MESSAGES (cap 3,000).

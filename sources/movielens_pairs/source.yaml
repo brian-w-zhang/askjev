@@ -13,3 +13,4 @@ notes: >
   (slug keys, "Title (Year)" descriptions; trailing articles moved to the front, alternate-language titles dropped),
   alphabetical. Human distribution: among users who rated both, the share who rated each film higher, ties split
   half-half; n = co-raters. No truth. Node self.lifestyle.this_or_that. Target via ASKJEV_TARGET_MOVIELENS_PAIRS.
+  Wave 2: run with ASKJEV_TARGET_MOVIELENS_PAIRS=5000 (the template cap); rows 1-4000 are unchanged.

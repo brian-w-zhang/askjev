@@ -1,0 +1,23 @@
+name: moral_machine
+url: https://osf.io/3hvt2/
+download: OSF 3hvt2 Datasets/Moral Machine Data/SharedResponses.csv.tar.gz (https://osf.io/download/tdqrn/, 3.2 GB), streamed once and aggregated, never stored
+license: Moral Machine public data (Awad et al. 2018, Nature 563:59-64); no license set on OSF; research use with citation
+version: SharedResponses.csv (OSF upload 2018-07-21), streamed 2026-09-24
+target: 3000
+hemisphere: self
+kind: values
+notes: >
+  Self-driving-car dilemmas as a Choice between `stay` and `swerve` (template_id moral_machine.av; the scenario is
+  rendered in the question text from the two outcomes' character counts, barrier = passengers die, traffic
+  signal = pedestrians crossing legally/illegally). fetch() streams the 3.2 GB tar.gz (curl | tar -xzO), keeps a
+  compact per-outcome table, pairs the stay-side and swerve-side rows by ResponseID (the file lists all stay-side
+  rows first, then all swerve-side rows), and writes aggregates.parquet (per configuration) and
+  aggregates_country.parquet (10 large countries). Dropped while streaming: any scenario with the Criminal or
+  Homeless character, and the Social Status / Social Value scenario type (docs/03-questions.md §6); rows with junk
+  values. Configurations with n >= 100 responses; salted-hash sample of 3,000 (ASKJEV_TARGET_MORAL_MACHINE).
+  Human distribution = share choosing each outcome, globally, plus per-country populations with n >= 100.
+  No truth. Node self.values.sacrificial_dilemmas.
+  Stream result: 70.3M outcome rows, 27.4M paired scenarios kept, 4.94M distinct configurations, 26,020 with
+  n >= 100. Those are almost all the fixed-cast Gender / Fitness / Age / Species scenarios (Utilitarian and Random
+  scenarios draw random characters, so a configuration rarely repeats 100 times). Executives and doctors appear
+  only inside those mirrored scenarios (e.g. male vs female executives), never in a status comparison.

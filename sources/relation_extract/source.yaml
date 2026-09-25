@@ -1,0 +1,18 @@
+name: relation_extract
+url: https://huggingface.co/datasets/bigbio/chemprot
+download: https://huggingface.co/api/datasets/bigbio/chemprot/parquet/chemprot_full_source/{train,validation,test}/0.parquet
+license: Public domain (bigbio license PUBLIC_DOMAIN_MARK_1p0)
+version: ChemProt (BioCreative VI track 5) full source, train + validation + test (2,432 abstracts)
+target: 2000
+hemisphere: machine
+shape: extract
+notes: >
+  Template relation_extract.chem_protein: Choice "What relation does `sentence` state between the chemical
+  `entity_a` and the gene or protein `entity_b`?" over activates / inhibits / agonist_of / antagonist_of /
+  substrate_or_product_of (the five evaluated CPR groups 3,4,5,6,9), other_relation (CPR:1/2/7/8) and none
+  (CPR:10 plus co-mentioned unannotated pairs, the standard ChemProt negative convention). Truth = CPR group.
+  Sentence-level: abstracts split on sentence punctuation, both mentions in one sentence, sentence <= 600 chars;
+  one question per (sentence, chemical text, gene text), dropped when its mention pairs disagree or one name
+  contains the other. none ~20%, other_relation ~8%, the rest water-filled across the five groups.
+  SciERC was considered but its public HF copies are either gated (allenai) or have unnamed integer labels.
+  Target: ASKJEV_TARGET_RELATION_EXTRACT.

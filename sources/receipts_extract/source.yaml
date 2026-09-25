@@ -1,0 +1,22 @@
+name: receipts_extract
+url: https://github.com/clovaai/cord
+download: https://huggingface.co/api/datasets/naver-clova-ix/cord-v2/parquet/default/{train/0-3,validation/0,test/0}.parquet (ground_truth column only, read remotely; images never downloaded)
+license: CC-BY-4.0
+version: CORD v2 (naver-clova-ix/cord-v2), 1,000 Indonesian receipts (800 train / 100 validation / 100 test)
+target: 3000
+hemisphere: machine
+shape: extract
+notes: >
+  Receipt text = the labelled OCR words re-assembled in reading order (grouped by OCR row id, rows
+  sorted by mean y, words by x), <= 1,500 chars; exact-text dedup. Only amounts printed verbatim in
+  that text are used.
+  receipts_extract.total (Choice, node machine.documents.structured_extraction): "Which amount is the
+  total in `receipt`?" Options = total_price + 3 other amounts (2 when the receipt has only 2) from the same receipt with different
+  digits (subtotal, tax, service, cash, change, line prices...), seeded shuffle, plus none_of_these.
+  Truth = total_price.
+  receipts_extract.field_match (Noul, node machine.ai_systems.extraction_verification): "Does
+  `extracted_value` match the `field` in `receipt`?" State = receipt + field description (total,
+  subtotal, tax, service, discount, cash, change, card, e-money, or the price of a uniquely named menu
+  line) + a value. Up to 3 fields per receipt; correct/wrong alternate (50/50). Wrong value = another amount
+  from the same receipt with different digits. meta.true_value keeps the gold value.
+  ASKJEV_TARGET_RECEIPTS_TOTAL (default 1,000), ASKJEV_TARGET_RECEIPTS_MATCH (default 2,000); caps 3,000 each.

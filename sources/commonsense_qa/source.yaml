@@ -1,0 +1,14 @@
+name: commonsense_qa
+url: https://huggingface.co/datasets/tau/commonsense_qa
+license: MIT
+version: tau/commonsense_qa default train + validation parquet (HF parquet API), fetched 2026-09-24
+target: 6000
+hemisphere: world
+kind: factual
+notes: >
+  CommonsenseQA crowd-written questions (built from ConceptNet relations) as World factual Choice: the five answer
+  texts as readable keys, truth = the labeled answer. Train + validation (test has no answers); salted-hash sample
+  of ASKJEV_TARGET_COMMONSENSE_QA (6000). Shared mmlu filters (no computation/"how many" stems, no numeric answers,
+  a wrong "all/none" answer removed), near-duplicates skipped, items left with < 3 answers dropped; a missing
+  "?" is added. node_hint: boolq's keyword map, then the science keyword map, else `world` (the beam walk places it).
+  Many items are everyday situations with no topical anchor, so a large share sits at `world` on purpose.

@@ -1,0 +1,18 @@
+name: medmcqa
+url: https://huggingface.co/datasets/openlifescienceai/medmcqa
+license: Apache-2.0
+version: openlifescienceai/medmcqa default validation + train parquet (HF parquet API), fetched 2026-09-24
+target: 5000
+hemisphere: world
+kind: factual
+notes: >
+  MedMCQA (AIIMS / NEET PG medical entrance exam questions) as World factual Choice: the four answer texts as
+  readable keys (shuffled deterministically per item: the source's letters skew toward a), truth = the correct one. The dev split first, then train, each in salted-hash order, capped at
+  ASKJEV_MEDMCQA_PER_SUBJECT (420) per subject and ASKJEV_TARGET_MEDMCQA (5000) overall. Shared mmlu filters:
+  no picture/computation stems, no numeric answers (doses, percentages, ages), no numbered-statement combos, a
+  wrong "all/none of the above" removed and the item dropped when it is the correct one; garbled text (non-ASCII,
+  "Ans:"/"Ref:" leaks) dropped; near-duplicates and mmlu overlaps skipped. Stems opening like a question (or asking "which")
+  get a "?" in place of a trailing ":"; sentence fragments use mmlu's completion wording. Explanations are never used. node_hint by
+  subject (anatomy/physiology -> human_body, pathology/microbiology/medicine -> diseases, pharmacology/surgery ->
+  medicine, psychiatry -> mental_health, biochemistry -> biology_genetics, OBGYN/pediatrics/PSM/dental -> world.health).
+  Flags: sensitive on sexual, abortion, suicide/poisoning and all forensic-medicine items; abortion also political.

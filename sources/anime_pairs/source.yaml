@@ -15,3 +15,4 @@ notes: >
   most 25 pairs per title. Options = slug keys with "Title (anime TV series|film)" descriptions (MAL romaji titles,
   HTML entities unescaped; titles whose slug collides, like Gintama vs Gintama°, keep only the most-rated), alphabetical. Human distribution: among co-raters, share rating each higher, ties split;
   n = co-raters. No truth. Node self.lifestyle.screens_media. Target via ASKJEV_TARGET_ANIME_PAIRS.
+  Wave 2: run with ASKJEV_TARGET_ANIME_PAIRS=5000 (the template cap); rows 1-4000 are unchanged.

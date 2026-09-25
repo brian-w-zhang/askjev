@@ -1,0 +1,14 @@
+name: snips_intents
+url: https://github.com/sonos/nlu-benchmark
+download: https://huggingface.co/api/datasets/benayas/snips/parquet/default/{train,test}/0.parquet
+license: CC0-1.0
+version: SNIPS NLU benchmark 2017 (7 intents; HF benayas/snips train 13,084 + test 1,400)
+target: 1500
+hemisphere: machine
+shape: route
+notes: >
+  Template snips_intents.intent: Choice "What does the user want the voice assistant to do in `command`?" over
+  the 7 SNIPS intents (keys snake_cased, descriptions hand-written); truth = dataset intent. Differs from
+  massive_en's scenario template (finer intents, e.g. add_to_playlist vs play_music). Case-insensitive dedup
+  across splits; ~214 per intent in salted-hash order. Upstream repo license CC0-1.0 (the HF copy's card says
+  apache-2.0). Node machine.support.commands. Target: ASKJEV_TARGET_SNIPS_INTENTS.

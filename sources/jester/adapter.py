@@ -11,6 +11,7 @@ import httpx
 import pyarrow.parquet as pq
 
 from askjev.model import HumanDist, Question
+from askjev.sampling import env_int, top_up
 
 NAME = "jester"
 # The official host (eigentaste.berkeley.edu) was unreachable on 2026-09-24 and its mirror
@@ -19,7 +20,8 @@ NAME = "jester"
 URL = "https://huggingface.co/datasets/SeppeV/jester_jokes_extracted/resolve/main/data/train-00000-of-00001.parquet"
 FILE = "jester_jokes_extracted.parquet"
 LICENSE = "Jester dataset: free for research use with citation (Goldberg et al. 2001); HF mirror SeppeV/jester_jokes_extracted"
-TARGET = 100
+TARGET = 100  # original seeded sample (kept byte-identical)
+TARGET_ALL = env_int("TARGET_JESTER", TARGET)  # grow beyond 100 with a salted-hash top-up
 SEED = "jester-20260924"
 MIN_RATINGS = 1000
 EDGES = (-6.0, -2.0, 2.0, 6.0)  # equal-width bins over -10..+10
@@ -82,6 +84,7 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
 
     rng = random.Random(SEED)
     picked = sorted(rng.sample(rows, min(TARGET, len(rows))), key=lambda r: int(r[0].split("_")[1]))
+    picked += top_up(picked, rows, TARGET_ALL - len(picked), key=lambda r: r[0], salt=SEED)
     for jid, text, ratings, mean, sexual in picked:
         counts = [0] * 5
         for x in ratings:

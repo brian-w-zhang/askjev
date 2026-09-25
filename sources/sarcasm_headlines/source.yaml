@@ -1,0 +1,15 @@
+name: sarcasm_headlines
+url: https://github.com/rishabhmisra/News-Headlines-Dataset-For-Sarcasm-Detection
+download: https://raw.githubusercontent.com/rishabhmisra/News-Headlines-Dataset-For-Sarcasm-Detection/master/Sarcasm_Headlines_Dataset.json
+license: No license file in the repo; public research dataset, cite Misra & Arora 2023 (AI Open) and Misra & Grover 2021
+version: Sarcasm_Headlines_Dataset.json (v1, 26,709 headlines; sarcastic = The Onion, non-sarcastic = HuffPost)
+target: 1500
+hemisphere: machine
+shape: detect
+notes: >
+  Template sarcasm_headlines.sarcastic: Noul "Is `headline` sarcastic?" State = the lowercased headline
+  as released (no link or outlet). Truth = is_sarcastic (i.e. The Onion). Exact dedup, headlines < 15
+  chars dropped, balanced 750 / 750 in salted hash order. Node machine.trust_safety.brand_safety
+  (satire detection is an ad-suitability check; no dedicated media node). Contested politics
+  (parties, named politicians, elections, guns, abortion, immigration...) flagged "political" by
+  keyword; sexual / self-harm wording flagged "sensitive". ASKJEV_TARGET_SARCASM_HEADLINES (cap 3,000).

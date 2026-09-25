@@ -1,0 +1,15 @@
+name: ecommerce_categories
+url: https://doi.org/10.5281/zenodo.3355823
+download: https://zenodo.org/records/3355823/files/ecommerceDataset.csv
+license: CC-BY-4.0
+version: Gautam (2019) E-commerce text dataset, 50,425 listings, 4 departments
+target: 2000
+hemisphere: machine
+shape: classify
+notes: >
+  Template ecommerce_categories.department: Choice "Which store department does the product in `listing`
+  belong in?" over household / books / electronics / clothing_accessories; truth = dataset label. Real product
+  listings (title + description) from Indian e-commerce sites. Case-insensitive exact dedup, < 40 chars dropped,
+  cut near 800 chars at a word boundary; 500 per department in salted-hash order. Flag sensitive on
+  sexual-product words. Node machine.commerce.listing_categorization. Other HF candidates were synthetic
+  (Lezh1n) or women's fashion only. Target: ASKJEV_TARGET_ECOMMERCE_CATEGORIES.

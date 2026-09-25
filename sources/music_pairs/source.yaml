@@ -16,3 +16,4 @@ notes: >
   alphabetical. Human distribution: among users with both artists in their top list, share who played each artist
   more (ties split); n = those users. This is play behaviour, not a stated rating. No truth. Node
   self.lifestyle.leisure_hobbies. Target via ASKJEV_TARGET_MUSIC_PAIRS.
+  Wave 2: run with ASKJEV_TARGET_MUSIC_PAIRS=5000 (the template cap); rows 1-4000 are unchanged.

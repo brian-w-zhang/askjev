@@ -1,0 +1,15 @@
+name: human_escalation
+url: https://huggingface.co/datasets/bitext/Bitext-customer-support-llm-chatbot-training-dataset
+download: https://huggingface.co/api/datasets/bitext/Bitext-customer-support-llm-chatbot-training-dataset/parquet/default/train/0.parquet
+license: CDLA-Sharing-1.0
+version: Bitext customer support v1 (26,872 messages, 27 intents)
+target: 1000
+hemisphere: machine
+shape: detect
+notes: >
+  Template human_escalation.wants_human: Noul "Is the customer in `message` asking to talk to a human agent?";
+  truth = intent contact_human_agent (450). Negatives (550) spread evenly over the other intents, excluding
+  contact_customer_service (asking how to reach customer service, an ambiguous near-positive). Messages are
+  Bitext's curated synthetic customer utterances (with deliberate typos/colloquialisms); {{Placeholders}} ->
+  [placeholder]. Case-insensitive dedup, salted-hash order. Node machine.support.human_escalation.
+  Target: ASKJEV_TARGET_HUMAN_ESCALATION.
