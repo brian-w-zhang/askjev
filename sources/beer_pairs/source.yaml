@@ -1,0 +1,18 @@
+name: beer_pairs
+url: https://huggingface.co/datasets/SWilliams20/Kaggle_Beer_Reviews
+download: https://huggingface.co/datasets/SWilliams20/Kaggle_Beer_Reviews/resolve/main/beer_reviews.csv
+license: BeerAdvocate reviews collected by McAuley, Leskovec & Jurafsky (2012), redistributed on Kaggle ("Beer Reviews") and mirrored on HF (card tag MIT); research use
+version: HF SWilliams20/Kaggle_Beer_Reviews main (1.59M reviews, 1998-2012), downloaded 2026-09-24
+target: 4000
+hemisphere: self
+kind: taste
+notes: >
+  Pairwise taste Choices "Which beer would you rather drink?" (template_id beer_pairs.drink). Beers with at least
+  400 BeerAdvocate reviews (808 beers; review_overall 1-5 in half steps; one review per user per beer, the first).
+  Each BeerAdvocate style is mapped to a family (IPA, pale ale, amber/brown, stout/porter, lager, wheat, Belgian,
+  sour, strong ale, specialty); a pair needs the same family and at least 100 users who rated both. Salted-hash
+  order (prefix-stable), at most 25 pairs per beer. Options = slug keys (beer name; brewery word prefixed when several
+  names collide) with "Beer by Brewery (Style)" descriptions, alphabetical. Human distribution: among co-raters,
+  share giving each beer the higher overall score, ties split; n = co-raters. No truth. Node
+  self.lifestyle.food_preferences. Target via ASKJEV_TARGET_BEER_PAIRS. The SNAP originals are request-only; this
+  public Kaggle-derived mirror is the BeerAdvocate subset.

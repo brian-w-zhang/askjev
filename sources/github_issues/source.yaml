@@ -1,0 +1,16 @@
+name: github_issues
+url: https://github.com/nlbse2024/issue-report-classification
+download: https://raw.githubusercontent.com/nlbse2024/issue-report-classification/main/data/issues_{train,test}.csv
+license: NLBSE'24 tool competition data (public GitHub issues; repo LICENSE file is empty, no explicit license)
+version: NLBSE'24 issue report classification, train + test (3,000 issues from facebook/react, tensorflow/tensorflow, opencv/opencv, bitcoin/bitcoin, microsoft/vscode; 200 per label per repo)
+target: 2500
+hemisphere: machine
+shape: classify
+notes: >
+  Template github_issues.type: Choice "What kind of issue is the one with `title` and `body`?" over
+  bug / feature / question (the dataset has no documentation label). Truth = dataset label.
+  State = title + body (HTML template comments stripped, whitespace tidied, truncated to 1,200 chars).
+  Title+body dedup, then balanced 834 bug / 833 feature / 833 question in salted hash order.
+  meta keeps repo, created_at and self_labelled (~20% of issues come from templates that state the type, e.g. TF "Issue type: Bug"). The NLBSE'23 1.4M-issue set (GPL-3.0, Azure blob) was not used:
+  its labels are mapped from repo-specific label synonyms and are noisier.
+  ASKJEV_TARGET_GITHUB_ISSUES (cap 3,000).

@@ -1,0 +1,15 @@
+name: movielens_pairs
+url: https://grouplens.org/datasets/movielens/32m/
+license: MovieLens usage license (research use; non-commercial without GroupLens permission; cite Harper & Konstan 2015; no endorsement)
+version: ml-32m.zip (GroupLens, released 2023-10-13), downloaded 2026-09-24
+target: 4000
+hemisphere: self
+kind: taste
+notes: >
+  Pairwise taste Choices "Which movie would you rather watch?" (template_id movielens_pairs.watch). Films with at
+  least 5,000 ratings in MovieLens 32M (1,489 films; the brief floor was 500, raised so every film is well known).
+  A pair needs a shared MovieLens genre and release years at most 10 apart, and at least 200 users who rated both.
+  Pairs are taken in salted-hash order (prefix-stable), at most 25 pairs per film. Options = the two titles
+  (slug keys, "Title (Year)" descriptions; trailing articles moved to the front, alternate-language titles dropped),
+  alphabetical. Human distribution: among users who rated both, the share who rated each film higher, ties split
+  half-half; n = co-raters. No truth. Node self.lifestyle.this_or_that. Target via ASKJEV_TARGET_MOVIELENS_PAIRS.

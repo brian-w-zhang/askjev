@@ -10,6 +10,7 @@ version: >
   MACH_data, MIES_Dev_Data, NIS_data, NPAS-data-16December2018, NPI, NR-6-data-OSPP2024, OHBDS-data,
   OSRI44_dev_data, PWE_data, RIASEC_data12Dec2018, RSE, SD3, Wagner, duckworth-grit-scale-data
 target: 1234
+target_expansion: 3000 (ASKJEV_TARGET_OPENPSYCH; the SWCPQ pool yields 340, total 1,574)
 hemisphere: self
 kind: personality (values for GCBS, NR-6, PWE)
 notes: >
@@ -50,3 +51,20 @@ notes: >
   codebook, and contested politics); APS (image pairs); EBFMT (memory test, HEXACO-PI-R stems truncated);
   itemsgen (free text); MGKT, VIQT, IQ1, FSIQ, SENTANCES, randomnumber (ability/knowledge tests, not Self);
   LSRP (zip returns 404).
+
+  Expansion (ASKJEV_TARGET_OPENPSYCH > 1234): the original 1,234 come out byte-identical and first; after them,
+  one Choice per bipolar adjective pair from the self-report section of the Statistical "Which Character"
+  Personality Quiz (openpsychometrics.org/tests/characters/data/, SWCPQ-Identification-Survey-Dataset-July2022,
+  CC BY-NC-SA 4.0, fetched 2026-09-24; the zip is only downloaded when the target is raised): 'Which describes
+  you better: "playful" or "serious"?', options = the two words. Human distribution from 297,877 quiz takers'
+  own slider positions (1-100 between the words, published rounded to 10): <50 -> first word, >50 -> second,
+  exactly 50 split evenly; meta.raw_mean keeps the mean slider value. Of 401 measures: emoji pairs dropped,
+  sexual pairs dropped (lewd, lustful, kinky, straight/queer, salacious, masochistic, sexual/asexual,
+  perverted, prudish/flirtatious), misaligned pairs 89-92 and 362 dropped, fiction-only pairs (protagonist,
+  main character, poorly-written...), nationality pairs, profanity and "genocidal" dropped, one duplicate pair
+  (hard/soft) merged: 340 remain, in salted-hash order. Political/religious pairs (liberal/conservative,
+  theist/atheist, feminist/sexist...) flagged political; autistic/neurotypical, OCD/ADHD, traumatized,
+  enslaved flagged sensitive. node_hint from a hand map (type.ei/jp/sn/tf, Big Five facet groups, self_concept,
+  dark_side, humor, this_or_that for taste pairs like Coke/Pepsi or cat/dog person), else self.personality.
+  Other _rawdata sets stay excluded as before (clinical, sexual, political, ability tests); nothing else in
+  _rawdata is new since the original pull.

@@ -1,0 +1,18 @@
+name: music_pairs
+url: http://ocelma.net/MusicRecommendationDataset/lastfm-360K.html
+download: https://huggingface.co/datasets/matthewfranglen/lastfm-360k (train.gz.parquet); artist display names from the public MusicBrainz web service (ws/2/artist/<mbid>, 1 request/s, cached in data/raw/music_pairs/artist_names.json)
+license: Last.fm Dataset 360K (Òscar Celma, MTG/UPF), distributed with permission of Last.fm for non-commercial use; cite Celma 2010. Artist names: MusicBrainz core data (CC0)
+version: HF matthewfranglen/lastfm-360k train split (287k users, 13.9M user-artist play counts, 2008); MusicBrainz names fetched 2026-09-24
+target: 4000
+hemisphere: self
+kind: taste
+notes: >
+  Pairwise taste Choices "Which artist would you rather listen to?" (template_id music_pairs.listen). Artists (by
+  MusicBrainz id) among the top artists of at least 3,000 users of the train split (751 artists; 1 without a
+  MusicBrainz name and non-Latin names that slug to nothing are skipped). Display names from MusicBrainz (the Last.fm
+  dump is lowercased), with Unicode hyphens/quotes mapped to ASCII. "Comparable" = a shared audience: cosine of the
+  two artists' listener sets >= 0.08; a pair also needs at least 200 users listing both. Salted-hash order
+  (prefix-stable), at most 25 pairs per artist. Options = slug keys with the artist name as description,
+  alphabetical. Human distribution: among users with both artists in their top list, share who played each artist
+  more (ties split); n = those users. This is play behaviour, not a stated rating. No truth. Node
+  self.lifestyle.leisure_hobbies. Target via ASKJEV_TARGET_MUSIC_PAIRS.

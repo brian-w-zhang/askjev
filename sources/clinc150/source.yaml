@@ -1,0 +1,16 @@
+name: clinc150
+url: https://huggingface.co/datasets/clinc/clinc_oos
+download: https://huggingface.co/api/datasets/clinc/clinc_oos/parquet/plus/test/0.parquet (+ intent names from the datasets-server info API, domain map from github.com/clinc/oos-eval data/domains.json)
+license: CC-BY-3.0
+version: clinc_oos "plus" test split (4,500 in-scope queries over 150 intents / 10 domains + 1,000 out-of-scope)
+target: 3500
+hemisphere: machine
+shape: route
+notes: >
+  Template clinc150.domain (2,500; ASKJEV_TARGET_CLINC150): Choice over the 10 CLINC domains + out_of_scope,
+  hand-written descriptions; truth = domain of the labelled intent per the dataset's domains.json. 10% OOS;
+  in-scope rows round-robin across domains (225 each) and, within a domain, across its 15 intents.
+  Template clinc150.in_scope (1,000; ASKJEV_TARGET_CLINC150_SCOPE): Noul "Is `message` a request this virtual
+  assistant supports?", the true criterion lists the supported areas; truth = not OOS; 40% OOS, messages
+  disjoint from the domain template. Case-insensitive exact dedup. Both on machine.support.routing.
+  meta.intent keeps the fine-grained label.

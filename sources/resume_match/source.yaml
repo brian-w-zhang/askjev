@@ -1,0 +1,16 @@
+name: resume_match
+url: https://huggingface.co/datasets/opensporks/resumes
+download: https://huggingface.co/api/datasets/opensporks/resumes/parquet/default/train/0.parquet
+license: CC0-1.0
+version: LiveCareer resume dataset (Kaggle snehaanbhawal/resume-dataset mirror; 2,484 resumes, 24 categories)
+target: 1000
+hemisphere: machine
+shape: classify
+notes: >
+  Template resume.category: Choice "Which job category does `resume` fit best?" over the 24 LiveCareer
+  categories (snake_case keys with short descriptions). Truth = the category the resume was filed under
+  on livecareer.com (a filing label, so some resumes read as another field). Text whitespace collapsed,
+  truncated to 1,500 chars; resumes under 200 chars and duplicates dropped. Balanced round-robin in
+  salted hash order (~43 per category; BPO has only 22). Chosen over ahmedheakl/resume-atlas (43
+  overlapping categories, text lowercased with punctuation and stopwords stripped) and
+  InferencePrince555/Resume-Dataset (generation prompts, not labels). ASKJEV_TARGET_RESUME_MATCH.

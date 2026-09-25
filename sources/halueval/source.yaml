@@ -1,0 +1,17 @@
+name: halueval
+url: https://github.com/RUCAIBox/HaluEval
+download: https://raw.githubusercontent.com/RUCAIBox/HaluEval/main/data/{qa,dialogue,summarization}_data.json
+license: MIT
+version: HaluEval main branch data/ (10,000 items per task: qa, dialogue, summarization)
+target: 4500 (1,500 per template; ASKJEV_TARGET_HALUEVAL sets the per-template count)
+hemisphere: machine
+shape: verify
+notes: >
+  Three Noul templates at machine.ai_systems.hallucination_citation: halueval.qa ("Is `answer` supported by
+  `knowledge`...?", state question/knowledge/answer), halueval.dialogue ("Is `response` faithful to `knowledge`
+  and the conversation...?", state knowledge/conversation/response), halueval.summarization ("Is every claim in
+  `summary` supported by `document`?"; only documents <= 2,000 chars, kept whole). Each source item is used once
+  with either its right or its hallucinated output; exactly half of each template is hallucinated (salted hash).
+  Truth = not hallucinated; meta.variant records which. Dedup by question / dialogue history / document.
+  Sample = first 1,500 per task in salted-hash order. Known artifact: HaluEval QA right answers are short spans
+  while hallucinated answers are often full sentences. Sensitive/political content flagged by keyword.

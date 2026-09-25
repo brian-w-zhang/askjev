@@ -1,0 +1,20 @@
+name: civil_comments
+url: https://huggingface.co/datasets/google/civil_comments
+download: https://huggingface.co/api/datasets/google/civil_comments/parquet/default/test/0.parquet
+license: CC0-1.0
+version: HF google/civil_comments default/test (97,320 comments, crowd-rated toxicity fractions)
+target: 4500
+hemisphere: machine
+shape: detect, classify
+notes: >
+  Template civil_comments.toxic (Noul, 2,500): truth = toxicity fraction >= 0.5, sampled 40% positive in
+  salted-hash order. HumanDist = the rater toxic fraction (population "Civil Comments raters"; the HF export
+  has no annotator counts, so n is null).
+  Template civil_comments.harm_kind (Choice, 2,000) over insult / identity_attack / threat / obscene /
+  sexual_explicit / none: truth = on comments with toxicity >= 0.5, the unique highest sub-attribute fraction if >= 0.5 (ties dropped), none =
+  clean comments (toxicity < 0.5, every sub-attribute < 0.2). none ~30%, the rest water-filled across the
+  five kinds (sexual_explicit and threat are rare).
+  Dropped: slurs, sexual content mentioning minors, comments > 1,500 chars, near-empty, exact duplicates.
+  Flags: sensitive (sexual_explicit >= 0.3, sexual words, or truth sexual_explicit); political (parties,
+  elections, named politicians, abortion, guns, immigration...).
+  Targets: ASKJEV_TARGET_CIVIL_COMMENTS (toxic), ASKJEV_TARGET_CIVIL_COMMENTS_KIND (harm_kind).

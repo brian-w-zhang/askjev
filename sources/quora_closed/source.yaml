@@ -1,0 +1,24 @@
+name: quora_closed
+url: https://huggingface.co/datasets/sentence-transformers/quora-duplicates
+license: Quora Question Pairs (research use)
+version: sentence-transformers/quora-duplicates pair-class train parquet (404,290 pairs, 537,362 unique questions), fetched 2026-09-24
+target: 10000
+target_phase6: 10000 (ASKJEV_TARGET_QUORA_CLOSED); world share cap ASKJEV_QUORA_CLOSED_WORLD_PCT (default 60)
+hemisphere: world + self (at most 60% world)
+kind: factual, evaluative, forecast, values, social, taste
+notes: >
+  Real closed questions people asked on Quora. Every unique question string is a candidate; kept only if it opens
+  like a closed question, is one standalone question of 25-160 ASCII characters (a trailing "Why?" / "If so, why?"
+  is stripped when the part before it is a complete question), has no rare-word typos (every lowercase word seen
+  at least 5 times across the corpus), is not about the asker's own situation (no I/me/my), is not a request
+  ("Can you suggest", "Is there an app", "Does anyone"), not about Quora, not homework math, needs no unseen
+  context (this/above/photo, bare he/she) and is not pinned to a moment that has passed (this year, "Will X by 2018").
+  Either/or yes/no questions and hidden second questions are dropped. "Which is better, A or B?" style (explicit
+  separator, 2-5 short options) and "Would you rather A or B?" become Choice with the options as keys; everything
+  else is Noul. Duplicate pairs (label=1) are merged with union-find plus a normalized-text key; one question per
+  cluster. Tags by keyword rules: self = the answerer's taste, values ("Is it wrong to", "Should ..."), social
+  judgments and "do/would you" opinions; world = factual, evaluative ("worth it", "better than"), forecast.
+  Sampled in salted-hash order with world capped at 60%. No truth. Contested politics flagged political,
+  sexual/health/drug/self-harm flagged sensitive (generous regexes); slurs and sexual content involving minors dropped.
+  Yield at the defaults: 39,975 questions pass the filters (2,220 self, 37,755 world), so self is the binding
+  constraint and the output is 5,550 (2,220 self + 3,330 world). ASKJEV_QUORA_CLOSED_WORLD_PCT=78 reaches 10,000.

@@ -1,0 +1,13 @@
+name: arc
+url: https://huggingface.co/datasets/allenai/ai2_arc
+license: CC BY-SA 4.0
+version: allenai/ai2_arc ARC-Challenge + ARC-Easy, train + validation + test parquet (HF parquet API), fetched 2026-09-24
+target: 7500 (every clean item; 7,367)
+hemisphere: world
+kind: factual
+notes: >
+  AI2 Reasoning Challenge grade-school science questions as World factual Choice with truth (answer-text keys as in
+  mmlu). ARC-Challenge first, then ARC-Easy. Same snap-judgment filters as mmlu (no numeric answers, computation,
+  pictures/diagrams, or combination answers); fragments wrapped in the completion wording (origin=template); a
+  leading "Use the information below ..." is removed. Items already taken by mmlu and near-duplicates are skipped.
+  node_hint: the shared science keyword map (mmlu adapter, SCIENCE_RULES), default world.science.

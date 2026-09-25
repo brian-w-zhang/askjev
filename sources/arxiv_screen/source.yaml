@@ -1,0 +1,21 @@
+name: arxiv_screen
+url: https://huggingface.co/datasets/gfissore/arxiv-abstracts-2021
+download: https://huggingface.co/api/datasets/gfissore/arxiv-abstracts-2021/parquet/default/train/3.parquet
+license: CC0-1.0
+version: arXiv metadata snapshot 2021, parquet shard 3 only (363k papers, ids 1912.x-2112.x)
+target: 2000
+target_ml: 1000
+hemisphere: machine
+shape: classify
+notes: >
+  Template arxiv.field: Choice "Which field of arXiv is the paper with `title` and `abstract` from?"
+  over 10 areas (computer_science, mathematics, physics [all physics archives except astro-ph and
+  cond-mat], astrophysics, condensed_matter, quantitative_biology, quantitative_finance, statistics,
+  economics, electrical_engineering_and_systems_science). Truth = area of the primary category; only
+  papers whose every listed category is in the same area are sampled (no cross-area ambiguity);
+  math-ph primaries dropped. 200 per area, salted hash order. Abstracts 200-1,500 chars, whitespace
+  collapsed, withdrawn papers dropped.
+  Template arxiv.is_ml: Noul "Is the paper with `title` and `abstract` about machine learning?".
+  500 true (primary cs.LG or stat.ML) + 500 false (no ML-adjacent category anywhere: cs.LG, stat.ML,
+  cs.AI, cs.CV, cs.CL, cs.NE, cs.IR, cs.RO, cs.MA, eess.IV, eess.AS), negatives spread 50 per area.
+  meta keeps categories and primary. ASKJEV_TARGET_ARXIV_SCREEN / ASKJEV_TARGET_ARXIV_SCREEN_ML.

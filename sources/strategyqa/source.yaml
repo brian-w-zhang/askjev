@@ -1,0 +1,13 @@
+name: strategyqa
+url: https://huggingface.co/datasets/wics/strategy-qa
+license: MIT
+version: wics/strategy-qa config `strategyQA` split `test` parquet (= the original 2,290-question annotated set), fetched 2026-09-24
+target: 2000
+hemisphere: world
+kind: factual
+notes: >
+  StrategyQA (Geva et al. 2021) implicit multi-step yes/no questions as World factual Noul, truth = the dataset
+  answer, state = null. The Wikipedia term, its description and the annotated facts are kept in meta only.
+  Questions with digits (counting, dates) and duplicates dropped (2,097 remain); salted-hash sample.
+  node_hint: the boolq keyword rules scored over the question, the term (as title) and "<term> is a <description>".
+  License MIT from the upstream eladsegal/strategyqa repository (the HF card says "other").

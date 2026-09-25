@@ -20,10 +20,13 @@ import numpy as np
 import polars as pl
 
 from askjev.model import HumanDist, Question
+from askjev.sampling import env_int, hash_order
 
 NAME = "openpsych"
 LICENSE = "Open Psychometrics raw data (no license stated); item texts from the instruments' codebooks"
 BASE = "https://openpsychometrics.org/_rawdata/"
+TARGET_V1 = 1234  # the original output (all items of the 27 instruments), kept byte-identical and first
+TARGET = env_int("TARGET_OPENPSYCH", TARGET_V1)  # expansion: SWCPQ bipolar self-report items appended after
 KEY_ROWS = 50_000  # first rows (all items of the scale valid) used to estimate data-driven keys
 
 # zip name -> folder it extracts to
@@ -666,6 +669,12 @@ def fetch(raw_dir: Path) -> None:
         (raw_dir / z).write_bytes(r.content)
         zf = zipfile.ZipFile(io.BytesIO(r.content))
         zf.extractall(raw_dir, members=[m for m in zf.namelist() if "/images/" not in m and "/items/" not in m])
+    if TARGET > TARGET_V1 and not (raw_dir / SWCPQ_DIR / "data files" / f"{SWCPQ_DIR}.csv").exists():
+        r = httpx.get(SWCPQ_URL, headers=headers, follow_redirects=True, timeout=1200)
+        r.raise_for_status()
+        (raw_dir / Path(SWCPQ_URL).name).write_bytes(r.content)
+        zf = zipfile.ZipFile(io.BytesIO(r.content))
+        zf.extractall(raw_dir, members=[m for m in zf.namelist() if "/pics/" not in m])
 
 
 def ipip_markers(raw: Path) -> set[str]:
@@ -675,6 +684,15 @@ def ipip_markers(raw: Path) -> set[str]:
 
 
 def normalize(raw_dir: Path) -> Iterator[Question]:
+    n = 0
+    for q in _normalize_v1(raw_dir):
+        n += 1
+        yield q
+    if TARGET > n:
+        yield from swcpq(raw_dir, TARGET - n)
+
+
+def _normalize_v1(raw_dir: Path) -> Iterator[Question]:
     markers = ipip_markers(raw_dir)
     merged: dict[str, dict] = {}  # norm(text)+frame -> record
     order: list[str] = []
@@ -771,3 +789,114 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
                                  distribution={keys[int(a)]: v for a, v in d.items()}, n=n,
                                  source=f"openpsychometrics.org/_rawdata {folder} item {ci.code}; {ci.scale_raw}")],
             )
+
+
+# ---------- expansion: Statistical "Which Character" Personality Quiz self-reports ----------
+
+SWCPQ_DIR = "SWCPQ-Identification-Survey-Dataset-July2022"
+SWCPQ_URL = f"https://openpsychometrics.org/tests/characters/data/{SWCPQ_DIR}.zip"
+SWCPQ_LICENSE = "CC BY-NC-SA 4.0 (Open Psychometrics, Statistical 'Which Character' Personality Quiz data)"
+SWCPQ_SALT = "openpsych-swcpq-v1"
+# Measure ids left out: sexual (6 lewd, 33 lustful, 45 kinky, 175 straight/queer, 222 salacious, 282 masochistic,
+# 332 sexual/asexual, 336 perverted, 395 prudish/flirtatious); 89-92 and 362 pair words from other items
+# (key.js misalignment); fiction-only (289 believable/poorly-written, 361 everyman/chosen one,
+# 363 protagonist/antagonist, 373 tautology/oxymoron, 401 main/side character); 270-273 nationality pairs
+# (French/Russian ...); 314 profanity; 369 genocidal.
+SWCPQ_SKIP = {6, 33, 45, 175, 222, 282, 332, 336, 395, 89, 90, 91, 92, 362, 289, 361, 363, 373, 401, 270, 271, 272,
+              273, 314, 369}
+SWCPQ_POLITICAL = {20, 48, 61, 63, 83, 96, 138, 149, 190, 202, 216, 220, 226, 227, 284, 387, 116}
+SWCPQ_SENSITIVE = {80, 274, 321, 106}
+WORD_FIX = {"down2earth": "down-to-earth", "head@clouds": "head in the clouds",
+            "open to new experinces": "open to new experiences", "'right-brained'": "right-brained",
+            "'left-brained'": "left-brained", "boy/girl-next-door": "girl or boy next door"}
+BFs = "self.personality.big_five."
+SWCPQ_NODE = {
+    **{i: "self.personality.type.ei" for i in (34, 59, 72, 212, 99, 229)},
+    **{i: "self.personality.type.jp" for i in (47, 49, 15, 150, 360)},
+    **{i: "self.personality.type.sn" for i in (53, 71, 100, 132, 152, 228, 305, 316, 366, 349)},
+    **{i: "self.personality.type.tf" for i in (35, 41, 367, 129, 292)},
+    **{i: BFs + "neuroticism.fear_worry" for i in (74, 18, 384, 376, 19, 27)},
+    **{i: BFs + "neuroticism.temper_moodiness" for i in (36, 125, 211, 278, 400, 141)},
+    **{i: BFs + "neuroticism.self_consciousness" for i in (62, 127, 391)},
+    **{i: BFs + "extraversion.sociability_energy" for i in (2, 60, 130, 142, 297, 57, 24, 139, 161, 3, 223, 285)},
+    **{i: BFs + "agreeableness.kindness_cooperation" for i in (17, 25, 76, 79, 84, 179, 351, 352, 154, 195, 397, 378)},
+    **{i: BFs + "agreeableness.trust_modesty_temper" for i in (10, 23, 31, 38, 110, 217, 355, 385, 390, 14, 197)},
+    **{i: BFs + "conscientiousness.drive_self_discipline" for i in (32, 75, 136, 199, 213, 214, 218, 345, 386, 131, 230)},
+    **{i: BFs + "conscientiousness.order_caution" for i in (8, 169, 233, 283, 151)},
+    **{i: BFs + "openness.ideas_imagination" for i in (12, 29, 30, 73, 208, 231, 12, 188, 191)},
+    **{i: BFs + "openness.convention_politics" for i in (16, 134, 198, 177, 348, 155, 224)},
+    **{i: "self.personality.dark_side" for i in (304, 337, 39, 81, 58, 22)},
+    **{i: "self.personality.humor_style.humor_habits_tastes" for i in (95, 121, 294, 320, 1)},
+    **{i: "self.personality.risk_decision_style" for i in (82, 133, 394, 187, 47)},
+    **{i: "self.personality.self_concept" for i in (26, 37, 40, 69, 70, 97, 108, 145, 148, 184, 135, 5, 94, 280, 203,
+                                                     146, 203)},
+    **{i: "self.personality.motivation_ambition" for i in (340, 350, 164, 389)},
+    **{i: "self.lifestyle.this_or_that" for i in (68, 147, 207, 209, 342, 343, 346, 368, 370, 371, 382, 317, 381, 315)},
+    **{i: "self.lifestyle.money_habits" for i in (66, 215, 353)},
+    **{i: "self.lifestyle.style_appearance" for i in (88, 165, 379)},
+}
+SWCPQ_TASTE = {68, 147, 207, 209, 342, 343, 346, 368, 370, 371, 382, 317, 381, 315}
+
+
+def _swcpq_measures(path: Path) -> dict[int, tuple[str, str]]:
+    t = read_text(path).split("var subjects")[0]
+    out = {}
+    for m in re.finditer(r'^(\d+)\s*:\s*\["(.*?)",\s*"(.*?)"\]', t, re.M):
+        i, a, b = int(m.group(1)), html.unescape(m.group(2)).strip(), html.unescape(m.group(3)).strip()
+        if "&#" in m.group(2) + m.group(3) or not re.search(r"[A-Za-z]", a + b):
+            continue  # emoji pairs
+        out[i] = (WORD_FIX.get(a, a), WORD_FIX.get(b, b))
+    return out
+
+
+def swcpq(raw_dir: Path, k: int) -> Iterator[Question]:
+    """One Choice per bipolar adjective pair of the character quiz's self-report section: "Which describes you
+    better: X or Y?", with the distribution of quiz takers' own slider positions (1-100, published rounded to
+    10): below 50 -> first word, above 50 -> second, exactly 50 split evenly."""
+    d = raw_dir / SWCPQ_DIR
+    measures = _swcpq_measures(d / "resources" / "key.js")
+    df = pl.read_csv(d / "data files" / f"{SWCPQ_DIR}.csv", separator="\t", columns=["quiz_items"],
+                     infer_schema_length=0, quote_char=None)
+    x = (df.with_columns(pl.col("quiz_items").str.json_decode(pl.List(pl.List(pl.Int64))))
+         .explode("quiz_items")
+         .select(pl.col("quiz_items").list.get(1).alias("item"), pl.col("quiz_items").list.get(2).alias("v"))
+         .drop_nulls())
+    counts = x.group_by("item", "v").len()
+    by_item: dict[int, dict[int, int]] = {}
+    for item, v, c in counts.iter_rows():
+        by_item.setdefault(item, {})[v] = c
+
+    seen: set[tuple[str, str]] = set()
+    pool = []
+    for i, (a, b) in sorted(measures.items()):
+        pair = tuple(sorted((a.lower(), b.lower())))
+        if i in SWCPQ_SKIP or i not in by_item or pair in seen:
+            continue
+        seen.add(pair)
+        pool.append((i, a, b))
+
+    for i, a, b in hash_order(pool, key=lambda x: x[0], salt=SWCPQ_SALT)[:k]:
+        ka, kb = choice_keys([a, b])
+        vc = by_item[i]
+        lo = sum(c for v, c in vc.items() if v < 50)
+        hi = sum(c for v, c in vc.items() if v > 50)
+        mid = vc.get(50, 0)
+        n = lo + hi + mid
+        meta = {"instrument": "SWCPQ", "measure_id": i,
+                "scale_raw": "slider 1-100 between the two words (1 = first word), published rounded to the nearest 10",
+                "raw_mean": round(sum(v * c for v, c in vc.items()) / n, 2)}
+        flags = (["political"] if i in SWCPQ_POLITICAL else []) + (["sensitive"] if i in SWCPQ_SENSITIVE else [])
+        if flags:
+            meta["flags"] = flags
+        yield Question(
+            text=f'Which describes you better: "{a}" or "{b}"?', primitive="choice", hemisphere="self",
+            kind="taste" if i in SWCPQ_TASTE else "personality", origin="dataset", source=NAME,
+            options={ka: None, kb: None}, node_hint=SWCPQ_NODE.get(i, "self.personality"),
+            human_text=f'Which would most people say describes them better: "{a}" or "{b}"?',
+            source_item_id=f"SWCPQ|{i}", license=SWCPQ_LICENSE, meta=meta,
+            human=[HumanDist(population="OpenPsychometrics web (Which Character quiz self-reports)",
+                             distribution={ka: round((lo + mid / 2) / n, 6), kb: round((hi + mid / 2) / n, 6)}, n=n,
+                             source=f"openpsychometrics.org/tests/characters/data {SWCPQ_DIR} quiz_items measure {i}; "
+                                    "slider <50 -> first word, >50 -> second, 50 split evenly",
+                             wave="2020-2022")],
+        )

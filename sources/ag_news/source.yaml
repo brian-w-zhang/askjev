@@ -1,0 +1,14 @@
+name: ag_news
+url: https://huggingface.co/datasets/fancyzhx/ag_news
+download: https://huggingface.co/api/datasets/fancyzhx/ag_news/parquet/default/test/0.parquet
+license: "AG's corpus: non-commercial research use (Zhang et al. 2015)"
+version: AG News test split (7,600 articles, 4 classes)
+target: 1500
+hemisphere: machine
+shape: classify
+notes: >
+  Template ag_news.section: Choice "Which section of a news site does `article` belong in?" over world /
+  sports / business / sci_tech with short descriptions; truth = dataset label. Text = title + lead as
+  shipped, with the corpus's stripped entities repaired ("#36;" -> "$", "&lt;" -> "<"), tags and stray
+  backslashes removed. Exact dedup, 375 per class in salted-hash order. Articles from 2004 mention the US
+  election a lot: election/party/politician names flag "political". ASKJEV_TARGET_AG_NEWS overrides the count.

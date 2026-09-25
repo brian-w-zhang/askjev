@@ -27,8 +27,9 @@ queue; `docs/expansion-log.md` is the running record (one section per wave). `CL
   entrepreneurship, personal finance, real estate < 70), `self.mind` 1.9% vs 5%, `self.personality` 3.1% vs 8%,
   `self.lifestyle` 4.1% vs 8%, kind personality 4.1% vs 9%, factual 10% vs 15%.
 - **Empty:** 45 Machine leaves have < 10 questions (hallucination_citation, model_routing, function_calling,
-  toxicity_harassment, personal_data, paper_screening, reranking, issue_triage...). The 965 Vital L3 topic
-  nodes hold ≤ 2 questions each; the Vital L4 entities mostly landed on hand nodes instead.
+  toxicity_harassment, personal_data, paper_screening, reranking, issue_triage...). The 965 Vital L3
+  nodes are single entities (Gandhi, the Yangtze), each holding its own 2 entity questions by design; they
+  are leaves, not topic groupings, so Vital L4 entities correctly sit on the hand topic nodes.
 
 ## 2. How the MVP run worked, and what changes
 The MVP ran **source a batch → ingest → `askjev pipeline`** (place → screen → answer → dedupe → measure →
@@ -135,8 +136,5 @@ Another session is changing the UI at the same time. The expansion agent must no
   - New nodes may be added: splits, grows, new hand nodes for real gaps.
   - Existing node ids and paths never change. No `group` or retire operations while the UI is in flux.
 - **Jev.** One pipeline process at `ASKJEV_RPS=16` leaves headroom for the UI's search rerank and ask box.
-- **Tree fixes allowed in wave 1:**
-  - Re-home Vital L4 entity questions under their Vital L3 topic node when the adapter recorded the parent.
-    Check a sample of 200 first. This moves questions, not nodes.
-  - Add hand nodes for consumer and practical decisions ("should I buy X or Y", home and DIY, tenant and
-    consumer rights) and internet culture, if Quora placement shows they have no home.
+- **Tree additions allowed in wave 1:** hand nodes for consumer and practical decisions ("should I buy X or
+  Y", home and DIY, tenant and consumer rights) and internet culture, if Quora placement shows they have no home.

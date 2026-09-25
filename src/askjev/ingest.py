@@ -47,15 +47,31 @@ def resolve_hint(hint: str | None, nodes: set[str]) -> str | None:
     return None
 
 
+def _clean(v):
+    """Postgres text/jsonb can't hold NUL characters; drop them wherever they hide."""
+    if isinstance(v, str):
+        return v.replace("\x00", "")
+    if isinstance(v, dict):
+        return {_clean(k): _clean(x) for k, x in v.items()}
+    if isinstance(v, list):
+        return [_clean(x) for x in v]
+    return v
+
+
 def ingest_questions(qs: list[Question], batch: int = 500) -> int:
     """Upsert questions (+ human dists, embeddings). Hinted questions get a deterministic placement
     only when the hint resolves exactly; partial matches are left for the Jev placement stage."""
     nodes = existing_nodes()
+    for q in qs:
+        q.text, q.options, q.state = _clean(q.text), _clean(q.options), _clean(q.state)
     n = 0
     with db.connect() as conn:
+        have = {r["id"] for r in conn.execute("select id from questions where id = any(%s)", ([q.id for q in qs],))}
+        # skip rows already stored (no re-embedding), and embed in length order: similar lengths pad less (~2x faster)
+        qs = sorted((q for q in qs if q.id not in have), key=lambda q: len(question_text(q.text, q.options, q.state)))
         for i in range(0, len(qs), batch):
             chunk = qs[i : i + batch]
-            vecs = embed([question_text(q.text, q.options, q.state) for q in chunk])
+            vecs = embed([question_text(q.text, q.options, q.state) for q in chunk], batch_size=32)
             for q, v in zip(chunk, vecs):
                 node = q.node_hint if q.node_hint in nodes else None
                 flags = list(q.meta.get("flags", []))

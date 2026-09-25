@@ -5,8 +5,11 @@ license: >
   (https://openpsychometrics.org/_rawdata/IPIP-FFM-data-8Nov2018.zip), no license stated on the data page.
 version: >
   ipip.ori.org scoring-key pages newBigFive5broadKey.htm, newNEOKey.htm, BFASKeys.htm, newAB5CKey.htm,
-  newHEXACO_PI_key.htm (fetched 2026-09-24); IPIP-FFM-data-8Nov2018
+  newHEXACO_PI_key.htm (fetched 2026-09-24); IPIP-FFM-data-8Nov2018. Expansion: AlphabeticalItemList.htm (all
+  3,320 IPIP items) and TedoneItemAssignmentTable30APR21.xlsx (item -> scale assignments, linked from
+  ipip.ori.org/ItemAssignmentTable.htm), fetched 2026-09-24
 target: 600
+target_expansion: 3500 (ASKJEV_TARGET_IPIP; the pool yields 3,329)
 hemisphere: self
 kind: personality
 notes: >
@@ -21,3 +24,19 @@ notes: >
   2016-2018 with IPC==1 (one record per IP) and all 50 items answered 1-5 (n=603,322). Their scale was
   1=Disagree, 3=Neutral, 5=Agree, mapped 1..5 -> levels "0".."4"; agreement anchors are not identical to
   the "describes me" levels.
+
+  Expansion (ASKJEV_TARGET_IPIP > 600): the original 600 come out byte-identical and first; after them,
+  every other item of the 3,320-item pool (key-page leftovers from AB5C/IPIP-HEXACO, then the alphabetical
+  list), deduplicated by normalized text, in salted-hash order. Same text frame and five "describes me"
+  levels. Stems that open with a clause get "I" after it ("When in a group, I try ..."). Scale info comes from
+  the key pages when the item was parsed there, else from Tedone's table (matched exactly, then ignoring
+  "that"/"am", then fuzzily at 0.92): meta.ipip_scales lists every (instrument, label, keyed) and
+  meta.ipip_survey_codes the ORI survey codes. node_hint maps the construct label to the deepest fitting
+  node (Big Five facet groups, dark_side, humor, risk, self_concept, happiness_wellbeing, interests...); labels
+  of IPIP scales built to correlate with CPI, MPQ, JPI, BIS/BAS and the 7-factor model are not used for
+  placement (their items are often off-topic for the label). About 1,800 expansion items have no usable
+  label (about 1,400 of the 3,320 IPIP items are on no published scale) and get node_hint self.personality,
+  so the placement walk puts them. No norms for expansion items. Flags: items of clinical symptom scales
+  (CES-D, dissociation, OCD symptoms, CAT-PD self-harm/anhedonia/unusual experiences/cognitive
+  problems/health anxiety) and sex/self-harm/drug wording are sensitive; religion, faith, God, politics and
+  the IPIP Liberalism/political-activism scales are political.

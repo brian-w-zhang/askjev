@@ -1,0 +1,30 @@
+name: wikidata_g4
+url: https://query.wikidata.org/ (heavy pulls via https://qlever.dev/api/wikidata)
+license: CC0 (Wikidata)
+version: SPARQL pulls cached 2026-09-24 (data/raw/wikidata_g4/<query>.json)
+target: 8345
+hemisphere: world
+kind: factual
+notes: >
+  G4 categorical facts with ground truth. Choice with 4 options (truth + 3 same-type distractors, shuffled
+  deterministically), origin wikidata-fact, truth = correct key. Entities need >= 40 sitelinks (first-level
+  subdivisions >= 60: bot wikis inflate provinces). Templates (template_id g4.<name>, <= 1,500 each):
+  continent ("Which continent is <country>/the city of <city> in?"; single continent after merging Oceania variants;
+  transcontinental countries skipped), country_of ("In which country is the landmark <X> located?" / "... the city of
+  <X>?"; single P17; distractors from the same continent; cities alternate with the continent template so none
+  is asked twice; landmark types whitelisted, settlements/airports/companies/destroyed structures dropped),
+  citizenship ("Which country is <person> from?"; single P27 = birth country, born 1900+), field ("What is the
+  primary field of <person>?"; exactly one of 15 scientific occupations and no other famous occupation; overlapping
+  fields never distractors), sport ("Which sport is <person> known for?"; one sport from P641 plus athlete
+  occupations; actors/musicians/etc. with a P641 dropped; soccer capped at 350; close sports never distractors),
+  language ("What is the official language of <country>?"; single P37; distractors are official languages on
+  the same continent minus the neighbors'), capital ("What is the capital of <country>?" / "<state>, <country>?";
+  single P36; distractors are the most-linked other cities of that country/state, never a co-seat like The Hague;
+  capital named like its state skipped), century ("In which century was <person> born?"; year precision, 1-2000 AD,
+  years ending 00/01 skipped, 20th capped 500 and 19th 400; neighbouring centuries as distractors, ranges in
+  the descriptions). Most-linked entities first; ambiguous labels (shared by two entities of one kind, city named
+  like a country/state) and non-Latin/parenthesised labels skipped. Flags: political on disputed states (Taiwan,
+  Palestine, Kosovo, Israel...) and on politicians born 1900+; location questions whose truth is itself
+  contested (Jerusalem holy sites, anything placed in Palestine) are skipped. Node hints by entity type and
+  occupation. WDQS for the small class queries; the human/city/landmark sitelink rankings time out on WDQS,
+  so they go to QLever first (same data). 1 request/s.

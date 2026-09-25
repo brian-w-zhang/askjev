@@ -1,0 +1,15 @@
+name: yahoo_topics
+url: https://huggingface.co/datasets/community-datasets/yahoo_answers_topics
+download: https://huggingface.co/api/datasets/community-datasets/yahoo_answers_topics/parquet/yahoo_answers_topics/test/0.parquet
+license: "Yahoo! Answers Comprehensive Q&A (Yahoo Webscope L6): non-commercial research use"
+version: Yahoo! Answers Topics test split (60,000 questions, 10 categories)
+target: 2000
+hemisphere: machine
+shape: classify
+notes: >
+  Template yahoo_topics.category: Choice "Which topic category does `question` belong to?" over the 10
+  top-level categories with short descriptions; truth = dataset label. State = title, blank line, the
+  asker's details (literal "\n" and entities repaired), truncated at a word near 1,500 chars. The best
+  answer is not sent. Exact dedup; 200 per category in salted-hash order. Slurs and sexual content
+  mentioning minors dropped; other sexual, self-harm or abuse content flagged "sensitive"; contested
+  politics flagged "political". ASKJEV_TARGET_YAHOO_TOPICS overrides the count.

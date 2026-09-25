@@ -1,0 +1,19 @@
+name: daily_dilemmas
+url: https://huggingface.co/datasets/kellycyy/daily_dilemmas
+license: CC-BY-4.0
+version: kellycyy/daily_dilemmas parquet (Dilemmas_with_values_aggregated, Values; HF parquet API), fetched 2026-09-24
+target: 1360
+hemisphere: self
+kind: values
+notes: >
+  DailyDilemmas (Chiu, Jiang & Choi 2024): 1,360 GPT-4-written everyday dilemmas, each with a "to do" and a
+  "not to do" action. One Choice per dilemma: text "What is the right thing to do in `dilemma`?" (the dilemmas
+  are written in the second person or about a named third person, so "the narrator" would not fit),
+  state = {"dilemma": the situation}, options = the two actions (slug keys, the action text as description).
+  No truth. meta keeps the value tags per action, the paper's negative consequence per action (not shown to
+  Jev), basic_situation and topic_group. The dataset has 1,360 dilemmas, so the brief's ~2,500 is not reachable;
+  all are kept (ASKJEV_TARGET_DAILY_DILEMMAS caps, salted-hash order). node_hint by keywords + value tags:
+  animals/environment -> animal_nature_dilemmas; donating/homeless/volunteering -> giving_charity; lying/secrets/
+  confessing with honesty or trust tags -> honesty_dilemmas; fairness words with fairness/justice tags ->
+  fairness_justice; retaliation, revenge or forgiveness -> fairness_justice; else life_values.personal_priorities (never everyday_ethics). Sexual/intimacy or
+  self-harm/euthanasia wording flagged sensitive; abortion, elections, immigration, guns, protests political.

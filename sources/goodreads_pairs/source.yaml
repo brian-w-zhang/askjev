@@ -1,0 +1,18 @@
+name: goodreads_pairs
+url: https://github.com/zygmuntz/goodbooks-10k
+license: CC BY-SA 4.0 (goodbooks-10k, Zygmunt Zając)
+version: goodbooks-10k master (ratings.csv, books.csv, book_tags.csv, tags.csv), downloaded 2026-09-24
+target: 3000
+hemisphere: self
+kind: taste
+notes: >
+  Pairwise taste Choices "Which book would you rather read?" (template_id goodreads_pairs.read). Books with at
+  least 500 ratings in goodbooks-10k's ratings.csv (6M ratings from 53k Goodreads users), English editions only,
+  omnibus/box-set/collection editions dropped. Each book's genre = the bucket (fantasy, science fiction, romance,
+  mystery/thriller, horror, classics, historical fiction, young adult, children's, comics, nonfiction, poetry) with
+  the most Goodreads shelvings; a pair needs the same genre, different first authors, not the same series, and at
+  least 50 users who rated both. Salted-hash order (prefix-stable), at most 25 pairs per book. Options = slug keys
+  with "Title by Author" descriptions (series suffix like "(Harry Potter, #1)" dropped), alphabetical. Human
+  distribution: among co-raters, share rating each book higher, ties split; n = co-raters. No truth.
+  Flags from shelves (>= 5% of a book's shelvings): erotica/bdsm -> sensitive, politics -> political; books by politicians or polemicists (Obama, Clinton, Marx, Zinn...) -> political.
+  Node self.lifestyle.leisure_hobbies. Target via ASKJEV_TARGET_GOODREADS_PAIRS.

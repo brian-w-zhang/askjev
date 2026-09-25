@@ -1,0 +1,12 @@
+name: sciq
+url: https://huggingface.co/datasets/allenai/sciq
+license: CC BY-NC 3.0
+version: allenai/sciq train + validation + test parquet (HF parquet API), fetched 2026-09-24
+target: 3900
+hemisphere: world
+kind: factual
+notes: >
+  SciQ crowdsourced science exam questions as World factual Choice: the correct answer and its 3 distractors,
+  shuffled deterministically per item, answer-text keys, truth = the correct key. Support passages are not used.
+  Same filters as mmlu; items already taken by mmlu or arc and near-duplicates skipped; salted-hash sample.
+  node_hint: the shared science keyword map, default world.science.

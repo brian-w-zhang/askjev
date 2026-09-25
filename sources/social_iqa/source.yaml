@@ -1,0 +1,21 @@
+name: social_iqa
+url: https://huggingface.co/datasets/allenai/social_i_qa
+license: CC-BY-4.0
+version: >
+  socialiqa-train-dev.zip (train 33,410 + dev 1,954) from the dataset script's own download URL
+  https://storage.googleapis.com/ai2-mosaic/public/socialiqa/socialiqa-train-dev.zip (the HF repo is
+  script-only, no parquet), fetched 2026-09-24
+target: 5000
+target_phase6: 10000 (ASKJEV_TARGET_SOCIAL_IQA=10000; the first 5,000 rows are unchanged)
+hemisphere: self
+kind: social
+notes: >
+  Social IQa (Sap et al. 2019): a short everyday situation plus a question about someone's motive, reaction,
+  need or next step, with three answers written by crowdworkers. Asked as Choice: state = {"context": ...},
+  text = "In `context`, <question lowercased>" (e.g. "In `context`, what does Tracy need to do before this?";
+  "Others" -> "others"), options = the three answer texts as slug keys with the full text as description,
+  truth = the gold label. Only wh-questions are kept (drops ~70 odd phrasings and "{}?" rows); rows whose
+  answers slug to the same key and exact duplicates dropped. 5,000 rows in salted-hash order over train+dev
+  (ASKJEV_TARGET_SOCIAL_IQA). node_hint by keywords: romance / dating / family / coworkers-school-neighbors /
+  friendship / etiquette, else self.love. Sexual, violent or self-harm wording flagged sensitive; party,
+  election, immigration words political.

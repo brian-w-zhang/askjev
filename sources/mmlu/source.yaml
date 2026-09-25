@@ -1,0 +1,25 @@
+name: mmlu
+url: https://huggingface.co/datasets/cais/mmlu
+license: MIT
+version: cais/mmlu config `all`, test + validation + dev parquet (HF parquet API), fetched 2026-09-24
+target: 12000 (9,763 survive the filters)
+hemisphere: world
+kind: factual
+notes: >
+  MMLU (Hendrycks et al. 2021) as World factual Choice: the answer texts are the options (short slug keys of
+  their first words, after any leading phrase all answers share; full text as description), truth = the correct
+  key. moral_scenarios is skipped (two-scenario format). moral_disputes is kept as factual under
+  world.society.philosophy_thinkers: its items ask what named philosophers argue ("According to Singer ..."), which
+  has a right answer, not the answerer's values. Dropped: numeric answers (arithmetic, dates, percentages; a
+  parenthetical year like "(1896)" is ignored and formulas like H2SO4 are allowed), computation stems (=, ^, LaTeX,
+  "calculate", "how many"), picture/table stems, "Statement 1 | Statement 2" and I/II/III combination answers,
+  stems over 1,200 characters, items whose answers only differ after 8 words. A wrong "all/none of the above" or
+  "both A and B" answer is removed (item dropped if it is the correct one). "This question refers to the following
+  information" items put the passage in state {"passage"} (max 2,500 chars) and keep the final question as text.
+  Sentence fragments are wrapped: 'Which option best completes this statement: "<stem> ..."?' (origin=template).
+  Near-duplicates (same normalized stem; generic stems under 9 words also need the same correct answer) merged.
+  Each subject capped at 600 (salted-hash order). node_hint: the subject's node (map in adapter.py), refined by the
+  boolq keyword rules only when they land inside it. Flags: political for us_foreign_policy,
+  high_school_government_and_politics, and any item matching the boolq political pattern, party/election terms
+  (politics subjects) or modern politicians; sensitive for human_sexuality and sexual/suicide terms.
+  This adapter also holds the helpers shared by arc, sciq, openbookqa and strategyqa.

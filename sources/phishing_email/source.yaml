@@ -1,0 +1,17 @@
+name: phishing_email
+url: https://huggingface.co/datasets/zefang-liu/phishing-email-dataset
+download: https://huggingface.co/api/datasets/zefang-liu/phishing-email-dataset/parquet/default/train/0.parquet
+license: LGPL-3.0
+version: HF zefang-liu/phishing-email-dataset default/train (18,650 emails; 7,328 "Phishing Email", 11,322 "Safe Email")
+target: 2500
+hemisphere: machine
+shape: detect
+notes: >
+  Template phishing_email.phishing (Noul): "Is `email` spam, a scam or a phishing attempt?" truth = label
+  (Phishing Email = true), 40% positive (1,000 / 1,500) in salted-hash order. The positive class pools
+  bulk spam with scams and phishing (sources: Enron, SpamAssassin, Ling-Spam, Nazario), so the question
+  names all three. Whitespace collapsed, emails truncated to 1,500 chars (meta.truncated_from keeps the
+  original length), dedup on the truncated text. Node: machine.trust_safety.spam_phishing
+  (machine.finance.fraud_indicators is about transactions and claims, not email).
+  Flags: sensitive for adult/pharma sexual spam; sexual spam mentioning minors dropped.
+  Target: ASKJEV_TARGET_PHISHING_EMAIL.

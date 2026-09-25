@@ -1,0 +1,13 @@
+name: dbpedia14
+url: https://huggingface.co/datasets/fancyzhx/dbpedia_14
+download: https://huggingface.co/api/datasets/fancyzhx/dbpedia_14/parquet/dbpedia_14/test/0.parquet
+license: CC-BY-SA-3.0
+version: DBpedia-14 test split (70,000 abstracts, 14 classes)
+target: 1500
+hemisphere: machine
+shape: classify
+notes: >
+  Template dbpedia14.entity_type: Choice "What kind of entity does `description` describe?" over the 14
+  classes (snake_case keys, short descriptions); truth = dataset label. State = the Wikipedia abstract
+  (it names the entity itself); meta.title keeps the page title. Exact dedup, ~107 per class in
+  salted-hash order. Hot-button terms / current politicians flag "political". ASKJEV_TARGET_DBPEDIA14.

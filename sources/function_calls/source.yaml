@@ -1,0 +1,23 @@
+name: function_calls
+url: https://huggingface.co/datasets/Team-ACE/ToolACE
+download: https://huggingface.co/api/datasets/Team-ACE/ToolACE/parquet/default/train/0.parquet
+license: Apache-2.0
+version: HF Team-ACE/ToolACE default/train (11,300 dialogues)
+target: 3000 (1,500 per template; ASKJEV_TARGET_FUNCTION_CALLS sets the per-template count)
+hemisphere: machine
+shape: verify, route
+notes: >
+  Salesforce xLAM-function-calling-60k is gated, so this uses ToolACE (ungated). Kept: first user turn answered
+  by exactly one call to a listed tool, 2-8 tools, literal arguments all declared by the tool, English request
+  <= 800 chars and not a stacked multi-part ask ("then", "also", "additionally"... or a replayed dialog log),
+  compact tool list (name: one-line description, params with type/required/enum) <= 1,400 chars; request dedup.
+  ToolACE's blanket date/file -> "string" mangling is undone in requests, tool names and descriptions
+  (valistring -> validate, prostring -> profile...). 2,856 items pass: verification takes the first 1,500 in
+  salted hash order, choice the remaining 1,356 plus 144 from the start of the order (same request, other template).
+  fc.verify_call (Noul, machine.ai_systems.tool_call_verification): state request/tools/call (JSON); exactly
+  half the calls perturbed deterministically (first applicable of wrong_function, changed_value [flipped bool,
+  other enum value, or the same param's value from another item, never one that appears in the request],
+  dropped_required, swapped_args, in a per-item hash order); meta.perturbation + detail + gold_call; truth =
+  unperturbed. fc.pick_function (Choice, machine.ai_systems.function_calling): options = the item's tool names
+  plus `none`; truth = the called function (never `none`: ToolACE's non-call replies are clarifications, not
+  "no tool fits").

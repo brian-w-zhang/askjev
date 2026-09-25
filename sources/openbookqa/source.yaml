@@ -1,0 +1,13 @@
+name: openbookqa
+url: https://huggingface.co/datasets/allenai/openbookqa
+license: Apache-2.0
+version: allenai/openbookqa config `main`, train + validation + test parquet (HF parquet API), fetched 2026-09-24
+target: 2000
+hemisphere: world
+kind: factual
+notes: >
+  OpenBookQA elementary science questions as World factual Choice with truth (answer-text keys; a phrase every
+  answer starts with, like "it will", is left out of the keys). About two thirds of the stems are sentence fragments
+  and are wrapped in the completion wording (origin=template). Same filters as mmlu; items already taken by mmlu,
+  arc or sciq and near-duplicates skipped; salted-hash sample. node_hint: the shared science keyword map.
+  License: the HF card says "unknown"; the upstream allenai/OpenBookQA repository is Apache-2.0.

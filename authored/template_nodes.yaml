@@ -1,0 +1,132 @@
+# Child nodes for high-volume Machine templates (src/askjev/template_split.py; docs/10-expansion.md §4).
+# One entry per template_id: the node a template's questions move into when its parent passes the node cap.
+
+amazon.satisfaction:
+  key: review_satisfaction
+  label: Reviewer Satisfaction
+  description: "Questions a program asks about a product review to score how satisfied the reviewer is with the purchase, from warning others away to delighted."
+  examples: ["How satisfied is the reviewer in this review?"]
+amazon.topic:
+  key: review_topic
+  label: Review Topic
+  description: "Questions a program asks about a product review to classify what the praise or complaint is mainly about: price, quality, fit and size, shipping, and so on."
+  examples: ["What is the main topic of complaint or praise in this review?"]
+
+ag_news.section:
+  key: news_section
+  label: News Section
+  description: "Questions a program asks about a news article to decide which section of a news site it belongs in: world, sports, business, or science and technology."
+  examples: ["Which section of a news site does this article belong in?"]
+dbpedia14.entity_type:
+  key: entity_type
+  label: Entity Type
+  description: "Questions a program asks about an encyclopedia-style description to classify what kind of entity it describes: a company, school, artist, athlete, politician, building, place, animal, plant, album, film, book, and so on."
+  examples: ["What kind of entity does this description describe?"]
+yahoo_topics.category:
+  key: question_topic
+  label: Question Topic
+  description: "Questions a program asks about a question someone posted on a Q&A site to file it under a topic category: health, science, sports, business, family and relationships, computers, entertainment, and so on."
+  examples: ["Which topic category does this question belong to?"]
+
+unfair_tos.unfair:
+  key: unfair_terms
+  label: Unfair Consumer Terms
+  description: "Questions a program asks about a clause in an online terms-of-service contract to decide whether it is potentially unfair to the consumer, such as limiting liability or allowing unilateral changes."
+  examples: ["Is this clause potentially unfair to the consumer?"]
+unfair_tos.clause_type:
+  key: unfair_clause_kind
+  label: Unfair Clause Kind
+  description: "Questions a program asks about a terms-of-service clause to name which kind of potentially unfair term it is: arbitration, jurisdiction, choice of law, limitation of liability, unilateral change or termination, content removal, or contract by using."
+  examples: ["Which kind of potentially unfair clause is this, if any?"]
+ledgar.provision_type:
+  key: provision_type
+  label: Contract Provision Type
+  description: "Questions a program asks about a provision from a commercial contract to classify its type: governing law, notices, assignment, indemnification, confidentiality, termination, arbitration, and so on."
+  examples: ["What type of provision is this clause?"]
+
+msmarco.answers_query:
+  key: passage_answers_query
+  label: Passage Answers Query
+  description: "Questions a program asks about a retrieved passage and a search query to decide whether the passage actually states the information the query is looking for."
+  examples: ["Does this passage contain an answer to the query?"]
+msmarco.relevance_level:
+  key: passage_relevance_level
+  label: Passage Relevance Level
+  description: "Questions a program asks about a retrieved passage and a search query to score how relevant the passage is, from a different subject to a direct, complete answer."
+  examples: ["How relevant is this passage to the query?"]
+
+clinc150.domain:
+  key: assistant_domain
+  label: Assistant Domain
+  description: "Questions a program asks about a message to a virtual assistant to decide which domain should handle it: banking, credit cards, travel, home, work, small talk, and so on, or out of scope."
+  examples: ["Which domain of this virtual assistant does this message belong to?"]
+clinc150.in_scope:
+  key: in_scope_request
+  label: In-Scope Request
+  description: "Questions a program asks about a message to a virtual assistant to decide whether it is a request the assistant supports at all, or out of scope."
+  examples: ["Is this message a request this virtual assistant supports?"]
+
+sms.spam:
+  key: sms_spam
+  label: SMS Spam
+  description: "Questions a program asks about a text message to decide whether it is unsolicited promotion, a scam or phishing, rather than a normal personal or transactional message."
+  examples: ["Is this text message spam?"]
+sms.call_to_action:
+  key: call_to_action
+  label: Call to Action
+  description: "Questions a program asks about a message to detect whether it asks the reader to open a link, call or text a number, or reply to a short code."
+  examples: ["Does this message ask the recipient to click a link or call a number?"]
+phishing_email.phishing:
+  key: email_phishing
+  label: Email Spam & Phishing
+  description: "Questions a program asks about an email to decide whether it is bulk spam, a scam, or a phishing attempt rather than legitimate correspondence."
+  examples: ["Is this email spam, a scam or a phishing attempt?"]
+
+civil_comments.toxic:
+  key: toxic_comment
+  label: Toxic Comment
+  description: "Questions a program asks about a user comment on a discussion platform to decide whether it is toxic: rude, disrespectful, or likely to make someone leave the discussion."
+  examples: ["Is this comment toxic?"]
+civil_comments.harm_kind:
+  key: harm_kind
+  label: Kind of Harm
+  description: "Questions a program asks about a user comment to name the main kind of harm it contains, if any: insult, identity attack, threat, obscenity, or sexually explicit content."
+  examples: ["Which kind of harm, if any, does this comment contain?"]
+
+pii_detect.contains_pii:
+  key: contains_pii
+  label: Contains Personal Data
+  description: "Questions a program asks about a piece of text to detect whether it contains personal data that identifies or could contact a specific person, such as a name, email, phone number, address, or account number."
+  examples: ["Does this text contain personal data that identifies a specific person?"]
+pii_detect.pii_kind:
+  key: pii_kind
+  label: Kind of Personal Data
+  description: "Questions a program asks about a piece of text to name which kind of personal data it contains: a name, email address, phone number, postal address, government ID, bank account, payment card, or online identifier."
+  examples: ["What kind of personal data does this text contain?"]
+
+halueval.qa:
+  key: answer_grounding
+  label: Answer Grounding
+  description: "Questions a program asks about a model's answer to a question, compared with the knowledge it was given, to decide whether the answer is supported with no invented or contradicting details."
+  examples: ["Is this answer supported by the knowledge, with no invented details?"]
+halueval.dialogue:
+  key: dialogue_faithfulness
+  label: Dialogue Faithfulness
+  description: "Questions a program asks about a chatbot's reply in a conversation, compared with the knowledge it was given, to decide whether the reply is faithful with no invented facts."
+  examples: ["Is this response faithful to the knowledge and the conversation?"]
+halueval.summarization:
+  key: summary_faithfulness
+  label: Summary Faithfulness
+  description: "Questions a program asks about a generated summary, compared with its source document, to decide whether every claim in the summary is supported by the document."
+  examples: ["Is every claim in this summary supported by the document?"]
+
+arxiv.field:
+  key: paper_field
+  label: Paper Field
+  description: "Questions a program asks about a paper's title and abstract to classify which field of science it comes from: computer science, mathematics, physics, astrophysics, biology, finance, statistics, economics, and so on."
+  examples: ["Which field of arXiv is this paper from?"]
+arxiv.is_ml:
+  key: ml_paper
+  label: Machine Learning Paper
+  description: "Questions a program asks about a paper's title and abstract to decide whether the paper is about machine learning, for screening a literature search."
+  examples: ["Is this paper about machine learning?"]

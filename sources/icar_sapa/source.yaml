@@ -1,0 +1,20 @@
+name: icar_sapa
+url: https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/TZJGAT
+license: CC0-1.0 (SAPA Project data release); the EPQ-R item wording is Eysenck's
+version: >
+  "Selected personality data from the SAPA-Project: 22Dec2015 to 07Feb2017" (Condon & Revelle), files
+  ItemInfo696.tab + sapaTempData696items22dec2015thru07feb2017.tab (48,350 participants, 696 temperament items),
+  fetched 2026-09-24 through the Dataverse access API
+target: 80
+hemisphere: self
+kind: personality
+notes: >
+  SAPA temperament items asked as Score with the ipip template and levels ('How well does this statement
+  describe you: "<I + stem>"', 5 describe-levels). 616 of the 696 SAPA items (all of the SPI-135) are IPIP items
+  already carried by the ipip/openpsych sources, so only the other 80 are kept: 78 EPQ-R-style items (Eysenck
+  E/N/P; "Worry about my health" is skipped as an IPIP duplicate) and two IPIP-analog items missing from the ipip pool (q_393 MPQ unlikely virtues, q_3090 plasticity).
+  Human distribution per item from the SAPA responses (about 4,900 respondents per item, SAPA's planned
+  missingness), SAPA's 6-point accuracy scale collapsed to the 5 levels 1->0, 2-3->1, 4->2, 5->3, 6->4
+  (raw scale and map in meta). node_hint by keywords, else by EPQ scale. Stems lost their apostrophes in the
+  release and are fixed by hand for four items. "Have once wished that I were dead" and the drugs item are
+  flagged sensitive. No truth. The ICAR ability items are not self-descriptions and are not used.

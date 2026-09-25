@@ -1,0 +1,17 @@
+name: boardgame_pairs
+url: https://huggingface.co/datasets/mmpa/board_game_analysis
+download: bgg-26m-reviews.csv (user, rating, ID, name) + games_detailed_info2025.csv (BGG game metadata)
+license: BoardGameGeek user ratings (Kaggle "BoardGameGeek Reviews" by jvanelteren, mirrored on HF by mmpa; no explicit license, research use)
+version: HF mmpa/board_game_analysis main (26.2M ratings), downloaded 2026-09-24
+target: 4000
+hemisphere: self
+kind: taste
+notes: >
+  Pairwise taste Choices "Which board game would you rather play?" (template_id boardgame_pairs.play). Games with at
+  least 5,000 BGG user ratings (987 games). A pair needs a shared BGG subdomain (strategy, family, party, thematic,
+  wargame, abstract, customizable, children's), complexity weights at most 1.0 apart, different franchises (title
+  head before ':' not equal or a prefix), and at least 300 users who rated both. Salted-hash order (prefix-stable),
+  at most 25 pairs per game. Options = slug keys with "Name (Year)" descriptions, alphabetical. Human distribution:
+  among co-raters, share rating each game higher, ties split half-half; n = co-raters. No truth. Games in BGG's
+  "Mature / Adult" category (Cards Against Humanity, Joking Hazard...) flagged sensitive. Node
+  self.lifestyle.leisure_hobbies. Target via ASKJEV_TARGET_BOARDGAME_PAIRS.

@@ -1,0 +1,17 @@
+name: anime_pairs
+url: https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database
+download: https://huggingface.co/datasets/jason1966/CooperUnion_anime-recommendations-database (anime.csv, rating.csv)
+license: CC0 1.0 per the Kaggle listing (CooperUnion; data from MyAnimeList); HF mirror card says unknown
+version: HF jason1966/CooperUnion_anime-recommendations-database main (7.8M rows, 73.5k users, 2016), downloaded 2026-09-24
+target: 4000
+hemisphere: self
+kind: taste
+notes: >
+  Pairwise taste Choices "Which anime would you rather watch?" (template_id anime_pairs.watch). TV series and films
+  with at least 2,000 explicit ratings in rating.csv (-1 "watched, unrated" rows dropped) and at least 100,000
+  MyAnimeList members. Hentai-genre titles are skipped entirely; Ecchi-genre titles are kept and flagged sensitive.
+  A pair needs the same format (TV/film), a shared MAL genre, a different franchise (first distinctive title word
+  differs, so no Gintama vs Gintama'), and at least 200 users who rated both. Salted-hash order (prefix-stable), at
+  most 25 pairs per title. Options = slug keys with "Title (anime TV series|film)" descriptions (MAL romaji titles,
+  HTML entities unescaped; titles whose slug collides, like Gintama vs Gintama°, keep only the most-rated), alphabetical. Human distribution: among co-raters, share rating each higher, ties split;
+  n = co-raters. No truth. Node self.lifestyle.screens_media. Target via ASKJEV_TARGET_ANIME_PAIRS.

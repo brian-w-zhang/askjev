@@ -19,6 +19,7 @@ def main(argv: list[str] | None = None):
     s = sub.add_parser("answer"); s.add_argument("--limit", type=int, default=None)
     sub.add_parser("dedupe")
     sub.add_parser("repair-paths")
+    s = sub.add_parser("template-split"); s.add_argument("--dry-run", action="store_true")
     sub.add_parser("measure")
     sub.add_parser("rollup")
     sub.add_parser("mix")
@@ -55,6 +56,9 @@ def main(argv: list[str] | None = None):
     elif a.cmd == "answer":
         from .answer import answer_pending
         print(answer_pending(limit=a.limit))
+    elif a.cmd == "template-split":
+        from .template_split import split
+        print(split(dry_run=a.dry_run))
     elif a.cmd == "repair-paths":
         from .restructure import repair_paths
         print(repair_paths())

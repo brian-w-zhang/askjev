@@ -1,0 +1,16 @@
+name: massive_en
+url: https://huggingface.co/datasets/AmazonScience/massive
+download: https://huggingface.co/api/datasets/mteb/amazon_massive_{scenario,intent}/parquet/en/{train,validation,test}/0.parquet
+license: CC-BY-4.0
+version: MASSIVE 1.1 en-US via the MTEB mirror (all splits, ~16.5k utterances; 18 scenarios, 60 intents)
+target: 2500
+hemisphere: machine
+shape: classify
+notes: >
+  Template massive_en.scenario: Choice "Which smart-assistant scenario does `command` belong to?" over the
+  18 scenarios with hand-written descriptions; truth = dataset scenario. Four keys renamed for readability
+  (play -> play_media, qa -> factual_question, iot -> smart_home, general -> chit_chat); meta.label_raw keeps
+  the original and meta.intent the fine intent. AmazonScience/massive is script-only with no parquet export,
+  so the MTEB mirror is used (the mirror card says apache-2.0; the upstream MASSIVE license is CC-BY-4.0).
+  Case-insensitive exact dedup across splits; salted-hash round-robin across scenarios (~139 each) and
+  across intents within each scenario. ASKJEV_TARGET_MASSIVE_EN overrides the count (cap 3,000).

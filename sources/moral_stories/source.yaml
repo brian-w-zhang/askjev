@@ -1,0 +1,18 @@
+name: moral_stories
+url: https://huggingface.co/datasets/demelin/moral_stories
+license: MIT
+version: HF parquet config "full" (12,000 stories), fetched 2026-09-24
+target: 5000
+hemisphere: self
+kind: values
+notes: >
+  Moral Stories (Emelin et al. 2021): crowdworkers wrote a norm, a situation, an actor's intention, and two
+  alternative actions (one following the norm, one breaking it). Asked as Choice:
+  "What should the person do in `situation`, given their `intention`?" with state = {situation, intention};
+  options = the two actions, keyed by a slug of their first words (the shared leading actor name dropped), the
+  full action text as description, order shuffled by a hash of the id; truth = the norm-following action. The
+  norm (which would give the answer away) and both consequences stay in meta, unseen. 5,000 rows in salted-hash
+  order (ASKJEV_TARGET_MORAL_STORIES). node_hint by keywords in the norm: animals/environment, loyalty,
+  honesty dilemmas, giving, fairness, authority, purity, care, life values, else self.values (never
+  self.values.everyday_ethics, which is already full). No human votes. Slurs/incest rows dropped; sexual,
+  violent or self-harm wording flagged sensitive; party/election/immigration words flagged political.

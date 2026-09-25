@@ -1,8 +1,9 @@
 name: scruples
 url: https://github.com/allenai/scruples
 license: Apache-2.0 (allenai/scruples repo); action descriptions come from Reddit r/AmItheAsshole titles
-version: Scruples Dilemmas v1.0 (dilemmas.tar.gz, dev + test splits)
+version: Scruples Dilemmas v1.0 (dilemmas.tar.gz, dev + test splits; train for the expansion)
 target: 600
+target_phase6: 4500 (ASKJEV_TARGET_SCRUPLES=4500)
 hemisphere: self
 kind: values
 notes: >
@@ -12,3 +13,8 @@ notes: >
   human-performance MTurk annotations each dev/test pair has (n=10); raw counts are in meta. No truth.
   Pairs with slurs, sexual violence terms, or sexual content that mentions minors are dropped. Sexual,
   self-harm, or violent content is flagged "sensitive" by keyword (over-inclusive: e.g. "killing a spider").
+  Expansion (ASKJEV_TARGET_SCRUPLES > 600; unset = the original 600, byte-identical): the original 600 stay first,
+  then the unpicked dev/test pairs (n=10 votes) in salted-hash order, then train pairs (5 gold votes only, n=5),
+  same filters and flags, deduplicated against everything before them. Prefix-stable. Expansion rows are hinted
+  to family_stories when either action mentions a relative, else quick_social_judgments (both under
+  self.values.everyday_ethics). At 4,500 every added pair comes from dev/test (n=10).

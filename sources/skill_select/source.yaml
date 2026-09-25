@@ -1,0 +1,18 @@
+name: skill_select
+url: https://github.com/HowieHwong/MetaTool
+download: https://raw.githubusercontent.com/HowieHwong/MetaTool/master/dataset/tmp_dataset/Task2-Subtask{1,2,3}.json
+license: MIT
+version: MetaTool master, dataset/tmp_dataset Task2 subtasks 1-3 (995 + 1,800 + 995 prompts; 199 tools)
+target: 1500
+hemisphere: machine
+shape: route
+notes: >
+  Template skill_select.pick (Choice, machine.ai_systems.skill_selection): "Which of these tools, if any, is the
+  right one for `request`?" Options = the item's MetaTool candidate tools (key = tool name, description = its
+  one-line description) plus `none`; state = the user query. Subtask1 (gold + 9 most similar tools) and Subtask2
+  (scenario lists of 5/10/15 incl. gold) give truth = gold tool; Subtask3 (reliability: 10 tools excluding gold)
+  gives truth = none. Catch-all tools (web search engines, web browser, "access web pages", Zapier, multi-agent
+  councils...) make `none` or a single gold ambiguous, so `none` items with any catch-all tool and gold items with
+  a catch-all tool other than the gold are dropped. ~1/3 none (salted hash order), then gold items in salted hash
+  order; each query used once. Queries shorter than 15 chars or written in the assistant's voice ("Sure, here
+  is...", "Yes, the plugin can...": generator artifacts) are dropped.
