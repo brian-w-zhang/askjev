@@ -201,3 +201,17 @@ turned out ~80% World factual, so prioritizing them pushed World and factual up 
 - **Personality** grows through round-trip-filtered synthetic banks and public no-login surveys (Afrobarometer, PISA student
   questionnaires, the GlobalOpinionQA remainder, IPIP-NEO response data to anchor existing items). Login-gated surveys (WVS, ESS,
   Pew, GESIS) are ingested only if Brian downloads them; Claude does not create accounts or accept data licenses on his behalf.
+
+## 10. Final sourcing plan to 1M at 35/35/30 (Brian, 2026-09-25)
+End target ≈ 1.02M: **World ~350k · Self ~345-350k · Machine ~300k.** Measured at 584k: World 225k, Self 166k, Machine 193k.
+
+| Hemisphere | Gap | Already queued | New sourcing |
+|---|---|---|---|
+| Self | +184k | Reddit polls extension (~28k Self), Self banks in round trip (~26k accepted), wave 9 banks (45k written, ~32k accepted) | **real**: Social Chemistry +20k (its freeze is lifted for Self balance), Social IQa +15k, Moral Machine +8k, Scruples remainder, behavioral-economics classics with published distributions (Many Labs, Kahneman-Tversky), moral vignettes with norms; **synthetic**: ~65k more written (personality, mind, love, values first), ~50k after round trip |
+| World | +125k | 59k held (Stack Exchange, Yahoo, MedMCQA, CommonsenseQA), released as the World share allows | Wikidata facts/comparisons for thin L1s (sports, food, history, tech, nature) ~30k; synthetic evaluative/forecast for those L1s ~25k; new GOAT categories ~10k |
+| Machine | +107k | wave 6 remainder ~22.5k | the running ~100k round, trimmed to ~85k at ingest, aimed at ai_systems, trust_safety, people, code, search, support, research (not documents, which is over) |
+
+**Level-1 gaps at 1M (target from `03-questions.md` §2):** Self personality +50k, mind +35k, values +39k, love +27k, lifestyle +30k;
+World sports +26k, food +21k, history +21k, nature +16k, tech +15k (society over); Machine ai_systems +29k, trust_safety +17k,
+people +16k (documents over). **Missing types to add:** Self forecasts and evaluative judgments, behavioral-economics preferences
+(risk, time, framing) with human data, forced trade-offs, World values.

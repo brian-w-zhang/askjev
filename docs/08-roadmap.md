@@ -42,6 +42,7 @@
 | 2026-09-25 | Expansion tree rules: high-volume templates split into their own child only when an authored label says the template is a topic (`authored/template_nodes.yaml`); single-template nodes are bounded by the template cap; hint-placed questions on overfull parents are re-walked by Jev from the parent ("descend") (`10-expansion.md` §7) |
 | 2026-09-25 | Waves 6+ priorities (`10-expansion.md` §8): real asked questions first (anchored share may drift to ~55-60%, logged); new hand nodes for buying decisions and everyday how-to; login-gated surveys ingested if Brian downloads them; TypeSafe's empty Machine leaves get authored inputs marked `synthetic_input` inside the 15% cap; a multilingual slice as universes |
 | 2026-09-25 | Synthetic share is a ~15-20% guideline, not a hard cap (Self may exceed it); new World volume held until World ≈ 36%; waves 6-7 are Machine + Self (`10-expansion.md` §9) |
+| 2026-09-25 | Final plan to ~1.02M at 35/35/30 (`10-expansion.md` §10): Self gets ~100k more beyond the queue (real + synthetic); Social Chemistry's freeze is lifted for Self balance; Machine's last round is trimmed to ~85k and kept out of documents |
 
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)
