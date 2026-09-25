@@ -1,0 +1,114 @@
+{
+  "type": "split",
+  "node": "self.values.everyday_ethics.family_conflicts.family_stories.parents_siblings_relatives",
+  "n_questions": 2163,
+  "clusters": [
+    {
+      "size": 1665,
+      "samples": [
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not telling my father in law where his former tenant lives/works?\\n\\nMy in laws are in their late 50's a",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for disliking my dad because of his depression and alcoholism?\\n\\nHey, so I just wanted to know if I am at f",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA (14M) for confronting the guy(17M) who cheated on my sister (17F)\\n\\nOkay let me start by saying this person",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'WIBTA for taking back the tv I gave to my sister?\\n\\nJust over a year ago my sister broke up with her boyfriend a",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for saying no to my mom asking for marijuana?\\n\\nHey there, so a little short backstory. Parents going throu",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'Aita for being upset about my niece stealing from me?\\n\\nMy niece is 10 years old, and steals from everybody. Not",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not spending time with my brother when he's sick?\\n\\nA couple of weeks ago I came back home from college",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for refusing to eat Chick-fil-A\\n\\nMy in-laws are both semi-religious, moderate conservatives. They are visi",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not wanting to have any contact with my father?\\n\\nSo my father used to mentally and physically abuse me",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for not telling my sisters bf what i do for a living?\\n\\nidk why i\\'m a private person and i\\'ve never been ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not being honest to my parents about university\\n\\nI am a third year student of Pharmacy (4 year course)",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for not giving my sister money?\\n\\nOkay so my sister (who we will be calling N) and I were at the store toda",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for wanting to leave my family with my mentally ill mother\\n\\nMy mother has a mental illness that debilitate",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for telling my mum I don't love her?\\n\\nObvious throwaway, let me give some clarity for the situation.\\n\\nMy",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA For telling my son we would talk about him taking his piano home even though my wife and I had already decid"
+      ],
+      "child": {
+        "key": "parents_stepparents",
+        "label": "Parents & Stepparents",
+        "description": "Questions about who is at fault, or which action is less ethical, in a conflict between someone and their own mother, father, stepparent, or a parent's partner.",
+        "not_for": "Conflicts with siblings (use Siblings); with a spouse's or partner's family (use In-Laws & Partner's Family); with grandparents, aunts, uncles, cousins or nieces (use Grandparents & Extended Family); with one's own children (use Raising One's Children).",
+        "examples": [
+          "AITA for telling my parents I want boundaries about my health?",
+          "AITA for not wanting to work at my parents' company?",
+          "Which is less ethical: not forgiving my mom, or quitting a job early?"
+        ]
+      }
+    },
+    {
+      "size": 498,
+      "samples": [
+        "Which of these two actions is less ethical?\nRefusing to play the snare drum for my acquaintance's recording / Being cruel and demanding to my father",
+        "Which of these two actions is less ethical?\nNot wanting to babysit my autistic brother / Being upset that nobody told me what happened to my best friend",
+        "Which of these two actions is less ethical?\nNot wanting to cook for my brother / Not interacting with my dad and grandma",
+        "Which of these two actions is less ethical?\nTelling my sister to pound sand / Following my neighbor on Twitch",
+        "Which of these two actions is less ethical?\nNot wanting to sleep with my mother / Refusing to see my aging grandma, even though she's never done anything horrible to me",
+        "Which of these two actions is less ethical?\nNot forgiving my mom / Stepping in and training another persons trainee",
+        "Which of these two actions is less ethical?\nNot thinking of my stepmom as my mom / Being grossed out that my sister licks the ice cream lid",
+        "Which of these two actions is less ethical?\nKicking my mom out since she can't afford the rent / Not inviting a friend",
+        "Which of these two actions is less ethical?\nBeing mad and not really wanting to talk to my father after what happened / Telling my sister to pound sand",
+        "Which of these two actions is less ethical?\nWanting to cut my sister off / Not giving a good enough New Year's kiss",
+        "Which of these two actions is less ethical?\nNot letting my gf blow my secrets / Disowning my mom",
+        "Which of these two actions is less ethical?\nGetting mad at my sister for wanting to get food after we've already left / Not wanting my Great Aunt to come to my birthday celebration",
+        "Which of these two actions is less ethical?\nNot wanting to get to know my dead beat dad / Quitting earlier than I said I would",
+        "Which of these two actions is less ethical?\nNot placing a disabled kid on a pedestal because he has cerebral palsy / Planning to move away for college even though my mother has health issues",
+        "Which of these two actions is less ethical?\nJudging my parents and siblings for bawling their eyes out at my grandma's funeral / Not wanting to spend large amounts of time on a gift"
+      ],
+      "child": {
+        "key": "siblings",
+        "label": "Siblings",
+        "description": "Questions about who is at fault, or which action is less ethical, in a conflict between brothers and sisters, including step- and half-siblings.",
+        "not_for": "Conflicts with parents (use Parents & Stepparents); with a sibling-in-law or partner's family (use In-Laws & Partner's Family); with one's own children (use Raising One's Children).",
+        "examples": [
+          "WIBTA for taking back the TV I gave to my sister?",
+          "AITA for not giving my sister money?",
+          "AITA for pushing my sister down the stairs?"
+        ]
+      }
+    },
+    {
+      "size": 0,
+      "samples": [],
+      "child": {
+        "key": "in_laws_partners_family",
+        "label": "In-Laws & Partner's Family",
+        "description": "Questions about who is at fault in a conflict with a spouse's, fiance's, or partner's parents, siblings or relatives.",
+        "not_for": "Conflicts with one's own parents or siblings (use Parents & Stepparents or Siblings); conflicts between the partners themselves (use Spouses & Married Life).",
+        "examples": [
+          "AITA for not taking my in-laws to the airport?",
+          "AITA for not inviting my fiance's mother to the wedding?",
+          "AITA for refusing to eat where my in-laws wanted?"
+        ]
+      }
+    },
+    {
+      "size": 0,
+      "samples": [],
+      "child": {
+        "key": "grandparents_extended_family",
+        "label": "Grandparents & Extended Family",
+        "description": "Questions about who is at fault, or which action is less ethical, in a conflict with grandparents, aunts, uncles, cousins, nieces or nephews.",
+        "not_for": "Conflicts with parents, siblings, in-laws or one's own children (use those sibling nodes).",
+        "examples": [
+          "Aita for being upset about my niece stealing from me?",
+          "AITA for refusing to see my aging grandma?",
+          "AITA for not wanting my great aunt at my birthday celebration?"
+        ]
+      }
+    },
+    {
+      "size": 0,
+      "samples": [],
+      "child": {
+        "key": "raising_ones_children",
+        "label": "Raising One's Children",
+        "description": "Questions about who is at fault in a conflict where the person telling the story is the parent, over how they raise, discipline, feed or treat their own son or daughter.",
+        "not_for": "Stories told by a child about their own parents (use Parents & Stepparents); conflicts with a spouse that are not about the children (use Spouses & Married Life).",
+        "examples": [
+          "AITA for giving my daughter meat when her dad raises her pescatarian?",
+          "AITA for not allowing a 3 year old to drink coffee?",
+          "AITA for taking my teenage son's phone away?"
+        ]
+      }
+    }
+  ]
+}

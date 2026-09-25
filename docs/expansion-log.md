@@ -2,6 +2,41 @@
 
 _One section per wave (`docs/10-expansion.md` §3). Newest first._
 
+## Wave 2: 239k → 300k (gated 2026-09-25)
+**299,863 canonical questions** (+60,544), all placed and answered; 1,388 active nodes (+23); 140,253 distinct texts;
+170,737 with ground truth; 76,770 human distributions; 587k cached Jev calls.
+
+| | Wave 2 added | Rule |
+|---|---|---|
+| Anchored | 40,290 (**67%**) | ≥ 60% ✅ |
+| Synthetic | 3,254 (5%): world thin-node bank, 67% round-trip accept | ≤ 15% ✅ |
+| Hemispheres after | World 36.5 · Self 32.9 · Machine 30.6 | Self still short → wave 3 leans Self |
+
+**Added:** Machine +26k (agent-trace success, code defects, commit types, fake reviews, receipt extraction, wine ratings,
+sarcasm, BeaverTails unsafe replies, FEVER, ChemProt relations, SNIPS, e-commerce departments, escalation requests, Davidson
+hate/offensive capped at 1,000); World +20k (Quora world top-up 12k, HotpotQA comparisons, Manifold +2,000 with midlife prices,
+world thin-node bank); Self +14k (Moral Machine 3,000 with global and per-country vote shares, O*NET work activities 5,000,
+ETHICS virtue and deontology 6,000). MedMCQA and CommonsenseQA are written but held (factual is 22.6% vs 15%).
+
+**Measurements:** most informative: wine ratings 0.45, commit types 0.47, Devign defects 0.54, SWE-agent success 0.68,
+Manifold 0.71, BeaverTails 0.74, hate/offensive 0.77. Saturated: CORD receipts 0.98, SNIPS 0.97 (stop scaling). O*NET and Moral
+Machine are almost never decisive (≤ 2%). Kinds after the wave: personality 5.4 (was 3.4), evaluative 5.7, perception 0.7
+(short), factual 22.6 (over).
+
+**Tree:** template split of 6 nodes (guardrails, claim support, commands, interests, honesty/trust, sacrificial dilemmas;
+12 children incl. Self-Driving Car Dilemmas and Work Activities); descend of 1,606 hint-placed questions (mammals, cities);
+13,606 Quora questions placed by beam walk; cluster splits **accepted** for parents/siblings/relatives (5 children), friends/peers
+(roommates, school, coworkers, events) and dating/partners (crushes, couple life, jealousy/cheating, breakups). Skipped as
+question-type (not topic) splits: reading_motives, reading_feelings. `repair-paths` 0; star layout 282,224 stars in 1,324 nodes.
+
+**Decisions:** dropped `support_tickets` (synthetic tickets, near-random labels) and `tv_pairs` (Netflix Prize data, withdrawn
+after a privacy lawsuit); Yahoo closed titles capped at 4,000 (messier than Quora); template split never re-splits a template
+already in its own node; descend skips questions descended before.
+
+**Known issues:** everyday_ethics still ~4.8k (split rejected twice for sibling moves); the pipeline can answer questions before
+placing them when ingest outpaces the place stage (they get placed on the next pass; no effect on answers); quora_closed's
+political regex matches "electricity" (fixed in newer adapters, left in quora_closed so ids stay stable).
+
 ## Wave 1: 99k → 239k (gated 2026-09-25)
 **239,319 canonical questions** (+139,861), all placed, screened and answered (4 left for the next pass); 1,365 active nodes
 (+46); 111,980 distinct question texts (was 52,466); 133,474 with ground truth; 67,994 human distributions; 466k cached Jev calls.

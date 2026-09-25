@@ -1,0 +1,235 @@
+{
+  "type": "split",
+  "node": "self.mind.reading_people.reading_motives",
+  "n_questions": 2065,
+  "clusters": [
+    {
+      "size": 205,
+      "samples": [
+        "In `context`, why did Sydney do this?\neat the lunch / throw away the lunch / keep the lunch secret\n{'context': 'Sydney packed their lunch. They enjoy food prepping and making lunches.'}",
+        "In `context`, what does Sasha need to do before this?\ngo to the store / make their own bread / purchase bread for others\n{'context': \"Sasha's favorite food was warm bread. Sasha ate bread every single day.\"}",
+        "In `context`, why did Alex do this?\nescape trouble / Get some cream soda / Be careless with soda\n{'context': 'Alex left after he spilled some cream soda on the ground in the kitchen area.'}",
+        "In `context`, what happened to Aubrey after eating the pizza?\ntake an antacid / stop eating so much / had to go to the bathroom\n{'context': 'Perhaps loving the pizza too much, Aubrey got a stomach ache and had to go to the bathroom.'}",
+        "In `context`, why did Sydney do this?\nmake the soup / read the receipe / talk about the soup good\n{'context': 'Sydney was cooking soup and reduced the soup to a lower level.'}",
+        "In `context`, what does Kai need to do before this?\nbring his wallet / eat the ice cream / consume the ice cream\n{'context': 'Kai always had a sweet tooth, it was a hard day so he bought some ice cream.'}",
+        "In `context`, what did Ash do?\nfrustrated / disappointed / forgot to buy Jordan a second hot dog\n{'context': 'Jordan asked for two hot dogs but Ash forgot and only bought him one.'}",
+        "In `context`, what will Aubrey want to do next?\norder food from the menu / exercise to make up for it / eat fast food at dinner time\n{'context': 'Aubrey is obsessed with health and fitness, but today Aubrey was short on time so they ate fast food for lunch.'}",
+        "In `context`, what does Lee need to do before this?\nof baked before / of thought better / make things better again\n{'context': 'Lee made things better than the last time she was baking.'}",
+        "In `context`, why did Cameron do this?\ntry the food / sleep afterwards / never try the food\n{'context': 'Cameron took a jet to Japan which took 18 hours one way.'}",
+        "In `context`, what does Addison need to do before this?\nstart the car / ask about lunch / Pay for the meal\n{'context': 'Addison was driving to their house and stopped so they could get lunch for themselves.'}",
+        "In `context`, what did Skylar do after complying?\nfelt like vomiting / decided to eat a hot dog / decided to eat a squirrel\n{'context': \"After complying to Kendall's request, Skylar decided to eat a hot dog and fry a squirrel.\"}",
+        "In `context`, what does Carson need to do before this?\ngoes to the bath tub / Because Carson was thirsty / gets up of the chair and heads to the kitchen\n{'context': 'Carson decides to get a drink of water as they are thirsty.'}",
+        "In `context`, what will Bailey want to do next?\ncover the food / wash the stone / keep the fly away from the cooking food\n{'context': 'Bailey killed the fly with a stone while cooking meals in the camping site.'}",
+        "In `context`, what will Taylor want to do next?\nhave a picnic / did not want Jesse to get sick while outside / knew Jesse was allergic to flowers in Spring\n{'context': 'Taylor gave Jesse his allergy medicine before grabbing the picnic basket and blanket.'}"
+      ],
+      "child": {
+        "key": "reasons_for_actions",
+        "label": "Reasons for Actions",
+        "description": "Questions asking why a person in a short everyday scene did what they did: the goal or reason behind their action.",
+        "not_for": "What the person had to do beforehand (use Steps Needed Beforehand); what they or others will want to do or what will happen next (use What Happens Next). How someone feels or what they are like (use Reading Feelings & Character).",
+        "examples": [
+          "Why did Sydney do this? (Sydney packed their lunch.)",
+          "Why did Taylor do this? (Taylor pushed Sasha's hair out of her face before pictures.)",
+          "Why did Kai pull a prank on Jan?"
+        ]
+      }
+    },
+    {
+      "size": 123,
+      "samples": [
+        "In `context`, what will Bailey want to do next?\ngot exercise / go to a restaurant / hasn't eaten in a while\n{'context': 'Bailey always takes her dog to the dog park in the afternoon but is always hungry at the end.'}",
+        "In `context`, what does Casey need to do before this?\nhate animals / get some animals / create a business\n{'context': 'Casey raised animals to buy things for the university and some medicines.'}",
+        "In `context`, what does Cameron need to do before this?\nknow about the kitten / know the kitten's eye color / recognize the kitten's sound\n{'context': 'Cameron saw that the kitten was hungry. Cameron gave the kitten some food.'}",
+        "In `context`, what will Riley need to buy to prepare for the kitten?\no many kittens / A litter box and food / Dog food and dog treats\n{'context': 'Riley is looking to adopt a kitten. Aubrey has several kittens to choose from, Riley picks her favorite and takes it home.'}",
+        "In `context`, what will Alex want to do next?\nbuy pet food / look at al the dogs / go home empty handed\n{'context': 'Alex always wanted a dog so he went ot the local shelter to see them.'}",
+        "In `context`, why did Lee do this?\nsee what it was like / see the horse in the pasture / practice their horse riding skills\n{'context': 'Lee had never rode a horse before, so Robin let them ride their horse.'}",
+        "In `context`, what does Quinn need to do before this?\nneeded to get a new cat / needed to pet their dog / needed to notice that their dog escaped\n{'context': 'Quinn jumped the fence in order to catch their dog.'}",
+        "In `context`, what will Remy want to do next?\nget the dog / get a new dog / take the dog back home\n{'context': 'Remy returned the dog to the shop because it was not the breed Remy was expecting.'}",
+        "In `context`, what does Remy need to do before this?\nfind their dog / post more flyers around town / find places to put the posters\n{'context': 'Remy posted flyers on town asking for help finding a dog.'}",
+        "In `context`, what will Kendall want to do next?\na dog trainer / train Alex's goldfish / train the dog to walk on hind legs\n{'context': \"Kendall is being paid to train Alex's dog.\"}",
+        "In `context`, what will Jan want to do next?\nlikes animals / teach the dog a new trick / show others how intelligent their dog is\n{'context': 'Jan taught their dog to sit when she was training him.'}",
+        "In `context`, why did Lee do this?\nadopt a cat / overcome fears / take care of others' cats\n{'context': 'Although he was terrified of cats, Lee overcame his fear and petted the cat.'}",
+        "In `context`, why did Tracy do this?\nget a pet / get some cat food / set up a spot for the kitten\n{'context': 'Tracy was feeling lonely so they went to an animal shelter and found a kitten. Tracy brought the kitten home.'}",
+        "In `context`, what will happen to Cameron?\nshe will pay a bill / receive immunity from rabies / get new rabies shots when it's time\n{'context': 'Cameron took her pet to the veterinarian to get a new rabies shot.'}",
+        "In `context`, what does Jesse need to do next?\nAdopt a dog / she wanted to own a cat / Get a litter box and food for the cat\n{'context': 'Jesse has never owned a cat before but she adopted one today from the animal society.'}"
+      ],
+      "child": {
+        "key": "steps_needed_beforehand",
+        "label": "Steps Needed Beforehand",
+        "description": "Questions asking what a person in a short everyday scene needed to do, have, or know before the action described could happen.",
+        "not_for": "Why the person did it (use Reasons for Actions); what they or others will do or what will happen afterwards (use What Happens Next).",
+        "examples": [
+          "What does Sasha need to do before this? (Sasha studied all night and made an A.)",
+          "What does Kendall need to do before this? (Kendall spent money on a new purse.)",
+          "What does Remy need to do before this? (Remy posted flyers looking for a dog.)"
+        ]
+      }
+    },
+    {
+      "size": 411,
+      "samples": [
+        "In `context`, what kind of place would Tracy be happy living?\nThe country / In a large city / In a big town with many people\n{'context': \"Tracy loves camping and being outside in nature, they don't like being cooped up in the city.\"}",
+        "In `context`, what will Riley want to do next?\nignore each other / not change anything / do things differently\n{'context': 'Jordan told Riley hoped that things would get better.'}",
+        "In `context`, what will Jesse want to do next?\nscript a first episode / script the final episode / research domestic authors\n{'context': \"Jesse promoted the world's literature by setting up a web series to take about international authors.\"}",
+        "In `context`, what will Kendall want to do next?\nbored / great / go to the next movie with Kendall\n{'context': 'Kendall loved horror movies and went to see the latest one tonight.'}",
+        "In `context`, what will Lee want to do next?\nMake another / demolish another / forget about insects\n{'context': 'Lee eliminated every insect from his vast collection.'}",
+        "In `context`, what will Skylar want to do next?\nget free tickets / go to the concert / convince them to give her tickets\n{'context': 'Skylar followed them everywhere hoping for free tickets to the concert.'}",
+        "In `context`, what will Skylar want to do next?\nbe funny / Burst out / Gently open the door\n{'context': 'Skylar was hiding in the closet waiting to burst out and scare Jordan. Jordan has entered the room.'}",
+        "In `context`, what will Carson want to do next?\nstudying free from distraction / avoid studying and procrastinate / wanted to do this to prevent diversions\n{'context': 'Carson deleted their facebook account shortly before the final exams at university.'}",
+        "In `context`, what will Aubrey want to do next?\nsell the coat / wash the coat / find some scissors\n{'context': 'Aubrey needed a shorter coat so they cut it according to their cloth.'}",
+        "In `context`, what will Kai want to do next?\nlearn a cover song / have the genes to be a great improvisational guitar player / record their improvised music\n{'context': 'Kai was a great improvisational guitar player; Kai made it up as Kai goes along.'}",
+        "In `context`, what will Tracy want to do next?\nknow the website / turn on the computer / keep reading the news\n{'context': 'Tracy wanted to know what happened so she read the news online.'}",
+        "In `context`, what will Austin want to do next?\nlay down / turn on the TV / find a movie to watch\n{'context': 'Austin was bored one night and had nowhere to go. Austin sat on the couch and watched a movie on TV.'}",
+        "In `context`, what will Sydney want to do next?\ndo another play / choose another part / practice their lines\n{'context': 'Sydney took the part of the lead character in the play.'}",
+        "In `context`, what will others want to do next?\nvacation next / have a service next / have their body disposed of\n{'context': 'Casey met her death in the bad car accident and the others were very sad.'}",
+        "In `context`, what will Skylar want to do next?\nbe good / promote good / Make sure not to hang out with people that are a bad influence\n{'context': 'Skylar overcame evil with good. He said no to a proposition that would have gotten him in trouble.'}"
+      ],
+      "child": {
+        "key": "what_happens_next",
+        "label": "What Happens Next",
+        "description": "Questions asking what a person or others in a short everyday scene will want to do next, or what will happen to them as a result.",
+        "not_for": "Why the person did it (use Reasons for Actions); what they had to do beforehand (use Steps Needed Beforehand); how they will feel (use Reading Feelings & Character).",
+        "examples": [
+          "What will Austin want to do next? (Austin sat on the couch to watch a movie.)",
+          "What will happen to Jesse? (Jesse was stuck with a hospital bill.)",
+          "What will others want to do next?"
+        ]
+      }
+    },
+    {
+      "size": 297,
+      "samples": [
+        "In `context`, what does Tracy need to do before this?\navoid austin / ignore austin / talk to austin\n{'context': 'Austin was a rebellious man so tracy brought austin to god.'}",
+        "In `context`, what does Quinn need to do before this?\nbe asked for help / be asked to leave / get away from Casey\n{'context': \"Quinn used Casey's hand to help Casey practice drawing, by guiding it across the paper.\"}",
+        "In `context`, what does Jan need to do before this?\nbreak the device / pick up the device / throw the device away\n{'context': 'Jan eased the tracking device by adjusting a dial on the back.'}",
+        "In `context`, what does Addison need to do before this?\nhire a tutor / play the piano every day / attend Addison's piano recital\n{'context': 'Addison played the piano very well after having practiced for years.'}",
+        "In `context`, what does Robin need to do before this?\ndecide to sit / not run with scissors / pick up some scissors\n{'context': 'Robin ran with scissors and fell down, cutting their arm badly.'}",
+        "In `context`, what does Riley need to do before this?\nget a canoe / get goggles / she likes going to the lake\n{'context': 'Riley woke up excitedly, jumping out of bed. \"It\\'s time to go to the lake!\" she says. \"I can\\'t wait to do laps!\".'}",
+        "In `context`, what does Lee need to do before this?\nSit down / Wait impatiently / See who it was from\n{'context': 'Lee tore open the cover. He could hardly wait to see what he had gotten in the mail.'}",
+        "In `context`, what will Kai want to do next?\ndisregard the results / prepare for the test results / Prepare herself for whatever the doctor says\n{'context': 'Kai saw a doctor. She had been putting it off out of fear of bad news.'}",
+        "In `context`, what does Sasha need to do before this?\nbe rich / be smart / be prepared for the test\n{'context': 'Sasha studied all night for a chemistry test. They made an A on the test.'}",
+        "In `context`, what does Skylar need to do before this?\nhave free time that day / did this for entertainment / have let her skin be unprotected\n{'context': 'Skylar spent the day at the beach and got a thick brown tan that looked great.'}",
+        "In `context`, what does Taylor need to do before this?\nvisit the museum / read book about World War II / watch movies about World war II\n{'context': 'Taylor went to a museum. Taylor learned about history of World War II.'}",
+        "In `context`, what did Jan need to do before watching the news?\ngo to bed / needed to wash her car / needed to take her car out at 10 p.m\n{'context': 'Before watching the 10 p.m. news, Jan needed to wash her car and take a shower.'}",
+        "In `context`, what does Jan need to do before?\nlive healthy / ignore Bailey / get to know Bailey\n{'context': \"Jan improved Bailey's life after he had been using drugs for years.\"}",
+        "In `context`, what does Sasha need to do before this?\nbe scared / do her best / be confident\n{'context': 'Sasha practiced for days but she was still nervous.'}",
+        "In `context`, what does Quinn need to do before seeing the article?\nget a paper / compliment her / become an author\n{'context': \"Quinn saw Aubrey's article in the paper and thought is was very informative.\"}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 270,
+      "samples": [
+        "In `context`, what's going to happen to Kai?\nignore Kai's request / not stop trying to impose themselves upon Tracy / start back to off seeing Tracy being very upset\n{'context': 'Tracy was very uncomfortable as Kai imposed her will onto Tracy.'}",
+        "In `context`, what will happen to Kai?\ntake Kai to dinner / be shown disappointment / Kail will be shown appreciation\n{'context': \"Kai wasn't sure what he wanted to dinner so Sydney offered suggestions. She got Kai to finally make up his mind.\"}",
+        "In `context`, what will happen to Taylor?\ngain power / be dominant / try to find a way to appease Austin\n{'context': 'Austin had Taylor at a disadvantage, so you could say Austin had Taylor by the short hairs.'}",
+        "In `context`, what will happen to Lee?\nrelaxed / resentful / be further duped by Jesse\n{'context': \"Jesse put Lee's worries at ease with a combination of logic and compassion.\"}",
+        "In `context`, what will happen to Bailey?\nbuy some beer / go to a new town / come to Bailey's aid\n{'context': 'Bailey bit their finger and drew blood on it and became very sad.'}",
+        "In `context`, what will Casey want to do next?\nlaugh next / express anger next / not a man of good character\n{'context': 'Robin forced himself upon Casey who resisted immediately and forcefully.'}",
+        "In `context`, what will Lee want to do next?\nredeem themselves / plan something bad / have a bad reputation\n{'context': 'Lee made their name hated to others after what they did.'}",
+        "In `context`, what will happen to Jesse?\nstay in hospital / Start to save money / Spend his money on a vacation\n{'context': \"Jesse cut Skylar's finger and was stuck with a hospital bill that he had no money to pay.\"}",
+        "In `context`, what will happen to Riley?\nIgnore Lee's opinion / Trust Lee's expertise / Pick something randomly\n{'context': 'Lee was an expert and Riley sought him out for advice which Lee happily gave.'}",
+        "In `context`, what will Addison want to counter with?\nrun away / tell the authorities / kick Lee in the shins\n{'context': \"Lee pushed back Addison's arms when she tried to punch him.\"}",
+        "In `context`, what will happen to Jesse?\nforget the trip / enjoy their trip / be forgiven by Jordan\n{'context': 'Jordan said the only thing they wanted for their birthday was a trip to Disney World. Jesse took Jordan to Disney World.'}",
+        "In `context`, what does Kendall need to do before this?\nrebel against the cause / know how to be a good lover / know how to be a good fighter\n{'context': 'Kendall fought by my side until the very end, but we still lost.'}",
+        "In `context`, what will happen to Remy?\ngo home / go to lunch / win the case\n{'context': \"Remy pleaded bailey's case to the jury, but it didn't seem to convince them.\"}",
+        "In `context`, what will happen to Robin?\nhe will laugh / shout and sing loudly / hit Kai softly on the arm\n{'context': 'Kai scared the crap out of Robin by jumping out from behind a tree.'}",
+        "In `context`, what does Austin need to do before this?\nsign them up / yell at them / receive power\n{'context': 'Austin put Kendall and teresa to the war so that they could fight for their country.'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 153,
+      "samples": [
+        "In `context`, what does Kendall need to do before this?\nbe trained / taught others how to ride horses / competed in horse riding competitions\n{'context': 'Kendall rode horses all the time and is very good at it.'}",
+        "In `context`, why did Bailey do this?\nwin again / win the first round / be better than their opponent\n{'context': \"Bailey anticipated every argument Bailey's opponent made in the final round of the debate championship because Bailey had spent a long time studying.\"}",
+        "In `context`, what will Carson want to do next?\ntry and calm down / grow red in the face / start yelling his points again\n{'context': 'Carson got the point across after slapping his hands repeatedly.'}",
+        "In `context`, what will Carson want to do next?\nget a snack next / take fencing next / save the others next\n{'context': 'Carson fell on the sword to save the others.'}",
+        "In `context`, why did Lee do this?\neat food / lose the fight / prepare for the fight\n{'context': 'Lee was in training for a fight and during training they absorbed every punch.'}",
+        "In `context`, what does Remy need to do before this?\neat a cake / practice skateboarding / lay around watching television\n{'context': \"Remy worked hard for the skateboarding competition and received carson's reward.\"}",
+        "In `context`, why did Sydney do this?\ndid this to quit / put her clubs away / did this to be thorough\n{'context': 'Sydney stayed on the course and finished all eighteen holes of golf.'}",
+        "In `context`, why did Kendall do this?\ngo to the supermarket / learn how to play guitar / give back the local community\n{'context': 'Kendall won the guitar at the local supermarket sweepstakes. Kendall took guitar lessons. Prompt word count: 4.'}",
+        "In `context`, what will Carson want to do next?\nneeded to stretch out / needed to get off the bench / Put concerns out of their mind\n{'context': 'CArson was playing in his last game and decided to go hard or go home.'}",
+        "In `context`, what will Kendall want to do next?\nstrong / prevented Kendall from falling / grabbing the arm before falling\n{'context': 'Jordan prevented Kendall from falling by grabbing the arm before falling into the pit.'}",
+        "In `context`, what will Kendall want to do next?\nstay inside / go in the pool / go in the yard\n{'context': 'Kendall went outside to play and though warm, he wore shoes.'}",
+        "In `context`, what will Jesse want to do next?\nhit a bump in the road / throw the bike in the trash / wear some knee pads next time\n{'context': 'Jesse was riding his bike without knee pads. Jesse scraped his knees.'}",
+        "In `context`, what will Carson want to do next?\nsend others to the store / pay for the lottery tickets / let others pay for the lottery tickets\n{'context': 'Carson want to play power ball lottery. Carson added their favorite number to the list.'}",
+        "In `context`, what will Jordan want to do next?\nquit it / play again / head out to the carnival\n{'context': 'Jordan was doing a carnival game at the fair. Jordan punched below their weight because he was unsure.'}",
+        "In `context`, what will the cyclists want to do next?\nwanted to be a part of the race / drink the water and get rehydrated / grab a sandwich after they cross the line\n{'context': 'Aubrey gave me water to pass out to the cyclists riding in the race.'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 341,
+      "samples": [
+        "In `context`, why did Taylor do this?\ngive Cameron medicine / take Cameron's temperature / wanted to make sure Cameron was safe\n{'context': \"Taylor inspected Cameron's body and raised Cameron's arms.\"}",
+        "In `context`, why did Sydney do this?\nbad / better / watch Skylar cry\n{'context': 'Skylar is crying and very upset. Syndey is busy but takes time to sit down and talk to Skylar.'}",
+        "In `context`, why did Jordan do this?\nhelp bailey recover / ask Bailey how the marathon was / get everything ready for Bailey\n{'context': \"Bailey had ran the marathon and just finished and got home Jordan settled Bailey on the settee and removed Bailey's shoes.\"}",
+        "In `context`, why did Remy do this?\ncool off / Go to sleep somewhere else / Take a shower to remove the sweat\n{'context': 'Remy left their bed because it was hot and they were getting sweaty.'}",
+        "In `context`, why did Tracy do this?\nfinalize the plan / wanted to show power / wanted to show incredibility\n{'context': 'Tracy raised an eyebrow at Aubrey when suggesting the plan.'}",
+        "In `context`, why did Kai pull a prank on Jan?\npiss Jan off / think of pulling a prank on jan / make Jan laugh so she wouldn't be sad\n{'context': \"Kai thought it would be funny and lift Jan's spirit if he pulled a prank on Jan, but it ended up really pissing her off instead.\"}",
+        "In `context`, why did Kendall do this?\nhelp skylar / get this over with / kendall who has want to skylar\n{'context': 'Knowing skylar would want to go too, Kendall took Skylar into account.'}",
+        "In `context`, why did Lee do this?\nbe angry at the video game / be annoyed at Taylor's playing / get them to pay attention to them\n{'context': \"Lee trued to turn Taylor's focus onto anything else but the video game they were playing.\"}",
+        "In `context`, why did Jesse do this?\nconsole Sasha / care for Sasha / wanted to see if Sasha's hand hurt where Jesse touched it\n{'context': \"Jesse touched a part of Sasha's hand that looked like it needed attention.\"}",
+        "In `context`, why did Cameron do this?\nGive a helping hand / So Casey new about the situation / So Casey could talk about the situation\n{'context': 'Cameron saw what happened and gave Casey a sense of events they saw.'}",
+        "In `context`, why did Taylor do this?\ngrab the camera / set the exposure / get the hair out of Sasha's face\n{'context': \"Taylor was helping Sasha get ready for pictures. Taylor pushed Sasha's hair back out of her face.\"}",
+        "In `context`, why did Kendall do this?\nhurt Sydney / discipline Sydney / keep everyone else safe\n{'context': 'Kendall threw Sydney into prison after they violated their parole.'}",
+        "In `context`, what will happen to Casey?\nembarrass Austin / become a laughingstock of the science community / write a paper based on their findings\n{'context': \"Casey knew how important it was in scientific experimentation to be precise, so he used Austin's exact procedure.\"}",
+        "In `context`, why did Remy do this?\nloved / pack a bag / use suntan lotion\n{'context': 'Remy took their belongings with them to the beach and had a nice tan.'}",
+        "In `context`, why did Casey do this?\nare selfish / had no choice / make bad choices that resulted in bad consquences\n{'context': 'Casey reaps what Casey sows because they brought the consequences on themselves.'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 265,
+      "samples": [
+        "In `context`, what will Aubrey want to do next?\nget his wallet from remy / see the wallet unattended / refuse to tell anyone his wallet was stolen by remy\n{'context': \"Remy was a bad person so he stole aubrey's wallet.\"}",
+        "In `context`, what will Jan want to do next?\nget back on / avoid the truck / fell off a turnip truck as it was travelling\n{'context': 'Jan fell off the turnip truck while it was driving down the street.'}",
+        "In `context`, what will Quinn want to do next?\nuse his new laptop / use his old laptop / have a reliable computer\n{'context': \"Quinn's old laptop had been malfunctioning for months, so he finally bought a new laptop.\"}",
+        "In `context`, why did Aubrey do this?\nfind some window glue / buy a new barbecue grill / buy some new garden supplies\n{'context': 'Aubrey went to the home improvement store when her front window was cracked by a ball.'}",
+        "In `context`, what does Ash need to do before this?\nhave money / did this to be caring / did this to be generous\n{'context': \"Ash put money in Quinn's pocket after realizing he didn't have any.\"}",
+        "In `context`, what does Ash need to do before this?\nneeded to shop for furniture / wanted to decorate the apartment / wanted to make the place look nicer\n{'context': 'Ash bought some modern furniture for his new condo he recently got.'}",
+        "In `context`, what does Kendall need to do before this?\nbuy a boat / rent a tuxedo / have some money\n{'context': 'Kendall went to the mall and spent some money on a new purse.'}",
+        "In `context`, what will Jan want to do next?\nbuy more things / get a lower price / follow good advice\n{'context': \"Quinn was telling Jan about how she got discounts at the store. When Jan went shopping, she used Quinn's advice to obtain discounts.\"}",
+        "In `context`, what does Alex need to do before this?\ndeliver the ticket to him / scan and check the ticket / allow him to receive a ticket from him\n{'context': \"Alex was checking everyone's tickets. Alex allowed him to enter.\"}",
+        "In `context`, what does Carson need to do before this?\ndie / have some decent insurance / have some expired insurance\n{'context': 'Carson kept Tracy alive on life support for as long as the insurance would allow it.'}",
+        "In `context`, what does Quinn need to do before this?\nGet a quote / buy a new car / Forget the dealerships offer\n{'context': 'Quinn got little in return for the car she traded in.'}",
+        "In `context`, what will Ash want to do next?\ngo to bed / go to a game / take care of the car\n{'context': 'Ash got himself a new car at the car lot and they loved it.'}",
+        "In `context`, what will others want to do next?\nTrade in their shares / Decide to keep their shares in the market / support others to also sell their shares\n{'context': 'Austin sold their shared in the market and the others saw that if they did not do the same they would lose all their money forever",
+        "In `context`, why did Kai do this?\nget money for shelter / get money for a holiday / get money for a restaurant\n{'context': 'Kai was sitting on the street with a cap infront of them at their feet and asked the passer by for money.'}",
+        "In `context`, what will Taylor want to do next?\nlook same / buy one less / keep buying them\n{'context': 'Taylor purchased one. Then they bought another the same day.'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

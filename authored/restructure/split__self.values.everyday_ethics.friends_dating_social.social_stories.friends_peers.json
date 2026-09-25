@@ -1,0 +1,212 @@
+{
+  "type": "split",
+  "node": "self.values.everyday_ethics.friends_dating_social.social_stories.friends_peers",
+  "n_questions": 2063,
+  "clusters": [
+    {
+      "size": 227,
+      "samples": [
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for asking for my stuff back?\\n\\nRecently, me and a friend traded some stuff, here's what he did \\n\\nHe Rece",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA For Expecting My Poor Friend To Pay Me Back?\\n\\nLong story short, I lent my friend $50 so she could buy some",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'WIBTA if I killed my friend’s aloe vera on purpose because she doesn’t care that her cat keeps getting upset stom",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for wanting to split a check 3-ways when with a couple?\\n\\nI was hanging out with a friend and his girlfrien",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA: for letting my best friend spend lots of money on me?\\n\\nHeres the thing my best friends spends a good deal",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for wanting my friend to pay his way?\\n\\nI'll keep this as short and sweet as I can. \\n\\nI invited a friend ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for possibly making a mistake when getting my friend a job?\\n\\nBackstory: my friend has a lot of student loa",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for letting my friend play the race card?\\n\\nA few days ago I was with my black friend and we were at a groc",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not giving someone their shoes back?\\n\\nSo, in my friend group a lot of us like basketball shoes. I had ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for not giving my friends free food after I payed for it\\n\\nIm at my friends house when some girls show up. ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not paying my friend back?\\n\\nWas traveling through Europe a while ago and I needed to get some cash out",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for not giving my roommate his share of the profit from our “business”?\\n\\nBefore you jump the gun let me pr",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'WIBTA if I ask my friend to pay half after I cracked his phone?\\n\\nSorry for formatting I\\'m on mobile.\\n\\nContex",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA because I asked for my money back?\\n\\nAccount Owner: my friend is using my account being she doesn’t have re",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"WIBTA If I held my friend's stuff until he paid me back (READ BEFORE YOUR DOWNVOTE)\\n\\nTL;DR at the bottom\\n\\nSo,"
+      ],
+      "child": {
+        "key": "roommates_shared_housing",
+        "label": "Roommates & Shared Housing",
+        "description": "Questions about who is at fault in a story about roommates, housemates, dorm mates or subletters: rent, chores, noise, food, guests and shared space.",
+        "not_for": "Stories about classmates or school (use School & Classmates); about coworkers or jobs (use Coworkers & Workplace); about a boyfriend or girlfriend (use Dating, Partners & Exes).",
+        "examples": [
+          "AITA for not letting my new roommate get the master bedroom?",
+          "AITA for giving my roommate a curfew?",
+          "AITA if I don't pay my roommates when they broke our agreement?"
+        ]
+      }
+    },
+    {
+      "size": 538,
+      "samples": [
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for saying my friends boobs are just ''alright''?\\n\\ni (18M) was hanging out with a friend (18F) at her plac",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'WIBTA for cutting off my friend who got back with her abusive ex?\\n\\nAbout two years ago, a friend (20f) of mine ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA? I’m normally the mediator to my friends’ arguments but I’m burnt out. My group of friends is falling apart ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for getting angry with my female friend for bragging about she likes to send nudes to her friends and gets t",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for yelling at my friend in front of my other friends?\\n\\nI stand by what I said, I just kind of want to kno",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for being friends with assholes?\\n\\nI’m in high school so I apologize if my immaturity shows through this po",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'WIBTA for wanting to stay away from people/“friends”\\n\\nIn general I am an asshole for comedic purposes (dark hum",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA? Punched a girl for fighting my friend. I’m male\\n\\nHi all. I just got out of a behavioral hospital after 6 ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for lying to my friends when I dont want to talk\\n\\nOkay so, I know lying is bad.. but Im conflicted because",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"WIBTA if I stopped talking to my 'friends'?\\n\\nReposting for visibility because I need more advice before I do an",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for wanting to end a friendship because they keep creating drama in my life?\\n\\nLong story short my friend _",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for calling a friend out on his hypocrisy and mentioning his ex?\\n\\nMe and a couple of friends play a game e",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for lying to my friend?\\n\\nHopefully my story doesn’t seem as bad as the title, but here goes.\\n\\nBasically,",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for breaking a 7 year friendship over a guy.\\n\\nLong story short my toxic best friend of 7 years slept with ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA For leaving my group of friends due to bullying?\\n\\nHey! As the title states I've been bullied by my friends"
+      ],
+      "child": {
+        "key": "school_classmates",
+        "label": "School & Classmates",
+        "description": "Questions about who is at fault in a story set at school or college: classmates, group projects, homework, teachers, grades and student clubs.",
+        "not_for": "Stories about roommates or dorm life at home (use Roommates & Shared Housing); about jobs or coworkers (use Coworkers & Workplace).",
+        "examples": [
+          "AITA for not letting a classmate copy my homework?",
+          "WIBTA if I told on a fellow student?",
+          "AITA for a problem in group work?"
+        ]
+      }
+    },
+    {
+      "size": 262,
+      "samples": [
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not tipping?\\n\\nEveryone in this story is American btw.\\n\\nI went out to eat with some friends a few day",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for forgetting a friend’s work schedule?\\n\\nI’m the mom friend. You know, the one who coordinates everyone’s",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for leaving from work leaving only one guy to scramble to function?\\n\\nI was supposed to come in today at 12",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for believing that I don’t owe anything to the company I worked for?\\n\\nWe just had a round of layoffs at wo",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA For not trusting the chef\\n\\nI went to dinner with some friends and we all wanted burgers. I asked a well do",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for saying I knew I was always destined for success?\\n\\nSo I got a promotion recently and the pay is VERY hi",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for firing a friend?\\n\\nI manage a business and this person used to be my equal, but their store front close",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"WIBTA if I ignore this email?\\n\\nI work as a PhD candidate and coworker X graduated last week. Today some of us g",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for putting extreme hot chilli in my sandwich to deter theft?\\n\\nHappened in middle school. I used to bring ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not splitting my referral bonus with a friend who got hired at the company I work for?\\n\\nPretty much ju",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA For reminding my coworker who crashed into my car to pay to get it repaired.\\n\\nIncident happened a week ago",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA For taking a coworkers phone for filming inappropriately?\\n\\nWe were at an after office (Still in the office",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not wanting to be the shoulder to cry on?\\n\\nI have a colleague who rains down every single problem she ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"WIBTA if I don't message my coworker to see if she's ok?\\n\\nMy coworker hasn't rocked up to work today. She's nev",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for calling someone out for calling the Ferguson police officer a “hideous monster”?\\n\\nThis was obviously y"
+      ],
+      "child": {
+        "key": "coworkers_workplace",
+        "label": "Coworkers & Workplace",
+        "description": "Questions about who is at fault in a story about a job: coworkers, bosses, employees, customers, tipping, hiring and firing.",
+        "not_for": "Stories about school or classmates (use School & Classmates); about roommates (use Roommates & Shared Housing).",
+        "examples": [
+          "AITA for firing a friend?",
+          "AITA for not splitting my referral bonus with a friend I got hired?",
+          "AITA for taking a coworker's phone for filming inappropriately?"
+        ]
+      }
+    },
+    {
+      "size": 266,
+      "samples": [
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for walking out of a Gay-Straight-Alliance meeting?\\n\\nSo, I’m a highschooler and everyday each grade gets a",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for leaving a mess on the table so the people who invaded our space had to clean it up?\\n\\nSo at my Universi",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA Blowing up at a Classmate Because of Sensory Issues\\n\\nIn my design class one of my classmates plays the ani",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"WIBTA if I told on a fellow student?\\n\\nOk, I have a friend who carries a knife to school every day. It's never b",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for wanting my friend to stop wearing his furry getup to school?\\n\\nHey there, this is my first post so go e",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not letting a classmate copy my homework?\\n\\nSo this happened around the 6th and 7th of february I got m",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for spilling water on my friend’s MacBook?\\n\\nSo basically this just happened a couple minutes ago. It’s fin",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for dismissing guy in my class?\\n\\nAITA. So a guy in my class (community college) immediately attached himse",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for believing that I should be able to say the N word if I'm reading it from a school-issued book?\\n\\nTo pre",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not acknowledging people?\\n\\nI'm a junior in high school. For some background, some kids at my school ar",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA because I was happy about a good grade?\\n\\nSo last week my class got back our math exam. Our teacher told us",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA accidentaly broke my classmate\\'s phone\\n\\nSo, today while me and my class was waiting for the next lesson, ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA ? Problem in group work\\n\\nHello everyone, \\n\\nI am extremely stressed by a story that happened to me last S",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for giving my classmates the opportunity to anonymously message a student\\n\\nFor some background information",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA For disliking the autistic kid at my school\\n\\nFirst and probably only post so shit formatting \\n\\nHeres som"
+      ],
+      "child": {
+        "key": "events_invitations_outings",
+        "label": "Events, Invitations & Outings",
+        "description": "Questions about who is at fault in a story about a friend's wedding, party, funeral, trip, bar or restaurant outing: invitations, attendance, bridesmaid roles and splitting the bill.",
+        "not_for": "Stories about roommates, school or work (use those siblings); ongoing friendship drama with no event at the center (stays at Friends, Roommates & Peers).",
+        "examples": [
+          "WIBTA for not going to a friend's wedding?",
+          "AITA for not inviting my pregnant friend on a bar crawl?",
+          "AITA for leaving my maid-of-honor seat next to the bride?"
+        ]
+      }
+    },
+    {
+      "size": 261,
+      "samples": [
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA expecting someone to work on the day they broke up with their boyfriend\\n\\nI work in a restaurant and in my ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'WIBTA for not going to a “friends” wedding?\\n\\nSo, I’m 20, and my friend A, is also 20. I try not to be too judgm",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for leaving my maid-of-honor seat next to the bride at her wedding?\\n\\nBest friend got married, I was her ma",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'WIBTA for not driving my friend’s boyfriend to the airport\\n\\nNot as dramatic as many of these but:\\n\\nI voluntee",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'WIBTA if I got married in the venue my best friend had to cancel because her fiancé cheated and called the weddin",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for leaving my friend at a movie theater?\\n\\nThis happened a few days ago but is still bothering me...\\n\\nMy",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for being angry about my friends not including me?\\n\\nBasically I’m angry that my friends made plans to hang",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for calling someone who wears a suit for fun a \"pretentious idiot\"\\n\\nI\\'m in college and I was eating with ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for potentially skipping my friends vacation wedding?\\n\\nMy buddy got engaged three weeks ago and they alrea",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA: For the way I ordered at a Mexican restaurant.\\n\\nThrowaway\\n\\nBackground: Born in SoCal, moved to a North ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA For pressuring friends to come to our friends funeral\\n\\nUsing a throwaway account because some friends know",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA For not wanting to be included in wedding accommodations?\\n\\nMy friend is getting married about 6 months fro",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for not inviting my pregnant friend on a bar crawl?\\n\\nMy group of friends, all mid twenties, have planned a",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not wanting to pay for other people's drinks?\\n\\nSo I went out with a group of friends and one of them i",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for leaving a penny as tip to the restaurant server for being overly political?\\n\\nA group of my friends and"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 170,
+      "samples": [
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'WIBTA if I apologize for being racist?\\n\\nMany years ago in college I was watching a movie with my Japanese frien",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for ruining the mood\\n\\nGroup of 3, went fishing and was playing cards to pass the time, the other two frien",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for destroying my friend's base?\\n\\nSo I made a server on ark just for me and friends. My friends said that ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'WIBTA for wanting to play my PS4 offline at my friend\\'s expense?\\n\\nOkay, I\\'ll do my best to make this brief.\\n",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for calling my friend dumb\\n\\nI was at my friends house yesterday and we were playing smash bros and he said",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for being angry at my friend for making no effort to do anything together for 2 weeks?\\n\\nOne of my friends ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"WIBTA if I don't tell them I know them?\\n\\nLong story short, I play a few online games. I made awesome friends on",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA - For getting pissed off that my friend is selling thoughtful gifts I gave her\\n\\nI collect a lot of anime/m",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for having evidence that says I\\'m right?\\n\\nThrowaway, ftp &amp; ltl blah blah. Ok lets start\\n\\nFriend - L",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for wearing this clothing?\\n\\nHello everyone, I’m on mobile so sorry for formatting. \\n\\nLater today my frie",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for killing my friend\\'s tarantula?\\n\\nMy friend is into tarantulas and has a couple of them at his house. I",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for saying my friend’s OC looks like a character from a show?\\n\\nLast night on Discord, my friend (who we wi",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for feeling annoyed at my friend for wanting to play a song better than me?\\n\\nBasically, I showed my friend",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA My friend refuses to play a game with me that i bought for him...\\n\\nSo it all began when i met this guy aro",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA For getting mad about a friend’s Hydra tattoo?\\n\\nMy friend and I are huge Marvel fans and often talk about "
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 339,
+      "samples": [
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for not letting new roomate get master bedroom?\\n\\nI’m(20M) moving out for the first time into a house with ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for putting parsley on my roommates scrambled eggs?\\n\\nSo. Bit of context here. Me and my roommate (25 y/o m",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA, for not expecting skidmarks in the toilet?\\n\\nSo i just visited a friend whom I have not seen for about 6 m",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for asking my roommate to replace the headphones his cat ate?\\n\\nI moved in to a new place about 5 months ag",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for wanting my friend to do his own dishes when he comes over?\\n\\nI\\'m twenty years old, as is my friend. I ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not wanting to loan my bed to a random subleaser?\\n\\nI'm trying to sublet my room inna few months and on",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for moving out?\\n\\nI just signed a lease with my two roommates to live in the same place again for another y",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA For not wanting my roommate to use my Switch console so much?\\n\\nIt’s my first year at college, and like all",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA For giving my roommate a curfew?\\n\\nI’m a freshman in college and I have one roommate and we share one room.",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not leaving the dorm when my roommate wants more privacy with his girlfriend?\\n\\nMy roommate rarely sees",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for leaving my friend and his girlfriend at the pool?\\n\\nSo my roommate and his girlfriend are really lovey-",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for making a comment about something my roommate has in the fridge?\\n\\nAITA My friend and I were in my kitch",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"WIBTA For texting my former roommates fiance about the roommate owing me money.\\n\\nSo pretty much about over a ye",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not waking up my roomate for class?\\n\\nMy roomate and her boyfriend are making me out to be the bad guy ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA if I don’t pay my roommates if they didn’t hold up to their end of the bargain?\\n\\nI went on a detachment (w"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

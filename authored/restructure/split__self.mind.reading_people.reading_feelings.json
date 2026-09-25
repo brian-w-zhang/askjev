@@ -1,0 +1,69 @@
+{
+  "type": "split",
+  "node": "self.mind.reading_people.reading_feelings",
+  "n_questions": 1718,
+  "clusters": [
+    {
+      "size": 742,
+      "samples": [
+        "In `context`, how would you describe Aubrey?\nlike a productive person / Someone that bought paint / Someone that went to get paint\n{'context': 'Aubrey went to the home improvement store to get paint for their room.'}",
+        "In `context`, how would you describe Remy?\nexcited / thrilled / As someone excited about their new phone\n{'context': 'Remy got a new phone and wanted to download their favorite apps.'}",
+        "In `context`, how would you describe Austin?\na dog lover / a cat person / relieved about finding the dog\n{'context': 'Austin finally found the perfect dog for him. He has wanted one for a long time.'}",
+        "In `context`, how would you describe Cameron?\nresponsible / surprised by them / sad to see the shoes go\n{'context': \"Cameron knew he couldn't afford the overpriced shoes so he returned them.\"}",
+        "In `context`, how would you describe Casey?\nbad / sad / persistent\n{'context': 'Casey went to his garage on a cold morning and got into their car. After attempting to start the car, it stalled. Casey attempted to start the car a second time.'}",
+        "In `context`, how would you describe Sydney?\nsnow blind / relaxed and warm / enjoying her sunglasses\n{'context': 'Sydney shielded her eyes from the sun while laying out on the beach.'}",
+        "In `context`, how would you describe Jesse?\na lot of stress / a thoughtful individual / able to make quick decisions\n{'context': 'Jesse thought aloud the themselves as they paced back and forth across the study.'}",
+        "In `context`, how would you describe Skylar?\nscared / unsafe / someone who needs help\n{'context': 'Skylar was in a bear attack and was hurt badly afterwards.'}",
+        "In `context`, how would you describe Remy?\nsad now / A socialist / depressed now\n{'context': 'How many voted for the first time because she did not want President Trump to be her president for the next four years.'}",
+        "In `context`, how would you describe Jordan?\naloof with fashion / very stylish and artistic / ready and confident to dance with Ash\n{'context': 'Jordan layered eyes on Ash till she was looking good and ready to go to the dance.'}",
+        "In `context`, how would you describe Austin?\nimpulsive / sad to lose the old car / relieved to get another car\n{'context': 'Austin bought a car the next day after his car broke down.'}",
+        "In `context`, how would you describe Remy?\na selfish person / a hopeless person / a sympathetic person\n{'context': 'Remy changed their character in order to be a more understanding person.'}",
+        "In `context`, how would you describe Jordan?\nambitious / tired afterwards / someone who likes to have fun\n{'context': 'Jordan had been out all night partying. They got back home.'}",
+        "In `context`, how would you describe Jan?\nwealthy / responsible / Happy and excited\n{'context': 'Jan got their car after they saved up money from working many months.'}",
+        "In `context`, how would you describe Alex?\nRelaxed / trusting / untrusting\n{'context': 'Alex was skeptical so he called the number.'}"
+      ],
+      "child": {
+        "key": "describing_character",
+        "label": "Describing Character",
+        "description": "Questions asking how you would describe a person in a short everyday scene: their traits or what kind of person they are, judged from what they did.",
+        "not_for": "Questions asking how the person or others would feel afterwards or as a result (use Feelings After Events). Why they acted or what happens next (use Reading Motives & Plans).",
+        "examples": [
+          "How would you describe Cameron? (Cameron returned shoes he couldn't afford.)",
+          "How would you describe Casey as a person?",
+          "How would you describe Jan? (Jan bought a car after saving for months.)"
+        ]
+      }
+    },
+    {
+      "size": 976,
+      "samples": [
+        "In `context`, how would Kai feel afterwards?\nvery happy / like he was crying / ecstatic at the movie\n{'context': 'Kai cried every time when he watched the sad movie.'}",
+        "In `context`, how would Carson feel afterwards?\nperturbed / hungry from not eating / conflicted about the news\n{'context': 'Carson was told bad news at dinner and immediately stopped eating.'}",
+        "In `context`, how would Alex feel afterwards?\ntired from relaxing all weekend / prepared to head on their vacation / eager to head home from the mountains\n{'context': 'Alex was going to head to the mountain for a relaxing weekend. Alex packed a bag.'}",
+        "In `context`, how would Austin feel afterwards?\nupset / angry at Austin / cross at Austin\n{'context': \"Austin ran the comb through Bailey's tangled hair. Bailey yelled at him because it hurt her.\"}",
+        "In `context`, how would Jan feel afterwards?\na little richer / tired and angry / ready to fall down\n{'context': 'Jan went to the bank and took some money out of her account.'}",
+        "In `context`, how will Kai be feeling?\nlike screaming / excited to watch the film / bored about watching the film\n{'context': 'Kai put on a scary film and for effect they turned all the lights off and sat in the dark to watch it.'}",
+        "In `context`, how would Jesse feel afterwards?\nlike a good cook / proud of his skills / really bad about himself\n{'context': 'Jesse accidentally burned the food while cooking a fancy meal.'}",
+        "In `context`, how would Addison feel afterwards?\nvery loved / like she became crueler / like her heart has softened\n{'context': \"Addison didn't at first but eventually grew to love Kendall.\"}",
+        "In `context`, how would Robin feel afterwards?\nfelt proud / felt embarrased / felt intelligent\n{'context': 'Robin had been driving drunk, when the cops caught her they had no sympathy, she spent the night in jail.'}",
+        "In `context`, how would Lee feel afterwards?\nas normal / as ordinary / sore from a sunburn\n{'context': 'Lee spent the entire day at the pool because he loved the water.'}",
+        "In `context`, how would Remy feel afterwards?\nthey regret so much / they lived life cautiously / like they lived life to the fullest\n{'context': \"Remy's life was lived fully and with great vigor every day.\"}",
+        "In `context`, how would Robin feel afterwards?\ninterested / unimpressed / excited about how well Alex did\n{'context': \"Robin loved Alex's performance and applauded very loudly.\"}",
+        "In `context`, how would Quinn feel as a result?\nangry / upset / grateful\n{'context': 'Quinn was acting stupid so alex gave her a idea.'}",
+        "In `context`, how would Carson feel afterwards?\nan adrenaline junkie / Like they were going fast / Like they want to see how fast they can ride\n{'context': 'Carson rode fast down the hill on their bike and it was as fast as they ever rode.'}",
+        "In `context`, how would Robin feel afterwards?\nas normal / sad to be home / relieved to be home\n{'context': 'Robin had to wait for the bus for a long time but they finally made it home.'}"
+      ],
+      "child": {
+        "key": "feelings_after_events",
+        "label": "Feelings After Events",
+        "description": "Questions asking how a person, or others around them, would feel afterwards or as a result of what happened in a short everyday scene.",
+        "not_for": "Questions asking how you would describe the person or their character (use Describing Character). Why they acted or what happens next (use Reading Motives & Plans).",
+        "examples": [
+          "How would Jesse feel afterwards? (Jesse burned a fancy meal.)",
+          "How would others feel as a result?",
+          "How would Robin feel afterwards? (Robin spent the night in jail.)"
+        ]
+      }
+    }
+  ]
+}

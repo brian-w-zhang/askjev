@@ -1,0 +1,99 @@
+{
+  "type": "split",
+  "node": "self.values.everyday_ethics.friends_dating_social.social_stories.dating_partners",
+  "n_questions": 2309,
+  "clusters": [
+    {
+      "size": 1179,
+      "samples": [
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for \"cheating\" on my gf (F23) in The Sims 4?\\n\\nOk. I know. But listen. I like me some good simulation game.",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for being annoyed the my partner wont watch a Film with me\\n\\nthrow away acc as she knows my reddit acc \\n\\n",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for not spending the night at my girlfriends.\\n\\nSo me (23) and my gf (19) live a little over an hour away f",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for buying a girl I am friends with a pack of Jaffa cakes?\\n\\nSo, I'm currently in an argument with my girlf",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for wanting my boyfriend to clean his side of the room?\\n\\nTLDR: AITA for wanting my boyfriend to clean his ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for taking part in a something my boyfriend disagreed with?\\n\\nHey Reddit, this irked me and I wanted some f",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not wanting my girlfriend's best friend to come on holiday with us?\\n\\nA bit of background...\\n\\nMy girl",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for going to a movie with a female coworker?\\n\\nWe are both in committed relationships, she's been with her ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA I didn’t disclose I get cold sores\\n\\nFacts:\\n\\nWe are both female. \\n\\nRight now we live 2000 miles apart. ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for being upset with my girlfriend?\\n\\nLast weekend was our 2 year anniversary so I went over her to watch s",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for dumping my girlfriend because she bullied a disabled 12 year old?\\n\\nI was walking around the campus abo",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not wanting to split the cost of an expensive hotel with my partner when a perfectly good alternative is",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for not wanting my boyfriend\\'s friends to join us on Valentine\\'s day?\\n\\nSo me and my boyfriend plan on ju",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for not wanting to marry my girlfriend.\\n\\nIve been with my girlfriend for quite some time now, and like mos",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA when I\\'m worried about my girlfriend drinking too much?\\n\\nMy girlfriend is 18, so it\\'s illegal for her to"
+      ],
+      "child": {
+        "key": "crushes_early_dating",
+        "label": "Crushes & Early Dating",
+        "description": "Questions about who is at fault in a story about a crush, asking someone out, a first date, a dating app match, or rejection before a relationship has formed.",
+        "not_for": "Stories about an established couple's everyday life (use Couple Life & Plans); about jealousy or cheating (use Jealousy & Cheating); about ending a relationship or an ex (use Breakups & Exes).",
+        "examples": [
+          "AITA for blocking a Tinder match who won't respect my mental health?",
+          "AITA for being upset after he didn't want a relationship?",
+          "AITA for throwing a girl out when she rejected me?"
+        ]
+      }
+    },
+    {
+      "size": 1130,
+      "samples": [
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for throwing a girl out when she rejected me?\\n\\nSo last night was gonna be a big night, I (M18) was gonna c",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for being upset after he didn’t want a relationship?\\n\\nWe talked for a little less than a month. Planned on",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for being attracted to people with mental issues?\\n\\nStrap in folks\\n\\nSo I've come to the realization that ",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for blocking a Tinder match who won\\'t respect my mental health?\\n\\nBackstory!\\n\\n&amp;#x200B;\\n\\nThis was m",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA? A friend of my girlfriend took her out for drinks, my girl got sick, friend left, I asked the friend why sh",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for not making my boyfriend my Snapchat best friend\\n\\nI have a (female) best friend and shes currently my s",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for cheating?\\n\\nOk so just to clarify, I hate cheating, and how it has become part of our culture.\\n\\nYeste",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for making my ex cry after flipping me off every day\\n\\nSo my ex gf (F16) and me (M16) broke up about a year",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for breaking up with my gf for finding out she slept with a few friends and aquaintances?\\n\\nI (18m) broke i",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for wanting to break up with my bf for not upholding his end of our agreement?\\n\\nI'll try to keep this shor",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for not dating a girl who's sick?\\n\\nI'll try to keep this short though because there's a lot of history.\\n\\",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for not telling my girlfriend i walk my dog with my best friend everynight\\n\\nThe situation is: i(male) have",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for telling my girlfriend I’m uncomfortable with some of her IG friends?\\n\\nMy girlfriend and I have been to",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': \"AITA for seeming to cause friction in my friend's relationship?\\n\\nI have just started college this past year, an",
+        "Based on `story`, who is in the wrong?\nNot enough information to judge / The other person or people / The person telling the story / Nobody is in the wrong / Everyone involved\n{'story': 'AITA for viewing my relationship differently after he disclosed his past bisexual experiences?\\n\\nMy boyfriend an"
+      ],
+      "child": {
+        "key": "couple_life_plans",
+        "label": "Couple Life & Plans",
+        "description": "Questions about who is at fault in a story about everyday life in a dating relationship: chores, money, time together, holidays, trips, habits, and plans like moving in or marrying.",
+        "not_for": "Stories about jealousy, cheating or a partner's friends of the opposite sex (use Jealousy & Cheating); about breaking up or an ex (use Breakups & Exes); married couples (use Spouses & Married Life).",
+        "examples": [
+          "AITA for wanting my boyfriend to clean his side of the room?",
+          "AITA for not wanting my girlfriend's best friend on our holiday?",
+          "AITA for not wanting to split an expensive hotel with my partner?"
+        ]
+      }
+    },
+    {
+      "size": 0,
+      "samples": [],
+      "child": {
+        "key": "jealousy_cheating",
+        "label": "Jealousy & Cheating",
+        "description": "Questions about who is at fault in a story about cheating, suspected infidelity, jealousy, or a partner's closeness to other people they might be attracted to.",
+        "not_for": "Everyday couple disagreements with no jealousy or infidelity (use Couple Life & Plans); stories centered on ending the relationship or an ex (use Breakups & Exes).",
+        "examples": [
+          "AITA for going to a movie with a female coworker?",
+          "AITA for telling my girlfriend I'm uncomfortable with some of her IG friends?",
+          "AITA for cheating?"
+        ]
+      }
+    },
+    {
+      "size": 0,
+      "samples": [],
+      "child": {
+        "key": "breakups_exes",
+        "label": "Breakups & Exes",
+        "description": "Questions about who is at fault in a story about deciding to break up, how a breakup was handled, or dealing with an ex afterwards.",
+        "not_for": "Stories where a couple is still together and the conflict is day-to-day (use Couple Life & Plans); stories about cheating that do not center on the breakup (use Jealousy & Cheating).",
+        "examples": [
+          "AITA for dumping my girlfriend because she bullied a disabled kid?",
+          "AITA for making my ex cry?",
+          "AITA for wanting to break up with my bf for not upholding our agreement?"
+        ]
+      }
+    }
+  ]
+}
