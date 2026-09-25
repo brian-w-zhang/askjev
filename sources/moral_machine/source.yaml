@@ -22,3 +22,4 @@ notes: >
   scenarios draw random characters, so a configuration rarely repeats 100 times). Executives and doctors appear
   only inside those mirrored scenarios (e.g. male vs female executives), never in a status comparison.
   Wave 3: run with ASKJEV_TARGET_MORAL_MACHINE=8000 (of the 26,020 eligible configurations); rows 1-3000 are unchanged.
+  Wave 5: run with ASKJEV_TARGET_MORAL_MACHINE=18000 (same exclusions and n >= 100); rows 1-8000 are unchanged.

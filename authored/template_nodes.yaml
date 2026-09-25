@@ -251,3 +251,85 @@ ethics_other.excuse:
   label: Excuses and Obligations
   description: "Whether an excuse is a reasonable reason for not doing what someone asked or what a role requires."
   examples: ["Is \"I was sick\" a reasonable excuse for not returning the book?"]
+
+# Wave 3
+fake_job_posts.fraudulent:
+  key: fraudulent_job_posts
+  label: Fraudulent Job Posts
+  description: "Questions a program asks about a job posting to decide whether it is a fraudulent listing rather than a real job."
+  examples: ["Is this job posting a fraudulent listing?"]
+contract_nli.entailment:
+  key: nda_clause_checks
+  label: NDA Clause Checks
+  description: "Questions a program asks about an excerpt of a non-disclosure agreement to decide whether it entails, contradicts, or doesn't mention a specific clause condition."
+  examples: ["Does this contract excerpt entail, contradict, or not mention that the receiving party may share information with employees?"]
+esci.match:
+  key: product_query_match
+  label: Product-Query Match
+  description: "Questions a program asks about a product listing and a shopping query to score how well the product matches: irrelevant, a complement, a substitute, or an exact match."
+  examples: ["How well does this product match the shopping query?"]
+pubmedqa.answer:
+  key: biomedical_questions
+  label: Biomedical Research Questions
+  description: "Questions a program asks about a biomedical research abstract to answer a research question yes, no, or maybe based on the abstract."
+  examples: ["Based on this abstract, does the treatment reduce mortality?"]
+fin_news_topic.topic:
+  key: financial_news_topics
+  label: Financial News Topics
+  description: "Questions a program asks about a financial news post to tag its topic: earnings, mergers, IPOs, macro, markets, policy, company news and so on."
+  examples: ["What is this financial news post about?"]
+docstring_match.accurate:
+  key: docstring_accuracy
+  label: Docstring Accuracy
+  description: "Questions a program asks about a function and its documentation comment to decide whether the docstring accurately describes what the code does."
+  examples: ["Does this docstring accurately describe what the code does?"]
+code.language:
+  key: language_identification
+  label: Language Identification
+  description: "Questions a program asks about a code snippet to identify which programming language it is written in."
+  examples: ["What programming language is this code written in?"]
+paws.same_meaning:
+  key: paraphrase_detection
+  label: Paraphrase Detection
+  description: "Questions a program asks about two sentences with heavily overlapping words to decide whether they mean the same thing."
+  examples: ["Do these two sentences mean the same thing?"]
+ethics_util.pleasant:
+  key: which_is_more_pleasant
+  label: Which Is More Pleasant
+  description: "Comparisons of two everyday situations to judge which one would feel more pleasant for the person living it."
+  examples: ["Which is more pleasant: 'I got a free coffee' or 'I got a free coffee and the barista remembered my name'?"]
+ethics_util.justice:
+  key: fair_justifications
+  label: Fair Justifications
+  description: "Whether a stated reason is a fair justification for treating someone a certain way or for what they deserve."
+  examples: ["Is 'because she worked overtime all week' a reasonable justification for 'I gave my employee a bonus'?"]
+caption_contest.funny:
+  key: cartoon_captions
+  label: Cartoon Caption Humor
+  description: "How funny a caption is for a described New Yorker cartoon, judged against thousands of readers' votes."
+  examples: ["How funny is this caption for the cartoon?"]
+humicroedit.funny:
+  key: edited_headlines
+  label: Edited Headline Humor
+  description: "How funny a news headline becomes when one word is swapped for a humorous replacement."
+  examples: ["How funny is this edited news headline?"]
+concreteness.concreteness:
+  key: word_concreteness
+  label: Word Concreteness
+  description: "How concrete a word feels: whether what it means can be directly seen, heard, touched, smelled, tasted or done, or only explained with other words."
+  examples: ["How concrete is the word \"metro\"?"]
+glasgow_norms.familiarity:
+  key: word_familiarity
+  label: Word Familiarity
+  description: "How familiar a word is to most people, from never seen to used every day."
+  examples: ["How familiar is the word \"quokka\" to most people?"]
+glasgow_norms.arousal:
+  key: word_arousal
+  label: Word Arousal
+  description: "How calming or stirring a word feels to most people."
+  examples: ["How calming or stirring does the word \"storm\" feel?"]
+glasgow_norms.valence:
+  key: word_pleasantness
+  label: Word Pleasantness
+  description: "How pleasant or unpleasant a word feels to most people."
+  examples: ["How pleasant does the word \"sunshine\" feel?"]

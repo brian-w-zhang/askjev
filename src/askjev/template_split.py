@@ -29,7 +29,9 @@ def candidates() -> list[dict]:
         return conn.execute(
             """with over as (select node_id, count(*) total from questions where display_ok group by 1 having count(*) > %s)
                select q.node_id, q.template_id, count(*) c, max(f.total) total from questions q join over f on f.node_id=q.node_id
-               where q.template_id is not null group by 1,2 having count(*) >= %s order by 1, 3 desc""",
+               join nodes n on n.id=q.node_id
+               where q.template_id is not null and n.depth >= 2  -- never add children to the root or a hemisphere
+               group by 1,2 having count(*) >= %s order by 1, 3 desc""",
             (NODE_CAP, MIN_TEMPLATE),
         ).fetchall()
 

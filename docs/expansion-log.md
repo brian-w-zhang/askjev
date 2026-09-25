@@ -2,6 +2,33 @@
 
 _One section per wave (`docs/10-expansion.md` §3). Newest first._
 
+## Wave 3: 300k → 373k (gated 2026-09-25)
+**372,590 canonical questions** (+72,727), all placed and answered; 1,404 active nodes; 177,991 distinct texts; 195,737 with
+ground truth; 116,391 human distributions; 783k cached Jev calls. Hemispheres: World 37.3 · Self 33.3 · Machine 29.4.
+
+| | Wave 3 | Rule |
+|---|---|---|
+| Anchored | ≈ 80% (word norms, Moral Machine, humor ratings and taste pairs carry human data; ETHICS and Machine sets carry truth) | ≥ 60% ✅ |
+| Synthetic | 8,729 (12%): world evaluative/perception/forecast bank 5,335 (**85%** accept), personality bank 3,394 (59%) | ≤ 15% ✅ |
+
+**Added:** Self: Moral Machine +5,000, Humicroedit 5,000 and New Yorker caption contest 3,000 (humor with judge shares), goodreads
++2,000, ETHICS utilitarianism/justice 7,000. World: Lancaster +8,000, Glasgow norms 9,000, Brysbaert concreteness 3,000 (all with
+human rating distributions), Yahoo closed titles 3,998, evaluative bank. Machine: ESCI match + pairwise, ContractNLI, PubMedQA,
+fake job posts, PAWS, docstring match, financial news topics (18,000).
+
+**Measurements:** perception rose from 0.7% to 5.3% (target 3); evaluative 5.7 → 8.1; factual 22.6 → 18.6. Word norms and humor are
+almost never decisive (≤ 9%), so they measure agreement with human rating distributions rather than accuracy. Informative
+Machine sets: ESCI 0.67, fake job posts 0.71, financial topics 0.76.
+
+**Tree:** template split for 12 nodes (7 wave 3 Machine templates; humor → edited headlines + cartoon captions; utilitarianism →
+Which Is More Pleasant; justice → Fair Justifications; docstring/language identification; paraphrase detection; word concreteness,
+familiarity, arousal, pleasantness under Word); descend of 26,560 hint-placed questions (16k word-norm items from the World root).
+Guard added: template split never adds children to the root or a hemisphere (two such nodes were created and folded back the same
+hour, before any UI read them). `repair-paths` 0; star layout 347,814 stars in 1,342 nodes.
+
+**Known issues:** everyday_ethics (~4.8k) and the Reading People children (~2k, question-type clusters) remain over the node cap;
+1,870 generic word-norm items stay on the World root; Moral Machine grows to 18k in wave 5 and needs a split by scenario type first.
+
 ## Wave 2: 239k → 300k (gated 2026-09-25)
 **299,863 canonical questions** (+60,544), all placed and answered; 1,388 active nodes (+23); 140,253 distinct texts;
 170,737 with ground truth; 76,770 human distributions; 587k cached Jev calls.

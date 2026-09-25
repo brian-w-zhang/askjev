@@ -1,0 +1,39 @@
+name: character_traits
+url: https://openpsychometrics.org/tests/characters/data/
+license: CC BY-NC-SA 4.0 (Open Psychometrics, Statistical "Which Character" Personality Quiz data)
+version: >
+  SWCPQ-Features-Survey-Dataset-November2023.zip (individual character ratings, Nov 2019 - Nov 2023; 3.39M survey
+  rows, 77.4M ratings) streamed once by fetch() and reduced to char_ratings_agg.parquet (per character x adjective
+  pair: count below 50 / at 50 / above 50, sum, sum of squares), then the 1.2 GB zip is deleted. Character names and
+  works from SWCPQ-Features-Aggregated-Dataset-January2025 (codebook), same character ids (raw means and n match the
+  aggregated file). Fetched 2026-09-25.
+target: 15000 (ASKJEV_TARGET_CHARACTER_TRAITS; salted-hash order, prefix-stable)
+hemisphere: world
+kind: evaluative
+notes: >
+  Crowd ratings of fictional characters on bipolar adjective pairs. One Choice per (character, pair):
+  'Which describes <character> from <work> better: "<a>" or "<b>"?' ("the title character of <work>" when the
+  character is the work), options = the two words as slug keys (template_id character_traits.pair, origin template).
+  Human distribution from the individual 1-100 slider ratings (1 = first word): share of raters below 50 -> first
+  word, above 50 -> second, exactly 50 (3.7% of ratings; the slider's start position) split evenly; n = raters.
+  No mean/SD approximation was needed. Mean, SD and the three counts are in meta.
+  Eligibility: characters whose median pair has >= 20 raters (a proxy for a well-known work: 1,627 characters, 278
+  works) and pairs with >= 15 raters. Per character <= 12 pairs: the 9 most decisive (ranked by the Wilson 95% lower
+  bound of the majority share, so large unanimous crowds come first) plus the 3 closest to an even split among pairs
+  rated at least as often as the character's median pair (not political). Pool 19,224 items; 1,602 characters in the 15,000.
+  Pairs dropped (adapter DROP, 144 of 500; 356 pairs kept): emoji pairs; sexual or innuendo pairs; slur-adjacent, mental-health and
+  disability labels (autistic, OCD/ADHD, crazy, deranged, stuttering, freak, alpha/beta, junkie ...); body and
+  appearance ratings (attractive/repulsive, thin/thick, beautiful/ugly, stinky, gross, sickly, macho/metrosexual ...);
+  loaded politics (feminist/sexist, racist/egalitarian, woke/problematic, sheeple/conspiracist ...); nonsense or
+  no-clear-contrast pairs (orange/purple, fire/water, moist/dry, bear/wolf ...); key.js pairs built from other items'
+  words (89-92, 362); duplicate hard/soft. Kept and flagged political: spiritual/skeptical, libertarian/socialist,
+  political/nonpolitical, democratic/authoritarian, theist/atheist, anarchist/statist, liberal/conservative,
+  patriotic/unpatriotic, radical/centrist, capitalist/communist, activist/nonpartisan, old-fashioned/progressive.
+  Works dropped: portrayals of real people (The Social Network, The Crown, Catch Me If You Can, Hustlers, House of
+  Gucci, 8 Mile, Mindhunter, American Sniper, Green Book, Band of Brothers, Baby Reindeer, Oppenheimer, Hamilton),
+  two webcomics; character dropped: Mammy (Gone With the Wind). Characters added to the quiz after Nov 2023 have no
+  individual ratings and are not included.
+  node_hint by a hand map of work -> medium: world.arts.television.tv_series, .television.cartoons_anime (animated
+  series and anime), .books.specific_books (novels, plays, comics), .theatre_dance, else .film.specific_films. Work
+  names fixed in text where needed (Two and a Half Men, Tomorrow Never Dies, Lost, Firefly, the Marvel Cinematic
+  Universe ...). No truth.
