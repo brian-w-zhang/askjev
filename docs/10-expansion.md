@@ -70,7 +70,7 @@ another wave under the mix rules. In that case, write down why in the log.
   Sources already over the cap (Vital4's two templates, AITA, Social Chemistry, ETHICS commonsense) are
   frozen. More volume comes from *new* question texts, not more rows of old ones.
 - **Anchored share ≥ 60% per wave**: the question has ground truth or a human distribution.
-- **Synthetic ≤ 15% per wave**, and only for nodes no real source covers. Rules for new banks:
+- **Synthetic ≈ 15-20% per wave (a guideline, not a hard cap; Brian, 2026-09-25)**, used where no real source covers a node; Self may go higher while real Self data is scarce. Rules for new banks:
   - No `other` option unless the list really can't be exhaustive.
   - No questions about a personal biography (childhood, family, body, hometown).
   - No synthetic factual questions (use a real source with truth).
@@ -191,3 +191,13 @@ hidden by design (kept that way); math and logic reasoning nearly absent; foreca
    native-language real questions where the license allows.
 6. **Kind gaps:** personality and Love/Mind through round-trip-filtered synthetic banks; food, history, sports, tech and money
    through real asked questions and new datasets; math/logic through a small closed-form reasoning set with truth.
+
+## 9. Steering corrections after wave 5 (agreed with Brian, 2026-09-25)
+At 564k: World 39.9 / Self 29.2 / Machine 30.8; factual ~21%, personality ~4.2%. Real asked questions (Stack Exchange, Yahoo)
+turned out ~80% World factual, so prioritizing them pushed World and factual up and Self down.
+- **Hold new World volume** (Yahoo top-up, MedMCQA, CommonsenseQA, further Stack Exchange) until World falls to ~36%.
+- **Waves 6-7 are Machine + Self:** wave 6 = 40k Machine + the wave 6 Self bank; wave 7 = Reddit polls extended to every day
+  (Self taste/opinion with vote shares) + a larger Self synthetic share.
+- **Personality** grows through round-trip-filtered synthetic banks and public no-login surveys (Afrobarometer, PISA student
+  questionnaires, the GlobalOpinionQA remainder, IPIP-NEO response data to anchor existing items). Login-gated surveys (WVS, ESS,
+  Pew, GESIS) are ingested only if Brian downloads them; Claude does not create accounts or accept data licenses on his behalf.
