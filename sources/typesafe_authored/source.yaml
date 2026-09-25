@@ -1,0 +1,24 @@
+name: typesafe_authored
+url: (none; authored in this repo)
+download: >
+  Nothing to download. Inputs are authored/machine_inputs/<leaf>.jsonl, one record per line with the
+  author's label.
+license: authored (askjev)
+version: wave 6 (2026-09-25)
+target: ~7,000 (every authored line; 250 per template, 350 for the two competency_evidence templates)
+hemisphere: machine
+shape: verify, detect, route, classify, score
+notes: >
+  docs/10-expansion.md §8 priority 4: TypeSafe's Machine leaves with no public labeled data
+  (finance.claims_triage, finance.kyc_aml, commerce.ad_alignment, commerce.listing_compliance,
+  trust_safety.enforcement, support.response_verification, legal.prohibited_claims,
+  research.methods_checks, people.competency_evidence, people.purchase_intent). 29 templates in the
+  TypeSafe style (one snap judgment over an input, state keys in backticks), defined in adapter.py.
+  The inputs (insurance claims, KYC files and alerts, ad/landing-page pairs, marketplace listings,
+  moderation cases, support tickets and transcripts, marketing copy, methods sections, resumes and
+  interview feedback, sales emails and call notes) were written by hand by Claude subagents, with
+  invented names, companies and identifiers, and labeled at authoring time. Classes are balanced per
+  template and about 30% of inputs are deliberately borderline (meta.borderline). Every question is
+  origin=synthetic with meta.synthetic_input = true and meta.truth_source = "author": the truth is the
+  author's judgment, not independent ground truth, so these are reported separately and count inside
+  the wave's 15% synthetic cap. No model was called to write or label them.

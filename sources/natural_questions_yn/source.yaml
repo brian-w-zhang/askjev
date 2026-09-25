@@ -1,0 +1,17 @@
+name: natural_questions_yn
+url: https://huggingface.co/datasets/google-research-datasets/natural_questions
+license: CC BY-SA 3.0 (Google Natural Questions)
+version: google-research-datasets/natural_questions default config, train (287 files) + validation (7 files) parquet; only question, document title, yes_no_answer and short-answer strings read via HTTP range requests; fetched 2026-09-25
+target: all that survive (ASKJEV_TARGET_NATURAL_QUESTIONS_YN, default 100000)
+hemisphere: world
+kind: factual
+notes: >
+  Real Google search queries whose NQ annotation is YES or NO (train: the single annotation; validation: >= 3 of 5
+  annotators agree, votes kept in meta). Noul with truth, no context (state None). Queries must open with a yes/no
+  auxiliary and pass BoolQ's standalone filter (no digits, no show-plot/"still"/unseen-context wording, no
+  fictional-universe titles). Casing restored from a corpus-wide name table (Wikipedia titles + short answers over
+  all NQ rows; common English words from Brysbaert et al. 2014 are never capitalized) and the row's own title.
+  Deduped on normalized text and against all 12,697 BoolQ questions (BoolQ was drawn from the same query stream:
+  about half the NQ yes/no queries are already in BoolQ). Visa-requirement queries are dated policy facts and are
+  capped at 40. Political/sensitive flags from BoolQ's regexes. No node_hint: BoolQ's title rules misfire without
+  the passage, so the beam walk places them.

@@ -1,0 +1,25 @@
+name: reddit_polls
+url: https://arctic-shift.photon-reddit.com (Arctic Shift public Reddit archive API, no login)
+license: Reddit user content via the Arctic Shift public archive (research use; Reddit User Agreement)
+version: r/polls + r/WouldYouRather submissions with poll_data, whole UTC days (1st, 8th, 15th, 22nd of each month, 2020-01..2024-12), fetched 2026-09-25
+target: 15000 (ASKJEV_TARGET_REDDIT_POLLS)
+hemisphere: self + world
+kind: taste, evaluative, social, values
+notes: >
+  Real Reddit native polls with their archived vote counts. A poll becomes a Choice over its options (2-6 after
+  dropping "see results" options; keys are snake_case cut at a word boundary, the full option text is the
+  description), HumanDist = vote shares over the kept options (population "r/polls voters" or "r/WouldYouRather
+  voters", n = their total votes, n >= 100; meta.closed_when_archived says whether the archive copy was taken after
+  voting ended). The title must be one standalone closed question ("WYR" expanded; [tags], "Reddit," and similar
+  prefixes stripped; Title Case, typo'd (quora_closed's corpus-frequency check), multi-question and garbled titles
+  dropped). Dropped: NSFW-marked, removed, and prediction posts; Demographics, Reddit, Trivia, Current Events,
+  Decide for Me and NSFW flairs; titles needing unseen context (the post body, "this", comments) or about the asker
+  (I/my); dated titles (COVID, years, "this year"); facts about the voter rather than an opinion (age, gender,
+  location, "have you ever", body abilities, "do you know"); polls whose options split votes by age, gender or
+  region; slurs and sexual content involving minors. Duplicate titles keep the poll with the most votes.
+  Hemisphere: self when it asks about the voter's own preference, habit or imagined choice ("would you", "do you
+  like", "your favorite"), world for opinions about the world ("which is better", "do you think X"). Kind: values
+  (should/moral/okay to...) > social (friends, dating, family, manners) > taste (self, or liking words) >
+  evaluative. Contested politics flagged political (Politics flairs + quora_closed's regex with the elect\w* fix),
+  sexual/drug/health/violence/profanity flagged sensitive. Salted-hash sample, at most 15% of the output per flair
+  and 25% from r/WouldYouRather. No truth, no node_hint (beam walk).

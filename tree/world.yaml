@@ -766,6 +766,16 @@ children:
     - Is Mandarin the hardest language to learn?
     - Is the Oxford comma necessary?
     - Is British English more correct than American English?
+  - id: world.society.everyday_how_to
+    label: Everyday Practical Questions
+    description: 'Practical yes/no and which-is-better questions about everyday life: home and DIY, cleaning, cooking technique
+      as a household task, car and bike upkeep, travel logistics, paperwork, and consumer rights.'
+    not_for: Choosing a product to buy goes to world.money.buying_decisions; recipes and dishes go to world.food; the
+      answerer's own routines go to SELF.
+    examples:
+    - Can you use dish soap to clean a car?
+    - Is it safe to leave a phone charging overnight?
+    - Can a landlord keep your deposit for normal wear and tear?
   - id: world.society.education
     label: Education & Schools
     description: Questions about schools, universities, teaching methods, exams, homework, and education systems around the
@@ -966,6 +976,16 @@ children:
     - Is credit card debt the worst kind of debt?
     - Is a strict monthly budget worth keeping?
     - Is saving for retirement in your 20s necessary?
+  - id: world.money.buying_decisions
+    label: Buying Decisions
+    description: 'Questions about choosing what to buy or pay for: which product, model, brand or service is the better pick,
+      whether something is worth the money, and when to buy.'
+    not_for: How brands and companies are doing as businesses goes to world.money.companies_brands; budgeting and debt go to
+      world.money.personal_finance; the answerer's own shopping habits go to SELF.
+    examples:
+    - Is a Dyson vacuum worth the price?
+    - Should you buy a laptop now or wait for the new models?
+    - Is an extended warranty ever worth it?
   - id: world.money.companies_brands
     label: Companies & Brands
     description: 'Questions about non-tech companies and brands: retail, consumer goods, food and fashion companies, carmakers

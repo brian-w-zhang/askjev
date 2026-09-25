@@ -4,7 +4,13 @@ Source: Yahoo! Answers Topics (Zhang, Zhao & LeCun 2015) train split, 1.4M quest
 filter chain, choice parsing, dedupe key and keyword tagging are quora_closed's (imported, not copied), with a few
 Yahoo-specific drops on top: the Family & Relationships category entirely, titles about Yahoo! Answers itself
 (points, best answer), SHOUTED titles, and names pinned to the mid-2000s news cycle. World only: self-tagged
-questions are dropped. No node_hint (placed by the beam walk). No truth.
+questions are dropped. No truth. No node_hint on the wave 3-5 rows (placed by the beam walk).
+
+Wave 6 (TARGET above WAVE5_TARGET): the 12,000 wave 5 rows are unchanged; the top-up takes the Business & Finance,
+Sports, Health, Science & Mathematics and Computers & Internet titles first (then the other topics, Politics &
+Government last), in salted-hash order, and gives new rows the topic's node_hint (TOPIC_NODE) when the question
+also has a topic word (TOPIC_WORDS); Science & Mathematics gets none (it mixes weather, animals and space). New rows'
+political flag uses the fixed election regex (stackexchange_closed's), not the electric-word workaround.
 """
 
 from __future__ import annotations
@@ -41,7 +47,8 @@ BASE = ("https://huggingface.co/api/datasets/community-datasets/yahoo_answers_to
 FILES = {f"train_{i}.parquet": f"{BASE}/{i}.parquet" for i in (0, 1)}
 LICENSE = "Yahoo! Answers Comprehensive Q&A (Yahoo Webscope L6): non-commercial research use"
 BASE_TARGET = 8000  # the original sample; a larger TARGET keeps it and tops up (prefix-stable)
-TARGET = env_int("TARGET_YAHOO_CLOSED", 12000)
+WAVE5_TARGET = 12000  # the wave 5 sample; a larger TARGET keeps it and tops up (priority topics first)
+TARGET = env_int("TARGET_YAHOO_CLOSED", 30000)
 SALT = "yahoo_closed-20260925"
 TOPICS = ["society_culture", "science_mathematics", "health", "education_reference", "computers_internet", "sports",
           "business_finance", "entertainment_music", "family_relationships", "politics_government"]
@@ -63,6 +70,33 @@ MESSY = re.compile(r"[()/&]| - |,\S|[.,]\?$|\b(\w+) \1\b|[a-z]\.[a-z]|\b(scare|b
 # up to these shares of TARGET and factual fills the rest.
 KIND_SHARE = {"evaluative": 0.40, "social": 0.10, "forecast": 0.05}
 FUNNEL: Counter = Counter()
+# Wave 6 top-up order and node hints: thin world nodes first; the rest after; politics last.
+PRIORITY_TOPICS = ["business_finance", "sports", "computers_internet", "science_mathematics", "health"]
+LAST_TOPICS = ["politics_government"]
+TOPIC_NODE = {"business_finance": "world.money", "sports": "world.sports", "computers_internet": "world.tech",
+              "health": "world.health"}
+# Yahoo topics are the asker's pick, so a hint also needs a topic word in the question (Science & Mathematics mixes
+# weather, animals and space, so it gets no hint).
+TOPIC_WORDS = {
+    "business_finance": re.compile(
+        r"\b(money|pay\w*|paid|tax\w*|banks?|banking|credit|loans?|stocks?|shares?|invest\w*|jobs?|work\w*|business\w*|"
+        r"compan(y|ies)|prices?|costs?|insurance|mortgages?|debt\w*|econom\w*|dollars?|euros?|salar(y|ies)|wages?|"
+        r"markets?|sell\w*|buy\w*|rent\w*|profit\w*|fund\w*|retire\w*|financ\w*|income|employ\w*|interest|"
+        r"cash|cheap\w*|expensive|save|saving\w*|budget\w*|bills?|checks?|cheques?|franchise\w*|brands?|stores?)\b", re.I),
+    "sports": re.compile(
+        r"\b(sports?|teams?|games?|play\w*|win\w*|won|league|football|soccer|basketball|baseball|hockey|golf|tennis|"
+        r"boxing|wrestl\w*|cricket|rugby|nba|nfl|nhl|mlb|nascar|olympic\w*|coach\w*|athlet\w*|champion\w*|"
+        r"season|draft\w*|score\w*|goal\w*|match\w*|race\w*|racing|fans?|stadium|quarterback|pitcher|"
+        r"ufc|fight\w*|skat\w*|ski\w*|swim\w*|run\w*|bike|cycling|workout|gym)\b", re.I),
+    "computers_internet": re.compile(
+        r"\b(computers?|pcs?|laptops?|internet|web\w*|online|software|windows|mac|linux|apple|microsoft|google|"
+        r"emails?|e-mail|virus\w*|hack\w*|programs?|programming|download\w*|files?|browsers?|firefox|explorer|"
+        r"ram|cpu|hard drives?|disks?|drives?|usb|printers?|monitors?|keyboards?|mouse|wifi|wireless|router|"
+        r"broadband|dsl|modem|servers?|sites?|ebay|youtube|myspace|facebook|chat\w*|msn|ipods?|phones?|mp3|"
+        r"burn\w*|dvd|cd|java\w*|html|code|os|xp|vista|install\w*|spyware|firewall|network\w*)\b", re.I),
+}
+_ELECT_FIX = r"elect(s|ed|ing|or\w*|oral|ion\w*)?"  # quora_closed's `elect\w*` also matches electricity
+POLITICAL_FIXED = re.compile(qc.POLITICAL.pattern.replace(r"elect\w*", _ELECT_FIX), re.I)
 
 
 # Yahoo misspellings recur hundreds of times ("ther", "stoped"), so corpus frequency alone can't catch them: a
@@ -89,6 +123,11 @@ def _known(w: str, vocab: Counter) -> bool:
 
 def _typo(q: str, vocab: Counter) -> bool:
     return any(not _known(w, vocab) for w in re.findall(r"\b[a-z][a-z']*\b", q.split(" ", 1)[-1]))
+
+
+def _hint(topic: str, q: str) -> str | None:
+    rx = TOPIC_WORDS.get(topic)
+    return TOPIC_NODE.get(topic) if rx is None or rx.search(q) else None
 
 
 def fetch(raw_dir: Path) -> None:
@@ -173,13 +212,23 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
 
     # The original sample is the kind-share selection at BASE_TARGET; a larger TARGET tops it up with the same
     # selection over the rest of the pool (then anything left, if a kind runs dry), so it contains the smaller one.
-    picked = select(order, min(TARGET, BASE_TARGET))
-    if TARGET > BASE_TARGET:
+    target5 = min(TARGET, WAVE5_TARGET)
+    picked = select(order, min(target5, BASE_TARGET))
+    if target5 > BASE_TARGET:
         have = {id(x) for x in picked}
         rest = [x for x in order if id(x) not in have]
-        extra = select(rest, TARGET - BASE_TARGET)
+        extra = select(rest, target5 - BASE_TARGET)
         have |= {id(x) for x in extra}
-        extra += [x for x in rest if id(x) not in have][: TARGET - BASE_TARGET - len(extra)]
+        extra += [x for x in rest if id(x) not in have][: target5 - BASE_TARGET - len(extra)]
+        picked += extra
+    # Wave 6: priority topics first, then the others, politics last; hash order within each group.
+    wave6: set = set()
+    if TARGET > WAVE5_TARGET:
+        have = {id(x) for x in picked}
+        rest = [x for x in order if id(x) not in have]
+        rank = lambda x: 0 if x["topic"] in PRIORITY_TOPICS else 2 if x["topic"] in LAST_TOPICS else 1  # noqa: E731
+        extra = sorted(rest, key=rank)[: TARGET - WAVE5_TARGET]  # stable sort keeps hash order within a group
+        wave6 = {x["raw"] for x in extra}
         picked += extra
     picked = sorted(picked, key=lambda x: x["raw"])
     FUNNEL.update({f"8_picked_kind_{k}": v for k, v in Counter(x["kind"] for x in picked).items()})
@@ -188,7 +237,9 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
     for it in picked:
         q = it["q"]
         flags = []
-        if qc.POLITICAL.search(re.sub(r"\belectric\w*", "", q, flags=re.I)):  # quora's elect\w* hits "electricity"
+        new = it["raw"] in wave6
+        if (POLITICAL_FIXED.search(q) if new else  # wave 3-5 rows keep their original flag
+                qc.POLITICAL.search(re.sub(r"\belectric\w*", "", q, flags=re.I))):  # quora's elect\w* hits "electricity"
             flags.append("political")
         if qc.SENSITIVE.search(q):
             flags.append("sensitive")
@@ -208,6 +259,7 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
             origin="dataset",
             source=NAME,
             options=options,
+            node_hint=_hint(it["topic"], q) if new else None,
             source_item_id=hashlib.sha1(it["raw"].encode()).hexdigest()[:16],
             license=LICENSE,
             meta=meta,

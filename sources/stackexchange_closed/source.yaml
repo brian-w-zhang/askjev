@@ -2,7 +2,7 @@ name: stackexchange_closed
 url: https://huggingface.co/datasets/flax-sentence-embeddings/stackexchange_title_best_voted_answer_jsonl
 license: CC BY-SA (Stack Exchange content; HF card lists CC BY-NC-SA 4.0)
 version: flax-sentence-embeddings/stackexchange_title_best_voted_answer_jsonl per-site train parquet (56 non-programming sites, 810,778 titles), fetched 2026-09-25
-target: 30000 (ASKJEV_TARGET_STACKEXCHANGE_CLOSED; first 10000 = the original sample, top-up prefix-stable)
+target: 55000 (ASKJEV_TARGET_STACKEXCHANGE_CLOSED; =30000 reproduces the wave 5 output byte-identically, =10000 the original sample)
 hemisphere: world + self (mostly world)
 kind: factual, evaluative, social, forecast, values
 notes: >
@@ -20,3 +20,14 @@ notes: >
   node_hint (beam walk). Pool after filters: 84,801, so ASKJEV_TARGET_STACKEXCHANGE_CLOSED can grow it a lot.
   Contested politics flagged political, sexual/health/drug/violence flagged sensitive (quora_closed's generous
   regexes).
+  Wave 6 (target 55,000; 54,999 written, one choice with duplicate option keys skipped): the 30,000 wave 5 rows are
+  unchanged and keep node_hint None. The top-up takes, in the same salted-hash order, the sites that feed thin nodes
+  first (cooking, coffee, beer, homebrew, vegetarianism, history, hsm, sports, bicycles, outdoors, fitness,
+  martialarts, chess, money, economics, workplace, diy, lifehacks, woodworking, crafts, travel, expatriates,
+  gardening, pets, parenting), then the other sites, with the site cap recomputed from the target (8% = 4,400; 4%
+  for the niche sites). New world rows get a node_hint where the site maps cleanly (cooking -> world.food.cooking,
+  money -> world.money.personal_finance, diy/lifehacks/bicycles/mechanics -> world.society.everyday_how_to, history
+  -> world.history, travel -> world.places.travel, expatriates -> world.places.moving_abroad, gardening ->
+  world.nature.plants_fungi, pets -> world.nature.pets_breeds, fitness -> world.health.fitness, workplace ->
+  world.money.careers, ...; SITE_NODE in the adapter); skeptics, scifi, philosophy, aviation, photo, outdoors,
+  parenting, writers, puzzling, genealogy, interpersonal and anime stay unhinted.

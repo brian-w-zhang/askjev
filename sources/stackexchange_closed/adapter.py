@@ -6,7 +6,12 @@ Source: flax-sentence-embeddings/stackexchange_title_best_voted_answer_jsonl (pe
 column holds the question title only). Titles run through the quora_closed filter chain (closed opener, single
 question, no typos, not about the asker, not a request, needs no unseen context, not dated) with its political
 regex fixed (`elect\\w*` matched electricity). Yes/no -> Noul; "Which is better, A or B?" -> Choice with A/B as
-keys. No truth, no node_hint (beam walk). At most SITE_CAP_PCT of the output from any one site.
+keys. No truth. At most SITE_CAP_PCT of the output from any one site.
+
+Wave 6 (TARGET above WAVE5_TARGET): the 30,000 wave 5 rows are unchanged (still no node_hint); the top-up takes
+the sites that feed thin nodes first (PRIORITY: cooking, history, sports, money, diy, travel, gardening, pets,
+parenting, ...), then the rest in hash order, and gives new world rows a node_hint where the site maps cleanly
+(SITE_NODE).
 """
 
 from __future__ import annotations
@@ -29,7 +34,8 @@ BASE = ("https://huggingface.co/api/datasets/flax-sentence-embeddings/stackexcha
         "parquet/{site}/train/0.parquet")
 LICENSE = "CC BY-SA (Stack Exchange content; HF card lists CC BY-NC-SA 4.0)"
 BASE_TARGET = 10000  # the original sample; a larger TARGET keeps it and tops up (prefix-stable)
-TARGET = env_int("TARGET_STACKEXCHANGE_CLOSED", 30000)
+WAVE5_TARGET = 30000  # the wave 5 sample; a larger TARGET keeps it and tops up with thin-node sites first
+TARGET = env_int("TARGET_STACKEXCHANGE_CLOSED", 55000)
 SITE_CAP = env_int("STACKEXCHANGE_CLOSED_SITE_CAP_PCT", 8) / 100
 # Sites whose titles are mostly game/fiction/equipment minutiae get half the cap.
 NICHE = {"gaming", "scifi", "aviation", "law", "mechanics", "anime", "photo", "boardgames", "homebrew"}
@@ -63,6 +69,58 @@ SITE_ONLY = re.compile(
     re.I,
 )
 FUNNEL: Counter = Counter()
+
+# Wave 6 top-up: sites that feed thin nodes (food, history, sports, money, everyday how-to, travel, nature) go first.
+PRIORITY = (
+    "cooking coffee beer homebrew vegetarianism history hsm sports bicycles outdoors fitness martialarts chess money "
+    "economics workplace diy lifehacks woodworking crafts travel expatriates gardening pets parenting"
+).split()
+# node_hint for wave 6 rows (world hemisphere only), where a site's titles sit under one node.
+SITE_NODE = {
+    "cooking": "world.food.cooking",
+    "coffee": "world.food.nonalcoholic_drinks",
+    "beer": "world.food.alcoholic_drinks",
+    "homebrew": "world.food.alcoholic_drinks",
+    "vegetarianism": "world.food",
+    "history": "world.history",
+    "hsm": "world.science.scientists_discoveries",
+    "sports": "world.sports",
+    "fitness": "world.health.fitness",
+    "martialarts": "world.sports.combat_sports",
+    "chess": "world.sports.board_card_games",
+    "boardgames": "world.sports.board_card_games",
+    "poker": "world.sports.board_card_games",
+    "gaming": "world.sports.video_games",
+    "money": "world.money.personal_finance",
+    "economics": "world.money.economics",
+    "workplace": "world.money.careers",
+    "diy": "world.society.everyday_how_to",
+    "lifehacks": "world.society.everyday_how_to",
+    "bicycles": "world.society.everyday_how_to",
+    "mechanics": "world.society.everyday_how_to",
+    "woodworking": "world.tech.engineering_inventions.materials",
+    "crafts": "world.tech.engineering_inventions.materials",
+    "travel": "world.places.travel",
+    "expatriates": "world.places.moving_abroad",
+    "gardening": "world.nature.plants_fungi",
+    "pets": "world.nature.pets_breeds",
+    "sustainability": "world.nature.ecosystems_conservation",
+    "earthscience": "world.nature",
+    "astronomy": "world.science.astronomy_space",
+    "space": "world.science.astronomy_space",
+    "biology": "world.science.biology_genetics",
+    "cogsci": "world.science.psychology_neuroscience",
+    "health": "world.health",
+    "english": "world.society.languages",
+    "linguistics": "world.society.languages",
+    "mythology": "world.society.mythology_folklore",
+    "literature": "world.arts.books",
+    "movies": "world.arts.film",
+    "music": "world.arts.music",
+    "musicfans": "world.arts.music",
+    "law": "world.society.crime_law",
+    "academia": "world.society.education",
+}
 
 
 def fetch(raw_dir: Path) -> None:
@@ -109,10 +167,11 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
     picked = []
     order = hash_order(pool, lambda x: x["key"], SALT)
     taken: set = set()
-    # Pass 1 reproduces the original 10k sample (site cap from BASE_TARGET); pass 2 tops up to TARGET over the
-    # remaining pool in the same hash order, with the site cap recomputed from TARGET. A larger TARGET therefore
-    # contains the smaller one.
-    for goal in (min(TARGET, BASE_TARGET), TARGET):
+    # Pass 1 reproduces the original 10k sample (site cap from BASE_TARGET); pass 2 tops up to the wave 5 30k over the
+    # remaining pool in the same hash order, with the site cap recomputed from its goal. Pass 3 (wave 6) tops up to
+    # TARGET with PRIORITY sites first, then the rest, cap recomputed from TARGET. Each larger TARGET contains the
+    # smaller ones.
+    for goal in (min(TARGET, BASE_TARGET), min(TARGET, WAVE5_TARGET)):
         cap = int(max(goal, BASE_TARGET) * SITE_CAP)
         for it in order:
             if len(picked) >= goal:
@@ -122,6 +181,19 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
             per_site[it["site"]] += 1
             picked.append(it)
             taken.add(it["key"])
+    wave6: set = set()
+    if TARGET > WAVE5_TARGET:
+        cap = int(TARGET * SITE_CAP)
+        prio = set(PRIORITY)
+        for it in [x for x in order if x["site"] in prio] + [x for x in order if x["site"] not in prio]:
+            if len(picked) >= TARGET:
+                break
+            if it["key"] in taken or per_site[it["site"]] >= (cap // 2 if it["site"] in NICHE else cap):
+                continue
+            per_site[it["site"]] += 1
+            picked.append(it)
+            taken.add(it["key"])
+            wave6.add(it["key"])
     FUNNEL["picked"] = len(picked)
     for it in sorted(picked, key=lambda x: x["key"]):
         q = it["q"]
@@ -135,6 +207,9 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
             options = {Q.slug(o): o for o in it["opts"]}
             if len(options) != len(it["opts"]) or not all(options):
                 continue
+        node_hint = SITE_NODE.get(it["site"]) if it["key"] in wave6 and hemisphere == "world" else None
+        if node_hint:
+            FUNNEL["wave6_node_hint"] += 1
         yield Question(
             text=q,
             primitive=it["primitive"],
@@ -142,6 +217,7 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
             kind=kind,
             origin="dataset",
             source=NAME,
+            node_hint=node_hint,
             options=options,
             source_item_id=f"{it['site']}:{it['key']}",
             license=LICENSE,
