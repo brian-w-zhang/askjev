@@ -46,6 +46,7 @@
 | 2026-09-26 | Search journeys go **straight down the chosen question's stored path** (embeddings + one Jev rerank pick it); Jev's own tree walk is **on demand** from the question card ("Where Jev would file it"), not part of every search: it cost 1-2 s and a detour whenever Jev filed a question elsewhere. Rerank check (`web/scripts/rerank_eval.mjs`, 30 queries): Jev changes the top result in 50%, median 243 ms |
 | 2026-09-25 | Authored questions never open with a trait or topic label (`01-jev.md` §7); labels were stripped from the queued Self banks and from 3,684 ingested synthetic questions, which were re-answered (`10-expansion.md` §7) |
 | 2026-09-26 | Taste gets single-item Score ratings next to the head-to-heads: new hand node Self > Lifestyle > Ratings (12 domain children); real-data ratings with human distributions for films, books, board games, anime and beer (`taste_ratings`), an authored bank for the other domains (`10-expansion.md` §7) |
+| 2026-09-26 | Personality (trait) banks accept any Self placement from the round trip and keep the intended trait as `meta.measures`; other banks keep the strict filter (`10-expansion.md` §7) |
 
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)

@@ -173,6 +173,14 @@ Another session is changing the UI at the same time. The expansion agent must no
   matchup pools and attaches each item's real rating distribution binned onto the levels (MovieLens, Goodreads,
   BoardGameGeek, MyAnimeList, BeerAdvocate; no truth); an authored bank (`g5_w13_ratings`) covers food, music, art,
   nature, activities, places and culture. Rating the same items as the matchups lets the pairs be checked against the ratings.
+- **Trait banks keep the walk's placement** (2026-09-26): personality items are written as everyday situations so they
+  don't name the trait ("Which suits you on a trip to the mountains?" measures planning vs spontaneity), and the blind
+  walk files them by the situation's topic. The W9 personality bank kept only 29% under the strict round trip (rejects
+  went to lifestyle, love, values and sibling personality nodes, not to wrong hemispheres). For trait banks
+  (`TRAIT_BANKS` in `src/askjev/authored.py`: g5_w9_self_b, g5_w10_self_personality) any Self placement is accepted at
+  the walk's node and the intended trait is kept as `meta.measures`, so the map stays topical and the personality
+  analysis aggregates by trait. W9's rejects were recovered from the reject log without new Jev calls
+  (`scripts/recover_trait_rejects.py`). Other banks keep the strict filter.
 - **Throughput** (2026-09-25): requests pack up to 64 questions / ~5k tokens (measured sweet spot; larger requests mostly 503);
   gateway pinned to TypeSafe's own provider; adaptive rate backs off 10% when > 30% of requests are throttled; packing several
   Machine inputs per request was tested and rejected (accuracy 84.5 → 82.5%).

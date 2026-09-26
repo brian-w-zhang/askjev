@@ -89,6 +89,16 @@ def round_trip_ok(intended: str, placed: str) -> bool:
     return intended.startswith(placed + ".") and intended.count(".") >= 3
 
 
+# Banks whose items measure a trait through an everyday situation (docs/10-expansion.md §7): the situation's topic,
+# not the trait, decides where the blind walk files it, so any Self placement is accepted at the walk's node and the
+# intended trait is kept as meta.measures for trait-level analysis.
+TRAIT_BANKS = {"g5_w9_self_b.jsonl", "g5_w10_self_personality.jsonl"}
+
+
+def trait_placement_ok(placed: str) -> bool:
+    return placed.startswith("self.") and placed.count(".") >= 1
+
+
 def ingest_authored(paths: list[str] | None = None, round_trip: bool = True) -> str:
     files = [Path(p) for p in paths] if paths else sorted(AUTHORED.glob("g5_*.jsonl")) + sorted(AUTHORED.glob("menus_*.yaml"))
     g5 = load_g5([f for f in files if f.name.startswith("g5_")])
@@ -108,6 +118,13 @@ def ingest_authored(paths: list[str] | None = None, round_trip: bool = True) -> 
             placed = r.get("node", "root")
             if "error" not in r and round_trip_ok(node, placed):
                 q.meta["round_trip"] = {"placed": placed, "confidence": r.get("confidence")}
+                if q.meta["authored_file"] in TRAIT_BANKS:
+                    q.meta["measures"] = node
+                kept.append(q)
+            elif "error" not in r and q.meta["authored_file"] in TRAIT_BANKS and trait_placement_ok(placed):
+                q.meta["round_trip"] = {"placed": placed, "confidence": r.get("confidence")}
+                q.meta["measures"] = node
+                q.node_hint = placed
                 kept.append(q)
             else:
                 rejected.append({"text": q.text, "intended": node, "placed": placed, "file": q.meta["authored_file"]})
