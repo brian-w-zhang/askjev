@@ -268,3 +268,19 @@ Mean nearest-neighbour similarity: mundane 0.835, edge 0.811, machine 0.773, abs
   & Grading**, **Operations, IoT & Logistics**; World lacked **Insurance & Risk** (money), **Libraries, Archives & Museums** (society)
   and **Shower Thoughts & Absurd Questions** (internet culture). Image, audio and camera inputs are out of scope (Jev reads text).
 - The tree now has 31 L1s. The new Machine L1s take their share from documents (over target) so Machine stays ~30%.
+
+## 13. Coverage probe 2 (2026-09-26)
+A second context-free probe (`docs/coverage-probe-2.md`): ten writers who never saw the corpus wrote 1,200 closed
+questions (40% Noul, 30% Choice, 30% Score) from angles the first probe skipped, checked by local-embedding nearest
+neighbour only (no Jev calls). Novel share (no analog at similarity ≥ 0.78):
+
+| Angle | Novel | Angle | Novel |
+|---|---|---|---|
+| subcultures & fandom debates | 81% | custom & civic life | 48% |
+| professions & exam judgments | 73% | kids' questions | 44% |
+| life stages, disability, caregiving | 63% | frontier science & puzzles | 43% |
+| senses & perception | 59% | futures | 33% |
+| life admin (landlords, claims, scams) | 51% | introspection ("36 questions", Proust) | 20% |
+
+Introspection and futures are already well covered by the Self banks and the forecast set; the gaps are insider
+hobby debates, professional judgment calls, life-stage situations and perception norms.
