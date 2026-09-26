@@ -158,7 +158,9 @@ Another session is changing the UI at the same time. The expansion agent must no
   target; the weakest synthetic Score shape ("How should X handle Y" with one sensible level) is dropped before round trip.
 - **Round-trip walk starts at the intended hemisphere** (2026-09-25): the author fixes the hemisphere, so the root step only spent a
   call (~20% of round-trip cost). The walk is still blind below it; a bank item can no longer be rejected for landing in another
-  hemisphere (rare in earlier banks; rejects were almost all sibling nodes).
+  hemisphere (rare in earlier banks; rejects were almost all sibling nodes). The one-call fast path was tested as a cheaper
+  round trip and rejected: on 500 W6 items it passed 60% of the beam walk's rejects and failed 12% of its accepts, because
+  embedding candidates already sit next to the intended node. Round trips keep the beam walk.
 - **Throughput** (2026-09-25): requests pack up to 64 questions / ~5k tokens (measured sweet spot; larger requests mostly 503);
   gateway pinned to TypeSafe's own provider; adaptive rate backs off 10% when > 30% of requests are throttled; packing several
   Machine inputs per request was tested and rejected (accuracy 84.5 → 82.5%).

@@ -397,3 +397,145 @@ trec_qc.answer_type:
   label: Question Answer Types
   description: "Questions a program asks about a user's question to decide what kind of answer it is looking for: a person, a place, a number, a definition, an entity, or an abbreviation."
   examples: ["What kind of answer is this question looking for?"]
+
+# wave 6: nodes stacking several large templates (docs/10-expansion.md §7)
+cfpb_complaints.product:
+  key: complaint_product
+  label: Complaint Product
+  description: "Questions a program asks about a consumer's complaint to a financial company to decide which product it concerns: a mortgage, credit card, student loan, bank account, debt collection, and so on."
+  examples: ["Which financial product is this complaint about?"]
+cfpb_complaints.issue:
+  key: complaint_issue
+  label: Complaint Issue
+  description: "Questions a program asks about a consumer's complaint to a financial company to classify what went wrong: billing disputes, incorrect credit reports, collection practices, account management."
+  examples: ["What issue is this complaint mainly about?"]
+gold_headlines.direction:
+  key: price_direction_news
+  label: Price Direction in News
+  description: "Questions a program asks about a commodities news headline to read which way it reports a price moving: up, down, or neither."
+  examples: ["Does this headline report the gold price going up, going down, or neither?"]
+gold_headlines.asset_comparison:
+  key: asset_comparison_news
+  label: Asset Comparisons in News
+  description: "Questions a program asks about a markets headline to tell whether it compares one asset against another, such as gold against the dollar or equities."
+  examples: ["Does this headline compare gold with another asset?"]
+finer_xbrl.concept:
+  key: xbrl_tagging
+  label: Financial Statement Tagging
+  description: "Questions a program asks about a number in a company filing to tag which accounting concept it reports: revenue, goodwill, debt, share count, and so on."
+  examples: ["Which accounting concept does this number in the filing report?"]
+linkedin_jobs.seniority:
+  key: job_seniority
+  label: Job Seniority
+  description: "Questions a program asks about a job posting to decide what experience level it hires for, from internship and entry level to director and executive."
+  examples: ["What experience level is this job posting hiring for?"]
+linkedin_jobs.work_type:
+  key: job_work_type
+  label: Job Work Type
+  description: "Questions a program asks about a job posting to classify the arrangement it offers: full-time, part-time, contract, temporary, internship, volunteer."
+  examples: ["What kind of employment does this posting offer?"]
+skillspan_jobs.requires_skill:
+  key: skill_mentions
+  label: Skill Mentions
+  description: "Questions a program asks about a sentence from a job posting to detect whether it names a skill or body of knowledge the job requires."
+  examples: ["Does this sentence from a job posting name a skill the job asks for?"]
+abcd_flows.flow:
+  key: customer_need
+  label: Customer Need
+  description: "Questions a program asks about a customer-service conversation to classify what the customer needs help with: an order, a return, their account, shipping, a promotion."
+  examples: ["What does the customer need help with in this conversation?"]
+abcd_flows.subflow:
+  key: customer_need_detail
+  label: Customer Need Detail
+  description: "Questions a program asks about a customer-service conversation to pin down the specific request within a broad need, such as a refund status versus a return label."
+  examples: ["Which specific request is the customer making?"]
+banking77.intent:
+  key: banking_intent
+  label: Banking Intent
+  description: "Questions a program asks about a bank customer's message to route it to the exact request: a lost card, a pending transfer, a declined payment, an exchange rate."
+  examples: ["What is the customer asking the bank to do?"]
+clone_pairs.same_function:
+  key: code_clones
+  label: Code Clones
+  description: "Questions a program asks about two snippets of code to decide whether they implement the same functionality, however differently written."
+  examples: ["Do these two methods implement the same functionality?"]
+poj_clones.same_problem:
+  key: same_problem_solutions
+  label: Same-Problem Solutions
+  description: "Questions a program asks about two programs to decide whether they solve the same programming problem."
+  examples: ["Do these two programs solve the same problem?"]
+code_review_need.needs_comment:
+  key: review_needed
+  label: Review Needed
+  description: "Questions a program asks about a code change to decide whether a reviewer would leave a comment on it or approve it as is."
+  examples: ["Would a reviewer comment on this change?"]
+entity_typing.conll_type:
+  key: named_entity_type
+  label: Named Entity Type
+  description: "Questions a program asks about a name in a sentence to type it as a person, organization, location, or other kind of name."
+  examples: ["What type of entity is this name in the sentence?"]
+entity_typing.wnut_type:
+  key: emerging_entity_type
+  label: Emerging Entity Type
+  description: "Questions a program asks about a name in a noisy social-media post to type it: a person, corporation, product, creative work, group, or place."
+  examples: ["What type of entity is this name in the post?"]
+qnli.contains_answer:
+  key: passage_answers
+  label: Passage Answers Question
+  description: "Questions a retrieval program asks about a passage to decide whether it contains the answer to a user's question before passing it to a model."
+  examples: ["Does this passage contain the answer to the question?"]
+squad2_spans.answer_span:
+  key: answer_span
+  label: Answer Span
+  description: "Questions a program asks about a passage to pick the span that answers a question, or to say the passage has no answer."
+  examples: ["Which part of the passage answers the question?"]
+trec_covid.pair:
+  key: document_pairs
+  label: Document Pairs
+  description: "Questions a search program asks about two documents to decide which better answers a query."
+  examples: ["Which of these two documents better answers the query?"]
+esci.pairwise:
+  key: product_pairs
+  label: Product Pairs
+  description: "Questions a shopping search program asks about two products to decide which better matches what a shopper typed."
+  examples: ["Which of these two products better matches the search?"]
+math.subject:
+  key: problem_subject
+  label: Problem Subject
+  description: "Questions a routing program asks about a math problem to classify which area it comes from: algebra, geometry, number theory, counting and probability, precalculus."
+  examples: ["Which area of mathematics is this problem from?"]
+math.hardest:
+  key: problem_difficulty
+  label: Problem Difficulty
+  description: "Questions a routing program asks about math problems to judge which is hardest, so the hard ones go to a stronger model."
+  examples: ["Which of these problems is hardest?"]
+commit_diff_match.message_fits:
+  key: message_fits_diff
+  label: Message Fits Diff
+  description: "Questions a program asks about a commit to check whether its message accurately describes the code change."
+  examples: ["Does this commit message describe the change?"]
+commit_messages.type:
+  key: commit_type
+  label: Commit Type
+  description: "Questions a program asks about a commit message to classify the change: a fix, a feature, docs, a refactor, tests, CI, a chore."
+  examples: ["What kind of change does this commit message describe?"]
+clickbait.is_clickbait:
+  key: clickbait
+  label: Clickbait
+  description: "Questions an ad or content program asks about a headline to detect clickbait that withholds or teases the story to lure a click."
+  examples: ["Is this headline clickbait?"]
+sarcasm_headlines.sarcastic:
+  key: satire_detection
+  label: Satire Detection
+  description: "Questions a content program asks about a headline to detect whether it is sarcastic or satirical rather than straight news."
+  examples: ["Is this headline sarcastic?"]
+emotion.primary:
+  key: primary_emotion
+  label: Primary Emotion
+  description: "Questions a research program asks about a piece of text to code which emotion it expresses most strongly: joy, sadness, anger, fear, love, surprise."
+  examples: ["Which emotion does this text express most strongly?"]
+goemotions.gratitude:
+  key: gratitude
+  label: Gratitude
+  description: "Questions a research program asks about a comment to code whether it expresses thanks or appreciation."
+  examples: ["Does this comment express gratitude?"]
