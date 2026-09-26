@@ -161,6 +161,12 @@ Another session is changing the UI at the same time. The expansion agent must no
   hemisphere (rare in earlier banks; rejects were almost all sibling nodes). The one-call fast path was tested as a cheaper
   round trip and rejected: on 500 W6 items it passed 60% of the beam walk's rejects and failed 12% of its accepts, because
   embedding candidates already sit next to the intended node. Round trips keep the beam walk.
+- **Label prefixes stripped** (2026-09-25): Self banks from wave 6 on opened most lines with the facet they measure
+  ("Manipulation: …", "Introvert or extravert: …"; 98% of the personality banks), which primes the desirable answer. The
+  label is removed wherever the rest stands as a question (question-word stems such as "How funny is this joke: …" stay):
+  ~82k lines across the W7, W9 and W10 Self banks before their round trip (the half-finished W7 round trip was restarted), and
+  3,684 ingested synthetic questions, whose text was fixed, re-embedded and re-answered (old label kept in `meta.stripped_label`;
+  the original calls stay in the request cache). Internet and taste banks keep their prefixes (there they are the content).
 - **Throughput** (2026-09-25): requests pack up to 64 questions / ~5k tokens (measured sweet spot; larger requests mostly 503);
   gateway pinned to TypeSafe's own provider; adaptive rate backs off 10% when > 30% of requests are throttled; packing several
   Machine inputs per request was tested and rejected (accuracy 84.5 → 82.5%).

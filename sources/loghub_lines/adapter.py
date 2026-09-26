@@ -95,7 +95,10 @@ def _load(raw_dir: Path, s: str) -> list[dict]:
         if not msg or msg in seen:
             continue
         seen.add(msg)
-        out.append({"id": f"{s}:{r['LineId']}", "line": " ".join(line.split()), "msg": msg,
+        # the OpenStack sample was concatenated from several files and each line starts with its file name
+        # (nova-compute.log.1...): an artifact of the dump, not part of the line, and it names the system
+        line = re.sub(r"^\S+\.log(\.\S+)?\s+", "", " ".join(line.split()))
+        out.append({"id": f"{s}:{r['LineId']}", "line": line, "msg": msg,
                     "event": r["EventId"], "component": (r.get("Component") or "").strip()})
     return out
 

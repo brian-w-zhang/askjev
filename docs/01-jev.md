@@ -112,6 +112,8 @@ never demonstrated.
 - **Noul:** one condition, phrased so high means yes, never inverted criteria. 0.5
   means uncertain, not "medium".
 - Keep content in the state and the judgment in the question. Send only the relevant context.
+- **Don't name what is being measured.** No leading trait or topic label ("Manipulation: …", "Introvert or extravert: …"):
+  it tells Jev which answer looks good. A question-word stem ("How funny is this joke: …") is the question and stays.
 - "Name the narrowest fact that decides it."
 - Thresholds are product policy: three bands (act / review / don't act), tuned per question.
 
