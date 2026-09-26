@@ -1,0 +1,20 @@
+name: anage_pairs
+url: https://genomics.senescence.info/species/
+download: https://genomics.senescence.info/species/dataset.zip (+ Wikidata sitelinks per binomial via https://qlever.dev/api/wikidata)
+license: CC BY 3.0 (AnAge, Human Ageing Genomic Resources; cite de Magalhaes et al. 2024, Nucleic Acids Research); Wikidata CC0
+version: AnAge stable build (4,645 species), downloaded 2026-09-25; sitelinks cached in data/raw/anage_pairs/sitelinks.json
+target: 5000
+hemisphere: world
+kind: factual
+notes: >
+  Pairwise life-history comparisons between two widely known animals, truth = the one with the larger AnAge value.
+  Species: AnAge entries with a real English common name (not the binomial), data quality acceptable or high, and a
+  Wikidata sitelinks floor per class (mammals 45, birds 50, reptiles 35, fish/amphibians 25, others 30) so the
+  pool is the well-known end (bot-made wikis inflate small birds and fish); Homo sapiens skipped. Templates
+  (share of ASKJEV_TARGET_ANAGE_PAIRS): longevity 40% ("Which animal has the longer maximum recorded lifespan",
+  ratio >= 2, any two species), gestation 15% (mammals, ratio >= 1.5), incubation 15% (birds and reptiles, same
+  AnAge column, ratio >= 1.5), litter/clutch size 15% (mammals/birds/reptiles, ratio >= 2), female age at maturity
+  15% (ratio >= 2). Salted-hash order per template, <= 12 uses per species per template. Options = common-name slugs
+  with "common name (binomial)" descriptions. Node hints by class/order (primates, rodents, mammals, birds, reptiles,
+  amphibians, fish, molluscs), world.nature.mammals or world.nature for mixed pairs. Maximum recorded longevity is a
+  record (often captive), not an average lifespan; the question text says "maximum recorded lifespan".

@@ -539,3 +539,30 @@ goemotions.gratitude:
   label: Gratitude
   description: "Questions a research program asks about a comment to code whether it expresses thanks or appreciation."
   examples: ["Does this comment express gratitude?"]
+
+# wave 9: real Self sets on reading_people and risk_decision_style
+empathetic_dialogues.emotion:
+  key: emotions_in_personal_stories
+  label: Emotions in Personal Stories
+  description: "Questions about a short situation someone wrote from their own life: which of 32 emotions they were feeling, from proud and grateful to jealous and devastated."
+  examples: ["Someone wrote that their light bill was super high. Which emotion were they feeling?"]
+isear.emotion:
+  key: emotions_in_life_events
+  label: Emotions in Life Events
+  description: "Questions about a life event a student described from memory: whether it made them feel joy, fear, anger, sadness, disgust, shame or guilt."
+  examples: ["Someone described the night they thought the house was on fire. Which emotion did they feel?"]
+storycommonsense.emotion:
+  key: story_character_feelings
+  label: Story Character Feelings
+  description: "Questions about a character in a short everyday story: which basic emotion they feel by the end, as crowd readers judged it."
+  examples: ["Which emotion best describes the feelings of James at the end of the story?"]
+storycommonsense.motive:
+  key: story_character_motives
+  label: Story Character Motives
+  description: "Questions about a character in a short everyday story: which human need best explains what they do or want, from hunger and safety to love, esteem and growth."
+  examples: ["Which need best explains Min's actions in the last sentence of the story?"]
+choices13k.gamble:
+  key: gamble_choices
+  label: Gamble Choices
+  description: "Choices between two described gambles with real money at stake, such as a sure $19 or an 80% chance at $36 with a 20% chance of losing $48."
+  examples: ["Which do you choose: $9 for sure, or $13 with a 75% chance and $4 with a 25% chance?"]

@@ -1,0 +1,29 @@
+name: choices13k
+url: https://github.com/jcpeterson/choices13k
+download: raw.githubusercontent.com/jcpeterson/choices13k/master/{c13k_selections.csv,c13k_problems.json}
+license: >
+  choices13k (Peterson, Bourgin, Agrawal, Reichman & Griffiths 2021, "Using large-scale experiments and machine
+  learning to discover theories of human decision-making", Science 372:1209-1214). Public GitHub release with no
+  license file; research use with citation.
+version: master (c13k_selections.csv 14,568 rows, c13k_problems.json), fetched 2026-09-26
+target: 5000 (ASKJEV_TARGET_CHOICES13K; the no-feedback pool yields 2,380)
+hemisphere: self
+kind: personality
+notes: >
+  Risky choice between two gambles in the Choice Prediction Competition format (Erev et al. 2017): gamble A has
+  at most two outcomes; gamble B pays a fixed amount or a lottery, which may have up to 8 outcomes, and with Amb=1
+  its probabilities are hidden. One Choice per problem: "Imagine you must play one of these two gambles once, for
+  real money (...). Which do you choose: `gamble_a` or `gamble_b`?" (template_id choices13k.gamble, origin
+  template), state {"gamble_a", "gamble_b"} written out in dollars as participants saw them ("$31 with a 60%
+  chance, or $38 with a 40% chance"; zero-probability outcomes dropped, equal amounts merged, "for sure" when
+  one outcome; ambiguous B lists its amounts "with probabilities you are not told").
+  Only the 2,380 no-feedback rows are used (Feedback=False): in the other 12,188 rows participants saw the
+  realized outcomes after each of 5 trials, a decision-from-experience task that a one-shot question does not
+  match. Correlation (Corr) only matters with feedback, so it is ignored. Problems whose A and B texts are
+  identical are skipped; identical problem texts are merged (n-weighted).
+  Human distribution: bRate = mean over participants of the share of their 5 trials on which they chose B
+  (so shares are trial-weighted, not one vote per person); n = participants (about 15-18 per problem). US MTurk
+  workers, paid a bonus of 10% of one realized outcome (so stakes were real but small). meta keeps b_rate,
+  ambiguity and the B lottery's outcome count. No truth (a preference, though some problems have a dominant
+  option). Probability wording needs arithmetic to weigh; that is the task, not a hidden fact to compute.
+  node_hint self.personality.risk_decision_style.

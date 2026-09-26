@@ -1,0 +1,32 @@
+name: aims_survey
+url: https://www.sentienceinstitute.org/aims-survey
+download: https://data.mendeley.com/datasets/x5689yhv2n/3 (public-files API; Codebook_AIMS.xlsx, Codebook_AIMS_Supplement_2023.xlsx, AIMS_wave1-3.xlsx, AIMS_Supplement_2023.xlsx)
+license: CC BY 4.0 (Pauketat, Ladak, Harris & Anthis, Sentience Institute, "Artificial Intelligence, Morality, and Sentience (AIMS) Survey", Mendeley Data v3)
+version: Mendeley Data x5689yhv2n version 3 (waves 2021 n=1,232, 2023 n=1,169, 2024 n=1,099; 2023 supplement n=1,099), fetched 2026-09-26
+target: 120 (all usable items)
+hemisphere: self
+kind: values, evaluative, forecast, taste
+notes: >
+  Preregistered US surveys on the moral and social standing of AIs. Item wording from the two codebooks; each
+  question gets one HumanDist per wave that asked it, weighted with the file's census-balancing weights
+  (population "US adults, census-weighted (AIMS <year>[ supplement])", n = unweighted respondents with an answer).
+  Identical wordings across waves share one question (so PMC1 carries 4 distributions); wordings that name the
+  survey year ("robots/AIs that existed in 2021") are one question per wave with that wave's year, rephrased in the
+  past tense so they don't clash with the asking date.
+  Formats: agree statements (1-7 with 4 = "no opinion") as 'How much do you agree: "<statement>"' with 7 agree
+  levels; 1-7 extent items (trust in parts of AI systems, emotions felt toward robots/AIs; sliders rounded) and
+  the two mind-uploading items (oppose..support) collapsed to 5 levels 1->0, 2-3->1, 4->2, 5-6->3, 7->4; 0-100
+  capacity sliders (what 2021/2023/2024 robots/AIs or 2023 LLMs could do) and 0-10 "average robot/AI" sliders
+  binned at 10/35/64/89% into 5 levels; the 0-100 likelihood of AI sentience within 100 years binned the same way
+  with the band in each level; yes/no/not sure items and the pace-of-AI-development item as Choice. AID4 was
+  asked as "To what extent do you agree ... that governments have the power ..." and is restated as the plain
+  statement. Kind: moral-treatment items values, capacity/trust/risk beliefs evaluative, sentience-possible and
+  AI extinction forecast, emotions toward AI and "I am a sci-fi fan" taste.
+  Skipped: inclusion-of-other-in-self circle pictures (SI6-16), open numeric year estimates, "In this future
+  world" items (need the survey's vignette), 1-5 relative moral-concern sliders for robot types (endpoint anchors
+  only, "less"/"more concern"), the "which universe is better" item (context not in the codebook), the YouGov
+  replication items YG1-4, brand awareness checks, the attention check, and all demographics, own-use and
+  experience items (personal biography). The 2023 supplement and the 2024 wave have the same n (1,099); the
+  codebooks don't say whether they are the same respondents, so they are kept as separate populations.
+  Flags: statements about bans, government regulation or funding, legal rights, campaigns and demonstrations are
+  "political" (policy stances). No truth. node_hint self.mind.consciousness_ai.

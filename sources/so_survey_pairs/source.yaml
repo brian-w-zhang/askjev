@@ -1,0 +1,20 @@
+name: so_survey_pairs
+url: https://survey.stackoverflow.co/
+download: https://github.com/StackExchange/Survey/raw/refs/heads/main/packages/archive/{2023,2024,2025}/results.csv
+license: Open Database License (ODbL) 1.0 for the database, Database Contents License (DbCL) 1.0 for its contents (Stack Overflow Developer Survey)
+version: 2023 (89,184 responses), 2024 (65,437), 2025 (49,191) full results CSVs, downloaded 2026-09-25
+target: 5000
+hemisphere: world
+kind: taste
+notes: >
+  Pairwise taste Choices "Which <category> would you rather work with over the next year: A or B?" (template_id
+  so_survey_pairs.<category>; one question text per category: programming languages, databases, cloud platforms, web
+  frameworks, other frameworks/libraries, developer tools, code editors/IDEs, project collaboration tools, chat/meeting
+  tools, AI search/coding assistants; 2025-only: AI model families and developer community platforms, "would you rather
+  use"). Both technologies come from one survey list. Human distribution per year: among respondents who ticked both
+  in HaveWorkedWith and exactly one of them in WantToWorkWith, the share wanting each (n = those deciders). A pair
+  needs >= 50 deciders in some year; every year with >= 30 adds a HumanDist (2024 first, then 2025, 2023). The 2025
+  "Platform" list mixes clouds and dev tools, so it is split by an allowlist of cloud providers; 2025 DevEnvs stands
+  in for the IDE list. Names are unified across years (RENAME in the adapter); "NA", colocation and managed hosting
+  dropped. Salted-hash order, at most 45 appearances per technology per category, ASKJEV_TARGET_SO_SURVEY_PAIRS. No
+  truth. Population is Stack Overflow survey takers (developers, self-selected), not the general public.

@@ -1,0 +1,30 @@
+name: pantheon_history
+url: https://pantheon.world/data/datasets
+download: https://storage.googleapis.com/pantheon-public-data/person_2025_update.csv.bz2
+license: CC BY-SA 4.0 (Pantheon, pantheon.world; Yu, Macé, Hidalgo et al. 2016, Scientific Data)
+version: person_2025_update.csv.bz2 (126,582 people), downloaded 2026-09-25
+target: 9000
+hemisphere: world
+kind: evaluative (better_known), factual (known_as, birth_country)
+notes: >
+  Historical figures from Pantheon's biographies: individuals (no groups), dead, born before 1900, with a Pantheon
+  occupation in a curated list of 35 (nobles, royal companions, inventors, extremists, occultists, athletes and the
+  other small or ambiguous classes dropped), Latin-script names that are unique in the file, no digits or
+  parentheses. The top 1,500 per era by HPI (ancient < 500, medieval < 1450, early modern < 1750, modern < 1900).
+  Three templates, deterministic salted-hash order:
+  (1) better_known (<= PANTHEON_HISTORY_FAMOUS, 4,000): "Who is better known around the world today: A or B?"
+  within one era and one occupation group; truth = higher Historical Popularity Index, kept only when the HPI gap is
+  >= 4 AND the more-known person also has >= 1.3x the Wikipedia language editions and >= 1.5x the non-English
+  pageviews; <= 6 pairs per person; religious figures skipped. Options = both names with lifespans.
+  (2) known_as (<= 2,500): "What was X (lifespan) mainly known as?" 4 options = the Pantheon occupation + 3
+  occupations from other groups; groups that often coincide in one life (ruler/general, philosopher/scientist/
+  writer, science/medicine/engineering...) are never offered against each other. Names with a title that gives it
+  away (King, Pope, Saint, General...) skipped. Truth = Pantheon occupation (one per person, so polymaths are noisy).
+  (3) birth_country (<= 2,500): "In which present-day country was X (lifespan) born?" born 1000+; 4 options =
+  truth + 3 drawn from the 6 countries whose Pantheon birthplace centroids are nearest; Israel/Palestine/Kosovo/
+  Taiwan/Western Sahara never used, Crimea births and religious figures skipped, names containing the country or a
+  demonym/region of it skipped.
+  Node hints: era nodes (ancient/medieval/early_modern/modern.modern_era), with ancient Greece/Rome/Egypt, Mongol
+  Empire, age of discovery, Renaissance, scientific revolution, Enlightenment, military history, economic history and
+  science/tech history by era x occupation x birthplace. Flags: political on politicians who died 1945 or later and on
+  birth-country options containing both Russia and Ukraine.

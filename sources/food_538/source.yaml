@@ -1,0 +1,27 @@
+name: food_538
+url: https://github.com/fivethirtyeight/data
+download: raw.githubusercontent.com/fivethirtyeight/data/master/{candy-power-ranking/candy-data.csv, food-world-cup/food-world-cup-data.csv, thanksgiving-2015/thanksgiving-2015-poll-data.csv, steak-survey/steak-risk-survey.csv, alcohol-consumption/drinks.csv}
+license: CC BY 4.0 (FiveThirtyEight data repository; cite FiveThirtyEight)
+version: fivethirtyeight/data master, downloaded 2026-09-25
+target: ~5,500 (all candy and cuisine pairs, 42 survey items, 3 x 450 drink pairs)
+hemisphere: world
+kind: taste (candy, cuisines, steak), social (Thanksgiving customs), factual (drinks)
+notes: >
+  (1) Candy power ranking (food_538.candy): "Which candy would you rather have: A or B?" over every pair of the 83
+  candies (the "One dime"/"One quarter" controls dropped; names tidied, e.g. Pixy Stix, Nestlé Smarties vs US
+  Smarties disambiguated). The dataset only has per-candy winpercent from ~269k random online matchups, so no per-pair
+  human split is attached; truth = the candy with the higher winpercent when the gap is >= 10 points, else none; meta
+  keeps both winpercents. (2) Food World Cup (food_538.cuisine): "Which cuisine do you like more: <Demonym> food or
+  <Demonym> food?" over the 40 national cuisines; HumanDist = among respondents who rated both (1-5 like scale, N/A and
+  blanks excluded), the share rating each higher, ties split, n = those respondents, pairs with n < 100 dropped; no
+  truth. (3) Thanksgiving 2015 poll (kind social, human only): four Choices (main dish, how it is cooked, stuffing,
+  cranberry sauce; "I don't know" and blanks dropped, write-ins = other), a gravy Noul, and one Noul per listed side
+  dish / pie / dessert ("Is pumpkin pie usually served at an American Thanksgiving dinner?"), human share = celebrants
+  who answered that block and ticked the item for their own dinner. Population wording notes it describes their own
+  dinner. (4) Steak survey: "How do you like your steak cooked?" (rare .. well done) with the shares of steak eaters.
+  Other items in that survey (smoking, gambling, cheating, lottery) skipped as off-topic or biographical.
+  (5) drinks.csv (WHO 2010 servings per person via 538, factual, food_538.drinks_<beer|wine|spirits>): "According to
+  World Health Organization estimates, in which country do adults drink more beer per person: A or B?", ratio >= 2,
+  higher value >= 20 servings, zero values dropped, each country in <= 8 pairs per template,
+  ASKJEV_FOOD_538_DRINKS_PER_TEMPLATE (450). Node hints world.food.* (baking_sweets, cuisines, alcoholic_drinks,
+  dishes_ingredients.*).

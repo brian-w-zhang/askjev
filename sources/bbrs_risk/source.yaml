@@ -1,0 +1,35 @@
+name: bbrs_risk
+url: https://osf.io/rce7g/
+download: https://osf.io/download/hb2mu/ (data/main/quest/quest_raw.csv); item wording from quest_codebook.pdf and quest_print.pdf in the same folder
+license: CC BY 4.0 (The Basel-Berlin Risk Study, OSF rce7g; Frey, Pedroni, Mata, Rieskamp & Hertwig 2017, Science Advances)
+version: data/main/quest/quest_raw.csv (1,524 rows; Basel 749, Berlin 775), fetched 2026-09-26
+target: 212 (every usable item)
+hemisphere: self
+kind: personality
+notes: >
+  Self-report risk questionnaires from the Basel-Berlin Risk Study main sample (adults, mostly young, in Basel and
+  Berlin), each item with its raw answer shares as the human distribution (population "Adults in Basel and Berlin
+  (Basel-Berlin Risk Study, German-language questionnaire)", n = non-missing answers, about 1,510).
+  Respondents answered German versions; the question texts are English translations of that German wording made
+  for this adapter (close to the English originals where the German follows them, e.g. DOSPERT and BIS-11, but
+  following the German where it differs, e.g. BIS item 10 and SSS-V items 14, 15, 21, 40).
+  Instruments: DOSPERT-40 (Weber, Blais & Betz 2002) in all three response frames, 40 items each: "How likely
+  would you be to do this", "How risky would it be for you to do this", "How much benefit would you expect to get
+  from doing this", 5 levels matching the 1-5 scales (risk and benefit label only 1/3/5; levels 2 and 4 are
+  written as the in-between steps); meta.domain = the item's DOSPERT domain. Sensation Seeking Scale V
+  (Zuckerman), 40 forced-choice pairs as "Which of these two statements describes you better", options = the two
+  statements. Barratt Impulsiveness Scale BIS-11, 28 of 30 items as "How often is this statement true of you" on
+  its 4 levels (rarely/never .. almost always/always); "I change jobs often" and "I change where I live often" are
+  skipped as personal history. SOEP general and six domain risk-willingness items, each also asked "compared with
+  the general population" (14), 0-10 binned into 5 levels 0-1 / 2-3 / 4-6 / 7-8 / 9-10 with the band in each
+  level. The SOEP hypothetical 100,000-euro lottery investment as a 6-level Score (nothing .. all). A pension fund
+  choice (25% vs 45% stocks). Eight risky everyday scenarios (PRI) as two-option Choices; the follow-up certainty
+  ratings are not used.
+  Not used: AUDIT, FTND, DAST, gambling screens, DOSPERT past-year / past-month behavior frequencies, health,
+  life events, sleep times, contraception and demographics (personal history), Berlin Numeracy (ability),
+  RLRQ2 (numeric answers). Flags: DOSPERT drug, affair and unprotected-sex items and the SSS-V drug, sex and
+  alcohol-high items "sensitive"; SSS-V 22 (comfort getting to know gay people) "political". No truth.
+  node_hint: self.personality.risk_decision_style for DOSPERT, SOEP and scenarios; SSS-V to
+  extraversion.sociability_energy (art, dress and unconventional-friends pairs to openness); BIS planning items
+  to conscientiousness.order_caution, attention items to conscientiousness.drive_self_discipline, puzzles and
+  complex problems to openness.ideas_imagination, the rest to neuroticism.impulses_coping.

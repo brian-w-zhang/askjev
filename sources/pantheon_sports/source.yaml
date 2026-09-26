@@ -1,0 +1,17 @@
+name: pantheon_sports
+url: https://pantheon.world/data/datasets
+download: https://storage.googleapis.com/pantheon-public-data/person_2025_update.csv.bz2
+license: CC BY-SA 4.0 (Pantheon, pantheon.world; Yu, Macé, Hidalgo et al. 2016, Scientific Data)
+version: person_2025_update.csv.bz2, downloaded 2026-09-26
+target: 3000
+hemisphere: world
+kind: evaluative
+notes: >
+  "Which <sport noun> is better known around the world today: A or B?" (one text per pair; template_id
+  pantheon_sports.<noun>) for athletes born 1930+ in 21 Pantheon sport occupations, top 250 per sport by Wikipedia
+  language editions, unique Latin-script names. Truth = the athlete better known on BOTH measures Pantheon ships:
+  >= 2x the non-English Wikipedia pageviews and >= 1.3x the language editions (HPI itself is not used because it
+  discounts people who are young or alive). Pairs within a sport only, salted-hash order, <= 6 pairs per athlete,
+  per-sport shares of ASKJEV_TARGET_PANTHEON_SPORTS (soccer 20%, basketball 9%, tennis 8% ... rugby/snooker 1%).
+  Options = name slugs with "Name (sport, born year, birth country)" descriptions. Node hints by sport. Pageviews are
+  cumulative (Pantheon's window), so long careers and older stars are favored; wrestlers include pro wrestling.

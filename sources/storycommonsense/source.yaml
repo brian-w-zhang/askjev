@@ -1,0 +1,29 @@
+name: storycommonsense
+url: https://uwnlp.github.io/storycommonsense/
+download: https://uwnlp.github.io/storycommonsense/data/storycommonsense_data.zip (json_version/annotations.json)
+license: >
+  StoryCommonsense annotations (Rashkin, Bosselut, Sap, Knight & Choi 2018, ACL), public research release with no
+  explicit license; the stories are ROCStories (Mostafazadeh et al. 2016). Research use with citation.
+version: storycommonsense_data.zip (14,738 annotated stories; dev 2,483 + test 2,370 carry categorical labels), fetched 2026-09-26
+target: 10000 (5,000 per template; ASKJEV_TARGET_STORYCOMMONSENSE_EMOTION / _MOTIVE)
+hemisphere: self
+kind: social
+notes: >
+  Five-sentence everyday stories annotated line by line for each character's state. Two Choice templates, state
+  {"story": the story up to and including the annotated line} (annotators also saw only the story so far):
+  (1) "Which emotion best describes the feelings of <who> at the end of `story`?" over Plutchik's eight
+  (joy, trust, fear, surprise, sadness, disgust, anger, anticipation) plus no_clear_emotion, node
+  self.mind.reading_people.reading_feelings; (2) "Which need best explains the actions or wishes of <who> in the last
+  sentence of `story`?" over Maslow's five (physiological, stability, love, esteem, spiritual_growth) plus
+  no_clear_need (the annotators' "none"), node self.mind.reading_people.reading_motives. Option descriptions gloss
+  each category. template_id storycommonsense.emotion / .motive, origin template.
+  Human distribution: annotators could tick several categories, so each annotator's vote is split evenly over what
+  they ticked (an empty Plutchik list counts as no_clear_emotion); intensity (2 vs 3) is ignored; n = annotators
+  (almost always 3; raw ticks in meta.annotator_labels). Kept only character-lines with 3+ annotators where some
+  category was ticked by a majority of them (flat splits dropped). Pool: 18,459 emotion items (4,592 stories) and 10,159 motive items (3,714 stories);
+  5,000 each in salted-hash order with at most 2 per story per template.
+  <who>: "the narrator" for the first-person character; "the narrator's <x>" for "My <x>"; "the <x>" when the
+  character name is used as a common noun in the story ("the dog", "the moms"); otherwise the name. Pronoun-like
+  characters (everyone, someone, people ...) and other multi-word names dropped.
+  Flags: sexual, self-harm, violence wording "sensitive"; politics words "political". No truth: these are
+  judgments with a crowd distribution, and 3-annotator splits are coarse.

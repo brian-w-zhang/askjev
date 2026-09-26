@@ -1,0 +1,20 @@
+name: wikidata_companies
+url: https://qlever.dev/api/wikidata (fallback https://query.wikidata.org/)
+license: CC0 (Wikidata)
+version: SPARQL pulls cached 2026-09-26 (data/raw/wikidata_companies/{companies,countries}.json)
+target: 3000
+hemisphere: world
+kind: factual
+notes: >
+  Money-L1 company facts with truth. Pool: the 6,000 most-linked items typed (P31) company, public company,
+  enterprise, business, airline, bank, automobile manufacturer, conglomerate, or holding company; not dissolved
+  (no P576); >= 25 sitelinks; English label unique in the pool, Latin script, no parentheses.
+  (1) more_employees (<= WIKIDATA_COMPANIES_EMPLOYEES, 1,500): "Which company employs more people: A or B?" P1128
+  best-rank values; skipped when a company's values disagree by > 30% or are < 50; ratio >= 3; <= 6 pairs per
+  company; salted-hash order, A/B order hashed. (2) hq_country (<= WIKIDATA_COMPANIES_HQ, 1,500): "In which country is
+  the company X headquartered?" single P159 -> P17 country; 4 options = truth + 3 countries on the same continent
+  drawn from the 12 with the most companies in the pool; names containing the country or its demonym/brand words
+  (Air France, Deutsche..., Bank of China) skipped; Taiwan/Palestine/Kosovo never used. Node world.tech.companies for
+  well-known tech names (regex), else world.money.companies_brands. Flags political when Russia, Ukraine, Israel or
+  Iran is involved. Employee counts are Wikidata's latest, not dated in the text; complements wikidata_g4's
+  founded_first (different questions).

@@ -1,0 +1,22 @@
+name: usda_nutrients
+url: https://fdc.nal.usda.gov/download-datasets
+download: https://fdc.nal.usda.gov/fdc-datasets/FoodData_Central_sr_legacy_food_csv_2018-04.zip
+license: Public domain (USDA Agricultural Research Service, FoodData Central; CC0 1.0)
+version: SR Legacy CSV release 2018-04 (food.csv + food_nutrient.csv), downloaded 2026-09-25
+target: 7000
+hemisphere: world
+kind: factual
+notes: >
+  Pairwise nutrient comparisons "Gram for gram, which has more <nutrient>: A or B?" (template_id
+  usda_nutrients.<nutrient>), Choice over the two foods, truth = the food with the higher amount per 100 g in SR
+  Legacy. Foods are a hand-curated list in the adapter (~390 exact SR descriptions mapped to plain display names such
+  as "Broccoli, raw" -> "raw broccoli", "Cheese, cheddar" -> "cheddar cheese"; no branded, fast-food, restaurant,
+  baby-food or multi-qualifier items; one form per display name), each tagged with a food group. Nutrients: protein,
+  fat, calories, sugar, dietary fiber, sodium, cholesterol, vitamin C, vitamin A (RAE), calcium, iron, potassium,
+  caffeine. Both values must be recorded and > 0 (so "zero vs some" pairs are excluded); ratio >= 1.5 (protein, fat,
+  calories, fiber, cholesterol, potassium, caffeine) or >= 2 (sugar, sodium, vitamins, calcium, iron). Per template a
+  share of the target (protein/fat/calories 10% each ... caffeine 1%), half taken from same-group pairs and the rest
+  from any pair, salted-hash order, each food in at most 22 pairs per template; A/B order by salted hash. Node:
+  vitamin C/A -> world.health.fitness.vitamin, calcium/iron/potassium -> world.health.fitness.nutrition, other
+  templates -> the shared food-group node (world.food.*) or world.food.dishes_ingredients for cross-group pairs.
+  meta keeps both per-100 g values and the SR descriptions. ASKJEV_TARGET_USDA_NUTRIENTS.

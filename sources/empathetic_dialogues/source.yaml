@@ -1,0 +1,24 @@
+name: empathetic_dialogues
+url: https://github.com/facebookresearch/EmpatheticDialogues
+download: https://dl.fbaipublicfiles.com/parlai/empatheticdialogues/empatheticdialogues.tar.gz
+license: CC BY-NC 4.0 (Rashkin, Smith, Li & Boureau 2019, "Towards Empathetic Open-domain Conversation Models")
+version: empatheticdialogues.tar.gz (train/valid/test csv, 24,850 conversations), fetched 2026-09-25
+target: 5000 (ASKJEV_TARGET_EMPATHETIC_DIALOGUES; the template cap)
+hemisphere: self
+kind: social
+notes: >
+  Each crowdworker was given one of 32 emotion words and wrote a one-to-three-sentence situation from their own
+  life in which they felt it (the "prompt" column; the dialogue that follows is not used). Asked as one 32-way
+  Choice, "Someone wrote `situation` about a time in their own life. Which emotion were they feeling?"
+  (template_id empathetic_dialogues.emotion, origin template), state {"situation"}, options = the 32 emotion
+  words (the dataset's own label set, no descriptions), truth = the word the writer was given. This is the
+  writer's own emotion, not an annotator's guess, but the 32 labels overlap (angry/furious, afraid/terrified,
+  sad/devastated ...), so the truth is one defensible answer among near-synonyms rather than the only one.
+  One question per distinct situation text (first line of each conversation; `_comma_` decoded, spacing fixed).
+  Dropped: situations under 6 words or over 600 characters, slurs, and situations that contain any of the 32
+  label words or a near form ("pride", "trusted", "hoping"; words outside the label set such as "nervous" are kept):
+  their own label gives the answer away, another label is a misleading cue ("I was terrified" written for afraid).
+  Sampled balanced across the 32 labels (round-robin over each label's salted-hash order), so ~156 per label.
+  Flags: sexual, self-harm and violence/abuse wording "sensitive"; politics words "political"; deaths are
+  marked meta.mentions_death (not flagged). No human distribution (the truth anchors it).
+  node_hint self.mind.reading_people.reading_feelings.

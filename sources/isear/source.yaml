@@ -1,0 +1,23 @@
+name: isear
+url: https://www.unige.ch/cisa/research/materials-and-online-research/research-material/
+download: https://huggingface.co/datasets/savalera/isear-from-original (config "original", train/validation/test parquet; a public copy of the ISEAR databank)
+license: >
+  ISEAR databank (Scherer & Wallbott 1994, Swiss Center for Affective Sciences, University of Geneva), made freely
+  available to researchers; the HF mirror is tagged apache-2.0. Research use with citation.
+version: savalera/isear-from-original original config (7,666 rows = the full ISEAR databank), fetched 2026-09-26
+target: 5000 (ASKJEV_TARGET_ISEAR; the template cap)
+hemisphere: self
+kind: social
+notes: >
+  In the 1990s ISEAR asked about 3,000 students in 37 countries to describe a situation in which they had felt
+  each of seven emotions. Asked as one 7-way Choice, "Someone described `situation` as a time they felt a strong
+  emotion. Which emotion did they feel?" (template_id isear.emotion, origin template), state {"situation"} = the
+  respondent's own English text (non-English answers were translated by the ISEAR team), options joy / fear /
+  anger / sadness / disgust / shame / guilt, truth = the emotion the respondent was reporting.
+  Dropped: non-answers ("[ No response.]", "Blank", "Same as in anger" ...), texts under 5 words, slurs, exact
+  duplicates, and any situation that names one of the emotions or a near form (happy, scared, angry, ashamed,
+  guilty ...), which would give the answer away or mislead. Balanced round-robin over the seven labels (about 715
+  each). meta.country_code is ISEAR's COUN code. Flags: sexual, self-harm and violence wording "sensitive";
+  politics, government, police and demonstrations "political" (over-inclusive). No human distribution.
+  node_hint self.mind.reading_people.reading_feelings. Shame vs guilt vs sadness are hard to tell apart by design,
+  so this measures agreement with the person's own report, not an unambiguous fact.

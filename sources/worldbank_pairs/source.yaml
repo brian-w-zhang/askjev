@@ -1,0 +1,21 @@
+name: worldbank_pairs
+url: https://data.worldbank.org/ (API https://api.worldbank.org/v2)
+license: CC BY 4.0 (World Bank World Development Indicators)
+version: WDI API pulls 2016-2023 cached 2026-09-25 (data/raw/worldbank_pairs/<indicator>.json, countries.json, population.json)
+target: 9000 (ASKJEV_TARGET_WORLDBANK_PAIRS)
+hemisphere: world
+kind: factual
+notes: >
+  Country-pair factual Choices "Which country has a higher X: A or B?" with truth, origin template, one template per
+  WDI indicator (template_id worldbank_pairs.<key>): money (GDP per person, total GDP, inflation, unemployment,
+  exports share, central-government tax revenue share, remittances share, agriculture share), health (life expectancy, infant mortality,
+  physicians, health spending per person, tobacco use, adult overweight, share aged 65+), food (alcohol per adult),
+  nature (forest cover, precipitation, protected land, CO2 per person), tech (internet use, mobile subscriptions,
+  electricity access, renewable electricity share). Per country: mean of its latest up to 5 yearly values in
+  2016-2023. A pair qualifies when the gap is clear (per-template minimum ratio and/or absolute gap in the adapter)
+  and the same country leads in every year both report. Countries: non-aggregate WDI economies with >= 1M people,
+  dependent territories dropped, West Bank and Gaza and Kosovo dropped (statehood contested); common English names
+  replace WDI labels (Korea, Rep. -> South Korea). Salted-hash order per template, each country in a bounded number of
+  pairs, A/B order hashed; quotas weighted money 480, health 360, alcohol 400, nature 330, tech 230 per template,
+  scaled to the target. Pairs with Israel, Russia, Ukraine or Iran carry meta.flags=["political"]. meta keeps the
+  indicator code, both means and the years used. Recent-years wording, no year in the text.

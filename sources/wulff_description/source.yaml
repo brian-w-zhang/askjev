@@ -1,0 +1,24 @@
+name: wulff_description
+url: https://huggingface.co/datasets/marcelbinz/Psych-101
+download: prompts_training.jsonl (860 MB) streamed once by fetch(); only the wulff2018description/exp1.csv transcripts are kept (1,981 participants)
+license: >
+  Psych-101 (Binz et al. 2025, "A foundation model to predict and capture human cognition", Nature), Apache-2.0,
+  transcribing the description condition of Wulff, Mergenthaler-Canseco & Hertwig 2018 (Psychological Bulletin
+  144:140-176), a meta-analysis that pooled raw choices from published description-experience studies.
+version: marcelbinz/Psych-101 main, fetched 2026-09-26
+target: 5000 (ASKJEV_TARGET_WULFF_DESCRIPTION; the pool yields 489)
+hemisphere: self
+kind: personality
+notes: >
+  Classic described-lottery problems (Kahneman-Tversky style and many later studies): "Imagine you pick one of
+  these two lotteries, and one random draw from it is added to a real bonus (negative points are taken off).
+  Which do you pick: `lottery_a` or `lottery_b`?" (template_id wulff_description.lottery, origin template), state
+  {"lottery_a", "lottery_b"} written out ("4 points with an 80% chance, or 0 points with a 20% chance"; "3 points
+  for sure"). Psych-101 states all amounts in points; the original studies used various currencies and real or
+  hypothetical payoffs, which the transcripts don't distinguish.
+  Every choice line in the transcripts is parsed; the two lotteries are put in a canonical order (screen
+  position varied between participants), and choices are pooled per problem. Kept: problems with 15+ pooled
+  choices (489 of 1,065 distinct problems). Human distribution = the pooled choice shares, n = choices (one per
+  participant per problem in almost all studies; meta.participants counts distinct participant ids).
+  No truth. Complements choices13k (different problem sets and populations). node_hint
+  self.personality.risk_decision_style.
