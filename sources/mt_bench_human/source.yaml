@@ -1,0 +1,17 @@
+name: mt_bench_human
+url: https://huggingface.co/datasets/lmsys/mt_bench_human_judgments
+download: HF parquet export, default/human (3,355 expert/author pairwise judgments)
+license: CC-BY-4.0
+version: MT-Bench human judgments (Zheng et al., NeurIPS 2023 D&B)
+target: 1156
+hemisphere: machine
+shape: rank
+notes: >
+  Template mt_bench.better_reply: Choice conversation_a / conversation_b, which assistant gives the better
+  reply to the user's last message. Responses are model outputs (6 models); the labels are human votes by
+  experts and paper authors. Votes pooled per (question, unordered model pair, turn); ties and
+  no-majority items dropped; truth = the majority winner; HumanDist = the judges' votes (a tie vote counts
+  half). Side (a/b) assigned by salted hash (505/490 balance before dedup). Turn-2 items show both turns of
+  each model's conversation. Transcripts over 5,000 chars and identical-answer pairs skipped, so 1,156 of
+  1,814 pairs survive (the whole usable set; the brief's 2,000+ aim is not reachable here).
+  -> machine.ai_systems.hallucination_citation.

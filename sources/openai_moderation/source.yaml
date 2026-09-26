@@ -1,0 +1,19 @@
+name: openai_moderation
+url: https://github.com/openai/moderation-api-release
+download: https://raw.githubusercontent.com/openai/moderation-api-release/main/data/samples-1680.jsonl.gz
+license: MIT
+version: samples-1680 (1,680 texts, human labels for S, H, V, HR, SH, S3, H2, V2; not every text has every label)
+target: 1200
+hemisphere: machine
+shape: detect
+notes: >
+  Evaluation set released with Markov et al. 2023; texts are real traffic samples (web pages, forum posts,
+  API inputs) with personal details masked as <Person>, <URL>... Some inputs in that traffic may themselves
+  be model output; the labels are human. One Noul per category, over texts annotated for it: every
+  positive + 1.5x negatives (salted-hash order, ~40% positive):
+  openai_moderation.sexual (S, node sexual_graphic), .hate (H, toxicity_harassment), .violence (V,
+  sexual_graphic: graphic violence and glorification), .harassment (HR, toxicity_harassment), .self_harm
+  (SH, self_harm). Dropped: every S3 (sexual/minors) text, sexual positives mentioning minors, duplicates.
+  Texts truncated to 1,500 chars (meta.truncated). Flags: sensitive (S, SH or V2 positive, sexual words),
+  political (politics words). meta.labels keeps all category labels.
+  Target: ASKJEV_TARGET_OPENAI_MODERATION (per-template cap; the data is far below it).

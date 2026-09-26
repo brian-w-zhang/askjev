@@ -1,0 +1,14 @@
+name: pubmed_design
+url: https://pubmed.ncbi.nlm.nih.gov/
+download: NCBI E-utilities esearch + efetch (public, no key), publication years 2016-2022, English, with abstract
+license: NLM PubMed/MEDLINE data (public; abstracts copyright their publishers)
+version: PubMed snapshot fetched 2026-09 (1,600 salted-hash PMIDs per design query)
+target: 2400
+hemisphere: machine
+shape: classify
+notes: >
+  Template pubmed_design.design: Choice "What kind of study is the paper described in `abstract`?" over
+  randomized_controlled_trial / observational_study / case_report / systematic_review (incl. meta-analysis) /
+  narrative_review. Truth = NLM-indexed publication type; only records carrying exactly one of the five designs
+  (protocols, errata, comments, retractions dropped). `abstract` = title + abstract text (section labels
+  dropped), <= 1,500 chars. 480 per design. Suicide / self-harm / sexual-abuse / overdose wording flagged sensitive. -> machine.research.methods_checks.

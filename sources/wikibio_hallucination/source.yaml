@@ -1,0 +1,13 @@
+name: wikibio_hallucination
+url: https://huggingface.co/datasets/potsawee/wiki_bio_gpt3_hallucination
+download: HF parquet export, default/evaluation (238 passages, 1,908 sentences)
+license: CC-BY-SA-3.0
+version: SelfCheckGPT release (EMNLP 2023)
+target: 1758
+hemisphere: machine
+shape: verify
+notes: >
+  GPT-3 written biographies (model outputs), every sentence hand-annotated accurate / minor_inaccurate /
+  major_inaccurate. wikibio.sentence_accuracy: Score with 3 concrete levels (low -> high error), state = the
+  person's real WikiBio text (only people whose text is <= 2,500 chars, shown whole) + the sentence; truth =
+  annotation index. All sentences of those people kept. Node machine.ai_systems.hallucination_citation.

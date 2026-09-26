@@ -338,6 +338,58 @@ def _parse(p: dict, sub: str) -> dict | None:
     }
 
 
+# Rows after the first 15,000 only: polls about the voter's own facts (name, body, health, family, education,
+# job, devices, possessions, home, location, past events) rather than a preference or opinion. The first 15,000
+# rows predate this filter and are kept byte-identical.
+_NOUN = (r"(first |last |middle |full |user|given |family )?names?|passport|birth\w*|zodiac( sign)?|star sign|sign|mbti|"
+         r"personality type|blood( type)?|eye colou?r|hair colou?r|natural hair|skin (tone|colou?r|type)|height|weight|"
+         r"shoe size|iq|diagnos\w*|disorder|disabilit\w*|allerg\w*|medication|eyesight|vision|(biological )?parents?|"
+         r"parent\(s\)|mom|mother|dad|father|siblings?|family|household|ancestr\w*|heritage|ethnicity|race|religion|"
+         r"nationality|citizenship|native language|first language|mother tongue|degree|major|school|college|"
+         r"university|grades?|gpa|education|job|career|occupation|profession|salary|income|rent|mortgage|savings|debt|"
+         r"credit score|car|phone|laptop|computer|pc|console|os|operating system|browser|keyboard|monitor|tv|wifi|"
+         r"internet( speed| provider)?|house|home|apartment|neighbou?rhood|town|city|state|country|region|province|"
+         r"county|area|time ?zone|climate|location|hometown|zip|postcode|pets?|dog|cat|birth order|relationship status|"
+         r"marital status|sexuality|orientation|gender|age|generation|bmi|resting heart rate|dominant hand|"
+         r"(phone|screen|desktop) (wallpaper|brightness|model|brand)|screen time|ringtone|bank|mobile carrier|carrier")
+VOTER_FACT = re.compile(
+    rf"^(what|which)( \w+){{0,3}} (is|are|was|were|'s) your ({_NOUN})\b|"
+    rf"^(what|which) ({_NOUN})( \w+)? (is|are|was|were|do|did) you\b(?! (want|like|prefer|wish))|"
+    rf"^(is|are|does|do|did|was|were|has|have|can) your ({_NOUN})\b|"
+    rf"^how (many|much|old|big|tall|long|far|fast)( \w+){{0,4}} (is|are|does|do|did|has|have) your ({_NOUN})\b|"
+    rf"\b(of|in) your ({_NOUN})\b.*\b(are|were|is|was|do|did|have|has) you\b|"
+    r"\bname (start|begin|end)s?\b|\bhighest level of\b|\bwhat (month|day|time|year|season|date) is it\b|"
+    r"^do (you|u) (have|own|use|live in|live with|work|attend|speak)( an?| any| the| more than| multiple| two)? "
+    r"(iphone|android|samsung|pixel|mac|macbook|windows|linux|chromebook|console|xbox|playstation|ps\d|switch|car|"
+    r"driver'?s? licen[cs]e|licen[cs]e|passport|kids|children|siblings|pets?|dog|cat|tattoos?|piercings?|glasses|"
+    r"contacts|braces|adhd|add|autism|anxiety|depression|ocd|allerg\w*|asthma|insurance|job|degree|roommates?|"
+    r"(a |an )?(job|car|house|garden|pool|basement|dishwasher|pet|dog|cat|degree|licen[cs]e|passport|"
+    r"sibling|brother|sister|twin|partner|mortgage|credit card|smartphone|landline))\b|"
+    r"^(are|were) you (an? )?(only child|oldest|youngest|middle child|firstborn|twin|adopted|left.?handed|"
+    r"right.?handed|ambidextrous|colou?r.?blind|employed|unemployed|retired|homeschooled|born|raised|bullied|"
+    r"in (school|college|university|high school|a relationship)|a (student|teacher|nurse|doctor|parent|homeowner|"
+    r"renter|immigrant|citizen|veteran|smoker|twin|first.?born)|taller|shorter|heavier|diagnosed|allergic|autistic|"
+    r"neurodivergent)\b|"
+    r"\bwhat is your (dominant|writing) hand\b|\bhow (tall|short|heavy|old) (are|were) you\b|"
+    r"\bhow many (\w+ ){0,3}(are|were) you (taller|shorter|older|younger)\b|"
+    r"^(have|has|did) you (ever )?(updated|upgraded|switched|moved|graduated|married|voted|traveled|travell?ed|"
+    r"lived|worked|finished|passed|failed|gotten|got|been (to|diagnosed|married|abroad|outside))\b|"
+    r"^has (anyone in )?your\b|\bwhen you were (a )?(kid|child|young|younger|little|teen\w*|in (school|high "
+    r"school|college))\b|\b(were|was) your\b.*\bgrowing up\b|"
+    r"^where (did|do) you (grow up|live|work|study|go to school|come from)\b|"
+    r"^what (grade|year|level) (are|were) you\b|^what (do|did) you (study|major)\b|"
+    r"^what (brightness|volume|os|phone|browser|device|keyboard|wallpaper|ringtone|os) (are|do) you\b|"
+    r"^which (device|phone|os|browser|console|platform|carrier|bank) (are|do) you (use|using|on|have|own|play on)\b",
+    re.I)
+PREF_GUARD = re.compile(r"\b(would|should|prefer\w*|rather|like|love|hate|enjoy|favou?rite|opinion|think|feel|"
+                        r"if|consider\w*|find|associate|identify|attractive|trustworth\w*|pet person|want|wish|best|better|worse|worst|rude|okay|ok|weird|proud|satisfied|happy)\b",
+                        re.I)
+
+
+def _voter_fact(q: str) -> bool:
+    return bool(VOTER_FACT.search(q)) and not PREF_GUARD.search(q)
+
+
 VOCAB: Counter = Counter()
 
 
@@ -363,6 +415,9 @@ def _pool(raw_dir: Path, legacy: bool) -> list[dict]:
                 FUNNEL["0_polls"] += 1
                 it = _parse(json.loads(line), sub)
                 if not it:
+                    continue
+                if not legacy and _voter_fact(it["q"]):
+                    FUNNEL["6b_voter_fact"] += 1
                     continue
                 key = _title_key(it["q"])
                 old = best.get(key)

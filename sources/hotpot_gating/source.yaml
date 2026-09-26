@@ -1,0 +1,14 @@
+name: hotpot_gating
+url: https://hotpotqa.github.io/
+download: https://huggingface.co/api/datasets/hotpotqa/hotpot_qa/parquet/distractor/validation/0.parquet
+license: CC-BY-SA-4.0
+version: HotpotQA distractor validation (7,405 questions; 5,918 bridge), fetched 2026-09-25
+target: 2500
+hemisphere: machine
+shape: verify
+notes: >
+  RAG context gating. hotpot_gating.needed (Noul, machine.search.rag_gating): a bridge question plus one of
+  its 10 paragraphs; truth true when it is one of the 2 gold paragraphs holding the crowd-annotated
+  supporting facts, false when it is one of the 8 TF-IDF distractors (on topic, not needed). One item per
+  question, 50/50 labels, salted-hash order. Comparison questions are excluded (hotpot_compare uses them
+  closed-book as World factual). Distractors can rarely contain a needed fact; the annotation is the truth.

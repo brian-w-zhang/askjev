@@ -1,0 +1,15 @@
+name: oasst_replies
+url: https://huggingface.co/datasets/OpenAssistant/oasst2
+download: HF parquet export, default/train + default/validation
+license: Apache-2.0
+version: oasst2 (2023-11 release)
+target: 2500
+hemisphere: machine
+shape: verify
+notes: >
+  Template oasst.fails_task: Noul, does the assistant `reply` (human-written by an Open Assistant volunteer
+  role-playing the assistant) fail to do what the user asked in `prompt`, with earlier turns in
+  `conversation`. Truth from the labelers' fails_task flag share: >= 2/3 true, <= 1/3 false, 1/3-2/3 dropped;
+  >= 3 labelers; English, not deleted, not synthetic. HumanDist = labelers' true/false shares (n = labelers).
+  Balanced 1,250/1,250, salted-hash order. Political/sensitive keyword flags in meta.flags.
+  -> machine.ai_systems.hallucination_citation ("does this answer address the user's request").

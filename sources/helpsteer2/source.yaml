@@ -1,0 +1,19 @@
+name: helpsteer2
+url: https://huggingface.co/datasets/nvidia/HelpSteer2
+download: https://huggingface.co/datasets/nvidia/HelpSteer2/resolve/main/disagreements/disagreements.jsonl.gz ; .../preference/preference.jsonl.gz
+license: CC-BY-4.0
+version: HelpSteer2 (2024-06) + HelpSteer2-Preference (2024-10)
+target: 4500
+hemisphere: machine
+shape: score + rank
+notes: >
+  Prompts are real user prompts (mostly ShareGPT); responses are model outputs; every label is human
+  (Scale AI annotators, 3-5 per item). Nothing is truncated: items over the length limits are skipped,
+  since cutting a response changes its correctness.
+  helpsteer2.correctness (2,500, Score, 5 concrete levels from HelpSteer2's 0-4 correctness guideline):
+  truth = median annotator rating (lower middle for even counts), items whose ratings span more than 2
+  points dropped, 500 per level. HumanDist = the annotators' individual ratings.
+  helpsteer2.preference (2,000, Choice response_1 / response_2, shape rank): pairs with aggregated
+  preference strength |s| >= 2 ("better" or "much better"), 1,000 per side; HumanDist = individual
+  annotators' preference directions (a "same" vote counts half to each).
+  Multi-turn prompts rendered as "User: ... / Assistant: ...". Both -> machine.ai_systems.hallucination_citation.

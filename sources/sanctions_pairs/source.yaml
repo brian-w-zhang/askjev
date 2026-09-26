@@ -1,0 +1,17 @@
+name: sanctions_pairs
+url: https://www.opensanctions.org/docs/opensource/pairs/ ; https://huggingface.co/datasets/sanctions-er-anon/opensanctions_pairs
+download: https://huggingface.co/datasets/sanctions-er-anon/opensanctions_pairs/resolve/main/pairs.json.gz
+license: CC-BY-NC-4.0 (OpenSanctions data)
+version: OpenSanctions Pairs snapshot 2025-12-09 (755,540 analyst-judged pairs)
+target: 2500 (ASKJEV_TARGET_SANCTIONS_PAIRS)
+hemisphere: machine
+shape: verify
+notes: >
+  Template sanctions_pairs.same_entity: Noul "Do `record_a` and `record_b` describe the same person or
+  organization?"; truth = the OpenSanctions analyst judgement on a matcher-proposed candidate pair (hard
+  negatives). Person-Person and organisation-organisation pairs only; 50/50 truth, ~60% person pairs, salted
+  hash order. Records rendered compactly (names, Latin first, up to 5; person birth date/place, nationality,
+  gender, positions, topics; organisation country, jurisdiction, incorporation date, legal form, sector,
+  registration numbers). No personal document numbers, addresses, source ids or URLs. Pairs involving PEP/RCA
+  or government-topic entities flagged "political" (capped at ~15% of each stratum). Non-commercial licence (fine for this private project).
+  Node machine.finance.kyc_aml.

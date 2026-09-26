@@ -3,6 +3,7 @@ url: https://maxwellforbes.com/social-chemistry/
 license: CC BY-SA 4.0 (Social Chemistry 101, Forbes et al., EMNLP 2020)
 version: social-chem-101.v1.0.tsv (social-chem-101.zip)
 target: 6000
+target_selfreal: 26000 (ASKJEV_TARGET_SOCIAL_CHEM=26000; the first 6,000 rows are unchanged)
 hemisphere: self
 kind: social
 notes: >
@@ -18,3 +19,12 @@ notes: >
   morality-ethics -> values.everyday_ethics), else self.values for advice/description rules so placement walks
   from the Values root. Same content filters as scruples; political keywords flag "political".
   Filters extend scruples with a few sexual terms (butt, groping, intercourse, underwear...) and minor terms (young girls/boys, step-children, babies, toddlers) via scruples_anecdotes.drop().
+  Self-real expansion (ASKJEV_TARGET_SOCIAL_CHEM > 6000; unset = the original 6,000, byte-identical): the extra rules
+  are appended after the original 6,000 in tiers, salted-hash order within each tier (salt social_chem-expand-v1), so a
+  larger target contains a smaller one: (0) the unpicked rules with >= 3 annotations (7,752), (1) 2-annotation rules
+  whose node is thin, i.e. not etiquette_social_norms / the self.values root / everyday_ethics (2,130), (2) 1-annotation
+  rules on thin nodes, then (3-4) 2- and 1-annotation rules on those broad nodes. Same node mapping, filters and flags.
+  At 26,000 the 20,000 extra rows are 7,752 n>=3, 2,130 n=2 and 10,118 n=1 (a single annotator's estimate, so a
+  one-hot distribution); by node: family_parenting 5,342, romance 3,148, friendship 2,432, values root 2,407,
+  etiquette 1,851, workplace_community 1,328, animals_environment 925, everyday_ethics 804, honesty_trust 747,
+  dating 622, fairness_justice 197, giving_charity 197.

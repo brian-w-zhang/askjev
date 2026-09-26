@@ -1,0 +1,15 @@
+name: ddi_interactions
+url: https://huggingface.co/datasets/bigbio/ddi_corpus
+download: https://huggingface.co/api/datasets/bigbio/ddi_corpus/parquet/ddi_corpus_source/{train,test}/0.parquet
+license: CC-BY-NC-4.0
+version: DDI Extraction 2013 corpus (DrugBank + MEDLINE, 1,025 documents; bigbio source config)
+target: 2500
+hemisphere: machine
+shape: classify
+notes: >
+  Template ddi.interaction_type: Choice "What does `sentence` say about how `drug_1` and `drug_2` interact
+  when used together?" over mechanism / effect / advise / interaction / none. Truth = the expert-annotated
+  DDI type; in-sentence pairs without a relation are none (the corpus annotates all in-sentence pairs).
+  Sentences recovered from the document text with a splitter that never cuts inside a drug mention;
+  discontinuous mentions and same-name pairs skipped; 40-700 char sentences. Up to 560 per type
+  (interaction has only ~285), remaining quota none (at most 2 per sentence). -> machine.research.entity_relation.

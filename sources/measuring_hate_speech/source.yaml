@@ -1,0 +1,19 @@
+name: measuring_hate_speech
+url: https://huggingface.co/datasets/ucberkeley-dlab/measuring-hate-speech
+download: https://huggingface.co/api/datasets/ucberkeley-dlab/measuring-hate-speech/parquet/default/train/0.parquet
+license: CC-BY-4.0
+version: HF default/train (135,556 annotations of 39,565 comments from YouTube, Twitter, Reddit, Gab)
+target: 4500
+hemisphere: machine
+shape: detect, classify
+notes: >
+  Only comments with >= 3 annotators. Both templates carry HumanDist over those annotators
+  (population "MTurk annotators (Measuring Hate Speech)").
+  mhs.hate_speech (Noul, 2,400): item `hatespeech`; shares over yes/no answers ("unclear" excluded);
+  truth true when >= 75% yes, false when >= 75% no, the rest dropped; 40% positive.
+  mhs.stance (Choice attacks / defends / neither, 2,100): item `attack_defend` bucketed 0-1 defends,
+  2 neither, 3-4 attacks; truth when >= 2/3 of annotators share a bucket; balanced thirds.
+  Dropped: slurs, sexual content mentioning minors, > 1,500 chars, duplicates.
+  Flags: sensitive (sexual words), political (politics words or >= 50% of annotators marked a political
+  target group). Node machine.trust_safety.toxicity_harassment.
+  Targets: ASKJEV_TARGET_MHS_HATE, ASKJEV_TARGET_MHS_STANCE.

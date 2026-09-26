@@ -15,11 +15,16 @@ from typing import Iterator
 import httpx
 
 from askjev.model import HumanDist, Question
+from askjev.sampling import env_int, hash_order
 
 NAME = "social_chem"
 URL = "https://storage.googleapis.com/ai2-mosaic-public/projects/social-chemistry/data/social-chem-101.zip"
 LICENSE = "CC BY-SA 4.0 (Social Chemistry 101, Forbes et al. 2020)"
-TARGET = 6000
+TARGET = 6000  # the original seeded sample (kept byte-identical)
+TARGET_ALL = env_int("TARGET_SOCIAL_CHEM", TARGET)  # expansion: appended after the original 6,000
+EXTRA_SALT = "social_chem-expand-v1"
+# Expansion preference: nodes thinner than etiquette / generic values / everyday ethics.
+BROAD = {"self.love.etiquette_social_norms", "self.values", "self.values.everyday_ethics"}
 SEED = 20260924
 TSV = Path("social-chem-101") / "social-chem-101.v1.0.tsv"
 MIN_MULTI = 3  # rules of thumb with at least this many rot-agree annotations are sampled first
@@ -127,44 +132,75 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
     rng.shuffle(multi)
     rng.shuffle(single)
     picked = sorted((multi + single)[:TARGET])
-
     for key, sexual in picked:
-        g, rot = groups[key], texts[key]
+        yield _question(groups[key], texts[key], sexual)
+
+    # Expansion (ASKJEV_TARGET_SOCIAL_CHEM > 6000; unset = the original 6,000, byte-identical). Tiers in order:
+    # the unpicked rules with >= 3 annotations, then 2-annotation rules on thin nodes, then 1-annotation rules on
+    # thin nodes, then 2-annotation and 1-annotation rules on broad nodes; salted-hash order within a tier, so a
+    # larger target always contains a smaller one.
+    k = TARGET_ALL - len(picked)
+    if k <= 0:
+        return
+    taken = {key for key, _ in picked}
+
+    def tier(item) -> int:
+        g = groups[item[0]]
         n = sum(g["votes"])
-        # Categories/foundations: those chosen by at least half of the annotations.
-        cats = {c for c, k in g["cats"].items() if 2 * k >= g["rows"]}
-        mfs = sorted(m for m, k in g["mf"].items() if 2 * k >= g["rows"])
-        flags = ["sensitive"] if (sexual or F.SELF_HARM.search(rot) or F.VIOLENT.search(rot)) else []
-        if A.POLITICAL.search(rot):
-            flags.append("political")
-        rot_ids = sorted(g["rot_ids"])
-        yield Question(
-            text=f'How many people would agree: "{rot}"?',
-            primitive="score",
-            hemisphere="self",
-            kind="social",
-            origin="dataset",
-            source=NAME,
-            options=LEVELS,
-            node_hint=node_for(rot, cats),
-            human_text=f'How many people would agree: "{rot}"?',
-            source_item_id=rot_ids[0],
-            license=LICENSE,
-            human=[
-                HumanDist(
-                    population="Social Chemistry 101 MTurk annotators",
-                    distribution={str(i): v / n for i, v in enumerate(g["votes"])},
-                    n=n,
-                    source="Social Chemistry 101 v1.0 rot-agree (annotator estimate of the share of people who agree)",
-                )
-            ],
-            meta={
-                "rot_agree_counts": g["votes"],
-                "categorization": sorted(cats),
-                "moral_foundations": mfs,
-                "areas": sorted(g["areas"]),
-                "rot_ids": rot_ids[:10],
-                "n_rot_ids": len(rot_ids),
-            }
-            | ({"flags": flags} if flags else {}),
-        )
+        if n >= MIN_MULTI:
+            return 0
+        thin = node_for(texts[item[0]], _cats(g)) not in BROAD
+        return (1 if n == 2 else 2) if thin else (3 if n == 2 else 4)
+
+    rest = [x for x in multi + single if x[0] not in taken]
+    by_tier: dict[int, list] = defaultdict(list)
+    for x in rest:
+        by_tier[tier(x)].append(x)
+    ordered = [x for t in sorted(by_tier) for x in hash_order(by_tier[t], lambda x: x[0], EXTRA_SALT)]
+    for key, sexual in ordered[:k]:
+        yield _question(groups[key], texts[key], sexual)
+
+
+def _cats(g: dict) -> set[str]:
+    # Categories: those chosen by at least half of the annotations.
+    return {c for c, k in g["cats"].items() if 2 * k >= g["rows"]}
+
+
+def _question(g: dict, rot: str, sexual: bool) -> Question:
+    n = sum(g["votes"])
+    cats = _cats(g)
+    mfs = sorted(m for m, k in g["mf"].items() if 2 * k >= g["rows"])
+    flags = ["sensitive"] if (sexual or F.SELF_HARM.search(rot) or F.VIOLENT.search(rot)) else []
+    if A.POLITICAL.search(rot):
+        flags.append("political")
+    rot_ids = sorted(g["rot_ids"])
+    return Question(
+        text=f'How many people would agree: "{rot}"?',
+        primitive="score",
+        hemisphere="self",
+        kind="social",
+        origin="dataset",
+        source=NAME,
+        options=LEVELS,
+        node_hint=node_for(rot, cats),
+        human_text=f'How many people would agree: "{rot}"?',
+        source_item_id=rot_ids[0],
+        license=LICENSE,
+        human=[
+            HumanDist(
+                population="Social Chemistry 101 MTurk annotators",
+                distribution={str(i): v / n for i, v in enumerate(g["votes"])},
+                n=n,
+                source="Social Chemistry 101 v1.0 rot-agree (annotator estimate of the share of people who agree)",
+            )
+        ],
+        meta={
+            "rot_agree_counts": g["votes"],
+            "categorization": sorted(cats),
+            "moral_foundations": mfs,
+            "areas": sorted(g["areas"]),
+            "rot_ids": rot_ids[:10],
+            "n_rot_ids": len(rot_ids),
+        }
+        | ({"flags": flags} if flags else {}),
+    )

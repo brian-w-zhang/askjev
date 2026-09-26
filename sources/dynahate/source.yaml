@@ -1,0 +1,17 @@
+name: dynahate
+url: https://github.com/bvidgen/Dynamically-Generated-Hate-Speech-Dataset
+download: https://raw.githubusercontent.com/bvidgen/Dynamically-Generated-Hate-Speech-Dataset/main/Dynamically%20Generated%20Hate%20Dataset%20v0.2.3.csv
+license: CC-BY-4.0
+version: v0.2.3 (41,144 statements, rounds 1-4)
+target: 2000
+hemisphere: machine
+shape: classify
+notes: >
+  Template dynahate.hate_type (Choice over derogation / animosity / threatening / support_for_hate /
+  dehumanization): original (not perturbed) hateful statements with a given type (rounds 2-4), truth = dataset type (set by the
+  trained annotator who wrote the entry, verified by experts). Statements are human-written adversarial
+  examples, not model-generated. Stratified by water-filling in salted-hash order (support_for_hate 87,
+  threatening 281, dehumanization 434: all available originals; derogation and animosity 599 each). Dropped: slurs, sexual content mentioning minors, > 1,500 chars,
+  duplicates. Flags: sensitive (sexual words), political (politicians, parties, immigration, BLM, Israel...).
+  meta keeps round, level (original / perturbation), split, target. Node machine.trust_safety.toxicity_harassment.
+  Target: ASKJEV_TARGET_DYNAHATE.

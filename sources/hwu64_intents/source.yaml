@@ -1,0 +1,15 @@
+name: hwu64_intents
+url: https://github.com/xliuhw/NLU-Evaluation-Data
+download: AnnotatedData/NLU-Data-Home-Domain-Annotated-All.csv (raw GitHub) + mteb/amazon_massive_intent en parquet (for overlap exclusion only)
+license: CC-BY-4.0
+version: master (25,716 utterances)
+target: 2500
+hemisphere: machine
+shape: route
+notes: >
+  Liu et al. (IWSDS 2019) home-assistant commands with scenario + intent. hwu64.intent: Choice over 64
+  "<scenario>_<intent>" keys with hand-written descriptions, truth = annotation. Stratified seeded round-robin.
+  Every utterance also present in Amazon MASSIVE en (built from HWU, used by massive_en) is excluded, so no
+  command repeats massive_en. Dropped: status IRR*, general_quirky (catch-all), general_greet (all in MASSIVE), cooking_query and
+  audio_volume_other (tiny), commands under three words. Labels are crowd annotations and somewhat noisy.
+  Node machine.support.commands.

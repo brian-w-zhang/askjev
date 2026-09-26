@@ -1,0 +1,18 @@
+name: synergy_screening
+url: https://github.com/asreview/synergy-dataset
+download: >
+  https://raw.githubusercontent.com/asreview/synergy-dataset/master/index.csv (v1 index, 27 reviews) and the
+  per-review metadata CSVs it links (asreview/systematic-review-datasets, branch metadata-v1-final)
+license: CC-BY-4.0 for most reviews (CC0 Nagtegaal_2019; Cohen 2006 reviews under a custom open license); per row
+version: SYNERGY / ASReview systematic review datasets, metadata-v1-final (27 reviews)
+target: 2400
+hemisphere: machine
+shape: classify
+notes: >
+  Template synergy.include: Noul "Did the reviewers include `paper` in their systematic review on
+  `review_topic`?" `paper` = title + abstract (<= 1,500 chars); `review_topic` = one-line scope written from
+  each review's published title (Cohen 2006 = DERP drug class reviews). Truth = review authors' label:
+  label_abstract_screening wherever the CSV has it (Cohen sets, Appenzeller-Herzog, Nagtegaal...),
+  else label_included (final); meta.label_column records which. Balanced per review: up to
+  110 included + the same number of excluded records of that review (salted-hash order), scaled to target.
+  Records need a title and >= 200-char abstract; duplicate titles dropped. -> machine.research.paper_screening.

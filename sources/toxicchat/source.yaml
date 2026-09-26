@@ -1,0 +1,15 @@
+name: toxicchat
+url: https://huggingface.co/datasets/lmsys/toxic-chat
+download: HF parquet export, config toxicchat0124, train + test (10,165 user prompts)
+license: CC-BY-NC-4.0
+version: toxicchat0124
+target: 2101
+hemisphere: machine
+shape: detect
+notes: >
+  Real user prompts to the Vicuna demo, human-annotated (only human_annotation = true rows; the rest were
+  auto-labelled non-toxic by a filter). toxicchat.toxic: all toxic prompts plus 1.4x as many non-toxic
+  ones (seeded hash order), truth = toxicity. toxicchat.jailbreak: toxic prompts only, truth = jailbreaking
+  (~27% true). Prompts over 1,600 chars skipped (no truncation); normalized-prefix dedup. Dropped: slurs,
+  sexual content with minor terms or OpenAI-moderation sexual/minors > 0.3. Flagged "sensitive": sexual
+  keywords or moderation sexual / self-harm / violence-graphic > 0.5. Node machine.ai_systems.guardrails.

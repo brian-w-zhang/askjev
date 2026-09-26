@@ -23,3 +23,4 @@ notes: >
   only inside those mirrored scenarios (e.g. male vs female executives), never in a status comparison.
   Wave 3: run with ASKJEV_TARGET_MORAL_MACHINE=8000 (of the 26,020 eligible configurations); rows 1-3000 are unchanged.
   Wave 5: run with ASKJEV_TARGET_MORAL_MACHINE=18000 (same exclusions and n >= 100); rows 1-8000 are unchanged.
+  Self-real wave: run with ASKJEV_TARGET_MORAL_MACHINE=26020 (every eligible configuration, n >= 100, same exclusions); rows 1-18000 are unchanged.

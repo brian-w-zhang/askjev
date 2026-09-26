@@ -51,7 +51,8 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
         for uid, prem, hyp, label in df.iter_rows():
             if label not in LABELS:
                 continue
-            prem, hyp = " ".join(prem.split()), " ".join(hyp.split())
+            prem = "\n".join(" ".join(x.split()) for x in prem.split("<br>") if x.strip())
+            hyp = " ".join(hyp.split())
             if len(prem) < 30 or len(hyp) < 5 or (prem, hyp) in seen:
                 continue
             seen.add((prem, hyp))

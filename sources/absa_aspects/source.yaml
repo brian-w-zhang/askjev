@@ -1,0 +1,13 @@
+name: absa_aspects
+url: https://alt.qcri.org/semeval2014/task4/
+download: https://huggingface.co/api/datasets/jakartaresearch/semeval-absa/parquet/{restaurant,laptop}/{train,validation}/0.parquet
+license: CC-BY-4.0 (HF export); SemEval-2014 Task 4 data, research use
+version: SemEval-2014 Task 4 restaurants + laptops (train + validation splits of the HF export)
+target: 1200
+hemisphere: machine
+shape: classify
+notes: >
+  Template absa.aspect_polarity (Choice positive / negative / neutral / mixed, node
+  machine.commerce.review_insights): "How does the reviewer feel about `aspect` in `review_sentence`?" Truth =
+  annotated aspect-term polarity (conflict -> mixed). One aspect per sentence; quotas mixed 6% / neutral 29% /
+  negative 32.5% / positive 32.5%, salted hash order. ASKJEV_TARGET_ABSA_ASPECTS (default 1,200).

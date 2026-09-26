@@ -1,0 +1,14 @@
+name: satd_comments
+url: https://github.com/maldonado/tse.satd.data
+download: https://raw.githubusercontent.com/maldonado/tse.satd.data/master/dataset/technical_debt_dataset.zip
+license: No license file; public research dataset (Maldonado, Shihab & Tsantalis, TSE 2017), cite the paper
+version: technical_debt_dataset.csv (62,275 comments, 10 Java projects, 4,071 SATD)
+target: 4000
+hemisphere: machine
+shape: detect
+notes: >
+  Manually labelled self-admitted technical debt comments. Two templates on disjoint comments, node
+  machine.code.code_review. satd_comments.debt_type: Choice over design / defect / implementation / test /
+  documentation (SATD comments only; at most 550 per type, so test 85 and documentation 54 are all of them).
+  satd_comments.admits_debt: Noul, balanced 1,200 SATD (any type, not used above) vs 1,200 not SATD.
+  Truth = the human label. Comments of fewer than 3 words and exact duplicates dropped; whitespace collapsed.

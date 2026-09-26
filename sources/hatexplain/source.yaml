@@ -1,0 +1,17 @@
+name: hatexplain
+url: https://github.com/hate-alert/HateXplain
+download: https://raw.githubusercontent.com/hate-alert/HateXplain/master/Data/dataset.json
+license: MIT
+version: dataset.json (20,148 Twitter and Gab posts, 3 MTurk annotators each)
+target: 2100
+hemisphere: machine
+shape: classify
+notes: >
+  Template hatexplain.label (Choice over hate_speech / offensive / normal): truth = the label all three
+  annotators gave (2-1 and 3-way splits dropped; agreement is low), HumanDist = their labels (population "MTurk annotators (HateXplain)",
+  n = 3). Balanced toward thirds in salted-hash order (hate_speech is short: ~590 unanimous slur-free posts). Posts are re-joined from lowercase tokens, `<user>` ->
+  `@user`, `<number>` etc. -> `[number]`. Dropped: slurs (the hate class loses most slur-heavy posts, so what remains is hate expressed
+  without slurs), sexual content mentioning minors, posts under 20 chars, exact duplicates.
+  Flags: sensitive (sexual words), political (parties, politicians, immigration, refugees, Israel/Palestine...).
+  meta.targets keeps the annotators' target communities. Node machine.trust_safety.toxicity_harassment.
+  Target: ASKJEV_TARGET_HATEXPLAIN.

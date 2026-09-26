@@ -24,7 +24,7 @@ from askjev.sampling import env_int, hash_order
 NAME = "mnli_grounding"
 BASE = "https://huggingface.co/api/datasets/nyu-mll/multi_nli/parquet/default"
 SPLITS = ["validation_matched", "validation_mismatched"]
-TARGET = env_int("TARGET_MNLI_GROUNDING", 2000)
+TARGET = env_int("TARGET_MNLI_GROUNDING", 2500)
 LICENSE = "Mixed open licenses (OANC portions public domain / CC-BY-3.0; fiction and Slate per MultiNLI data description)"
 TEXT = "Taking everything in `source` as true, does `statement` follow from it, contradict it, or neither?"
 OPTIONS = {

@@ -4,6 +4,7 @@ license: Apache-2.0 (allenai/scruples repo); action descriptions come from Reddi
 version: Scruples Dilemmas v1.0 (dilemmas.tar.gz, dev + test splits; train for the expansion)
 target: 600
 target_phase6: 4500 (ASKJEV_TARGET_SCRUPLES=4500)
+target_selfreal: 4655 (ASKJEV_TARGET_SCRUPLES=4655 = the whole eligible dev/test pool, all n=10; no train pairs; rows 1-2000 unchanged)
 hemisphere: self
 kind: values
 notes: >

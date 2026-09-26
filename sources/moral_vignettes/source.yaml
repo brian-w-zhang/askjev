@@ -1,0 +1,32 @@
+name: moral_vignettes
+url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4780680/ (Clifford et al. 2015) and https://osf.io/9gnza/ (Dutch MFV validation)
+license: >
+  Vignette text and US classification norms from Clifford, Iyengar, Cabeza & Sinnott-Armstrong 2015, Behavior
+  Research Methods 47:1178-1198 (NIH author manuscript, Table 1), research use with citation. Dutch item-level
+  ratings from Hopp, Jargow, Kouwen & Bakker 2024 (Judgment and Decision Making; OSF 9gnza, no license set),
+  research use with citation.
+version: >
+  PMC4780680 HTML (Table 1: 132 vignettes, classification percentages and mean wrongness); OSF 9gnza
+  numeric_responses.csv (648 Qualtrics rows) + table1.xlsx (121 vignettes with English and Dutch text).
+  Fetched 2026-09-25.
+target: 266
+hemisphere: self
+kind: values
+notes: >
+  Moral Foundations Vignettes ("You see a ..." third-party violations; 7 foundations plus a social-norms control
+  set). Two questions per vignette. (1) Choice "What is the main reason the behavior in this scene is morally
+  wrong, if it is wrong at all" with the study's own seven options (harm, fairness, loyalty, authority, purity,
+  freedom, not morally wrong) as readable keys; human = Clifford's US MTurk classification percentages (about 30
+  raters each, rounded percentages renormalized, n unknown so left null) and, where the vignette is in the Dutch
+  set, the Dutch item-level classification counts. (2) Score "How morally wrong is the behavior in this scene"
+  on five concrete levels matching the 1-5 scale (not at all / not too / somewhat / very / extremely wrong),
+  only where item-level ratings exist: the Dutch sample (15-37 ratings per vignette after the authors' own
+  8-minute duration exclusion; their political-orientation listwise deletion is not applied). Clifford
+  published only mean wrongness (no SD, no item-level data), so no US wrongness distribution is derived; the US
+  mean (0-4) is kept in meta. Dutch items are matched to Clifford's English text by normalized fuzzy match
+  (cutoff 0.9); the Dutch export's duplicate "79-" columns are vignette 78, as in the authors' notebook.
+  Vignette auth09 has no Dutch ratings. node_hint by intended foundation: care, proportionality (fairness =
+  cheating / free riding), loyalty, authority, purity, the moral_foundations root for liberty, and
+  self.love.etiquette_social_norms for the social-norms controls. Scruples content filters: sexual / violent
+  wording flagged "sensitive". Knutson et al. 2010 and the Latin American MFV validation were not used (no
+  public no-login item data found).

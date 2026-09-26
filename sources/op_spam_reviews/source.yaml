@@ -1,0 +1,13 @@
+name: op_spam_reviews
+url: https://myleott.com/op_spam/
+download: https://myleott.com/op_spam_v1.4.zip
+license: CC-BY-NC-SA-3.0
+version: Deceptive Opinion Spam corpus v1.4 (1,600 hotel reviews; 800 truthful, 800 deceptive, positive + negative)
+target: 800
+hemisphere: machine
+shape: detect
+notes: >
+  Template op_spam.genuine_stay (Noul, node machine.commerce.review_abuse): "Was `review` written by a guest who
+  actually stayed at the hotel?" Truth = truthful (real reviews from TripAdvisor / booking sites) vs deceptive
+  (written by paid MTurk workers who never stayed). Deceptive reviews are human-written, not model-generated.
+  200 per polarity x truthfulness cell, salted hash order. ASKJEV_TARGET_OP_SPAM_REVIEWS (default 800).

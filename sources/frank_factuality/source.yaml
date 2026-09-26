@@ -1,0 +1,14 @@
+name: frank_factuality
+url: https://github.com/artidoro/frank
+download: data/benchmark_data.json + data/human_annotations.json (raw GitHub)
+license: MIT
+version: NAACL 2021 release (2,246 annotated summaries)
+target: 985
+hemisphere: machine
+shape: verify
+notes: >
+  Human-annotated factual consistency of summaries from nine summarization systems (CNN/DM and XSum). The
+  summaries are model outputs; the labels are human (3 annotators per sentence, majority). frank.faithful:
+  Noul, truth = Factuality == 1.0 (no erroneous sentence). Only articles <= 3,000 characters, shown whole.
+  All faithful summaries + 1.5x unfaithful, seeded. Summaries keep the systems' lowercased tokenized form.
+  Node machine.ai_systems.hallucination_citation.

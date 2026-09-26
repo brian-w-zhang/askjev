@@ -1,0 +1,13 @@
+name: complaint_tweets
+url: https://github.com/danielpreotiuc/complaints-social-media
+download: https://raw.githubusercontent.com/danielpreotiuc/complaints-social-media/master/complaints-data.csv
+license: research use (released with the ACL 2019 paper; no explicit license)
+version: ACL 2019 release (3,449 tweets)
+target: 2500
+hemisphere: machine
+shape: detect
+notes: >
+  Preotiuc-Pietro, Gaman & Aletras (ACL 2019), tweets to customer-service accounts in nine industries,
+  hand-labelled complaint / not (inter-annotator kappa 0.73). complaint_tweets.complaint: Noul, truth = label.
+  All complaints (~1.2k) plus non-complaints to 2,500, seeded hash order; normalized-text dedup; slurs dropped.
+  meta.industry keeps the dataset's domain. Node machine.support.urgency_frustration.

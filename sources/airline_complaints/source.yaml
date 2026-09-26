@@ -1,0 +1,14 @@
+name: airline_complaints
+url: https://www.kaggle.com/datasets/crowdflower/twitter-airline-sentiment ; https://huggingface.co/datasets/osanseviero/twitter-airline-sentiment
+download: HF parquet export of osanseviero/twitter-airline-sentiment (the Figure Eight / Kaggle CSV)
+license: CC-BY-NC-SA-4.0
+version: February 2015 tweets (14,640)
+target: 2000
+hemisphere: machine
+shape: classify
+notes: >
+  Figure Eight "Data for Everyone" crowd labels. airline_complaints.reason: Choice over the nine concrete
+  negative reasons (Can't Tell dropped), negative tweets with reason confidence >= 0.66, truth = negativereason,
+  stratified seeded round-robin (small classes like damaged_luggage and long_lines are exhausted, the rest
+  fill). The release's label-leaking text substitutions ("Cancelled Flightled", "Late Flightr") are undone. Dedup on text without leading @handles; slurs dropped. meta keeps airline and reason confidence.
+  Node machine.support.intent_topic.

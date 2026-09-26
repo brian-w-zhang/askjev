@@ -916,6 +916,84 @@ children:
     examples:
     - Which generation is most optimistic about the future?
     - Is nationality mostly about where you were born?
+  - id: world.society.internet_culture
+    label: Internet Culture & Memes
+    description: 'Questions from internet culture: memes, "who would win" matchups, viral debates and paradoxes, and online
+      trends and platforms.'
+    not_for: Serious questions about social media companies and policy go to world.tech.social_media; the answerer's own
+      preference in a would-you-rather goes to SELF.
+    examples:
+    - Who would win in a fight, 100 men or 1 gorilla?
+    - Is the Distracted Boyfriend meme overused?
+    - How many holes does a straw have?
+    children:
+    - id: world.society.internet_culture.memes
+      label: Memes
+      description: 'Questions about memes: famous meme formats and templates, meme hypotheticals, and classic memes and meme
+        eras.'
+      not_for: '"Who would win" matchups go to world.society.internet_culture.who_would_win; classification debates like "is
+        a hot dog a sandwich" go to world.society.internet_culture.viral_debates.'
+      examples:
+      - Is the Rickroll the greatest meme of all time?
+      - Which meme format best fits a Monday morning?
+      - Would 100 duck-sized horses beat one horse-sized duck?
+      children:
+      - id: world.society.internet_culture.memes.formats_templates
+        label: Meme Formats & Templates
+        description: 'Questions about named meme formats and image templates (Distracted Boyfriend, Drake Hotline Bling, This
+          Is Fine, Galaxy Brain, Woman Yelling at Cat): which fits a situation, which is funniest, which is overused.'
+        not_for: Specific classic memes as cultural moments go to world.society.internet_culture.memes.classic_eras.
+        examples:
+        - Which meme format fits procrastinating on a deadline best?
+        - Is the Drake meme format overused?
+        - Is Woman Yelling at Cat funnier than Distracted Boyfriend?
+      - id: world.society.internet_culture.memes.meme_hypotheticals
+        label: Meme Hypotheticals
+        description: 'Famous absurd internet hypotheticals and cursed would-you-rathers asked about the world, like the
+          duck-sized horses question.'
+        not_for: One-on-one "who would win" battles go to world.society.internet_culture.who_would_win; the answerer's own
+          would-you-rather choice goes to SELF.
+        examples:
+        - Would most people rather fight 100 duck-sized horses than one horse-sized duck?
+        - Is being able to only whisper worse than only being able to shout?
+        - Would a world where everyone has a tail be better?
+      - id: world.society.internet_culture.memes.classic_eras
+        label: Classic Memes & Eras
+        description: 'Questions about classic memes and internet eras: Rickroll, Doge, Harambe, Nyan Cat, rage comics, Vine
+          quotes; which aged best, which era was the peak of meme culture.'
+        not_for: Current platforms and trends go to world.society.internet_culture.online_trends.
+        examples:
+        - Has Doge aged better than Grumpy Cat?
+        - Was 2016 the peak year for memes?
+        - Are rage comics funny today?
+    - id: world.society.internet_culture.who_would_win
+      label: Who Would Win
+      description: '"Who would win" matchups: animals vs animals, crowds vs one big creature, forces of nature, fictional
+        characters across franchises, and absurd scale battles.'
+      not_for: Meme hypotheticals that aren't a fight go to world.society.internet_culture.memes.meme_hypotheticals; real
+        sports matchups go to world.sports.
+      examples:
+      - Who would win, 100 men or 1 gorilla?
+      - Would all the lions on Earth beat the sun?
+      - Could Batman beat Superman?
+    - id: world.society.internet_culture.viral_debates
+      label: Viral Debates & Paradoxes
+      description: 'Internet classification debates and viral paradoxes: is a hot dog a sandwich, is cereal a soup, how many
+        holes a straw has, the dress, Yanny or Laurel, toilet paper over or under.'
+      not_for: Serious philosophical puzzles go to self.mind.thought_experiments.
+      examples:
+      - How many holes does a straw have?
+      - Is a Pop-Tart a ravioli?
+      - Was the dress blue and black?
+    - id: world.society.internet_culture.online_trends
+      label: Online Trends & Platforms
+      description: 'Judgments about internet trends, viral challenges, online eras and platforms as culture: Vine vs TikTok,
+        the best era of YouTube, whether a trend was good or bad.'
+      not_for: Social media companies, moderation and policy go to world.tech.social_media.
+      examples:
+      - Was Vine better than TikTok?
+      - Was the Ice Bucket Challenge a good trend?
+      - Was early YouTube better than today's?
 - id: world.health
   label: Health & Body
   share: 2

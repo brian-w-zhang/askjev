@@ -1,0 +1,13 @@
+name: stsb_similarity
+url: https://ixa2.si.ehu.eus/stswiki/index.php/STSbenchmark
+download: https://huggingface.co/api/datasets/sentence-transformers/stsb/parquet/default/{train,validation,test}/0.parquet
+license: "STS Benchmark: each part keeps its source license (news, captions, forums; research use)"
+version: STS Benchmark 2017 (8,628 pairs, gold = mean of 5 crowd ratings on 0-5)
+target: 1000
+hemisphere: machine
+shape: score
+notes: >
+  Template stsb.meaning_overlap (Score, 6 levels paraphrasing the STS annotation guideline's level
+  descriptions, node machine.search.relevance): "How close in meaning is `sentence_b` to `sentence_a`?"
+  Truth = gold mean rounded half up to 0-5. ~167 per level, salted hash order; identical and duplicate pairs
+  dropped. ASKJEV_TARGET_STSB_SIMILARITY (default 1,000).

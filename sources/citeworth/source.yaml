@@ -1,0 +1,14 @@
+name: citeworth
+url: https://huggingface.co/datasets/copenlu/citeworth
+download: https://huggingface.co/api/datasets/copenlu/citeworth/parquet/default/test/0.parquet
+license: CC-BY-NC-4.0 (derived from S2ORC, CC-BY-NC-2.0)
+version: CiteWorth test split (20,995 paragraphs from S2ORC 20200705v1, ten MAG fields)
+target: 2500
+hemisphere: machine
+shape: detect
+notes: >
+  Template citeworth.needs_citation: Noul "In the original paper, did the authors cite a source in `sentence`?
+  It comes from `paragraph` in the `section` section; all citation markers have been removed." Truth = the original sentence carried a citation (labels come from the
+  authors' own citations; markers are stripped in the cleaned text shown). One sentence per paragraph,
+  paragraphs 250-1,400 chars with >= 3 sentences, round-robin across fields and labels (50/50).
+  -> machine.research.claim_support. meta.field = MAG field of study.

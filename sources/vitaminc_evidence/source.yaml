@@ -1,0 +1,14 @@
+name: vitaminc_evidence
+url: https://github.com/TalSchuster/VitaminC
+download: https://huggingface.co/api/datasets/tals/vitaminc/parquet/default/test/0.parquet
+license: CC-BY-SA-3.0
+version: VitaminC test split (55,197 pairs); real-revision, non-FEVER rows only
+target: 2000
+hemisphere: machine
+shape: verify
+notes: >
+  Template vitaminc.evidence_verdict (Choice confirms / contradicts / does_not_decide, node
+  machine.research.claim_support): "Does the Wikipedia sentence in `evidence` confirm `claim`, contradict it,
+  or not decide it?" Truth = label. Only revision_type=real (evidence is a real Wikipedia sentence) and
+  FEVER_id empty (FEVER is already its own source). Tokenised spacing undone. ~667 per label, at most one pair
+  per revision case, salted hash order. ASKJEV_TARGET_VITAMINC_EVIDENCE (default 2,000).

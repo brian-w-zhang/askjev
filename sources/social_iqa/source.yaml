@@ -8,6 +8,7 @@ version: >
 target: 5000
 target_phase6: 10000 (ASKJEV_TARGET_SOCIAL_IQA=10000; the first 5,000 rows are unchanged)
 target_wave5: 15000 (ASKJEV_TARGET_SOCIAL_IQA=15000; the first 10,000 rows are unchanged)
+target_selfreal: 30000 (ASKJEV_TARGET_SOCIAL_IQA=30000; the first 15,000 rows are unchanged)
 hemisphere: self
 kind: social
 notes: >

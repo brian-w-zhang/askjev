@@ -1,0 +1,14 @@
+name: faithdial
+url: https://huggingface.co/datasets/McGill-NLP/FaithDial
+download: HF parquet export, plain_text train + test
+license: MIT
+version: FaithDial v1 (TACL 2022)
+target: 1800
+hemisphere: machine
+shape: verify
+notes: >
+  Wizard-of-Wikipedia responses (human-written) annotated with BEGIN categories by trained annotators.
+  faithdial.grounded: Noul, is everything in `response` supported by the one-sentence `knowledge`? Truth =
+  true for BEGIN [Entailment], false for [Hallucination]; mixed/generic/uncooperative skipped. Uses the
+  original response (not FaithDial's edited rewrite). 900/900, seeded hash order, response-text dedup.
+  Node machine.ai_systems.hallucination_citation.

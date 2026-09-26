@@ -1,0 +1,18 @@
+name: code_comments
+url: https://github.com/nlbse2023/code-comment-classification
+download: raw.githubusercontent.com/nlbse2023/code-comment-classification/main/{extended_java/merged_java.csv,python/input/python.csv,pharo/input/pharo.csv}
+license: CC0-1.0
+version: main branch (NLBSE'23 tool competition + extended Java set)
+target: 4400
+hemisphere: machine
+shape: classify
+notes: >
+  Human-classified code comments, three templates, node machine.code.semantic_lint.
+  code_comments.java: whole Java comments from the extended Java set (Pascarella et al. 2019 taxonomy merged
+  with NLBSE'23 Java; Eclipse, Hadoop, Vaadin, Guava, Guice, Spark), 12 categories (summary, expand,
+  rationale, usage, exception, deprecation, todo, pointer, commented_out_code, section_marker, license,
+  ownership); the tiny directive / noise / incomplete / auto-generated classes are dropped.
+  code_comments.python (5 categories) and code_comments.pharo (6; class_references, 12 items, dropped):
+  NLBSE'23 class-comment sentences with the class name. Single-label items only, exact dedup, NLBSE
+  sentences >= 4 words, at most 250 per category (salted hash order; CAP via ASKJEV_CAP_CODE_COMMENTS).
+  Truth = the human label.

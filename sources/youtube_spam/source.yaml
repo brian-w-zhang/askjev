@@ -1,0 +1,15 @@
+name: youtube_spam
+url: https://archive.ics.uci.edu/dataset/380/youtube+spam+collection
+download: https://archive.ics.uci.edu/static/public/380/youtube+spam+collection.zip
+license: CC-BY-4.0
+version: UCI #380 (1,956 comments from 5 music videos, 2013-2015; 1,749 after per-video dedup)
+target: 2000
+hemisphere: machine
+shape: detect
+notes: >
+  Template youtube_spam.spam (Noul): "Is `comment`, posted under the YouTube video `video`, spam?" with
+  state {video, comment}; truth = the authors' hand label (CLASS 1 = spam, ~51%). Every usable comment is
+  kept (the collection is below the template cap). Video titles are written out from the file names.
+  Cleanup: BOMs stripped, <br> -> space, whitespace collapsed; per-video exact duplicates dropped.
+  Flags: sensitive on sexual words. Node machine.trust_safety.spam_phishing.
+  Target: ASKJEV_TARGET_YOUTUBE_SPAM.

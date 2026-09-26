@@ -1,0 +1,34 @@
+name: behavioral_econ
+url: https://osf.io/wx7ck/ (Many Labs 1), https://osf.io/8cd4r/ (Many Labs 2), https://osf.io/ct89g/ (Many Labs 3), https://osf.io/esxc4/ (prospect theory replication)
+license: >
+  Many Labs 1 and 2 data CC0 1.0; Many Labs 3 data CC-BY 4.0; prospect theory replication (Ruggeri et al. 2020)
+  has no license set on OSF (public data, research use with citation). Per-question license strings name the
+  study used.
+version: >
+  ML1 Datasets.zip (Tab.delimited.Cleaned.dataset.WITH.variable.labels.dat, 6,344 participants); ML2 ML2_S1.csv
+  (7,263) + ML2_S2.csv (8,042) + ML2_SourceInfo.xlsx; ML3 "ML3 PPool and MTurk Data.csv" (3,759); prospect theory
+  pt_replication_modified_exclusions_data_CoM.csv (4,098, 19 countries). All fetched from OSF 2026-09-25.
+target: 81
+hemisphere: self
+kind: personality
+notes: >
+  Classic judgment and decision problems asked in the self frame, each with the replication sample's own
+  item-level answer shares as the human distribution (no truth; the letter-position availability items have
+  no truth either, since the classic "third position is more frequent" claim depends on the word counts used).
+  Each condition or variant is its own question (gain vs loss frame, paid vs free ticket, certain vs 1% prize,
+  award vs deny, $250 vs $30 item, footbridge vs switch...). Populations: the pooled study sample, plus
+  per-country populations (n >= 100) for ML1 (by citizenship), ML2 (by site country, via ML2_SourceInfo) and
+  the 19-country prospect theory replication. ML2 TIPI / self-esteem / life-satisfaction items pool both
+  slates; TIPI adds ML3's TIPI answers as a second population. Responses are all non-missing answers in the
+  published files (ML2's per-effect exclusions such as the 4-second Hauser rule are not re-applied).
+  Item texts: ML2 from the US-English Qualtrics codebooks (Detailed Codebooks zip), ML1 from the ML1 codebook
+  and the original problems, prospect theory from the US survey instrument (dollar amounts; other countries saw
+  the same structure in local currency). Long rating scales are binned to at most 7 concrete levels (sunk cost
+  9-point -> 5, Risen 10-point -> 5, Schwarz 11-point -> 5, life satisfaction 10-point -> 5; bins in meta).
+  Numeric-estimate items (anchoring, gambler's fallacy, false-consensus percentages, Critcher) are skipped, as
+  are image-based, open-response, and manipulation-only tasks (Norenzayan, Giessner, Gray & Wegner, Kay, Savani,
+  SVO, syllogisms, CRT). Miyamoto (death-penalty essays) is skipped. Items touching contested politics
+  (allowed/forbidden speech, US-North Korea reciprocity, global warming, homosexual couples in Inbar et al.) are
+  flagged "political"; the condom disgust item is flagged "sensitive". Nodes: risk_decision_style for risk and
+  framing choices, sacrificial_dilemmas for Hauser trolley items, everyday_ethics for Knobe/Inbar, TIPI items by
+  trait facet, others by topic.

@@ -3,11 +3,11 @@ url: https://cims.nyu.edu/~sbowman/multinli/
 download: https://huggingface.co/api/datasets/nyu-mll/multi_nli/parquet/default/{validation_matched,validation_mismatched}/0.parquet
 license: Mixed open licenses (OANC portions public domain / CC-BY-3.0; fiction and Slate per MultiNLI data description)
 version: MultiNLI 1.0 validation_matched + validation_mismatched (19,647 labelled pairs)
-target: 2000
+target: 2500
 hemisphere: machine
 shape: verify
 notes: >
   Template mnli.grounded (Choice follows / contradicts / neither, node machine.ai_systems.extraction_verification):
   "Taking everything in `source` as true, does `statement` follow from it, contradict it, or neither?"
-  Truth = gold label (validated majority of 5 annotators). ~667 per label, round-robin across the ten genres,
-  salted hash order. ASKJEV_TARGET_MNLI_GROUNDING (default 2,000).
+  Truth = gold label (validated majority of 5 annotators). ~833 per label, round-robin across the ten genres,
+  salted hash order. ASKJEV_TARGET_MNLI_GROUNDING (default 2,500).

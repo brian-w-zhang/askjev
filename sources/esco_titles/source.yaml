@@ -1,0 +1,20 @@
+name: esco_titles
+url: https://esco.ec.europa.eu/en/use-esco/download ; https://huggingface.co/datasets/danieldux/ESCO
+download: https://huggingface.co/datasets/danieldux/ESCO/resolve/main/esco_occupations.jsonl
+license: ESCO (c) European Union, reuse under Commission Decision 2011/833/EU (attribution); HF mirror danieldux/ESCO CC
+version: ESCO English occupations (3,017 occupations, ~32k preferred + alternative labels) with ISCO-08 hierarchy
+target: 2500 sub-major (ASKJEV_TARGET_ESCO_TITLES) + 2000 skill level (ASKJEV_TARGET_ESCO_SKILL_LEVEL)
+hemisphere: machine
+shape: classify
+notes: >
+  Template esco_titles.isco_submajor: Choice "Which ISCO occupation sub-major group does the job title `job_title` belong to?"
+  over the 42 ISCO-08 sub-major groups with ESCO occupations (keys/descriptions hand-written from ISCO-08
+  definitions). Titles = ESCO preferred and alternative labels; truth = the ISCO sub-major group of the
+  occupation. Titles listed under occupations in two different sub-major groups are dropped. Round-robin across
+  groups in salted-hash order (small groups exhausted: 94 has 28 titles, 95 has 22). Different taxonomy and
+  title source from people_docs' O*NET -> SOC template. Node machine.people.lead_fit.
+  Template esco_titles.skill_level: Score "What level of skill does the job `job_title` typically require?", the
+  four ISCO-08 skill levels written as concrete task/education situations; truth = the skill level stated in the
+  title's ISCO sub-major group definition (25 ICT professionals states none -> level 4 like its major group);
+  armed forces excluded. 500 titles per level (ASKJEV_TARGET_ESCO_SKILL_LEVEL, 2000), disjoint from the
+  sub-major sample. Node machine.people.resume_match.

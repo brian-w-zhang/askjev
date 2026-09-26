@@ -1,0 +1,19 @@
+name: wiki_attacks
+url: https://figshare.com/articles/dataset/Wikipedia_Talk_Labels_Personal_Attacks/4054689
+download: https://ndownloader.figshare.com/files/7554634 (comments) ; https://ndownloader.figshare.com/files/7554637 (annotations)
+license: CC0-1.0
+version: figshare v6 (115,864 talk-page comments, ~10 CrowdFlower annotators each)
+target: 4200
+hemisphere: machine
+shape: detect, classify
+notes: >
+  wiki_attacks.attack (Noul, 2,400): truth true when >= 60% of annotators marked an attack, false when <= 10%
+  (middle dropped); 40% positive. HumanDist = attack share, n = annotators.
+  wiki_attacks.target (Choice the_person_addressed / someone_else, 1,800): among clear attacks, the target
+  type holding >= 50% of annotators and at least twice the other (recipient_attack vs third_party_attack);
+  capped at half each (someone_else has ~610 qualifying comments, the rest go to the_person_addressed);
+  HumanDist = the two shares renormalised.
+  Cleanup: NEWLINE_TOKEN/TAB_TOKEN -> whitespace, doubled backticks -> quotes. Dropped: slurs, sexual content
+  mentioning minors, > 1,500 or < 15 chars, duplicates. Flags: sensitive (sexual words), political
+  (politicians, parties, abortion, immigration, Israel/Palestine). Node machine.trust_safety.toxicity_harassment.
+  Targets: ASKJEV_TARGET_WIKI_ATTACKS, ASKJEV_TARGET_WIKI_ATTACKS_TARGET.

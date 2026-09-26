@@ -1,0 +1,20 @@
+name: so_quality
+url: https://www.kaggle.com/datasets/imoore/60k-stack-overflow-questions-with-quality-rate
+download: https://huggingface.co/api/datasets/NickyNicky/60k-stack-overflow-questions-with-quality-rate/parquet/default/train/0.parquet
+license: CC-BY-SA-4.0 (Stack Overflow content; Kaggle dataset by Moore 2020)
+version: HF mirror of the Kaggle train split (45,000 posts 2016-2020; 15k each HQ / LQ_EDIT / LQ_CLOSE)
+target: 4800
+hemisphere: machine
+shape: classify
+notes: >
+  Two templates on disjoint posts. so_quality.outcome (2,400; 800 per outcome): Choice "How did the Stack
+  Overflow community receive the question in `question`?" over well_received (score > 30, never edited),
+  downvoted_and_edited (negative score, several community edits, stayed open) and closed (closed without an
+  edit); truth = the dataset's Y, which comes from Stack Overflow's own score/edit/close history.
+  Node machine.code.issue_triage. so_quality.language (2,400; 150 per language): Choice over 16 languages,
+  truth = the post's single language tag (python-2.7/python-3.x folded into python; posts with two language
+  tags or an html/css tag dropped; tags hidden from Jev; only posts whose body contains code; HTML-comment language hints stripped). Node machine.code.code_review.
+  The Kaggle file stores HQ/LQ_CLOSE bodies as HTML and LQ_EDIT bodies as Markdown, a label leak, so all
+  bodies are flattened to the same plain text. Title-level dedup; bodies truncated at 1,500 chars.
+  The larger pacovaldez/stackoverflow-questions set was rejected: its P0-P3 labels are machine-generated.
+  Keyword flags: "political" (named politicians, elections, abortion, guns, immigration), "sensitive" (porn, suicide, self-harm).

@@ -1,0 +1,18 @@
+name: aegis_prompts
+url: https://huggingface.co/datasets/nvidia/Aegis-AI-Content-Safety-Dataset-2.0
+download: HF parquet export, default/train + validation + test
+license: CC-BY-4.0
+version: Aegis 2.0 (2025)
+target: 4616
+hemisphere: machine
+shape: classify + detect
+notes: >
+  Human-written user prompts to AI assistants (HH red-teaming, jailbreak prompts, forum text); only the
+  prompt labels are used (all human-annotated; response labels are partly LLM-jury, so responses are not).
+  Distinct prompts deduped (normalized text); prompts with conflicting labels across rows dropped; anything
+  tagged Sexual (minor) dropped; REDACTED rows skipped; prompts < 12 or > 1,500 chars skipped (no truncation).
+  aegis.harm_category (2,116, Choice, 10 keys): unsafe prompt-only rows with exactly one violated category,
+  categories with >= 100 such prompts, criminal_planning capped at 400 (smallest class violence 96).
+  aegis.prompt_unsafe (2,500, Noul): balanced 1,250/1,250 over all rows, disjoint from the category items.
+  Sexual / self-harm categories or keywords -> meta.flags "sensitive" (444); political category or keywords
+  -> "political" (71). Both -> machine.ai_systems.guardrails.

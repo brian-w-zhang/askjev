@@ -1,0 +1,15 @@
+name: dolly_tasks
+url: https://huggingface.co/datasets/databricks/databricks-dolly-15k
+download: HF parquet export, default/train (15,011 human-written instruction records)
+license: CC-BY-SA-3.0
+version: databricks-dolly-15k (2023)
+target: 2500
+hemisphere: machine
+shape: route
+notes: >
+  Template dolly.task_type: Choice over seven task kinds for a human-written instruction (`prompt`) and its
+  reference passage (`context`, "(no passage given)" when the author gave none). Truth = the category the
+  Databricks author wrote the record for. open_qa and general_qa are merged into open_question (their
+  guidelines overlap and the text cannot separate them). Balanced ~357 per key, salted-hash order,
+  normalized-text dedup, instructions over 1,500 chars skipped, passages truncated at 1,500 chars.
+  -> machine.ai_systems.model_routing.

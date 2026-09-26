@@ -1,0 +1,18 @@
+name: djinni_recruitment
+url: https://huggingface.co/datasets/lang-uk/recruitment-dataset-job-descriptions-english ; https://huggingface.co/datasets/lang-uk/recruitment-dataset-candidate-profiles-english
+download: https://huggingface.co/api/datasets/lang-uk/recruitment-dataset-{job-descriptions,candidate-profiles}-english/parquet/default/train/0.parquet
+license: MIT (lang-uk recruitment datasets; Djinni job board)
+version: 141,897 job postings + 210,250 candidate profiles (English, 2020-2023)
+target: 2500 per template x 4 (ASKJEV_TARGET_DJINNI_JOB_ROLE / _CANDIDATE_ROLE / _JOB_EXPERIENCE / _FIT)
+hemisphere: machine
+shape: route | score | verify
+notes: >
+  Real Djinni (Ukrainian IT job board) postings and candidate profiles; labels are the fields the employer or
+  candidate selected on the site. djinni.job_role (Choice, 39 role categories, description only, no title) ->
+  machine.people.lead_fit; djinni.candidate_role (Choice, same 39, CV text without the headline title) ->
+  machine.people.resume_match; djinni.job_experience (Score, 5 levels: no experience / 1 / 2 / 3 / 5+ years,
+  from the employer's "Exp Years") -> machine.people.resume_match; djinni.candidate_job_fit (Noul, 50/50: same
+  category vs a clearly different category, confusable neighbours never used as negatives, Lead excluded) ->
+  machine.people.resume_match. "Other" and job-only categories (Block-chain, Product Owner, React, SAP) dropped.
+  Round-robin balanced across labels in salted-hash order; inputs disjoint across templates; texts >= 250 chars,
+  near-duplicates dropped, rows kept only when the hidden headline title agrees with the category (regex per category), long texts keep head + tail (1,500 chars; 1,000 each in the fit pairs).

@@ -1,0 +1,19 @@
+name: pubhealth_claims
+url: https://github.com/neemakot/Health-Fact-Checking
+download: https://huggingface.co/api/datasets/bigbio/pubhealth/parquet/pubhealth_source/{train,validation,test}/0.parquet
+license: MIT
+version: PUBHEALTH via BigBIO pubhealth_source (12,258 claims; labels 0 true, 1 false, 2 unproven, 3 mixture)
+target: 1000
+hemisphere: machine
+shape: verify
+notes: >
+  Misinformation template pubhealth_claims.verdict (Noul): "Would a professional fact-checker rate `claim` as
+  true?" Truth = the published verdict (true / false only; mixture and unproven dropped). Kept only
+  fact-checked viral claims: a Snopes staff writer in fact_checkers, or subjects tagged fact checks / junk
+  news / fake news / fauxtography / viral content / Facebook fact-checks. Claims whose subjects mention
+  politics, elections, Congress or legislation are excluded; AP / Reuters news headlines (labelled true
+  only because they are news) are excluded by the checker/subject filter. All 404 eligible true claims
+  + 596 false (salted-hash order), ~40% true. Quote artifacts from the CSV export cleaned.
+  Flags: political on politics words that pass the subject filter (Obamacare, immigration, Islam...),
+  sensitive on sexual words. Node machine.trust_safety (no misinformation child exists; the Jev walk places it).
+  Target: ASKJEV_TARGET_PUBHEALTH_CLAIMS.

@@ -1,0 +1,18 @@
+name: sgd_dialogue
+url: https://github.com/google-research-datasets/dstc8-schema-guided-dialogue
+download: dev/ and test/ dialogues_*.json + schema.json (raw GitHub; 54 files, ~180 MB)
+license: CC-BY-SA-4.0
+version: DSTC8 release (dev 2,482 + test 4,201 dialogues)
+target: 4500
+hemisphere: machine
+shape: route
+notes: >
+  Crowd-paraphrased task-oriented dialogues with per-turn user acts and active service intent.
+  sgd.intent (Choice, route, machine.ai_systems.function_calling, 2,500): a user turn that states a new goal
+  (acts include INFORM_INTENT for the active intent, single frame, >= 5 words, not a retry after a failure
+  notice) -> which API intent; 36 options (same-goal intents of different services merged: play_media ->
+  play_song, lookup_song -> lookup_music, find_apartment -> find_home_by_area, rent_movie -> play_movie),
+  hand-written descriptions, truth = active intent. sgd.user_act (Choice, classify,
+  machine.support.intent_topic, 2,000): assistant turn + user reply whose acts reduce to one act type ->
+  10 act options (GOODBYE never occurs alone, so it is not offered), truth = act; user-reply text dedup per act.
+  Both stratified seeded round-robin over labels.
