@@ -1,0 +1,18 @@
+name: uscis_civics
+url: https://www.uscis.gov/citizenship/find-study-materials-and-resources/study-for-the-test
+license: Public domain (US federal government work, USCIS)
+version: 128 Civics Questions and Answers (2025 version, M-1778 09/25) + 100 Civics Questions (2008 version); fetched 2026-09-26
+target: 120
+hemisphere: world
+kind: factual
+notes: >
+  The naturalization civics test as World factual Choice, origin=template: the official question (lightly reworded to
+  stand alone, "Name one X" -> "Which of these is X?") with one official answer as truth and three authored distractors,
+  taken from other questions' official answer lists where possible (meta.distractors = "authored"). Options sorted
+  alphabetically by text. 101 of the 128 2025 items and 19 items only the 2008 list asks. Skipped: answers that vary
+  or name a current official (senators, representative, President/VP/Speaker/Chief Justice now, governor, state
+  capital), anything partisan (the parties, the President's party), numbers, counts and dates, and trivial or
+  policy-flavored items (civic participation lists, taxes, Selective Service, 9/11 and after, causes of the Civil War).
+  Every correct answer is checked against the downloaded official text of its question; a mismatch raises.
+  node_hint: government, constitution, American revolution, history of North America, world wars, Cold War,
+  holidays, United States, and the named ocean/river nodes.

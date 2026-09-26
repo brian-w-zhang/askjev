@@ -1,0 +1,16 @@
+name: iconicity_ratings
+url: https://osf.io/qvw6u/ (data files in github.com/bodowinter/iconicity_ratings, linked from the OSF project)
+license: No explicit data license (publicly posted research data); article CC BY 4.0 (Winter, Lupyan, Perry, Dingemanse & Perlman 2023, Behavior Research Methods)
+version: ratings/iconicity_ratings_cleaned.csv + ratings/iconicity_ratings_raw.csv (main branch) + Brysbaert et al. 2014 xlsx (SUBTLEX counts), fetched 2026-09-26
+target: 2500
+hemisphere: world
+kind: perception
+notes: >
+  'How much does the word "<w>" sound like what it means?' as a 7-level Score (template iconicity_ratings.iconicity),
+  node_hint world.society.languages.word. Human distribution = the actual 1-7 ratings per word from the authors'
+  post-exclusion individual-ratings file (161,057 rows; NA "don't know" answers dropped; words whose row count does
+  not match the published n_ratings are skipped). About 10-17 raters per word. Pool: single lowercase words with
+  prop_known >= 0.9 and SUBTLEX-US count >= 50; "buzz", "hiss", "boom" excluded because the top level names them.
+  Stratified by mean rating into bands <3, 3-4, 4-5, >=5 with equal quotas (short bands pass their remainder on),
+  salted-hash order within each band (ASKJEV_TARGET_ICONICITY_RATINGS). Level wording is ours (raters saw only
+  "Not iconic at all" to "Very iconic" and instructions about sounding like the meaning).

@@ -1,0 +1,20 @@
+name: uscg_mariner
+url: https://www.dco.uscg.mil/national_maritime_center/examinations/
+license: Public domain (US federal government work, USCG National Maritime Center)
+version: NMC sample examination PDFs (Q100-Q808), latest Internet Archive capture of each at or before 2026-03-01 (cdx.json saved in raw); fetched 2026-09-26
+target: 5000
+hemisphere: world
+kind: factual
+notes: >
+  US Coast Guard merchant mariner credential exams: rules of the road, deck general and safety, navigation general,
+  lifeboatman, tankship, barge, MODU, and engineering (motor, steam, gas turbine, electrical, refrigeration, QMED
+  ratings). dco.uscg.mil refuses scripted downloads (Akamai 403), so the same PDF URLs come from the Wayback Machine
+  (195 of 199 modules; one capture truncated); navigation-problem, chart and stability-problem modules skipped as
+  computation. Text via pdftotext -layout; both layouts parsed (bullet + "If choice X is selected", and
+  "Correct answer: X"; an item whose bullet and key disagree is dropped). 11,440 parsed items, 4,323 after the shared
+  snap filter (no illustration/figure/table stems, no numeric answers, no computation) and near-duplicate merge across
+  modules. Rules-of-the-road scope prefixes ("INLAND ONLY") become "Under the U.S. Inland Navigation Rules: ". node_hint
+  by module: deck/safety/rules/lifeboat/tank/barge -> vehicles.ship; nav general -> engineering_inventions.navigation
+  (weather items -> nature.weather_climate); engine plants and QMED ratings -> machines_engines; electrical ->
+  electrical_engineering; engineering general subjects and refrigeration -> mechanical_engineering. Shared flags
+  masked for seamanship false positives (sextant, signal/grease guns, "executed", immigration service, EEOC).

@@ -1,0 +1,18 @@
+name: head_qa
+url: https://huggingface.co/datasets/dvilares/head_qa
+license: MIT (HEAD-QA; exams published by the Spanish Ministerio de Sanidad)
+version: dvilares/head_qa English config, train + validation + test (refs/convert/parquet); fetched 2026-09-26
+target: 5000
+hemisphere: world
+kind: factual
+notes: >
+  Spanish healthcare specialist-training exams 2013-2017 (Vilares & Gomez-Rodriguez 2019), English machine
+  translation, as World factual Choice over the 4-5 answer texts (shuffled per item), truth = the official key.
+  Only the profession exams: nursing (EIR) -> health.medicine.nursing, pharmacy (FIR) -> health.medicine.drug,
+  clinical psychology (PIR) -> psychology_neuroscience.psychology. Medicine (MIR) is skipped (covered by medmcqa, and
+  a spot check found MIR keys that look wrong), biology and chemistry too (general science, most untranslated terms).
+  Image items dropped; medmcqa's stem/answer cleaner and the shared snap filter (no numeric answers, combos,
+  computation); translated "all/none of the previous" answers removed when wrong, item dropped when right; mmlu and
+  medmcqa near-duplicates skipped. 2,426 remain. Caveat: the translation leaves some Spanish or literal words
+  ("Radio" for radius, "Goalkeepers" for gatekeepers) and Spain-specific system questions (National Health System,
+  Royal Decrees), which is also the point: non-US professional exams. Flags as medmcqa (sensitive; abortion political).

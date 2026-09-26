@@ -1,0 +1,14 @@
+name: bouba_kiki
+url: https://osf.io/w7crs/
+license: No explicit license on the OSF project (public data); article CC BY 4.0 (Ćwiek et al. 2022, Phil. Trans. R. Soc. B 377:20200390)
+version: data/web_by_trial.csv (OSF file cvygf), fetched 2026-09-26
+target: 2
+hemisphere: world
+kind: perception
+notes: >
+  Two Choice questions ("bouba", "kiki"): 'Picture two shapes side by side: one round and blob-like..., the other
+  spiky... Which one would you call "<w>"?', options round_shape / spiky_shape, template bouba_kiki.shape,
+  node_hint world.science.psychology_neuroscience.perception. Human data: 917 participants from 25 languages, one
+  trial each (heard the word, picked a drawn shape). HumanDist pooled over all participants plus one per language with
+  >= 10 participants for that word. No truth (association, not fact); congruent answer in meta. Participants heard
+  audio and saw pictures, while the question describes the shapes in words.

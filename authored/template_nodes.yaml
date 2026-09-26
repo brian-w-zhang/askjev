@@ -808,3 +808,20 @@ djinni.candidate_role:
   description: Questions a recruiting program asks about a candidate's profile to classify which role category they are looking for.
   examples:
   - Which role category is the candidate who wrote profile looking for?
+
+# probe 2: perception sources
+lancaster_modality.dominant:
+  key: dominant_sense
+  label: Dominant Sense
+  description: "Questions about which sense people mostly experience a word's meaning through: sight, hearing, touch, taste, smell or sensations inside the body."
+  examples: ["Through which sense do you mostly experience \"thirst\"?"]
+pseudoword_shapes.round_pointed:
+  key: pseudoword_shapes
+  label: Round or Pointed Sounds
+  description: "Questions about whether a made-up word sounds like a round, soft shape or a pointed, spiky one (sound symbolism, as in bouba and kiki)."
+  examples: ["Does the made-up word \"koh-too\" sound more like a round shape or a pointed shape?"]
+iconicity_ratings.iconicity:
+  key: word_iconicity
+  label: Word Iconicity
+  description: "Questions about how much a real word sounds like what it means, from arbitrary words to imitative ones like buzz or hiss."
+  examples: ["How much does the word \"bleep\" sound like what it means?"]

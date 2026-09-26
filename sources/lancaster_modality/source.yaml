@@ -1,0 +1,21 @@
+name: lancaster_modality
+url: https://osf.io/7emr6/
+license: CC BY 4.0 (Lynott et al. 2020, Behavior Research Methods)
+version: Lancaster_sensorimotor_norms_for_39707_words.csv (OSF file 48wsc) + Brysbaert et al. 2014 concreteness xlsx (SUBTLEX counts), fetched 2026-09-26
+target: 4140
+hemisphere: world
+kind: perception
+notes: >
+  Truth-based Choice over the Lancaster Sensorimotor Norms' mean ratings (0-5 per perceptual modality); no human
+  distribution is attached because the norms publish only mean/SD/N. Word pool: single lowercase words with
+  Percent_known >= 0.95 and SUBTLEX-US count >= 30.
+  (1) template lancaster_modality.dominant, 'Through which sense do you mostly experience "<w>"?' over sight, hearing,
+  touch, taste, smell, body_sensation (interoceptive); truth = dominant modality when its mean >= 3.0 and beats the
+  runner-up by >= 1.0, and Brysbaert concreteness >= 3.0 (>= 4.0 for visual words). Non-visual words first (all
+  570), visual words capped at the same number (the qualifying pool is ~76% visual): 1,140 rows (sight 570, hearing
+  281, body_sensation 107, touch 76, taste 76, smell 30). Cap ASKJEV_TARGET_LANCASTER_MODALITY_DOMINANT (2,400).
+  (2) templates lancaster_modality.pair_<sense>, 'Which do you experience more through <sense>: "<a>" or "<b>"?';
+  truth = higher mean, gap >= 1.5, the lower word still >= 1.0 on that sense, both words concreteness >= 3.0, each
+  word in at most 3 pairs per sense (concreteness >= 3.5); option order by salted hash. Default 500 per sense
+  (ASKJEV_TARGET_LANCASTER_MODALITY_PAIR). node_hint world.science.psychology_neuroscience.perception.
+  Complements the `lancaster` source (per-sense Score questions); words may overlap across the two.

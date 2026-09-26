@@ -1,0 +1,17 @@
+name: pseudoword_shapes
+url: https://osf.io/ekpgh/
+license: No explicit license on the OSF project (public download); McCormick, Kim, List & Nygaard 2015, CogSci proceedings; research use
+version: SoS Pseudoword Database.xlsx (OSF file wnzt5), fetched 2026-09-26
+target: 537
+hemisphere: world
+kind: perception
+notes: >
+  Sound symbolism (bouba/kiki style): one 7-level Score per pseudoword, 'Say the made-up word "<respelling>" (IPA
+  /<ipa>/) out loud. Does it sound more like a round shape or a pointed shape to you?', template
+  pseudoword_shapes.round_pointed, node_hint world.science.psychology_neuroscience.perception. Human distribution =
+  the pooled individual 1-7 answers from the trial sheet: ~25 raters on "not pointed..very pointed" plus ~27 other
+  raters on "not rounded..very rounded" recoded 8 - x, the same single round-to-pointed scale the authors publish
+  (our recomputed means differ slightly from their published means, which rest on slightly larger samples).
+  Raters heard audio only; the respelling (ee, ay, oh, oo, uu, ih, eh; ch, j; hard "gh" before front vowels) is ours.
+  Sheet 2 of the workbook duplicates one participant and is ignored; 33 trial-sheet items absent from the published
+  537 are not asked.

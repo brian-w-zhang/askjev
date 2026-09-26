@@ -1,0 +1,17 @@
+name: ham_radio_pools
+url: https://www.ncvec.org/index.php/amateur-question-pools
+license: Public domain (NCVEC question pools for FCC amateur radio license exams)
+version: NCVEC docx releases - 2026-2030 Technician (Feb 19 2026), 2023-2027 General (6th errata, Feb 4 2026), 2024-2028 Extra (4th errata, Feb 4 2026); fetched 2026-09-26
+target: 5000
+hemisphere: world
+kind: factual
+notes: >
+  The three current FCC amateur radio exam pools (1,431 live questions; withdrawn "Question Deleted" stubs skipped)
+  as World factual Choice over the answer texts, truth = the pool's keyed letter. Shared mmlu snap filter drops
+  figure and computation items and every item with a numeric answer (frequencies, powers, lengths, values), which is
+  most of the rules and math questions; a wrong "All these choices are correct" is removed and the item dropped when
+  it is the right one. Near-duplicates across classes merged (Technician first). 927 remain (every clean item; the
+  target is only a cap). node_hint by subelement: rules, operating, propagation, station practice, antennas ->
+  telecom_networks.radio; electrical principles -> physics.electricity; components and circuits ->
+  engineering_inventions.electronics; signals/modulation/digital -> telecom_networks.telecommunications; safety ->
+  engineering_inventions.electrical_general.

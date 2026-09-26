@@ -1,0 +1,18 @@
+name: nrc_gfe
+url: https://www.nrc.gov/reactors/operator-licensing/history-rulemaking-activities/generic-fundamentals-examinations/pwr
+license: Public domain (US federal government work, US Nuclear Regulatory Commission)
+version: NRC Generic Fundamentals Examination question banks, PWR and BWR, November 2020 (pwr-bank.pdf, bwr-bank.pdf); fetched 2026-09-26
+target: 5000
+hemisphere: world
+kind: factual
+notes: >
+  Reactor-operator licensing questions (components, reactor theory, thermodynamics) from the NRC's published GFE banks
+  (2,142 PWR + 2,150 BWR entries, 4,218 parsed). Text via pdftotext -layout (poppler must be installed), page
+  headers stripped. World factual Choice over the answer texts, truth = the keyed letter. Most of the bank is
+  computation over given parameters or steam tables and drops out: "="/computation stems, numeric answers, any
+  figure/drawing/graph/table reference, and aligned "given" tables or two-column answers. PWR/BWR near-duplicates
+  merged (PWR first). 1,342 remain. Stems with a trailing "(Assume ...)" keep the note after the question; stems ending
+  on "..." or a blank read as completions. node_hint by topic: reactor theory, core thermal limits and vessel
+  brittle fracture -> engineering_inventions.nuclear_power; thermodynamics -> physics.thermodynamics; fluid statics ->
+  physics.liquid; valves, pumps, controllers, heat exchangers -> mechanical_engineering; motors/generators and
+  breakers -> electrical_engineering; sensors and detectors -> optics_instruments.
