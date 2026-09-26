@@ -145,6 +145,42 @@ Added by the expansion (`10-expansion.md`); counts, truth and human coverage are
 **Skipped:** recipe pairs (no public Food.com copy with recipe ids; ratings mostly ties), video-game pairs (no clean per-user
 preference), SciERC (no public labeled copy), xLAM function calling (gated).
 
+## Expansion sources (waves 5-9, 2026-09-25/26)
+Same verdict key. Jev correct = share of truth-bearing questions where Jev's top answer matches (sources with human
+data but no truth show "—"). Per-wave numbers and the full list are in `docs/expansion-log.md`.
+
+| Source | Hemisphere / node | n | Anchor | Jev correct | Verdict |
+|---|---|---|---|---|---|
+| reddit_polls | Self + World, real asked polls | 60,000 | voter shares | — | Hold (pool used; 23% hidden as biographical/political) |
+| social_chem, social_iqa, scruples | Self social/values | 26,000 / 30,000 / 4,655 | truth / votes | — / 0.85 / — | Hold (social over target) |
+| moral_machine | Self sacrificial dilemmas | 26,020 | respondent shares | — | Hold (template over cap; child deaths hidden) |
+| taste_ratings | Self > Ratings (films, books, board games, anime, beer) | 12,361 | rating distributions | — | **Scale** (other catalogs) |
+| storycommonsense, empathetic_dialogues, isear | Self > Reading People | 6,000 / 3,000 / 3,000 | votes / truth / truth | — / 0.53 / 0.69 | Hold (social over target) |
+| choices13k, wulff_description, bbrs_risk | Self > Risk & Decision Style | 2,380 / 489 / 212 | choice rates, norms | — | Hold (pools used) |
+| aims_survey | Self > Consciousness & AI | 120 | US weighted shares | — | Hold (all waves used) |
+| so_survey_pairs, food_538 | Self matchups (dev tools, candy, cuisine) | 4,056 / 2,952 | preference shares / crowd pick | — | Hold (pools used) |
+| wikidata_g4 | World places, people, science | 32,391 | truth | 0.95 | **Saturated** |
+| pantheon_history, pantheon_sports | World history, sports | 9,000 / 2,650 | truth | 0.95 / 0.95 | **Saturated** |
+| wikidata_companies | World money | 2,822 | truth | 0.97 | **Saturated** |
+| worldbank_pairs, usda_nutrients, anage_pairs | World money/health/nature, food, nature | 8,829 / 7,000 / 5,000 | truth | 0.89 / 0.91 / 0.91 | Hold |
+| commonsense_qa, medmcqa | World factual | 6,000 / 5,000 | truth | 0.85 / 0.82 | Hold (pools at cap) |
+| stackexchange_closed, yahoo_closed | World real asked | 54,990 / 12,777 | none | — | Hold (anchored share) |
+| legalbench (7 tasks) | Machine legal | 11,820 | truth | 0.88 | Hold (template cap) |
+| typesafe_authored | Machine, TypeSafe's empty leaves | 7,450 | truth | 0.94 | Hold |
+| mtsamples, drug_reviews, icd10_chapter, hcv_labs | Machine > Healthcare | 2,637 / 3,500 / 2,000 / 225 | truth | 0.86 / 0.90 / 0.83 / 0.86 | Hold |
+| semeval_sag, gsm8k_verify, asap_essays | Machine > Education | 3,500 / 2,000 / 2,100 | truth | 0.72 / 0.76 / 0.46 | **Scale** (informative) |
+| loghub_lines, hdfs_sessions, bgl_alerts | Machine > Operations | 2,994 / 1,500 / 1,500 | truth | 0.73 / 0.44 / 0.65 | **Scale** (informative) |
+| helpsteer2, dolly_tasks, oasst_replies, wikibio_hallucination | Machine AI systems | 2,500 each / 1,758 | truth | 0.58 / 0.60 / 0.83 / 0.68 | **Scale** (informative) |
+| esco_titles, djinni_recruitment | Machine people | 2,000 / 3,000 | truth | 0.63 / 0.74 | Hold |
+| clone_pairs, code_review_need, code_comments, citeworth | Machine code, research | 2,500 / 2,000 / 2,500 / 1,500 | truth | 0.54 / 0.60 / 0.64 / 0.65 | **Scale** (informative) |
+| multiwoz_domain | Machine support routing | 2,000 | truth | 0.98 | **Saturated** |
+| trust & safety round (dynahate, hatexplain, measuring_hate_speech, wiki_attacks, youtube_spam, aegis, toxicchat) | Machine T&S, guardrails | 12,850 | truth | 0.62-0.95 | Hold |
+
+**Dropped after review:** support_tickets (near-random labels), tv_pairs (Netflix, withdrawn dataset), ATIS (LDC),
+OpenAI Moderation, symptom_diagnosis (Gretel synthetic). **Rejected at research:** Metaculus (API now needs a token),
+Kaggle-only recipe, wine and coffee ratings, World Values / ESS / ISSP / Global Preferences (registration), OkCupid
+questions (scraped without consent), Anthropic persona evals (model-written).
+
 ## Structure sources (the tree, not questions)
 | Source | Role | License |
 |---|---|---|

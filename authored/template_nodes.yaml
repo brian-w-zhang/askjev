@@ -566,3 +566,245 @@ choices13k.gamble:
   label: Gamble Choices
   description: "Choices between two described gambles with real money at stake, such as a sure $19 or an 80% chance at $36 with a 20% chance of losing $48."
   examples: ["Which do you choose: $9 for sure, or $13 with a 75% chance and $4 with a 25% chance?"]
+
+# wave 8: nodes stacking several large Machine templates (docs/10-expansion.md §7)
+oasst.fails_task:
+  key: reply_fails_task
+  label: Reply Fails the Task
+  description: Questions a program asks about an AI assistant's reply to decide whether it fails to do what the user asked.
+  examples:
+  - Does the assistant's reply fail to do what the user asked in prompt (read with the earlier conversation, if any)?
+faithdial.grounded:
+  key: dialogue_grounding
+  label: Dialogue Grounding
+  description: Questions a program asks about a chatbot reply to check that everything it says is supported by the knowledge it was given, with no added facts or opinions.
+  examples:
+  - Is everything response says supported by knowledge, with no added facts, opinions or personal experiences that knowledge does not back up?
+wikibio.sentence_accuracy:
+  key: biography_sentence_accuracy
+  label: Biography Sentence Accuracy
+  description: Questions a program asks about a sentence from an AI-written biography to judge how wrong it is against the person's Wikipedia facts.
+  examples:
+  - How wrong is sentence, taken from an AI-written biography of the person described in wikipedia, judged against what is true about that person?
+helpsteer2.correctness:
+  key: response_correctness
+  label: Response Correctness
+  description: Questions a program asks about an AI assistant's response to judge how correct it is.
+  examples:
+  - How correct is the AI assistant's response to the user's prompt?
+mt_bench.better_reply:
+  key: better_reply_judging
+  label: Better Reply Judging
+  description: Questions a program asks about two AI assistants' replies in a conversation to judge which is better, as expert human judges did.
+  examples:
+  - 'Which AI assistant gives the better reply to the user''s last message: the one in conversation_a or the one in conversation_b?'
+helpsteer2.preference:
+  key: response_preference
+  label: Response Preference
+  description: Questions a program asks about two AI assistant responses to the same prompt to pick the better reply.
+  examples:
+  - Which of the two AI assistant responses, response_1 or response_2, is the better reply to the user's prompt?
+frank.faithful:
+  key: summary_faithfulness
+  label: Summary Faithfulness
+  description: Questions a program asks about a machine-written summary to check that every statement is supported by the article.
+  examples:
+  - Is every statement in summary, a machine-written summary of article, supported by the article?
+mnli.grounded:
+  key: statement_entailment
+  label: Statement Entailment
+  description: Questions a program asks to decide whether a statement follows from a source, contradicts it, or neither.
+  examples:
+  - Taking everything in source as true, does statement follow from it, contradict it, or neither?
+receipts_extract.field_match:
+  key: receipt_field_checks
+  label: Receipt Field Checks
+  description: Questions a program asks to verify that a value extracted from a receipt matches the field it claims to be.
+  examples:
+  - Does extracted_value match the field in receipt?
+anli.backed_up:
+  key: adversarial_claim_checks
+  label: Adversarial Claim Checks
+  description: Questions a program asks about a hard, adversarially written claim to decide whether its context backs it up, rules it out, or leaves it open.
+  examples:
+  - Does context back up claim, rule it out, or leave it open?
+aegis.prompt_unsafe:
+  key: unsafe_prompts
+  label: Unsafe Prompts
+  description: Questions a guardrail asks about a user's message to an AI assistant to decide whether it breaks a content-safety policy.
+  examples:
+  - Does message, sent by a user to an AI assistant, break a content-safety policy (crime, violence, weapons, drugs, hate, harassment, sexual content, self-harm, privacy, profanity, or advice only a licensed professional should give)?
+aegis.harm_category:
+  key: harm_categories
+  label: Harm Categories
+  description: Questions a guardrail asks about an unsafe message to an AI assistant to classify which kind of policy violation it is.
+  examples:
+  - Which kind of policy violation is message, a message a user sent to an AI assistant?
+toxicchat.toxic:
+  key: toxic_prompts
+  label: Toxic Prompts
+  description: Questions a guardrail asks about a real prompt sent to a chatbot to decide whether it asks for harmful, hateful or sexual content.
+  examples:
+  - Should an AI assistant treat prompt as toxic, meaning it asks for harmful, hateful, sexually explicit or otherwise inappropriate content, or is itself abusive?
+loghub.system:
+  key: log_source_system
+  label: Log Source System
+  description: Questions a program asks about a raw log line to identify which system wrote it.
+  examples:
+  - Which system wrote the log line log_line?
+hdfs.anomalous_session:
+  key: hdfs_block_anomalies
+  label: HDFS Block Anomalies
+  description: Questions a monitoring program asks about the log of one HDFS data block to decide whether the session was anomalous.
+  examples:
+  - Is the HDFS log log for block block_id (written <blk> in the log) anomalous?
+bgl.alert:
+  key: supercomputer_alerts
+  label: Supercomputer Alerts
+  description: Questions a monitoring program asks about a Blue Gene/L supercomputer log line to decide whether it needs an administrator's attention.
+  examples:
+  - Is the Blue Gene/L log line log_line an alert that needs an administrator's attention?
+loghub.component:
+  key: log_component
+  label: Log Component
+  description: Questions a program asks about a log message to identify which component of a system wrote it.
+  examples:
+  - Which component of system wrote the log message log_message?
+drug_reviews.condition:
+  key: review_condition
+  label: Review Condition
+  description: Questions a program asks about a patient's drug review to identify which condition it is about.
+  examples:
+  - Which condition is the patient's drug review review about?
+mtsamples.specialty:
+  key: transcription_specialty
+  label: Transcription Specialty
+  description: Questions a program asks about a medical transcription to route it to the right specialty.
+  examples:
+  - Which medical specialty does the transcription transcription belong to?
+drug_reviews.satisfied:
+  key: drug_satisfaction
+  label: Drug Satisfaction
+  description: Questions a program asks about a patient's drug review to decide whether they are satisfied with the drug.
+  examples:
+  - Is the reviewer satisfied with the drug in review?
+mtsamples.doc_type:
+  key: clinical_document_type
+  label: Clinical Document Type
+  description: 'Questions a program asks about a medical transcription to classify the kind of document: operative report, consult, progress note, discharge summary.'
+  examples:
+  - What kind of clinical document is transcription?
+gsm8k.final_correct:
+  key: math_answer_checks
+  label: Math Answer Checks
+  description: Questions a grading program asks about a worked solution to a grade-school math problem to check whether the final answer is right.
+  examples:
+  - Is the final answer in solution the correct answer to problem?
+sag.correct:
+  key: short_answer_correctness
+  label: Short Answer Correctness
+  description: Questions a grading program asks to decide whether a student's short answer is correct given the reference answer.
+  examples:
+  - Is student_answer a correct answer to question, given the reference answer reference_answer?
+sag.label:
+  key: short_answer_grades
+  label: Short Answer Grades
+  description: 'Questions a grading program asks to grade a student''s short answer against the reference: correct, partially correct, contradictory, irrelevant or off-topic.'
+  examples:
+  - How should student_answer to question be graded, given the reference answer reference_answer?
+dynahate.hate_type:
+  key: hate_types
+  label: Hate Types
+  description: Questions a moderation program asks about a hateful statement to classify which kind of hate it expresses.
+  examples:
+  - Which kind of hate does statement express?
+hate_speech_offensive.class:
+  key: hate_or_offensive_tweets
+  label: Hate or Offensive Tweets
+  description: Questions a moderation program asks about a tweet to separate hate speech from merely offensive language.
+  examples:
+  - Is post hate speech, offensive but not hate speech, or neither?
+hatexplain.label:
+  key: hate_or_offensive_posts
+  label: Hate or Offensive Posts
+  description: Questions a moderation program asks about a social-media post to label it hate speech, offensive, or normal.
+  examples:
+  - Is post hate speech, offensive without being hate speech, or normal?
+wiki_attacks.attack:
+  key: personal_attacks
+  label: Personal Attacks
+  description: Questions a moderation program asks about a Wikipedia talk-page comment to detect a personal attack.
+  examples:
+  - Does comment contain a personal attack on someone?
+mhs.hate_speech:
+  key: identity_hate
+  label: Identity Hate
+  description: Questions a moderation program asks about a comment to decide whether it is hate speech against an identity group.
+  examples:
+  - Is comment hate speech against a group of people defined by an identity such as race, religion, national origin, gender, sexual orientation, age or disability?
+mhs.stance:
+  key: identity_stance
+  label: Identity Stance
+  description: Questions a moderation program asks about a comment mentioning an identity group to decide whether it attacks the group, defends it, or neither.
+  examples:
+  - Does comment attack the identity group it talks about, defend it, or neither?
+wiki_attacks.target:
+  key: attack_targets
+  label: Attack Targets
+  description: Questions a moderation program asks about a personal attack to identify who it targets.
+  examples:
+  - Who does the personal attack in comment target?
+code_defects.vulnerable:
+  key: vulnerable_functions
+  label: Vulnerable Functions
+  description: Questions a code-review program asks about a function to detect a security vulnerability or memory-safety bug.
+  examples:
+  - Does the function in code contain a security vulnerability or memory-safety bug?
+code_comments.java:
+  key: java_comment_types
+  label: Java Comment Types
+  description: Questions a program asks about a comment from a Java source file to classify what kind of comment it is.
+  examples:
+  - What kind of comment is comment, taken from a Java source file?
+code_comments.python:
+  key: python_docstring_sentences
+  label: Python Docstring Sentences
+  description: Questions a program asks about a sentence from a Python class docstring to classify what it describes.
+  examples:
+  - What does the sentence in comment_sentence from the docstring of the Python class class_name do?
+code_comments.pharo:
+  key: pharo_comment_sentences
+  label: Pharo Comment Sentences
+  description: Questions a program asks about a sentence from a Pharo (Smalltalk) class comment to classify what it describes.
+  examples:
+  - What does the sentence in comment_sentence from the class comment of the Pharo (Smalltalk) class class_name describe?
+resume.category:
+  key: resume_category
+  label: Resume Category
+  description: Questions a recruiting program asks about a resume to file it under a job category.
+  examples:
+  - Which job category does resume fit best?
+esco_titles.skill_level:
+  key: job_skill_level
+  label: Job Skill Level
+  description: Questions a recruiting program asks about a job title to judge the level of skill it typically requires.
+  examples:
+  - What level of skill does the job job_title typically require?
+djinni.candidate_job_fit:
+  key: candidate_job_fit
+  label: Candidate Job Fit
+  description: Questions a recruiting program asks to decide whether a candidate's profile fits the kind of role a job ad is for.
+  examples:
+  - Is the candidate who wrote profile looking for the kind of role advertised in job_description?
+djinni.job_experience:
+  key: job_experience_required
+  label: Job Experience Required
+  description: Questions a recruiting program asks about a job description to extract how much experience it asks for.
+  examples:
+  - How much professional experience does job_description ask for?
+djinni.candidate_role:
+  key: candidate_role
+  label: Candidate Role
+  description: Questions a recruiting program asks about a candidate's profile to classify which role category they are looking for.
+  examples:
+  - Which role category is the candidate who wrote profile looking for?

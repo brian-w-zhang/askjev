@@ -2,6 +2,48 @@
 
 _One section per wave (`docs/10-expansion.md` §3). Newest first._
 
+## Waves 7-9: 612k → 938k (gated together 2026-09-26)
+**937,967 canonical questions** (+325,721), all placed and answered; 1,695 active nodes (+60); star layout regenerated.
+Hemispheres: World 35.1 · Self 31.9 · Machine 33.0. Three overlapping ingests (Self real data, Machine's last round and
+World thin areas, then new World/Self sources) were placed and answered together and gated as one.
+
+| | Waves 7-9 | Rule |
+|---|---|---|
+| Anchored | 282,567 (**87%**) | ≥ 60% ✅ |
+| Synthetic | 28,578 (9%): Self bank W7 (**57%** round-trip accept), World bank W10 (**55%**), ratings bank (**81%**) | ~15-20% guideline ✅ |
+
+**Added.** Self (126k): Reddit polls to 60k (30k Self + 15k World), Social Chemistry +20k, Social IQa +15k, Moral Machine
++8k, Scruples, single-item taste ratings with real rating distributions (12,361; films, books, board games, anime, beer)
+plus the authored ratings bank (7,013), StoryCommonsense 6k, Empathetic Dialogues and ISEAR 3k each, Stack Overflow
+tool preferences 4k, 538 candy/cuisine, choices13k gambles, Wulff lotteries, the Basel-Berlin risk battery, the AIMS
+AI-sentience survey. World (104k): wikidata_g4 to its full pool, Pantheon history 9k and athletes 2.7k, World Bank
+country pairs 8.8k, Yahoo +8.8k, USDA nutrients 7k, CommonsenseQA 6k, AnAge animal pairs 5k, MedMCQA 5k, GOAT +3.6k,
+Wikidata companies 2.8k. Machine (95.5k): the new Healthcare, Education and Operations L1s (clinical transcriptions, drug
+reviews, ICD-10 chapters, liver labs, short-answer and math-answer grading, essay traits, Loghub, HDFS and Blue Gene/L
+logs) and the last round aimed at ai_systems, trust & safety, people, code, search, support and research (39 datasets).
+
+**Measurements.** Most informative Machine sets: HDFS anomalies 0.44 and ASAP essay traits 0.46 (never decisive), STS-B
+0.47, deceptive hotel reviews 0.50, HelpSteer2 correctness 0.58, Dolly routing 0.60, ESCO titles 0.63, code comments 0.64,
+CiteWorth 0.65 (never decisive). Saturated (≥ 95% correct, ≥ 60% decisive; frozen): wikidata_g4, Pantheon history and
+athletes, Wikidata companies. Self emotion reading: ISEAR 0.69, Empathetic Dialogues 0.53 (32 overlapping labels).
+Taste ratings are never decisive (0% p > 0.95), as expected for taste.
+
+**Tree.** New hand node Self > Lifestyle > Ratings (12 domain children). Template split made 45 children: 5 for the real
+Self sets (emotions in personal stories / life events, story character feelings / motives, gamble choices) and 40 on
+the nine Machine nodes wave 8 overfilled (hallucination & citation had 10.7k direct; also extraction verification,
+guardrails, logs & incidents, clinical notes, answer grading, toxicity, semantic lint, resume match). Meta splits for
+Moral Machine scenarios and the candy, cuisine and developer-tool matchups. Descend re-walked 82,231 hint-placed
+questions; 45k unhinted Reddit polls were placed with the fast path. Dedupe linked 1,255 duplicate pairs.
+
+**Fixes.** Authored Self banks opened most lines with the trait they measure ("Manipulation: …"); the labels were
+stripped from the queued banks and from 3,684 ingested questions, which were re-answered (`01-jev.md` §7). Loghub
+OpenStack lines lost a file-name prefix that named the system. Candy taste pairs lost a crowd-majority "truth".
+
+**Known issues.** Personality is 3.4% of World/Self against 9% (public item banks are exhausted; the W10 personality bank
+is still in the round-trip queue). Split candidates left: dishes & ingredients 6.4k, family rules of thumb 6.2k,
+everyday ethics 5.8k, self.love 5.7k, video games 5.6k, and Machine nodes at 2-4k stacking 2-3 templates. 2,110
+questions sit at the root and ~2,100 at a hemisphere (fast placement found no confident branch).
+
 ## Waves 5-6: 478k → 612k (gated together 2026-09-25)
 **612,246 canonical questions** (+133,839), all placed and answered; 1,635 active nodes (+67); star layout 612,737 stars in
 1,600 nodes. Hemispheres at the gate: World 36.8 · Self 28.2 · Machine 35.0. The two waves overlapped (wave 6's ingest ran
