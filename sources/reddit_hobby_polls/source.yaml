@@ -1,0 +1,42 @@
+name: reddit_hobby_polls
+url: https://arctic-shift.photon-reddit.com (Arctic Shift public Reddit archive API, no login)
+license: Reddit user content via the Arctic Shift public archive (research use; Reddit User Agreement)
+version: native polls from 35 hobby / fandom / subculture subreddits, 2020-01..2024-12, fetched 2026-09-26 (35,169 archived polls)
+target: 15000 (ASKJEV_TARGET_REDDIT_HOBBY_POLLS; at most 800 per subreddit via ASKJEV_REDDIT_HOBBY_POLLS_PER_SUB; the run yields 8,454)
+hemisphere: world + self
+kind: evaluative, taste, values, social
+notes: >
+  Real Reddit native polls with archived vote counts from fandom and hobby subreddits (anime, games, rap artists,
+  TV, comics, toys, tabletop RPGs, BJJ, K-pop, sneakers, mechanical keyboards, vinyl, conlangs...). This covers the
+  insider hobby debates that the coverage probe found missing. The title cleaning and filter chain are reddit_polls'
+  (loaded from sources/reddit_polls/adapter.py, not copied): see that source's notes. It drops voter facts, crosstab
+  options, context-dependent, dated, Reddit-meta and typo'd titles, flags politics and sensitive content, and
+  decides hemisphere and kind the same way. Minimum 50 votes, not 100 (hobby polls are smaller; the median is 272).
+  The typo vocabulary is quora_closed's questions plus all fetched hobby titles, so fandom jargon counts as real words.
+  Hobby additions: dropped are polls about the voter's own gear, collection, rank, main, history or habits
+  ("your setup", "what's in your bag", "how many ... do you own", "what do you main", "how do you ..."); anything
+  tied to a season, episode, chapter, patch, leak or upcoming release, plus forecasts ("who will win", "there will
+  be"); fragments and titles that need the post ("this/these", "If you could choose?"); placeholder options
+  ("A"/"B", "Option 1"); tabletop rules lookups in D&D/RPG subs (rules minutiae, not opinion); and sexualized polls
+  about characters in fiction subs, whose casts include minors (in real-person subs these are flagged sensitive
+  instead). "Explain in comments" options are dropped and the shares renormalized. Political/sensitive flags are
+  recomputed with fandom words masked ("Beast Wars", a shooter's guns, Drag Race, a D&D race, fight/kill/death in
+  battle polls, Dick Grayson): 3.5% flagged. Titles get a topic prefix when they don't already name it ("One Punch
+  Man: Who's the 5th strongest S class hero?"; origin template, else dataset). node_hint comes from a subreddit ->
+  node map (world node for world items, self.lifestyle.leisure_hobbies or style_appearance for self items). Salted-hash
+  sample, at most 800 per subreddit.
+  Subreddits were chosen by measured poll density (400 posts per sub in four windows, ~150 subs): most hobby subs
+  run 0-0.5% polls, and fandom subs 1.5-7%. "scan" subs (the dense ones) list posts cheaply with fields=selftext and
+  pick poll posts by Reddit's "[View Poll](https://www.reddit.com/poll/...)" marker, then hydrate them via
+  /api/posts/ids. Scanning takes months in salted-hash order and stops at 2,000 cached polls or 30 months.
+  "search" subs (sparse) use full-text selftext=poll, which found every poll a full scan found on sample days, but
+  the archive rate-limits it by query time. mechanicalkeyboards, Sneakers and kpopthoughts get all ten half-years;
+  rpg, DnD and vinyl get 4 hash-picked half-years, one page each. Probed and dropped: crossword and Jeopardy (daily
+  discussion-thread polls), Warhammer40k and Autos (almost no polls, search stalled), fountainpens, golf,
+  baseballcards, lego, Pathfinder2e, yugioh, civ and tennis (too slow for their yield). Most big sports, music-genre
+  and general gaming subs (gaming, Minecraft, nba, nfl, soccer, hiphopheads, Metal...) have no
+  native polls. Years skew to 2020-2022, and 2024 is nearly empty because native polls fade from the archive.
+  Every request has a 20 s timeout and backs off on X-RateLimit-Reset; progress goes to
+  data/raw/reddit_hobby_polls/fetch.log. ASKJEV_REDDIT_HOBBY_POLLS_FETCH=0 normalizes the cache without network. At
+  build time a few units were unfinished (DnD, rpg and vinyl half-years, Valorant months), so a later run with
+  fetch on adds rows.
