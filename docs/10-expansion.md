@@ -221,3 +221,17 @@ End target ≈ 1.02M: **World ~350k · Self ~345-350k · Machine ~300k.** Measur
 World sports +26k, food +21k, history +21k, nature +16k, tech +15k (society over); Machine ai_systems +29k, trust_safety +17k,
 people +16k (documents over). **Missing types to add:** Self forecasts and evaluative judgments, behavioral-economics preferences
 (risk, time, framing) with human data, forced trade-offs, World values.
+
+## 11. Category review at 606k (2026-09-25)
+94% of questions sit at depth ≥ 3. The top level (3 hemispheres, 28 L1s) covers what people ask; the gaps were one level down,
+found by sampling the ~35k questions stuck at the root, a hemisphere or an L1:
+- **New hand nodes:** History — Everyday Life in the Past, Economic & Money History, History of Science & Technology, Regional
+  Histories; Sports — Rules & Officiating, Leagues, Teams & Transfers; Health — Health Claims & Remedies; Money — Business,
+  Management & Marketing (plus the earlier Buying Decisions and Everyday Practical Questions).
+- **Placement fixes:** 1,856 Social IQa items at Love's top level moved to Reading People (feelings/describe → Reading Feelings,
+  the rest → Reading Motives); 2,202 word-norm items stuck at the root/hemispheres moved to the Word node; the questions at the root,
+  the World hemisphere and the History/Sports/Money/Health/Society L1s re-walked by beam from where they sat.
+- **Filter leak:** 356 demographic polls ("What color is your passport?") flagged `biographical` and hidden; the Reddit adapter's
+  filter tightened for new rows.
+- **Left as is:** Self, Arts, Places, Science and Machine are already fine-grained; Machine finance/people load is template children
+  pending the wave 6 gate.

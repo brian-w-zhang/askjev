@@ -237,6 +237,25 @@ children:
     - Is chess harder than go?
     - Is Monopoly a bad board game?
     - Is poker more skill than luck?
+  - id: world.sports.rules_officiating
+    label: Rules & Officiating
+    description: 'Questions about the rules of sports and how they are applied: what is legal in play, positions, scoring
+      rules, penalties, referees, umpires, video review, and rule changes.'
+    not_for: Debates about the best players or teams go to the sport's sibling; the business of leagues, contracts and transfers
+      goes to world.sports.leagues_business.
+    examples:
+    - Can a baseball coach also play in a game?
+    - Should video review be used for offside calls?
+    - Can a receiver tip the ball to another receiver?
+  - id: world.sports.leagues_business
+    label: Leagues, Teams & Transfers
+    description: 'Questions about the business side of sports: leagues and their structure, franchises, drafts, trades, transfers
+      and transfer windows, free agency, salaries, salary caps, and stadium deals.'
+    not_for: On-field rules go to world.sports.rules_officiating; who is the greatest player goes to the sport's sibling.
+    examples:
+    - Should there be a salary cap in European soccer?
+    - Can a club sign a free agent outside the transfer window?
+    - Does Las Vegas deserve a pro football team?
 - id: world.food
   label: Food & Drink
   share: 3
@@ -747,6 +766,43 @@ children:
     - Would Rome have survived without Christianity?
     - Would Europe look different today if Napoleon had won at Waterloo?
     - Would the Library of Alexandria have changed history if it had survived?
+  - id: world.history.everyday_life
+    label: Everyday Life in the Past
+    description: 'Questions about how ordinary people lived in past times: food, clothing, homes, work, hygiene, family life,
+      customs, childhood, schooling, and daily routines in earlier eras.'
+    not_for: Wars and battles go to world.history.wars_battles; famous individuals go to world.history.figures; politics and
+      events of an era go to that era's sibling.
+    examples:
+    - Did people in the Middle Ages really bathe rarely?
+    - Were diaries more commonly kept in the past?
+    - Did Roman children go to school?
+  - id: world.history.economic_history
+    label: Economic & Money History
+    description: 'Questions about the history of money, trade, markets, banking, currencies, debts, crashes and economic
+      systems.'
+    not_for: Today's economy goes to world.money.economics; the history of inventions goes to world.history.science_tech_history.
+    examples:
+    - Was the introduction of paper money controversial?
+    - Did the Silk Road make China rich?
+    - Was the 1929 crash the worst in history?
+  - id: world.history.science_tech_history
+    label: History of Science & Technology
+    description: 'Questions about how inventions, technologies and scientific ideas developed over history, and what earlier
+      societies knew or could make.'
+    not_for: A scientist's biography goes to world.science.scientists_discoveries; today's technology goes to world.tech.
+    examples:
+    - Did ancient Romans have concrete as strong as today's?
+    - Did Aboriginal Australians use slings?
+    - Was the printing press the most important invention in history?
+  - id: world.history.regional_histories
+    label: Regional Histories
+    description: 'Questions about the history of a particular country or region across eras: the Americas, Europe, Asia,
+      Africa, the Middle East and Oceania, including colonies and empires.'
+    not_for: Questions about a single era worldwide go to that era's sibling; wars go to world.history.wars_battles.
+    examples:
+    - Was Brazil a Portuguese colony?
+    - Did Japan ever trade enslaved people to Europe?
+    - Was the Ottoman Empire tolerant of other religions?
 - id: world.society
   label: Society & Culture
   share: 3
@@ -940,6 +996,15 @@ children:
     examples:
     - Is sunscreen necessary on cloudy days?
     - 'Which matters more for healthy skin: diet or skincare products?'
+  - id: world.health.health_claims
+    label: Health Claims & Remedies
+    description: 'Questions about everyday health claims, home remedies, wellness trends and health myths: whether something
+      is good or bad for you, safe or unsafe, or has the benefits people claim.'
+    not_for: Prescription drugs, vaccines and treatments go to world.health.medicine; food and diets go to world.health.nutrition.
+    examples:
+    - Does chlorophyll have health benefits?
+    - Is it harmful to read in a moving car?
+    - Does putting ice on your neck help you cool down?
 - id: world.money
   label: Money & Work
   share: 2
@@ -1023,6 +1088,16 @@ children:
     - Is renting better than buying?
     - Is real estate the safest investment?
     - Are houses overpriced right now?
+  - id: world.money.business_management
+    label: Business, Management & Marketing
+    description: 'Questions about how businesses are run: management and leadership, organizations, strategy, marketing,
+      advertising, accounting, and corporate governance.'
+    not_for: A specific company or brand goes to world.money.companies_brands; starting a business goes to world.money.entrepreneurship;
+      the answerer's own career goes to SELF.
+    examples:
+    - Is the four Ps model of marketing still useful?
+    - Is it better for a manager to be liked or respected?
+    - Do open-plan offices hurt productivity?
 - id: world.future
   label: The Future
   share: 1
