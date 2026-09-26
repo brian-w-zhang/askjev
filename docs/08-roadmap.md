@@ -44,6 +44,7 @@
 | 2026-09-25 | Synthetic share is a ~15-20% guideline, not a hard cap (Self may exceed it); new World volume held until World ≈ 36%; waves 6-7 are Machine + Self (`10-expansion.md` §9) |
 | 2026-09-25 | Final plan to ~1.02M at 35/35/30 (`10-expansion.md` §10): Self gets ~100k more beyond the queue (real + synthetic); Social Chemistry's freeze is lifted for Self balance; Machine's last round is trimmed to ~85k and kept out of documents |
 | 2026-09-25 | Authored questions never open with a trait or topic label (`01-jev.md` §7); labels were stripped from the queued Self banks and from 3,684 ingested synthetic questions, which were re-answered (`10-expansion.md` §7) |
+| 2026-09-26 | Taste gets single-item Score ratings next to the head-to-heads: new hand node Self > Lifestyle > Ratings (12 domain children); real-data ratings with human distributions for films, books, board games, anime and beer (`taste_ratings`), an authored bank for the other domains (`10-expansion.md` §7) |
 
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)

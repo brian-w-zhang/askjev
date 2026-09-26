@@ -167,6 +167,12 @@ Another session is changing the UI at the same time. The expansion agent must no
   ~82k lines across the W7, W9 and W10 Self banks before their round trip (the half-finished W7 round trip was restarted), and
   3,684 ingested synthetic questions, whose text was fixed, re-embedded and re-answered (old label kept in `meta.stripped_label`;
   the original calls stay in the request cache). Internet and taste banks keep their prefixes (there they are the content).
+- **Single-item taste ratings** (2026-09-26): taste was 84% Choice (65k head-to-head pairs) and 11% Score (mostly jokes),
+  so it said which of two things wins but not how much Jev likes anything. New hand node `self.lifestyle.ratings` with 12
+  domain children holds "How much would you enjoy X?" Scores over five situation levels. `taste_ratings` (12,361) reuses the
+  matchup pools and attaches each item's real rating distribution binned onto the levels (MovieLens, Goodreads,
+  BoardGameGeek, MyAnimeList, BeerAdvocate; no truth); an authored bank (`g5_w13_ratings`) covers food, music, art,
+  nature, activities, places and culture. Rating the same items as the matchups lets the pairs be checked against the ratings.
 - **Throughput** (2026-09-25): requests pack up to 64 questions / ~5k tokens (measured sweet spot; larger requests mostly 503);
   gateway pinned to TypeSafe's own provider; adaptive rate backs off 10% when > 30% of requests are throttled; packing several
   Machine inputs per request was tested and rejected (accuracy 84.5 → 82.5%).

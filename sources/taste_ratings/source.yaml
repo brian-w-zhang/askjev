@@ -1,0 +1,15 @@
+name: taste_ratings
+url: (reads the raw downloads of movielens_pairs, goodreads_pairs, boardgame_pairs, anime_pairs, beer_pairs)
+license: per domain, the pool adapter's license (MovieLens usage license; goodbooks-10k CC BY-SA 4.0; BoardGameGeek, MyAnimeList, BeerAdvocate research use)
+version: same files as the pair sources, 2026-09-24
+target: 12500
+hemisphere: self
+kind: taste
+notes: >
+  Single-item Score questions "How much would you enjoy watching/reading/playing/drinking X?" (template_id
+  taste_ratings.<domain>), five situation levels per domain, one question per item: films 4,000 (MovieLens, >= 300
+  ratings), books 3,000 (goodbooks-10k, >= 2,000 Goodreads ratings), board games 2,500 (BGG, >= 500 ratings),
+  anime 1,500 (MAL, >= 300 ratings, >= 20k members), beers 1,500 (BeerAdvocate, >= 100 reviews). Item pools, cleaning and
+  content flags come from the matching *_pairs adapter; items are a salted-hash sample of the pool. Human distribution
+  = the item's real ratings binned onto the five levels (binning in each question's meta). No truth: a taste has no
+  correct answer. Nodes: self.lifestyle.ratings.<domain>_ratings. Targets via ASKJEV_TARGET_TASTE_RATINGS_<DOMAIN>.

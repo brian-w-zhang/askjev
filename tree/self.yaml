@@ -576,6 +576,78 @@ children:
     - Would you rather work from home or in an office?
     - Do you listen to music while you work?
     - Do you study better alone or in a group?
+  - id: self.lifestyle.ratings
+    label: Ratings
+    description: 'Questions asking how much the answerer would enjoy one specific thing on its own, rated on a scale of
+      concrete reactions: a film, book, board game, anime, beer, dish, song or genre, artwork, flower, sport, hobby, place
+      or tradition.'
+    not_for: Head-to-head picks between two things (use the matching Matchups node). General favorite categories like color
+      or season (use Favorites). Facts about the thing itself (use World).
+    examples:
+    - How much would you enjoy watching The Godfather?
+    - How much would you enjoy playing Catan?
+    - How much would you enjoy a bowl of pho?
+    children:
+    - id: self.lifestyle.ratings.film_ratings
+      label: Film Ratings
+      description: "How much the answerer would enjoy watching one specific film."
+      examples:
+      - How much would you enjoy watching Casablanca?
+    - id: self.lifestyle.ratings.book_ratings
+      label: Book Ratings
+      description: "How much the answerer would enjoy reading one specific book."
+      examples:
+      - How much would you enjoy reading Pride and Prejudice?
+    - id: self.lifestyle.ratings.board_game_ratings
+      label: Board Game Ratings
+      description: "How much the answerer would enjoy playing one specific board game."
+      examples:
+      - How much would you enjoy playing Catan?
+    - id: self.lifestyle.ratings.anime_ratings
+      label: Anime Ratings
+      description: "How much the answerer would enjoy watching one specific anime series or film."
+      examples:
+      - How much would you enjoy watching Spirited Away?
+    - id: self.lifestyle.ratings.beer_ratings
+      label: Beer Ratings
+      description: "How much the answerer would enjoy drinking one specific beer."
+      examples:
+      - How much would you enjoy a glass of Guinness Draught?
+    - id: self.lifestyle.ratings.food_ratings
+      label: Food & Drink Ratings
+      description: "How much the answerer would enjoy one specific dish, food, dessert, fruit or drink."
+      examples:
+      - How much would you enjoy a bowl of pho?
+    - id: self.lifestyle.ratings.music_ratings
+      label: Music Ratings
+      description: "How much the answerer would enjoy one specific music genre, famous song, album or instrument's sound."
+      examples:
+      - How much would you enjoy an evening of bossa nova?
+    - id: self.lifestyle.ratings.art_ratings
+      label: Art & Design Ratings
+      description: "How much the answerer would enjoy one specific artwork, art movement, architectural style or design style."
+      examples:
+      - How much would you enjoy an hour in front of Monet's Water Lilies?
+    - id: self.lifestyle.ratings.nature_ratings
+      label: Nature Ratings
+      description: "How much the answerer would enjoy one specific flower, plant, animal, landscape, season or kind of weather."
+      examples:
+      - How much would you enjoy a garden full of peonies?
+    - id: self.lifestyle.ratings.activity_ratings
+      label: Activity & Hobby Ratings
+      description: "How much the answerer would enjoy doing or watching one specific sport, game, hobby or pastime."
+      examples:
+      - How much would you enjoy an afternoon of rock climbing?
+    - id: self.lifestyle.ratings.place_ratings
+      label: Place Ratings
+      description: "How much the answerer would enjoy one specific city, destination or kind of trip."
+      examples:
+      - How much would you enjoy a week in Kyoto?
+    - id: self.lifestyle.ratings.culture_ratings
+      label: Culture & Tradition Ratings
+      description: "How much the answerer would enjoy one specific festival, holiday, tradition, TV genre or cultural experience."
+      examples:
+      - How much would you enjoy Holi in Jaipur?
 - id: self.mind
   label: Mind & Philosophy
   share: 5
