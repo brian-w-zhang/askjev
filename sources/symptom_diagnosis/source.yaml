@@ -1,0 +1,13 @@
+name: symptom_diagnosis
+url: https://huggingface.co/datasets/gretelai/symptom_to_diagnosis
+download: https://huggingface.co/api/datasets/gretelai/symptom_to_diagnosis/parquet/default/{train,test}/0.parquet
+license: Apache-2.0
+version: HF gretelai/symptom_to_diagnosis train+test (1,065 descriptions, 22 diagnoses)
+target: all (~1,060 after dedup)
+hemisphere: machine
+shape: classify
+notes: >
+  Template symptom_diagnosis.diagnosis: Choice over the 22 diagnoses (dataset labels, snake_case).
+  State = the first-person symptom description. Truth = dataset label. Exact-text dedup. The
+  descriptions come from Kaggle Symptom2Disease and read as templated patient messages; labels are
+  the dataset's. Node machine.healthcare.intake_admin.

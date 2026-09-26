@@ -1,0 +1,16 @@
+name: mtsamples
+url: https://www.kaggle.com/datasets/tboyle10/medicaltranscriptions
+download: https://huggingface.co/api/datasets/harishnair04/mtsamples/parquet/default/train/0.parquet
+license: CC0-1.0 (Kaggle scrape of mtsamples.com; HF mirror lists Apache-2.0)
+version: HF harishnair04/mtsamples default/train (4,999 rows; 2,357 unique transcriptions)
+target: all eligible (caps 2,500 specialty / 2,000 doc type)
+hemisphere: machine
+shape: classify
+notes: >
+  Two Choice templates over deduplicated transcriptions (node machine.healthcare.clinical_notes).
+  mtsamples.specialty: 30 specialties; only transcriptions filed under exactly one specialty (MTSamples
+  multi-files a note under the specialty and under Surgery / Consult / etc.). mtsamples.doc_type: 8
+  document types from the site's non-specialty categories (Surgery = operative report, Consult - History
+  and Phy., SOAP / Chart / Progress Notes, Discharge Summary, Emergency Room Reports, Office Notes,
+  Letters, IME-QME-Work Comp); only transcriptions under exactly one of them. General Medicine and
+  Pain Management are ignored. Text cut to 1,500 chars. Round-robin over labels (small labels used up), at most 400 per label.

@@ -1,0 +1,13 @@
+name: semeval_sag
+url: https://www.cs.york.ac.uk/semeval-2013/task7/
+download: https://huggingface.co/api/datasets/nkazi/{SciEntsBank,Beetle}/parquet/default/<split>/0.parquet
+license: CC-BY-4.0
+version: SemEval-2013 Task 7 SciEntsBank (10,804 answers) + Beetle (5,199 answers), all splits, 5-way labels
+target: 2000 correct + 1500 label
+hemisphere: machine
+shape: verify / classify
+notes: >
+  sag.correct: Noul "Is `student_answer` a correct answer to `question`, given `reference_answer`?",
+  truth = 5-way label is "correct", 45% true. sag.label: Choice over the 5 SemEval labels with
+  descriptions, truth = label, round-robin over labels. Disjoint samples; dedup on (question, answer),
+  conflicting labels dropped. Node machine.education.answer_grading.

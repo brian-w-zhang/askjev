@@ -1,0 +1,16 @@
+name: hdfs_sessions
+url: https://github.com/logpai/loghub (HDFS_v1)
+download: https://zenodo.org/api/records/8196385/files/HDFS_v1.zip/content (187 MB; HDFS.log + preprocessed/anomaly_label.csv)
+license: Loghub license (free for research or academic work, with attribution)
+version: Loghub HDFS_v1 (11,175,629 lines; 575,061 blocks; 16,838 anomalous)
+target: 1500
+hemisphere: machine
+shape: detect
+notes: >
+  Template hdfs.anomalous_session: Noul "Is the HDFS log `log` for block `block_id` anomalous?". State =
+  the block's full session, compacted (date/time/pid dropped, own block id -> <blk>, "dfs." dropped),
+  never cut; sessions ≤ 2,500 compacted chars (at 1,500 only 13-line normal sessions and 2-4 line
+  anomaly stubs remain, a pure length giveaway). Truth = dataset label; 40% anomalous; anomalous stubs
+  (< 8 lines) capped at a third of anomalies. fetch() streams HDFS.log once for a fixed hash-ordered
+  candidate set (8,000 anomalous + 16,000 normal blocks) into sessions.jsonl.
+  Node machine.operations.logs_incidents.

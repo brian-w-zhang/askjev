@@ -1,0 +1,14 @@
+name: loghub_lines
+url: https://github.com/logpai/loghub
+download: https://raw.githubusercontent.com/logpai/loghub/master/<System>/<System>_2k.{log,log_structured.csv} (16 systems)
+license: Loghub license (free for research or academic work, with attribution)
+version: Loghub 2k samples (16 systems x 2,000 lines, parsed with event templates)
+target: 2000 system + up to 1500 component (all eligible, ~1,000)
+hemisphere: machine
+shape: classify
+notes: >
+  loghub.system: Choice over 16 systems; state = the raw log line (header included, ≤500 chars);
+  truth = source file. loghub.component: Choice over a system's components (Android, HealthApp, HDFS,
+  OpenStack, Spark; components with 5+ distinct messages); state = system + message without the header;
+  truth = parsed Component. Dedup by message, ≤25 (system) / ≤10 (component) lines per event template,
+  round-robin over systems. Node machine.operations.logs_incidents.

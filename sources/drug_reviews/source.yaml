@@ -1,0 +1,16 @@
+name: drug_reviews
+url: https://archive.ics.uci.edu/dataset/462/drug+review+dataset+drugs+com
+download: https://huggingface.co/api/datasets/lewtun/drug-reviews/parquet/default/{train,test}/0.parquet
+license: CC-BY-4.0
+version: UCI Drug Review Dataset (Drugs.com), HF mirror lewtun/drug-reviews train+test (215,063 reviews)
+target: 2000 condition + 1500 satisfied
+hemisphere: machine
+shape: classify / detect
+notes: >
+  drug_reviews.condition: Choice over 44 distinct conditions (overlapping site labels such as Pain vs
+  Chronic Pain, Obesity vs Weight Loss, Emergency Contraception vs Birth Control, anxiety/depression
+  subtypes are excluded, reviews and options both); drug name hidden; truth = the dataset condition;
+  round-robin over conditions. drug_reviews.satisfied: Noul, truth = reviewer's rating 8-10 (true) vs
+  1-3 (false), 4-7 excluded, 50/50, disjoint from the condition sample. Reviews HTML-unescaped, deduped
+  by text (texts posted under two conditions dropped), 40-1,500 chars. Sexual/self-harm mentions flagged
+  sensitive. Node machine.healthcare.clinical_notes.

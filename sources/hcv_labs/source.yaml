@@ -1,0 +1,13 @@
+name: hcv_labs
+url: https://archive.ics.uci.edu/dataset/571/hcv+data
+download: https://archive.ics.uci.edu/static/public/571/hcv+data.zip
+license: CC-BY-4.0
+version: UCI HCV data (615 panels; 533 donors, 7 suspect donors, 24 hepatitis, 21 fibrosis, 30 cirrhosis)
+target: 225
+hemisphere: machine
+shape: detect
+notes: >
+  Template hcv_labs.liver_disease: Noul "Does the blood panel `labs` indicate liver disease?". State = a
+  one-line report (age, sex, 10 analytes with units; missing omitted). Truth = hepatitis/fibrosis/
+  cirrhosis (true) vs blood donor (false); suspect donors excluded. All 75 disease + 150 donor panels.
+  Node machine.healthcare.lab_results.

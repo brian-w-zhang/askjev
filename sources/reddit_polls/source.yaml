@@ -27,7 +27,11 @@ notes: >
   (built from the original sample days only, with that sample's vocabulary and caps). A larger target appends new
   titles from every day of 2020-2024 (same filters, n >= 100, typo vocabulary over all fetched titles), skipping any
   title already in the first 15,000, in salted-hash order, with the flair and r/WouldYouRather caps taken as shares
-  of the new total. Fetch is polite: at most ~1 request/s, exponential backoff, one cached file per subreddit-day
+  of the new total. New rows only (the first 15,000 predate these) also drop polls about the voter's own facts
+  (name, body, health, family, education, job, devices, possessions, home, location, past events; preference and
+  opinion wordings are kept) and options that grid an answer by the voter's group ("yes_atheist" / "no_religious",
+  "the_boot_i_m_american"). At 60000: pool 140,164 unique titles (125,511 not already taken), 45,000 appended.
+  Fetch is polite: at most ~1 request/s, exponential backoff, one cached file per subreddit-day
   under data/raw/reddit_polls/. 2019 was probed and skipped (the archive has no poll_data before 2020-04). Other
   poll subreddits were probed (polls_for_fun, PollsForFun, SampleSize, ThisOrThat, HypotheticalSituation,
   whowouldwin, unpopularopinion, ShouldIbuythisgame...) and not added: no archived posts, no native polls, or only

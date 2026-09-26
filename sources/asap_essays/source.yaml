@@ -1,0 +1,14 @@
+name: asap_essays
+url: https://www.kaggle.com/c/asap-aes
+download: https://huggingface.co/api/datasets/llm-aes/asap-7-original/parquet/default/train/0.parquet
+license: ASAP-AES competition data (Hewlett Foundation / Kaggle, research use); HF mirror states no license
+version: ASAP-AES essay set 7 (1,569 grade-7 narrative essays, 2 raters x 4 traits, 0-3)
+target: 700 per trait (3 traits)
+hemisphere: machine
+shape: score
+notes: >
+  Score templates asap7.ideas / asap7.organization / asap7.conventions, 4 levels each (the official
+  0-3 rubric rewritten as concrete situations). Only essays where both raters agree on the trait; truth
+  = agreed score. Essays ≤ 1,500 chars (not cut). State = assignment, anonymization note, essay.
+  Style trait skipped (overlaps). Node machine.education.essay_feedback. Ungated HF mirror; the Kaggle
+  original requires a login.

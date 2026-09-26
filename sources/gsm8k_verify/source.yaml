@@ -1,0 +1,14 @@
+name: gsm8k_verify
+url: https://github.com/openai/grade-school-math
+download: https://huggingface.co/api/datasets/openai/gsm8k/parquet/main/{train,test}/0.parquet
+license: MIT
+version: GSM8K main (7,473 train + 1,319 test)
+target: 2000
+hemisphere: machine
+shape: verify
+notes: >
+  Template gsm8k.final_correct: Noul "Is the final answer in `solution` the correct answer to
+  `problem`?". Human-written solution, calculator annotations stripped, ending "Final answer: N".
+  Half perturbed (truth false): final answer and the last mention of N in the steps replaced with a
+  seeded wrong value (±1, ±2, ±10, x2, /2, digit swap/change); meta has original, shown, method.
+  Positive-integer answers only; problem + solution ≤ 1,400 chars. Node machine.education.answer_grading.

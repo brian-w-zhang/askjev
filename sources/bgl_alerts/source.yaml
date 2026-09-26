@@ -1,0 +1,15 @@
+name: bgl_alerts
+url: https://github.com/logpai/loghub (BGL)
+download: https://zenodo.org/api/records/8196385/files/BGL.zip/content (57 MB; BGL.log)
+license: Loghub license (free for research or academic work, with attribution)
+version: Loghub BGL (4,747,963 lines; 348,460 alert lines in 41 categories)
+target: 1500
+hemisphere: machine
+shape: detect
+notes: >
+  Template bgl.alert: Noul "Is the Blue Gene/L log line `log_line` an alert that needs an
+  administrator's attention?". State = raw line minus the label column. Truth = admins' alert tag;
+  40% alerts. Lines grouped by masked template (digits/hex masked), ≤ 3 lines per template, 10 for alert templates (fetch keeps
+  those with the smallest line hash). Alerts round-robin over alert categories; non-alerts half from
+  severity WARNING+ (untagged errors, so severity is not the answer), half from any. Node
+  machine.operations.logs_incidents.

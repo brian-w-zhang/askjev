@@ -1,0 +1,14 @@
+name: icd10_chapter
+url: https://www.cms.gov/medicare/coding-billing/icd-10-codes
+download: https://www.cms.gov/files/zip/2026-code-descriptions-tabular-order.zip (icd10cm_codes_2026.txt)
+license: Public domain (US government work, CDC NCHS / CMS)
+version: ICD-10-CM FY2026 code descriptions in tabular order (74k billable codes)
+target: 2000
+hemisphere: machine
+shape: classify
+notes: >
+  Template icd10.chapter: Choice over the 21 ICD-10-CM chapters (keys readable, descriptions = official
+  chapter titles; chapter 22 U-codes left out). State = the official long description only (no code).
+  Truth = chapter from the code range. Round-robin over chapters; within a chapter one code per
+  3-character category before any second code, all in salted-hash order. Exact-description dedup.
+  Node machine.healthcare.intake_admin.
