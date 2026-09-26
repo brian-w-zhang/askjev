@@ -2,6 +2,45 @@
 
 _One section per wave (`docs/10-expansion.md` §3). Newest first._
 
+## Waves 5-6: 478k → 612k (gated together 2026-09-25)
+**612,246 canonical questions** (+133,839), all placed and answered; 1,635 active nodes (+67); star layout 612,737 stars in
+1,600 nodes. Hemispheres at the gate: World 36.8 · Self 28.2 · Machine 35.0. The two waves overlapped (wave 6's ingest ran
+during wave 5's placement so Jev never idled) and were gated as one.
+
+| | Waves 5-6 | Rule |
+|---|---|---|
+| Anchored | 95,351 (**71%**) | ≥ 60% ✅ |
+| Synthetic | 20,943 (16%): Self banks W5 and W6 (W6 **66%** round-trip accept) and TypeSafe-authored Machine inputs | ~15-20% guideline ✅ |
+
+**Why Self is low at the gate:** these waves were Machine-heavy by plan (§9: fill the new Machine L1s and pull the anchored
+share back after wave 4). Wave 7 is Self real data (Reddit polls to 60k, Social IQa, Social Chemistry, Moral Machine, Scruples);
+with its ingest the corpus is 703,251 at World 34.1 · Self 35.4 · Machine 30.5.
+
+**Added:** World: Stack Exchange second batch 24,320 (real asked questions, no anchor), Reddit polls 5,613, character traits
++4,000, Natural Questions yes/no 504. Self: Reddit polls 10,887 (voter-fact filter), Self banks 13,493, Young People Survey
+869 and the MxMH, color-favorite, PISA, GSS, PhilPapers, Afrobarometer and GlobalOpinionQA items. Machine (74,081): LegalBench
+11,820 across 7 tasks, TypeSafe-authored inputs 7,450 over 29 templates, LinkedIn job seniority and work type, CFPB complaint
+product and issue, CoNLL/WNUT entity typing, ABCD customer flows, gold-news price direction, TREC-COVID pairs, SkillSpan, code
+clones (BigCloneBench, POJ-104), SciCite, TREC question classes, Amazon review helpfulness, commit-message fit, SQuAD 2 spans,
+evidence inference, FiNER XBRL tags, MultiWOZ domains, code-review need, WikiQA.
+
+**Measurements:** most informative: code clones 0.54 correct while decisive 69% of the time (confidently wrong); LinkedIn
+seniority 0.59; code-review need 0.60 and Amazon helpfulness 0.65, both never decisive; CFPB complaints 0.68. Saturated:
+MultiWOZ domain 0.98 correct / 97% decisive (frozen). Stack Exchange titles are almost never decisive (3%), as expected for
+open questions forced into closed form.
+
+**Tree:** template split made 38 children: 10 in wave 5 (legal help areas, overruling, citation intent, clinical trial
+effects, answer types, CUAD provisions, review helpfulness…) and 28 in wave 6 on the 11 nodes stacking several large
+templates (machine.finance had 10.9k direct). Descend re-walked 29.5k hint-placed World/Self questions; 7,763 questions stuck
+at root/hemisphere/L1 were re-walked with the beam; repair-paths clean; dedupe linked 540 duplicate pairs.
+
+**Throughput:** requests pack up to 64 questions / ~5k tokens; the gateway is pinned to TypeSafe's own provider
+(DigitalOcean returned 503s); adaptive rate backs off under 429s. TypeSafe's capacity (~850-950 successful calls/min) is the
+ceiling, so placement and round trips ran near the 8 rps floor while the lane answered.
+
+**Known issues:** the Moral Machine gender child holds 9.5k rows of one template (scenario rows, bounded only by the source);
+23% of Reddit polls are hidden (biographical, demographic and political flags); everyday_ethics still has no accepted split.
+
 ## Wave 4: 373k → 478k (gated 2026-09-25)
 **478,407 canonical questions** (+105,817), all placed and answered; 1,568 active nodes (+164); star layout 450,737 stars in
 1,540 nodes. Hemispheres: World 40.0 · Self 30.7 · Machine 29.3.

@@ -1,7 +1,7 @@
 """Wave gate numbers (docs/10-expansion.md §3-§4): per-source stats for questions created since a time, plus
 the corpus-wide template cap and node cap checks. Read-only on Postgres; prints markdown.
 
-  uv run python scripts/wave_report.py --since 2026-09-24T21:00
+  uv run python scripts/wave_report.py --since 2026-09-24T21:00 [--until 2026-09-25T09:00]
 """
 
 import argparse
@@ -14,6 +14,7 @@ TEMPLATE_CAP, MACHINE_TEMPLATE_CAP, NODE_CAP = 5000, 3000, 1500
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--since", required=True)
+    ap.add_argument("--until", default="infinity")
     a = ap.parse_args()
     with db.connect() as c:
         rows = c.execute(
@@ -23,13 +24,13 @@ def main():
                  avg(m.correct::int) acc, avg((m.p_top > 0.95)::int) decisive, avg(m.p_top) ptop,
                  count(*) filter (where not q.display_ok) hidden, count(distinct q.text) texts
                from questions q left join question_meta m on m.question_id=q.id
-               where q.created_at >= %s group by 1,2 order by 3 desc""",
-            (a.since,),
+               where q.created_at >= %s and q.created_at < %s group by 1,2 order by 3 desc""",
+            (a.since, a.until),
         ).fetchall()
         tot = sum(r["n"] for r in rows)
         anch = sum(r["anchored"] for r in rows)
-        syn = c.execute("select count(*) c from questions where created_at >= %s and origin='synthetic'", (a.since,)).fetchone()["c"]
-        hem = c.execute("select hemisphere, count(*) c from questions where created_at >= %s group by 1", (a.since,)).fetchall()
+        syn = c.execute("select count(*) c from questions where created_at >= %s and created_at < %s and origin='synthetic'", (a.since, a.until)).fetchone()["c"]
+        hem = c.execute("select hemisphere, count(*) c from questions where created_at >= %s and created_at < %s group by 1", (a.since, a.until)).fetchall()
         print(f"## Added since {a.since}: {tot:,} questions\n")
         print(f"- anchored (truth or human data): {anch:,} ({anch / max(tot, 1):.0%}); synthetic: {syn:,} ({syn / max(tot, 1):.0%})")
         print("- by hemisphere: " + ", ".join(f"{r['hemisphere']} {r['c']:,}" for r in hem) + "\n")
