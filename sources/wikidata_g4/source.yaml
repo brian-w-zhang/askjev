@@ -4,6 +4,7 @@ license: CC0 (Wikidata)
 version: SPARQL pulls cached 2026-09-24 (data/raw/wikidata_g4/<query>.json)
 target: 8345
 target_wave2: 16395 (ASKJEV_WIKIDATA_G4_COMPARE_PER_TEMPLATE=1150 appends 7 comparison templates; unset/0 = the original 8,345 rows byte-identical)
+target_wave3: 32391 (plus ASKJEV_WIKIDATA_G4_WAVE3_PER_TEMPLATE=1500 appends 20 templates for the thin World L1s, 15,996 rows; unset/0 = the 16,395 wave 2 rows byte-identical)
 hemisphere: world
 kind: factual
 notes: >
@@ -38,3 +39,28 @@ notes: >
   year-precision births >= 20 years apart), founded_first ("Which company was founded earlier"; items whose own P31
   is a kind of company, >= 15 years apart), atomic_number (any two of the 118 elements). Quantities: preferred rank
   if present, else normal; skipped when a value's statements disagree by > 20%; units converted to km / m / km2.
+  Wave 3 (thin World L1s; appended after wave 2, <= ASKJEV_WIKIDATA_G4_WAVE3_PER_TEMPLATE each, most-linked first or
+  bounded pairs as above). Sports: team_sport ("Which sport does the team X compete in?"; clubs with one curated sport,
+  national/Olympic teams and names that give the sport away dropped, soccer capped 300), team_country ("In which
+  country is the team X based?"; single P17, name mentioning the country or its demonym dropped), competition_sport
+  (recurring events; leagues/conferences and names shared across sports like "... Open" dropped, soccer capped 150),
+  stadium_capacity (P1083 ratio >= 1.4), taller ("Who is taller"; athletes, heights 140-235 cm >= 12 cm apart,
+  footballers at most half the pool), game_developer ("Which studio developed the video game X?"), game_released_first
+  (>= 3 years apart, titles with 2+ digits dropped). Food: food_origin ("Which country does the dish/cheese/drink X
+  come from?"; single P495, name naming the country/demonym dropped, a regex of disputed origins skipped: hummus,
+  baklava, pavlova, borscht, ceviche, fries...), food_ingredient (single P186 from a whitelist of concrete ingredients;
+  cheeses choose among milks; <= 40 per ingredient), food_cuisine (single P2012, foods not already asked for origin).
+  History: event_first (wars, battles, revolutions, treaties, sieges, coups, rebellions with year-precision dates;
+  >= 20 years apart and the first ended before the second began; names with digits dropped), event_century (BC
+  supported; boundary years and events spanning two centuries skipped; 19th/20th capped 300), event_country
+  ("In which present-day country was the Battle/Siege of X fought?"; single P17, names mentioning any country
+  dropped), state_founded (historical countries, P571 >= 50 years apart). Tech: released_first (devices by group and
+  software, >= 3 years apart, pairs within a group), made_by (electronics and aircraft, single P176; cars left out
+  because model names carry a brand that differs from the corporate maker), developed_by (software, single P178).
+  Nature: animal_class ("Which group of animals does the X belong to?"; mammal/bird/reptile/amphibian/fish/insect/
+  arachnid from the P171 chain, birds win over reptiles, birds capped 350, species with only a scientific name
+  dropped), animal_heavier ("Which animal is heavier on average"; only P2067 statements qualified "adult weight",
+  since bare taxon masses mix birth weights and unit slips; geometric mean over sexes, ratio >= 2), animal_endemic
+  ("Which continent is the X native to?"; P183 endemic-to only, since taxon range P9714 lists partial ranges).
+  Flags: political on post-1945 events naming contested conflicts and on disputed words; sensitive on massacres,
+  genocides and bombings.

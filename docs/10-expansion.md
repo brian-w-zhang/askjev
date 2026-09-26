@@ -235,3 +235,14 @@ found by sampling the ~35k questions stuck at the root, a hemisphere or an L1:
   filter tightened for new rows.
 - **Left as is:** Self, Arts, Places, Science and Machine are already fine-grained; Machine finance/people load is template children
   pending the wave 6 gate.
+
+## 12. Coverage probe (2026-09-25)
+Six context-free subagents wrote 666 closed questions (mundane, niche expert, absurd, edge, global, machine); each was matched
+against the corpus by local embedding and walked down the tree by Jev (`scripts/probe_coverage.py`, report in `docs/coverage-probe.md`).
+Mean nearest-neighbour similarity: mundane 0.835, edge 0.811, machine 0.773, absurd 0.765, niche 0.735, **global 0.697 (99% novel)**.
+- **Content gaps:** culturally specific non-US/UK questions (exams, dishes, festivals, customs), the niche-expert long tail, and
+  pure whimsy. → a ~12k global-cultures bank, a ~10k professions/expert-judgment bank, a ~1.5k shower-thoughts bank.
+- **Structure gaps** (questions stuck at a hemisphere or L1): Machine lacked industry L1s → new **Healthcare & Clinical**, **Education
+  & Grading**, **Operations, IoT & Logistics**; World lacked **Insurance & Risk** (money), **Libraries, Archives & Museums** (society)
+  and **Shower Thoughts & Absurd Questions** (internet culture). Image, audio and camera inputs are out of scope (Jev reads text).
+- The tree now has 31 L1s. The new Machine L1s take their share from documents (over target) so Machine stays ~30%.

@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import math
 import random
 import re
 import time
@@ -36,6 +37,7 @@ PREFIX wikibase: <http://wikiba.se/ontology#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX p: <http://www.wikidata.org/prop/>
 PREFIX psv: <http://www.wikidata.org/prop/statement/value/>
+PREFIX pq: <http://www.wikidata.org/prop/qualifier/>
 """
 EN = 'FILTER(LANG(?{v}) = "en")'
 
@@ -104,12 +106,11 @@ SOFTWARE = _topd("{ ?item wdt:P31/wdt:P279* wd:Q7397 } UNION { ?item wdt:P31/wdt
 GAMES = _top("?item wdt:P31 wd:Q7889 .", 8000)
 ANIMAL_CLASSES = "VALUES ?v { wd:Q7377 wd:Q5113 wd:Q10811 wd:Q10908 wd:Q25371 wd:Q127282 wd:Q1390 wd:Q1358 }"
 ANIMALS = _top("?item wdt:P105 wd:Q7432 ; wdt:P171* wd:Q729 .", 12000)
-PLANTS = _top("?item wdt:P105 wd:Q7432 ; wdt:P171* wd:Q756 .", 5000)
 
 
 def _range(where: str) -> str:
-    return (f"SELECT DISTINCT ?item ?v ?c WHERE {{ {where} ?item wdt:P183|wdt:P9714 ?v . "
-            f"OPTIONAL {{ ?v wdt:P30 ?c }} }}")
+    """Endemic-to (P183) only: taxon range (P9714) lists partial ranges (wintering grounds, a few countries)."""
+    return f"SELECT DISTINCT ?item ?v ?c WHERE {{ {where} ?item wdt:P183 ?v . OPTIONAL {{ ?v wdt:P30 ?c }} }}"
 
 
 WAVE3_QUERIES: list[tuple[str, tuple[str, str], str]] = [
@@ -156,11 +157,11 @@ WAVE3_QUERIES: list[tuple[str, tuple[str, str], str]] = [
     ("animals", HEAVY, _base(ANIMALS)),
     ("animals_class", HEAVY, f"SELECT DISTINCT ?item ?v WHERE {{ {ANIMALS} {ANIMAL_CLASSES} ?item wdt:P171* ?v . }}"),
     ("animals_P225", HEAVY, f"SELECT DISTINCT ?item ?v WHERE {{ {ANIMALS} ?item wdt:P225 ?v . }}"),
-    ("animals_P2067", HEAVY, _quantity(ANIMALS, "P2067")),
-    ("animals_range", HEAVY, _range(ANIMALS)),
-    ("plants", HEAVY, _base(PLANTS)),
-    ("plants_P225", HEAVY, f"SELECT DISTINCT ?item ?v WHERE {{ {PLANTS} ?item wdt:P225 ?v . }}"),
-    ("plants_range", HEAVY, _range(PLANTS)),
+    # adult weight only: bare P2067 on taxa mixes birth weights, egg masses and unit slips (an Asian elephant at 95 kg)
+    ("animals_adult_mass", HEAVY, f"SELECT DISTINCT ?item ?a ?u ?r WHERE {{ {ANIMALS} ?item p:P2067 ?s . "
+                                  f"?s psv:P2067 ?n ; wikibase:rank ?r ; pq:P3831 wd:Q78101716 . "
+                                  f"?n wikibase:quantityAmount ?a ; wikibase:quantityUnit ?u . }}"),
+    ("animals_endemic", HEAVY, _range(ANIMALS)),
 ]
 QUERIES: list[tuple[str, tuple[str, str], str]] = [
     ("countries", SMALL, _base(SOVEREIGN + " ?item wikibase:sitelinks ?sl .")),
@@ -1067,6 +1068,7 @@ TEAM_SPORT_KEYS = {"soccer", "basketball", "ice_hockey", "volleyball", "handball
                    "bandy", "futsal", "floorball", "rugby_sevens", "cycling", "auto_racing"}
 GENERIC_SPORT = {"Q212434", "Q60583336", "Q589184", "Q204686"}  # Olympic / summer / Paralympic / winter sport
 W3_SPORT_CAP = {"soccer": 300}
+COMPETITION_CAP = {"soccer": 150}
 NOT_CLUB = re.compile(r"national|olympic|paralympic|delegation|all-star|selection|multi-sport|league\b|association\b|"
                       r"federation|confederation", re.I)
 # Club names that give the sport away (abbreviations case-sensitive, words in several languages).
@@ -1099,6 +1101,7 @@ FOOD_KIND = [  # (kind QIDs, word in the question, node); first match wins
     ({"Q182940"}, "dessert", "world.food.baking_sweets"),
     ({"Q746549"}, "dish", "world.food.dishes_ingredients"),
 ]
+INGREDIENT_CAP = 40
 # Main-ingredient template: only a concrete ingredient as truth (Wikidata's P186 also holds "dough", "leaf",
 # "cultigen"...). label -> (key, display, family); a family's members are never distractors for each other.
 INGREDIENTS = {
@@ -1142,7 +1145,9 @@ SENSITIVE_EVENT = re.compile(r"massacre|genocide|holocaust|pogrom|atrocit|rape|b
 STATE_ARTICLE = re.compile(r"\b(Empire|Kingdom|Republic|Dynasty|Caliphate|Sultanate|Union|Confederation|Duchy|Khanate|"
                            r"Principality|Confederacy|State|States|Commonwealth|Emirate|Shogunate|Federation|Protectorate|"
                            r"Realm|Grand Duchy|Electorate|Margraviate|County|Tsardom|Khaganate|Territory|Dominion|"
-                           r"Colony|Viceroyalty|Mandate|League|Crown)\b")
+                           r"Colony|Viceroyalty|Mandate|League|Crown)\b", re.I)
+GENERIC_EVENT = {"Eastern Front", "Western Front", "Italian Front", "Southern Front", "Deluge", "Black January",
+                 "Great Retreat", "Home front", "Reconquista"}
 
 # Tech.
 PRODUCT_GROUP = [  # (root QIDs, group, node); first match wins
@@ -1153,8 +1158,9 @@ PRODUCT_GROUP = [  # (root QIDs, group, node); first match wins
     ({"Q3231690"}, "cars", "world.tech.vehicles"),
     ({"Q2858615"}, "electronics", "world.tech.gadgets"),
 ]
+# Cars are left out: model names carry a brand that differs from the corporate maker (Daewoo Lacetti -> GM).
 MAKER_BUCKET = {"consoles": "electronics", "phones": "electronics", "computers": "electronics",
-                "electronics": "electronics", "aircraft": "aircraft", "cars": "cars"}
+                "electronics": "electronics", "aircraft": "aircraft"}
 
 # Nature.
 ANIMAL_CLASS = {"Q7377": "mammal", "Q5113": "bird", "Q10811": "reptile", "Q10908": "amphibian", "Q25371": "fish",
@@ -1238,6 +1244,8 @@ class W3:
         self.demonyms: dict[str, set[str]] = {}
         for r in _load(raw_dir, "countries_P1549"):
             self.demonyms.setdefault(ALIAS.get(r["item"], r["item"]), set()).add(r["v"])
+
+        self.all_country_words = set().union(*(self.country_words(q) for q in w.countries))
 
     def country_words(self, q: str) -> set[str]:
         return {self.w.country_label[q]} | self.demonyms.get(q, set())
@@ -1353,11 +1361,14 @@ def _w3_competition_sport(raw_dir: Path) -> Iterator[Question]:
         if not vs or not all(v in W3_SPORTS for v in vs) or len({W3_SPORTS[v][0] for v in vs}) != 1:
             continue
         key = W3_SPORTS[next(iter(vs))][0]
-        if re.search(r"\d", name) or REVEAL_ABBR.search(name) or _mentions(name, words) or re.search(
+        # "Canadian Open", "Masters": the same name is a tennis and a golf event
+        if re.search(r"\d|\b(League|Conference|Association|Federation|Games|Universiade|Open|Masters|Classic|"
+                     r"International|Invitational|Championships?)\b", name) \
+                or REVEAL_ABBR.search(name) or _mentions(name, words) or re.search(
                 r"football|basket|hockey|rugby|volley|ball\b|cycl|racing|ski|swim|skat|golf|chess|box|wrestl|tennis",
                 name, re.I):
             continue
-        if per.get(key, 0) >= W3_SPORT_CAP.get(key, WAVE3_PER_TEMPLATE):
+        if per.get(key, 0) >= COMPETITION_CAP.get(key, WAVE3_PER_TEMPLATE):
             continue
         res = _sport_choice("competition_sport", q, key, None)
         if not res:
@@ -1398,7 +1409,9 @@ def _w3_taller(w: World, raw_dir: Path) -> Iterator[Question]:
         if q in h and w.person_ok(q) and len(sp) == 1 and next(iter(sp)) in SPORT_NODE \
                 and not w.occupations.get(q, set()) & (NON_SPORT | POLITICIAN):
             sport[q] = next(iter(sp))
-    items = sorted(sport)
+    soccer = [q for q in sorted(sport) if sport[q] == "soccer"]  # footballers dominate: at most half the pool
+    keep = set(hash_order(soccer, lambda q: q, f"{SALT}|taller_soccer")[: len(sport) - len(soccer)])
+    items = sorted(q for q in sport if sport[q] != "soccer" or q in keep)
     for a, b in _pairs("taller", items, lambda a, b: abs(h[a] - h[b]) >= 12, WAVE3_PER_TEMPLATE):
         node = SPORT_NODE[sport[a]] if sport[a] == sport[b] else "world.sports"
         q = _cmp("taller", "Who is taller: {a} or {b}?", (a, w.humans[a]["label"]), (b, w.humans[b]["label"]),
@@ -1454,6 +1467,7 @@ def _w3_food_ingredient(raw_dir: Path) -> Iterator[Question]:
     parts_labels: dict[str, str] = {}
     parts = _values(raw_dir, "foods_P527", parts_labels)
     pool = sorted({(k, d) for k, d, _ in INGREDIENTS.values()})
+    per: dict[str, int] = {}
     n = 0
     for q in items:
         if n >= WAVE3_PER_TEMPLATE:
@@ -1463,6 +1477,8 @@ def _w3_food_ingredient(raw_dir: Path) -> Iterator[Question]:
             continue
         key, disp, fam = INGREDIENTS[mat_labels[next(iter(ms))]]
         name = labels[q]
+        if per.get(key, 0) >= INGREDIENT_CAP:  # cheeses of cow's milk would otherwise dominate
+            continue
         if _mentions(name, {key.replace("_", " "), disp or key, fam}) or re.search(r"\b(milk|cheese)\b", name, re.I) and fam.startswith("milk"):
             continue
         listed = {INGREDIENTS[parts_labels[p]][2] for p in parts.get(q, ()) if parts_labels.get(p) in INGREDIENTS}
@@ -1474,6 +1490,7 @@ def _w3_food_ingredient(raw_dir: Path) -> Iterator[Question]:
         res = _choice("food_ingredient", q, (key, disp), cands)
         if not res:
             continue
+        per[key] = per.get(key, 0) + 1
         n += 1
         yield _q(f"What is the main ingredient of the {kind[q][0]} {name}?", res[0], res[1], kind[q][1],
                  "food_ingredient", q, {"entity": name, "entity_type": kind[q][0], "truth_label": disp or key})
@@ -1518,7 +1535,7 @@ def _event_pool(raw_dir: Path):
     start, end = {}, {}
     for q in labels:
         s = _one_year(p580.get(q)) if q in p580 else _one_year(p585.get(q))
-        if s is None or re.search(r"\d", labels[q]):
+        if s is None or re.search(r"\d", labels[q]) or labels[q] in GENERIC_EVENT:
             continue
         e = _one_year(p582.get(q)) if q in p582 else None
         if e is not None and e < s:
@@ -1605,7 +1622,8 @@ def _w3_event_country(x: W3, raw_dir: Path) -> Iterator[Question]:
         if q not in war or not re.match(r"(First |Second |Third |Great )?(Battle|Siege|Sack)\b", name) or re.search(r"\d", name):
             continue
         country = x.single_country(countries.get(q))
-        if not country or _mentions(name, x.country_words(country)):
+        # any country named ("Battle of France" carries P17 Belgium) makes the question misleading
+        if not country or _mentions(name, x.all_country_words):
             continue
         res = x.country_choice("event_country", q, country)
         if not res:
@@ -1699,10 +1717,11 @@ def _makers(raw_dir: Path, name: str, labels: dict[str, str], group_of) -> tuple
     single = {q: next(iter(v)) for q, v in makers.items() if q in labels and len(v) == 1}
     freq: dict[tuple[str, str], int] = {}
     for q, m in single.items():
-        freq[(group_of(q), m)] = freq.get((group_of(q), m), 0) + 1
+        if group_of(q):
+            freq[(group_of(q), m)] = freq.get((group_of(q), m), 0) + 1
     pools: dict[str, list[str]] = {}
     for (g, m), k in sorted(freq.items()):
-        if k >= 3 and _clean(m_labels.get(m)) and g:
+        if k >= 3 and _clean(m_labels.get(m)) and g and not re.match(r"(Development Studio|In-house)", m_labels[m]):
             pools.setdefault(g, []).append(m)
     return single, m_labels, pools
 
@@ -1807,14 +1826,23 @@ def _w3_animal_class(raw_dir: Path) -> Iterator[Question]:
 def _w3_animal_heavier(raw_dir: Path) -> Iterator[Question]:
     labels, _ = _organisms(raw_dir, "animals", ANIMAL_MIN_SL)
     cls = _animal_class(raw_dir)
-    mass = _quantities(raw_dir, "animals_P2067", UNIT_KG)
-    items = sorted(q for q in labels if q in mass)
+    vals: dict[str, list[float]] = {}
+    for r in _load(raw_dir, "animals_adult_mass"):
+        if "Deprecated" not in r["r"] and r["u"] in UNIT_KG and re.fullmatch(r"[-+]?\d+(\.\d+)?(E[-+]?\d+)?", r["a"]):
+            if (v := float(r["a"]) * UNIT_KG[r["u"]]) > 0:
+                vals.setdefault(r["item"], []).append(v)
+    # one value per species: geometric mean over the sexes, skipped when they differ more than 3x
+    mass = {q: math.prod(vs) ** (1 / len(vs)) for q, vs in vals.items() if max(vs) / min(vs) <= 3}
+    pool = sorted(q for q in labels if q in mass)
+    birds = [q for q in pool if cls.get(q) == "bird"]  # birds dominate the most-linked species: at most half
+    keep = set(hash_order(birds, lambda q: q, f"{SALT}|heavier_birds")[: len(pool) - len(birds)])
+    items = [q for q in pool if cls.get(q) != "bird" or q in keep]
     for a, b in _pairs("animal_heavier", items, lambda a, b: _ratio(mass[a], mass[b]) >= 2, WAVE3_PER_TEMPLATE):
         la, lb = labels[a][0].upper() + labels[a][1:], labels[b][0].upper() + labels[b][1:]
         ca, cb = cls.get(a), cls.get(b)
         q = _cmp("animal_heavier", "Which animal is heavier on average: {a} or {b}?", (a, la), (b, lb),
                  a if mass[a] > mass[b] else b, ANIMAL_CLASS_NODE[ca] if ca and ca == cb else "world.nature",
-                 {"values": [mass[a], mass[b]], "unit": "kg"})
+                 {"values": [round(mass[a], 4), round(mass[b], 4)], "unit": "kg (adult)"})
         if q:
             yield q
 
@@ -1832,8 +1860,8 @@ def _native(raw_dir: Path, name: str, w: World) -> dict[str, str]:
 
 
 def _w3_native(w: World, raw_dir: Path, tid: str, base: str, text: str, node_of) -> Iterator[Question]:
-    labels, sl = _organisms(raw_dir, base, ANIMAL_MIN_SL if base == "animals" else 30)
-    native = _native(raw_dir, f"{base}_range", w)
+    labels, sl = _organisms(raw_dir, base, ANIMAL_MIN_SL)
+    native = _native(raw_dir, f"{base}_endemic", w)
     label = {k: k.replace("_", " ").title() for k in CONTINENT_KEYS}
     n = 0
     for q in sorted(labels, key=lambda q: (-sl[q], q)):
@@ -1881,10 +1909,8 @@ def _wave3(w: World, raw_dir: Path) -> Iterator[Question]:
     cls = _animal_class(raw_dir)
     yield from _w3_animal_class(raw_dir)
     yield from _w3_animal_heavier(raw_dir)
-    yield from _w3_native(w, raw_dir, "animal_native", "animals", "Which continent is the {name} native to?",
+    yield from _w3_native(w, raw_dir, "animal_endemic", "animals", "Which continent is the {name} native to?",
                           lambda q: ANIMAL_CLASS_NODE.get(cls.get(q), "world.nature"))
-    yield from _w3_native(w, raw_dir, "plant_native", "plants", "Which continent is the plant {name} native to?",
-                          lambda q: "world.nature.plants_fungi")
 
 
 def normalize(raw_dir: Path) -> Iterator[Question]:

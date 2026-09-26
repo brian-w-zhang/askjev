@@ -370,6 +370,9 @@ VOTER_FACT = re.compile(
     r"in (school|college|university|high school|a relationship)|a (student|teacher|nurse|doctor|parent|homeowner|"
     r"renter|immigrant|citizen|veteran|smoker|twin|first.?born)|taller|shorter|heavier|diagnosed|allergic|autistic|"
     r"neurodivergent)\b|"
+    r"\b(are you|you are|you're|would you say (that )?you('re| are)) (currently |clinically )?(depressed|anxious|"
+    r"suicidal|mentally ill|in therapy|on (meds|medication)|pregnant|sick|ill)\b|"
+    r"^are you (able to|capable of)\b|\byou guys\?$|^which one are you\b|\byour (profile picture|pfp|avatar)\b|"
     r"\bwhat is your (dominant|writing) hand\b|\bhow (tall|short|heavy|old) (are|were) you\b|"
     r"\bhow many (\w+ ){0,3}(are|were) you (taller|shorter|older|younger)\b|"
     r"^(have|has|did) you (ever )?(updated|upgraded|switched|moved|graduated|married|voted|traveled|travell?ed|"
@@ -388,6 +391,28 @@ PREF_GUARD = re.compile(r"\b(would|should|prefer\w*|rather|like|love|hate|enjoy|
 
 def _voter_fact(q: str) -> bool:
     return bool(VOTER_FACT.search(q)) and not PREF_GUARD.search(q)
+
+
+ANSWER_WORDS = {"yes", "no", "for", "against", "idk", "unsure", "maybe", "agree", "disagree", "neutral", "other",
+                "sometimes", "never", "always", "positive", "negative", "true", "false", "support", "oppose"}
+GROUP_TAG = re.compile(r"_(i_m|i_am|im|i_vote|i_own|i_don_t_own|i_dont_own)_\w+|_(m|f)$")
+
+
+def _crosstab_keys(keys: list[str]) -> bool:
+    """Options that grid an answer by the voter's group ("yes_atheist" / "no_religious", "the_boot_i_m_american"):
+    CROSSTAB only catches parenthesized tags; this catches the snake_case grids. Rows after the first 15,000 only."""
+    if len(keys) < 4:
+        return False
+    parts = [k.split("_") for k in keys]
+    if all(len(p) >= 2 for p in parts):
+        for pos in (0, -1):
+            ans = Counter(p[pos] for p in parts)
+            rest = Counter("_".join(p[1:] if pos == 0 else p[:-1]) for p in parts)
+            if 2 <= len(ans) <= 3 and all(v >= 2 for v in ans.values()) and max(rest.values()) >= 2 and \
+                    (set(ans) <= ANSWER_WORDS or set(rest) <= ANSWER_WORDS | {"it_s_equal", "not_sure", "i_don_t_know"}):
+                return True
+    tails = Counter(m.group(0) for k in keys for m in [GROUP_TAG.search(k)] if m)
+    return bool(tails) and max(tails.values()) >= 2
 
 
 VOCAB: Counter = Counter()
@@ -418,6 +443,9 @@ def _pool(raw_dir: Path, legacy: bool) -> list[dict]:
                     continue
                 if not legacy and _voter_fact(it["q"]):
                     FUNNEL["6b_voter_fact"] += 1
+                    continue
+                if not legacy and _crosstab_keys(list(it["options"])):
+                    FUNNEL["6c_option_crosstab"] += 1
                     continue
                 key = _title_key(it["q"])
                 old = best.get(key)

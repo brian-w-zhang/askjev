@@ -861,6 +861,15 @@ children:
     - Is Zeus the most powerful mythological god?
     - Was King Arthur a real person?
     - Is Norse mythology cooler than Greek mythology?
+  - id: world.society.libraries_archives
+    label: Libraries, Archives & Museums
+    description: 'Questions about libraries, archives, museums and collections: cataloguing, preservation, digitization,
+      provenance, and how cultural records are kept.'
+    not_for: Art itself goes to world.arts; history content goes to world.history.
+    examples:
+    - Should digitization replace physical preservation of old manuscripts?
+    - Are public libraries still essential?
+    - Should museums return artifacts to their countries of origin?
   - id: world.society.world_religions
     label: World Religions (Facts)
     description: 'Questions about religions as cultural and historical facts: their origins, practices, holy sites, architecture,
@@ -985,6 +994,15 @@ children:
       - How many holes does a straw have?
       - Is a Pop-Tart a ravioli?
       - Was the dress blue and black?
+    - id: world.society.internet_culture.shower_thoughts
+      label: Shower Thoughts & Absurd Questions
+      description: 'Whimsical, absurd and shower-thought questions about everyday things and ideas: talking objects, silly
+        logic, category jokes and playful paradoxes that no one needs to answer.'
+      not_for: Who-would-win matchups go to world.society.internet_culture.who_would_win; serious puzzles go to self.mind.thought_experiments.
+      examples:
+      - Is Tuesday the most suspicious day of the week?
+      - Could a labyrinth get lost inside itself?
+      - Is a broken clock proud of being right twice a day?
     - id: world.society.internet_culture.online_trends
       label: Online Trends & Platforms
       description: 'Judgments about internet trends, viral challenges, online eras and platforms as culture: Vine vs TikTok,
@@ -1157,6 +1175,15 @@ children:
     - Do most startups fail?
     - Is venture capital good for founders?
     - Is dropping out to start a company a good idea?
+  - id: world.money.insurance_risk
+    label: Insurance & Risk
+    description: 'Questions about insurance and risk as a field: types of insurance, premiums, actuarial practice, reinsurance,
+      catastrophe risk, and whether coverage is worth it.'
+    not_for: Choosing a product to buy goes to world.money.buying_decisions; investing goes to world.money.investing.
+    examples:
+    - Is extended warranty insurance ever worth it?
+    - Is a combined ratio above 100 always unprofitable for an insurer?
+    - Should flood insurance be mandatory in high-risk areas?
   - id: world.money.real_estate
     label: Housing & Real Estate
     description: Questions about housing markets, buying versus renting, mortgages, property values, and real estate as an

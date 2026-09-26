@@ -408,3 +408,66 @@ children:
         description: "Questions a program asks about a text record (a tasting note, report, description) to turn it into many probabilistic features, presence flags and intensity scores that feed a predictive model alongside structured data."
         not_for: "Pulling exact field values (Structured Extraction). Market demand signals for forecasting (Commerce & Marketing)."
         examples: ["How strongly does this tasting note mention oak?", "How positive is the overall tone of this note?", "Judging only by this note, how good is the wine?"]
+
+  # ------------------------------------------------------------------ added 2026-09-25 (coverage probe)
+  - id: machine.healthcare
+    label: Healthcare & Clinical
+    share: 2
+    description: "Questions a program asks about clinical and health-administration text (patient intake forms, clinical notes, transcriptions, lab reports, referrals, prior-authorization requests, medical codes) to route, flag, code and check them."
+    not_for: "Health insurance claims and payouts (Finance, Risk & Insurance). Medical research abstracts and trials (Science & Research). Consumer health questions about the world (WORLD)."
+    examples: ["Which medical specialty does this transcription belong to?", "Does this lab report contain a value outside the reference range?", "Does this intake form mention a drug allergy?"]
+    children:
+      - id: machine.healthcare.clinical_notes
+        label: Clinical Notes & Transcriptions
+        description: "Questions a program asks about clinical notes, discharge summaries and dictated transcriptions: which specialty, which condition, whether a finding or medication is mentioned."
+        not_for: "Structured lab values (Lab Results & Vitals). Scheduling and forms (Intake & Admin)."
+        examples: ["Which medical specialty does this transcription belong to?", "Does this note mention a history of diabetes?", "Is the patient in this note a smoker?"]
+      - id: machine.healthcare.lab_results
+        label: Lab Results & Vitals
+        description: "Questions a program asks about lab reports and vital-sign readings: out-of-range values, trends, and whether a result needs follow-up."
+        not_for: "Free-text clinical notes (Clinical Notes & Transcriptions)."
+        examples: ["Does this lab report contain a value outside the reference range?", "Does this vitals log show a fever?", "Is this potassium result critical?"]
+      - id: machine.healthcare.intake_admin
+        label: Intake, Coding & Admin
+        description: "Questions a program asks about patient intake forms, referrals, prior-authorization requests and medical codes: completeness, urgency, routing and code choice."
+        not_for: "Insurance claim payouts (Finance, Risk & Insurance)."
+        examples: ["Does this intake form mention a drug allergy?", "Is this referral urgent?", "Which ICD chapter fits this diagnosis?"]
+  - id: machine.education
+    label: Education & Grading
+    share: 1
+    description: "Questions a program asks about student work and learning content (quiz and short answers, essays, code submissions, plagiarism reports, course materials) to grade, give feedback and flag problems."
+    not_for: "Research papers (Science & Research). Job candidates (People & Sales)."
+    examples: ["Is this short answer correct given the reference answer?", "How well organized is this essay?", "Does this plagiarism report exceed the similarity threshold?"]
+    children:
+      - id: machine.education.answer_grading
+        label: Answer Grading
+        description: "Questions a program asks about a student's answer compared with a reference answer or rubric: correct, partially correct, or wrong."
+        not_for: "Long essays scored on a rubric (Essay Scoring & Feedback)."
+        examples: ["Is this short answer correct given the reference answer?", "Does this answer mention the key concept?", "Is this math answer's final result right?"]
+      - id: machine.education.essay_feedback
+        label: Essay Scoring & Feedback
+        description: "Questions a program asks about student essays and written work: overall score, organization, argument, grammar, and integrity checks."
+        not_for: "Short factual answers (Answer Grading)."
+        examples: ["How well organized is this essay?", "Does this essay state a clear thesis?", "Does this plagiarism report exceed the similarity threshold?"]
+  - id: machine.operations
+    label: Operations, IoT & Logistics
+    share: 2
+    description: "Questions a program asks about operational records (system and server logs, alerts, sensor and IoT telemetry, inventory scans, shipment and route logs, maintenance tickets) to detect anomalies, triage incidents and route work."
+    not_for: "Source code and code review (Code & Engineering). Security of user content (Trust & Safety)."
+    examples: ["Is this log line part of an anomalous session?", "Does this sensor reading indicate a refrigeration failure?", "Does this route log show an unscheduled stop?"]
+    children:
+      - id: machine.operations.logs_incidents
+        label: Logs & Incidents
+        description: "Questions a program asks about system logs, alerts and incident reports: anomalous or normal, which component failed, client- or server-side, how severe."
+        not_for: "Physical sensor telemetry (Sensors & IoT)."
+        examples: ["Is this log sequence anomalous?", "Is this API error a client-side or server-side failure?", "How severe is this incident report?"]
+      - id: machine.operations.sensors_iot
+        label: Sensors & IoT
+        description: "Questions a program asks about sensor and IoT readings described as text or tables: threshold breaches, drifts, failures and maintenance needs."
+        not_for: "Software logs (Logs & Incidents)."
+        examples: ["Does this sensor reading indicate a refrigeration failure?", "Does this vibration reading exceed the safety threshold?", "Does this thermostat log show an unusual spike?"]
+      - id: machine.operations.logistics
+        label: Logistics & Inventory
+        description: "Questions a program asks about shipments, routes, inventory counts and warehouse records: delays, discrepancies and exceptions."
+        not_for: "Customer complaints about deliveries (Customer Support)."
+        examples: ["Does this route log show an unscheduled stop?", "Does this inventory scan indicate a stock discrepancy?", "Is this shipment likely to arrive late?"]

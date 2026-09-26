@@ -4,6 +4,7 @@ license: CC0 (Wikidata)
 version: SPARQL + entity-API pulls cached 2026-09-24 (data/raw/goat_pairs/<category>.json)
 target: 6600
 target_wave4: 11100 (ASKJEV_TARGET_GOAT_PAIRS; picks TARGET // 300 categories in order, unset = the original 22, byte-identical)
+target_wave5: 14700 (ASKJEV_TARGET_GOAT_PAIRS=14700 appends 12 categories after the 37; 11100 = the wave 4 rows byte-identical)
 hemisphere: world
 kind: taste (evaluative for scientists)
 notes: >
@@ -27,3 +28,10 @@ notes: >
   animated TV series, video game console models, sports car models, dog breeds, national parks, islands (not
   sovereign states), cathedrals, and stadiums. kind taste except philosophers (evaluative). Xbox consoles are
   missing: their Wikidata items don't carry the console-model class.
+  Wave 5 (ASKJEV_TARGET_GOAT_PAIRS=14700) appends 12 categories for the thin World L1s, same construction: NFL, NBA
+  and MLB franchises (current teams by league; the Athletics skipped while the name is in flux), golfers (tennis
+  players, actors, footballers and others tagged golfer removed by occupation), sports to watch (types of sport;
+  martial arts and mountaineering dropped), cheeses ("cheese"/"PDO" suffixes stripped), fruits (common names only;
+  dried fruit, berry, nut dropped), desserts (congee dropped), cocktails, smartphone models (<= 6 per maker, labels
+  kept in their own case: iPhone), operating systems (<= 4 per developer; GNU dropped), birds (common names only).
+  kind taste.

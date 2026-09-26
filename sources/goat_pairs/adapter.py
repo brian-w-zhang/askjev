@@ -289,9 +289,76 @@ WAVE4_CATEGORIES: dict[str, dict] = {
         "exclude": {"Q10285": "an ancient amphitheatre (Colosseum)"},
     },
 }
+# Wave 5 categories (thin World L1s: sports, food, tech, nature), appended after wave 4; ASKJEV_TARGET_GOAT_PAIRS=14700
+# runs all 49. `strip` = a suffix removed from labels ("Roquefort cheese" -> "Roquefort", "Grana Padano PDO").
+WAVE5_CATEGORIES: dict[str, dict] = {
+    "nfl_teams": {
+        "where": "?item wdt:P31 wd:Q17156793 ; wdt:P118 wd:Q1215884 .",
+        "text": "Which is the greater NFL franchise?", "node": "world.sports.american_football",
+    },
+    "nba_teams": {
+        "where": "?item wdt:P31 wd:Q13393265 ; wdt:P118 wd:Q155223 .",
+        "text": "Which is the greater NBA franchise?", "node": "world.sports.basketball.nba",
+    },
+    "mlb_teams": {
+        "where": "?item wdt:P31 wd:Q13027888 ; wdt:P118 wd:Q1163715 .",
+        "text": "Which is the greater MLB franchise?", "node": "world.sports.baseball",
+        "exclude": {"Q504339": "name in flux after the move from Oakland (Athletics)"},
+    },
+    "golfers": {
+        # tennis players, actors, footballers, racing drivers... also tagged "golfer" drop out by occupation
+        "where": "?item wdt:P31 wd:Q5 ; wdt:P106 wd:Q11303721 . MINUS { ?item wdt:P106 ?o . VALUES ?o { wd:Q10833314 "
+                 "wd:Q33999 wd:Q10800557 wd:Q10798782 wd:Q937857 wd:Q11774891 wd:Q9149093 wd:Q4610556 wd:Q378622 "
+                 "wd:Q36180 wd:Q82955 wd:Q2066131 wd:Q10871364 wd:Q19204627 wd:Q13382576 } }",
+        "text": "Who is the greater golfer?", "node": "world.sports.individual_sports", "person": True,
+        "exclude": {"Q270784": "one 1900 Olympic event, not a golfer of note (Margaret Abbott)",
+                    "Q172101": "known as racing driver (Alfonso de Portago)"},
+        "rename": {"Q440066": "Sergio García"},
+    },
+    "sports": {
+        "where": "?item wdt:P31 wd:Q31629 .",
+        "text": "Which sport would you rather watch?", "node": "world.sports",
+        "exclude": {"Q11417": "a family of sports (martial arts)", "Q36908": "not a spectator sport (mountaineering)"},
+        "rename": {"Q2736": "Soccer"},
+    },
+    "cheeses": {
+        "where": "?item wdt:P31/wdt:P279* wd:Q10943 .",
+        "text": "Which cheese do you prefer?", "node": "world.food.dishes_ingredients", "strip": r" (cheese|PDO)$",
+    },
+    "fruits": {
+        "where": "?item wdt:P279 wd:Q3314483 .",
+        "text": "Which fruit do you prefer?", "node": "world.food.dishes_ingredients", "common_name": True,
+        "exclude": {"Q234901": "a preparation (dried fruit)", "Q16128920": "a class of fruits (berry)",
+                    "Q3320037": "not a fruit in the everyday sense (nut)"},
+    },
+    "desserts": {
+        "where": "?item wdt:P279 wd:Q182940 .",
+        "text": "Which dessert would you rather eat?", "node": "world.food.baking_sweets",
+        "exclude": {"Q878624": "a savory porridge (congee)"},
+    },
+    "cocktails": {
+        "where": "?item wdt:P31/wdt:P279* wd:Q134768 .",
+        "text": "Which cocktail would you rather drink?", "node": "world.food.alcoholic_drinks",
+    },
+    "smartphones": {
+        "where": "?item wdt:P31/wdt:P279* wd:Q19723451 .",
+        "text": "Which smartphone would you rather own?", "node": "world.tech.gadgets", "cap": ("P176", 6),
+        "keep_case": True, "exclude": {"Q621427": "the product line, not a model (iPhone)"},
+        "rename": {"Q235642": "Nokia Lumia 920"},
+    },
+    "operating_systems": {
+        "where": "?item wdt:P31/wdt:P279* wd:Q9135 .",
+        "text": "Which operating system do you prefer?", "node": "world.tech.computers_hardware", "cap": ("P178", 4),
+        "keep_case": True, "exclude": {"Q44571": "used as a component of GNU/Linux (GNU)"},
+    },
+    "birds": {
+        "where": "?item wdt:P105 wd:Q7432 ; wdt:P171* wd:Q5113 .",
+        "text": "Which bird do you like more?", "node": "world.nature.birds", "common_name": True,
+    },
+}
 PAIRS_PER_CATEGORY = TOP * (TOP - 1) // 2
 N_CATEGORIES = env_int("TARGET_GOAT_PAIRS", len(CATEGORIES) * PAIRS_PER_CATEGORY) // PAIRS_PER_CATEGORY
-ACTIVE = dict(list((CATEGORIES | WAVE4_CATEGORIES).items())[:N_CATEGORIES])
+ACTIVE = dict(list((CATEGORIES | WAVE4_CATEGORIES | WAVE5_CATEGORIES).items())[:N_CATEGORIES])
 
 
 def _sparql(query: str) -> list[dict]:
@@ -383,6 +450,8 @@ def _top(name: str, cat: dict, raw_dir: Path) -> list[dict]:
         q = r["item"]
         it = data["items"].get(q) or {}
         label = rename.get(q) or it.get("label")
+        if label and "strip" in cat:
+            label = re.sub(cat["strip"], "", label)
         if q in seen_q or q in exclude or not label or ("only" in cat and q not in cat["only"]):
             continue
         seen_q.add(q)
@@ -390,7 +459,7 @@ def _top(name: str, cat: dict, raw_dir: Path) -> list[dict]:
             continue
         if cat.get("common_name") and label in it.get("P225", []):  # only a scientific name, no English one
             continue
-        name_ = _display(label)
+        name_ = label if cat.get("keep_case") else _display(label)
         slug = _slug(name_)
         if not slug or slug in seen_slug:
             continue
