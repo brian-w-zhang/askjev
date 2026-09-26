@@ -3,7 +3,7 @@ import { useMemo, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Vector3, type PerspectiveCamera } from "three";
 import { useStore } from "@/lib/store";
-import { anim } from "@/lib/anim";
+import { anim, introDone, now } from "@/lib/anim";
 import type { Placed } from "@/lib/layout";
 import { overlaps, uiRects, type Rect } from "@/lib/uirects";
 import { assign, cards, moveCard, NODE_LABELS, nodeSlots, place, publish } from "@/lib/overlay";
@@ -51,6 +51,8 @@ export function Labels({ placed }: { placed: Map<string, Placed> }) {
         const extPx = (p.ext > p.ball + 0.01 ? p.ext : p.ball) * sc.ppu;
         const forced = onPath.has(p.id) || sel === p.id || s.hovered === p.id;
         if (!forced && extPx < SHOW_PX[di] && !kids.has(p.id)) continue;
+        // while forming, only the three hemispheres are named, each once its questions have gathered
+        if (!introDone() && (n.depth > 1 || now() * 1000 < (s.born[p.id] ?? 0) + 900)) continue;
         const w = Math.min(n.label.length, 34) * FONT_PX[di] * CHAR_W[di] + 12;
         const h = FONT_PX[di] + 4;
         const y = sc.y - lift(p, sc.ppu);

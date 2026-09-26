@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useStore } from "@/lib/store";
 import { cards, nodeSlots, starSlots, useOverlay } from "@/lib/overlay";
-import { selectNode } from "@/lib/actions";
+import { openStar, selectNode } from "@/lib/actions";
 import { loadTexts, starData, starText } from "@/lib/stars";
 
 // HTML over the canvas (docs/07-ui.md, Look): node labels, question labels, and hover cards.
@@ -12,7 +12,7 @@ export function SkyOverlay() {
   const nodes = useOverlay((s) => s.nodes);
   const stars = useOverlay((s) => s.stars);
   return (
-    <div className="skylabels" aria-hidden>
+    <div className="skylabels" aria-hidden onWheel={forwardWheel}>
       {nodes.map((l, i) => (
         <div
           key={`n${i}`}
@@ -25,7 +25,13 @@ export function SkyOverlay() {
         </div>
       ))}
       {stars.map((l, i) => (
-        <div key={`s${i}`} ref={(el) => { starSlots[i].el = el; }} className={`skylabel ${l.cls}`} style={{ opacity: 0 }}>
+        <div
+          key={`s${i}`}
+          ref={(el) => { starSlots[i].el = el; }}
+          className={`skylabel ${l.cls}`}
+          style={{ opacity: 0 }}
+          onClick={() => { const k = starSlots[i].key; if (k !== null) openStar(k); }}
+        >
           {l.text}
         </div>
       ))}
@@ -35,6 +41,15 @@ export function SkyOverlay() {
       <Destination />
     </div>
   );
+}
+
+/**
+ * Labels take clicks, so a scroll over one would otherwise stop there. Hand it to the canvas instead, so
+ * zooming works wherever the pointer is.
+ */
+function forwardWheel(e: React.WheelEvent) {
+  const canvas = document.querySelector<HTMLCanvasElement>(".stage canvas");
+  canvas?.dispatchEvent(new WheelEvent("wheel", { ...e.nativeEvent, deltaX: e.deltaX, deltaY: e.deltaY, deltaMode: e.deltaMode, clientX: e.clientX, clientY: e.clientY, ctrlKey: e.ctrlKey, bubbles: true, cancelable: true }));
 }
 
 /** The journey's walker: a glowing dot with a chip saying who is walking, where, and how sure Jev was. */
@@ -53,7 +68,7 @@ function Walker() {
   );
 }
 
-/** Where the journey ends: a lit ring on the question's dot, with its text. */
+/** Where the journey ends: crop-mark brackets around the question's dot (as on typesafe.ai), with its text. */
 function Destination() {
   const i = useStore((s) => s.focusStar);
   const [, loaded] = useState(0);
@@ -67,7 +82,7 @@ function Destination() {
   const q = i >= 0 ? starText(i) : undefined;
   return (
     <div ref={(el) => { cards.dest = el; }} className="dest skycard" style={{ visibility: "hidden" }}>
-      <i className="dest-ring" />
+      <i className="dest-mark" aria-hidden><b /><b /><b /><b /></i>
       {q && <div className="dest-callout">{q.label}</div>}
     </div>
   );
@@ -102,7 +117,8 @@ function StarCard() {
     loadTexts(d.nodeIds[d.node[hoverStar]]).then(() => live && loaded((x) => x + 1));
     return () => { live = false; };
   }, [hoverStar]);
-  const q = hoverStar >= 0 ? starText(hoverStar) : undefined;
+  const focusStar = useStore((s) => s.focusStar);
+  const q = hoverStar >= 0 && hoverStar !== focusStar ? starText(hoverStar) : undefined;
   return (
     <div ref={(el) => { cards.star = el; }} className="hovercard star-card skycard" style={{ visibility: "hidden" }}>
       {q && (

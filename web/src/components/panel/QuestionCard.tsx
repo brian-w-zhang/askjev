@@ -1,10 +1,11 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import { useStore } from "@/lib/store";
-import { openQuestion, selectNode, travel } from "@/lib/actions";
-import { HEMI_COLOR } from "@/lib/layout";
+import { jevFile, openQuestion, selectNode, travel, type Walk } from "@/lib/actions";
 import type { Hemisphere } from "@/lib/types";
 import { Crumbs, pct } from "./Panel";
+import { questionUrl } from "@/lib/panelData";
+import { useResource } from "@/lib/cache";
 
 type Dist = Record<string, number>;
 interface Probe { id: string; frame: string; variant_kind: string; variant_params: Record<string, unknown> | null; request_hash: string; model_served: string | null; distribution: Dist; confidence: number | null }
@@ -44,26 +45,14 @@ function truthKey(t: unknown): string | undefined {
 }
 
 export function QuestionCard({ id, note, onClose }: { id: string; note?: string; onClose: () => void }) {
-  const [d, setD] = useState<QData | null>(null);
-  const [err, setErr] = useState<string | null>(null);
-  const [frame, setFrame] = useState<string>("self");
-  const [pop, setPop] = useState<string>("");
+  const { data: d, error: err } = useResource<QData>(questionUrl(id));
+  const [frameSel, setFrame] = useState<string | null>(null);
+  const [popSel, setPop] = useState<string | null>(null);
   const selected = useStore((s) => s.selected);
-
-  useEffect(() => {
-    let live = true;
-    fetch(`/api/question/${encodeURIComponent(id)}`)
-      .then((r) => r.json())
-      .then((x) => {
-        if (!live) return;
-        if (x.error) return setErr(x.error);
-        setD(x);
-        const frames = new Set((x as QData).probes.filter((p) => p.variant_kind === "base").map((p) => p.frame));
-        setFrame(frames.has("self") ? "self" : [...frames][0] ?? "self");
-        setPop((x as QData).human[0]?.population ?? "");
-      });
-    return () => { live = false; };
-  }, [id]);
+  // defaults until the reader picks: Jev's own frame, and the first human population
+  const baseFrames = d ? new Set(d.probes.filter((p) => p.variant_kind === "base").map((p) => p.frame)) : null;
+  const frame = frameSel ?? (baseFrames && !baseFrames.has("self") ? [...baseFrames][0] ?? "self" : "self");
+  const pop = popSel ?? d?.human[0]?.population ?? "";
 
   // Light the path to this question's node when the card opens from somewhere else.
   useEffect(() => {
@@ -89,7 +78,7 @@ export function QuestionCard({ id, note, onClose }: { id: string; note?: string;
 
   const { question: q, meta } = d;
   const isSelf = q.hemisphere === "self";
-  const color = HEMI_COLOR[q.hemisphere];
+  const color = `var(--${q.hemisphere === "root" ? "ink" : q.hemisphere})`;
   const dist = view.main?.distribution;
   const top = argmax(dist);
   const hd = d.human.find((h) => h.population === pop)?.distribution;
@@ -120,6 +109,8 @@ export function QuestionCard({ id, note, onClose }: { id: string; note?: string;
             </pre>
           )}
         </section>
+
+        <JevFile key={q.id} text={q.text} stored={d.ancestors.map((x) => x.id)} />
 
         <section>
           <div className="framebar">
@@ -278,5 +269,41 @@ export function QuestionCard({ id, note, onClose }: { id: string; note?: string;
         </section>
       </div>
     </>
+  );
+}
+
+/**
+ * "How would Jev file this?": on demand, Jev walks the tree for the question's text (one /api/walk call) and
+ * the sky shows its green path beside the ink path of where the question is stored.
+ */
+function JevFile({ text, stored }: { text: string; stored: string[] }) {
+  const nodes = useStore((s) => s.nodes);
+  const [st, setSt] = useState<{ state: "idle" | "walking" | "done" | "error"; walk?: Walk; error?: string }>({ state: "idle" });
+  const label = (id: string) => nodes[id]?.label ?? id.split(".").pop();
+  const go = async () => {
+    setSt({ state: "walking" });
+    const w = await jevFile(text, stored);
+    setSt("error" in w ? { state: "error", error: w.error } : { state: "done", walk: w });
+  };
+  const here = stored[stored.length - 1];
+  const w = st.walk;
+  return (
+    <section>
+      <h4>
+        Where Jev would file it
+        {st.state !== "walking" && (
+          <button className="chipbtn" onClick={go}>{st.state === "done" ? "Walk again" : "Ask Jev"}</button>
+        )}
+      </h4>
+      {st.state === "idle" && <p className="note">Jev walks the tree for this question, one decision per level, and the sky shows its path next to where the question is stored.</p>}
+      {st.state === "walking" && <div className="working"><span className="spinner" />Jev is walking the tree</div>}
+      {st.state === "error" && <p className="err">Jev&apos;s walk is unavailable ({st.error}).</p>}
+      {st.state === "done" && w && (
+        <p className="desc">
+          <span className="tag gold">Jev</span> files it under <b>{label(w.node)}</b> <span className="num">({Math.round(w.confidence * 100)}% path confidence)</span>.{" "}
+          {w.node === here ? "That’s where it’s stored." : <>It&apos;s stored under <b>{label(here)}</b>; the green and ink trails show where they part.</>}
+        </p>
+      )}
+    </section>
   );
 }

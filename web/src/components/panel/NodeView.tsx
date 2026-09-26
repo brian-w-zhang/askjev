@@ -1,6 +1,8 @@
 "use client";
-import { useEffect, useState } from "react";
-import { filterQuery, useStore } from "@/lib/store";
+import { useState } from "react";
+import { useStore } from "@/lib/store";
+import { useResource, prefetch } from "@/lib/cache";
+import { nodeUrl, questionUrl } from "@/lib/panelData";
 import { openQuestion, selectNode } from "@/lib/actions";
 import { attention, rampColor } from "@/lib/color";
 import type { Indicator } from "@/lib/types";
@@ -23,29 +25,28 @@ const IND: { k: Indicator | "fragile_share"; label: string; fmt: (v: number) => 
   { k: "calibration_ece", label: "Calibration error", fmt: (v) => v.toFixed(3) },
   { k: "fragile_share", label: "Fragile questions", fmt: (v) => `${Math.round(v * 100)}%` },
 ];
-const KIND_COLORS = ["#4B5BD6", "#F386A1", "#E8663D", "#D45BB6", "#7D89E6", "#1E1E1E", "#ABBAB9", "#E9A23B"];
+const KIDS_SHOWN = 12;
+const KIND_COLORS = ["#4B5BD6", "#F386A1", "#E8663D", "#D45BB6", "#7D89E6", "var(--ink)", "#ABBAB9", "#E9A23B"];
 
 export function NodeView({ id, onClose }: { id: string; onClose: () => void }) {
   const filters = useStore((s) => s.filters);
   const showHidden = useStore((s) => s.showHidden);
   const [scope, setScope] = useState<"subtree" | "direct">("subtree");
-  const [data, setData] = useState<NodeData | null>(null);
-  const [extra, setExtra] = useState<NodeData["questions"]>([]);
-  const [err, setErr] = useState<string | null>(null);
-
-  useEffect(() => {
-    let live = true;
-    fetch(`/api/node/${encodeURIComponent(id)}?scope=${scope}${filterQuery(filters, showHidden)}`)
-      .then((r) => r.json())
-      .then((d) => { if (live) { if (d.error) setErr(d.error); else { setData(d); setExtra([]); } } });
-    return () => { live = false; };
-  }, [id, scope, filters, showHidden]);
+  const url = nodeUrl(id, scope, filters, showHidden);
+  const { data: fresh, error: err } = useResource<NodeData>(url);
+  // switching scope keeps the list on screen until the other one arrives
+  const [last, setLast] = useState<NodeData | undefined>(fresh);
+  if (fresh && fresh !== last) setLast(fresh);
+  const data = fresh ?? last;
+  const [extra, setExtra] = useState<{ url: string; qs: NodeData["questions"] }>({ url, qs: [] });
+  const [allKids, setAllKids] = useState(false);
 
   const loadMore = async () => {
     if (!data) return;
-    const off = data.questions.length + extra.length;
-    const d = await fetch(`/api/node/${encodeURIComponent(id)}?scope=${scope}&offset=${off}${filterQuery(filters, showHidden)}`).then((r) => r.json());
-    setExtra((e) => [...e, ...d.questions]);
+    const more = extra.url === url ? extra.qs : [];
+    const off = data.questions.length + more.length;
+    const d = await fetch(`${url}&offset=${off}`).then((r) => r.json());
+    setExtra({ url, qs: [...more, ...d.questions] });
   };
 
   if (err) return <div className="panel-body"><p className="err">{err}</p></div>;
@@ -54,7 +55,7 @@ export function NodeView({ id, onClose }: { id: string; onClose: () => void }) {
   const sub = data.stats.find((s) => s.scope === "subtree");
   const kinds = Object.entries(sub?.kind_counts ?? {}).sort((a, b) => b[1] - a[1]);
   const kindTotal = kinds.reduce((s, [, v]) => s + v, 0);
-  const qs = [...data.questions, ...extra];
+  const qs = [...data.questions, ...(extra.url === url ? extra.qs : [])];
 
   return (
     <>
@@ -63,13 +64,38 @@ export function NodeView({ id, onClose }: { id: string; onClose: () => void }) {
         <section>
           <div className="tags">
             <span className={`tag hemi-${node.hemisphere}`}>{node.hemisphere === "root" ? "Whole tree" : node.hemisphere}</span>
-            <span className="tag num">{sub?.n_questions ?? 0} question{sub?.n_questions === 1 ? "" : "s"}</span>
+            <span className="tag num">{(sub?.n_questions ?? 0).toLocaleString()} question{sub?.n_questions === 1 ? "" : "s"}</span>
             {(sub?.n_asked ?? 0) > 0 && <span className="tag gold num">{sub?.n_asked} asked here</span>}
           </div>
           <h2 className="title">{node.label}</h2>
           <p className="desc">{node.description}</p>
           {node.not_for && <p className="note">Not here: {node.not_for}</p>}
           {node.examples?.length > 0 && <p className="note">For example: {node.examples.map((e) => `“${e}”`).join("  ")}</p>}
+        </section>
+
+        <section>
+          <ol className="trail">
+            {data.ancestors.slice(0, -1).map((a, i) => (
+              <li key={a.id} style={{ ["--d" as string]: i }}>
+                <button onClick={() => selectNode(a.id)} onPointerEnter={() => prefetch(nodeUrl(a.id))}>{i === 0 ? "All questions" : a.label}</button>
+              </li>
+            ))}
+            <li className="here" style={{ ["--d" as string]: data.ancestors.length - 1 }} aria-current="true">
+              <span>{node.label}</span>
+            </li>
+            {(allKids ? data.children : data.children.slice(0, KIDS_SHOWN)).map((c) => (
+              <li key={c.id} className="kid" style={{ ["--d" as string]: data.ancestors.length }}>
+                <button onClick={() => selectNode(c.id)} onPointerEnter={() => prefetch(nodeUrl(c.id))}>
+                  {c.label}<small className="num">{c.n_questions.toLocaleString()}</small>
+                </button>
+              </li>
+            ))}
+          </ol>
+          {data.children.length > KIDS_SHOWN && (
+            <button className="more" onClick={() => setAllKids(!allKids)}>
+              {allKids ? "Fewer subtopics" : `All ${data.children.length} subtopics`}
+            </button>
+          )}
         </section>
 
         <section>
@@ -110,19 +136,6 @@ export function NodeView({ id, onClose }: { id: string; onClose: () => void }) {
           </section>
         )}
 
-        {data.children.length > 0 && (
-          <section>
-            <h4>Subtopics <small className="num">{data.children.length}</small></h4>
-            <div className="chips">
-              {data.children.map((c) => (
-                <button key={c.id} className="chip" onClick={() => selectNode(c.id)}>
-                  {c.label}<small className="num">{c.n_questions}</small>
-                </button>
-              ))}
-            </div>
-          </section>
-        )}
-
         <section>
           <h4>
             Questions <small className="num">{data.total}</small>
@@ -134,7 +147,7 @@ export function NodeView({ id, onClose }: { id: string; onClose: () => void }) {
           {qs.length === 0 && <p className="note">No questions here yet{filters.kind || filters.primitive || filters.origin ? " for these filters" : ""}. Use the ask box to add one.</p>}
           <div className="qlist">
             {qs.map((qq) => (
-              <button key={qq.id} className="qitem" data-testid="question-item" onClick={() => openQuestion(qq.id)}>
+              <button key={qq.id} className="qitem" data-testid="question-item" onClick={() => openQuestion(qq.id)} onPointerEnter={() => prefetch(questionUrl(qq.id))}>
                 <span className="qt">{qq.text}</span>
                 <span className="qm">
                   <span>{qq.primitive}</span>

@@ -1,6 +1,6 @@
 import { Color } from "three";
 import type { Indicator, TreeNode } from "./types";
-import { HEMI_COLOR } from "./layout";
+import { THEMES, type Theme } from "./theme";
 
 // "Attention" 0..1 per indicator: 1 = where Jev is jagged or worth a look. Never a grade.
 export const INDICATORS: { id: Indicator; label: string; hint: string }[] = [
@@ -29,7 +29,6 @@ const clamp = (x: number) => Math.max(0, Math.min(1, x));
 
 // steady = calm blue, worth a look = magenta (TypeSafe palette); no data fades into the sky
 const RAMP = [new Color("#7D89E6"), new Color("#F386A1"), new Color("#D45BB6")];
-const NODATA = new Color("#BFDDF3");
 
 export function rampColor(t: number, out = new Color()): Color {
   if (t <= 0.5) return out.copy(RAMP[0]).lerp(RAMP[1], t / 0.5);
@@ -38,25 +37,26 @@ export function rampColor(t: number, out = new Color()): Color {
 
 export const RAMP_CSS = "linear-gradient(90deg, #7D89E6, #F386A1, #D45BB6)";
 
-export function nodeColor(n: TreeNode, ind: Indicator, out = new Color()): Color {
-  if (ind === "hemisphere") return out.set(HEMI_COLOR[n.hemisphere]);
+export function nodeColor(n: TreeNode, ind: Indicator, theme: Theme, out = new Color()): Color {
+  if (ind === "hemisphere") return out.set(THEMES[theme].hemi[n.hemisphere]);
   const a = attention(n, ind);
-  if (a === null) return out.copy(NODATA);
+  if (a === null) return out.set(THEMES[theme].nodata);
   return rampColor(a, out);
 }
 
-// Nebula palette: each hemisphere spans a small hue range, and each L1 branch takes its own shade of it,
+// Each hemisphere spans a small hue range (lib/theme.ts), and each L1 branch takes its own shade of it,
 // so neighbouring branches read as different clouds.
-const PALETTE: Record<string, Color[]> = {
-  world: [new Color("#3A48B8"), new Color("#4B5BD6"), new Color("#7D89E6")],
-  self: [new Color("#E86F90"), new Color("#F386A1"), new Color("#F7A8BC")],
-  machine: [new Color("#D9542B"), new Color("#E8663D"), new Color("#F09A6E")],
-  root: [new Color("#1E1E1E"), new Color("#1E1E1E"), new Color("#1E1E1E")],
-};
+const shades = new Map<string, Color[]>();
 
 /** Branch shade: `t` in 0..1 is the L1 branch's position among its siblings. */
-export function branchColor(hemisphere: string, t: number, out = new Color()): Color {
-  const p = PALETTE[hemisphere] ?? PALETTE.root;
+export function branchColor(hemisphere: string, t: number, theme: Theme, out = new Color()): Color {
+  const key = theme + hemisphere;
+  let p = shades.get(key);
+  if (!p) {
+    const b = THEMES[theme].branches;
+    p = (b[hemisphere as keyof typeof b] ?? b.root).map((c) => new Color(c));
+    shades.set(key, p);
+  }
   if (t <= 0.5) return out.copy(p[0]).lerp(p[1], t / 0.5);
   return out.copy(p[1]).lerp(p[2], (t - 0.5) / 0.5);
 }

@@ -1,8 +1,10 @@
 "use client";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useStore } from "@/lib/store";
-import { HEMI_COLOR } from "@/lib/layout";
 import { feelingLucky, journey } from "@/lib/actions";
+import { starData } from "@/lib/stars";
+import { ToolPanel, ToolTabs } from "./Tools";
+import { Mic } from "./Mic";
 import type { NodeHit, SearchHit } from "@/lib/types";
 
 interface Rerank { state: "idle" | "waiting" | "done" | "error"; ms?: number; cached?: boolean; error?: string }
@@ -16,10 +18,24 @@ export function Search() {
   const [latency, setLatency] = useState<number | null>(null);
   const [rerank, setRerank] = useState<Rerank>({ state: "idle" });
   const showHidden = useStore((s) => s.showHidden);
-  const showJevPath = useStore((s) => s.showJevPath);
-  const walk = useStore((s) => s.jevWalk);
-  const nodes = useStore((s) => s.nodes);
+  const tool = useStore((s) => s.tool);
+  const theme = useStore((s) => s.theme);
+  const ready = useStore((s) => s.starsReady);
   const seq = useRef(0);
+  const inputRef = useRef<HTMLInputElement>(null);
+  // "/" or ⌘K / Ctrl+K jumps to the box from anywhere (as on typesafe.ai's docs and most search UIs)
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      const typing = (e.target as HTMLElement | null)?.closest("input, textarea, select, [contenteditable]");
+      if ((e.key === "k" && (e.metaKey || e.ctrlKey)) || (e.key === "/" && !typing)) {
+        e.preventDefault();
+        inputRef.current?.focus();
+        inputRef.current?.select();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
   const rerankTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const listRef = useRef<HTMLDivElement>(null);
   const tops = useRef(new Map<string, number>());
@@ -99,13 +115,13 @@ export function Search() {
     const top = hits[0]?.score || 1;
     for (const r of hits) for (const p of r.path) rel[p.id] = Math.max(rel[p.id] ?? 0, Math.max(0, r.score / top) * 0.8);
     useStore.getState().set({ relevance: rel, panel: { kind: "none" } });
-    await journey({ query: q.trim(), path: h.path.map((p) => p.id), questionId: h.id });
+    await journey({ path: h.path.map((p) => p.id), questionId: h.id });
   }
 
   async function chooseNode(n: NodeHit) {
     setOpen(false);
     useStore.getState().set({ relevance: {} });
-    await journey({ query: q.trim(), path: n.path.map((p) => p.id) });
+    await journey({ path: n.path.map((p) => p.id) });
   }
 
   function ask() {
@@ -127,33 +143,52 @@ export function Search() {
     else if (e.key === "Escape") setOpen(false);
   };
 
-  const label = (id: string) => nodes[id]?.label ?? id.split(".").pop();
-  const agrees = walk.node && walk.node === walk.target;
 
   return (
     <div className="search">
-      <div className="search-field" data-title="Search.Questions 1.1">
+      <div className="finder">
+        <div className="finder-title">
+          <span className="brand">askjev</span>
+          <span className="count num">{ready ? `${(starData()?.count ?? 0).toLocaleString()} questions` : "Loading questions"}</span>
+          <button
+            className="themebtn"
+            onClick={() => useStore.getState().set({ theme: theme === "light" ? "dark" : "light" })}
+            aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+            title={theme === "light" ? "Dark mode" : "Light mode"}
+          >
+            <span aria-hidden>{theme === "light" ? "☾" : "☀"}</span>
+            {theme === "light" ? "Dark" : "Light"}
+          </button>
+        </div>
+        <div className="search-field">
+        <label className="qbox">
+        <svg className="qicon" viewBox="0 0 16 16" aria-hidden shapeRendering="crispEdges">
+          <path d="M6.5 2.5a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z M9.5 9.5 13.5 13.5" fill="none" stroke="currentColor" strokeWidth="1.6" />
+        </svg>
         <input
+          ref={inputRef}
           data-testid="search"
           value={q}
           onChange={(e) => {
             setQ(e.target.value);
             if (!e.target.value.trim()) { setHits([]); setNodeHits([]); setLatency(null); setRerank({ state: "idle" }); }
           }}
-          onFocus={() => hits.length && setOpen(true)}
+          onFocus={() => { useStore.getState().set({ tool: null }); if (hits.length) setOpen(true); }}
           onKeyDown={onKey}
-          placeholder="Search or ask, like best pizza topping"
+          placeholder="Ask Jev anything"
           aria-label="Search questions or ask Jev"
           role="combobox"
           aria-expanded={open}
           aria-controls="search-results"
         />
         {latency !== null && q.trim() && <span className="search-meta num" data-testid="latency">{Math.round(latency)} ms</span>}
-        <button className="lucky" onClick={lucky} title="Fly to a random question">
-          I&apos;m feeling lucky
-        </button>
+        </label>
+        <Mic onText={(t) => { setQ(t); if (!t) { setHits([]); setNodeHits([]); } inputRef.current?.focus(); }} />
+        </div>
+        <ToolTabs onLucky={lucky} />
       </div>
-      {open && q.trim() && (
+      <ToolPanel />
+      {open && q.trim() && !tool && (
         <div className="results" id="search-results" role="listbox" ref={listRef} data-title="Results">
           <div className="results-status">
             <span className="num">{hits.length} match{hits.length === 1 ? "" : "es"}</span>
@@ -174,7 +209,7 @@ export function Search() {
               onMouseEnter={() => setActive(i)}
               onClick={() => choose(h)}
             >
-              <span className="dot" style={{ background: HEMI_COLOR[h.hemisphere] }} />
+              <span className="dot" style={{ background: `var(--${h.hemisphere})` }} />
               <span className="text">{h.text}</span>
               <span className="p num">
                 {h.jev_p != null && (
@@ -190,7 +225,7 @@ export function Search() {
           {nodeHits.length > 0 && <h3>Topics</h3>}
           {nodeHits.map((n) => (
             <button key={n.id} className="result" onClick={() => chooseNode(n)}>
-              <span className="dot" style={{ background: HEMI_COLOR[n.hemisphere] }} />
+              <span className="dot" style={{ background: `var(--${n.hemisphere})` }} />
               <span className="text">{n.label}</span>
               <span className="p" />
               <span className="where">{n.path.slice(1, -1).map((p) => p.label).join(" / ") || "Hemisphere"}</span>
@@ -199,21 +234,6 @@ export function Search() {
           <button className="askrow" onClick={ask}>
             <span>Ask Jev</span> &ldquo;{q.trim()}&rdquo;
           </button>
-        </div>
-      )}
-      {!open && walk.state !== "idle" && showJevPath && (
-        <div className="walkcard" data-testid="walkcard" data-title="Jev.Walk">
-          <p className="walk-body">
-            {walk.state === "walking" && <>Jev is walking the tree for &ldquo;{walk.query}&rdquo;, one decision per level.</>}
-            {walk.state === "error" && <>Jev&apos;s walk is unavailable ({walk.error}), so the tree path runs alone.</>}
-            {walk.state === "done" && walk.node && (
-              <>
-                <span className="gold">Jev</span> filed it under <b>{label(walk.node)}</b>{" "}
-                <span className="num">({Math.round((walk.confidence ?? 0) * 100)}% path confidence)</span>.{" "}
-                {agrees ? "The question you picked lives there too." : <>The question you picked lives under <b>{label(walk.target!)}</b>; the ink hop shows where the paths part.</>}
-              </>
-            )}
-          </p>
         </div>
       )}
     </div>

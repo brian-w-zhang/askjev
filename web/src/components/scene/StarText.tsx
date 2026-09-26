@@ -3,10 +3,10 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { Vector3, type PerspectiveCamera } from "three";
 import { useStore } from "@/lib/store";
-import { anim, now } from "@/lib/anim";
+import { anim, introDone, now } from "@/lib/anim";
 import { starAttention } from "@/lib/color";
 import { loadTexts, metric, starData, starText, starWorld } from "@/lib/stars";
-import { landOnStar, openQuestion } from "@/lib/actions";
+import { openStar } from "@/lib/actions";
 import { overlaps, uiRects } from "@/lib/uirects";
 import { assign, cards, moveCard, place, publish, STAR_LABELS, starSlots } from "@/lib/overlay";
 import type { Placed } from "@/lib/layout";
@@ -69,7 +69,10 @@ export function StarText() {
     const cam = camera as PerspectiveCamera;
     const t = now();
     const s = useStore.getState();
-    if (frame.current++ % 8 === 0) {
+    // while the camera is flying, labels would reshuffle every few frames: let them fade until it lands
+    const moving = !!anim.flight || !!anim.follow || !introDone();
+    if (moving) assign(slots, []);
+    else if (frame.current++ % 8 === 0) {
       const near = nodesOnScreen(cam, size.width, size.height, TEXT_PX, v).slice(0, 5);
       for (const { p } of near) loadTexts(p.id).then(() => bump((x) => x + 1));
       // candidates: stars with loaded text, projected
@@ -147,17 +150,8 @@ function StarPicker() {
       mouse.current.down = null;
       if (!dn || Math.hypot(e.clientX - dn[0], e.clientY - dn[1]) > 5) return; // a drag, not a click
       const s = useStore.getState();
-      const d = starData();
-      if (s.hoverStar < 0 || s.hovered || !d) return;
-      const i = s.hoverStar;
-      const nodeId = d.nodeIds[d.node[i]];
-      loadTexts(nodeId).then(async () => {
-        const q = starText(i);
-        if (!q) return;
-        s.set({ selected: nodeId });
-        await landOnStar(i, 1.0);
-        openQuestion(q.id);
-      });
+      if (s.hoverStar < 0 || s.hovered) return;
+      openStar(s.hoverStar);
     };
     el.addEventListener("pointermove", move);
     el.addEventListener("pointerleave", leave);
@@ -180,7 +174,7 @@ function StarPicker() {
       m.dirty = false;
       let best = -1;
       let bestD = PICK_PX;
-      if (!s.hovered) {
+      if (!s.hovered && !anim.flight && introDone()) {
         for (const { p, px, sx, sy } of nodesOnScreen(camera as PerspectiveCamera, size.width, size.height, PICK_PX, v)) {
           if (Math.hypot(sx - m.x, sy - m.y) > px * 1.15 + PICK_PX) continue; // pointer isn't over this ball
           const off = d.offsets.get(p.id)!;

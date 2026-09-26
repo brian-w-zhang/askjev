@@ -4,7 +4,8 @@ import { useFrame } from "@react-three/fiber";
 import { NormalBlending, BufferAttribute, BufferGeometry, Color, ShaderMaterial } from "three";
 import { useStore } from "@/lib/store";
 import { anim, now, progress } from "@/lib/anim";
-import { edgePoint, HEMI_COLOR, PATH_A_COLOR, PATH_B_COLOR, type Placed } from "@/lib/layout";
+import { edgePoint, type Placed } from "@/lib/layout";
+import { JEV_GREEN, THEMES } from "@/lib/theme";
 
 const SEG = 24;
 
@@ -58,6 +59,7 @@ export function Edges({ placed }: { placed: Map<string, Placed> }) {
   const pathA = useStore((s) => s.pathA);
   const pathB = useStore((s) => s.pathB);
   const relevance = useStore((s) => s.relevance);
+  const theme = useStore((s) => s.theme);
   const filtersActive = useStore((s) => !!(s.filters.kind || s.filters.primitive || s.filters.origin));
 
   const material = useMemo(
@@ -72,12 +74,16 @@ export function Edges({ placed }: { placed: Map<string, Placed> }) {
           uTime: { value: 0 },
           uProgA: { value: -1 },
           uProgB: { value: -1 },
-          uColA: { value: new Color(PATH_A_COLOR) },
-          uColB: { value: new Color(PATH_B_COLOR) },
+          uColA: { value: new Color(THEMES.light.ink) },
+          uColB: { value: new Color(JEV_GREEN) },
         },
       }),
     [],
   );
+
+  useEffect(() => {
+    material.uniforms.uColA.value.set(THEMES[theme].ink);
+  }, [material, theme]);
 
   const { geometry, ranges } = useMemo(() => {
     const edges: [Placed, Placed, string][] = [];
@@ -98,7 +104,7 @@ export function Edges({ placed }: { placed: Map<string, Placed> }) {
     let v = 0;
     for (const [p, ch, id] of edges) {
       const start = v;
-      c.set(HEMI_COLOR[nodes[id].hemisphere]);
+      c.set(THEMES[theme].hemi[nodes[id].hemisphere]);
       const b = (born[id] ?? 0) / 1000;
       for (let s = 0; s < SEG; s++) {
         for (const t of [s / SEG, (s + 1) / SEG]) {
@@ -121,7 +127,7 @@ export function Edges({ placed }: { placed: Map<string, Placed> }) {
     g.setAttribute("aBorn", new BufferAttribute(aBorn, 1));
     for (const name of ["aA", "aB", "aDim", "aRel"]) g.setAttribute(name, new BufferAttribute(new Float32Array(nv), 1));
     return { geometry: g, ranges };
-  }, [placed, nodes, born]);
+  }, [placed, nodes, born, theme]);
 
   useEffect(() => () => geometry.dispose(), [geometry]);
 

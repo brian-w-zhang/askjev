@@ -1,6 +1,10 @@
 "use client";
 import { create } from "zustand";
 import type { Filters, Indicator, TreeNode } from "./types";
+import type { LayoutKind, V3 } from "./layout";
+import type { Theme } from "./theme";
+
+export type ToolId = "layout" | "color" | "filters";
 
 export type PanelView =
   | { kind: "node"; id: string }
@@ -8,24 +12,27 @@ export type PanelView =
   | { kind: "ask"; text?: string }
   | { kind: "none" };
 
-/** Jev's live walk of the current query (the green journey). `target` is where the chosen question lives. */
-export interface JevWalk { state: "idle" | "walking" | "done" | "error"; query?: string; node?: string; confidence?: number; error?: string; target?: string }
 
 interface State {
   nodes: Record<string, TreeNode>;
   children: Record<string, string[]>; // parent id -> ordered child ids (present once expanded)
   born: Record<string, number>; // node id -> performance.now() when it arrived (grow-in animation)
   indicator: Indicator;
+  layout: LayoutKind; // how the nebula is arranged (docs/07-ui.md, Layouts)
+  theme: Theme;
+  tool: ToolId | null; // the search window's open tool panel
+  canBack: boolean; // the side panel has somewhere to go back to
+  canForward: boolean;
+  layoutTick: number; // bumps when a layout computed in the background is ready
+  semantic: Record<string, V3> | null; // node positions for the semantic layout, once loaded
   filters: Filters;
   showHidden: boolean;
-  showJevPath: boolean;
   panel: PanelView;
   selected: string | null;
   hovered: string | null;
   hoverStar: number; // star index under the pointer, -1 for none
   starsReady: boolean;
   focusStar: number; // the question dot a search or "feeling lucky" flight landed on, -1 for none
-  jevWalk: JevWalk;
   pathA: string[]; // embedding path (root → result node)
   pathB: string[]; // Jev's own walk
   relevance: Record<string, number>; // node id -> 0..1 search relevance (branches brighten)
@@ -38,16 +45,21 @@ export const useStore = create<State>((set) => ({
   children: {},
   born: {},
   indicator: "hemisphere",
+  layout: "force",
+  theme: "light",
+  tool: null,
+  canBack: false,
+  canForward: false,
+  layoutTick: 0,
+  semantic: null,
   filters: { kind: "", primitive: "", origin: "" },
   showHidden: false,
-  showJevPath: true,
   panel: { kind: "none" },
   selected: null,
   hovered: null,
   hoverStar: -1,
   starsReady: false,
   focusStar: -1,
-  jevWalk: { state: "idle" },
   pathA: [],
   pathB: [],
   relevance: {},
@@ -111,4 +123,21 @@ export async function ensurePath(path: string[]): Promise<void> {
   const r = await fetch(`/api/tree?expand=${need.map(encodeURIComponent).join(",")}${filterQuery(filters, showHidden)}`);
   const { nodes } = (await r.json()) as { nodes: TreeNode[] };
   useStore.getState().mergeNodes(nodes, need);
+}
+
+let semanticLoad: Promise<void> | null = null;
+
+/** Node positions for the semantic layout (computed on the server from question embeddings, ~5 s cold). */
+export function loadSemantic(): Promise<void> {
+  semanticLoad ??= fetch("/api/layout")
+    .then((r) => r.json())
+    .then(({ coords }: { coords?: Record<string, V3> }) => {
+      if (!coords) throw new Error("no semantic layout");
+      useStore.getState().set({ semantic: coords });
+    })
+    .catch((e) => {
+      semanticLoad = null;
+      throw e;
+    });
+  return semanticLoad;
 }

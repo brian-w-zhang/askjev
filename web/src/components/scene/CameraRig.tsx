@@ -8,13 +8,13 @@ import { useStore } from "@/lib/store";
 import { starData, starWorld } from "@/lib/stars";
 
 const easeInOutCubic = (x: number) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);
-// Preferred viewing direction: above the sky, tilted toward the viewer.
-const UP_VIEW = new Vector3(0, 0.72, 0.69).normalize();
+// Preferred viewing direction: a little above the nebula, looking over it toward the horizon.
+const UP_VIEW = new Vector3(0, 0.18, 0.98).normalize(); // about 10° down: across the water to the horizon, sky behind the nebula
 
 /** Fly the camera to look at `to` from `dist` away (eased), cancelled by any user drag. */
-export function flyTo(to: [number, number, number], dist: number, dur = 1.1) {
+export function flyTo(to: [number, number, number], dist: number, dur = 1.1, turn = 0.35) {
   anim.follow = null;
-  anim.flight = { to, dist, t0: now(), dur };
+  anim.flight = { to, dist, t0: now(), dur, turn };
 }
 
 /** Distance that frames a node: its whole subtree for branches, its star ball for leaves. */
@@ -33,7 +33,7 @@ function followDist(id: string) {
   return Math.max(9, frameDist(id) * 0.75);
 }
 
-export function home(dur = 1.6) {
+export function home(dur = 1.6, turn = 0.35) {
   const ps = [...anim.placed.values()];
   if (!ps.length) return;
   const lo = [Infinity, Infinity, Infinity], hi = [-Infinity, -Infinity, -Infinity];
@@ -43,7 +43,10 @@ export function home(dur = 1.6) {
   const c: [number, number, number] = [(lo[0] + hi[0]) / 2, (lo[1] + hi[1]) / 2, (lo[2] + hi[2]) / 2];
   const d = ps.map((p) => Math.hypot(p.x - c[0], p.y - c[1], p.z - c[2])).sort((a, b) => a - b);
   const r = d[Math.floor(d.length * 0.95)];
-  flyTo(c, (r * 1.2) / Math.tan((21 * Math.PI) / 180), dur);
+  // fit the narrower of the two view angles (a phone held upright is narrower than it is tall)
+  const aspect = typeof window !== "undefined" ? window.innerWidth / Math.max(1, window.innerHeight) : 1;
+  const half = Math.atan(Math.tan((21 * Math.PI) / 180) * Math.min(1, aspect));
+  flyTo(c, (r * 1.2) / Math.tan(half), dur, turn);
 }
 
 export function CameraRig() {
@@ -53,6 +56,23 @@ export function CameraRig() {
   const dir = useMemo(() => new Vector3(), []);
   const star: [number, number, number] = useMemo(() => [0, 0, 0], []);
   const offset = useRef(0);
+
+  // Dev only: a handle for the screenshot harness (web/scripts/ui_shots.mjs) to put the camera anywhere.
+  useEffect(() => {
+    if (process.env.NODE_ENV === "production" || !controls) return;
+    (window as unknown as { __cam?: unknown }).__cam = {
+      set(pos: [number, number, number], target: [number, number, number]) {
+        anim.flight = null;
+        anim.follow = null;
+        anim.trackStar = -1;
+        anim.userMoved = now();
+        controls.target.set(...target);
+        controls.object.position.set(...pos);
+        controls.update();
+      },
+      get: () => ({ pos: controls.object.position.toArray(), target: controls.target.toArray(), flight: !!anim.flight }),
+    };
+  }, [controls]);
 
   useEffect(() => {
     if (!controls) return;
@@ -84,7 +104,7 @@ export function CameraRig() {
       const e = easeInOutCubic(x);
       tmpT.fromArray(f.from.target).lerp(tmpP.fromArray(f.to), e);
       // keep the current viewing angle, blended toward the preferred tilt, at the new distance
-      dir.fromArray(f.from.pos).sub(tmpP.fromArray(f.from.target)).normalize().lerp(UP_VIEW, 0.35 * e).normalize();
+      dir.fromArray(f.from.pos).sub(tmpP.fromArray(f.from.target)).normalize().lerp(UP_VIEW, (f.turn ?? 0.35) * e).normalize();
       const d0 = new Vector3().fromArray(f.from.pos).distanceTo(new Vector3().fromArray(f.from.target));
       const d = d0 + (f.dist - d0) * e;
       controls.target.copy(tmpT);

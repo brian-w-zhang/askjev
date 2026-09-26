@@ -1,7 +1,7 @@
 "use client";
 import { anim, lightMs, now, startLight } from "./anim";
 import { loadTexts, starData, starWorld } from "./stars";
-import { ensurePath, filterQuery, loadSubtree, useStore } from "./store";
+import { ensurePath, filterQuery, loadSubtree, useStore, type PanelView } from "./store";
 import { flyTo, frameDist } from "@/components/scene/CameraRig";
 import type { TreeNode } from "./types";
 
@@ -75,7 +75,7 @@ export async function landOnStar(i: number, dur = 1.4) {
   anim.trackStar = i;
 }
 
-const JOURNEY_PER_LEVEL = 0.6; // seconds per level on a journey: slow enough to read each node's chip
+const JOURNEY_PER_LEVEL = 0.45; // seconds per level on a journey: quick, but slow enough to read each node
 let journeyRun = 0;
 const last = <T,>(a: T[]) => a[a.length - 1];
 
@@ -90,66 +90,28 @@ async function fetchWalk(query: string): Promise<Walk | { error: string }> {
 }
 
 /**
- * The journey (docs/07-ui.md). Jev walks the tree for `query` from the root, one decision per level (green,
- * with its confidence at each node). If the chosen question lives elsewhere, an ink hop continues from where
- * the two paths part. Then the camera closes in on the question's dot and only then does its card open.
- * Without a query (or with "Show Jev's path" off) the ink tree path runs alone.
+ * The journey (docs/07-ui.md): from a search result or a lucky pick, the camera flies straight down the
+ * question's stored path, one level at a time behind a lit trail, closes in on the question's dot, and only
+ * then opens its card. No Jev call on the way: the result was already chosen by the embedding search and
+ * Jev's rerank. (Jev's own walk is on demand, from the card: `jevFile`.)
  */
-export async function journey(o: { query?: string; path: string[]; questionId?: string }) {
+export async function journey(o: { path: string[]; questionId?: string }) {
   const run = ++journeyRun;
   const live = () => run === journeyRun;
   const tree = o.path;
-  const s = useStore.getState();
-  const useJev = !!o.query?.trim() && s.showJevPath;
   anim.trackStar = -1;
   anim.fork = -1;
   anim.A.active = anim.B.active = false;
-  anim.journey = { phase: useJev ? "thinking" : "hop", probs: new Map() };
-  s.set({
-    panel: { kind: "none" }, focusStar: -1, pathA: [], pathB: [], selected: null,
-    jevWalk: useJev ? { state: "walking", query: o.query, target: last(tree) } : { state: "idle" },
-  });
-  // settle near the root while Jev reads the query
-  const root = anim.placed.get("root");
-  if (root) flyTo([root.x, root.y, root.z], frameDist("root") * 0.55, 1.1);
-  const t0 = performance.now();
-  let jev: string[] | null = null;
-  if (useJev) {
-    const w = await fetchWalk(o.query!);
-    if (!live()) return;
-    if ("error" in w) {
-      useStore.getState().set({ jevWalk: { state: "error", error: w.error, query: o.query, target: last(tree) } });
-    } else {
-      jev = ["root", ...w.path_probs.map((p) => p[0])];
-      anim.journey.probs = new Map(w.path_probs.map((p) => [p[0], p[2]]));
-      useStore.getState().set({ jevWalk: { state: "done", query: o.query, node: w.node, confidence: w.confidence, target: last(tree) } });
-    }
-  }
-  await sleep(Math.max(0, 1150 - (performance.now() - t0))); // the camera arrives before anyone walks
+  anim.journey = { phase: "hop", probs: new Map() };
+  useStore.getState().set({ panel: { kind: "none" }, focusStar: -1, pathA: [], pathB: [], selected: null });
+  await ensurePath(tree);
+  await frames(2); // let the layout pick up newly loaded rings
   if (!live()) return;
-
-  if (jev) {
-    anim.journey.phase = "jev";
-    useStore.getState().set({ pathB: jev });
-    startLight("B", jev, JOURNEY_PER_LEVEL);
-    anim.follow = "B";
-    await sleep(lightMs(jev.length, JOURNEY_PER_LEVEL) + 300);
-    if (!live()) return;
-  }
-  if (!jev || last(jev) !== last(tree)) {
-    // shared prefix with Jev's path is already lit; the ink light picks up where the paths part
-    let shared = 0;
-    while (jev && shared < Math.min(jev.length, tree.length) && jev[shared] === tree[shared]) shared++;
-    const skip = Math.max(0, shared - 1);
-    anim.fork = jev && shared < jev.length ? shared : -1;
-    anim.journey.phase = "hop";
-    useStore.getState().set({ pathA: tree });
-    startLight("A", tree, JOURNEY_PER_LEVEL);
-    anim.A.t0 -= skip * JOURNEY_PER_LEVEL;
-    anim.follow = "A";
-    await sleep(lightMs(tree.length - skip, JOURNEY_PER_LEVEL) + 300);
-    if (!live()) return;
-  }
+  useStore.getState().set({ pathA: tree });
+  startLight("A", tree, JOURNEY_PER_LEVEL);
+  anim.follow = "A";
+  await sleep(lightMs(tree.length, JOURNEY_PER_LEVEL) + 300);
+  if (!live()) return;
   anim.follow = null;
   useStore.getState().set({ selected: last(tree) });
   if (o.questionId) {
@@ -165,14 +127,43 @@ export async function journey(o: { query?: string; path: string[]; questionId?: 
   }
 }
 
-/** "I'm feeling lucky": any displayable question, uniformly at random; Jev walks it by its own text. */
+/**
+ * "How would Jev file this?" (docs/07-ui.md): Jev walks the tree for the question's text, one decision per
+ * level, as a green trail with its confidence at each node, beside the ink trail of where the question is
+ * stored, so any disagreement shows where the paths part. One /api/walk call, only when asked.
+ */
+export async function jevFile(text: string, stored: string[]): Promise<Walk | { error: string }> {
+  const run = ++journeyRun;
+  const w = await fetchWalk(text);
+  if ("error" in w || run !== journeyRun) return w;
+  const jev = ["root", ...w.path_probs.map((p) => p[0])];
+  await ensurePath([...stored, ...jev]);
+  await frames(2);
+  let shared = 0;
+  while (shared < Math.min(jev.length, stored.length) && jev[shared] === stored[shared]) shared++;
+  anim.fork = shared < jev.length ? shared : -1;
+  anim.trackStar = -1;
+  anim.journey = { phase: "jev", probs: new Map(w.path_probs.map((p) => [p[0], p[2]])) };
+  useStore.getState().set({ pathA: stored, pathB: jev });
+  startLight("A", stored, 0.001); // where it's stored: lit at once, in ink
+  startLight("B", jev, JOURNEY_PER_LEVEL);
+  anim.follow = "B";
+  await sleep(lightMs(jev.length, JOURNEY_PER_LEVEL) + 300);
+  if (run === journeyRun) {
+    anim.follow = null;
+    anim.journey.phase = "landed";
+  }
+  return w;
+}
+
+/** "I'm feeling lucky": any displayable question, uniformly at random. */
 export async function feelingLucky() {
   const d = starData();
   if (!d) return;
   const i = Math.floor(Math.random() * d.count);
   const nodeId = d.nodeIds[d.node[i]];
   const q = (await loadTexts(nodeId))[i - d.offsets.get(nodeId)![0]];
-  if (q) await journey({ query: q.text, path: ancestors(nodeId), questionId: q.id });
+  if (q) await journey({ path: ancestors(nodeId), questionId: q.id });
 }
 
 export interface Walk { node: string; confidence: number; separation: number; runner_up?: string; path_probs: [string, string, number][] }
@@ -186,4 +177,52 @@ export async function refreshFilters() {
   const { nodes } = await r.json();
   for (const n of nodes) if (!("n_match" in n)) n.n_match = undefined;
   useStore.getState().mergeNodes(nodes, expanded);
+}
+
+// Side panel history (docs/07-ui.md, Side panel): like a browser, every topic or question the panel moves to
+// is remembered until it closes, so Back and Forward retrace the way you came.
+const back: PanelView[] = [];
+const fwd: PanelView[] = [];
+let stepping = false;
+const same = (a: PanelView, b: PanelView) => a.kind === b.kind && (a as { id?: string }).id === (b as { id?: string }).id;
+
+useStore.subscribe((s, prev) => {
+  if (s.panel === prev.panel) return;
+  if (s.panel.kind === "none") { back.length = 0; fwd.length = 0; }
+  else if (stepping) stepping = false;
+  else if (prev.panel.kind !== "none" && !same(prev.panel, s.panel)) { back.push(prev.panel); fwd.length = 0; }
+  const canBack = back.length > 0, canForward = fwd.length > 0;
+  if (s.canBack !== canBack || s.canForward !== canForward) useStore.setState({ canBack, canForward });
+});
+
+function show(v: PanelView) {
+  stepping = true;
+  if (v.kind === "node") selectNode(v.id);
+  else useStore.getState().set({ panel: v });
+}
+
+export function goBack() {
+  const v = back.pop();
+  if (!v) return;
+  fwd.push(useStore.getState().panel);
+  show(v);
+}
+
+export function goForward() {
+  const v = fwd.pop();
+  if (!v) return;
+  back.push(useStore.getState().panel);
+  show(v);
+}
+
+/** Open a question from its dot (or its label): fly in to it, then open its card. */
+export async function openStar(i: number) {
+  const d = starData();
+  if (!d) return;
+  const nodeId = d.nodeIds[d.node[i]];
+  const q = (await loadTexts(nodeId))[i - d.offsets.get(nodeId)![0]];
+  if (!q) return;
+  useStore.getState().set({ selected: nodeId, hoverStar: -1 });
+  await landOnStar(i, 1.0);
+  openQuestion(q.id);
 }

@@ -10,15 +10,27 @@ const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", weigh
 
 export const metadata: Metadata = {
   title: "askjev",
-  description: "Every closed question, placed on one tree and answered by Jev.",
+  description: "A map of the closed questions people and programs ask, answered by Jev.",
 };
 
-export const viewport: Viewport = { themeColor: "#D6EAF8", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = {
+  themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#1E1E1E" }, { color: "#DBF0FF" }],
+  width: "device-width",
+  initialScale: 1,
+};
+
+// Picks the theme before first paint (saved choice, else the system's), so dark mode never flashes light.
+const THEME_SCRIPT = `try{var t=localStorage.getItem("askjev.theme");if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme="light"}`;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${sans.variable} ${pixel.variable} ${mono.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${sans.variable} ${pixel.variable} ${mono.variable}`} suppressHydrationWarning>
+      <body>
+        {/* first thing in <body>: browser extensions inject scripts into <head>, which would shift what
+            React matches this against; its content is static, so skip comparing it on hydration */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} suppressHydrationWarning />
+        {children}
+      </body>
     </html>
   );
 }

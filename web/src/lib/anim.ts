@@ -5,7 +5,7 @@ export const anim = {
   A: { path: [], t0: 0, per: 0.4, active: false } as Light,
   B: { path: [], t0: 0, per: 0.4, active: false } as Light,
   follow: null as null | "A" | "B",
-  flight: null as null | { to: [number, number, number]; dist: number; t0: number; dur: number; from?: { pos: [number, number, number]; target: [number, number, number] } },
+  flight: null as null | { to: [number, number, number]; dist: number; t0: number; dur: number; turn?: number; from?: { pos: [number, number, number]; target: [number, number, number] } },
   fork: -1, // index in pathB where it leaves pathA (-1: none)
   userMoved: 0,
   // the journey in progress (docs/07-ui.md): who is walking, and Jev's confidence at each node it chose
@@ -13,7 +13,15 @@ export const anim = {
   trackStar: -1, // camera keeps this question dot centered as it drifts (-1: off; any drag stops it)
   placed: new Map() as Map<string, import("./layout").Placed>,
   labelRects: [] as import("./uirects").Rect[], // node labels on screen (question labels avoid them)
+  // the opening (docs/07-ui.md, Opening): when the nebula starts forming, and when it has formed (seconds, now())
+  intro: { t0: Infinity, end: Infinity },
 };
+
+/** Seconds after the opening starts before a node at `depth` (and its questions) begins to form. */
+export const introDelay = (depth: number) => 0.35 + depth * 0.42;
+export const INTRO_FORM = 1.4; // seconds each piece takes to fly into place
+
+export const introDone = (t = now()) => t >= anim.intro.end;
 
 export const now = () => performance.now() / 1000;
 const easeInOut = (x: number) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2);

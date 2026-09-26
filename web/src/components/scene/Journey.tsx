@@ -7,7 +7,8 @@ import { LineGeometry } from "three/examples/jsm/lines/LineGeometry.js";
 import { LineMaterial } from "three/examples/jsm/lines/LineMaterial.js";
 import { useStore } from "@/lib/store";
 import { anim, headPosition, now, progress } from "@/lib/anim";
-import { edgePoint, INK, PATH_B_COLOR, type Placed } from "@/lib/layout";
+import { edgePoint, type Placed } from "@/lib/layout";
+import { JEV_GREEN, THEMES } from "@/lib/theme";
 import { cards, moveCard, publishWalker } from "@/lib/overlay";
 import { starData, starWorld } from "@/lib/stars";
 
@@ -19,7 +20,8 @@ const SEG = 20;
 function Trail({ which, placed }: { which: "A" | "B"; placed: Map<string, Placed> }) {
   const path = useStore((s) => (which === "A" ? s.pathA : s.pathB));
   const gl = useThree((s) => s.gl);
-  const color = which === "B" ? PATH_B_COLOR : INK;
+  const theme = useStore((s) => s.theme);
+  const color = which === "B" ? JEV_GREEN : THEMES[theme].ink;
   const { lines, segs } = useMemo(() => {
     const pts: number[] = [];
     const pt: [number, number, number] = [0, 0, 0];
@@ -39,8 +41,9 @@ function Trail({ which, placed }: { which: "A" | "B"; placed: Map<string, Placed
       return l;
     };
     // a wide soft halo under the core line; the dither turns it into a halftone glow
-    const halo = make(which === "B" ? 16 : 9, which === "B" ? 0.35 : 0.2);
-    const core = make(which === "B" ? 5 : 3, 1);
+    // widths in canvas pixels, which are 2 CSS px each (one dither cell)
+    const halo = make(which === "B" ? 8 : 5, which === "B" ? 0.35 : 0.2);
+    const core = make(which === "B" ? 2.5 : 1.5, 1);
     return { lines: [halo, core], segs: Math.max(0, pts.length / 3 - 1) };
   }, [path, placed, color, which]);
   useEffect(() => () => lines.forEach((l) => { l.geometry.dispose(); (l.material as LineMaterial).dispose(); }), [lines]);

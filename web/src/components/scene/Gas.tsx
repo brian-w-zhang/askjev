@@ -4,12 +4,13 @@ import { useFrame } from "@react-three/fiber";
 import { NormalBlending, Color, InstancedBufferAttribute, InstancedBufferGeometry, PlaneGeometry, ShaderMaterial } from "three";
 import { useStore } from "@/lib/store";
 import { now } from "@/lib/anim";
-import { attention, branchColor, rampColor } from "@/lib/color";
+import { attention, rampColor } from "@/lib/color";
+import { THEMES } from "@/lib/theme";
 import { edgePoint, type Placed } from "@/lib/layout";
-import { branchShades } from "./Stars";
 
-// Clouds (docs/07-ui.md): slowly drifting cumulus puffs around every node's ball and along the big branches,
-// in the hemisphere's color, or by the node's indicator, so where Jev is jagged shows as weather from far away.
+// Indicator weather (docs/07-ui.md): when the sky is colored by an indicator, slowly drifting cumulus puffs
+// around every node's ball and along the big branches take the node's indicator color, so where Jev is
+// jagged shows as weather from far away. Colored by hemisphere, the particles are the cloud and this is off.
 const vert = /* glsl */ `
   attribute vec3 aPos; attribute vec3 aColor; attribute float aSize; attribute float aAlpha; attribute float aSeed;
   uniform float uTime;
@@ -65,14 +66,17 @@ interface Puff { x: number; y: number; z: number; size: number; alpha: number; s
 export function Gas({ placed }: { placed: Map<string, Placed> }) {
   const nodes = useStore((s) => s.nodes);
   const indicator = useStore((s) => s.indicator);
+  const theme = useStore((s) => s.theme);
 
   const material = useMemo(
     () => new ShaderMaterial({ vertexShader: vert, fragmentShader: frag, transparent: true, depthWrite: false, blending: NormalBlending, uniforms: { uTime: { value: 0 } } }),
     [],
   );
 
+  const on = indicator !== "hemisphere";
   const puffs = useMemo(() => {
     const out: Puff[] = [];
+    if (!on) return out;
     const pt: [number, number, number] = [0, 0, 0];
     for (const p of placed.values()) {
       const n = nodes[p.id];
@@ -114,7 +118,7 @@ export function Gas({ placed }: { placed: Map<string, Placed> }) {
       }
     }
     return out;
-  }, [placed, nodes]);
+  }, [placed, nodes, on]);
 
   const geometry = useMemo(() => {
     const g = new InstancedBufferGeometry();
@@ -142,26 +146,25 @@ export function Gas({ placed }: { placed: Map<string, Placed> }) {
 
   useEffect(() => {
     const col = geometry.getAttribute("aColor") as InstancedBufferAttribute;
-    const shade = branchShades(nodes);
     const c = new Color();
-    const white = new Color("#FEFEFE");
+    const T = THEMES[theme];
+    const pale = new Color(T.sky);
     puffs.forEach((p, i) => {
       const n = nodes[p.node];
       if (!n) return;
-      const a = indicator === "hemisphere" ? null : attention(n, indicator);
-      if (a === null) {
-        if (indicator === "hemisphere") branchColor(n.hemisphere, shade.get(n.id) ?? 0.5, c);
-        else c.set("#FEFEFE"); // no data: plain white cloud
-      } else rampColor(a, c);
-      c.lerp(white, 0.55); // a pale halo: the particles are the cloud, the gas only softens it
+      const a = attention(n, indicator);
+      if (a === null) c.set(T.nodata); // no data: a plain cloud
+      else rampColor(a, c);
+      c.lerp(pale, 0.45); // a pale halo: the particles are the cloud, the gas only softens it
       col.setXYZ(i, c.r, c.g, c.b);
     });
     col.needsUpdate = true;
-  }, [geometry, puffs, nodes, indicator]);
+  }, [geometry, puffs, nodes, indicator, theme]);
 
   useFrame(() => {
     material.uniforms.uTime.value = now();
   });
 
+  if (!on) return null;
   return <mesh geometry={geometry} material={material} frustumCulled={false} renderOrder={-1} />;
 }

@@ -1,8 +1,8 @@
 "use client";
 // Question stars (docs/07-ui.md): one entry per displayable question, loaded once from /api/stars.
-// Positions are node center + (local unit-ball offset × the node's ball radius), turned slowly around
+// Positions are node center + the local unit-ball offset shaped by the layout (`starLocal`), turned slowly around
 // the node by `spin`. The shader and `starWorld` below use the same formula so picking matches the picture.
-import type { Placed } from "./layout";
+import { starLocal, type Placed, type V3 } from "./layout";
 
 export interface StarData {
   count: number;
@@ -98,10 +98,12 @@ export function starText(i: number): StarText | undefined {
 
 export const metric = (v: number) => (v === 255 ? null : v / 254);
 
+const tmp: V3 = [0, 0, 0];
+
 /** World position of star i at time t (seconds): same math as the star vertex shader. */
 export function starWorld(i: number, p: Placed, t: number, out: [number, number, number]): [number, number, number] {
   const d = data!;
-  const lx = d.local[i * 3] * p.ball, ly = d.local[i * 3 + 1] * p.ball, lz = d.local[i * 3 + 2] * p.ball;
+  const [lx, ly, lz] = starLocal(d.local[i * 3], d.local[i * 3 + 1], d.local[i * 3 + 2], p, tmp);
   const a = p.spin * t;
   const c = Math.cos(a), s = Math.sin(a);
   out[0] = p.x + c * lx + s * lz;
