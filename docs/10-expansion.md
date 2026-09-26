@@ -181,6 +181,13 @@ Another session is changing the UI at the same time. The expansion agent must no
   the walk's node and the intended trait is kept as `meta.measures`, so the map stays topical and the personality
   analysis aggregates by trait. W9's rejects were recovered from the reject log without new Jev calls
   (`scripts/recover_trait_rejects.py`). Other banks keep the strict filter.
+- **Format banks keep the author's node** (2026-09-26): nodes defined by format rather than topic (Internet Culture &
+  Memes, Who Would Win, Viral Debates, Shower Thoughts, the Ratings children) lose their questions to the topic walk:
+  "20 sumo wrestlers vs a polar bear" goes to mammals, "is a cape a coat?" to clothing, "How much would you enjoy
+  mochi?" to Food Preferences. The internet bank kept 7% under the strict round trip. For `FORMAT_BANKS` (g5_w11_internet,
+  g5_w12_shower_thoughts, g5_w13_ratings) a completed walk keeps the question at the author's node, with the walk's
+  placement in `meta.round_trip`. Earlier rejects from those banks were recovered at the intended node, and the older
+  personality banks' personality-aimed rejects at the walk's Self placement (`--at intended` / `--prefix`).
 - **Throughput** (2026-09-25): requests pack up to 64 questions / ~5k tokens (measured sweet spot; larger requests mostly 503);
   gateway pinned to TypeSafe's own provider; adaptive rate backs off 10% when > 30% of requests are throttled; packing several
   Machine inputs per request was tested and rejected (accuracy 84.5 → 82.5%).

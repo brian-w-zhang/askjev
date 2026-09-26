@@ -95,6 +95,12 @@ def round_trip_ok(intended: str, placed: str) -> bool:
 TRAIT_BANKS = {"g5_w9_self_b.jsonl", "g5_w10_self_personality.jsonl"}
 
 
+# Banks whose nodes are defined by format, not topic (memes, "who would win", shower thoughts, single-item ratings):
+# the blind walk files them by subject ("20 sumo wrestlers vs a polar bear" -> mammals), so they are kept at the
+# author's node once the walk completes; the walk's placement is recorded in meta.round_trip.
+FORMAT_BANKS = {"g5_w11_internet.jsonl", "g5_w12_shower_thoughts.jsonl", "g5_w13_ratings.jsonl"}
+
+
 def trait_placement_ok(placed: str) -> bool:
     return placed.startswith("self.") and placed.count(".") >= 1
 
@@ -120,6 +126,9 @@ def ingest_authored(paths: list[str] | None = None, round_trip: bool = True) -> 
                 q.meta["round_trip"] = {"placed": placed, "confidence": r.get("confidence")}
                 if q.meta["authored_file"] in TRAIT_BANKS:
                     q.meta["measures"] = node
+                kept.append(q)
+            elif "error" not in r and q.meta["authored_file"] in FORMAT_BANKS and placed.count(".") >= 1:
+                q.meta["round_trip"] = {"placed": placed, "confidence": r.get("confidence"), "kept_at": "intended"}
                 kept.append(q)
             elif "error" not in r and q.meta["authored_file"] in TRAIT_BANKS and trait_placement_ok(placed):
                 q.meta["round_trip"] = {"placed": placed, "confidence": r.get("confidence")}
