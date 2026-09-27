@@ -3,7 +3,7 @@ import { loadPortrait } from "@/components/portrait/data";
 
 // ?ids shows each card's id, to find its words in components/portrait/copy.ts
 export default async function PortraitPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
-  const d = loadPortrait();
+  const d = await loadPortrait();
   const showIds = (await searchParams).ids !== undefined;
   if (!d) {
     return (

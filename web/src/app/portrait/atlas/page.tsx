@@ -9,8 +9,8 @@ export const metadata: Metadata = { title: "Atlas · A self-portrait of Jev · a
 // "self.lifestyle: frame gap..." reads better as "Lifestyle & Taste: frame gap...": swap topic ids for their names
 const TOPIC = /\b(?:world|self|machine)(?:\.[a-z0-9_]+)+/g;
 
-export default function AtlasPage() {
-  const d = loadPortrait();
+export default async function AtlasPage() {
+  const d = await loadPortrait();
   const labels = new Map((d?.nodes ?? []).map((n) => [n.node_id, n.label as string | null]));
   // the atlas lists claims; it doesn't need their chart data, so only the fields it shows are sent to the browser
   const claims = d ? Object.values(d.claims).filter((c) => c.section !== "page")

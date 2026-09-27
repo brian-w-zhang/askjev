@@ -2,6 +2,7 @@
 
     uv run python scripts/sync_prod.py [TARGET_URL]      # default: PROD_DATABASE_URL from .env
     uv run python scripts/sync_prod.py --stars-only       # just upload data/stars (+ semantic layout) to Blob
+    uv run python scripts/sync_prod.py --delta            # only the questions added or hidden since the last sync
     add --deploy to point the Vercel project at the new snapshot and redeploy
 
 The site reads a trimmed, read-mostly copy, not the pipeline's database:
@@ -240,6 +241,63 @@ def sync_db(src: str, dst: str, resume: bool = False) -> None:
                     "select pg_size_pretty(pg_database_size(current_database())), (select count(*) from questions)"], check=True)
 
 
+SMALL = ("universes", "nodes", "node_stats")  # whole tables, small enough to replace on every delta
+
+
+def sync_delta(src: str, dst: str) -> None:
+    """Changed rows only: questions that became visible locally since the last sync are added with their rows, and
+    questions no longer visible are removed. New rows load into a `delta` schema first; one transaction then applies
+    the removals and additions and replaces the small whole tables, so the site never sees half a change."""
+    q = lambda url, sql: subprocess.run([PSQL, url, "-At", "-v", "ON_ERROR_STOP=1", "-c", sql], check=True,
+                                        capture_output=True, text=True).stdout.split()
+    local, prod = set(q(src, VISIBLE)), set(q(dst, "select id from questions"))
+    added, removed = sorted(local - prod), sorted(prod - local)
+    print(f"delta: {len(added)} to add, {len(removed)} to remove (local {len(local):,}, production {len(prod):,})")
+    arr = lambda ids: "'{" + ",".join(ids) + "}'::text[]"
+    psql(dst, "drop schema if exists delta cascade; create schema delta;")
+    for t in list(COPY) + list(SMALL):
+        if t in COPY or t in SMALL:
+            psql(dst, f"create table if not exists delta.{t} (like public.{t});")
+    if added:
+        cols = subprocess.run([PSQL, src, "-At", "-c", "select string_agg(quote_ident(column_name), ',' order by ordinal_position) "
+                               "from information_schema.columns where table_schema = 'public' and table_name = 'questions' "
+                               "and column_name <> 'embedding'"], check=True, capture_output=True, text=True).stdout.strip()
+        a = arr(added)
+        sel = {
+            "questions": f"select {cols} from questions where id = any({a})",
+            "qvec": f"select id, embedding::halfvec(384) from questions where id = any({a})",
+            "question_meta": f"select * from question_meta where question_id = any({a})",
+            "probes": f"select * from probes where question_id = any({a})",
+            "answers": f"select a.* from answers a join probes p on p.id = a.probe_id where p.question_id = any({a})",
+            "human_dists": f"select * from human_dists where question_id = any({a})",
+            "placements": f"select * from placements where question_id = any({a})",
+            "question_links": f"select * from question_links where (from_id = any({a}) or to_id = any({a})) "
+                              f"and from_id in ({VISIBLE}) and to_id in ({VISIBLE})",
+            "calls": COPY["calls"].replace(f"p.question_id in ({VISIBLE})", f"p.question_id = any({a})"),
+        }
+        for t, select in sel.items():
+            copy_table(src, dst, f"delta.{t}" + (f" ({cols})" if t == "questions" else ""), select, t in BINARY)
+    for t in SMALL:
+        copy_table(src, dst, f"delta.{t}", COPY[t])
+    r = arr(removed) if removed else None
+    stmts = ["begin;"]
+    if r:
+        stmts += [f"delete from answers where probe_id in (select id from probes where question_id = any({r}));",
+                  *[f"delete from {t} where question_id = any({r});" for t in ("probes", "question_meta", "human_dists", "placements")],
+                  f"delete from question_links where from_id = any({r}) or to_id = any({r});",
+                  f"delete from qvec where id = any({r});", f"delete from questions where id = any({r});"]
+    for t in COPY:
+        stmts.append(f"insert into public.{t} select * from delta.{t} on conflict do nothing;")
+    for t in SMALL:
+        stmts += [f"delete from public.{t};", f"insert into public.{t} select * from delta.{t};"]
+    stmts.append("commit;")
+    psql(dst, " ".join(stmts))
+    psql(dst, "drop schema delta cascade;")
+    for t in list(COPY) + list(SMALL):
+        psql(dst, f"analyze {t};")
+    print("production now has", q(dst, "select count(*) from questions")[0], "questions")
+
+
 def upload_stars() -> None:
     """data/stars + the precomputed Meaning layout → Vercel Blob (needs BLOB_READ_WRITE_TOKEN and the Vercel CLI)."""
     token = env("BLOB_READ_WRITE_TOKEN")
@@ -291,6 +349,8 @@ def main() -> None:
         raise SystemExit("need DATABASE_URL and a target (argument or PROD_DATABASE_URL)")
     if src == dst:
         raise SystemExit("target is the source database")
+    if "--delta" in sys.argv:
+        return sync_delta(src, dst)
     sync_db(src, dst, "--resume" in sys.argv)
     upload_stars()
 
