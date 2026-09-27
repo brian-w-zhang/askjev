@@ -98,7 +98,7 @@ function Intro({ C, d, s, total, nSources, common }: { C: CFn; d: PortraitData; 
         {s && <span className="card-id">tweet</span>}
         <div className="card-in">
           <div className="card-main">
-            <img className="tweet-img" src="/portrait/memes/tweet.webp" alt="Tweet from @typesafeai, September 23, 2026: Everyone wants to know what Jev is, nobody asks how Jev's doing" />
+            <img className="tweet-img" src="/portrait/memes/tweet.webp" width={900} height={514} alt="Tweet from @typesafeai, September 23, 2026: Everyone wants to know what Jev is, nobody asks how Jev's doing" />
             <h1 className="card-t">{COPY.tweet.title}</h1>
             <p className="scroll-hint">scroll ↓</p>
           </div>

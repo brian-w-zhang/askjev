@@ -96,7 +96,7 @@ What moved each score:
   readable sentences (topic names instead of ids, commas, ordinals, typical values), coverage as cards. **C4:** 848 KB
   to 196 KB (29 KB gzipped): topic and source tables load when their tab opens.
 
-## Performance (local production build; prod numbers in the changelog)
+## Performance
 | Measure | Before | After |
 |---|---|---|
 | /portrait HTML | 1,366 KB (200 KB gz) | 697 KB (108 KB gz) |
@@ -104,3 +104,35 @@ What moved each score:
 | memes | 2.0 MB | 170 KB |
 | map API, warm | 10-60 ms | same |
 | map API, cold | /api/layout 12 s, /api/node 2.2 s | same (edge-cached in production; the map session's code) |
+
+Production, median of 3 cold loads at 1440 px (`scripts/portrait/vitals.mjs`):
+
+| Route | LCP | CLS | TTFB | Transferred |
+|---|---|---|---|---|
+| / (map) | 64 ms | 0 | 23 ms | 5.9 MB (star snapshot, the map's own) |
+| /portrait | 644 ms | 0.029, now 0 (tweet image sized) | 24 ms | 260 KB |
+| /portrait/atlas | 188 ms | 0 | 28 ms | 40 KB |
+
+## Changelog
+**Changed**
+- Rubric (this doc), research notes, and four scripts in `scripts/portrait/`: `sweep.mjs` (5 widths × 2 themes:
+  errors, overflow, alt text, unnamed controls), `interact.mjs` (23 visitor steps across map, portrait, atlas),
+  `vitals.mjs`, and `verify_page.py` against production (`ASKJEV_KEY`).
+- Map: quiet bad deep links, nav chips out of the way of the phone panel, nav links no longer prefetch the portrait.
+- Portrait: new cards from data already in the corpus (online tests vs ~50 Open Psychometrics scales and their real
+  test-takers, the career code, the checkup on five wellbeing scales); weaker cards moved to the atlas; big-number
+  cards for rhythm; a Wrapped summary at the end; density chart for gambles; five strongest and weakest knowledge
+  domains; keyboard-operable calibration; copy reread three times for slop and overclaiming.
+- Atlas: findings as cards with section facets and counts (table one click away), coverage as cards, topic names,
+  tables loaded on demand, readable ledger sentences for every claim.
+- Performance: portrait 1.37 MB to 0.70 MB of HTML, atlas 848 KB to 196 KB, memes 2 MB to 170 KB.
+- Shipping: `sync_prod.py --delta` (changed rows in one transaction; 18 wellbeing questions in 50 s), stars
+  rebuilt (1,048,982), portrait data and memes published privately (`publish.py`, `PORTRAIT_URL`), deployed.
+  Production matches local: same question count, same 518 page numbers (`verify_page.py`), zero failed steps in the
+  interaction sweep on desktop and phone.
+
+**Left**
+- `THREE.Clock` deprecation warning from @react-three/fiber (fixed only by an upstream release).
+- Cold map API latency (`/api/layout` 12 s, `/api/node` 2 s before the edge cache warms): the map session's code.
+- GitHub builds need Brian to link GitHub in Vercel (the deploy session's open item); deploys run from this machine.
+- A stories mode (tap-through cards) can wrap the same cards later.
