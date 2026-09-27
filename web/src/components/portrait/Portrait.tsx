@@ -32,7 +32,6 @@ const TASK_NAMES: Record<string, string> = {
   phishing_email: "phishing emails", function_calls: "picking the function to call",
 };
 const taskName = (t: string) => TASK_NAMES[t] ?? label(t).toLowerCase();
-const facetName = (f: string) => label(f.split(".").at(-1)!);
 const film = (text: string) => text.replace(/^How much would you enjoy watching /, "").replace(/\?$/, "");
 const bookName = (t: string) => t.replace(/^How much would you enjoy reading /, "").replace(/ by .*$/, "").replace(/\?$/, "");
 // tile names: beers and books without brewery or author, anime without its format tag
@@ -144,9 +143,6 @@ function Act1({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
   const T = ["neuroticism", "extraversion", "openness", "agreeableness", "conscientiousness"];
   const bf = T.map((t) => C(`bigfive_${t}`));
   const neu = C("bigfive_neuroticism");
-  const ms = C("muted_self");
-  const facets = Object.entries(ms.facets as Record<string, { self: number; people: number; self_minus_people: number; n_items: number }>)
-    .sort((a, b) => a[1].self_minus_people - b[1].self_minus_people);
   const ty = C("type");
   const axes = ty.axes as Record<string, { lean: string; ci90: [number, number]; n_items: number; [k: string]: unknown }>;
   const AX: [string, string, string, string][] = [["IE", "Introvert", "Extravert", "E"], ["SN", "Sensing", "Intuition", "N"], ["FT", "Thinking", "Feeling", "F"], ["JP", "Perceiving", "Judging", "J"]];
@@ -164,6 +160,7 @@ function Act1({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
       <Checkup C={C} R={R} s={s} />
       <Tests d={d} R={R} s={s} />
       <Card id="calm" field="pink" c={COPY.calm} showId={s} claims={bf} rows={R(neu, 2)}
+        aside={<Meme name="spiderman" size="m" alt="Spider-Man pointing at Spider-Man meme" labels={["jev", "“most people”, according to jev"]} />}
         vars={{ calmer: `${Math.round(100 - (neu.effect as number))}%`, people: compact(neu.human_n), guess: ordinal(neu.robustness.people_frame_pct) }}>
         <Win title="big_five.plot · percentile among people">
           <div className="pt-legend">{Legend.jev}{Legend.guess}</div>
@@ -186,18 +183,6 @@ function Act1({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
                 value: <b>{a.lean}</b>,
               };
             })} />
-        </Win>
-      </Card>
-      <Card id="muted" field="sage" c={COPY.muted} vars={{ lower: ms.n_lower, facets: ms.n_facets }} showId={s} claims={[ms]}
-        aside={<Meme name="spiderman" size="m" alt="Spider-Man pointing at Spider-Man meme" labels={["jev", "“most people”, according to jev"]} />}>
-        <Win title="traits.plot · 0 to 1">
-          <div className="pt-legend">{Legend.jev}{Legend.guess}</div>
-          <DotRows domain={[0.15, 0.75]} ticks={[0.2, 0.4, 0.6]} fmt={(v) => num(v, 1)}
-            rows={facets.slice(0, 10).map(([k, f]) => ({
-              key: k, label: facetName(k), link: true,
-              marks: [{ v: f.people, kind: "guess" as const }, { v: f.self, kind: "jev" as const }], value: <b>{signed(f.self_minus_people)}</b>,
-            }))} />
-          <p className="win-note">The ten biggest gaps of {ms.n_facets}; the rest are in the atlas.</p>
         </Win>
       </Card>
       <Card id="hedge" field="teal" c={COPY.hedge} big={pct(lv.effect as number)} vars={{ mid: pct(lv.effect as number), choice: pct(ml.choice_p_top) }} showId={s}

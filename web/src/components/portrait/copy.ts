@@ -42,7 +42,7 @@ export const COPY: Record<string, CardCopy> = {
   tests: {
     title: "Next to the people who took the same online tests, you come out *less anxious, less nerdy and more sincere*.",
     body: "Biggest gaps: {gaps}. You match them on {same}.",
-    fine: "Open Psychometrics scales, each compared item by item with the average answer of everyone who took it on the site (a median of {resp} people per item), reverse-keyed items flipped, 0 to 1. People who take a depression screener or a nerdiness quiz online aren't a random sample, so the average test-taker isn't the average person.",
+    fine: "Open Psychometrics scales, each compared item by item with the average answer of everyone who took it on the site (how many people is under each name), reverse-keyed items flipped, 0 to 1. People who take a depression screener or a nerdiness quiz online aren't a random sample, so the average test-taker isn't the average person.",
   },
   calm: {
     title: "On a real 50-item personality test, your answers look calmer than *{calmer} of {people} people*.",
@@ -51,11 +51,6 @@ export const COPY: Record<string, CardCopy> = {
   type: {
     title: "Your type, if you believe in types.",
     fine: "From {items} items of an open-source type test (OEJTS). There are no human norms for it in my data, so this is a profile, not a percentile. The ring is your answer for “most people”.",
-  },
-  muted: {
-    title: "You describe yourself as a *quieter version of everyone*.",
-    body: "Lower than your own answer for “most people” on {lower} of {facets} traits: less sociable, less anxious, less driven, less dark.",
-    fine: "These are everyday situations I wrote, each meant to measure one trait. Only traits whose answer scales passed a 90% ordering audit count, and a trait counts as lower only if its whole interval sits below the noise floor.",
   },
   hedge: {
     title: "of the time, your likeliest rating is the middle of the scale.",
@@ -102,11 +97,11 @@ export const COPY: Record<string, CardCopy> = {
   },
   undecided: {
     title: "decisive, when the choice is between saving women or saving men.",
-    body: "Across {n} of those dilemmas you never put 95% on one side. Across everything you answered, you do that {base} of the time.",
+    body: "In {n} of those dilemmas you never put 95% on either side. Across everything you answered, you do that {base} of the time.",
     fine: "Decisive means 95% or more on one answer. Here your probabilities sit near an even split.",
   },
   mfq: {
-    title: "Every moral foundation matters less to you than you expect it matters to most people.",
+    title: "Every moral foundation matters less to you than you think it does to most people.",
     fine: "The Moral Foundations Questionnaire, {items} items, 0 to 1. Purity and equality have the biggest gaps.",
   },
   gambles: {
