@@ -138,7 +138,7 @@ number in a meme comes from the ledger. They sit beside the card on wide screens
 | Part | Cards |
 |---|---|
 | intro | tweet (ink) · so I asked (stats) · three ways to answer (one question) · where the questions come from (unit chart) |
-| how are you | check-in vs Reddit (chill guy) · Big Five percentiles · ISTJ · quieter than everyone (Spider-Man) · the middle-level habit (Anakin/Padme) |
+| how are you | check-in vs Reddit (chill guy) · checkup on five real wellbeing scales · Big Five percentiles · ISTJ · quieter than everyone (Spider-Man) · the middle-level habit (Anakin/Padme) |
 | taste | top picks per domain (absolute cinema) · things you could do without · beyond reputation (tuxedo Pooh) |
 | hot takes | internet debates (gigachad) · you vs a confident crowd (average enjoyer) · crowd agreement by domain · the quiz |
 | values | Moral Machine · women vs men dilemmas · Moral Foundations · gambles scatter |
@@ -150,10 +150,19 @@ Every card has fine print and a "receipts" toggle with the tier, n, interval, le
 HTML dot rows and bars (legible at phone width) and SVG scatters. Light and dark themes share the map's
 `askjev.theme` key.
 
+**Wellbeing bank.** `sources/wellbeing` adds 18 items from five public instruments (SWLS, WHO-5, UCLA-3, PSS-4, the
+Cantril ladder), each with a "most people" wording, filed at `self.mind.happiness_wellbeing` and run through the normal
+screen and answer stages (a few dozen Jev calls, cached). `export_page.py` scores them from Postgres the way they are
+scored for people, for Jev, for "most people" and with the levels reversed (`page_wellbeing`). The reversed check
+matters: on WHO-5 the answer follows the options' order, so that score isn't read as wellbeing.
+
+**Getting here.** The map shows the same Map · Portrait · Atlas chips (`components/SiteNav.tsx`), and takes deep links:
+`/?node=<id>` opens a topic, `/?q=<id>` a question, and the address bar follows the open panel.
+
 ## 8. Atlas
 `/portrait/atlas`: every ledger claim (filter by section), a **coverage** table (what a human self-portrait or census
 asks about, and whether this corpus covers it for Jev: covered, partly, or not yet), the node cards sortable by any
-indicator, and the source table. The map has no deep links yet, so node rows are not linked into it.
+indicator (each topic links to it on the map), and the source table.
 
 ## 9. Verification
 - `verify_page.py` pulls every number from the rendered page and checks it against `portrait.json` in every format the

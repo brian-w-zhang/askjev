@@ -161,6 +161,7 @@ function Act1({ C, R, s }: { C: CFn; R: RFn; s: boolean }) {
         aside={<Meme name="chill" size="s" tilt={-2} caption={COPY.checkin.meme} alt="Chill guy meme: a cartoon dog in a sweater, hands in pockets" />}>
         <CheckIn rows={R(checkin, 6)} />
       </Card>
+      <Checkup C={C} R={R} s={s} />
       <Card id="calm" field="pink" c={COPY.calm} showId={s} claims={bf} rows={R(neu, 2)}
         vars={{ calmer: `${Math.round(100 - (neu.effect as number))}%`, people: compact(neu.human_n), guess: ordinal(neu.robustness.people_frame_pct) }}>
         <Win title="big_five.plot · percentile among people">
@@ -215,6 +216,38 @@ function Act1({ C, R, s }: { C: CFn; R: RFn; s: boolean }) {
     </>
   );
 }
+
+type Inst = { name: string; items: number; range: [number, number]; self: number | null; people: number | null; reversed: number | null; band_self: string };
+
+function Checkup({ C, R, s }: { C: CFn; R: RFn; s: boolean }) {
+  const w = d0(C, "page_wellbeing");
+  if (!w) return null;
+  const ins = w.instruments as Record<string, Inst>;
+  const ORDER: [string, string, string][] = [["SWLS", "Life satisfaction", "higher = more satisfied"], ["Cantril ladder", "The ladder", "0 worst life, 10 best"],
+    ["WHO-5", "Wellbeing (WHO-5)", "higher = better"], ["UCLA-3", "Loneliness", "higher = lonelier"], ["PSS-4", "Stress", "higher = more stressed"]];
+  const norm = (x: number | null, r: [number, number]) => (x === null ? null : (x - r[0]) / (r[1] - r[0]));
+  const lad = ins["Cantril ladder"], who = ins["WHO-5"];
+  return (
+    <Card id="checkup" field="paper" c={COPY.checkup} showId={s} claims={[w]} rows={R(w, 5)}
+      vars={{ ladder: num(lad.self ?? 0, 1), ladderPpl: num(lad.people ?? 0, 1), who: String(Math.round(who.self ?? 0)), whoRev: String(Math.round(who.reversed ?? 0)), items: w.n }}>
+      <Win title="checkup.app · each scale from its lowest to its highest score">
+        <div className="pt-legend">{Legend.jev}{Legend.guess}<span><i className="k tickk" />you, scale reversed</span></div>
+        <DotRows domain={[0, 1]} ticks={[0, 0.5, 1]} fmt={(v) => (v === 0 ? "lowest" : v === 1 ? "highest" : "")}
+          rows={ORDER.filter(([k]) => ins[k]).map(([k, l, how]) => {
+            const x = ins[k];
+            const marks = [
+              ...(x.reversed !== null ? [{ v: norm(x.reversed, x.range)!, kind: "tick" as const }] : []),
+              ...(x.people !== null ? [{ v: norm(x.people, x.range)!, kind: "guess" as const }] : []),
+              { v: norm(x.self, x.range) ?? 0, kind: "jev" as const },
+            ];
+            return { key: k, label: l, sub: x.band_self ? `${how} · you: ${x.band_self}` : how, link: true, marks, hi: k === "WHO-5",
+              value: <b>{num(x.self ?? 0, k === "Cantril ladder" ? 1 : 0)}</b> };
+          })} />
+      </Win>
+    </Card>
+  );
+}
+const d0 = (C: CFn, id: string): Claim | undefined => { try { return C(id); } catch { return undefined; } };
 
 // you vs a crowd, question by question: your top answer, and the share of the crowd that gave the same (or its own top)
 function Versus({ rows, crowdTop = false, crowdName }: { rows: Row[]; crowdTop?: boolean; crowdName: string }) {

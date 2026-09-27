@@ -83,6 +83,76 @@ def row(r: dict) -> dict:
             "correct": r["correct"], "top": r["top"], "p_top": r["p_top"]}
 
 
+WELL = {  # instrument: (score label, how to total the item levels, range, bands as (upper bound, label))
+    "SWLS": ("life satisfaction", "sum+1", (5, 35), [(9, "extremely dissatisfied"), (14, "dissatisfied"), (19, "slightly dissatisfied"),
+                                                  (20, "neutral"), (25, "slightly satisfied"), (30, "satisfied"), (35, "extremely satisfied")]),
+    "WHO-5": ("wellbeing", "sum*4", (0, 100), [(50, "low wellbeing"), (100, "not low")]),
+    "UCLA-3": ("loneliness", "sum+1", (3, 9), [(5, "not lonely"), (9, "lonely")]),
+    "PSS-4": ("stress", "sum", (0, 16), [(16, "")]),
+    "Cantril ladder": ("the ladder", "step", (0, 10), [(10, "")]),
+}
+
+
+def wellbeing() -> tuple[dict, list[dict]]:
+    """Score each wellbeing instrument for Jev's own answer, its 'most people' answer and its reversed-levels answer
+    (levels mapped back to the original order), from Postgres."""
+    from askjev import db
+    with db.connect() as c:
+        rs = c.execute("""select q.id, q.text, q.options, q.primitive, q.node_id, q.source, q.meta, q.hemisphere, q.display_ok,
+                                 p.frame, p.variant_kind, a.distribution, a.score_scalar
+                          from questions q join probes p on p.question_id = q.id join answers a on a.probe_id = p.id
+                          where q.source = 'wellbeing' and p.universe_id = 'base'""").fetchall()
+    by: dict[str, dict] = {}
+    for r in rs:
+        q = by.setdefault(r["id"], {"q": r, "self": None, "people": None, "reversed": None})
+        if r["variant_kind"] == "base":
+            q["self" if r["frame"] in ("self", "none") else "people"] = r
+        elif r["variant_kind"] == "reversed_levels":
+            q["reversed"] = r
+
+    def level(ans, q):
+        if ans is None:
+            return None
+        if q["primitive"] == "choice":  # the ladder: expected step
+            return sum(int(k.split("_")[1]) * v for k, v in ans["distribution"].items())
+        return ans["score_scalar"]
+
+    out, rows = {}, []
+    for ins, (name, how, rng, bands) in WELL.items():
+        items = [v for v in by.values() if v["q"]["meta"].get("instrument") == ins and v["q"]["display_ok"]]
+        if not items:
+            continue
+        tot = {}
+        for key in ("self", "people", "reversed"):
+            vals = []
+            for v in items:
+                lv = level(v[key], v["q"])
+                if lv is None:
+                    continue
+                k = len(v["q"]["options"]) - 1
+                vals.append(k - lv if v["q"]["meta"].get("reverse") else lv)
+            if len(vals) < len(items):
+                tot[key] = None
+                continue
+            s = sum(vals)
+            tot[key] = round(s + len(vals) if how == "sum+1" else s * 4 if how == "sum*4" else s, 1)
+        # bands are defined on whole-number totals: round the expected score before looking one up
+        band = lambda x: next((b for u, b in bands if x is not None and round(x) <= u), "")
+        out[ins] = {"name": name, "items": len(items), "range": rng, "self": tot["self"], "people": tot["people"],
+                    "reversed": tot["reversed"], "band_self": band(tot["self"]), "band_people": band(tot["people"]),
+                    "band_reversed": band(tot["reversed"])}
+        v = items[0]
+        q = v["q"]
+        opts = list(q["options"]) if isinstance(q["options"], dict) else q["options"]
+        rows.append({"id": q["id"], "text": q["text"], "state": None, "options": opts, "primitive": q["primitive"],
+                     "node": q["node_id"], "source": q["source"], "hemisphere": q["hemisphere"],
+                     "jev": v["self"]["distribution"], "people": v["people"]["distribution"] if v["people"] else None,
+                     "human": None, "truth": None, "correct": None,
+                     "top": max(v["self"]["distribution"], key=v["self"]["distribution"].get),
+                     "p_top": max(v["self"]["distribution"].values())})
+    return out, rows
+
+
 def main():
     q = pl.read_parquet(A / "questions.parquet")
     shown = q.filter(pl.col("display_ok") & ~pl.col("harmful") & pl.col("jev_dist").is_not_null())
@@ -228,6 +298,14 @@ def main():
     add.append({"id": "page_ratings", "section": "page", "tier": "1", "n": rt.height, "effect": None, "ci90": None,
                 "examples": [], "script": "scripts/portrait/export_page.py", "domains": ratings,
                 "sentence": "Jev's highest and lowest one-at-a-time ratings (0 to 4) in each taste domain."})
+    # ---- wellbeing instruments (sources/wellbeing): scored straight from the answers, since they were added after
+    # the analysis table was built. Items are scored on the instrument's own scale; reverse-keyed items are flipped.
+    well, well_rows = wellbeing()
+    if well:
+        add.append({"id": "page_wellbeing", "section": "page", "tier": "1", "n": sum(w["items"] for w in well.values()),
+                    "effect": None, "ci90": None, "examples": [r["id"] for r in well_rows], "script": "scripts/portrait/export_page.py",
+                    "instruments": well, "sentence": "Five public wellbeing instruments, asked of Jev item by item and scored "
+                                                     "as for a person, for itself, for 'most people', and with the levels reversed."})
     L["claims"] = claims + add
     L["n_claims"] = len(L["claims"])
     (A / "findings.json").write_text(json.dumps(L, indent=1, default=str))
@@ -241,6 +319,7 @@ def main():
     for dom in byid["page_ratings"]["domains"].values():
         ex_ids |= {x["id"] for x in dom["top"] + dom["bottom"]}
     rows = {r["id"]: row(r) for r in shown.filter(pl.col("id").is_in(list(ex_ids))).iter_rows(named=True)}
+    rows |= {r["id"]: r for r in well_rows}
     work = [c for c in L["claims"] if c["section"] == "work"]
     # chance level per task: 1 / number of options (yes/no counts two)
     k = (shown.filter(pl.col("hemisphere") == "machine")

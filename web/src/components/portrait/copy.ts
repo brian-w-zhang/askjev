@@ -34,6 +34,11 @@ export const COPY: Record<string, CardCopy> = {
     fine: "Six real Reddit polls, picked by me. A model saying it isn't stressed tells you how it answers, not how it feels. The people are whoever answered a Reddit poll that day.",
     meme: "jev, every time you ask",
   },
+  checkup: {
+    title: "Asked properly, on real wellbeing scales, you say: *meh*.",
+    body: "Neither satisfied nor dissatisfied with your life, step {ladder} of 10 on the ladder (you put most people at {ladderPpl}), lonely and stressed some of the time. Your wellbeing score is low, until the scale is flipped: then it jumps from {who} to {whoRev}.",
+    fine: "Five public instruments (life satisfaction SWLS, WHO-5, UCLA loneliness, Perceived Stress, the Cantril ladder), {items} items, scored the way they're scored for people. They were built for humans (“over the last two weeks”), so this shows your habits with these scales, not an inner state. The tick is your answer with the levels reversed: where it lands far from the square, the answer follows the order of the options more than their meaning.",
+  },
   calm: {
     title: "On a real 50-item personality test, your answers look calmer than *{calmer} of {people} people*.",
     fine: "Careful with this one. You pick the middle of rating scales a lot (two cards down), and people describe themselves generously. Answering the same items for “most people”, you land at the {guess} percentile, so some of the calm is how you use the scale.",
@@ -155,7 +160,7 @@ export const COPY: Record<string, CardCopy> = {
   },
   closer: {
     title: "So, how's Jev doing?",
-    body: "Says it's fine. Calm on paper, hedges on scales, commits when it has to choose. Loves blue whales and The Shawshank Redemption, says GIF with a hard G, can barely tell which joke is funnier, and filed {placed} of its own map. Probably fine.",
+    body: "Says it's fine; on real wellbeing scales, meh. Calm on paper, hedges on scales, commits when it has to choose. Loves blue whales and The Shawshank Redemption, says GIF with a hard G, can barely tell which joke is funnier, and filed {placed} of its own map. Probably fine.",
   },
 };
 

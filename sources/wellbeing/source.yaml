@@ -1,0 +1,15 @@
+name: wellbeing
+url: https://doi.org/10.1207/s15327752jpa4901_13 (SWLS); https://www.psykiatri-regionh.dk/who-5 (WHO-5); https://doi.org/10.1177/0164027504268574 (UCLA-3); https://doi.org/10.2307/2136404 (PSS)
+license: >
+  Public instruments, free for non-commercial research use: Satisfaction with Life Scale (Diener, Emmons, Larsen &
+  Griffin 1985), WHO-5 Well-Being Index (WHO 1998), three-item UCLA Loneliness Scale (Hughes et al. 2004),
+  Perceived Stress Scale 4-item (Cohen, Kamarck & Mermelstein 1983), Cantril Self-Anchoring Ladder (Cantril 1965).
+version: items transcribed from the published instruments, 2026-09-27
+target: 18
+hemisphere: self
+kind: personality
+notes: >
+  Added for the portrait's "how are you doing?" card (docs/11-portrait.md). Each item keeps its instrument's own
+  response format (agreement, frequency), with a "most people" wording for the human frame. The Cantril ladder has
+  11 steps, more than a Score allows, so it is an ordered pick-one. All placed at self.mind.happiness_wellbeing.
+  No human distributions: published norms are means, not item distributions.
