@@ -145,6 +145,12 @@ Added by the expansion (`10-expansion.md`); counts, truth and human coverage are
 **Skipped:** recipe pairs (no public Food.com copy with recipe ids; ratings mostly ties), video-game pairs (no clean per-user
 preference), SciERC (no public labeled copy), xLAM function calling (gated).
 
+**Word norms carry means only (2026-09-26).** `lancaster`, `glasgow_norms` and `concreteness` publish a mean and SD
+per word, not per-level answer counts. Their earlier "human distributions" were normal curves fitted to mean and SD; those
+22,000 fitted curves were moved out of the human data into `meta.fitted_dist` (kept, labeled as fitted), and human
+comparisons on these sources use the published mean (`meta.mean` / `mean_0_5` / `mean_1_5`). The adapters no longer
+build them.
+
 ## Expansion sources (waves 5-9, 2026-09-25/26)
 Same verdict key. Jev correct = share of truth-bearing questions where Jev's top answer matches (sources with human
 data but no truth show "—"). Per-wave numbers and the full list are in `docs/expansion-log.md`.

@@ -177,7 +177,7 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
     for w in picked:
         r = rows[w]
         meta = {"word": w, "mean_1_5": r["conc_m"], "sd": r["conc_sd"], "subtlex_count": r["subtlex"],
-                "dist_method": f"normal(mean, max(sd,{MIN_SD})) on the 1-5 scale, cut at 1.5, 2.5, 3.5, 4.5"}
+                "human_summary": "published mean and SD only"}
         flags = word_flags(w)
         if flags:
             meta["flags"] = flags
@@ -194,11 +194,6 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
             source_item_id=w,
             license=LICENSE,
             template_id="concreteness.concreteness",
-            human=[HumanDist(
-                population="Brysbaert et al. 2014 MTurk raters (US)",
-                distribution=discretize(r["conc_m"], r["conc_sd"], [1.5, 2.5, 3.5, 4.5]),
-                n=r["n"],
-                source="Brysbaert, Warriner & Kuperman 2014 concreteness ratings",
-            )],
+            human=[],  # the norms publish means and SDs only (in meta); no per-level distribution was observed
             meta=meta,
         )

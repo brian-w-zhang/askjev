@@ -48,6 +48,7 @@
 | 2026-09-26 | Taste gets single-item Score ratings next to the head-to-heads: new hand node Self > Lifestyle > Ratings (12 domain children); real-data ratings with human distributions for films, books, board games, anime and beer (`taste_ratings`), an authored bank for the other domains (`10-expansion.md` §7) |
 | 2026-09-26 | Personality (trait) banks accept any Self placement from the round trip and keep the intended trait as `meta.measures`; other banks keep the strict filter (`10-expansion.md` §7) |
 | 2026-09-26 | Format banks (memes, who-would-win, shower thoughts, ratings) keep the author's node once the round-trip walk completes; earlier rejects recovered (`10-expansion.md` §7) |
+| 2026-09-26 | Human data must be observed: fitted normal curves from published means/SDs (lancaster, glasgow_norms, concreteness; 22,000 rows) moved out of `human_dists` into `meta.fitted_dist`; comparisons use the published mean (`04-datasets.md`) |
 
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)

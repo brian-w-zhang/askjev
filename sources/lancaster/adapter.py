@@ -211,14 +211,7 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
                 human_text=f'How much do most people experience "{word}" by {gerund}?',
                 source_item_id=f"{word.upper()}:{dim}",
                 license=LICENSE,
-                human=[
-                    HumanDist(
-                        population="Lancaster norms raters",
-                        distribution=discretize(mean, sd),
-                        n=n,
-                        source="Lancaster Sensorimotor Norms (OSF 7emr6)",
-                    )
-                ],
+                human=[],  # the norms publish means and SDs only (in meta); no per-level distribution was observed
                 meta={
                     **({"flags": fl} if (fl := _c.word_flags(word)) else {}),
                     "word": word,
@@ -226,6 +219,6 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
                     "mean_0_5": mean,
                     "sd": sd,
                     "dominant_perceptual": r["Dominant.perceptual"],
-                    "dist_method": f"normal(mean, max(sd,{MIN_SD})) on the 0-5 scale, binned <1,1-2,2-3,3-4,>=4",
+                    "human_summary": "published mean and SD only",
                 },
             )

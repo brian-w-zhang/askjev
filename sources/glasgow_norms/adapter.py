@@ -161,8 +161,7 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
             w, head, sense = quoted(r["Words"])
             mean, sd, n = float(r[f"{col}.M"]), float(r[f"{col}.SD"]), int(float(r[f"{col}.N"]))
             meta = {"word": r["Words"], "dimension": spec["dim"], "mean": mean, "sd": sd, "scale": spec["scale"],
-                    "dist_method": f"normal(mean, max(sd,{MIN_SD})) on the {spec['scale'].split(' ')[0]} scale, "
-                                   f"cut at {', '.join(str(e) for e in spec['edges'])}"}
+                    "human_summary": "published mean and SD only"}
             flags = _c.word_flags(head)
             if flags:
                 meta["flags"] = flags
@@ -179,11 +178,6 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
                 source_item_id=f"{r['Words']}:{spec['dim']}",
                 license=LICENSE,
                 template_id=f"glasgow_norms.{spec['dim']}",
-                human=[HumanDist(
-                    population="Glasgow Norms raters (UK university students)",
-                    distribution=_c.discretize(mean, sd, spec["edges"], MIN_SD),
-                    n=n,
-                    source="Glasgow Norms (Scott et al. 2019)",
-                )],
+                human=[],  # the norms publish means and SDs only (in meta); no per-level distribution was observed
                 meta=meta,
             )
