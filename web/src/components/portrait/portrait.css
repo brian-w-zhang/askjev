@@ -466,3 +466,4 @@
 .thb { border: 0; background: none; padding: 0; font: inherit; color: inherit; }
 .pt-table th { top: 0; }
 @media (max-width: 640px) { .at-bar { top: 30px; } .claimgrid, .covgrid { grid-template-columns: 1fr; } .atlas .pt-scroll { overflow-x: auto; } }
+.svgc rect[role="slider"]:focus-visible { outline: 2px solid var(--jev); outline-offset: -2px; }

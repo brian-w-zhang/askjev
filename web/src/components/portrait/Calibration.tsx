@@ -32,7 +32,7 @@ export default function Calibration({ bins }: { bins: Bin[] }) {
     <div>
       <p style={{ margin: "0 0 10px", fontSize: 15 }}>
         {shown ? "Your guesses are the rings; Jev's real rates are the dots." :
-          <>Your guess first: drag in each column. When Jev is this sure, how often is it right? <span style={{ color: "var(--w-fg-2)" }}>({count}/{guessBins.length} guessed)</span></>}
+          <>Your guess first: drag in each column (or tab to it and use the arrow keys). When Jev is this sure, how often is it right? <span style={{ color: "var(--w-fg-2)" }}>({count}/{guessBins.length} guessed)</span></>}
       </p>
       <svg ref={svg} className="svgc" viewBox={`0 0 ${W} ${H}`} style={{ touchAction: shown ? "auto" : "none" }}
         role="img" aria-label="Reliability diagram: Jev's confidence against how often it is right"
@@ -52,7 +52,15 @@ export default function Calibration({ bins }: { bins: Bin[] }) {
           <g key={b.lo}>
             {!shown && (
               <rect x={sx(b.lo) + 2} width={sx(b.hi) - sx(b.lo) - 4} y={sy(Y1)} height={sy(Y0) - sy(Y1)} fill="var(--jev-soft)" fillOpacity={guess[b.lo] === undefined ? 0.6 : 0.25}
-                style={{ cursor: "ns-resize" }}
+                style={{ cursor: "ns-resize" }} tabIndex={0} role="slider" aria-valuemin={20} aria-valuemax={100}
+                aria-valuenow={Math.round((guess[b.lo] ?? (b.lo + b.hi) / 2) * 100)}
+                aria-label={`Your guess: when Jev is ${Math.round(b.lo * 100)} to ${Math.round(b.hi * 100)}% sure, how often it is right`}
+                onKeyDown={(e) => {
+                  const step = e.key === "ArrowUp" || e.key === "ArrowRight" ? 0.05 : e.key === "ArrowDown" || e.key === "ArrowLeft" ? -0.05 : 0;
+                  if (!step) return;
+                  e.preventDefault();
+                  setGuess((g) => ({ ...g, [b.lo]: Math.min(Y1, Math.max(Y0, (g[b.lo] ?? (b.lo + b.hi) / 2) + step)) }));
+                }}
                 onPointerDown={(e) => { drag.current = b.lo; (e.target as Element).setPointerCapture?.(e.pointerId); setFrom(e, b.lo); }} />
             )}
             {guess[b.lo] !== undefined && (
