@@ -34,9 +34,13 @@ uv run python scripts/portrait/discovery.py          # 3. indicator cards per no
 uv run python scripts/portrait/findings.py           # 4. the ledger
 uv run python scripts/portrait/landscape.py          #    data landscape claims + source table
 uv run python scripts/portrait/pipeline.py           #    "Jev built its own map" claims
+uv run python scripts/portrait/tier1_scales.py       #    online tests (Open Psychometrics) vs their real test-takers
 uv run python scripts/portrait/export_page.py        # 7. page support claims + data/analysis/portrait.json
 uv run python scripts/portrait/shortlist.py          # 6. the review shortlist (data/analysis/shortlist.md)
-uv run python scripts/portrait/verify_page.py        # 9. numbers on the rendered page vs the ledger
+uv run python scripts/portrait/verify_page.py        # 9. numbers on the rendered page vs the ledger (ASKJEV_KEY=... for prod)
+node scripts/portrait/sweep.mjs <outdir> [base]      #    every route, 5 widths, 2 themes: errors, overflow, alt text
+node scripts/portrait/interact.mjs <outdir> [base]   #    clicks through map, portrait and atlas like a visitor
+uv run python scripts/portrait/publish.py [--deploy] #    portrait.json + memes to a private Blob folder (PORTRAIT_URL)
 node scripts/portrait/shots.mjs <outdir>             #    one screenshot per card, both themes, desktop and phone
 ```
 
@@ -66,6 +70,9 @@ Every claim states its tier.
 - Bradley-Terry rankings from the head-to-heads, with rank correlation against people's own head-to-heads and against
   Jev's single-item ratings of the same entities.
 - Accuracy and calibration where there is a right answer; crowd agreement where there are human answers; real gambles.
+- Open Psychometrics scales (nerdiness, DASS, attachment, dark triad, RIASEC and ~50 more) compared item by item with
+  the average answer of everyone who took them on the site (`tier1_scales.py`); a comparison with test-takers, not a
+  percentile, and test-takers are self-selected.
 
 **Tier 2: authored trait questions** (`meta.measures`). A subagent audited option direction on a random sample of
 1,650 items across 33 facets (`data/analysis/audit/`). Most rating (Score) items ran low to high (81% as written);
@@ -138,13 +145,13 @@ number in a meme comes from the ledger. They sit beside the card on wide screens
 | Part | Cards |
 |---|---|
 | intro | tweet (ink) · so I asked (stats) · three ways to answer (one question) · where the questions come from (unit chart) |
-| how are you | check-in vs Reddit (chill guy) · checkup on five real wellbeing scales · Big Five percentiles · ISTJ · quieter than everyone (Spider-Man) · the middle-level habit (Anakin/Padme) |
+| how are you | check-in vs Reddit (chill guy) · checkup on five real wellbeing scales · online tests vs their real test-takers · Big Five percentiles (Spider-Man) · ISTJ · the middle-level habit (Anakin/Padme) |
 | taste | top picks per domain (absolute cinema) · things you could do without · beyond reputation (tuxedo Pooh) |
-| hot takes | internet debates (gigachad) · you vs a confident crowd (average enjoyer) · crowd agreement by domain · the quiz |
-| values | Moral Machine · women vs men dilemmas · Moral Foundations · gambles scatter |
-| work | performance review (is this a pigeon) · draw-first calibration · knowledge by domain · you helped build the map |
+| hot takes | internet debates (gigachad) · you vs a confident crowd (average enjoyer) · the quiz |
+| values | Moral Machine · women vs men dilemmas · Moral Foundations · gambles (binned density) |
+| work | performance review (is this a pigeon) · career code (RIASEC) · draw-first calibration · five strongest and weakest knowledge domains · you helped build the map |
 | rough edges | humor (monkey puppet) · confident misses and whose fault · shuffle stability |
-| end | you vs Jev · what this can't tell you · closer · the full fine print |
+| end | you vs Jev · what this can't tell you · closer with the Wrapped summary tiles · the full fine print |
 
 Every card has fine print and a "receipts" toggle with the tier, n, interval, ledger ids and real rows. Charts are
 HTML dot rows and bars (legible at phone width) and SVG scatters. Light and dark themes share the map's
