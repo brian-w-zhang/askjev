@@ -1,0 +1,21 @@
+name: imgflip_captions
+url: https://github.com/schesa/ImgFlip575K_Dataset
+license: ImgFlip575K (schesa, public GitHub scrape of imgflip.com, no explicit license); captions are Imgflip user content, research use
+version: master branch, dataset/memes/*.json (99 templates, 575,948 memes) + dataset/templates/*.json, fetched 2026-09-26
+target: 3500 (ASKJEV_TARGET_IMGFLIP_CAPTIONS; at most 60 per template via ASKJEV_IMGFLIP_CAPTIONS_PER_TEMPLATE)
+hemisphere: world
+kind: evaluative
+notes: >
+  "Which caption, `caption_1` or `caption_2`, got more upvotes on Imgflip when it was posted on the "<template>" meme?"
+  Two real captions from the same template's Imgflip popular stream; truth = the one with more upvotes (img-votes).
+  Exposure is held roughly equal so the vote gap reflects the caption: views within 1.5x of each other, the winner
+  has >= 25 upvotes and >= 4x the loser's, and the loser has >= 300 views. Each caption is used at most once.
+  state = {meme_template, template_layout, caption_1, caption_2}; the multi-box caption is the boxes joined by " / "
+  in Imgflip's box order, and template_layout is a one-line description of the image and box order authored for
+  this source (the model reads text only). Dropped: an empty box, fewer boxes than a multi-panel layout needs (Drake,
+  Expanding Brain, Two Buttons...), < 12 or > 280 characters or < 3 words, captions that are only the template's
+  own words, Imgflip/upvote/stream meta talk and links, slurs, explicit sexual content, exact duplicates. Flags
+  (keyword, over-inclusive): "political" for politics words and every caption on the Trump Bill Signing and Bernie
+  templates; "sensitive" for violence, drugs, profanity, death/self-harm and ethnic, gender-identity or disability
+  mentions. Round-robin across templates in salted-hash order. Node memes.formats_templates. Caveats: votes come
+  from a 2020 scrape of the popular stream (not the all-time list); captions are often ALL CAPS and typo'd as posted.

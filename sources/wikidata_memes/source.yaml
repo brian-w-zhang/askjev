@@ -1,0 +1,29 @@
+name: wikidata_memes
+url: https://qlever.dev/api/wikidata (fallback https://query.wikidata.org/) + https://wikimedia.org/api/rest_v1/metrics/pageviews
+license: CC0 (Wikidata); popularity from Wikimedia pageviews API (CC0)
+version: SPARQL pulls and English Wikipedia pageviews 2023-01..2025-12 cached 2026-09-26 (data/raw/wikidata_memes/{items,classes,pageviews}.json)
+target: 2754 (ASKJEV_WIKIDATA_MEMES_KNOWN 2000 + ASKJEV_WIKIDATA_MEMES_FIRST up to 1200; dated items limit it to 754)
+hemisphere: world
+kind: evaluative (better_known), factual (came_first)
+notes: >
+  Items that are an instance (P31) of internet meme (Q2927074) or viral video (Q1030329) or a subclass (image macro,
+  copypasta, exploitable comic, internet challenge, rage comic, YouTube Poop...): 1,016 items, 553 with an English
+  Wikipedia article. Pool (482): has an enwiki article; no other P31 that makes it primarily something else (film,
+  video game, number, drug, brand, product, principle/adage/law, human, genre, conspiracy theory, website, mascot,
+  caricature, pejorative, political campaign, stock character, annual event); description not "film directed / video
+  game developed / character from / album by / company / TV series"; unique Latin-script label <= 60 chars. Dropped
+  outright: shock sites, porn, sexual slang memes (Rule 34, Ligma, "Fuck her right in the pussy", santorum...),
+  hate symbols and antisemitic caricatures, pedophilia memes, terrorism (an ISIS nasheed). Flags (keyword over label
+  + description): "political" for politicians, wars, elections, political pejoratives (23%); "sensitive" for sexual
+  slang, death, drugs, violence (7%). (1) better_known (2,000): "Which internet meme is better known: "A" or "B"?"
+  (viral video / "internet phenomena" wording for other kind combinations). Truth = more enwiki user pageviews over
+  2023-2025, only when the winner has >= 20,000 views and >= 3x the loser (>= 1,000), and the winner's sitelink count
+  is not lower. Options carry "label: Wikidata description" (truncated to 110 chars) to disambiguate names like
+  "Thriller" or "Cristal". (2) came_first (754): "Which internet meme appeared first: "A" or "B"?" from the earliest
+  inception (P571) / publication (P577) year, used only when the item's dates agree within a year; 12 undated items
+  take the year from a description like "2011 Internet meme". Only items dated 1998 or later (older P571/P577 dates are the source, e.g. a 1995 table or a 1987 game line, not the meme). Years >= 3 apart. Option descriptions containing a year
+  are left out so they don't give the answer away. Each item in at most 10 pairs per template; salted-hash order, A/B
+  order hashed. Node memes.classic_eras. Caveats: pageviews favor recent memes (Skibidi Toilet, Italian brainrot) over
+  classics, so "better known" means "gets more attention now"; Wikidata's meme typing is loose (a few items are
+  slang, aesthetics, products or incidents that went viral); even after 1998, P571/P577 can date the
+  source (an SNL sketch, a sound effect) rather than when it became a meme.

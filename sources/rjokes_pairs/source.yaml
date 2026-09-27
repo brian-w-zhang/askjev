@@ -1,0 +1,21 @@
+name: rjokes_pairs
+url: https://github.com/orionw/rJokesData
+license: r/Jokes dataset (Weller & Seppi 2020, github.com/orionw/rJokesData) - Reddit user content under the Reddit API terms and User Agreement, research use with citation
+version: data/preprocessed.csv.gz (573,335 r/Jokes posts 2008-2019 with final scores), fetched 2026-09-26
+target: 2500 (ASKJEV_TARGET_RJOKES_PAIRS)
+hemisphere: world
+kind: evaluative
+notes: >
+  "Which joke, `joke_1` or `joke_2`, got more upvotes on Reddit's r/Jokes?" with the two jokes (post title + body, as
+  posted) in state. Truth = the higher-scored joke. Both posted in the same calendar month; winner score >= 1,000 and
+  >= 10x the loser; loser score 10-300 (a live post that was seen and voted on); lengths 40-600 characters and within
+  2x of each other; each joke used once. Reposts removed: a joke whose normalized text or first 80 normalized
+  characters occurs more than once in the file is dropped, so no joke has two scores. Trailing "Edit: ..." notes are
+  stripped, and any remaining Reddit meta (karma, gold, repost, this sub, r/, u/) drops the joke so no text leaks its
+  score. Hard content filter (keyword, over-inclusive): slurs, sexual words and innuendo, politics, ethnic /
+  national / religious-group, gender-identity and disability jokes, "women are..." / blonde / yo-mama jokes,
+  Holocaust/terror/9-11, any joke using black/white/brown for people (color words are dropped unless plainly about a thing: black hole, black eye, black and white...), graphic violence, self-harm, drugs and strong profanity are all dropped. Borderline content
+  that remains (religion as a setting, death, drinking, mild swearing, toilet humor) is flagged "sensitive". Node:
+  world.society.internet_culture (world.arts.comedy would also fit). Caveat: Reddit scores are heavy-tailed and partly
+  luck (timing, the front page), so the 10x gap with a same-month control is what makes the truth meaningful; the
+  question is about r/Jokes voters, not about which joke is objectively funnier.
