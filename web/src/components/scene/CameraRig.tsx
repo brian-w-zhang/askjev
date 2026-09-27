@@ -33,7 +33,7 @@ function followDist(id: string) {
   return Math.max(9, frameDist(id) * 0.75);
 }
 
-export function home(dur = 1.6, turn = 0.35) {
+export function home(dur = 1.6, turn = 0.35, from?: { pos: [number, number, number]; target: [number, number, number] }) {
   const ps = [...anim.placed.values()];
   if (!ps.length) return;
   const lo = [Infinity, Infinity, Infinity], hi = [-Infinity, -Infinity, -Infinity];
@@ -47,6 +47,7 @@ export function home(dur = 1.6, turn = 0.35) {
   const aspect = typeof window !== "undefined" ? window.innerWidth / Math.max(1, window.innerHeight) : 1;
   const half = Math.atan(Math.tan((21 * Math.PI) / 180) * Math.min(1, aspect));
   flyTo(c, (r * 1.2) / Math.tan(half), dur, turn);
+  if (from && anim.flight) anim.flight.from = from; // start somewhere else (the opening starts close on the root)
 }
 
 export function CameraRig() {
@@ -70,7 +71,7 @@ export function CameraRig() {
         controls.object.position.set(...pos);
         controls.update();
       },
-      get: () => ({ pos: controls.object.position.toArray(), target: controls.target.toArray(), flight: !!anim.flight }),
+      get: () => ({ pos: controls.object.position.toArray(), target: controls.target.toArray(), flight: !!anim.flight, sea: anim.sea }),
     };
   }, [controls]);
 

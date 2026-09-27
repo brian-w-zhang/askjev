@@ -4,6 +4,7 @@ import { useStore } from "@/lib/store";
 import { jevFile, openQuestion, selectNode, travel, type Walk } from "@/lib/actions";
 import type { Hemisphere } from "@/lib/types";
 import { Crumbs, pct } from "./Panel";
+import { Info } from "./Info";
 import { questionUrl } from "@/lib/panelData";
 import { useResource } from "@/lib/cache";
 
@@ -114,7 +115,18 @@ export function QuestionCard({ id, note, onClose }: { id: string; note?: string;
 
         <section>
           <div className="framebar">
-            <h4 style={{ margin: 0 }}>{view.main?.frame === "human" ? "What Jev thinks most people would say" : isSelf ? "Jev's default" : "Jev's answer"}</h4>
+            <h4 style={{ margin: 0 }}>
+              <span className="h4t">
+                {view.main?.frame === "human" ? "What Jev thinks most people would say" : isSelf ? "Jev's default" : "Jev's answer"}
+                <Info label="Jev's answer">
+                  Each bar is the probability Jev gave that option. Jev returns the whole spread, not just a pick.
+                  <span><b>{frameName("self")}:</b> the question asked as is.</span>
+                  <span><b>Most people:</b> the same question, with Jev told to give the most common human answer instead of its own view.</span>
+                  <span><b>Real people</b> (the tick marks): what an actual survey or poll found, where one exists.</span>
+                  <span><b>Reported confidence:</b> a number Jev returns for Choice and Score, based on how concentrated its probabilities are. It is not a measured chance of being right.</span>
+                </Info>
+              </span>
+            </h4>
             {view.frames.length > 1 && (
               <span className="seg" role="group" aria-label="Frame">
                 {view.frames.map((f) => (
@@ -172,7 +184,14 @@ export function QuestionCard({ id, note, onClose }: { id: string; note?: string;
 
         <section>
           <h4>
-            Stability under reshuffling
+            <span className="h4t">
+              Stability under reshuffling
+              <Info label="Stability under reshuffling">
+                Jev is asked the same question again with the options in a different order: three shuffles for a Choice,
+                the levels reversed for a Score. <b>Agree</b> is the share of those reruns that kept the same top answer.
+                <span>A flip means the answer depends partly on where an option sits, not on what it says. Yes / no questions have nothing to reorder, so they aren&apos;t measured.</span>
+              </Info>
+            </span>
             {typeof stability === "number" && <small className="num">{pct(stability)} agree</small>}
           </h4>
           {view.variants.length === 0 ? (
@@ -197,7 +216,18 @@ export function QuestionCard({ id, note, onClose }: { id: string; note?: string;
 
         {meta && (
           <section>
-            <h4>Jev on the question itself <small>its own read, before answering</small></h4>
+            <h4>
+              <span className="h4t">
+                Jev on the question itself
+                <Info label="Jev on the question itself">
+                  Before answering, Jev is asked about the question. Each bar is its probability of &ldquo;yes&rdquo;.
+                  <span><b>Has one right answer:</b> could it be checked against facts?</span>
+                  <span><b>Ambiguous:</b> could different readers understand it differently?</span>
+                  <span><b>People disagree:</b> how much thoughtful people would disagree (a scale, shown 0 to 100%).</span>
+                  <span><b>Reveals the answerer:</b> would someone&apos;s answer say something about their personality or values?</span>
+                </Info>
+              </span>
+            </h4>
             <div className="meters">
               {([["objective", "Has one right answer"], ["ambiguous", "Ambiguous"], ["disagreement", "People disagree"], ["reveals_self", "Reveals the answerer"]] as const).map(([k, label]) =>
                 meta[k] === null || meta[k] === undefined ? null : (
@@ -210,15 +240,15 @@ export function QuestionCard({ id, note, onClose }: { id: string; note?: string;
               )}
             </div>
             <dl className="facts" style={{ marginTop: 14 }}>
-              {meta.frame_gap != null && <><dt>Frame gap</dt><dd className="num">{(meta.frame_gap as number).toFixed(2)} (self vs most people)</dd></>}
-              {meta.human_gap != null && <><dt>Human gap</dt><dd className="num">{(meta.human_gap as number).toFixed(2)} (vs real people)</dd></>}
-              {meta.correct != null && <><dt>Matches truth</dt><dd>{meta.correct ? "Yes" : "No"}{meta.brier != null && <span className="num"> (Brier {(meta.brier as number).toFixed(3)})</span>}</dd></>}
+              {meta.frame_gap != null && <><dt><span className="h4t">Frame gap<Info label="Frame gap">How far Jev&apos;s own answer is from its &ldquo;most people&rdquo; answer, from 0 (identical) to 1 (no overlap). It&apos;s the total variation distance between the two spreads.</Info></span></dt><dd className="num">{(meta.frame_gap as number).toFixed(2)} (self vs most people)</dd></>}
+              {meta.human_gap != null && <><dt><span className="h4t">Human gap<Info label="Human gap">How far Jev&apos;s &ldquo;most people&rdquo; answer is from what real people actually answered, on the same 0 to 1 scale. It tests Jev&apos;s model of people, not its own view.</Info></span></dt><dd className="num">{(meta.human_gap as number).toFixed(2)} (vs real people)</dd></>}
+              {meta.correct != null && <><dt><span className="h4t">Matches truth<Info label="Matches truth">Whether Jev&apos;s top answer is the known correct one, for questions that have one. <b>Brier</b> is the squared error of all its probabilities against that answer: 0 is perfect, and always hedging 50 / 50 on a yes / no scores 0.25.</Info></span></dt><dd>{meta.correct ? "Yes" : "No"}{meta.brier != null && <span className="num"> (Brier {(meta.brier as number).toFixed(3)})</span>}</dd></>}
             </dl>
           </section>
         )}
 
         <section>
-          <h4>Thread <small className="num">asked {q.ask_count}×</small></h4>
+          <h4>Thread <small className="num">{q.ask_count ? `asked ${q.ask_count} time${q.ask_count === 1 ? "" : "s"}` : "never asked"}</small></h4>
           {d.links.length === 0 ? (
             <p className="note">No follow-ups or duplicates linked yet.</p>
           ) : (
@@ -244,7 +274,10 @@ export function QuestionCard({ id, note, onClose }: { id: string; note?: string;
             <dt>Origin</dt><dd>{q.origin}{q.source ? `, ${q.source}` : ""}{q.license ? ` (${q.license})` : ""}</dd>
             {d.placements.length > 0 && (
               <>
-                <dt>Placed by</dt>
+                <dt><span className="h4t">Placed by<Info label="Placed by">How this question got to its topic.
+                  <span><b>jev</b> / <b>jev_fast:</b> Jev walked the tree, picking a branch at each level. <b>Sure</b> is its confidence in the path, and <b>separation</b> is how many times stronger it scored than the runner-up.</span>
+                  <span><b>deterministic:</b> the source dataset&apos;s own category decided it.</span>
+                  <span><b>split</b>, <b>regroup</b>, <b>reroute</b>: moved when its topic was split or reorganized.</span></Info></span></dt>
                 <dd className="num">
                   {d.placements[d.placements.length - 1].method}
                   {d.placements[d.placements.length - 1].confidence != null && `, ${pct(d.placements[d.placements.length - 1].confidence)} sure`}
@@ -290,7 +323,14 @@ function JevFile({ text, stored }: { text: string; stored: string[] }) {
   return (
     <section>
       <h4>
-        Where Jev would file it
+        <span className="h4t">
+          Where Jev would file it
+          <Info label="Where Jev would file it">
+            Jev sees the tree one level at a time and picks a branch at each step, keeping its best few paths. Its pick is
+            drawn in green beside the ink trail of where the question is actually stored, so any disagreement shows where they part.
+            <span><b>Path confidence</b> is how sure it was of the whole path.</span>
+          </Info>
+        </span>
         {st.state !== "walking" && (
           <button className="chipbtn" onClick={go}>{st.state === "done" ? "Walk again" : "Ask Jev"}</button>
         )}

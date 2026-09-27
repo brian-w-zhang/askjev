@@ -1,9 +1,10 @@
 "use client";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { NormalBlending, BufferAttribute, BufferGeometry, Color, ShaderMaterial } from "three";
 import { useStore } from "@/lib/store";
-import { anim, now, progress } from "@/lib/anim";
+import { anim, FLIGHT, now, progress } from "@/lib/anim";
+import { heat } from "@/lib/heat";
 import { edgePoint, type Placed } from "@/lib/layout";
 import { JEV_GREEN, THEMES } from "@/lib/theme";
 
@@ -22,18 +23,18 @@ const vert = /* glsl */ `
 // A light pulse travels along a path: `uProgA`/`uProgB` are positions in depth units
 // (k = the k-th node on the path). Behind the head the path stays lit (the trail).
 const frag = /* glsl */ `
-  uniform float uTime; uniform float uProgA; uniform float uProgB;
+  uniform float uTime; uniform float uFlight; uniform float uProgA; uniform float uProgB; uniform float uLevel;
   uniform vec3 uColA; uniform vec3 uColB;
   varying float vT; varying float vPos; varying float vA; varying float vB; varying float vBorn;
   varying float vDim; varying float vRel; varying vec3 vColor;
   void main() {
-    float grown = clamp((uTime - vBorn) / 0.7, 0.0, 1.0);
+    float grown = clamp((uTime - vBorn) / uFlight, 0.0, 1.0);
     if (vT > grown * 1.05) discard;                         // new branches draw outward from the parent
     float drift = 0.5 + 0.5 * sin(vPos * 9.0 - uTime * 1.4); // slow outward flow on every branch
     // thin ink filaments tinted by hemisphere; the dither pass turns them into dotted lines
     // filaments in the hemisphere's own color, strong enough to read against the sky
-    vec3 col = vColor * 0.85;
-    float alpha = (0.5 + 0.1 * drift + 0.4 * vRel) * vDim;
+    vec3 col = mix(vColor * 0.85, uColA, 0.6 * vRel); // live search heat warms branches toward ink
+    float alpha = (0.5 + 0.1 * drift + 0.5 * vRel) * vDim * mix(1.0, 0.2 + 0.8 * vRel, uLevel); // the rest fades while searching
     if (vA > 0.5 && uProgA >= 0.0) {
       float trail = step(vPos, uProgA);
       float d = (vPos - uProgA) * 4.5;
@@ -58,7 +59,6 @@ export function Edges({ placed }: { placed: Map<string, Placed> }) {
   const born = useStore((s) => s.born);
   const pathA = useStore((s) => s.pathA);
   const pathB = useStore((s) => s.pathB);
-  const relevance = useStore((s) => s.relevance);
   const theme = useStore((s) => s.theme);
   const filtersActive = useStore((s) => !!(s.filters.kind || s.filters.primitive || s.filters.origin));
 
@@ -72,8 +72,10 @@ export function Edges({ placed }: { placed: Map<string, Placed> }) {
         blending: NormalBlending,
         uniforms: {
           uTime: { value: 0 },
+          uFlight: { value: FLIGHT },
           uProgA: { value: -1 },
           uProgB: { value: -1 },
+          uLevel: { value: 0 },
           uColA: { value: new Color(THEMES.light.ink) },
           uColB: { value: new Color(JEV_GREEN) },
         },
@@ -131,12 +133,13 @@ export function Edges({ placed }: { placed: Map<string, Placed> }) {
 
   useEffect(() => () => geometry.dispose(), [geometry]);
 
-  // Path membership, relevance and filter dimming live in per-vertex attributes.
+  // Path membership and filter dimming live in per-vertex attributes; search heat too (written per frame below).
+  const heatSeen = useRef(-1);
   useEffect(() => {
+    heatSeen.current = -1; // a rebuilt geometry starts cold
     const A = geometry.getAttribute("aA") as BufferAttribute;
     const B = geometry.getAttribute("aB") as BufferAttribute;
     const D = geometry.getAttribute("aDim") as BufferAttribute;
-    const R = geometry.getAttribute("aRel") as BufferAttribute;
     const onA = new Set(pathA.slice(1));
     const onB = new Set(pathB.slice(1));
     for (const [id, [start, count]] of ranges) {
@@ -144,20 +147,25 @@ export function Edges({ placed }: { placed: Map<string, Placed> }) {
       const dim = filtersActive && n && n.n_match !== undefined && n.n_match === 0 ? 0.25 : 1;
       const a = onA.has(id) ? 1 : 0;
       const b = onB.has(id) ? 1 : 0;
-      const r = Math.min(1, relevance[id] ?? 0);
       for (let i = start; i < start + count; i++) {
         A.array[i] = a;
         B.array[i] = b;
         D.array[i] = dim;
-        R.array[i] = r;
       }
     }
-    A.needsUpdate = B.needsUpdate = D.needsUpdate = R.needsUpdate = true;
-  }, [geometry, ranges, pathA, pathB, nodes, filtersActive, relevance]);
+    A.needsUpdate = B.needsUpdate = D.needsUpdate = true;
+  }, [geometry, ranges, pathA, pathB, nodes, filtersActive]);
 
   useFrame(() => {
+    if (heatSeen.current !== heat.version) {
+      heatSeen.current = heat.version;
+      const R = geometry.getAttribute("aRel") as BufferAttribute;
+      for (const [id, [start, count]] of ranges) R.array.fill(heat.node.get(id) ?? 0, start, start + count);
+      R.needsUpdate = true;
+    }
     const t = now();
     material.uniforms.uTime.value = t;
+    material.uniforms.uLevel.value = heat.level;
     material.uniforms.uProgA.value = progress(anim.A, t);
     material.uniforms.uProgB.value = progress(anim.B, t);
   });

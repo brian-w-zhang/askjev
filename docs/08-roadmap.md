@@ -44,6 +44,7 @@
 | 2026-09-25 | Synthetic share is a ~15-20% guideline, not a hard cap (Self may exceed it); new World volume held until World ≈ 36%; waves 6-7 are Machine + Self (`10-expansion.md` §9) |
 | 2026-09-25 | Final plan to ~1.02M at 35/35/30 (`10-expansion.md` §10): Self gets ~100k more beyond the queue (real + synthetic); Social Chemistry's freeze is lifted for Self balance; Machine's last round is trimmed to ~85k and kept out of documents |
 | 2026-09-26 | Search journeys go **straight down the chosen question's stored path** (embeddings + one Jev rerank pick it); Jev's own tree walk is **on demand** from the question card ("Where Jev would file it"), not part of every search: it cost 1-2 s and a detour whenever Jev filed a question elsewhere. Rerank check (`web/scripts/rerank_eval.mjs`, 30 queries): Jev changes the top result in 50%, median 243 ms |
+| 2026-09-26 | **Deployment:** Vercel (from `web/`) + a trimmed Postgres copy (PlanetScale, single node) built by `scripts/sync_prod.py`; search drops its trigram leg (never changed the #1 on 30 queries, ~590 ms) and production uses half-precision embeddings with a 1-bit HNSW index (#1 matches exact search 97%, 292 MB vs 1.85 GB); private via a shared-link key; ask box answer-only in production (`07-ui.md`, Deployment) |
 | 2026-09-25 | Authored questions never open with a trait or topic label (`01-jev.md` §7); labels were stripped from the queued Self banks and from 3,684 ingested synthetic questions, which were re-answered (`10-expansion.md` §7) |
 | 2026-09-26 | Taste gets single-item Score ratings next to the head-to-heads: new hand node Self > Lifestyle > Ratings (12 domain children); real-data ratings with human distributions for films, books, board games, anime and beer (`taste_ratings`), an authored bank for the other domains (`10-expansion.md` §7) |
 | 2026-09-26 | Personality (trait) banks accept any Self placement from the round trip and keep the intended trait as `meta.measures`; other banks keep the strict filter (`10-expansion.md` §7) |
@@ -51,6 +52,7 @@
 | 2026-09-26 | Human data must be observed: fitted normal curves from published means/SDs (lancaster, glasgow_norms, concreteness; 22,000 rows) moved out of `human_dists` into `meta.fitted_dist`; comparisons use the published mean (`04-datasets.md`) |
 | 2026-09-27 | Content screen: narrow 03 §6 topics plus contested policy debates and sex work, attached content included, hide at p >= 0.3 with a keyword backstop; all hidden questions re-screened (17,833 unhidden) and Moral Machine shown (`03-questions.md` §6, `10-expansion.md` §7) |
 | 2026-09-27 | Harm review: an embedding and keyword scan (no Jev) found 32 visible World/Self questions to remove; hidden with a permanent `harmful` flag rather than deleted (kept in dev, never in the production copy); Machine moderation inputs stay visible by choice (`03-questions.md` §6) |
+| 2026-09-26 | Search is **find-only and live**: every keystroke (minus a trailing fragment under 3 chars) re-lights the map as ink heat over the top 20's dots and paths, with the category named and the rest faded; Jev stays one request at the pause, drawn in green. No answering LLM or citations. Asking new questions becomes a separate **compose mode** later (`07-ui.md`, Search and Ask box) |
 
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)
@@ -81,6 +83,7 @@
 - [x] Constellation view + question cards + findings page (`07-ui.md`)
 - [ ] Nebula main view: every node and question drawn, detail on approach (`07-ui.md`)
 - [x] Ask box (private)
+- [ ] Compose mode: write a new question in its primitive's spec and watch Jev dedupe, place and answer it live on the map (`07-ui.md`, Ask box)
 
 ## M5: Outreach
 Plan (from `resources/references/notion/become-typesafe-first-intern.md`): apply to "Member of Staff:

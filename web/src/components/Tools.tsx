@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useStore, type ToolId } from "@/lib/store";
 import { INDICATORS, RAMP_CSS } from "@/lib/color";
 import { LAYOUTS, LAYOUT_KEY, type LayoutKind } from "@/lib/layout";
-import { refreshFilters } from "@/lib/actions";
+import { refreshFilters, resetView } from "@/lib/actions";
 
 // The search window's tools row (docs/07-ui.md, Search), like the row under a search engine's box: each tab
 // names its current setting and opens a panel right under the box. Keys 1-6 switch layouts.
@@ -45,7 +45,22 @@ export function ToolTabs({ onLucky }: { onLucky: () => void }) {
     <div className="tooltabs" role="toolbar" aria-label="View">
       {tab("layout", "Layout", LAYOUTS.find((l) => l.id === layout)?.label ?? "")}
       {tab("color", "Color", INDICATORS.find((i) => i.id === indicator)?.label ?? "")}
-      {tab("filters", "Filters", nFilters ? String(nFilters) : "Off")}
+      <button
+        className="tooltab icon"
+        aria-expanded={tool === "filters"}
+        aria-controls="toolpanel"
+        onClick={() => toggle("filters")}
+        title="Filters"
+        aria-label={nFilters ? `Filters, ${nFilters} on` : "Filters"}
+      >
+        <svg viewBox="0 0 16 16" aria-hidden shapeRendering="crispEdges">
+          <path d="M2 3h12l-4.5 5.5V13l-3 1.5v-6Z" fill={nFilters ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.5" />
+        </svg>
+        {nFilters > 0 && <b className="num">{nFilters}</b>}
+      </button>
+      <button className="resetbtn" onClick={resetView} title="Reset view: clear the search and selection, fly home (Esc)" aria-label="Reset view">
+        <span aria-hidden>⌂</span>
+      </button>
       <button className="luckybtn" onClick={onLucky} title="Fly to a random question">
         Feeling lucky
       </button>
@@ -90,9 +105,9 @@ export function ToolPanel() {
       )}
       {tool === "color" && (
         <>
-          <div className="seg" role="group" aria-label="Color by indicator">
+          <div className="segline" role="radiogroup" aria-label="Color by indicator">
             {INDICATORS.map((i) => (
-              <button key={i.id} aria-pressed={indicator === i.id} onClick={() => set({ indicator: i.id })} title={i.hint}>
+              <button key={i.id} role="radio" aria-checked={indicator === i.id} onClick={() => set({ indicator: i.id })} title={i.hint}>
                 {i.label}
               </button>
             ))}
@@ -131,10 +146,12 @@ export function ToolPanel() {
             </select>
           </div>
           <div className="toggles">
+{process.env.NODE_ENV !== "production" && (
             <div className="toggle">
               <span>Show hidden questions (dev)</span>
               <button className="switch" role="switch" aria-checked={showHidden} aria-label="Show hidden questions" onClick={() => set({ showHidden: !showHidden })} />
             </div>
+            )}
           </div>
         </>
       )}

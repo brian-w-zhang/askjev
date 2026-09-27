@@ -37,7 +37,10 @@ function treeKey(inp: LayoutInput): string {
     for (let i = 0; i < id.length; i++) h = (Math.imul(h, 31) + id.charCodeAt(i)) | 0;
   }
   for (const v of inp.direct.values()) total += v;
-  return `${Object.keys(inp.nodes).length}:${n}:${h}:${total}:${inp.semantic ? 1 : 0}`;
+  // the Meaning layout also depends on its coordinates (they change when the questions do)
+  let c = 0;
+  if (inp.semantic) for (const [id, v] of Object.entries(inp.semantic)) c = (Math.imul(c, 31) + id.length + Math.round(v[0] * 1e4) + Math.round(v[1] * 1e3)) | 0;
+  return `${Object.keys(inp.nodes).length}:${n}:${h}:${total}:${c}`;
 }
 
 /** Node placement for `kind`; null while that layout is still being computed (Web) or loaded (Meaning). */
@@ -60,7 +63,7 @@ export function layoutFor(
     case "pack": out = pack(inp); break;
     case "onion": out = onion(inp); break;
     case "force": out = forceAsync(key, inp, () => layoutFor("balloon", nodes, children, direct, null, rootId)!); break;
-    case "semantic": out = semantic(inp); break;
+    case "semantic": out = inp.semantic ? semanticAsync(key, inp) : null; break;
     default: out = balloon(inp);
   }
   if (out) {
@@ -108,6 +111,43 @@ function forceAsync(key: string, inp: LayoutInput, startOf: () => Map<string, Pl
     done(force(inp, start)); // no worker after all: do it here
   };
   worker.postMessage(sim);
+  return null;
+}
+
+const SEMANTIC_KEY = "askjev.meaning:"; // finished Meaning layouts, per browser, keyed by tree shape and coordinates
+
+/**
+ * The Meaning layout without blocking the page: its overlap pass (~0.5 s) runs in a worker and the result is kept
+ * in this browser, so after the first time it's instant. Null until it's ready; the Scene re-renders then.
+ */
+function semanticAsync(key: string, inp: LayoutInput): Map<string, Placed> | null {
+  try {
+    const saved = localStorage.getItem(SEMANTIC_KEY + key);
+    if (saved) return new Map(JSON.parse(saved) as [string, Placed][]);
+  } catch {}
+  if (pending.has(key)) return null;
+  if (typeof Worker === "undefined") return semantic(inp);
+  pending.add(key);
+  const done = (layout: Map<string, Placed> | null) => {
+    pending.delete(key);
+    if (!layout) return;
+    cache.set(key, layout);
+    useStore.getState().set({ layoutTick: useStore.getState().layoutTick + 1 });
+  };
+  const worker = new Worker(new URL("./layouts/semantic.worker.ts", import.meta.url), { type: "module" });
+  worker.onmessage = (e: MessageEvent<Map<string, Placed> | null>) => {
+    worker.terminate();
+    try {
+      for (let i = localStorage.length - 1; i >= 0; i--) { const k = localStorage.key(i); if (k?.startsWith(SEMANTIC_KEY)) localStorage.removeItem(k); }
+      if (e.data) localStorage.setItem(SEMANTIC_KEY + key, JSON.stringify([...e.data]));
+    } catch {}
+    done(e.data);
+  };
+  worker.onerror = () => {
+    worker.terminate();
+    done(semantic(inp)); // no worker after all: do it here
+  };
+  worker.postMessage(inp);
   return null;
 }
 

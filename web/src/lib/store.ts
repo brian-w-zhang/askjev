@@ -35,7 +35,7 @@ interface State {
   focusStar: number; // the question dot a search or "feeling lucky" flight landed on, -1 for none
   pathA: string[]; // embedding path (root → result node)
   pathB: string[]; // Jev's own walk
-  relevance: Record<string, number>; // node id -> 0..1 search relevance (branches brighten)
+  searchReset: number; // bumps to clear the search box from elsewhere (reset view)
   mergeNodes: (rows: TreeNode[], expanded: string[]) => void;
   set: (p: Partial<State>) => void;
 }
@@ -62,7 +62,7 @@ export const useStore = create<State>((set) => ({
   focusStar: -1,
   pathA: [],
   pathB: [],
-  relevance: {},
+  searchReset: 0,
   mergeNodes: (rows, expanded) =>
     set((s) => {
       const nodes = { ...s.nodes };

@@ -11,6 +11,7 @@ export interface ThemeColors {
   /** The dome, horizon up: [0] horizon, then rising bands, last = zenith. */
   ramp: string[];
   glow: string; // twilight glow low on the sun's side
+  glowFall: number; // how fast the glow fades going up (higher: it hugs the horizon)
   glowCore: string; // its brightest line, right at the horizon
   belt: string; // the Belt of Venus: the pink band opposite the sun
   shadow: string; // Earth's shadow: the blue-grey band under the belt
@@ -18,6 +19,13 @@ export interface ThemeColors {
   cloudDark: string; // cloud bodies against the light (silhouettes) and their shadow sides
   cloudRim: string; // the thin rim where light catches a cloud's edge
   water: string; // the sea straight down
+  rimAmt: number; // 0..1: how strongly cloud edges catch the rim color (light mode keeps it soft)
+  seaDim: number; // the sea's brightness relative to the sky it mirrors: below 1 keeps the horizon a visible edge
+  waterDeep: string; // the water's own color, seen looking down into it (it mirrors the sky only toward the horizon)
+  deckLit: string; // the high cloud deck overhead, where the set sun lights it from below
+  deckShade: string; // the same deck away from the light
+  deckRim: string; // where the light slips around a cell's edge (toward the sunset only)
+  deckAmt: number; // 0..1: how opaque the deck is; the backdrop must stay quieter than the data in front of it
   stars: number; // 0..1: stars overhead (night only)
   ink: string; // tree paths, the ink walker
   dim: string; // nodes outside a lit path
@@ -39,13 +47,21 @@ export const THEMES: Record<Theme, ThemeColors> = {
     sky: "#DBF0FF",
     ramp: ["#F8DDEA", "#F8DDEA", "#DBF0FF", "#DBF0FF", "#C4D6F5"],
     glow: "#F8DDEA",
+    glowFall: 6,
     glowCore: "#FFA1FF",
     belt: "#F8CFE3",
     shadow: "#C8CBE4",
     cloudLit: "#FEFEFE",
     cloudDark: "#B7B0D8",
-    cloudRim: "#FFA1FF",
+    cloudRim: "#F8CFE3",
     water: "#C4D6F5",
+    waterDeep: "#ABADE0",
+    rimAmt: 0.35,
+    seaDim: 0.95,
+    deckLit: "#F8CFE3",
+    deckShade: "#C8CBE4",
+    deckRim: "#F8DDEA",
+    deckAmt: 0.6,
     stars: 0,
     ink: "#1E1E1E",
     dim: "#C9C9C9",
@@ -66,7 +82,8 @@ export const THEMES: Record<Theme, ThemeColors> = {
   dark: {
     sky: "#0D0B14",
     ramp: ["#7E4880", "#443870", "#27234A", "#161630", "#0D0B14"],
-    glow: "#7E4880",
+    glow: "#5E3F78",
+    glowFall: 15,
     glowCore: "#D45BB6",
     belt: "#443870",
     shadow: "#161630",
@@ -74,6 +91,13 @@ export const THEMES: Record<Theme, ThemeColors> = {
     cloudDark: "#1C1830",
     cloudRim: "#FF78F2",
     water: "#0D0B14",
+    waterDeep: "#100E1C",
+    rimAmt: 0.55,
+    seaDim: 0.72,
+    deckLit: "#27234A",
+    deckShade: "#1C1830",
+    deckRim: "#443870",
+    deckAmt: 0.72,
     stars: 1,
     ink: "#FEFEFE",
     dim: "#4A4660",
@@ -86,9 +110,9 @@ export const THEMES: Record<Theme, ThemeColors> = {
       root: ["#9A9A9A", "#9A9A9A", "#9A9A9A"],
     },
     dither: [
-      ["#0D0B14", 0], ["#161630", 0], ["#27234A", 0], ["#443870", 0], ["#7E4880", 0], ["#1C1830", 0],
+      ["#0D0B14", 0], ["#161630", 0], ["#27234A", 0], ["#443870", 0], ["#7E4880", 0], ["#35295C", 0],
       ["#4A4660", 0], ["#FF78F2", 1], ["#D45BB6", 1], ["#F386A1", 4], ["#7D89E6", 2], ["#A6AEF0", 2],
-      ["#F0885E", 3], ["#03AA5C", 0], ["#FEFEFE", 0], ["#9DB6E6", 2],
+      ["#F0885E", 3], ["#03AA5C", 0], ["#FEFEFE", 0], ["#5E3F78", 0],
     ],
   },
 };

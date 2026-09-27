@@ -13,13 +13,41 @@ export const anim = {
   trackStar: -1, // camera keeps this question dot centered as it drifts (-1: off; any drag stops it)
   placed: new Map() as Map<string, import("./layout").Placed>,
   labelRects: [] as import("./uirects").Rect[], // node labels on screen (question labels avoid them)
-  // the opening (docs/07-ui.md, Opening): when the nebula starts forming, and when it has formed (seconds, now())
-  intro: { t0: Infinity, end: Infinity },
+  // the opening (docs/07-ui.md, Opening): when the nebula starts forming, and when it has formed (seconds, now()),
+  // and for each node when it launches from its parent and when it lands and bursts (seconds after t0)
+  intro: { t0: Infinity, end: Infinity, launch: new Map(), arrive: new Map() } as { t0: number; end: number; launch: Map<string, number>; arrive: Map<string, number> },
+  // the water's surface (world y): just under the lowest node, so the nebula reflects in it (docs/07-ui.md, Look).
+  // `seaTarget` follows the layout; `sea` eases toward it, so a layout switch lowers or raises the water smoothly
+  sea: -300,
+  seaTarget: -300,
 };
 
-/** Seconds after the opening starts before a node at `depth` (and its questions) begins to form. */
-export const introDelay = (depth: number) => 0.35 + depth * 0.42;
-export const INTRO_FORM = 1.4; // seconds each piece takes to fly into place
+// The opening is a fireworks show, breadth first: each node flies out from its parent (FLIGHT), then bursts,
+// its questions spraying out to their ball (BURST) while its children launch.
+export const FLIGHT = 0.5;
+export const BURST = 1.1;
+
+/**
+ * Launch and landing times (seconds after the opening starts) for every node: the root lands first, and each
+ * node's children launch as it lands, a little staggered, so the show ripples outward level by level.
+ */
+export function fireworks(children: Record<string, string[]>, root = "root") {
+  const launch = new Map<string, number>([[root, 0]]);
+  const arrive = new Map<string, number>([[root, 0.25]]);
+  const queue = [root];
+  while (queue.length) {
+    const id = queue.shift()!;
+    (children[id] ?? []).forEach((k, i) => {
+      let h = 0;
+      for (let j = 0; j < k.length; j++) h = (h * 31 + k.charCodeAt(j)) >>> 0;
+      const l = arrive.get(id)! + Math.min(0.18, i * 0.025) + (h % 1000) / 1000 * 0.05;
+      launch.set(k, l);
+      arrive.set(k, l + FLIGHT);
+      queue.push(k);
+    });
+  }
+  return { launch, arrive, last: Math.max(...arrive.values()) };
+}
 
 export const introDone = (t = now()) => t >= anim.intro.end;
 

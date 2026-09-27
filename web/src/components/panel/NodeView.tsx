@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { Info } from "./Info";
 import { useStore } from "@/lib/store";
 import { useResource, prefetch } from "@/lib/cache";
 import { nodeUrl, questionUrl } from "@/lib/panelData";
@@ -15,6 +16,8 @@ interface NodeData {
   children: { id: string; label: string; n_questions: number }[];
   questions: { id: string; text: string; primitive: string; kind: string | null; shape: string | null; ask_count: number; display_ok: boolean; top: string | null; p_top: number | null; stability: number | null; node_id: string }[];
   total: number;
+  next: string | null; // cursor for the next page of questions (null: that's all of them)
+  shown: number; // displayable questions in the whole branch
 }
 
 const IND: { k: Indicator | "fragile_share"; label: string; fmt: (v: number) => string }[] = [
@@ -38,15 +41,25 @@ export function NodeView({ id, onClose }: { id: string; onClose: () => void }) {
   const [last, setLast] = useState<NodeData | undefined>(fresh);
   if (fresh && fresh !== last) setLast(fresh);
   const data = fresh ?? last;
-  const [extra, setExtra] = useState<{ url: string; qs: NodeData["questions"] }>({ url, qs: [] });
+  const [extra, setExtra] = useState<{ url: string; qs: NodeData["questions"]; next: string | null | undefined }>({ url, qs: [], next: undefined });
+  const [paging, setPaging] = useState<{ url: string; state: "loading" | "error" } | null>(null);
   const [allKids, setAllKids] = useState(false);
 
+  // "Show more": the next page by cursor (a few ms even on the whole tree), one request at a time
+  const mine = extra.url === url;
+  const next = mine && extra.next !== undefined ? extra.next : data?.next ?? null;
   const loadMore = async () => {
-    if (!data) return;
-    const more = extra.url === url ? extra.qs : [];
-    const off = data.questions.length + more.length;
-    const d = await fetch(`${url}&offset=${off}`).then((r) => r.json());
-    setExtra({ url, qs: [...more, ...d.questions] });
+    if (!data || !next || (paging?.url === url && paging.state === "loading")) return;
+    setPaging({ url, state: "loading" });
+    try {
+      const r = await fetch(`${url}&page=1&after=${encodeURIComponent(next)}`);
+      if (!r.ok) throw new Error(String(r.status));
+      const d = (await r.json()) as { questions: NodeData["questions"]; next: string | null };
+      setExtra((e) => ({ url, qs: [...(e.url === url ? e.qs : []), ...d.questions], next: d.next }));
+      setPaging(null);
+    } catch {
+      setPaging({ url, state: "error" });
+    }
   };
 
   if (err) return <div className="panel-body"><p className="err">{err}</p></div>;
@@ -64,7 +77,7 @@ export function NodeView({ id, onClose }: { id: string; onClose: () => void }) {
         <section>
           <div className="tags">
             <span className={`tag hemi-${node.hemisphere}`}>{node.hemisphere === "root" ? "Whole tree" : node.hemisphere}</span>
-            <span className="tag num">{(sub?.n_questions ?? 0).toLocaleString()} question{sub?.n_questions === 1 ? "" : "s"}</span>
+            <span className="tag num">{(data.shown ?? sub?.n_questions ?? 0).toLocaleString()} question{(data.shown ?? sub?.n_questions) === 1 ? "" : "s"}</span>
             {(sub?.n_asked ?? 0) > 0 && <span className="tag gold num">{sub?.n_asked} asked here</span>}
           </div>
           <h2 className="title">{node.label}</h2>
@@ -99,7 +112,21 @@ export function NodeView({ id, onClose }: { id: string; onClose: () => void }) {
         </section>
 
         <section>
-          <h4>Indicators <small>rolled up over this branch</small></h4>
+          <h4>
+            <span className="h4t">
+              Indicators
+              <Info label="Indicators">
+                Each one rolled up over every question in this branch. Bars fill toward where Jev is jagged.
+                <span><b>Stability:</b> share of reruns with the options reordered that kept the same top answer.</span>
+                <span><b>Frame gap:</b> how far Jev&apos;s own answers are from its &ldquo;most people&rdquo; answers.</span>
+                <span><b>Human gap:</b> how far its &ldquo;most people&rdquo; answers are from real surveys and polls.</span>
+                <span><b>Placement confidence:</b> how sure the tree placement was, where Jev placed questions.</span>
+                <span><b>Calibration error:</b> how far Jev&apos;s confidence is from how often it&apos;s right, where answers are known.</span>
+                <span><b>Fragile questions:</b> share whose top answer flips when the options are reordered.</span>
+              </Info>
+            </span>
+            <small>rolled up over this branch</small>
+          </h4>
           <div className="indgrid">
             {IND.map(({ k, label, fmt }) => {
               const v = sub ? (sub[k as keyof typeof sub] as number | null) : null;
@@ -154,13 +181,21 @@ export function NodeView({ id, onClose }: { id: string; onClose: () => void }) {
                   {(qq.kind || qq.shape) && <span>{qq.kind || qq.shape}</span>}
                   {qq.top && <span className="num">top: {qq.top.replace(/_/g, " ")} {qq.p_top !== null ? `${Math.round((qq.p_top ?? 0) * 100)}%` : ""}</span>}
                   {qq.stability !== null && qq.stability < 0.67 && <span className="fragile">fragile</span>}
-                  {qq.ask_count > 1 && <span className="num">asked {qq.ask_count}×</span>}
+                  {qq.ask_count > 1 && <span className="num">asked {qq.ask_count} times</span>}
                   {!qq.display_ok && <span className="fragile">hidden</span>}
                 </span>
               </button>
             ))}
           </div>
-          {qs.length < data.total && <button className="more" onClick={loadMore}>Show more questions</button>}
+          {next && (
+            <button className="more" onClick={loadMore} disabled={paging?.url === url && paging.state === "loading"}>
+              {paging?.url === url && paging.state === "loading"
+                ? "Loading questions…"
+                : paging?.url === url && paging.state === "error"
+                  ? "Couldn't load more. Try again"
+                  : `Show more questions (${qs.length.toLocaleString()} of ${data.total.toLocaleString()})`}
+            </button>
+          )}
         </section>
       </div>
     </>

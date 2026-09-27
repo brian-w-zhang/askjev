@@ -3,12 +3,13 @@ import type { Indicator, TreeNode } from "./types";
 import { THEMES, type Theme } from "./theme";
 
 // "Attention" 0..1 per indicator: 1 = where Jev is jagged or worth a look. Never a grade.
+// The color picker's options (docs/07-ui.md, Color). Placement confidence isn't one: 72% of questions were filed by
+// their dataset's own category (stored as 100%), so the map would mostly show a default. It stays on cards and topics.
 export const INDICATORS: { id: Indicator; label: string; hint: string }[] = [
   { id: "hemisphere", label: "Hemisphere", hint: "World, Self and Machine arms" },
   { id: "stability", label: "Stability", hint: "Do answers survive option shuffles? Bright = fragile" },
   { id: "human_gap", label: "Human gap", hint: "Distance between Jev's most-people answer and real human data" },
   { id: "frame_gap", label: "Frame gap", hint: "Jev's own answer vs its answer for most people" },
-  { id: "placement_conf", label: "Placement", hint: "How sure Jev is about where questions belong. Bright = unsure" },
   { id: "calibration_ece", label: "Calibration", hint: "Expected calibration error where truth is known" },
 ];
 

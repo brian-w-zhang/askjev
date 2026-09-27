@@ -90,7 +90,10 @@ export function StarText() {
           const y = ((1 - v.y) / 2) * size.height;
           const center = Math.hypot(v.x, v.y);
           const a = starAttention(starMetric(s.indicator, i), s.indicator) ?? 0;
-          const text = starText(i)!.label;
+          // a node's text list can be shorter than its star range when the snapshot was rebuilt after this page
+          // loaded its stars (the corpus grows while the site is open): skip stars with no text rather than crash
+          const text = starText(i)?.label;
+          if (!text) continue;
           const cw = Math.min(text.length, CHARS_PER_LINE) * LABEL_PX * 0.42 + 10;
           const lines = Math.min(3, Math.ceil(Math.min(text.length, MAX_CHARS) / CHARS_PER_LINE));
           cands.push({ i, pri: -center * 2 - dist * 0.02 + a * 1.2, x, y, w: cw, h: lines * LABEL_PX + 4 });

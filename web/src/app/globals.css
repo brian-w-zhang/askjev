@@ -138,13 +138,23 @@ input, textarea, select { font: inherit; color: inherit; }
 .askrow span { font-family: var(--pixel); font-size: 17px; background: var(--bar); color: var(--on-bar); padding: 0 6px; margin-right: 6px; }
 .askrow:hover { background: var(--paper); }
 .search-meta { color: var(--ink); font-family: var(--pixel); font-size: 18px; white-space: nowrap; }
-.tooltabs { display: flex; gap: 2px; padding: 2px 6px 3px; border-top: 1px dashed var(--line-2); margin: 4px 3px 0; }
-.tooltab { border: 0; background: none; padding: 2px 8px 1px; white-space: nowrap; font-family: var(--pixel); font-size: 18px; line-height: 20px; color: var(--muted); }
+.tooltabs { display: flex; align-items: center; gap: 2px; padding: 2px 6px 3px; border-top: 1px dashed var(--line-2); margin: 4px 3px 0; min-width: 0; }
+/* the tabs give way (their value truncates) before "Feeling lucky" or the icons ever do */
+.tooltab { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; border: 0; background: none; padding: 2px 8px 1px; white-space: nowrap; font-family: var(--pixel); font-size: 18px; line-height: 20px; color: var(--muted); }
 .tooltab b { font-weight: 400; color: var(--ink); }
 .tooltab:hover { background: var(--chip); }
 .tooltab[aria-expanded="true"] { background: var(--bar); color: var(--on-bar); }
 .tooltab[aria-expanded="true"] b { color: var(--on-bar); }
-.luckybtn { margin-left: auto; border: 0; background: none; padding: 2px 8px 1px; font-family: var(--pixel); font-size: 18px; line-height: 20px; color: var(--ink); white-space: nowrap; }
+.tooltab.icon { flex: none; display: inline-flex; align-items: center; gap: 4px; padding: 2px 6px 1px; color: var(--ink); }
+.tooltab.icon svg { width: 16px; height: 16px; display: block; }
+.tooltab.icon b { font-size: 16px; }
+.tooltab.icon[aria-expanded="true"] { color: var(--on-bar); }
+.resetbtn { flex: none; margin-left: auto; border: 0; background: none; padding: 0 7px; font-size: 17px; line-height: 20px; color: var(--muted); }
+.resetbtn:hover { background: var(--bar); color: var(--on-bar); }
+.resetbtn + .luckybtn { margin-left: 0; }
+.qclear { border: 0; background: none; padding: 0 4px; font-size: 18px; line-height: 1; color: var(--muted); cursor: pointer; }
+.qclear:hover { color: var(--ink); }
+.luckybtn { flex: none; margin-left: auto; border: 0; background: none; padding: 2px 8px 1px; font-family: var(--pixel); font-size: 18px; line-height: 20px; color: var(--ink); white-space: nowrap; }
 .luckybtn::before { content: "\2723" / ""; margin-right: 5px; color: var(--pink); }
 .luckybtn:hover { background: var(--bar); color: var(--on-bar); }
 .toolpanel { margin-top: 10px; padding: 0 3px 10px; background: var(--win); box-shadow: 0 0 0 1px var(--ink), inset 0 0 0 2px var(--win), inset 0 0 0 3px var(--ink); color: var(--ink); }
@@ -180,7 +190,12 @@ input, textarea, select { font: inherit; color: inherit; }
 .segline button { flex: 1 1 0; min-width: 0; border: 0; background: none; padding: 3px 2px 2px; font-family: var(--pixel); font-size: 18px; line-height: 20px; color: var(--ink); white-space: nowrap; }
 .segline button + button { box-shadow: inset 1px 0 0 var(--line-2); }
 .segline button:hover { background: var(--chip); }
-.segline button[aria-checked="true"] { background: var(--bar); color: var(--on-bar); box-shadow: none; }
+.segline button { overflow: hidden; text-overflow: ellipsis; }
+/* the chosen option inverts (ink fill, paper text) and keeps its frame, so it reads in both themes */
+.segline button[aria-checked="true"] { background: var(--ink); color: var(--paper); box-shadow: inset 0 0 0 1px var(--ink); }
+/* phones: the segments shrink their type rather than truncate or wrap */
+@media (max-width: 480px) { .segline button { font-size: 15px; padding: 3px 1px 2px; } }
+@media (max-width: 420px) { .segline button { font-size: 13px; letter-spacing: -0.02em; } }
 .seg { display: flex; flex-wrap: wrap; gap: 4px; }
 .seg button, .chipbtn { border: 0; background: var(--chip); padding: 1px 7px; font-family: var(--pixel); font-size: 18px; line-height: 20px; color: var(--ink); }
 .seg button::before, .chipbtn::before { content: "\2723" / ""; margin-right: 3px; }
@@ -218,8 +233,11 @@ input, textarea, select { font: inherit; color: inherit; }
 .navbtn:hover:not(:disabled) { background: var(--bar); color: var(--on-bar); }
 .navbtn:disabled { opacity: 0.35; cursor: default; }
 /* the path is one line, always: when it's long, the start slides off the left (the end is what matters) */
-.panel-nav .crumbs { flex: 1; min-width: 0; height: 26px; flex-wrap: nowrap; justify-content: flex-end; align-items: center; margin-left: 4px; padding: 0 8px; background: var(--paper); box-shadow: inset 0 0 0 1px var(--ink); color: var(--ink); font-size: 17px; line-height: 20px; white-space: nowrap; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 14px); mask-image: linear-gradient(90deg, transparent 0, #000 14px); }
+.panel-nav .crumbs { flex: 1; min-width: 0; height: 26px; flex-wrap: nowrap; justify-content: flex-end; align-items: center; margin-left: 4px; padding: 0 8px; background: var(--paper); box-shadow: inset 0 0 0 1px var(--ink); color: var(--ink); font-size: 17px; line-height: 20px; white-space: nowrap; overflow: hidden; position: relative; } /* a long path folds its leading steps into "…" (Panel.tsx, Path) instead of being cut */
 .panel-nav .crumbs > * { flex: none; }
+.crumbs .step { display: inline-flex; gap: 0 5px; }
+.crumbs .ruler { position: absolute; visibility: hidden; pointer-events: none; display: flex; white-space: nowrap; left: 0; top: 0; }
+.crumbs .ruler .step + .step { margin-left: 5px; }
 .panel-nav { position: relative; }
 .panel[data-pending="true"] .panel-nav::after { content: ""; position: absolute; left: 6px; right: 6px; bottom: -2px; height: 2px; background: linear-gradient(90deg, transparent, var(--pink), transparent); background-size: 40% 100%; background-repeat: no-repeat; animation: pending 0.9s linear infinite; }
 @keyframes pending { from { background-position: -40% 0; } to { background-position: 140% 0; } }
@@ -243,6 +261,18 @@ input, textarea, select { font: inherit; color: inherit; }
 .panel .note { color: var(--muted); font-size: 14px; margin-top: 8px; }
 .panel h4 { font-family: var(--pixel); font-size: 19px; font-weight: 400; margin-bottom: 10px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .panel h4 small { color: var(--muted); font-size: 17px; }
+/* the "i" beside a term: a tiny pixel key that opens a mini OS window (title bar + body), like the hover cards */
+.h4t { display: inline-flex; align-items: center; gap: 9px; } /* a term and its "i" (headings and fact labels) */
+.info { position: relative; display: inline-flex; vertical-align: middle; }
+.info-i { width: 15px; height: 15px; padding: 0; border: 0; background: var(--chip); color: var(--ink); font-family: var(--pixel); font-size: 14px; line-height: 15px; text-align: center; box-shadow: inset 0 0 0 1px var(--ink); cursor: help; }
+.info-i:hover, .info[data-open="true"] .info-i, .info-i:focus-visible { background: var(--bar); color: var(--on-bar); outline: none; }
+.info-pop { position: absolute; top: calc(100% + 6px); z-index: 20; display: none; background: var(--win); color: var(--ink); box-shadow: 0 0 0 1px var(--ink), inset 0 0 0 2px var(--win), inset 0 0 0 3px var(--ink), 3px 3px 0 1px var(--pink); padding: 0 3px 3px; text-align: left; white-space: normal; }
+.info[data-up="true"] .info-pop { top: auto; bottom: calc(100% + 6px); }
+.info:hover .info-pop, .info[data-open="true"] .info-pop, .info-i:focus-visible + .info-pop { display: block; }
+.info-head { display: block; background: var(--bar); color: var(--on-bar); font-family: var(--pixel); font-size: 17px; line-height: 20px; padding: 0 6px; margin: 0 -3px 0; }
+.info-body { display: block; font-family: var(--sans); font-size: 13px; line-height: 1.4; letter-spacing: 0; padding: 7px 7px 4px; }
+.info-body b { font-weight: 600; }
+.info-body span { display: block; margin-top: 5px; }
 .panel pre, .panel code { font-family: var(--mono); font-weight: 300; }
 .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 12px; }
 .tag { font-family: var(--pixel); font-size: 17px; line-height: 19px; padding: 0 6px; background: var(--bar); color: var(--on-bar); }
@@ -313,7 +343,7 @@ input, textarea, select { font: inherit; color: inherit; }
 .meterrow .t i { display: block; height: 100%; background: var(--ink); position: relative; }
 .meterrow .t i::after { content: ""; position: absolute; right: -4px; top: -3px; width: 8px; height: 8px; background: var(--ink); }
 .meterrow .v { text-align: right; font-family: var(--pixel); font-size: 17px; }
-.facts { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; font-size: 14px; }
+.facts { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; font-size: 14px; align-items: baseline; } /* pixel labels and sans values share a baseline */
 .facts dt { font-family: var(--pixel); font-size: 17px; color: var(--muted); }
 .facts dd { min-width: 0; overflow-wrap: anywhere; }
 .facts a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
@@ -391,6 +421,9 @@ input, textarea, select { font: inherit; color: inherit; }
 .dest-mark b:nth-child(4) { right: 0; bottom: 0; border-right-width: 2px; border-bottom-width: 2px; }
 .dest-callout { position: absolute; left: 50%; bottom: calc(100% + 8px); transform: translateX(-50%); width: max-content; max-width: 320px; font-size: 17px; line-height: 1.15; font-weight: 500; letter-spacing: -0.02em; background: var(--paper); color: var(--ink); padding: 6px 9px 7px; box-shadow: 0 0 0 1px var(--ink), 3px 3px 0 var(--pink); text-align: center; }
 @keyframes dest { 50% { transform: scale(1.18); } }
+/* the topic most live search results sit under: a pink offset shadow, like typesafe.ai's highlighted chips */
+.skylabel.heat { box-shadow: 3px 3px 0 var(--pink); transition: box-shadow 200ms var(--ease-out); }
+.skylabel.d1.heat { box-shadow: none; text-decoration: underline; text-decoration-color: var(--pink); text-decoration-thickness: 4px; text-underline-offset: 5px; }
 .skylabel.sel { background: var(--green); color: #fefefe; }
 .skylabel.d1.sel { text-shadow: none; padding: 0 8px 3px; }
 

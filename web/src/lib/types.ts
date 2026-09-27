@@ -34,9 +34,9 @@ export interface SearchHit {
   node_id: string;
   hemisphere: Hemisphere;
   sim: number;
-  trgm: number;
   score: number;
   path: PathStep[];
+  star?: number; // index of the question's dot in the star snapshot (-1: not drawn, e.g. hidden)
   jev_p?: number | null;
 }
 

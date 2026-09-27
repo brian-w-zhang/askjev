@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { useStore } from "@/lib/store";
-import { goBack, goForward } from "@/lib/actions";
+import { goBack, goForward, deselect, resetView } from "@/lib/actions";
 import { Search } from "./Search";
 import { Legend } from "./Tools";
 import type { Theme } from "@/lib/theme";
@@ -35,7 +35,13 @@ export default function App() {
     const onKey = (e: KeyboardEvent) => {
       const typing = e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement || e.target instanceof HTMLSelectElement;
       if (typing) return;
-      if (e.key === "Escape") useStore.getState().set({ panel: { kind: "none" }, tool: null });
+      if (e.key === "Escape") {
+        // Esc peels one layer at a time: an open tool, then the selection, then everything (search too, fly home)
+        const st = useStore.getState();
+        if (st.tool) st.set({ tool: null });
+        else if (st.panel.kind !== "none" || st.selected) deselect();
+        else resetView();
+      }
       else if ((e.key === "Backspace" || (e.altKey && e.key === "ArrowLeft")) && useStore.getState().canBack) { e.preventDefault(); goBack(); }
       else if (e.altKey && e.key === "ArrowRight" && useStore.getState().canForward) { e.preventDefault(); goForward(); }
     };

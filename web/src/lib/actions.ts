@@ -1,9 +1,10 @@
 "use client";
 import { anim, lightMs, now, startLight } from "./anim";
+import { heat, heatJev } from "./heat";
 import { loadTexts, starData, starWorld } from "./stars";
 import { ensurePath, filterQuery, loadSubtree, useStore, type PanelView } from "./store";
-import { flyTo, frameDist } from "@/components/scene/CameraRig";
-import type { TreeNode } from "./types";
+import { flyTo, frameDist, home } from "@/components/scene/CameraRig";
+import type { SearchHit, TreeNode } from "./types";
 
 const PER_LEVEL = 0.4; // seconds per tree level: slow enough for the eye to follow
 
@@ -12,7 +13,43 @@ const frames = (n = 2) => new Promise<void>((r) => {
   step(n);
 });
 
+/**
+ * Jev's pick for the live search (docs/07-ui.md, Search), lit green down its path over the ink heat; `null`
+ * clears it. It lives only while its result list does: any navigation (a topic, a dot, a journey) clears it,
+ * so the green on the map is always one thing.
+ */
+export function showJevPick(h: SearchHit | null) {
+  if (h && anim.follow) return; // a journey is flying; don't draw over it
+  heatJev(h?.star ?? -1);
+  const path = h ? h.path.map((p) => p.id) : [];
+  if (!path.length && !anim.B.active && !useStore.getState().pathB.length) return;
+  useStore.getState().set({ pathB: path });
+  if (path.length) startLight("B", path, 0.12);
+  else Object.assign(anim.B, { active: false, path: [] }); // labels read the path itself, not just `active`
+}
+
+/**
+ * Deselect (docs/07-ui.md, Clearing): close the side panel and take the selection, the flight trail and the
+ * landed dot off the map. The live search, if any, stays: it belongs to the search box.
+ */
+export function deselect() {
+  journeyRun++; // a journey or walk still in flight stops here
+  Object.assign(anim, { follow: null, trackStar: -1, fork: -1, journey: { phase: "idle", probs: new Map() } });
+  Object.assign(anim.A, { active: false, path: [] });
+  showJevPick(null);
+  useStore.getState().set({ panel: { kind: "none" }, selected: null, focusStar: -1, pathA: [], pathB: [] });
+}
+
+/** Reset view: deselect, clear the search too, and fly home. */
+export function resetView() {
+  deselect();
+  const s = useStore.getState();
+  s.set({ searchReset: s.searchReset + 1, tool: null });
+  home(1.6);
+}
+
 export function selectNode(id: string, opts: { fly?: boolean; panel?: boolean } = {}) {
+  showJevPick(null);
   const s = useStore.getState();
   anim.trackStar = -1;
   s.set({ selected: id, focusStar: -1, ...(opts.panel === false ? {} : { panel: { kind: "node", id } }) });
@@ -99,6 +136,7 @@ export async function journey(o: { path: string[]; questionId?: string }) {
   const run = ++journeyRun;
   const live = () => run === journeyRun;
   const tree = o.path;
+  showJevPick(null);
   anim.trackStar = -1;
   anim.fork = -1;
   anim.A.active = anim.B.active = false;
@@ -134,6 +172,7 @@ export async function journey(o: { path: string[]; questionId?: string }) {
  */
 export async function jevFile(text: string, stored: string[]): Promise<Walk | { error: string }> {
   const run = ++journeyRun;
+  heatJev(-1); // the walk draws its own green trail
   const w = await fetchWalk(text);
   if ("error" in w || run !== journeyRun) return w;
   const jev = ["root", ...w.path_probs.map((p) => p[0])];
@@ -188,6 +227,8 @@ const same = (a: PanelView, b: PanelView) => a.kind === b.kind && (a as { id?: s
 
 useStore.subscribe((s, prev) => {
   if (s.panel === prev.panel) return;
+  const soft = s.panel.kind !== "none";
+  if (heat.soft !== soft) Object.assign(heat, { soft, moving: true });
   if (s.panel.kind === "none") { back.length = 0; fwd.length = 0; }
   else if (stepping) stepping = false;
   else if (prev.panel.kind !== "none" && !same(prev.panel, s.panel)) { back.push(prev.panel); fwd.length = 0; }
@@ -222,6 +263,7 @@ export async function openStar(i: number) {
   const nodeId = d.nodeIds[d.node[i]];
   const q = (await loadTexts(nodeId))[i - d.offsets.get(nodeId)![0]];
   if (!q) return;
+  showJevPick(null);
   useStore.getState().set({ selected: nodeId, hoverStar: -1 });
   await landOnStar(i, 1.0);
   openQuestion(q.id);

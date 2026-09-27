@@ -11,7 +11,11 @@ const PRIMS: { id: Prim; name: string; what: string; example: string }[] = [
 
 const slug = (s: string) => s.trim().toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_|_$/g, "").slice(0, 40) || "option";
 
-interface AskResult { question_id?: string; duplicate_of?: string | null; node_id?: string; error?: string; flags?: string[]; display_ok?: boolean }
+interface AskResult {
+  question_id?: string; duplicate_of?: string | null; node_id?: string; error?: string; flags?: string[]; display_ok?: boolean;
+  // answer-only mode (production): Jev's answers, shown here instead of a question card
+  answer_only?: boolean; primitive?: Prim; options?: unknown; answers?: { self: Record<string, number> | null; human: Record<string, number> | null };
+}
 
 export function AskBox({ onClose, initial = "" }: { onClose: () => void; initial?: string }) {
   const [prim, setPrim] = useState<Prim>("noul");
@@ -21,6 +25,7 @@ export function AskBox({ onClose, initial = "" }: { onClose: () => void; initial
   const [busy, setBusy] = useState(false);
   const [elapsed, setElapsed] = useState(0);
   const [err, setErr] = useState<string | null>(null);
+  const [live, setLive] = useState<AskResult | null>(null);
   const t0 = useRef(0);
 
   useEffect(() => {
@@ -54,7 +59,12 @@ export function AskBox({ onClose, initial = "" }: { onClose: () => void; initial
     try {
       const r = await fetch("/api/ask", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ text: text.trim(), primitive: prim, options, state: null }) });
       const d = (await r.json()) as AskResult;
-      if (!r.ok || d.error || !d.question_id) throw new Error(d.error ?? `ask failed (${r.status})`);
+      if (!r.ok || d.error) throw new Error(d.error ?? `ask failed (${r.status})`);
+      if (d.answer_only) {
+        setLive(d);
+        return;
+      }
+      if (!d.question_id) throw new Error(`ask failed (${r.status})`);
       const note = d.duplicate_of
         ? "Someone already asked this. Here is the original question; its ask count went up by one."
         : d.display_ok === false
@@ -73,12 +83,12 @@ export function AskBox({ onClose, initial = "" }: { onClose: () => void; initial
   return (
     <>
       <div className="panel-head">
-        <span style={{ fontWeight: 600 }}>Ask Jev a question</span>
-        <button className="iconbtn" onClick={onClose} aria-label="Close panel">✕</button>
+        <span className="panel-title">Ask.View 1.1</span>
+        <button className="iconbtn" onClick={onClose} aria-label="Close panel" title="Close (Esc)">✕</button>
       </div>
       <form className="panel-body ask" onSubmit={submit} data-testid="ask-box">
         <p className="note" style={{ marginTop: 0 }}>
-          Your question is checked against existing ones, placed on the tree, then answered by Jev in both frames with three option shuffles. It stays private.
+          Jev answers your question twice: its own answer, and what it thinks most people would say. It stays private.
         </p>
         <label>Question type</label>
         <div className="prims" role="group" aria-label="Question type">
@@ -116,11 +126,40 @@ export function AskBox({ onClose, initial = "" }: { onClose: () => void; initial
         <button className="primary" type="submit" disabled={!ready || busy} data-testid="ask-submit">
           {busy ? "Asking Jev" : "Ask Jev"}
         </button>
-        {busy && (
-          <div className="working num"><span className="spinner" />Checking for duplicates, placing it on the tree, then asking Jev ({elapsed.toFixed(1)} s)</div>
-        )}
+        {busy && <div className="working num"><span className="spinner" />Asking Jev ({elapsed.toFixed(1)} s)</div>}
         {err && <p className="err" data-testid="ask-error">{err}</p>}
+        {live?.answers && <LiveAnswer r={live} />}
       </form>
     </>
+  );
+}
+
+/** Answer-only mode: Jev's answer and its "most people" answer, as bars. */
+function LiveAnswer({ r }: { r: AskResult }) {
+  const labels: Record<string, string> =
+    r.primitive === "noul" ? { true: "Yes", false: "No" }
+      : r.primitive === "score" && Array.isArray(r.options) ? Object.fromEntries((r.options as string[]).map((o, i) => [String(i), o]))
+        : Object.fromEntries(Object.entries((r.options as Record<string, string>) ?? {}).map(([k, v]) => [k, v ?? k]));
+  const keys = Object.keys(labels).length ? Object.keys(labels) : Object.keys(r.answers?.self ?? {});
+  return (
+    <section style={{ marginTop: 18 }} data-testid="ask-answer">
+      {(["self", "human"] as const).map((f) => r.answers?.[f] && (
+        <div key={f} style={{ marginBottom: 14 }}>
+          <h4>{f === "self" ? "Jev's answer" : "What Jev thinks most people would say"}</h4>
+          <div className="bars">
+            {keys.map((k) => {
+              const p = r.answers![f]![k] ?? 0;
+              return (
+                <div className="bar" key={k}>
+                  <span className="lab">{labels[k] ?? k}</span>
+                  <span className="pct num">{Math.round(p * 100)}%</span>
+                  <span className="track"><span className="fill" style={{ width: `${p * 100}%`, background: "var(--pink)" }} /></span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </section>
   );
 }

@@ -4,6 +4,7 @@ import { useFrame } from "@react-three/fiber";
 import { Vector3, type PerspectiveCamera } from "three";
 import { useStore } from "@/lib/store";
 import { anim, introDone, now } from "@/lib/anim";
+import { heat } from "@/lib/heat";
 import type { Placed } from "@/lib/layout";
 import { overlaps, uiRects, type Rect } from "@/lib/uirects";
 import { assign, cards, moveCard, NODE_LABELS, nodeSlots, place, publish } from "@/lib/overlay";
@@ -49,7 +50,7 @@ export function Labels({ placed }: { placed: Map<string, Placed> }) {
         if (!sc || sc.x < -40 || sc.x > size.width + 40 || sc.y < -40 || sc.y > size.height + 40) continue;
         const di = Math.min(n.depth, SHOW_PX.length - 1);
         const extPx = (p.ext > p.ball + 0.01 ? p.ext : p.ball) * sc.ppu;
-        const forced = onPath.has(p.id) || sel === p.id || s.hovered === p.id;
+        const forced = onPath.has(p.id) || sel === p.id || s.hovered === p.id || heat.focus === p.id;
         if (!forced && extPx < SHOW_PX[di] && !kids.has(p.id)) continue;
         // while forming, only the three hemispheres are named, each once its questions have gathered
         if (!introDone() && (n.depth > 1 || now() * 1000 < (s.born[p.id] ?? 0) + 900)) continue;
@@ -78,7 +79,8 @@ export function Labels({ placed }: { placed: Map<string, Placed> }) {
     // text and class go to React (only renders when they change); position and fade go straight to the ref
     publish("nodes", slots.map((sl) => {
       const n = sl.key !== null ? s.nodes[sl.key] : undefined;
-      return n ? { text: n.label, cls: cls(n.depth) + (s.selected === sl.key || onB.has(sl.key!) ? " sel" : "") } : { text: "", cls: "" };
+      const tone = s.selected === sl.key || onB.has(sl.key!) ? " sel" : heat.focus === sl.key ? " heat" : "";
+      return n ? { text: n.label, cls: cls(n.depth) + tone } : { text: "", cls: "" };
     }));
     for (const sl of slots) {
       if (sl.key === null) continue;
