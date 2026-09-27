@@ -25,7 +25,7 @@ export default async function AtlasPage() {
         <header className="at-head">
           <span className="pt-tag">Jev.Atlas</span>
           <h1>Everything else</h1>
-          <p>The <Link href="/portrait">portrait</Link> picks a few dozen findings. Here are all {claims.length}, what a human self-portrait would cover and how much of that this does, every topic&rsquo;s numbers, and every source.</p>
+          <p>The <Link href="/portrait" prefetch={false}>portrait</Link> picks a few dozen findings. Here are all {claims.length}, what a human self-portrait would cover and how much of that this does, every topic&rsquo;s numbers, and every source.</p>
         </header>
         {d ? <Atlas claims={claims} nNodes={d.nodes.length} nSources={d.sources.length} />
           : <p className="at-empty">No portrait data. Run scripts/portrait/export_page.py.</p>}

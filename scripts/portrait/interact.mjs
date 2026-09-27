@@ -20,6 +20,7 @@ p.on("console", (m) => { if (["error", "warning"].includes(m.type()) && !IGNORE.
 p.on("pageerror", (e) => logs.push(`[${step}] pageerror: ${e.message.slice(0, 200)}`));
 p.on("response", (r) => { if (r.status() >= 400) logs.push(`[${step}] http ${r.status()}: ${r.url().slice(0, 140)}`); });
 await p.addInitScript((t) => localStorage.setItem("askjev.theme", t), theme);
+if (process.env.ASKJEV_KEY) await p.goto(`${base}/?key=${encodeURIComponent(process.env.ASKJEV_KEY)}`); // private production: set the cookie first
 let step = "start", n = 0;
 const results = [];
 async function run(name, fn) {
@@ -68,7 +69,7 @@ await run("portrait to atlas", async () => { await p.click(".pt-nav >> text=Atla
 
 // ---- atlas ----
 await run("atlas tabs", async () => { for (const t of ["Coverage", "Topics", "Sources", "Findings"]) { await p.click(`.tabs button:has-text("${t}")`); await sleep(300); } });
-await run("atlas search", async () => { await p.fill(".pt-input", "humor"); await sleep(400); if (!(await p.$$(".pt-table tbody tr")).length) throw new Error("no rows for humor"); await p.fill(".pt-input", ""); });
+await run("atlas search", async () => { await p.fill(".pt-input", "humor"); await sleep(400); if (!(await p.$$(".claimgrid .claim, .pt-table tbody tr")).length) throw new Error("no findings for humor"); await p.fill(".pt-input", ""); });
 await run("atlas section filter", async () => { const c = await p.$$(".pt-filters button"); if (c.length > 2) { await c[2].click(); await sleep(300); await c[0].click(); } });
 await run("atlas sort", async () => { await p.click(`.tabs button:has-text("Topics")`); await p.click(".pt-table th button:has-text('right')"); await sleep(300); await p.click(".pt-table th button:has-text('right')"); await sleep(300); });
 await run("atlas topic link", async () => { const a = await p.$(".pt-table td a"); if (!a) throw new Error("no link"); await a.click(); await p.waitForURL(/\?node=/); await p.waitForSelector("[data-testid=panel][data-open=true]", { timeout: 20000 }); await sleep(2000); });

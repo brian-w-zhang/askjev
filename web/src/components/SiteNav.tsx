@@ -55,8 +55,8 @@ export default function SiteNav() {
   return (
     <nav className="sitenav" aria-label="Site">
       <span className="snav here" aria-current="page">Map</span>
-      <Link className="snav" href="/portrait">Portrait</Link>
-      <Link className="snav" href="/portrait/atlas">Atlas</Link>
+      <Link className="snav" href="/portrait" prefetch={false}>Portrait</Link>
+      <Link className="snav" href="/portrait/atlas" prefetch={false}>Atlas</Link>
     </nav>
   );
 }

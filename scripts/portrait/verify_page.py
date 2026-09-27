@@ -5,15 +5,19 @@ in data/analysis/portrait.json (the ledger claims the page uses plus the real ro
 the page prints them (percent, count, compact, fixed decimals, signed, ordinal). Prints what does not match, so it can
 be read by hand; chapter numbers, axis ticks and years inside titles are expected there.
 
-  uv run python scripts/portrait/verify_page.py [url]
+  uv run python scripts/portrait/verify_page.py [url]            # local dev server by default
+  ASKJEV_KEY=... uv run python scripts/portrait/verify_page.py https://<prod>/portrait
 """
 
 from __future__ import annotations
 
 import html
+import http.cookiejar
 import json
+import os
 import re
 import sys
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -53,7 +57,12 @@ def forms(v: float) -> set[str]:
 
 def main():
     url = sys.argv[1] if len(sys.argv) > 1 else "http://localhost:4592/portrait"
-    raw = urllib.request.urlopen(url).read().decode()
+    # production is private: with ASKJEV_KEY set, open the site's key link first so the cookie is set
+    opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+    if os.environ.get("ASKJEV_KEY"):
+        base = "/".join(url.split("/")[:3])
+        opener.open(f"{base}/?key={urllib.parse.quote(os.environ['ASKJEV_KEY'])}").read()
+    raw = opener.open(url).read().decode()
     body = re.sub(r"<script.*?</script>|<style.*?</style>", " ", raw, flags=re.S)
     text = html.unescape(re.sub(r"<[^>]+>", " ", body))
     P = json.loads((A / "portrait.json").read_text())

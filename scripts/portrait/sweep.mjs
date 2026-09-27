@@ -24,6 +24,7 @@ for (const route of routes) for (const theme of themes) for (const w of widths) 
   p.on("requestfailed", (r) => logs.push(`failed: ${r.url().slice(0, 160)} ${r.failure()?.errorText}`));
   p.on("response", (r) => { if (r.status() >= 400) logs.push(`http ${r.status()}: ${r.url().slice(0, 160)}`); });
   await p.addInitScript((t) => localStorage.setItem("askjev.theme", t), theme);
+  if (process.env.ASKJEV_KEY) await p.goto(`${base}/?key=${encodeURIComponent(process.env.ASKJEV_KEY)}`); // private production: set the cookie first
   const t0 = Date.now();
   await p.goto(base + route, { waitUntil: "networkidle", timeout: 90000 });
   const loadMs = Date.now() - t0;
