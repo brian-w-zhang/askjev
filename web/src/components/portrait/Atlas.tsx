@@ -59,7 +59,7 @@ export default function Atlas({ claims, nNodes, nSources }: { claims: Claim[]; n
   useEffect(() => {
     const part = tab === "nodes" && !nodes ? "nodes" : tab === "sources" && !sources ? "sources" : null;
     if (!part) return;
-    fetch(`/portrait/atlas/data?part=${part}`).then((r) => (r.ok ? r.json() : Promise.reject())).then((x) => (part === "nodes" ? setNodes(x) : setSources(x))).catch(() => setFailed(true));
+    fetch(`/portrait/atlas/tables?part=${part}`).then((r) => (r.ok ? r.json() : Promise.reject())).then((x) => (part === "nodes" ? setNodes(x) : setSources(x))).catch(() => setFailed(true));
   }, [tab, nodes, sources]);
 
   const matches = useMemo(() => claims.filter((c) => !needle || `${c.id} ${c.sentence} ${SECTION[c.section] ?? c.section}`.toLowerCase().includes(needle)), [claims, needle]);
