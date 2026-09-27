@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from pathlib import Path
 
 import numpy as np
@@ -111,7 +112,21 @@ def main():
         seeded(ids(q.filter(pl.col("source") == "mfq")), "mfq"), foundations=mf)
 
     # ---- taste (tier 1) ----
+    def distinct(items: list[dict]) -> list[dict]:
+        """Drop near-duplicate entities (Bob Marley / Bob Marley & The Wailers, iPhone 15 / iPhone 17, four kinds of
+        Reese's): the higher-ranked one is kept."""
+        seen, out = set(), []
+        for t in items:
+            words = re.findall(r"[a-z]+", t["label"].lower())
+            # a possessive brand (Reese's ..., Hershey's ...) is one entity; otherwise the first two real words
+            k = words[0] if len(words) > 1 and words[1] == "s" else " ".join([w for w in words if len(w) > 2][:2])
+            if k not in seen:
+                seen.add(k)
+                out.append(t)
+        return out
+
     for src, v in tt["taste"].items():
+        v = {**v, "top": distinct(v["top"]), "bottom": distinct(v["bottom"])}
         sub = q.filter(pl.col("source") == src)
         add(f"favorites_{src}", "taste_favorites", f"Jev's most-preferred items in {src.replace('_pairs', '')} "
             f"(Bradley-Terry over {v['n_pairs']:,} head-to-heads): " + ", ".join(t["label"] for t in v["top"][:5]) + ".",

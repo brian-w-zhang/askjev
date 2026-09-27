@@ -37,7 +37,7 @@ uv run python scripts/portrait/pipeline.py           #    "Jev built its own map
 uv run python scripts/portrait/export_page.py        # 7. page support claims + data/analysis/portrait.json
 uv run python scripts/portrait/shortlist.py          # 6. the review shortlist (data/analysis/shortlist.md)
 uv run python scripts/portrait/verify_page.py        # 9. numbers on the rendered page vs the ledger
-node scripts/portrait/shots.mjs <outdir>             #    screenshots, both themes, desktop and phone
+node scripts/portrait/shots.mjs <outdir>             #    one screenshot per card, both themes, desktop and phone
 ```
 
 ## 1. Analysis table
@@ -100,56 +100,60 @@ they matter: stability by primitive and domain, the Big Five under reversed leve
 throughout. Headline claims that depend on scale use (the Big Five percentiles) are framed against Jev's "most
 people" answer, because Jev rates in the middle and people rate themselves generously.
 
-## 6. Selection
-A shortlist of 36 candidates (`shortlist.py`) went to Brian, who approved 30 for the page and 6 for the atlas only
-(taste agreement per domain, confident misses, fragile domains, themes, question kinds, probes per question). Some of
-their numbers appear on the page as context: fragile domains next to the stable ones (S1), agreement with people next
-to agreement with its own ratings (J3), the probe count on the cover. Editorial rules:
-- about 14 chapters and 30 findings; taste gets at most two sections (favorites; beyond reputation)
-- Self, World and Machine each carry real weight
-- surprising and robust over big; one strong example per idea
+## 6. Selection and framing
+The first draft (14 chapters, 30 findings, report voice) read as a report. The current page is framed by TypeSafe's
+tweet, "Everyone wants to know what Jev is, nobody asks how Jev's doing", and answers it as a playful self-portrait:
+a deck of about 30 cards addressed to Jev ("you"), Wrapped-style, each with plain fine print about what the number can
+and can't say. Rules:
+- one idea per card, one headline on the whole page; everything else is card-sized
+- claims say "your answers say", not "you are"; limits sit on the card they affect, and a "what this can't tell you"
+  card comes before the closer
+- taste uses the one-at-a-time ratings (top and bottom per domain), not the head-to-heads
+- the check-in, debates, hot takes, quiz and confident misses are **hand-picked** from real questions and say so;
+  everything else is ranked or seeded. The hot-take and miss cards state the size of the pool they were picked from
 - TypeSafe's documented limits (`01-jev.md` §6) are not presented as discoveries
 
 ## 7. The page
-**Files.** `web/src/app/portrait/` (layout, page, atlas page) and `web/src/components/portrait/` only; shared UI files
-are untouched. The map's body never scrolls, so the portrait scrolls inside its own `.pt` container, and all its
-styles are scoped under `.pt`.
+**Files.** `web/src/app/portrait/` (layout, page, atlas page, the meme route) and `web/src/components/portrait/` only;
+shared UI files are untouched. The map's body never scrolls, so the portrait scrolls inside its own `.pt` container
+(scroll-snap, proximity), and all its styles are scoped under `.pt`.
 
-**Data.** `export_page.py` writes `data/analysis/portrait.json` (about 1.6 MB): the ledger, the real rows behind every
-example, the work tasks, the source table and the node cards. `components/portrait/data.ts` reads it on the server
-(re-reading when the file changes). It is never copied into `web/public`, so the findings stay out of the public repo;
-deploying the page needs Brian's go-ahead and a private way to ship that file.
+**Words.** Every word on the page is in `components/portrait/copy.ts`, keyed by card id: `{name}` placeholders are
+filled from the ledger by `Portrait.tsx` (a missing one shows as ⟨name⟩), `*text*` is highlighted. `/portrait?ids`
+shows each card's id so its words can be found.
 
-**Chapters and fields.**
+**Data.** `export_page.py` writes `data/analysis/portrait.json`: the ledger, the real rows behind every example, the
+Wrapped card data (`page_checkin`, `page_debates`, `page_hot_takes`, `page_quiz_debates`, `page_misses` with a hand
+verdict on whose miss it was, `page_ratings`), the work tasks with chance levels, the source table and the node cards.
+`components/portrait/data.ts` reads it on the server and re-reads it when it changes. It is never copied into
+`web/public`, so the findings stay out of the public repo.
 
-| # | Chapter | Field | Findings |
-|---|---|---|---|
-| — | Cover | paper, pink dithered hero | stacked question windows, three big numbers, three highlights, contents |
-| 1 | One question | paper | the cold open: one seeded question, Jev for itself vs for "most people" vs real people |
-| 2 | Where the questions come from | pink | L1 unit chart, L2 answer shapes, L3 anchoring, L5 hidden |
-| 3 | Jev built its own map | sage | F1 pipeline diagram, F3 blind round trip per bank, F4 content screen |
-| 4 | Answer it yourself | paper | five seeded questions with real human splits |
-| 5 | How Jev answers | teal | D1 middle-level lean, D2 stability under reordering |
-| 6 | Personality | pink | P1 Big Five percentiles, P2 muted self, P3 type, P4 where the lenses disagree |
-| 7 | Values | sage | V1-V3 Moral Machine, V4 undecided dilemmas, V5 MFQ, V6 gambles |
-| 8 | Taste | magenta | T1 favorites, B1 beyond reputation (films), B2 small multiples |
-| 9 | What Jev knows | paper | K1 accuracy vs confidence by domain, C1 draw-first calibration |
-| 10 | Jev at work | teal | W1 task scatter, W2 hardest tasks vs chance, W3 code clones |
-| 11 | Jaggedness | ink | J1 humor, J3 head-to-heads vs own ratings, J4 self vs "most people" by domain |
-| 12 | What never moves | sage | S1 most and least stable domains, A1 crowd agreement |
-| 13 | You vs Jev | pink | your quiz answers vs Jev vs the crowd |
-| 14 | Method | paper | this doc in short, F2 placement methods, the bill |
+**Memes.** Templates from imgflip plus the tweet screenshot live in `data/portrait/memes/` (gitignored) and are served
+by `app/portrait/memes/[file]/route.ts`. `Meme.tsx` holds each template's label positions. About one card in three
+gets one, never on the values cards: reaction images take a caption above them, panel memes take labels, and every
+number in a meme comes from the ledger. They sit beside the card on wide screens and below it on phones.
 
-**Every figure** has a sentence title that is the finding, direct labels, n, an interval where one exists, the ledger
-ids it rests on, and a "show the rows" drawer of real questions with Jev's distribution next to the human one (or
-Jev's "most people" answer). Charts are HTML dot rows and bars (legible at phone width) and SVG scatters; no 3D, glow
-or radar charts. The quiz and calibration guesses stay in the reader's browser. Light and dark themes share the map's
+**Cards** (field color · visual · meme):
+
+| Part | Cards |
+|---|---|
+| intro | tweet (ink) · so I asked (stats) · three ways to answer (one question) · where the questions come from (unit chart) |
+| how are you | check-in vs Reddit (chill guy) · Big Five percentiles · ISTJ · quieter than everyone (Spider-Man) · the middle-level habit (Anakin/Padme) |
+| taste | top picks per domain (absolute cinema) · things you could do without · beyond reputation (tuxedo Pooh) |
+| hot takes | internet debates (gigachad) · you vs a confident crowd (average enjoyer) · crowd agreement by domain · the quiz |
+| values | Moral Machine · women vs men dilemmas · Moral Foundations · gambles scatter |
+| work | performance review (is this a pigeon) · draw-first calibration · knowledge by domain · you helped build the map |
+| rough edges | humor (monkey puppet) · confident misses and whose fault · shuffle stability |
+| end | you vs Jev · what this can't tell you · closer · the full fine print |
+
+Every card has fine print and a "receipts" toggle with the tier, n, interval, ledger ids and real rows. Charts are
+HTML dot rows and bars (legible at phone width) and SVG scatters. Light and dark themes share the map's
 `askjev.theme` key.
 
 ## 8. Atlas
-`/portrait/atlas`: a searchable table of every ledger claim (filter by section), the node cards sortable by any
-indicator, and the full source table. The map has no deep links yet, so node rows are not linked into it; adding
-them means a change to the map's shared code.
+`/portrait/atlas`: every ledger claim (filter by section), a **coverage** table (what a human self-portrait or census
+asks about, and whether this corpus covers it for Jev: covered, partly, or not yet), the node cards sortable by any
+indicator, and the source table. The map has no deep links yet, so node rows are not linked into it.
 
 ## 9. Verification
 - `verify_page.py` pulls every number from the rendered page and checks it against `portrait.json` in every format the

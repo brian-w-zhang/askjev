@@ -55,7 +55,7 @@ export function HBars({ rows, max = 1, fmt }: {
   rows: { key: string; label: ReactNode; v: number; jev?: boolean }[]; max?: number; fmt: (v: number) => string;
 }) {
   return (
-    <div>
+    <div className="hbars">
       {rows.map((r) => (
         <div className="hbar" key={r.key}>
           <span className="l">{r.label}</span>

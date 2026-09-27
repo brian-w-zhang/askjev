@@ -32,7 +32,7 @@ export default function Calibration({ bins }: { bins: Bin[] }) {
     <div>
       <p style={{ margin: "0 0 10px", fontSize: 15 }}>
         {shown ? "Your guesses are the rings; Jev's real rates are the dots." :
-          <>Drag in each column to guess: when Jev is this sure, how often is it right? <span style={{ color: "var(--w-fg-2)" }}>({count}/{guessBins.length} guessed)</span></>}
+          <>Your guess first: drag in each column. When Jev is this sure, how often is it right? <span style={{ color: "var(--w-fg-2)" }}>({count}/{guessBins.length} guessed)</span></>}
       </p>
       <svg ref={svg} className="svgc" viewBox={`0 0 ${W} ${H}`} style={{ touchAction: shown ? "auto" : "none" }}
         role="img" aria-label="Reliability diagram: Jev's confidence against how often it is right"
@@ -66,7 +66,7 @@ export default function Calibration({ bins }: { bins: Bin[] }) {
             <text className="lab" x={(sx(b.lo) + sx(b.hi)) / 2} y={sy(b.acc) + 20 + 11 * Math.sqrt(b.n / maxN)} textAnchor="middle">{Math.round(b.acc * 100)}%</text>
           </g>
         ))}
-        <text x={(L + W - R) / 2} y={H - 6} textAnchor="middle">Jev&apos;s confidence in its answer</text>
+        <text x={(L + W - R) / 2} y={H - 6} textAnchor="middle">how sure Jev is</text>
         <text transform={`translate(10 ${(T + H - B) / 2}) rotate(-90)`} textAnchor="middle">how often it is right</text>
       </svg>
       <div style={{ display: "flex", gap: 8, marginTop: 8, flexWrap: "wrap" }}>

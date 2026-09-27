@@ -27,10 +27,10 @@ for (const theme of themes) {
     // the portrait scrolls inside its own container; unwrap it so element screenshots see the whole chapter
     await p.addStyleTag({ content: "html,body{overflow:visible!important;height:auto!important}.pt{position:static!important;overflow:visible!important}" });
     await p.waitForTimeout(600);
-    const ids = await p.$$eval("section.pt-field", (s) => s.map((x, i) => x.id || `s${i}`));
+    const ids = await p.$$eval("section.card, section.fineprint", (s) => s.map((x, i) => x.id || `s${i}`));
     for (const [i, id] of ids.entries()) {
       if (only && !only.split(",").includes(id)) continue;
-      const el = (await p.$$("section.pt-field"))[i];
+      const el = (await p.$$("section.card, section.fineprint"))[i];
       await el.screenshot({ path: `${out}/${String(i).padStart(2, "0")}_${id}_${theme}_${width}.png` });
     }
     if (errs.length) console.log(theme, width, "errors:", errs.slice(0, 5));

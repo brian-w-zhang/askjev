@@ -4,7 +4,32 @@ import { useMemo, useState } from "react";
 import type { Claim, NodeCard, SourceRow } from "./types";
 
 // The atlas (docs/11-portrait.md §8): every ledger claim, every topic card and the full source table, searchable.
-type Tab = "claims" | "nodes" | "sources";
+type Tab = "claims" | "coverage" | "nodes" | "sources";
+
+// What a human self-portrait or census usually covers, and how much of it this corpus covers for Jev.
+const COVERAGE: { area: string; have: "have" | "part" | "no"; how: string }[] = [
+  { area: "Personality (Big Five)", have: "have", how: "IPIP 50-item markers vs 603k people; bigfive_*" },
+  { area: "Type (Myers-Briggs style)", have: "have", how: "OEJTS items, no human norms; type" },
+  { area: "Trait facets, dark side, humor style", have: "have", how: "authored items, audited; muted_self" },
+  { area: "Moral values", have: "have", how: "Moral Foundations Questionnaire, Moral Machine; mfq, mm_*" },
+  { area: "Risk and money choices", have: "have", how: "real described gambles; risk_gambles" },
+  { area: "Taste (film, music, books, food, art, places, games)", have: "have", how: "ratings and head-to-heads; page_ratings, favorites_*, beyond_*" },
+  { area: "Social norms and etiquette", have: "have", how: "Social Chemistry, Scruples, AITA-style crowd votes; crowd_*" },
+  { area: "General knowledge", have: "have", how: "exams, Wikidata, trivia; knowledge_*" },
+  { area: "Calibration (knowing what you know)", have: "have", how: "calibration" },
+  { area: "Work skills", have: "have", how: "127 labeled task datasets; task_*" },
+  { area: "Humor", have: "have", how: "caption and joke upvotes; humor_*" },
+  { area: "Wellbeing and mood", have: "part", how: "Reddit polls only (page_checkin); no validated scale like WHO-5 or the Cantril ladder" },
+  { area: "Cognitive ability", have: "part", how: "ICAR items are in the corpus but not scored as a test" },
+  { area: "Career interests (RIASEC)", have: "part", how: "O*NET interest items are in the corpus but not scored" },
+  { area: "Relationships and attachment", have: "part", how: "love and dating polls; no attachment-style instrument" },
+  { area: "Religion and spirituality", have: "part", how: "scattered questions, not scored" },
+  { area: "Health behaviors", have: "part", how: "health facts, not self-report habits" },
+  { area: "Worldview (World Values Survey, Schwartz values)", have: "no", how: "not collected" },
+  { area: "Chronotype, sleep, time use, media diet", have: "no", how: "only scattered polls" },
+  { area: "Politics", have: "no", how: "answered but hidden on purpose" },
+  { area: "Demographics (age, location, income)", have: "no", how: "doesn't apply to a model" },
+];
 const pctf = (x: unknown) => (typeof x === "number" ? `${Math.round(x * 100)}%` : "–");
 const fixed = (x: unknown, d = 2) => (typeof x === "number" ? x.toFixed(d) : "–");
 const SECTION: Record<string, string> = {
@@ -47,9 +72,9 @@ export default function Atlas({ claims, nodes, sources }: { claims: Claim[]; nod
       <div className="pt-bar"><span>Atlas.app</span><span className="sp" /><span className="dots">▪▪▪</span></div>
       <div className="pt-body">
         <div className="tabs" role="tablist">
-          {(["claims", "nodes", "sources"] as Tab[]).map((t) => (
+          {(["claims", "coverage", "nodes", "sources"] as Tab[]).map((t) => (
             <button key={t} type="button" role="tab" aria-selected={tab === t} onClick={() => setTab(t)}>
-              {t === "claims" ? `Findings (${claims.length})` : t === "nodes" ? `Topics (${nodes.length})` : `Sources (${sources.length})`}
+              {t === "claims" ? `Findings (${claims.length})` : t === "coverage" ? "Coverage" : t === "nodes" ? `Topics (${nodes.length})` : `Sources (${sources.length})`}
             </button>
           ))}
         </div>
@@ -75,6 +100,20 @@ export default function Atlas({ claims, nodes, sources }: { claims: Claim[]; nod
                     <td>{SECTION[c.section] ?? c.section}</td>
                     <td>{c.tier}</td>
                     <td className="n">{c.n.toLocaleString("en-US")}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+          {tab === "coverage" && (
+            <table className="pt-table">
+              <thead><tr><th>what a person would be asked about</th><th>for Jev</th><th>how</th></tr></thead>
+              <tbody>
+                {COVERAGE.filter((c) => !needle || `${c.area} ${c.how}`.toLowerCase().includes(needle)).map((c) => (
+                  <tr key={c.area}>
+                    <td>{c.area}</td>
+                    <td><span className={`cov ${c.have}`}>{c.have === "have" ? "● covered" : c.have === "part" ? "◐ partly" : "○ not yet"}</span></td>
+                    <td style={{ color: "var(--w-fg-2)" }}>{c.how}</td>
                   </tr>
                 ))}
               </tbody>
@@ -111,7 +150,8 @@ export default function Atlas({ claims, nodes, sources }: { claims: Claim[]; nod
         </div>
       </div>
       <div className="pt-foot">
-        {tab === "nodes" ? <span>Sorted by {sort.key}; showing up to 400. &lsquo;Unusual&rsquo; is the largest standardized distance from the corpus baseline on any indicator.</span>
+        {tab === "coverage" ? <span>Modeled on what surveys, censuses and personality reports ask people about. &lsquo;Partly&rsquo; means questions exist but aren&rsquo;t scored as an instrument.</span>
+          : tab === "nodes" ? <span>Sorted by {sort.key}; showing up to 400. &lsquo;Unusual&rsquo; is the largest standardized distance from the corpus baseline on any indicator.</span>
           : tab === "claims" ? <span>Every finding computed, on the page or not. Tiers: 1 published instrument or real answers · 2 audited authored items · 3 embedding theme · discovery node indicator.</span>
           : <span>Counts include hidden questions; &lsquo;shown&rsquo; is the share on the map.</span>}
       </div>

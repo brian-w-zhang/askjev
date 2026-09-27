@@ -20,7 +20,7 @@ export const compact = (x: number) =>
 
 // Option names are snake_case slugs Jev saw verbatim; show them as words.
 export function label(slug: string): string {
-  const s = slug.replace(/_s_/g, "'s ").replace(/_t_/g, "'t ").replace(/_/g, " ").trim();
+  const s = slug.replace(/(?<=[a-z])_(s|t|m|re|ve|ll|d)_/g, "'$1 ").replace(/(?<=[a-z])_(s|t|m)$/g, "'$1").replace(/(\d+)_(m|k)_/gi, (_, n, u) => `$${n}${u.toUpperCase()} `).replace(/_/g, " ").replace(/\bi\b/g, "I").replace(/\s+/g, " ").trim();
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
@@ -33,6 +33,13 @@ export function optionLabel(row: Row, key: string): string {
   if (row.primitive === "noul") return key === "true" ? "Yes" : key === "false" ? "No" : label(key);
   // head-to-head options are names (artists, games, films): title case them
   if (row.source.endsWith("_pairs")) return key.split("_").filter(Boolean).map((w) => w[0].toUpperCase() + w.slice(1)).join(" ");
+  // keep the question's own casing when the option appears in it ("GIF", "Star Trek")
+  const words = key.replace(/_/g, " ").trim();
+  const at = words.length > 1 ? row.text.toLowerCase().indexOf(words.toLowerCase()) : -1;
+  if (at >= 0) {
+    const s = row.text.slice(at, at + words.length);
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
   return label(key);
 }
 
