@@ -1,0 +1,8 @@
+/* the map's site nav (SiteNav.tsx): typesafe.ai's white nav chips, top center; bottom center on phones */
+.sitenav { position: fixed; top: 8px; left: 50%; transform: translateX(-50%); z-index: 35; display: flex; gap: 2px; }
+.sitenav .snav { display: inline-block; background: #fefefe; color: #1e1e1e; padding: 1px 7px; font-family: var(--sans); font-size: 13px; line-height: 20px; text-decoration: none; box-shadow: 0 0 0 1px rgba(30, 30, 30, 0.14); }
+.sitenav .snav:hover { background: var(--pink); }
+.sitenav .snav.here { text-decoration: underline; text-underline-offset: 3px; }
+:root[data-theme="dark"] .sitenav .snav { background: #1d191c; color: #ebe6ea; box-shadow: none; }
+:root[data-theme="dark"] .sitenav .snav:hover { background: #e551ba; color: #fefefe; }
+@media (max-width: 760px) { .sitenav { top: auto; bottom: 14px; } }

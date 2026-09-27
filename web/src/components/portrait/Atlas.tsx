@@ -125,7 +125,7 @@ export default function Atlas({ claims, nodes, sources }: { claims: Claim[]; nod
               <tbody>
                 {shownNodes.map((n) => (
                   <tr key={n.node_id}>
-                    <td style={{ fontFamily: "var(--mono)", fontSize: 11.5, wordBreak: "break-all" }}>{n.node_id}</td>
+                    <td style={{ fontFamily: "var(--mono)", fontSize: 11.5, wordBreak: "break-all" }}><a href={`/?node=${encodeURIComponent(n.node_id)}`} title="open on the map">{n.node_id}</a></td>
                     <td className="n">{Number(n.n).toLocaleString("en-US")}</td>
                     <td className="n">{pctf(n.accuracy)}</td><td className="n">{pctf(n.confidence)}</td><td className="n">{pctf(n.decisive)}</td>
                     <td className="n">{pctf(n.stability)}</td><td className="n">{fixed(n.frame_gap)}</td><td className="n">{pctf(n.crowd_agree)}</td><td className="n">{fixed(n.z_max, 1)}</td>
@@ -151,7 +151,7 @@ export default function Atlas({ claims, nodes, sources }: { claims: Claim[]; nod
       </div>
       <div className="pt-foot">
         {tab === "coverage" ? <span>Modeled on what surveys, censuses and personality reports ask people about. &lsquo;Partly&rsquo; means questions exist but aren&rsquo;t scored as an instrument.</span>
-          : tab === "nodes" ? <span>Sorted by {sort.key}; showing up to 400. &lsquo;Unusual&rsquo; is the largest standardized distance from the corpus baseline on any indicator.</span>
+          : tab === "nodes" ? <span>Sorted by {sort.key}; showing up to 400. &lsquo;Unusual&rsquo; is the largest standardized distance from the corpus baseline on any indicator. Click a topic to open it on the map.</span>
           : tab === "claims" ? <span>Every finding computed, on the page or not. Tiers: 1 published instrument or real answers · 2 audited authored items · 3 embedding theme · discovery node indicator.</span>
           : <span>Counts include hidden questions; &lsquo;shown&rsquo; is the share on the map.</span>}
       </div>

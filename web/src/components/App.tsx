@@ -7,6 +7,7 @@ import { Search } from "./Search";
 import { Legend } from "./Tools";
 import type { Theme } from "@/lib/theme";
 import { Panel } from "./panel/Panel";
+import SiteNav from "./SiteNav";
 
 // the vertical caption, as on typesafe.ai: base64 of "askjev: every closed question, answered by Jev"
 const B64 = "YXNramV2OiBldmVyeSBjbG9zZWQgcXVlc3Rpb24sIGFuc3dlcmVkIGJ5IEpldg==";
@@ -64,6 +65,7 @@ export default function App() {
         <Search />
       </div>
       <Legend />
+      <SiteNav />
       <Panel />
       <i className="crop tl" /><i className="crop tr" /><i className="crop bl" /><i className="crop br" />
       <span className="b64" aria-hidden>{B64}</span>

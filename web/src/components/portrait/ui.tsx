@@ -12,9 +12,9 @@ export function Nav({ here }: { here: "portrait" | "atlas" }) {
     <nav className="pt-nav" aria-label="Portrait">
       <div className="grp"><Link className="pt-chipnav brand" href="/">askjev</Link></div>
       <div className="grp">
+        <Link className="pt-chipnav" href="/">Map</Link>
         <Link className="pt-chipnav" href="/portrait" aria-current={here === "portrait" ? "page" : undefined}>Portrait</Link>
         <Link className="pt-chipnav" href="/portrait/atlas" aria-current={here === "atlas" ? "page" : undefined}>Atlas</Link>
-        <Link className="pt-chipnav" href="/">Map</Link>
       </div>
       <div className="grp"><ThemeToggle /></div>
     </nav>
