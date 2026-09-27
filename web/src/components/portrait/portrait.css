@@ -467,3 +467,13 @@
 .pt-table th { top: 0; }
 @media (max-width: 640px) { .at-bar { top: 30px; } .claimgrid, .covgrid { grid-template-columns: 1fr; } .atlas .pt-scroll { overflow-x: auto; } }
 .svgc rect[role="slider"]:focus-visible { outline: 2px solid var(--jev); outline-offset: -2px; }
+
+/* ---------- phone overrides (last, so they win over the base rules above) ---------- */
+@media (max-width: 640px) {
+  .tiles, .tiles.debate { grid-template-columns: 1fr 1fr; gap: 6px; }
+  .tile { padding: 8px 9px 9px; }
+  .tile b { font-size: 14px; }
+  .atlas .pt-filters { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
+  .atlas .pt-filters .facet { flex: none; }
+  .atlas .pt-filters .sp { display: none; }
+}

@@ -59,5 +59,48 @@ Scores are 0 (fails), 1 (mostly), 2 (meets).
   facet chips with counts, sortable columns, a detail view per row with provenance. Avoid: tables as the first view;
   a first-time visitor should see a few findings before any table.
 
-## Scores
-Filled in per iteration (see the changelog at the end of this file).
+
+## Scores (0 fails, 1 mostly, 2 meets)
+Screenshots for every score are in the session scratchpad (sweep*/, r1/, s*/), not the repo.
+
+| Criterion | Map before | Map after | Portrait before | Portrait after | Atlas before | Atlas after |
+|---|---|---|---|---|---|---|
+| V1 no slop | 2 | 2 | 1 | 2 | 0 | 2 |
+| V2 playful, honest | – | – | 2 | 2 | 1 | 2 |
+| V3 no overclaiming | 2 | 2 | 1 | 2 | 1 | 2 |
+| R1 one idea per card | – | – | 1 | 2 | – | – |
+| R2 Wrapped pacing | – | – | 1 | 2 | – | – |
+| R3 earned length | – | – | 1 | 2 | 1 | 2 |
+| L1 TypeSafe language | 2 | 2 | 2 | 2 | 1 | 2 |
+| L2 type scale | 2 | 2 | 1 | 2 | 1 | 2 |
+| L3 memes | – | – | 1 | 2 | – | – |
+| L4 charts | – | – | 1 | 2 | 1 | 2 |
+| C1 themes, widths | 1 | 2 | 2 | 2 | 1 | 2 |
+| C2 zero errors | 1 | 2 | 2 | 2 | 2 | 2 |
+| C3 keyboard, a11y | 2 | 2 | 1 | 2 | 1 | 2 |
+| C4 fast | 2 | 2 | 1 | 2 | 0 | 2 |
+| C5 traceable | – | – | 2 | 2 | 2 | 2 |
+
+What moved each score:
+- **Map C1:** the nav chips sat on top of the open panel on phones; they now step aside. **C2:** a link to a topic
+  that doesn't exist logged a 404; it's now checked first and dropped quietly. The only console line left is a
+  deprecation warning from @react-three/fiber itself (`THREE.Clock`), still present in its latest release.
+- **Portrait V1/V3:** ledger sentences and card copy reread three times; "built most of its own map" became "about
+  27%", "can't tell a joke" became "can barely tell", a hard-coded meme number was wired to the data. **R1-R3:** the
+  weakest cards (crowd agreement, "quieter than everyone") moved to the atlas; new cards come from real test-takers
+  (online tests, career code) and real scales (checkup). **L3:** meme labels were drawn with Tailwind's `outline`
+  utility by accident (white boxes); fixed. **C3:** calibration guesses work from the keyboard. **C4:** 1.37 MB of
+  HTML to 0.70 MB (200 KB to 108 KB gzipped): receipts render when opened, the 2,869-dot scatter became a binned
+  density grid, memes went from 2 MB of PNG to 170 KB of WebP.
+- **Atlas:** first view is now findings as cards with section chips and counts (the table is one click away),
+  readable sentences (topic names instead of ids, commas, ordinals, typical values), coverage as cards. **C4:** 848 KB
+  to 196 KB (29 KB gzipped): topic and source tables load when their tab opens.
+
+## Performance (local production build; prod numbers in the changelog)
+| Measure | Before | After |
+|---|---|---|
+| /portrait HTML | 1,366 KB (200 KB gz) | 697 KB (108 KB gz) |
+| /portrait/atlas HTML | 848 KB (132 KB gz) | 196 KB (29 KB gz) |
+| memes | 2.0 MB | 170 KB |
+| map API, warm | 10-60 ms | same |
+| map API, cold | /api/layout 12 s, /api/node 2.2 s | same (edge-cached in production; the map session's code) |
