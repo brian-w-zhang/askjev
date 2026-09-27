@@ -330,6 +330,10 @@ def main():
     chance = {r["source"]: 1 / r["k"] for r in k.iter_rows(named=True) if r["k"]}
     src = pl.read_parquet(A / "landscape_sources.parquet").sort("n", descending=True)
     nodes = pl.read_parquet(A / "node_cards.parquet")
+    from askjev import db
+    with db.connect() as c:  # topic names, so the atlas can show "Happiness & the Good Life" rather than an id
+        labels = {r["id"]: r["label"] for r in c.execute("select id, label from nodes")}
+    nodes = nodes.with_columns(pl.col("node_id").replace_strict(labels, default=None).alias("label"))
     out = {
         "version": next((c.get("jev_version") for c in L["claims"] if c.get("jev_version")), "typesafe-ai/jev"),
         "claims": byid, "rows": rows,

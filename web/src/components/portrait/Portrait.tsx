@@ -74,9 +74,9 @@ export default function Portrait({ d, showIds = false }: { d: PortraitData; show
       <Nav here="portrait" />
       <ChapterRail chapters={parts} />
       <Intro C={C} d={d} s={s} total={total} nSources={nSources} common={common} />
-      <Act1 C={C} R={R} s={s} />
+      <Act1 C={C} R={R} d={d} s={s} />
       <Act2 C={C} d={d} s={s} />
-      <Act3 C={C} R={R} d={d} s={s} />
+      <Act3 C={C} R={R} s={s} />
       <Act4 C={C} R={R} s={s} />
       <Act5 C={C} R={R} d={d} s={s} />
       <Act6 C={C} R={R} d={d} s={s} />
@@ -140,7 +140,7 @@ function Intro({ C, d, s, total, nSources, common }: { C: CFn; d: PortraitData; 
 
 /* ---------------------------------------------------------------- part 1: how are you */
 
-function Act1({ C, R, s }: { C: CFn; R: RFn; s: boolean }) {
+function Act1({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
   const T = ["neuroticism", "extraversion", "openness", "agreeableness", "conscientiousness"];
   const bf = T.map((t) => C(`bigfive_${t}`));
   const neu = C("bigfive_neuroticism");
@@ -162,6 +162,7 @@ function Act1({ C, R, s }: { C: CFn; R: RFn; s: boolean }) {
         <CheckIn rows={R(checkin, 6)} />
       </Card>
       <Checkup C={C} R={R} s={s} />
+      <Tests d={d} R={R} s={s} />
       <Card id="calm" field="pink" c={COPY.calm} showId={s} claims={bf} rows={R(neu, 2)}
         vars={{ calmer: `${Math.round(100 - (neu.effect as number))}%`, people: compact(neu.human_n), guess: ordinal(neu.robustness.people_frame_pct) }}>
         <Win title="big_five.plot · percentile among people">
@@ -214,6 +215,38 @@ function Act1({ C, R, s }: { C: CFn; R: RFn; s: boolean }) {
         </Win>
       </Card>
     </>
+  );
+}
+
+// the Open Psychometrics scales that make the point: the biggest gaps and the closest matches
+const TEST_ROWS: [string, string][] = [
+  ["scale_dass_anxiety", "Anxiety (DASS)"], ["scale_dass_depression", "Depression (DASS)"], ["scale_dass_stress", "Stress (DASS)"],
+  ["scale_ecr_attachment_anxiety", "Attachment anxiety"], ["scale_npas_nerdiness", "Nerdiness"], ["scale_nr-6_nature_relatedness", "Feeling connected to nature"],
+  ["scale_gcbs_generic_conspiracist_beliefs", "Conspiracy beliefs"], ["scale_hexaco_honesty-humility_sinc", "Sincerity"],
+  ["scale_grit_grit", "Grit"], ["scale_eqsq_empathizing", "Empathizing"], ["scale_mies_introversion", "Introversion"],
+];
+
+function Tests({ d, R, s }: { d: PortraitData; R: RFn; s: boolean }) {
+  const rows = TEST_ROWS.map(([id, l]) => ({ c: d.claims[id], l })).filter((x) => x.c);
+  if (!rows.length) return null;
+  const differs = (c: Claim) => !(c.ci90![0] <= 0 && c.ci90![1] >= 0) && Math.abs(c.effect as number) >= 0.1;
+  const gaps = rows.filter((x) => differs(x.c)).sort((a, b) => Math.abs(b.c.effect as number) - Math.abs(a.c.effect as number)).slice(0, 3)
+    .map((x) => `${x.l.replace(/ \(DASS\)$/, "").toLowerCase()} (${num(x.c.self)} vs ${num(x.c.people)})`);
+  const same = rows.filter((x) => !differs(x.c)).map((x) => x.l.replace(/ \(DASS\)$/, "").toLowerCase());
+  const resp = Math.round(rows.reduce((a, x) => a + x.c.median_respondents, 0) / rows.length);
+  return (
+    <Card id="tests" field="sage" c={COPY.tests} showId={s} claims={rows.map((x) => x.c)} rows={R(rows[4].c, 2)}
+      vars={{ gaps: gaps.join(", "), same: same.length > 1 ? `${same.slice(0, -1).join(", ")} and ${same.at(-1)}` : same[0] ?? "nothing", resp: int(resp) }}>
+      <Win title="online_tests.plot · 0 to 1, higher = more of the trait">
+        <div className="pt-legend">{Legend.jev}{Legend.hum}{Legend.guess}</div>
+        <DotRows domain={[0, 1]} ticks={[0, 0.5, 1]} fmt={(v) => num(v, 1)}
+          rows={rows.map(({ c, l }) => ({
+            key: c.id, label: l, sub: `${c.instrument} · ${compact(c.median_respondents)} people`, link: true, hi: differs(c),
+            marks: [{ v: c.people, kind: "hum" as const }, ...(c.guess !== null ? [{ v: c.guess, kind: "guess" as const }] : []), { v: c.self, kind: "jev" as const }],
+            value: <b>{signed(c.effect as number)}</b>,
+          }))} />
+      </Win>
+    </Card>
   );
 }
 
@@ -323,13 +356,12 @@ function Tiles({ items, low }: { items: { key: string; kind: string; name: strin
 
 /* ---------------------------------------------------------------- part 3: hot takes */
 
-function Act3({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
+function Act3({ C, R, s }: { C: CFn; R: RFn; s: boolean }) {
   const db = C("page_debates"), ht = C("page_hot_takes"), qz = C("page_quiz_debates");
   const debates = R(db, 12);
   const gif = debates.find((r) => r.text.includes("GIF"));
   const hots = R(ht, 5);
   const phys = hots.find((r) => r.text.includes("physics"));
-  const crowd = Object.values(d.claims).filter((c) => c.section === "agreement").sort((a, b) => (b.effect as number) - (a.effect as number));
   return (
     <>
       <Card id="debates" field="ink" c={COPY.debates} showId={s} claims={[db]} rows={debates.slice(0, 3)} wide
@@ -340,12 +372,6 @@ function Act3({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
         aside={phys && <Meme name="enjoyer" size="m" alt="Average fan versus average enjoyer meme"
           caption="physics or socializing with friends?" labels={[`friends: ${pct(phys.human!.dist.socializing ?? 0)} of people`, `physics: you, ${pct(phys.jev!.physics ?? 0)}`]} />}>
         <Versus rows={hots} crowdTop crowdName="the crowd" />
-      </Card>
-      <Card id="crowd" field="teal" c={COPY.crowd} showId={s} claims={crowd} rows={R(crowd.at(-1)!, 2)}>
-        <Win title="crowd.plot">
-          <DotRows domain={[0, 1]} ticks={[0, 0.5, 1]} fmt={(v) => pct(v)} refs={[{ v: 0.5 }]}
-            rows={crowd.map((c) => ({ key: c.id, label: domain(c.id.replace(/^crowd_/, "")), sub: compact(c.n), ci: c.ci90 ?? undefined, marks: [{ v: c.effect as number, kind: "jev" as const }], value: <b>{pct(c.effect as number)}</b> }))} />
-        </Win>
       </Card>
       <Card id="quiz" field="paper" c={COPY.quiz} showId={s} claims={[qz]}>
         <Quiz />
@@ -415,7 +441,7 @@ function Act4({ C, R, s }: { C: CFn; R: RFn; s: boolean }) {
         </Win>
       </Card>
       <Card id="gambles" field="teal" c={COPY.gambles} vars={{ n: int(g.n), agree: pct(g.effect as number), r: num(g.r) }} showId={s} claims={[g, gp]} rows={R(g, 2)}>
-        <Win title="gambles.scatter">
+        <Win title="gambles.density">
           <Density points={gp.points as [number, number][]} xLabel="share of people choosing the first option" yLabel="your probability for it" fmt={(v) => pct(v)} />
           <p className="win-note">Each square is a bin of gambles; darker means more of them. On the dashed line you and people agree.</p>
         </Win>
@@ -458,6 +484,7 @@ function Act5({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
           <div className="rv-s"><span className="rv-k">overall rating</span><ul><li>we don&rsquo;t do those here</li></ul></div>
         </div>
       </Card>
+      <Career d={d} R={R} s={s} />
       <Card id="calibration" field="sage" c={COPY.calibration} big={pct(top.acc)} vars={{ top: pct(top.acc), mid: pct(mid.acc), n: int(cal.n) }} showId={s} claims={[cal]} rows={R(cal, 2)}>
         <Win title="calibration.app"><Calibration bins={bins} /></Win>
       </Card>
@@ -487,6 +514,27 @@ function Act5({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
         </div>
       </Card>
     </>
+  );
+}
+
+const RIASEC: [string, string][] = [["Realistic", "R"], ["Investigative", "I"], ["Artistic", "A"], ["Social", "S"], ["Enterprising", "E"], ["Conventional", "C"]];
+
+function Career({ d, R, s }: { d: PortraitData; R: RFn; s: boolean }) {
+  const t = RIASEC.map(([name, letter]) => ({ name, letter, c: d.claims[`scale_riasec_${name.toLowerCase()}`] })).filter((x) => x.c);
+  if (t.length < 6) return null;
+  const order = [...t].sort((a, b) => b.c.self - a.c.self);
+  const code = order.slice(0, 3).map((x) => x.letter).join("");
+  const resp = Math.round(t.reduce((a, x) => a + x.c.median_respondents, 0) / t.length);
+  return (
+    <Card id="career" field="teal" c={COPY.career} showId={s} claims={t.map((x) => x.c)} rows={R(order[0].c, 2)} big={<span className="letters">{code}</span>}
+      vars={{ code, top3: `${order[0].name.toLowerCase()}, ${order[1].name.toLowerCase()} and ${order[2].name.toLowerCase()}`, resp: compact(resp) }}>
+      <Win title="riasec.plot · 0 to 1">
+        <div className="pt-legend">{Legend.jev}{Legend.hum}</div>
+        <DotRows domain={[0, 1]} ticks={[0, 0.5, 1]} fmt={(v) => num(v, 1)}
+          rows={order.map((x) => ({ key: x.name, label: `${x.name} (${x.letter})`, link: true, hi: order.indexOf(x) < 3,
+            marks: [{ v: x.c.people, kind: "hum" as const }, { v: x.c.self, kind: "jev" as const }], value: <b>{num(x.c.self)}</b> }))} />
+      </Win>
+    </Card>
   );
 }
 

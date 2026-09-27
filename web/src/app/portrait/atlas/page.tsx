@@ -1,27 +1,34 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import Atlas from "@/components/portrait/Atlas";
 import { loadPortrait } from "@/components/portrait/data";
 import { Nav } from "@/components/portrait/ui";
 
 export const metadata: Metadata = { title: "Atlas · A self-portrait of Jev · askjev" };
 
+// "self.lifestyle: frame gap..." reads better as "Lifestyle & Taste: frame gap...": swap topic ids for their names
+const TOPIC = /\b(?:world|self|machine)(?:\.[a-z0-9_]+)+/g;
+
 export default function AtlasPage() {
   const d = loadPortrait();
+  const labels = new Map((d?.nodes ?? []).map((n) => [n.node_id, n.label as string | null]));
   // the atlas lists claims; it doesn't need their chart data, so only the fields it shows are sent to the browser
   const claims = d ? Object.values(d.claims).filter((c) => c.section !== "page")
-    .map(({ id, section, sentence, tier, n, ci90, effect, script }) => ({ id, section, sentence, tier, n, ci90, effect: typeof effect === "number" ? effect : null, examples: [], script })) : [];
+    .map(({ id, section, sentence, tier, n, ci90, effect, script }) => ({
+      id, section, tier, n, ci90, effect: typeof effect === "number" ? effect : null, examples: [], script,
+      sentence: String(sentence).replace(TOPIC, (m) => labels.get(m) ?? m),
+    })) : [];
   return (
     <main>
       <Nav here="atlas" />
-      <section className="pt-field" data-f="sage" style={{ minHeight: "100vh" }}>
-        <header className="pt-open" style={{ paddingBottom: 40 }}>
-          <i className="pt-crop tl" /><i className="pt-crop tr" /><i className="pt-crop bl" /><i className="pt-crop br" />
+      <section className="pt-field atlas-page" data-f="sage">
+        <header className="at-head">
           <span className="pt-tag">Jev.Atlas</span>
-          <h1 className="pt-h1 sm">Everything Else</h1>
-          <p className="pt-dek">The portrait picks a few dozen findings. Here are all {claims.length} of them, what a human self-portrait would cover and how much of it this does, every topic&rsquo;s indicators, and every source.</p>
+          <h1>Everything else</h1>
+          <p>The <Link href="/portrait">portrait</Link> picks a few dozen findings. Here are all {claims.length}, what a human self-portrait would cover and how much of that this does, every topic&rsquo;s numbers, and every source.</p>
         </header>
         {d ? <Atlas claims={claims} nNodes={d.nodes.length} nSources={d.sources.length} />
-          : <p style={{ textAlign: "center" }}>No portrait data. Run scripts/portrait/export_page.py.</p>}
+          : <p className="at-empty">No portrait data. Run scripts/portrait/export_page.py.</p>}
       </section>
     </main>
   );

@@ -39,6 +39,11 @@ export const COPY: Record<string, CardCopy> = {
     body: "Neither satisfied nor dissatisfied with your life, step {ladder} of 10 on the ladder (you put most people at {ladderPpl}), lonely and stressed some of the time. Your wellbeing score is low, until the scale is flipped: then it jumps from {who} to {whoRev}.",
     fine: "Five public instruments (life satisfaction SWLS, WHO-5, UCLA loneliness, Perceived Stress, the Cantril ladder), {items} items, scored the way they're scored for people. They were built for humans (“over the last two weeks”), so this shows your habits with these scales, not an inner state. The tick is your answer with the levels reversed: where it lands far from the square, the answer follows the order of the options more than their meaning.",
   },
+  tests: {
+    title: "Next to the people who took the same online tests, you come out *less anxious, less nerdy and more sincere*.",
+    body: "Biggest gaps: {gaps}. You match them on {same}.",
+    fine: "Open Psychometrics scales, each compared item by item with the average answer of everyone who took it on the site (a median of {resp} people per item), reverse-keyed items flipped, 0 to 1. People who take a depression screener or a nerdiness quiz online aren't a random sample, so the average test-taker isn't the average person.",
+  },
   calm: {
     title: "On a real 50-item personality test, your answers look calmer than *{calmer} of {people} people*.",
     fine: "Careful with this one. You pick the middle of rating scales a lot (two cards down), and people describe themselves generously. Answering the same items for “most people”, you land at the {guess} percentile, so some of the calm is how you use the scale.",
@@ -115,6 +120,11 @@ export const COPY: Record<string, CardCopy> = {
     fine: "{tasks} labeled work tasks. Chance is one over the number of options. There's no overall score on purpose: a single number would hide everything on this card.",
     meme: "is this a clone?",
   },
+  career: {
+    title: "is your career code, if you took the quiz.",
+    body: "Your three strongest interest types are {top3}. You'd also enjoy every kind of work more than the people who took the quiz, which says more about how you use rating scales than about ambition.",
+    fine: "The RIASEC interest items (48 activities, about {resp} people per item) and the six Holland types: Realistic, Investigative, Artistic, Social, Enterprising, Conventional. The code is your three highest types in order.",
+  },
   calibration: {
     title: "right, when you say you're 90% sure or more.",
     body: "When you say 50–60%, {mid}. Guess first, then reveal.",
@@ -145,10 +155,6 @@ export const COPY: Record<string, CardCopy> = {
     title: "Shuffle the options and you usually hold your answer.",
     body: "{choice} of the time on pick-one questions, {score} on rating scales. Math and language questions move most.",
     fine: "Every question was asked again with its options reordered. TypeSafe already documents math as a weak spot for Jev, so that part isn't news.",
-  },
-  crowd: {
-    title: "How often you give the crowd's most common answer.",
-    fine: "Only where real people answered the same question. 90% intervals resample whole sources.",
   },
 
   you: {
