@@ -53,6 +53,7 @@
 | 2026-09-27 | Content screen: narrow 03 §6 topics plus contested policy debates and sex work, attached content included, hide at p >= 0.3 with a keyword backstop; all hidden questions re-screened (17,833 unhidden) and Moral Machine shown (`03-questions.md` §6, `10-expansion.md` §7) |
 | 2026-09-27 | Harm review: an embedding and keyword scan (no Jev) found 32 visible World/Self questions to remove; hidden with a permanent `harmful` flag rather than deleted (kept in dev, never in the production copy); Machine moderation inputs stay visible by choice (`03-questions.md` §6) |
 | 2026-09-26 | Search is **find-only and live**: every keystroke (minus a trailing fragment under 3 chars) re-lights the map as ink heat over the top 20's dots and paths, with the category named and the rest faded; Jev stays one request at the pause, drawn in green. No answering LLM or citations. Asking new questions becomes a separate **compose mode** later (`07-ui.md`, Search and Ask box) |
+| 2026-09-27 | **Self-portrait** (`11-portrait.md`): one page at `/portrait` plus `/portrait/atlas`, 30 findings on the page and the rest in the atlas, with a pipeline chapter ("Jev built its own map"). Its data is private: `scripts/portrait/export_page.py` writes `data/analysis/portrait.json`, read on the server, never from `web/public`. No extra rewording calls: the existing four probes per question (as asked, 'most people', reordered, reversed) are the robustness checks |
 
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)

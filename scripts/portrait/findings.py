@@ -79,14 +79,15 @@ def main():
             f"{bf['human_reference'].split('n=')[1]} human respondents; its answers for 'most people' land at the "
             f"{v['people_frame_pct']:.0f}th.", "1", v["n_items"], v["percentile"], v["ci90"],
             seeded([i["id"] for i in v["items"]], f"bf{t}"),
-            robustness={"reversed_levels_pct": v["robust_reversed_levels_pct"], "people_frame_pct": v["people_frame_pct"]})
+            robustness={"reversed_levels_pct": v["robust_reversed_levels_pct"], "people_frame_pct": v["people_frame_pct"]},
+            human_n=int(bf["human_reference"].split("n=")[1].split()[0].strip(",;)")))
     t2 = json.loads((A / "tier2_traits.json").read_text())["facets"]
     neg = [f for f, v in t2.items() if v["self_minus_people"] is not None and v["gap_ci90"][1] < -0.03]
     add("muted_self", "personality",
         f"On {len(neg)} of {len(t2)} audited trait facets, Jev places itself lower than it places 'most people' on the "
         f"same questions: less extraverted, less anxious, less driven, less dark.", "2",
         sum(v["n_items"] for v in t2.values()), round(float(np.mean([v["self_minus_people"] for v in t2.values()])), 3),
-        None, [], facets={f.replace("self.personality.", ""): v for f, v in t2.items()})
+        None, [], facets={f.replace("self.personality.", ""): v for f, v in t2.items()}, n_lower=len(neg), n_facets=len(t2))
     tt = json.loads((A / "tier1_type_taste.json").read_text())
     oe = tt["oejts"]
     order = [("IE", "EI"), ("SN", "NS"), ("FT", "TF"), ("JP", "PJ")]
@@ -132,9 +133,10 @@ def main():
     rt = q.filter(pl.col("source").is_in(["taste_ratings", "g5_w13_ratings"]))
     mid = rt.with_columns(pl.col("top").cast(pl.Utf8).alias("t"), pl.col("options").str.count_matches('", "').alias("k"))
     share_mid = mid.filter(pl.col("k") == 4).select((pl.col("t") == "2").mean()).item()
+    choice_top = float(q.filter(pl.col("primitive") == "choice")["p_top"].mean())
     add("middle_lean", "defaults", f"Rating one thing at a time, Jev's single most likely answer is the middle level "
-        f"{share_mid:.0%} of the time; in head-to-heads its top pick averages {q.filter(pl.col('primitive') == 'choice')['p_top'].mean():.0%}.",
-        "1", mid.height, round(float(share_mid), 3), None, seeded(ids(rt), "mid"))
+        f"{share_mid:.0%} of the time; on pick-one questions its top answer averages {choice_top:.0%}.",
+        "1", mid.height, round(float(share_mid), 3), None, seeded(ids(rt), "mid"), choice_p_top=round(choice_top, 3))
 
     # ---- knowledge and calibration ----
     tq = q.filter(pl.col("correct").is_not_null())
@@ -225,7 +227,7 @@ def main():
         add("risk_gambles", "values", f"Choosing between {len(rows):,} described gambles, Jev picks the same option as most people "
             f"{agree:.0%} of the time (correlation with the human choice share {np.corrcoef(jv, hv)[0, 1]:.2f}).", "1",
             len(rows), round(agree, 3), None, seeded([x[0] for x in rows], "risk"),
-            mean_abs_diff=round(float(np.abs(jv - hv).mean()), 3))
+            mean_abs_diff=round(float(np.abs(jv - hv).mean()), 3), r=round(float(np.corrcoef(jv, hv)[0, 1]), 3))
 
     # ---- tier 3 theme stances: Jev's own answer vs its 'most people' answer, on the theme's yes/no questions ----
     for name, v in th.items():
