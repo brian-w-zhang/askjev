@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Claim, NodeCard, SourceRow } from "./types";
 
 // The atlas (docs/11-portrait.md §8): every ledger claim, every topic card and the full source table, searchable.
@@ -39,8 +39,17 @@ const SECTION: Record<string, string> = {
   discovery: "discovery", page: "page support",
 };
 
-export default function Atlas({ claims, nodes, sources }: { claims: Claim[]; nodes: NodeCard[]; sources: SourceRow[] }) {
+export default function Atlas({ claims, nNodes, nSources }: { claims: Claim[]; nNodes: number; nSources: number }) {
   const [tab, setTab] = useState<Tab>("claims");
+  // topic cards and sources are fetched when their tab first opens (they're most of the atlas's data)
+  const [nodes, setNodes] = useState<NodeCard[] | null>(null);
+  const [sources, setSources] = useState<SourceRow[] | null>(null);
+  const [failed, setFailed] = useState(false);
+  useEffect(() => {
+    const part = tab === "nodes" && !nodes ? "nodes" : tab === "sources" && !sources ? "sources" : null;
+    if (!part) return;
+    fetch(`/portrait/atlas/data?part=${part}`).then((r) => (r.ok ? r.json() : Promise.reject())).then((x) => (part === "nodes" ? setNodes(x) : setSources(x))).catch(() => setFailed(true));
+  }, [tab, nodes, sources]);
   const [q, setQ] = useState("");
   const [section, setSection] = useState<string>("");
   const [sort, setSort] = useState<{ key: string; desc: boolean }>({ key: "n", desc: true });
@@ -49,7 +58,7 @@ export default function Atlas({ claims, nodes, sources }: { claims: Claim[]; nod
   const shownClaims = useMemo(() => claims.filter((c) => (!section || c.section === section)
     && (!needle || `${c.id} ${c.sentence}`.toLowerCase().includes(needle))), [claims, section, needle]);
   const shownNodes = useMemo(() => {
-    const r = nodes.filter((n) => !needle || n.node_id.toLowerCase().includes(needle));
+    const r = (nodes ?? []).filter((n) => !needle || n.node_id.toLowerCase().includes(needle));
     return [...r].sort((a, b) => {
       const x = a[sort.key] as number | null, y = b[sort.key] as number | null;
       if (x === y) return 0;
@@ -58,7 +67,7 @@ export default function Atlas({ claims, nodes, sources }: { claims: Claim[]; nod
       return sort.desc ? y - x : x - y;
     }).slice(0, 400);
   }, [nodes, needle, sort]);
-  const shownSources = useMemo(() => sources.filter((s) => !needle || `${s.source} ${s.family}`.toLowerCase().includes(needle)), [sources, needle]);
+  const shownSources = useMemo(() => (sources ?? []).filter((s) => !needle || `${s.source} ${s.family}`.toLowerCase().includes(needle)), [sources, needle]);
   const sections = useMemo(() => [...new Set(claims.map((c) => c.section))], [claims]);
 
   const th = (key: string, text: string) => (
@@ -74,7 +83,7 @@ export default function Atlas({ claims, nodes, sources }: { claims: Claim[]; nod
         <div className="tabs" role="tablist">
           {(["claims", "coverage", "nodes", "sources"] as Tab[]).map((t) => (
             <button key={t} type="button" role="tab" aria-selected={tab === t} onClick={() => setTab(t)}>
-              {t === "claims" ? `Findings (${claims.length})` : t === "coverage" ? "Coverage" : t === "nodes" ? `Topics (${nodes.length})` : `Sources (${sources.length})`}
+              {t === "claims" ? `Findings (${claims.length})` : t === "coverage" ? "Coverage" : t === "nodes" ? `Topics (${nNodes})` : `Sources (${nSources})`}
             </button>
           ))}
         </div>
@@ -119,7 +128,10 @@ export default function Atlas({ claims, nodes, sources }: { claims: Claim[]; nod
               </tbody>
             </table>
           )}
-          {tab === "nodes" && (
+          {((tab === "nodes" && !nodes) || (tab === "sources" && !sources)) && (
+            <p style={{ padding: 16, fontFamily: "var(--mono)", fontSize: 12, color: "var(--w-fg-2)" }}>{failed ? "Couldn't load this table. Try reloading the page." : "Loading…"}</p>
+          )}
+          {tab === "nodes" && nodes && (
             <table className="pt-table">
               <thead><tr><th>topic</th>{th("n", "n")}{th("accuracy", "right")}{th("confidence", "confidence")}{th("decisive", "decisive")}{th("stability", "stable")}{th("frame_gap", "self vs people")}{th("crowd_agree", "crowd")}{th("z_max", "unusual")}</tr></thead>
               <tbody>
@@ -134,7 +146,7 @@ export default function Atlas({ claims, nodes, sources }: { claims: Claim[]; nod
               </tbody>
             </table>
           )}
-          {tab === "sources" && (
+          {tab === "sources" && sources && (
             <table className="pt-table">
               <thead><tr><th>source</th><th>family</th><th>hemisphere</th><th style={{ textAlign: "right" }}>questions</th><th style={{ textAlign: "right" }}>right answer</th><th style={{ textAlign: "right" }}>human answers</th><th style={{ textAlign: "right" }}>shown</th></tr></thead>
               <tbody>

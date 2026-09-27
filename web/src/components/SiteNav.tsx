@@ -14,11 +14,23 @@ export default function SiteNav() {
     const sp = new URLSearchParams(location.search);
     const node = sp.get("node"), q = sp.get("q");
     let unsub = () => {};
+    const drop = () => {  // a link to nothing: clean the address bar and stay on the map's home view
+      const u = new URL(location.href);
+      u.searchParams.delete("node");
+      u.searchParams.delete("q");
+      history.replaceState(history.state, "", u.pathname + u.search);
+    };
     const go = () => {
-      if (q) openQuestion(q);
-      else if (node) {
-        const parts = node.split(".");
-        travel(["root", ...parts.map((_, i) => parts.slice(0, i + 1).join("."))]).then(() => selectNode(node));
+      if (q) {
+        if (/^[0-9a-f]{24}$/.test(q)) openQuestion(q);
+        else drop();
+      } else if (node) {
+        // check the topic exists first (the tree endpoint answers an empty list rather than a 404)
+        fetch(`/api/tree?root=${encodeURIComponent(node)}&depth=0`).then((r) => r.json()).then(({ nodes }) => {
+          if (!nodes?.length) return drop();
+          const parts = node.split(".");
+          travel(["root", ...parts.map((_, i) => parts.slice(0, i + 1).join("."))]).then(() => selectNode(node));
+        }).catch(drop);
       }
       unsub = useStore.subscribe((st, prev) => {
         if (st.panel === prev.panel) return;

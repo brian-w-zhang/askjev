@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import type { Claim, PortraitData, QuizItem, Row } from "./types";
 import { compact, domain, int, label, num, optionLabel, ordinal, pct, signed, topOf } from "./fmt";
 import { Card, Legend, Nav, Win, fill, pick } from "./ui";
-import { DotRows, HBars, Scatter, Units } from "./charts";
+import { Density, DotRows, HBars, Units } from "./charts";
 import { Quiz, QuizProvider, YouVsJev } from "./Quiz";
 import Calibration from "./Calibration";
 import ChapterRail from "./ChapterRail";
@@ -99,7 +99,7 @@ function Intro({ C, d, s, total, nSources, common }: { C: CFn; d: PortraitData; 
         {s && <span className="card-id">tweet</span>}
         <div className="card-in">
           <div className="card-main">
-            <img className="tweet-img" src="/portrait/memes/tweet.png" alt="Tweet from @typesafeai, September 23, 2026: Everyone wants to know what Jev is, nobody asks how Jev's doing" />
+            <img className="tweet-img" src="/portrait/memes/tweet.webp" alt="Tweet from @typesafeai, September 23, 2026: Everyone wants to know what Jev is, nobody asks how Jev's doing" />
             <h1 className="card-t">{COPY.tweet.title}</h1>
             <p className="scroll-hint">scroll ↓</p>
           </div>
@@ -416,7 +416,8 @@ function Act4({ C, R, s }: { C: CFn; R: RFn; s: boolean }) {
       </Card>
       <Card id="gambles" field="teal" c={COPY.gambles} vars={{ n: int(g.n), agree: pct(g.effect as number), r: num(g.r) }} showId={s} claims={[g, gp]} rows={R(g, 2)}>
         <Win title="gambles.scatter">
-          <Scatter points={gp.points as [number, number][]} xLabel="people choosing the first option" yLabel="your probability" size={1.6} fmt={(v) => pct(v)} />
+          <Density points={gp.points as [number, number][]} xLabel="share of people choosing the first option" yLabel="your probability for it" fmt={(v) => pct(v)} />
+          <p className="win-note">Each square is a bin of gambles; darker means more of them. On the dashed line you and people agree.</p>
         </Win>
       </Card>
     </>

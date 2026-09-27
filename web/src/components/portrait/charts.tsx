@@ -140,3 +140,38 @@ export function Units({ groups, per }: { groups: { key: string; n: number; cls: 
     </div>
   );
 }
+
+// Binned scatter: a grid of pixel squares, darker where more points fall. Lighter than one dot per point and easier
+// to read when points pile up.
+export function Density({ points, xLabel, yLabel, bins = 24, fmt }: {
+  points: [number, number][]; xLabel: string; yLabel: string; bins?: number; fmt: (v: number) => string;
+}) {
+  const W = 420, H = 330, L = 42, R = 12, T = 12, B = 38;
+  const cw = (W - L - R) / bins, ch = (H - T - B) / bins;
+  const grid = new Map<string, number>();
+  for (const [x, y] of points) {
+    const i = Math.min(bins - 1, Math.floor(x * bins)), j = Math.min(bins - 1, Math.floor(y * bins));
+    grid.set(`${i},${j}`, (grid.get(`${i},${j}`) ?? 0) + 1);
+  }
+  const max = Math.max(...grid.values());
+  const sx = (v: number) => L + v * (W - L - R), sy = (v: number) => H - B - v * (H - T - B);
+  return (
+    <svg className="svgc" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={`${yLabel} against ${xLabel}, ${points.length} points`}>
+      {[0, 0.25, 0.5, 0.75, 1].map((t) => (
+        <g key={t}>
+          <line className="grid" x1={sx(0)} x2={sx(1)} y1={sy(t)} y2={sy(t)} />
+          <line className="grid" x1={sx(t)} x2={sx(t)} y1={sy(0)} y2={sy(1)} />
+          <text x={L - 6} y={sy(t) + 3} textAnchor="end">{fmt(t)}</text>
+          <text x={sx(t)} y={H - B + 14} textAnchor="middle">{fmt(t)}</text>
+        </g>
+      ))}
+      {[...grid].map(([k, c]) => {
+        const [i, j] = k.split(",").map(Number);
+        return <rect key={k} className="jev" x={L + i * cw + 0.5} y={H - B - (j + 1) * ch + 0.5} width={cw - 1} height={ch - 1} fillOpacity={0.12 + 0.88 * Math.sqrt(c / max)} />;
+      })}
+      <line className="diag" x1={sx(0)} y1={sy(0)} x2={sx(1)} y2={sy(1)} />
+      <text x={(L + W - R) / 2} y={H - 4} textAnchor="middle">{xLabel}</text>
+      <text transform={`translate(10 ${(T + H - B) / 2}) rotate(-90)`} textAnchor="middle">{yLabel}</text>
+    </svg>
+  );
+}

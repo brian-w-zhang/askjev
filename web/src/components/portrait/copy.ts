@@ -106,7 +106,7 @@ export const COPY: Record<string, CardCopy> = {
   },
   gambles: {
     title: "Offered {n} real gambles, you pick what most people picked *{agree}* of the time.",
-    fine: "Each dot is one gamble: your probability for the first option against the share of real people who chose it (correlation {r}). The dashed line is perfect agreement.",
+    fine: "Gambles from two published choice experiments, with the share of real people who picked each option. Correlation between your probability and theirs: {r}. \"Most people\" here means the majority of that experiment's participants.",
   },
 
   review: {

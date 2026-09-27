@@ -6,3 +6,5 @@
 :root[data-theme="dark"] .sitenav .snav { background: #1d191c; color: #ebe6ea; box-shadow: none; }
 :root[data-theme="dark"] .sitenav .snav:hover { background: #e551ba; color: #fefefe; }
 @media (max-width: 760px) { .sitenav { top: auto; bottom: 14px; } }
+/* on phones the panel is a bottom sheet: step aside while it's open */
+@media (max-width: 760px) { body.panel-open .sitenav { display: none; } }

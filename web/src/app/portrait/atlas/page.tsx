@@ -7,7 +7,9 @@ export const metadata: Metadata = { title: "Atlas · A self-portrait of Jev · a
 
 export default function AtlasPage() {
   const d = loadPortrait();
-  const claims = d ? Object.values(d.claims).filter((c) => c.section !== "page") : [];
+  // the atlas lists claims; it doesn't need their chart data, so only the fields it shows are sent to the browser
+  const claims = d ? Object.values(d.claims).filter((c) => c.section !== "page")
+    .map(({ id, section, sentence, tier, n, ci90, effect, script }) => ({ id, section, sentence, tier, n, ci90, effect: typeof effect === "number" ? effect : null, examples: [], script })) : [];
   return (
     <main>
       <Nav here="atlas" />
@@ -18,7 +20,7 @@ export default function AtlasPage() {
           <h1 className="pt-h1 sm">Everything Else</h1>
           <p className="pt-dek">The portrait picks a few dozen findings. Here are all {claims.length} of them, what a human self-portrait would cover and how much of it this does, every topic&rsquo;s indicators, and every source.</p>
         </header>
-        {d ? <Atlas claims={claims} nodes={d.nodes} sources={d.sources} />
+        {d ? <Atlas claims={claims} nNodes={d.nodes.length} nSources={d.sources.length} />
           : <p style={{ textAlign: "center" }}>No portrait data. Run scripts/portrait/export_page.py.</p>}
       </section>
     </main>

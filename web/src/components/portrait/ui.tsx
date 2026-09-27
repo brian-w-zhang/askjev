@@ -2,7 +2,8 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import type { Claim, Row } from "./types";
 import type { CardCopy } from "./copy";
-import { int, optionLabel, pct, truthKey } from "./fmt";
+import { int, pct } from "./fmt";
+import Receipts from "./Receipts";
 import ThemeToggle from "./ThemeToggle";
 
 export type Field = "paper" | "pink" | "teal" | "sage" | "magenta" | "ink";
@@ -56,16 +57,12 @@ export function Card({ id, field = "paper", c, vars, big, children, aside, aside
           <div className="card-foot">
             {c.fine && <p className="fine">{fill(c.fine, vars)}</p>}
             {claims.length > 0 && (
-              <details className="receipts">
-                <summary>receipts</summary>
-                <p className="rc-meta">
-                  {TIER[c0.tier] ?? c0.tier} · n = {int(claims.length === 1 ? c0.n : Math.max(...claims.map((x) => x.n)))}
-                  {claims.length === 1 && c0.ci90 && typeof c0.effect === "number" ? ` · 90% interval ${fmtCi(c0)}` : ""}
-                  {note ? <> · {note}</> : null}
-                  <br />ledger: {claims.map((x) => x.id).join(", ")}
-                </p>
-                {rows && rows.length > 0 && <ol className="rc-rows">{rows.map((r) => <QuestionRow key={r.id} row={r} />)}</ol>}
-              </details>
+              <Receipts rows={rows} meta={<>
+                {TIER[c0.tier] ?? c0.tier} · n = {int(claims.length === 1 ? c0.n : Math.max(...claims.map((x) => x.n)))}
+                {claims.length === 1 && c0.ci90 && typeof c0.effect === "number" ? ` · 90% interval ${fmtCi(c0)}` : ""}
+                {note ? <> · {note}</> : null}
+                <br />ledger: {claims.map((x) => x.id).join(", ")}
+              </>} />
             )}
           </div>
         )}
@@ -97,38 +94,6 @@ export const Legend = {
   guess: <span key="g"><i className="k guess" />Jev, for &lsquo;most people&rsquo;</span>,
   hum: <span key="h"><i className="k hum" />real people</span>,
 };
-
-// One real question: Jev's distribution next to the human one (or Jev's guess for 'most people').
-export function QuestionRow({ row }: { row: Row }) {
-  const human = row.human?.dist ?? null;
-  const other = human ?? row.people;
-  const keys = Object.keys(row.jev ?? {});
-  const t = truthKey(row);
-  const score = (k: string) => Math.max(row.jev?.[k] ?? 0, other?.[k] ?? 0);
-  const keep = new Set([...keys].sort((a, b) => score(b) - score(a)).slice(0, 6));
-  const shown = keys.length <= 6 ? keys : keys.filter((k) => keep.has(k) || k === t);
-  return (
-    <li className="pt-q">
-      <p className="qt">{row.text}</p>
-      {row.state && <p className="qs">{row.state.replace(/^\{|\}$/g, "")}</p>}
-      {shown.map((k) => (
-        <div className="pt-opt" key={k}>
-          <span className={`ol${t === k ? " truth" : ""}`}>{optionLabel(row, k)}</span>
-          <span className="ob">
-            <i className="j" style={{ width: `${(row.jev?.[k] ?? 0) * 100}%` }} />
-            {other && <i className={human ? "h" : "g"} style={{ width: `${(other[k] ?? 0) * 100}%` }} />}
-            <em>Jev {pct(row.jev?.[k] ?? 0)}{other ? ` · ${human ? "people" : "Jev for most people"} ${pct(other[k] ?? 0)}` : ""}</em>
-          </span>
-        </div>
-      ))}
-      {keys.length > shown.length && <p className="qm">+ {keys.length - shown.length} more options near 0%</p>}
-      <p className="qm">
-        {row.node.replaceAll(".", " › ")} · {row.source}
-        {row.human?.n ? ` · ${int(row.human.n)} people${row.human.population ? ` (${row.human.population})` : ""}` : ""}
-      </p>
-    </li>
-  );
-}
 
 export function pick(rows: Record<string, Row>, ids: string[], k = 3): Row[] {
   return ids.map((i) => rows[i]).filter(Boolean).slice(0, k);
