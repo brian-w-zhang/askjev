@@ -1,4 +1,6 @@
 "use client";
+import { prefetch } from "@/lib/cache";
+import { questionUrl } from "@/lib/panelData";
 import { useEffect, useState } from "react";
 import { useStore } from "@/lib/store";
 import { cards, nodeSlots, starSlots, useOverlay } from "@/lib/overlay";
@@ -112,9 +114,16 @@ function StarCard() {
   // the text cache lives outside React; this only makes sure the hovered star's node is loading
   useEffect(() => {
     const d = starData();
-    if (hoverStar < 0 || !d || starText(hoverStar)) return;
+    if (hoverStar < 0 || !d) return;
+    // hovering a dot starts loading its card, so a click opens it with the data already here
+    const ready = starText(hoverStar);
+    if (ready) { prefetch(questionUrl(ready.id)); return; }
     let live = true;
-    loadTexts(d.nodeIds[d.node[hoverStar]]).then(() => live && loaded((x) => x + 1));
+    loadTexts(d.nodeIds[d.node[hoverStar]]).then(() => {
+      const t = starText(hoverStar);
+      if (t) prefetch(questionUrl(t.id));
+      if (live) loaded((x) => x + 1);
+    });
     return () => { live = false; };
   }, [hoverStar]);
   const focusStar = useStore((s) => s.focusStar);

@@ -265,6 +265,7 @@ export async function openStar(i: number) {
   if (!q) return;
   showJevPick(null);
   useStore.getState().set({ selected: nodeId, hoverStar: -1 });
-  await landOnStar(i, 1.0);
+  // the card opens right away (its data was prefetched on hover) while the camera flies in beside it
   openQuestion(q.id);
+  await landOnStar(i, 1.0);
 }

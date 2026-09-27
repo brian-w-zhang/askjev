@@ -38,6 +38,9 @@ export interface SearchHit {
   path: PathStep[];
   star?: number; // index of the question's dot in the star snapshot (-1: not drawn, e.g. hidden)
   jev_p?: number | null;
+  answer?: { label: string; p: number } | null; // Jev's stored top answer to this question
+  similar?: { id: string; text: string; variant: boolean }[]; // rewordings (and same-text variants) folded into this row
+  agree?: boolean | null; // do Jev's answers to the rewordings agree? (null: fewer than two answered)
 }
 
 export interface NodeHit { id: string; label: string; hemisphere: Hemisphere; sim: number; path: PathStep[] }

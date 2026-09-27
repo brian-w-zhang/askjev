@@ -22,8 +22,8 @@ questions anchored. **Wave 2 gated: 299,863** (World 36.5 / Self 32.9 / Machine 
 | UI | 60 fps constellation, human-paced path animations, Jev-path fork, cards, ask box; Playwright-verified |
 | Indicators (preview) | ECE 0.058 over 36k ground-truth items; no position bias; Machine research/search/commerce overconfident (ECE ≈ 0.23-0.27); see docs/findings-preview.md |
 
-**How to run:** `uv run askjev pipeline` (Python pipeline; Postgres 17 local) · `cd web && npm run build && npm start`
-(UI at http://localhost:3000) · evals in `scripts/` · regenerate reports with `scripts/corpus_report.py` and
+**How to run:** `uv run askjev pipeline` (Python pipeline; Postgres 17 local) · `cd web && npm run dev`
+(UI at https://askjev.localhost via portless) · evals in `scripts/` · regenerate reports with `scripts/corpus_report.py` and
 `scripts/findings_preview.py`.
 
 **Known issues**

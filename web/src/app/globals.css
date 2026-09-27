@@ -134,14 +134,13 @@ input, textarea, select { font: inherit; color: inherit; }
 .mic[data-on="true"] { background: var(--pink); color: #1e1e1e; animation: listening 1.1s steps(2) infinite; }
 @keyframes listening { 50% { box-shadow: 0 0 0 3px var(--pink); } }
 .qbox input::placeholder { color: var(--faint); }
-.askrow { display: block; width: 100%; margin-top: 4px; padding: 8px 10px; border: 0; border-top: 1px dashed var(--line-2); background: none; text-align: left; font-size: 15px; }
+.askrow { display: block; width: 100%; margin-top: 4px; padding: 8px 10px; border: 0; border-top: 1px dashed var(--line-2); background: var(--win); text-align: left; font-size: 15px; position: sticky; bottom: -6px; z-index: 1; } /* always reachable, pinned to the bottom of the list */
 .askrow span { font-family: var(--pixel); font-size: 17px; background: var(--bar); color: var(--on-bar); padding: 0 6px; margin-right: 6px; }
 .askrow:hover { background: var(--paper); }
-.search-meta { color: var(--ink); font-family: var(--pixel); font-size: 18px; white-space: nowrap; }
 .tooltabs { display: flex; align-items: center; gap: 2px; padding: 2px 6px 3px; border-top: 1px dashed var(--line-2); margin: 4px 3px 0; min-width: 0; }
 /* the tabs give way (their value truncates) before "Feeling lucky" or the icons ever do */
 .tooltab { flex: 0 1 auto; min-width: 0; overflow: hidden; text-overflow: ellipsis; border: 0; background: none; padding: 2px 8px 1px; white-space: nowrap; font-family: var(--pixel); font-size: 18px; line-height: 20px; color: var(--muted); }
-.tooltab b { font-weight: 400; color: var(--ink); }
+.tooltab b { font-weight: 400; color: var(--ink); display: inline-block; text-align: left; }
 .tooltab:hover { background: var(--chip); }
 .tooltab[aria-expanded="true"] { background: var(--bar); color: var(--on-bar); }
 .tooltab[aria-expanded="true"] b { color: var(--on-bar); }
@@ -166,15 +165,30 @@ input, textarea, select { font: inherit; color: inherit; }
 .results { margin-top: 10px; max-height: min(56vh, 520px); overflow: auto; padding: 0 3px 6px; }
 .results::before { position: sticky; top: 0; z-index: 1; margin: 0 -3px 4px; }
 .results-status { display: flex; justify-content: space-between; gap: 12px; padding: 4px 10px 6px; color: var(--ink); font-family: var(--pixel); font-size: 17px; border-bottom: 1px solid var(--line); margin-bottom: 4px; }
-.results-status .jev { color: var(--paper); background: var(--green); padding: 0 5px; }
+.results-status { align-items: center; height: 31px; }
+.results-status .topics { display: flex; gap: 4px; min-width: 0; overflow: hidden; }
+.topicchip { flex: none; display: inline-flex; align-items: center; gap: 5px; border: 0; background: var(--chip); color: var(--ink); font-family: var(--pixel); font-size: 16px; line-height: 20px; padding: 0 6px; white-space: nowrap; max-width: 190px; overflow: hidden; text-overflow: ellipsis; }
+.topicchip i { flex: none; width: 7px; height: 7px; }
+.topicchip:hover { background: var(--bar); color: var(--on-bar); }
+/* a fixed slot, so the status changing ("Jev is ranking" → "Ranked by Jev") never moves anything */
+.results-status .rstate { flex: none; width: 126px; height: 20px; text-align: center; font-family: var(--pixel); font-size: 16px; line-height: 20px; color: var(--muted); }
+.results-status .rstate.jev { color: var(--paper); background: var(--green); }
+.results-status .rstate:empty { visibility: hidden; }
+.results-status .verdict { font-family: var(--pixel); font-size: 16px; line-height: 20px; color: var(--muted); white-space: nowrap; }
+.results-status .verdict.none { color: var(--ink); background: var(--paper); box-shadow: inset 0 0 0 1px var(--ink), 2px 2px 0 var(--pink); padding: 0 6px; }
+.result.faint .text, .result.faint .ans { opacity: 0.55; }
 .result { display: grid; grid-template-columns: 9px 1fr auto; gap: 3px 12px; align-items: start; width: 100%; text-align: left; padding: 8px 10px; background: transparent; border: 0; }
 .result[aria-selected="true"], .result:hover { background: var(--paper); box-shadow: inset 0 0 0 1px var(--ink); }
 .result .dot { width: 9px; height: 9px; margin-top: 5px; }
 .result .text { font-size: 16px; line-height: 1.3; letter-spacing: -0.01em; }
-.result .where { grid-column: 2; color: var(--muted); font-family: var(--pixel); font-size: 16px; line-height: 1; }
-.result .p { grid-row: 1 / span 2; grid-column: 3; display: flex; flex-direction: column; align-items: flex-end; gap: 4px; color: var(--ink); font-family: var(--pixel); font-size: 17px; min-width: 48px; }
-.result .pbar { width: 48px; height: 2px; background: var(--ink); position: relative; overflow: visible; }
-.result .pbar i { display: block; height: 7px; width: 7px !important; background: var(--green); position: absolute; top: -3px; left: var(--p, 0); transition: left 420ms var(--ease-out); }
+.result .where { grid-column: 2 / span 2; display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; color: var(--muted); font-family: var(--pixel); font-size: 16px; line-height: 18px; }
+.result .where .rew { color: var(--ink); }
+@media (max-width: 480px) { .tooltab b { min-width: 0 !important; display: inline; } } /* phones: values truncate rather than reserve room */
+.result .where .flip { color: var(--paper); background: var(--hot); padding: 0 4px; }
+.result .where .tagjev { color: var(--paper); background: var(--green); padding: 0 4px; }
+/* Jev's stored answer, in a column of fixed width so rows don't jiggle as answers load */
+.result .ans { grid-column: 3; grid-row: 1; width: 132px; text-align: right; color: var(--muted); font-family: var(--pixel); font-size: 16px; line-height: 20px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.result .ans b { font-weight: 400; color: var(--ink); }
 .results h3 { color: var(--ink); font-family: var(--pixel); font-size: 17px; font-weight: 400; padding: 8px 10px 2px; }
 .results .empty { padding: 12px 10px; color: var(--muted); }
 
@@ -233,7 +247,7 @@ input, textarea, select { font: inherit; color: inherit; }
 .navbtn:hover:not(:disabled) { background: var(--bar); color: var(--on-bar); }
 .navbtn:disabled { opacity: 0.35; cursor: default; }
 /* the path is one line, always: when it's long, the start slides off the left (the end is what matters) */
-.panel-nav .crumbs { flex: 1; min-width: 0; height: 26px; flex-wrap: nowrap; justify-content: flex-end; align-items: center; margin-left: 4px; padding: 0 8px; background: var(--paper); box-shadow: inset 0 0 0 1px var(--ink); color: var(--ink); font-size: 17px; line-height: 20px; white-space: nowrap; overflow: hidden; position: relative; } /* a long path folds its leading steps into "…" (Panel.tsx, Path) instead of being cut */
+.panel-nav .crumbs { flex: 1; min-width: 0; height: 26px; flex-wrap: nowrap; align-items: center; margin-left: 4px; padding: 0 8px; background: var(--paper); box-shadow: inset 0 0 0 1px var(--ink); color: var(--ink); font-size: 17px; line-height: 20px; white-space: nowrap; overflow: hidden; position: relative; justify-content: flex-start; } /* a long path folds its leading steps into "…" (Panel.tsx, Path) instead of being cut, so it always fits and reads from the left */
 .panel-nav .crumbs > * { flex: none; }
 .crumbs .step { display: inline-flex; gap: 0 5px; }
 .crumbs .ruler { position: absolute; visibility: hidden; pointer-events: none; display: flex; white-space: nowrap; left: 0; top: 0; }
@@ -280,7 +294,8 @@ input, textarea, select { font: inherit; color: inherit; }
 .tag.hemi-self { background: var(--self); color: var(--ink); }
 .tag.hemi-machine { background: var(--machine); color: var(--paper); }
 .tag.warn { background: var(--magenta); color: var(--paper); }
-.tag.gold { background: var(--green); color: var(--paper); }
+.tag.gold { background: var(--green); color: var(--paper); } /* Jev's green: Jev's own acts only */
+.tag.asked { background: var(--paper); color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink), 2px 2px 0 var(--pink); }
 
 .indgrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
 .ind { background: var(--win); box-shadow: inset 0 0 0 1px var(--ink); padding: 8px 10px; }
@@ -309,7 +324,10 @@ input, textarea, select { font: inherit; color: inherit; }
 .more { margin-top: 10px; width: 100%; padding: 4px; border: 0; box-shadow: inset 0 0 0 1px var(--ink); background: var(--win); font-family: var(--pixel); font-size: 18px; }
 .more:hover { background: var(--bar); color: var(--on-bar); }
 
-.framebar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; flex-wrap: wrap; }
+.framebar { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px; }
+.framebar .seg { flex: none; flex-wrap: nowrap; }
+.chipbtn.fixedw { min-width: 118px; text-align: center; }
+.chipbtn:disabled { opacity: 0.6; }
 .bars { display: flex; flex-direction: column; gap: 12px; }
 .bar { display: grid; grid-template-columns: 1fr 52px; gap: 5px 10px; align-items: center; }
 .bar .lab { font-size: 15px; display: flex; gap: 8px; align-items: baseline; min-width: 0; }

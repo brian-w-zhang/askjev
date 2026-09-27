@@ -1,6 +1,7 @@
 import type { NextRequest } from "next/server";
 import { q } from "@/lib/server/db";
 import { questionFilters } from "@/lib/server/filters";
+import { counts } from "@/lib/server/counts";
 
 type Row = Record<string, unknown> & { id: string; ask_count: number };
 
@@ -58,23 +59,23 @@ export async function GET(req: NextRequest, ctx: RouteContext<"/api/node/[id]">)
   }
 
   const scopeSql = scope === "direct" ? "qq.node_id = $1::text and $2::ltree is not null" : "qq.path <@ $2::ltree and $1::text is not null";
-  const sameAsTotal = scope === "subtree" && !f.active && sp.get("hidden") !== "1";
-  const [stats, ancestors, children, first, total, shown] = await Promise.all([
+  // unfiltered counts come from the in-memory per-topic counts (instant); only a filtered list is counted live
+  const plain = !f.active && sp.get("hidden") !== "1";
+  const [stats, ancestors, children, first, total, c] = await Promise.all([
     q(`select * from node_stats where node_id = $1`, [id]),
     q(`select a.id, a.label, a.depth from nodes a where a.path @> $1::ltree order by a.depth`, [node.path]),
     q(`select n.id, n.label, coalesce(s.n_questions,0) as n_questions from nodes n
          left join node_stats s on s.node_id = n.id and s.scope = 'subtree'
         where n.parent_id = $1 and n.status = 'active' order by n.ord nulls last, n.id`, [id]),
     page(null),
-    q<{ n: number }>(`select count(*)::int as n from questions qq where ${scopeSql} and ${f.sql}`, base),
-    // the header's count: displayable questions in the whole branch (the stats rollup also counts hidden ones).
-    // In the default view (whole branch, no filters) that's exactly the list's total, so it isn't counted twice.
-    sameAsTotal
-      ? Promise.resolve([] as { n: number }[])
-      : q<{ n: number }>(`select count(*)::int as n from questions where path <@ $1::ltree and display_ok`, [node.path]),
+    plain ? Promise.resolve(null) : q<{ n: number }>(`select count(*)::int as n from questions qq where ${scopeSql} and ${f.sql}`, base),
+    counts(),
   ]);
+  // the header's count: displayable questions in the whole branch (the stats rollup also counts hidden ones)
+  const shown = c.subtree.get(id) ?? 0;
+  const listTotal = total ? total[0].n : scope === "direct" ? c.direct.get(id) ?? 0 : shown;
   return Response.json({
     node, stats, ancestors, children, questions: first.rows, next: first.next,
-    total: total[0].n, shown: sameAsTotal ? total[0].n : shown[0].n, scope, limit,
+    total: listTotal, shown, scope, limit,
   });
 }

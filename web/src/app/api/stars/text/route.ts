@@ -19,7 +19,14 @@ export async function GET(req: NextRequest) {
   );
   const shared = new Map<string, number>();
   for (const x of rows) shared.set(x.text, (shared.get(x.text) ?? 0) + 1);
-  const m = new Map(rows.map((x) => [x.id, { id: x.id, text: x.text, primitive: x.primitive, label: (shared.get(x.text) ?? 0) > 1 ? distinct(x) ?? x.text : x.text }]));
+  // previews only (hover cards, sky labels): the card fetches the full question, and some topics hold thousands of
+  // long scenario texts (a Moral Machine topic was 8 MB untrimmed)
+  const cut = (t: string, n: number) => (t.length > n ? t.slice(0, n - 1).trimEnd() + "…" : t);
+  // `label` is sent only when it differs from the text (the client fills it in), which halves the payload
+  const m = new Map(rows.map((x) => {
+    const label = (shared.get(x.text) ?? 0) > 1 ? distinct(x) : null;
+    return [x.id, { id: x.id, text: cut(x.text, 220), primitive: x.primitive, ...(label ? { label: cut(label, 140) } : {}) }];
+  }));
   return Response.json({ questions: ids.map((id) => m.get(id) ?? { id, text: "", label: "", primitive: "" }) });
 }
 

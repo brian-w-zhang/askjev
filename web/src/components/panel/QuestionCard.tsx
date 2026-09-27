@@ -117,7 +117,8 @@ export function QuestionCard({ id, note, onClose }: { id: string; note?: string;
           <div className="framebar">
             <h4 style={{ margin: 0 }}>
               <span className="h4t">
-                {view.main?.frame === "human" ? "What Jev thinks most people would say" : isSelf ? "Jev's default" : "Jev's answer"}
+                {/* one heading for every frame: the toggle beside it says which, so switching never reflows the row */}
+                Jev&apos;s answer
                 <Info label="Jev's answer">
                   Each bar is the probability Jev gave that option. Jev returns the whole spread, not just a pick.
                   <span><b>{frameName("self")}:</b> the question asked as is.</span>
@@ -331,9 +332,10 @@ function JevFile({ text, stored }: { text: string; stored: string[] }) {
             <span><b>Path confidence</b> is how sure it was of the whole path.</span>
           </Info>
         </span>
-        {st.state !== "walking" && (
-          <button className="chipbtn" onClick={go}>{st.state === "done" ? "Walk again" : "Ask Jev"}</button>
-        )}
+        {/* always there, same width, so the heading doesn't jump while Jev walks */}
+        <button className="chipbtn fixedw" onClick={go} disabled={st.state === "walking"}>
+          {st.state === "walking" ? "Walking…" : st.state === "done" ? "Walk again" : "Ask Jev"}
+        </button>
       </h4>
       {st.state === "idle" && <p className="note">Jev walks the tree for this question, one decision per level, and the sky shows its path next to where the question is stored.</p>}
       {st.state === "walking" && <div className="working"><span className="spinner" />Jev is walking the tree</div>}

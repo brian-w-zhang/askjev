@@ -1,5 +1,5 @@
 import "server-only";
-import { qWith } from "./db";
+import { q, qWith } from "./db";
 
 export type Hit = { id: string; text: string; primitive: string; node_id: string; hemisphere: string; sim: number };
 
@@ -12,7 +12,7 @@ export type Hit = { id: string; text: string; primitive: string; node_id: string
 // A trigram leg used to run beside it; it never changed the #1 result on 30 test queries and cost ~0.6 s.
 const STORE = process.env.EMBED_STORE === "binary" ? "binary" : "vector";
 
-export function nearest(vec: string, hidden: boolean): Promise<Hit[]> {
+export function nearest(vec: string, hidden: boolean, k = 20): Promise<Hit[]> {
   const cols = "id, text, primitive, node_id, hemisphere";
   if (STORE === "binary")
     // candidates from the 1-bit index, exact re-rank on the narrow vector table, full rows for the top 20 only
@@ -22,7 +22,7 @@ export function nearest(vec: string, hidden: boolean): Promise<Hit[]> {
          select id, embedding <=> $1::halfvec as d from (
            select id, embedding from qvec
             order by binary_quantize(embedding)::bit(384) <~> binary_quantize($1::halfvec) limit 400) x
-          order by d limit 20)
+          order by d limit ${k})
        select ${cols.split(", ").map((k) => "q." + k).join(", ")}, 1 - c.d as sim from c join questions q using (id) order by c.d`,
       [vec],
     );
@@ -30,8 +30,16 @@ export function nearest(vec: string, hidden: boolean): Promise<Hit[]> {
     "set local hnsw.ef_search = 100",
     `select ${cols}, 1 - (embedding <=> $1::vector) as sim from questions
       where embedding is not null and ${hidden ? "true" : "display_ok"}
-      order by embedding <=> $1::vector limit 20`,
+      order by embedding <=> $1::vector limit ${k}`,
     [vec],
   );
 }
 
+
+/** Embeddings for a handful of questions (to group near-duplicate results), from whichever store search uses. */
+export async function vectors(ids: string[]): Promise<Map<string, Float32Array>> {
+  if (!ids.length) return new Map();
+  const table = STORE === "binary" ? "qvec" : "questions";
+  const rows = await q<{ id: string; v: string }>(`select id, embedding::text as v from ${table} where id = any($1)`, [ids]);
+  return new Map(rows.map((r) => [r.id, Float32Array.from(JSON.parse(r.v) as number[])]));
+}

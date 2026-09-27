@@ -33,7 +33,12 @@ const remember = (k: string, d: Found) => {
 };
 
 
-interface Rerank { state: "idle" | "waiting" | "done" | "error"; ms?: number; cached?: boolean; error?: string }
+interface Rerank { state: "idle" | "waiting" | "done" | "error"; ms?: number; cached?: boolean; error?: string; match?: number | null }
+
+// Jev's "does anything here answer this?" (asked with the reorder): real questions land 0.77-0.99, nonsense and
+// topics the corpus lacks 0.03-0.28 ("how to fix my car's transmission" 0.28)
+const MATCH_CLOSE = 0.7;
+const MATCH_NONE = 0.35;
 
 export function Search() {
   const [q, setQ] = useState("");
@@ -41,7 +46,6 @@ export function Search() {
   const [nodeHits, setNodeHits] = useState<NodeHit[]>([]);
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
-  const [latency, setLatency] = useState<number | null>(null);
   const [rerank, setRerank] = useState<Rerank>({ state: "idle" });
   const showHidden = useStore((s) => s.showHidden);
   const tool = useStore((s) => s.tool);
@@ -85,7 +89,7 @@ export function Search() {
       const ranked = list.map((h) => ({ ...h, jev_p: p.get(h.id) ?? null })).sort(byJev);
       setHits(ranked);
       showJevPick(ranked[0] ?? null);
-      setRerank({ state: "done", ms: performance.now() - t0, cached: d.cached });
+      setRerank({ state: "done", ms: performance.now() - t0, cached: d.cached, match: typeof d.match === "number" ? d.match : null });
     } catch (e) {
       if (my === seq.current) setRerank({ state: "error", error: (e as Error).message });
     }
@@ -114,10 +118,8 @@ export function Search() {
     const my = ++seq.current;
     if (!text) return;
     const key = `${text}|${showHidden ? 1 : 0}`;
-    const t0 = performance.now();
     const show = (d: Found) => {
       if (my !== seq.current) return;
-      setLatency(performance.now() - t0);
       setHits(d.results);
       setNodeHits(d.nodes.slice(0, 3));
       setActive(0);
@@ -176,7 +178,6 @@ export function Search() {
     setQ("");
     setHits([]);
     setNodeHits([]);
-    setLatency(null);
     setRerank({ state: "idle" });
     clearHeat();
     showJevPick(null);
@@ -220,6 +221,13 @@ export function Search() {
   };
 
 
+  // results header state: an exact match skips Jev; otherwise Jev's reorder also says whether anything matches
+  const exact = (hits[0]?.sim ?? 0) >= NEAR_EXACT;
+  const match = rerank.state === "done" ? rerank.match ?? null : null;
+  const none = match !== null && match < MATCH_NONE;
+  const related = match !== null && match >= MATCH_NONE && match < MATCH_CLOSE;
+  const status = exact ? "Exact match" : rerank.state === "waiting" ? "Jev is ranking" : rerank.state === "done" ? "Ranked by Jev" : rerank.state === "error" ? "Jev unavailable" : "";
+
   return (
     <div className="search">
       <div className="finder">
@@ -257,7 +265,6 @@ export function Search() {
           aria-expanded={open}
           aria-controls="search-results"
         />
-        {latency !== null && q.trim() && <span className="search-meta num" data-testid="latency">{Math.round(latency)} ms</span>}
         {q && (
           <button className="qclear" onClick={() => { clear(); inputRef.current?.focus(); }} aria-label="Clear search" title="Clear search (Esc)">
             <span aria-hidden>✕</span>
@@ -272,19 +279,29 @@ export function Search() {
       {open && q.trim() && !tool && (
         <div className="results" id="search-results" role="listbox" ref={listRef} data-title="Results">
           <div className="results-status">
-            <span className="num">{hits.length} match{hits.length === 1 ? "" : "es"}</span>
-            <span className={rerank.state === "done" ? "jev" : ""}>
-              {rerank.state === "waiting" && "Jev is reordering"}
-              {rerank.state === "done" && `Reordered by Jev in ${((rerank.ms ?? 0) / 1000).toFixed(2)} s${rerank.cached ? " (cached)" : ""}`}
-              {rerank.state === "error" && "Jev reorder unavailable"}
+            <span className="topics">
+              {/* Jev's verdict takes the topics' place in this fixed-height row, so nothing below moves when it lands */}
+              {none && <span className="verdict none" title="Jev doesn't think any question here asks this. The nearest are below, or ask it yourself.">No close match</span>}
+              {related && <span className="verdict">Related, not exact</span>}
+              {!none && !related && nodeHits.slice(0, 3).map((n) => (
+                <button key={n.id} className="topicchip" onClick={() => chooseNode(n)} title={n.path.map((p, i) => (i === 0 ? "All" : p.label)).join(" / ")}>
+                  <i style={{ background: `var(--${n.hemisphere})` }} />{n.label}
+                </button>
+              ))}
             </span>
+            <span className={`rstate ${rerank.state === "done" || exact ? "jev" : ""}`} title={rerank.state === "done" ? `Jev reordered these in ${((rerank.ms ?? 0) / 1000).toFixed(2)} s${rerank.cached ? " (cached)" : ""}` : undefined}>{status}</span>
           </div>
           {hits.length === 0 && <div className="empty">No questions match yet. Try fewer words, or ask it below.</div>}
-          {hits.map((h, i) => (
+          {hits.map((h, i) => {
+            const rewordings = (h.similar ?? []).filter((x) => !x.variant).length;
+            const variants = (h.similar ?? []).length - rewordings;
+            const pick = i === 0 && rerank.state === "done" && !none && !exact;
+            const where = h.path.slice(1);
+            return (
             <button
               key={h.id}
               data-hit={h.id}
-              className="result"
+              className={`result ${none ? "faint" : ""}`}
               role="option"
               aria-selected={i === active}
               onMouseEnter={() => setActive(i)}
@@ -292,26 +309,24 @@ export function Search() {
             >
               <span className="dot" style={{ background: `var(--${h.hemisphere})` }} />
               <span className="text">{h.text}</span>
-              <span className="p num">
-                {h.jev_p != null && (
-                  <>
-                    {Math.round(h.jev_p * 100)}%
-                    <span className="pbar"><i style={{ ["--p" as string]: `${h.jev_p * 100}%` }} /></span>
-                  </>
-                )}
+              <span className="ans num" title={h.answer ? `Jev's answer: ${h.answer.label} (${Math.round(h.answer.p * 100)}%)` : "Not answered yet"}>
+                {h.answer ? <>{h.answer.label} <b>{Math.round(h.answer.p * 100)}%</b></> : ""}
               </span>
-              <span className="where">{h.path.slice(1).map((p) => p.label).join(" / ")}</span>
+              <span className="where" title={where.map((p) => p.label).join(" / ")}>
+                {pick && <span className="tagjev">Jev&apos;s pick</span>}
+                {exact && i === 0 && <span className="tagjev">Exact</span>}
+                {where.slice(-2).map((p) => p.label).join(" / ")}
+                {rewordings > 0 && (
+                  <span className="rew" title={(h.similar ?? []).filter((x) => !x.variant).map((x) => x.text).join("\n")}>
+                    +{rewordings} rewording{rewordings === 1 ? "" : "s"}
+                  </span>
+                )}
+                {variants > 0 && <span className="rew" title="The same question with other answer options">+{variants} with other options</span>}
+                {h.agree === false && <span className="flip" title="Jev gives different answers to rewordings of this question">answers differ</span>}
+              </span>
             </button>
-          ))}
-          {nodeHits.length > 0 && <h3>Topics</h3>}
-          {nodeHits.map((n) => (
-            <button key={n.id} className="result" onClick={() => chooseNode(n)}>
-              <span className="dot" style={{ background: `var(--${n.hemisphere})` }} />
-              <span className="text">{n.label}</span>
-              <span className="p" />
-              <span className="where">{n.path.slice(1, -1).map((p) => p.label).join(" / ") || "Hemisphere"}</span>
-            </button>
-          ))}
+            );
+          })}
           <button className="askrow" onClick={ask}>
             <span>Ask Jev</span> &ldquo;{q.trim()}&rdquo;
           </button>

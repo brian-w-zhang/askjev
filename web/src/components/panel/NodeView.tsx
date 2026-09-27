@@ -78,7 +78,7 @@ export function NodeView({ id, onClose }: { id: string; onClose: () => void }) {
           <div className="tags">
             <span className={`tag hemi-${node.hemisphere}`}>{node.hemisphere === "root" ? "Whole tree" : node.hemisphere}</span>
             <span className="tag num">{(data.shown ?? sub?.n_questions ?? 0).toLocaleString()} question{(data.shown ?? sub?.n_questions) === 1 ? "" : "s"}</span>
-            {(sub?.n_asked ?? 0) > 0 && <span className="tag gold num">{sub?.n_asked} asked here</span>}
+            {(sub?.n_asked ?? 0) > 0 && <span className="tag asked num" title="Questions people asked through the ask box, in this branch">{sub?.n_asked} asked here</span>}
           </div>
           <h2 className="title">{node.label}</h2>
           <p className="desc">{node.description}</p>

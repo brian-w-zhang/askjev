@@ -78,9 +78,11 @@ export function loadTexts(nodeId: string): Promise<StarText[]> {
   if (!p) {
     p = fetch(`/api/stars/text?node=${encodeURIComponent(nodeId)}`)
       .then((r) => r.json())
-      .then(({ questions }: { questions: StarText[] }) => {
-        texts.set(nodeId, questions);
-        return questions;
+      .then(({ questions }: { questions: (Omit<StarText, "label"> & { label?: string })[] }) => {
+        // the server leaves out a label that's just the text
+        const list = questions.map((q) => ({ ...q, label: q.label ?? (q.text.length > 140 ? q.text.slice(0, 139).trimEnd() + "…" : q.text) }));
+        texts.set(nodeId, list);
+        return list;
       });
     textLoads.set(nodeId, p);
     p.catch(() => textLoads.delete(nodeId));

@@ -36,15 +36,17 @@ export function ToolTabs({ onLucky }: { onLucky: () => void }) {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  const tab = (t: ToolId, name: string, value: string) => (
+  // each tab's value gets the width of its longest option (the pixel font is monospaced), so picking another
+  // layout or color never slides the tabs after it
+  const tab = (t: ToolId, name: string, value: string, longest: number) => (
     <button className="tooltab" aria-expanded={tool === t} aria-controls="toolpanel" onClick={() => toggle(t)}>
-      {name} <b>{value}</b> <span aria-hidden>{tool === t ? "▴" : "▾"}</span>
+      {name} <b style={{ minWidth: `${longest}ch` }}>{value}</b> <span aria-hidden>{tool === t ? "▴" : "▾"}</span>
     </button>
   );
   return (
     <div className="tooltabs" role="toolbar" aria-label="View">
-      {tab("layout", "Layout", LAYOUTS.find((l) => l.id === layout)?.label ?? "")}
-      {tab("color", "Color", INDICATORS.find((i) => i.id === indicator)?.label ?? "")}
+      {tab("layout", "Layout", LAYOUTS.find((l) => l.id === layout)?.label ?? "", Math.max(...LAYOUTS.map((l) => l.label.length)))}
+      {tab("color", "Color", INDICATORS.find((i) => i.id === indicator)?.label ?? "", Math.max(...INDICATORS.map((i) => i.label.length)))}
       <button
         className="tooltab icon"
         aria-expanded={tool === "filters"}
