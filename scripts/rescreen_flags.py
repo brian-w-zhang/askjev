@@ -42,7 +42,7 @@ def hidden_rows(limit_ids=None):
         return c.execute(
             """select id, text, options, state, hemisphere, source, flags from questions
                where not display_ok and source <> 'moral_machine'
-                 and (flags && array['political','sensitive']) and not (flags && array['duplicate','biographical'])"""
+                 and (flags && array['political','sensitive']) and not (flags && array['duplicate','biographical','harmful'])"""
             + (" and id = any(%s)" if limit_ids else ""), (limit_ids,) if limit_ids else ()).fetchall()
 
 
@@ -97,7 +97,7 @@ def main():
     if a.moral_machine:
         with db.connect() as c:
             rows = c.execute("""select id, flags from questions where source='moral_machine' and not display_ok
-                                and not (flags && array['political','duplicate','biographical'])""").fetchall()
+                                and not (flags && array['political','duplicate','biographical','harmful'])""").fetchall()
         n = unhide([(r["id"], [f for f in r["flags"] if f in ("political", "sensitive")]) for r in rows],
                    "Moral Machine is shown per 03-questions §6 (only Criminal/Homeless/Social Status are hidden)")
         print(f"moral machine: unhid {n}")

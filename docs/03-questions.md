@@ -125,6 +125,9 @@ Pitch: "an automated jaggedness miner over a coverage tree."
   debates; sexual content or sex work, self-harm, abuse, graphic violence, but not a plain mention of death or illness),
   sees the question's attached content (joke, story, caption), and hides at p >= 0.3, with a keyword backstop
   (`src/askjev/answer.py`, `scripts/rescreen_flags.py`).
+- A manual review flag `harmful` (self-harm methods, supremacy claims, adult-minor or pedophilia content, slurs used as
+  slurs, rape jokes) hides a question for good: no screen or re-screen clears it, and the production copy never contains
+  it (it copies displayable questions only).
 
 ## 7. Scale ladder (hemisphere ratios hold at every stage)
 | Stage | What it adds | Depth | Synthetic share |
