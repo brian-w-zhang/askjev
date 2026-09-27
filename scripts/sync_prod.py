@@ -217,10 +217,13 @@ def sync_db(src: str, dst: str, resume: bool = False) -> None:
             psql(dst, stmt.rstrip(";") + ";")
     print("search index (1-bit HNSW)")
     wait_for_wal(dst)
-    psql(dst, "drop index if exists stage.q_bin;")  # a build cut off mid-way can leave an invalid one
-    # the server's own maintenance_work_mem: a 1 GB build on this instance size gets its connection killed
-    psql(dst, "set max_parallel_maintenance_workers = 0; "
-              "create index q_bin on stage.qvec using hnsw ((binary_quantize(embedding)::bit(384)) bit_hamming_ops);")
+    valid = subprocess.run([PSQL, dst, "-At", "-c", "select coalesce((select indisvalid from pg_index "
+                            "where indexrelid = to_regclass('stage.q_bin')), false)"], capture_output=True, text=True)
+    if not (resume and valid.stdout.strip() == "t"):  # a build that finished server-side after the client dropped counts
+        psql(dst, "drop index if exists stage.q_bin;")  # one cut off mid-way can leave an invalid index
+        # the server's own maintenance_work_mem: a 1 GB build on this instance size gets its connection killed
+        psql(dst, "set max_parallel_maintenance_workers = 0; "
+                  "create index q_bin on stage.qvec using hnsw ((binary_quantize(embedding)::bit(384)) bit_hamming_ops);")
     for t in COPY:
         psql(dst, f"analyze stage.{t};")
     print("swap")
