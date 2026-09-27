@@ -477,3 +477,12 @@
   .atlas .pt-filters .facet { flex: none; }
   .atlas .pt-filters .sp { display: none; }
 }
+
+/* the Wrapped summary on the closer */
+.wrapped { margin-top: 26px !important; background: #fefefe; color: #1e1e1e; box-shadow: 0 0 0 1px #fefefe, 6px 6px 0 #e551ba; max-width: 640px; }
+.wr-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: rgba(30, 30, 30, 0.14); }
+.wr-grid > div { background: #fefefe; padding: 10px 12px; display: flex; flex-direction: column; gap: 3px; }
+.wr-grid span { font-family: var(--mono); font-size: 10.5px; color: rgba(30, 30, 30, 0.6); }
+.wr-grid b { font-size: 19px; font-weight: 500; letter-spacing: -0.015em; line-height: 1.15; }
+:root[data-theme="dark"] .wrapped, :root[data-theme="dark"] .wr-grid > div { background: #16121a; color: #ebe6ea; }
+:root[data-theme="dark"] .wr-grid span { color: #a9a4a8; }

@@ -79,7 +79,7 @@ export default function Portrait({ d, showIds = false }: { d: PortraitData; show
       <Act4 C={C} R={R} s={s} />
       <Act5 C={C} R={R} d={d} s={s} />
       <Act6 C={C} R={R} d={d} s={s} />
-      <End C={C} s={s} common={common} />
+      <End C={C} d={d} s={s} common={common} />
       <FinePrint C={C} d={d} total={total} />
     </QuizProvider>
   );
@@ -451,7 +451,6 @@ function Act5({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
   const top = bins.at(-1)!, mid = bins.find((b) => b.lo === 0.5)!;
   const kn = Object.values(d.claims).filter((c) => c.section === "knowledge" && c.n >= 5000).sort((a, b) => (b.effect as number) - (a.effect as number));
   const pl = C("pipeline_placement"), rt = C("pipeline_round_trip"), sc = C("pipeline_screen"), dd = C("pipeline_dedupe");
-  const half = Math.ceil(kn.length / 2);
   return (
     <>
       <Card id="review" field="paper" c={COPY.review} vars={{ tasks: d.work.length }} showId={s}
@@ -477,7 +476,7 @@ function Act5({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
         <Win title="knowledge.plot">
           <div className="pt-legend"><span><i className="k jev" />right</span><span><i className="k tickk" />average confidence</span></div>
           <div className="cols2">
-            {[kn.slice(0, half), kn.slice(half)].map((part, i) => (
+            {[kn.slice(0, 5), kn.slice(-5)].map((part, i) => (
               <DotRows key={i} domain={[0.5, 1]} ticks={[0.5, 0.75, 1]} fmt={(v) => pct(v)}
                 rows={part.map((c) => ({
                   key: c.id, label: domain(c.id.replace(/^knowledge_/, "")), ci: c.ci90 ?? undefined,
@@ -578,7 +577,7 @@ function Act6({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
 
 /* ---------------------------------------------------------------- the end */
 
-function End({ C, s, common }: { C: CFn; s: boolean; common: Record<string, string> }) {
+function End({ C, d, s, common }: { C: CFn; d: PortraitData; s: boolean; common: Record<string, string> }) {
   return (
     <>
       <Card id="you" field="pink" c={COPY.you} showId={s} claims={[C("page_quiz_debates")]}>
@@ -593,11 +592,39 @@ function End({ C, s, common }: { C: CFn; s: boolean; common: Record<string, stri
           <div className="card-main">
             <h2 className="card-t xl">{COPY.closer.title}</h2>
             <p className="card-b">{fill(COPY.closer.body, { placed: `about ${pct((C("pipeline_placement").effect as number) / C("landscape_families").n)}` })}</p>
+            <Wrapped C={C} d={d} />
             <p className="links"><a href="/portrait/atlas">everything else, in the atlas →</a> <a href="#fineprint">the full fine print ↓</a></p>
           </div>
         </div>
       </section>
     </>
+  );
+}
+
+// The Wrapped summary: one tile per headline number, the card people would screenshot. Every value is from the ledger.
+function Wrapped({ C, d }: { C: CFn; d: PortraitData }) {
+  const lv = C("page_levels"), cal = C("calibration"), ty = C("type");
+  const top = (cal.reliability as { bin: string; acc: number }[]).at(-1)!;
+  const doms = C("page_ratings").domains as Record<string, { top: { name: string; level: number }[]; bottom: { name: string; level: number }[] }>;
+  const riasec = ["Realistic", "Investigative", "Artistic", "Social", "Enterprising", "Conventional"]
+    .map((n) => ({ l: n[0], c: d.claims[`scale_riasec_${n.toLowerCase()}`] })).filter((x) => x.c).sort((a, b) => b.c.self - a.c.self);
+  const gif = pick(d.rows, C("page_debates").examples, 12).find((r) => r.text.includes("GIF"));
+  const h1 = C("humor_imgflip_captions");
+  const tiles: [string, string][] = [
+    ["type", String(ty.effect)],
+    ...(riasec.length === 6 ? [["career code", riasec.slice(0, 3).map((x) => x.l).join("")] as [string, string]] : []),
+    ["top film", doms.film.top[0].name.replace(/ \(\d{4}\)$/, "")],
+    ["lowest rating of all", (() => { const w = Object.values(doms).map((x) => x.bottom[0]).sort((a, b) => a.level - b.level)[0]; return `${w.name.replace(/^(A|An) /, "")}, ${num(w.level)}/4`; })()],
+    ...(gif ? [["GIF", `hard G, ${pct(gif.jev![topOf(gif.jev)!])}`] as [string, string]] : []),
+    ["middle of the scale", `${pct(lv.effect as number)} of ratings`],
+    ["when 90%+ sure", `right ${pct(top.acc)}`],
+    ["funnier caption", `${pct(h1.effect as number)} (coin: 50%)`],
+  ];
+  return (
+    <div className="wrapped" aria-label="Summary">
+      <div className="pt-bar"><span>jev.wrapped</span><span className="sp" /><span className="dots" aria-hidden>▪▪▪</span></div>
+      <div className="wr-grid">{tiles.map(([k, v]) => <div key={k}><span>{k}</span><b>{v}</b></div>)}</div>
+    </div>
   );
 }
 

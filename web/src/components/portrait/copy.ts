@@ -126,8 +126,8 @@ export const COPY: Record<string, CardCopy> = {
     fine: "{n} questions with a right answer, binned by your confidence. Dots are sized by how many questions fall in each bin.",
   },
   knowledge: {
-    title: "Where you know things.",
-    fine: "Accuracy by domain where there's an answer key, with a 90% interval from resampling sources; domains with fewer than 5,000 keyed questions are left out. The tick is your average confidence, so a tick right of the dot means overconfidence. Many keys come from exams and Wikidata, which have their own mistakes (see the misses).",
+    title: "Where you know things, and where you don't.",
+    fine: "Accuracy by domain where there's an answer key, with a 90% interval from resampling sources: your five strongest and five weakest domains (all of them are in the atlas; domains with fewer than 5,000 keyed questions are left out). The tick is your average confidence, so a tick right of the dot means overconfidence. Many keys come from exams and Wikidata, which have their own mistakes (see the misses).",
   },
   sideproject: {
     title: "You also helped build the map you're on.",
