@@ -26,7 +26,7 @@ META_KEYS = ("measures", "trait", "facet", "keyed", "level_map", "scale", "dicho
 SQL = f"""
 copy (
   select q.id, q.node_id, q.hemisphere, q.kind, q.shape, q.primitive, q.source, q.origin, q.template_id,
-         q.text, q.options::text as options, q.truth::text as truth, array_to_string(q.flags, ',') as flags,
+         q.text, q.options::text as options, left(q.state::text, 2000) as state, q.truth::text as truth, array_to_string(q.flags, ',') as flags,
          q.display_ok,
          (select jsonb_object_agg(k, q.meta->k) from unnest(array[{",".join(f"'{k}'" for k in META_KEYS)}]) k
             where q.meta ? k)::text as meta,

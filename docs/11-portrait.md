@@ -70,6 +70,20 @@ Also compute:
 - **Ratings:** the middle-level lean.
 - **Taste beyond reputation:** self minus people-frame.
 
+## 3b. Data landscape (SQL)
+The portrait is only as good as what Jev was asked, so the page also shows the corpus itself. Every figure below goes
+into the claims ledger like any other claim:
+- **Where the questions come from:** counts by source family (surveys and polls, psychometric instruments, labeled
+  task datasets, knowledge and exam banks, pairwise taste data, real asked questions, authored banks), real vs
+  authored, and licenses.
+- **Shape:** hemisphere, L1 and kind; primitive (Noul / Choice / Score); option and level counts; the tree's depth
+  and node sizes.
+- **Anchoring:** the share with ground truth, the share with real human answer distributions (and the number of human
+  respondents behind them), and the share with neither.
+- **Filtering:** round-trip acceptance for authored banks, what is hidden and why (sensitive, political, duplicate,
+  biographical, harmful), and the fitted norms that were removed.
+- **Jev's side:** probes and answers per question, the served version, cached calls.
+
 ## 4. Claims ledger
 `data/analysis/findings.json` holds one entry per claim:
 - the sentence, tier and query/script
@@ -104,19 +118,21 @@ charts.
 
 **Sections, in order:**
 1. Cold open: one real question ("one of 1,091,643").
-2. Answer it yourself: 5 questions, and your answers carry down the page.
-3. How Jev answers (defaults).
-4. Personality.
-5. Values.
-6. Taste favorites.
-7. Taste beyond reputation.
-8. Knowledge map.
-9. Calibration (draw-first).
-10. Work effectiveness.
-11. Jaggedness (the same question, asked two ways).
-12. The stable core.
-13. You vs Jev.
-14. Methods.
+2. The data landscape: where the 1.09M questions come from and what shape they have (sources, primitives,
+   anchoring, filtering).
+3. Answer it yourself: 5 questions, and your answers carry down the page.
+4. How Jev answers (defaults).
+5. Personality.
+6. Values.
+7. Taste favorites.
+8. Taste beyond reputation.
+9. Knowledge map.
+10. Calibration (draw-first).
+11. Work effectiveness.
+12. Jaggedness (the same question, asked two ways).
+13. The stable core.
+14. You vs Jev.
+15. Methods.
 
 **Every chart** has a sentence title, direct labels, n and an interval, and a "show the rows" drawer of real questions
 with Jev's answer next to the human answer. Charts are dot/interval in plain SVG/React, or a library already in
@@ -124,7 +140,8 @@ with Jev's answer next to the human answer. Charts are dot/interval in plain SVG
 
 ## 8. Atlas
 `/portrait/atlas` (or an appendix section): a searchable, filterable table of every candidate finding and every node
-card, each linking into the star map. Everything found but not on the page lives here.
+card, each linking into the star map, plus the full source table from the data landscape. Everything found but not on
+the page lives here.
 
 ## 9. Verify
 - Every number on the page equals `findings.json`.

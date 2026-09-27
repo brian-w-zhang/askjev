@@ -19,6 +19,18 @@ A = Path("data/analysis")
 PICKS = [
     ("C1", "cold open", "One of 1,091,643: a single question Jev answered, shown in full, before any aggregate.",
      "one question card: Jev's distribution vs the human split", ["mm_more_lives"]),
+    ("L1", "data landscape", "1,091,643 questions from 264 sources in 9 families; 81% from real data, 19% written for this project and filtered by a blind round trip.",
+     "unit chart: one square per ~1,000 questions, colored by family, authored banks hatched", ["landscape_families", "landscape_real_vs_authored"]),
+    ("L2", "data landscape", "How the three answer shapes split: pick-one dominates Machine, yes/no dominates facts, rating scales dominate taste and personality.",
+     "three stacked bars (World, Self, Machine) by primitive, plus option-count histogram", ["landscape_primitives", "landscape_options"]),
+    ("L3", "data landscape", "47% of questions have a right answer and 22% have real human answers (270,167 human distributions, median 154 people each); 33% have neither.",
+     "three-way bar: truth / human / neither, by family", ["landscape_anchoring"]),
+    ("L4", "data landscape", "What the World and Self questions ask about: facts, taste, judgments, social norms, values, personality, perception, forecasts.",
+     "sorted bar of kinds", ["landscape_kinds"]),
+    ("L5", "data landscape", "3.9% of questions are answered and measured but hidden from the map: politics, sensitive content, duplicates, biography.",
+     "small bar of hidden reasons; the round-trip acceptance rates of the authored banks", ["landscape_hidden"]),
+    ("L6", "data landscape", "Jev answered each question several ways: 3.8M probes (as asked, 'most people', reordered options, reversed scales).",
+     "one question fanned into its probes; methods note", ["landscape_jev", "landscape_tree"]),
     ("D1", "how Jev answers", "Rating one thing at a time, Jev's likeliest answer is the middle level 80% of the time.",
      "stacked bar of top-level position, ratings vs head-to-heads", ["middle_lean"]),
     ("D2", "how Jev answers", "Reorder the options and Jev keeps its answer 98% of the time on choices but 88% on rating scales.",
@@ -86,7 +98,7 @@ def main():
     L = {c["id"]: c for c in json.loads((A / "findings.json").read_text())["claims"]}
     q = {r["id"]: r for r in pl.read_parquet(A / "questions.parquet", columns=["id", "text", "top", "p_top", "humans"]).iter_rows(named=True)}
     out = ["# Portrait shortlist (for Brian)", "",
-           "Pick the ones that make the page (budget ~25-35 findings, ~14 sections; taste capped at 2 sections).",
+           "Pick the ones that make the page (budget ~25-35 findings plus the data landscape, ~15 sections; taste capped at 2 sections).",
            "Each rests on ledger ids in data/analysis/findings.json. Examples are chosen by fixed seed, not by hand.",
            "Step 5 (robustness rewordings, the only Jev calls) runs on your picks after this review.", ""]
     missing = []
