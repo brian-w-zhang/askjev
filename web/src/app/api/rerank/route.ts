@@ -1,7 +1,10 @@
 import { evaluate } from "@/lib/server/jev";
+import { limited } from "@/lib/server/limit";
 
 // POST /api/rerank {q, candidates: [{id, text}]} → ONE Jev Choice over up to 20 candidates (c0..c19).
 export async function POST(req: Request) {
+  const slow = limited(req, "rerank");
+  if (slow) return slow;
   const { q: query, candidates } = (await req.json()) as { q: string; candidates: { id: string; text: string }[] };
   const cands = (candidates ?? []).slice(0, 20);
   if (!query || cands.length < 2) return Response.json({ order: cands.map((c) => ({ id: c.id, p: null })), skipped: true });

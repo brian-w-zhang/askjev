@@ -31,7 +31,9 @@ export interface JevResponse {
   providerMetadata?: { gateway?: { generationId?: string } };
 }
 
-function logLine(rec: object): string {
+/** Local runs keep a JSONL log beside the pipeline's; on Vercel the disk is read-only, so `calls` is the log. */
+function logLine(rec: object): string | null {
+  if (process.env.VERCEL) return null;
   const day = new Date().toISOString().slice(0, 10);
   const dir = path.join(REPO_ROOT, "data", "calls", day);
   fs.mkdirSync(dir, { recursive: true });

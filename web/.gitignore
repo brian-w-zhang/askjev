@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# search model fetched at build (scripts/fetch_model.mjs)
+/models/
+/.hf-cache/

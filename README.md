@@ -29,7 +29,7 @@ Agents: see [CLAUDE.md](CLAUDE.md).
 uv sync && uv run askjev migrate && uv run askjev tree   # schema + tree
 uv run askjev pipeline                                   # place, screen, answer, dedupe, measure, rollup
 uv run python scripts/star_layout.py                     # star positions for the nebula (data/stars/)
-cd web && npm install && npm run build && npm start      # explorer at http://localhost:3000
+cd web && npm install && npm run dev   # explorer at https://askjev.localhost (portless; PORTLESS=0 for a plain port)
 ```
 
 ## Setup

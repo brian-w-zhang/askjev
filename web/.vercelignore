@@ -1,0 +1,9 @@
+# local-only: Vercel installs dependencies and fetches the search model itself during the build
+node_modules
+.next
+models
+.hf-cache
+test-results
+playwright-report
+*.log
+.env*

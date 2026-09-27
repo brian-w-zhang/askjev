@@ -1,10 +1,10 @@
 import type { NextRequest } from "next/server";
 import { q, toVector } from "@/lib/server/db";
+import { nearest } from "@/lib/server/search";
 import { embed } from "@/lib/server/embed";
+import { starOf, stars } from "@/lib/server/stars";
 
-type Hit = { id: string; text: string; primitive: string; node_id: string; hemisphere: string; sim: number; trgm: number };
-
-// GET /api/search?q=...  local embedding → pgvector top 20 ∪ pg_trgm top 10, plus the closest nodes.
+// GET /api/search?q=...  local embedding → the 20 nearest questions, plus the closest nodes.
 // Every result carries its node path (ids + labels) so the UI can animate root → ... → node at once.
 export async function GET(req: NextRequest) {
   const sp = req.nextUrl.searchParams;
@@ -14,27 +14,13 @@ export async function GET(req: NextRequest) {
   const t0 = performance.now();
   const vec = toVector(await embed(text));
   const t1 = performance.now();
-  const vis = hidden ? "true" : "display_ok";
-  // Trigram catches exact keywords (names, jargon) the embedding can blur. It uses the GiST trigram
-  // index as a nearest-neighbour lookup (`<->`), which stays fast at 100k+ rows for any query length.
-  const useTrgm = text.trim().length >= 3;
-  const [byVec, byTrgm, nodes] = await Promise.all([
-    q<Hit>(`select id, text, primitive, node_id, hemisphere, 1 - (embedding <=> $1::vector) as sim, similarity(text, $2) as trgm
-              from questions where embedding is not null and ${vis}
-             order by embedding <=> $1::vector limit 20`, [vec, text]),
-    useTrgm
-      ? q<Hit>(`select id, text, primitive, node_id, hemisphere, coalesce(1 - (embedding <=> $1::vector), 0) as sim, similarity(text, $2) as trgm
-                  from questions where ${vis} order by text <-> $2 limit 10`, [vec, text])
-      : Promise.resolve([] as Hit[]),
+  const [results, nodes, snap] = await Promise.all([
+    nearest(vec, hidden),
     q<{ id: string; label: string; hemisphere: string; sim: number }>(
       `select id, label, hemisphere, 1 - (embedding <=> $1::vector) as sim from nodes
         where status = 'active' and embedding is not null order by embedding <=> $1::vector limit 5`, [vec]),
+    stars(), // each result's dot, so the map can light it as you type
   ]);
-  const merged = new Map<string, Hit & { score: number }>();
-  for (const h of [...byVec, ...byTrgm]) {
-    if (!merged.has(h.id)) merged.set(h.id, { ...h, score: h.sim + 0.3 * h.trgm });
-  }
-  const results = [...merged.values()].sort((a, b) => b.score - a.score).slice(0, 20);
   const nodeIds = [...new Set([...results.map((r) => r.node_id), ...nodes.map((n) => n.id)])];
   const paths = nodeIds.length
     ? await q<{ nid: string; id: string; label: string }>(
@@ -49,7 +35,7 @@ export async function GET(req: NextRequest) {
   const t2 = performance.now();
   return Response.json({
     q: text,
-    results: results.map((r) => ({ ...r, path: pathOf.get(r.node_id) ?? [] })),
+    results: results.map((r) => ({ ...r, score: r.sim, star: starOf(snap, r.node_id, r.id), path: pathOf.get(r.node_id) ?? [] })),
     nodes: nodes.map((n) => ({ ...n, path: pathOf.get(n.id) ?? [] })),
     timing: { embed_ms: +(t1 - t0).toFixed(1), db_ms: +(t2 - t1).toFixed(1), total_ms: +(t2 - t0).toFixed(1) },
   });
