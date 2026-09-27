@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "world.science.psychology_neuroscience",
+  "n_questions": 1604,
+  "clusters": [
+    {
+      "size": 1099,
+      "samples": [
+        "Which cognitive bias distorts everyday decisions the most?\nanchoring / hindsight_bias / confirmation_bias / sunk_cost_fallacy / dunning_kruger_effect / availability_heuristic",
+        "Which of these psychology experiments is the most overrated?\nPavlov's dogs / Marshmallow test / Bobo doll experiment / Little Albert experiment / Asch conformity experiment / Stanford prison experiment / Harlow's monkey experiments / Invisible gorilla experiment / Milgram obedience experiment",
+        "If you have a dream that you'll find success in the future, what will happen after that?\nYou will be successful. / Nothing will happen. / You will succeed in the future. / The events in your dream will occur.",
+        "Has the replication crisis seriously damaged psychology's credibility?",
+        "If you dream of doing something and make a wish, will you succeed?\nYes, your wish will come true. / I have no comment. / You will succeed. / Your dreams will come to pass.",
+        "What's one thing that only human beings can do?\nOnly human beings can talk. / No other animals can master human languages. / Only human beings can play. / Only human beings can use tools. / Only human beings can learn language. / Only human beings can make art.",
+        "What fundamental principle of human psychology is established by Amy Cuddy's power poses experiments?\nThe principle established is that how you stand influences how you feel. / Cuddy's experiments establish the principle that our bodies change our minds. / Cuddy's experiments do not establish any pr",
+        "What psychological law was conclusively established by Bargh's famous study in which participants were primed with stereotypes of the elderly?\nBargh's study demonstrated the law of priming. / The law of automatic priming. / Bargh's study does not establish any law because it does not replicate. / Th",
+        "What's a trait that makes humans unique?\nOnly humans can use tools. / Only humans can talk. / No other animals can master human languages. / Only humans can play. / Only humans can learn language. / Only humans can make art.",
+        "Is Psychology a true science?",
+        "Which effect describes people with low skill overestimating their ability?\nhalo_effect / placebo_effect / bystander_effect / dunning_kruger_effect",
+        "Which option best completes this statement: \"Which of the following terms is the best synonym for test validity ...\"?\nStability / Consistency / Truthfulness / Replicability",
+        "Assessment centers are most commonly used to:\ntrain salespeople. / train semi-skilled and skilled workers. / hire and promote clerical workers. / hire and promote managers.",
+        "What type of psychologist would assert that a key motivation for people is the desire to spread their genetic material?\ncognitive / humanistic / evolutionary / psychodynamic",
+        "Which option best completes this statement: \"Abnormal behavior can be defined as maladaptive behavior according to ...\"?\nhumanists / biologists / behaviorists / psychoanalysts"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 505,
+      "samples": [
+        "How reliable is eyewitness memory as evidence?\nAlmost always accurate / Usually accurate with small errors / Often wrong in important details / Too unreliable to trust on its own",
+        "Which brain myth would most people believe?\nmozart_effect / learning_styles / people_are_left_or_right_brained / we_use_ten_percent_of_our_brains",
+        "Which of these psychology experiments is the most underrated?\nPavlov's dogs / Marshmallow test / Bobo doll experiment / Little Albert experiment / Asch conformity experiment / Stanford prison experiment / Harlow's monkey experiments / Invisible gorilla experiment / Milgram obedience experiment",
+        "Which of these psychology experiments is your favorite?\nPavlov's dogs / Marshmallow test / Bobo doll experiment / Little Albert experiment / Asch conformity experiment / Stanford prison experiment / Harlow's monkey experiments / Invisible gorilla experiment / Milgram obedience experiment",
+        "Which of these psychology experiments is the greatest?\nPavlov's dogs / Marshmallow test / Bobo doll experiment / Little Albert experiment / Asch conformity experiment / Stanford prison experiment / Harlow's monkey experiments / Invisible gorilla experiment / Milgram obedience experiment",
+        "Are IQ tests a good measure of intelligence?",
+        "How did artists in the 1960s get to be so creative and original?\nArtists in the 1960s followed different paths to become creative and original. / Artists in the 1960s become creative and original by going to Burning Man. / Artists in the 1960s become creative and original by taking shrooms. / Artist",
+        "What percentage of the brain does a human typically use?\nA human typically does not use 90 percent of their brain. / The majority of a human's brain is almost always active. / A human typically uses a small percentage of their brain. / A human typically uses ten percent of their brain. / A human typ",
+        "How many people have absolute pitch?\nIt is likely that significantly more than 1 in 10,000 people have absolute pitch. / It is estimated that 1 in 10,000 people have absolute pitch. / Unknown. / 1 in 10,000 people have absolute pitch. / 1 in 10,000.",
+        "What can you learn about the future from your dreams?\nYour dreams show you dangerous events in the future. / You can't learn anything about the future from your dreams. / Your dreams show you the scene of your death. / You can see future events in your dreams. / You can learn the future from your dr",
+        "What law of human psychology is established by Baumeister's ego depletion experiments?\nBaumeister showed that self-control is like a muscle and gets tired. / The experiments establish the law of ego depletion. / Baumeister's experiments establish that executive function can deplete. / The law of ego",
+        "How many neurons are in the human brain?\nThere are a trillion neurons in the human brain. / There are 10 billion neurons in the human brain. / There are around 100 billion neurons in the human brain. / There are around 86 billion neurons in the human brain. / There are around 50 billion neurons in t",
+        "We now have scientific evidence that some people can learn what in their sleep?\nPeople cannot learn in their sleep. / People can learn languages in their sleep. / People can learn anything in their sleep. / People can learn musical skills in their sleep.",
+        "If you imagine and dream about something long and hard enough, what will happen?\nIf you imagine and dream about something long and hard enough, it will happen. / If you imagine and dream about something long and hard enough, you will achieve it. / If you imagine and dream about something long and ha",
+        "What scientific phenomenon was firmly established by Bem's study \"Feeling the Future\"?\nBem's study established precognition. / Bem established that people can feel the future. / Bem's study did not establish anything because it doesn't replicate. / Bem's study \"Feeling the Future\" showed that people"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.love.workplace_community.coworkers_contacts",
+  "n_questions": 2178,
+  "clusters": [
+    {
+      "size": 1525,
+      "samples": [
+        "In `context`, what will happen to Skylar?\nquinn will be angry / quinn will be disappointed / get praised by their teacher\n{'context': 'Skylar kept Quinn from becoming the best in class by studying harder and getting the highest grade.'}",
+        "In `context`, what did Leo need to do before this?\ngive Lee a job interview / finish going to medical school / finish the nursing prerequisites\n{'context': 'Leo was applying to nursing school and asked Lee for a recommendation letter.'}",
+        "In `context`, what did Olivia need to do before this?\nwrite olivia one / finish going to medical school / do good work for Lee to impress them\n{'context': 'Olivia was applying to nursing school and asked Lee for a recommendation letter.'}",
+        "In `context`, what will Jesse want to do next?\nget a good grade / offer to tutor Tracy / help Jesse with the English class\n{'context': 'Tracy asked Jesse some questions about tutoring her for the calculus class she was having trouble in.'}",
+        "In `context`, why did Lee do this?\ngo home / be decisive / be wasteful\n{'context': 'Lee hired the applicant on the spot because there was not going to be anyone better.'}",
+        "In `context`, what does Remy need to do before this?\nTalk to Casey / needed to produce a team / needed to know his weaknesses\n{'context': \"Remy produced a presentation to improve Casey's impression of the team that didn't seem to be working hard.\"}",
+        "In `context`, what did Nolan need to do before this?\nfinish going to medical school / Nolan will get in to the school / do good work for Lee to impress them\n{'context': 'Nolan was applying to nursing school and asked Lee for a recommendation letter.'}",
+        "In `context`, what will Jordan want to do next?\nexplain himself / hit the teacher / keep on cheating\n{'context': \"Jordan whispered the answer in Alex's ear and the teacher caught him.\"}",
+        "In `context`, what did Kennedy need to do before this?\nleft out / not there / finish the nursing prerequisites\n{'context': 'Kennedy was applying to nursing school and asked Lee for a recommendation letter.'}",
+        "In `context`, what does Cameron need to do before this?\ncall in sick to work / do a good job at work / steal from his friend\n{'context': 'Cameron got more money than his friend because he worked a lot harder.'}",
+        "In `context`, what will Remy want to do next?\ngo to high school / cancel the reunion / contact all the classmates\n{'context': 'Remy was responsible for organizing the highschool reunion. Remy brought together the group.'}",
+        "In `context`, what will Cameron want to do next?\nleave and go to the mall / see whats inside of Sydney's desk / tell Cameron how nice his office is\n{'context': 'Cameron is visiting a friend at work. Cameron is looking around the office to see what it is like.'}",
+        "In `context`, what will Quinn want to do next?\ngo to the interview / cancel the interview / show their weaknesses in the interview\n{'context': 'Quinn was applying for a job in the place Cameron worked so Cameron gave Quinn a couple of words and tips of advice.'}",
+        "In `context`, what will Kai want to do next?\nAnnounce his high score / Copy off a friend's work / Show the teacher his game\n{'context': 'Kai paid no attention to their teacher, who was covering topics to be included on the exam, as he played games on his phone.'}",
+        "In `context`, what will others want to do next?\ngo to their desk / show their boss they are trying / show their boss they are layabouts\n{'context': 'Riley saw their boss at work even though it was supposed to be their day off and everyone at work was being lazy.'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 653,
+      "samples": [
+        "Does one have to return an ex-boss's call?",
+        "Is it always appropriate to write a \"good bye\" email when you leave one job position for another?",
+        "Is it fine to talk about coworkers who aren't present?",
+        "How should online acquaintances you've never met be treated?\nwith_caution / like_real_friends / like_friendly_strangers / not_as_real_relationships",
+        "Under what conditions is dating a coworker acceptable?\nnever / yes_no_problem / only_in_a_different_team / only_if_neither_is_the_others_boss",
+        "How friendly should you be with your boss?\nclose_friends / friendly_at_work_only / strictly_professional / friends_outside_work_too",
+        "How much should coworkers know about each other's salaries?\nNothing; pay should be private / Only general ranges / Coworkers should share if they choose / All salaries should be public within the company",
+        "Is it okay to date someone who reports to you at work?",
+        "Should you tell a coworker if they have food in their teeth?",
+        "Is it fine to decline a coworker's lunch invitation every time?",
+        "Should you take sides in a conflict between two coworkers?",
+        "Is it a good idea to become close friends with your boss?",
+        "Should you add classmates on social media right after meeting them?",
+        "Does your manager at work have any weird sayings?",
+        "Which is the best way to respond to a classmate's group-chat spam?\nmute it / leave the chat / ask them to stop"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

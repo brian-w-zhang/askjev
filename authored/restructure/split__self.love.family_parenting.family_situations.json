@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "self.love.family_parenting.family_situations",
+  "n_questions": 2096,
+  "clusters": [
+    {
+      "size": 1358,
+      "samples": [
+        "In `context`, what does Robin need to do before this?\nprepare for test / brush their teeth and get their equipment for the day / get dressed and make sure they have their homework for the day\n{'context': 'Since their mom dropped them off a bit early on her way to work, Robin always started school ea",
+        "In `context`, what will happen to others?\nOthers will go inside / Others will go outside to play / Others will be afraid of Bailey\n{'context': 'Others had been out all day long playing in the yard, but it was getting dark out, so Bailey called them back home.'}",
+        "In `context`, how would you describe Riley?\nNeedy / Ambitious / irritated\n{'context': \"Riley needed milk from the store, but didn't want to go so they sent Jordan's son.\"}",
+        "In `context`, how would Austin feel afterwards?\nbad because he didn't mean to make Remy upset / he will be happy because now Remy will leave him alone / he will continue to ignore Remy because he has more important things to do\n{'context': \"Austin was very busy and didn't mean to ignore his broth Re",
+        "In `context`, how would you describe Sydney?\nkind / a writer who has interviewed Sydney's child's first birthday so Sydney wanted to make it a very special day for them / a writer who has researched child's first birthday\n{'context': \"It was Sydney's child's first birthday so Sydney wanted to make i",
+        "In `context`, what will Lee do next?\nblame Alex / ignore Alex / talk to Alex\n{'context': 'Lee wanted to see Addison at home so Lee could talk to Alex about their child.'}",
+        "In `context`, what will happen to Taylor?\nget scolded / get reprimanded / keep giving the medication\n{'context': 'Taylor gave Jesse his medicine as directed by the doctor.'}",
+        "In `context`, how would Kendall feel afterwards?\nneedy / lacking / accomplished\n{'context': 'Kendall was getting their kids ready for swim lessons. Kendall signed everyone up for lessons.'}",
+        "In `context`, why did Cameron do this?\nexpress dismay / leave his son alone / be fun as much as he can\n{'context': 'Cameron killed their son by tickling him over and over.'}",
+        "In `context`, why did Lee do this?\nlazy / skilled / tell Kendall what he did\n{'context': \"Lee wanted to clean Kendall's room and found a vacuum cleaner to vacuum the room.\"}",
+        "In `context`, why did Addison do this?\nspecial / wrap the gift / know her mom loved her\n{'context': 'Addison hugged their mom and gave her a birthday gift she made herself.'}",
+        "In `context`, how would others feel as a result?\nvery angry / very happy / a mean child\n{'context': 'Sasha caught the ball back and took it away from the others.'}",
+        "In `context`, how would Austin feel afterwards?\nproud / pleased / disappointed\n{'context': \"Austin couldn't handle Lee anymore and told Lee that he was grounded.\"}",
+        "In `context`, why did Jesse do this?\nwash their hands / take out the garbage / Because it was stinky\n{'context': \"Jesse change Asher's diaper wh he pooped in it.\"}",
+        "In `context`, what will happen to Alex?\nbe happy / she will be a baby / she will live a good life\n{'context': 'Alex started going into labor, so she went to the hospital where she gave birth to Sasha.'}"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 738,
+      "samples": [
+        "Is it ok to be attracted to your mother in law?",
+        "Which of these would most people name first when asked: \"What might parents be caught doing that causes their kid to bust them for doing santa's job?\"\nEating cookies / Wrapping gifts / Buying/hiding gifts / Set gifts under tree",
+        "How much should parents stay involved once their children are adults?\nNot at all; they're on their own / Occasional check-ins / Regular advice and help when asked / Close involvement in everyday decisions",
+        "What is the best way to settle a dispute between adult siblings over a parent's care?\nfamily_meeting / outside_mediator / the_eldest_decides / the_one_providing_care_decides",
+        "Should siblings share a bedroom when they're young?",
+        "Should parents tell their children if they were adopted?",
+        "Should a ten year old girl have a cell phone?",
+        "Is homeschooling for a year a good option for a family that travels?",
+        "How nervous should parents let themselves appear when teaching a teen to drive?\nThey should hide all nerves / They should show only a little / They should be honest but calm / They should show their worry clearly / They should not teach if they are nervous",
+        "Should children be made to finish everything on their plate?",
+        "Is it a good idea to let a child quit piano after one month?",
+        "Is it a good idea to give siblings identical birthday gifts?",
+        "Is it a good idea for siblings to go into business together?",
+        "Is a sleepover at a friend's house fine for a seven-year-old?",
+        "Should parents let a toddler cry for a few minutes at bedtime?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

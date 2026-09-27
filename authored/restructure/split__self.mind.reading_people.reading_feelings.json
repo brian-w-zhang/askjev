@@ -1,7 +1,7 @@
 {
   "type": "split",
   "node": "self.mind.reading_people.reading_feelings",
-  "n_questions": 1718,
+  "n_questions": 1720,
   "clusters": [
     {
       "size": 742,
@@ -23,19 +23,15 @@
         "In `context`, how would you describe Alex?\nRelaxed / trusting / untrusting\n{'context': 'Alex was skeptical so he called the number.'}"
       ],
       "child": {
-        "key": "describing_character",
-        "label": "Describing Character",
-        "description": "Questions asking how you would describe a person in a short everyday scene: their traits or what kind of person they are, judged from what they did.",
-        "not_for": "Questions asking how the person or others would feel afterwards or as a result (use Feelings After Events). Why they acted or what happens next (use Reading Motives & Plans).",
-        "examples": [
-          "How would you describe Cameron? (Cameron returned shoes he couldn't afford.)",
-          "How would you describe Casey as a person?",
-          "How would you describe Jan? (Jan bought a car after saving for months.)"
-        ]
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
       }
     },
     {
-      "size": 976,
+      "size": 978,
       "samples": [
         "In `context`, how would Kai feel afterwards?\nvery happy / like he was crying / ecstatic at the movie\n{'context': 'Kai cried every time when he watched the sad movie.'}",
         "In `context`, how would Carson feel afterwards?\nperturbed / hungry from not eating / conflicted about the news\n{'context': 'Carson was told bad news at dinner and immediately stopped eating.'}",
@@ -54,15 +50,11 @@
         "In `context`, how would Robin feel afterwards?\nas normal / sad to be home / relieved to be home\n{'context': 'Robin had to wait for the bus for a long time but they finally made it home.'}"
       ],
       "child": {
-        "key": "feelings_after_events",
-        "label": "Feelings After Events",
-        "description": "Questions asking how a person, or others around them, would feel afterwards or as a result of what happened in a short everyday scene.",
-        "not_for": "Questions asking how you would describe the person or their character (use Describing Character). Why they acted or what happens next (use Reading Motives & Plans).",
-        "examples": [
-          "How would Jesse feel afterwards? (Jesse burned a fancy meal.)",
-          "How would others feel as a result?",
-          "How would Robin feel afterwards? (Robin spent the night in jail.)"
-        ]
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
       }
     }
   ]

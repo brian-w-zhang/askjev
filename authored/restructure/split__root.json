@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "root",
+  "n_questions": 1673,
+  "clusters": [
+    {
+      "size": 837,
+      "samples": [
+        "Are Americans aware that Canada has the largest oil reserves next to Saudi Arabia?",
+        "Is nuclear power really dangerous?",
+        "Is there really a way to freeze time?",
+        "Is chalk in water dangerous?",
+        "Do magnets erase date on CDs and DVDs?",
+        "Is it true that it is the urine and not the chlorine in the swimming pool that makes eyes sting?",
+        "Is IRAN dangerous for other countries?",
+        "Would the three elements which make up cement ever come together to form cement naturally?",
+        "Does solar energy effectively utilize our natural resource?",
+        "Do white candles burn faster then color candles?",
+        "Is it possible to get clean in hard water?",
+        "Does gas affect the life of balloon?",
+        "Can real diamond be shattered with a steel hammer?",
+        "Is there good skiing in England?",
+        "Could stainless-steel tank safely contain an essential oil?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 836,
+      "samples": [
+        "Can you see the sunset in the east!?",
+        "Is the United States the best country to live in?",
+        "Should we fund programs to search for asteroids?",
+        "Does Great Britian have any air bases near Africa?",
+        "Is it true that the heat from the sun comes only from the conversion of light to heat?",
+        "Has any theory explained why does the void energy exists?",
+        "Is Iran as bad as it is portrayed?",
+        "IS south Africa a better place?",
+        "Is it true that as you speed up relative time slows down?",
+        "Would space be totally empty and non-existent without virtual particles?",
+        "Is the Observed expansion of the Universe really an illusion?",
+        "Does the true line of the equator move over time?",
+        "Will Polaris be the same north star forever?",
+        "Can you use a \"hand pump\" in space?",
+        "Could our moon crash into us?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "type": "split",
+  "node": "world",
+  "n_questions": 2138,
+  "clusters": [
+    {
+      "size": 608,
+      "samples": [
+        "Are braille maps available?",
+        "Is it true that cannibals don't eat clowns because they taste funny?",
+        "Is science in better than arts?",
+        "Is braided fishing line worth the money?",
+        "Is it Saturday morning in your world?",
+        "Could we really make a monster if we all pull together as a team?",
+        "Could you type on a keyboard with your elbow?",
+        "Is the thing about big feet true?",
+        "IS IT the better time for USA to leave IRAQ?",
+        "Which is superior- a hard sword or the razor type?\na hard sword / the razor type",
+        "Which is bigger, giant or enormous?\ngiant / enormous",
+        "Can a Christian be more intelligent then a gnat?",
+        "Are we better off now than we were six years ago?",
+        "Is there such a thing as good mitten?",
+        "Does the US use more energy then other countries?"
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    },
+    {
+      "size": 1530,
+      "samples": [
+        "How much do you experience \"garage\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I e",
+        "How much do you experience \"corner\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I e",
+        "How much do you experience \"tile\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I e",
+        "How much do you experience \"tile\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I e",
+        "How much do you experience \"ashtray\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ",
+        "How much do you experience \"hood\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I e",
+        "How much do you experience \"stamp\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ex",
+        "How much do you experience \"decoy\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ex",
+        "How much do you experience \"tavern\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I e",
+        "How much do you experience \"carpet\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I e",
+        "How much do you experience \"sail\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I e",
+        "How much do you experience \"bathtub\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I ",
+        "How much do you experience \"path\" by hearing?\nNot at all: hearing plays no part in experiencing it / Slightly: its sound comes up only now and then, as a minor detail / Moderately: its sound is one noticeable part of experiencing it, alongside others / Strongly: its sound is one of the main ways I e",
+        "How much do you experience \"card\" by tasting?\nNot at all: tasting plays no part in experiencing it / Slightly: its taste comes up only now and then, as a minor detail / Moderately: its taste is one noticeable part of experiencing it, alongside others / Strongly: its taste is one of the main ways I e",
+        "How much do you experience \"daytime\" by seeing?\nNot at all: seeing plays no part in experiencing it / Slightly: its sight comes up only now and then, as a minor detail / Moderately: its sight is one noticeable part of experiencing it, alongside others / Strongly: its sight is one of the main ways I "
+      ],
+      "child": {
+        "key": "",
+        "label": "",
+        "description": "",
+        "not_for": "",
+        "examples": []
+      }
+    }
+  ]
+}
