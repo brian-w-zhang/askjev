@@ -48,7 +48,7 @@ export const COPY: Record<string, CardCopy> = {
     fine: "These are everyday situations I wrote, each meant to measure one trait. Only traits whose answer scales passed a 90% ordering audit count, and a trait counts as lower only if its whole interval sits below the noise floor.",
   },
   hedge: {
-    title: "You pick the middle of a rating scale *{mid}* of the time.",
+    title: "of the time, your likeliest rating is the middle of the scale.",
     body: "Give you a choice instead and you commit: your top answer averages {choice}.",
     fine: "Middle-heavy ratings are a known habit of rating scales in general. It's why the personality numbers need care.",
   },
@@ -91,8 +91,8 @@ export const COPY: Record<string, CardCopy> = {
     fine: "Each row is how much a difference between the two sides changes the chance that side is spared, fitted the way the original study did (Awad et al., 2018), on {n} dilemmas.",
   },
   undecided: {
-    title: "Asked to choose between saving women or men, you don't.",
-    body: "Decisive on {pct} of {n} of those dilemmas. Across everything, you're decisive {base} of the time.",
+    title: "decisive, when the choice is between saving women or saving men.",
+    body: "Across {n} of those dilemmas you never put 95% on one side. Across everything you answered, you do that {base} of the time.",
     fine: "Decisive means 95% or more on one answer. Here your probabilities sit near an even split.",
   },
   mfq: {
@@ -111,7 +111,7 @@ export const COPY: Record<string, CardCopy> = {
     meme: "is this a clone?",
   },
   calibration: {
-    title: "When you say 90%+, you're right *{top}* of the time.",
+    title: "right, when you say you're 90% sure or more.",
     body: "When you say 50–60%, {mid}. Guess first, then reveal.",
     fine: "{n} questions with a right answer, binned by your confidence. Dots are sized by how many questions fall in each bin.",
   },
@@ -127,8 +127,8 @@ export const COPY: Record<string, CardCopy> = {
 
   humor: {
     kicker: "part 6 · rough edges",
-    title: "You can barely tell which joke got more upvotes.",
-    body: "{memes} on meme captions and {jokes} on jokes, where a coin gets 50%.",
+    title: "right, picking which of two meme captions got more upvotes. A coin gets 50%.",
+    body: "On jokes, {jokes}. You can barely tell what a crowd finds funny.",
     fine: "Pairs of real captions and jokes, scored by their real upvotes.",
     meme: "jev when you ask which caption is funnier",
   },

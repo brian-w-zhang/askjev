@@ -112,6 +112,7 @@
   .card-aside { justify-self: center; width: min(320px, 100%); }
 }
 .card-main > * + * { margin-top: 14px; }
+.big + .card-t { margin-top: 6px; }
 .pt-tag { display: inline-block; font-family: var(--pixel); font-size: 18px; line-height: 20px; padding: 0 6px; background: #1e1e1e; color: #fefefe; }
 .card[data-f="ink"] .pt-tag, :root[data-theme="dark"] .pt-tag { background: #fefefe; color: #1e1e1e; }
 .card-t { margin: 0; font-size: clamp(26px, 3.4vw, 40px); font-weight: 500; line-height: 1.08; letter-spacing: -0.025em; color: var(--fg); text-wrap: balance; }
@@ -119,7 +120,7 @@
 .card-t.xl + .card-b { margin-top: 22px; font-size: 19px; }
 .card-b { margin: 0; max-width: 40em; font-size: 17px; line-height: 1.45; color: var(--fg); text-wrap: pretty; }
 .card-v { margin-top: 22px !important; }
-.big { font-size: clamp(72px, 14vw, 180px); font-weight: 500; line-height: 0.85; letter-spacing: -0.05em; color: var(--fg); }
+.big { font-size: clamp(64px, 11vw, 150px); font-weight: 500; line-height: 0.85; letter-spacing: -0.05em; color: var(--fg); }
 .big .letters { letter-spacing: 0.02em; }
 .card-foot { border-top: 1px solid var(--rule); padding-top: 10px; display: grid; gap: 6px; }
 .fine { margin: 0; max-width: 62em; font-size: 13px; line-height: 1.45; color: var(--fg-2); text-wrap: pretty; }
@@ -175,8 +176,8 @@
 .meme .img { position: relative; overflow: hidden; background: #000; }
 .meme img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .meme .lab { position: absolute; transform: translate(-50%, -50%); text-align: center; font-family: Impact, "Anton", "Arial Black", sans-serif; font-size: clamp(11px, 1.15vw, 15px); line-height: 1.05; letter-spacing: 0.01em; }
-.meme .lab.outline { color: #fff; text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000, 0 2px 0 #000; text-transform: uppercase; }
-.meme .lab.ink { color: #111; font-family: var(--sans); font-weight: 600; font-size: 13px; text-transform: none; }
+.meme .lab.lab-outline { color: #fff; text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000, 0 2px 0 #000; text-transform: uppercase; }
+.meme .lab.lab-ink { color: #111; font-family: var(--sans); font-weight: 600; font-size: 13px; text-transform: none; }
 @media (max-width: 860px) { .meme.m, .meme.l { width: min(280px, 100%); } .meme.s { width: 200px; } .meme .lab { font-size: 12px; } }
 @media (max-width: 640px) {
   .tiles, .tiles.debate { grid-template-columns: 1fr 1fr; gap: 6px; }

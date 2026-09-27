@@ -33,9 +33,9 @@ export default function Meme({ name, caption, labels = [], size = "m", tilt = 0,
       <div className="pt-bar"><span>{name}.{d.file.split(".")[1]}</span><span className="sp" /><span className="dots" aria-hidden>▪▪▪</span></div>
       {caption && <figcaption className="cap">{caption}</figcaption>}
       <div className="img" style={{ aspectRatio: `${d.w} / ${d.h}` }}>
-        <img src={`/portrait/memes/${d.file}`} alt={alt} loading="lazy" />
+        <img src={`/portrait/memes/${d.file}`} alt={alt} />
         {(d.labels ?? []).map((l, i) => labels[i] ? (
-          <span key={i} className={`lab ${l.style ?? "outline"}`} style={{ left: `${l.x}%`, top: `${l.y}%`, width: `${l.w}%` }}>{labels[i]}</span>
+          <span key={i} className={`lab lab-${l.style ?? "outline"}`} style={{ left: `${l.x}%`, top: `${l.y}%`, width: `${l.w}%` }}>{labels[i]}</span>
         ) : null)}
       </div>
     </figure>

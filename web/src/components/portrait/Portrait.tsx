@@ -198,7 +198,7 @@ function Act1({ C, R, s }: { C: CFn; R: RFn; s: boolean }) {
           <p className="win-note">The ten biggest gaps of {ms.n_facets}; the rest are in the atlas.</p>
         </Win>
       </Card>
-      <Card id="hedge" field="teal" c={COPY.hedge} vars={{ mid: pct(lv.effect as number), choice: pct(ml.choice_p_top) }} showId={s}
+      <Card id="hedge" field="teal" c={COPY.hedge} big={pct(lv.effect as number)} vars={{ mid: pct(lv.effect as number), choice: pct(ml.choice_p_top) }} showId={s}
         claims={[ml, lv]} rows={R(ml, 2)}
         aside={<Meme name="anakin" size="m" alt="Anakin and Padme four-panel meme"
           labels={["cat or dog person?", "you'll pick one, right?", `“both, no preference” (${catdog})`, "…right?"]} />}>
@@ -367,7 +367,7 @@ function Act4({ C, R, s }: { C: CFn; R: RFn; s: boolean }) {
             })} />
         </Win>
       </Card>
-      <Card id="undecided" field="paper" c={COPY.undecided} showId={s} claims={[dil, C("page_baseline")]} rows={R(dil, 2)}
+      <Card id="undecided" field="paper" c={COPY.undecided} big={pct(dil.effect as number)} showId={s} claims={[dil, C("page_baseline")]} rows={R(dil, 2)}
         vars={{ pct: pct(dil.effect as number), n: int(dil.n), base: pct(base.decisive) }}>
         <HBars max={1} fmt={(v) => pct(v)} rows={[
           { key: "all", label: "Everything", v: base.decisive },
@@ -424,7 +424,7 @@ function Act5({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
           <div className="rv-s"><span className="rv-k">overall rating</span><ul><li>we don&rsquo;t do those here</li></ul></div>
         </div>
       </Card>
-      <Card id="calibration" field="sage" c={COPY.calibration} vars={{ top: pct(top.acc), mid: pct(mid.acc), n: int(cal.n) }} showId={s} claims={[cal]} rows={R(cal, 2)}>
+      <Card id="calibration" field="sage" c={COPY.calibration} big={pct(top.acc)} vars={{ top: pct(top.acc), mid: pct(mid.acc), n: int(cal.n) }} showId={s} claims={[cal]} rows={R(cal, 2)}>
         <Win title="calibration.app"><Calibration bins={bins} /></Win>
       </Card>
       <Card id="knowledge" field="paper" c={COPY.knowledge} showId={s} claims={kn} rows={R(kn.at(-1)!, 2)} wide>
@@ -469,7 +469,7 @@ function Act6({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
   const node = (id: string) => label(id.replace(/^(stable|fragile)_/, "").split(".").slice(-1)[0]);
   return (
     <>
-      <Card id="humor" field="ink" c={COPY.humor} vars={{ memes: pct(h1.effect as number), jokes: pct(h2.effect as number) }} showId={s} claims={[h1, h2]} rows={R(h1, 2)}
+      <Card id="humor" field="ink" c={COPY.humor} big={pct(h1.effect as number)} vars={{ memes: pct(h1.effect as number), jokes: pct(h2.effect as number) }} showId={s} claims={[h1, h2]} rows={R(h1, 2)}
         aside={<Meme name="monkey" size="m" caption={COPY.humor.meme} alt="Monkey puppet looking away meme" />}>
         <Win title="humor.test">
           <DotRows domain={[0.4, 0.7]} ticks={[0.4, 0.5, 0.6, 0.7]} fmt={(v) => pct(v)} refs={[{ v: 0.5 }]}
