@@ -49,6 +49,7 @@
 | 2026-09-26 | Personality (trait) banks accept any Self placement from the round trip and keep the intended trait as `meta.measures`; other banks keep the strict filter (`10-expansion.md` §7) |
 | 2026-09-26 | Format banks (memes, who-would-win, shower thoughts, ratings) keep the author's node once the round-trip walk completes; earlier rejects recovered (`10-expansion.md` §7) |
 | 2026-09-26 | Human data must be observed: fitted normal curves from published means/SDs (lancaster, glasgow_norms, concreteness; 22,000 rows) moved out of `human_dists` into `meta.fitted_dist`; comparisons use the published mean (`04-datasets.md`) |
+| 2026-09-27 | Content screen: narrow 03 §6 topics plus contested policy debates and sex work, attached content included, hide at p >= 0.3 with a keyword backstop; all hidden questions re-screened (17,833 unhidden) and Moral Machine shown (`03-questions.md` §6, `10-expansion.md` §7) |
 
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)

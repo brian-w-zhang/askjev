@@ -188,6 +188,13 @@ Another session is changing the UI at the same time. The expansion agent must no
   g5_w12_shower_thoughts, g5_w13_ratings) a completed walk keeps the question at the author's node, with the walk's
   placement in `meta.round_trip`. Earlier rejects from those banks were recovered at the intended node, and the older
   personality banks' personality-aimed rejects at the walk's Self placement (`--at intended` / `--prefix`).
+- **Hidden-question audit** (2026-09-27): the screen had hidden anything at p >= 0.5 on two broad prompts and never saw
+  a question's attached content. A 1,000-question sample was re-scored at several bars (cached), the prompts narrowed to
+  03 §6 plus contested policy debates and sex work, the content added, and the bar set at 0.3 with a keyword backstop:
+  17,833 of 54,855 hidden questions came back, and the 12,749 Moral Machine scenarios were unhidden per 03 §6. Old flags
+  sit in `meta.unflagged`; the regular screen now uses the same prompts, content and bar.
+- **Incremental dedupe** (2026-09-27): the per-question nearest-neighbour search takes hours at 1M; `askjev dedupe
+  --since <time>` checks only questions added since the last run, against the whole corpus.
 - **Throughput** (2026-09-25): requests pack up to 64 questions / ~5k tokens (measured sweet spot; larger requests mostly 503);
   gateway pinned to TypeSafe's own provider; adaptive rate backs off 10% when > 30% of requests are throttled; packing several
   Machine inputs per request was tested and rejected (accuracy 84.5 → 82.5%).

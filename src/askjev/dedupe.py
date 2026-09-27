@@ -30,22 +30,27 @@ DUP_P = 0.7
 ORIGIN_RANK = {"dataset": 0, "typesafe-docs": 0, "wikidata-fact": 1, "template": 2, "synthetic": 3, "asked": 4}
 
 
-def candidate_pairs() -> list[dict]:
+def candidate_pairs(since: str | None = None) -> list[dict]:
+    """since: only questions created at or after this time are checked (against every question in their node); pairs
+    among older questions were checked by an earlier run. At 1M questions a full pass takes hours."""
+    new_a = "and a.created_at >= %s" if since else ""
+    # a full pass orders each pair once by id; with `since`, a new question is paired with older ones on either side
+    order = "(b.created_at < %s or b.id > a.id)" if since else "b.id > a.id"
     with db.connect() as conn:
         return conn.execute(
             """select a.id a_id, b.id b_id, a.text a_text, b.text b_text, a.options a_opt, b.options b_opt,
                       a.origin a_origin, b.origin b_origin, 1 - (a.embedding <=> b.embedding) sim
                from questions a join lateral (
                    select id, text, options, origin, source, embedding from questions b
-                   where b.node_id = a.node_id and b.id > a.id and b.template_id is not distinct from null
+                   where b.node_id = a.node_id and {order} and b.template_id is not distinct from null
                      and not ('duplicate' = any(b.flags))
                      -- items from one dataset are already deduped by its adapter; instrument items are
                      -- intentionally similar (facets, reverse-keyed), so only cross-source pairs are checked
                      and not (b.source = a.source and a.origin in ('dataset', 'wikidata-fact', 'template'))
                    order by b.embedding <=> a.embedding limit 3) b on true
-               where a.template_id is null and not ('duplicate' = any(a.flags))
-                 and 1 - (a.embedding <=> b.embedding) >= %s""",
-            (SIM,),
+               where a.template_id is null and not ('duplicate' = any(a.flags)) {new_a}
+                 and 1 - (a.embedding <=> b.embedding) >= %s""".format(order=order, new_a=new_a),
+            ((since, since) if since else ()) + (SIM,),
         ).fetchall()
 
 
@@ -60,8 +65,8 @@ async def _judge(pairs):
     return [answers(res[r.hash]).get("d") for r in reqs]
 
 
-def dedupe() -> str:
-    pairs = candidate_pairs()
+def dedupe(since: str | None = None) -> str:
+    pairs = candidate_pairs(since)
     if not pairs:
         return "no candidate pairs"
     verdicts = asyncio.run(_judge(pairs))

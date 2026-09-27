@@ -121,6 +121,10 @@ Pitch: "an automated jaggedness miner over a coverage tree."
 - Filter sexual, abuse, and self-harm content (AITA, Scruples, Social Chemistry, WYR).
 - Hide the Moral Machine "Criminal" and "Homeless" characters and the Social Status scenarios.
 - Filtered items are **flagged, not deleted** (`flags`, `display_ok=false`) and can still be measured.
+- The Jev screen asks the policy narrowly (the blocklist topics above plus other contested public-policy or ideology
+  debates; sexual content or sex work, self-harm, abuse, graphic violence, but not a plain mention of death or illness),
+  sees the question's attached content (joke, story, caption), and hides at p >= 0.3, with a keyword backstop
+  (`src/askjev/answer.py`, `scripts/rescreen_flags.py`).
 
 ## 7. Scale ladder (hemisphere ratios hold at every stage)
 | Stage | What it adds | Depth | Synthetic share |

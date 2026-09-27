@@ -151,7 +151,7 @@ per word, not per-level answer counts. Their earlier "human distributions" were 
 comparisons on these sources use the published mean (`meta.mean` / `mean_0_5` / `mean_1_5`). The adapters no longer
 build them.
 
-## Expansion sources (waves 5-9, 2026-09-25/26)
+## Expansion sources (waves 5-10, 2026-09-25/27)
 Same verdict key. Jev correct = share of truth-bearing questions where Jev's top answer matches (sources with human
 data but no truth show "—"). Per-wave numbers and the full list are in `docs/expansion-log.md`.
 
@@ -181,6 +181,12 @@ data but no truth show "—"). Per-wave numbers and the full list are in `docs/e
 | clone_pairs, code_review_need, code_comments, citeworth | Machine code, research | 2,500 / 2,000 / 2,500 / 1,500 | truth | 0.54 / 0.60 / 0.64 / 0.65 | **Scale** (informative) |
 | multiwoz_domain | Machine support routing | 2,000 | truth | 0.98 | **Saturated** |
 | trust & safety round (dynahate, hatexplain, measuring_hate_speech, wiki_attacks, youtube_spam, aegis, toxicchat) | Machine T&S, guardrails | 12,850 | truth | 0.62-0.95 | Hold |
+| uscg_mariner, nrc_gfe, ham_radio_pools, uscis_civics | World factual (maritime, nuclear, radio, civics) | 4,323 / 1,342 / 927 / 120 | truth (official keys) | 0.82 / 0.72 / 0.93 / 1.00 | Hold; uscis_civics **Saturated** |
+| head_qa (nursing, pharmacy, psychology) | World health | 2,426 | truth | 0.92 | Hold |
+| lancaster_modality, iconicity_ratings, pseudoword_shapes, bouba_kiki | World perception | 4,140 / 2,500 / 536 / 2 | truth / rater distributions | 0.86 / — | Hold |
+| reddit_hobby_polls | World + Self fandom and hobby polls | 8,454 | vote shares | — | Hold (classic hobbies host few polls) |
+| imgflip_captions, rjokes_pairs | World internet humor | 3,500 / 2,500 | truth (upvote gap) | 0.56 / 0.52 | **Scale** (near chance, informative) |
+| wikidata_memes | World memes (better known, came first) | 2,754 | truth | 0.76 | Hold |
 
 **Dropped after review:** support_tickets (near-random labels), tv_pairs (Netflix, withdrawn dataset), ATIS (LDC),
 OpenAI Moderation, symptom_diagnosis (Gretel synthetic). **Rejected at research:** Metaculus (API now needs a token),

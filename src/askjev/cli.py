@@ -17,7 +17,7 @@ def main(argv: list[str] | None = None):
     s = sub.add_parser("place"); s.add_argument("--limit", type=int, default=None)
     s = sub.add_parser("screen"); s.add_argument("--limit", type=int, default=None)
     s = sub.add_parser("answer"); s.add_argument("--limit", type=int, default=None)
-    sub.add_parser("dedupe")
+    s = sub.add_parser("dedupe"); s.add_argument("--since", default=None)
     sub.add_parser("repair-paths")
     s = sub.add_parser("template-split"); s.add_argument("--dry-run", action="store_true")
     sub.add_parser("measure")
@@ -64,7 +64,7 @@ def main(argv: list[str] | None = None):
         print(repair_paths())
     elif a.cmd == "dedupe":
         from .dedupe import dedupe
-        print(dedupe())
+        print(dedupe(a.since))
     elif a.cmd == "measure":
         from .measure import measure_all
         print(measure_all())

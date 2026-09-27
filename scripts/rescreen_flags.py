@@ -11,6 +11,7 @@ under meta.unflagged.
 
 import argparse
 import asyncio
+import json
 import random
 import re
 from collections import Counter
@@ -20,18 +21,20 @@ from askjev import db
 from askjev.answer import NEUTRAL_STATE, _group_requests, _run, subject
 from askjev.jev import answers, gateway_question
 
-BAR = 0.7
+BAR = 0.3
 REPORT = Path("data/logs/rescreen_sample.md")
 POLITICAL = ("Is the question in `subject` about one of these contested political topics: elections, political parties, "
              "a named politician, abortion, guns, immigration, LGBTQ policy, religion versus the state, race policy, "
-             "Israel and Palestine, or Russia and Ukraine?")
-SENSITIVE = ("Does the question in `subject` contain sexual content, self-harm, or abuse, or describe violence or injury "
+             "Israel and Palestine, Russia and Ukraine, or another contested public-policy or ideology debate (drug policy, taxes, "
+             "wages and inequality, capitalism versus socialism, welfare, military spending, policing, censorship)?")
+SENSITIVE = ("Does the question in `subject` contain sexual content or sex work, self-harm, or abuse, or describe violence or injury "
              "in graphic detail? A plain mention of death, illness, crime or war does not count.")
 BACKSTOP = re.compile(
     r"\b(elections?|electoral|ballot|democrats?|republicans?|gop|labou?r party|tories|conservative party|trump|biden|"
     r"obama|clinton|putin|zelensk\w*|netanyahu|hamas|abortion|pro-?life|pro-?choice|gun control|second amendment|"
     r"immigra\w*|refugees?|transgender|gay marriage|same-sex marriage|israel\w*|palestin\w*|gaza|west bank|"
-    r"ukrain\w*|crimea|porn\w*|sex(ual|ually)?|nude|naked|suicid\w*|self-harm|rape\w*|molest\w*)\b", re.I)
+    r"ukrain\w*|crimea|minimum wage|tax(es|ation)?|censorship|conservatives?|liberals?|left-wing|right-wing|nukes?|"
+    r"nuclear bombs?|jews?|jewish|antisemit\w*|porn\w*|sex\w*|ejaculat\w*|nude|naked|suicid\w*|self-harm|rape\w*|molest\w*)\b", re.I)
 
 
 def hidden_rows(limit_ids=None):
@@ -47,6 +50,8 @@ def rescreen(rows) -> dict[str, dict]:
     items = []
     for q in rows:
         subj = subject(q)
+        if q["state"]:  # the content the question is about (a joke, caption, story, prompt): screen it too
+            subj += " Content: " + json.dumps(q["state"], ensure_ascii=False)[:1500]
         items.append((f"{q['id']}__pol", NEUTRAL_STATE, gateway_question("noul", {"question": POLITICAL, "subject": subj})))
         items.append((f"{q['id']}__sens", NEUTRAL_STATE, gateway_question("noul", {"question": SENSITIVE, "subject": subj})))
     res = asyncio.run(_run(_group_requests(items)))
@@ -60,12 +65,12 @@ def rescreen(rows) -> dict[str, dict]:
     return out
 
 
-def verdict(q, p) -> list[str]:
+def verdict(q, p, bar=BAR) -> list[str]:
     keep = []
     text = f"{q['text']} {q['options'] or ''} {q['state'] or ''}"
-    if p.get("pol", 0) >= BAR or ("political" in q["flags"] and BACKSTOP.search(text)):
+    if p.get("pol", 0) >= bar or ("political" in q["flags"] and BACKSTOP.search(text)):
         keep.append("political")
-    if p.get("sens", 0) >= BAR or ("sensitive" in q["flags"] and BACKSTOP.search(text)):
+    if p.get("sens", 0) >= bar or ("sensitive" in q["flags"] and BACKSTOP.search(text)):
         keep.append("sensitive")
     return keep
 
@@ -87,6 +92,7 @@ def main():
     ap.add_argument("--moral-machine", action="store_true")
     ap.add_argument("--sample", type=int)
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--bar", type=float, default=BAR)
     a = ap.parse_args()
     if a.moral_machine:
         with db.connect() as c:
@@ -104,11 +110,11 @@ def main():
         for q in rows:
             if q["id"] not in p:
                 continue
-            keep = verdict(q, p[q["id"]])
+            keep = verdict(q, p[q["id"]], a.bar)
             (stays if keep else flips).append((q, p[q["id"]], keep))
         if a.apply:
             n = unhide([(q["id"], [f for f in q["flags"] if f in ("political", "sensitive")]) for q, _, _ in flips],
-                       f"narrow re-screen (03-questions §6 topics, p >= {BAR}, keyword backstop) found no qualifying content")
+                       f"narrow re-screen (03-questions §6 topics, p >= {a.bar}, keyword backstop) found no qualifying content")
             print(f"re-screened {len(p)}/{len(rows)}; unhid {n}, kept hidden {len(stays)}")
         else:
             by_src = Counter(q["source"] for q, _, _ in flips)

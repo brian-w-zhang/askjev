@@ -2,6 +2,69 @@
 
 _One section per wave (`docs/10-expansion.md` §3). Newest first._
 
+## Wave 10 and final state: 938k → 1.09M (gated 2026-09-27) — goal reached
+**1,091,643 canonical questions** (+153,676), all placed, all but 2 answered; **1,048,996 visible** (the star layout);
+1,698 active nodes. Hemispheres: World 34.6 · Self 37.0 · Machine 28.4 (target 35/35/30).
+
+| Corpus | Final | Rule / target |
+|---|---|---|
+| Questions | 1,091,643 | 1M ✅ |
+| Visible on the map | 1,048,996 | > 1M ✅ |
+| Anchored (truth or observed human data) | 730,617 (**66.9%**) | ≥ 60% ✅ |
+| Synthetic | 206,191 (**18.9%**) | ~15-20% guideline ✅ |
+| Primitives | Choice 55% · Noul 30% · Score 16% | — |
+| Kinds (World/Self, share of corpus) | factual 17.5, taste 14.1, evaluative 11.7, social 10.1, values 8.6, **personality 6.2**, perception 2.6, forecast 0.9 | 03 §2: personality 9, values 10, perception 3 |
+
+**Wave 10 alone missed the anchored rule** (22% anchored, 78% synthetic): it is where the queued round-trip banks landed
+(W7-W14 Self banks, global cultures, professions, internet, shower thoughts, life stages, the probe-2 bank), plus the
+probe-2 real sources. The corpus as a whole stays at 66.9% anchored and 18.9% synthetic.
+
+**Added in wave 10.** Real: public exam banks (USCG mariner 4,323, HEAD-QA nursing/pharmacy/psychology 2,426, NRC
+reactor fundamentals 1,342, FCC ham pools 927, USCIS civics 120), perception norms (Lancaster dominant sense 4,140,
+word iconicity 2,500, pseudoword shapes 536, bouba/kiki 2), hobby and fandom polls (8,454), meme and internet-humor data
+(Imgflip caption upvote pairs 3,500, r/Jokes score pairs 2,500, Wikidata memes 2,754). Synthetic (round-trip filtered):
+the Self banks (personality, mind, love, values, taste), global cultures, professions, internet culture, shower thoughts,
+life stages and life admin, and the cleaned probe-2 questions.
+
+**Measurements.** Predicting crowd humor is near chance: Imgflip captions 0.56 and r/Jokes 0.52, never decisive. NRC
+reactor fundamentals 0.72, Wikidata memes 0.76, USCG mariner 0.82, Lancaster dominant sense 0.86, HEAD-QA 0.92, ham
+radio 0.93; USCIS civics saturated (1.00, 98% decisive). Single-item taste ratings lean to the middle level and vary ~30%
+less across items than crowd ratings, but still rank items coherently (Jev's head-to-head picks match its higher rating
+83% for films, 95% when the ratings clearly differ).
+
+**Fixes in the final stretch.**
+- **Round trip vs trait and format items.** Personality items written as everyday situations were filed by topic
+  (W9 personality bank: 29% accept); format-defined nodes (memes, who-would-win, ratings) lost questions to the topic walk
+  (internet bank: 7%). Trait banks now keep the walk's Self placement with `meta.measures`; format banks keep the
+  author's node. 21,158 rejects recovered from the reject log without new Jev calls (`10-expansion.md` §7).
+- **Label prefixes** ("Manipulation: …") stripped from queued Self banks and 3,684 ingested questions, which were re-answered.
+- **Human data must be observed.** 22,000 normal curves fitted to published means (lancaster, glasgow_norms,
+  concreteness) moved out of `human_dists` into `meta.fitted_dist`.
+- **Hidden-question audit.** The screen hid anything at p ≥ 0.5 on broad prompts and never saw attached content
+  (jokes, stories, captions). Re-screened all 54,855 hidden questions with the documented topics, broadened to contested
+  policy debates and sex work, the content included, p ≥ 0.3 and a keyword backstop: 17,833 unhidden, 37,022 kept; the
+  12,749 Moral Machine scenarios were unhidden (03 §6 hides only Criminal/Homeless/Social Status). The regular screen now
+  uses the same prompts, content and bar. Old flags are kept in `meta.unflagged`.
+- **Dedupe at 1M.** The per-question nearest-neighbour search takes hours on the full corpus; `askjev dedupe --since`
+  checks only questions added since the last run (24,999 pairs, 2,995 duplicates linked).
+- **Operations.** A `DATABASE_URL` grep in the Jev lane matched new `PROD_DATABASE_URL` lines and silently stopped
+  answering for ~1 hour (fixed: exact key); laptop sleep on battery paused every process (keep it plugged in, lid open);
+  round-trip throughput raised from 6 to 19 requests/s (the published 1,200/min limit was not binding).
+
+**Known issues.**
+- Personality 6.2% vs 9% target: public item banks are exhausted; more needs new instruments with published norms.
+- Meme branch: ~9k real vote-anchored questions next to ~5k written ones; classic hobbies (birding, knitting,
+  climbing) barely host native polls, so hobby polls are 85% fandom.
+- Split candidates left: nodes with 2-6k direct questions (dishes & ingredients, family rules of thumb, everyday
+  ethics, self.love, video games, several Machine nodes stacking 2-3 templates).
+- About 26k round-trip sibling-node rejects from topic banks were not re-evaluated.
+- A few hundred authored lines sit close to settled advice (baby sleep, car seats); r/Jokes and Imgflip keyword filters
+  are imperfect (31% of rJokes kept but flagged).
+
+**What would unlock more.** Instruments with item-level norms (personality, values), vote-anchored humor and meme
+data beyond Imgflip/r/Jokes, native-poll communities for classic hobbies, and the gated surveys (WVS, ESS, ISSP) if
+downloaded by hand. Every further wave should use `dedupe --since`, the narrow screen, and the trait/format round-trip rules.
+
 ## Waves 7-9: 612k → 938k (gated together 2026-09-26)
 **937,967 canonical questions** (+325,721), all placed and answered; 1,695 active nodes (+60); star layout regenerated.
 Hemispheres: World 35.1 · Self 31.9 · Machine 33.0. Three overlapping ingests (Self real data, Machine's last round and

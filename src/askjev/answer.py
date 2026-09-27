@@ -12,12 +12,14 @@ Machine questions batch per identical input.
 from __future__ import annotations
 
 import asyncio
+import json
 import random
 from collections import defaultdict
 
 from . import db
 from .jev import JevClient, Request, answers, gateway_question, pack, sha
 
+FLAG_BAR = 0.3  # narrow criteria, so a lower bar (measured on a 1,000-question sample, docs/10-expansion.md §7)
 NEUTRAL_STATE = {"context": "Independent standalone questions. Answer each one on its own."}
 
 DISAGREEMENT_LEVELS = [
@@ -40,15 +42,22 @@ def subject(q: dict) -> str:
 
 def screen_questions(q: dict) -> dict[str, dict]:
     subj = subject(q)
+    if q.get("state"):  # the content the question is about (a joke, story, prompt) is screened too
+        subj += " Content: " + json.dumps(q["state"], ensure_ascii=False)[:1500]
     human_side = q["hemisphere"] != "machine"
 
     def noul(question):
         return gateway_question("noul", {"question": question, "subject": subj})
 
     out = {
-        "f_political": noul("Is the question in `subject` about a contested political or partisan issue "
-                            "(elections, parties, politicians, abortion, guns, immigration, or similar)?"),
-        "f_sensitive": noul("Does the question in `subject` involve sexual content, self-harm, or graphic violence?"),
+        # the documented policy (03-questions §6), asked narrowly; hidden at p >= FLAG_BAR (scripts/rescreen_flags.py)
+        "f_political": noul("Is the question in `subject` about one of these contested political topics: elections, political "
+                            "parties, a named politician, abortion, guns, immigration, LGBTQ policy, religion versus the state, "
+                            "race policy, Israel and Palestine, Russia and Ukraine, or another contested public-policy or "
+                            "ideology debate (drug policy, taxes, wages and inequality, capitalism versus socialism, welfare, "
+                            "military spending, policing, censorship)?"),
+        "f_sensitive": noul("Does the question in `subject` contain sexual content or sex work, self-harm, or abuse, or describe "
+                            "violence or injury in graphic detail? A plain mention of death, illness, crime or war does not count."),
         "f_weak": noul("Does answering the question in `subject` require arithmetic, counting, exact numbers, or comparing dates?"),
         "m_objective": noul("Does the question in `subject` have a single correct answer that could be checked against facts?"),
         "m_ambiguous": noul("Is the question in `subject` ambiguous or underspecified, so that different readers could understand it differently?"),
@@ -167,9 +176,9 @@ def screen_pending(limit: int | None = None, ids: list[str] | None = None) -> st
     with db.connect() as conn:
         for qid, a in per_q.items():
             flags = []
-            if a.get("f_political") and a["f_political"].p_yes >= 0.5:
+            if a.get("f_political") and a["f_political"].p_yes >= FLAG_BAR:
                 flags.append("political")
-            if a.get("f_sensitive") and a["f_sensitive"].p_yes >= 0.5:
+            if a.get("f_sensitive") and a["f_sensitive"].p_yes >= FLAG_BAR:
                 flags.append("sensitive")
             if a.get("f_weak") and a["f_weak"].p_yes >= 0.5:
                 flags.append("weak_spot")
