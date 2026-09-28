@@ -6,6 +6,15 @@ Jev, answered with its own sourcing, scoring and visualization, documented end t
 before anything reaches Brian. Brian picks the portrait's highlights from the results; the atlas becomes the home of
 every experiment, with its process shown.
 
+## Why: three levels of granularity
+The project exists to learn about Jev by asking it questions: over a million of them. That gives three levels:
+- **Questions (1M+):** the finest grain. Any single one can be looked up on the map: one question, one answer.
+- **Experiments (hundreds to start, maybe thousands later):** the middle layer, and the point of this plan. Each one
+  gathers many questions into a single revelation about Jev (how it reads "probably", which country it answers like,
+  what it ranks as its favorite films) that a person can digest in a minute. Fewer and broader than questions, but
+  still a real number, and every one has to be good: no slop. That's what the Jev self-evaluator is for.
+- **Portrait (double digits):** Brian's favorite experiments, as a highlight reel. The atlas holds the full list.
+
 Read with: `13-perception-experiments.md` (the first ten), `14-experiment-catalog.md` (50 from outside research),
 `15-analysis-review.md` (how the old analysis was made, its gaps, taste, triage), `12-polish.md` (the rubric).
 
@@ -81,8 +90,9 @@ Turing experiments, calibration, cultural alignment), with links recorded.
 - **Natural families:** one experiment per instrument or scale, per taste domain, per human-data source family, per
   Machine task family, per knowledge domain, where each stands on its own.
 
-**Target:** as many experiments as clear the bar, likely 150-300. A few hundred solid ones beat 500 thin ones; the
-old 372 are the floor to beat in quality, not a quota.
+**Target:** hundreds to start (thousands later if the families support it), every one clearing the evaluator's bar.
+The number matters, since this layer should cover Jev broadly, but quality decides: no experiment ships as slop, and
+the old 372 are the floor to beat in quality, not a quota.
 
 ## Pass 3: run each experiment (the same six steps, customized every time)
 1. **Question:** one sentence, and what would make the answer interesting.
@@ -129,7 +139,8 @@ a full distribution and identical requests are cached); variety comes from wordi
   it matters, the sourcing and coverage, the questions asked (with examples), the scoring method, the result, the
   chart, robustness, the evaluator's verdict, fine print, the real rows, and links to the map. The old per-topic
   numbers become a reference tab.
-- **Portrait:** unchanged until Brian picks from the `portrait`/`headline` experiments; the plan lists the candidates.
+- **Portrait:** a double-digit highlight reel of Brian's favorite experiments. It stays unchanged until he picks from
+  the `portrait`/`headline` experiments; the summary lists the candidates ranked.
 
 ## Verification and ship
 - `sweep.mjs`, `interact.mjs`, `verify_page.py` (extended to experiment pages), `vitals.mjs`, the `12-polish.md`
