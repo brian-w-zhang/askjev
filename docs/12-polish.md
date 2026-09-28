@@ -131,6 +131,17 @@ Production, median of 3 cold loads at 1440 px (`scripts/portrait/vitals.mjs`):
   Production matches local: same question count, same 518 page numbers (`verify_page.py`), zero failed steps in the
   interaction sweep on desktop and phone.
 
+**Experiments atlas (2026-09-28, `16-experiments-plan.md`)**
+- The atlas became the experiments library: 192 cards with chart thumbnails, Jev's verdict and rank, a page per
+  experiment; the old claims moved to a reference tab. Atlas HTML: 252 KB transferred, LCP 380 ms, CLS 0.
+- Sweeps: `sweep.mjs` on map, portrait, atlas and experiment pages at five widths and both themes (no overflow; only the
+  known `THREE.Clock` warning); `interact.mjs` extended to the experiments (search, family facet, a page, its map link,
+  back), zero failed steps on production; `verify_page.py --experiments` checks every experiment page against its own
+  entry, and production flags exactly what local flags (pager titles, axis ticks, names like choices13k).
+- Shipping: 17,098 new questions synced (`--delta`; the post-sync `analyze` hit a dropped connection and was re-run by
+  hand), 39 new topics, stars rebuilt (1,066,067), portrait and experiments published (`publish.py`), deployed.
+  Production matches local: 1,066,067 questions, 1,737 nodes, 192 experiment pages.
+
 **Left**
 - `THREE.Clock` deprecation warning from @react-three/fiber (fixed only by an upstream release).
 - Cold map API latency (`/api/layout` 12 s, `/api/node` 2 s before the edge cache warms): the map session's code.

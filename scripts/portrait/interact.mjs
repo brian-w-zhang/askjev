@@ -68,8 +68,13 @@ await run("portrait theme", async () => { await p.click(".pt-nav .pt-chipnav.dar
 await run("portrait to atlas", async () => { await p.click(".pt-nav >> text=Atlas"); await p.waitForURL(/atlas/); await sleep(1200); });
 
 // ---- atlas ----
-await run("atlas tabs", async () => { for (const t of ["Coverage", "Topics", "Sources", "Findings"]) { await p.click(`.tabs button:has-text("${t}")`); await sleep(300); } });
-await run("atlas search", async () => { await p.fill(".pt-input", "humor"); await sleep(400); if (!(await p.$$(".claimgrid .claim, .pt-table tbody tr")).length) throw new Error("no findings for humor"); await p.fill(".pt-input", ""); });
+await run("atlas experiments search", async () => { await p.fill(".ex-bar .pt-input", "humor"); await sleep(400); if (!(await p.$$(".ex-grid .ex-card")).length) throw new Error("no experiments for humor"); await p.fill(".ex-bar .pt-input", ""); });
+await run("atlas experiment family facet", async () => { const c = await p.$$(".ex-bar .pt-filters .facet"); if (c.length > 2) { await c[2].click(); await sleep(300); await c[0].click(); } });
+await run("atlas experiment page", async () => { await p.click(".ex-grid .ex-card"); await p.waitForURL(/\/portrait\/atlas\/[a-z0-9_]+$/); await p.waitForSelector(".ex-result"); await sleep(400); });
+await run("experiment page to map", async () => { const a = await p.$(".ex-nodes a"); if (!a) return; const href = await a.getAttribute("href"); if (!href?.includes("?node=")) throw new Error("bad map link"); });
+await run("experiment page back to atlas", async () => { await p.click(".ex-crumb a"); await p.waitForURL(/\/portrait\/atlas$/); await sleep(800); });
+await run("atlas tabs", async () => { for (const t of ["Coverage", "Topics", "Sources", "Reference"]) { await p.click(`.tabs button:has-text("${t}")`); await sleep(300); } });
+await run("atlas search", async () => { await p.fill(".at-bar > .pt-input", "humor"); await sleep(400); if (!(await p.$$(".claimgrid .claim, .pt-table tbody tr")).length) throw new Error("no claims for humor"); await p.fill(".at-bar > .pt-input", ""); });
 await run("atlas section filter", async () => { const c = await p.$$(".pt-filters button"); if (c.length > 2) { await c[2].click(); await sleep(300); await c[0].click(); } });
 await run("atlas sort", async () => { await p.click(`.tabs button:has-text("Topics")`); await p.click(".pt-table th button:has-text('right')"); await sleep(300); await p.click(".pt-table th button:has-text('right')"); await sleep(300); });
 await run("atlas topic link", async () => { const a = await p.$(".pt-table td a"); if (!a) throw new Error("no link"); await a.click(); await p.waitForURL(/\?node=/); await p.waitForSelector("[data-testid=panel][data-open=true]", { timeout: 20000 }); await sleep(2000); });
