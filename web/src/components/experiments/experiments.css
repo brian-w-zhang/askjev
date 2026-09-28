@@ -2,7 +2,8 @@
    Jev magenta, people ink. Scoped under .pt (the portrait layout) so the map is untouched. */
 
 /* ---------- index ---------- */
-.pt .ex-bar { position: static; margin-top: 10px; }
+.pt .ex-bar { position: static; margin-top: 10px; display: grid; grid-template-columns: 1fr; gap: 10px; }
+.pt .ex-bar .pt-input { width: 100%; }
 .pt .ex-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; margin-top: 14px; }
 .pt .ex-card { display: flex; flex-direction: column; gap: 8px; padding: 12px 14px; background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line); text-decoration: none !important; min-width: 0; }
 .pt .ex-card:hover { box-shadow: 0 0 0 1px var(--w-line), 4px 4px 0 var(--jev); }
@@ -245,3 +246,6 @@
 .pt .ex-follow { position: fixed; left: 0; top: 0; z-index: 60; width: 240px; pointer-events: none; will-change: transform; }
 .pt .ex-follow .ex-memefig { box-shadow: 0 0 0 1px var(--w-line), 4px 4px 0 var(--jev), 0 12px 30px rgba(0, 0, 0, 0.25); }
 .pt .ex-follow .ex-memefig .cap { font-size: 12px; padding: 6px 8px; }
+.pt .ex-xy:not(.mini) { max-width: 760px; }
+.pt .ex-xy .tk { font-size: 10px; }
+.pt .ex-xy .lab { font-size: 10.5px; }

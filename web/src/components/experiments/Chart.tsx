@@ -13,6 +13,7 @@ const str = (x: unknown) => (x === null || x === undefined ? "" : String(x));
 const pair = (x: unknown): [number, number] | undefined =>
   Array.isArray(x) && num(x[0]) !== null && num(x[1]) !== null ? [x[0] as number, x[1] as number] : undefined;
 const pretty = (s: string) => s.replaceAll("_", " ");
+const fmtPct = (v: number) => (v >= 0 && v <= 1 ? `${Math.round(v * 100)}%` : Number.isInteger(v) ? String(v) : v.toFixed(2));
 
 function fmtFor(domain: [number, number]) {
   const span = Math.abs(domain[1] - domain[0]);
@@ -39,7 +40,11 @@ function extent(values: number[], zero: boolean, pad = 0.06): [number, number] {
   if (lo >= 0 && hi <= 1 && hi - lo > 0.25) return [0, 1];
   if (hi === lo) { lo -= 1; hi += 1; }
   const p = (hi - lo) * pad;
-  return [lo - p, hi + p];
+  // round the ends outward to a readable step, so axes read 0 to 1 or -0.5 to 1, not -0.41 to 0.75
+  const raw = (hi - lo + 2 * p) / 4;
+  const mag = 10 ** Math.floor(Math.log10(raw || 1));
+  const step = [1, 2, 2.5, 5, 10].map((m) => m * mag).find((x) => x >= raw) ?? raw;
+  return [Math.floor((lo - p) / step) * step, Math.ceil((hi + p) / step) * step];
 }
 
 // ---- rows of dots: dots, effects, forest, strip, range, dumbbell, slope ------------------------------------------------
@@ -63,7 +68,7 @@ function rowsChart(c: ChartData, mini: boolean) {
       if (a !== null) marks.push({ v: a, kind: "hum", title: `${str(c.a_label)} ${a}` });
       if (b !== null) marks.push({ v: b, kind: "jev", title: `${str(c.b_label)} ${b}` });
       push(a, b); link = true;
-      value = t === "slope" ? <><b>{b}</b> · {a}</> : null;
+      value = t === "slope" && a !== null && b !== null ? <><b>{c.rank ? b : fmtPct(b)}</b> · {c.rank ? a : fmtPct(a)}</> : null;
     } else {
       const v = num(r.value), p = num(r.people), g = num(r.guess);
       if (p !== null) marks.push({ v: p, kind: "hum", title: `people ${p}` });
@@ -82,14 +87,15 @@ function rowsChart(c: ChartData, mini: boolean) {
       value = r.right !== undefined ? str(r.right) : r.note !== undefined ? str(r.note) : null;
       link = p !== null && v !== null;
     }
-    dr.push({ key: `${i}`, label: pretty(str(r.label)), sub: mini ? null : sub, marks, ci, ciP, value: mini ? null : value, hi: Boolean(r.hi), link });
+    dr.push({ key: `${i}`, label: pretty(str(r.label)), sub: mini ? null : sub, marks, ci, ciP, value: mini ? null : value, hi: r.hi === true, link });
   }
   const zero = c.zero !== undefined;
   let domain = pair(c.domain) ?? extent(vals, zero);
-  if (t === "slope" && vals.length) domain = [Math.max(...vals) + 0.5, Math.min(...vals) - 0.5]; // ranks: 1 on the right
+  const ranks = t === "slope" && Boolean(c.rank);
+  if (ranks && vals.length) domain = [Math.max(...vals) + 0.5, Math.min(...vals) - 0.5]; // ranks: 1 on the right
   const shown = mini ? dr.slice(0, 7) : dr;
-  const fmt = t === "slope" ? (v: number) => String(Math.round(v)) : fmtFor(domain);
-  const ticks = t === "slope" ? [] : niceTicks(domain, mini ? 3 : 5);
+  const fmt = ranks ? (v: number) => String(Math.round(v)) : fmtFor(domain);
+  const ticks = ranks ? [] : niceTicks(domain, mini ? 3 : 5);
   return (
     <div className={mini ? "ex-mini-rows" : undefined}>
       <DotRows rows={shown} domain={domain} ticks={ticks} fmt={fmt} refs={[...(zero ? [{ v: num(c.zero) ?? 0, zero: true }] : []), ...(num(c.ref) !== null ? [{ v: c.ref as number }] : [])]} />
@@ -101,7 +107,7 @@ function rowsChart(c: ChartData, mini: boolean) {
 function Legend({ c }: { c: ChartData }) {
   const t = c.type;
   const rows = arr(c.rows);
-  const hasP = t === "forest" || t === "dumbbell" || t === "slope" || rows.some((r) => num(r.people) !== null);
+  const hasP = t === "forest" || t === "dumbbell" || t === "slope" || rows.some((r) => num(r.people) !== null || pair(r.people_ci));
   const hasG = rows.some((r) => num(r.guess) !== null);
   const hasT = rows.some((r) => r.others || r.lo);
   const a = t === "dumbbell" || t === "slope" ? str(c.a_label) || "people" : "people";
@@ -196,7 +202,8 @@ function XY({ series, labels = [], xd, yd, xl, yl, diagonal, mini, xcats, links 
   series: Series[]; labels?: { label: string; x: number; y: number }[]; xd: [number, number]; yd: [number, number];
   xl?: string; yl?: string; diagonal?: boolean; mini: boolean; xcats?: string[]; links?: [[number, number], [number, number]][];
 }) {
-  const W = mini ? 220 : 640, H = mini ? 130 : 380, m = mini ? { l: 6, r: 6, t: 6, b: 6 } : { l: 48, r: 16, t: 12, b: 40 };
+  // a narrow canvas: at phone width it shrinks little, so its labels stay readable; on desktop it's capped in CSS
+  const W = mini ? 220 : 480, H = mini ? 130 : 330, m = mini ? { l: 6, r: 6, t: 6, b: 6 } : { l: 44, r: 14, t: 12, b: 40 };
   // rounded: server and browser can differ in a float's last bit (log10), which breaks hydration
   const r2 = (v: number) => Math.round(v * 100) / 100;
   const sx = (v: number) => r2(m.l + ((v - xd[0]) / (xd[1] - xd[0] || 1)) * (W - m.l - m.r));
@@ -353,15 +360,20 @@ function special(c: ChartData, mini: boolean): ReactNode {
       const rows = arr(c.rows);
       const agree = rows.filter((r) => r.agree).length;
       if (mini) return <Bars rows={[{ label: "sides with the majority", b: agree / (rows.length || 1) }]} max={1} fmt={(v) => `${Math.round(v * 100)}%`} mini />;
+      // Jev's breaks from the majority first; the full list is in the questions below the case study
+      const sorted = [...rows].sort((x, y) => Number(Boolean(x.agree)) - Number(Boolean(y.agree))).slice(0, 24);
       return (
+        <>
+        <p className="ex-foot">{rows.length} questions; Jev breaks from the most common answer on {rows.length - agree}. {rows.length > 24 ? "The first 24 are shown, breaks first." : ""}</p>
         <ol className="ex-splits">
-          {rows.map((r, i) => (
+          {sorted.map((r, i) => (
             <li key={i} className={r.agree ? "ok" : "no"}>
               <span className="q">{str(r.label)}</span>
               <span className="a">Jev: <b>{pretty(str(r.jev))}</b>{r.agree ? "" : <> · most: {pretty(str(r.human_top))}</>}</span>
             </li>
           ))}
         </ol>
+        </>
       );
     }
     case "wordstrip": {
