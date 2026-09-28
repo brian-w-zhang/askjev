@@ -14,7 +14,7 @@ import numpy as np
 import polars as pl
 from scipy.stats import spearmanr
 
-from lib import Result, Spec, agree_word, biggest, boot, js, level, source
+from lib import Result, Spec, agree_word, and_list, biggest, boot, js, level, norm, source, with_meta
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "portrait"))
 from export_page import name_of  # noqa: E402
@@ -52,44 +52,106 @@ def rated(dom: str) -> pl.DataFrame:
     return pl.DataFrame(rows).sort("score", descending=True)
 
 
+def finals(dom: str) -> list[dict] | None:
+    """The round-robin finals among the domain's top 24 (sources/taste_finals): each item's wins (Jev's probability
+    for it, averaged over both option orders, summed over its 23 games) and Bradley-Terry strength. None if not run."""
+    games = [r for r in with_meta("taste_finals") if r["m"].get("domain") == dom] if dom else []
+    if not games:
+        return None
+    ids, names, p = [], {}, {}
+    for r in games:
+        opts = js(r["options"]) if isinstance(r["options"], str) else r["options"]
+        (ka, na), (kb, nb) = list(opts.items())
+        ds = [norm(js(r["jev_dist"]))] + [norm(v["dist"]) for v in js(r["variants"]) or [] if v.get("kind") == "shuffle"]
+        pa = float(np.mean([d.get(ka, 0.0) for d in ds]))
+        a, b = r["m"]["a"], r["m"]["b"]
+        names[a], names[b] = na, nb
+        p[(a, b)] = pa
+    ids = sorted(names)
+    ix = {i: n for n, i in enumerate(ids)}
+    w = np.zeros((len(ids), len(ids)))
+    for (a, b), pa in p.items():
+        w[ix[a], ix[b]], w[ix[b], ix[a]] = pa, 1 - pa
+    s_ = np.ones(len(ids))
+    for _ in range(500):  # Bradley-Terry by minorization-maximization, soft wins
+        tot = w.sum(1)
+        den = np.array([sum((w[i, j] + w[j, i]) / (s_[i] + s_[j]) for j in range(len(ids)) if j != i) for i in range(len(ids))])
+        s_ = tot / den
+        s_ /= np.exp(np.mean(np.log(s_)))
+    out = [{"id": i, "name": names[i], "wins": float(w[ix[i]].sum()), "strength": float(np.log(s_[ix[i]]))} for i in ids]
+    out.sort(key=lambda x: -x["strength"])
+    # intransitive triads: a beats b, b beats c, c beats a (majority choices)
+    beats = w > 0.5
+    n, cyc = len(ids), 0
+    for i in range(n):
+        for j in range(i + 1, n):
+            for k in range(j + 1, n):
+                if (beats[i, j] and beats[j, k] and beats[k, i]) or (beats[j, i] and beats[k, j] and beats[i, k]):
+                    cyc += 1
+    out[0]["_cycles"], out[0]["_triads"] = cyc, n * (n - 1) * (n - 2) // 6
+    return out
+
+
 def ranked(dom: str):
     key, noun, plural, catalog, _ = DOMAINS[dom]
     spec = Spec(
         id=f"taste_top_{dom}", family="taste", title=f"Jev's favorite {plural}, ranked",
         question=f"If Jev ranked every {noun} it was asked about, what would its top ten be?",
-        why="Wrapped-style favorites, but from every item it rated rather than a handful of head-to-heads; the "
-            "interesting part is what rises to the top and what sinks.",
+        why="Wrapped-style favorites, but from every item it rated and then a real final among the best, rather than a "
+            "handful of head-to-heads; the interesting part is what rises to the top and what sinks.",
         sourcing=f"Existing one-at-a-time rating questions (\"How much would you enjoy ...\", five situation-described "
-                 f"levels) under Self > Lifestyle > Ratings > {key}; items from {catalog}. Enough: every item is rated, "
-                 "so the whole list can be ranked; the old head-to-heads (about 7 per item) are too thin to rank.",
-        scoring="Each item's expected level (0-4) from Jev's probability over the five levels, averaged with the same "
-                "question asked with the levels reversed; the gap between the two shows how much the order of the "
-                "options matters. Ties are left as ties. The top 24 go to a head-to-head final (taste_finals).",
-        chart="A ranked list, Wrapped style: the top ten with their level bars, and the bottom five for contrast.",
-        compared_with="nothing outside the model: a ranking of Jev's own ratings",
-        limits=f"A winner is only the best of what was on the list ({catalog}). Levels are Jev's probabilities over "
-               "described situations, not a star rating.",
-        sources=["taste_ratings" if DOMAINS[dom][4] else "g5_w13_ratings"],
+                 f"levels) under Self > Lifestyle > Ratings > {key}; items from {catalog}. Every item is rated, so the "
+                 "whole list can be ranked; the ratings crowd the top with near-ties, so the top 24 play a round-robin "
+                 "final (new questions, sources/taste_finals).",
+        collection="The ratings exist. New: the finals, 276 head-to-heads among the top 24 (\"Which film would you "
+                   "rather watch?\"), each asked in both option orders.",
+        scoring="Ratings: each item's expected level (0-4), averaged with the same question asked with the levels "
+                "reversed. Finals: Jev's probability for each side, averaged over both orders, summed into soft wins; "
+                "the order is the Bradley-Terry strength fitted to all 276 games. Intransitive triads (A beats B, B "
+                "beats C, C beats A) are counted as a consistency check.",
+        chart="A ranked list, Wrapped style: the finals' top ten with their win counts, and the ratings' bottom five for "
+              "contrast.",
+        compared_with="nothing outside the model: a ranking of Jev's own ratings and choices",
+        limits=f"A winner is only the best of what was on the list ({catalog}). Finalists were chosen by Jev's own "
+               "ratings, so an item it underrated never reached the final.",
+        new_questions=276, sources=["taste_ratings" if DOMAINS[dom][4] else "g5_w13_ratings", "taste_finals"],
     )
 
     def run():
         t = rated(dom)
         if t.height < 50:
             return None
-        gap = float((t["base"] - t["rev"]).abs().mean()) if t["rev"].is_not_null().any() else None
-        top10 = t.head(10).to_dicts()
-        bottom = t.tail(5).reverse().to_dicts()
         rho = spearmanr(t["base"], t["rev"], nan_policy="omit").statistic if t["rev"].is_not_null().sum() > 20 else None
-        names = ", ".join(x["name"] for x in top10[:3])
+        bottom = t.tail(5).reverse().to_dicts()
+        fin = finals(dom)
+        if fin:
+            top10 = fin[:10]
+            rate_order = {r["id"]: i for i, r in enumerate(t.head(40).to_dicts())}
+            first_by_rating = t.row(0, named=True)["name"]
+            cyc, tri = fin[0]["_cycles"], fin[0]["_triads"]
+            moved = spearmanr([rate_order.get(x["id"], 40) for x in fin], list(range(len(fin)))).statistic
+            head = (f"Out of {t.height:,} {plural}, Jev's final among its 24 favorites crowns {top10[0]['name']} "
+                    f"({top10[0]['wins']:.1f} wins of 23), ahead of {top10[1]['name']} and {top10[2]['name']}"
+                    + ("" if first_by_rating == top10[0]["name"] else f"; the ratings alone had put {first_by_rating} first")
+                    + f". Least favorite of all: {bottom[0]['name']}.")
+            rob = (f"The finals keep the ratings' order only loosely (rank correlation {moved:.2f} among the 24). "
+                   f"{cyc} of {tri} triads are intransitive ({cyc / tri:.1%}). Base vs reversed-level ratings: "
+                   f"rank correlation {rho:.2f}." if rho is not None else "")
+            items = [{"label": x["name"], "value": round(x["wins"], 1)} for x in top10]
+        else:
+            top10 = t.head(10).to_dicts()
+            head = (f"Out of {t.height:,} {plural}, Jev's top three are {and_list([x['name'] for x in top10[:3]])}; "
+                    f"its least favorite is {bottom[0]['name']}.")
+            rob = f"Rank correlation between base and reversed-level answers: {rho:.2f}." if rho is not None else ""
+            items = [{"label": x["name"], "value": round(x["score"], 2)} for x in top10]
         return Result(
-            result=f"Out of {t.height:,} {plural}, Jev's top three are {names}; its least favorite is {bottom[0]['name']}.",
-            evidence=f"{t.height:,} items rated; rank agreement between the question as asked and with reversed levels "
-                     f"{rho:.2f}" if rho is not None else f"{t.height:,} items rated",
-            numbers={"n": t.height, "top": top10, "bottom": bottom, "mean_abs_gap_reversed": gap, "rho_reversed": rho},
-            chart={"type": "ranked", "items": [{"label": x["name"], "value": round(x["score"], 2)} for x in top10],
-                   "bottom": [{"label": x["name"], "value": round(x["score"], 2)} for x in bottom], "max": 4},
-            examples=[x["id"] for x in top10[:2]] + [bottom[0]["id"]], n=t.height,
-            robustness=f"Rank correlation between base and reversed-level answers: {rho:.2f}." if rho is not None else "")
+            result=head,
+            evidence=f"{t.height:,} items rated" + ("; 276 final games among the top 24" if fin else ""),
+            numbers={"n": t.height, "top": top10, "bottom": bottom, "rho_reversed": rho,
+                     "finals": [{k: v for k, v in x.items() if not k.startswith("_")} for x in fin] if fin else None},
+            chart={"type": "ranked", "items": items, "unit": "wins of 23" if fin else "level (0-4)",
+                   "bottom": [{"label": x["name"], "value": round(x["score"], 2)} for x in bottom]},
+            examples=[x["id"] for x in top10[:2]] + [bottom[0]["id"]], n=t.height, robustness=rob)
     return spec, run
 
 
@@ -173,4 +235,84 @@ def self_vs_guess():
     return spec, run
 
 
-EXPERIMENTS = [ranked(d) for d in DOMAINS] + [audience(d) for d in DOMAINS if DOMAINS[d][4]] + [self_vs_guess()]
+def intransitive():
+    spec = Spec(
+        id="taste_intransitive", family="taste", title="Rock, paper, scissors: Jev's favorites go in circles",
+        question="When Jev's 24 favorite films (or books, foods, places...) play every other one head to head, are its "
+                 "choices consistent, or does it prefer A to B, B to C, and C to A?",
+        why="A ranking only means something if preferences are transitive. People are mostly transitive on things "
+            "they care about; a model whose picks loop can still crown a 'favorite', but the crown is an accident of "
+            "which pairs were asked.",
+        sourcing="The taste finals (sources/taste_finals): 276 head-to-heads among the top 24 of each of 12 domains, "
+                 "3,281 shown, each asked in both option orders.",
+        collection="Uses the taste finals' new questions (no further calls).",
+        scoring="Per domain, every triple of finalists is a triad; it is intransitive when the majority choices form a "
+                "cycle. A random tournament has 25% intransitive triads, a perfectly consistent one 0%. Also: how "
+                "decisive each pick is (distance of Jev's probability from 50%), how often the pick survives reversing "
+                "the order, and the triads whose three picks are all decisive (70/30 or firmer).",
+        chart="Bars per domain: share of intransitive triads, with the 25% random line and the decisive-only share.",
+        compared_with="a random tournament (25%) and a perfectly transitive chooser (0%)",
+        limits="Finalists are near the top of Jev's own ratings, so many pairs are close calls; the decisive-only count "
+               "addresses that.", sources=["taste_finals"])
+
+    def run():
+        rows, example = [], None
+        firm_all = 0
+        same, lean = [], []
+        for dom in DOMAINS:
+            games = [r for r in with_meta("taste_finals") if r["m"].get("domain") == dom]
+            if not games:
+                continue
+            p, names = {}, {}
+            for r in games:
+                opts = js(r["options"]) if isinstance(r["options"], str) else r["options"]
+                (ka, na), (kb, nb) = list(opts.items())
+                ds = [norm(js(r["jev_dist"]))] + [norm(v["dist"]) for v in js(r["variants"]) or [] if v.get("kind") == "shuffle"]
+                pa = float(np.mean([d.get(ka, 0.0) for d in ds]))
+                same += [(ds[0].get(ka, 0) > 0.5) == (float(np.mean([d.get(ka, 0) for d in ds[1:]])) > 0.5)] if len(ds) > 1 else []
+                lean.append(max(pa, 1 - pa))
+                a, b = r["m"]["a"], r["m"]["b"]
+                names[a], names[b] = na, nb
+                p[(a, b)], p[(b, a)] = pa, 1 - pa
+            ids = sorted(names)
+            cyc = firm = firm_cyc = tri = 0
+            for i in range(len(ids)):
+                for j in range(i + 1, len(ids)):
+                    for k in range(j + 1, len(ids)):
+                        a, b, c = ids[i], ids[j], ids[k]
+                        if (a, b) not in p or (b, c) not in p or (a, c) not in p:
+                            continue
+                        tri += 1
+                        ab, bc, ca = p[(a, b)] > 0.5, p[(b, c)] > 0.5, p[(c, a)] > 0.5
+                        loop = (ab and bc and ca) or (not ab and not bc and not ca)
+                        cyc += loop
+                        strong = all(abs(p[x] - 0.5) >= 0.2 for x in ((a, b), (b, c), (c, a)))
+                        firm += strong
+                        firm_cyc += loop and strong
+                        if loop and strong and dom == "film" and example is None:
+                            x, y, z = (a, b, c) if ab else (a, c, b)
+                            example = [names[x], names[y], names[z], p[(x, y)], p[(y, z)], p[(z, x)]]
+            firm_all += firm
+            rows.append({"domain": DOMAINS[dom][2], "share": cyc / tri, "firm_share": firm_cyc / firm if firm else None,
+                         "triads": tri, "firm": firm})
+        rows.sort(key=lambda r: r["share"])
+        mean = float(np.mean([r["share"] for r in rows]))
+        fs = [r["firm_share"] for r in rows if r["firm_share"] is not None]
+        ex = (f" Among its favorite films it prefers {example[0]} to {example[1]} ({example[3]:.0%}), {example[1]} to "
+              f"{example[2]} ({example[4]:.0%}), and {example[2]} to {example[0]} ({example[5]:.0%})." if example else "")
+        return Result(
+            result=f"In round-robins among its 24 favorites, {mean:.0%} of Jev's triads go in a circle, close to the 25% "
+                   f"of a random tournament, from {rows[0]['share']:.0%} ({rows[0]['domain']}) to {rows[-1]['share']:.0%} "
+                   f"({rows[-1]['domain']}). The picks are not coin flips: they are firm and survive reversing the order."
+                   + ex,
+            evidence=f"{sum(r['triads'] for r in rows):,} triads in {len(rows)} domains; among triads whose three picks are "
+                     f"all 70/30 or firmer ({firm_all:,}), {float(np.mean(fs)):.0%} still loop",
+            numbers={"domains": rows, "mean": mean, "example": example}, n=sum(r["triads"] for r in rows),
+            chart={"type": "bars", "rows": [{"label": r["domain"], "value": r["share"]} for r in rows], "domain": [0, 0.3],
+                   "note": "25% = random tournament"},
+            robustness=f"{np.mean(same):.0%} of picks are the same whichever option is listed first; the average pick puts "
+                       f"{np.mean(lean):.0%} on one side.")
+    return spec, run
+
+
+EXPERIMENTS = [ranked(d) for d in DOMAINS] + [audience(d) for d in DOMAINS if DOMAINS[d][4]] + [self_vs_guess(), intransitive()]

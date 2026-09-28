@@ -177,3 +177,20 @@ def clip(text: str, n: int = 100) -> str:
 
 def and_list(xs: list[str]) -> str:
     return xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " and " + xs[-1]
+
+
+@lru_cache(maxsize=64)
+def full_meta(name: str) -> dict:
+    """id -> the full meta of one source's questions, from its normalized file (the table keeps only a subset)."""
+    out = {}
+    path = Path("data/normalized") / f"{name}.jsonl"
+    for line in path.open():
+        r = json.loads(line)
+        out[r["id"]] = r.get("meta") or {}
+    return out
+
+
+def with_meta(name: str) -> list[dict]:
+    """A source's shown questions as dicts, each with its full meta under 'm'."""
+    M = full_meta(name)
+    return [{**r, "m": M.get(r["id"], {})} for r in source(name).iter_rows(named=True)]
