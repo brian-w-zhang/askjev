@@ -22,7 +22,7 @@ Per year, the share where Jev's median bin is the bin holding that year's averag
 Dots per year: share right (and within one bin), with the mean signed error as a label.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.167, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.207, top verdict `portrait`.
 
 ## Compared with
 BLS average prices by year

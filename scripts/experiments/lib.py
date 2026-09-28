@@ -56,7 +56,8 @@ class Result:
 @lru_cache(maxsize=1)
 def table() -> pl.DataFrame:
     q = pl.read_parquet(A / "questions.parquet")
-    return q.filter(pl.col("display_ok") & ~pl.col("harmful") & pl.col("jev_dist").is_not_null())
+    # sorted by id: a rebuild writes rows in a new order, which would reshuffle ties and group orders
+    return q.filter(pl.col("display_ok") & ~pl.col("harmful") & pl.col("jev_dist").is_not_null()).sort("id")
 
 
 def source(*names: str) -> pl.DataFrame:

@@ -22,7 +22,7 @@ Share right overall, and split by exit status: runs that ended by running out of
 Bars: the share right on each kind of run.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.046, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.054, top verdict `portrait`.
 
 ## Compared with
 SWE-bench's own test results (resolved or not)

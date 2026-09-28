@@ -22,7 +22,7 @@ Rank correlation between Jev's expected level (base and reversed averaged) and t
 A rank scatter: Canadians' rank (x) vs Jev's rank (y), with the ten largest moves labeled.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.518, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.527, top verdict `portrait`.
 
 ## Compared with
 Canadian adults in the 1965 national prestige survey (Pineo & Porter 1967)

@@ -22,7 +22,7 @@ Jev's probability of 'really knows' on the Gettier cases vs the knowledge contro
 Bars: probability of 'really knows' per case, controls marked.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.339, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.348, top verdict `portrait`.
 
 ## Compared with
 Jev's own answers on clear knowledge and a clear false belief; the replicated finding that most people deny knowledge in Gettier cases (no number used)

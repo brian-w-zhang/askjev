@@ -22,7 +22,7 @@ Per format, Jev's mean position on a 0-1 scale (level / (levels - 1)), the share
 Dots per format: Jev's mean position with its 90% interval, and the annotators' mean on the original.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.53, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.555, top verdict `portrait`.
 
 ## Compared with
 Jev's answers on the original 5-level format; Social Chemistry annotators (original format only)

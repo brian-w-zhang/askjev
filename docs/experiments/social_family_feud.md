@@ -22,7 +22,7 @@ How often Jev's top pick is the survey's number one answer, against the chance r
 A bar of where Jev's pick ranked in the survey (1st to 6th), with the chance line; a list of the biggest misses.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.868, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.873, top verdict `portrait`.
 
 ## Compared with
 Family Feud survey respondents (about 100 per question)

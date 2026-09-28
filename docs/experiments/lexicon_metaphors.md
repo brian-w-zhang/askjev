@@ -22,7 +22,7 @@ Per dimension, rank correlation with people's mean and a 90% bootstrap interval;
 Paired dots per group (metaphors, literal) and dimension: people's mean and Jev's, 0-6.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.351, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.36, top verdict `portrait`.
 
 ## Compared with
 Crowd raters, expression shown in isolation (OSF xk3j9)

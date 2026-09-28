@@ -22,7 +22,7 @@ Per domain and overall: share where Jev's median bin holds the true answer, agai
 Paired bars per domain: typical person, crowd median and Jev, share in the right bin.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.826, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.838, top verdict `portrait`.
 
 ## Compared with
 About 500 US online participants per question (Simoiu et al. 2019) and the study's answer key

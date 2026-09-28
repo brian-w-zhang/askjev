@@ -22,7 +22,7 @@ Per set, the share of useful passages Jev rejects and of useless passages it let
 Paired bars per set: useful passages rejected vs useless ones let in.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.559, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.577, top verdict `portrait`.
 
 ## Compared with
 each dataset's own labels

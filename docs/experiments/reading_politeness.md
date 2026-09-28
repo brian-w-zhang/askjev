@@ -22,7 +22,7 @@ Rank correlation between Jev's expected level (base and reversed averaged) and t
 A scatter: raters' mean score (x) vs Jev's level (y), with the largest disagreements labeled.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.023, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.038, top verdict `portrait`.
 
 ## Compared with
 5 MTurk raters per request (Danescu-Niculescu-Mizil et al. 2013)

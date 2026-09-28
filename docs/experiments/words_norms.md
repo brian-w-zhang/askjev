@@ -22,7 +22,7 @@ Per dimension, rank correlation between Jev's robust level and the human mean, w
 Dots with intervals, one row per dimension, sorted by agreement.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.099, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.15, top verdict `portrait`.
 
 ## Compared with
 Glasgow Norms raters (UK students, about 30 per word per scale); Brysbaert et al. 2014 raters (US, MTurk)

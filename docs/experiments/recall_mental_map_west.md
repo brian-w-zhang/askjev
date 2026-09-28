@@ -22,7 +22,7 @@ Share right when the state misleads vs when it doesn't, balanced for whether the
 Bars: share right by which city is named first, and by whether the state misleads.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 5.164, top verdict `headline`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 5.173, top verdict `headline`.
 
 ## Compared with
 the coordinates (truth); the human pattern is from the literature

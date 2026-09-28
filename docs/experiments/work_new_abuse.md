@@ -22,7 +22,7 @@ Per set, the share of real abuse Jev misses and the share of clean items it flag
 Paired bars per set: misses vs false alarms.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.962, top verdict `headline`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.969, top verdict `headline`.
 
 ## Compared with
 each dataset's own labels

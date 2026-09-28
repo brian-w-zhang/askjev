@@ -22,7 +22,7 @@ Per set, the share right, misses and false alarms, with 90% intervals.
 Bars per set: the share right, with 50% (a coin flip) marked.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.629, top verdict `headline`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.623, top verdict `headline`.
 
 ## Compared with
 each dataset's own labels

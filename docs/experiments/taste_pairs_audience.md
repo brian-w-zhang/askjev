@@ -22,7 +22,7 @@ Per catalog, the share of pairs where Jev's own pick (averaged over both option 
 Dots per catalog: agreement of Jev's own pick (square) and of its guess for most people (ring), with a 50% line.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.785, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.783, top verdict `portrait`.
 
 ## Compared with
 the audiences of six catalogs (users who rated or played both items)

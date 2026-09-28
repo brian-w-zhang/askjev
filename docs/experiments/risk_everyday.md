@@ -22,7 +22,7 @@ Jev's expected level (0-4) per activity vs the adults' mean level; rank correlat
 Paired dots per domain (adults vs Jev), with the three largest single-activity gaps labeled.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.122, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.128, top verdict `portrait`.
 
 ## Compared with
 Basel-Berlin Risk Study adults (about 1,500, German-language questionnaire)

@@ -22,7 +22,7 @@ Per set, rank correlation between Jev's robust level and the crowd's mean level,
 Three dots with intervals, one per crowd, on a -1 to 1 scale.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.756, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.71, top verdict `portrait`.
 
 ## Compared with
 Jester users, Humicroedit crowd judges (MTurk), New Yorker contest voters

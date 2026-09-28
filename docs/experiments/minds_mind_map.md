@@ -22,7 +22,7 @@ Per capacity, each character's mean advantage in its 12 comparisons (-2 to +2); 
 The Gray et al. map: Experience (x) by Agency (y), each character as a Jev dot joined to a people dot.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.087, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.092, top verdict `portrait`.
 
 ## Compared with
 US adults in a replication of Gray et al. 2007 (Weisman, 2015)

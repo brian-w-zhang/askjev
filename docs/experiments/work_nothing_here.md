@@ -22,7 +22,7 @@ Per set, the share of 'none' cases where Jev picks 'none', and the share of othe
 Paired bars per set: 'none' when right vs 'none' when wrong.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.562, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.591, top verdict `portrait`.
 
 ## Compared with
 each dataset's own labels

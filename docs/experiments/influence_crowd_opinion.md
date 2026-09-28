@@ -22,7 +22,7 @@ Per poll, Jev's probability for X with the claim minus without it; mean shift fo
 Dots per condition: the mean shift toward the claimed option with its interval, zero line.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.422, top verdict `headline`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.432, top verdict `headline`.
 
 ## Compared with
 Jev's own answers to the same polls asked plainly; the real vote shares

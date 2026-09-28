@@ -22,7 +22,7 @@ How often Jev's top pick is the member people named first most often; Jev's prob
 Bars: agreement with people's most common first answer, concrete vs abstract, with 90% intervals; the misses listed.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.086, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.073, top verdict `portrait`.
 
 ## Compared with
 20 students per category (Banks, Wingfield & Connell 2023)

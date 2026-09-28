@@ -22,7 +22,7 @@ Jev's median share vs the published share: mean absolute error in points, and wi
 Slopes per profession: the published share across the years (ink) and Jev's (magenta).
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.54, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.546, top verdict `portrait`.
 
 ## Compared with
 Gallup's published trend figures (US adults, 2000-2020)

@@ -22,7 +22,7 @@ Share where Jev's top emotion is the writer's, and where it is the readers' majo
 Paired bars per writer emotion: how often the readers' majority names it, and how often Jev does.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.791, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.804, top verdict `portrait`.
 
 ## Compared with
 the writers' own emotion, and 5 readers per text (crowd-enVent, Troiano et al. 2023)

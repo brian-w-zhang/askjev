@@ -22,7 +22,7 @@ Share of each perturbation kind Jev rejects, and the share of correct calls it a
 Bars: the share caught per kind of mistake, and correct calls accepted.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.376, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.384, top verdict `portrait`.
 
 ## Compared with
 the dataset's correct calls and the known perturbation

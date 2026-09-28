@@ -22,7 +22,7 @@ Per pair, Jev's probability for the stronger word averaged over both word orders
 Bars: agreement by gold set and by distance on the scale, with 90% intervals.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.185, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.194, top verdict `portrait`.
 
 ## Compared with
 Three published gold orderings (linguists and crowd workers)

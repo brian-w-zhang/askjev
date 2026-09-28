@@ -22,7 +22,7 @@ For each indicator, whether the richer country usually has the higher value (the
 A dumbbell per indicator: accuracy when the answer fits the wealth rule vs when it goes against it, sorted by the gap.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.03, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.032, top verdict `portrait`.
 
 ## Compared with
 World Bank World Development Indicators

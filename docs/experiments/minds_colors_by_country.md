@@ -22,7 +22,7 @@ Per country, the mean over the 20 emotions of 1 - Jensen-Shannon distance betwee
 A ranked list of countries by similarity (top ten and bottom five).
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.082, top verdict `portrait`.
+Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.078, top verdict `portrait`.
 
 ## Compared with
 People in 31 countries (International Colour-Emotion Association Survey)

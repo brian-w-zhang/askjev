@@ -22,7 +22,7 @@ Per phrase, the bin holding Jev's median vs the bin holding people's median; ran
 A ridge chart on a log axis: one row per phrase, people's and Jev's distributions over the bins.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.198, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.195, top verdict `portrait`.
 
 ## Compared with
 46 Reddit respondents (zonination 2015)

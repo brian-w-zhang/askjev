@@ -22,7 +22,7 @@ The study's own regression: for each factor, the change in the probability of sp
 Effect dot plot: one row per factor, players (diamond) and Jev (square) with intervals, zero line; the rows where Jev drops a human preference highlighted.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.114, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.124, top verdict `portrait`.
 
 ## Compared with
 Moral Machine players worldwide (millions of decisions) and in 10 countries

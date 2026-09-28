@@ -22,7 +22,7 @@ Share of poems where Jev's more likely answer is right, vs the crowd's majority 
 Paired bars: the share of poems called human, for real poems and for AI poems, people vs Jev.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 6.08, top verdict `headline`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 6.12, top verdict `headline`.
 
 ## Compared with
 US adults in Porter & Machery 2024, Study 1 (about 160 judgments per poem)

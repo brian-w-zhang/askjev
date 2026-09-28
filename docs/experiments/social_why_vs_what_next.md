@@ -22,7 +22,7 @@ The share Jev gets right per question type, with 90% bootstrap intervals; groupe
 Dots per question type with intervals, ordered, colored by looking back / feelings / looking ahead.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.21, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.256, top verdict `portrait`.
 
 ## Compared with
 Social IQa's crowd-validated answers (people agreed with the marked answer about 87% of the time in the original study)

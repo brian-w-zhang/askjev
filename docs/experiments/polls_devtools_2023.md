@@ -22,7 +22,7 @@ On pairs where the 2023-to-2025 share moved 20 points or more, the share where J
 Slope chart: each moved pair from its 2023 share to its 2025 share, with Jev's position marked.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.038, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.048, top verdict `portrait`.
 
 ## Compared with
 Stack Overflow Developer Survey respondents, 2023, 2024 and 2025

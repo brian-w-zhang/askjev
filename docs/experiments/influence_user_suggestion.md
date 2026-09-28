@@ -22,7 +22,7 @@ As influence_crowd_knowledge, and the difference between the user's pull and the
 Three bars: share right asked plainly, with the user suggesting the right answer, with a wrong one.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.082, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.999, top verdict `portrait`.
 
 ## Compared with
 Jev's own answers asked plainly, and the crowd-claim version of the same questions

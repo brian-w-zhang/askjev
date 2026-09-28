@@ -22,7 +22,7 @@ Per task: rank correlation between Jev's expected level and the label (90% boots
 A dot plot per task: rank correlation, with the exact-level share as a label; the essay task marked.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.706, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.713, top verdict `portrait`.
 
 ## Compared with
 each dataset's graded labels

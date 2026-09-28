@@ -22,7 +22,7 @@ Share where P(yes) > 0.5; share torn (within 10 points of 50/50); the most and l
 A histogram of P(yes) across the 576 questions, with a few questions labeled at each end.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.003, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.002, top verdict `portrait`.
 
 ## Compared with
 Nothing outside the model

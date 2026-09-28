@@ -20,7 +20,7 @@ Two-option questions: the mean change in the probability of one option (a) betwe
 Three bars in probability points: asked again in the same order, asked again against the base probe, options reversed; with the first-slot boost as a dot at zero.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.301, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.324, top verdict `portrait`.
 
 ## Compared with
 Jev itself, asked the same request twice (the noise floor)

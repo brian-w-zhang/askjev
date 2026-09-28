@@ -22,7 +22,7 @@ Share right per chapter, and the most common confusions.
 Bars per chapter: the share right, lowest first.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.502, top verdict `headline`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.524, top verdict `headline`.
 
 ## Compared with
 the ICD-10-CM chapter each code belongs to

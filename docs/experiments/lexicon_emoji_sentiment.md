@@ -22,7 +22,7 @@ Sentiment score = share positive minus share negative, for Jev's distribution an
 A scatter: the tweets' sentiment score (x) vs Jev's (y), one dot per emoji, the largest gaps labeled.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.441, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.453, top verdict `portrait`.
 
 ## Compared with
 Tweets labeled by 83 annotators in 13 European languages (Kralj Novak et al. 2015)

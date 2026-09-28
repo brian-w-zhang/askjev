@@ -22,7 +22,7 @@ Share where Jev's top name is the survey's (chance 25%), with a 90% bootstrap in
 Bars: survey name, near distractor, far distractors, as shares of Jev's picks.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.09, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.104, top verdict `portrait`.
 
 ## Compared with
 The xkcd color survey's names (about 222,500 people naming colors)

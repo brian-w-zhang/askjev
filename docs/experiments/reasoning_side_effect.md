@@ -22,7 +22,7 @@ Per pair, Jev's probability of 'intentionally' for the harm minus the help versi
 A dumbbell per story: help vs harm probability of 'intentionally'.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.216, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.22, top verdict `portrait`.
 
 ## Compared with
 Knobe 2003's chairman (82% vs 23%); Jev's own answer on the Many Labs 2 chairman (judgment_classics)

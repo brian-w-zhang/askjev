@@ -22,7 +22,7 @@ The share of rules at each level for Jev (its most likely level) and for annotat
 Paired bars: the share of rules at each of the five levels, annotators vs Jev.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.854, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.86, top verdict `portrait`.
 
 ## Compared with
 Social Chemistry 101 crowd annotators (one estimate per rule)

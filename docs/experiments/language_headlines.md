@@ -22,7 +22,7 @@ Share of pairs where Jev's pick (averaged over both orders) is the headline with
 Bars: agreement with the winner by click-gap band and for significant gaps, with a 50% line.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.071, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.091, top verdict `portrait`.
 
 ## Compared with
 Upworthy's readers in 2013-2015 (randomized tests, clicks per version)

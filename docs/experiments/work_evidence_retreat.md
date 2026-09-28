@@ -22,7 +22,7 @@ Per set, accuracy on clear cases (supports or contradicts), the share of their e
 Bars per set: the share of errors on clear cases that retreat to 'can't tell'.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.351, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.345, top verdict `portrait`.
 
 ## Compared with
 each dataset's own labels

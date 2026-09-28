@@ -22,7 +22,7 @@ Per task, the share of real cases Jev says no to (misses) and of absent cases it
 Paired bars per task: misses vs false alarms.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.916, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.957, top verdict `portrait`.
 
 ## Compared with
 each dataset's own labels

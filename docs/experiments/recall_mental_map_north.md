@@ -22,7 +22,7 @@ For Europe-North America pairs, how often Jev picks the North American city, and
 Bars: share right per set, and for Europe-North America split by which side is north.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.753, top verdict `headline`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.755, top verdict `headline`.
 
 ## Compared with
 the coordinates (truth); the human pattern is from the literature, not item-level data

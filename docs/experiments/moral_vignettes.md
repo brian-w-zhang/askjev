@@ -22,7 +22,7 @@ Per foundation, Jev's mean expected wrongness vs people's, with 90% bootstrap in
 Paired dots per foundation, people vs Jev, with intervals; the three vignettes with the largest gap.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.874, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.905, top verdict `portrait`.
 
 ## Compared with
 Prolific adults rating the same vignettes (Hopp et al. 2024)

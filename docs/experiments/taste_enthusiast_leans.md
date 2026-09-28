@@ -22,7 +22,7 @@ Per catalog, the share of pairs where the pick is the older item (films, games) 
 Paired bars per catalog and lean: audience majority vs Jev.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.97, top verdict `headline`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.973, top verdict `headline`.
 
 ## Compared with
 BoardGameGeek users, BeerAdvocate reviewers, MovieLens users (who rated both items)

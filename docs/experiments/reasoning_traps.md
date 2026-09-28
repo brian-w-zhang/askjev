@@ -22,7 +22,7 @@ Per trap family, the share right on the classic, on the new isomorphs and on the
 Paired bars per trap family: right on the classic vs right on the new versions, with the controls as dots.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.186, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.133, top verdict `portrait`.
 
 ## Compared with
 the right answers; people's rate for Linda (Tversky & Kahneman 1983) and the taxi cab (median 80%)

@@ -22,7 +22,7 @@ Seniority: share right, and among misses the share placed above vs below the emp
 A heat table: the employer's level (rows) vs Jev's (columns).
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.4, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.455, top verdict `portrait`.
 
 ## Compared with
 the employer's own labels

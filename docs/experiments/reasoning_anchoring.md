@@ -22,7 +22,7 @@ Per quantity, the anchoring index (Jacowitz & Kahneman 1995): the difference bet
 Dots per quantity: the no-anchor estimate, the low- and high-anchor estimates as ticks, and the truth.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.73, top verdict `headline`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.756, top verdict `headline`.
 
 ## Compared with
 Tversky & Kahneman 1974 (medians 25 and 45 on the UN question)

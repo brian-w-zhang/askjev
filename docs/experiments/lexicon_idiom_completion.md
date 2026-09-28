@@ -22,7 +22,7 @@ Share where Jev's top pick is the idiom's word, vs the share of people who gave 
 Bars by familiarity tercile: share of people giving the idiom's word vs Jev picking it.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.982, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.991, top verdict `portrait`.
 
 ## Compared with
 US adults (Bulkes & Tanner 2017)

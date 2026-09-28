@@ -22,7 +22,7 @@ Per set, the share of unfaithful items Jev catches and of faithful items it wron
 Paired bars per set: caught vs wrongly flagged.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.309, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.324, top verdict `portrait`.
 
 ## Compared with
 each dataset's own labels

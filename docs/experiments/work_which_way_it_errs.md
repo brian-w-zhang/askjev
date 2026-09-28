@@ -20,7 +20,7 @@ Per task, the lean: the share of items Jev passes (or, for 'is something wrong',
 A dot plot, one row per task grouped under its kind, the lean around zero; the bad-case catch rate as a label on the extreme rows.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.557, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.572, top verdict `portrait`.
 
 ## Compared with
 each dataset's own labels

@@ -22,7 +22,7 @@ Accuracy per quantity on pairs at least 2x apart, with 90% bootstrap intervals; 
 Ranked dots: one row per quantity, accuracy with its interval, foods and animals colored apart.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.386, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.362, top verdict `portrait`.
 
 ## Compared with
 USDA FoodData Central and AnAge values

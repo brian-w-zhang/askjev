@@ -22,7 +22,7 @@ Jev's median share vs the published share: mean absolute error, bias (mean signe
 A scatter: published share (x) vs Jev's median (y), one dot per country, diagonal, the largest misses labeled.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.865, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.879, top verdict `portrait`.
 
 ## Compared with
 Integrated Values Surveys respondents (WVS and EVS, nationally representative samples)
