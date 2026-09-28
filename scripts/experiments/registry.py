@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import importlib
 
-FAMILIES = ["fam_taste", "fam_person"]
+FAMILIES = ["fam_taste", "fam_person", "fam_resemble"]
 
 EXPERIMENTS = []
 for name in FAMILIES:
