@@ -114,6 +114,16 @@ def seeded(ids, key: str, k: int = 3) -> list[str]:
     return sorted(ids, key=lambda i: hashlib.md5(f"{key}|{i}".encode()).hexdigest())[:k]
 
 
+def ordinal(x: float) -> str:
+    n = round(x)
+    return f"{n}{'th' if 11 <= n % 100 <= 13 else {1: 'st', 2: 'nd', 3: 'rd'}.get(n % 10, 'th')}"
+
+
+def agree_word(rho: float) -> str:
+    """Rank correlation in words."""
+    return "closely" if rho >= 0.7 else "moderately" if rho >= 0.45 else "only loosely" if rho >= 0.2 else "barely"
+
+
 def pct(x: float, d: int = 0) -> str:
     return f"{x * 100:.{d}f}%"
 

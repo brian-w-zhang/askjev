@@ -1,0 +1,33 @@
+# Jev's taste in beers vs BeerAdvocate reviewers
+
+`taste_vs_audience_beer` · family: taste
+
+## 1. Question
+Does Jev like the beers that BeerAdvocate reviewers like, and where does it disagree most?
+
+A real test of taste against a real crowd, not against Jev's own guess about people; the disagreements are the portrait.
+
+## 2. Sourcing
+Existing rating questions under Self > Lifestyle > Ratings > beer_ratings, each with the real rating distribution of BeerAdvocate reviewers (their ratings binned to the same five levels). Enough: thousands of items.
+
+Sources: `taste_ratings`
+
+## 3. Collection
+Existing questions only; no new Jev calls.
+
+## 4. Scoring
+Rank correlation (Spearman) between Jev's robust level and the audience's mean level, with a 90% bootstrap interval over items; the items with the largest rank disagreement in each direction. Ranks, not levels, because Jev's described levels and the audience's star ratings aren't the same scale.
+
+## 5. Visualization
+A scatter of audience rank vs Jev's rank, with the ten biggest disagreements labeled on each side.
+
+## 6. Evaluation
+Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+
+## Compared with
+BeerAdvocate reviewers (their average rating of each item)
+
+## Limits
+Audiences rate what they chose to watch or drink; Jev rates everything. Rank comparisons only.
+
+Results: `data/analysis/experiments/taste_vs_audience_beer.json` (private). Code: `scripts/experiments/`.
