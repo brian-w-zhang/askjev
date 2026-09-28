@@ -121,7 +121,7 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
             <p className="ex-result">{e.result}</p>
             <Chart chart={e.chart} />
             {e.case?.chart_note && <p className="ex-note"><b>How to read this:</b> {e.case.chart_note}</p>}
-            <p className="ex-evidence">{e.evidence}{e.robustness ? ` ${e.robustness}` : ""}</p>
+            <p className="ex-evidence">{[e.evidence, e.robustness].filter(Boolean).map((t) => String(t).trim().replace(/[.;]?$/, ".")).join(" ")}</p>
           </div>
         </div>
 
