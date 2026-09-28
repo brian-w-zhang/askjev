@@ -6,7 +6,7 @@ family: self
 Picking "other" is how a respondent says "none of these fits me". On a personality quiz, a person who picks "other" for their favorite flower but always chooses a listed answer on honesty is telling you something about what they have views on. Where a model takes that exit shows where it will and won't commit to a concrete answer about itself.
 
 ## The people and the data
-There are no people here. The questions come from banks written about Jev itself, covering tastes, habits, relationships, values and ways of thinking.
+There are no people here, and no new questions. The project already had banks of questions about Jev itself, written for it by Claude and covering tastes, habits, relationships, values and ways of thinking.
 
 ## What Jev was asked
 Questions about itself with a short menu that includes "other". The answers as Jev saw them (names, with short descriptions where the question had them):

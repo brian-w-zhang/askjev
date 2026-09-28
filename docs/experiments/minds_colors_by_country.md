@@ -6,7 +6,7 @@ family: minds
 Most color-feeling links are shared worldwide, but the details differ from country to country. Which country's details a model reproduces is a small test of whose culture its defaults come from. Text on the internet is heavily English, so a model's associations might lean English-speaking even for something as basic as the color of relief.
 
 ## The people and the data
-
+For each of 20 feelings, every country has its own shares of how often the feeling was linked to each of 12 color terms. The participants were volunteers, not national samples.
 
 ## What Jev was asked
 No new questions: this reuses Jev's answers to the 20 questions "Which color do you associate most with the feeling ...?" from the colors-of-feelings experiment, and compares them with each country's answers.

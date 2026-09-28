@@ -8,7 +8,7 @@ Which jobs does society respect? In 1947 the National Opinion Research Center as
 A model has its own picture of which work is respected, which shows up in career advice, stories and small talk. Comparing it with a mid-century public shows where it agrees, where it is more modern, and whether its ladder is built on money or on schooling.
 
 ## The people and the data
-
+The comparison is **Duncan's 45 occupations** from the 1947 NORC survey (often called the North-Hatt study), as published in Duncan's 1961 work: for each job, the share of American adults who rated its standing good or excellent, with 1950 census figures on how many people in the job had high incomes and high education.
 
 ## What Jev was asked
 > How would you rate the general standing of a contractor as a job?

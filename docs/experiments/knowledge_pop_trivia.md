@@ -3,10 +3,10 @@
 family: knowledge
 
 ## Why ask this
-Trivia is a quick map of what a model has absorbed well. A pub quiz database, split into categories, shows where the knowledge is thick and where it thins out, and the database's own difficulty ratings show whether "hard" for people is also hard for the model.
+Trivia is a quick map of what a model has absorbed well. A pub quiz database, split into categories, shows where the knowledge is thick and where it thins out. Every question also carries an easy, medium or hard label from the person who wrote it, a rough outside check on whether what a quiz writer thinks is hard is also hard for the model.
 
 ## The people and the data
-The Open Trivia Database is a free, volunteer-written quiz database (CC BY-SA 4.0), with a category and a difficulty rating on every question.
+The Open Trivia Database is a free quiz database (CC BY-SA 4.0) written by volunteers, who give every question a category and a difficulty rating.
 
 ## What Jev was asked
 Each question as the database has it, with its four options:

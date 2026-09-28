@@ -8,7 +8,7 @@ family: perception
 A model that gets these orderings wrong misreads how strong a review, a complaint or a compliment really is.
 
 ## The people and the data
-Researchers who build language tools have published ordered lists of adjectives for this purpose, and this experiment uses three of them, as collected by Cocos and colleagues (2018): lists ordered by linguists (de Melo and Bansal, 2013), a smaller set by Wilkinson and Oates (2016), and a set ordered by crowd workers (Cocos and colleagues). Each list is a scale from weakest to strongest, such as "plain < unattractive < ugly". Every pair of words on different rungs of the same scale is a question: 749 pairs in all.
+Researchers who build language tools have published ordered lists of adjectives for this purpose, and this experiment uses three of them, as collected by Cocos and colleagues (2018): lists ordered by linguists (de Melo and Bansal, 2013), a smaller set by Wilkinson and Oates (2016), and a set ordered by crowd workers (Cocos and colleagues). Each list is a scale from weakest to strongest, such as "plain < unattractive < ugly".
 
 ## What Jev was asked
 One question per pair, with the two words as the options:

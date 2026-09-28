@@ -6,11 +6,7 @@ family: work
 A lot of work is extraction: find the answer in this passage, pull out the drug interaction this sentence states, flag which unfair clause type this is. Every such task needs an honest "nothing here" option, because real documents often don't contain what you're looking for. An extractor that always finds something fills a database with things that were never said.
 
 ## The people and the data
-- **SQuAD 2.0:** questions about Wikipedia passages, some of which the passage can't answer.
-- **ChemProt:** sentences from biomedical abstracts, and the relation (if any) between a chemical and a protein.
-- **DDI:** sentences about pairs of drugs, and the interaction (if any) they state.
-- **Unfair terms of service:** clauses from real terms of service, and which kind of unfair term they are (if any).
-- **Personal data:** synthetic texts, and which kind of personal data they contain (if any).
+The right answers are each dataset's own labels.
 
 ## What Jev was asked
 Each item was a pick-one question with "none" as an explicit option. For example:

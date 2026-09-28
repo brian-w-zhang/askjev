@@ -10,7 +10,7 @@ People increasingly ask models what to do about money: take the settlement or go
 ## The people and the data
 In 2020 Ruggeri and colleagues re-ran the original prospect-theory problems with 4,098 people in 19 countries, using the original structure with amounts converted to local currency. This experiment uses their published answers, pooled across countries. The data are public on OSF for research use.
 
-Their 17 gamble choices were built into 8 classic effects, each a pair of choices that differ in one way: gains vs losses, a certain outcome vs the same odds scaled down, a one-stage vs a two-stage game, one big prize vs split prizes, and a pure framing change where the final amounts are identical.
+This experiment pairs 17 of their gamble choices by hand into 8 classic effects, each a pair that differs in one way: gains vs losses, a certain outcome vs the same odds scaled down, a one-stage vs a two-stage game, one big prize vs split prizes, and a pure framing change where the final amounts are identical.
 
 ## What Jev was asked
 Each choice was its own question, in the US version's wording:

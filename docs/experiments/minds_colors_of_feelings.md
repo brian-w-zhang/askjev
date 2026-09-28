@@ -8,7 +8,7 @@ Anger is red. Sadness is... blue, or black, or grey, depending on who you ask. P
 A model learned its colors from text, much of it English. It might reproduce the universal links, sharpen English clichés, or miss the quieter associations people share.
 
 ## The people and the data
-The **International Colour-Emotion Association Survey** (Jonauskaite and colleagues, 2020) asked 7,387 people in 31 countries which of 20 feelings they associate with each of 12 color terms: red, orange, yellow, green, turquoise, blue, purple, pink, brown, black, grey and white. The data is public under a CC BY license. For each feeling, the data gives the share of all its color associations went to each color.
+The **International Colour-Emotion Association Survey** (Jonauskaite and colleagues, 2020) asked 7,387 people in 31 countries which of 20 feelings they associate with each of 12 color terms: red, orange, yellow, green, turquoise, blue, purple, pink, brown, black, grey and white. The data is public under a CC BY license. For each feeling, the data gives what share of all its color associations went to each color.
 
 ## What Jev was asked
 For each feeling, which color goes with it:

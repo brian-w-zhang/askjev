@@ -3,12 +3,12 @@
 family: polls
 
 ## Why ask this
-A model can know what people like without liking it itself. It can know that Americans love Italian and Mexican food and still, asked for its own taste, rank something else first. The gap between the two is worth seeing: it shows where Jev's "own" answers diverge from the crowd it can describe perfectly well.
+A model can know what people like without liking it itself. It can know that Americans love Italian and Mexican food and still, asked for its own taste, rank something else first. The gap between the two is worth seeing: it shows where Jev's "own" answers diverge from a crowd it can describe well.
 
 Food is a good test, because FiveThirtyEight once ran a bracket-style survey of which world cuisines Americans like.
 
 ## The people and the data
-FiveThirtyEight's **Food World Cup** (2014, run with SurveyMonkey): about 1,000 US adults rated 40 world cuisines, from Italian and Mexican to Ghanaian and Bosnian. From their ratings, about 790 head-to-heads, each with the share of respondents who preferred one cuisine to the other.
+FiveThirtyEight's **Food World Cup** (2014, run with SurveyMonkey): about 1,000 US adults answered an online survey rating 40 world cuisines, from Italian and Mexican to Ghanaian and Bosnian, including ones many had never tried. Their ratings were turned into about 790 head-to-heads, each with the share of respondents who preferred one cuisine to the other.
 
 ## What Jev was asked
 Every head-to-head, twice: once for its own taste, and once for what it thinks most people would say.

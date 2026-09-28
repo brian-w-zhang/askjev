@@ -6,7 +6,7 @@ family: taste
 Anime fans rate a lot and argue about it more. Comparing Jev with MyAnimeList, the biggest fan database, shows whether a model's sense of good anime matches the people who watch it, and where it doesn't.
 
 ## The people and the data
-MyAnimeList users, via a public dataset from 2016 of their 1-to-10 ratings. For each title, the experiment uses the distribution of its ratings, set on the same five levels Jev answers on.
+MyAnimeList users, via a public 2016 dataset of their 1-to-10 ratings. For each title, the experiment uses the distribution of its ratings, set on the same five levels Jev answers on.
 
 ## What Jev was asked
 Every title one at a time:

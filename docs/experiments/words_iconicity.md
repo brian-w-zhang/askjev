@@ -8,7 +8,7 @@ Some words sound like what they mean: "buzz", "moo", "whoosh". That's **iconicit
 A model that only reads text has never heard a word. Whether it still senses these links, or only knows the obvious sound-effect words, says something about what text carries.
 
 ## The people and the data
-Winter and colleagues (2023) asked people to rate thousands of English words for iconicity on a 1-to-7 scale, from "not iconic at all" to "very iconic". The individual ratings are public. This experiment uses 2,488 common words, spread across the range of ratings, each rated by about 10 to 17 people.
+Winter and colleagues (2023) asked US English speakers to rate thousands of English words for iconicity on a 1-to-7 scale, from "not iconic at all" to "very iconic", and published every individual rating. This experiment uses 2,488 common words, spread across the range of ratings, each rated by about 10 to 17 people.
 
 ## What Jev was asked
 One question per word, with seven described answers written for this project:

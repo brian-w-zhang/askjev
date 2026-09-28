@@ -6,7 +6,7 @@ family: personality
 Helen Fisher proposed four broad temperaments: curious and energetic, cautious and rule-following, analytical and tough-minded, and prosocial and empathetic. The typology is popular on dating apps, which makes it a light way to ask which one a model would claim.
 
 ## The people and the data
-
+Open Psychometrics, a website of free personality tests, runs it online and publishes the anonymous answers.
 
 ## What Jev was asked
 Every statement, word for word:

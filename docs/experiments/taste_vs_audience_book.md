@@ -6,7 +6,7 @@ family: taste
 Books have a huge, opinionated audience. Comparing Jev's ranking with real readers' ratings shows whether a model that has read about every one of these books likes the same ones the people who actually read them do.
 
 ## The people and the data
-Goodreads readers, via goodbooks-10k, a public dataset of Goodreads ratings from 2017: millions of ratings of the site's most-rated books. For each book the experiment uses the distribution of its star ratings, set on the same five levels Jev answers on.
+The readers are Goodreads users, via goodbooks-10k, a public dataset collected in 2017 with millions of star ratings of the site's most-rated books, from bestsellers to scripture. For each one it uses the whole spread of 1-to-5-star ratings, set on the same five levels Jev answers on.
 
 ## What Jev was asked
 Every book one at a time:

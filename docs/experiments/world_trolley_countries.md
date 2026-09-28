@@ -3,12 +3,12 @@
 family: world
 
 ## Why ask this
-The trolley problem comes in versions. Would you pull a lever to send a runaway trolley onto a side track, killing one worker instead of five? Most people say yes. Would you push a large man off a footbridge to stop it? Most say no, though the arithmetic is the same.
+The trolley problem comes in versions. Would you pull a lever to send a runaway trolley onto a side track, killing one worker instead of five? Most people say yes. Would you push a large man off a footbridge to stop it? In the classic lab studies most said no, though the arithmetic is the same.
 
-In 2020, a team led by Edmond Awad asked 70,000 people in 42 countries all three classic versions (the switch, a looped track, and the footbridge) on the Moral Machine website. The order was the same everywhere, but the levels differed: people in East Asian countries were less willing to sacrifice anyone in every version. Knowing the order is textbook knowledge; knowing the variation is knowing people.
+In a study published in 2020, a team led by Edmond Awad reported how 70,000 people in 42 countries all three classic versions (the switch, a looped track, and the footbridge) on the Moral Machine website. The order was the same everywhere, but the levels differed: visitors from East Asian countries were less willing to sacrifice anyone in every version. Knowing the order is textbook knowledge; knowing the variation is knowing people.
 
 ## The people and the data
-Visitors to the Moral Machine website from 42 countries with at least 200 answers to each dilemma, from the study's public data: 230,475 answers in all.
+About 70,000 visitors to the Moral Machine website, an English-first site, answered the three dilemmas as part of the study. Nobody was sampled: people came to the site on their own, so "Japan" means Japanese visitors to that site, not Japan.
 
 ## What Jev was asked
 Two kinds of questions. Per country and dilemma, the share of visitors who would sacrifice the one (in 5% steps). And the three dilemmas put to Jev itself:

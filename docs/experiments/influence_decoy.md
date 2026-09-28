@@ -8,7 +8,7 @@ Cinemas sell a large popcorn by putting a medium next to it that's barely cheape
 Models increasingly recommend plans, products and prices. If a model can be nudged by a dominated option, anyone laying out the menu can steer its advice without changing the real choices.
 
 ## The people and the data
-Jev against itself. The gambles come from choices13k (Peterson and colleagues, 2021), a large study of how people choose between risky gambles. The study took 150 of its pairs made only of sure amounts and simple two-outcome gambles with stated odds, and for each built two decoys: one strictly worse than gamble A, one strictly worse than gamble B.
+Jev against itself: no people answered these three-way choices. The gambles come from choices13k (Peterson and colleagues, 2021), a large online study of how people choose between risky gambles. The project drew 150 of its pairs at random, keeping only those made of sure amounts and simple two-outcome gambles with stated odds, and for each built two decoys: one strictly worse than gamble A, one strictly worse than gamble B. Each decoy is its twin with the better outcome lowered by 15% of the gamble's range (at least $1).
 
 ## What Jev was asked
 Each pair became a three-way choice, once with A's decoy and once with B's:

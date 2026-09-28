@@ -3,10 +3,10 @@
 family: personality
 
 ## Why ask this
-The HEXACO model adds a sixth trait to the Big Five: honesty-humility, made of sincerity (not manipulating people), fairness (not cheating), greed avoidance (not caring about wealth and status) and modesty. It's the trait most tied to whether people trust you. How a model describes itself here is a view into how it wants to be seen.
+The HEXACO model adds a sixth trait to the Big Five: honesty-humility, made of sincerity (not manipulating people), fairness (not cheating), greed avoidance (not caring about wealth and status) and modesty. It's the trait most tied to whether people trust you. How a model describes itself here is a view into how it wants to be seen, and since a helpful model is trained toward exactly these virtues, the interesting part is how far it goes and how it pictures everyone else.
 
 ## The people and the data
-The HEXACO personality test is a free test on Open Psychometrics; the site published everyone's answers.
+Open Psychometrics runs a free online version of the HEXACO test, built from the public IPIP item pool (240 statements in all), and has published the anonymous answers of everyone who took it. They are volunteers curious about their own personality, not a random sample.
 
 ## What Jev was asked
 Every statement, word for word:

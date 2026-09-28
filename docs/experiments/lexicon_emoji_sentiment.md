@@ -8,7 +8,7 @@ Emoji carry much of the tone of online writing, and they don't always mean what 
 Here is a clean test: a large set of real tweets whose tone was labeled by people, grouped by the emoji they contain. Jev is asked to guess the tone from the emoji alone and compare.
 
 ## The people and the data
-The **Emoji Sentiment Ranking** (Kralj Novak and colleagues, 2015) comes from tweets in 13 European languages, collected in 2013-2015, whose tone was labeled negative, neutral or positive by 83 human annotators. For each emoji, the share of negative, neutral and positive tweets containing it is its "sentiment" in real use.
+The **Emoji Sentiment Ranking** (Kralj Novak and colleagues, 2015) comes from 1.6 million tweets in 13 European languages, collected in 2013-2015, whose tone was labeled negative, neutral or positive by 83 human annotators. For each emoji, the share of negative, neutral and positive tweets containing it is its "sentiment" in real use.
 
 ## What Jev was asked
 > A tweet contains the emoji ⛔. Knowing only that, is the tweet more likely negative, neutral or positive?

@@ -67,6 +67,9 @@ def row_order(e: dict, shown: pl.DataFrame) -> list[list]:
     return [[i, fl] for i, fl, _ in rows]
 
 
+RANK_WEIGHTS = {"strength": 0.35, "keep": 0.25, "trust": 0.15, "fair": 0.10, "surprise": 0.10, "recognize": 0.05}
+
+
 def main():
     exps = []
     for f in sorted(OUT.glob("*.json")):
@@ -114,7 +117,8 @@ def main():
         if c:
             out[-1]["result"] = (c.get("result") or r["result"]).strip()
             out[-1]["case"] = {"sections": c["sections"], "chart_note": c.get("chart_note") or "",
-                               "caveats": c.get("caveats") or [], "facts": c.get("facts") or []}
+                               "caveats": c.get("caveats") or [], "facts": c.get("facts") or [],
+                               "takeaways": c.get("takeaways") or []}
             mm = memes.resolve(c["meme"]) if c.get("meme") else None
             if mm:
                 out[-1]["meme"] = mm
@@ -139,7 +143,21 @@ def main():
                            for nd, c in bynode.head(16).iter_rows()]
             x["n_topics"] = bynode.height
         x["n_flagged"] = {k: sum(1 for _, fl in order if fl == k) for k in ("wrong", "differs")}
-    out.sort(key=lambda x: -((x["evaluation"] or {}).get("strength") or -99))
+    # the order (docs/17, "Ranking"): Jev's head-to-heads between experiments, plus its own answers about each one,
+    # each standardized across the 192 before weighting
+    def z(vals):
+        m = sum(vals) / len(vals)
+        sd = (sum((v - m) ** 2 for v in vals) / len(vals)) ** 0.5 or 1
+        return [(v - m) / sd for v in vals]
+    parts = {"strength": [(x["evaluation"] or {}).get("strength") or 0 for x in out]}
+    sc = [((x.get("take") or {}).get("scores") or {}) for x in out]
+    for k in ("keep", "trust", "fair", "recognize"):
+        parts[k] = [s.get(k, 0.5) for s in sc]
+    parts["surprise"] = [1 - s.get("expected", 0.5) for s in sc]
+    zs = {k: z(v) for k, v in parts.items()}
+    for i, x in enumerate(out):
+        x["rank_score"] = round(sum(RANK_WEIGHTS[k] * zs[k][i] for k in RANK_WEIGHTS), 4)
+    out.sort(key=lambda x: (-x["rank_score"], x["id"]))
     # portrait candidates: Jev's order among kept experiments, at most two per family, so the reel isn't one topic
     per: Counter = Counter()
     cands = []

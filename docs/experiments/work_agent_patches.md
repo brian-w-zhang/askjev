@@ -8,7 +8,7 @@ Coding agents now attempt real bug fixes on their own: read the issue, explore t
 Two different skills hide in that job. Telling a run that crashed or gave up from one that finished is easy: the trace says so. Telling a correct patch from a plausible wrong one is the hard part, and the only part that saves time.
 
 ## The people and the data
-There are no human raters. The data are **SWE-agent trajectories** on real GitHub issues from open-source Python projects, in the style of the SWE-bench benchmark. Each trace records an agent (SWE-agent, driven by Llama-based models) working on one issue, and the label says whether its final patch passed the tests that fix the issue.
+There are no human raters. The data are **SWE-agent trajectories** on real GitHub issues from open-source Python projects, in the style of the SWE-bench benchmark. Each trace records an agent (SWE-agent, driven by Llama-based models at 8, 70 and 405 billion parameters) working on one issue: the commands it ran, what it saw, and the patch it ended with. The label says whether that final patch passed the tests that check the fix.
 
 ## What Jev was asked
 Each trace was one yes/no question:

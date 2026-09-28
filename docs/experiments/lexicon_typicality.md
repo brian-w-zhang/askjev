@@ -8,7 +8,7 @@ Not all members of a category are equal. A robin is a better example of a bird t
 A model that ranks members differently from people will reason about categories differently: it will pick odd examples, or treat a borderline case as central.
 
 ## The people and the data
-The ratings come from the **category norms** of Banks, Wingfield and Connell (2023). UK adults recruited online rated, from 1 ("very poor example") to 5 ("very good example"), how good an example each member was of its category, with at least a dozen raters per item.
+The ratings come from the **category norms** of Banks, Wingfield and Connell (2023). UK adults recruited through the online panel Prolific rated, from 1 ("very poor example") to 5 ("very good example"), how good an example each member was of its category, with at least a dozen raters per item; the study published only the average for each.
 
 ## What Jev was asked
 > How good an example of a social relationship is mother?

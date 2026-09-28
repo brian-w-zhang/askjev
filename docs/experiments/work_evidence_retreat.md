@@ -8,7 +8,7 @@ A lot of AI checking comes down to one question: does this evidence support the 
 ## The people and the data
 - **FEVER** and **VitaminC:** claims checked against Wikipedia sentences (VitaminC's come from real revisions of Wikipedia articles).
 - **SciFact:** scientific claims checked against research abstracts.
-- **MultiNLI** and **Adversarial NLI:** everyday sentence pairs, the second written by people trying to fool models.
+- **MultiNLI** and **Adversarial NLI:** everyday sentence pairs; Adversarial NLI's were written by people trying to fool the best models of the day.
 - **ContractNLI:** statements about non-disclosure agreements.
 - **Evidence Inference:** clinical-trial reports; does the treatment increase, decrease or not change an outcome?
 

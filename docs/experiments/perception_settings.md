@@ -5,10 +5,10 @@ family: perception
 ## Why ask this
 "A slight chance of rain" and "a slight chance of a fatal side effect" use the same words, but people hear different numbers. Research on how people read these phrases (Weber and Hilton, 1990) found the numbers shift with the setting: with how common the event usually is, and with how bad it would be.
 
-It also isn't how people talk, and it may miss what a doctor who says a side effect is "unlikely" is really conveying.
+A model that reads "likely" as one fixed number everywhere is simpler and more predictable. It also isn't how people talk, and it may miss what a doctor who says a side effect is "unlikely" is really conveying.
 
 ## The people and the data
-This experiment has no human answers of its own; it compares Jev with itself. The phrases are the 17 from the 2015 Reddit survey behind "What 'probably' means to Jev". Each was placed in three settings written for this project: a weather forecast, a doctor describing a new medication's side effects, and an intelligence report.
+This experiment has no human answers of its own; it compares Jev with itself. The phrases are the 17 from the 2015 Reddit survey behind "What 'probably' means to Jev", from "almost no chance" to "almost certainly". Each was placed in three one-sentence settings written for this project: a weather forecast, a doctor describing a new medication's side effects, and an intelligence report.
 
 ## What Jev was asked
 Each phrase in each setting, answered as one of 21 steps from 0% to 100%:

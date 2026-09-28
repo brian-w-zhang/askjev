@@ -3,7 +3,7 @@
 family: personality
 
 ## Why ask this
-Machiavellianism (manipulating people), narcissism (needing admiration) and psychopathy (callousness) are the "dark triad", the traits people least like to admit. A model trained to be helpful should come out low. The questions worth asking are how low, on which traits, and whether it expects people to be darker than itself.
+Machiavellianism (manipulating people), narcissism (needing admiration) and psychopathy (callousness) are the "dark triad", the traits people least like to admit; the Hypersensitive Narcissism Scale adds the fragile, easily slighted kind of narcissism. A model trained to be helpful should come out low. The questions worth asking are how low, on which traits, and whether it expects people to be darker than itself.
 
 ## The people and the data
 

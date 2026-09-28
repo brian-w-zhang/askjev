@@ -8,7 +8,7 @@ Every fandom has inside opinions: the best arc, the worst contestant, the album 
 So a simple test tells you something about Jev's cultural coverage: in which communities can it guess what the fans voted for, and where does it do no better than picking at random?
 
 ## The people and the data
-Native Reddit polls from 35 hobby and fan communities (anime, games, rap artists, TV shows, tabletop games and more), collected from a public Reddit archive for 2020 to 2024, each with its vote counts.
+Native Reddit polls, the kind where a member posts a question and the community clicks an option, from 35 hobby and fan subreddits (anime, games, rap artists, TV shows, tabletop games, sneakers, mechanical keyboards and more). They were collected from Arctic Shift, a public Reddit archive, for 2020 to 2024, each with its final vote counts. Only polls with at least 50 votes were kept (the median has 272). Polls flagged as political were dropped, and so were polls tied to a particular season, episode, chapter or upcoming release, and forecasts like "who will win", though a filter can't catch every poll about recent events.
 
 ## What Jev was asked
 Each poll as posted, with its options, asking what most people would say. For example, from a Kingdom Hearts fan community:

@@ -6,7 +6,7 @@ family: taste
 Which celebrations and traditions appeal to someone says what they value: spectacle, family, spirituality, music. For a model that has read about the world's festivals but never attended one, the favorites show which experiences its reading makes most vivid.
 
 ## The people and the data
-No people here: Jev against its own opinions.
+No people here: Jev against its own opinions. The one-at-a-time ratings already existed; only the 276 games of the final were new.
 
 ## What Jev was asked
 Every entry one at a time, with five answers describing what you'd do:

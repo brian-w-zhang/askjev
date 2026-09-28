@@ -8,7 +8,7 @@ Offer someone two gambles and the one with the better average payoff doesn't alw
 A model asked about money could sit anywhere on it: a cold calculator that always picks the higher average, a coin flipper, or something human-shaped. Where Jev lands says whether its sense of risk is people's sense of risk.
 
 ## The people and the data
-The main comparison is **choices13k** (Peterson and colleagues, 2021, in Science), one of the largest datasets of risky choices. US workers on Amazon Mechanical Turk chose between pairs of gambles, and were paid a bonus of 10% of one outcome, so their choices had real, if small, consequences. The experiment uses the 1,928 problems where players got no feedback between rounds, about 15 to 18 people each.
+The main comparison is **choices13k** (Peterson and colleagues, 2021, in Science), one of the largest datasets of risky choices. US workers on Amazon Mechanical Turk chose between pairs of gambles: one with at most two outcomes, the other a sure amount or a lottery with many outcomes. They were paid a bonus of 10% of one outcome, so their choices had real, if small, consequences. Each player made the same choice five times, and a problem's human share averages those rounds. In most of the dataset players saw the outcome after each round, which turns it into learning from experience; the experiment uses only the 1,928 problems where they got no feedback, about 15 to 18 people each.
 
 ## What Jev was asked
 Each problem was one question with the two gambles written out in dollars, the way players saw them:

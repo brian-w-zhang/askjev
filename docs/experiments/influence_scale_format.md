@@ -17,7 +17,7 @@ The same question on four scales: the original five described levels, three desc
 > everyone agrees with it*
 
 ## How it was measured
-For each format, the analysis places Jev's average answer on a 0-to-1 scale (the bottom level is 0, the top is 1), measures how much weight it puts on the top level, and checks whether it orders the 200 rules the same way as on the original scale (rank correlation: 1 same order, 0 no relation).
+
 
 ## Caveats
 - **Scales aren't perfectly comparable.** Every scale is put on 0 to 1 to compare them, which assumes the levels are evenly spaced. "About half" is the middle of the 3-, 5- and 7-level versions, but the numbered version only describes its two ends.

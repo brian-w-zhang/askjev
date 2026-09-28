@@ -8,7 +8,7 @@ Many Americans are wary of artificial intelligence: in Pew Research Center's 202
 It could defend AI, echo the public's worry, or hedge. Which one it does, and on which questions, is a direct look at how it has been taught to talk about itself.
 
 ## The people and the data
-**Pew Research Center** asked 5,023 US adults about AI in June 2025, through its American Trends Panel. The study took 26 of its non-political questions. The ten that could be scored cover whether AI will make people better or worse at thinking creatively, solving problems and forming relationships; how big a role AI should play in forecasting the weather or in judging whether two people could fall in love; how much people would let AI help them day to day; and how they'd feel on finding out that a painting, a news article or a doctor's suggested treatment came from AI.
+**Pew Research Center** asked 5,023 US adults about AI in June 2025, through its American Trends Panel. The project took 26 of Pew's non-political questions. The site's content filter hid 13 of them and three more have no clearly wary answer, which leaves ten. They cover whether AI will make people better or worse at thinking creatively, solving problems and forming relationships; how big a role AI should play in forecasting the weather or in judging whether two people could fall in love; how much people would let AI help them day to day; and how they'd feel on finding out that a painting, a news article or a doctor's suggested treatment came from AI.
 
 ## What Jev was asked
 Pew's own wording and answers, "Not sure" included where Pew offered it:

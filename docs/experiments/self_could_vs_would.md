@@ -6,7 +6,7 @@ family: self
 Across tens of thousands of real questions, those starting "Can...?" get far more yeses from Jev than those starting "Will...?" (see "Can? Yes. Will? No."). But different questions start with different words for different reasons. Pairs of questions that ask the same thing with a different opening verb separate the word from the topic: whatever difference is left is the word.
 
 ## The people and the data
-There are no people here. Rows below use the pairs of opening words with at least 15 examples.
+There are no people here: the comparison is Jev against itself. The questions come from banks written for this project by Claude, and in every pair at least one comes from the banks about Jev itself (its habits, tastes and relationships). Where two questions ask nearly the same thing, the project's duplicate matching pairs them up. Rows below use the pairs of opening words with at least 15 examples.
 
 ## What Jev was asked
 Each question on its own, never side by side:

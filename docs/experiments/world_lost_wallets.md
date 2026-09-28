@@ -8,7 +8,7 @@ In 2019 a team of economists (Cohn, Maréchal, Tannenbaum and Zünd) handed 17,3
 A model that reasons from self-interest ("more money, more temptation") would make the same wrong prediction. A model that knows people would get it right.
 
 ## The people and the data
-The study's own data (public, CC0): for each country, the share of wallets returned without money and with about US$13 in local currency, plus a larger amount (about US$94) in the US, the UK and Poland. The "people" here are the staff at banks, hotels, post offices, museums and public offices who received the wallets.
+The study's own data (public, CC0), covering 17,303 wallets in 355 cities of 40 countries. A wallet counts as returned when the staff member emailed its owner. For each country the data give the share returned without money and with about US$13 in local currency, plus a larger amount (about US$94) in the US, the UK and Poland. The "people" here are the staff at banks, hotels, post offices, museums and public offices who received the wallets, and each country's rate pools several cities and kinds of institution.
 
 ## What Jev was asked
 The experiment described in full, per country and condition:

@@ -6,7 +6,7 @@ family: recall
 Knowing a fact is one thing. Knowing that most people don't know it is what makes an explanation land: it tells you what to spell out and what to skip. A model that knows nearly everything may quietly assume everyone else does too, and pitch every answer too high.
 
 ## The people and the data
-In 2012, psychologists asked about 670 US college students 299 general-knowledge questions ("What is the name of Batman's butler?") and recorded the share who came up with the answer unaided (Tauber, Dunlosky, Rawson, Rhodes and Sitzman, 2013). The shares run from "zebra"-level facts almost everyone knows to ones almost nobody does.
+In 2012, psychologists asked about 670 US college students 299 general-knowledge questions ("What is the name of Batman's butler?") and recorded the share who came up with the answer unaided, with no choices to pick from (Tauber, Dunlosky, Rawson, Rhodes and Sitzman, 2013). The shares run from facts nearly everyone knows ("zebra", 93%) to ones almost nobody does. The per-question shares used here come from a public transcription of the paper's appendix, whose order matches the published ranking almost exactly.
 
 ## What Jev was asked
 Each of the 299 questions, with the answer shown and twelve ranges to choose from:

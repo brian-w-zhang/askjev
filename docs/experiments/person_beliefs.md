@@ -6,7 +6,7 @@ family: personality
 Three short scales from very different corners: how connected you feel to nature, how much you believe in conspiracies, and whether you see yourself as logical or intuitive. Put together, they test one idea: does a model turn down whatever people endorse, or does it pick sides?
 
 ## The people and the data
-All three are free tests on Open Psychometrics with published answers: the Generic Conspiracist Beliefs Scale (Brotherton, French and Pickering 2013), a six-statement nature relatedness scale, and a left-brain versus right-brain questionnaire.
+All three are free tests on Open Psychometrics, a website where anyone can take personality questionnaires and whose anonymous answers are published: the Generic Conspiracist Beliefs Scale (Brotherton, French and Pickering 2013; 9 statements here), a six-statement nature relatedness scale, and a ten-statement left-brain versus right-brain questionnaire.
 
 ## What Jev was asked
 Every statement, word for word:

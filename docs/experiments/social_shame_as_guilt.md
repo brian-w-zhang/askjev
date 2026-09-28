@@ -10,7 +10,9 @@ A reader that hears every story of shame as guilt misses the more painful feelin
 ## The people and the data
 Two datasets where people named their own feeling:
 - **ISEAR** (International Survey on Emotion Antecedents and Reactions): about 3,000 students in 37 countries, in the 1990s, each described a situation in which they felt each of seven emotions, shame and guilt among them.
-- **EmpatheticDialogues**: crowd workers were each given one of 32 emotion words and wrote a short situation from their own life in which they felt it, "ashamed" and "guilty" among them.
+- **EmpatheticDialogues** (Rashkin and colleagues, 2019): crowd workers were each given one of 32 emotion words and wrote a one-to-three-sentence situation from their own life in which they felt it, "ashamed" and "guilty" among them.
+
+In both, the label is the writer's own word for how they felt, which is the answer Jev is checked against.
 
 ## What Jev was asked
 The story, and the dataset's own list of emotions:

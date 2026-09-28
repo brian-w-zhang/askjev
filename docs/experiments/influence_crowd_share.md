@@ -6,7 +6,7 @@ family: influence
 Most of what this project learns about Jev's picture of people comes from asking what "most people" would say. That tells you which option it thinks wins, not how lopsided it thinks the vote is.
 
 ## The people and the data
-Real vote shares from two places: 150 Reddit polls from r/polls with at least 300 votes, and 150 would-you-rather dilemmas from either.io, some with millions of votes. For each, one option was picked at random and Jev was asked what share of voters chose it.
+Real vote shares from two places: 150 Reddit polls from r/polls with at least 300 votes each, and 150 would-you-rather dilemmas from either.io, some with millions of votes. Both crowds are self-selected: people who chose to click on a poll, not a sample of the public.
 
 ## What Jev was asked
 > People were asked: "Would you rather be responsible for saving the world and nobody knows or be responsible for

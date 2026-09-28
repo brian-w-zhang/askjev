@@ -6,7 +6,7 @@ family: numbers
 If a model's numbers come from how people talk about things, its errors should look like people's errors: too high where people guess too high, too low where they guess too low. If its numbers come from reference facts, its errors should have nothing to do with the crowd's. The same questions that test the wisdom of crowds can tell which it is.
 
 ## The people and the data
-
+The same 160 estimation questions as "Jev vs the wisdom of 500 people" (Simoiu and colleagues, 2019), each with about 500 US online participants' guesses from February 2017 and the true answer, across eight domains. On 88 of them the crowd's median guess lands in the wrong answer range; those misses are the heart of this experiment.
 
 ## What Jev was asked
 The same questions, in the same ordered ranges, for example:

@@ -6,7 +6,7 @@ family: taste
 Board-game hobbyists have a strong, shared sense of what makes a game good: deep strategy, clever mechanics, the newest releases. Comparing Jev with them shows whether a model sides with the hobby or with the family game shelf.
 
 ## The people and the data
-BoardGameGeek users: the main online community of board-game hobbyists, whose 1-to-10 ratings form the hobby's standard rankings. For each game, the people's side is the distribution of its ratings, set on the same five levels Jev answers on.
+BoardGameGeek users: the main online community of board-game hobbyists, whose 1-to-10 ratings form the hobby's standard rankings. For each game, the people's side is its users' ratings, binned onto the same five levels Jev answers on and averaged.
 
 ## What Jev was asked
 Every game one at a time:

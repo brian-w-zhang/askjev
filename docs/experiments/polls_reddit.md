@@ -8,7 +8,7 @@ r/polls is a Reddit community where people post simple questions with a few answ
 A model that talks to millions of people carries a picture of "most people" around with it. Guessing poll winners across tens of thousands of polls shows where that picture is detailed and where it's thin.
 
 ## The people and the data
-Native Reddit polls from r/polls, collected from a public Reddit archive for 2020 to 2024, each with its archived vote counts.
+Native Reddit polls from r/polls, posted from 2020 to 2024 and collected from Arctic Shift, a public Reddit archive, each with its archived vote counts. The voters are whoever was browsing the subreddit: mostly young, online and English-speaking.
 
 ## What Jev was asked
 Each poll exactly as posted, with its options, asked two ways: what Jev itself would pick, and what it thinks most people would say. For example:

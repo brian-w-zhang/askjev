@@ -23,7 +23,7 @@ and enjoy, on Brian's bar: no slop, honest, specific, fun where it earns it.
    everywhere: rows, charts, legends and prose.
 8. **A unique meme per experiment**, woven into the page: relevant, with real meme taste, and no template reused
    across experiments. Claude edits text onto templates where needed.
-9. **Hover memes on the atlas index:** hovering an experiment card shows its meme following the cursor.
+9. **Atlas index:** cards highlight in pink on hover; memes appear only on the case study page, beside the findings.
 10. **"On the map" gets a proper UI:** its own section on where the questions live (topics as a small tree or
     chips with counts, linking to the map), not a bare list in the sidebar.
 11. **Better charts:** fix the weak ones and the thumbnails.
@@ -43,30 +43,32 @@ The repo is public and results are private, so:
   way `verify_page.py` checks the page.
 
 ## Page structure (items 1-12)
-Top to bottom:
-1. **Header:** family, title, a one-line question, and the meme as a small OS-window card beside the title
-   (stacked on phones).
-2. **The result:** the result sentence, the chart (improved), and a one-line "how to read this chart".
-3. **The case study**, as readable sections with short headings:
-   - "Why ask this": the question and why it's interesting.
-   - "The people and the data": who the humans are, the source, and the size.
-   - "What Jev was asked": the real wording, one example, format and count, in plain words.
-   - "How we measured it".
-   - "What we found": the result, then 2-4 observations with numbers and real examples.
-   - "What it means, and what it doesn't".
-4. **Jev's take (sidebar):** a quoted first-person-style paragraph built from Jev's answers, with the verdict,
-   interest and rank underneath.
-5. **Caveats (sidebar):** a short bulleted list, only what applies.
-6. **Where these questions live:** its own section with the topics as chips or a mini tree, counts, and map links.
-7. **Every question:** the legend, then rows 5 at a time with "show more", and filters.
-8. **Pager** to the previous and next experiment.
+Top to bottom, every block the same width, the finding first (the order data stories and research write-ups use:
+the finding and a short summary up front, the method compact and after it):
+1. **Header:** family, title, a one-line question.
+2. **The result:** the result sentence, the chart, a one-line "how to read this", the fine print.
+3. **In short:** 2-3 takeaways (front matter `takeaways`).
+4. **What the data shows,** with the meme floated beside it, sized by its shape; then **What it means, and what it
+   doesn't**.
+5. **Caveats** beside **Jev on this experiment**: Jev's keep-or-discard call and its answers to the other questions
+   about the experiment, shown as answers.
+6. **Why ask this**, then **How this was done**: the people and the data, what Jev was asked, how it was measured.
+7. **Where these questions live**, then **Every question** (each opens on the map), then the pager.
+
+Case studies are written in the third person: no "we", "our" or "us".
+
+## Ranking
+The index orders experiments by a weighted sum of standardized parts: Jev's head-to-heads between experiments
+(0.35), its keep-or-discard answer (0.25), how much a reader should rely on the result (0.15), how fair the
+comparison is (0.10), how surprising the result is to Jev (0.10) and whether it describes Jev (0.05).
 
 ## Jev's take (item 4)
 Jev answers only yes/no, pick-one or scale questions, so its opinion is assembled from new questions put to it
 about each experiment's card. For example: would you have expected this result; is the comparison with these people
 fair; which caveat matters most (Choice over that experiment's caveats); how much should a reader trust it
-(Score). Cached, `ASKJEV_RPS <= 16`, Jev as the only gateway model. The paragraph is templated from those answers,
-never invented, and each claim in it links back to the answer behind it.
+(Score); and should the experiment be kept or discarded (yes/no). Cached, `ASKJEV_RPS <= 16`, Jev as the only
+gateway model. The page shows the answers themselves, each with its probability or level, not a paragraph built
+from them.
 
 ## Memes (items 8-9)
 - **Pick:** for each experiment, a format that fits its joke. Draw on current and classic formats (distracted
@@ -77,9 +79,6 @@ never invented, and each claim in it links back to the answer behind it.
 - **Make:** templates go in the gitignored `data/portrait/memes/templates/`, captioned images in
   `data/portrait/memes/exp/<id>.webp` via one script (`scripts/experiments/memes.py`, text boxes per template).
   Served privately like the portrait's memes, with captions labeled as ours.
-- **Hover:** a React component on the index shows the hovered card's meme following the cursor (a ref and
-  `requestAnimationFrame`, no re-render per mouse move, eased). It's off on touch devices and with
-  prefers-reduced-motion, and never covers the card's text.
 
 ## Rows (items 6-7)
 - A private route (`/portrait/atlas/rows?id=&page=`) serves every question id an experiment used, from a list the
@@ -94,11 +93,11 @@ never invented, and each claim in it links back to the answer behind it.
 3. **Jev's take:** questions, run, templated paragraph.
 4. **Caveats:** a per-experiment list, only what applies.
 5. **Memes:** pick 192 (a list with rationale, checked for reuse), template sourcing, captioning script, page
-   placement, hover.
+   placement.
 6. **Charts and thumbnails:** audit all chart types at 1440 and 390, and fix the weak ones.
 7. **Page and index UI** redesign, including the "where these questions live" section.
 8. **Audit:** check_cases.py clean; a sampled read against the result files; one full reread for slop.
-9. **Ship:** sweep.mjs, interact.mjs (with paging and hover), verify_page.py --experiments, vitals.mjs,
+9. **Ship:** sweep.mjs, interact.mjs (with paging), verify_page.py --experiments, vitals.mjs,
    screenshots in both themes; export, publish.py, deploy; prod must match local.
 
 ## Status (2026-09-28)

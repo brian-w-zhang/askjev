@@ -6,7 +6,7 @@ family: knowledge
 Licence exams are practical knowledge written down: what a radio operator or a ship's officer must know to be trusted with the job. They come with official answers, and they cover very different kinds of knowledge (electronics, engines, the rules for ships meeting at sea), so they show where a model's practical knowledge is solid.
 
 ## The people and the data
-Three public-domain question banks from US agencies: the amateur radio question pools used for FCC licences (Technician, General and Extra classes, from the National Conference of Volunteer Examiner Coordinators), the US Coast Guard's merchant mariner exam questions, and the 2025 USCIS civics test for citizenship.
+
 
 ## What Jev was asked
 Each question with its options:

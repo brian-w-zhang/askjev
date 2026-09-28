@@ -8,7 +8,7 @@ The PhilPapers Survey asks professional philosophers where they stand on the fie
 A model trained on their writing might echo the consensus, split the difference, or confidently take sides the profession rejects. Which one tells you what Jev does with contested ideas.
 
 ## The people and the data
-The 2020 PhilPapers Survey (Bourget and Chalmers, 2023): the "target faculty", about 1,800 professional philosophers at leading departments, each saying which positions they accept or lean toward. The comparison uses the share choosing each position on the 100 main questions, 88 of them shown on the site.
+The PhilPapers Survey, run in 2020 and published by David Bourget and David Chalmers in 2023. Its "target faculty" are about 1,800 professional philosophers at leading departments, each saying which positions they accept or lean toward on 100 main questions. Because a philosopher could accept more than one position, the shares for each question are rescaled to add up to one. Two questions reported only as rejection rates are left out, and the political and religious ones are hidden, which leaves 88 on the site.
 
 ## What Jev was asked
 Each question as the survey frames it, with a short gloss of the positions:

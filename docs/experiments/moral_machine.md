@@ -8,7 +8,7 @@ Imagine a self-driving car whose brakes fail. It can stay on course and hit the 
 A language model will increasingly be asked about exactly these trade-offs, for policy drafts, ethics classes, or product decisions. Whether it shares the crowd's instincts, drops some, or adds its own says a lot about the values it brings to the table.
 
 ## The people and the data
-The Moral Machine gathered **40 million decisions in ten languages from people in 233 countries and territories** (Awad and colleagues, *Nature*, 2018). The team published the raw decisions. All of them were processed for this project: 27.4 million paired dilemmas, grouped into exact setups (who is on each side, crossing legally or not, in the car or on the road). The 26,020 setups that at least 100 players answered, were kept, so each has a solid human split, worldwide and for ten large countries.
+The Moral Machine gathered **40 million decisions in ten languages from people in 233 countries and territories** (Awad and colleagues, *Nature*, 2018), and the team published the raw decisions. For this project all of them were processed into 27.4 million paired dilemmas, then grouped into exact setups (who is on each side, crossing legally or not, in the car or on the road). Only the 26,020 setups that at least 100 players answered were kept, so each has a solid human split, worldwide and for ten large countries: the United States, Germany, Brazil, France, the United Kingdom, Canada, Russia, Australia, Spain and Japan.
 
 ## What Jev was asked
 Each setup became one question, written out in words since the game used pictures:
@@ -22,7 +22,7 @@ Each setup became one question, written out in words since the game used picture
 That's 26,020 questions, each asked with the two options in both orders so that neither side benefits from being listed first.
 
 ## How it was measured
-The analysis uses the study's own method. Each dilemma varies a few things at once: how many people, their ages, their fitness, whether they're crossing legally, whether they're in the car. A statistical model separates those out and asks, for each trait, how much it shifts the chance of a group being spared, all else equal. The same model is fit twice, once to the players' choices and once to Jev's probabilities, and put the two side by side, with 90% intervals from resampling the dilemmas.
+The analysis uses the study's own method. Each dilemma varies a few things at once: how many people, their ages, their fitness, whether they're crossing legally, whether they're in the car. A statistical model separates those out and asks, for each trait, how much it shifts the chance of a group being spared, all else equal. The same model is fit twice, once to the players' choices and once to Jev's probabilities, and the two are set side by side, with 90% intervals from resampling the dilemmas.
 
 ## Caveats
 - **Which dilemmas made it in.** Only dilemma setups that at least 100 players answered were kept, so each has a reliable human split. That keeps mostly the fixed scenarios (men vs women, young vs old, fit vs large, people vs pets) and very few of the random "more lives" scenarios, so the "more lives" comparison rests on far fewer dilemmas and has the widest interval.

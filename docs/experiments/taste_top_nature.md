@@ -6,7 +6,7 @@ family: taste
 Asking what someone loves in nature is a gentle way into their temperament: big and awe-inspiring, small and cute, calm, wild. For a model, it also shows how it handles experiences it can never have: a smell, a storm, an animal up close.
 
 ## The people and the data
-No people here: Jev against its own opinions.
+No people here: Jev against its own opinions. The one-at-a-time ratings already existed; only the 276 games of the final were new.
 
 ## What Jev was asked
 Every entry one at a time, with five answers describing what you'd do:

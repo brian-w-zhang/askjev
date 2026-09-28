@@ -3,12 +3,12 @@
 family: lexicon
 
 ## Why ask this
-Ask someone to name a bird and they'll probably say robin or sparrow, not penguin or ostrich. The first member that comes to mind is the center of the category for that person, and psychologists have long used it to map how people organize what they know. It also shapes how people talk: the "default" bird, fruit or job is the one people reach for in examples.
+Ask someone to name a bird and they'll almost never say penguin or ostrich. The first member that comes to mind is the center of the category for that person, and psychologists have long used it to map how people organize what they know. It also shapes how people talk: the "default" bird, fruit or job is the one people reach for in examples.
 
 A model reaches for examples constantly. If its defaults differ from people's, its examples will feel slightly off, and its idea of "typical" will quietly differ from yours.
 
 ## The people and the data
-The data comes from **category production norms** by Banks, Wingfield and Connell (2023). Students at Lancaster University in the UK were given a category and 60 seconds to name as many members as they could.
+The data comes from **category production norms** by Banks, Wingfield and Connell (2023, Behavior Research Methods). Students at Lancaster University in the UK were given a category and 60 seconds to name as many members as they could.
 
 ## What Jev was asked
 > Asked to name a room in a house, which one comes to mind first?

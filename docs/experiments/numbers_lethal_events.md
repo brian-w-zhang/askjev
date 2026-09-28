@@ -8,7 +8,7 @@ In 1978 Lichtenstein and colleagues asked Americans how many people die each yea
 A model trained on news-heavy text might inherit that squash, or it might have read the statistics instead. The answer says something about where its sense of risk comes from.
 
 ## The people and the data
-The 1978 study's 41 causes, each with the yearly US death count from the vital statistics of the time and the participants' average estimate, as compiled by Pachur in 2024 (open data on OSF). The participants were given one reference point, as Jev was: about 50,000 people a year died in motor-vehicle accidents.
+The 1978 study's 41 causes, each with the yearly US death count from the vital statistics of the time and the participants' average estimate (a geometric mean, so a few wild guesses don't dominate), as compiled by Pachur in 2024 (open data on OSF). The participants were given one reference point, as Jev was: about 50,000 people a year died in motor-vehicle accidents.
 
 ## What Jev was asked
 One question per cause, with the study's reference, in ordered bins:

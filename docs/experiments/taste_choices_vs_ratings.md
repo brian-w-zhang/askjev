@@ -6,7 +6,7 @@ family: taste
 There are two ways to find someone's favorite: ask them to rate things one at a time, or make them choose between pairs. People are known to give different answers to the two. For a model, it matters which one you trust: ask it "rate this" and "pick one" and you may get different favorites.
 
 ## The people and the data
-No people here: this compares Jev with itself, across 12 taste domains (films, books, board games, anime, beers, music, foods, places, art, nature, activities, culture). In each domain, Jev's 24 top-rated items played every other in a round-robin final: 276 games per domain, 3,281 in all.
+No people here: this compares Jev with itself, across 12 taste domains (films, books, board games, anime, beers, music, foods, places, art, nature, activities, culture). In each domain, Jev's top-rated items (24 in most, fewer for artworks) played every other in a round-robin final: 276 games in a full domain, 3,281 in all.
 
 ## What Jev was asked
 The ratings asked one item at a time, with five described answers, for example "How much would you enjoy watching Hud (1963)?" from "You'd turn it off within the first twenty minutes" to "You'd rewatch it and count it among your favorites". The final asked two at a time:

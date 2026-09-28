@@ -8,7 +8,7 @@ The Open-Source Psychometrics Project's Statistical "Which Character" Personalit
 It's a fun question to put to an AI, and a revealing one: the character Jev matches says what kind of personality its self-description adds up to.
 
 ## The people and the data
-Two sets of ratings, both from the Open-Source Psychometrics Project. First, fans rating characters: between November 2019 and November 2023, visitors rated fictional characters on hundreds of word pairs, 77.4 million ratings in all.
+Two sets of ratings, both from the Open-Source Psychometrics Project. First, fans rating characters: between November 2019 and November 2023, visitors rated 2,125 fictional characters on 500 word pairs, moving a slider from 1 to 100 between the two words, 77.4 million ratings in all.
 
 ## What Jev was asked
 The quiz's self-report items, one word pair at a time:

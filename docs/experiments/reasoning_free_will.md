@@ -3,13 +3,13 @@
 family: reasoning
 
 ## Why ask this
-If everything you do was fully caused by what happened before, down to the beginning of the universe, can you be blamed for anything? Philosophers have argued this for centuries. In the 2000s, experimental philosophers asked ordinary people, and found a split. Described abstractly, most people say no: in a determined universe, nobody is fully responsible. Told a vivid story about a particular person doing something wrong, many say yes, that person is responsible anyway.
+If everything you do was fully caused by what happened before, down to the beginning of the universe, can you be blamed for anything? Philosophers have argued this for centuries. In the 2000s, experimental philosophers put the question to ordinary people and found a split. Described abstractly, most people say no: 86% of Nichols and Knobe's participants said nobody in a determined universe can be fully responsible. But told about a particular man, Bill, who murders his family in that same universe, 72% said he is fully responsible anyway. A calmer case, a man cheating on his taxes, moved far fewer people.
 
 That split between principle and case says a lot about how someone weighs rules against gut reactions. A model trained on philosophy might follow the principle every time, or it might react to the story like people do.
 
 ## The people and the data
-The stories and people's answers come from two well-known studies:
-- **Nichols and Knobe (2007):** a universe where everything is caused by what came before, described in detail, then either an abstract question (can anyone be fully responsible?) or a specific person (Mark, who cheats on his taxes as he has many times before). In the abstract, 14% said yes; for Mark, 23% said it's possible he's fully responsible.
+The stories and people's answers come from two well-known studies of US undergraduates:
+- **Nichols and Knobe (2007):** a universe where everything is caused by what came before, described in detail, then either an abstract question (can anyone be fully responsible?) or a specific person (Mark, who cheats on his taxes as he has many times before). In the abstract, 14% said yes; for Mark, 23% said it's possible he's fully responsible. The study's Bill story was hidden by a content filter, so it isn't compared here.
 - **Nahmias and colleagues (2005):** a supercomputer that predicts everything with perfect accuracy, including that Jeremy will rob a bank years before he's born. 76% said Jeremy robs the bank of his own free will.
 
 ## What Jev was asked

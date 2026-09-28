@@ -6,7 +6,7 @@ family: consistency
 Every comparison on this site rests on a question: how much would Jev's answer change if you just asked again? Many chatbots answer differently each time. Jev returns probabilities rather than a sampled answer, so the question is whether those probabilities are fixed, or wobble, and whether a wobble can change what it would pick.
 
 ## The people and the data
-No people; Jev against itself. Every two-option question in the corpus was sent in the reversed order twice, as two separate requests at different times.
+No people; Jev against itself. Each two-option question on the site is asked three times as part of its usual checks: with the options reversed, in the original order, and reversed again. The two reversed requests are identical word for word and were sent separately, at different times.
 
 ## What Jev was asked
 Any two-option question, twice. For example:

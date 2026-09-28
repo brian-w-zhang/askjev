@@ -9,12 +9,9 @@ A reader who shies away from the top of every scale does quiet damage: the excel
 
 ## The people and the data
 Four datasets where the right level is known:
-- **Wine Enthusiast tasting notes** with the critic's points (80 to 100), grouped into five bands.
-- **Sentence pairs** from the STS Benchmark, with the average of five crowd ratings of how close in meaning they are.
-- **Amazon reviews** with the writer's own 1 to 5 stars.
-- **Seventh-grade essays** from a public essay-scoring competition, scored by two human graders who agreed.
+- **Wine Enthusiast tasting notes** with the critic's points (80 to 100), grouped into five bands, the top one 94 to 100. 2,000 notes.
 
-About 7,400 items in all.
+About 7,400 items in all. The wine, sentence and review sets were drawn with roughly equal numbers at each level, so the true share at the top is known in advance: about a fifth for wine and reviews, a sixth for sentences.
 
 ## What Jev was asked
 Each dataset got its own question with described levels, the top level spelled out like the others. For the wine: "How highly does the critic rate the wine in [note]?", with only the tasting note shown (no price, grape or region). For sentence pairs: how close in meaning is the second sentence to the first, on six levels paraphrased from the dataset's own guidelines.

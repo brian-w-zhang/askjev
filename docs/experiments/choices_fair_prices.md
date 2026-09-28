@@ -8,7 +8,9 @@ In 1986, the psychologist Daniel Kahneman and economists Jack Knetsch and Richar
 Models now advise both businesses and customers. Whose rulebook does Jev carry: the public's, or something closer to a textbook where prices simply follow supply and demand?
 
 ## The people and the data
-The respondents were adults in Toronto and Vancouver, reached by telephone in 1984 and 1985. The paper reports the share who said fair or acceptable. Of the 23 scenarios asked about, 9 are shown here.
+The respondents were adults in Toronto and Vancouver, reached by telephone in 1984 and 1985 for Kahneman, Knetsch and Thaler's paper in the American Economic Review. The paper reports only the share who said completely fair or acceptable, so that grouped share is the people's number.
+
+Jev was given all 23 of the paper's scenarios (Questions 1 to 16, several with variants, plus the UNICEF version of the doll auction). A content filter hid 14 of them from the site, mostly the wage-cutting ones, which leaves 9, mostly about prices.
 
 ## What Jev was asked
 The paper's own wording and answers:

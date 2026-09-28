@@ -34,7 +34,9 @@ function Question({ row }: { row: Flagged }) {
   const order = row.primitive === "score" ? shown.sort((a, b) => Number(a) - Number(b)) : shown.sort((a, b) => score(b) - score(a));
   return (
     <li className={`ex-q${row.flag ? ` f-${row.flag}` : ""}`}>
-      <p className="qt">{words(row.text)}</p>
+      <a className="qt" href={`/?q=${encodeURIComponent(row.id)}`} title="Open this question on the map">
+        {words(row.text)} <span className="go" aria-hidden>↗</span>
+      </a>
       {row.fields ? (
         <dl className="qf">
           {row.fields.map(([k, v]) => <div key={k}><dt>{words(k)}</dt><dd>{v}</dd></div>)}

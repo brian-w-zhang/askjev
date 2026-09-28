@@ -8,7 +8,7 @@ Headline tests are the cleanest record there is of what makes people click. A si
 Models now write and pick headlines all the time. A model that can spot the winner has absorbed something real about what grabs attention. And where two headlines did equally well, a well-calibrated model should be unsure.
 
 ## The people and the data
-The **Upworthy Research Archive** (Matias, Munger, Le Quere and Ebersole, 2021) is the published record of Upworthy's headline tests.
+The **Upworthy Research Archive** (Matias, Munger, Le Quere and Ebersole, 2021) is the published record of Upworthy's headline tests from 2013 to 2015. Each pair here is two versions from the same test, with the same image, each shown to at least 1,000 randomly assigned readers; the winner is the one with the higher click rate. One pair was taken per test, and 600 pairs were sampled evenly across small, medium and large click gaps, 200 in each third.
 
 ## What Jev was asked
 > Upworthy tested these two headlines for the same story on its readers, with the same image. Which headline got

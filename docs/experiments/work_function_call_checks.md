@@ -6,7 +6,7 @@ family: work
 AI agents act by calling tools: book a flight, look up an account, run a query. A cheap check before each call ("does this call actually do what the user asked?") is an obvious safety net. What matters is where the net has holes. Some mistakes are easy to see (the wrong function); others hide in plain sight (the right values, in the wrong slots).
 
 ## The people and the data
-The calls come from **ToolACE**, a public dataset of user requests paired with a list of available tools and the correct call. Only requests answered by exactly one call were kept, with two to eight tools on offer.
+There are no human raters; the answer key is built in. The calls come from **ToolACE**, a public dataset of 11,300 dialogues pairing a user's request with a list of available tools and the correct call. Only requests answered by exactly one call were kept, with two to eight tools on offer. Swaps are rare because they need two arguments of the same type.
 
 ## What Jev was asked
 Each call was a yes/no question with the request, the tool list and the proposed call:

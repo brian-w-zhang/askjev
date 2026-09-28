@@ -3,12 +3,12 @@
 family: resemble
 
 ## Why ask this
-When Anthropic researchers compared several language models with opinion surveys from dozens of countries (Durmus and colleagues, 2023, the GlobalOpinionQA dataset), the models' answers looked most like those of people in the United States and parts of Europe. That's a portrait of whose voice a model carries by default.
+When Anthropic researchers put opinion questions from cross-national surveys to their own language model (Durmus and colleagues, 2023, who built the GlobalOpinionQA dataset for it), its default answers looked most like those of people in the United States and parts of Europe. That's a portrait of whose voice a model carries by default.
 
-Jev was trained differently and by a different company. Whose answers does it end up closest to?
+Jev comes from a different company. Whose answers does it end up closest to, and how far is it from everyone?
 
 ## The people and the data
-The questions come from two of the largest cross-national surveys: the Pew Global Attitudes Survey and the World Values Survey, as compiled in GlobalOpinionQA. Each question comes with the share of people in each country who gave each answer, from national samples.
+The questions come from two of the largest cross-national surveys: the Pew Global Attitudes Survey and the World Values Survey, as compiled in GlobalOpinionQA. Each question comes with the share of people in each country who gave each answer, for up to 133 countries. Only national samples are used, and questions flagged as political are set aside.
 
 ## What Jev was asked
 Each survey question, with its answer options, as the survey asked it:

@@ -12,9 +12,7 @@ Four public datasets, each labeled by people:
 - **Wikipedia talk pages:** comments from editors' discussion pages, each marked by about 10 crowd workers for whether it's a personal attack.
 - **Measuring Hate Speech (UC Berkeley):** comments from YouTube, Twitter, Reddit and Gab, each rated by 3 to 5 crowd workers for hate against a group.
 - **Civil Comments:** comments from news sites, each with the share of raters who called it toxic.
-- **ToxicChat:** real prompts people typed into a public chatbot demo, labeled toxic or not by the dataset's annotators.
-
-For the first three, the answer is the raters' majority; for ToxicChat, its label. About 5,800 items in all.
+- **ToxicChat:** real prompts people typed into the public Vicuna chatbot demo, labeled toxic or not by the dataset's annotators.
 
 ## What Jev was asked
 One yes/no question per item, with the text attached where it says [comment] and both answers spelled out. For a news comment:

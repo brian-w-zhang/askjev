@@ -5,7 +5,7 @@ family: moral
 ## Why ask this
 Every culture runs on thousands of small unwritten rules: text back within a day, don't bring up an ex at dinner, split the bill on a first date or don't. Some of these are shared by nearly everyone; many are argued about endlessly. Knowing a rule is one thing. Knowing whether it's a rule or an opinion is the harder part.
 
-A model that treats every rule of thumb as universal will sound preachy: it will tell you "people generally agree you should..." about things people fight over. This experiment checks how widely Jev thinks everyday rules are shared, against people's own estimates.
+A model that treats every rule of thumb as universal will sound preachy: it will tell you "people generally agree you should..." about things people fight over. This experiment checks how widely Jev thinks everyday rules are shared, against the estimates of the crowd workers who rated the same rules.
 
 ## The people and the data
 The rules come from **Social Chemistry 101** (Forbes and colleagues, 2020), a large map of everyday morality built by crowd workers on Amazon Mechanical Turk. Workers read real situations from Reddit and advice columns, wrote "rules of thumb" that apply ("It's rude to cancel plans last minute"), and estimated how many people would agree with each, from "practically no one" to "practically everyone".

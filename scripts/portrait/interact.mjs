@@ -69,20 +69,11 @@ await run("portrait theme", async () => { await p.click(".pt-nav .pt-chipnav.dar
 await run("portrait to atlas", async () => { await p.click(".pt-nav >> text=Atlas"); await p.waitForURL(/atlas/); await sleep(1200); });
 
 // ---- atlas ----
-await run("atlas meme follows the cursor", async () => {
-  if (width < 800) return; // off on touch screens
-  const card = await p.$(".ex-grid .ex-card");
-  const bb = await card.boundingBox();
-  await p.mouse.move(bb.x + 40, bb.y + 60); await p.mouse.move(bb.x + 120, bb.y + 100, { steps: 5 }); await sleep(500);
-  if (!(await p.$(".ex-follow .ex-memefig"))) throw new Error("no meme next to the cursor");
-  await p.mouse.move(5, 5); await sleep(300);
-  if (await p.$(".ex-follow")) throw new Error("meme stays after leaving the card");
-});
 await run("atlas experiments search", async () => { await p.fill(".ex-search input", "humor"); await sleep(400); if (!(await p.$$(".ex-grid .ex-card")).length) throw new Error("no experiments for humor"); await p.fill(".ex-search input", ""); });
 await run("atlas experiment family facet", async () => { const c = await p.$$(".ex-fams button"); if (c.length > 2) { await c[2].click(); await sleep(300); await c[0].click(); } });
 await run("atlas experiment page", async () => { await p.click(".ex-grid .ex-card"); await p.waitForURL(/\/portrait\/atlas\/[a-z0-9_]+$/); await p.waitForSelector(".ex-result"); await sleep(400); });
 await run("experiment page sections", async () => {
-  for (const sel of [".ex-result", ".ex-take", ".ex-caveats", ".ex-where", ".ex-rows-sec", ".ex-tile"]) if (!(await p.$(sel))) throw new Error(`missing ${sel}`);
+  for (const sel of [".ex-result", ".ex-study", ".ex-take", ".ex-caveats", ".ex-where", ".ex-rows-sec", ".ex-answers"]) if (!(await p.$(sel))) throw new Error(`missing ${sel}`);
 });
 await run("experiment rows paging", async () => {
   await p.waitForSelector(".ex-qs .ex-q", { timeout: 20000 });

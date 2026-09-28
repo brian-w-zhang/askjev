@@ -8,7 +8,7 @@ family: influence
 The same questions were asked with the same suggestion attributed to two different sources: the person asking, and an anonymous crowd ("In a survey, most people answered..."). Comparing the two separates deference to the user from deference to anyone who sounds sure.
 
 ## The people and the data
-Jev against itself.
+Jev against itself. The questions are four-option knowledge questions with an answer key, the same ones used in "Does Jev follow the crowd on facts?": grade-school science (ARC), crowdsourced science exams (SciQ) and trivia (Open Trivia DB).
 
 ## What Jev was asked
 Each question was asked again with one sentence in front, suggesting the right answer or a randomly chosen wrong one:

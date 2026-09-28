@@ -8,7 +8,7 @@ Automated essay scoring is used on children's writing at scale, for practice tes
 That combination matters, because the students still learning to spell are exactly the ones a harsh grader would mark down. So Jev was compared with human graders on three separate parts of the same rubric.
 
 ## The people and the data
-Essays from the Hewlett Foundation's public essay-scoring competition (ASAP, on Kaggle): 1,569 stories by seventh graders about a time they were patient, each scored by two trained human graders on four traits from 0 to 3. Three traits are used (ideas, organization, and conventions: spelling, grammar, capitalization and punctuation), and only the scores both graders agreed on: 700 essays per trait.
+The essays come from the Hewlett Foundation's public essay-scoring competition (ASAP, on Kaggle), set 7: 1,569 stories by seventh graders about a time they were patient. Two trained human graders scored each one on four traits from 0 to 3. Three of those traits are used here: ideas, organization, and conventions (spelling, grammar, capitalization and punctuation).
 
 ## What Jev was asked
 One question per essay and trait, with the graders' rubric rewritten as four described levels. For conventions:

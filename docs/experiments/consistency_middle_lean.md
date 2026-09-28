@@ -6,7 +6,7 @@ family: consistency
 Anyone who has written a survey knows the middle option: "neither agree nor disagree", "sometimes", "it's fine". Jev picks it a lot, which the portrait already showed. The open question is whether that's a habit with every scale, like a person ticking the middle box to get through a form, or whether it depends on the subject. If it follows the subject, it's a stance, not a tic.
 
 ## The people and the data
-
+Each is sorted by the kind of topic it sits under on the map, from taste and personality to values, perception and social norms.
 
 ## What Jev was asked
 Rating questions with described levels, for example:

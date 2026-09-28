@@ -19,7 +19,7 @@ Every game one at a time, with five answers describing what you'd do:
 Each was also asked with the answers reversed, and the two averaged. The 24 top-rated games then played a round-robin final: 276 games of "Which board game would you rather play?", each asked with the names in both orders.
 
 ## How it was measured
-A game's rating is where Jev's answer lands on the five levels (0 to 4). In the final, each matchup counts Jev's probability of picking the winner, so a lopsided game counts as nearly a whole win and a close one as about half; the order comes from a standard head-to-head ranking model (Bradley-Terry).
+A game's rating is where Jev's answer lands on the five levels (0 to 4). In the final, each game gives each side Jev's probability of picking it, so a lopsided game counts as nearly a whole win and a close one as about half; the order comes from a standard head-to-head ranking model (Bradley-Terry).
 
 ## Caveats
 - **A game with nobody at the table.** The question asks how much "you" would enjoy playing, with no group, no rules explanation and no table time. Famous, easy-to-picture games like Codenames and Carcassonne, which Jev has read the most about, likely gain from that.

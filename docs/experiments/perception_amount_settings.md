@@ -3,10 +3,10 @@
 family: perception
 
 ## Why ask this
-"A few people came to my party" and "a few people were at the stadium" don't mean the same number. You'd expect a reader to scale vague amounts to what's being counted: many grains of rice is far more than many years. Whether a model does the same is a quick test of whether it reads the words or the situation they describe.
+"A few people came to my party" and "a few people were at the stadium" don't mean the same number. Readers scale vague amounts to what's being counted: many grains of rice is far more than many years. Whether a model does the same is a quick test of whether it reads the words or the situation they describe.
 
 ## The people and the data
-This experiment has no human data; it compares Jev with itself across settings. The three words ("a few", "several", "many") come from the Reddit survey behind "How many is 'a few'?"; the five settings were written for this project: people at a dinner party, people at a stadium, grains of rice on the floor, emails in a day, and years ago.
+This experiment has no human data; it compares Jev with itself across settings. The three words ("a few", "several", "many") and the 15 answer ranges come from the Reddit survey behind "How many is 'a few'?". The five settings were written for this project and chosen to differ in scale by orders of magnitude: people at a dinner party, people at a stadium when the gates opened, grains of rice that fell on the floor, emails in a day, and years ago.
 
 ## What Jev was asked
 Each word in each setting, answered with the same 15 ranges as the survey question:

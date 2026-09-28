@@ -3,7 +3,7 @@
 family: taste
 
 ## Why ask this
-Everyone has a food personality: sweet tooth, cheese person, spice seeker, picky eater. Food is also where a model has the least first-hand experience of anything, so its "favorites" show purely what it has absorbed from how people write about eating.
+Everyone has a food personality: sweet tooth, cheese person, spice seeker, picky eater. A model has never tasted anything, so its "favorites" can only come from what it has absorbed from how people write about eating: menus, recipes, reviews and dares.
 
 ## The people and the data
 No people here: Jev against its own opinions.

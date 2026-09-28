@@ -10,6 +10,8 @@ Stack Overflow's yearly developer survey records those shifts. Comparing Jev wit
 ## The people and the data
 The **Stack Overflow Developer Survey** asks developers which technologies they've worked with and which they want to keep working with. Head-to-heads were built from three years (2023, 2024, 2025): among respondents who had used both tools in a pair and wanted to keep using exactly one, which one did they pick? The focus is the 49 pairs where that preference moved by 20 points or more between 2023 and 2025, with at least 50 such respondents in both years.
 
+The surveys themselves are big (89,184 responses in 2023, 65,437 in 2024, 49,191 in 2025), but each pair rests only on the people who had used both tools, from about 50 to a few hundred.
+
 ## What Jev was asked
 One question per pair, the way a developer might be asked:
 

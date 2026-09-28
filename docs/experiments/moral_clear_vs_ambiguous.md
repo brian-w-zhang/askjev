@@ -10,7 +10,9 @@ This experiment checks whether Jev's certainty rises and falls with human agreem
 ## The people and the data
 Two sets of moral choices:
 - **Scruples Dilemmas** (Lourie, Le Bras and Choi, Allen Institute for AI, 2021): pairs of real actions taken from titles of r/AmItheAsshole posts, each judged by ten crowd workers on Amazon Mechanical Turk, who picked which of the two is less ethical.
-- The clear ones were generated with GPT-4 and then checked by human annotators; the ambiguous ones start from hand-written scenarios.
+- The clear ones were generated with GPT-4 and then checked by human annotators; the ambiguous ones start from hand-written scenarios. The filter hid 166 of the 1,366 scenarios.
+
+Both sets were already in the project's question tree, so this experiment needed no new questions.
 
 ## What Jev was asked
 For Scruples, the same question the crowd workers answered:

@@ -10,7 +10,9 @@ A language model learns words only from text. Where its ratings match people's, 
 ## The people and the data
 Two standard datasets:
 - **The Glasgow Norms** (Scott and colleagues, 2019): 5,553 English words, each rated on nine dimensions by native English speakers from the University of Glasgow community, about 33 raters per word. The experiment uses six: pleasantness, excitement (arousal), age of learning, familiarity, size and imageability.
-- **Brysbaert, Warriner and Kuperman's concreteness ratings** (2014), covering 39,954 English words on a scale from abstract to concrete.
+- **Brysbaert, Warriner and Kuperman's concreteness ratings** (2014), covering 39,954 English words on a 1-to-5 scale from abstract to concrete, rated by US participants recruited online through Amazon Mechanical Turk.
+
+The Glasgow raters used 1-to-9 or 1-to-7 scales, depending on the dimension.
 
 ## What Jev was asked
 One question per word and dimension, with five described answers written for this project, for example:

@@ -29,7 +29,7 @@
 }
 .pt .ex-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; margin-top: 14px; }
 .pt .ex-card { display: flex; flex-direction: column; gap: 8px; padding: 12px 14px; background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line); text-decoration: none !important; min-width: 0; }
-.pt .ex-card:hover { box-shadow: 0 0 0 1px var(--w-line), 4px 4px 0 var(--jev); }
+.pt .ex-card:hover, .pt .ex-card:focus-visible { box-shadow: 0 0 0 1px var(--w-line), 4px 4px 0 var(--jev); }
 .pt .ex-card.o-atlas { opacity: 0.92; }
 .pt .ex-card.o-cut, .pt .ex-card.o-rework { opacity: 0.7; }
 .pt .ex-top { display: flex; justify-content: space-between; gap: 8px; font-family: var(--mono); font-size: 10.5px; color: var(--w-fg-2); text-transform: lowercase; }
@@ -132,7 +132,7 @@
 
 /* ---------- experiment page ---------- */
 .pt .ex-page { padding-top: 40px; }
-.pt .ex-page > * { max-width: 1080px; margin-left: auto; margin-right: auto; }
+.pt .ex-page > * { max-width: 860px; margin-left: auto; margin-right: auto; }
 .pt .ex-crumb { font-family: var(--mono); font-size: 11.5px; color: var(--fg-2); margin: 0 auto 10px; }
 .pt .ex-head h1 { margin: 10px 0 8px; font-size: clamp(28px, 4vw, 44px); font-weight: 500; letter-spacing: -0.03em; line-height: 1.05; }
 .pt .ex-sub { margin: 0 0 18px; max-width: 46em; font-size: 17px; line-height: 1.45; color: var(--fg-2); }
@@ -221,7 +221,7 @@
 .pt .ex-meme figcaption { padding: 6px 10px 8px; font-size: 12px; color: var(--w-fg-2); }
 .pt .ex-note { margin: 0; font-size: 13.5px; color: var(--w-fg); padding: 8px 10px; background: var(--w-sub); }
 .pt .ex-note b { font-weight: 600; }
-.pt .ex-study { max-width: 44em; }
+.pt .ex-study { max-width: 860px; }
 .pt .ex-sec { margin: 0 0 26px; }
 .pt .ex-sec h2 { margin: 0 0 8px; font-size: 21px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.2; font-family: var(--sans); text-transform: none; color: var(--fg); }
 .pt .ex-sec p, .pt .ex-sec li { font-size: 16px; line-height: 1.6; }
@@ -278,9 +278,6 @@
 .pt .ex-memefig .lab { position: absolute; transform: translate(-50%, -50%); text-align: center; font-family: Impact, "Anton", "Arial Black", sans-serif; font-size: calc(clamp(10px, 6.2cqw, 22px) * var(--s, 1)); line-height: 1.05; letter-spacing: 0.01em; overflow-wrap: anywhere; }
 .pt .ex-memefig .lab-outline { color: #fff; text-transform: uppercase; text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000, 0 2px 0 #000; }
 .pt .ex-memefig .lab-ink { color: #111; font-family: var(--sans); font-weight: 600; text-transform: none; font-size: calc(clamp(9px, 5cqw, 18px) * var(--s, 1)); }
-.pt .ex-follow { position: fixed; left: 0; top: 0; z-index: 60; width: 240px; pointer-events: none; will-change: transform; }
-.pt .ex-follow .ex-memefig { box-shadow: 0 0 0 1px var(--w-line), 4px 4px 0 var(--jev), 0 12px 30px rgba(0, 0, 0, 0.25); }
-.pt .ex-follow .ex-memefig .cap { font-size: 12px; padding: 6px 8px; }
 .pt .ex-xy:not(.mini) { max-width: 760px; }
 .pt .ex-xy .tk { font-size: 10px; }
 .pt .ex-xy .lab { font-size: 10.5px; }
@@ -293,8 +290,6 @@
 }
 
 /* caveats and Jev's take as full-width blocks after the write-up (no sticky side column) */
-.pt .ex-page > .ex-caveats, .pt .ex-page > .ex-take { margin: 26px auto 0; }
-.pt .ex-page > .ex-caveats ul { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px 24px; }
 .pt .ex-take .dim { margin: -4px 0 12px; font-size: 13px; }
 .pt .ex-tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
 @media (max-width: 700px) { .pt .ex-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
@@ -313,3 +308,36 @@
 .pt .ex-tile .meter small:last-of-type { grid-column: 4 / 6; text-align: right; }
 .pt .ex-tile.verdict .a { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
 .pt .ex-memefig .lab.at-top, .pt .ex-memefig .lab.at-bottom { transform: translateX(-50%); }
+.pt .ex-keep { display: inline-block; padding: 0 6px; font-family: var(--mono); font-size: 10.5px; line-height: 18px; background: var(--w-sub); color: var(--w-fg); }
+.pt .ex-keep.keep { background: var(--jev); color: #fff; }
+.pt .ex-keep em { font-style: normal; opacity: 0.8; margin-left: 2px; }
+
+/* page order (docs/17): result, in short, findings, caveats beside Jev's answers, why, how it was done */
+.pt .ex-page > * + * { margin-top: 26px; }
+.pt .ex-short { padding: 14px 18px; background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line); }
+.pt .ex-short h2 { margin: 0 0 8px; font-size: 13px; font-family: var(--mono); font-weight: 400; text-transform: lowercase; color: var(--w-fg-2); }
+.pt .ex-short ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; }
+.pt .ex-short li { font-size: 16.5px; line-height: 1.45; }
+.pt .ex-judge { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+.pt .ex-judge > section { margin: 0; }
+.pt .ex-keepline { margin: 0 0 10px; display: flex; gap: 10px; align-items: baseline; }
+.pt .ex-keepline b { padding: 1px 8px; font-size: 14px; font-weight: 600; background: var(--w-sub); }
+.pt .ex-keepline.keep b { background: var(--jev); color: #fff; }
+.pt .ex-keepline span { font-family: var(--mono); font-size: 11px; color: var(--w-fg-2); }
+.pt .ex-answers { margin: 0; display: grid; gap: 8px; }
+.pt .ex-answers > div { display: grid; gap: 2px; padding-top: 8px; border-top: 1px solid var(--w-grid); }
+.pt .ex-answers dt { font-family: var(--mono); font-size: 10.5px; color: var(--w-fg-2); text-transform: lowercase; }
+.pt .ex-answers dd { margin: 0; display: flex; gap: 10px; align-items: center; justify-content: space-between; font-size: 14px; }
+.pt .ex-answers dd em { font-style: normal; font-family: var(--mono); font-size: 11px; color: var(--w-fg-2); }
+.pt .ex-answers .meter { display: inline-grid; grid-template-columns: repeat(5, 12px); gap: 2px; flex: none; }
+.pt .ex-answers .meter i { height: 8px; box-shadow: inset 0 0 0 1px var(--w-grid); }
+.pt .ex-answers .meter i.on { background: var(--jev); box-shadow: none; }
+.pt .ex-sec.s-how h3 { margin: 16px 0 4px; font-size: 16px; font-weight: 600; }
+.pt .ex-sec.s-how .ex-how:first-of-type h3 { margin-top: 4px; }
+@media (max-width: 800px) { .pt .ex-judge { grid-template-columns: 1fr; } }
+.pt .ex-q a.qt { display: block; margin: 0 0 6px; color: inherit; text-decoration: none; }
+.pt .ex-q a.qt:hover { text-decoration: underline; text-decoration-color: var(--jev); text-underline-offset: 3px; }
+.pt .ex-q a.qt .go { color: var(--jev); font-size: 0.85em; }
+.pt .ex-wbar { gap: 8px; }
+.pt .ex-wbar span:first-child { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pt .ex-wbar span:last-child { flex: none; }

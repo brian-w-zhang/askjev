@@ -6,7 +6,7 @@ family: taste
 Most of what Jev says about taste can only be checked against itself. Films are different: MovieLens, a recommendation site run by the GroupLens research lab, has millions of real ratings.
 
 ## The people and the data
-MovieLens users: people who signed up to a free film-recommendation site and rated films they'd seen, between 1995 and 2023. For each film, the experiment uses the distribution of its ratings, turned into the same five levels Jev answers on.
+For each film, the experiment uses the distribution of its ratings, binned into the same five levels Jev answers on.
 
 ## What Jev was asked
 Every film one at a time:

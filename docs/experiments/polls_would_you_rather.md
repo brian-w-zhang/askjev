@@ -8,7 +8,7 @@ Would-you-rather questions are pure preference: there's no right answer, only wh
 Where Jev agrees with a million people, it has absorbed ordinary taste. Where it confidently disagrees, the disagreement is a small, plain look at its quirks.
 
 ## The people and the data
-
+Would-you-rather questions from either.io, a game site where visitors vote on one dilemma after another, taken from a public scrape of the site published on Kaggle. About 1,140 questions have at least 1,000 votes; 1,000 of them were asked, and 750 remain after a content filter hid sexual and other sensitive items.
 
 ## What Jev was asked
 Each dilemma exactly as the site words its two options:

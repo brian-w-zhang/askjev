@@ -8,7 +8,7 @@ Psychologists who study morality find that people care about more than harm. **M
 A model that judges scenes only through harm will seem to agree with people on the obvious cases and quietly shrug at the others. Rating the same short scenes people rated shows which concerns Jev shares and which it discounts.
 
 ## The people and the data
-The scenes are the **Moral Foundations Vignettes** (Clifford, Iyengar, Cabeza and Sinnott-Armstrong, 2015): 132 one-sentence scenes of someone breaking a norm, each written to target one foundation, plus harmless but odd scenes as a control. The ratings come from a later Dutch validation (Hopp, Jargow, Kouwen and Bakker, 2024), whose participants rated how wrong each scene is on a five-point scale. The study uses the 93 scenes that have those item-level ratings, 15 to 31 raters each.
+The scenes are the **Moral Foundations Vignettes** (Clifford, Iyengar, Cabeza and Sinnott-Armstrong, 2015): 132 one-sentence scenes of someone breaking a norm, each written to target one foundation, plus harmless but odd scenes as a control. The ratings come from a later Dutch validation (Hopp, Jargow, Kouwen and Bakker, 2024), whose participants, Dutch adults recruited online through Prolific, rated how wrong each scene is on a five-point scale from "not at all wrong" to "extremely wrong". This project uses the 93 scenes that have those item-level ratings, 15 to 31 raters each; some kinds of wrongdoing are thinly covered (11 disloyalty scenes, 4 impurity scenes).
 
 ## What Jev was asked
 Each scene was one question with five answer levels written as situations:

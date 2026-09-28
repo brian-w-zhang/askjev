@@ -3,12 +3,12 @@
 family: society
 
 ## Why ask this
-The second classic study of job prestige asked Canadians in 1965 to rate the standing of about a hundred occupations. Paired with census records of each job's pay, schooling and share of women, it shows what a mid-century public's ladder of respectable work was built on.
+The second classic study of job prestige, after an American one in 1947, asked Canadians in 1965 to rate the standing of about a hundred occupations. Paired with census records of each job's pay, schooling and share of women, it shows what a mid-century public's ladder of respectable work was built on.
 
 Comparing Jev with it shows two things: which jobs Jev has promoted or demoted relative to that public, and whether its sense of standing rests on money, on education, or on something else.
 
 ## The people and the data
-**Pineo and Porter's** survey of Canadians (1965) gave each of 102 occupations a mean prestige score.
+**Pineo and Porter's** national survey of Canadian adults (1965, published 1967) gave each of 102 occupations a mean prestige score. The version used here, John Fox's Prestige data for the R statistics language, adds 1971 census figures for each occupation: average income, average years of education, and the share of women.
 
 ## What Jev was asked
 > How would you rate the general standing of firefighters as a job?

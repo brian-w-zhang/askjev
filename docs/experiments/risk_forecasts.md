@@ -8,7 +8,7 @@ A forecast is only useful if its numbers mean something. A forecaster can also b
 Models are increasingly asked "how likely is it that…". TypeSafe publishes no calibration numbers for Jev, so this checks both halves against a real betting crowd.
 
 ## The people and the data
-For each market, the price is recorded at the midpoint of its life, as the crowd's forecast, and how it resolved.
+For each market, the crowd's forecast is its price just before the midpoint of its life (the probability after the last bet before then), set against how it resolved.
 
 ## What Jev was asked
 Each market's question, word for word, as a yes/no question:

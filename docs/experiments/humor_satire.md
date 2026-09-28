@@ -6,7 +6,7 @@ family: humor
 Satire works by reporting the absurd with a straight face. A reader who takes words at face value will miss some of it, and the headlines that fool them show which jokes are too deadpan to spot without knowing the source. It's also a practical skill: a model that summarizes the news should know when a story is a joke.
 
 ## The people and the data
-The News Headlines Dataset for Sarcasm Detection (Misra, 2019) pairs headlines from The Onion, a satirical news site, with headlines from HuffPost, a real news site. There are no human judges: the label is simply where the headline was published.
+The News Headlines Dataset for Sarcasm Detection (Misra, 2019) pairs headlines from The Onion, a satirical news site, with headlines from HuffPost, a real news site. There are no human judges: the label is simply where the headline was published. The headlines date from roughly 2014 to 2018 and were released lowercased.
 
 ## What Jev was asked
 Each headline was a yes/no question, with both answers described:

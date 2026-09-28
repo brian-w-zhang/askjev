@@ -8,7 +8,7 @@ family: perception
 Amount words are also a window into how a model learned language: from the dictionary, or from how people actually talk.
 
 ## The people and the data
-The same 2015 Reddit survey behind "What 'probably' means to Jev" (46 people on r/samplesize, public on GitHub under an MIT license) also asked what number people would assign to ten amount phrases. Nine of them are used here.
+The same 2015 Reddit survey behind "What 'probably' means to Jev" (run by the user zonination: 46 people on r/samplesize, with the answers public on GitHub under an MIT license) also asked what number people would assign to ten amount phrases. Nine of them are used here; the tenth, "fractions of", means less than one and doesn't fit answers that start at 1.
 
 ## What Jev was asked
 The survey's own question, with 15 answers from 1 to more than 1,000, finer at the bottom:

@@ -8,7 +8,7 @@ Most of reading a story is filling in what isn't said. "Joan lived next to a dum
 A reader that often answers "no clear emotion" is being literal where people infer. That's fine in a contract and a problem in a conversation, where most feelings are implied.
 
 ## The people and the data
-**StoryCommonsense** (Rashkin and colleagues, 2018): five-sentence everyday stories, annotated line by line for each character's feelings by three crowd workers each, using Plutchik's eight basic emotions (joy, trust, fear, surprise, sadness, disgust, anger, anticipation) plus "no clear emotion".
+**StoryCommonsense** (Rashkin and colleagues, 2018): five-sentence everyday stories, annotated line by line for each character's feelings by three paid crowd workers each on Amazon Mechanical Turk, using Plutchik's eight basic emotions (joy, trust, fear, surprise, sadness, disgust, anger, anticipation) plus "no clear emotion".
 
 ## What Jev was asked
 The story up to the line in question, and the nine answers:

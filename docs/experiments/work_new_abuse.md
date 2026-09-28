@@ -8,7 +8,7 @@ Trust-and-safety filtering is one of the first jobs anyone gives a fast classifi
 ## The people and the data
 - **Spam and phishing email**, **SMS spam** and **YouTube comment spam**, from classic spam corpora.
 - **Personal data:** synthetic English texts with planted identifying details (names, emails, account numbers).
-- **Jailbreak prompts** collected in the wild from communities that share them, against ordinary prompts.
+- **Jailbreak prompts** collected in the wild from online communities that share them, against ordinary prompts.
 - **Fake job ads** from EMSCAD, 17,880 real job postings of which 866 were fraudulent.
 
 ## What Jev was asked

@@ -6,7 +6,7 @@ family: personality
 A language model is made of the internet: forums, fan wikis, technical manuals, arguments about starships. If any personality test should call it a nerd, it's this one. Whether it agrees is a small, fun check on how it sees itself, and on whether it describes itself through what it knows or through what it does.
 
 ## The people and the data
-The Nerdy Personality Attributes Scale (NPAS) was built by Open Psychometrics from statements that separate self-described nerds from everyone else.
+The Nerdy Personality Attributes Scale (NPAS) was built by Open Psychometrics from statements that separate self-described nerds from everyone else. The takers chose to take a nerd test, so they are a nerdier crowd than the general public.
 
 ## What Jev was asked
 Every statement, word for word:

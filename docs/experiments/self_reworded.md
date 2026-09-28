@@ -6,7 +6,7 @@ family: self
 People rarely ask the same thing the same way twice. Asking a model the identical question again moves its answer by about a point (see "Ask Jev the same thing twice"). Rewording is the realistic test: how much of an answer is about the question, and how much is about its wording?
 
 ## The people and the data
-There are no people here. When the project removed duplicate questions, it found pairs that ask the same thing in different words and linked them.
+There are no people here. When the project removed duplicate questions, it found pairs that ask the same thing in different words (matched automatically by similar meaning, then confirmed by Jev) and linked them.
 
 ## What Jev was asked
 Each question on its own, never side by side, for example:

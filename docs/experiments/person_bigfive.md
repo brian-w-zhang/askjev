@@ -8,7 +8,7 @@ The Big Five (openness, conscientiousness, extraversion, agreeableness and neuro
 That makes it the cleanest way to ask the question behind the whole portrait: if Jev took the same test as everyone else, where would it land? And does it see itself the way it sees everyone else?
 
 ## The people and the data
-The test is the 50-item Big-Five Factor Markers from the International Personality Item Pool, a set of public domain personality statements. The Open Psychometrics website published every response it collected from 2016 to 2018. The study keeps the 603,322 people who answered all 50 statements, one record per internet address, and score them exactly as the test says: ten statements per trait, some counted in reverse.
+The test is the 50-item Big-Five Factor Markers from the International Personality Item Pool, a set of public domain personality statements. The Open Psychometrics website published every response it collected from 2016 to 2018. The project keeps the 603,322 people who answered all 50 statements, one record per internet address, and scores them exactly as the test says: ten statements per trait, some counted in reverse. These are people who chose to take a free personality test online, not a random sample of anyone.
 
 ## What Jev was asked
 All 50 statements, one question each, word for word from the test:

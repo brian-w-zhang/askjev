@@ -8,7 +8,7 @@ Some words are funny on their own. "Nincompoop", "gaggle", "tinkle" make people 
 Jev has trouble telling which joke or cartoon caption people find funnier (see "Jev can't tell which New Yorker captions are funny"). Single words strip humor down to sound and meaning. If Jev can tell a funny word, the problem with jokes lies elsewhere, in timing, context or surprise.
 
 ## The people and the data
-Engelthaler and Hills (2018) asked people to rate 4,997 English words for how funny they are, on a scale from 1 (humorless) to 5 (humorous), about 35 raters per word.
+Engelthaler and Hills (2018) asked people to rate 4,997 English words for how funny they are, on a scale from 1 (humorless) to 5 (humorous), about 35 US adults per word.
 
 ## What Jev was asked
 One question per word, with five described answers written for this project:
@@ -21,7 +21,7 @@ One question per word, with five described answers written for this project:
 Each was also asked with the levels reversed (averaged) and for "most people".
 
 ## How it was measured
-The words are ranked by Jev's answer and by people's average and the rankings compared (a rank correlation: 1 means the same order), then list the words where the two rankings differ most.
+The words are ranked by Jev's answer and by people's average and the rankings compared (a rank correlation: 1 means the same order), and the analysis lists the words where the two rankings differ most.
 
 ## Caveats
 - **Averages only.** The study published each word's average rating and its spread, not every answer, so the comparison is of rankings, not how often each rating was given.

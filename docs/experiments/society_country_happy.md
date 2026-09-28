@@ -8,7 +8,7 @@ In most countries, most people tell surveyors they are at least "quite happy", i
 A model's guess about how happy people are in a place reveals its mental picture of that place. Guessing low everywhere, or assuming misery wherever it assumes poverty or conflict, would color everything it writes about the world's people.
 
 ## The people and the data
-The **World Values Survey** and the **European Values Study** interview representative samples of adults in dozens of countries every few years. One question asks: taking all things together, would you say you are very happy, quite happy, not very happy or not at all happy? This experiment uses the share saying very or quite happy, as compiled by Our World in Data, at each country's latest survey since 2010: 109 countries.
+The **World Values Survey** and the **European Values Study** interview representative samples of adults in dozens of countries every few years. One question asks: taking all things together, would you say you are very happy, quite happy, not very happy or not at all happy? This experiment uses the share saying very or quite happy, as compiled by Our World in Data, at each country's latest survey since 2010: 109 countries, surveyed in different years between 2010 and 2023.
 
 ## What Jev was asked
 > In the 2022 World Values Survey or European Values Study in Lebanon, what share of people said they were "very

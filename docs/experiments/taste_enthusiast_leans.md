@@ -6,7 +6,7 @@ family: taste
 Enthusiast communities have tastes that outsiders don't share: board-game hobbyists chase the newest designs, beer reviewers prize strength and intensity. If Jev doesn't lean the same way, it shows which kind of judge it is: a hobbyist or a well-read outsider.
 
 ## The people and the data
-BoardGameGeek users, BeerAdvocate reviewers and MovieLens users, via public datasets of their ratings. For each pair of items, the audience's pick is the one most people who rated both preferred. Each item's release year is known (from its title), its number of ratings, and each beer's alcohol by volume, so it's possible to check how often each side picks the older game, the more-rated game or the weaker beer.
+Three enthusiast audiences, via public datasets of their ratings: BoardGameGeek users for board games, BeerAdvocate reviewers for beers, and MovieLens users for films as a control. For each pair of items, the audience's pick is the one preferred by most people who rated both. Games and films carry their release year in their names, every item has a count of ratings, and every beer has its alcohol by volume, so it's possible to check how often each side picks the older game, the more-rated game or the weaker beer.
 
 ## What Jev was asked
 Each pair as a simple choice:

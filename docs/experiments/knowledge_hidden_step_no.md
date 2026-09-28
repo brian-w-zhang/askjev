@@ -6,7 +6,7 @@ family: knowledge
 Some yes/no questions can be answered by recalling one fact ("Is East Timor the same as Timor-Leste?"). Others need a chain the question doesn't spell out ("Is chaff produced by hydropower?" needs knowing what chaff is and where it comes from). When the chain gets hard, a model can guess, or it can fall back on one answer. Which way it falls back is a habit worth knowing.
 
 ## The people and the data
-StrategyQA (Geva et al. 2021; MIT) is 2,290 yes/no questions written so that each needs an implicit chain of facts; 1,923 are used here. For comparison, BoolQ and Natural Questions are yes/no questions about a single fact.
+No people here; the answer keys are the reference. The main set is StrategyQA (Geva and colleagues, 2021; MIT license): 2,290 yes/no questions written so that each needs an implicit chain of facts, of which 1,923 are used.
 
 ## What Jev was asked
 Each as a single yes/no question:

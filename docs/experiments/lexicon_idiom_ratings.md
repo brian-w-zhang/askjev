@@ -8,7 +8,7 @@ People read idioms using two quick judgments. Is this a phrase I know? And could
 A model that misjudges which idioms are familiar will use rare ones as if everyone knows them, or explain common ones needlessly. And one that misjudges literal plausibility may read a figure of speech too literally, or miss a literal reading.
 
 ## The people and the data
-
+The ratings come from **Bulkes and Tanner (2017)**, who normed 870 American English idioms with about 100 US adults per idiom and per rating: how familiar each idiom is, and how plausible it is taken literally, each on a 1-to-5 scale.
 
 ## What Jev was asked
 Two questions per idiom, each with five described levels:

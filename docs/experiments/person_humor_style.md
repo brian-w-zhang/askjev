@@ -6,7 +6,7 @@ family: personality
 The Humor Styles Questionnaire splits how people use jokes into four styles: affiliative (joking to connect with people), self-enhancing (keeping a humorous outlook to cope), aggressive (teasing, mockery) and self-defeating (making yourself the butt of the joke). It pairs with the humor experiments, where Jev struggles to tell which joke people found funnier: here, the question is how it describes its own sense of humor.
 
 ## The people and the data
-
+Open Psychometrics, a website of free personality tests, runs it online and publishes the anonymous answers.
 
 ## What Jev was asked
 Every statement, word for word, with the test's own answers:

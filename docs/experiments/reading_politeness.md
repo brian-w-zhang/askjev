@@ -6,7 +6,7 @@ family: reading
 Tone is a large part of how people react to a message. A request can be granted or refused on its phrasing alone. A model that writes, rewrites and summarizes messages all day should hear politeness the way people do: the "please" and "thanks" that soften, the direct "you" and bare questions that don't.
 
 ## The people and the data
-The Stanford Politeness Corpus (Danescu-Niculescu-Mizil and colleagues, 2013) collected requests Wikipedia editors wrote to each other on their talk pages and had five crowd workers on Amazon Mechanical Turk rate each one, from very impolite (1) to very polite (25). The experiment took 500 of the 4,353 rated requests, 100 from each fifth of the politeness range, so polite and rude requests are equally represented.
+The Stanford Politeness Corpus (Danescu-Niculescu-Mizil and colleagues, 2013) collected requests Wikipedia editors wrote to each other on their talk pages and had five US crowd workers on Amazon Mechanical Turk rate each one, around 2012, on a slider from very impolite (1) to very polite (25). The experiment took 500 of the 4,353 rated requests, 100 from each fifth of the politeness range, so polite and rude requests are equally represented.
 
 ## What Jev was asked
 Each request on its own, with five described levels:

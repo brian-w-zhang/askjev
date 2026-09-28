@@ -6,7 +6,7 @@ family: knowledge
 Numbers about food and animals are everyday knowledge: which has more protein, which animal lives longer. A model might know the headline numbers (calories, protein) and be vague about the rest (minerals, vitamins). Holding the comparison easy (one value at least twice the other) isolates which kinds of numbers it has actually absorbed.
 
 ## The people and the data
-No people; the answers come from two public databases. USDA FoodData Central (public domain) gives nutrients per 100 grams for thousands of foods; AnAge (CC BY 3.0) gives life-history traits for thousands of animal species: maximum lifespan, gestation, incubation, age at maturity, litter size.
+No people; the answers come from two public databases. USDA FoodData Central (CC0) gives 13 nutrients per 100 grams for thousands of foods; AnAge (CC BY 3.0) gives five life-history traits for thousands of animal species: maximum lifespan, gestation, incubation, age at maturity, litter size.
 
 ## What Jev was asked
 Two-option questions:

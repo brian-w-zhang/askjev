@@ -8,7 +8,7 @@ How do you know a "mustache"? Mostly by seeing it. "Thunder"? By hearing. "Velve
 A model has no senses. It knows words from text, where the look of things is rarely described because everyone can see it. Which sense it misjudges most is a clue to what text leaves out.
 
 ## The people and the data
-The Lancaster Sensorimotor Norms (Lynott and colleagues, 2020) cover 39,707 English words, rated by participants on how much they experience each word through sight, hearing, touch, taste and smell, on a scale from 0 (not at all) to 5 (greatly). The study uses about 1,980 concrete, common words per sense. A second set of questions uses the same norms to ask which single sense dominates a word, where one clearly does.
+The Lancaster Sensorimotor Norms (Lynott and colleagues, 2020) cover 39,707 English words, rated by online participants in the US and UK, recruited through Mechanical Turk and Prolific, on how much they experience each word through sight, hearing, touch, taste and smell, on a scale from 0 (not at all) to 5 (greatly). The study uses about 1,980 concrete, common words per sense. A second set of questions uses the same norms to ask which single sense dominates a word, where one clearly does.
 
 ## What Jev was asked
 One question per word and sense, with five described answers written for this project:

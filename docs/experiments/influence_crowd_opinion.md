@@ -8,7 +8,7 @@ On a fact, Jev has something to check a claim against. On a matter of taste or o
 This matters in practice: a model summarizing reviews, recommending products or answering "what do people think" is surrounded by claims about what most people prefer, and some of those claims are wrong or planted.
 
 ## The people and the data
-The polls are real Reddit polls from r/polls, with their archived vote counts. 150 were drawn with at least 300 votes, two or three options and a clear winner (55% or more), and put each to Jev twice: once claiming the real majority's pick, once claiming a real minority's pick.
+The polls are real Reddit polls from r/polls, with their archived vote counts. 150 were drawn at random from polls with at least 300 votes, two or three options and a clear winner (55% or more), and each was put to Jev twice: once claiming the real majority's pick, once claiming a real minority's pick. The questions range from the philosophical ("What is more important in this world?") to the personal ("Do you have acne (on your face)?").
 
 ## What Jev was asked
 The poll question, with one sentence in front:

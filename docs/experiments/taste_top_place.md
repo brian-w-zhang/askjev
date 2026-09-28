@@ -6,7 +6,7 @@ family: taste
 A dream destination says what someone values: nature or cities, adventure or ease, famous or undiscovered. For a model, it also shows how its sense of a place is built from travel writing, photos described in text, and news.
 
 ## The people and the data
-No people here: Jev against its own opinions.
+No people here: Jev against its own opinions. The list mixes famous natural wonders and landmarks with ordinary cities, festivals and places better known for conflict.
 
 ## What Jev was asked
 Every place one at a time, with five answers describing what you'd do:

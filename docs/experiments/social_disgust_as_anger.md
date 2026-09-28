@@ -8,7 +8,7 @@ The ISEAR survey is psychology's classic record of what makes people feel each o
 Disgust is the telling one. People feel it at spoiled food, but also at other people's behavior, and moral disgust sits close to anger. A reader that turns disgust into anger would read contempt as rage.
 
 ## The people and the data
-**ISEAR** (International Survey on Emotion Antecedents and Reactions, Scherer and Wallbott): about 3,000 students in 37 countries, in the 1990s, each described a situation in which they felt each of the seven emotions.
+**ISEAR** (International Survey on Emotion Antecedents and Reactions, Scherer and Wallbott, 1994): in the 1990s, about 3,000 students in 37 countries each described a situation in which they had felt each of the seven emotions, often in a single line and many later translated into English.
 
 ## What Jev was asked
 The story, and the seven emotions:

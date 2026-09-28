@@ -10,7 +10,7 @@ She has a true belief with a good reason, which is how philosophers once defined
 ## The people and the data
 There are eight short stories. One is a published case from the experimental-philosophy literature: Bob thinks his friend Jill drives an American car because she has long driven a Buick; the Buick was stolen, and she now drives a Pontiac, another American car. He's right, but for the wrong reason. Five are Gettier cases written for this project: a stopped clock, a borrowed car, fake barns, ten coins in a pocket, and a dog that looks like a sheep. Two are controls: a clock that works (clear knowledge) and a clock that's wrong (a false belief).
 
-There's no human split to compare with: the published car case's reported numbers couldn't be verified, so they aren't used. What the literature shows is qualitative: most people, like most philosophers, deny knowledge in these cases.
+There's no human split to compare with: the published car case's reported numbers couldn't be verified, so they aren't used. What the literature offers is qualitative: replications across cultures (Kim and Yuan, 2015; Machery and colleagues, 2017) find that most ordinary people, like most philosophers, deny knowledge in Gettier cases.
 
 ## What Jev was asked
 Each story ended with the same choice:

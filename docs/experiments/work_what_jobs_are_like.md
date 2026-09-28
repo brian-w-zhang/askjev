@@ -8,7 +8,7 @@ People ask models about careers all the time: what's it like to be a nurse, is b
 The US Department of Labor asks workers directly how often they face angry people, deadlines, weather, disease and more. So Jev's picture can be checked against the people doing the jobs.
 
 ## The people and the data
-The comparison is **O*NET Work Context** (version 29.0), part of the US Department of Labor's occupational database. O*NET surveys people currently working in each occupation, asking how often each condition is part of their job, and publishes the share choosing each answer. The experiment used 12 conditions (dealing with angry people, conflict, working in the weather, time pressure, public speaking, email, exposure to disease, sitting, freedom to make decisions, how serious mistakes are, automation, competition) for 46 well-known occupations, from nurses and cashiers to air traffic controllers and roofers. The data are CC BY 4.0.
+The comparison is **O*NET Work Context** (version 29.0), part of the US Department of Labor's occupational database. O*NET surveys people currently working in each occupation in the US, often a few dozen per job, asking how often each condition is part of their job, and publishes the share choosing each answer. The experiment used 12 conditions (dealing with angry people, conflict, working in the weather, time pressure, public speaking, email, exposure to disease, sitting, freedom to make decisions, how serious mistakes are, automation, competition) for 46 well-known occupations, from nurses and cashiers to air traffic controllers and roofers. The data are published under CC BY 4.0.
 
 ## What Jev was asked
 Each pair was one question, with O*NET's own five answers:

@@ -8,7 +8,7 @@ A metaphor works when the describing word captures something that matters about 
 A model that finds every metaphor apt can't help you cut a weak image from your writing, and one that can't tell a metaphor from a literal phrase reads figurative language flatly.
 
 ## The people and the data
-The ratings come from a set of **metaphor norms** published in 2025: 300 two-word expressions, 207 metaphors ("dark thoughts", "acid test") and 93 literal expressions ("fan brush"), each rated for aptness by about 25 people and for familiarity by about 27, on a 1-to-7 scale.
+The ratings come from a set of **metaphor norms** published in 2025: 300 two-word expressions, 207 metaphors ("dark thoughts", "acid test") and 93 literal expressions ("fan brush"), each rated for aptness by about 25 people and for familiarity by about 27, on a 1-to-7 scale, with the data posted on OSF.
 
 ## What Jev was asked
 Two questions per expression, with seven described levels each:

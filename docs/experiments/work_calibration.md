@@ -8,7 +8,7 @@ A model's confidence is only useful if you can take it at face value. If "90% su
 TypeSafe publishes no calibration numbers for Jev. Work tasks with a right answer make it possible to measure it directly, and to compare Jev's two main question types: yes/no checks and picking one option from a list.
 
 ## The people and the data
-There are no people here, only answers. Each dataset's answers come from its creators (annotators, experts, or the original authors).
+There are no people here, only answers with a known right one. Each dataset's answers come from its creators (annotators, experts, or the original authors).
 
 ## What Jev was asked
 Two kinds of questions. A yes/no check, for example:

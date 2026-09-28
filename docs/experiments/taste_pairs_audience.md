@@ -6,7 +6,7 @@ family: taste
 Asking "which would you rather" is the simplest test of taste, and for six catalogs the record shows what thousands of real people chose between the same two items. It also allows a neat comparison: is Jev closer to real audiences when it answers for itself, or when it tries to guess what most people would say?
 
 ## The people and the data
-Six real audiences, each from a public dataset: MovieLens users (films), Goodreads readers (books), BoardGameGeek users (board games), MyAnimeList users (anime), BeerAdvocate reviewers (beers) and Last.fm listeners (music artists). For each pair, the audience's split is the share of people who rated both items and rated each one higher (for Last.fm, who played each one more), with ties split.
+Six real audiences, each from a public dataset: MovieLens users (films, from MovieLens 32M), Goodreads readers (books, from goodbooks-10k), BoardGameGeek users (board games), MyAnimeList users (anime), BeerAdvocate reviewers (beers) and Last.fm listeners (music artists, from Last.fm 360K). For each pair, the audience's split is the share of people who rated both items and rated each one higher (for Last.fm, who played each one more), with ties split. Pairs were drawn within a genre or style, so a film faces a film of its own kind.
 
 ## What Jev was asked
 Each pair as a simple choice:

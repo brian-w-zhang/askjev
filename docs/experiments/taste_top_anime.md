@@ -6,7 +6,7 @@ family: taste
 Anime has a devoted fan culture with strong opinions about what's great. A ranking from a model shows whether it lands on the fan consensus, on the films outsiders know (Studio Ghibli), or somewhere of its own.
 
 ## The people and the data
-No people here: Jev against its own opinions. How Jev compares with MyAnimeList users is its own experiment.
+No people here: Jev against its own opinions. Adult-genre titles were left out. How Jev compares with MyAnimeList users is its own experiment.
 
 ## What Jev was asked
 Every title one at a time, with five answers describing what you'd do:

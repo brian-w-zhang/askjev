@@ -8,7 +8,7 @@ Online stores let shoppers vote on whether a review was helpful, and use the vot
 If a model is going to sort or summarize reviews, its sense of "helpful" matters. A judge that finds everything helpful is a poor filter: it can't tell the review that explains the product from the one that just vents.
 
 ## The people and the data
-Amazon reviews collected by researchers at UC San Diego (the McAuley product dataset, 2014), from seven categories including toys, groceries, baby products and tools. Each review carries its "Was this review helpful?" votes. The study kept 2,500 reviews with at least 10 votes and a clear verdict, 60% of them voted helpful.
+Amazon reviews collected by researchers at UC San Diego (He and McAuley, 2016, reviews up to 2014), from seven categories including toys, groceries, baby products and tools. Each review carries its "Was this review helpful?" votes. The project kept 2,500 reviews with at least 10 votes (about 15 is typical) and a clear verdict: at least 85% of voters calling it helpful, or at most 40%. 60% of them were voted helpful.
 
 ## What Jev was asked
 The review with its product category, star rating and title, then:

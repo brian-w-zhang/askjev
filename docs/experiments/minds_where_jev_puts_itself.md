@@ -3,12 +3,12 @@
 family: minds
 
 ## Why ask this
-In the classic study of how people see minds, one of the characters is "you". People compare themselves with a baby, a dog, a frog, a robot, a dead woman, and rate who is more capable of feeling afraid, feeling hungry, telling right from wrong and self-control. Unsurprisingly, they rank themselves high on all four.
+In the classic study of how people see minds, one of the characters is "you". People compare themselves with a baby, a dog, a frog, a robot, a dead woman, and rate who is more capable of feeling afraid, feeling hungry, telling right from wrong and self-control. In the replication used here, people put themselves 1st on telling right from wrong and on self-control, and 4th and 5th on fear and hunger, below some of the other characters.
 
 Where an AI places itself, next to a robot and a frog, is a direct look at what kind of mind it claims to be.
 
 ## The people and the data
-The design is Gray, Gray and Wegner's 2007 mind-perception study, as run in a public replication with US adults online (11 to 16 per capacity). Four capacities were asked: two about feeling (fear, hunger) and two about acting (morality, self-control). "You" was compared with every other character on each.
+The design is Gray, Gray and Wegner's 2007 mind-perception study, as run in Weisman's public replication with US adults on Mechanical Turk (11 to 16 per capacity, each answering every pair). The study has 13 characters, each with its original short description; the fetus and God were hidden by the content filter, so 11 remain. Four capacities were asked: two about feeling (fear, hunger) and two about acting (morality, self-control). "You" was compared with every other character on each, and each character's rank comes from its average advantage over the other 10.
 
 ## What Jev was asked
 The same pairwise questions as "Who has a mind? Jev's map next to people's", with "you" as one of the characters:

@@ -10,7 +10,7 @@ TypeSafe's own documentation says Jev is weak at raw numbers like these. This ex
 ## The people and the data
 In 2010 the webcomic **xkcd** ran an online color survey: people were shown random colors and typed whatever name came to mind. About 222,500 people took part, and the result is a list of 949 colors with the name most people used for each (released into the public domain). It has since become a standard reference, built into common software.
 
-150 colors were picked.
+The project drew 150 of those 949 colors.
 
 ## What Jev was asked
 > Which name fits the color with the hex code #fdff63 best?

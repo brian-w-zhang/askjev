@@ -6,7 +6,7 @@ family: perception
 Reading "likely" as 70% is half the job. The other half is saying "likely" when the chance is 70%: a model that writes summaries, forecasts and advice turns numbers into words all day.
 
 ## The people and the data
-This experiment runs the probability-words survey backwards. The phrases are the 17 from the 2015 Reddit survey behind "What 'probably' means to Jev", from "almost no chance" to "almost certainly". There is no human data for this direction; the comparison is Jev's own forward reading of each phrase.
+This experiment runs the probability-words survey backwards. The phrases are the 17 from the 2015 Reddit survey behind "What 'probably' means to Jev", from "almost no chance" to "almost certainly". People in that survey turned words into numbers; nobody asked them to turn numbers into words, so there is no human data for this direction. The comparison is Jev's own forward reading of each phrase, the number it gave each one in that experiment.
 
 ## What Jev was asked
 For each probability from 0% to 100% in steps of 5, one question with all 17 phrases as options:

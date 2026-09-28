@@ -8,7 +8,7 @@ Family Feud doesn't reward the best answer; it rewards the most common one. "Nam
 That makes it a neat test of a different skill from knowledge. Knowing the correct answer is one thing; knowing what ordinary people think of first is another, and it's the skill a model needs to predict what people will say.
 
 ## The people and the data
-**ProtoQA** (Boratko and colleagues, 2020) collected Family Feud survey questions with their answer counts, scraped from fan sites that record the show's boards. Each survey asked about 100 people. The experiment uses 146 questions with at least four answer groups.
+**ProtoQA** (Boratko and colleagues, 2020) collected Family Feud survey questions with their answer counts, scraped from fan sites that record the show's boards. Each survey asked about 100 people, and the researchers merged answers that mean the same thing ("lawyer", "lawyers", "attorney") into one group, so every question comes with a ranked list of groups and the share of people behind each. The experiment uses 146 questions with at least four answer groups.
 
 ## What Jev was asked
 Each question with the survey's top answers as options:

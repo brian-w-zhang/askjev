@@ -6,7 +6,7 @@ family: world
 An ideal day is a compact self-portrait. What someone would do more of, and what they'd drop, says what they value. Asked about its own ideal day, Jev has to trade hours between sleep, work, reading, TV and people, and the trades are revealing when set next to how Americans actually spend theirs.
 
 ## The people and the data
-Jev's side has no human data. The comparison uses the American Time Use Survey diaries (Bureau of Labor Statistics, 2003 to 2016, 181,335 days, weighted): the average minutes Americans actually spend on each of the same 20 activities.
+No one has surveyed Americans' ideal days, so Jev's answers are set against their real ones: the American Time Use Survey (Bureau of Labor Statistics), where Americans log everything they did on one day. The comparison uses 181,335 diary days from 2003 to 2016, weighted to represent the population, and the average minutes spent on each of the same 20 activities.
 
 ## What Jev was asked
 The same 20 activities as in "A random American's day, as Jev pictures it", asked about its own ideal day:

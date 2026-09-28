@@ -8,7 +8,7 @@ Attachment theory sorts how adults handle closeness along two lines: anxiety (wo
 So the question is less "does Jev have an attachment style" than "what relationship does it imagine having": secure, clingy, or distant?
 
 ## The people and the data
-
+They are volunteers who went looking for a test of their relationship style, so they are a curious crowd, not a random one.
 
 ## What Jev was asked
 Every statement, word for word:

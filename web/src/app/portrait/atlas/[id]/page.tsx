@@ -7,12 +7,13 @@ import ExMeme from "@/components/experiments/ExMeme";
 import Md from "@/components/experiments/Md";
 import Rows from "@/components/experiments/Rows";
 import { loadExperiments } from "@/components/experiments/data";
-import { OUTCOME, VERDICT } from "@/components/experiments/labels";
+import { keepOf } from "@/components/experiments/labels";
 import type { Experiment } from "@/components/experiments/types";
 import "@/components/experiments/experiments.css";
 
-// One experiment as a case study (docs/17): the result and its chart, the write-up, Jev's own take, the caveats,
-// where its questions live on the map, and every question behind it.
+// One experiment as a case study (docs/17, "Page structure"): the finding first (result and chart, in short, what the
+// data shows, what it means), then the caveats beside Jev's own answers about it, then why it was asked and how it was
+// done, where its questions live on the map, and every question behind it.
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const e = (await loadExperiments())?.experiments.find((x) => x.id === id);
@@ -20,10 +21,10 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 }
 
 type SectionKey = "why" | "data" | "asked" | "measured" | "found" | "means";
-const SECTIONS: [SectionKey, string][] = [
-  ["why", "Why ask this"], ["data", "The people and the data"], ["asked", "What Jev was asked"],
-  ["measured", "How it was measured"], ["found", "What the data shows"], ["means", "What it means, and what it doesn't"],
-];
+const TITLE: Record<SectionKey, string> = {
+  found: "What the data shows", means: "What it means, and what it doesn't", why: "Why ask this",
+  data: "The people and the data", asked: "What Jev was asked", measured: "How it was measured",
+};
 
 // Before a case study exists, the spec's fields stand in for its sections.
 function sectionsOf(e: Experiment): Partial<Record<SectionKey, string>> {
@@ -66,37 +67,34 @@ function Topics({ e }: { e: Experiment }) {
   );
 }
 
-// Jev's take (docs/17 item 4): its own answers to questions about this experiment, shown as answers, not a paragraph
+// Jev's take (docs/17 item 4): its own answers to questions about this experiment, asked after reading the result
+// and the caveats, shown as answers
 function Take({ e, rank, of }: { e: Experiment; rank: number; of: number }) {
-  const ev = e.evaluation;
-  const answers = e.take?.answers ?? [];
+  const answers = (e.take?.answers ?? []).filter((a) => !a.q.startsWith("Keep or discard"));
+  const keep = keepOf(e);
   return (
     <section className="ex-take" aria-labelledby="ex-take">
       <h2 id="ex-take">Jev on this experiment</h2>
-      <p className="dim">Its own answers, asked after reading the result and the caveats.</p>
-      <div className="ex-tiles">
+      {keep && (
+        <p className={`ex-keepline ${keep.verdict}`}>
+          <b>{keep.verdict === "keep" ? "Keep it" : "Discard it"}</b> <span>{Math.round(keep.p * 100)}% sure · rank {rank} of {of}</span>
+        </p>
+      )}
+      <dl className="ex-answers">
         {answers.map((a, i) => (
-          <div className="ex-tile" key={i}>
-            <span className="q">{a.q}</span>
-            <b className="a">{a.a.charAt(0).toUpperCase() + a.a.slice(1)}</b>
-            {a.level !== undefined ? (
-              <span className="meter" aria-label={`${a.level.toFixed(1)} on a 0 to 4 scale`}>
-                {[0, 1, 2, 3, 4].map((k) => <i key={k} className={Math.round(a.level ?? 0) === k ? "on" : ""} />)}
-                <small>{a.scale?.[0]}</small><small>{a.scale?.[1]}</small>
-              </span>
-            ) : a.p !== null ? (
-              <span className="pbar"><i style={{ width: `${Math.round(a.p * 100)}%` }} /><em>{Math.round(a.p * 100)}% sure</em></span>
-            ) : null}
+          <div key={i}>
+            <dt>{a.q}</dt>
+            <dd>
+              <b>{a.a.charAt(0).toUpperCase() + a.a.slice(1)}</b>
+              {a.level !== undefined ? (
+                <span className="meter" aria-label={`${a.level.toFixed(1)} on a 0 to 4 scale, from ${a.scale?.[0]} to ${a.scale?.[1]}`}>
+                  {[0, 1, 2, 3, 4].map((k) => <i key={k} className={Math.round(a.level ?? 0) === k ? "on" : ""} />)}
+                </span>
+              ) : a.p !== null ? <em>{Math.round(a.p * 100)}%</em> : null}
+            </dd>
           </div>
         ))}
-        {ev && (
-          <div className="ex-tile verdict">
-            <span className="q">Its verdict on the experiment</span>
-            <b className="a"><span className={`ex-verdict ${ev.outcome}`}>{OUTCOME[ev.outcome] ?? ev.outcome}</span>{ev.top ? ` ${VERDICT[ev.top] ?? ev.top}` : ""}</b>
-            <span className="sub">{typeof ev.interest === "number" ? `interest ${ev.interest.toFixed(1)} of 10 · ` : ""}rank {rank} of {of}</span>
-          </div>
-        )}
-      </div>
+      </dl>
     </section>
   );
 }
@@ -135,10 +133,17 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
           </div>
         </div>
 
+        {(e.case?.takeaways?.length ?? 0) > 0 && (
+          <section className="ex-short" aria-labelledby="ex-short">
+            <h2 id="ex-short">In short</h2>
+            <ul>{e.case!.takeaways!.map((t, j) => <li key={j}>{t}</li>)}</ul>
+          </section>
+        )}
+
         <article className="ex-study">
-          {SECTIONS.filter(([k]) => s[k]).map(([k, t]) => (
+          {(["found", "means"] as SectionKey[]).filter((k) => s[k]).map((k) => (
             <section key={k} className={`ex-sec s-${k}`}>
-              <h2>{t}</h2>
+              <h2>{TITLE[k]}</h2>
               {/* the meme is a joke about the finding, so it sits beside it, the text wrapping round it; its width
                   follows the template's shape so wide and tall memes take up about the same room */}
               {k === "found" && e.meme && (
@@ -151,14 +156,27 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
           ))}
         </article>
 
-        {caveats.length > 0 && (
-          <section className="ex-caveats" aria-labelledby="ex-cav">
-            <h2 id="ex-cav">Caveats</h2>
-            <ul>{caveats.map((c, j) => <li key={j}><b>{c.label}.</b> {c.text}</li>)}</ul>
-          </section>
-        )}
+        <div className="ex-judge">
+          {caveats.length > 0 && (
+            <section className="ex-caveats" aria-labelledby="ex-cav">
+              <h2 id="ex-cav">Caveats</h2>
+              <ul>{caveats.map((c, j) => <li key={j}><b>{c.label}.</b> {c.text}</li>)}</ul>
+            </section>
+          )}
+          <Take e={e} rank={i + 1} of={all.length} />
+        </div>
 
-        <Take e={e} rank={i + 1} of={all.length} />
+        <article className="ex-study">
+          {s.why && <section className="ex-sec s-why"><h2>{TITLE.why}</h2><Md text={s.why} /></section>}
+          {(s.data || s.asked || s.measured) && (
+            <section className="ex-sec s-how">
+              <h2>How this was done</h2>
+              {(["data", "asked", "measured"] as SectionKey[]).filter((k) => s[k]).map((k) => (
+                <div key={k} className="ex-how"><h3>{TITLE[k]}</h3><Md text={s[k] as string} /></div>
+              ))}
+            </section>
+          )}
+        </article>
 
         <Topics e={e} />
 

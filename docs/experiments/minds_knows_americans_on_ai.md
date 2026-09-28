@@ -6,7 +6,7 @@ family: minds
 Separate from its own opinion, a model carries a picture of what *people* think, and that picture shapes how it talks to them. If it believes the public is terrified of AI, it may over-reassure; if it believes the public is relaxed, it may miss real concerns. Pew's survey gives the real answers to check that picture against.
 
 ## The people and the data
-**Pew Research Center** asked 5,023 US adults about AI in June 2025. This experiment uses the same questions as "An AI's feelings about AI, next to Americans'": whether AI will make people better or worse at thinking creatively, solving problems and forming relationships; how big a role it should play in weather forecasts and in judging whether two people could fall in love; how much people would let it help them; and how they'd feel on finding out a painting, a news article or a doctor's treatment came from AI.
+**Pew Research Center** asked 5,023 US adults about AI in June 2025. This experiment uses the same questions as "An AI's feelings about AI, next to Americans'": whether AI will make people better or worse at thinking creatively, solving problems and forming relationships; how big a role it should play in weather forecasts and in judging whether two people could fall in love; how much people would let it help them; and how they'd feel on finding out a painting, a news article or a doctor's treatment came from AI. As there, 13 of Pew's 26 questions were hidden by the site's content filter and three have no clearly wary answer, so ten questions are scored.
 
 ## What Jev was asked
 The same questions, in Pew's wording, but asking what most people would answer. For example:

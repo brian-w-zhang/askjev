@@ -6,7 +6,7 @@ family: taste
 "What's your favorite?" is the most human question there is, and most people just answer it. A model might hedge instead: pick the safe non-answer rather than commit to a taste it isn't sure it has. Reddit's poll communities give thousands of real favorites questions, many with an "Other" or "None" option, and real votes to compare with.
 
 ## The people and the data
-Voters in r/polls, a Reddit community for polls, from 2020 to 2024: each poll's archived vote counts, over its 2 to 6 options.
+Voters in r/polls, a Reddit community for polls, from 2020 to 2024: each poll's archived vote counts, over its 2 to 6 options, keeping only polls with at least 100 votes.
 
 ## What Jev was asked
 Each poll exactly as posted:

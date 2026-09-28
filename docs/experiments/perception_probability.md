@@ -8,7 +8,7 @@ Weather forecasters, doctors and intelligence analysts rarely give numbers. They
 A model now reads and writes a lot of this language. If it hears "we doubt" as a coin flip where people hear one in four, every hedge it summarizes or writes will be shifted.
 
 ## The people and the data
-The human side is a small, well-loved survey: in 2015, 46 people on Reddit's r/samplesize were asked what probability they would assign to 17 phrases, from "almost certainly" to "almost no chance". The survey's author published every answer under an MIT license (zonination on GitHub), with a chart of one ridge per phrase that this page copies.
+The human side is a small, well-loved survey: in 2015, 46 people on Reddit's r/samplesize were asked what probability they would assign to 17 phrases, from "almost certainly" to "almost no chance". The survey's author published every answer under an MIT license (zonination on GitHub), with a chart of one ridge per phrase that this page copies. Each person typed a single number per phrase.
 
 ## What Jev was asked
 The survey's own question, with the answer as one of 21 steps from 0% to 100%:

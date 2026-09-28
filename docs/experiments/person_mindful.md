@@ -6,7 +6,7 @@ family: personality
 Mindfulness questionnaires ask about paying attention to the present: noticing sensations, finding words for feelings, not running on autopilot, and not judging your own thoughts. They're an odd set of claims for a model to make, which is why the pattern of what it claims, and what it doesn't, is informative.
 
 ## The people and the data
-
+They are volunteers who chose to take the test, not a random sample.
 
 ## What Jev was asked
 Every statement, word for word, with the test's own answers:

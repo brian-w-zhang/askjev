@@ -9,7 +9,9 @@ And 0 never wins. Real players stop after a step or two of that reasoning, so th
 
 ## The people and the data
 Three real crowds, from published results:
-- **Financial Times readers:** a 1997 contest run by Richard Thaler in the newspaper; the average was 18.91 and 13 won.
+- **Financial Times readers:** a 1997 contest Richard Thaler ran in the newspaper for its readers; the average was 18.91 and 13 won.
+
+Only these averages were published, not each player's number.
 
 ## What Jev was asked
 For each crowd, two questions: what number it would pick, and what it expects the average to be. For example:

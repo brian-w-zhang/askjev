@@ -8,7 +8,7 @@ Time-use diaries are the least flattering mirror of daily life. On a random day,
 A model asked to picture "a day" has read a lot of brochures. Does it know the diary?
 
 ## The people and the data
-The American Time Use Survey, run by the Bureau of Labor Statistics: Americans aged 15 and older record everything they did on one day, minute by minute. The study uses 181,335 diary days from 2003 to 2016 (public domain), weighted to represent the population, and for each of 20 activities the share of days falling in each time bin.
+The American Time Use Survey, run by the Bureau of Labor Statistics: Americans aged 15 and older record everything they did on one day, minute by minute. The comparison uses 181,335 diary days from 2003 to 2016 (public domain), weighted to represent the population, and for each of 20 activities the share of days falling in each time bin.
 
 ## What Jev was asked
 One question per activity, framed exactly as the diaries measure it:

@@ -3,8 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import Chart from "./Chart";
-import { useMemeFollower } from "./MemeFollower";
-import { OUTCOME, VERDICT } from "./labels";
+
 import type { ExperimentCard } from "./types";
 
 // The experiments library (docs/16 pass 4): one card per experiment with its result, a thumbnail of its chart and
@@ -18,7 +17,6 @@ export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] })
   const [sort, setSort] = useState<Sort>("rank");
   const [open, setOpen] = useState(false);
   const needle = q.trim().toLowerCase();
-  const follower = useMemeFollower();
   const ranks = useMemo(() => new Map(cards.map((c, i) => [c.id, i + 1])), [cards]);
   const rank = (c: ExperimentCard) => ranks.get(c.id) ?? 999;
   const matches = useMemo(() => cards.filter((c) => !needle || `${c.title} ${c.result} ${c.family_label} ${c.id}`.toLowerCase().includes(needle)), [cards, needle]);
@@ -71,29 +69,26 @@ export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] })
       {shown.length === 0 && <p className="at-empty">Nothing matches &ldquo;{q}&rdquo;.</p>}
       <div className="ex-grid">
         {shown.map((c) => (
-          <Link key={c.id} href={`/portrait/atlas/${c.id}`} prefetch={false} className={`ex-card o-${c.evaluation?.outcome ?? "none"}`} {...follower.handlers(c.meme)}>
+          <Link key={c.id} href={`/portrait/atlas/${c.id}`} prefetch={false} className={`ex-card o-${c.keep?.verdict ?? "none"}`}>
             <div className="ex-top">
               <span className="ex-fam">{c.family_label}</span>
-              <span className="ex-rank" title="Jev's head-to-head ranking of all experiments">#{rank(c)}</span>
+              <span className="ex-rank" title="Rank from Jev's head-to-heads and its own answers about each experiment">#{rank(c)}</span>
             </div>
             <h3>{c.title}</h3>
             <div className="ex-thumb" aria-hidden><Chart chart={c.chart} mini /></div>
             <p className="ex-res">{c.result}</p>
             <div className="ex-meta">
-              {c.evaluation ? (
-                <>
-                  <span className={`ex-verdict ${c.evaluation.outcome}`}>{OUTCOME[c.evaluation.outcome] ?? c.evaluation.outcome}</span>
-                  {c.evaluation.top && <span>Jev: {VERDICT[c.evaluation.top] ?? c.evaluation.top}</span>}
-                  {typeof c.evaluation.interest === "number" && <span>interest {c.evaluation.interest.toFixed(1)}/10</span>}
-                </>
-              ) : <span>not evaluated yet</span>}
+              {c.keep ? (
+                <span className={`ex-keep ${c.keep.verdict}`} title="Jev's own call: keep this experiment or discard it">
+                  Jev: {c.keep.verdict} <em>{Math.round(c.keep.p * 100)}%</em>
+                </span>
+              ) : <span>not judged yet</span>}
               <span className="sp" />
               <span>n = {c.n.toLocaleString("en-US")}{c.new_questions ? ` · ${c.new_questions.toLocaleString("en-US")} new` : ""}</span>
             </div>
           </Link>
         ))}
       </div>
-      {follower.layer}
     </>
   );
 }

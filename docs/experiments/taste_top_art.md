@@ -6,7 +6,7 @@ family: taste
 Art taste is where people most expect a model to parrot the canon. The interesting parts are whether it does, what it does with non-Western works, and what it likes least.
 
 ## The people and the data
-No people here: Jev against its own opinions.
+No people here: Jev against its own opinions. The one-at-a-time ratings already existed; only the 276 games of the final were new.
 
 ## What Jev was asked
 Every entry one at a time, with five answers describing what you'd do:

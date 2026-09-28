@@ -13,7 +13,7 @@ Three datasets where several people rated each item:
 - **Open Assistant:** does this chatbot reply fail to do what the user asked? 3 to 6 volunteers each. The replies themselves were written by volunteers playing the assistant.
 - **Measuring Hate Speech:** is this comment hate speech? 3 to 5 crowd workers each.
 
-About 4,900 items in all.
+Only the rater split matters here, not a single right answer.
 
 ## What Jev was asked
 The same yes/no question the raters answered, with both answers spelled out. For a chatbot reply:

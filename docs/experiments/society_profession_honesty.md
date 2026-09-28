@@ -8,7 +8,7 @@ Every year Gallup asks Americans to rate the honesty and ethical standards of pe
 A model talks about professions constantly: in career advice, in stories, in answers about who to trust. It carries its own ladder of trust, which may be kinder or harsher than the public's, and more or less extreme.
 
 ## The people and the data
-**Gallup's Honesty and Ethics in Professions** poll asks US adults, by phone and online, to rate people in each field from "very low" to "very high". This experiment uses the December 2025 poll for 16 professions; 15 are shown here. The people's answer is Gallup's published split for each.
+**Gallup's Honesty and Ethics in Professions** poll asks US adults, by phone and online, to rate people in each field from "very low" to "very high", and has done so every year since 1976. This experiment uses the December 1-15, 2025 poll: 16 professions, from nurses and pharmacists to telemarketers and car salespeople. A content filter hid one (military veterans), so 15 are compared. Politically charged ones (members of Congress, journalists, police officers, clergy, labor union leaders) were left out from the start. The people's answer is Gallup's published split for each profession, with "no opinion" dropped.
 
 ## What Jev was asked
 Gallup's own question and answers:

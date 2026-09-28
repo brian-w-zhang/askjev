@@ -3,14 +3,14 @@
 family: reasoning
 
 ## Why ask this
-A handful of puzzles made psychology famous by catching almost everyone. In the **Linda problem**, most people judge "a bank teller who is active in the feminist movement" more likely than "a bank teller", which can't be true. In the **taxi cab problem**, people ignore how rare blue taxis are. In **Monty Hall**, almost everyone refuses to switch doors, and switching wins two times in three. In the **bat and ball**, the answer "10 cents" jumps to mind and is wrong.
+A handful of puzzles made psychology famous by catching almost everyone. In the **Linda problem**, most people judge "a bank teller who is active in the feminist movement" more likely than "a bank teller", which can't be true. In the **taxi cab problem**, people ignore how rare blue taxis are. In **Monty Hall**, most people stick with their first door, and switching wins two times in three. In the **bat and ball**, the answer "10 cents" jumps to mind and is wrong.
 
 A language model has read these puzzles, and their answers, thousands of times. So passing them says little. The real question is whether it still avoids the trap when the story and the numbers are new, and whether it knows when the famous rule *doesn't* apply.
 
 ## The people and the data
-There are six families of traps: the conjunction fallacy (Linda), base-rate neglect (the taxi cab), Monty Hall, the birthday problem, the gambler's fallacy, and the "cognitive reflection" puzzles (bat and ball, lily pads, widgets). The classics are transcribed from the papers that made them famous (Tversky and Kahneman, Frederick, vos Savant's Parade column).
+There are six families of traps: the conjunction fallacy (Linda), base-rate neglect (the taxi cab), Monty Hall, the birthday problem, the gambler's fallacy, and the "cognitive reflection" puzzles (bat and ball, lily pads, widgets). Eight classics are transcribed from the sources that made them famous (Tversky and Kahneman, Frederick, vos Savant's Parade column). All 29 were written for this project, and each question has a right answer.
 
-The only human split for a trap family is Linda's (the taxi cab's 80% is a median answer, not a split): 85% of 142 University of British Columbia students chose the wrong, more detailed answer. For the other traps the comparison is the right answer.
+People's numbers are scarce. The only human split is Linda's: 85% of 142 University of British Columbia students chose the wrong, more detailed answer. But the original Linda problem was hidden by the content filter, so of the eight classics only seven are shown, and Linda's human split has no Jev answer beside it. The taxi cab problem has a published median answer (80%), not a split. For everything else the comparison is the right answer, not people.
 
 ## What Jev was asked
 Each puzzle was one multiple-choice question with its answers laid out, for example:

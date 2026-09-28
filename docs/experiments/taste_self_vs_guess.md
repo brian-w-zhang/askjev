@@ -6,7 +6,7 @@ family: taste
 Ask someone whether they'd enjoy something and then whether most people would, and the gap tells you how they see themselves: pickier, more adventurous, more highbrow.
 
 ## The people and the data
-No real people: both answers come from Jev. The items are the 12 taste domains in the corpus: films, books, board games, anime and beers from real rating catalogs (MovieLens, Goodreads, BoardGameGeek, MyAnimeList, BeerAdvocate), and music, food, places, art, nature, activities and culture from lists written for this project.
+No real people: both answers come from Jev. Films, books, board games, anime and beers come from real rating catalogs (MovieLens, Goodreads, BoardGameGeek, MyAnimeList, BeerAdvocate); music, food, places, art, nature, activities and culture come from lists written for this project.
 
 ## What Jev was asked
 Each item twice. Once as itself:

@@ -3,14 +3,14 @@
 family: reasoning
 
 ## Why ask this
-In 1974 Amos Tversky and Daniel Kahneman spun a wheel of fortune in front of people, rigged to stop at 10 or at 65, and then asked what percentage of African countries were in the United Nations. Everyone could see the number was random. It moved them anyway: people who saw 10 guessed 25% on average (the median), people who saw 65 guessed 45%. That's **anchoring**, one of the most replicated effects in psychology. It's why a first offer frames a negotiation and why a crossed-out "original price" makes a sale look good.
+In 1974 Amos Tversky and Daniel Kahneman spun a wheel of fortune in front of people, rigged to stop at 10 or at 65, and then asked what percentage of African countries were in the United Nations. Everyone could see the number was random. It moved them anyway: the median guess was 25% after the wheel stopped at 10, and 45% after it stopped at 65. That's **anchoring**, one of the most replicated effects in psychology. It's why a first offer frames a negotiation and why a crossed-out "original price" makes a sale look good.
 
 A model reads the whole prompt at once, including any number in it. So it might be pulled just as hard, or it might treat an irrelevant number as irrelevant.
 
 ## The people and the data
-The human comparison is the original 1974 study, reported in *Science*: median estimates of 25 after the wheel landed on 10, and 45 after it landed on 65. That was turned into the standard **anchoring index** (Jacowitz and Kahneman, 1995): the gap between the two estimates divided by the gap between the anchors. For people it's (45 − 25) / (65 − 10) = 0.36.
+The human comparison is the original 1974 study, reported in *Science*: median estimates of 25 after the wheel landed on 10, and 45 after it landed on 65. The standard way to summarize a result like this is the **anchoring index**, proposed later by Jacowitz and Kahneman (1995): the gap between the two estimates divided by the gap between the anchors. For people it's (45 − 25) / (65 − 10) = 0.36.
 
-To test more than one item, ten quantities were added with known answers, written for this project: bones in the hand, piano keys, teeth, Mozart's age at death, the share of the Earth covered by water, and others.
+To test more than one item, ten quantities were added with known answers, written for this project: bones in the hand, piano keys, teeth, Mozart's, Lincoln's and Martin Luther King's ages at death, the number of countries in Africa, the share of the Earth covered by water, the share of the body that is water, and the share of the air that is nitrogen. Each has a low and a high anchor on either side of the true value.
 
 ## What Jev was asked
 Each quantity was asked three times: after a low spin, after a high spin, and with no wheel at all. For example:

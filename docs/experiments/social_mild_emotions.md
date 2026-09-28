@@ -8,7 +8,7 @@ Feelings come in strengths. Furious is more than angry, terrified is more than a
 That matters for any model that summarizes feedback, triages messages or writes back to people: if it hears fury as annoyance and terror as worry, its summaries will read calmer than the people who wrote them.
 
 ## The people and the data
-**EmpatheticDialogues**, a dataset from Facebook AI researchers: crowd workers were each given one of 32 emotion words and wrote a short situation from their own life in which they felt it. Three of the 32 come in a strong and a mild version of the same feeling: furious and angry, terrified and afraid, devastated and sad.
+**EmpatheticDialogues** (Rashkin and colleagues, 2019), a dataset from Facebook AI researchers: crowd workers were each given one of 32 emotion words and wrote a situation from their own life in which they felt it, in one to three sentences. Three of the 32 come in a strong and a mild version of the same feeling: furious and angry, terrified and afraid, devastated and sad.
 
 ## What Jev was asked
 The situation, and all 32 words to choose from:

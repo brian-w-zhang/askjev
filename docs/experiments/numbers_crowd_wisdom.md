@@ -6,7 +6,7 @@ family: numbers
 The wisdom of crowds says that the median of many independent guesses beats almost every individual guesser: ask 500 people how far Houston is from Atlanta and the middle answer is closer than most of them. A language model has read what everyone has written. Is it one more guesser, or already a crowd?
 
 ## The people and the data
-A large 2019 study by Simoiu and colleagues at Stanford, which ran estimation questions on about 500 people each in February 2017 (public data, MIT license). This experiment uses its eight text-only domains, 20 questions each: celebrities' ages, distances between US cities, dates in US history, GDP per person, how many of one country fit into the continental US, calories in foods, appliance wattage and country populations.
+The guesses come from a large 2019 study by Simoiu and colleagues at Stanford, which put estimation questions to US online participants recruited for the study, about 500 per question, in February 2017 (public data, MIT license). This experiment uses its eight text-only domains, 20 questions each: celebrities' ages, distances between US cities, dates in US history, GDP per person, how many of one country fit into the continental US, calories in foods, appliance wattage and country populations. Each person's typed number was sorted into the same answer ranges Jev saw.
 
 ## What Jev was asked
 Each question as the study asked it, with ordered answer ranges fixed per domain:
