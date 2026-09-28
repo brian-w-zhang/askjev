@@ -67,7 +67,10 @@ def row_order(e: dict, shown: pl.DataFrame) -> list[list]:
     return [[i, fl] for i, fl, _ in rows]
 
 
-RANK_WEIGHTS = {"strength": 0.35, "interesting": 0.25, "trust": 0.15, "fair": 0.10, "surprise": 0.10, "recognize": 0.05}
+# docs/17, "Ranking": mostly Jev's head-to-heads over the whole case study (rank.py), corrected by how much a reader
+# should rely on the result and how fair its comparison is. Whether it describes Jev and whether Jev saw it coming are
+# sorts on the index, not quality.
+RANK_WEIGHTS = {"h2h": 0.60, "interesting": 0.15, "trust": 0.15, "fair": 0.10}
 
 
 def main():
@@ -152,11 +155,13 @@ def main():
         m = sum(vals) / len(vals)
         sd = (sum((v - m) ** 2 for v in vals) / len(vals)) ** 0.5 or 1
         return [(v - m) / sd for v in vals]
-    parts = {"strength": [(x["evaluation"] or {}).get("strength") or 0 for x in out]}
+    h2h = json.loads((OUT / "_rank.json").read_text()) if (OUT / "_rank.json").exists() else {}
+    for x in out:
+        x["h2h"] = h2h.get(x["id"])
+    parts = {"h2h": [x["h2h"] if x["h2h"] is not None else 0 for x in out]}
     sc = [((x.get("take") or {}).get("scores") or {}) for x in out]
-    for k in ("interesting", "trust", "fair", "recognize"):
-        parts[k] = [s.get(k, 0.5) for s in sc]
-    parts["surprise"] = [1 - s.get("expected", 0.5) for s in sc]
+    for k in ("interesting", "trust", "fair"):
+        parts[k] = [s.get(k, 0.5 if k == "interesting" else 2) for s in sc]
     zs = {k: z(v) for k, v in parts.items()}
     for i, x in enumerate(out):
         x["rank_score"] = round(sum(RANK_WEIGHTS[k] * zs[k][i] for k in RANK_WEIGHTS), 4)

@@ -146,10 +146,11 @@ PAIR_Q = ("Each option is one experiment about Jev, an AI model. Which one teach
           "surprising and specific about how the model behaves, clearly stated and backed by a real comparison?")
 
 
-def pairwise(items: list[dict], pairs_per_item: int | None = None, seed: int = 11) -> dict[str, float]:
+def pairwise(items: list[dict], pairs_per_item: int | None = None, seed: int = 11, card_fn=None) -> dict[str, float]:
     """Head-to-head interest: 'which of the two would a curious reader find more interesting?', each pair asked in
     both orders (position bias cancels). Bradley-Terry strengths on a log scale; higher is more interesting.
     All pairs for small sets; otherwise a random regular design with `pairs_per_item` opponents each."""
+    card_fn = card_fn or card  # the state per experiment; rank.py passes the whole case study
     ids = [e["id"] for e in items]
     byid = {e["id"]: e for e in items}
     rng = random.Random(seed)
@@ -168,7 +169,7 @@ def pairwise(items: list[dict], pairs_per_item: int | None = None, seed: int = 1
     reqs = []
     for a, b in pairs:
         for x, y in ((a, b), (b, a)):
-            reqs.append((x, y, Request({"first": card(byid[x]), "second": card(byid[y])}, {"pick": q})))
+            reqs.append((x, y, Request({"first": card_fn(byid[x]), "second": card_fn(byid[y])}, {"pick": q})))
     res = run_sync([r for *_, r in reqs])
     wins: dict[tuple, float] = {}
     for x, y, r in reqs:

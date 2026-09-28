@@ -5,6 +5,7 @@ import { loadPortrait } from "@/components/portrait/data";
 import { Nav } from "@/components/portrait/ui";
 import { loadExperiments } from "@/components/experiments/data";
 import type { Chart, ExperimentCard } from "@/components/experiments/types";
+import { jevOf } from "@/components/experiments/labels";
 import "@/components/experiments/experiments.css";
 
 export const metadata: Metadata = { title: "Atlas · A self-portrait of Jev · askjev" };
@@ -37,7 +38,7 @@ export default async function AtlasPage() {
     })) : [];
   const cards: ExperimentCard[] = (x?.experiments ?? []).map((e) => ({
     id: e.id, family: e.family, family_label: e.family_label, title: e.title, result: e.result, n: e.n,
-    new_questions: e.new_questions, n_rows: e.n_rows ?? 0, evaluation: e.evaluation, portrait_rank: e.portrait_rank ?? null, chart: thumb(e.chart),
+    new_questions: e.new_questions, n_rows: e.n_rows ?? 0, evaluation: e.evaluation, portrait_rank: e.portrait_rank ?? null, chart: thumb(e.chart), jev: jevOf(e),
   }));
   return (
     <main>
@@ -49,7 +50,7 @@ export default async function AtlasPage() {
           <p>
             Each experiment gathers many of Jev&rsquo;s answers into one thing you can learn about it in a minute, compared with
             real people or a right answer where one exists. The <Link href="/portrait" prefetch={false}>portrait</Link> picks a
-            few; here are all {cards.length}, ranked by Jev&rsquo;s head-to-heads between them and its own answers about each one. Indicators, not a benchmark.
+            few; here are all {cards.length}, ranked by Jev: it read the case studies two at a time and picked the one that teaches a curious reader more, and that order is adjusted by how much it would rely on each result and how fair it finds the comparison. Indicators, not a benchmark.
           </p>
         </header>
         {d || cards.length ? <Atlas claims={claims} nNodes={d?.nodes.length ?? 0} nSources={d?.sources.length ?? 0} experiments={cards} />

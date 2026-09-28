@@ -8,7 +8,31 @@ import type { ExperimentCard } from "./types";
 
 // The experiments library (docs/16 pass 4): one card per experiment with its result, a thumbnail of its chart and
 // Jev's own verdict on it. Sorted by Jev's head-to-head ranking by default; family facets and search narrow it.
-type Sort = "rank" | "family" | "n";
+// Sorts beyond Jev's rank use its own answers about each experiment; the card then shows the value it's sorted by
+type Sort = "rank" | "interesting" | "describes" | "describes_least" | "surprising" | "trust" | "fair" | "n" | "family";
+const SORTS: [Sort, string][] = [
+  ["rank", "Jev's rank"], ["interesting", "Most interesting, to Jev"], ["describes", "Describes Jev most"],
+  ["describes_least", "Describes Jev least"], ["surprising", "Most surprising to Jev"], ["trust", "Most reliable, to Jev"],
+  ["fair", "Fairest comparison, to Jev"], ["n", "Most questions"], ["family", "Family"],
+];
+const pct = (p: number) => `${Math.round(p * 100)}%`;
+// the number a card shows for the sort in effect (none for Jev's rank, family or size)
+function metric(c: ExperimentCard, sort: Sort): { text: string; title: string } | null {
+  const j = c.jev;
+  if (!j) return null;
+  switch (sort) {
+    case "interesting": return { text: `interesting to read: ${pct(j.interesting)}`, title: "Jev's probability that a curious person, not an AI researcher, would find it interesting to read" };
+    case "describes": case "describes_least": return { text: `describes Jev: ${pct(j.describes)}`, title: "Jev's probability that the result matches how it sees itself" };
+    case "surprising": return { text: `Jev saw it coming: ${pct(j.predicted)}`, title: "Jev's probability that it would have predicted this result about itself" };
+    case "trust": return { text: `rely on it: ${j.trustWord.toLowerCase()}`, title: `How much Jev says a reader should rely on the result: ${j.trust.toFixed(1)} of 4` };
+    case "fair": return { text: `comparison: ${j.fairWord.toLowerCase()}`, title: `How fair Jev finds the comparison: ${j.fair.toFixed(1)} of 4` };
+    default: return null;
+  }
+}
+const KEY: Partial<Record<Sort, (c: ExperimentCard) => number>> = {
+  interesting: (c) => -(c.jev?.interesting ?? 0), describes: (c) => -(c.jev?.describes ?? 0), describes_least: (c) => c.jev?.describes ?? 1,
+  surprising: (c) => c.jev?.predicted ?? 1, trust: (c) => -(c.jev?.trust ?? 0), fair: (c) => -(c.jev?.fair ?? 0), n: (c) => -(c.n_rows ?? 0),
+};
 const FEW = 7;
 
 export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] }) {
@@ -30,8 +54,8 @@ export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] })
   const shown = useMemo(() => {
     const r = matches.filter((c) => !family || c.family === family);
     if (sort === "family") return [...r].sort((a, b) => a.family_label.localeCompare(b.family_label) || (ranks.get(a.id) ?? 999) - (ranks.get(b.id) ?? 999));
-    if (sort === "n") return [...r].sort((a, b) => b.n - a.n);
-    return r;
+    const k = KEY[sort];
+    return k ? [...r].sort((a, b) => k(a) - k(b) || (ranks.get(a.id) ?? 999) - (ranks.get(b.id) ?? 999)) : r;
   }, [matches, family, sort, ranks]);
 
   return (
@@ -43,12 +67,12 @@ export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] })
             <input placeholder="Search experiments" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search experiments" />
             {q && <button type="button" className="x" onClick={() => setQ("")} aria-label="Clear search">×</button>}
           </label>
-          <div className="ex-sort" role="group" aria-label="Sort">
+          <label className="ex-sort">
             <span>Sort</span>
-            <button type="button" aria-pressed={sort === "rank"} onClick={() => setSort("rank")}>Jev&rsquo;s rank</button>
-            <button type="button" aria-pressed={sort === "family"} onClick={() => setSort("family")}>Family</button>
-            <button type="button" aria-pressed={sort === "n"} onClick={() => setSort("n")}>Size</button>
-          </div>
+            <select value={sort} onChange={(e) => setSort(e.target.value as Sort)}>
+              {SORTS.map(([k, label]) => <option key={k} value={k}>{label}</option>)}
+            </select>
+          </label>
         </div>
         <div className={`ex-fams${open ? " open" : ""}`} role="group" aria-label="Filter by family">
           <button type="button" aria-pressed={!family} onClick={() => setFamily("")}>All <em>{matches.length}</em></button>
@@ -79,6 +103,7 @@ export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] })
             <p className="ex-res">{c.result}</p>
             <div className="ex-meta">
               <span>{(c.n_rows ?? 0).toLocaleString("en-US")} {c.n_rows === 1 ? "question" : "questions"}</span>
+              {(() => { const m = metric(c, sort); return m && <span className="ex-metric" title={m.title}>{m.text}</span>; })()}
             </div>
           </Link>
         ))}

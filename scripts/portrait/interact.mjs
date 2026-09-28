@@ -71,6 +71,13 @@ await run("portrait to atlas", async () => { await p.click(".pt-nav >> text=Atla
 // ---- atlas ----
 await run("atlas experiments search", async () => { await p.fill(".ex-search input", "humor"); await sleep(400); if (!(await p.$$(".ex-grid .ex-card")).length) throw new Error("no experiments for humor"); await p.fill(".ex-search input", ""); });
 await run("atlas experiment family facet", async () => { const c = await p.$$(".ex-fams button"); if (c.length > 2) { await c[2].click(); await sleep(300); await c[0].click(); } });
+await run("atlas experiment sorts", async () => {
+  await p.selectOption(".ex-sort select", "describes"); await sleep(300);
+  const t = await p.textContent(".ex-grid .ex-card .ex-metric");
+  if (!/describes Jev: \d+%/.test(t ?? "")) throw new Error(`no metric on the sorted cards: ${t}`);
+  await p.selectOption(".ex-sort select", "rank"); await sleep(300);
+  if (await p.$(".ex-grid .ex-card .ex-metric")) throw new Error("metric shown on Jev's rank");
+});
 await run("atlas experiment page", async () => { await p.click(".ex-grid .ex-card"); await p.waitForURL(/\/portrait\/atlas\/[a-z0-9_]+$/); await p.waitForSelector(".ex-result"); await sleep(400); });
 await run("experiment page sections", async () => {
   for (const sel of [".ex-result", ".ex-study", ".ex-take", ".ex-caveats", ".ex-where", ".ex-rows-sec", ".ex-answers"]) if (!(await p.$(sel))) throw new Error(`missing ${sel}`);

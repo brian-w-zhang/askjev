@@ -58,9 +58,15 @@ the finding and a short summary up front, the method compact and after it):
 Case studies are written in the third person: no "we", "our" or "us".
 
 ## Ranking
-The index orders experiments by a weighted sum of standardized parts: Jev's head-to-heads between experiments
-(0.35), how sure it is that a curious person would find the experiment interesting to read (0.25), how much a reader should rely on the result (0.15), how fair the
-comparison is (0.10), how surprising the result is to Jev (0.10) and whether it describes Jev (0.05).
+Jev's rank is mostly Jev's own head-to-heads over the whole case studies (`scripts/experiments/rank.py`): it reads
+two write-ups side by side (result, takeaways, why ask this, what the data shows, what it means, caveats) and picks
+the one that teaches a curious reader more, each pair in both orders; every experiment meets about 14 others, and
+Bradley-Terry turns the picks into one strength. The rank is a weighted sum of standardized parts: that strength (0.60),
+how sure Jev is a curious person would find it interesting (0.15), how much a reader should rely on the result (0.15)
+and how fair the comparison is (0.10). Whether a result describes Jev, and whether Jev saw it coming, are facts about
+the experiment, not its quality, so they're sorts on the index instead. The index sorts by Jev's rank, most interesting,
+describes Jev most or least, most surprising to Jev, most reliable, fairest comparison, most questions and family;
+under any sort but rank, family and size, each card shows the value it's sorted by next to its question count.
 
 ## Jev's take (item 4)
 Jev answers only yes/no, pick-one or scale questions, so its opinion is assembled from new questions put to it
