@@ -9,7 +9,7 @@ import numpy as np
 import polars as pl
 from scipy.stats import spearmanr
 
-from lib import OUT, Result, Spec, agree_word, biggest, boot, js, level, norm, seeded, source, top
+from lib import and_list, OUT, Result, Spec, agree_word, biggest, boot, js, level, norm, seeded, source, top
 
 
 def _truth(r) -> object:
@@ -348,6 +348,10 @@ def negativity():
     return spec, run
 
 
+NOUN = {"Wine critic notes": "wine notes", "Sentence similarity": "sentence pairs", "Seventh-grade essays": "essays",
+        "Amazon review satisfaction": "Amazon reviews"}
+
+
 def top_grade():
     spec = Spec(
         id="judge_top_grade", family="judge", title="Jev rarely gives the top grade when reading others' judgments",
@@ -379,13 +383,15 @@ def top_grade():
                          "top_items_mean": float(t.filter(pl.col("t") == k)["j"].mean()),
                          "top_items_hit": float((t.filter(pl.col("t") == k)["jt"] == k).mean()),
                          "rho": spearmanr(t["t"], t["j"]).statistic})
-        w, s = rows[0], rows[1]
+        w = rows[0]
         stingy = [r for r in rows if r["jev_top"] < r["true_top"] * 0.6]
         return Result(
-            result=f"Jev can read a wine critic's rating from the note (rank correlation {w['rho']:.2f}), but of the "
-                   f"notes for the critic's top-rated wines it gives the top level to only {w['top_items_hit']:.0%}; "
-                   f"of sentence pairs annotators called the same meaning, {s['top_items_hit']:.0%}. It lands on the "
-                   f"top level well below its true share in {len(stingy)} of {len(rows)} datasets.",
+            result="Jev rarely hands out the top grade when reading someone else's: it gives it to "
+                   + and_list([f"{r['jev_top']:.0%} of {NOUN.get(r['label'], r['label'].lower())} (the real share is {r['true_top']:.0%})"
+                               for r in rows if r in stingy])
+                   + f". It still orders the wines well (rank correlation {w['rho']:.2f}). "
+                   + and_list([NOUN.get(r["label"], r["label"].lower()).capitalize() for r in rows if r not in stingy])
+                   + " are the exception.",  # every noun is plural
             evidence="; ".join(f"{r['label']}: top level {r['true_top']:.0%} true vs {r['jev_top']:.0%} Jev (n={r['n']:,})" for r in rows),
             numbers={"sets": rows}, n=sum(r["n"] for r in rows),
             chart={"type": "bars2", "labels": [r["label"] for r in rows], "a": [r["true_top"] for r in rows],

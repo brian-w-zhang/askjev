@@ -29,6 +29,7 @@ export const domain = (l1: string) => label(l1).replace(/^Ai /, "AI ");
 
 // The label for one key of a row's distribution: score levels are indexes into options, the rest are option slugs.
 export function optionLabel(row: Row, key: string): string {
+  if (row.labels?.[key]) return row.labels[key];
   if (row.primitive === "score" && /^\d+$/.test(key) && row.options[+key]) return row.options[+key];
   if (row.primitive === "noul") return key === "true" ? "Yes" : key === "false" ? "No" : label(key);
   // head-to-head options are names (artists, games, films): title case them

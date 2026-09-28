@@ -2,11 +2,13 @@
 
 import { useEffect, useMemo, useState } from "react";
 import type { Claim, NodeCard, SourceRow } from "./types";
+import ExperimentsIndex from "../experiments/Index";
+import type { ExperimentCard } from "../experiments/types";
 
-// The atlas (docs/11-portrait.md §8): every ledger claim, what a human self-portrait would cover, every topic's
-// indicators and the source table. Findings open as cards (a first view a person can read); the table is one click
-// away. Topic cards and sources load when their tab opens.
-type Tab = "claims" | "coverage" | "nodes" | "sources";
+// The atlas (docs/16 pass 4): the experiments library first; then, for reference, the old per-topic claims, what a
+// human self-portrait would cover, every topic's indicators and the source table. Topic cards and sources load when
+// their tab opens.
+type Tab = "experiments" | "claims" | "coverage" | "nodes" | "sources";
 type View = "cards" | "table";
 const pctf = (x: unknown) => (typeof x === "number" ? `${Math.round(x * 100)}%` : "–");
 const fixed = (x: unknown, d = 2) => (typeof x === "number" ? x.toFixed(d) : "–");
@@ -44,8 +46,10 @@ const COVERAGE: { area: string; have: "have" | "part" | "no"; how: string }[] = 
   { area: "Demographics (age, location, income)", have: "no", how: "doesn't apply to a model" },
 ];
 
-export default function Atlas({ claims, nNodes, nSources }: { claims: Claim[]; nNodes: number; nSources: number }) {
-  const [tab, setTab] = useState<Tab>("claims");
+export default function Atlas({ claims, nNodes, nSources, experiments }: {
+  claims: Claim[]; nNodes: number; nSources: number; experiments: ExperimentCard[];
+}) {
+  const [tab, setTab] = useState<Tab>("experiments");
   const [view, setView] = useState<View>("cards");
   const [q, setQ] = useState("");
   const [section, setSection] = useState<string>("");
@@ -87,20 +91,22 @@ export default function Atlas({ claims, nNodes, nSources }: { claims: Claim[]; n
       <button type="button" className="thb" onClick={() => setSort({ key, desc: sort.key === key ? !sort.desc : true })}>
         {text}{sort.key === key ? (sort.desc ? " ↓" : " ↑") : ""}</button></th>
   );
-  const placeholder = { claims: "Search findings: humor, moral machine, nerdiness…", coverage: "Search coverage", nodes: "Search topics: happiness, spam…", sources: "Search sources" }[tab];
+  const placeholder = { experiments: "", claims: "Search the old claims: humor, moral machine, nerdiness…", coverage: "Search coverage", nodes: "Search topics: happiness, spam…", sources: "Search sources" }[tab];
 
   return (
     <div className="atlas">
       <div className="at-bar">
         <div className="tabs" role="tablist" aria-label="Atlas sections">
-          {(["claims", "coverage", "nodes", "sources"] as Tab[]).map((t) => (
+          {(["experiments", "claims", "coverage", "nodes", "sources"] as Tab[]).map((t) => (
             <button key={t} type="button" role="tab" aria-selected={tab === t} onClick={() => setTab(t)}>
-              {t === "claims" ? `Findings ${claims.length}` : t === "coverage" ? "Coverage" : t === "nodes" ? `Topics ${nNodes.toLocaleString("en-US")}` : `Sources ${nSources}`}
+              {t === "experiments" ? `Experiments ${experiments.length}` : t === "claims" ? `Reference: old claims ${claims.length}` : t === "coverage" ? "Coverage" : t === "nodes" ? `Topics ${nNodes.toLocaleString("en-US")}` : `Sources ${nSources}`}
             </button>
           ))}
         </div>
-        <input className="pt-input" placeholder={placeholder} value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search the atlas" />
+        {tab !== "experiments" && <input className="pt-input" placeholder={placeholder} value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search the atlas" />}
       </div>
+
+      {tab === "experiments" && <ExperimentsIndex cards={experiments} />}
 
       {tab === "claims" && (
         <>
@@ -192,7 +198,8 @@ export default function Atlas({ claims, nNodes, nSources }: { claims: Claim[]; n
 
       <p className="at-foot">
         {tab === "nodes" ? "Topics sorted by the column you pick (up to 400 shown). Unusual: the largest standardized distance from the corpus average on any indicator. Click a topic to open it on the map."
-          : tab === "claims" ? "Every finding computed, on the portrait or not. Evidence: real answers (published tests, crowd votes, answer keys), audited items (questions written for this project), themes (found by similarity), indicators (per-topic numbers)."
+          : tab === "experiments" ? "Rank and verdict are Jev's own: it judged every experiment in head-to-heads anchored to a gold set labeled from Brian's feedback (docs/experiments/evaluator.md). Keep: strong enough for the portrait's shortlist; atlas: worth reading here."
+          : tab === "claims" ? "The per-topic claims computed before the experiments, kept for reference; most now live inside an experiment. Evidence: real answers (published tests, crowd votes, answer keys), audited items (questions written for this project), themes (found by similarity), indicators (per-topic numbers)."
           : tab === "coverage" ? "Modeled on what surveys, censuses and personality reports ask people about. Partly means the questions exist but aren't scored as a test."
           : "Counts include hidden questions; shown is the share on the map."}
       </p>

@@ -18,6 +18,7 @@ export type Row = {
   correct: boolean | null;
   top: string;
   p_top: number;
+  labels?: Record<string, string>; // option descriptions, when the experiments export has them
 };
 
 // A ledger claim: the common fields, plus whatever the claim's script attached (families, facets, reliability...).

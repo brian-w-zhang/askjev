@@ -14,10 +14,11 @@ let pending: Promise<ExperimentsData | null> | null = null;
 
 export async function loadExperiments(): Promise<ExperimentsData | null> {
   if (PORTRAIT_URL) {
-    if (cached?.key === PORTRAIT_URL) return cached.data;
-    pending ??= fetch(`${PORTRAIT_URL}/experiments.json`, { cache: "no-store" })
+    const url = PORTRAIT_URL;
+    if (cached?.key === url) return cached.data;
+    pending ??= fetch(`${url}/experiments.json`, { cache: "no-store" })
       .then((r) => (r.ok ? (r.json() as Promise<ExperimentsData>) : null))
-      .then((data) => { if (data) cached = { key: PORTRAIT_URL, data }; return data; })
+      .then((data) => { if (data) cached = { key: url, data }; return data; })
       .catch(() => null)
       .finally(() => { pending = null; });
     return pending;

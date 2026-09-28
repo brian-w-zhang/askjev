@@ -107,7 +107,9 @@ def boot(values, stat=np.mean, b: int = 1000) -> list[float]:
     if len(v) < 2:
         return [float(stat(v)), float(stat(v))] if len(v) else [float("nan")] * 2
     bs = [stat(v[RNG.integers(0, len(v), len(v))]) for _ in range(b)]
-    return [round(float(np.percentile(bs, 5)), 4), round(float(np.percentile(bs, 95)), 4)]
+    lo, hi = float(np.percentile(bs, 5)), float(np.percentile(bs, 95))
+    d = 2 if max(abs(lo), abs(hi)) >= 1 else 3  # enough digits to read, not more
+    return [round(lo, d), round(hi, d)]
 
 
 def seeded(ids, key: str, k: int = 3) -> list[str]:

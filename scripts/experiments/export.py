@@ -37,7 +37,13 @@ def main():
     q = pl.read_parquet(A / "questions.parquet")
     shown = q.filter(pl.col("display_ok") & ~pl.col("harmful") & pl.col("jev_dist").is_not_null())
     ids = {i for e in exps for i in (e["result"].get("examples") or [])[:8]}
-    rows = {r["id"]: row(r) for r in shown.filter(pl.col("id").is_in(list(ids))).iter_rows(named=True)}
+    rows = {}
+    for r in shown.filter(pl.col("id").is_in(list(ids))).iter_rows(named=True):
+        x = row(r)
+        opts = json.loads(r["options"]) if r["options"] else {}
+        if isinstance(opts, dict) and any(opts.values()):  # show "50%" rather than the key "p050"
+            x["labels"] = {k: v for k, v in opts.items() if v}
+        rows[r["id"]] = x
     srcs = {s for e in exps for s in e["spec"].get("sources") or []}
     counts = dict(shown.filter(pl.col("source").is_in(list(srcs))).group_by("source").len().iter_rows())
     nodes = {}

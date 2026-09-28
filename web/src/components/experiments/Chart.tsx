@@ -177,7 +177,7 @@ function barsChart(c: ChartData, mini: boolean) {
   // bars
   const rows = arr(c.rows).length
     ? arr(c.rows).map((r) => ({ label: pretty(str(r.label)), b: num(r.value) ?? 0, ci: pair(r.ci) }))
-    : arr<string>(c.labels).map((l, i) => ({ label: pretty(str(l)), b: num(arr(c.values)[i]) ?? 0 }));
+    : arr<string>(c.labels).map((l, i) => ({ label: pretty(str(l)), b: num(arr(c.values)[i]) ?? 0, ci: undefined as [number, number] | undefined }));
   const dom = pair(c.domain);
   const max = dom ? dom[1] : Math.max(...rows.map((r) => r.ci?.[1] ?? r.b), 0);
   const fmt = max <= 1 ? (v: number) => `${Math.round(v * 100)}%` : (v: number) => v.toFixed(2).replace(/\.?0+$/, "");
