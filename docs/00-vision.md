@@ -14,12 +14,14 @@ where its judgments are jagged.
 - **Capabilities + personality + jaggedness.** Machine-side questions show how Jev
   behaves on its real use cases. Self-side questions show its defaults. World-side
   questions show breadth, and with ground truth, calibration by topic.
-- **Findings are the substance, the map is the packaging.** The deliverable that
-  matters is 3-5 concrete, reproducible jaggedness findings. The tree and the
-  sunburst make 100k-1M answers browsable and make the findings visceral.
+- **Experiments are the substance, the map is the packaging.** Each experiment
+  gathers many questions into one reproducible thing to learn about Jev, compared
+  with people or a right answer (`16-experiments-plan.md`); the portrait is a
+  highlight reel of them. The tree and the map make the million answers browsable
+  and make the experiments visceral.
 
 ## Three layers, in order of importance
-1. **Jaggedness findings.** Controlled perturbations (rewording universes, option
+1. **Experiments on jaggedness.** Controlled perturbations (rewording universes, option
    shuffle, order swap, decoys, self vs human frame) plus ground truth and human
    data. See `05-experiments.md`.
 2. **The map.** Three hemispheres (World / Self / Machine), 28 L1 roots, and Jev
@@ -55,10 +57,10 @@ where its judgments are jagged.
 - **Score answers are shown as bands**, never as fake-precise interpolated numbers.
 - **Don't re-announce TypeSafe's documented jaggedness as a discovery**
   (`01-jev.md` §6). Quantify it at scale, or go beyond it.
-- **Private first.** Findings go to TypeSafe before anything else.
+- **Private first.** Results go to TypeSafe before anything else.
 
 ## Success
-- A findings write-up: 3-5 jagged edges, each with the phenomenon, an exact repro,
+- An experiments write-up: the strongest jagged edges, each with the phenomenon, an exact repro,
   magnitude across N items, the noise floor, and a hypothesis about a general fix.
 - A working private site: the sunburst over the tree, question cards with indicators,
   and an ask box.

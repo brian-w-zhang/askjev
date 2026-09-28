@@ -57,6 +57,7 @@
 | 2026-09-27 | Portrait reframed around TypeSafe's "nobody asks how Jev's doing" tweet: a Wrapped-style deck of ~30 cards addressed to Jev, with fine print on every card, memes on about a third of them (templates kept in gitignored `data/portrait/memes/`), taste from ratings rather than head-to-heads, and hand-picked check-in/debate/hot-take/miss cards labeled as hand-picked (`11-portrait.md` §6-7). Scrollable now; a stories mode can wrap the same cards later |
 | 2026-09-27 | The map links to the portrait and atlas with TypeSafe-style nav chips (top center; bottom on phones) and takes deep links (`/?node=`, `/?q=`, the address bar following the open panel). A wellbeing bank (`sources/wellbeing`: SWLS, WHO-5, UCLA-3, PSS-4, Cantril ladder; 18 items) was added and answered for the portrait's checkup card (`11-portrait.md` §7) |
 | 2026-09-27 | Polish pass (`12-polish.md`): a rubric for map, portrait and atlas scored before and after; online tests scored against their real test-takers (`tier1_scales.py`); atlas findings as cards; routine prod refreshes via `sync_prod.py --delta`; portrait data served from a private Blob folder (`PORTRAIT_URL`). Production matches local |
+| 2026-09-28 | **Findings become experiments** (`16-experiments-plan.md`, `experiments/`): each gathers many questions into one comparison, documented in six steps and judged by Jev itself (`experiments/evaluator.md`: head-to-heads against a gold set, keep/atlas/rework/cut in code, plus Claude's sampled audit). New questions only where an experiment needs them, as `sources/<name>` adapters of published human data, tagged `meta.experiment`. The atlas becomes the experiments library (a page per experiment); the old per-topic claims move to a reference tab. The portrait's cards stay; its candidates are ranked from Jev's verdicts |
 
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)
@@ -77,7 +78,7 @@
 - [x] Adapters (38 sources; Moral Machine deferred: large OSF file, aggregates only)
 - [x] Run stages end to end (`06-pipeline.md` §4); mix report against `03-questions.md` §2
 
-## M3: Experiments + findings
+## M3: Experiments
 - [ ] Starter universes on a stratified 5k sample (terse, verbose, old-english, synonyms, typos, statement-form, french, negated)
 - [ ] Experiments 1-11 on the slice; findings notebook
 - [x] Coverage test; first growth round
