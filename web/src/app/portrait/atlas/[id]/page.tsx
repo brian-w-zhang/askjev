@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Nav } from "@/components/portrait/ui";
 import Chart from "@/components/experiments/Chart";
+import ExMeme from "@/components/experiments/ExMeme";
 import Md from "@/components/experiments/Md";
 import Rows from "@/components/experiments/Rows";
 import { loadExperiments } from "@/components/experiments/data";
@@ -111,14 +112,7 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
             <h1>{e.title}</h1>
             <p className="ex-sub">{e.question}</p>
           </div>
-          {e.meme && (
-            <figure className="ex-meme">
-              <div className="ex-wbar"><span>meme.webp</span><span>ours</span></div>
-              {/* eslint-disable-next-line @next/next/no-img-element -- a private image served by our own route */}
-              <img src={`/portrait/memes/${e.meme.file}`} alt={e.meme.alt ?? ""} loading="lazy" />
-              {e.meme.caption && <figcaption>{e.meme.caption}</figcaption>}
-            </figure>
-          )}
+          {e.meme && <div className="ex-meme"><ExMeme m={e.meme} /></div>}
         </header>
 
         <div className="ex-window">

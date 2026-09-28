@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import Chart from "./Chart";
+import { useMemeFollower } from "./MemeFollower";
 import { OUTCOME, VERDICT } from "./labels";
 import type { ExperimentCard } from "./types";
 
@@ -15,6 +16,7 @@ export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] })
   const [family, setFamily] = useState("");
   const [sort, setSort] = useState<Sort>("rank");
   const needle = q.trim().toLowerCase();
+  const follower = useMemeFollower();
   const ranks = useMemo(() => new Map(cards.map((c, i) => [c.id, i + 1])), [cards]);
   const rank = (c: ExperimentCard) => ranks.get(c.id) ?? 999;
   const matches = useMemo(() => cards.filter((c) => !needle || `${c.title} ${c.result} ${c.family_label} ${c.id}`.toLowerCase().includes(needle)), [cards, needle]);
@@ -50,7 +52,7 @@ export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] })
       {shown.length === 0 && <p className="at-empty">Nothing matches &ldquo;{q}&rdquo;.</p>}
       <div className="ex-grid">
         {shown.map((c) => (
-          <Link key={c.id} href={`/portrait/atlas/${c.id}`} prefetch={false} className={`ex-card o-${c.evaluation?.outcome ?? "none"}`}>
+          <Link key={c.id} href={`/portrait/atlas/${c.id}`} prefetch={false} className={`ex-card o-${c.evaluation?.outcome ?? "none"}`} {...follower.handlers(c.meme)}>
             <div className="ex-top">
               <span className="ex-fam">{c.family_label}</span>
               <span className="ex-rank" title="Jev's head-to-head ranking of all experiments">#{rank(c)}</span>
@@ -72,6 +74,7 @@ export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] })
           </Link>
         ))}
       </div>
+      {follower.layer}
     </>
   );
 }

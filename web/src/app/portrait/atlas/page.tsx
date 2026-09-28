@@ -37,7 +37,7 @@ export default async function AtlasPage() {
     })) : [];
   const cards: ExperimentCard[] = (x?.experiments ?? []).map((e) => ({
     id: e.id, family: e.family, family_label: e.family_label, title: e.title, result: e.result, n: e.n,
-    new_questions: e.new_questions, evaluation: e.evaluation, portrait_rank: e.portrait_rank ?? null, chart: thumb(e.chart),
+    new_questions: e.new_questions, evaluation: e.evaluation, portrait_rank: e.portrait_rank ?? null, chart: thumb(e.chart), meme: e.meme,
   }));
   return (
     <main>

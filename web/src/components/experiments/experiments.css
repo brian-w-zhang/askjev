@@ -232,3 +232,16 @@
   .pt .ex-side { position: static; }
   .pt .ex-sec p, .pt .ex-sec li { font-size: 15px; }
 }
+
+/* ---------- memes: on the page, and following the cursor on the index ---------- */
+.pt .ex-meme { margin: 0 0 18px; transform: rotate(1.2deg); }
+.pt .ex-memefig { margin: 0; background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line), 5px 5px 0 var(--jev); }
+.pt .ex-memefig .cap { padding: 8px 10px 7px; font-size: 14px; line-height: 1.25; font-weight: 500; }
+.pt .ex-memefig .img { position: relative; overflow: hidden; background: #000; container-type: inline-size; }
+.pt .ex-memefig img { display: block; width: 100%; height: 100%; object-fit: cover; user-select: none; }
+.pt .ex-memefig .lab { position: absolute; transform: translate(-50%, -50%); text-align: center; font-family: Impact, "Anton", "Arial Black", sans-serif; font-size: clamp(10px, 6.2cqw, 22px); line-height: 1.05; letter-spacing: 0.01em; overflow-wrap: anywhere; }
+.pt .ex-memefig .lab-outline { color: #fff; text-transform: uppercase; text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000, 0 2px 0 #000; }
+.pt .ex-memefig .lab-ink { color: #111; font-family: var(--sans); font-weight: 600; text-transform: none; font-size: clamp(9px, 5cqw, 18px); }
+.pt .ex-follow { position: fixed; left: 0; top: 0; z-index: 60; width: 240px; pointer-events: none; will-change: transform; }
+.pt .ex-follow .ex-memefig { box-shadow: 0 0 0 1px var(--w-line), 4px 4px 0 var(--jev), 0 12px 30px rgba(0, 0, 0, 0.25); }
+.pt .ex-follow .ex-memefig .cap { font-size: 12px; padding: 6px 8px; }

@@ -22,7 +22,7 @@ export type Experiment = {
   topics?: { node: string; n: number; label: string; parent: string; parent_label: string }[];
   case?: { sections: Partial<Record<"why" | "data" | "asked" | "measured" | "found" | "means", string>>; chart_note: string;
            caveats: { label: string; text: string }[]; facts: string[] };
-  meme?: { file: string; alt: string | null; caption: string | null };
+  meme?: ExperimentMeme;
   take?: Take;
 };
 export type ExperimentsData = { experiments: Experiment[]; families: Record<string, string> };
@@ -31,3 +31,9 @@ export type ExperimentCard = Pick<Experiment, "id" | "family" | "family_label" |
 
 // Jev's take (docs/17 item 4): its answers to questions about the experiment, and the paragraph built from them.
 export type Take = { text: string; answers: { q: string; a: string; p: number | null }[] };
+
+// A template with our words on it (docs/17 item 8): label boxes in percent of the image.
+export type ExperimentMeme = {
+  name: string; file: string; w: number; h: number; alt: string; caption: string | null;
+  boxes: { x: number; y: number; w: number; style?: "outline" | "ink"; size?: number }[]; texts: string[];
+};

@@ -20,6 +20,7 @@ from export_page import row  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import cases  # noqa: E402
+import memes  # noqa: E402
 
 A = Path("data/analysis")
 OUT = A / "experiments"
@@ -111,9 +112,9 @@ def main():
             out[-1]["result"] = (c.get("result") or r["result"]).strip()
             out[-1]["case"] = {"sections": c["sections"], "chart_note": c.get("chart_note") or "",
                                "caveats": c.get("caveats") or [], "facts": c.get("facts") or []}
-            m = c.get("meme") or {}
-            if m.get("file") and (Path("data/portrait/memes") / m["file"]).exists():
-                out[-1]["meme"] = {k: m.get(k) for k in ("file", "alt", "caption")}
+            mm = memes.resolve(c["meme"]) if c.get("meme") else None
+            if mm:
+                out[-1]["meme"] = mm
         take = OUT / "_take" / f"{s['id']}.json"
         if take.exists():
             out[-1]["take"] = json.loads(take.read_text())
