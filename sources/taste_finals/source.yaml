@@ -1,0 +1,11 @@
+name: taste_finals
+url: (generated) data/raw/taste_finals/top24.json from scripts/experiments/taste_finals_pool.py
+license: Items from the taste sources' catalogs (see taste_ratings and g5_w13_ratings); pairs authored for this project
+version: finalists picked 2026-09-28 from the questions table
+target: 3312
+hemisphere: self
+kind: taste
+notes: >
+  Round-robin head-to-heads among Jev's 24 top-rated items per taste domain (12 domains x 276 pairs), placed at each
+  domain's ratings node. No human data: this settles Jev's own order at the top. The option names are what Jev
+  sees; the ids stay in meta.

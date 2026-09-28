@@ -1,6 +1,6 @@
-# Jev vs 1,000 young Slovaks: fears, hobbies and habits
+# resemble_young_slovaks
 
-`resemble_young_slovaks` · family: resemble
+family: resemble
 
 ## 1. Question
 On the Young People Survey (fears, hobbies, music, spending), where does Jev differ from ~1,000 people aged 15-30?

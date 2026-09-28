@@ -1,6 +1,6 @@
-# How wrong is it? Jev is softer, most on disloyalty
+# moral_vignettes
 
-`moral_vignettes` · family: moral
+family: moral
 
 ## 1. Question
 Rating short scenes of wrongdoing (harm, cheating, disloyalty, disrespect, impurity, oppression), how wrong does Jev find each kind compared with people?

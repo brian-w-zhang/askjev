@@ -1,6 +1,6 @@
-# Jev's taste in books vs Goodreads readers
+# taste_vs_audience_book
 
-`taste_vs_audience_book` · family: taste
+family: taste
 
 ## 1. Question
 Does Jev like the books that Goodreads readers like, and where does it disagree most?

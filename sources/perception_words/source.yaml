@@ -1,0 +1,13 @@
+name: perception_words
+url: https://github.com/zonination/perceptions
+license: MIT (zonination/perceptions, 2015)
+version: probly.csv and numberly.csv from the repository's master branch, fetched 2026-09-28
+target: 150
+hemisphere: world
+kind: perception
+notes: >
+  Added for the probability- and amount-word experiments (docs/13 #1 and #3, docs/experiments/perception_*.md).
+  46 Reddit respondents gave a probability for 17 phrases and a number for 10 amount phrases; each answer is put in
+  the same ordered bins Jev answers in (probabilities to the nearest 5%, counts in 15 bins). "Fractions of" is left
+  out because the bins hold counts. The reverse direction (probability to phrase) and the phrases in different
+  settings have no human data. Placed at world.society.languages.word.probability_words.

@@ -1,6 +1,6 @@
-# Jev's four letters
+# person_type
 
-`person_type` · family: personality
+family: personality
 
 ## 1. Question
 On an open Jungian type test (OEJTS, a free Myers-Briggs-style test), which type does Jev come out as?

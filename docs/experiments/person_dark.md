@@ -1,6 +1,6 @@
-# The dark triad
+# person_dark
 
-`person_dark` · family: personality
+family: personality
 
 ## 1. Question
 Does Jev describe itself as more or less manipulative, narcissistic and callous than the people who took the dark-triad tests?

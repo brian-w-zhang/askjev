@@ -1,6 +1,6 @@
-# How nerdy is Jev?
+# person_nerd
 
-`person_nerd` · family: personality
+family: personality
 
 ## 1. Question
 On the Nerdy Personality Attributes Scale, how nerdy is Jev compared with ~15,000 test-takers?

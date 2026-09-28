@@ -1,6 +1,6 @@
-# Jev's favorite books, ranked
+# taste_top_book
 
-`taste_top_book` · family: taste
+family: taste
 
 ## 1. Question
 If Jev ranked every book it was asked about, what would its top ten be?

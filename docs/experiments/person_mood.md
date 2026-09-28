@@ -1,6 +1,6 @@
-# Anxiety, depression and stress vs 40,000 test-takers
+# person_mood
 
-`person_mood` · family: personality
+family: personality
 
 ## 1. Question
 On the DASS mood scales, how anxious, depressed and stressed do Jev's answers look next to the people who took them?

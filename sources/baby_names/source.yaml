@@ -1,0 +1,12 @@
+name: baby_names
+url: https://www.ssa.gov/oact/babynames/limits.html (via https://github.com/hadley/babynames)
+license: Public domain (US Social Security Administration); packaged by the R babynames package, CC0
+version: babynames package data (SSA records 1880-2017), fetched 2026-09-28
+target: 240
+hemisphere: world
+kind: factual
+notes: >
+  Added for the names experiment (docs/13 #7, docs/experiments/names_*.md). Truth only, no human answers: the share
+  of babies with a name recorded as girls, and the decade with the most births of the name. Birth records count sex
+  recorded at birth; the questions say so and make no claim about anyone's identity. Placed at
+  world.society.languages.personal_name.

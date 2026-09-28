@@ -1,6 +1,6 @@
-# Jev's favorite albums and sounds, ranked
+# taste_top_music
 
-`taste_top_music` · family: taste
+family: taste
 
 ## 1. Question
 If Jev ranked every album or sound it was asked about, what would its top ten be?

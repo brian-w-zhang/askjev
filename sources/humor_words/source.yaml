@@ -1,0 +1,11 @@
+name: humor_words
+url: https://github.com/tomasengelthaler/HumorNorms
+license: Free for not-for-profit research (Engelthaler & Hills 2018 humor norms)
+version: humor_dataset.csv from the repository's master branch, fetched 2026-09-28
+target: 600
+hemisphere: world
+kind: perception
+notes: >
+  Added for the funny-words experiment (docs/13 #6). 600 of the 4,997 words, spread evenly over the range of mean
+  funniness. Only published means (1-5, about 35 raters each) exist, so they are kept in meta, not as a human
+  distribution. Placed at a new node world.society.languages.word.word_humor.

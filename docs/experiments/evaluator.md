@@ -40,7 +40,7 @@ What the tuning showed:
   whatever the card says, except the human-baseline check (0.23 for cards the gold set cuts, about 0.7 otherwise).
   Absolute verdicts can't tell "an unusual topic on a metric" from a real result: jargon cards got `portrait`.
 - **Comparisons work.** Jev commits when it compares. The head-to-head ranking puts all seven strong new-format cards
-  first; its misses are old findings written tersely (the ISTJ type, the middle-level habit) and Jev-only fun (the
+  first; its misses are old findings written tersely (a personality-type result, the middle-level habit) and Jev-only fun (the
   skunk), which the bar deliberately discounts.
 - **Stable:** the absolute outcome was identical for 60/60 cards with the verdict options reordered; head-to-heads are
   asked in both orders so position bias cancels.

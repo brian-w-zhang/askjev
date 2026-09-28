@@ -1,6 +1,6 @@
-# Introversion and social signals
+# person_social_style
 
-`person_social_style` · family: personality
+family: personality
 
 ## 1. Question
 Is Jev an introvert, and how warm are its social signals, next to thousands of test-takers?

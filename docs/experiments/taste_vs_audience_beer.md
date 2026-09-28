@@ -1,6 +1,6 @@
-# Jev's taste in beers vs BeerAdvocate reviewers
+# taste_vs_audience_beer
 
-`taste_vs_audience_beer` · family: taste
+family: taste
 
 ## 1. Question
 Does Jev like the beers that BeerAdvocate reviewers like, and where does it disagree most?

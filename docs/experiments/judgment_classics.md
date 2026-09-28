@@ -1,6 +1,6 @@
-# Psychology's classic effects, re-run on Jev
+# judgment_classics
 
-`judgment_classics` · family: judgment
+family: judgment
 
 ## 1. Question
 Take the famous framing and judgment effects that Many Labs re-ran on thousands of people. Does Jev shift when only the framing changes, the way people do?

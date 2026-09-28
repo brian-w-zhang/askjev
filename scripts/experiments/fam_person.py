@@ -9,9 +9,8 @@ from __future__ import annotations
 
 import json
 from functools import lru_cache
-from pathlib import Path
 
-from lib import A, Result, Spec, boot, ordinal, seeded
+from lib import A, Result, Spec, ordinal
 
 HOW_SCALES = ("Open Psychometrics publishes each item's answer distribution from everyone who took the test on its "
               "site. Each item Jev answered is compared with that average on a 0-1 scale (reverse-keyed items flipped, "
@@ -82,6 +81,21 @@ SCALE_FAMILIES = {
 }
 
 
+
+def _clean(label: str) -> str:
+    """'Machiavellianism (sd3)' -> 'SD3 machiavellianism' for test names; other labels lower-cased as they are."""
+    if " (" in label:
+        base, tag = label.split(" (", 1)
+        tag = tag.rstrip(")")
+        if tag.lower() in ("sd3", "mach-iv", "mies", "osri"):
+            return f"{tag.upper()} {base.lower()}"
+        return f"{base.lower()}, {tag.lower()}"
+    return label.lower()
+
+
+def _and(xs: list[str]) -> str:
+    return xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " and " + xs[-1]
+
 def scale_family(fid: str):
     title, question, why, ids = SCALE_FAMILIES[fid]
     spec = Spec(
@@ -103,17 +117,17 @@ def scale_family(fid: str):
                  "gap": c["effect"], "ci": c["ci90"], "n_items": c["n"], "resp": c.get("median_respondents")} for c in cs]
         real = [r for r in rows if not (r["ci"][0] <= 0 <= r["ci"][1]) and abs(r["gap"]) >= 0.1]
         if real:
-            big = max(real, key=lambda r: abs(r["gap"]))
-            head = (f"Jev comes out {'lower' if big['gap'] < 0 else 'higher'} than the average test-taker on "
-                    f"{big['label'].lower()} ({big['self']:.2f} vs {big['people']:.2f} on a 0-1 scale)")
-            others = [r["label"].lower() for r in real if r is not big]
-            if others:
-                head += ", and differs clearly on " + ", ".join(others)
-            same = [r["label"].lower() for r in rows if r not in real]
-            head += ("; no clear gap on " + ", ".join(same) + ".") if same else "."
+            parts = []
+            for word, sign in (("lower", -1), ("higher", 1)):
+                side = sorted((r for r in real if r["gap"] * sign > 0), key=lambda r: -abs(r["gap"]))
+                if side:
+                    parts.append(f"{word} on " + _and([f"{_clean(r['label'])} ({r['self']:.2f} vs {r['people']:.2f})" for r in side]))
+            head = "On a 0-1 scale, Jev scores " + "; ".join(parts) + " than the average test-taker"
+            same = [_clean(r["label"]) for r in rows if r not in real]
+            head += ("; no clear gap on " + _and(same) + ".") if same else "."
         else:
             head = "No gap clears the noise here: " + ", ".join(
-                f"{r['label'].lower()} {r['self']:.2f} vs {r['people']:.2f} for test-takers" for r in rows) + "."
+                f"{_clean(r['label'])} {r['self']:.2f} vs {r['people']:.2f} for test-takers" for r in rows) + "."
         return Result(
             result=head,
             evidence=f"{sum(r['n_items'] for r in rows)} items; median of {int(sorted(r['resp'] or 0 for r in rows)[len(rows)//2]):,} "

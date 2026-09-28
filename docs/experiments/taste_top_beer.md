@@ -1,6 +1,6 @@
-# Jev's favorite beers, ranked
+# taste_top_beer
 
-`taste_top_beer` · family: taste
+family: taste
 
 ## 1. Question
 If Jev ranked every beer it was asked about, what would its top ten be?

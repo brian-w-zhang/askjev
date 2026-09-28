@@ -1,6 +1,6 @@
-# Mindfulness
+# person_mindful
 
-`person_mindful` · family: personality
+family: personality
 
 ## 1. Question
 On the Kentucky mindfulness skills, does Jev observe, describe, act with awareness and accept?

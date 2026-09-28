@@ -1,6 +1,6 @@
-# Fisher's four temperaments
+# person_temperament
 
-`person_temperament` · family: personality
+family: personality
 
 ## 1. Question
 Which of Helen Fisher's temperaments (curious, cautious, analytical, prosocial) does Jev lean toward?

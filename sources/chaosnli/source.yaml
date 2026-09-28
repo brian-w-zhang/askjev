@@ -1,0 +1,12 @@
+name: chaosnli
+url: https://github.com/easonnie/ChaosNLI (files via https://huggingface.co/datasets/earino/chaosnli)
+license: CC BY-NC 4.0 (ChaosNLI, Nie, Zhou & Bansal 2020); non-commercial research use
+version: ChaosNLI v1.0 SNLI and MNLI-matched files, fetched 2026-09-28
+target: 600
+hemisphere: world
+kind: perception
+notes: >
+  Added for the "reading between the lines" experiment (research pass 2, idea 9). 100 crowd labels per item; 300
+  items each from SNLI and MNLI, sampled evenly across entropy terciles so contested items are well represented.
+  Options are described in plain words instead of the NLI labels. Placed at a new node
+  world.society.languages.sentence_inference.

@@ -1,6 +1,6 @@
-# Jev's favorite games and activities, ranked
+# taste_top_activity
 
-`taste_top_activity` · family: taste
+family: taste
 
 ## 1. Question
 If Jev ranked every game or activity it was asked about, what would its top ten be?

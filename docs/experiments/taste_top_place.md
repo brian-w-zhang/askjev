@@ -1,6 +1,6 @@
-# Jev's favorite places, ranked
+# taste_top_place
 
-`taste_top_place` · family: taste
+family: taste
 
 ## 1. Question
 If Jev ranked every place it was asked about, what would its top ten be?

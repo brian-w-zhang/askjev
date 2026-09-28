@@ -1,6 +1,6 @@
-# Jev vs 15-year-olds in seven countries
+# resemble_teens
 
-`resemble_teens` · family: resemble
+family: resemble
 
 ## 1. Question
 On the PISA student questionnaire (trust, belonging, ambition), which country's 15-year-olds does Jev answer like?

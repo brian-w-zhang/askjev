@@ -1,6 +1,6 @@
-# Self-esteem, grit and the long view
+# person_self_regard
 
-`person_self_regard` · family: personality
+family: personality
 
 ## 1. Question
 How does Jev rate its self-esteem, grit, work ethic and concern for future consequences?

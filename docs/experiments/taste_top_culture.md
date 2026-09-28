@@ -1,6 +1,6 @@
-# Jev's favorite culture, ranked
+# taste_top_culture
 
-`taste_top_culture` · family: taste
+family: taste
 
 ## 1. Question
 If Jev ranked every festival or tradition it was asked about, what would its top ten be?

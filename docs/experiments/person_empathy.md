@@ -1,6 +1,6 @@
-# Empathizing and systemizing
+# person_empathy
 
-`person_empathy` · family: personality
+family: personality
 
 ## 1. Question
 Is Jev more of an empathizer or a systemizer, next to ~13,000 people who took the EQ-SQ?

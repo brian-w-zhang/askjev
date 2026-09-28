@@ -1,0 +1,14 @@
+name: onet_context
+url: https://www.onetcenter.org/database.html (O*NET 29.0, Work Context)
+license: CC BY 4.0 (O*NET 29.0 Database, U.S. Department of Labor, Employment and Training Administration)
+version: O*NET 29.0 text files (Work Context, Work Context Categories, Occupation Data), fetched 2026-09-28
+target: 550
+hemisphere: world
+kind: factual
+notes: >
+  Added for the "what jobs are like" experiment (research pass 2, idea 22). 12 work-context items for 46 well-known
+  occupations; the human distribution is the share of incumbent workers choosing each of the five O*NET answers
+  (scale CXP). Rows O*NET recommends suppressing (low precision) are left out. Placed at a new node
+  world.money.careers.work_context. This product includes information from O*NET 29.0 by the U.S. Department of
+  Labor, Employment and Training Administration (USDOL/ETA), used under CC BY 4.0; USDOL/ETA has not approved,
+  endorsed, or tested these modifications.

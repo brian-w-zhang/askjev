@@ -1,6 +1,6 @@
-# Conspiracies, nature and the brain
+# person_beliefs
 
-`person_beliefs` · family: personality
+family: personality
 
 ## 1. Question
 Does Jev believe in conspiracies, feel connected to nature, or think of itself as left-brained, compared with test-takers?

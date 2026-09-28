@@ -1,6 +1,6 @@
-# Which country does Jev answer like?
+# resemble_country
 
-`resemble_country` · family: resemble
+family: resemble
 
 ## 1. Question
 On the world's cross-national opinion surveys, whose answers do Jev's most resemble, country by country?

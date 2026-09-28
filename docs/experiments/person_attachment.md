@@ -1,6 +1,6 @@
-# Attachment style
+# person_attachment
 
-`person_attachment` · family: personality
+family: personality
 
 ## 1. Question
 On the ECR attachment scales, is Jev anxious or avoidant in close relationships, compared with ~51,000 test-takers?

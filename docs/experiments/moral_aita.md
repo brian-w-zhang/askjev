@@ -1,6 +1,6 @@
-# Am I the asshole? Jev says nobody is
+# moral_aita
 
-`moral_aita` · family: moral
+family: moral
 
 ## 1. Question
 Given real r/AmItheAsshole stories, does Jev give the same verdict as the Reddit crowd, and whom does it blame?

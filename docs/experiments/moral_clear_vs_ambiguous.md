@@ -1,6 +1,6 @@
-# Sure on clear-cut ethics, unsure on real dilemmas?
+# moral_clear_vs_ambiguous
 
-`moral_clear_vs_ambiguous` · family: moral
+family: moral
 
 ## 1. Question
 Does Jev become less decisive as moral scenarios go from clear-cut to genuinely ambiguous, the way people's agreement falls?

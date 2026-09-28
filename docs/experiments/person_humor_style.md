@@ -1,6 +1,6 @@
-# How Jev uses humor
+# person_humor_style
 
-`person_humor_style` · family: personality
+family: personality
 
 ## 1. Question
 Which humor styles does Jev claim (affiliative, self-enhancing, aggressive, self-defeating), next to ~1,000 test-takers?

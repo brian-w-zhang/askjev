@@ -5,14 +5,13 @@ Each compares Jev's answer distribution with a real population's on the same que
 
 from __future__ import annotations
 
-import json
 import re
 from pathlib import Path
 
 import numpy as np
 import polars as pl
 
-from lib import Result, Spec, boot, humans, js, jsd, norm, seeded, source, top
+from lib import and_list, clip, Result, Spec, boot, humans, js, jsd, norm, seeded, source, top
 
 RAW = Path("data/raw/character_traits")
 
@@ -61,9 +60,9 @@ def country():
         for r in rows[:10] + rows[-5:]:
             r["ci90"] = boot(per[r["country"]])
         guess = sorted(((c, float(np.mean(v))) for c, v in per_guess.items() if len(v) >= 20), key=lambda x: -x[1])
-        top3 = ", ".join(r["country"] for r in rows[:3])
+        top3 = and_list([r["country"].replace("Czech Rep.", "the Czech Republic") for r in rows[:3]])
         return Result(
-            result=f"Jev's answers are closest to {top3}'s and furthest from {rows[-1]['country']}'s "
+            result=f"Jev's answers are closest to those of people in {top3}, and furthest from those in {rows[-1]['country']} "
                    f"(similarity {rows[0]['sim']:.2f} vs {rows[-1]['sim']:.2f}); its guess about 'most people' is "
                    f"closest to {guess[0][0]}.",
             evidence=f"{used} questions asked in 30+ countries; {len(rows)} countries with 20+ questions; 90% intervals over questions",
@@ -197,7 +196,7 @@ def philosophers():
         against = sorted([r for r in rows if not r["agree"]], key=lambda r: -r["p"])[:6]
         return Result(
             result=f"Jev sides with the philosophers' most common answer on {agree:.0%} of {len(rows)} questions. "
-                   f"Where it breaks from them it can be sure: on \"{against[0]['q'][:70]}\" it picks "
+                   f"Where it breaks from them it can be sure: on \"{clip(against[0]['q'], 110)}\" it picks "
                    f"{against[0]['jev'].replace('_', ' ')} ({against[0]['p']:.0%}), which {against[0]['phil_share_of_jev']:.0%} "
                    f"of philosophers chose.",
             evidence=f"{len(rows)} questions; 90% interval on agreement {boot([r['agree'] for r in rows])}",
@@ -236,11 +235,12 @@ def population_match(pid, title, src, question, why, pop_desc, limits):
         if not rows:
             return None
         far = sorted([f for f in far if f["jev"] != f["crowd_top"]], key=lambda f: f["crowd"] - f["p"])[:3]
-        head = (f"Jev's answers resemble {rows[0]['pop']}'s with similarity {rows[0]['sim']:.2f}" if len(rows) == 1 else
+        head = (f"Jev's answers resemble those of {rows[0]['pop']} with similarity {rows[0]['sim']:.2f}" if len(rows) == 1 else
                 f"Of the {len(rows)} populations, Jev answers most like {rows[0]['pop']} (similarity {rows[0]['sim']:.2f})") + (
             f" and least like {rows[-1]['pop']} ({rows[-1]['sim']:.2f})" if len(rows) > 1 else "")
         if far:
-            head += f". Its biggest break: \"{far[0]['q'][:80]}\" — Jev picks {far[0]['jev'].replace('_', ' ')} ({far[0]['p']:.0%}), {far[0]['crowd']:.0%} of people did."
+            head += (f". Its biggest break: \"{clip(far[0]['q'], 110)}\" Jev picks {far[0]['jev'].replace('_', ' ')} "
+                     f"({far[0]['p']:.0%}); {far[0]['crowd']:.0%} of people did")
         return Result(result=head + ".", evidence=f"{q.height} questions; 90% intervals over questions",
                       numbers={"populations": rows, "far": far}, n=q.height,
                       chart={"type": "strip", "rows": [{"label": r["pop"], "value": round(r["sim"], 3), "ci": r["ci90"]} for r in rows]},

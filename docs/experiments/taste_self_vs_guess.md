@@ -1,6 +1,6 @@
-# Where Jev thinks its taste differs from everyone's
+# taste_self_vs_guess
 
-`taste_self_vs_guess` · family: taste
+family: taste
 
 ## 1. Question
 In which kinds of things does Jev rate itself differently from how it thinks most people would?

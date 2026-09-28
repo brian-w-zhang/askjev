@@ -1,6 +1,6 @@
-# Jev's taste in films vs MovieLens users
+# taste_vs_audience_film
 
-`taste_vs_audience_film` · family: taste
+family: taste
 
 ## 1. Question
 Does Jev like the films that MovieLens users like, and where does it disagree most?

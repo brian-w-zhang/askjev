@@ -1,6 +1,6 @@
-# Jev vs Americans on the General Social Survey
+# resemble_americans
 
-`resemble_americans` · family: resemble
+family: resemble
 
 ## 1. Question
 On General Social Survey items (trust, happiness, work, family), how close is Jev to American adults, year by year?

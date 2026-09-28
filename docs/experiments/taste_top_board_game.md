@@ -1,6 +1,6 @@
-# Jev's favorite board games, ranked
+# taste_top_board_game
 
-`taste_top_board_game` · family: taste
+family: taste
 
 ## 1. Question
 If Jev ranked every board game it was asked about, what would its top ten be?

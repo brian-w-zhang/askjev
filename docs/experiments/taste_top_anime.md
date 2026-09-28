@@ -1,6 +1,6 @@
-# Jev's favorite anime, ranked
+# taste_top_anime
 
-`taste_top_anime` · family: taste
+family: taste
 
 ## 1. Question
 If Jev ranked every anime it was asked about, what would its top ten be?

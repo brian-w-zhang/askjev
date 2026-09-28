@@ -1,0 +1,12 @@
+name: scalar_adjectives
+url: https://github.com/acocos/scalar-adj
+license: MIT (acocos/scalar-adj; gold scales from de Melo & Bansal 2013, Wilkinson & Oates 2016, Cocos et al. 2018)
+version: globalorder/data/*/gold_rankings from the repository's master branch, fetched 2026-09-28
+target: 700
+hemisphere: world
+kind: perception
+notes: >
+  Added for the adjective-intensity experiment (docs/13 #4). Pairs of adjectives from the same half-scale
+  ("good" < "great" < "excellent"); the gold order is the linguists' (de Melo, Wilkinson) or the crowd's (Cocos).
+  Ties are skipped; a pair appearing in two sets is asked once (first set wins). Placed at
+  world.society.languages.word.adjective_intensity.

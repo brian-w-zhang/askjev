@@ -1,6 +1,6 @@
-# Prospect theory, re-run on Jev
+# risk_prospect_theory
 
-`risk_prospect_theory` · family: risk
+family: risk
 
 ## 1. Question
 On the gamble choices that founded prospect theory, re-run in 19 countries in 2020, does Jev choose like people?

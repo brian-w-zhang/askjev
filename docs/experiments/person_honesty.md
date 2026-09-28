@@ -1,6 +1,6 @@
-# Honesty and humility
+# person_honesty
 
-`person_honesty` · family: personality
+family: personality
 
 ## 1. Question
 On HEXACO's honesty-humility facets, how does Jev describe its own sincerity, fairness and greed?

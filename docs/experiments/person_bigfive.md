@@ -1,6 +1,6 @@
-# The Big Five, against 603,322 people
+# person_bigfive
 
-`person_bigfive` · family: personality
+family: personality
 
 ## 1. Question
 Where do Jev's answers to the public 50-item Big Five test land among the 603,322 people who took it?

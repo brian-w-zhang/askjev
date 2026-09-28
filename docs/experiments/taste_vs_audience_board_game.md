@@ -1,6 +1,6 @@
-# Jev's taste in board games vs BoardGameGeek users
+# taste_vs_audience_board_game
 
-`taste_vs_audience_board_game` · family: taste
+family: taste
 
 ## 1. Question
 Does Jev like the board games that BoardGameGeek users like, and where does it disagree most?

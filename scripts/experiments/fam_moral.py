@@ -5,13 +5,12 @@ from __future__ import annotations
 
 import json
 from functools import lru_cache
-from itertools import groupby
 
 import numpy as np
 import polars as pl
 from scipy.stats import spearmanr
 
-from lib import A, Result, Spec, agree_word, biggest, boot, js, jsd, level, norm, seeded, source, top
+from lib import A, Result, Spec, agree_word, biggest, boot, js, level, norm, seeded, source, top
 
 
 @lru_cache(maxsize=1)

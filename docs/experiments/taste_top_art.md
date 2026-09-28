@@ -1,6 +1,6 @@
-# Jev's favorite artworks, ranked
+# taste_top_art
 
-`taste_top_art` · family: taste
+family: taste
 
 ## 1. Question
 If Jev ranked every artwork or art form it was asked about, what would its top ten be?

@@ -1,6 +1,6 @@
-# Who Jev saves in the Moral Machine
+# moral_machine
 
-`moral_machine` · family: moral
+family: moral
 
 ## 1. Question
 In the Moral Machine's self-driving-car dilemmas, which factors pull Jev toward sparing one side, and how does that compare with millions of players?

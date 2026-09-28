@@ -1,6 +1,6 @@
-# Jev's favorite foods, ranked
+# taste_top_food
 
-`taste_top_food` · family: taste
+family: taste
 
 ## 1. Question
 If Jev ranked every food it was asked about, what would its top ten be?

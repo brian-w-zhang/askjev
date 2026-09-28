@@ -150,7 +150,8 @@ def save(spec: Spec, res: Result) -> dict:
 
 def render(spec: Spec, ev: dict | None = None) -> str:
     """The method doc for one experiment. Numbers live in the private result file; the doc says how they're made."""
-    lines = [f"# {spec.title}", "", f"`{spec.id}` · family: {spec.family}" + (f" · new questions: {spec.new_questions}" if spec.new_questions else ""), "",
+    # the heading is the id, not the title: titles state the finding, and findings stay in the private result file
+    lines = [f"# {spec.id}", "", f"family: {spec.family}" + (f" · new questions: {spec.new_questions}" if spec.new_questions else ""), "",
              "## 1. Question", spec.question, "", spec.why, "",
              "## 2. Sourcing", spec.sourcing, ""]
     if spec.sources:
@@ -166,3 +167,13 @@ def render(spec: Spec, ev: dict | None = None) -> str:
         lines += ["## Limits", spec.limits, ""]
     lines += ["Results: `data/analysis/experiments/" + spec.id + ".json` (private). Code: `scripts/experiments/`."]
     return "\n".join(lines) + "\n"
+
+
+def clip(text: str, n: int = 100) -> str:
+    """Shorten at a word boundary, marking the cut with an ellipsis."""
+    text = " ".join(text.split())
+    return text if len(text) <= n else text[:n].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+
+
+def and_list(xs: list[str]) -> str:
+    return xs[0] if len(xs) == 1 else ", ".join(xs[:-1]) + " and " + xs[-1]

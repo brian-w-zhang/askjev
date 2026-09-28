@@ -14,7 +14,7 @@ import numpy as np
 import polars as pl
 from scipy.stats import spearmanr
 
-from lib import Result, Spec, agree_word, biggest, boot, js, level, seeded, source
+from lib import Result, Spec, agree_word, biggest, boot, js, level, source
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "portrait"))
 from export_page import name_of  # noqa: E402
@@ -30,9 +30,9 @@ DOMAINS = {
     "food": ("food_ratings", "food", "foods", "lists written for this project (dishes, ingredients, cheeses, drinks)", None),
     "place": ("place_ratings", "place", "places", "lists written for this project (landmarks, cities, natural wonders)", None),
     "art": ("art_ratings", "artwork or art form", "artworks", "lists written for this project (famous works, genres)", None),
-    "nature": ("nature_ratings", "animal, sight or smell in nature", "nature", "lists written for this project (animals, sights, smells, weather)", None),
+    "nature": ("nature_ratings", "animal, sight or smell in nature", "things in nature", "lists written for this project (animals, sights, smells, weather)", None),
     "activity": ("activity_ratings", "game or activity", "games and activities", "lists written for this project (video games, pastimes, events)", None),
-    "culture": ("culture_ratings", "festival or tradition", "culture", "lists written for this project (festivals, performances, media)", None),
+    "culture": ("culture_ratings", "festival or tradition", "festivals and traditions", "lists written for this project (festivals, performances, media)", None),
 }
 
 

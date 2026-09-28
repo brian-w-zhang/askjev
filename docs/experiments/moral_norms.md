@@ -1,6 +1,6 @@
-# Jev thinks everyday rules are more universal than people do
+# moral_norms
 
-`moral_norms` · family: moral
+family: moral
 
 ## 1. Question
 For 25,000 rules of thumb ('It's rude to...', 'You should...'), how many people does Jev think agree, compared with the annotators' estimates?

@@ -1,6 +1,6 @@
-# Jev's taste in anime vs MyAnimeList users
+# taste_vs_audience_anime
 
-`taste_vs_audience_anime` · family: taste
+family: taste
 
 ## 1. Question
 Does Jev like the anime that MyAnimeList users like, and where does it disagree most?

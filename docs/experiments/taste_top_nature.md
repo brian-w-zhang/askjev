@@ -1,6 +1,6 @@
-# Jev's favorite nature, ranked
+# taste_top_nature
 
-`taste_top_nature` · family: taste
+family: taste
 
 ## 1. Question
 If Jev ranked every animal, sight or smell in nature it was asked about, what would its top ten be?

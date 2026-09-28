@@ -1,6 +1,6 @@
-# Jev's career code
+# person_career
 
-`person_career` · family: personality
+family: personality
 
 ## 1. Question
 If Jev took the Holland (RIASEC) career-interest quiz, what would its code be, next to ~145,000 quiz-takers?

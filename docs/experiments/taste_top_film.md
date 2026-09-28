@@ -1,6 +1,6 @@
-# Jev's favorite films, ranked
+# taste_top_film
 
-`taste_top_film` · family: taste
+family: taste
 
 ## 1. Question
 If Jev ranked every film it was asked about, what would its top ten be?

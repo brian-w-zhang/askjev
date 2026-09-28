@@ -1,6 +1,6 @@
-# Which fictional character is Jev?
+# resemble_character
 
-`resemble_character` · family: resemble
+family: resemble
 
 ## 1. Question
 If Jev took the Statistical 'Which Character' Personality Quiz, which of 2,125 fictional characters would it match?

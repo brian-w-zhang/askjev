@@ -1,6 +1,6 @@
-# Jev vs professional philosophers
+# resemble_philosophers
 
-`resemble_philosophers` · family: resemble
+family: resemble
 
 ## 1. Question
 On the big questions of philosophy (free will, God, zombies, the trolley problem), does Jev side with the profession?
