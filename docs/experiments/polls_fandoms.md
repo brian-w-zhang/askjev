@@ -22,7 +22,7 @@ Per community, share of polls where Jev's guess names the winner, and its lift o
 Ranked bars: communities by lift over chance, with the chance line.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.613, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.831, top verdict `portrait`.
 
 ## Compared with
 Voters in each subreddit's own polls

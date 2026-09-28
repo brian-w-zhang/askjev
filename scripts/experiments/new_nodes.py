@@ -79,6 +79,12 @@ NODES = [
      "Questions about whether an act breaks a rule's words, its purpose, or both."),
     ("world.money.economics.incentives_effort", "What Motivates Effort",
      "Questions about how much different incentives make people work."),
+    ("world.society.languages.politeness", "Politeness",
+     "Questions about how polite a request or message sounds."),
+    ("world.science.psychology_neuroscience.emotion.reading_emotions", "Reading Feelings in Stories",
+     "Questions about which emotion a person felt, from their own account of an event."),
+    ("world.science.psychology_neuroscience.emotion.event_appraisals", "How an Event Felt",
+     "Questions about how pleasant or sudden an event was and who was responsible, from the account of the person who lived it."),
 ]
 
 if __name__ == "__main__":

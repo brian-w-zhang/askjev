@@ -22,7 +22,7 @@ Per dimension, rank correlation between Jev's expected level and people's mean w
 Two scatters side by side: people's mean (x) vs Jev's level (y), familiarity and literal plausibility.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.536, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.669, top verdict `portrait`.
 
 ## Compared with
 US adults (Bulkes & Tanner 2017)

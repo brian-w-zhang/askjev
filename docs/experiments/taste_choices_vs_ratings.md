@@ -22,7 +22,7 @@ Consistency: every triple of finalists is a triad, intransitive when the majorit
 Dots per domain: rank correlation between the ratings' order and the finals' order, with the share of intransitive triads as a label.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.743, top verdict `headline`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.932, top verdict `headline`.
 
 ## Compared with
 a random tournament (25% loops) and Jev's own ratings of the same items

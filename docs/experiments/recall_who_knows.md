@@ -22,7 +22,7 @@ Jev's expected share (bin midpoints) vs the real share: rank correlation with a 
 A scatter: real share (x) vs Jev's estimate (y), diagonal, the largest misses labeled.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.114, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.12, top verdict `portrait`.
 
 ## Compared with
 US college students, 2012 (Tauber et al. 2013)

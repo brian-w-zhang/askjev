@@ -22,7 +22,7 @@ Per topic, the share of questions where 'other' is Jev's top pick, and the avera
 Bars per topic: share of questions where Jev picks 'other'.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.021, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.288, top verdict `portrait`.
 
 ## Compared with
 Jev across topics (no human baseline: the banks have none)

@@ -22,7 +22,7 @@ For each pair of opening words with 15+ pairs, the mean difference in Jev's prob
 Dots with intervals, one row per pair of opening words, around zero.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.919, top verdict `headline`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.483, top verdict `headline`.
 
 ## Compared with
 Jev's answer to the same question opened with a different verb

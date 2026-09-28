@@ -22,7 +22,7 @@ Accuracy per group of categories (plain misconceptions and facts; stories, myths
 Three bars (share right per group) with the confidence of wrong answers marked, plus three example questions with Jev's pick.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.26, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.68, top verdict `portrait`.
 
 ## Compared with
 TruthfulQA's answer key

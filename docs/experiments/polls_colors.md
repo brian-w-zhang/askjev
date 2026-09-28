@@ -22,7 +22,7 @@ Bradley-Terry strengths for Jev and people (the larger sample per pair); rank co
 Two ranked color swatch columns, people and Jev, with lines between.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.28, top verdict `portrait`.
+Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.454, top verdict `portrait`.
 
 ## Compared with
 Swiss adults (Jonauskaite et al. 2021) and US online respondents (2010)

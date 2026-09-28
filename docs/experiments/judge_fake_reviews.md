@@ -22,7 +22,7 @@ Accuracy against the labels, and the direction of errors: the share of fakes Jev
 Paired bars per dataset: the share of fakes Jev calls real, and the share of real reviews it calls fake.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.788, top verdict `headline`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.726, top verdict `headline`.
 
 ## Compared with
 The datasets' labels; Ott et al. 2011's human judges as reference (near chance, trusting)

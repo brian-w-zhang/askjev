@@ -22,7 +22,7 @@ Rank correlation between Jev's expected level and people's mean, with a 90% boot
 A scatter: people's mean rating (x, 1-5) vs Jev's level (y, 0-4), with the largest disagreements labeled.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.609, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.694, top verdict `portrait`.
 
 ## Compared with
 UK adults on Prolific (Banks, Wingfield & Connell 2023)

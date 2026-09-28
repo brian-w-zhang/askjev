@@ -20,7 +20,7 @@ Share of questions whose most likely level is the middle one, by kind, with 90% 
 Dots per kind (share at the middle), and paired bars for the sources with people's answers.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 5.076, top verdict `headline`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 5.105, top verdict `headline`.
 
 ## Compared with
 Real respondents on 14 sources (captions, jokes, personality items, taste ratings, norms, sound symbolism)

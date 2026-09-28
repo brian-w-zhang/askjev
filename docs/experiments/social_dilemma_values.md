@@ -22,7 +22,7 @@ For each value, its win rate: Jev's average probability on the action that carri
 A ranked list of values by win rate, top and bottom; the head-to-heads with loyalty.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.1, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.768, top verdict `portrait`.
 
 ## Compared with
 Nothing outside the model: the value tags come from the dataset, the choices from Jev

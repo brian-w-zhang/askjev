@@ -22,7 +22,7 @@ For each item whose yearly price rises steadily (rank correlation of price with 
 A strip of implied years, one dot per item, with the year Jev says it is and August 2026 marked.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.021, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.142, top verdict `portrait`.
 
 ## Compared with
 BLS average prices by year, 1980-2026

@@ -22,7 +22,7 @@ Per item, the wary share in Jev's 'most people' answer vs Americans'; mean diffe
 Paired dots per item: Americans' wary share and Jev's guess of it.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.887, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.15, top verdict `portrait`.
 
 ## Compared with
 US adults (Pew American Trends Panel, June 2025, N=5,023)

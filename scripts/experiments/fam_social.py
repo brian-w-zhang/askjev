@@ -240,6 +240,9 @@ def story_emotion():
             numbers={"annotators": a, "jev": j, "majority_none": float(m.mean()), "n_majority": len(maj)}, n=q.height,
             chart={"type": "bars2", "labels": order, "a": [a[k] for k in order], "b": [j[k] for k in order],
                    "a_label": "annotators", "b_label": "Jev"},
+            robustness="Measured against annotators, not the people in the stories. Where the writer's own feeling is known "
+                       "(reading_writer_vs_readers), Jev's 'no particular emotion' matches writers who felt nothing much "
+                       "more often than readers do, so part of this gap is readers projecting feelings.",
             examples=seeded(ids, "story"))
     return spec, run
 

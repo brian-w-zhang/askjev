@@ -22,7 +22,7 @@ Jev's probability on 'completely fair' or 'acceptable' vs the share of responden
 A dot plot, one row per scenario ordered by people's share: people's share acceptable and Jev's.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.037, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.166, top verdict `portrait`.
 
 ## Compared with
 Canadian adults surveyed by telephone (Kahneman, Knetsch & Thaler 1986)

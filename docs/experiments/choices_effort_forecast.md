@@ -22,7 +22,7 @@ Jev's forecast = the expected score over its bins (bin midpoints). Against the a
 A scatter: actual mean score (x) vs forecast (y), Jev and the experts, with the diagonal.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.128, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.258, top verdict `portrait`.
 
 ## Compared with
 The actual scores (9,861 MTurk workers) and 208 experts' mean forecasts

@@ -22,7 +22,7 @@ Ratings: each item's expected level (0-4), averaged with the same question asked
 A ranked list, Wrapped style: the finals' top ten with their win counts, and the ratings' bottom five for contrast.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.751, top verdict `portrait`.
+Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.404, top verdict `portrait`.
 
 ## Compared with
 nothing outside the model: a ranking of Jev's own ratings and choices

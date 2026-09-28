@@ -22,7 +22,7 @@ Per phrase and setting, Jev's median minus its median for the bare phrase; mean 
 A dot plot: one row per phrase, the bare reading and the three settings as colored dots.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.429, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.545, top verdict `portrait`.
 
 ## Compared with
 Jev's own reading of the bare phrase (perception_probability)

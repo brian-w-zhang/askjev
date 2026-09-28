@@ -22,7 +22,7 @@ Jev's expected score (bin midpoints) against the published average: rank correla
 A scatter: published average (x) vs Jev's estimate (y), with the diagonal and the biggest misses labeled.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.673, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.561, top verdict `portrait`.
 
 ## Compared with
 World Happiness Report 2025 (Gallup World Poll, 2022-2024)

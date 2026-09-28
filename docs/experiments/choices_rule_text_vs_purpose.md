@@ -22,7 +22,7 @@ Per case, Jev's probability of 'broken' vs the share of people; rank correlation
 Dots per case, grouped by kind: people's share and Jev's probability of 'the rule was broken'.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.963, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.086, top verdict `portrait`.
 
 ## Compared with
 Brazilian adults (Struchiner, Hannikainen & Almeida 2020, Studies 1 and 2)

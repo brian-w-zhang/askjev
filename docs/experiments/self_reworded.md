@@ -22,7 +22,7 @@ Per pair, the difference between Jev's two probabilities of yes; the share of pa
 A scatter of the two probabilities, one dot per pair, with the diagonal.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.517, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.257, top verdict `portrait`.
 
 ## Compared with
 Jev asked the identical request twice (consistency_repeat_noise)

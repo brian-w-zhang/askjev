@@ -22,7 +22,7 @@ Rank correlation over the 536 words between Jev's robust level and the raters' m
 A dumbbell per made-up word sorted by people's rating (people vs Jev), and the two classic words as paired bars.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.42, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.145, top verdict `portrait`.
 
 ## Compared with
 McCormick et al. 2015 raters; Ćwiek et al. 2022 participants in 25 language groups

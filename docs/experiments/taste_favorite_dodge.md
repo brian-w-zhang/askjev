@@ -22,7 +22,7 @@ Share of polls where the escape option is Jev's top pick, for its own answer and
 Paired bars: share of polls where the escape option comes first, voters vs Jev, for favorites polls and for other polls, with Jev's 'most people' guess as a third bar.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.4, top verdict `headline`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.622, top verdict `headline`.
 
 ## Compared with
 r/polls voters (100+ per poll)

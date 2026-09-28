@@ -22,7 +22,7 @@ Per profession, the share rating it high or very high, Jev (its probability on t
 Dots per profession: Americans' share rating it high or very high (diamond) and Jev's (square), sorted by Americans'.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.869, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.762, top verdict `portrait`.
 
 ## Compared with
 US adults (Gallup Honesty and Ethics poll, December 2025)

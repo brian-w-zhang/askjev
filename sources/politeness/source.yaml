@@ -1,0 +1,14 @@
+name: politeness
+url: https://www.cs.cornell.edu/~cristian/Politeness_files/Stanford_politeness_corpus.zip (also https://convokit.cornell.edu/documentation/wiki_politeness.html)
+license: Stanford Politeness Corpus v1.01 (Danescu-Niculescu-Mizil et al. 2013), released by the authors for research; redistributed in ConvoKit under CC BY 4.0
+version: v1.01 (May 2013), wikipedia.annotated.csv, fetched 2026-09-28
+target: 500
+hemisphere: world
+kind: perception
+notes: >
+  Added for the politeness experiment (research pass 2; docs/13 #9). Five MTurk ratings per request on 1 (very
+  impolite) to 25 (very polite), per the corpus Readme; binned 1-5, 6-10, 11-15, 16-20, 21-25 into Jev's five levels
+  (the level descriptions are written for this project, anchored on the study's two ends). 500 of the 4,353 rated
+  Wikipedia requests, 100 from each quintile of the normalized score. StackExchange requests are not included in the
+  downloaded release. The authors ask that users of the corpus email them; noted here for Brian.
+  Placed at a new node world.society.languages.politeness.

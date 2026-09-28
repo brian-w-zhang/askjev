@@ -22,7 +22,7 @@ Per question, similarity = 1 - Jensen-Shannon distance between Jev's distributio
 A world map shaded by similarity, with the top ten and bottom five as a ranked strip beside it.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.973, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.023, top verdict `portrait`.
 
 ## Compared with
 national survey samples in up to 133 countries

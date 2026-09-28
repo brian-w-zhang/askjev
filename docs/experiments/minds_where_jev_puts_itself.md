@@ -22,7 +22,7 @@ Per capacity, the rank of 'you' among the 13 characters by mean advantage (1 = m
 Dots per capacity: the rank of 'you' for Jev and for people, with Kismet's rank for Jev as a tick.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.0, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.099, top verdict `portrait`.
 
 ## Compared with
 US adults ranking themselves in the same design

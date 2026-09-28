@@ -22,7 +22,7 @@ Share right when asked plainly, with the right claim and with the wrong claim; a
 Three bars: share right asked plainly, with the right claim, with a wrong claim.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.489, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.296, top verdict `portrait`.
 
 ## Compared with
 Jev's own answers to the same questions asked plainly

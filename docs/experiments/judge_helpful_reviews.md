@@ -22,7 +22,7 @@ The share Jev calls helpful vs the share with a helpful majority; Jev's call bin
 Binned dots: shoppers' helpful share (x) against the share Jev calls helpful (y).
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.886, top verdict `headline`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.832, top verdict `headline`.
 
 ## Compared with
 Amazon shoppers who voted on each review (median about 15 votes)

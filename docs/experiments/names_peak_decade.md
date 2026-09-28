@@ -22,7 +22,7 @@ Share where Jev's top decade is the peak; share within one decade; mean error in
 A confusion strip: true peak decade (x) vs Jev's decade (y), dot size = names; plus ridges for a few names (records' births by decade vs Jev's distribution).
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.354, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.301, top verdict `portrait`.
 
 ## Compared with
 US Social Security Administration birth records, 1880-2017

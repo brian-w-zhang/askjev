@@ -22,7 +22,7 @@ For each problem, the expected-value edge of the better gamble as a share of the
 Two lines over the edge bins: share choosing the better gamble, people vs Jev, with the 50% line.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.713, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.961, top verdict `portrait`.
 
 ## Compared with
 choices13k MTurk workers (real stakes); participants in Wulff et al. 2018's described-gamble studies

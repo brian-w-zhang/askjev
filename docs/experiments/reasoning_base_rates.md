@@ -22,7 +22,7 @@ Per item, Jev's median against the Bayesian answer and the lure (the reliability
 Dots per item: Jev's median (magenta), the Bayesian answer (tick) and the lure (grey), on 0-100%.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.419, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.512, top verdict `portrait`.
 
 ## Compared with
 Bayes' rule; people's median answer on the taxi cab (80%, Tversky & Kahneman 1982)

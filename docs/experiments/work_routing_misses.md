@@ -22,7 +22,7 @@ Per dataset: share right; among misses, the share where the right intent was Jev
 Paired bars per dataset (ordered by number of options): share right, and the share of misses where the answer was second choice; the top confusions as labels.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.736, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.693, top verdict `portrait`.
 
 ## Compared with
 each dataset's own labels

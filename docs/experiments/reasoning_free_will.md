@@ -22,7 +22,7 @@ Jev's probability of 'yes' per vignette vs people's share; the gap between the c
 Paired dots per vignette: people's share saying yes and Jev's probability.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.879, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.932, top verdict `portrait`.
 
 ## Compared with
 US undergraduates (Nichols & Knobe 2007; Nahmias et al. 2005)

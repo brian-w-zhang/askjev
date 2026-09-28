@@ -22,7 +22,7 @@ Jev's own answers vs the key; its estimated share correct (bin midpoints) vs the
 A dumbbell per item: the real share correct in 1988 and 2016, with Jev's two estimates beside them.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.339, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.055, top verdict `portrait`.
 
 ## Compared with
 US adults: NSF surveys 1988 (n=2,041) and the General Social Survey 2016 (n=1,390)

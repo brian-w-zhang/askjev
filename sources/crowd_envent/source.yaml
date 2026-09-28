@@ -1,0 +1,15 @@
+name: crowd_envent
+url: https://www.ims.uni-stuttgart.de/data/appraisalemotion (file https://www.romanklinger.de/data-sets/crowd-enVent2023.zip)
+license: Research use with citation (crowd-enVent, Troiano, Oberländer & Klinger 2023, Computational Linguistics 49(1):1-72); no license file in the release
+version: crowd-enVent2023.zip (corpus/crowd-enVent_generation.tsv and _validation.tsv), fetched 2026-09-28
+target: 1200
+hemisphere: world
+kind: perception
+notes: >
+  Added for the writer-vs-reader experiments (research pass 2, idea 11). Writers described a real event and gave
+  their own emotion and appraisals (1-5, "not at all" to "extremely", per the release readme); 5 readers per text
+  guessed them from the text with emotion words hidden (hidden_emo_text, the version shown here). Truth = the
+  writer's answer; human distribution = the 5 readers'. 598 emotion questions (46 per writer emotion; guilt and shame
+  have fewer validated texts if short) and 150 texts x 4 appraisals. The appraisal level labels paraphrase the study's
+  1-5 scale. No license file ships with the data; used privately for non-commercial research with the citation.
+  New nodes: world.science.psychology_neuroscience.emotion.reading_emotions and .event_appraisals.

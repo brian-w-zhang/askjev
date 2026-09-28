@@ -20,7 +20,7 @@ Per topic, Jev's yes-rate for itself minus its yes-rate for most people (the sha
 Dots per topic, the gap in yes-rates with intervals, zero line; the largest gaps labeled.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.105, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.185, top verdict `portrait`.
 
 ## Compared with
 Jev's own guess of what most people would answer (not real people)

@@ -22,7 +22,7 @@ Per activity: Jev's share on 'none' vs the diaries' (how often the activity does
 Paired rows per activity: minutes per day, diaries (ink) and Jev (magenta), with the share of days at zero.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.339, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.115, top verdict `portrait`.
 
 ## Compared with
 American Time Use Survey diary days, 2003-2016 (BLS; weighted)

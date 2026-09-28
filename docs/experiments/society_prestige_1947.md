@@ -22,7 +22,7 @@ Jev's probability on 'good' or 'excellent' vs the percentage of 1947 raters; ran
 A scatter: 1947 raters' share good or excellent (x) vs Jev's (y), labeled at the largest gaps, diagonal.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.867, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.913, top verdict `portrait`.
 
 ## Compared with
 US adults in the 1947 NORC North-Hatt survey (Duncan 1961)

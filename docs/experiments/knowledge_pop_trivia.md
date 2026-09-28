@@ -22,7 +22,7 @@ Accuracy per category with 90% bootstrap intervals; accuracy by the easy/medium/
 Ranked dots: one row per category, with the difficulty ratings as a small three-bar inset.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.322, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.146, top verdict `portrait`.
 
 ## Compared with
 Open Trivia DB answer keys and difficulty ratings
