@@ -8,7 +8,7 @@ Humor is where a model's taste could differ most from ours, and "can't rank joke
 ## The people and the data
 - **Classic jokes (Jester):** a joke-recommendation site run at UC Berkeley (Goldberg and colleagues, 2001), where users rated jokes on a slider from -10 to +10.
 - **Edited headlines (Humicroedit):** real news headlines from 2017 to 2019 with one word swapped to make them funny ("...: ministry" became "...: plumber"), each graded 0 to 3 by about five crowd workers on Amazon Mechanical Turk (Hossain and colleagues, 2019). 4,383 headlines.
-- **Cartoon captions (New Yorker):** 2,915 captions from the magazine's weekly contest, each rated unfunny, somewhat funny or funny by a median of 165 newyorker.com visitors.
+- **Cartoon captions (New Yorker):** 2,914 captions from the magazine's weekly contest, each rated unfunny, somewhat funny or funny by a median of 165 newyorker.com visitors.
 
 ## What Jev was asked
 Each item was a separate question with described answers. A headline, for example:

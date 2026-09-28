@@ -10,7 +10,7 @@ If a model has any sense of humor, it should at least tell the better captions f
 ## The people and the data
 The votes come from the New Yorker's public crowd-rating system, released for research by the NEXT project (Jain and colleagues, 2020): visitors to newyorker.com rated submitted captions as unfunny, somewhat funny or funny. The drawings themselves are images, so we used written descriptions of each cartoon from a later research dataset (Hessel and colleagues, 2023).
 
-We took contests 510 to 763, and from each, 15 captions with at least 100 votes: 5 from the funniest tenth, 5 from the middle and 5 from the bottom half. That gives 2,915 captions from 224 contests, with a median of 165 votes each.
+We took contests 510 to 763, and from each, 15 captions with at least 100 votes: 5 from the funniest tenth, 5 from the middle and 5 from the bottom half. That gives 2,914 captions from 224 contests, with a median of 165 votes each.
 
 ## What Jev was asked
 Each caption was a separate question, with the cartoon described in words:

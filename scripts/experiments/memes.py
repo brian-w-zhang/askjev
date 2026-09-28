@@ -73,11 +73,12 @@ def fetch(only: list[str], extra: dict[str, str] | None = None):
 PAGES = MEMES / "tpl" / "_imgflip_pages.json"
 
 
-def _assignments() -> dict:
-    """Which meme each experiment gets: data/portrait/memes/assign.py (private: the captions quote results)."""
+def _assignments(what: str = "A") -> dict:
+    """Which meme each experiment gets (A), and the memes we cut rather than force (CUT):
+    data/portrait/memes/assign.py, private because the captions quote results."""
     ns: dict = {}
     exec((MEMES / "assign.py").read_text(), ns)
-    return ns["A"]
+    return ns.get(what, {})
 
 
 def fetch_assigned():
@@ -151,10 +152,18 @@ def apply():
         m = re.match(r"^---\n(.*?)\n---\n(.*)$", text, re.S)
         front = yaml.safe_load(m.group(1)) or {}
         front.pop("meme_idea", None)
+        front.pop("meme_cut", None)
         front["meme"] = {"template": slug(name), "texts": labels or [], "caption": caption,
                          "alt": f"{name} meme" + (": " + "; ".join(x for x in (labels or []) if x) if labels else (f": {caption}" if caption else ""))}
         p.write_text("---\n" + yaml.safe_dump(front, sort_keys=False, allow_unicode=True, width=120) + "---\n" + m.group(2))
-    print(f"{len(A)} memes written into case files")
+    for eid, why in _assignments("CUT").items():
+        p = cases.path(eid)
+        m = re.match(r"^---\n(.*?)\n---\n(.*)$", p.read_text(), re.S)
+        front = yaml.safe_load(m.group(1)) or {}
+        front.pop("meme", None)
+        front["meme_cut"] = why
+        p.write_text("---\n" + yaml.safe_dump(front, sort_keys=False, allow_unicode=True, width=120) + "---\n" + m.group(2))
+    print(f"{len(A)} memes written into case files, {len(_assignments('CUT'))} cut")
 
 
 def resolve(m: dict) -> dict | None:
@@ -170,9 +179,11 @@ def check():
     cat, used, bad = catalog(), Counter(), []
     ids = sorted(p.name[:-8] for p in cases.OUT.glob("*.case.md"))
     for i in ids:
-        m = (cases.load(i) or {}).get("meme")
+        c = cases.load(i) or {}
+        m = c.get("meme")
         if not m:
-            bad.append(f"{i}: no meme")
+            if not c.get("meme_cut"):
+                bad.append(f"{i}: no meme and no reason for cutting it")
             continue
         t = cat.get(m.get("template", ""))
         used[m.get("template")] += 1
@@ -186,7 +197,8 @@ def check():
         if n > 1:
             bad.append(f"template {t} used {n} times")
     print("\n".join(bad) or "all memes resolve; no template reused")
-    print(f"{len(ids)} cases, {sum(used.values())} memes, {len(used)} templates")
+    cut = [i for i in ids if (cases.load(i) or {}).get("meme_cut")]
+    print(f"{len(ids)} cases, {sum(used.values())} memes, {len(used)} templates, {len(cut)} cut: {', '.join(cut)}")
 
 
 if __name__ == "__main__":

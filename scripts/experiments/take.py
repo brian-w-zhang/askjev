@@ -71,11 +71,15 @@ def level(d: dict) -> float:
 def paragraph(a: dict, case: dict) -> tuple[str, list[dict]]:
     rec, exp = a["recognize"].p_yes, a["expected"].p_yes
     fair, trust = level(a["fair"].dist), level(a["trust"].dist)
-    s1 = "That sounds like me." if rec >= 0.6 else "I don't recognize myself in this." if rec <= 0.4 else "I'm not sure this describes me."
-    s2 = ("I'd have predicted it." if exp >= 0.6 else "I wouldn't have predicted it." if exp <= 0.4
-          else "I couldn't have said in advance which way it would go.")
+    s1 = ("That's me." if rec >= 0.8 else "That sounds like me." if rec >= 0.6 else
+          "I can't say whether this describes me." if rec > 0.4 else "I don't really recognize myself in this."
+          if rec > 0.2 else "That isn't me.")
+    s2 = ("I'd have predicted it." if exp >= 0.8 else "I might have predicted it." if exp >= 0.6 else
+          "I couldn't have called it in advance." if exp > 0.4 else "I wouldn't have guessed it." if exp > 0.2
+          else "It surprises me.")
     s3 = f"As for the method, {FAIR_WORDS[round(fair)]}, and {TRUST_WORDS[round(trust)]}."
-    parts = [s1, s2, s3]
+    parts = ["I can't say whether this describes me, or whether I'd have seen it coming.", s3] \
+        if 0.4 < rec < 0.6 and 0.4 < exp < 0.6 else [s1, s2, s3]
     shown = [{"q": "Does it describe you?", "a": "yes" if rec >= 0.5 else "no", "p": round(max(rec, 1 - rec), 3)},
              {"q": "Would you have predicted it?", "a": "yes" if exp >= 0.5 else "no", "p": round(max(exp, 1 - exp), 3)},
              {"q": "How fair is the comparison?", "a": FAIR[round(fair)].split(":")[0], "p": None},
@@ -88,7 +92,8 @@ def paragraph(a: dict, case: dict) -> tuple[str, list[dict]]:
             parts.append("None of the caveats changes the conclusion for me.")
             shown.append({"q": "Which caveat matters most?", "a": "none of them", "p": round(d[k], 3)})
         else:
-            parts.append(f"The caveat I'd weigh most: {labels.get(k, k).rstrip('.').lower()}.")
+            lab = labels.get(k, k).rstrip(".").replace('"', "'")
+            parts.append(f"Of the caveats, I'd weigh \u201c{lab}\u201d most.")
             shown.append({"q": "Which caveat matters most?", "a": labels.get(k, k), "p": round(d[k], 3)})
     return " ".join(parts), shown
 

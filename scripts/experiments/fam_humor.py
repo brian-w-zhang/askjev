@@ -52,7 +52,7 @@ def captions():
         sourcing="Existing questions ('How funny is this caption for the cartoon?', three levels: unfunny, somewhat "
                  "funny, funny), with the cartoon described in words and the caption attached; each has the voters' "
                  "unfunny / somewhat / funny split from the NEXT crowd-rating data (median 165 votes per caption). "
-                 "Enough: 2,915 captions from 224 contests.",
+                 "Enough: 2,914 captions from 224 contests.",
         scoring="Rank correlation between Jev's robust level and the voters' mean level, over all captions and within "
                 "each contest (captions are only comparable against the same cartoon); how often the voters' favorite "
                 "caption in a contest is also Jev's favorite, against the chance rate of 1 in the number of captions.",
@@ -107,7 +107,7 @@ def three_crowds():
             "separates 'can't rank jokes at all' from 'can rank some kinds of jokes'.",
         sourcing="Existing rating questions with human rating distributions: Jester (100 classic jokes, thousands of "
                  "ratings each), Humicroedit (4,383 news headlines with one word swapped for a joke, 5 judges each), "
-                 "and New Yorker contest captions (2,915, about 165 voters each). Enough.",
+                 "and New Yorker contest captions (2,914, about 165 voters each). Enough.",
         scoring="Per set, rank correlation between Jev's robust level and the crowd's mean level, with a 90% bootstrap "
                 "interval over items. Humicroedit's 5 judges make its crowd means noisy, which caps any correlation.",
         chart="Three dots with intervals, one per crowd, on a -1 to 1 scale.",

@@ -20,7 +20,7 @@ We also list the questions where Jev's top answer is furthest from what they cho
 ## Caveats
 - **One small, specific group.** About a thousand people aged 15 to 30, surveyed in Slovakia in 2013 by students of Comenius University in Bratislava. It's one country, one age group and one year, not a national sample.
 - **Translated.** The survey was run in Slovak and published in English; the wording Jev saw is the English version, with its typos fixed.
-- **A virtuous self-image.** Jev's biggest breaks are all questions about honesty and conduct (lying, cheating). Its answers there are what a model tuned to be honest would say about itself, which says more about its self-presentation than its habits.
+- **A virtuous self-image.** Two of Jev's three biggest breaks are about honesty and conduct (lying, cheating). Its answers there are what a model tuned to be honest would say about itself, which says more about its self-presentation than its habits.
 - **Nothing to compare the score with.** It's comparable only loosely with the other resemblance experiments, which use different questions.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

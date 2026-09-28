@@ -22,7 +22,7 @@ We picked 150 colors.
 How often Jev's top pick is the survey's name, against 25% for a random guess, with a 90% interval. For the misses, whether they went to the look-alike (right family, wrong shade) or to a far color (no idea).
 
 ## Caveats
-- **A known weak spot.** TypeSafe lists raw numbers, and hex and RGB values especially, among Jev's documented weak spots. This experiment measures that limit; it doesn't discover it, which is why it stays small.
+- **A known weak spot.** TypeSafe lists raw numbers, and hex and RGB values especially, among Jev's documented weak spots. This experiment measures that limit rather than discovering it.
 - **It may be recall, not seeing.** The xkcd color list is copied everywhere: the popular plotting library matplotlib ships all 949 names with their exact hex codes. Jev may partly be remembering name-code pairs from code it was trained on rather than working out the color.
 - **The look-alike can be a fair answer.** The near option is the closest other survey color, at least 40 steps away on the red-green-blue scale. Some of those pairs are genuinely hard for people too, so a "miss" to the look-alike is often a defensible pick.
 

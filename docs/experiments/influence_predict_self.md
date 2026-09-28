@@ -23,7 +23,7 @@ We compare Jev's predicted option with three things: its own top answer when ask
 
 ## Caveats
 - **Does it know it's Jev?.** The question names "an AI model named Jev" with no other description. Jev may not recognize itself in that name, in which case this measures how well it predicts a generic AI, which happens to be itself.
-- **Taste questions only.** All the questions are polls and would-you-rather dilemmas, where Jev's own answers are often close calls. Self- prediction on facts or on its personality items wasn't tested.
+- **Taste questions only.** All the questions are polls and would-you-rather dilemmas, where Jev's own answers are often close calls. Self-prediction on facts or on its personality items wasn't tested.
 - **Who voted.** The crowd comparison uses r/polls and either.io voters, self-selected online audiences.
 - **Small set.**
 

@@ -25,6 +25,6 @@ For each dataset, the share of items that truly belong at the top level, against
 ## Caveats
 - **Our levels, our cut-offs.** We turned each dataset's scale into described levels (for wine, point bands like 94-100 for "top"), and wrote the descriptions. A top level described as "exceptional" invites caution; a different wording or cut could move the share.
 - **Balanced on purpose.** The wine, sentence and review sets were sampled with about equal numbers at each level, so exactly a fifth or a sixth of items belong at the top. That's what makes the comparison clean, but it isn't how often the top grade is deserved in real life.
-- **Essays overlap another experiment.** The essay part is the same data as "Jev grades seventh-graders' spelling harder than their teachers", seen from the top of the scale.
+- **Essays overlap another experiment.** The essay part is the same data as "Jev grades seventh-graders' spelling harder than their human graders", seen from the top of the scale.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.
