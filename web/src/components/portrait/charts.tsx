@@ -12,8 +12,11 @@ export function DotRows({ rows, domain, ticks, refs = [], band, fmt = (x) => Str
   rows: DotRow[]; domain: [number, number]; ticks: number[]; refs?: { v: number; zero?: boolean }[];
   band?: [number, number]; fmt?: (x: number) => string;
 }) {
-  const x = (v: number) => `${((Math.min(Math.max(v, domain[0]), domain[1]) - domain[0]) / (domain[1] - domain[0])) * 100}%`;
-  const w = (a: number, b: number) => `${((Math.min(b, domain[1]) - Math.max(a, domain[0])) / (domain[1] - domain[0])) * 100}%`;
+  // the domain may run either way (ranks put 1 on the right), so clamp to its low and high ends, not its first and last
+  const lo = Math.min(domain[0], domain[1]), hi = Math.max(domain[0], domain[1]);
+  const f = (v: number) => (Math.min(Math.max(v, lo), hi) - domain[0]) / (domain[1] - domain[0]);
+  const x = (v: number) => `${f(v) * 100}%`;
+  const w = (a: number, b: number) => `${Math.abs(f(b) - f(a)) * 100}%`;
   const track = (children: ReactNode) => (
     <div className="dp-t">
       {band && <i className="band" style={{ left: x(band[0]), width: w(band[0], band[1]) }} />}
@@ -38,7 +41,7 @@ export function DotRows({ rows, domain, ticks, refs = [], band, fmt = (x) => Str
           <div key={r.key} className={`dp-row${r.hi ? " hi" : ""}`}>
             <span className="dp-l">{r.label}{r.sub && <small>{r.sub}</small>}</span>
             {track(<>
-              {r.link && vs.length > 1 && <i className="link" style={{ left: x(Math.min(...vs)), width: w(Math.min(...vs), Math.max(...vs)) }} />}
+              {r.link && vs.length > 1 && <i className="link" style={{ left: `${Math.min(...vs.map(f)) * 100}%`, width: w(Math.min(...vs), Math.max(...vs)) }} />}
               {r.ciP && <i className="ci p" style={{ left: x(r.ciP[0]), width: w(r.ciP[0], r.ciP[1]) }} />}
               {r.ci && <i className="ci" style={{ left: x(r.ci[0]), width: w(r.ci[0], r.ci[1]) }} />}
               {r.marks.map((m, i) => <i key={i} className={`m ${m.kind}`} style={{ left: x(m.v) }} title={m.title} />)}

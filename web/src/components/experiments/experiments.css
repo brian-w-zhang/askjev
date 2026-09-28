@@ -163,10 +163,12 @@
 .pt .ex-q .qt { margin: 0 0 4px; font-size: 15px; line-height: 1.35; }
 .pt .ex-q .qs { margin: 0 0 6px; font-size: 12.5px; color: var(--w-fg-2); max-height: 7.5em; overflow: auto; }
 .pt .ex-q .qf { margin: 0 0 8px; display: grid; gap: 4px; font-size: 13px; }
-.pt .ex-q .qf > div { display: grid; grid-template-columns: minmax(64px, max-content) 1fr; gap: 10px; align-items: baseline; }
+.pt .ex-q .qf > div { display: grid; grid-template-columns: minmax(64px, max-content) minmax(0, 1fr); gap: 10px; align-items: baseline; }
 .pt .ex-q .qf dt { font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.02em; color: var(--w-fg-2); text-transform: lowercase; }
 .pt .ex-q .qf dd { margin: 0; color: var(--w-fg); white-space: pre-line; overflow-wrap: anywhere; }
-@media (max-width: 600px) { .pt .ex-q .qf > div { grid-template-columns: 1fr; gap: 0; } }
+@media (max-width: 600px) { .pt .ex-q .qf > div { grid-template-columns: minmax(0, 1fr); gap: 0; } }
+.pt .ex-q { min-width: 0; }
+.pt .ex-q .qt { overflow-wrap: anywhere; }
 .pt .ex-q .qm { margin: 6px 0 0; font-family: var(--mono); font-size: 10.5px; color: var(--w-fg-2); }
 .pt .ex-opts { display: grid; gap: 3px; margin-top: 6px; }
 .pt .ex-opt { display: grid; grid-template-columns: minmax(110px, 38%) 1fr auto; gap: 10px; align-items: center; min-height: 22px; }
@@ -247,6 +249,7 @@
 
 /* ---------- memes: on the page, and following the cursor on the index ---------- */
 .pt .ex-meme { margin: 0 0 18px; transform: rotate(1.2deg); }
+@media (max-width: 600px) { .pt .ex-meme { width: calc(100% - 14px); margin: 4px 0 18px; transform: rotate(0.8deg); } }
 .pt .ex-memefig { margin: 0; background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line), 5px 5px 0 var(--jev); }
 .pt .ex-memefig .cap { padding: 8px 10px 7px; font-size: 14px; line-height: 1.25; font-weight: 500; }
 .pt .ex-memefig .img { position: relative; overflow: hidden; background: #000; container-type: inline-size; }
