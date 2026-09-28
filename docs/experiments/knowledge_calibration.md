@@ -22,7 +22,7 @@ Jev's probability on its top option, binned; in each bin, the share of questions
 A reliability diagram: confidence bins on x, accuracy on y, the diagonal as perfect calibration, dot size by count.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v3): **keep**, head-to-head strength 0.576, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.92, top verdict `portrait`.
 
 ## Compared with
 the right answers (Wikidata, exam keys, dataset labels)

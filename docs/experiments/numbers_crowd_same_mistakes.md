@@ -22,7 +22,7 @@ Signed error in bins (estimate minus truth) for Jev and for the crowd's median; 
 A scatter: the crowd's signed error (x) vs Jev's (y), jittered, with the diagonal.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.416, top verdict `portrait`.
 
 ## Compared with
 About 500 people per question (Simoiu et al. 2019)

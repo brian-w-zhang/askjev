@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import json
 import sys
+from collections import Counter
 from pathlib import Path
 
 import polars as pl
@@ -71,6 +72,18 @@ def main():
             "evaluation": {k: ev.get(k) for k in ("outcome", "strength", "top", "interest", "verdict", "checks", "version")} if ev else None,
         })
     out.sort(key=lambda x: -((x["evaluation"] or {}).get("strength") or -99))
+    # portrait candidates: Jev's order among kept experiments, at most two per family, so the reel isn't one topic
+    per: Counter = Counter()
+    cands = []
+    for x in out:
+        if (x["evaluation"] or {}).get("outcome") == "keep" and per[x["family"]] < 2:
+            per[x["family"]] += 1
+            cands.append(x["id"])
+    for x in out:
+        x["portrait_rank"] = cands.index(x["id"]) + 1 if x["id"] in cands[:30] else None
+    (OUT / "_portrait_candidates.json").write_text(json.dumps(
+        [{"rank": i + 1, "id": c, **{k: next(x for x in out if x["id"] == c)[k] for k in ("family", "title", "result")}}
+         for i, c in enumerate(cands[:30])], indent=1))
     data = {"experiments": out, "families": FAMILY}
     (A / "experiments.json").write_text(json.dumps(data, separators=(",", ":"), default=str))
     print(f"{len(out)} experiments, {len(rows)} example rows -> {A / 'experiments.json'} "

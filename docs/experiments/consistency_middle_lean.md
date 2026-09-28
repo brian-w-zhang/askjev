@@ -20,7 +20,7 @@ Share of questions whose most likely level is the middle one, by kind, with 90% 
 Dots per kind (share at the middle), and paired bars for the sources with people's answers.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.882, top verdict `headline`.
 
 ## Compared with
 Real respondents on 14 sources (captions, jokes, personality items, taste ratings, norms, sound symbolism)

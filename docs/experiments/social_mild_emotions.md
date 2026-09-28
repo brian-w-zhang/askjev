@@ -22,7 +22,7 @@ For each pair, the share of stories written under the strong word that Jev calls
 Paired bars per pair: strong read as mild vs mild read as strong; a ranked strip of the words Jev uses least relative to writers.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.624, top verdict `portrait`.
 
 ## Compared with
 The writers' own labels (the label they were asked to write about)

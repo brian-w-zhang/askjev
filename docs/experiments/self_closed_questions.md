@@ -22,7 +22,7 @@ Share where P(yes) > 0.5, overall, by source and by the question's first word, w
 Dots per first word (Can, Have, Has, ... Will, Was), yes-share with intervals, line at 50%.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v3): **keep**, head-to-head strength 1.315, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.871, top verdict `portrait`.
 
 ## Compared with
 Nothing outside the model: no answer key exists for these questions

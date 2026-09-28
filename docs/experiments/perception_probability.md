@@ -22,7 +22,7 @@ Per phrase, the median of Jev's distribution vs the respondents' median; rank co
 A ridge chart like the zonination original: one row per phrase, people's distribution as a ridge and Jev's as a second ridge, ordered by people's median.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.631, top verdict `portrait`.
 
 ## Compared with
 46 Reddit respondents (zonination 2015)

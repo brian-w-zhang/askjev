@@ -22,7 +22,7 @@ The confusion table: for each emotion the writer named, the share Jev gives each
 A heat table, writer's emotion (rows) by Jev's pick (columns), shares per row.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.639, top verdict `headline`.
 
 ## Compared with
 The writers' own labels

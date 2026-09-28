@@ -22,7 +22,7 @@ Agreement with the crowd's majority, overall and by how split the crowd is (entr
 Binned dots: the crowd's majority share (x) vs Jev's probability on that answer (y), with the diagonal and the typical person's agreement line.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.303, top verdict `portrait`.
 
 ## Compared with
 100 crowd workers per item (ChaosNLI)

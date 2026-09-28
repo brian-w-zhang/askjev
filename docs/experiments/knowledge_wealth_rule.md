@@ -22,7 +22,7 @@ For each indicator, whether the richer country usually has the higher value (the
 A dumbbell per indicator: accuracy when the answer fits the wealth rule vs when it goes against it, sorted by the gap.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.051, top verdict `portrait`.
 
 ## Compared with
 World Bank World Development Indicators

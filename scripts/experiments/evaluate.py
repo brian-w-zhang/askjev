@@ -25,7 +25,7 @@ from askjev.jev import Request, answers, gateway_question as gq, run_sync
 
 A = Path("data/analysis")
 OUT = A / "experiments"
-VERSION = "v3"  # bump when the card or options change; results keep the version they were made with
+VERSION = "v4"  # bump when the card or options change; results keep the version they were made with
 
 # The ten verdicts, each a situation (01-jev.md §7), with the value code uses. Order here is the order Jev sees.
 VERDICTS = {
@@ -204,7 +204,11 @@ def evaluate_pool(items: list[dict], pairs_per_item: int = 12) -> dict[str, dict
     absolute = evaluate(items)
     anchors = [dict(g) for g in gold if g["id"] not in {e["id"] for e in items}]
     bt = pairwise(items + anchors, pairs_per_item=pairs_per_item)
-    shift = sum(gold_bt[a["id"]] - bt[a["id"]] for a in anchors) / max(len(anchors), 1)
+    # v4: shift on the new-style gold cards only. They are written like the experiments (question, evidence, what it
+    # was compared with); the terse old findings lose every head-to-head to a detailed card, which put every new
+    # experiment above the old keep line (v3 pool: 154 of 155 kept).
+    styled = [a for a in anchors if a["id"].startswith("new_")] or anchors
+    shift = sum(gold_bt[a["id"]] - bt[a["id"]] for a in styled) / max(len(styled), 1)
     out = {}
     for e in items:
         r = absolute.get(e["id"], {})

@@ -22,7 +22,7 @@ Jev's position on each pair = its probability for the second adjective × 100; e
 A Wrapped card with the match's name and work, the five closest characters, and the adjective pairs that decide it (where Jev and the character are both far from the average).
 
 ## 6. Evaluation
-Jev's verdict (evaluator v3): **keep**, head-to-head strength 0.836, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.127, top verdict `portrait`.
 
 ## Compared with
 crowd ratings of 2,125 fictional characters (Open Psychometrics raters)

@@ -22,7 +22,7 @@ For each effect, the difference in the share choosing the key option between the
 A forest plot of the 8 effects, people vs Jev, plus a 2x2 of the headline pair (sure thing vs gamble, gains vs losses).
 
 ## 6. Evaluation
-Jev's verdict (evaluator v3): **keep**, head-to-head strength 4.526, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 5.262, top verdict `portrait`.
 
 ## Compared with
 Ruggeri et al. 2020, 4,098 people in 19 countries

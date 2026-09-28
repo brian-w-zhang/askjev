@@ -48,7 +48,7 @@ def ordered_median(d: dict, keys: list[str]) -> int:
 def robust(r: dict) -> dict:
     """Jev's distribution averaged over the base probe and the shuffled-order probes (same keys, different order)."""
     ds = [norm(js(r["jev_dist"]))] + [norm(v["dist"]) for v in js(r["variants"]) or [] if v.get("kind") == "shuffle" and v.get("dist")]
-    keys = set().union(*ds)
+    keys = sorted(set().union(*ds))  # sorted: a set's order changes between runs
     return {k: float(np.mean([d.get(k, 0.0) for d in ds])) for k in keys}
 
 

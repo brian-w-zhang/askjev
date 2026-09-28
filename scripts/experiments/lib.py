@@ -103,10 +103,11 @@ def level(d: dict) -> float | None:
 
 
 def boot(values, stat=np.mean, b: int = 1000) -> list[float]:
-    v = np.asarray(values, dtype=float)
+    v = np.sort(np.asarray(values, dtype=float))  # sorted: group_by output comes in a different order each run
     if len(v) < 2:
         return [float(stat(v)), float(stat(v))] if len(v) else [float("nan")] * 2
-    bs = [stat(v[RNG.integers(0, len(v), len(v))]) for _ in range(b)]
+    rng = np.random.default_rng(16)  # per call, so an interval doesn't depend on which experiments ran before it
+    bs = [stat(v[rng.integers(0, len(v), len(v))]) for _ in range(b)]
     lo, hi = float(np.percentile(bs, 5)), float(np.percentile(bs, 95))
     d = 2 if max(abs(lo), abs(hi)) >= 1 else 3  # enough digits to read, not more
     return [round(lo, d), round(hi, d)]

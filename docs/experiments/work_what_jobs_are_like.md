@@ -22,7 +22,7 @@ Per item, rank correlation across occupations between Jev's expected level and t
 A dot plot, one row per item: the mean gap with its interval, and the rank correlation as a label.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v3): **keep**, head-to-head strength 3.15, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.521, top verdict `portrait`.
 
 ## Compared with
 US workers in each occupation (O*NET 29.0 incumbent surveys)

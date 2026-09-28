@@ -22,7 +22,7 @@ Share of cues where Jev's top pick is people's most common response, by quarter 
 Binned by how predictable the cue is (people's top share): people's top share, Jev's probability on that response, and how often Jev picks it.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.083, top verdict `portrait`.
 
 ## Compared with
 University of South Florida students (Nelson et al. 2004)

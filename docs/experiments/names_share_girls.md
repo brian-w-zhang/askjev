@@ -22,7 +22,7 @@ Jev's expected share (bin midpoints) vs the records; mean absolute error for mix
 A scatter: records' share (x) vs Jev's share (y) for the mixed names, labeled at the extremes, diagonal.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.582, top verdict `portrait`.
 
 ## Compared with
 US Social Security Administration birth records, 1880-2017

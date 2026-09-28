@@ -22,7 +22,7 @@ The average share each label gets from annotators vs Jev's average probability o
 Paired bars over the nine labels: annotators vs Jev.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.966, top verdict `headline`.
 
 ## Compared with
 StoryCommonsense MTurk annotators (three per story line)

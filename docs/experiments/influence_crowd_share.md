@@ -22,7 +22,7 @@ Jev's median share vs the real share: mean absolute error, rank correlation, and
 A scatter: real share (x) vs Jev's median guess (y), with the diagonal.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.405, top verdict `portrait`.
 
 ## Compared with
 real vote shares (Reddit polls, either.io)

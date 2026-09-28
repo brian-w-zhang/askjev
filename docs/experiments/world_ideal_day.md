@@ -22,7 +22,7 @@ Expected minutes per activity from bin midpoints; the difference from the diarie
 Two stacked 24-hour bars, the diaries' average day and Jev's ideal day, colored by activity.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.971, top verdict `portrait`.
 
 ## Compared with
 American Time Use Survey diary days, 2003-2016 (actual, not ideal, days)

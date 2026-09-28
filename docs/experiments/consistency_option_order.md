@@ -20,7 +20,7 @@ Two-option questions: the mean change in the probability of one option (a) betwe
 Three bars in probability points: asked again in the same order, asked again against the base probe, options reversed; with the first-slot boost as a dot at zero.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.496, top verdict `portrait`.
 
 ## Compared with
 Jev itself, asked the same request twice (the noise floor)

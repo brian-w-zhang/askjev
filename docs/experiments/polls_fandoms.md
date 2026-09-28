@@ -22,7 +22,7 @@ Per community, share of polls where Jev's guess names the winner, and its lift o
 Ranked bars: communities by lift over chance, with the chance line.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.576, top verdict `portrait`.
 
 ## Compared with
 Voters in each subreddit's own polls

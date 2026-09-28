@@ -22,7 +22,7 @@ Jev's mean probability of yes, binned by the share of raters saying yes (none, a
 Binned dots: the share of raters saying yes (x) against Jev's mean probability (y), one line per dataset, with the diagonal.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.397, top verdict `portrait`.
 
 ## Compared with
 The share of raters saying yes on each item

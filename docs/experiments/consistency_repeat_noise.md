@@ -20,7 +20,7 @@ The absolute change in the probability of the same option between the two identi
 Flip rate by distance from 50/50 (0-2, 2-5, 5-10, 10-20, 20-50 points), with the mean change above each bar.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.429, top verdict `portrait`.
 
 ## Compared with
 Jev itself

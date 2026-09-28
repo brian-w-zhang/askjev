@@ -22,7 +22,7 @@ Share where Jev's pick (averaged over both orders) is the state with the lower u
 Bars: agreement by gap band.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.008, top verdict `portrait`.
 
 ## Compared with
 The US EQ-5D-5L value set (Pickard et al. 2019)

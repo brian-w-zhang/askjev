@@ -22,7 +22,7 @@ Per year, the share where Jev's median bin is the bin holding that year's averag
 Dots per year: share right (and within one bin), with the mean signed error as a label.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.146, top verdict `portrait`.
 
 ## Compared with
 BLS average prices by year

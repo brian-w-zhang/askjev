@@ -22,7 +22,7 @@ Per phrase and setting, Jev's median minus its median for the bare phrase; mean 
 A dot plot: one row per phrase, the bare reading and the three settings as colored dots.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.167, top verdict `portrait`.
 
 ## Compared with
 Jev's own reading of the bare phrase (perception_probability)

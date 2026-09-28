@@ -22,7 +22,7 @@ For each dataset, the share of shame stories Jev calls guilt and the share of gu
 Paired bars per dataset: shame read as guilt vs guilt read as shame.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.653, top verdict `portrait`.
 
 ## Compared with
 The writers' own labels for their feelings

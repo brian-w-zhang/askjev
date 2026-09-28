@@ -22,7 +22,7 @@ Share where the predicted option is Jev's own top answer, against the share wher
 Bars: the prediction matches Jev's own answer / Jev's guess for most people / the real majority.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.641, top verdict `portrait`.
 
 ## Compared with
 Jev's direct answers, its 'most people' answers, and the real votes

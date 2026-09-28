@@ -22,7 +22,7 @@ The share of items whose true level is the top one, vs the share where Jev's mos
 Paired bars per dataset: share at the top level, true vs Jev.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.602, top verdict `portrait`.
 
 ## Compared with
 The datasets' own levels (critic points, annotator means, stars, teacher scores)

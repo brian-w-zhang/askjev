@@ -22,7 +22,7 @@ Per pair, Jev's share for A among A and B with A's decoy minus with B's decoy (t
 Dots: the decoy effect with its interval, zero line; plus the share of weight on the decoy.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.291, top verdict `portrait`.
 
 ## Compared with
 Jev's own choice between the two gambles; the published human effect is positive but varies by setup, so no human line is drawn

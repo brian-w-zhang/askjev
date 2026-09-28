@@ -22,7 +22,7 @@ Rank correlation between Jev's robust level and the raters' mean, with a 90% boo
 A scatter of raters' mean (x) against Jev's (y) with the onomatopoeia labeled and the biggest misses marked.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.111, top verdict `portrait`.
 
 ## Compared with
 Winter et al. 2023 raters (US English speakers, about 10 per word)

@@ -20,7 +20,7 @@ Jev's probability on its chosen answer, binned (50-60%, ..., 99%+); in each bin 
 A reliability diagram: confidence (x) vs share right (y), one line for yes/no and one for pick-one, with the diagonal.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.604, top verdict `portrait`.
 
 ## Compared with
 each dataset's own labels

@@ -73,6 +73,9 @@ def main():
             lines.append(f"| [`{s['id']}`]({s['id']}.md) | {q} | {e['result'].get('n', 0):,} | "
                          f"{s.get('new_questions') or ''} | {ev.get('outcome', '')} |")
         lines.append("")
+    from registry import CUT
+    lines.append(f"## Cut ({len(CUT)})\n")
+    lines += [f"- `{k}`: {v}" for k, v in CUT.items()] + [""]
     lines.append("Other docs here: `evaluator.md` (the self-evaluator and its meta-evaluation), `coverage.md` (the internal "
                  "coverage pass), `research-2.md` (the second outside research pass).\n")
     DOC.write_text("\n".join(lines))

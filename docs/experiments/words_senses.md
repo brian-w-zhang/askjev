@@ -22,7 +22,7 @@ Per sense: rank correlation with the human mean, and the mean rating on a common
 Paired bars per sense: people's mean vs Jev's mean on 0-5, with the rank correlation printed per row.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v3): **keep**, head-to-head strength 3.378, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.93, top verdict `portrait`.
 
 ## Compared with
 Lancaster Sensorimotor Norms raters (Lynott et al. 2020, US and UK, MTurk and Prolific)

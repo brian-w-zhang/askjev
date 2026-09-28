@@ -22,7 +22,7 @@ Share where Jev's pick matches the gold order, by set and by how far apart the w
 Bars: agreement by gold set and by distance on the scale, with 90% intervals.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.808, top verdict `portrait`.
 
 ## Compared with
 Three published gold orderings (linguists and crowd workers)

@@ -14,7 +14,7 @@ from lib import Result, Spec, agree_word, and_list, boot, js, norm, seeded, top,
 def robust(r: dict) -> dict:
     """Jev's distribution averaged over the base probe and the shuffled-order probes (same keys, different order)."""
     ds = [norm(js(r["jev_dist"]))] + [norm(v["dist"]) for v in js(r["variants"]) or [] if v.get("kind") == "shuffle" and v.get("dist")]
-    keys = set().union(*ds)
+    keys = sorted(set().union(*ds))  # sorted: a set's order changes between runs
     return {k: float(np.mean([d.get(k, 0.0) for d in ds])) for k in keys}
 
 
@@ -63,7 +63,7 @@ def implicature():
             rows.append({"id": r["id"], "study": r["m"]["study"], "scale": r["m"]["scale"], "cls": r["m"].get("word_class", "adjective"),
                          "jev": j, "guess": p_yes(r, "people_dist"), "people": r["m"]["rate"]})
         t = pl.DataFrame(rows).group_by("study", "scale", "cls").agg(
-            pl.col("jev").mean(), pl.col("guess").mean(), pl.col("people").first(), pl.col("id").first())
+            pl.col("jev").mean(), pl.col("guess").mean(), pl.col("people").first(), pl.col("id").first()).sort("study", "scale")
         rho = spearmanr(t["jev"], t["people"]).statistic
         rho_g = spearmanr(t["guess"].fill_null(0.5), t["people"]).statistic
         idx = np.arange(t.height)

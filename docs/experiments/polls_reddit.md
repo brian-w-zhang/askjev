@@ -22,7 +22,7 @@ Share of polls where Jev's guess of most people names the voters' winner, agains
 Dot plot of the lift over chance per topic, top and bottom ten, with the overall rate as a line.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.596, top verdict `portrait`.
 
 ## Compared with
 r/polls voters (vote shares per poll)

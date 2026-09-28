@@ -22,7 +22,7 @@ For each question, with 'other' removed on both sides (it pools every unlisted v
 A strip per question, philosophers' split as a stacked bar with Jev's pick marked; a summary of how often Jev sides with the majority.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.853, top verdict `portrait`.
 
 ## Compared with
 PhilPapers 2020 survey, target faculty (~1,800 professional philosophers)

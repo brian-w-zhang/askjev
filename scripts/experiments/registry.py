@@ -9,7 +9,18 @@ FAMILIES = ["fam_taste", "fam_person", "fam_resemble", "fam_moral", "fam_humor",
             "fam_knowledge", "fam_social", "fam_words", "fam_work", "fam_polls", "fam_consistency", "fam_self",
             "fam_perception", "fam_numbers", "fam_minds", "fam_reasoning", "fam_influence", "fam_world", "fam_language"]
 
+# Cut in the rework pass (docs/16 step 6): the reason stays on record; the experiment no longer runs.
+CUT = {
+    "person_self_regard": "no gap clears the noise on any of its four scales",
+    "person_empathy": "no gap clears the noise (empathizing, systemizing)",
+    "person_social_style": "no gap clears the noise on any of its three scales",
+    "person_career": "Jev's code equals the quiz-takers' average code; nothing to learn",
+    "polls_family_feud": "duplicate of social_family_feud",
+    "work_option_order": "duplicate of consistency_option_order",
+    "taste_intransitive": "its loops came from a bug (options matched by position); corrected as taste_choices_vs_ratings",
+}
+
 EXPERIMENTS = []
 for name in FAMILIES:
     if (Path(__file__).parent / f"{name}.py").exists():  # families still being written are skipped
-        EXPERIMENTS += importlib.import_module(name).EXPERIMENTS
+        EXPERIMENTS += [(s, f) for s, f in importlib.import_module(name).EXPERIMENTS if s.id not in CUT]

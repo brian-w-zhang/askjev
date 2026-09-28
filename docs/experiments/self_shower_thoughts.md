@@ -22,7 +22,7 @@ Share where P(yes) > 0.5; share torn (within 10 points of 50/50); the most and l
 A histogram of P(yes) across the 576 questions, with a few questions labeled at each end.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.136, top verdict `portrait`.
 
 ## Compared with
 Nothing outside the model

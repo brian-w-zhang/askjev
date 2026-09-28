@@ -22,7 +22,7 @@ Share of questions Jev answers yes vs the share whose answer is yes; accuracy wh
 Paired bars per dataset: accuracy on true-yes and true-no questions.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.616, top verdict `portrait`.
 
 ## Compared with
 the datasets' answer keys

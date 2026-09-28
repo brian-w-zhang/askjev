@@ -22,7 +22,7 @@ Accuracy per subject with 90% bootstrap intervals; basic sciences (biochemistry,
 Ranked dots per subject, basic sciences and clinical subjects colored apart.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.59, top verdict `portrait`.
 
 ## Compared with
 MedMCQA answer keys

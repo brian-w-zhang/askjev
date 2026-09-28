@@ -22,7 +22,7 @@ Share of Onion headlines Jev calls straight news, share of real headlines it cal
 A 2x2 table (real source vs Jev's call) with the share in each cell, and the misses listed.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.782, top verdict `headline`.
 
 ## Compared with
 the headline's real source (The Onion or HuffPost)

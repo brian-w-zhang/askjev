@@ -22,7 +22,7 @@ Per emotion, whether Jev's top color is people's top color, and the similarity o
 A grid: one row per emotion, people's color shares as a strip of swatches, Jev's pick outlined.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.819, top verdict `portrait`.
 
 ## Compared with
 7,387 people in 31 countries (International Colour-Emotion Association Survey)

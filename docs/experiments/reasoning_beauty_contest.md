@@ -22,7 +22,7 @@ Per crowd, the winning number (the fraction times the published mean) against Je
 Dots per crowd: Jev's pick, the winning number (tick) and Jev's predicted average vs the real one.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.007, top verdict `portrait`.
 
 ## Compared with
 Published crowd means (Nagel 1995; Thaler's 1997 Financial Times contest)

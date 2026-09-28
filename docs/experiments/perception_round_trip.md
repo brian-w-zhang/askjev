@@ -22,7 +22,7 @@ Per probability, Jev's top phrase. Per phrase, the probabilities where it is Jev
 A strip from 0% to 100% colored by Jev's chosen phrase, with each phrase's forward median marked above.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v3): **keep**, head-to-head strength 1.144, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.499, top verdict `portrait`.
 
 ## Compared with
 Jev's own forward readings (perception_probability); no human data in this direction

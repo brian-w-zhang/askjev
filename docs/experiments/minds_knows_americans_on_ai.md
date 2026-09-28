@@ -22,7 +22,7 @@ Per item, the wary share in Jev's 'most people' answer vs Americans'; mean diffe
 Paired dots per item: Americans' wary share and Jev's guess of it.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.881, top verdict `portrait`.
 
 ## Compared with
 US adults (Pew American Trends Panel, June 2025, N=5,023)

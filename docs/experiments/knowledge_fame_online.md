@@ -22,7 +22,7 @@ Accuracy and mean confidence per domain with 90% bootstrap intervals; for memes,
 Paired bars per domain: Jev's confidence vs its accuracy, so overconfidence shows as a gap.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.415, top verdict `portrait`.
 
 ## Compared with
 Wikipedia attention (Pantheon HPI, page views)

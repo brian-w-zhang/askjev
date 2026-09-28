@@ -22,7 +22,7 @@ Agreement with the crowd's majority verdict; Jev's verdict mix vs the crowd's; a
 Paired stacked bars of verdict mix (crowd vs Jev), and agreement by how divided the crowd was.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.599, top verdict `portrait`.
 
 ## Compared with
 r/AmItheAsshole commenters (verdict counts per story)

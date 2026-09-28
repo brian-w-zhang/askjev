@@ -22,7 +22,7 @@ For the deprivation items, the share answering 'never' for Jev's guess of most p
 Paired bars, one row per need: share who never went without, respondents vs Jev's 'most people'.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.663, top verdict `headline`.
 
 ## Compared with
 Afrobarometer Round 9 respondents, 39 African countries pooled

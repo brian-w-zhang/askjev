@@ -22,7 +22,7 @@ Accuracy of the category facts; for comparisons, accuracy and mean confidence by
 A psychometric curve: size ratio (log scale) on x, share right on y, with Jev's mean confidence as a second line and the category-fact accuracy as a reference line.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.404, top verdict `portrait`.
 
 ## Compared with
 Wikidata values

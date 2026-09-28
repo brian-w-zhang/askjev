@@ -22,7 +22,7 @@ Jev's estimate = the geometric middle of its median bin. On a log scale: rank co
 The 1978 log-log chart: true deaths (x) vs estimates (y), people's points and Jev's, with the diagonal.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.941, top verdict `portrait`.
 
 ## Compared with
 US adults in 1978 (geometric means; Lichtenstein et al. 1978) and the 1970s death counts

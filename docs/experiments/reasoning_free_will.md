@@ -22,7 +22,7 @@ Jev's probability of 'yes' per vignette vs people's share; the gap between the c
 Paired dots per vignette: people's share saying yes and Jev's probability.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.1, top verdict `portrait`.
 
 ## Compared with
 US undergraduates (Nichols & Knobe 2007; Nahmias et al. 2005)

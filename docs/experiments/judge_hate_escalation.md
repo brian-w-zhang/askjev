@@ -22,7 +22,7 @@ A 3x3 table of the annotators' majority label against Jev's most likely label; t
 A heat table: annotators' rung (rows) by Jev's rung (columns), with the step-up cells highlighted.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.322, top verdict `headline`.
 
 ## Compared with
 HateXplain MTurk annotators (majority of 3); Davidson et al. CrowdFlower annotators; DynaHate labels

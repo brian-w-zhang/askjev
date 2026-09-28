@@ -22,7 +22,7 @@ Open Psychometrics publishes each item's answer distribution from everyone who t
 Dot plot per scale: real test-takers (diamond), Jev (square), Jev for 'most people' (ring), with intervals; the gap printed at the right.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v3): **atlas**, head-to-head strength -1.089, top verdict `solid_dull`.
+Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.862, top verdict `solid_dull`.
 
 ## Compared with
 the average answer of everyone who took each test on Open Psychometrics

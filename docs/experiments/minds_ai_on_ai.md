@@ -22,7 +22,7 @@ Per item, the share on the wary answer(s) (e.g. 'more concerned than excited', '
 Paired dots, one row per item: Americans' wary share and Jev's, with Jev's guess of Americans.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.485, top verdict `portrait`.
 
 ## Compared with
 US adults (Pew American Trends Panel, June 2025, N=5,023)

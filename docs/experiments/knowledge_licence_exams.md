@@ -22,7 +22,7 @@ Accuracy per pool and, for the mariner bank, per area (engine room; navigation; 
 Dots per pool and mariner area with the passing marks as ticks.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.063, top verdict `portrait`.
 
 ## Compared with
 the official answer keys

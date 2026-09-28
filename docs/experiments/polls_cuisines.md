@@ -22,7 +22,7 @@ Bradley-Terry strengths from the head-to-heads, for Jev's answers, Jev's guess o
 Three-column slope chart of cuisine ranks: Jev, Jev's guess of people, Americans.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v3): **keep**, head-to-head strength 1.964, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.386, top verdict `portrait`.
 
 ## Compared with
 US adults in the 2014 FiveThirtyEight Food World Cup survey
