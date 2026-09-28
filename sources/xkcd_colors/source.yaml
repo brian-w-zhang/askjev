@@ -1,0 +1,12 @@
+name: xkcd_colors
+url: https://xkcd.com/color/rgb.txt (survey write-up https://blog.xkcd.com/2010/05/03/color-survey-results/)
+license: CC0 (xkcd color survey, Munroe 2010)
+version: rgb.txt fetched 2026-09-28 (949 names)
+target: 150
+hemisphere: world
+kind: perception
+notes: >
+  Added for the hex-color experiment (research pass 2 idea 8). A documented weak spot (docs/01-jev.md §6 item 2:
+  raw hex/RGB values), so it measures a known limit and stays small: 150 colors, four names each (the survey's name,
+  the nearest other survey color at least 40 RGB units away, two random far ones). Placed at a new node
+  world.science.physics.color.color_names.

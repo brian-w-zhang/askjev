@@ -1,0 +1,23 @@
+name: philosophy_vignettes
+url: >
+  Weinberg, Nichols & Stich 2001 (Philosophical Topics 29:429-460, car case text only); Nichols & Knobe 2007 (Noûs 41:663-685); Nahmias,
+  Morris, Nadelhoffer & Turner 2005 (Philosophical Psychology 18:561-584); Knobe 2003 (Analysis 63:190-194) for the
+  side-effect structure
+license: Vignettes transcribed from the cited studies (research use with citation); new cases authored for this project
+version: transcribed and authored 2026-09-28
+target: 24
+hemisphere: self
+kind: evaluative
+notes: >
+  Four published vignettes with reported two-option splits, stored as human distributions, each checked on
+  2026-09-28: Nichols & Knobe 2007, Noûs 41:663-685, p. 670 (abstract: 86% "no one can be fully responsible";
+  Bill: 72% "fully responsible", read in the paper's text) and Table 2, p. 676 (Mark, determinist universe: 23%
+  "possible", as reported by the Florida Philosophical Review critique of the paper; Table 2 is an image);
+  Nahmias, Morris, Nadelhoffer & Turner 2005, Philosophical Psychology 18:561-584, supercomputer case, first
+  condition: 76% "free will" (from secondary summaries of the paper; Nichols & Knobe 2007 p. 667 quote the same
+  study's 83% "blameworthy" condition). DROPPED: the Gettier car case's 26% "really knows" (Weinberg, Nichols &
+  Stich 2001) could not be verified from the paper or a reliable secondary source; the vignette is asked without
+  human data. Authored: five new Gettier cases plus a clear-knowledge and a false-belief control, and six help/harm
+  side-effect pairs in Knobe 2003's structure (Analysis 63:190-194: 82% harm vs 23% help, verified via secondary
+  sources; the original chairman case is already in behavioral_econ). Nodes: self.mind.epistemics.knowledge_certainty,
+  self.mind.big_questions.free_will_reality, and a proposed self.mind.thought_experiments.side_effects.

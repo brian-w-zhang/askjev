@@ -22,7 +22,7 @@ Rank correlations among four numbers per word: Jev's and people's arousal, Jev's
 A scatter of people's arousal (x) against Jev's (y), colored by people's pleasantness, with the largest misses labeled.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 5.439, top verdict `headline`.
 
 ## Compared with
 Glasgow Norms raters (Scott et al. 2019)

@@ -22,7 +22,7 @@ Share of pairs where Jev's pick is the more-upvoted one, with 90% bootstrap inte
 Paired bars per set: accuracy when the right answer was shown first vs second, with 50% marked.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 4.445, top verdict `headline`.
 
 ## Compared with
 Reddit r/Jokes and Imgflip upvote counts

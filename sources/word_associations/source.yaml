@@ -1,0 +1,13 @@
+name: word_associations
+url: http://w3.usf.edu/FreeAssociation/ (Nelson, McEvoy & Schreiber 2004, Behavior Research Methods, Instruments & Computers 36:402-407)
+license: Copyright Nelson, McEvoy & Schreiber; USF free association norms published free for research use
+version: Appendix A cue-target pairs (8 files), fetched 2026-09-28
+target: 400
+hemisphere: world
+kind: perception
+notes: >
+  Added for the first-word experiment (docs/15 E42). Small World of Words (the docs' first choice) is CC BY-NC-ND and
+  behind a request form, so the older, openly posted USF norms are used: about 150 students per cue. Choice over the
+  cue's 7 most common responses plus "some other word"; people's residual share (responses given by one person, or
+  outside the top 7) goes to "another word". 400 cues, 100 per quartile of top-response share. Proposed node
+  world.society.languages.word.word_association.

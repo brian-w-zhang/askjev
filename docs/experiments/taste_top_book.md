@@ -22,7 +22,7 @@ Ratings: each item's expected level (0-4), averaged with the same question asked
 A ranked list, Wrapped style: the finals' top ten with their win counts, and the ratings' bottom five for contrast.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **atlas**, head-to-head strength -0.163, top verdict `portrait`.
 
 ## Compared with
 nothing outside the model: a ranking of Jev's own ratings and choices

@@ -1,0 +1,13 @@
+name: ai_attitudes
+url: https://www.pewresearch.org/science/2025/09/17/how-americans-view-ai-and-its-impact-on-people-and-society/
+license: Pew Research Center, American Trends Panel W173 topline (2025); use with attribution per Pew's terms
+version: topline PDF PS_2025.9.17_AI-and-its-impact_topline.pdf, fetched 2026-09-28; shares transcribed by hand
+target: 26
+hemisphere: self
+kind: values
+notes: >
+  Added for the "an AI's feelings about AI" experiment (docs/15 E18). 26 non-political items from Pew's June 2025
+  survey of 5,023 US adults; items on governing, elections, juries, policing, benefit fraud and faith are left out,
+  as are items that only fit a person. Distinct from AIMS (fam_polls polls_ai_minds), which asks about AI minds and
+  sentience. The human frame gives Jev's guess of Americans, so the experiment reads both "what Jev thinks" and "does
+  Jev know what people think". Proposed node self.mind.consciousness_ai.ai_in_daily_life.

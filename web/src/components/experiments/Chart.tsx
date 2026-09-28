@@ -238,9 +238,17 @@ function xyChart(c: ChartData, mini: boolean) {
     if (t === "rankscatter") pts = pts.map(([j, a]) => [a, j]); // stored as (Jev rank, audience rank)
     if (mini && pts.length > 600) pts = pts.filter((_, i) => i % Math.ceil(pts.length / 600) === 0);
     const d = pair(c.domain);
-    const xd = d ?? extent(pts.map((p) => p[0]), false, 0.03), yd = d ?? extent(pts.map((p) => p[1]), false, 0.03);
-    const labels = arr(c.labels).map((l) => ({ label: str(l.label), x: num(l.x) ?? 0, y: num(l.y) ?? 0 }));
-    return <XY series={[{ name: "items", kind: "jev", pts, line: false }]} labels={labels} xd={xd} yd={yd} xl={str(c.x)} yl={str(c.y)} diagonal={Boolean(c.diagonal) || t === "rankscatter"} mini={mini} />;
+    const xd: [number, number] = d ?? extent(pts.map((p) => p[0]), false, 0.03), yd: [number, number] = d ?? extent(pts.map((p) => p[1]), false, 0.03);
+    const pp = arr<[number, number]>(c.points_people).filter((p) => Array.isArray(p) && num(p[0]) !== null && num(p[1]) !== null);
+    const lg = Boolean(c.log);
+    const tf = (p: [number, number]): [number, number] => (lg ? [Math.log10(Math.max(p[0], 1e-9)), Math.log10(Math.max(p[1], 1e-9))] : p);
+    const P = pts.map(tf), Q = pp.map(tf);
+    const both = [...P, ...Q];
+    const xd2 = d && !lg ? xd : extent(both.map((p) => p[0]), false, 0.03), yd2 = d && !lg ? yd : extent(both.map((p) => p[1]), false, 0.03);
+    const labels = arr(c.labels).map((l) => { const [x, y] = tf([num(l.x) ?? 0, num(l.y) ?? 0]); return { label: str(l.label), x, y }; });
+    const series: Series[] = [{ name: "Jev", kind: "jev", pts: P, line: false }];
+    if (Q.length) series.push({ name: "people", kind: "hum", pts: Q, line: false });
+    return <XY series={series} labels={labels} xd={xd2} yd={yd2} xl={`${str(c.x)}${lg ? " (log10)" : ""}`} yl={`${str(c.y)}${lg ? " (log10)" : ""}`} diagonal={Boolean(c.diagonal) || t === "rankscatter"} mini={mini} />;
   }
   if (t === "binned") {
     const rows = arr(c.rows);
@@ -387,6 +395,37 @@ function special(c: ChartData, mini: boolean): ReactNode {
     case "match": {
       const best = arr(c.best).slice(0, mini ? 3 : 6);
       return <Bars rows={best.map((b) => ({ label: `${str(b.name)} (${str(b.work)})`, b: num(b.r) ?? 0 }))} max={1} fmt={(v) => `r ${v.toFixed(2)}`} mini={mini} />;
+    }
+    case "map2d": {
+      // rows of {label, jev: [x, y], people: [x, y], hi}: two positions per character, linked
+      const rows = arr(c.rows);
+      const series: Series[] = [
+        { name: "Jev", kind: "jev", pts: rows.map((r) => pair(r.jev)).filter(Boolean) as [number, number][], line: false },
+        { name: "people", kind: "hum", pts: rows.map((r) => pair(r.people)).filter(Boolean) as [number, number][], line: false },
+      ];
+      const all = series.flatMap((x) => x.pts);
+      const labels = mini ? [] : rows.map((r) => { const j = pair(r.jev); return j ? { label: str(r.label), x: j[0], y: j[1] } : null; }).filter(Boolean) as { label: string; x: number; y: number }[];
+      return <XY series={series} labels={labels} xd={pair(c.xdomain) ?? extent(all.map((p) => p[0]), false)} yd={pair(c.ydomain) ?? extent(all.map((p) => p[1]), false)} xl={str(c.x) || "agency"} yl={str(c.y) || "experience"} mini={mini} />;
+    }
+    case "colorgrid": {
+      // rows of {label, people: {color: share}, jev: {color: share} or a color, jev_p}
+      const rows = arr(c.rows).slice(0, mini ? 6 : 40);
+      const topOf = (d: unknown) => (d && typeof d === "object" ? Object.entries(d as Record<string, number>).sort((a, b) => b[1] - a[1])[0]?.[0] : str(d));
+      return (
+        <div className={`ex-heat${mini ? " mini" : ""}`}><table>
+          {!mini && <thead><tr><th /><th>people&rsquo;s top color</th><th>Jev&rsquo;s</th></tr></thead>}
+          <tbody>{rows.map((r, i) => {
+            const pc = topOf(r.people) ?? "", jc = topOf(r.jev) ?? "";
+            return (
+              <tr key={i}>
+                {!mini && <th>{str(r.label)}</th>}
+                <td className="txt"><i className="sw" style={{ background: pc }} />{mini ? "" : pc}</td>
+                <td className="txt"><i className="sw" style={{ background: jc }} />{mini ? "" : `${jc}${pc === jc ? " ✓" : ""}`}</td>
+              </tr>
+            );
+          })}</tbody>
+        </table></div>
+      );
     }
     default:
       return null;

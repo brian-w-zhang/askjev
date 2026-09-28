@@ -20,7 +20,7 @@ Per task, the share Jev gets right (its most likely answer equals the dataset's 
 One row per field: a dot at the pooled share, a line from its weakest to its strongest task, weakest and strongest named.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 2.535, top verdict `portrait`.
 
 ## Compared with
 each dataset's own labels (a right answer, not a crowd)

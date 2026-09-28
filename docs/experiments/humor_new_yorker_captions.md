@@ -22,7 +22,7 @@ Rank correlation between Jev's robust level and the voters' mean level, over all
 A scatter of voters' mean level (x) against Jev's (y), one dot per caption, with the per-contest correlations as a strip below.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 3.379, top verdict `headline`.
 
 ## Compared with
 New Yorker Caption Contest voters (NEXT crowd ratings, about 165 votes per caption)

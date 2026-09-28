@@ -1,0 +1,15 @@
+name: health_states
+url: https://doi.org/10.1016/j.jval.2019.02.009 (US EQ-5D-5L value set); https://cran.r-project.org/package=eq5d
+license: >
+  US EQ-5D-5L value set coefficients as published (Pickard et al. 2019), checked against the eq5d R package v0.17.0
+  (MIT); the dimension wording is paraphrased from the EQ-5D-5L descriptive system (EuroQol); non-commercial research
+version: coefficients transcribed 2026-09-28
+target: 293
+hemisphere: world
+kind: evaluative
+notes: >
+  Added for the health-states experiment (research pass 2 idea 20). Truth, not a distribution: the value set is a
+  fitted model of 1,134 US adults' time-trade-off and choice answers. 143 time-trade-off questions (10 years in the
+  state then death; how many years in full health are as good; "worse than dying now" is an option), about 13 per
+  answer bin; and 150 pairs of states (which is worse), 50 per band of utility gap (<0.1, 0.1-0.3, >0.3). Placed at a
+  new node world.health.medicine.health_state_values.

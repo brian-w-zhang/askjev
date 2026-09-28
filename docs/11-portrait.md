@@ -1,8 +1,8 @@
 # 11. A self-portrait of Jev
 
 `/portrait` is one long page in the askjev web app, readable in 15-20 minutes, about what the full answered corpus
-(1,091,643 questions, 3.8M probes) says about Jev. `/portrait/atlas` holds every finding, every topic's indicators and
-every source. This doc is the method: how the numbers are made, how the page is built, and how to regenerate both.
+(1,091,643 questions, 3.8M probes) says about Jev. `/portrait/atlas` holds every experiment (`16-experiments-plan.md`,
+`experiments/`), and, for reference, the old per-topic claims, every topic's indicators and every source. This doc is the method: how the numbers are made, how the page is built, and how to regenerate both.
 
 Read first: `CLAUDE.md`, `01-jev.md` (§6: documented jaggedness is labeled as known, never as a discovery),
 `03-questions.md`, `05-experiments.md`, `07-ui.md` ("Look").
@@ -168,14 +168,25 @@ which are stored in the original order.
 `/?node=<id>` opens a topic, `/?q=<id>` a question, and the address bar follows the open panel.
 
 ## 8. Atlas
-`/portrait/atlas`: every ledger claim (filter by section), a **coverage** table (what a human self-portrait or census
-asks about, and whether this corpus covers it for Jev: covered, partly, or not yet), the node cards sortable by any
+`/portrait/atlas` is the experiments library (`16-experiments-plan.md` pass 4). The first tab holds one card per
+experiment: family, title, a thumbnail of its chart, the result sentence, Jev's own verdict (keep, atlas, rework, cut;
+its label and interest) and its rank in Jev's head-to-heads, filterable by family and searchable. Each card opens
+`/portrait/atlas/<id>`: the result and its chart first, then the six steps (question, sourcing and coverage, questions
+asked, scoring, chart, verdict), the fine print, real rows, and links to the topics its questions sit under on the map.
+The data is `data/analysis/experiments.json` (private, from `scripts/experiments/export.py`; published next to
+`portrait.json` by `publish.py`); charts come from one library (`components/experiments/Chart.tsx`) that draws each
+chart type full size or as a thumbnail.
+
+The other tabs are reference: the old per-topic claims (the ledger, filter by section), a **coverage** table (what a
+human self-portrait or census asks about, and whether this corpus covers it for Jev), the node cards sortable by any
 indicator (each topic links to it on the map), and the source table.
 
 ## 9. Verification
 - `verify_page.py` pulls every number from the rendered page and checks it against `portrait.json` in every format the
   page prints. What remains unmatched is expected: chapter numbers, figure n totals (sums of ledger n), and numbers
   inside question text in the drawers.
+- `verify_page.py --experiments` does the same for every experiment page against that experiment's own entry in
+  `experiments.json`; what remains is axis ticks and numbers inside names (choices13k) or prose years.
 - `shots.mjs` screenshots every chapter in both themes at 1440 px and 390 px.
 - Rounding matches the ledger's sentences (the page rounds half to even, as Python does).
 

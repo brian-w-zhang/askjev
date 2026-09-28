@@ -22,7 +22,7 @@ Accuracy per quantity on pairs at least 2x apart, with 90% bootstrap intervals; 
 Ranked dots: one row per quantity, accuracy with its interval, foods and animals colored apart.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 2.197, top verdict `portrait`.
 
 ## Compared with
 USDA FoodData Central and AnAge values

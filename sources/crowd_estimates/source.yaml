@@ -1,0 +1,13 @@
+name: crowd_estimates
+url: https://github.com/stanford-policylab/wisdom-of-crowds
+license: MIT (stanford-policylab/wisdom-of-crowds, Simoiu et al. 2019)
+version: data/original/{tasks,answers,domains}.csv.zip from the repository's master branch, fetched 2026-09-28
+target: 160
+hemisphere: world
+kind: factual
+notes: >
+  Added for the "how big, how far, how many" experiment (docs/15 E29/44). The eight text-only numeric domains of
+  Simoiu et al. 2019 (20 questions each, about 500 people per question, February 2017), each person's number binned
+  into fixed ordered bins per domain; truth bin from the study's answer key. Time-bound questions are pinned to 2016/
+  February 2017; a handful of typos in the prompts are fixed. Placed at existing nodes by subject (celebrities,
+  nutrition, cities, countries, energy, history).

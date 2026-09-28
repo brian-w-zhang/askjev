@@ -1,0 +1,17 @@
+name: scalar_implicature
+url: https://github.com/jennhu/expectations-over-alternatives/tree/master/cross-scale/human_data
+license: >
+  Published experimental results (van Tiel et al. 2016, J. Semantics 33:137-175; Gotzner, Solt & Benz 2018,
+  Front. Psychol. 9:1659; Pankratz & van Tiel 2021, Language and Cognition 13:562-594) as compiled by Hu et al. 2023
+  (no license stated); used for private, non-commercial research
+version: vt16.csv, g18.csv, pvt21.csv from the repository, fetched 2026-09-28
+target: 234
+hemisphere: world
+kind: perception
+notes: >
+  Added for the scalar-implicature experiment (research pass 2 idea 1). One Noul per sentence: 'Mary says: "<weak>"
+  Would you conclude from this that, according to Mary, <not strong>?'. The human distribution is the study's
+  per-scale yes rate (n not published per scale). van Tiel's three sentences per scale share one rate; its verb,
+  quantifier and adverb scales are transcribed by hand from the paper's sentences; few/none is left out. Ronai &
+  Xiang 2022 is not used (sentences only by correspondence). Placed at a new node
+  world.society.languages.word.scalar_implicature.

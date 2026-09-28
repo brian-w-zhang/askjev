@@ -22,7 +22,7 @@ Jev's confidence (its top probability) against human agreement (the majority sha
 Human agreement (x) vs Jev's confidence (y), binned dots with the diagonal: does confidence track consensus?
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 1.582, top verdict `portrait`.
 
 ## Compared with
 MTurk annotators' splits on Scruples dilemmas; MoralChoice's ambiguity labels

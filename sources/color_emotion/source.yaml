@@ -1,0 +1,13 @@
+name: color_emotion
+url: https://osf.io/873df/ (data of the International Colour-Emotion Association Survey; Jonauskaite et al. 2020, Psychological Science 31(10))
+license: CC BY 4.0 (Jonauskaite et al., Colour-emotion associations across adulthood, OSF 873df)
+version: DATA.csv (7,387 participants, 31 countries), fetched 2026-09-28
+target: 32
+hemisphere: world
+kind: perception
+notes: >
+  Added for the colors-of-feelings experiment (docs/15 E41). 20 emotions -> pick one of 12 colors, and 12 colors ->
+  pick one of 20 emotions. People ticked any number of emotions per color, so their distribution is the share of
+  associations, not a single pick (said in the experiment's limits). Each emotion question carries the pooled
+  distribution and one per country of origin (31). Proposed node
+  world.science.psychology_neuroscience.emotion.colors_of_emotions.

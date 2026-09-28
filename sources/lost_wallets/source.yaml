@@ -1,0 +1,13 @@
+name: lost_wallets
+url: https://doi.org/10.7910/DVN/YKBODN (file copy https://github.com/bonjwow/lost-wallet)
+license: CC0 1.0 (Cohn et al. 2019 replication data, Harvard Dataverse doi:10.7910/DVN/YKBODN)
+version: behavioral data (csv), 17,303 wallets, fetched 2026-09-28
+target: 84
+hemisphere: world
+kind: social
+notes: >
+  Added for the lost-wallets experiment (research pass 2, idea 16). One question per country and condition (no
+  money; about US$13.45; about US$94.15 in the US, UK and Poland), asking the return rate in 5% bins, plus one on
+  the direction of the money effect. The truth is the observed rate rounded to 5%. The big-money-without-key
+  condition is left out. Dataverse requires a guestbook form to download, so the CC0 file is read from a public
+  GitHub copy of the same data. Placed at a new node world.places.countries.lost_wallets.

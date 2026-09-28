@@ -22,7 +22,7 @@ Per phrase, the bin holding Jev's median vs the bin holding people's median; ran
 A ridge chart on a log axis: one row per phrase, people's and Jev's distributions over the bins.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 1.93, top verdict `portrait`.
 
 ## Compared with
 46 Reddit respondents (zonination 2015)

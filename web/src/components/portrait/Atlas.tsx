@@ -132,7 +132,7 @@ export default function Atlas({ claims, nNodes, nSources, experiments }: {
           ) : (
             <div className="pt-scroll">
               <table className="pt-table">
-                <thead><tr><th>finding</th><th>section</th><th>evidence</th><th style={{ textAlign: "right" }}>n</th></tr></thead>
+                <thead><tr><th>claim</th><th>section</th><th>evidence</th><th style={{ textAlign: "right" }}>n</th></tr></thead>
                 <tbody>
                   {shownClaims.map((c) => (
                     <tr key={c.id}>

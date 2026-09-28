@@ -22,7 +22,7 @@ Per trait, Jev's mean expected level minus the teachers' level, with 90% bootstr
 Dots per trait: teachers' mean level and Jev's, with intervals.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 2.233, top verdict `portrait`.
 
 ## Compared with
 The teachers' rubric scores in the ASAP dataset

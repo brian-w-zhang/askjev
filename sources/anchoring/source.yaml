@@ -1,0 +1,14 @@
+name: anchoring
+url: Tversky & Kahneman 1974, Science 185:1124-1131 (the wheel-of-fortune UN question)
+license: Classic item transcribed from Tversky & Kahneman 1974 (research use with citation); other items authored for this project
+version: transcribed and authored 2026-09-28
+target: 33
+hemisphere: world
+kind: factual
+notes: >
+  The UN question after a wheel landing on 10 or 65, and with no wheel. Tversky & Kahneman 1974, Science
+  185:1124-1131, p. 1128: median estimates 25 (anchor 10) and 45 (anchor 65), confirmed by secondary sources; kept in
+  meta, no distribution exists. The anchoring index 0.36 is computed from those medians, (45 - 25) / (65 - 10). No
+  truth on that item: the share has changed since 1974. Plus ten authored quantities with known answers, each after a
+  low anchor, a high anchor and none. 21 ordered bins (about 0 to about 100). Placed at a proposed node
+  world.science.psychology_neuroscience.cognition.judgment_biases.

@@ -1,0 +1,15 @@
+name: beauty_contest
+url: Nagel 1995, American Economic Review 85:1313-1326; Bosch-Domènech, Montalvo, Nagel & Satorra 2002, American Economic Review 92:1687-1701
+license: Game from Nagel 1995 and Bosch-Domènech et al. 2002 (published means, research use with citation); wording authored
+version: published means transcribed 2026-09-28
+target: 8
+hemisphere: self
+kind: forecast
+notes: >
+  Guess-two-thirds (and one-half) of the average against four crowds: two lab conditions (Nagel 1995, Figure 1,
+  p. 1316: first-round means 36.73 for p = 2/3 and 27.05 for p = 1/2, read in the paper), Richard Thaler's 1997
+  Financial Times contest (mean 18.91, winning number 13; reported in Bosch-Domènech et al. 2002 and confirmed by
+  secondary sources), and copies of Jev (no human data). DROPPED: the Spektrum der Wissenschaft (22.08) and Expansión
+  (25.47) means, which could not be verified from the paper (not reachable) or a reliable secondary source. For each
+  crowd, Jev's pick (self) and its expected average (world, truth = the bin of the published mean). Only means are
+  published, so there are no human distributions. Placed at a proposed node self.personality.risk_decision_style.guessing_games.

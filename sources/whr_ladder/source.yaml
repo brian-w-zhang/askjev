@@ -1,0 +1,12 @@
+name: whr_ladder
+url: https://ourworldindata.org/grapher/happiness-cantril-ladder (World Happiness Report 2025, https://worldhappiness.report)
+license: CC BY 4.0 (Our World in Data; World Happiness Report 2025, Gallup World Poll)
+version: OWID grapher CSV, WHR 2025 values (2022-2024 averages), fetched 2026-09-28
+target: 150
+hemisphere: world
+kind: factual
+notes: >
+  Added for the "how the world rates its life" experiment (docs/15 E15). One question per country: its average on
+  the Cantril ladder, answered in half-step bins (below 3, 3.0-3.5, ..., 8 or above); the truth is the bin holding
+  the published average. Aggregates (OWID_ codes) are left out. GDP per head (World Bank PPP, via OWID) and OWID
+  region are kept in meta for the analysis, not shown. Placed at a new node world.places.countries.life_ladder.

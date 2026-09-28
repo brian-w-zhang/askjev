@@ -22,7 +22,7 @@ Per domain, every triple of finalists is a triad; it is intransitive when the ma
 Bars per domain: share of intransitive triads, with the 25% random line and the decisive-only share.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 3.887, top verdict `portrait`.
 
 ## Compared with
 a random tournament (25%) and a perfectly transitive chooser (0%)

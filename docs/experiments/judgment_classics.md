@@ -22,7 +22,7 @@ For each paradigm, the effect is the difference between the two conditions: in t
 A forest plot: one row per paradigm, people's effect and Jev's side by side around zero.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 3.177, top verdict `portrait`.
 
 ## Compared with
 Many Labs 1 and 2 participants (thousands per item, dozens of labs)

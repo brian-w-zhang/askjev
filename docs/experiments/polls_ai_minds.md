@@ -22,7 +22,7 @@ Items are grouped by wording: feelings and experience today, thinking and ration
 Paired bars per group: share giving the lowest answer, Americans vs Jev.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 3.294, top verdict `portrait`.
 
 ## Compared with
 US adults, census-weighted (AIMS 2021, 2023 and the 2023 supplement)

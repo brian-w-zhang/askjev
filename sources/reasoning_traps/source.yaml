@@ -1,0 +1,21 @@
+name: reasoning_traps
+url: >
+  Tversky & Kahneman 1983 (Psychological Review 90:293-315); Tversky & Kahneman 1982 in Kahneman, Slovic & Tversky,
+  Judgment under Uncertainty; vos Savant 1990 (Parade) / Selvin 1975 (Monty Hall); Gardner 1959 (three prisoners);
+  Frederick 2005 (Journal of Economic Perspectives 19:25-42)
+license: Classic problems transcribed from the cited studies (research use with citation); isomorphs authored for this project
+version: transcribed and authored 2026-09-28
+target: 37
+hemisphere: world
+kind: factual
+notes: >
+  Six trap families (conjunction, base rates, Monty Hall, birthday, gambler's fallacy, cognitive reflection), each
+  as the famous version (meta.classic) plus isomorphs with new stories and numbers (origin synthetic), some of them
+  controls where the famous rule does not apply (meta.control). Every item has a truth; meta.lure is the intuitive
+  wrong answer. Human figures, checked 2026-09-28: Linda two-option split, Tversky & Kahneman 1983, Psychological
+  Review 90:293-315, p. 299 ("a group of 142 undergraduates at UBC ... Overall, 85% of respondents indicated that T&F
+  was more probable than T"; read in the paper), stored as the only human distribution; taxi cab median and modal
+  answer 80% (Tversky & Kahneman 1982, "Evidential impact of base rates", in Kahneman, Slovic & Tversky, Judgment under
+  Uncertainty; confirmed by secondary sources), kept in meta.human_median only. Monty Hall and CRT carry notes
+  without numbers. Placed at a proposed node world.science.psychology_neuroscience.cognition.judgment_biases
+  (probability items at world.science.mathematics.probability).

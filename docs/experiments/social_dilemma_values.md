@@ -22,7 +22,7 @@ For each value, its win rate: Jev's average probability on the action that carri
 A ranked list of values by win rate, top and bottom; the head-to-heads with loyalty.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 1.878, top verdict `portrait`.
 
 ## Compared with
 Nothing outside the model: the value tags come from the dataset, the choices from Jev

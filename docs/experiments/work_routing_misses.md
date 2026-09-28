@@ -22,7 +22,7 @@ Per dataset: share right; among misses, the share where the right intent was Jev
 Paired bars per dataset (ordered by number of options): share right, and the share of misses where the answer was second choice; the top confusions as labels.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 2.706, top verdict `portrait`.
 
 ## Compared with
 each dataset's own labels

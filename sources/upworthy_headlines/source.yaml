@@ -1,0 +1,13 @@
+name: upworthy_headlines
+url: https://osf.io/jd64p/ (Upworthy Research Archive)
+license: CC BY 4.0 (Upworthy Research Archive, Matias, Munger, Le Quere & Ebersole 2021, Scientific Data 8:195)
+version: upworthy-archive-exploratory-packages-03.12.2020.csv, fetched 2026-09-28
+target: 600
+hemisphere: world
+kind: perception
+notes: >
+  Added for the "which headline got more clicks" experiment (research pass 2 idea 35). Two versions of the same
+  Upworthy test with the same image and different headlines, each shown to 1,000+ readers; one pair per test; the
+  truth is the higher click-through rate. 200 pairs in each third of the click gap (log ratio of the rates), with the
+  two-proportion z kept in meta so noise-level gaps can be separated. Tests touching politics or contested issues are
+  dropped by keyword before sampling. Placed at a new node world.society.media_news.journalism.headline_tests.

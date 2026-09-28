@@ -22,7 +22,7 @@ Per word and setting, the bin of Jev's median; the range from the smallest to th
 Small multiples: one panel per word, the five settings as dots on the log axis.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **atlas**, head-to-head strength -0.307, top verdict `portrait`.
 
 ## Compared with
 Jev's own reading across settings; no human data here

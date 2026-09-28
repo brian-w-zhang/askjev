@@ -22,7 +22,7 @@ Jev's expected answer per item on the test's 1-5 scale, keyed and summed per tra
 Five percentile strips (0-100) with Jev's square, its 'most people' ring, and the interval.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 0.511, top verdict `portrait`.
 
 ## Compared with
 603,322 people who took the IPIP-FFM test online (Open Psychometrics)

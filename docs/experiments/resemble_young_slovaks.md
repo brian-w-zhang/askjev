@@ -22,7 +22,7 @@ Per question and population, 1 - Jensen-Shannon distance between Jev's distribut
 A ranked strip of populations by similarity, and the three questions where Jev differs most.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 1.262, top verdict `portrait`.
 
 ## Compared with
 Slovak young people aged 15-30 (2013 survey, n≈1,000)

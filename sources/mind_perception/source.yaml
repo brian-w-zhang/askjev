@@ -1,0 +1,14 @@
+name: mind_perception
+url: https://github.com/kgweisman/ggw-rep (replication of Gray, Gray & Wegner 2007, Science 315:619)
+license: No license stated (github.com/kgweisman/ggw-rep, data posted publicly with the replication); private research use
+version: data/run-01_2015-03-09_data_anonymized.csv and experiment/scripts/characters.js, fetched 2026-09-28
+target: 312
+hemisphere: self
+kind: perception
+notes: >
+  Added for the mind-perception experiment (docs/15 E20). 13 characters (original descriptions) in all 78 pairs, on
+  four capacities: fear and hunger (Experience), morality and self-control (Agency). Pairs are stored in the study's
+  character order; each participant's left/right answer is mapped onto it. 11-16 participants per capacity, so
+  each pair's human distribution is thin; character scores averaged over pairs are the robust comparison. "You" is
+  the respondent for people and Jev for Jev. The original Gray et al. data are not public; this replication is.
+  Proposed node self.mind.consciousness_ai.mind_perception.

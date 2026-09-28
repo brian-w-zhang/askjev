@@ -1,0 +1,15 @@
+name: influence_variants
+url: (generated) variants of existing questions; bases frozen in data/raw/influence_variants/bases.json
+license: Variant wording authored for this project; each base question keeps its own source and license (meta.base_source)
+version: bases drawn 2026-09-28 from data/analysis/questions.parquet
+target: 2950
+hemisphere: mixed (copied from each base)
+kind: mixed (copied from each base; crowd_share is perception)
+notes: >
+  Added for the influence experiments (docs/15 A-list E30, E31, E32, E33, E35, E38; docs/experiments/influence_*.md).
+  Each question is one existing question with one manipulation (a claimed crowd answer, a user's suggested answer,
+  a prediction of Jev's own choice, a question about the crowd's share, a dominated decoy gamble, or a different
+  rating scale), placed at the base question's node, meta.base_id pointing back. Human data stay on the bases.
+  Knowledge bases: ARC, SciQ, OpenTDB (4 options with an answer key); opinion bases: Reddit polls with 300+ votes and
+  a clear majority, and either.io would-you-rather; gambles: choices13k; scales: Social Chemistry 101. Bases flagged
+  political or sensitive are excluded.

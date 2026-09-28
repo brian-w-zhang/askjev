@@ -22,7 +22,7 @@ Jev's mean level for each star rating; the share of 3-star reviews it reads as a
 Dots per star rating: the star level (0-4) and Jev's mean reading of the same reviews.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 2.558, top verdict `portrait`.
 
 ## Compared with
 The reviewers' own star ratings and thumbs

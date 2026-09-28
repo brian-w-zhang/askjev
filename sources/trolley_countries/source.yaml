@@ -1,0 +1,14 @@
+name: trolley_countries
+url: https://osf.io/mxa6z/ (Awad et al. 2020, PNAS 117:2332-2337)
+license: Public OSF data, no license stated (Awad et al. 2020, osf.io/mxa6z); non-commercial research use
+version: Shared_data_allResponses.csv (230,475 answers), fetched 2026-09-28
+target: 129
+hemisphere: world
+kind: social
+notes: >
+  Added for the trolley-by-country experiment (research pass 2, idea 13). 42 countries with 200+ answers to each of
+  the Switch, Loop and Footbridge dilemmas (the paper's rule); per country and dilemma one question asks the share
+  who said they would sacrifice the one, in 5% bins, truth = observed share (all answers, any scenario order). Three
+  self questions put the dilemmas to Jev, with the pooled 42-country answers as the human distribution. Scenario
+  texts paraphrase the Moral Machine site's classic trolley pages. Country questions at a new node
+  world.places.countries.trolley_by_country; self questions at self.values.moral_foundations.

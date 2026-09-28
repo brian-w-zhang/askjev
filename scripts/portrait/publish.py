@@ -1,6 +1,7 @@
 """Publish the portrait's private data to production (docs/11-portrait.md §7).
 
-Uploads data/analysis/portrait.json and the meme images into a fresh, unguessable Vercel Blob folder and sets the
+Uploads data/analysis/portrait.json, the experiments bundle (data/analysis/experiments.json, from
+scripts/experiments/export.py) and the meme images into a fresh, unguessable Vercel Blob folder and sets the
 site's PORTRAIT_URL to it. The site fetches both on the server (components/portrait/data.ts,
 app/portrait/memes/[file]/route.ts), so the folder's address never reaches a browser, and the pages stay behind the
 site key. Nothing is committed to the public repo. Needs BLOB_READ_WRITE_TOKEN (from .env) and the Vercel CLI.
@@ -22,7 +23,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from sync_prod import env  # noqa: E402  (reads .env without printing it)
 
 ROOT = Path(__file__).resolve().parent.parent.parent
-FILES = [ROOT / "data" / "analysis" / "portrait.json"] + sorted((ROOT / "data" / "portrait" / "memes").glob("*.webp"))
+FILES = [ROOT / "data" / "analysis" / "portrait.json", ROOT / "data" / "analysis" / "experiments.json"] + sorted((ROOT / "data" / "portrait" / "memes").glob("*.webp"))
 
 
 def main() -> None:

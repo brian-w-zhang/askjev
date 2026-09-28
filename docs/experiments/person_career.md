@@ -22,7 +22,7 @@ Mean enjoyment per type on 0-1, Jev vs quiz-takers; the code is Jev's three high
 Six dots (Jev vs quiz-takers) sorted by Jev, the code in big letters.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **atlas**, head-to-head strength -1.222, top verdict `portrait`.
 
 ## Compared with
 ~145,000 people who took the RIASEC quiz on Open Psychometrics

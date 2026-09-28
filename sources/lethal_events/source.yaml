@@ -1,0 +1,12 @@
+name: lethal_events
+url: https://osf.io/u4d7g (Pachur 2024, file Lichtenstein1978.xlsx); original Lichtenstein et al. 1978, doi:10.1037/0278-7393.4.6.551
+license: Published research data (Lichtenstein et al. 1978, compiled by Pachur 2024, OSF u4d7g, open access); used for non-commercial research
+version: Lichtenstein1978.xlsx from OSF u4d7g "Individual data sets", fetched 2026-09-28
+target: 81
+hemisphere: world
+kind: factual
+notes: >
+  Added for the "which kills more" experiment (docs/15 E8). 41 causes of death, yearly US deaths in the 1970s
+  (truth) and 1978 participants' geometric-mean estimates (in meta; no distributions published). Each cause asked
+  with the study's reference cause (50,000 motor-vehicle deaths a year) and without it, in 13 log bins. Placed at a
+  new node world.health.causes_of_death.

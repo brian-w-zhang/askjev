@@ -1,0 +1,14 @@
+name: atus_day
+url: https://www.bls.gov/tus/ (files via https://cran.r-project.org/src/contrib/Archive/atus/atus_0.2.tar.gz)
+license: Public domain (US BLS American Time Use Survey); abridged files from the R package atus 0.2 (GPL-2+)
+version: ATUS 2003-2016 activity and respondent files as packaged in atus 0.2 (2018), fetched 2026-09-28
+target: 40
+hemisphere: world
+kind: social
+notes: >
+  Added for the "typical day" experiment (docs/15 E49). 20 activities (ATUS lexicon code prefixes in the adapter);
+  for each, the weighted share of 181,335 diary days falling in each of 9 time bins is the human distribution for
+  "a random American on a random day". A second question per activity asks Jev about its own ideal day (self, no
+  human data). bls.gov refuses scripted downloads without a contact address, so the CRAN package's copy (included
+  with BLS permission) is used. The ATUS Well-Being Module (happiness by activity) is not in that package and is not
+  used. Day questions at a new node world.society.time_use; ideal-day questions at self.lifestyle.habits_routines.

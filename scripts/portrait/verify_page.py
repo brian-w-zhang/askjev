@@ -7,6 +7,8 @@ be read by hand; chapter numbers, axis ticks and years inside titles are expecte
 
   uv run python scripts/portrait/verify_page.py [url]            # local dev server by default
   ASKJEV_KEY=... uv run python scripts/portrait/verify_page.py https://<prod>/portrait
+  uv run python scripts/portrait/verify_page.py --experiments [base]  # every /portrait/atlas/<id> page against
+                                                                      # its own entry in experiments.json
 """
 
 from __future__ import annotations
@@ -55,16 +57,49 @@ def forms(v: float) -> set[str]:
     return {s.lstrip("-") for s in f}
 
 
-def main():
-    url = sys.argv[1] if len(sys.argv) > 1 else "http://localhost:4592/portrait"
+def page_text(opener, url: str) -> str:
+    raw = opener.open(url).read().decode()
+    body = re.sub(r"<script.*?</script>|<style.*?</style>", " ", raw, flags=re.S)
+    return html.unescape(re.sub(r"<[^>]+>", " ", body))
+
+
+def open_site(url: str):
     # production is private: with ASKJEV_KEY set, open the site's key link first so the cookie is set
     opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
     if os.environ.get("ASKJEV_KEY"):
         base = "/".join(url.split("/")[:3])
         opener.open(f"{base}/?key={urllib.parse.quote(os.environ['ASKJEV_KEY'])}").read()
-    raw = opener.open(url).read().decode()
-    body = re.sub(r"<script.*?</script>|<style.*?</style>", " ", raw, flags=re.S)
-    text = html.unescape(re.sub(r"<[^>]+>", " ", body))
+    return opener
+
+
+def experiments(base: str):
+    """Every experiment page: each number it prints must come from that experiment's own entry (result, evidence,
+    chart, rows, evaluation), from its rank and the total count, or be a chart axis tick."""
+    X = json.loads((A / "experiments.json").read_text())["experiments"]
+    opener = open_site(base)
+    bad_pages = 0
+    for i, e in enumerate(X):
+        text = page_text(opener, f"{base}/portrait/atlas/{e['id']}")
+        vals: set[float] = {float(i + 1), float(len(X))}
+        numbers(e, vals)
+        allowed = set().union(*(forms(v) for v in vals))
+        # the evidence and prose quote numbers the page prints verbatim; ticks are round numbers on the chart axis
+        tokens = re.findall(r"[+−-]?\d[\d,]*(?:\.\d+)?(?:M|k)?", text)
+        miss = [t for t in tokens if t.lstrip("+−-") not in allowed and t.lstrip("+−-").replace(",", "") not in allowed
+                and not re.fullmatch(r"[+−-]?(\d{1,3}|0\.\d)", t.lstrip("+−-"))]
+        if miss:
+            bad_pages += 1
+            print(f"{e['id']}: {len(miss)} of {len(tokens)} unmatched: {sorted(set(miss))[:8]}")
+    print(f"{len(X)} experiment pages checked; {bad_pages} with numbers not in their own entry")
+
+
+def main():
+    if "--experiments" in sys.argv:
+        rest = [a for a in sys.argv[1:] if a != "--experiments"]
+        return experiments(rest[0] if rest else "http://localhost:4592")
+    url = sys.argv[1] if len(sys.argv) > 1 else "http://localhost:4592/portrait"
+    opener = open_site(url)
+    text = page_text(opener, url)
     P = json.loads((A / "portrait.json").read_text())
     allowed: set[str] = set()
     vals: set[float] = set()

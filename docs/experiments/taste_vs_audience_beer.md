@@ -22,7 +22,7 @@ Rank correlation (Spearman) between Jev's robust level and the audience's mean l
 A scatter of audience rank vs Jev's rank, with the ten biggest disagreements labeled on each side.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 1.392, top verdict `portrait`.
 
 ## Compared with
 BeerAdvocate reviewers (their average rating of each item)

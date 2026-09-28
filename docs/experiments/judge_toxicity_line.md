@@ -22,7 +22,7 @@ Per dataset, the share Jev flags (probability above one half) vs the share the r
 Paired dots per dataset: raters' flag rate and Jev's, so the direction of each gap is visible at once.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 2.571, top verdict `portrait`.
 
 ## Compared with
 The datasets' own raters (majority vote) and ToxicChat's labels

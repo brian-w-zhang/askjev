@@ -22,7 +22,7 @@ Share where Jev's own choice and its guess of most people match the majority; th
 Scatter of vote share vs Jev's probability for option A, with the five biggest disagreements labeled.
 
 ## 6. Evaluation
-Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
+Jev's verdict (evaluator v3): **keep**, head-to-head strength 2.568, top verdict `portrait`.
 
 ## Compared with
 either.io voters

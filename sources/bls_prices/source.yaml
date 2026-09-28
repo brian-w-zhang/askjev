@@ -1,0 +1,13 @@
+name: bls_prices
+url: https://www.bls.gov/cpi/factsheets/average-prices.htm (series via https://fred.stlouisfed.org, e.g. APU0000708111)
+license: Public domain (US Bureau of Labor Statistics average price data, via FRED)
+version: FRED CSV downloads of 29 APU series, monthly 1980-2026-08, fetched 2026-09-28
+target: 140
+hemisphere: world
+kind: factual
+notes: >
+  Added for the prices and what-year experiments (docs/15 E50, E37). 29 everyday items, U.S. city average: the
+  price right now (truth: August 2026) and in 1985, 1995, 2005 and 2015 (truth: that year's average, full years only),
+  as 12 log-spaced bins over each item's 1980-2026 range; plus "What year is it right now?". Truth only, no human
+  answers. BLS's own file server refuses scripted downloads, so the series come from FRED's mirror. Placed at a new
+  node world.money.economics.everyday_prices.
