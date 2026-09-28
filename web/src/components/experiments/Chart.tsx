@@ -192,13 +192,15 @@ function barsChart(c: ChartData, mini: boolean) {
 // ---- x-y charts: scatter, rankscatter, binned, calibration, reliability ------------------------------------------------
 type Series = { name: string; kind: "jev" | "hum" | "alt"; pts: [number, number][]; line: boolean };
 
-function XY({ series, labels = [], xd, yd, xl, yl, diagonal, mini, xcats }: {
+function XY({ series, labels = [], xd, yd, xl, yl, diagonal, mini, xcats, links = [] }: {
   series: Series[]; labels?: { label: string; x: number; y: number }[]; xd: [number, number]; yd: [number, number];
-  xl?: string; yl?: string; diagonal?: boolean; mini: boolean; xcats?: string[];
+  xl?: string; yl?: string; diagonal?: boolean; mini: boolean; xcats?: string[]; links?: [[number, number], [number, number]][];
 }) {
   const W = mini ? 220 : 640, H = mini ? 130 : 380, m = mini ? { l: 6, r: 6, t: 6, b: 6 } : { l: 48, r: 16, t: 12, b: 40 };
-  const sx = (v: number) => m.l + ((v - xd[0]) / (xd[1] - xd[0] || 1)) * (W - m.l - m.r);
-  const sy = (v: number) => H - m.b - ((v - yd[0]) / (yd[1] - yd[0] || 1)) * (H - m.t - m.b);
+  // rounded: server and browser can differ in a float's last bit (log10), which breaks hydration
+  const r2 = (v: number) => Math.round(v * 100) / 100;
+  const sx = (v: number) => r2(m.l + ((v - xd[0]) / (xd[1] - xd[0] || 1)) * (W - m.l - m.r));
+  const sy = (v: number) => r2(H - m.b - ((v - yd[0]) / (yd[1] - yd[0] || 1)) * (H - m.t - m.b));
   const fx = fmtFor(xd), fy = fmtFor(yd);
   const dense = series.reduce((a, s) => a + s.pts.length, 0) > 400;
   return (
@@ -212,12 +214,18 @@ function XY({ series, labels = [], xd, yd, xl, yl, diagonal, mini, xcats }: {
         ))}
         {!mini && xcats && xcats.map((t, i) => <text key={t} className="tk" x={sx(i)} y={H - m.b + 14} textAnchor="middle">{t}</text>)}
         {diagonal && <line className="diag" x1={sx(Math.max(xd[0], yd[0]))} y1={sy(Math.max(xd[0], yd[0]))} x2={sx(Math.min(xd[1], yd[1]))} y2={sy(Math.min(xd[1], yd[1]))} />}
-        {series.map((s) => (
-          <g key={s.name} className={`s ${s.kind}`}>
-            {s.line && <polyline points={s.pts.map(([x, y]) => `${sx(x)},${sy(y)}`).join(" ")} />}
-            {s.pts.map(([x, y], i) => <circle key={i} cx={sx(x)} cy={sy(y)} r={dense ? (mini ? 1 : 1.6) : mini ? 2.5 : 4} />)}
-          </g>
-        ))}
+        {links.map(([a, b], i) => <line key={`l${i}`} className="link" x1={sx(a[0])} y1={sy(a[1])} x2={sx(b[0])} y2={sy(b[1])} />)}
+        {series.map((s) => {
+          const r = dense ? (mini ? 1 : 1.6) : mini ? 2.5 : 4;
+          return (
+            <g key={s.name} className={`s ${s.kind}`}>
+              {s.line && <polyline points={s.pts.map(([x, y]) => `${sx(x)},${sy(y)}`).join(" ")} />}
+              {s.pts.map(([x, y], i) => s.kind === "hum" && !dense
+                ? <rect key={i} x={sx(x) - r * 0.8} y={sy(y) - r * 0.8} width={r * 1.6} height={r * 1.6} transform={`rotate(45 ${sx(x)} ${sy(y)})`} />
+                : <circle key={i} cx={sx(x)} cy={sy(y)} r={r} />)}
+            </g>
+          );
+        })}
         {!mini && labels.map((l, i) => (
           <text key={i} className="lab" x={sx(l.x) + 6} y={sy(l.y) - 5}>{l.label.length > 28 ? `${l.label.slice(0, 27)}…` : l.label}</text>
         ))}
@@ -311,7 +319,7 @@ function ridge(c: ChartData, mini: boolean) {
   const W = 100, H = mini ? 10 : 14;
   const path = (v: number[]) => {
     const max = Math.max(...v, 1e-9);
-    const pts = v.map((y, i) => `${(i / (v.length - 1 || 1)) * W},${H - (y / max) * (H - 1)}`);
+    const pts = v.map((y, i) => `${Math.round((i / (v.length - 1 || 1)) * W * 100) / 100},${Math.round((H - (y / max) * (H - 1)) * 100) / 100}`);
     return `M0,${H} L${pts.join(" L")} L${W},${H} Z`;
   };
   return (
@@ -405,7 +413,8 @@ function special(c: ChartData, mini: boolean): ReactNode {
       ];
       const all = series.flatMap((x) => x.pts);
       const labels = mini ? [] : rows.map((r) => { const j = pair(r.jev); return j ? { label: str(r.label), x: j[0], y: j[1] } : null; }).filter(Boolean) as { label: string; x: number; y: number }[];
-      return <XY series={series} labels={labels} xd={pair(c.xdomain) ?? extent(all.map((p) => p[0]), false)} yd={pair(c.ydomain) ?? extent(all.map((p) => p[1]), false)} xl={str(c.x) || "agency"} yl={str(c.y) || "experience"} mini={mini} />;
+      const links = rows.map((r) => [pair(r.jev), pair(r.people)]).filter(([a, b]) => a && b) as [[number, number], [number, number]][];
+      return <XY series={series} labels={labels} links={links} xd={pair(c.xdomain) ?? extent(all.map((p) => p[0]), false)} yd={pair(c.ydomain) ?? extent(all.map((p) => p[1]), false)} xl={str(c.x) || "agency"} yl={str(c.y) || "experience"} mini={mini} />;
     }
     case "colorgrid": {
       // rows of {label, people: {color: share}, jev: {color: share} or a color, jev_p}
