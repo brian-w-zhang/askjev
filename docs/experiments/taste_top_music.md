@@ -1,33 +1,33 @@
 # taste_top_music
 
-family: taste
+family: taste · new questions: 276
 
 ## 1. Question
 If Jev ranked every album or sound it was asked about, what would its top ten be?
 
-Wrapped-style favorites, but from every item it rated rather than a handful of head-to-heads; the interesting part is what rises to the top and what sinks.
+Wrapped-style favorites, but from every item it rated and then a real final among the best, rather than a handful of head-to-heads; the interesting part is what rises to the top and what sinks.
 
 ## 2. Sourcing
-Existing one-at-a-time rating questions ("How much would you enjoy ...", five situation-described levels) under Self > Lifestyle > Ratings > music_ratings; items from lists written for this project (classic albums, everyday sounds). Enough: every item is rated, so the whole list can be ranked; the old head-to-heads (about 7 per item) are too thin to rank.
+Existing one-at-a-time rating questions ("How much would you enjoy ...", five situation-described levels) under Self > Lifestyle > Ratings > music_ratings; items from lists written for this project (classic albums, everyday sounds). Every item is rated, so the whole list can be ranked; the ratings crowd the top with near-ties, so the top 24 play a round-robin final (new questions, sources/taste_finals).
 
-Sources: `g5_w13_ratings`
+Sources: `g5_w13_ratings`, `taste_finals`
 
 ## 3. Collection
-Existing questions only; no new Jev calls.
+The ratings exist. New: the finals, 276 head-to-heads among the top 24 ("Which film would you rather watch?"), each asked in both option orders.
 
 ## 4. Scoring
-Each item's expected level (0-4) from Jev's probability over the five levels, averaged with the same question asked with the levels reversed; the gap between the two shows how much the order of the options matters. Ties are left as ties. The top 24 go to a head-to-head final (taste_finals).
+Ratings: each item's expected level (0-4), averaged with the same question asked with the levels reversed. Finals: Jev's probability for each side, averaged over both orders, summed into soft wins; the order is the Bradley-Terry strength fitted to all 276 games. Intransitive triads (A beats B, B beats C, C beats A) are counted as a consistency check.
 
 ## 5. Visualization
-A ranked list, Wrapped style: the top ten with their level bars, and the bottom five for contrast.
+A ranked list, Wrapped style: the finals' top ten with their win counts, and the ratings' bottom five for contrast.
 
 ## 6. Evaluation
 Run `scripts/experiments/evaluate.py new`; the verdict is stored with the result.
 
 ## Compared with
-nothing outside the model: a ranking of Jev's own ratings
+nothing outside the model: a ranking of Jev's own ratings and choices
 
 ## Limits
-A winner is only the best of what was on the list (lists written for this project (classic albums, everyday sounds)). Levels are Jev's probabilities over described situations, not a star rating.
+A winner is only the best of what was on the list (lists written for this project (classic albums, everyday sounds)). Finalists were chosen by Jev's own ratings, so an item it underrated never reached the final.
 
 Results: `data/analysis/experiments/taste_top_music.json` (private). Code: `scripts/experiments/`.
