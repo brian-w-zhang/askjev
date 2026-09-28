@@ -166,11 +166,50 @@ def apply():
     print(f"{len(A)} memes written into case files, {len(_assignments('CUT'))} cut")
 
 
+def _blank_bands(im: Image.Image) -> tuple[int, int, int, int]:
+    """The box left after cutting plain white or black bands (a template's empty text area) off each edge."""
+    import numpy as np
+    a = np.asarray(im.convert("L"), dtype=float)
+    def plain(v):  # a row or column that is one flat, very light or very dark colour
+        return v.std() < 6 and (v.mean() > 225 or v.mean() < 30)
+    top, bottom, left, right = 0, a.shape[0], 0, a.shape[1]
+    while top < bottom - 20 and plain(a[top]): top += 1
+    while bottom > top + 20 and plain(a[bottom - 1]): bottom -= 1
+    while left < right - 20 and plain(a[top:bottom, left]): left += 1
+    while right > left + 20 and plain(a[top:bottom, right - 1]): right -= 1
+    return left, top, right, bottom
+
+
+def trim():
+    """For memes with no words set on the image (caption only), cut the template's empty bands so the picture fills
+    its frame: writes tpl-<slug>-trim.webp and records it in the catalog."""
+    cat = catalog()
+    used = {c["meme"]["template"] for c in (cases.load(p.name[:-8]) or {} for p in cases.OUT.glob("*.case.md"))
+            if c.get("meme") and not c["meme"].get("texts")}
+    n = 0
+    for sl in sorted(used):
+        t = cat[sl]
+        im = Image.open(MEMES / t["file"]).convert("RGB")
+        l, tp, r, b = _blank_bands(im)
+        t.pop("trim", None)
+        if (im.width - (r - l)) + (im.height - (b - tp)) < 0.06 * min(im.size):
+            continue  # nothing worth cutting
+        f = t["file"].replace(".webp", "-trim.webp")
+        im.crop((l, tp, r, b)).save(MEMES / f, "WEBP", quality=82)
+        t["trim"] = {"file": f, "w": r - l, "h": b - tp}
+        n += 1
+        print("trimmed", sl, im.size, "->", (r - l, b - tp))
+    CATALOG.write_text(json.dumps(cat, indent=1, sort_keys=True))
+    print(n, "trimmed")
+
+
 def resolve(m: dict) -> dict | None:
     """A case's meme as the site draws it (see web/src/components/experiments/ExMeme.tsx)."""
     t = catalog().get(m.get("template", ""))
     if not t or not (MEMES / t["file"]).exists():
         return None
+    if not m.get("texts") and t.get("trim") and (MEMES / t["trim"]["file"]).exists():
+        t = {**t, **t["trim"]}  # caption only: the template without its empty text bands
     return {"name": m["template"], "file": t["file"], "w": t["w"], "h": t["h"], "boxes": t.get("boxes", []),
             "texts": m.get("texts") or [], "caption": m.get("caption"), "alt": m.get("alt") or t["name"]}
 
@@ -209,5 +248,7 @@ if __name__ == "__main__":
         fetch_assigned()
     elif cmd == "apply":
         apply()
+    elif cmd == "trim":
+        trim()
     elif cmd == "check":
         check()

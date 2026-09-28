@@ -17,7 +17,7 @@ Rating questions with described levels, for example:
 
 Each was also asked with the levels in reverse order.
 
-## How we measured it
+## How it was measured
 For each question, whether Jev's most likely answer is the middle level. Then the share of questions where it is, by kind of question (from the map's topics), with 90% intervals, and, on the datasets with people's ratings, the same share for the people.
 
 ## Caveats

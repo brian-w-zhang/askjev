@@ -20,7 +20,7 @@ The story, and the dataset's own list of emotions:
 
 In EmpatheticDialogues the question was the same idea with all 32 emotion words to choose from.
 
-## How we measured it
+## How it was measured
 For each dataset: how many shame stories Jev calls guilt, and how many guilt stories it calls shame. If the two numbers are about equal, the feelings are simply hard to tell apart. If one is much larger, the confusion has a direction.
 
 ## Caveats

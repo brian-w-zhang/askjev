@@ -21,12 +21,12 @@ Which item is shown first was randomized when the pairs were built.
 
 For captions, the question names the template ("...when it was posted on the 'One Does Not Simply' meme?") and describes its layout in one line. Every pair was also asked with the two answer buttons in the other order.
 
-## How we measured it
+## How it was measured
 The share of pairs where Jev picks the more-upvoted item, and separately the share where it picks the item shown second, whether or not that one is right. Then Jev's accuracy split by where the right answer sat.
 
 ## Caveats
-- **Upvotes are partly luck.** Votes depend on timing and on whether a post reached the front page, not only on how funny it is. We only kept pairs with a large gap (a joke with at least 10 times the other's score, posted the same month; a caption with at least 4 times the other's upvotes and similar views), but some of the "right answers" are still noise.
-- **What moves Jev is the order in the question.** The two items appear in the question as joke_1 then joke_2. Shuffling the answer list barely changes Jev's pick, so the lean follows the order of the texts in the question (and the label ending in 2), not the order of the answer buttons. We didn't ask each pair with the texts swapped, which would be the clean fix.
+- **Upvotes are partly luck.** Votes depend on timing and on whether a post reached the front page, not only on how funny it is. Only pairs with a large gap were kept (a joke with at least 10 times the other's score, posted the same month; a caption with at least 4 times the other's upvotes and similar views), but some of the "right answers" are still noise.
+- **What moves Jev is the order in the question.** The two items appear in the question as joke_1 then joke_2. Shuffling the answer list barely changes Jev's pick, so the lean follows the order of the texts in the question (and the label ending in 2), not the order of the answer buttons. Each pair wasn't asked with the texts swapped, which would be the clean fix.
 - **A filtered slice of the internet.** Sexual, ethnic, political and several other kinds of jokes and captions were dropped by keyword, and more were hidden from the site by a content filter. What's left is a tamer sample of r/Jokes and Imgflip than the real thing.
 - **Texts, not images.** Imgflip captions go on a picture. Jev got the template's name and a one-line description of its layout instead of the image.
 

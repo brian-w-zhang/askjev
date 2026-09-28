@@ -12,11 +12,11 @@
   ## Why ask this
   ## The people and the data
   ## What Jev was asked
-  ## How we measured it
-  ## What we found
+  ## How it was measured
+  ## What the data shows
   ## What it means, and what it doesn't
 
-The first four sections and the caveats are method: they go to the public docs/experiments/<id>.md. "What we found" and
+The first four sections and the caveats are method: they go to the public docs/experiments/<id>.md. "What the data shows" and
 "What it means" state results, so they stay private and appear only on the site.
 
   uv run python scripts/experiments/cases.py draft [ids]    # starting files for experiments without one
@@ -34,10 +34,14 @@ import yaml
 
 OUT = Path("data/analysis/experiments")
 SECTIONS = [("why", "Why ask this"), ("data", "The people and the data"), ("asked", "What Jev was asked"),
-            ("measured", "How we measured it"), ("found", "What we found"), ("means", "What it means, and what it doesn't")]
+            ("measured", "How it was measured"), ("found", "What the data shows"), ("means", "What it means, and what it doesn't")]
 PUBLIC = ("why", "data", "asked", "measured")
 JARGON = [r"no new (Jev )?calls", r"existing questions only", r"\bsources?/\w+", r"`[a-z0-9_]+`", r"\bparquet\b",
           r"\bprobe(s)?\b", r"\bJev for (')?most people", r"\bnode_id\b", r"\bfam_\w+", r"\bmeta\.\w+", r"\bthe screen\b"]
+
+
+# headings from before the case studies moved to the third person
+OLD_TITLES = {"how we measured it": "measured", "what we found": "found"}
 
 
 def path(eid: str) -> Path:
@@ -50,7 +54,7 @@ def parse(text: str) -> dict:
     if m:
         front, body = yaml.safe_load(m.group(1)) or {}, m.group(2)
     sections, cur = {}, None
-    titles = {t.lower(): k for k, t in SECTIONS}
+    titles = {t.lower(): k for k, t in SECTIONS} | OLD_TITLES
     for line in body.splitlines():
         h = re.match(r"^##\s+(.*)$", line)
         if h:
@@ -207,8 +211,8 @@ def draft(eid: str) -> str:
     s, r = d["spec"], d["result"]
     front = {"result": r["result"], "chart_note": "", "caveats": [{"label": "TODO", "text": s.get("limits") or ""}]}
     body = [f"## Why ask this\n{s['question']}\n\n{s['why']}", f"## The people and the data\n{s['sourcing']}\n\n{s['compared_with']}",
-            f"## What Jev was asked\n{s['collection']}", f"## How we measured it\n{s['scoring']}",
-            f"## What we found\n{r['result']}\n\n{r['evidence']}\n\n{r.get('robustness', '')}", "## What it means, and what it doesn't\nTODO"]
+            f"## What Jev was asked\n{s['collection']}", f"## How it was measured\n{s['scoring']}",
+            f"## What the data shows\n{r['result']}\n\n{r['evidence']}\n\n{r.get('robustness', '')}", "## What it means, and what it doesn't\nTODO"]
     return "---\n" + yaml.safe_dump(front, sort_keys=False, allow_unicode=True, width=120) + "---\n" + "\n\n".join(body) + "\n"
 
 

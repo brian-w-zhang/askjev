@@ -14,7 +14,7 @@ One question per item and year, in the same 12 price ranges as the "right now" q
 > What was the average retail price of a pound of cheddar cheese in US cities in 2015?
 > *Under $2.40 · $2.40 to $2.64 · ... · $6.50 to $7.29 · $7.30 or more*
 
-## How we measured it
+## How it was measured
 For each year, the share of items where Jev's middle answer is the range holding that year's average price, the share within one range, and the average lean of its misses in ranges (positive means too high), with 90% ranges from resampling items.
 
 ## Caveats

@@ -21,8 +21,8 @@ The whole conversation and both answers, then:
 
 MT-Bench pairs were asked the same way, with two full conversations side by side.
 
-## How we measured it
-First, how often Jev picks the answer the judges picked. Then the length question: we group pairs by how much longer the first answer is than the second, and in each group compare how often Jev and the judges chose the first answer. If both rise together as the first answer gets longer, they share the same lean.
+## How it was measured
+First, how often Jev picks the answer the judges picked. Then the length question: the analysis groups pairs by how much longer the first answer is than the second, and in each group compares how often Jev and the judges chose the first answer. If both rise together as the first answer gets longer, they share the same lean.
 
 ## Caveats
 - **Answers in a fixed order.** The two answers always appear in the order the dataset gives them.

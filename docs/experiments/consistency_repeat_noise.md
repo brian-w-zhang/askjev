@@ -16,7 +16,7 @@ Any two-option question, twice. For example:
 
 (Jev leaned only slightly toward Japan: right, but a near toss-up on a question it should have been sure of.)
 
-## How we measured it
+## How it was measured
 The absolute change in the probability of the same option between the two identical requests, and the share of pairs where the favored option switched, grouped by how far the first answer was from 50/50.
 
 ## Caveats

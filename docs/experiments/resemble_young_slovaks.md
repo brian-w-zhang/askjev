@@ -14,8 +14,8 @@ The survey's questions, as Choice or five-level ratings:
 > Do you lie to others?
 > *I never lie · I sometimes lie · Only to avoid hurting someone · Every time it suits me*
 
-## How we measured it
-We also list the questions where Jev's top answer is furthest from what they chose.
+## How it was measured
+It also lists the questions where Jev's top answer is furthest from what they chose.
 
 ## Caveats
 - **One small, specific group.** About a thousand people aged 15 to 30, surveyed in Slovakia in 2013 by students of Comenius University in Bratislava. It's one country, one age group and one year, not a national sample.

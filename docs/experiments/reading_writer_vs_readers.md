@@ -3,7 +3,7 @@
 family: reading
 
 ## Why ask this
-Most emotion datasets label a text by what readers see in it. But what a reader sees and what the writer felt can differ: we project feelings onto other people's stories all the time. A dataset that also records the writer's own answer can tell reading the page apart from reading the person, and a model trained on text might be a very good reader of pages and still miss the person.
+Most emotion datasets label a text by what readers see in it. But what a reader sees and what the writer felt can differ: people project feelings onto other people's stories all the time. A dataset that also records the writer's own answer can tell reading the page apart from reading the person, and a model trained on text might be a very good reader of pages and still miss the person.
 
 ## The people and the data
 The crowd-enVent corpus (Troiano, Oberländer and Klinger, 2023) asked people on the survey platform Prolific to recall an event from their own life in which they felt a given emotion, describe it, and rate it. That gave 6,600 descriptions from 2,379 writers. A later group of readers then saw 1,200 of the texts, with the emotion words hidden, and guessed what the writer felt, five readers per text.
@@ -18,7 +18,7 @@ Each text on its own, with the study's 13 answers:
 
 Each question was also asked with the answers in three shuffled orders, and the answers averaged.
 
-## How we measured it
+## How it was measured
 How often Jev's top answer is the writer's emotion, compared with how often the readers' majority names it and how often a single reader does. Where the readers' majority and the writer disagree, whose side Jev takes. And the hit rate for each emotion the writers felt.
 
 ## Caveats

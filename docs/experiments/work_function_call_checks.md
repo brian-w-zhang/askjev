@@ -6,7 +6,7 @@ family: work
 AI agents act by calling tools: book a flight, look up an account, run a query. A cheap check before each call ("does this call actually do what the user asked?") is an obvious safety net. What matters is where the net has holes. Some mistakes are easy to see (the wrong function); others hide in plain sight (the right values, in the wrong slots).
 
 ## The people and the data
-The calls come from **ToolACE**, a public dataset of user requests paired with a list of available tools and the correct call. We kept requests answered by exactly one call, with two to eight tools on offer.
+The calls come from **ToolACE**, a public dataset of user requests paired with a list of available tools and the correct call. Only requests answered by exactly one call were kept, with two to eight tools on offer.
 
 ## What Jev was asked
 Each call was a yes/no question with the request, the tool list and the proposed call:
@@ -18,7 +18,7 @@ Each call was a yes/no question with the request, the tool list and the proposed
 
 That example has two arguments swapped: the test type is the urine test and the result is positive.
 
-## How we measured it
+## How it was measured
 For each kind of mistake, the share of broken calls Jev rejects; for correct calls, the share it accepts. Each with a range showing how much it could vary by chance.
 
 ## Caveats

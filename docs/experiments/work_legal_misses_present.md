@@ -21,7 +21,7 @@ Each item was a yes/no question over the text, with the provision or practice de
 > and (2) of this Agreement, but nonexclusive as to all other products covered by this Agreement."*
 > *Provision: Competitive restriction exception: does the clause mention exceptions or carve-outs to …*
 
-## How we measured it
+## How it was measured
 For each task, two rates: **misses**, the share of real cases Jev says no to, and **false alarms**, the share of absent cases it says yes to, each with a range showing how much it could vary by chance.
 
 ## Caveats

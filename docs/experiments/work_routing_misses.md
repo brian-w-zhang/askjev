@@ -20,8 +20,8 @@ Each message was one pick-one question, with every intent written out with a one
 > *Options (77): age limit: the minimum age to open or use an account · change PIN: changing the card PIN · ATM
 > support: which ATMs the card works at · … · get a physical card …*
 
-## How we measured it
-For each dataset: the share of messages Jev routes right; among its misses, the share where the right intent was its second choice; and the most common confusions. Across the 13 datasets, we compare menu length with the share right (rank correlation: 1 means longer menus always do better, -1 always worse, 0 no relation).
+## How it was measured
+For each dataset: the share of messages Jev routes right; among its misses, the share where the right intent was its second choice; and the most common confusions. Across the 13 datasets, the analysis compares menu length with the share right (rank correlation: 1 means longer menus always do better, -1 always worse, 0 no relation).
 
 ## Caveats
 - **Some intents overlap by design.** Many "misses" are between intents a person would also hesitate over. The datasets' labels treat these as wrong, so the share right is a floor.

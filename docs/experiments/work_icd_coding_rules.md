@@ -19,7 +19,7 @@ Each code was one pick-one question with the chapters' official titles:
 > *Options: the 21 chapter titles, from "Certain infectious and parasitic diseases" to "External causes of
 > morbidity" and "Factors influencing health status and contact with health services"*
 
-## How we measured it
+## How it was measured
 The share of codes Jev places in the right chapter, chapter by chapter, and the most common wrong chapter for each.
 
 ## Caveats

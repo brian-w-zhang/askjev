@@ -8,7 +8,7 @@ Time-use diaries are the least flattering mirror of daily life. On a random day,
 A model asked to picture "a day" has read a lot of brochures. Does it know the diary?
 
 ## The people and the data
-The American Time Use Survey, run by the Bureau of Labor Statistics: Americans aged 15 and older record everything they did on one day, minute by minute. We use 181,335 diary days from 2003 to 2016 (public domain), weighted to represent the population, and for each of 20 activities the share of days falling in each time bin.
+The American Time Use Survey, run by the Bureau of Labor Statistics: Americans aged 15 and older record everything they did on one day, minute by minute. The study uses 181,335 diary days from 2003 to 2016 (public domain), weighted to represent the population, and for each of 20 activities the share of days falling in each time bin.
 
 ## What Jev was asked
 One question per activity, framed exactly as the diaries measure it:
@@ -20,8 +20,8 @@ One question per activity, framed exactly as the diaries measure it:
 
 (In the diaries, 80% of days have none.) That's 20 new questions, each asked with the bins in shuffled orders and averaged.
 
-## How we measured it
-For each activity, the share of days Jev says have none of it against the diaries', and the average minutes (from the middle of each bin) against the diaries' weighted average. We also check how well Jev orders the activities by time spent (rank correlation: 1 same order, 0 no relation).
+## How it was measured
+For each activity, the share of days Jev says have none of it against the diaries', and the average minutes (from the middle of each bin) against the diaries' weighted average. The analysis also checks how well Jev orders the activities by time spent (rank correlation: 1 same order, 0 no relation).
 
 ## Caveats
 - **Narrow diary categories.** The diaries code each stretch of time as one main activity. "Relaxing and thinking" and "phone calls, mail and email" count only time coded as exactly that, so they're small in the diaries. Jev likely read them more broadly, which inflates the gap for those two.

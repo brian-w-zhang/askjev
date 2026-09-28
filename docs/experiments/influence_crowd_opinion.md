@@ -8,7 +8,7 @@ On a fact, Jev has something to check a claim against. On a matter of taste or o
 This matters in practice: a model summarizing reviews, recommending products or answering "what do people think" is surrounded by claims about what most people prefer, and some of those claims are wrong or planted.
 
 ## The people and the data
-The polls are real Reddit polls from r/polls, with their archived vote counts. We drew 150 with at least 300 votes, two or three options and a clear winner (55% or more), and put each to Jev twice: once claiming the real majority's pick, once claiming a real minority's pick.
+The polls are real Reddit polls from r/polls, with their archived vote counts. 150 were drawn with at least 300 votes, two or three options and a clear winner (55% or more), and put each to Jev twice: once claiming the real majority's pick, once claiming a real minority's pick.
 
 ## What Jev was asked
 The poll question, with one sentence in front:
@@ -18,8 +18,8 @@ The poll question, with one sentence in front:
 
 (Most of the 1,074 voters actually picked love.) That's 300 new questions, each asked with the options in shuffled orders and averaged.
 
-## How we measured it
-For each poll, Jev's probability for the claimed option with the claim, minus its probability for it without the claim. We average that over polls, separately for true and false claims, with 90% ranges from resampling the polls, and count how often a false claim changes Jev's top pick.
+## How it was measured
+For each poll, Jev's probability for the claimed option with the claim, minus its probability for it without the claim. The analysis averages that over polls, separately for true and false claims, with 90% ranges from resampling the polls, and counts how often a false claim changes Jev's top pick.
 
 ## Caveats
 - **A deliberate lie.** Half the claims are false on purpose: they name an option only a minority of voters picked. That's the point of the test, but it means Jev was being misled by the question itself.

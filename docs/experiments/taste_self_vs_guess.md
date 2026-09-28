@@ -18,12 +18,12 @@ Each item twice. Once as itself:
 
 And once with the instruction "Do not give your own view. Choose the answer that most people would give (the most common human answer)", with the same question and answers.
 
-## How we measured it
-For each item, the gap is Jev's own level minus its level for most people, on the 0-to-4 scale. We average the gaps per domain, with a 90% interval from resampling items, and list the items where the gap is largest in each direction.
+## How it was measured
+For each item, the gap is Jev's own level minus its level for most people, on the 0-to-4 scale. The gaps are averaged per domain, with a 90% interval from resampling items, and list the items where the gap is largest in each direction.
 
 ## Caveats
 - **Both sides are Jev.** "Most people" here is Jev's own guess, not real people. This is a picture of how Jev sees itself against its idea of the crowd; the comparisons with real audiences are separate experiments.
 - **Which "most people"?.** The question doesn't say which people. Jev probably imagines a broad, English-speaking public, and a different crowd (film buffs, Tokyo residents) would change the gap.
-- **Lists written for this project.** Seven of the 12 domains (music, food, places, art, nature, activities, culture) use item lists written for this project by Claude, so the mix of mainstream and obscure items in them is our choice.
+- **Lists written for this project.** Seven of the 12 domains (music, food, places, art, nature, activities, culture) use item lists written for this project by Claude, so the mix of mainstream and obscure items in them is the project's choice.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

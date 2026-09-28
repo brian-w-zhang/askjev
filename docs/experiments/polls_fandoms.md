@@ -18,12 +18,12 @@ Each poll as posted, with its options, asking what most people would say. For ex
 
 (Poll options were stored as short labels, so Jev saw them in this plain form.)
 
-## How we measured it
+## How it was measured
 For each community, how often Jev's guess names the option that got the most votes, against what a random guess would get (one divided by the number of options).
 
 ## Caveats
 - **Some polls are about things after Jev's training.** Fan polls about a new episode, season or album can concern events Jev never read about, and those are unwinnable. This probably hurts fast-moving communities (a reality show, an active artist) most.
-- **Communities differ in size and style.** We kept polls with 50 or more votes; hobby polls are smaller than general ones (the median is 272 votes), so a single poll can be decided by a few dozen fans.
+- **Communities differ in size and style.** Only polls with 50 or more votes were kept; hobby polls are smaller than general ones (the median is 272 votes), so a single poll can be decided by a few dozen fans.
 - **Each community is its own crowd.** Fans of a series vote as insiders, often against the general reputation. That's the point of the test, but it means "guessing wrong" here can mean "guessing what outsiders think".
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

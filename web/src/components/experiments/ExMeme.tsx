@@ -11,8 +11,11 @@ export default function ExMeme({ m, size = "page" }: { m: ExperimentMeme; size?:
       <div className="img" style={{ aspectRatio: `${m.w} / ${m.h}` }}>
         <img src={`/portrait/memes/${m.file}`} alt={m.alt} loading="lazy" draggable={false} />
         {m.boxes.map((b, i) => m.texts[i] ? (
-          <span key={i} className={`lab lab-${b.style ?? "outline"}`}
-            style={{ left: `${b.x}%`, top: `${b.y}%`, width: `${b.w}%`, ...(b.size ? { "--s": b.size } : {}) } as React.CSSProperties}>{m.texts[i]}</span>
+          <span key={i} className={`lab lab-${b.style ?? "outline"}${b.y < 25 ? " at-top" : b.y > 75 ? " at-bottom" : ""}`}
+            style={{ left: `${b.x}%`, width: `${b.w}%`, ...(b.size ? { "--s": b.size } : {}),
+              // near an edge the text grows away from it, so extra lines never fall off the picture
+              ...(b.y < 25 ? { top: `${Math.max(1.5, b.y - 7)}%` } : b.y > 75 ? { bottom: `${Math.max(1.5, 93 - b.y)}%` } : { top: `${b.y}%` }),
+            } as React.CSSProperties}>{m.texts[i]}</span>
         ) : null)}
       </div>
     </figure>

@@ -21,8 +21,8 @@ The same question the raters answered, with the dataset's five answer levels:
 
 Each rule was asked once as written and once with the five levels in reverse order.
 
-## How we measured it
-For each rule we compare Jev's answer with the raters'.
+## How it was measured
+For each rule, Jev's answer is compared with the raters'.
 
 ## Caveats
 - **One rater is often the whole crowd.** 9,820 of the rules have a single rater's estimate, and at most six people rated any rule. A single MTurk worker's guess about "how many people agree" is noisy, and it is itself a guess about people, not a survey of them.

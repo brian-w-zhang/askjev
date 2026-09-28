@@ -18,8 +18,8 @@ The questionnaire's own items, with their answer categories:
 
 Among 4,350 Brazilian students, the most common answer was "agree". Each question was also asked with the options in shuffled orders, and Jev's answers were averaged over the orders.
 
-## How we measured it
-We also list the questions where Jev's top answer is furthest from what students pick.
+## How it was measured
+The analysis also lists the questions where Jev's top answer is furthest from what students pick.
 
 ## Caveats
 - **Only 32 shared questions.**

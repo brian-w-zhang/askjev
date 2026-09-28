@@ -18,8 +18,8 @@ The situation, the question and the three answers:
 
 with the context "Tracy obeyed Skylar's order to stay back and not leave."
 
-## How we measured it
-The share Jev gets right for each kind of question, grouped into looking back (motives, what was needed first), feelings and descriptions, and looking ahead (what happens next, what they'll want next). We also check whether Jev's confidence matches how often it's right.
+## How it was measured
+The share Jev gets right for each kind of question, grouped into looking back (motives, what was needed first), feelings and descriptions, and looking ahead (what happens next, what they'll want next). It also checks whether Jev's confidence matches how often it's right.
 
 ## Caveats
 - **Some "right" answers are odd.** The answers were written by crowd workers, and some marked-right answers are strange. For "Bailey was a shy kid at school. They made no friends. What will happen to Bailey?", the marked answer is "get work done". The forward-looking questions seem to have more of these, which alone could explain a few points.

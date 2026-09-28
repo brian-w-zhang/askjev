@@ -6,7 +6,7 @@ family: knowledge
 Most facts about countries follow money. Richer countries have more doctors per person, longer lives, fewer people working the land. A model can get many country comparisons right just by knowing which country is richer, without knowing the actual numbers. The test is the exceptions: when the world goes against the pattern, does Jev still get it right, or does it fall back on the rule of thumb?
 
 ## The people and the data
-Each question pairs two countries on one indicator. For every pair we know which country is richer, so we can say whether the right answer is the one wealth predicts.
+Each question pairs two countries on one indicator. For every pair it is known which country is richer, so it is clear whether the right answer is the one wealth predicts.
 
 ## What Jev was asked
 Two-option questions like:
@@ -16,7 +16,7 @@ Two-option questions like:
 
 Each pair was also asked with the two countries in the other order.
 
-## How we measured it
+## How it was measured
 
 
 ## Caveats

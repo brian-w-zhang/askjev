@@ -18,12 +18,12 @@ Every statement, word for word, with the test's own answers:
 
 Each was also asked as "what would most people say", and with the answers in reverse order.
 
-## How we measured it
+## How it was measured
 Each statement goes on a 0 to 1 scale, flipped where the test counts it in reverse. A skill is the average of its statements, with a 90% interval from resampling them.
 
 ## Caveats
 - **A small crowd.**
 - **Senses Jev doesn't have.** Most observing statements are about sensations: smells, sounds, the sun on your face. Jev's low answers there reflect having no senses, not a lack of attention.
-- **Our answer wording.** The test's own frequency answers were used ("never or very rarely true" to "very often or always true"), so the wording matches the study here.
+- **The answer wording.** The test's own frequency answers were used ("never or very rarely true" to "very often or always true"), so the wording matches the study here.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

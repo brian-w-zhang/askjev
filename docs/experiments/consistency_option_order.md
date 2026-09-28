@@ -16,12 +16,12 @@ Any question, in several orders. For example, once as
 
 and again with the options the other way round.
 
-## How we measured it
+## How it was measured
 For two-option questions: how much the probability of one option moves (a) between the two identical requests, which is pure noise, and (b) between the reversed and original order, which is noise plus any order effect. The "first-slot boost" is how much more probability an option gets when it's listed first. For longer lists, the same boost against the option's average over three orders. For rating scales, how far the average answer moves when the levels are reversed.
 
 ## Caveats
 - **Only a few orders per question.** Each question was asked in three orders, one of them a repeat. That's enough to measure an average effect over hundreds of thousands of questions, not to rule out an effect on any single one.
-- **Model or gateway?.** From outside, we can't tell whether the model itself ignores order or whether TypeSafe's service rearranges the options before the model sees them. For anyone using Jev, the effect is the same.
+- **Model or gateway?.** From outside, there's no way to tell whether the model itself ignores order or whether TypeSafe's service rearranges the options before the model sees them. For anyone using Jev, the effect is the same.
 - **Order in the question text is different.** This is about the order of the answer options. When two items are named inside the question itself, Jev does lean toward one (see the mental map experiments), so this result doesn't cover that.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

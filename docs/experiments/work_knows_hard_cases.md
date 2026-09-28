@@ -8,7 +8,7 @@ The most useful thing a model doing checks can know is when it doesn't know. If 
 Public datasets rarely say which cases are borderline. The work cases written for this project do.
 
 ## The people and the data
-There are no human raters here. We compare four groups of work cases:
+There are no human raters here. The experiment compares four groups of work cases:
 
 ## What Jev was asked
 Each case was a yes/no or pick-one question over a written input. For example, a know-your-customer check:
@@ -19,8 +19,8 @@ Each case was a yes/no or pick-one question over a written input. For example, a
 > *(the policy and the application follow: required photo ID, proof of address within 3 months, tax ID; the
 > applicant's documents)*
 
-## How we measured it
-For each group, two numbers: how often Jev's top answer matches the label, and how often it put 95% or more on its answer. Each comes with a range showing how much it could vary by chance, and we split yes/no from pick-one questions.
+## How it was measured
+For each group, two numbers: how often Jev's top answer matches the label, and how often it put 95% or more on its answer. Each comes with a range showing how much it could vary by chance, and yes/no is split from pick-one questions.
 
 ## Caveats
 - **Written for this project, by Claude.** The clear and borderline cases were written for this project by Claude (Anthropic's model) subagents, in TypeSafe's style, with a label and a "borderline" flag set at writing time. They are synthetic: tidier than real inputs, and one author's idea of what's hard. The labels are that author's judgment, not independent ground truth.

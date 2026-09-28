@@ -6,7 +6,7 @@ family: recall
 Explaining science starts from what people already believe. Since 1988 the US has put the same short quiz to a national sample of adults ("Antibiotics kill viruses as well as bacteria: true or false?"), and some answers have barely moved while others doubled. A model that explains science to millions of people should know roughly where the public stands, and which misconceptions are common.
 
 ## The people and the data
-The questions and results come from the US National Science Board's Science and Engineering Indicators 2018 (Appendix Table 7-9): the share of US adults answering each item correctly, from an NSF survey in 1988 (2,041 people) and the General Social Survey in 2016 (1,390 people). We used nine items; one (the father's gene) wasn't asked in 1988.
+The questions and results come from the US National Science Board's Science and Engineering Indicators 2018 (Appendix Table 7-9): the share of US adults answering each item correctly, from an NSF survey in 1988 (2,041 people) and the General Social Survey in 2016 (1,390 people). Nine items are used; one (the father's gene) wasn't asked in 1988.
 
 ## What Jev was asked
 Two kinds of questions. First the quiz itself, as the survey asked it:
@@ -21,7 +21,7 @@ Then, for each item and year, what share of adults got it right, with the answer
 
 Each question was also asked with the answers in shuffled orders, and the answers averaged.
 
-## How we measured it
+## How it was measured
 Jev's own answers against the key. Then its estimated share (the middle of each range, weighted by its probability) against the real share, item by item and on average, and the change it expects from 1988 to 2016 against the real change.
 
 ## Caveats

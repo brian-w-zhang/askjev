@@ -20,12 +20,12 @@ Each film was asked twice, the second time with the answers in reverse order, an
 
 Ratings like these crowd the top with near-ties, so the 24 highest-rated films then played a round-robin final: every film against every other, 276 games, each a simple choice, "Which film would you rather watch?", asked with the two titles in both orders.
 
-## How we measured it
+## How it was measured
 For the ratings, a film's score is where Jev's answer lands on the five levels, 0 (turn it off) to 4 (a favorite). For the final, each game gives the winner Jev's probability of picking it, so a lopsided game counts as nearly a whole win and a close one as about half. The order of the top ten comes from a standard way of ranking players from head-to-head results (a Bradley-Terry model); the win counts shown are the plain totals.
 
 ## Caveats
 - **A list of famous films, judged by a model that has read about them.** A top ten led by The Shawshank Redemption and The Godfather looks a lot like the internet's consensus canon, so "Jev's taste" here is hard to separate from what it has read people say about these films.
 - **The finalists were picked by Jev's own ratings.** A film it underrated one at a time never got the chance to win head to head.
-- **Our answer wording.** We wrote the five answer levels ("You'd turn it off within the first twenty minutes" up to "You'd rewatch it and count it among your favorites"). The top level asks for a lot, which is part of why so many films tie near the top and a final was needed.
+- **The project's answer wording.** The five answer levels were written for this project ("You'd turn it off within the first twenty minutes" up to "You'd rewatch it and count it among your favorites"). The top level asks for a lot, which is part of why so many films tie near the top and a final was needed.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

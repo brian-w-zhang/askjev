@@ -20,8 +20,8 @@ Every statement, word for word, with the test's own four answers:
 
 Each was also asked as "what would most people say", and with the answers in reverse order.
 
-## How we measured it
-For each statement we put Jev's expected answer and the test-takers' average on the same 0 to 1 scale, with 0 meaning "did not apply at all".
+## How it was measured
+For each statement Jev's expected answer and the test-takers' average go on the same 0 to 1 scale, with 0 meaning "did not apply at all".
 
 ## Caveats
 - **Who the people are.** People who seek out a depression and anxiety test online are more likely than most to be struggling, so their average is not the average person's.

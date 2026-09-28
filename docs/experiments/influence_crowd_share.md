@@ -3,10 +3,10 @@
 family: influence
 
 ## Why ask this
-Most of what we learn about Jev's picture of people comes from asking what "most people" would say. That tells you which option it thinks wins, not how lopsided it thinks the vote is.
+Most of what this project learns about Jev's picture of people comes from asking what "most people" would say. That tells you which option it thinks wins, not how lopsided it thinks the vote is.
 
 ## The people and the data
-Real vote shares from two places: 150 Reddit polls from r/polls with at least 300 votes, and 150 would-you-rather dilemmas from either.io, some with millions of votes. For each we picked one option at random and asked Jev what share of voters chose it.
+Real vote shares from two places: 150 Reddit polls from r/polls with at least 300 votes, and 150 would-you-rather dilemmas from either.io, some with millions of votes. For each, one option was picked at random and Jev was asked what share of voters chose it.
 
 ## What Jev was asked
 > People were asked: "Would you rather be responsible for saving the world and nobody knows or be responsible for
@@ -14,7 +14,7 @@ Real vote shares from two places: 150 Reddit polls from r/polls with at least 30
 > "save it"?
 > *0% · 5% · 10% · ... · 100%*
 
-## How we measured it
+## How it was measured
 For each option, the middle of Jev's answer against the real share: the average distance in points, how well Jev orders the options by share (a rank correlation: 1 same order, 0 no relation), and how steeply its guess rises with the real share. Two baselines: always guessing an even split, and using Jev's own "most people" probability for the option as if it were a share.
 
 ## Caveats

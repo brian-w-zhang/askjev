@@ -16,7 +16,7 @@ Each question as the database has it, with its four options:
 
 Each was also asked with the options in shuffled orders.
 
-## How we measured it
+## How it was measured
 The share right per category and per difficulty rating, with 90% intervals.
 
 ## Caveats

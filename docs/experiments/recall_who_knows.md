@@ -18,7 +18,7 @@ Each of the 299 questions, with the answer shown and twelve ranges to choose fro
 
 The ranges are finer at the bottom, where most obscure facts sit. Each question was also asked with the ranges in three shuffled orders, and the answers averaged.
 
-## How we measured it
+## How it was measured
 Jev's estimate (the middle of each range, weighted by its probability) against the real share, ranked across all 299 questions and compared (a rank correlation: 1 means the same order). Then the average gap within each third of the questions, from rarely to usually recalled. As a check, the same ranking against a 2020 German version of the study.
 
 ## Caveats

@@ -82,8 +82,10 @@ def paragraph(a: dict, case: dict) -> tuple[str, list[dict]]:
         if 0.4 < rec < 0.6 and 0.4 < exp < 0.6 else [s1, s2, s3]
     shown = [{"q": "Does it describe you?", "a": "yes" if rec >= 0.5 else "no", "p": round(max(rec, 1 - rec), 3)},
              {"q": "Would you have predicted it?", "a": "yes" if exp >= 0.5 else "no", "p": round(max(exp, 1 - exp), 3)},
-             {"q": "How fair is the comparison?", "a": FAIR[round(fair)].split(":")[0], "p": None},
-             {"q": "How much should a reader rely on it?", "a": TRUST[round(trust)].split(":")[0], "p": None}]
+             {"q": "How fair is the comparison?", "a": FAIR[round(fair)].split(":")[0], "p": None, "level": round(fair, 2),
+              "scale": ["unfair", "clean"]},
+             {"q": "How much should a reader rely on it?", "a": TRUST[round(trust)].split(":")[0], "p": None,
+              "level": round(trust, 2), "scale": ["not at all", "fully"]}]
     if "flaw" in a:
         d = a["flaw"].dist
         k = max(d, key=d.get)

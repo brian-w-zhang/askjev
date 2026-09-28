@@ -8,7 +8,7 @@ Idioms are phrases whose meaning isn't the sum of their words, and they wear dow
 A model trained on vast amounts of edited text might know the dictionary form better than people remember it, or it might follow the drift in how people actually talk. Which one tells you whether it writes like a style guide or like a person.
 
 ## The people and the data
-The idioms and completions come from **Bulkes and Tanner (2017)**, who normed 870 American English idioms with about 100 US adults per task. In one task, people saw each idiom with its last word missing and wrote the first word that came to mind.
+The idioms and completions come from **Bulkes and Tanner (2017)**, who normed 870 American English idioms with about 100 US adults per task.
 
 ## What Jev was asked
 > Finish this idiom with one word: "Be let off ___"
@@ -16,7 +16,7 @@ The idioms and completions come from **Bulkes and Tanner (2017)**, who normed 87
 
 The options were the idiom's own word and the other words at least two people wrote, plus "another word".
 
-## How we measured it
+## How it was measured
 How often Jev's top pick is the idiom's own last word, against the share of people who wrote it, overall and for the least, middle and most familiar thirds of idioms (familiarity from the same study). Then, on the idioms where most people wrote a different word, whether Jev goes with the idiom or with the crowd.
 
 ## Caveats

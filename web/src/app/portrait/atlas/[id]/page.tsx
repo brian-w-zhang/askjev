@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 type SectionKey = "why" | "data" | "asked" | "measured" | "found" | "means";
 const SECTIONS: [SectionKey, string][] = [
   ["why", "Why ask this"], ["data", "The people and the data"], ["asked", "What Jev was asked"],
-  ["measured", "How we measured it"], ["found", "What we found"], ["means", "What it means, and what it doesn't"],
+  ["measured", "How it was measured"], ["found", "What the data shows"], ["means", "What it means, and what it doesn't"],
 ];
 
 // Before a case study exists, the spec's fields stand in for its sections.
@@ -66,27 +66,38 @@ function Topics({ e }: { e: Experiment }) {
   );
 }
 
+// Jev's take (docs/17 item 4): its own answers to questions about this experiment, shown as answers, not a paragraph
 function Take({ e, rank, of }: { e: Experiment; rank: number; of: number }) {
   const ev = e.evaluation;
+  const answers = e.take?.answers ?? [];
   return (
-    <aside className="ex-take" aria-labelledby="ex-take">
-      <h2 id="ex-take">Jev&rsquo;s take</h2>
-      {e.take ? <blockquote className="ex-takeq"><Md text={e.take.text} /></blockquote>
-        : <p className="dim">Jev hasn&rsquo;t weighed in on this one yet.</p>}
-      {e.take && e.take.answers.length > 0 && (
-        <details className="ex-takea">
-          <summary>what Jev actually answered</summary>
-          <ul>{e.take.answers.map((a, i) => <li key={i}><span>{a.q}</span> <b>{a.a}</b>{a.p !== null ? <em> {Math.round(a.p * 100)}%</em> : null}</li>)}</ul>
-        </details>
-      )}
-      {ev && (
-        <dl className="ex-verdict-dl">
-          <dt>its verdict</dt><dd><span className={`ex-verdict ${ev.outcome}`}>{OUTCOME[ev.outcome] ?? ev.outcome}</span>{ev.top ? ` · ${VERDICT[ev.top] ?? ev.top}` : ""}</dd>
-          <dt>how interesting</dt><dd>{typeof ev.interest === "number" ? `${ev.interest.toFixed(1)} of 10` : "–"}</dd>
-          <dt>rank</dt><dd>{rank} of {of}, from Jev&rsquo;s head-to-heads between experiments</dd>
-        </dl>
-      )}
-    </aside>
+    <section className="ex-take" aria-labelledby="ex-take">
+      <h2 id="ex-take">Jev on this experiment</h2>
+      <p className="dim">Its own answers, asked after reading the result and the caveats.</p>
+      <div className="ex-tiles">
+        {answers.map((a, i) => (
+          <div className="ex-tile" key={i}>
+            <span className="q">{a.q}</span>
+            <b className="a">{a.a.charAt(0).toUpperCase() + a.a.slice(1)}</b>
+            {a.level !== undefined ? (
+              <span className="meter" aria-label={`${a.level.toFixed(1)} on a 0 to 4 scale`}>
+                {[0, 1, 2, 3, 4].map((k) => <i key={k} className={Math.round(a.level ?? 0) === k ? "on" : ""} />)}
+                <small>{a.scale?.[0]}</small><small>{a.scale?.[1]}</small>
+              </span>
+            ) : a.p !== null ? (
+              <span className="pbar"><i style={{ width: `${Math.round(a.p * 100)}%` }} /><em>{Math.round(a.p * 100)}% sure</em></span>
+            ) : null}
+          </div>
+        ))}
+        {ev && (
+          <div className="ex-tile verdict">
+            <span className="q">Its verdict on the experiment</span>
+            <b className="a"><span className={`ex-verdict ${ev.outcome}`}>{OUTCOME[ev.outcome] ?? ev.outcome}</span>{ev.top ? ` ${VERDICT[ev.top] ?? ev.top}` : ""}</b>
+            <span className="sub">{typeof ev.interest === "number" ? `interest ${ev.interest.toFixed(1)} of 10 · ` : ""}rank {rank} of {of}</span>
+          </div>
+        )}
+      </div>
+    </section>
   );
 }
 
@@ -112,7 +123,6 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
             <h1>{e.title}</h1>
             <p className="ex-sub">{e.question}</p>
           </div>
-          {e.meme && <div className="ex-meme"><ExMeme m={e.meme} /></div>}
         </header>
 
         <div className="ex-window">
@@ -125,25 +135,30 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
           </div>
         </div>
 
-        <div className="ex-cols">
-          <article className="ex-study">
-            {SECTIONS.filter(([k]) => s[k]).map(([k, t]) => (
-              <section key={k} className={`ex-sec s-${k}`}>
-                <h2>{t}</h2>
-                <Md text={s[k] as string} />
-              </section>
-            ))}
-          </article>
-          <div className="ex-side">
-            <Take e={e} rank={i + 1} of={all.length} />
-            {caveats.length > 0 && (
-              <aside className="ex-caveats" aria-labelledby="ex-cav">
-                <h2 id="ex-cav">Caveats</h2>
-                <ul>{caveats.map((c, j) => <li key={j}><b>{c.label}.</b> {c.text}</li>)}</ul>
-              </aside>
-            )}
-          </div>
-        </div>
+        <article className="ex-study">
+          {SECTIONS.filter(([k]) => s[k]).map(([k, t]) => (
+            <section key={k} className={`ex-sec s-${k}`}>
+              <h2>{t}</h2>
+              {/* the meme is a joke about the finding, so it sits beside it, the text wrapping round it; its width
+                  follows the template's shape so wide and tall memes take up about the same room */}
+              {k === "found" && e.meme && (
+                <div className="ex-meme-slot" style={{ "--ar": (e.meme.w / e.meme.h).toFixed(3) } as React.CSSProperties}>
+                  <ExMeme m={e.meme} />
+                </div>
+              )}
+              <Md text={s[k] as string} />
+            </section>
+          ))}
+        </article>
+
+        {caveats.length > 0 && (
+          <section className="ex-caveats" aria-labelledby="ex-cav">
+            <h2 id="ex-cav">Caveats</h2>
+            <ul>{caveats.map((c, j) => <li key={j}><b>{c.label}.</b> {c.text}</li>)}</ul>
+          </section>
+        )}
+
+        <Take e={e} rank={i + 1} of={all.length} />
 
         <Topics e={e} />
 

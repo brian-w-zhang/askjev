@@ -14,7 +14,7 @@ Four public datasets, each labeled by people:
 - **Civil Comments:** comments from news sites, each with the share of raters who called it toxic.
 - **ToxicChat:** real prompts people typed into a public chatbot demo, labeled toxic or not by the dataset's annotators.
 
-For the first three we use the raters' majority; for ToxicChat, its label. About 5,800 items in all.
+For the first three, the answer is the raters' majority; for ToxicChat, its label. About 5,800 items in all.
 
 ## What Jev was asked
 One yes/no question per item, with the text attached where it says [comment] and both answers spelled out. For a news comment:
@@ -25,12 +25,12 @@ One yes/no question per item, with the text attached where it says [comment] and
 
 The other datasets had their own question built from their own definition (a personal attack, hate against a group identity, a toxic chatbot prompt).
 
-## How we measured it
-For each dataset, we count how often Jev says yes (its probability above one half) and how often the raters' majority does, and compare the two rates. For the three sets with several raters we also look at the comments **no** rater flagged, and ask how often Jev flags them anyway. For ToxicChat we count how many labeled-toxic prompts Jev lets through.
+## How it was measured
+For each dataset, the analysis counts how often Jev says yes (its probability above one half) and how often the raters' majority does, and compares the two rates. For the three sets with several raters it also looks at the comments **no** rater flagged, and asks how often Jev flags them anyway. For ToxicChat it counts how many labeled-toxic prompts Jev lets through.
 
 ## Caveats
-- **Four different questions.** Each dataset defines "bad" its own way (a personal attack, hate against a group, rudeness that drives people off, a harmful chatbot prompt), and we wrote each definition into Jev's answer options. A gap can come from our wording of the definition as much as from Jev.
-- **Not the platforms' real mix.** We sampled each dataset with extra toxic items (aimed at about 40% for news comments and personal attacks; about a quarter after filtering), so the rates here are for our samples, not for how much toxic text the sites actually carry.
+- **Four different questions.** Each dataset defines "bad" its own way (a personal attack, hate against a group, rudeness that drives people off, a harmful chatbot prompt), and each definition was written into Jev's answer options. A gap can come from the project's wording of the definition as much as from Jev.
+- **Not the platforms' real mix.** Each dataset was sampled with extra toxic items (aimed at about 40% for news comments and personal attacks; about a quarter after filtering), so the rates here are for these samples, not for how much toxic text the sites actually carry.
 - **The worst text is missing.** A content filter hides the most harmful text from the site, and slurs were dropped before asking. The extreme end, where Jev and raters would agree most easily, is under-represented.
 - **Who labeled it.** Crowd workers labeled the comments (about 10 per Wikipedia comment, 3 to 5 for hate speech); the news-site data gives only the share of raters, not how many. ToxicChat's labels come from its authors' annotators reading real prompts to a demo chatbot.
 

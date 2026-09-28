@@ -17,7 +17,7 @@ Each question with its four options:
 
 Each was also asked with the options in shuffled orders.
 
-## How we measured it
+## How it was measured
 The share right per subject, with 90% intervals, and grouped into basic science (anatomy, physiology, pathology, pharmacology, microbiology and similar) and clinical subjects.
 
 ## Caveats

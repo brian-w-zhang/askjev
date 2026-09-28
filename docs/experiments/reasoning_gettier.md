@@ -10,7 +10,7 @@ She has a true belief with a good reason, which is how philosophers once defined
 ## The people and the data
 There are eight short stories. One is a published case from the experimental-philosophy literature: Bob thinks his friend Jill drives an American car because she has long driven a Buick; the Buick was stolen, and she now drives a Pontiac, another American car. He's right, but for the wrong reason. Five are Gettier cases written for this project: a stopped clock, a borrowed car, fake barns, ten coins in a pocket, and a dog that looks like a sheep. Two are controls: a clock that works (clear knowledge) and a clock that's wrong (a false belief).
 
-There's no human split to compare with: the published car case's reported numbers couldn't be verified, so they aren't used. What we know from the literature is qualitative: most people, like most philosophers, deny knowledge in these cases.
+There's no human split to compare with: the published car case's reported numbers couldn't be verified, so they aren't used. What the literature shows is qualitative: most people, like most philosophers, deny knowledge in these cases.
 
 ## What Jev was asked
 Each story ended with the same choice:
@@ -20,13 +20,13 @@ Each story ended with the same choice:
 > is a barn, or does he only believe it?
 > *He or she really knows it · He or she only believes it*
 
-Each was also asked with the two answers swapped, and we average the two.
+Each was also asked with the two answers swapped, and the two are averaged.
 
-## How we measured it
+## How it was measured
 The weight Jev puts on "really knows", story by story, next to the two controls: if it treats lucky guesses like knowledge, the Gettier stories will sit near the working clock; if not, near the wrong one.
 
 ## Caveats
-- **No human numbers for these stories.** Five of the Gettier stories were written for this project and have no human answers. The published car case had a reported split we couldn't verify, so we left it out. The comparison with people is the general finding, not a number.
+- **No human numbers for these stories.** Five of the Gettier stories were written for this project and have no human answers. The published car case had a reported split that couldn't be verified, so it was left out. The comparison with people is the general finding, not a number.
 - **Famous cases.** The stopped clock, the fake barns and the ten coins are textbook examples in philosophy, usually presented with the conclusion that they aren't knowledge. Jev may be repeating the textbook rather than judging the story.
 - **Two words carry a lot.** The answers are "really knows it" versus "only believes it". The word "really" invites doubt, and a different pair of answers (say, "knows" versus "doesn't know") might shift every number.
 - **Small set.** Six Gettier stories and two controls. A single story changing its answer would move the average noticeably.

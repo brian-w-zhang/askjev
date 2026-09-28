@@ -30,7 +30,7 @@ export type ExperimentsData = { experiments: Experiment[]; families: Record<stri
 export type ExperimentCard = Pick<Experiment, "id" | "family" | "family_label" | "title" | "result" | "n" | "new_questions" | "evaluation" | "portrait_rank" | "meme"> & { chart: Chart };
 
 // Jev's take (docs/17 item 4): its answers to questions about the experiment, and the paragraph built from them.
-export type Take = { text: string; answers: { q: string; a: string; p: number | null }[] };
+export type Take = { text: string; answers: { q: string; a: string; p: number | null; level?: number; scale?: [string, string] }[] };
 
 // A template with our words on it (docs/17 item 8): label boxes in percent of the image.
 export type ExperimentMeme = {

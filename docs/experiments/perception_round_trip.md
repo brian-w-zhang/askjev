@@ -18,7 +18,7 @@ For each probability from 0% to 100% in steps of 5, one question with all 17 phr
 
 That's 21 questions, each with the phrases in three shuffled orders, averaged.
 
-## How we measured it
+## How it was measured
 For each probability, Jev's most likely phrase. Then the **round trip**: take a phrase, find the number Jev reads into it (from the forward experiment), and ask which phrase Jev picks for that number. A phrase survives if it comes back as itself.
 
 ## Caveats

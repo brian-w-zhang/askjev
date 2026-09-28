@@ -25,11 +25,11 @@ For each made-up word, a seven-level question written for this project:
 
 Plus the two classic questions, which describe a round, blob-like shape and a spiky one and ask which would be called "bouba" and which "kiki". Each was also asked with the answers reversed, and averaged.
 
-## How we measured it
+## How it was measured
 The ranking of the 536 words by Jev and by people (a rank correlation: 1 means the same order); how widely each side's ratings spread (their standard deviation); and for bouba and kiki, the share choosing the expected shape.
 
 ## Caveats
-- **People heard the words, Jev read them.** Raters heard recordings of each made-up word. Jev read a respelling we wrote ("noo-moo") plus its phonetic spelling. Reading "pee-kay" may make the spiky letters (k, p) stand out more than hearing it does.
+- **People heard the words, Jev read them.** Raters heard recordings of each made-up word. Jev read a respelling written for this project ("noo-moo") plus its phonetic spelling. Reading "pee-kay" may make the spiky letters (k, p) stand out more than hearing it does.
 - **The effect is famous.** Bouba and kiki are one of the best-known results in psychology, and widely written about.
 - **Words for shapes, not pictures.** For bouba and kiki, people heard the word and picked between two drawn shapes. Jev got the shapes described in words ("round and blob-like", "spiky"), which spells out the contrast.
 - **No license on the data.** Both datasets are posted publicly without an explicit data license; they're used for private research only.

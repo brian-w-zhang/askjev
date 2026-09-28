@@ -23,12 +23,12 @@ For Amazon, one question with five described levels:
 
 For Steam, a yes/no question: does the player who wrote this review recommend the game?
 
-## How we measured it
-We line up the five levels with the five star ratings (1 star = "a failure", 3 stars = "torn", 5 stars = "delighted") and average Jev's reading for each star rating. The telling group is 3-star reviews: how many does Jev push down to "let down" or "failure", and how many up to "pleased"? On Steam, we count the mistakes in each direction.
+## How it was measured
+The five levels are lined up with the five star ratings (1 star = "a failure", 3 stars = "torn", 5 stars = "delighted") and average Jev's reading for each star rating. The telling group is 3-star reviews: how many does Jev push down to "let down" or "failure", and how many up to "pleased"? On Steam, the analysis counts the mistakes in each direction.
 
 ## Caveats
 - **Stars are a summary, not the answer.** A star rating is the writer's own verdict, but people use stars differently: some give 3 to anything they wouldn't buy again, some to anything that works. Jev's reading of the text can be reasonable and still differ.
-- **Our five levels.** We wrote the five satisfaction levels ("let down", "torn", "pleased with a minor reservation"...) and mapped 3 stars to "torn". If writers use 3 stars for "disappointed", the level we called the answer is off, not Jev.
+- **The project's five levels.** The five satisfaction levels ("let down", "torn", "pleased with a minor reservation"...) were written for this project, with 3 stars mapped to "torn". If writers use 3 stars for "disappointed", the level counted as the answer is off, not Jev.
 - **Two different sites.** Amazon reviews come from a research release with 1,000 reviews per star rating; Steam reviews are English reviews of about a thousand games, at most 8 per game. Neither is a random sample of what people write.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

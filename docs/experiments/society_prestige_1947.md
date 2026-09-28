@@ -18,13 +18,13 @@ A model has its own picture of which work is respected, which shows up in career
 
 Each job was asked as written, for "most people", and with the levels reversed.
 
-## How we measured it
-For each job, Jev's probability on "good" or "excellent" against the 1947 share. We compare the order of jobs (rank correlation: 1 means the same order) and list the biggest gaps. Then we check whether each side's ladder follows the jobs' income and education in the 1950 census.
+## How it was measured
+For each job, Jev's probability on "good" or "excellent" against the 1947 share. The analysis compares the order of jobs (rank correlation: 1 means the same order) and lists the biggest gaps. Then it checks whether each side's ladder follows the jobs' income and education in the 1950 census.
 
 ## Caveats
 - **A 1947 public.** The ratings are from Americans in 1947. Jev answers today, so a gap can mean Jev is modern, not wrong: skilled trades have gained respect and some jobs, like "soda fountain clerk", barely exist.
 - **One respondent against a crowd.** The 1947 figure is the share of many people; Jev's is one respondent's probability, which tends to be more extreme (0% or 100%) than any crowd's share.
-- **Only the published share.** The study's full answers are lost; what survives is the share rating each job good or excellent. We wrote five described levels around the survey's own words (poor to excellent standing).
+- **Only the published share.** The study's full answers are lost; what survives is the share rating each job good or excellent. The five described levels were written around the survey's own words (poor to excellent standing).
 - **Some jobs hidden.** A content filter hid 2 of the 45 jobs from the site.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

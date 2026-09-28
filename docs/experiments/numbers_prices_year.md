@@ -16,8 +16,8 @@ One question per item, answered in 12 price ranges spanning the item's 1980-2026
 
 Plus one more: "What year is it right now?" That's 30 new questions, each asked with the options in three shuffled orders and averaged.
 
-## How we measured it
-For each item whose average yearly price rises steadily, we find the years whose price falls in Jev's answer; the middle of those is the item's implied year. We report the median across items with a 90% range, how often Jev's answer covers the August 2026 price, and the year Jev names.
+## How it was measured
+For each item whose average yearly price rises steadily, the analysis finds the years whose price falls in Jev's answer; the middle of those is the item's implied year. The report gives the median across items with a 90% range, how often Jev's answer covers the August 2026 price, and the year Jev names.
 
 ## Caveats
 - **Wide answer bins.**

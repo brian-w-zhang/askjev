@@ -177,7 +177,7 @@
 .pt .ex-rlegend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; }
 .pt .ex-rlegend .sw { display: inline-block; width: 22px; height: 10px; margin-right: 7px; vertical-align: 0; }
 .pt .ex-rlegend .sw.jev { background: var(--jev); }
-.pt .ex-rlegend .sw.guess { box-shadow: inset 0 0 0 2px var(--jev); background: var(--w-body); }
+.pt .ex-rlegend .sw.guess { background: var(--w-fg); }
 .pt .ex-rlegend .sw.hum { background: var(--ppl); }
 .pt .ex-rlegend .sw.truth { width: auto; height: auto; background: none; color: var(--ok); font-style: normal; font-weight: 700; }
 .pt .ex-qs { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
@@ -201,12 +201,12 @@
 .pt .ex-opt .ob { display: grid; gap: 2px; }
 .pt .ex-opt .b { display: block; height: 5px; min-width: 1px; }
 .pt .ex-opt .b.jev { background: var(--jev); }
-.pt .ex-opt .b.guess { box-shadow: inset 0 0 0 1.5px var(--jev); height: 5px; }
+.pt .ex-opt .b.guess { background: var(--w-fg); }
 .pt .ex-opt .b.hum { background: var(--ppl); }
 .pt .ex-opt .ov { display: flex; gap: 8px; font-family: var(--mono); font-size: 11px; font-variant-numeric: tabular-nums; }
 .pt .ex-opt .ov b { font-weight: 400; min-width: 3.2em; text-align: right; }
 .pt .ex-opt .ov .jev { color: var(--jev); }
-.pt .ex-opt .ov .guess { color: var(--jev); opacity: 0.7; font-style: italic; }
+.pt .ex-opt .ov .guess { color: var(--w-fg); }
 .pt .ex-opt .ov .hum { color: var(--w-fg); }
 .pt .ex-more { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 12px; }
 @media (max-width: 760px) {
@@ -216,7 +216,6 @@
 }
 
 /* ---------- case study page (docs/17) ---------- */
-.pt .ex-head.with-meme { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 320px); gap: 24px; align-items: end; }
 .pt .ex-meme { margin: 0 0 18px; background: var(--w-body); box-shadow: 0 0 0 1px var(--w-line), 5px 5px 0 var(--jev); transform: rotate(1.2deg); }
 .pt .ex-meme img { display: block; width: 100%; height: auto; }
 .pt .ex-meme figcaption { padding: 6px 10px 8px; font-size: 12px; color: var(--w-fg-2); }
@@ -264,7 +263,6 @@
 .pt .ex-chip em { font-style: normal; font-family: var(--mono); font-size: 10.5px; color: var(--w-fg-2); }
 .pt .ex-chip:hover { background: var(--hl); color: var(--hl-fg); }
 @media (max-width: 760px) {
-  .pt .ex-head.with-meme { grid-template-columns: 1fr; }
   .pt .ex-meme { max-width: 320px; transform: none; }
   .pt .ex-side { position: static; }
   .pt .ex-sec p, .pt .ex-sec li { font-size: 15px; }
@@ -286,3 +284,32 @@
 .pt .ex-xy:not(.mini) { max-width: 760px; }
 .pt .ex-xy .tk { font-size: 10px; }
 .pt .ex-xy .lab { font-size: 10.5px; }
+
+/* the meme beside "What the data shows": about the same area whatever the template's shape */
+.pt .ex-meme-slot { float: right; width: 250px; width: max(160px, min(calc(260px * sqrt(var(--ar))), 320px, calc(330px * var(--ar)))); margin: 6px 0 14px 24px; transform: rotate(1deg); }
+.pt .ex-sec.s-found { display: flow-root; }
+@media (max-width: 700px) {
+  .pt .ex-meme-slot { float: none; width: max(180px, min(100% - 8px, calc(380px * var(--ar)))); margin: 4px auto 18px; transform: rotate(0.6deg); }
+}
+
+/* caveats and Jev's take as full-width blocks after the write-up (no sticky side column) */
+.pt .ex-page > .ex-caveats, .pt .ex-page > .ex-take { margin: 26px auto 0; }
+.pt .ex-page > .ex-caveats ul { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px 24px; }
+.pt .ex-take .dim { margin: -4px 0 12px; font-size: 13px; }
+.pt .ex-tiles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+@media (max-width: 700px) { .pt .ex-tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.pt .ex-tile { display: grid; gap: 6px; align-content: start; padding: 10px 12px; background: var(--w-sub); }
+.pt .ex-tile .q { font-family: var(--mono); font-size: 10.5px; color: var(--w-fg-2); text-transform: lowercase; }
+.pt .ex-tile .a { font-size: 15px; font-weight: 500; line-height: 1.25; }
+.pt .ex-tile .sub { font-size: 12px; color: var(--w-fg-2); }
+.pt .ex-tile .pbar { position: relative; display: block; height: 16px; background: var(--w-body); box-shadow: inset 0 0 0 1px var(--w-grid); }
+.pt .ex-tile .pbar i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--jev); }
+.pt .ex-tile .pbar em { position: absolute; right: 6px; top: 0; font-style: normal; font-family: var(--mono); font-size: 10.5px; line-height: 16px; color: var(--w-fg); }
+.pt .ex-tile .meter { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; }
+.pt .ex-tile .meter i { height: 10px; background: var(--w-body); box-shadow: inset 0 0 0 1px var(--w-grid); }
+.pt .ex-tile .meter i.on { background: var(--jev); box-shadow: none; }
+.pt .ex-tile .meter small { grid-row: 2; font-family: var(--mono); font-size: 10px; color: var(--w-fg-2); }
+.pt .ex-tile .meter small:first-of-type { grid-column: 1 / 3; }
+.pt .ex-tile .meter small:last-of-type { grid-column: 4 / 6; text-align: right; }
+.pt .ex-tile.verdict .a { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.pt .ex-memefig .lab.at-top, .pt .ex-memefig .lab.at-bottom { transform: translateX(-50%); }

@@ -23,8 +23,8 @@ The same pairwise questions as "Who has a mind? Jev's map next to people's", wit
 
 That's 48 of the questions, each averaged over the answers in both orders.
 
-## How we measured it
-For each capacity, the characters are ranked by their average advantage over the others (1 = most capable). We compare where "you" lands for Jev and for people, and note who sits just above and below Jev, and where Jev puts Kismet, the robot in the study.
+## How it was measured
+For each capacity, the characters are ranked by their average advantage over the others (1 = most capable). The analysis compares where "you" lands for Jev and for people, and notes who sits just above and below Jev, and where Jev puts Kismet, the robot in the study.
 
 ## Caveats
 - **"You" is a different character for each.** The study describes "you" as "the one answering this question". For people that's a human adult; for Jev it's an AI. The comparison is each respondent's view of itself, not two views of the same thing.

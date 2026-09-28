@@ -21,12 +21,12 @@ Each item was a yes/no question over a passage and a question. For HotpotQA (MS 
 
 That paragraph is one of the two a question needs; Jev leaned toward leaving it out.
 
-## How we measured it
+## How it was measured
 For each dataset, two error rates: the share of useful passages Jev rejects, and the share of useless passages it lets in.
 
 ## Caveats
 - **Web search labels are partial.** In MS MARCO, a passage is marked useful if the human annotator used it to write the answer. Other passages that also answer the query are marked not useful, so some of Jev's "let in" errors are passages that do help.
-- **"Needed" is subtle for two-step questions.** A HotpotQA question often needs a "bridge" paragraph that names an entity without stating the answer. Our guess, not measured here, is that Jev reads "needed" as "contains the answer" and throws those out.
-- **Question wording.** For HotpotQA we asked whether the passage states a fact needed to answer the question. A wording that mentioned intermediate steps might change the result.
+- **"Needed" is subtle for two-step questions.** A HotpotQA question often needs a "bridge" paragraph that names an entity without stating the answer. A guess, not measured here, is that Jev reads "needed" as "contains the answer" and throws those out.
+- **Question wording.** For HotpotQA the question asked whether the passage states a fact needed to answer the question. A wording that mentioned intermediate steps might change the result.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

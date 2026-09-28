@@ -22,8 +22,8 @@ The study's story and question, answered yes or no:
 >
 > Did the person break the rule?
 
-## How we measured it
-For each case, Jev's probability of "yes, the rule was broken" against the share of people who said so. We compare the order of the cases (rank correlation: 1 means the same order) and the averages for each kind of case: only the words broken (a reader of the text says yes), only the purpose broken (a reader of the purpose says yes).
+## How it was measured
+For each case, Jev's probability of "yes, the rule was broken" against the share of people who said so. The analysis compares the order of the cases (rank correlation: 1 means the same order) and the averages for each kind of case: only the words broken (a reader of the text says yes), only the purpose broken (a reader of the purpose says yes).
 
 ## Caveats
 - **Brazilian respondents, in Portuguese.** The people were Brazilian adults answering in Portuguese; Jev read the authors' English translation. Words like "dog" and "vehicle" carry the same meaning in both, but the translation can shift the fine shades that decide a borderline case.

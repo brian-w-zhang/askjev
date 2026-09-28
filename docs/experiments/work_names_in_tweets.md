@@ -9,7 +9,7 @@ Deciding what a name refers to (a person, a place, a company, a product) is a ba
 - **CoNLL-2003:** English news stories, with each name tagged as a person, organization, location or other.
 - **WNUT-17:** tweets and other social posts, built around rare and emerging names, tagged as a person, location, corporation, product, creative work or group.
 
-The tags come from each dataset's annotators. We balanced the questions across types.
+The tags come from each dataset's annotators. The questions were balanced across types.
 
 ## What Jev was asked
 Each name was one pick-one question with its sentence:
@@ -20,7 +20,7 @@ Each name was one pick-one question with its sentence:
 > *Options: group (a band, sports team, political party or other group of people that is not a company) · person ·
 > product · location · corporation · creative work*
 
-## How we measured it
+## How it was measured
 The share of names Jev types right, per type and corpus, and the most common wrong type for the weakest ones.
 
 ## Caveats

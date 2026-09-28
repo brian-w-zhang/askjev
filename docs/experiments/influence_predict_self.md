@@ -18,8 +18,8 @@ Each question was wrapped in a description of Jev being asked it:
 
 That's 250 new questions, each asked with the options in shuffled orders and averaged.
 
-## How we measured it
-We compare Jev's predicted option with three things: its own top answer when asked the question directly, its answer for "most people", and the real voters' majority. We also split the questions by how sure Jev's own direct answer was.
+## How it was measured
+The analysis compares Jev's predicted option with three things: its own top answer when asked the question directly, its answer for "most people", and the real voters' majority. It also splits the questions by how sure Jev's own direct answer was.
 
 ## Caveats
 - **Does it know it's Jev?.** The question names "an AI model named Jev" with no other description. Jev may not recognize itself in that name, in which case this measures how well it predicts a generic AI, which happens to be itself.

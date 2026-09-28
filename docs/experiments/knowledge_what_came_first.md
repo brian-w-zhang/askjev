@@ -16,7 +16,7 @@ Two-option questions:
 
 Each was also asked with the two options in the other order.
 
-## How we measured it
+## How it was measured
 Accuracy by the gap in years between the two things, and, for pairs 1 to 5 years apart, by kind of thing, with 90% intervals.
 
 ## Caveats

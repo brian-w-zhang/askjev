@@ -13,12 +13,12 @@ Each as a single yes/no question:
 
 > Would Dave Chappelle pray over a Quran?
 
-## How we measured it
+## How it was measured
 
 
 ## Caveats
 - **Yes/no answers are their own format.** TypeSafe documents that Jev's yes/no answers aren't directly comparable with its multiple-choice answers. All comparisons here stay within yes/no questions.
-- **Questions without their passage.** BoolQ and Natural Questions come with a passage that contains the answer. We asked them without it, so they test memory, like the StrategyQA questions.
+- **Questions without their passage.** BoolQ and Natural Questions come with a passage that contains the answer. They were asked without it, so they test memory, like the StrategyQA questions.
 - **StrategyQA's own keys.** Some StrategyQA answers rest on an arguable chain of facts ("would Dave Chappelle pray over a Quran?"). A few "misses" are disagreements with the key.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

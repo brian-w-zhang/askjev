@@ -8,7 +8,7 @@ Say "bread" and most people think "butter". Say "top" and most say "bottom". **F
 A model that has read billions of sentences should know the common links. The interesting questions are whether it picks the same first word people do, and whether it's as predictable as a crowd or more so.
 
 ## The people and the data
-The **University of South Florida free association norms** (Nelson, McEvoy and Schreiber, 2004) are a standard resource in psychology: for each of a large set of cue words, about 150 students wrote the first word that came to mind. The norms list how often each answer came up. We took 400 cues, spread evenly from cues where most people give the same answer to cues where answers scatter.
+The **University of South Florida free association norms** (Nelson, McEvoy and Schreiber, 2004) are a standard resource in psychology: for each of a large set of cue words, about 150 students wrote the first word that came to mind. The norms list how often each answer came up. The study took 400 cues, spread evenly from cues where most people give the same answer to cues where answers scatter.
 
 ## What Jev was asked
 Each cue with people's seven most common answers and an eighth option:
@@ -18,7 +18,7 @@ Each cue with people's seven most common answers and an eighth option:
 
 Each was asked with the options in three shuffled orders (averaged), and for "most people".
 
-## How we measured it
+## How it was measured
 How often Jev's top pick is people's most common answer, split by how predictable the cue is; how much probability Jev puts on that top answer compared with the share of people who gave it; and how often Jev picks "some other word" compared with how often people's answers fell outside the seven.
 
 ## Caveats

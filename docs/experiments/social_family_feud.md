@@ -8,7 +8,7 @@ Family Feud doesn't reward the best answer; it rewards the most common one. "Nam
 That makes it a neat test of a different skill from knowledge. Knowing the correct answer is one thing; knowing what ordinary people think of first is another, and it's the skill a model needs to predict what people will say.
 
 ## The people and the data
-**ProtoQA** (Boratko and colleagues, 2020) collected Family Feud survey questions with their answer counts, scraped from fan sites that record the show's boards. Each survey asked about 100 people. We use 146 questions with at least four answer groups.
+**ProtoQA** (Boratko and colleagues, 2020) collected Family Feud survey questions with their answer counts, scraped from fan sites that record the show's boards. Each survey asked about 100 people. The experiment uses 146 questions with at least four answer groups.
 
 ## What Jev was asked
 Each question with the survey's top answers as options:
@@ -16,8 +16,8 @@ Each question with the survey's top answers as options:
 > Which of these would most people name first when asked: "Name a measurement people know on their body."
 > *Waist · Height · Weight · Shoe size*
 
-## How we measured it
-We also look at where Jev's pick ranked in the survey, and at the biggest misses, where the survey's favorite was far ahead.
+## How it was measured
+The analysis also looks at where Jev's pick ranked in the survey, and at the biggest misses, where the survey's favorite was far ahead.
 
 ## Caveats
 - **A game-show survey.** The answers come from the TV show's own surveys of about 100 people each, scraped from fan sites by the dataset's authors. They reflect the show's American audience and the moment each survey was run.

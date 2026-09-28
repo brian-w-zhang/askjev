@@ -8,9 +8,9 @@ In 1974 Amos Tversky and Daniel Kahneman spun a wheel of fortune in front of peo
 A model reads the whole prompt at once, including any number in it. So it might be pulled just as hard, or it might treat an irrelevant number as irrelevant.
 
 ## The people and the data
-The human comparison is the original 1974 study, reported in *Science*: median estimates of 25 after the wheel landed on 10, and 45 after it landed on 65. We turned that into the standard **anchoring index** (Jacowitz and Kahneman, 1995): the gap between the two estimates divided by the gap between the anchors. For people it's (45 − 25) / (65 − 10) = 0.36.
+The human comparison is the original 1974 study, reported in *Science*: median estimates of 25 after the wheel landed on 10, and 45 after it landed on 65. That was turned into the standard **anchoring index** (Jacowitz and Kahneman, 1995): the gap between the two estimates divided by the gap between the anchors. For people it's (45 − 25) / (65 − 10) = 0.36.
 
-To test more than one item, we added ten quantities with known answers, written for this project: bones in the hand, piano keys, teeth, Mozart's age at death, the share of the Earth covered by water, and others.
+To test more than one item, ten quantities were added with known answers, written for this project: bones in the hand, piano keys, teeth, Mozart's age at death, the share of the Earth covered by water, and others.
 
 ## What Jev was asked
 Each quantity was asked three times: after a low spin, after a high spin, and with no wheel at all. For example:
@@ -22,8 +22,8 @@ Each quantity was asked three times: after a low spin, after a high spin, and wi
 
 That's 33 questions in all, each asked with the choices in three different orders and averaged.
 
-## How we measured it
-For each quantity we take Jev's estimate (the middle of its probabilities over the 21 choices) after the low and after the high spin, and compute the anchoring index. Zero means the wheel made no difference; one means the estimate moved as far as the wheel did.
+## How it was measured
+For each quantity, the analysis takes Jev's estimate (the middle of its probabilities over the 21 choices) after the low and after the high spin, and computes the anchoring index. Zero means the wheel made no difference; one means the estimate moved as far as the wheel did.
 
 ## Caveats
 - **Well-known quantities resist anchors.** Jev knows them with no wheel, so a random number has little room to move it. People anchor most on quantities they're unsure of. Only the original UN question is genuinely uncertain, and it moved Jev a little.

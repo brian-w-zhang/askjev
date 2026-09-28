@@ -18,7 +18,7 @@ Each trace was one yes/no question:
 > submitted a change that does not resolve the issue*
 > *(the trace follows: the GitHub issue, then the agent's final steps and what it saw)*
 
-## How we measured it
+## How it was measured
 The share Jev got right, split by how the run ended: runs that submitted a patch, where Jev has to judge the patch, and runs that ended any other way, where the trace itself gives the answer away.
 
 ## Caveats

@@ -21,13 +21,13 @@ Two questions per expression, with seven described levels each:
 
 and "How familiar is the expression?" Each was asked as written, for "most people", and with the levels reversed.
 
-## How we measured it
+## How it was measured
 For each question, whether Jev ranks the expressions in the same order as people (rank correlation: 1 means the same order), and Jev's average rating against people's on the same 0-6 scale, separately for metaphors and literal expressions.
 
 ## Caveats
-- **Our answer levels.** People rated from 1 to 7 against the study's definitions. We wrote seven described levels ("Somewhat apt: the link works but is ordinary", "Fairly apt: it captures something real"). The middle levels sound approving, which may pull any rater upward; people's ratings were collected on the plain scale.
-- **Expressions alone.** We used the ratings people gave to each expression shown on its own, without a sentence around it. Out of context, a strange pairing like "lonely oval" is hard to judge for anyone.
+- **The project's answer levels.** People rated from 1 to 7 against the study's definitions. Jev saw seven described levels written for this project ("Somewhat apt: the link works but is ordinary", "Fairly apt: it captures something real"). The middle levels sound approving, which may pull any rater upward; people's ratings were collected on the plain scale.
+- **Expressions alone.** The comparison uses the ratings people gave to each expression shown on its own, without a sentence around it. Out of context, a strange pairing like "lonely oval" is hard to judge for anyone.
 - **About 25 raters each.** Each expression's aptness was rated by about 25 people, so the ranking of any one expression is noisy.
-- **Data with no stated license.** The rating data comes from a public research project that states no license (the article itself is open access); we use it for private research only.
+- **Data with no stated license.** The rating data comes from a public research project that states no license (the article itself is open access); it is used for private research only.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

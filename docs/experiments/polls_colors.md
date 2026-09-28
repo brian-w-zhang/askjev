@@ -10,7 +10,7 @@ Two open datasets on favorite colors:
 - A **2010 US online survey** by sociologist Philip N. Cohen, where 2,103 people picked their favorite from seven color swatches (or wrote in another).
 - A **2021 study by Jonauskaite and colleagues** in Switzerland, where 323 adults named their favorite color in their own words, sorted into 13 categories.
 
-From these we built 72 head-to-heads between 13 colors: among people whose favorite was one of the two, which one?
+From these, 72 head-to-heads were built between 13 colors: among people whose favorite was one of the two, which one?
 
 ## What Jev was asked
 Each pair of colors, by name:
@@ -18,7 +18,7 @@ Each pair of colors, by name:
 > Which color do you like better: orange or yellow?
 > *orange · yellow*
 
-## How we measured it
+## How it was measured
 
 
 ## Caveats

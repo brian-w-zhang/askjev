@@ -17,7 +17,7 @@ Each question with the test's own options:
 
 Each was also asked with the options in shuffled orders.
 
-## How we measured it
+## How it was measured
 The share where Jev picks the test's correct answer in each group, and its average confidence when it's wrong.
 
 ## Caveats

@@ -3,7 +3,7 @@
 family: taste
 
 ## Why ask this
-Board games are social, so a favorite says what kind of evening you want: a clever party game, a long strategy session, a two-player duel. With thousands of games rated one at a time and a final among the best, we can see what Jev reaches for, and whether the ratings and the final agree.
+Board games are social, so a favorite says what kind of evening you want: a clever party game, a long strategy session, a two-player duel. With thousands of games rated one at a time and a final among the best, it's possible to see what Jev reaches for, and whether the ratings and the final agree.
 
 ## The people and the data
 No people here: Jev against its own opinions. How Jev's taste compares with BoardGameGeek users is its own experiment.
@@ -18,7 +18,7 @@ Every game one at a time, with five answers describing what you'd do:
 
 Each was also asked with the answers reversed, and the two averaged. The 24 top-rated games then played a round-robin final: 276 games of "Which board game would you rather play?", each asked with the names in both orders.
 
-## How we measured it
+## How it was measured
 A game's rating is where Jev's answer lands on the five levels (0 to 4). In the final, each matchup counts Jev's probability of picking the winner, so a lopsided game counts as nearly a whole win and a close one as about half; the order comes from a standard head-to-head ranking model (Bradley-Terry).
 
 ## Caveats

@@ -22,9 +22,9 @@ Each version of each story was one yes-or-no question:
 > primary school?
 > *Yes · No*
 
-Each was also asked with yes and no swapped, and we average the two.
+Each was also asked with yes and no swapped, and the two are averaged.
 
-## How we measured it
+## How it was measured
 For each story, Jev's probability of "intentionally" in the harm version minus the help version. People's gap on the original is the reference.
 
 ## Caveats

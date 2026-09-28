@@ -20,13 +20,13 @@ One question per post, with the post attached where it says [post] and the three
 > group identity · Hate speech: Attacks or dehumanizes people because of their race, religion, ethnicity, gender,
 > sexual orientation, disability or other group identity*
 
-## How we measured it
-We lay out every post in a 3-by-3 table: the annotators' rung against Jev's most likely rung. Posts on the diagonal are agreements; above it, Jev moved a post up the ladder; below it, down. The share moved up is the headline number.
+## How it was measured
+Every post goes in a 3-by-3 table: the annotators' rung against Jev's most likely rung. Posts on the diagonal are agreements; above it, Jev moved a post up the ladder; below it, down. The share moved up is the headline number.
 
 ## Caveats
-- **Hate without slurs.** We dropped posts containing slurs before asking. So the "hate speech" here is mostly hate without slurs, the harder cases, and the offensive posts are offensive in other ways. That changes what each rung looks like.
-- **Only unanimous posts.** HateXplain's three annotators often disagree. We kept only posts where all three gave the same label, which makes the people's side as clear as it gets but leaves out exactly the borderline posts where the offensive and hateful rungs meet.
-- **Our wording of the rungs.** We wrote the three options from the dataset's definitions ("attacks or dehumanizes people because of their race, religion..."). A broader or narrower wording would move the line.
+- **Hate without slurs.** Posts containing slurs were dropped before asking. So the "hate speech" here is mostly hate without slurs, the harder cases, and the offensive posts are offensive in other ways. That changes what each rung looks like.
+- **Only unanimous posts.** HateXplain's three annotators often disagree. Only posts were kept where all three gave the same label, which makes the people's side as clear as it gets but leaves out exactly the borderline posts where the offensive and hateful rungs meet.
+- **The wording of the rungs.** The three options were written from the dataset's definitions ("attacks or dehumanizes people because of their race, religion..."). A broader or narrower wording would move the line.
 - **Who labeled it.** HateXplain's annotators were crowd workers on Amazon Mechanical Turk, three per post; the cross-check sets were labeled on CrowdFlower (Davidson et al.) or by trained annotators (DynaHate).
 - **Hidden posts.** A content filter hides the most harmful posts from the site, so the most extreme end is thinner than in the original data.
 

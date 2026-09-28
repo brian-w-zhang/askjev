@@ -21,7 +21,7 @@ Each item was a yes/no question over real code. For example:
 > *Code: function text(node) { unist(node); assert.strictEqual('children' in node, false, …); assert.ok('value' in
 > node, …) }*
 
-## How we measured it
+## How it was measured
 For each task, the share Jev got right, the share of real cases it missed, and the share of clean cases it wrongly flagged, with a range showing how much it could vary by chance. Because every set is half yes and half no, 50% is what guessing would get.
 
 ## Caveats

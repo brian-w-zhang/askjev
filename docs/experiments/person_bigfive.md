@@ -8,7 +8,7 @@ The Big Five (openness, conscientiousness, extraversion, agreeableness and neuro
 That makes it the cleanest way to ask the question behind the whole portrait: if Jev took the same test as everyone else, where would it land? And does it see itself the way it sees everyone else?
 
 ## The people and the data
-The test is the 50-item Big-Five Factor Markers from the International Personality Item Pool, a set of public domain personality statements. The Open Psychometrics website published every response it collected from 2016 to 2018. We keep the 603,322 people who answered all 50 statements, one record per internet address, and score them exactly as the test says: ten statements per trait, some counted in reverse.
+The test is the 50-item Big-Five Factor Markers from the International Personality Item Pool, a set of public domain personality statements. The Open Psychometrics website published every response it collected from 2016 to 2018. The study keeps the 603,322 people who answered all 50 statements, one record per internet address, and score them exactly as the test says: ten statements per trait, some counted in reverse.
 
 ## What Jev was asked
 All 50 statements, one question each, word for word from the test:
@@ -19,8 +19,8 @@ All 50 statements, one question each, word for word from the test:
 
 Each statement was also asked as "what would most people say", and with the five answers in reverse order, to check the order didn't drive Jev's answers.
 
-## How we measured it
-For each trait we add up Jev's expected answers exactly as the test scores a person, then ask what share of the 603,322 people scored lower. That share is Jev's percentile: 50 is the middle of the crowd. Because a trait rests on only ten statements, we resample them to get a 90% interval, and we score the reversed-order answers and the "most people" answers the same way.
+## How it was measured
+For each trait, Jev's expected answers are added up exactly as the test scores a person, then the analysis asks what share of the 603,322 people scored lower. That share is Jev's percentile: 50 is the middle of the crowd. Because a trait rests on only ten statements, they are resampled to get a 90% interval, and the reversed-order answers and the "most people" answers are scored the same way.
 
 ## Caveats
 - **Who the people are.** The comparison group is everyone who took this free test on the Open Psychometrics website from 2016 to 2018, one record per internet address. They chose to take a personality test online, so they are not a random sample of anyone.

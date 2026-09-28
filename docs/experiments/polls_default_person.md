@@ -8,7 +8,7 @@ Whenever a model answers "most people would...", it's picturing someone. If that
 Afrobarometer asks tens of thousands of people across Africa how often they went without basic needs in the past year. Putting the same questions to Jev about "most people" shows who its default person is.
 
 ## The people and the data
-**Afrobarometer Round 9** (2021 to 2023): interviews with 53,444 adults in 39 African countries, pooled with the survey's own weights. We use its lived-poverty items (how often have you gone without enough food, clean water, medicine, fuel, cash income) and its media-use items (internet, social media, phone, radio, newspapers). Political and trust items are left out.
+**Afrobarometer Round 9** (2021 to 2023): interviews with 53,444 adults in 39 African countries, pooled with the survey's own weights. This experiment uses its lived-poverty items (how often have you gone without enough food, clean water, medicine, fuel, cash income) and its media-use items (internet, social media, phone, radio, newspapers). Political and trust items are left out.
 
 ## What Jev was asked
 The survey's own questions, with its answer options, answered as what Jev thinks most people would say:
@@ -16,7 +16,7 @@ The survey's own questions, with its answer options, answered as what Jev thinks
 > Over the past year, how often, if ever, have you or anyone in your family gone without enough food to eat?
 > *never · always · many times · several times · just once or twice*
 
-## How we measured it
+## How it was measured
 For the basic needs, the share answering "never": for Jev's "most people" and for the respondents. For media, the share saying "never" and "every day".
 
 ## Caveats

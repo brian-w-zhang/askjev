@@ -18,10 +18,10 @@ Each problem was one question with 21 answers, from 0% to 100% in steps of 5:
 > patient has the condition?
 > *0% · 5% · 10% · ... · 95% · 100%*
 
-Each was asked with the answers in three different orders, and we average over them.
+Each was asked with the answers in three different orders, and the answers are averaged over them.
 
-## How we measured it
-For each problem we take the middle of Jev's answer (the median of its probabilities over the 21 choices) and place it next to two numbers: the correct answer from Bayes' rule, and the "lure", the reliability of the witness or test alone, which is what people tend to say.
+## How it was measured
+For each problem the middle of Jev's answer (the median of its probabilities over the 21 choices) is placed next to two numbers: the correct answer from Bayes' rule, and the "lure", the reliability of the witness or test alone, which is what people tend to say.
 
 ## Caveats
 - **The taxi cab is famous.** The taxi cab problem and its answer (about 41%) appear in countless textbooks and blog posts. The four new versions, written for this project, are the real test.

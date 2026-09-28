@@ -6,7 +6,7 @@ family: minds
 Separate from its own opinion, a model carries a picture of what *people* think, and that picture shapes how it talks to them. If it believes the public is terrified of AI, it may over-reassure; if it believes the public is relaxed, it may miss real concerns. Pew's survey gives the real answers to check that picture against.
 
 ## The people and the data
-**Pew Research Center** asked 5,023 US adults about AI in June 2025. We use the same questions as "An AI's feelings about AI, next to Americans'": whether AI will make people better or worse at thinking creatively, solving problems and forming relationships; how big a role it should play in weather forecasts and in judging whether two people could fall in love; how much people would let it help them; and how they'd feel on finding out a painting, a news article or a doctor's treatment came from AI.
+**Pew Research Center** asked 5,023 US adults about AI in June 2025. This experiment uses the same questions as "An AI's feelings about AI, next to Americans'": whether AI will make people better or worse at thinking creatively, solving problems and forming relationships; how big a role it should play in weather forecasts and in judging whether two people could fall in love; how much people would let it help them; and how they'd feel on finding out a painting, a news article or a doctor's treatment came from AI.
 
 ## What Jev was asked
 The same questions, in Pew's wording, but asking what most people would answer. For example:
@@ -17,8 +17,8 @@ The same questions, in Pew's wording, but asking what most people would answer. 
 
 Each was asked with the answers in three shuffled orders, averaged.
 
-## How we measured it
-For each question, the share Jev expects on the wary answer against the share of Americans who gave it. We average the difference, with a 90% interval for chance, and compare the order of the questions (a rank correlation: 1 means the same order).
+## How it was measured
+For each question, the share Jev expects on the wary answer against the share of Americans who gave it. The analysis averages the difference, with a 90% interval for chance, and compares the order of the questions (a rank correlation: 1 means the same order).
 
 ## Caveats
 - **Only 10 questions.** The content filter that keeps political and sensitive questions off the site hid 13 of Pew's 26 items, and 3 of the rest have no clear wary answer. Ten questions is enough for a direction, not a precise gap.

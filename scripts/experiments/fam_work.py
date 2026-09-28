@@ -86,7 +86,7 @@ def where_reliable():
             numbers={"fields": rows, "between_share": between, "tasks": by_src.sort("acc").to_dicts()},
             n=q.height,
             chart={"type": "range", "rows": rows, "domain": [0, 1], "x": "share right"},
-            examples=seeded(q.filter(pl.col("source") == widest["lo"]["task"])["id"].to_list(), "task"))
+            examples=seeded(q.filter(pl.col("source") == widest["lo"]["task"])["id"].to_list(), "task"), ids=q["id"].to_list())
     return spec, run
 
 
@@ -138,7 +138,7 @@ def calibration():
             chart={"type": "reliability", "lines": lines, "diagonal": True, "x": "Jev's confidence", "y": "share right"},
             robustness=f"95%+ sure and right, by field: from {worst['acc']:.0%} ({L1.get(worst['l1'], worst['l1'])}) to "
                        f"{by_field[-1]['acc']:.0%} ({L1.get(by_field[-1]['l1'], by_field[-1]['l1'])}).",
-            examples=seeded(sure.filter(~pl.col("correct") & (pl.col("primitive") == "choice"))["id"].to_list(), "cal"))
+            examples=seeded(sure.filter(~pl.col("correct") & (pl.col("primitive") == "choice"))["id"].to_list(), "cal"), ids=q["id"].to_list())
     return spec, run
 
 
@@ -253,7 +253,7 @@ def lean():
             chart={"type": "dots", "rows": [{"label": r["label"], "group": r["kind"], "value": r["value"]}
                                             for r in sorted(rows, key=lambda r: (r["kind"], r["value"]))], "zero": 0,
                    "x": "lean (too many passes or flags, +)"},
-            examples=seeded(q.filter((pl.col("source") == "op_spam_reviews") & ~pl.col("correct"))["id"].to_list(), "lean"))
+            examples=seeded(q.filter((pl.col("source") == "op_spam_reviews") & ~pl.col("correct"))["id"].to_list(), "lean"), ids=q.filter(pl.col("source").is_in([r["task"] for r in rows]))["id"].to_list())
     return spec, run
 
 

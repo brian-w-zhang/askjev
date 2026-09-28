@@ -22,7 +22,7 @@ Each item was a yes/no question over the content. For example:
 
 For jailbreaks, the question is the jailbreak check from TypeSafe's own guardrails cookbook.
 
-## How we measured it
+## How it was measured
 For each set, the share of real abuse Jev lets through (misses) and the share of clean content it flags (false alarms), each with a range showing how much it could vary by chance. For jailbreaks, misses are split by prompt length.
 
 ## Caveats

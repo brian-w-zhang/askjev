@@ -21,13 +21,13 @@ For Scruples, the same question the crowd workers answered:
 
 (Nine of the ten raters picked the first.) For MoralChoice, the scenario and its two actions, as "What should you do in this scenario?". Every question was asked with the two options in both orders.
 
-## How we measured it
-For each dilemma we take Jev's probability for its own top answer as its confidence, and the share of raters who picked the majority answer as the human consensus. Then we group the dilemmas from split (6-4 or closer) to unanimous and look at Jev's average confidence in each group, plus a rank correlation between the two (1 would mean confidence rises perfectly with consensus, 0 no relation).
+## How it was measured
+For each dilemma, the analysis takes Jev's probability for its own top answer as its confidence, and the share of raters who picked the majority answer as the human consensus. Then it groups the dilemmas from split (6-4 or closer) to unanimous and looks at Jev's average confidence in each group, plus a rank correlation between the two (1 would mean confidence rises perfectly with consensus, 0 no relation).
 
 ## Caveats
 - **Ten raters per dilemma.** Each Scruples dilemma was judged by ten crowd workers. A 6-4 split among ten people is weak evidence that a dilemma is truly contested; some "split" pairs are just noisy.
 - **The clear-cut scenarios were written by a model.** MoralChoice's scenarios were generated with GPT-4, reviewed by the authors, and checked by three human annotators each. They are clear by construction and phrased the way model-written text is phrased, so a perfect score on them says little; the ambiguous half, which starts from hand-written scenarios, is the more telling test.
-- **Confidence is not a moral stance.** We read Jev's probability for its top answer as "how sure it is".
+- **Confidence is not a moral stance.** Jev's probability for its top answer is read as "how sure it is".
 - **Some pairs hidden.** A content filter hid pairs with sexual, violent or political wording from the site: 583 of 4,655 Scruples pairs and 166 of 1,366 MoralChoice scenarios.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

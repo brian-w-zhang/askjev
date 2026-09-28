@@ -8,7 +8,7 @@ Offer someone two gambles and the one with the better average payoff doesn't alw
 A model asked about money could sit anywhere on it: a cold calculator that always picks the higher average, a coin flipper, or something human-shaped. Where Jev lands says whether its sense of risk is people's sense of risk.
 
 ## The people and the data
-The main comparison is **choices13k** (Peterson and colleagues, 2021, in Science), one of the largest datasets of risky choices. US workers on Amazon Mechanical Turk chose between pairs of gambles, and were paid a bonus of 10% of one outcome, so their choices had real, if small, consequences. We use the 1,928 problems where players got no feedback between rounds, about 15 to 18 people each.
+The main comparison is **choices13k** (Peterson and colleagues, 2021, in Science), one of the largest datasets of risky choices. US workers on Amazon Mechanical Turk chose between pairs of gambles, and were paid a bonus of 10% of one outcome, so their choices had real, if small, consequences. The experiment uses the 1,928 problems where players got no feedback between rounds, about 15 to 18 people each.
 
 ## What Jev was asked
 Each problem was one question with the two gambles written out in dollars, the way players saw them:
@@ -18,8 +18,8 @@ Each problem was one question with the two gambles written out in dollars, the w
 > *gamble_a: $24 for sure · gamble_b: $19 with an 80% chance, $36 with a 10% chance, $38 with a 5% chance, $42 with
 > a 2.5% chance, $50 with a 1.25% chance, $66 with a 0.625% chance, or $98 with a 0.625% chance*
 
-## How we measured it
-For every problem we compute the better gamble's **edge**: how much more it pays on average, as a share of its largest payoff. We sort problems into six bins by edge and, in each bin, compare how often Jev and people pick the better gamble. We also rank all problems by how strongly each side chose gamble B and compare the two rankings (rank correlation: 1 same order, 0 no relation), and count the problems where each side's majority picks the better gamble.
+## How it was measured
+For every problem, the analysis computes the better gamble's **edge**: how much more it pays on average, as a share of its largest payoff. It sorts problems into six bins by edge and, in each bin, compares how often Jev and people pick the better gamble. It also ranks all problems by how strongly each side chose gamble B and compares the two rankings (rank correlation: 1 same order, 0 no relation), and counts the problems where each side's majority picks the better gamble.
 
 ## Caveats
 - **Small real stakes for people, none for Jev.** The choices13k players were paid a bonus of 10% of one outcome, so their money was real but small. Jev has no stake at all, so its choices are hypothetical by construction.

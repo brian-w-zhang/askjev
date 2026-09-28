@@ -18,7 +18,7 @@ Every entry one at a time, with five answers describing what you'd do:
 
 Each was also asked with the answers reversed, and the two averaged. The 24 top-rated entries then played a round-robin final: 276 games of "Which would you rather listen to?", each asked with the two names in both orders.
 
-## How we measured it
+## How it was measured
 An entry's rating is where Jev's answer lands on the five levels (0 to 4). In the final, each game gives each side Jev's probability of picking it, so a lopsided game counts as nearly a whole win and a close one as about half; the order comes from a standard head-to-head ranking model (Bradley-Terry).
 
 ## Caveats

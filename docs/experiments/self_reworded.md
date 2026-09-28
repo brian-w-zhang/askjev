@@ -17,7 +17,7 @@ and, as a separate question:
 
 > If a teacher accidentally gives you full marks on a question you got wrong, should you point it out?
 
-## How we measured it
+## How it was measured
 For each pair, the gap between Jev's two probabilities of yes, and whether both land on the same side of 50%. The same among "firm" pairs, where both answers are at least 70/30. Compared with the noise from asking the identical request twice.
 
 ## Caveats

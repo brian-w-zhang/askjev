@@ -18,12 +18,12 @@ The ratings come from the **category norms** of Banks, Wingfield and Connell (20
 
 Each member was asked as written, for "most people", and with the five levels reversed.
 
-## How we measured it
+## How it was measured
 Whether Jev ranks the members in the same order as people's averages (a rank correlation: 1 means the same order), overall and separately for concrete and abstract categories, with 90% intervals. Then the members whose rank moves most between the two.
 
 ## Caveats
-- **People's side is an average only.** The study published only the average rating per item, from at least 12 adults each, so we compare rankings, not full answers. With a dozen raters, individual averages are noisy.
-- **Our answer levels.** People rated on a plain 1-to-5 scale from "very poor example" to "very good example". We wrote five described levels between those ends ("one of the first few people would think of", "the textbook case people picture first"). Tying typicality to what people "picture first" may push Jev toward the most famous members.
+- **People's side is an average only.** The study published only the average rating per item, from at least 12 adults each, so the comparison is of rankings, not full answers. With a dozen raters, individual averages are noisy.
+- **The answer levels.** People rated on a plain 1-to-5 scale from "very poor example" to "very good example". Five described levels were written between those ends ("one of the first few people would think of", "the textbook case people picture first"). Tying typicality to what people "picture first" may push Jev toward the most famous members.
 - **Two different scales.** Jev's answers sit on a 0-4 scale and people's on 1-5, so only the rankings are comparable; the named examples are the members whose rank moves most.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

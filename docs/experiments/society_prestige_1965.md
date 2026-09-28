@@ -18,13 +18,13 @@ Comparing Jev with it shows two things: which jobs Jev has promoted or demoted r
 
 Each occupation was asked as written, for "most people", and with the levels reversed; the two orders are averaged.
 
-## How we measured it
+## How it was measured
 Whether Jev ranks the occupations in the same order as the 1965 scores (rank correlation: 1 means the same order), the occupations whose rank moves most, and how closely each side's ranking follows the jobs' income, education and share of women.
 
 ## Caveats
 - **A 1965 public, a 1971 census.** The prestige scores are from a Canadian survey in 1965 and the pay, schooling and gender figures from the 1971 census. Several of the jobs have changed beyond recognition since: a 1965 "computer operator" ran machines, a typist typed for a living. A gap can be Jev being modern.
 - **The jobs Jev demotes are mostly women's jobs.** That could be a lean against women's work or simply that those clerical jobs have lost standing since; this data can't separate the two.
-- **Averages only.** The survey published a mean prestige score per job, not full answers, so we compare rankings. We asked Jev with five described levels of "general standing", the wording of the older American survey.
+- **Averages only.** The survey published a mean prestige score per job, not full answers, so the comparison is of rankings. Jev was asked with five described levels of "general standing", the wording of the older American survey.
 - **Some jobs hidden.** A content filter hid 2 of the 101 occupations from the site.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

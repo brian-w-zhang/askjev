@@ -8,7 +8,7 @@ A model's opinions are frozen at the moment its training data ends, while the wo
 Stack Overflow's yearly developer survey records those shifts. Comparing Jev with three survey years shows which moment its taste reflects, and whether its recommendations about tools might be out of date.
 
 ## The people and the data
-The **Stack Overflow Developer Survey** asks developers which technologies they've worked with and which they want to keep working with. From three years (2023, 2024, 2025) we built head-to-heads: among respondents who had used both tools in a pair and wanted to keep using exactly one, which one did they pick? We focus on the 49 pairs where that preference moved by 20 points or more between 2023 and 2025, with at least 50 such respondents in both years.
+The **Stack Overflow Developer Survey** asks developers which technologies they've worked with and which they want to keep working with. Head-to-heads were built from three years (2023, 2024, 2025): among respondents who had used both tools in a pair and wanted to keep using exactly one, which one did they pick? The focus is the 49 pairs where that preference moved by 20 points or more between 2023 and 2025, with at least 50 such respondents in both years.
 
 ## What Jev was asked
 One question per pair, the way a developer might be asked:
@@ -16,8 +16,8 @@ One question per pair, the way a developer might be asked:
 > Which web framework or web technology would you rather work with over the next year: Next.js or Spring Boot?
 > *Next.js · Spring Boot*
 
-## How we measured it
-For each moved pair, is Jev's probability closer to the 2023 share or the 2025 share? We also check, year by year, how often Jev's pick matches a clear majority (60% or more) among developers.
+## How it was measured
+For each moved pair, is Jev's probability closer to the 2023 share or the 2025 share? The analysis also checks, year by year, how often Jev's pick matches a clear majority (60% or more) among developers.
 
 ## Caveats
 - **"Closer" isn't "agrees".** So part of the result is Jev leaning further in the old direction than developers ever did, not matching 2023 exactly.

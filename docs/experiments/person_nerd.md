@@ -17,12 +17,12 @@ Every statement, word for word:
 
 Each was also asked as "what would most people say", and with the answers in reverse order.
 
-## How we measured it
+## How it was measured
 Each statement goes on a 0 to 1 scale for Jev and the test-takers, and the scale is their average, with a 90% interval from resampling the statements.
 
 ## Caveats
 - **Who the people are.** People who take a "how nerdy are you" test are, predictably, nerdier than most: their average is not the general public's.
 - **Nerdiness as a life, not a mind.** Most statements describe things you do with a body and a life: collecting books, playing Dungeons and Dragons, spending time at the library. Jev says no to having done those, which says little about how it thinks.
-- **Our answer wording.** People answered from disagree to agree; we asked Jev "how well does this statement describe you" with five described steps.
+- **The project's answer wording.** People answered from disagree to agree; Jev was asked "how well does this statement describe you" with five described steps.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

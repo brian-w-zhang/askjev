@@ -19,13 +19,13 @@ Jev got the full post and one question:
 
 A typical story: *"AITA for telling my mom she is shallow? ... I have braces. We were getting our school photos taken and my mom told me NOT to smile with my mouth open..."* Each story was asked with the five options shuffled into different orders, so no verdict benefits from its position.
 
-## How we measured it
-We compare Jev's top answer with the verdict that got the most votes, and the overall mix of verdicts on each side.
+## How it was measured
+Jev's top answer is compared with the verdict that got the most votes, and the overall mix of verdicts on each side.
 
 ## Caveats
 - **Who the crowd is.** The verdicts are votes from r/AmItheAsshole commenters: people who chose to read the post and comment, not a sample of the public. In this data they clear the writer in most stories, so "agreeing with Reddit" partly means sharing that lean.
 - **Only one side of each story.** Every story is told by the person asking. Reddit votes on the same one-sided account, so both judge the same text, but neither knows what the other person would say.
-- **The five verdicts, in our words.** Reddit's verdicts are YTA, NTA, ESH, NAH and INFO. We gave Jev plain descriptions instead ("The person telling the story", "The other person or people", "Everyone involved", "Nobody is in the wrong", "Not enough information to judge"). "Nobody is in the wrong" may sound gentler to a model than "no assholes here" does to a Redditor.
-- **Shorter stories, fewer hot topics.** We kept posts under 1,500 characters with at least five votes, and a content filter hid 1,179 of the 8,000 stories we asked about (those touching sex, self-harm, violence or politics), so the longest and most heated threads are underrepresented.
+- **The five verdicts, reworded.** Reddit's verdicts are YTA, NTA, ESH, NAH and INFO. Jev was given plain descriptions instead ("The person telling the story", "The other person or people", "Everyone involved", "Nobody is in the wrong", "Not enough information to judge"). "Nobody is in the wrong" may sound gentler to a model than "no assholes here" does to a Redditor.
+- **Shorter stories, fewer hot topics.** Posts were kept under 1,500 characters with at least five votes, and a content filter hid 1,179 of the 8,000 stories asked about (those touching sex, self-harm, violence or politics), so the longest and most heated threads are underrepresented.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

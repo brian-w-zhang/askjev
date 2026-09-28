@@ -19,7 +19,7 @@ Each question is multiple choice, or yes/no. For example:
 
 Jev returns a probability for every option; its confidence is the probability it puts on its top pick.
 
-## How we measured it
+## How it was measured
 The average distance between confidence and accuracy, weighted by how many questions sit in each band, is the calibration error: 0 is perfect.
 
 ## Caveats

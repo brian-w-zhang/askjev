@@ -17,7 +17,7 @@ Each question with its options:
 
 Each was also asked with the options in shuffled orders.
 
-## How we measured it
+## How it was measured
 The share right per exam or exam section, with 90% intervals.
 
 ## Caveats

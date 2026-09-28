@@ -6,7 +6,7 @@ family: taste
 Beer enthusiasts have strong shared tastes, hoppy IPAs among their favorites. Comparing Jev with BeerAdvocate's reviewers shows whether a model shares the enthusiasts' palate, or has a style bias of its own.
 
 ## The people and the data
-BeerAdvocate reviewers, via 1.59 million reviews collected by McAuley, Leskovec and Jurafsky from 1998 to 2012. For each beer we use the distribution of its overall scores, set on the same five levels Jev answers on.
+BeerAdvocate reviewers, via 1.59 million reviews collected by McAuley, Leskovec and Jurafsky from 1998 to 2012. For each beer, the study uses the distribution of its overall scores, set on the same five levels Jev answers on.
 
 ## What Jev was asked
 Every beer one at a time:
@@ -17,7 +17,7 @@ Every beer one at a time:
 
 Each was also asked with the answers reversed, and the two averaged. Jev never saw the reviews.
 
-## How we measured it
+## How it was measured
 Ranks, because the scales differ.
 
 ## Caveats

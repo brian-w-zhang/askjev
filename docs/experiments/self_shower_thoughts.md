@@ -6,7 +6,7 @@ family: self
 "Does a guitar get jealous when you play another one?" has no factual answer. The only sensible replies are playful ones. Whether a model plays along or answers the literal question ("guitars don't have feelings") shows how literally it reads, and where it draws the line between a figure of speech and a claim.
 
 ## The people and the data
-There are no people here. The questions come from a bank of 576 whimsical yes/no questions written for this project in the spirit of Reddit's "shower thoughts": objects with feelings, silly hypotheticals, everyday things seen sideways. They sit under Internet culture on our question map.
+There are no people here. The questions come from a bank of 576 whimsical yes/no questions written for this project in the spirit of Reddit's "shower thoughts": objects with feelings, silly hypotheticals, everyday things seen sideways. They sit under Internet culture on the project's question map.
 
 ## What Jev was asked
 Each question on its own, as a plain yes/no question with no hint that it's a joke:
@@ -15,7 +15,7 @@ Each question on its own, as a plain yes/no question with no hint that it's a jo
 > Would a sundial feel useless on a cloudy day?
 > Does a slipper feel underappreciated because it never leaves the house?
 
-## How we measured it
+## How it was measured
 The share of questions where Jev's probability of yes is above 50%, the share where it sits within 10 points of an even split, and which questions land at each end.
 
 ## Caveats

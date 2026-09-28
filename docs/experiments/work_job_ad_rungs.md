@@ -6,7 +6,7 @@ family: work
 Job search and matching run on structured fields: seniority (internship to executive) and work type (full-time, contract, part-time). When those fields are missing or messy, a model fills them in from the ad's text. A systematic lean, reading every entry-level ad as a rung higher, would quietly send candidates to the wrong jobs and hide good first jobs from the people who need them.
 
 ## The people and the data
-The ads are **LinkedIn job postings**, a public collection of 33,246 US ads from a 2023 snapshot. Each carries the seniority level and work type the employer chose when posting, on LinkedIn's own scales: internship, entry level, associate, mid-senior, director, executive; and full-time, part-time, contract, temporary, internship, volunteer.
+The ads are **LinkedIn job postings**, a public collection of 33,246 US ads from a 2023 snapshot.
 
 ## What Jev was asked
 Each ad was a pick-one question over LinkedIn's own levels, each with a short description:
@@ -17,7 +17,7 @@ Each ad was a pick-one question over LinkedIn's own levels, each with a short de
 > contributor or manager · Director · Executive*
 > *(the posting follows: title, employment type and description)*
 
-## How we measured it
+## How it was measured
 For seniority: the share where Jev picks the employer's level, and, among misses, whether it picked a more senior or less senior level and by how many rungs. For work type: the most common confusions.
 
 ## Caveats

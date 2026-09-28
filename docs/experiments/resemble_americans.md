@@ -17,8 +17,8 @@ The GSS questions as the codebook words them, with their answer categories:
 
 Each question was also asked with the options in shuffled orders, and Jev's answers were averaged over the orders.
 
-## How we measured it
-For each question we compare Jev's spread of answers with each year's Americans, from 0 (nothing in common) to 1 (identical), and note which year it lands closer to. If Jev carried no era at all, it would land closer to the later year about half the time. A 90% range comes from resampling the questions.
+## How it was measured
+For each question, Jev's spread of answers is compared with each year's Americans, from 0 (nothing in common) to 1 (identical), and note which year it lands closer to. If Jev carried no era at all, it would land closer to the later year about half the time. A 90% range comes from resampling the questions.
 
 ## Caveats
 - **A small lean on a thin margin.**

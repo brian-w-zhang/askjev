@@ -13,7 +13,7 @@ Each question twice, once as written and once for most people. For example:
 
 > Would you panic if your car's steering felt strange on a motorway?
 
-## How we measured it
+## How it was measured
 Per topic, the share of questions Jev answers yes about itself, minus the share it thinks most people would, with a 90% interval. For rating questions, the average difference in level as a share of the scale.
 
 ## Caveats

@@ -20,13 +20,13 @@ One question per cause, with the study's reference, in ordered bins:
 
 Each cause was also asked without the reference. That's 81 new questions, each asked with the bins in three shuffled orders and averaged.
 
-## How we measured it
-Jev's estimate is the middle of its median bin (on a log scale). On log scales, we compare how well estimates order the causes, how steep the estimate-versus-truth line is (1 means no squash, lower means rare causes are pushed up and common ones down), and how much more dramatic causes are overestimated than quiet ones, for Jev and for the 1978 public.
+## How it was measured
+Jev's estimate is the middle of its median bin (on a log scale). On log scales, the analysis compares how well estimates order the causes, how steep the estimate-versus-truth line is (1 means no squash, lower means rare causes are pushed up and common ones down), and how much more dramatic causes are overestimated than quiet ones, for Jev and for the 1978 public.
 
 ## Caveats
 - **People's side is an average.** The study published one geometric-mean estimate per cause, not each person's answer, so the human dots are averages and can't show how spread out people were.
-- **Jev knows later statistics.** We ask about the mid-1970s and score against the 1970s counts, but Jev has read decades of later statistics and the 1978 paper itself, one of the most cited in the psychology of risk. Knowing the famous result could help it avoid the famous bias.
-- **Numbers are a known weak spot.** TypeSafe lists raw numeric values as a known weakness of Jev. We gave it ordered answer bins (1 to 9, 10 to 29, ... 1 million or more) instead of asking for a number, and each bin spans about a factor of three.
-- **Which causes count.** Which causes count as "dramatic" follows Pachur's 2024 compilation, not our judgment.
+- **Jev knows later statistics.** The questions ask about the mid-1970s and are scored against the 1970s counts, but Jev has read decades of later statistics and the 1978 paper itself, one of the most cited in the psychology of risk. Knowing the famous result could help it avoid the famous bias.
+- **Numbers are a known weak spot.** TypeSafe lists raw numeric values as a known weakness of Jev. It was given ordered answer bins (1 to 9, 10 to 29, ... 1 million or more) instead of asking for a number, and each bin spans about a factor of three.
+- **Which causes count.** Which causes count as "dramatic" follows Pachur's 2024 compilation, not a judgment made for this project.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

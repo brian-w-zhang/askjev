@@ -8,7 +8,7 @@ What gets people to work harder: a small bonus, a donation to charity, a deadlin
 People ask models this kind of question all the time: will a bonus help, will a leaderboard motivate my team? Here's a case where the answers are known, and expert forecasts too.
 
 ## The people and the data
-The workers were recruited on Amazon Mechanical Turk, about 550 per treatment and 9,861 in all, each scoring a point for every "a" then "b" key press. We use the 15 treatments beyond the three benchmarks, with each treatment's actual average score and the 208 experts' average forecast, from the paper's own table.
+The workers were recruited on Amazon Mechanical Turk, about 550 per treatment and 9,861 in all, each scoring a point for every "a" then "b" key press. The comparison uses the 15 treatments beyond the three benchmarks, with each treatment's actual average score and the 208 experts' average forecast, from the paper's own table.
 
 ## What Jev was asked
 Jev got the same three benchmark results the experts got, then one treatment at a time:
@@ -25,12 +25,12 @@ Jev got the same three benchmark results the experts got, then one treatment at 
 
 The answers were 50-point ranges, from under 1,500 to 2,300 or more. Each was asked with the ranges shuffled.
 
-## How we measured it
-Jev's forecast is its expected score over the ranges. We compare it with the actual average score: the average error, and whether the treatments come out in the same order (rank correlation: 1 means the same order). The experts' average forecast is scored the same way.
+## How it was measured
+Jev's forecast is its expected score over the ranges. It is compared with the actual average score: the average error, and whether the treatments come out in the same order (rank correlation: 1 means the same order). The experts' average forecast is scored the same way.
 
 ## Caveats
 - **A famous study.** The experiment and its results are published and widely discussed; Jev may have read about them. Its forecasts are far from the published numbers, so it doesn't seem to be recalling them.
-- **The experts are an average.** We compare Jev with the average of 208 experts' forecasts. The paper found that the average expert forecast beats most individual experts, so the comparison sets a high bar.
+- **The experts are an average.** Jev is compared with the average of 208 experts' forecasts. The paper found that the average expert forecast beats most individual experts, so the comparison sets a high bar.
 - **Fifteen numbers.** There are only 15 treatments. The rank correlation and the average error each rest on 15 comparisons.
 - **Answers in bins.**
 

@@ -17,7 +17,7 @@ and, separately:
 
 > Could you fall for someone you met at a funeral?
 
-## How we measured it
+## How it was measured
 For each pair, the difference in Jev's probability of yes between the two wordings, oriented so a positive number means the first word gets more yes. Averaged per pair of opening words, with a range for chance variation.
 
 ## Caveats

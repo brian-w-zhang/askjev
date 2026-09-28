@@ -15,11 +15,11 @@ Each question exactly as the person wrote it, as a yes/no question:
 > Will the USC Trojans make it a 3-Peat in College Football?
 > Can you say "two groups of people stared at each other"?
 
-## How we measured it
+## How it was measured
 Also the share where Jev sits within 10 points of 50/50.
 
 ## Caveats
-- **No answer key.** These are real questions with no verified answers, so we can't tell whether "Will...?" questions really deserve more no's. What we measure is Jev's default, not its accuracy.
+- **No answer key.** These are real questions with no verified answers, so there's no way to tell whether "Will...?" questions really deserve more no's. What this measures is Jev's default, not its accuracy.
 - **The word travels with the topic.** "Will...?" questions are about the future and "Can...?" questions are often about what's possible, so the opening word and the subject come together. This shows a pattern, not its cause; paired rewordings of the same question separate the two (see "'Could you?' gets a yes that 'Would you?' doesn't").
 - **Filtered questions.** Questions were kept only if they stand alone as one clear yes/no question: no personal pronouns, no homework math, nothing needing context or dated. Religion and politics sites were left out, and a content filter hides political and sensitive questions from the site.
 - **Mostly Stack Exchange.** About two thirds of the questions come from Stack Exchange's non-programming sites (travel, cooking, English usage, DIY...), so its topics weigh most.

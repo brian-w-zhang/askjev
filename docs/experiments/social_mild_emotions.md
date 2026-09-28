@@ -19,12 +19,12 @@ The situation, and all 32 words to choose from:
 
 For example, someone wrote under "furious": "I won tickets to a concert and when we got there, they were supposed to have the tickets at the box office and they didn't so the refused us no matter how much proof we gave that we won.
 
-## How we measured it
-For each pair, how many stories written for the strong word Jev calls by the mild one, and how many written for the mild word it calls by the strong one. Across all 32 words, we also compare how often Jev uses each word with how often writers were given it.
+## How it was measured
+For each pair, how many stories written for the strong word Jev calls by the mild one, and how many written for the mild word it calls by the strong one. Across all 32 words, the analysis also compares how often Jev uses each word with how often writers were given it.
 
 ## Caveats
 - **A story written to a word.** Each writer was handed an emotion word and asked to describe a time they felt it. A story written for "furious" may genuinely read as plain anger; the label is the prompt, not a measurement of intensity.
-- **No other readers to compare.** We compare Jev with the word the writer was given, not with how other people would label the same story. Other readers might soften these stories too.
+- **No other readers to compare.** Jev is compared with the word the writer was given, not with how other people would label the same story. Other readers might soften these stories too.
 - **Many near-synonyms.** With that many close options, any reader will spread its answers; what matters is that Jev's errors all go one direction.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

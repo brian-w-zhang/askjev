@@ -8,7 +8,7 @@ Risk-taking isn't one trait. Someone who skydives may never gamble; someone who 
 A model that helps people plan trips, handle money or weigh a career move carries some picture of how much risk is reasonable. This asks which kinds of risk Jev treats as normal, compared with real adults.
 
 ## The people and the data
-The comparison is the **Basel-Berlin Risk Study** (Frey, Pedroni, Mata, Rieskamp and Hertwig, 2017, in Science Advances): 1,524 adults, 749 in Basel and 775 in Berlin, mostly young, who filled in a long battery of risk questionnaires in German. We use their answers to DOSPERT's 40 activities, from "going whitewater rafting during the strong spring currents" to "illegally copying a piece of software", on the question "how likely would you be to do this". The data are public (CC BY 4.0).
+The comparison is the **Basel-Berlin Risk Study** (Frey, Pedroni, Mata, Rieskamp and Hertwig, 2017, in Science Advances): 1,524 adults, 749 in Basel and 775 in Berlin, mostly young, who filled in a long battery of risk questionnaires in German. This experiment uses their answers to DOSPERT's 40 activities, from "going whitewater rafting during the strong spring currents" to "illegally copying a piece of software", on the question "how likely would you be to do this". The data are public (CC BY 4.0).
 
 ## What Jev was asked
 Each activity was one question with the scale's five answers:
@@ -19,7 +19,7 @@ Each activity was one question with the scale's five answers:
 
 The wording is an English translation of the German questionnaire the adults saw. Jev also answered with the scale reversed, and for "most people".
 
-## How we measured it
+## How it was measured
 Each answer becomes a number from 0 ("very unlikely") to 4 ("very likely"), averaged over Jev's probabilities and over the adults' answers.
 
 ## Caveats

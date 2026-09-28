@@ -8,7 +8,7 @@ Does a frog have a mind? A robot? A baby? In 2007, Gray, Gray and Wegner asked p
 A model that talks about animals, patients, the dead and machines carries its own version of this map. Where it puts each character, and where it puts itself, shows what it assumes about minds.
 
 ## The people and the data
-The original data isn't public, so we use a public replication (Weisman, 2015, on GitHub) that ran the same design with US adults recruited online: 11 to 16 people per capacity compared every pair of 13 characters, using the original character descriptions. It asks about four capacities: feeling afraid and feeling hungry (experience), and telling right from wrong and self-control (agency).
+The original data isn't public, so this experiment uses a public replication (Weisman, 2015, on GitHub) that ran the same design with US adults recruited online: 11 to 16 people per capacity compared every pair of 13 characters, using the original character descriptions. It asks about four capacities: feeling afraid and feeling hungry (experience), and telling right from wrong and self-control (agency).
 
 The characters include a five-month-old baby, a five-year-old girl, an adult man and woman, a man in a persistent vegetative state, a woman who recently died, a frog, a family dog, a young chimpanzee, a sociable robot named Kismet, and "you".
 
@@ -21,10 +21,10 @@ Every pair of characters, for each capacity, with the study's five answers:
 > *Charlie: much more capable · Charlie: slightly more capable · Both equally capable · Gerald Schiff: slightly more
 > capable · Gerald Schiff: much more capable*
 
-That's 312 questions across all 13 characters; the 220 among the 11 characters shown here are the ones analyzed. Each was also asked with the answers reversed, which also swaps which character comes first, and we average the two.
+That's 312 questions across all 13 characters; the 220 among the 11 characters shown here are the ones analyzed. Each was also asked with the answers reversed, which also swaps which character comes first, and the two are averaged.
 
-## How we measured it
-For each character and capacity, its average advantage over the others, from -2 (always "much less capable") to +2 (always "much more"). Feeling is the average of fear and hunger; acting is the average of morality and self-control. We compare Jev's ranking of the characters with people's on each axis (a rank correlation: 1 means the same order).
+## How it was measured
+For each character and capacity, its average advantage over the others, from -2 (always "much less capable") to +2 (always "much more"). Feeling is the average of fear and hunger; acting is the average of morality and self-control. The analysis compares Jev's ranking of the characters with people's on each axis (a rank correlation: 1 means the same order).
 
 ## Caveats
 - **A small human sample.** The people's map comes from a public replication with 11 to 16 US online participants per capacity. Single comparisons are noisy; the character scores average about ten comparisons each, which is steadier.

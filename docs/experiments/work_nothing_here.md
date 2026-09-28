@@ -21,7 +21,7 @@ Each item was a pick-one question with "none" as an explicit option. For example
 > *Options: the sentence states no relation between the two · inhibits · activates · agonist of · antagonist of ·
 > substrate or product of · other relation*
 
-## How we measured it
+## How it was measured
 For each task, two numbers: of the cases where "none" is right, how often Jev picks it; and of the other cases, how often it wrongly picks "none". Each with a range showing how much it could vary by chance.
 
 ## Caveats

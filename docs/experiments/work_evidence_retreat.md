@@ -21,8 +21,8 @@ Each item was a three-way question over a source and a statement:
 > *Statement: "One of my favorite authors is Isaac Asimov."*
 > *Options: follows · neither · contradicts*
 
-## How we measured it
-For each dataset we take the clear cases, where the answer is "supports" or "contradicts", and look at Jev's mistakes on them: what share went to "can't tell" (a retreat) versus the opposite verdict (a flip). We also check how often Jev correctly says "can't tell" when that's the answer.
+## How it was measured
+For each dataset, the analysis takes the clear cases, where the answer is "supports" or "contradicts", and looks at Jev's mistakes on them: what share went to "can't tell" (a retreat) versus the opposite verdict (a flip). It also checks how often Jev correctly says "can't tell" when that's the answer.
 
 ## Caveats
 - **"Can't tell" means different things.** Each dataset defines the middle answer its own way: not enough information (FEVER), no significant difference (clinical trials), not mentioned (contracts). A retreat in one isn't the same act as in another.

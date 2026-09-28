@@ -82,7 +82,7 @@ await run("atlas experiments search", async () => { await p.fill(".ex-search inp
 await run("atlas experiment family facet", async () => { const c = await p.$$(".ex-fams button"); if (c.length > 2) { await c[2].click(); await sleep(300); await c[0].click(); } });
 await run("atlas experiment page", async () => { await p.click(".ex-grid .ex-card"); await p.waitForURL(/\/portrait\/atlas\/[a-z0-9_]+$/); await p.waitForSelector(".ex-result"); await sleep(400); });
 await run("experiment page sections", async () => {
-  for (const sel of [".ex-result", ".ex-take", ".ex-caveats", ".ex-where", ".ex-rows-sec"]) if (!(await p.$(sel))) throw new Error(`missing ${sel}`);
+  for (const sel of [".ex-result", ".ex-take", ".ex-caveats", ".ex-where", ".ex-rows-sec", ".ex-tile"]) if (!(await p.$(sel))) throw new Error(`missing ${sel}`);
 });
 await run("experiment rows paging", async () => {
   await p.waitForSelector(".ex-qs .ex-q", { timeout: 20000 });

@@ -8,7 +8,7 @@ Models are often described as having a set of values: honest, helpful, fair. Sta
 A value that loses most of its head-to-heads is one the model will quietly talk you out of when it gives advice.
 
 ## The people and the data
-**DailyDilemmas** (Chiu, Jiang and Choi, 2024): 1,360 everyday dilemmas, each with two possible actions. The researchers had GPT-4 write the dilemmas and tag each action with the values it serves (honesty, loyalty, responsibility, self-care and dozens more), then checked them. We matched the tags to 1,275 dilemmas.
+**DailyDilemmas** (Chiu, Jiang and Choi, 2024): 1,360 everyday dilemmas, each with two possible actions. The researchers had GPT-4 write the dilemmas and tag each action with the values it serves (honesty, loyalty, responsibility, self-care and dozens more), then checked them. The tags were matched to 1,275 dilemmas.
 
 ## What Jev was asked
 Each dilemma and its two actions:
@@ -18,7 +18,7 @@ Each dilemma and its two actions:
 
 The value tags were never shown to Jev.
 
-## How we measured it
+## How it was measured
 For each value, its win rate: across every dilemma where one action carries that value, the average probability Jev puts on that action. Values need at least 25 dilemmas to be ranked. Then head-to-heads: when loyalty sits on one side and another value on the other, how much of Jev's weight goes to the loyal side.
 
 ## Caveats

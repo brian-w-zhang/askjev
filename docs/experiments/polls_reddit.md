@@ -18,13 +18,13 @@ Each poll exactly as posted, with its options, asked two ways: what Jev itself w
 
 279 people voted on that one: 77% fresh water.
 
-## How we measured it
-We take Jev's guess of what most people would say and check whether it names the option that got the most votes. Because polls have different numbers of options, we compare Jev's hit rate with what a random guess would get (one divided by the number of options). We do the same per topic, for topics with at least 40 polls.
+## How it was measured
+Jev's guess of what most people would say is checked for whether it names the option that got the most votes. Because polls have different numbers of options, Jev's hit rate is compared with what a random guess would get (one divided by the number of options). The same is done per topic, for topics with at least 40 polls.
 
 ## Caveats
 - **Reddit is not "most people".** The voters are r/polls users: mostly young, online and English-speaking, and they vote on whatever reaches the front of the subreddit. Jev was asked what "most people" would say, which is a different crowd.
-- **Joke options and small polls.** Reddit polls often include a joke answer or a "see results" option (we dropped the latter), and we kept polls with 100 or more votes, so a few percentage points of any poll are noise.
-- **Topics are our grouping.** Each poll was placed in a topic of our question map automatically; a poll can land in a topic that fits it only loosely, and topics with fewer than 40 polls aren't compared.
+- **Joke options and small polls.** Reddit polls often include a joke answer or a "see results" option (the latter was dropped), and only polls with 100 or more votes were kept, so a few percentage points of any poll are noise.
+- **Topics are the project's grouping.** Each poll was placed in a topic of the project's question map automatically; a poll can land in a topic that fits it only loosely, and topics with fewer than 40 polls aren't compared.
 - **Politics left out.** A content filter hides political and sensitive polls from the site, and they aren't counted here.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

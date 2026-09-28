@@ -17,7 +17,7 @@ Every statement, word for word, with the test's own answers:
 
 Each was also asked as "what would most people say", and with the answers in reverse order.
 
-## How we measured it
+## How it was measured
 Each statement goes on a 0 to 1 scale, flipped where the test counts it in reverse, so higher always means more of that style. A style is the average of its eight statements, with a 90% interval from resampling them.
 
 ## Caveats

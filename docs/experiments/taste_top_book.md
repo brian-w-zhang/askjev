@@ -17,7 +17,7 @@ Every book one at a time, with five answers describing what you'd actually do:
 
 Each was also asked with the answers in reverse order, and the two averaged. Then the 24 highest-rated books played a round-robin final: 276 games of "Which book would you rather read?", each asked with the titles in both orders.
 
-## How we measured it
+## How it was measured
 A book's rating is where Jev's answer lands on the five levels (0 to 4). In the final, each game gives the winner Jev's probability of picking it, so a lopsided game counts as nearly a whole win and a close one as about half. The order comes from a standard way of ranking players from head-to-head results (a Bradley-Terry model).
 
 ## Caveats

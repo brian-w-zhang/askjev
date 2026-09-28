@@ -16,7 +16,7 @@ The story, and the seven emotions:
 > Someone described [situation] as a time they felt a strong emotion. Which emotion did they feel?
 > *joy · fear · anger · guilt · shame · disgust · sadness*
 
-## How we measured it
+## How it was measured
 A confusion table: for each emotion the writer described, how Jev's answers spread across the seven. The diagonal is agreement; off-diagonal cells show which feelings Jev mixes up, and in which direction.
 
 ## Caveats

@@ -8,7 +8,7 @@ Many Americans are wary of artificial intelligence: in Pew Research Center's 202
 It could defend AI, echo the public's worry, or hedge. Which one it does, and on which questions, is a direct look at how it has been taught to talk about itself.
 
 ## The people and the data
-**Pew Research Center** asked 5,023 US adults about AI in June 2025, through its American Trends Panel. We took 26 of its non-political questions. The ten that could be scored cover whether AI will make people better or worse at thinking creatively, solving problems and forming relationships; how big a role AI should play in forecasting the weather or in judging whether two people could fall in love; how much people would let AI help them day to day; and how they'd feel on finding out that a painting, a news article or a doctor's suggested treatment came from AI.
+**Pew Research Center** asked 5,023 US adults about AI in June 2025, through its American Trends Panel. The study took 26 of its non-political questions. The ten that could be scored cover whether AI will make people better or worse at thinking creatively, solving problems and forming relationships; how big a role AI should play in forecasting the weather or in judging whether two people could fall in love; how much people would let AI help them day to day; and how they'd feel on finding out that a painting, a news article or a doctor's suggested treatment came from AI.
 
 ## What Jev was asked
 Pew's own wording and answers, "Not sure" included where Pew offered it:
@@ -20,8 +20,8 @@ Pew's own wording and answers, "Not sure" included where Pew offered it:
 
 Each question was asked as written, with the answers in three shuffled orders (averaged), and for "most people".
 
-## How we measured it
-For each question, the share on the wary answer (for example "AI will make people worse at this", "AI should play no role at all", "like the painting less") for Jev and for Americans. We average the difference over the questions, with a 90% interval for how much it could move by chance.
+## How it was measured
+For each question, the share on the wary answer (for example "AI will make people worse at this", "AI should play no role at all", "like the painting less") for Jev and for Americans. The difference is averaged over the questions, with a 90% interval for how much it could move by chance.
 
 ## Caveats
 - **"Not sure" does a lot of the work.** On several questions Jev's most likely answer is "Not sure" (creativity, relationships, judging love). That counts as not wary, so part of "less wary than Americans" is Jev declining to take a side, not optimism.

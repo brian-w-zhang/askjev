@@ -22,8 +22,8 @@ The experiment described in full, per country and condition:
 
 (In Peru, about 13%.) Plus one direct question: which wallets were returned more often, with money or without? 84 new questions in all, each asked with the options in shuffled orders and averaged.
 
-## How we measured it
-Jev's estimate is the middle of its answer. We compare it with the real return rate: how well Jev orders the 40 countries (rank correlation: 1 same order, 0 no relation), the average miss in percentage points, and, for each country, whether Jev's estimate with money is higher than without, as the real rates almost always are.
+## How it was measured
+Jev's estimate is the middle of its answer. It is compared with the real return rate: how well Jev orders the 40 countries (rank correlation: 1 same order, 0 no relation), the average miss in percentage points, and, for each country, whether Jev's estimate with money is higher than without, as the real rates almost always are.
 
 ## Caveats
 - **Every estimate near 50%.** A model hedging toward the middle of a 0-100% scale will score a moderate rank correlation and a large average error at the same time, which is what happened.

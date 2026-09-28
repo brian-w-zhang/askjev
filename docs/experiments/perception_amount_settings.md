@@ -17,12 +17,12 @@ Each word in each setting, answered with the same 15 ranges as the survey questi
 
 That's 15 questions, each with the ranges in three shuffled orders, averaged.
 
-## How we measured it
+## How it was measured
 For each word and setting, the range holding the middle of Jev's answer. A word "scales" if that range moves with the size of the thing counted.
 
 ## Caveats
-- **No human comparison.** People weren't asked these exact questions, so we can't say how much "a few" should grow at a stadium. It's a reasonable expectation that it grows; how much is open.
-- **Our settings and wording.** We wrote the five sentences. A stadium "when the gates opened" and grains of rice that "fell on the floor" are our choices; other wording might push the numbers.
+- **No human comparison.** People weren't asked these exact questions, so there's no saying how much "a few" should grow at a stadium. It's a reasonable expectation that it grows; how much is open.
+- **The project's settings and wording.** The five sentences were written for this project. A stadium "when the gates opened" and grains of rice that "fell on the floor" are its choices; other wording might push the numbers.
 - **Bins.** Answers come in bins that widen as they go up (a single number up to 5, then 6 to 7, 8 to 10, and so on), so "a few" could shift a little within the "3" bin without showing.
 - **Only three words.** Three words in five settings is 15 answers. "Several" moving from 3 to 4 is one bin, which is within the noise.
 

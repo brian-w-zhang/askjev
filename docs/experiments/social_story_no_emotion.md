@@ -17,7 +17,7 @@ The story up to the line in question, and the nine answers:
 > *joy or happiness · fear or worry · anger or annoyance · trust or acceptance · disgust · sadness · surprise ·
 > anticipation, looking forward to something · no clear emotion*
 
-## How we measured it
+## How it was measured
 The share of all answers that went to each of the nine options, for Jev and for the annotators. Then the story lines where at least two of three annotators named the same real emotion: how often does Jev still say "no clear emotion"?
 
 ## Caveats

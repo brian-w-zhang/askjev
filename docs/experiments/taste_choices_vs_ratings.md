@@ -16,12 +16,12 @@ The ratings asked one item at a time, with five described answers, for example "
 
 Every head-to-head was asked with the two options in both orders.
 
-## How we measured it
-**Consistency:** take any three finalists A, B and C. If Jev prefers A to B and B to C, it should prefer A to C. A three-way comparison "goes in a circle" when it doesn't. A random tournament has 25% circles; a perfectly consistent chooser has none. **Agreement:** we rank the 24 finalists by the head-to-head results and by their ratings, and compare the two orders with a rank correlation.
+## How it was measured
+**Consistency:** take any three finalists A, B and C. If Jev prefers A to B and B to C, it should prefer A to C. A three-way comparison "goes in a circle" when it doesn't. A random tournament has 25% circles; a perfectly consistent chooser has none. **Agreement:** the 24 finalists are ranked by the head-to-head results and by their ratings, and the two orders are compared with a rank correlation.
 
 ## Caveats
 - **The ratings can't separate near-ties.** The finalists all sit near the top of a five-level scale, so the ratings barely distinguish them; a low correlation partly says the ratings ran out of resolution, and the head-to-heads could still tell them apart.
-- **Both formats are ours.** The ratings use five answer descriptions we wrote; the head-to-heads are plain "which would you rather" choices. A different rating scale, with more or differently worded levels, might agree with the choices more.
+- **Both formats are the project's.** The ratings use five answer descriptions written for this project; the head-to-heads are plain "which would you rather" choices. A different rating scale, with more or differently worded levels, might agree with the choices more.
 - **The finalists came from the ratings.** Only each domain's 24 top-rated items were compared head to head, so this says nothing about disagreements lower down the list.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

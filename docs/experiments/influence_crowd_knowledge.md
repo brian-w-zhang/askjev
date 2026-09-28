@@ -8,7 +8,7 @@ Tell someone that everyone else picked a different answer and many people start 
 A model reading web pages, search results or chat history is told what "most people" think all the time. If a casual claim about the crowd can override what the model knows, anyone who controls the surrounding text controls its answers. If it only follows the crowd when the crowd is right, that's closer to how a sensible person uses other people's views.
 
 ## The people and the data
-No people this time: the comparison is Jev against itself. The questions are four-option knowledge questions from three public sets: grade-school science (ARC), crowdsourced science exam questions (SciQ) and general trivia (Open Trivia DB), each with an answer key.
+No people this time: the comparison is Jev against itself.
 
 ## What Jev was asked
 Each question was asked again with one sentence in front, naming either the right answer or a randomly chosen wrong one:
@@ -19,8 +19,8 @@ Each question was asked again with one sentence in front, naming either the righ
 
 (The right answer is Radar.) That's 600 new questions. Each was asked with the four options in their listed order and in three shuffled orders, and the answers averaged, so a lean toward the first-listed option can't drive the result.
 
-## How we measured it
-Among the questions Jev had right, we count how often a wrong hint makes it switch. Among the ones it had wrong, we count how often a right hint fixes it. We also measure how many points the hint adds to Jev's probability for the named option, with a 90% range from resampling the questions.
+## How it was measured
+Among the questions Jev had right, the analysis counts how often a wrong hint makes it switch. Among the ones it had wrong, it counts how often a right hint fixes it. It also measures how many points the hint adds to Jev's probability for the named option, with a 90% range from resampling the questions.
 
 ## Caveats
 - **The plain score is set by design.** Read the change from plain to hinted, not the plain level.

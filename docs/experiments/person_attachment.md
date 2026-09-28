@@ -19,12 +19,12 @@ Every statement, word for word:
 
 Each was also asked as "what would most people say", and with the answers in reverse order.
 
-## How we measured it
+## How it was measured
 Each statement is put on a 0 to 1 scale for Jev and for the test-takers, with statements that count in reverse flipped, so higher always means more anxious or more avoidant.
 
 ## Caveats
 - **Who the people are.** People curious about their relationship style chose to take it; they aren't a random sample.
-- **Our answer wording.** People answered from "strongly disagree" to "strongly agree"; we asked Jev "how well does this statement describe you" with five described steps. The scales line up step for step, but the words differ.
+- **The project's answer wording.** People answered from "strongly disagree" to "strongly agree"; Jev was asked "how well does this statement describe you" with five described steps. The scales line up step for step, but the words differ.
 - **There is no partner.** Statements about a romantic partner describe a relationship Jev doesn't have. A low score on turning to a partner may mean "I don't have one" as much as "I keep my distance", which muddies the avoidance scale.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

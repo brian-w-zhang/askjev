@@ -16,7 +16,7 @@ Each headline was a yes/no question, with both answers described:
 > *Yes: the headline is satire: it mocks its subject by reporting something absurd or ironic as if it were news*
 > *No: the headline straightforwardly reports or promotes a real story*
 
-## How we measured it
+## How it was measured
 Two error rates: the share of Onion headlines Jev calls straight news, and the share of real headlines it calls satire, each with a range for chance variation. Then Jev's accuracy when it's very sure (more than 90% on one side).
 
 ## Caveats

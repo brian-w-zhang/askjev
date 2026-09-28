@@ -21,12 +21,12 @@ Each puzzle was one multiple-choice question with its answers laid out, for exam
 
 Every question was asked with the answers in three different orders, and the answer is the average over those, so the position of the right answer can't drive it.
 
-## How we measured it
-For each trap, we compare how often Jev picks the right answer on the famous version, on the new versions, and on the controls, and how often it picks the tempting wrong answer. For number answers, "right" means within one step (5 points) of the correct value.
+## How it was measured
+For each trap, the analysis compares how often Jev picks the right answer on the famous version, on the new versions, and on the controls, and how often it picks the tempting wrong answer. For number answers, "right" means within one step (5 points) of the correct value.
 
 ## Caveats
 - **The famous versions may be memorized.** The classic puzzles are all over the internet, with their answers. Getting them right can be recall, not reasoning. That's why the new versions exist, and why the gap between the two columns matters more than the first column.
-- **The new versions are ours.** The 26 new versions and 3 controls were written by Claude for this project, with the same structure as the classics but new stories and numbers. They have no human data, and a different writer would have produced different traps.
+- **The new versions were written for this project.** The 26 new versions and 3 controls were written by Claude for this project, with the same structure as the classics but new stories and numbers. They have no human data, and a different writer would have produced different traps.
 - **Linda is missing.** The original Linda problem was hidden by the content filter that keeps political and sensitive questions off the site (Linda is described as active in social-justice causes). So people's famous result, 85% of 142 students falling for it, has no Jev answer next to it. The six Linda-style versions stand in for it.
 - **Numbers are a known weak spot.** Several traps need arithmetic (the birthday problem, the bat and ball). TypeSafe documents counting and raw numbers as a weak spot for Jev, so a miss on those can be arithmetic, not a fallen-for trap.
 - **A handful per trap.** Each trap has 3 to 6 new versions.

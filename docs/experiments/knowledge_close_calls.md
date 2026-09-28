@@ -16,8 +16,8 @@ Category facts are multiple choice; comparisons are two options:
 
 Each was also asked with the options in a different order.
 
-## How we measured it
-For the comparisons we compute how many times larger the bigger value is, group the pairs by that ratio, and check how often Jev picks the bigger one, and how sure it is, in each group.
+## How it was measured
+For the comparisons, the analysis computes how many times larger the bigger value is, groups the pairs by that ratio, and checks how often Jev picks the bigger one, and how sure it is, in each group.
 
 ## Caveats
 - **Wikidata's numbers.** City populations, stadium capacities and river lengths in Wikidata can be stale or disputed; on the closest calls, a wrong key is enough to flip the answer.

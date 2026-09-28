@@ -11,8 +11,8 @@ Most color-feeling links are shared worldwide, but the details differ from count
 ## What Jev was asked
 No new questions: this reuses Jev's answers to the 20 questions "Which color do you associate most with the feeling ...?" from the colors-of-feelings experiment, and compares them with each country's answers.
 
-## How we measured it
-For each country and each feeling, how similar Jev's colors are to that country's (a similarity score from 0 to 1, where 1 means identical shares), averaged over the 20 feelings. We also estimate how much each country's score could move by chance (a 90% interval) to see which differences are real.
+## How it was measured
+For each country and each feeling, how similar Jev's colors are to that country's (a similarity score from 0 to 1, where 1 means identical shares), averaged over the 20 feelings. The analysis also estimates how much each country's score could move by chance (a 90% interval) to see which differences are real.
 
 ## Caveats
 - **Small differences.** Countries mostly agree on colors and feelings, so the gaps between them are small. The top of the list is suggestive, not a clear ranking: more than half the countries can't be told apart from the leader.

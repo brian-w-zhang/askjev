@@ -16,7 +16,7 @@ Two-option questions:
 
 Each was also asked with the two options in the other order.
 
-## How we measured it
+## How it was measured
 
 
 ## Caveats
