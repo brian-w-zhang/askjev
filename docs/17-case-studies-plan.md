@@ -101,6 +101,13 @@ never invented, and each claim in it links back to the answer behind it.
 9. **Ship:** sweep.mjs, interact.mjs (with paging and hover), verify_page.py --experiments, vitals.mjs,
    screenshots in both themes; export, publish.py, deploy; prod must match local.
 
+## Status (2026-09-28)
+Steps 1-9 are done and live. 189 of 192 experiments have a meme; 3 were cut rather than forced, each with its reason
+in the private assignment file (`data/portrait/memes/assign.py`, `CUT`). Every case file was checked against its
+result file by `cases.py check` and audited claim by claim; 98 offensive jokes and captions behind the humor
+experiments were hidden. Open: rebuild the map's star snapshot so hidden questions drop from it, and redraw the few
+thumbnails that are a single line or dot.
+
 ## Rules
 Results, data and memes stay private. Commit only own paths, with plain messages and no co-author lines; don't push.
 Check session recall before touching shared UI files. No politics. Indicators, never a benchmark.
