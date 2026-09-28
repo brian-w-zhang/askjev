@@ -101,13 +101,13 @@ def escalation():
                  "as the annotators?",
         why="The difference between offensive and hateful is the hard part of content moderation, and where the "
             "policy decisions live. A model that reads rudeness as hate will over-enforce in a specific direction.",
-        sourcing="Existing HateXplain posts (three annotators each, majority label), plus two cross-checks: Davidson "
+        sourcing="Existing HateXplain posts (three annotators each, only posts all three labeled the same), plus two cross-checks: Davidson "
                  "et al. 2017 tweets whose annotators said 'neither', and DynaHate statements labeled implicit "
                  "animosity. Enough: about 1,400 items. Harm-screened posts are not shown.",
-        scoring="A 3x3 table of the annotators' majority label against Jev's most likely label; the share moved up a "
+        scoring="A 3x3 table of the annotators' shared label against Jev's most likely label; the share moved up a "
                 "rung, down a rung, or kept; 90% bootstrap interval on the share moved up.",
         chart="A heat table: annotators' rung (rows) by Jev's rung (columns), with the step-up cells highlighted.",
-        compared_with="HateXplain MTurk annotators (majority of 3); Davidson et al. CrowdFlower annotators; DynaHate labels",
+        compared_with="HateXplain MTurk annotators (all 3 agreeing); Davidson et al. CrowdFlower annotators; DynaHate labels",
         limits="The three-way labels come from each dataset's definitions, reworded as Jev options. Ties among three "
                "annotators are dropped.", sources=["hatexplain", "hate_speech_offensive", "dynahate"])
 
@@ -135,7 +135,7 @@ def escalation():
                    f"them, and almost none down ({(t['d'] < 0).mean():.0%}): it calls {off_up:.0%} of the posts they "
                    f"called merely offensive hate speech, and it calls {norm_up:.0%} of the posts they called normal "
                    f"either offensive or hateful.",
-            evidence=f"{t.height} HateXplain posts with a clear majority; 90% interval on the share moved up {boot(up.astype(float))}",
+            evidence=f"{t.height} HateXplain posts all three annotators labeled the same; 90% interval on the share moved up {boot(up.astype(float))}",
             numbers={"up": float(up.mean()), "down": float((t["d"] < 0).mean()), "normal_up": norm_up,
                      "offensive_up": off_up, "hso_neither_flagged": hso_up, "dynahate_implicit_as_explicit": dyn_explicit,
                      "heat": heat.select("people", "jev", "len").to_dicts()}, n=t.height,

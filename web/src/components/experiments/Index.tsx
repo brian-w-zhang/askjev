@@ -34,7 +34,7 @@ export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] })
 
   return (
     <>
-      <div className="at-bar ex-bar">
+      <div className="at-bar ex-filterbar">
         <input className="pt-input" placeholder="Search experiments: probability, taste, moral machine…" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search experiments" />
         <div className="pt-filters" role="group" aria-label="Filter by family">
           <button type="button" className="facet" aria-pressed={!family} onClick={() => setFamily("")}>all <em>{matches.length}</em></button>

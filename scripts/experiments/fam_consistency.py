@@ -139,7 +139,7 @@ def repeat_noise():
         near = m < 0.1
         return Result(
             result=f"Sent the identical request twice, Jev's probability moves by {d.mean() * 100:.1f} points on "
-                   f"average ({bins[0]['change']:.1f} near 50/50, under half a point near certainty), and the option it "
+                   f"average ({bins[0]['change']:.1f} near 50/50, {bins[-1]['change']:.1f} more than 20 points from it), and the option it "
                    f"favors changes {flip.mean():.1%} of the time. {flip[near].sum() / max(flip.sum(), 1):.0%} of those "
                    f"flips happen within 10 points of a coin toss; beyond 20 points it essentially never flips "
                    f"({int(flip[m >= 0.2].sum())} of {int((m >= 0.2).sum()):,}).",
@@ -214,12 +214,22 @@ def middle_lean():
             numbers={"overall": t["mid"].mean(), "kinds": by, "five_levels": five, "vs_people": hs}, n=t.height,
             robustness="Within five-level scales alone the order is the same: " + ", ".join(
                 f"{r['kind']} {r['mid']:.0%}" for r in five if r["kind"]) + ".",
-            chart={"type": "bars2", "labels": [r["src"] for r in hs], "a": [r["people"] for r in hs],
+            chart={"type": "bars2", "labels": [SRC_NAMES.get(r["src"], r["src"].replace("_", " ")) for r in hs], "a": [r["people"] for r in hs],
                    "b": [r["jev"] for r in hs], "a_label": "people", "b_label": "Jev",
                    "dots": [{"label": r["label"], "value": r["mid"], "ci": r["ci"]} for r in by]},
             examples=seeded(t.filter(pl.col("mid") & (pl.col("kind") == "taste"))["id"].to_list(), "middle"),
             ids=t["id"].to_list())
     return spec, run
+
+
+# the datasets with people's ratings, as a reader knows them
+SRC_NAMES = {"social_chem": "everyday rules (Social Chemistry)", "taste_ratings": "films, books, games, beers, anime",
+             "caption_contest": "New Yorker captions", "iconicity_ratings": "words that sound like their meaning",
+             "helpsteer2": "AI replies (HelpSteer2)", "openpsych": "personality tests", "metaphor_norms": "metaphors",
+             "crowd_envent": "life events", "pseudoword_shapes": "made-up words", "onet_context": "what jobs are like",
+             "politeness": "politeness", "ipip": "Big Five test", "mind_perception": "minds", "young_people_survey":
+             "young Slovaks' survey", "bbrs_risk": "risky activities", "jester": "classic jokes", "moral_vignettes":
+             "moral scenes", "aims_survey": "AI minds survey", "icar_sapa": "reasoning puzzles"}
 
 
 def self_vs_people():

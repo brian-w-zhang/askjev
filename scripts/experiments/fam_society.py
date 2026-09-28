@@ -156,7 +156,7 @@ def honesty_history():
                    f"(only {moved.height} spans), Jev's change points the same way in {int(round(same * moved.height))} of them, but smaller"
                    + (f"; for {big[0]['prof'].lower()} {big[0]['span']} the real change was {big[0]['true']:+.0f} points, "
                       f"Jev's {big[0]['jev']:+.0f}." if big else "."),
-            evidence=f"{t.height} poll figures for 16 professions; rank correlation of changes {rho:.2f}; by year: "
+            evidence=f"{t.height} poll figures for {t['prof'].n_unique()} professions; rank correlation of changes {rho:.2f}; by year: "
                      + "; ".join(f"{b['year']} off by {b['mae']:.0f}" for b in by),
             numbers={"rows": rows, "by_year": by, "changes": changes, "same_direction": same, "flat": flat, "rho_changes": rho},
             n=t.height,

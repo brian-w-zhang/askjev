@@ -124,25 +124,33 @@ function Legend({ c }: { c: ChartData }) {
 }
 
 // ---- bars: ranked, bars, bars2, mix --------------------------------------------------------------------------------------
-function Bars({ rows, max, fmt, mini, labels }: {
+function Bars({ rows, max, fmt, mini, labels, mark }: {
   rows: { label: string; a?: number | null; b: number; ci?: [number, number] }[]; max: number; fmt: (v: number) => string;
-  mini: boolean; labels?: [string, string];
+  mini: boolean; labels?: [string, string]; mark?: number | null;
 }) {
   const w = (v: number) => `${Math.max(0, Math.min(1, v / (max || 1))) * 100}%`;
+  const paired = rows.some((r) => r.a !== undefined && r.a !== null);
   return (
-    <div className={`ex-bars${mini ? " mini" : ""}`}>
+    <div className={`ex-bars${mini ? " mini" : ""}${paired ? " paired" : ""}`}>
       {rows.map((r, i) => (
         <div className="ex-bar" key={i}>
           <span className="l">{r.label}</span>
           <span className="t">
-            {r.a !== undefined && r.a !== null && <i className="p" style={{ width: w(r.a) }} />}
+            {/* two bars stacked, not overlaid: Jev on top, the comparison under it */}
             <i className="j" style={{ width: w(r.b) }} />
+            {r.a !== undefined && r.a !== null && <i className="p" style={{ width: w(r.a) }} />}
             {r.ci && <i className="ci" style={{ left: w(r.ci[0]), width: `calc(${w(r.ci[1])} - ${w(r.ci[0])})` }} />}
+            {mark !== undefined && mark !== null && <i className="ref" style={{ left: w(mark) }} />}
           </span>
-          {!mini && <span className="v"><b>{fmt(r.b)}</b>{r.a !== undefined && r.a !== null ? ` · ${fmt(r.a)}` : ""}</span>}
+          {!mini && <span className="v"><b>{fmt(r.b)}</b>{r.a !== undefined && r.a !== null ? <> · <span className="pv">{fmt(r.a)}</span></> : ""}</span>}
         </div>
       ))}
-      {!mini && labels && <p className="ex-legend"><span><i className="k jev" />{labels[1]}</span><span><i className="k hum" />{labels[0]}</span></p>}
+      {!mini && labels && (
+        <p className="ex-legend">
+          <span><i className="k jev" />{labels[1]}</span><span><i className="k bar" />{labels[0]}</span>
+          {mark !== undefined && mark !== null && <span><i className="k tick" />{fmt(mark)}</span>}
+        </p>
+      )}
     </div>
   );
 }
@@ -178,7 +186,7 @@ function barsChart(c: ChartData, mini: boolean) {
     const max = Math.max(...a, ...b, 0);
     const fmt = max <= 1 ? (v: number) => `${Math.round(v * 100)}%` : (v: number) => v.toFixed(1);
     const rows = labels.map((l, i) => ({ label: pretty(l), a: a[i] ?? 0, b: b[i] ?? 0 })).slice(0, mini ? 6 : 40);
-    return <Bars rows={rows} max={max} fmt={fmt} mini={mini} labels={[la, lb]} />;
+    return <Bars rows={rows} max={max} fmt={fmt} mini={mini} labels={[la, lb]} mark={num(c.ref)} />;
   }
   // bars
   const rows = arr(c.rows).length

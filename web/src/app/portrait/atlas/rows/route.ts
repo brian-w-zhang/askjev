@@ -30,6 +30,23 @@ async function list(id: string): Promise<[string, string][] | null> {
 }
 
 type Dist = Record<string, number>;
+
+// A question's state (the text it's about: a joke, a review, a log line) as named fields, each clipped for the page.
+// Some sources stored newlines as a literal backslash-n; those become real line breaks.
+function fields(state: unknown): [string, string][] | null {
+  let s = state;
+  if (typeof s === "string") {
+    try { s = JSON.parse(s); } catch { return null; }
+  }
+  if (!s || typeof s !== "object" || Array.isArray(s)) return null;
+  const out = Object.entries(s as Record<string, unknown>)
+    .filter(([, v]) => v !== null && v !== "" && typeof v !== "object")
+    .map(([k, v]): [string, string] => {
+      const t = String(v).replace(/\\n/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
+      return [k, t.length > 420 ? `${t.slice(0, 420).trimEnd()}…` : t];
+    });
+  return out.length ? out : null;
+}
 const norm = (d: Dist | null) => {
   if (!d) return null;
   const t = Object.values(d).reduce((a, b) => a + b, 0) || 1;
@@ -57,7 +74,7 @@ export async function GET(req: Request) {
         where question_id = any($1) order by question_id, n desc nulls last`, [ids]),
   ]);
   const byQ = new Map(qs.map((x) => [x.id, x]));
-  const rows: (Row & { flag: string })[] = [];
+  const rows: (Row & { flag: string; fields: [string, string][] | null })[] = [];
   for (const [qid, flag] of slice) {
     const x = byQ.get(qid);
     if (!x) continue;
@@ -70,6 +87,7 @@ export async function GET(req: Request) {
     const top = jev ? Object.entries(jev).sort((a, b) => b[1] - a[1])[0] : null;
     rows.push({
       id: qid, text: x.text, state: x.state ? (typeof x.state === "string" ? x.state : JSON.stringify(x.state)).slice(0, 600) : null,
+      fields: fields(x.state),
       options: Array.isArray(opts) ? opts : Object.keys(opts ?? {}), labels, primitive: x.primitive, node: x.node_id, source: x.source,
       hemisphere: x.hemisphere, jev, people: norm(people), human: h ? { dist: norm(h.distribution) as Dist, n: h.n, population: h.population } : null,
       truth: (x.truth ?? null) as Row["truth"], correct: null, top: top?.[0] ?? "", p_top: top?.[1] ?? 0, flag,

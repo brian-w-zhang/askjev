@@ -151,7 +151,7 @@ def self_place():
                    f"{and_list([ordinal(r['people']) for r in rows])} on fear, hunger, morality and self-control. "
                    f"In Jev's rankings Kismet the robot comes {and_list([ordinal(r['robot']) for r in rows])}.",
             evidence="40 pairs involving 'you' (the fetus and God left out), each averaged over both orders", numbers={"rows": rows}, n=48,
-            chart={"type": "dots", "domain": [1, 11], "x": "rank among 13 characters (1 = most capable)", "rows": [{"label": CAP[r["cap"]], "value": r["jev"], "people": r["people"],
+            chart={"type": "dots", "domain": [1, 11], "x": "rank among the 11 characters shown (1 = most capable)", "rows": [{"label": CAP[r["cap"]], "value": r["jev"], "people": r["people"],
                                                                 "others": {"Kismet (Jev)": r["robot"]}, "right": f"#{r['jev']}"} for r in rows]})
     return spec, run
 
@@ -296,13 +296,13 @@ def first_word():
             return f"\"{e['cue']}\" gets {e['jev'].replace('_', ' ')} from Jev, {e['people_top']} from {e['share']:.0%} of people"
 
         return Result(
-            result=f"Jev picks people's most common first word for {a:.0%} of 400 cues: {by[-1]['agree']:.0%} of the "
+            result=f"Jev picks people's most common first word for {a:.0%} of {t.height} cues: {by[-1]['agree']:.0%} of the "
                    f"most predictable quarter and {by[0]['agree']:.0%} of the least. It puts "
                    f"{t['jev_on_top'].mean():.0%} of its probability on that word, where people give it "
                    f"{t['share'].mean():.0%}, and picks 'some other word' {t['jev_other'].mean():.0%} of the time where "
                    f"{t['ppl_other'].mean():.0%} of people's answers fell outside the seven."
                    + (" Its surprises: " + and_list([surprise(e) for e in ex[:2]]) + "." if ex else ""),
-            evidence=f"400 cues, about 150 people each; 90% interval on agreement {boot(t['agree'].cast(float).to_numpy())}",
+            evidence=f"{t.height} cues shown (of 400 asked), about 150 people each; 90% interval on agreement {boot(t['agree'].cast(float).to_numpy())}",
             numbers={"agree": a, "by_quartile": by, "surprises": ex}, n=t.height,
             chart={"type": "binned", "x": "how predictable the cue is (quarter)", "y": "share",
                    "rows": [{"label": f"Q{b['q'] + 1} ({b['share']:.0%})", "value": b["jev_on_top"], "people": b["share"],

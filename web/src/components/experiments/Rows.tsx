@@ -7,9 +7,11 @@ import type { Row } from "../portrait/types";
 // Every question behind an experiment (docs/17 items 6-7): one legend on top, five questions at a time with "show more",
 // and filters for the rows where Jev misses. Rows come from /portrait/atlas/rows (private), in the order the export
 // chose: the experiment's own examples, then the misses, biggest gap first, then the rest.
-type Flagged = Row & { flag: string };
+type Flagged = Row & { flag: string; fields?: [string, string][] | null };
 type Filter = "" | "wrong" | "differs";
 const pct = (x: number) => `${Math.round(x * 100)}%`;
+// field names and placeholders as a reader would say them: `caption_1` -> caption 1
+const words = (s: string) => s.replace(/`([^`]+)`/g, "$1").replace(/\b([a-z]+)_([a-z0-9]+)\b/g, "$1 $2");
 
 export function Legend({ human, guess, truth }: { human: boolean; guess: boolean; truth: boolean }) {
   return (
@@ -32,8 +34,12 @@ function Question({ row }: { row: Flagged }) {
   const order = row.primitive === "score" ? shown.sort((a, b) => Number(a) - Number(b)) : shown.sort((a, b) => score(b) - score(a));
   return (
     <li className={`ex-q${row.flag ? ` f-${row.flag}` : ""}`}>
-      <p className="qt">{row.text}</p>
-      {row.state && <p className="qs">{row.state.replace(/^\{|\}$/g, "")}</p>}
+      <p className="qt">{words(row.text)}</p>
+      {row.fields ? (
+        <dl className="qf">
+          {row.fields.map(([k, v]) => <div key={k}><dt>{words(k)}</dt><dd>{v}</dd></div>)}
+        </dl>
+      ) : row.state && <p className="qs">{row.state.replace(/^\{|\}$/g, "")}</p>}
       <div className="ex-opts">
         {order.map((k) => (
           <div className={`ex-opt${t === k ? " truth" : ""}`} key={k}>
@@ -53,8 +59,9 @@ function Question({ row }: { row: Flagged }) {
       </div>
       {keys.length > shown.length && <p className="qm">{keys.length - shown.length} more options near 0%</p>}
       <p className="qm">
-        {row.flag === "wrong" ? "Jev's top answer is wrong · " : row.flag === "differs" ? "Jev's top answer differs from people's · " : ""}
-        {row.human?.n ? `${row.human.n.toLocaleString("en-US")} people${row.human.population ? `: ${row.human.population}` : ""}` : row.human ? row.human.population ?? "" : ""}
+        {[row.flag === "wrong" ? "Jev's top answer is wrong" : row.flag === "differs" ? "Jev's top answer differs from people's" : "",
+          row.human?.n ? `${row.human.n.toLocaleString("en-US")} people${row.human.population ? `: ${row.human.population}` : ""}` : row.human?.population ?? ""]
+          .filter(Boolean).join(" · ")}
       </p>
     </li>
   );
