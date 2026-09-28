@@ -29,7 +29,10 @@ FAMILY = {  # display names and order
     "resemble": "Who Jev resembles", "moral": "Moral judgment", "judgment": "Judgment and bias", "risk": "Risk and forecasting",
     "social": "Reading people", "humor": "Humor", "words": "How words feel", "judge": "Judging text",
     "knowledge": "What it knows", "polls": "Reading the crowd", "work": "Work tasks", "consistency": "Consistency",
-    "self": "Defaults",
+    "self": "Defaults", "reasoning": "Reasoning traps", "influence": "Pressure and persuasion", "minds": "Minds and feelings",
+    "lexicon": "Words and phrases", "society": "Jobs and countries", "world": "The world in numbers",
+    "numbers": "Estimating numbers", "language": "Reading between the lines", "choices": "Fairness and forecasts",
+    "recall": "Memory and maps", "reading": "Reading people's stories",
 }
 
 
