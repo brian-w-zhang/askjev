@@ -104,3 +104,37 @@ never invented, and each claim in it links back to the answer behind it.
 ## Rules
 Results, data and memes stay private. Commit only own paths, with plain messages and no co-author lines; don't push.
 Check session recall before touching shared UI files. No politics. Indicators, never a benchmark.
+
+## Style guide for case files
+The exemplar is `words_arousal_is_mood` (private; ask for it). Every case file follows it.
+- **Reader:** a curious outsider who has never seen the project. No pipeline words: never "probe", "source",
+  "node", "parquet", "no new calls", "existing questions", "the screen", "Jev for most people", ids in backticks or
+  family names. Say "a content filter hides political and sensitive questions from the site" the first time hidden
+  questions matter, "what Jev thinks most people would say" for the human frame, "the answer order reversed" for
+  robustness checks.
+- **Why ask this:** the phenomenon in plain words, with a concrete everyday example, and why a model getting it
+  wrong would matter. Two short paragraphs.
+- **The people and the data:** who the humans are (where, when, how recruited, how many, paid or volunteers), what
+  the dataset is famous for, and the license if it's unusual. Only verified facts: from the source's `source.yaml` or
+  adapter, the result file, or a source you checked (put outside numbers in `facts:` with the citation). Never
+  from memory.
+- **What Jev was asked:** quote one real question with its answer options exactly as Jev saw them (from the
+  question table), then the format, how many, and the checks (answer order reversed or shuffled, "most people"
+  version) in plain words. Say if the wording is the study's or ours.
+- **How we measured it:** the comparison in words a reader can follow; define any statistic in one clause (rank
+  correlation: 1 same order, 0 no relation). No formulas.
+- **What we found:** the headline, then 2-4 concrete observations with numbers and named examples, as bullets
+  where a list reads better. Every number must be in the result file (or a cited fact); `cases.py check` enforces it.
+- **What it means, and what it doesn't:** what a reader should take away, and the limits of the claim. One or two
+  short paragraphs. Point to related experiments by their titles when useful.
+- **Caveats (front matter):** 2-5 items, each a short label and 1-3 sentences, only what applies to this one:
+  the human sample, our wording vs the study's (and any lean in our examples or level descriptions), option or
+  word order, coverage gaps, questions the content filter hid (with the count if known), synthetic or
+  Claude-written items and what that implies, possible training-data exposure (famous poems, puzzles, trivia),
+  small n, and documented Jev limits (`01-jev.md` §6, said to be known). Think about where bias actually creeps in
+  for this experiment; check the real question wording and levels for leading examples, as the exemplar does.
+- **Result (front matter):** the headline sentence, rewritten for an outsider if the script's is stiff; same
+  numbers. **chart_note:** one sentence on how to read the chart.
+- **Tone:** plain, specific, honest; fun where it earns it; no sweeping claims, no hype words, no "notably",
+  "crucially", "fascinating". Indicators, never a benchmark or a score. Hand-picked examples are labeled.
+- **Check:** `uv run python scripts/experiments/cases.py check <id>` must be clean, then reread the file twice.

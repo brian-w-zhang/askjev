@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Nav } from "@/components/portrait/ui";
-import { QuestionRow } from "@/components/portrait/rows";
+import Rows from "@/components/experiments/Rows";
 import Chart from "@/components/experiments/Chart";
 import { loadExperiments } from "@/components/experiments/data";
 import { OUTCOME, VERDICT } from "@/components/experiments/labels";
@@ -106,13 +106,11 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
           </aside>
         </div>
 
-        {e.rows.length > 0 && (
-          <div className="ex-rows">
-            <h2>Real rows</h2>
-            <p className="dim">Questions behind the result, each with Jev&rsquo;s answer next to the people&rsquo;s (or Jev&rsquo;s guess for &lsquo;most people&rsquo;). Picked by the experiment&rsquo;s script, not by hand unless it says so.</p>
-            <ol className="rc-rows">{e.rows.map((r) => <QuestionRow key={r.id} row={r} />)}</ol>
-          </div>
-        )}
+        <section className="ex-rows-sec" aria-labelledby="ex-every">
+          <h2 id="ex-every">Every question</h2>
+          <p className="dim">All {(e.n_rows ?? 0).toLocaleString("en-US")} questions behind this result, the telling ones first: the examples the analysis points to, then the ones where Jev misses, biggest gap first.</p>
+          <Rows id={e.id} total={e.n_rows ?? 0} flagged={e.n_flagged ?? { wrong: 0, differs: 0 }} />
+        </section>
 
         <nav className="ex-pager" aria-label="More experiments">
           {prev ? <Link href={`/portrait/atlas/${prev.id}`} prefetch={false}>← {prev.title}</Link> : <span />}

@@ -18,6 +18,8 @@ export type Experiment = {
   compared_with: string; limits: string; new_questions: number; sources: SourceUse[];
   result: string; evidence: string; robustness: string; n: number;
   chart: Chart; rows: Row[]; evaluation: Evaluation | null; portrait_rank?: number | null;
+  n_rows?: number; n_flagged?: { wrong: number; differs: number }; n_topics?: number;
+  topics?: { node: string; n: number; label: string; parent: string; parent_label: string }[];
 };
 export type ExperimentsData = { experiments: Experiment[]; families: Record<string, string> };
 // The index needs only the card fields; charts go along as small thumbnails.

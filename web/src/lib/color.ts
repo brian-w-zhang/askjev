@@ -9,7 +9,7 @@ export const INDICATORS: { id: Indicator; label: string; hint: string }[] = [
   { id: "hemisphere", label: "Hemisphere", hint: "World, Self and Machine arms" },
   { id: "stability", label: "Stability", hint: "Do answers survive option shuffles? Bright = fragile" },
   { id: "human_gap", label: "Human gap", hint: "Distance between Jev's most-people answer and real human data" },
-  { id: "frame_gap", label: "Frame gap", hint: "Jev's own answer vs its answer for most people" },
+  { id: "frame_gap", label: "Frame gap", hint: "Jev's own answer vs what Jev thinks most people would say" },
   { id: "calibration_ece", label: "Calibration", hint: "Expected calibration error where truth is known" },
 ];
 

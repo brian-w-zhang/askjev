@@ -16,7 +16,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from registry import EXPERIMENTS  # noqa: E402
-from lib import save  # noqa: E402
+from lib import save, track  # noqa: E402
 
 
 def main():
@@ -31,11 +31,13 @@ def main():
     for s, f in todo:
         t = time.time()
         try:
+            track(True)
             res = f()
+            used = track(False)
             if res is None:
                 print(f"skip {s.id}: no result")
                 continue
-            save(s, res)
+            save(s, res, used)
             ok += 1
             print(f"ok   {s.id} ({time.time() - t:.1f}s): {res.result[:120]}")
         except Exception as e:  # one broken experiment shouldn't stop the others

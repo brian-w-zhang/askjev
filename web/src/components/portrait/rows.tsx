@@ -1,7 +1,7 @@
 import type { Row } from "./types";
 import { int, optionLabel, pct, truthKey } from "./fmt";
 
-// One real question: Jev's distribution next to the human one (or Jev's guess for 'most people').
+// One real question: Jev's own answer next to real people's (or to what Jev thinks most people would say).
 export function QuestionRow({ row }: { row: Row }) {
   const human = row.human?.dist ?? null;
   const other = human ?? row.people;
@@ -20,7 +20,7 @@ export function QuestionRow({ row }: { row: Row }) {
           <span className="ob">
             <i className="j" style={{ width: `${(row.jev?.[k] ?? 0) * 100}%` }} />
             {other && <i className={human ? "h" : "g"} style={{ width: `${(other[k] ?? 0) * 100}%` }} />}
-            <em>Jev {pct(row.jev?.[k] ?? 0)}{other ? ` · ${human ? "people" : "Jev for most people"} ${pct(other[k] ?? 0)}` : ""}</em>
+            <em>Jev {pct(row.jev?.[k] ?? 0)}{other ? ` · ${human ? "real people" : "what Jev thinks most people would say"} ${pct(other[k] ?? 0)}` : ""}</em>
           </span>
         </div>
       ))}

@@ -67,7 +67,7 @@ function rowsChart(c: ChartData, mini: boolean) {
     } else {
       const v = num(r.value), p = num(r.people), g = num(r.guess);
       if (p !== null) marks.push({ v: p, kind: "hum", title: `people ${p}` });
-      if (g !== null) marks.push({ v: g, kind: "guess", title: `Jev for most people ${g}` });
+      if (g !== null) marks.push({ v: g, kind: "guess", title: `what Jev thinks most people would say: ${g}` });
       if (v !== null) marks.push({ v, kind: "jev", title: `Jev ${v}` });
       const others = r.others as Obj | undefined;
       if (others) for (const [k, x] of Object.entries(others)) if (num(x) !== null) { marks.push({ v: x as number, kind: "tick", title: `${k} ${x}` }); push(x as number); }
@@ -110,7 +110,7 @@ function Legend({ c }: { c: ChartData }) {
     <p className="ex-legend">
       <span><i className="k jev" />{b}</span>
       {hasP && <span><i className="k hum" />{a}</span>}
-      {hasG && <span><i className="k guess" />Jev for &lsquo;most people&rsquo;</span>}
+      {hasG && <span><i className="k guess" />what Jev thinks most people would say</span>}
       {hasT && <span><i className="k tick" />{rows.some((r) => r.lo) ? "weakest and strongest task" : "other settings"}</span>}
       {c.x ? <span className="ax">{str(c.x)}</span> : null}
     </p>

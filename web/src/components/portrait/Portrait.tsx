@@ -316,7 +316,7 @@ function Act2({ C, d, s }: { C: CFn; d: PortraitData; s: boolean }) {
       <Card id="beyond" field="pink" c={COPY.beyond} vars={{ n: int(fb.n) }} showId={s} claims={[fb, book]} rows={pick(d.rows, [more[0].id, less[0].id], 2)}
         aside={<Meme name="pooh" size="m" alt="Tuxedo Winnie the Pooh meme" labels={[bookName(hp.text), bookName(ari.text)]}
           caption="your book ratings, next to what you think people like" />}>
-        <Win title="beyond.plot · your rating minus your guess for most people">
+        <Win title="beyond.plot · your rating minus what you think most people would say">
           <DotRows domain={[-1.3, 1.3]} ticks={[-1, 0, 1]} fmt={(v) => signed(v, 0)} refs={[{ v: 0, zero: true }]}
             rows={[...more, ...[...less].reverse()].map((x) => ({ key: x.id, label: film(x.text), marks: [{ v: x.gap, kind: "jev" as const }], value: <b>{signed(x.gap, 1)}</b> }))} />
         </Win>

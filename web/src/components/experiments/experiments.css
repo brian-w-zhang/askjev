@@ -139,3 +139,41 @@
 .pt .ex-heat .sw { display: inline-block; width: 12px; height: 12px; margin-right: 6px; vertical-align: -2px; box-shadow: inset 0 0 0 1px var(--w-grid); }
 .pt .ex-xy .link { stroke: var(--w-fg-2); stroke-width: 1; opacity: 0.5; }
 .pt .ex-xy .s.hum rect { fill: var(--ppl); fill-opacity: 0.7; }
+
+/* ---------- every question: legend, rows, paging ---------- */
+.pt .ex-rows-sec { margin-top: 30px; }
+.pt .ex-rows-sec > h2 { margin: 0 0 4px; font-size: 22px; font-weight: 500; letter-spacing: -0.02em; }
+.pt .ex-rhead { position: sticky; top: 30px; z-index: 4; display: grid; gap: 8px; padding: 8px 12px; margin: 12px 0 10px; background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line); }
+.pt .ex-rlegend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; }
+.pt .ex-rlegend .sw { display: inline-block; width: 22px; height: 10px; margin-right: 7px; vertical-align: 0; }
+.pt .ex-rlegend .sw.jev { background: var(--jev); }
+.pt .ex-rlegend .sw.guess { box-shadow: inset 0 0 0 2px var(--jev); background: var(--w-body); }
+.pt .ex-rlegend .sw.hum { background: var(--ppl); }
+.pt .ex-rlegend .sw.truth { width: auto; height: auto; background: none; color: var(--ok); font-style: normal; font-weight: 700; }
+.pt .ex-qs { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.pt .ex-q { background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line); padding: 12px 14px; }
+.pt .ex-q.f-wrong, .pt .ex-q.f-differs { box-shadow: 0 0 0 1px var(--w-line), inset 3px 0 0 var(--jev); }
+.pt .ex-q .qt { margin: 0 0 4px; font-size: 15px; line-height: 1.35; }
+.pt .ex-q .qs { margin: 0 0 6px; font-size: 12.5px; color: var(--w-fg-2); max-height: 7.5em; overflow: auto; }
+.pt .ex-q .qm { margin: 6px 0 0; font-family: var(--mono); font-size: 10.5px; color: var(--w-fg-2); }
+.pt .ex-opts { display: grid; gap: 3px; margin-top: 6px; }
+.pt .ex-opt { display: grid; grid-template-columns: minmax(110px, 38%) 1fr auto; gap: 10px; align-items: center; min-height: 22px; }
+.pt .ex-opt .ol { font-size: 13px; line-height: 1.2; overflow-wrap: anywhere; }
+.pt .ex-opt.truth .ol { font-weight: 600; }
+.pt .ex-opt .tk { color: var(--ok); margin-right: 5px; }
+.pt .ex-opt .ob { display: grid; gap: 2px; }
+.pt .ex-opt .b { display: block; height: 5px; min-width: 1px; }
+.pt .ex-opt .b.jev { background: var(--jev); }
+.pt .ex-opt .b.guess { box-shadow: inset 0 0 0 1.5px var(--jev); height: 5px; }
+.pt .ex-opt .b.hum { background: var(--ppl); }
+.pt .ex-opt .ov { display: flex; gap: 8px; font-family: var(--mono); font-size: 11px; font-variant-numeric: tabular-nums; }
+.pt .ex-opt .ov b { font-weight: 400; min-width: 3.2em; text-align: right; }
+.pt .ex-opt .ov .jev { color: var(--jev); }
+.pt .ex-opt .ov .guess { color: var(--jev); opacity: 0.7; font-style: italic; }
+.pt .ex-opt .ov .hum { color: var(--w-fg); }
+.pt .ex-more { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 12px; }
+@media (max-width: 760px) {
+  .pt .ex-opt { grid-template-columns: 1fr auto; }
+  .pt .ex-opt .ob { grid-column: 1 / -1; grid-row: 2; }
+  .pt .ex-rhead { top: 0; }
+}

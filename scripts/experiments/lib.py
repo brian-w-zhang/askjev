@@ -50,6 +50,7 @@ class Result:
     examples: list[str] = field(default_factory=list)   # question ids for the rows drawer
     robustness: str = ""
     n: int = 0
+    ids: list[str] = field(default_factory=list)   # every question behind the result, when the code knows exactly
 
 
 # ---- data ----------------------------------------------------------------------------------------------------------
@@ -138,12 +139,61 @@ def card(spec: Spec, res: Result) -> dict:
             "compared_with": spec.compared_with, "sourcing": spec.sourcing.split(". ")[0], "chart": spec.chart.split(". ")[0]}
 
 
-def save(spec: Spec, res: Result) -> dict:
+# ---- which questions an experiment used -------------------------------------------------------------------------------
+# run.py turns tracking on around each experiment; every table row an experiment iterates over (a row with an id and
+# Jev's answer) is recorded, so the atlas can page through all the questions behind a result, not just its examples.
+USED: set[str] | None = None
+_iter_rows = pl.DataFrame.iter_rows
+
+
+ANSWER_KEYS = ("jev_dist", "people_dist", "variants")
+
+
+class _Row(dict):
+    """A table row that records its question id when the experiment reads one of Jev's answers from it, so rows an
+    experiment only looked past (filtering on text or meta) aren't counted as used."""
+    def __getitem__(self, k):
+        if k in ANSWER_KEYS and USED is not None:
+            USED.add(dict.get(self, "id"))
+        return dict.__getitem__(self, k)
+
+    def get(self, k, default=None):
+        return self[k] if k in self else default
+
+
+def _tracked_iter_rows(self, *a, **k):
+    named = k.get("named", a[0] if a else False)
+    if USED is None or not named or "id" not in self.columns or "jev_dist" not in self.columns:
+        yield from _iter_rows(self, *a, **k)
+        return
+    for r in _iter_rows(self, *a, **k):
+        yield _Row(r)
+
+
+pl.DataFrame.iter_rows = _tracked_iter_rows
+
+
+def track(on: bool) -> set[str] | None:
+    """Start (True) or stop (False) recording the questions an experiment reads; stopping returns them."""
+    global USED
+    got, USED = USED, (set() if on else None)
+    return got
+
+
+def save(spec: Spec, res: Result, used: set[str] | None = None) -> dict:
     OUT.mkdir(parents=True, exist_ok=True)
+    ids_given = res.ids
+    if used is not None or ids_given:
+        # every question behind the result: the code's own list if it gives one, else what it read (answers
+        # accessed), else its sources
+        ids = sorted(set(ids_given)) or sorted(i for i in (used or ()) if i) or sorted(table().filter(pl.col("source").is_in(spec.sources))["id"].to_list())
+        (OUT / "_rows").mkdir(exist_ok=True)
+        (OUT / "_rows" / f"{spec.id}.json").write_text(json.dumps(ids))
     DOCS.mkdir(parents=True, exist_ok=True)
     p = OUT / f"{spec.id}.json"
     old = json.loads(p.read_text()) if p.exists() else {}
-    d = {"spec": asdict(spec), "result": asdict(res), "card": card(spec, res),
+    r = {k: v for k, v in asdict(res).items() if k != "ids"}  # the id list goes to _rows, not the result file
+    d = {"spec": asdict(spec), "result": r, "card": card(spec, res),
          "evaluation": old.get("evaluation"), "evaluations": old.get("evaluations", [])}
     if old.get("card") and old["card"] != d["card"]:
         d["evaluation"] = None  # the card changed; evaluate again
@@ -197,4 +247,4 @@ def full_meta(name: str) -> dict:
 def with_meta(name: str) -> list[dict]:
     """A source's shown questions as dicts, each with its full meta under 'm'."""
     M = full_meta(name)
-    return [{**r, "m": M.get(r["id"], {})} for r in source(name).iter_rows(named=True)]
+    return [_Row({**r, "m": M.get(r["id"], {})}) for r in source(name).iter_rows(named=True)]
