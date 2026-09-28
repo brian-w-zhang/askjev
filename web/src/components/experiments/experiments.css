@@ -308,9 +308,6 @@
 .pt .ex-tile .meter small:last-of-type { grid-column: 4 / 6; text-align: right; }
 .pt .ex-tile.verdict .a { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
 .pt .ex-memefig .lab.at-top, .pt .ex-memefig .lab.at-bottom { transform: translateX(-50%); }
-.pt .ex-keep { display: inline-block; padding: 0 6px; font-family: var(--mono); font-size: 10.5px; line-height: 18px; background: var(--w-sub); color: var(--w-fg); }
-.pt .ex-keep.keep { background: var(--jev); color: #fff; }
-.pt .ex-keep em { font-style: normal; opacity: 0.8; margin-left: 2px; }
 
 /* page order (docs/17): result, in short, findings, caveats beside Jev's answers, why, how it was done */
 .pt .ex-page > * + * { margin-top: 26px; }
@@ -320,10 +317,6 @@
 .pt .ex-short li { font-size: 16.5px; line-height: 1.45; }
 .pt .ex-judge { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 16px; align-items: start; }
 .pt .ex-judge > section { margin: 0; }
-.pt .ex-keepline { margin: 0 0 10px; display: flex; gap: 10px; align-items: baseline; }
-.pt .ex-keepline b { padding: 1px 8px; font-size: 14px; font-weight: 600; background: var(--w-sub); }
-.pt .ex-keepline.keep b { background: var(--jev); color: #fff; }
-.pt .ex-keepline span { font-family: var(--mono); font-size: 11px; color: var(--w-fg-2); }
 .pt .ex-answers { margin: 0; display: grid; gap: 8px; }
 .pt .ex-answers > div { display: grid; gap: 2px; padding-top: 8px; border-top: 1px solid var(--w-grid); }
 .pt .ex-answers dt { font-family: var(--mono); font-size: 10.5px; color: var(--w-fg-2); text-transform: lowercase; }

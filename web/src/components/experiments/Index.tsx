@@ -69,7 +69,7 @@ export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] })
       {shown.length === 0 && <p className="at-empty">Nothing matches &ldquo;{q}&rdquo;.</p>}
       <div className="ex-grid">
         {shown.map((c) => (
-          <Link key={c.id} href={`/portrait/atlas/${c.id}`} prefetch={false} className={`ex-card o-${c.keep?.verdict ?? "none"}`}>
+          <Link key={c.id} href={`/portrait/atlas/${c.id}`} prefetch={false} className="ex-card">
             <div className="ex-top">
               <span className="ex-fam">{c.family_label}</span>
               <span className="ex-rank" title="Rank from Jev's head-to-heads and its own answers about each experiment">#{rank(c)}</span>
@@ -78,13 +78,7 @@ export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] })
             <div className="ex-thumb" aria-hidden><Chart chart={c.chart} mini /></div>
             <p className="ex-res">{c.result}</p>
             <div className="ex-meta">
-              {c.keep ? (
-                <span className={`ex-keep ${c.keep.verdict}`} title="Jev's own call: keep this experiment or discard it">
-                  Jev: {c.keep.verdict} <em>{Math.round(c.keep.p * 100)}%</em>
-                </span>
-              ) : <span>not judged yet</span>}
-              <span className="sp" />
-              <span>n = {c.n.toLocaleString("en-US")}{c.new_questions ? ` · ${c.new_questions.toLocaleString("en-US")} new` : ""}</span>
+              <span>{(c.n_rows ?? 0).toLocaleString("en-US")} {c.n_rows === 1 ? "question" : "questions"}</span>
             </div>
           </Link>
         ))}

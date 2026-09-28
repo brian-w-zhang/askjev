@@ -67,7 +67,7 @@ def row_order(e: dict, shown: pl.DataFrame) -> list[list]:
     return [[i, fl] for i, fl, _ in rows]
 
 
-RANK_WEIGHTS = {"strength": 0.35, "keep": 0.25, "trust": 0.15, "fair": 0.10, "surprise": 0.10, "recognize": 0.05}
+RANK_WEIGHTS = {"strength": 0.35, "interesting": 0.25, "trust": 0.15, "fair": 0.10, "surprise": 0.10, "recognize": 0.05}
 
 
 def main():
@@ -151,7 +151,7 @@ def main():
         return [(v - m) / sd for v in vals]
     parts = {"strength": [(x["evaluation"] or {}).get("strength") or 0 for x in out]}
     sc = [((x.get("take") or {}).get("scores") or {}) for x in out]
-    for k in ("keep", "trust", "fair", "recognize"):
+    for k in ("interesting", "trust", "fair", "recognize"):
         parts[k] = [s.get(k, 0.5) for s in sc]
     parts["surprise"] = [1 - s.get("expected", 0.5) for s in sc]
     zs = {k: z(v) for k, v in parts.items()}

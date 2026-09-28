@@ -50,8 +50,8 @@ the finding and a short summary up front, the method compact and after it):
 3. **In short:** 2-3 takeaways (front matter `takeaways`).
 4. **What the data shows,** with the meme floated beside it, sized by its shape; then **What it means, and what it
    doesn't**.
-5. **Caveats** beside **Jev on this experiment**: Jev's keep-or-discard call and its answers to the other questions
-   about the experiment, shown as answers.
+5. **Caveats** beside **Jev on this experiment**: Jev's answers to questions about the experiment, shown as
+   answers.
 6. **Why ask this**, then **How this was done**: the people and the data, what Jev was asked, how it was measured.
 7. **Where these questions live**, then **Every question** (each opens on the map), then the pager.
 
@@ -59,14 +59,14 @@ Case studies are written in the third person: no "we", "our" or "us".
 
 ## Ranking
 The index orders experiments by a weighted sum of standardized parts: Jev's head-to-heads between experiments
-(0.35), its keep-or-discard answer (0.25), how much a reader should rely on the result (0.15), how fair the
+(0.35), how sure it is that a curious person would find the experiment interesting to read (0.25), how much a reader should rely on the result (0.15), how fair the
 comparison is (0.10), how surprising the result is to Jev (0.10) and whether it describes Jev (0.05).
 
 ## Jev's take (item 4)
 Jev answers only yes/no, pick-one or scale questions, so its opinion is assembled from new questions put to it
 about each experiment's card. For example: would you have expected this result; is the comparison with these people
 fair; which caveat matters most (Choice over that experiment's caveats); how much should a reader trust it
-(Score); and should the experiment be kept or discarded (yes/no). Cached, `ASKJEV_RPS <= 16`, Jev as the only
+(Score); and would a curious person find it interesting to read (yes/no; Jev says yes to all 192, so only its certainty ranks). Cached, `ASKJEV_RPS <= 16`, Jev as the only
 gateway model. The page shows the answers themselves, each with its probability or level, not a paragraph built
 from them.
 

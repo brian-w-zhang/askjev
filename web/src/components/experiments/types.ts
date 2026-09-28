@@ -27,11 +27,9 @@ export type Experiment = {
 };
 export type ExperimentsData = { experiments: Experiment[]; families: Record<string, string> };
 // The index needs only the card fields; charts go along as small thumbnails.
-export type ExperimentCard = Pick<Experiment, "id" | "family" | "family_label" | "title" | "result" | "n" | "new_questions" | "evaluation" | "portrait_rank"> & {
-  chart: Chart; keep: Keep | null;
+export type ExperimentCard = Pick<Experiment, "id" | "family" | "family_label" | "title" | "result" | "n" | "new_questions" | "n_rows" | "evaluation" | "portrait_rank"> & {
+  chart: Chart;
 };
-// Jev's own call on an experiment: keep it in the collection or discard it, and how sure it is
-export type Keep = { verdict: "keep" | "discard"; p: number };
 
 // Jev's take (docs/17 item 4): its answers to questions about the experiment, and the paragraph built from them.
 export type Take = { text: string; scores?: Record<string, number>; answers: { q: string; a: string; p: number | null; level?: number; scale?: [string, string] }[] };

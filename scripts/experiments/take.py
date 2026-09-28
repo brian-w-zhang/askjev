@@ -57,9 +57,8 @@ def questions(case: dict) -> dict:
         "fair": gq("score", "How fair is the comparison this experiment makes?", FAIR),
         "trust": gq("score", "How much should a reader rely on this result?", TRUST),
     }
-    q["keep"] = gq("noul", "Should this experiment stay in the collection of what people can learn about you?",
-                   {"true": "Keep it: it shows a reader something real about me",
-                    "false": "Discard it: it is trivial, shaky or misleading"})
+    q["interesting"] = gq("noul", "Would a curious person, not an AI researcher, find this experiment interesting to read?",
+                          {"true": "Yes, it's interesting to read", "false": "No, it's dull"})
     if cav:
         q["flaw"] = gq("choice", "Which of this experiment's caveats matters most for its result?",
                        {**cav, "none_of_these": "None of these changes the conclusion"})
@@ -100,8 +99,9 @@ def paragraph(a: dict, case: dict) -> tuple[str, list[dict]]:
             lab = labels.get(k, k).rstrip(".").replace('"', "'")
             parts.append(f"Of the caveats, I'd weigh \u201c{lab}\u201d most.")
             shown.append({"q": "Which caveat matters most?", "a": labels.get(k, k), "p": round(d[k], 3)})
-    k = a["keep"].p_yes
-    shown.append({"q": "Keep or discard this experiment?", "a": "keep" if k >= 0.5 else "discard", "p": round(max(k, 1 - k), 3)})
+    k = a["interesting"].p_yes
+    shown.insert(0, {"q": "Would a person find it interesting to read?", "a": "yes" if k >= 0.5 else "no",
+                     "p": round(max(k, 1 - k), 3)})
     return " ".join(parts), shown
 
 
@@ -126,7 +126,7 @@ def main(ids: list[str]):
         text, shown = paragraph(answers(resp), c)
         a = answers(resp)
         scores = {"recognize": a["recognize"].p_yes, "expected": a["expected"].p_yes, "fair": level(a["fair"].dist),
-                  "trust": level(a["trust"].dist), "keep": a["keep"].p_yes}
+                  "trust": level(a["trust"].dist), "interesting": a["interesting"].p_yes}
         (OUT / "_take" / f"{i}.json").write_text(json.dumps({"text": text, "answers": shown, "scores": scores}, indent=1))
         n += 1
     print(f"{n} takes written")

@@ -5,9 +5,3 @@ export const VERDICT: Record<string, string> = {
 };
 export const OUTCOME: Record<string, string> = { keep: "keep", atlas: "atlas", rework: "rework", cut: "cut" };
 
-// Jev's keep-or-discard answer about an experiment (take.py asks it), or null before it has answered
-export function keepOf(e: { take?: { scores?: Record<string, number> } }): { verdict: "keep" | "discard"; p: number } | null {
-  const k = e.take?.scores?.keep;
-  if (typeof k !== "number") return null;
-  return k >= 0.5 ? { verdict: "keep", p: k } : { verdict: "discard", p: 1 - k };
-}

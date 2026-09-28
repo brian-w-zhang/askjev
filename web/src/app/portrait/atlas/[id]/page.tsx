@@ -7,7 +7,6 @@ import ExMeme from "@/components/experiments/ExMeme";
 import Md from "@/components/experiments/Md";
 import Rows from "@/components/experiments/Rows";
 import { loadExperiments } from "@/components/experiments/data";
-import { keepOf } from "@/components/experiments/labels";
 import type { Experiment } from "@/components/experiments/types";
 import "@/components/experiments/experiments.css";
 
@@ -69,17 +68,11 @@ function Topics({ e }: { e: Experiment }) {
 
 // Jev's take (docs/17 item 4): its own answers to questions about this experiment, asked after reading the result
 // and the caveats, shown as answers
-function Take({ e, rank, of }: { e: Experiment; rank: number; of: number }) {
-  const answers = (e.take?.answers ?? []).filter((a) => !a.q.startsWith("Keep or discard"));
-  const keep = keepOf(e);
+function Take({ e }: { e: Experiment }) {
+  const answers = e.take?.answers ?? [];
   return (
     <section className="ex-take" aria-labelledby="ex-take">
       <h2 id="ex-take">Jev on this experiment</h2>
-      {keep && (
-        <p className={`ex-keepline ${keep.verdict}`}>
-          <b>{keep.verdict === "keep" ? "Keep it" : "Discard it"}</b> <span>{Math.round(keep.p * 100)}% sure · rank {rank} of {of}</span>
-        </p>
-      )}
       <dl className="ex-answers">
         {answers.map((a, i) => (
           <div key={i}>
@@ -124,7 +117,7 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
         </header>
 
         <div className="ex-window">
-          <div className="ex-wbar"><span>result</span><span>{e.n.toLocaleString("en-US")} {e.n === 1 ? "item" : "items"}</span></div>
+          <div className="ex-wbar"><span>result</span><span>{(e.n_rows ?? 0).toLocaleString("en-US")} {e.n_rows === 1 ? "question" : "questions"}</span></div>
           <div className="ex-wbody">
             <p className="ex-result">{e.result}</p>
             <Chart chart={e.chart} />
@@ -163,7 +156,7 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
               <ul>{caveats.map((c, j) => <li key={j}><b>{c.label}.</b> {c.text}</li>)}</ul>
             </section>
           )}
-          <Take e={e} rank={i + 1} of={all.length} />
+          <Take e={e} />
         </div>
 
         <article className="ex-study">
