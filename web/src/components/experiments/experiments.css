@@ -55,7 +55,7 @@
 .pt .ex-legend .k { display: inline-block; width: 9px; height: 9px; margin-right: 5px; vertical-align: -1px; }
 .pt .ex-legend .k.jev { background: var(--jev); }
 .pt .ex-legend .k.hum { background: var(--ppl); transform: rotate(45deg) scale(0.85); }
-.pt .ex-legend .k.guess { border-radius: 50%; box-shadow: inset 0 0 0 2px var(--jev); }
+.pt .ex-legend .k.guess { border-radius: 50%; box-shadow: inset 0 0 0 2px var(--guess); }
 .pt .ex-legend .k.tick { width: 2px; background: var(--w-fg-2); }
 .pt .ex-legend .k.alt { background: var(--f-teal); }
 .pt .ex-legend .ax { margin-left: auto; }
@@ -177,7 +177,7 @@
 .pt .ex-rlegend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 13px; }
 .pt .ex-rlegend .sw { display: inline-block; width: 22px; height: 10px; margin-right: 7px; vertical-align: 0; }
 .pt .ex-rlegend .sw.jev { background: var(--jev); }
-.pt .ex-rlegend .sw.guess { background: var(--w-fg); }
+.pt .ex-rlegend .sw.guess { background: var(--guess); }
 .pt .ex-rlegend .sw.hum { background: var(--ppl); }
 .pt .ex-rlegend .sw.truth { width: auto; height: auto; background: none; color: var(--ok); font-style: normal; font-weight: 700; }
 .pt .ex-qs { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
@@ -201,12 +201,12 @@
 .pt .ex-opt .ob { display: grid; gap: 2px; }
 .pt .ex-opt .b { display: block; height: 5px; min-width: 1px; }
 .pt .ex-opt .b.jev { background: var(--jev); }
-.pt .ex-opt .b.guess { background: var(--w-fg); }
+.pt .ex-opt .b.guess { background: var(--guess); }
 .pt .ex-opt .b.hum { background: var(--ppl); }
 .pt .ex-opt .ov { display: flex; gap: 8px; font-family: var(--mono); font-size: 11px; font-variant-numeric: tabular-nums; }
 .pt .ex-opt .ov b { font-weight: 400; min-width: 3.2em; text-align: right; }
 .pt .ex-opt .ov .jev { color: var(--jev); }
-.pt .ex-opt .ov .guess { color: var(--w-fg); }
+.pt .ex-opt .ov .guess { color: var(--guess); }
 .pt .ex-opt .ov .hum { color: var(--w-fg); }
 .pt .ex-more { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 12px; }
 @media (max-width: 760px) {

@@ -23,6 +23,7 @@
   --jev: #d0419f;
   --jev-soft: rgba(208, 65, 159, 0.16);
   --ppl: #1e1e1e;
+  --guess: #d98a00;
   --ok: #03aa5c;
   --band: rgba(30, 30, 30, 0.07);
   --dot: rgba(30, 30, 30, 0.28);
@@ -61,6 +62,7 @@
   --jev: #e551ba;
   --jev-soft: rgba(229, 81, 186, 0.2);
   --ppl: #ebe6ea;
+  --guess: #f2b233;
   --band: rgba(235, 230, 234, 0.07);
   --dot: rgba(235, 230, 234, 0.16);
   --hl: #e551ba;
@@ -159,7 +161,7 @@
 .pt-legend span { display: inline-flex; align-items: center; gap: 6px; }
 .k { display: inline-block; width: 10px; height: 10px; flex: none; }
 .k.jev { background: var(--jev); }
-.k.guess { box-shadow: inset 0 0 0 2px var(--jev); border-radius: 50%; }
+.k.guess { box-shadow: inset 0 0 0 2px var(--guess); border-radius: 50%; }
 .k.hum { background: var(--ppl); transform: rotate(45deg) scale(0.85); }
 .k.tickk { width: 2px; height: 12px; background: var(--w-fg-2); }
 .dim { color: var(--w-fg-2); }
@@ -282,7 +284,7 @@
 .dp-t .m { position: absolute; top: 50%; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px; }
 .dp-t .m.jev { background: var(--jev); z-index: 3; }
 .dp-t .m.hum { background: var(--ppl); transform: rotate(45deg) scale(0.85); z-index: 2; }
-.dp-t .m.guess { border-radius: 50%; box-shadow: inset 0 0 0 2px var(--jev); background: var(--w-body); z-index: 2; }
+.dp-t .m.guess { border-radius: 50%; box-shadow: inset 0 0 0 2px var(--guess); background: var(--w-body); z-index: 2; }
 .dp-t .m.tick { width: 2px; height: 14px; margin: -7px 0 0 -1px; background: var(--w-fg-2); }
 .dp-axis { height: 18px; }
 .dp-axis .dp-t { height: 18px; }
@@ -345,7 +347,7 @@
 .pt-opt .ob i { display: block; height: 7px; min-width: 1px; }
 .pt-opt .ob i.j { background: var(--jev); }
 .pt-opt .ob i.h { background: var(--ppl); }
-.pt-opt .ob i.g { background: transparent; box-shadow: inset 0 0 0 1px var(--jev); }
+.pt-opt .ob i.g { background: var(--guess); }
 .pt-opt .ob em { font-style: normal; font-family: var(--mono); font-size: 10px; color: var(--w-fg-2); }
 
 /* ---------- quiz ---------- */
