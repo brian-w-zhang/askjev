@@ -1,0 +1,15 @@
+name: vehicles_park
+url: https://osf.io/7ft6e (Struchiner, Hannikainen & Almeida 2020, Judgment and Decision Making 15(3):312-329)
+license: No license stated on OSF; used for non-commercial research
+version: study1.csv, study2.csv and the English stimuli (Study 1.docx, Study 2.docx), fetched 2026-09-28
+target: 22
+hemisphere: self
+kind: values
+notes: >
+  Rule-violation judgments (yes/no) from Studies 1 and 2: a rule, the incident that prompted it, and a case where the
+  rule's text and purpose may come apart. Human distribution = share of respondents saying the rule was broken
+  (Study 1: about 135 per case; Study 2: about 45-50 per cell, respondents flagged for familiarity with the first
+  author's research excluded). Participants were Brazilian and answered in Portuguese; the English wording is the
+  authors' translation on OSF, lightly copyedited (Maria/Mary, spelling). Cells with fewer than 20 answers are left out
+  (car off-topic and shoes core are absent from the data). Placed at a new node
+  world.society.crime_law.law.rule_interpretation.

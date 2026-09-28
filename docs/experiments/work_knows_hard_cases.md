@@ -22,7 +22,7 @@ Share right and share of answers at 95%+ confidence for clear vs borderline case
 Paired bars: share right and share 95%+ sure, for docs examples, clear authored, borderline authored and public data.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.75, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.529, top verdict `portrait`.
 
 ## Compared with
 the author's labels (authored), the docs' answers, and public datasets' labels

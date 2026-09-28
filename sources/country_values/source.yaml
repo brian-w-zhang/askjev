@@ -1,0 +1,13 @@
+name: country_values
+url: https://ourworldindata.org/grapher/self-reported-trust-attitudes ; https://ourworldindata.org/grapher/share-of-people-who-say-they-are-happy
+license: CC BY 4.0 (Our World in Data, from the Integrated Values Surveys: WVS and EVS)
+version: OWID grapher CSVs (Integrated Values Surveys 2024 release), fetched 2026-09-28
+target: 218
+hemisphere: world
+kind: factual
+notes: >
+  Added for the country trust and happiness experiments. The share who say most people can be trusted, and the
+  share who say they are very or quite happy, per country at its latest survey since 2010 (109 countries each). Truth
+  only (published shares, binned to 5%); the question names the survey year so the answer is a fact about that
+  survey. Substitutes for the Global Preferences Survey country file, which sits behind a download form. Placed at a
+  new node world.places.countries.values_surveys.

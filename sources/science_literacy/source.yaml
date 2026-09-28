@@ -1,0 +1,14 @@
+name: science_literacy
+url: https://ncses.nsf.gov/statistics/2018/nsb20181/assets/404/tables/at07-09.pdf
+license: Public domain (US Government work, National Science Board, Science & Engineering Indicators 2018)
+version: Appendix Table 7-9 (1985-2016), transcribed 2026-09-28
+target: 26
+hemisphere: world
+kind: factual
+notes: >
+  Added for the "knowing who doesn't know" experiment (round 3, family recall). 9 items from Appendix Table 7-9 with
+  their percent correct in 1988 and 2016 (US adults; 2016 GSS n=1,390, 1988 n=2,041; "don't know" counted as
+  incorrect). The item itself carries the 2016 share as a correct-vs-not human distribution (wrong share split
+  evenly across wrong options, which the table doesn't break down). Evolution and big-bang items are left out
+  (religiously contested). Item 3b was asked only of those who answered 3a correctly; its percent counts the others
+  as wrong, as NSF does.

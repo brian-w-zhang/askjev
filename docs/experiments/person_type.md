@@ -22,7 +22,7 @@ Share of each axis's items where Jev leans to each pole, with a 90% interval fro
 Four bipolar bars with Jev's square and its 'most people' ring, the type in big letters.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **atlas**, head-to-head strength -2.693, top verdict `portrait`.
+Jev's verdict (evaluator v4): **atlas**, head-to-head strength -2.892, top verdict `portrait`.
 
 ## Compared with
 Jev's own answer for 'most people' (no human norms available)

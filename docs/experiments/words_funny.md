@@ -22,7 +22,7 @@ Rank correlation between Jev's expected level (base and reversed averaged) and p
 A scatter: people's mean (x) vs Jev's level (y), with the biggest disagreements labeled.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.234, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.532, top verdict `portrait`.
 
 ## Compared with
 US adults rating the words (Engelthaler & Hills 2018)

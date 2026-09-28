@@ -420,38 +420,53 @@ def adjectives():
         sourcing="New questions (sources/scalar_adjectives): 'Which word expresses a stronger degree of the same "
                  "quality: \"<a>\" or \"<b>\"?' for every pair of differently ranked words in three gold sets: de Melo "
                  "& Bansal 2013 (linguists), Wilkinson & Oates 2016, and Cocos et al. 2018 (crowd). 749 pairs.",
-        collection="749 new questions, each asked in both orders (averaged).",
-        scoring="Share where Jev's pick matches the gold order, by set and by how far apart the words sit on their "
-                "scale (neighbors vs two or more steps); the scales where it errs most.",
+        collection="1,498 new questions: each pair with the two words in both orders in the question text, each also "
+                   "asked with the options shuffled (all averaged).",
+        scoring="Per pair, Jev's probability for the stronger word averaged over both word orders; share of pairs where "
+                "that is above one half, by set and by how far apart the words sit on their scale; the same share per "
+                "word order, to show how much naming a word first helps it; the scales where it errs most.",
         chart="Bars: agreement by gold set and by distance on the scale, with 90% intervals.",
         compared_with="Three published gold orderings (linguists and crowd workers)",
         limits="Gold orderings disagree with each other on some scales; a 'miss' can be a defensible order.",
-        new_questions=749, sources=["scalar_adjectives"])
+        new_questions=1498, sources=["scalar_adjectives"])
 
     def run():
         rows = []
         for r in with_meta("scalar_adjectives"):
             j = robust(r)
             truth = r["truth"].strip('"')
-            rows.append({"id": r["id"], "set": r["m"]["set"], "gap": min(r["m"]["gap"], 3), "right": j.get(truth, 0) > 0.5,
-                         "p": j.get(truth, 0), "scale": r["m"]["scale"], "pair": " < ".join(r["m"].get("pair", []) or [])
-                         or r["text"].split(":", 1)[1].strip(" ?")})
-        t = pl.DataFrame(rows)
+            other = next(k for k in (js(r["options"]) if isinstance(r["options"], str) else r["options"]) if k != truth)
+            rows.append({"id": r["id"], "set": r["m"]["set"], "gap": min(r["m"]["gap"], 3), "scale": r["m"]["scale"],
+                         "order": r["m"].get("order", "weaker_first"), "p": j.get(truth, 0.0),
+                         "pair": f'"{other}" < "{truth}"'})
+        q = pl.DataFrame(rows)
+        # a pair's answer is the average over both orders of the words in the question
+        t = q.group_by("set", "scale", "pair", "gap").agg(pl.col("p").mean(), pl.len().alias("orders"),
+                                                         pl.col("id").first()).sort("set", "scale", "pair")
+        t = t.with_columns((pl.col("p") > 0.5).alias("right"))
+        by_order = {o: float((g["p"] > 0.5).mean()) for (o,), g in q.group_by("order")}
         by_set = t.group_by("set").agg(pl.col("right").mean(), pl.len()).sort("right").to_dicts()
         by_gap = t.group_by("gap").agg(pl.col("right").mean(), pl.len()).sort("gap").to_dicts()
         worst = t.group_by("scale").agg(pl.col("right").mean(), pl.len()).filter(pl.col("len") >= 3).sort("right").head(3).to_dicts()
         wrong_sure = t.filter(pl.col("p") < 0.1).sort("p").head(3).to_dicts()
         a = float(t["right"].mean())
         return Result(
-            result=f"Jev picks the stronger adjective {a:.0%} of the time: {by_gap[0]['right']:.0%} for neighbors on a "
-                   f"scale, {by_gap[-1]['right']:.0%} for words three or more steps apart. By gold set it runs from "
+            result=f"Jev picks the stronger adjective for {a:.0%} of {t.height} pairs: {by_gap[0]['right']:.0%} for neighbors on "
+                   f"a scale, {by_gap[-1]['right']:.0%} for words three or more steps apart. By gold set it runs from "
                    f"{by_set[0]['right']:.0%} ({by_set[0]['set']}) to {by_set[-1]['right']:.0%} ({by_set[-1]['set']}). "
-                   f"It is surest and wrong on pairs like {and_list([w['pair'] for w in wrong_sure[:2]])}.",
-            evidence=f"{t.height} pairs; 90% interval {boot(t['right'].cast(float).to_numpy())}",
-            numbers={"acc": a, "by_set": by_set, "by_gap": by_gap, "worst_scales": worst,
+                   f"The order of the words matters: it is right {by_order.get('stronger_first', 0):.0%} of the time when "
+                   f"the stronger word is named first and {by_order.get('weaker_first', 0):.0%} when it is named second."
+                   + (f" It is surest and wrong on {and_list([w['pair'] for w in wrong_sure[:2]])}." if wrong_sure else ""),
+            evidence=f"{t.height} pairs, each asked with the words in both orders (averaged); 90% interval "
+                     f"{boot(t['right'].cast(float).to_numpy())}",
+            numbers={"acc": a, "by_order": by_order, "by_set": by_set, "by_gap": by_gap, "worst_scales": worst,
                      "wrong_sure": wrong_sure}, n=t.height,
             chart={"type": "bars", "rows": [{"label": f"{b['gap']}{'+' if b['gap'] == 3 else ''} step{'s' if b['gap'] > 1 else ''} apart",
-                                             "value": b["right"], "n": b["len"]} for b in by_gap], "domain": [0, 1]},
+                                             "value": b["right"], "n": b["len"]} for b in by_gap]
+                   + [{"label": "stronger word named first", "value": by_order.get("stronger_first", 0)},
+                      {"label": "stronger word named second", "value": by_order.get("weaker_first", 0)}], "domain": [0, 1]},
+            robustness="Each question is also asked with its two options in shuffled order (averaged); that moves nothing. "
+                       "The words' order in the question text is what moves Jev, so every pair is asked both ways.",
             examples=[w["id"] for w in wrong_sure[:2]])
     return spec, run
 

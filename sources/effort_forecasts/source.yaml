@@ -1,0 +1,13 @@
+name: effort_forecasts
+url: https://www.nber.org/papers/w22193 (DellaVigna & Pope 2018, Review of Economic Studies 85(2):1029-1069)
+license: Treatment wording and results quoted from the paper (Table 4) for non-commercial research use
+version: transcribed from Table 4 of NBER working paper w22193 on 2026-09-28 and checked against its text
+target: 15
+hemisphere: world
+kind: forecast
+notes: >
+  The 15 non-benchmark treatments of the MTurk real-effort experiment (about 550 workers each; 9,861 in total), each
+  with its mean points and the mean forecast (and SD) of the 208 experts who forecast all 15 (Table 4, columns 4-6).
+  Jev is told the three benchmark results the experts were told (no pay 1,521; 1 cent per 100 points 2,029; 10 cents
+  2,175) and forecasts in 50-point bins from 1,500 to 2,300. Truth is the bin of the actual mean; the experts' mean
+  forecast is in meta. Placed at a new node world.money.economics.incentives_effort.

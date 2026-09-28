@@ -1,0 +1,17 @@
+name: fair_prices
+url: https://www.jstor.org/stable/1806070 (Kahneman, Knetsch & Thaler 1986, AER 76(4):728-741)
+license: Scenario wording and results quoted from the paper for non-commercial research use
+version: transcribed from the published paper 2026-09-28 and checked against its text
+target: 23
+hemisphere: self
+kind: values
+notes: >
+  The 1986 telephone-survey scenarios on fair prices and wages (Questions 1-16, as numbered in the paper), each with
+  the paper's grouped share of respondents who rated the action acceptable (completely fair or acceptable) and N.
+  Every figure was checked against the paper's text: e.g. Q1 snow shovels 82% unfair (N=107, p. 729), Q2A 17%
+  acceptable (N=98), Q2B 73% (N=125), Q3 63% (N=94), Q4A 38% (N=125), Q4B 78% (N=129), Q5A 29% (N=130), Q5B 58%
+  (N=123), Q6A 39% (N=100), Q6B 80% (N=98), Q7 79% (N=101), Q8 75% (N=151), Q9A 23% and Q9B 68% (N=195 each), Q10
+  21% (N=147), Q11A 79% (N=102), Q11B 53% (N=100), Q12 37% (N=102), Q13 24% (N=101), Q14 9% (N=157), Q15 26%
+  (N=101), Q16 36% (N=154). Q15U adds the paper's UNICEF sentence (unfair falls from 74% to 21%, p. 735-736; N not
+  reported). Only grouped shares exist, so they are kept in meta. Placed at a new node
+  self.values.fairness_justice.fair_prices.

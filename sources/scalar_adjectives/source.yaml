@@ -2,7 +2,7 @@ name: scalar_adjectives
 url: https://github.com/acocos/scalar-adj
 license: MIT (acocos/scalar-adj; gold scales from de Melo & Bansal 2013, Wilkinson & Oates 2016, Cocos et al. 2018)
 version: globalorder/data/*/gold_rankings from the repository's master branch, fetched 2026-09-28
-target: 700
+target: 1500
 hemisphere: world
 kind: perception
 notes: >

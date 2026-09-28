@@ -22,7 +22,7 @@ Per question and population, 1 - Jensen-Shannon distance between Jev's distribut
 A ranked strip of populations by similarity, and the three questions where Jev differs most.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.475, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.666, top verdict `portrait`.
 
 ## Compared with
 15-year-old students in the PISA 2018/2022 samples of seven countries

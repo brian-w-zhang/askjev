@@ -22,7 +22,7 @@ Accuracy by the gap in years (binned), and, for pairs 1-5 years apart, accuracy 
 Dots: accuracy on close pairs (1-5 years apart) per kind of thing, with the overall curve by gap as an inset.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.548, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.621, top verdict `portrait`.
 
 ## Compared with
 Wikidata dates (release, founding, inception)

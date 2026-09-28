@@ -1,0 +1,13 @@
+name: metaphor_norms
+url: https://osf.io/xk3j9/ (article https://pmc.ncbi.nlm.nih.gov/articles/PMC12769609/)
+license: Article CC BY 4.0; data from OSF xk3j9 (no license stated on the project); used for non-commercial research
+version: Norms.csv, df_apt.csv, df_fam.csv, fetched 2026-09-28
+target: 600
+hemisphere: world
+kind: perception
+notes: >
+  Added for the metaphor experiment (research pass 2, idea 3). 300 two-word expressions (207 metaphors, 93 literal),
+  rated 1-7 for aptness (about 25 raters) and familiarity (about 27) in isolation and in context; only isolation
+  ratings are used, as distributions from the trial-level files. Level descriptions are this project's, anchored on
+  the study's definitions. The OSF project states no license; the article is CC BY 4.0. Placed at a new node
+  world.society.languages.word.metaphors.

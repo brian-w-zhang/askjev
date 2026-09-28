@@ -20,7 +20,7 @@ Per task, the share Jev gets right (its most likely answer equals the dataset's 
 One row per field: a dot at the pooled share, a line from its weakest to its strongest task, weakest and strongest named.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.603, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.343, top verdict `portrait`.
 
 ## Compared with
 each dataset's own labels (a right answer, not a crowd)

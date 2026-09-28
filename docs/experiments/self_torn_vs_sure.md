@@ -20,7 +20,7 @@ Confidence = how far Jev's top probability is above an even split, scaled so 0 i
 Dots per topic sorted by confidence, from torn to sure, with Jev's confidence about most people as a second, hollow dot.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.23, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.642, top verdict `portrait`.
 
 ## Compared with
 Jev's confidence when answering for most people (its guess, not real people)

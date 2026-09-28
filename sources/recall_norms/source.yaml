@@ -1,0 +1,16 @@
+name: recall_norms
+url: https://doi.org/10.3758/s13428-012-0307-9 (values via https://ehsankia.com/quiz/quiz.js; check via https://doi.org/10.1371/journal.pone.0281305 S1 Table)
+license: >
+  Published research norms (Tauber, Dunlosky, Rawson, Rhodes & Sitzman 2013). The per-item recall shares come from a
+  public transcription of the paper's appendix (no license stated); question text from the German norms' S1 Table
+  (PLOS ONE 2023, CC BY 4.0). Private, non-commercial research use.
+version: quiz.js and S1 Table fetched 2026-09-28
+target: 299
+hemisphere: world
+kind: factual
+notes: >
+  Added for the "who knows it" experiment (round 3, family recall). Truth is the bin (12 bins: 0-2, 2-5, 5-10, then 10-point steps) holding the share of
+  about 670 US college students who recalled the answer with no choices. The transcription's order matches Tauber's
+  2012 ranks as reprinted in the German S1 table at Spearman 0.99 over the 290 items matched by text; the 9 unmatched
+  items keep the transcription's wording, sentence-cased. The question shows the answer: Jev is judging how widely
+  known the fact is. The German 2020 recall share (S1) is kept in meta for items asked in both studies.

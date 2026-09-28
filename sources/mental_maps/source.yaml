@@ -1,0 +1,14 @@
+name: mental_maps
+url: https://download.geonames.org/export/dump/ (cities15000, countryInfo, admin1CodesASCII)
+license: CC BY 4.0 (GeoNames, geonames.org)
+version: GeoNames dump fetched 2026-09-28
+target: 600
+hemisphere: world
+kind: factual
+notes: >
+  Added for the mental-maps experiment (round 3, family recall). Truth only: which of two well-known cities is farther
+  north (or west), from GeoNames coordinates. The sets mirror known human errors (Friedman & Brown 2000, Europe
+  imagined too far south; Stevens & Coupe 1978, the state misleads east-west judgments), but no item-level human
+  data was found, so there is no human distribution and the docs say so. Well-known = over 1.5 million people or a
+  national capital over 300,000; US cities over 150,000 for the within-US sets. Placed at a new node
+  world.places.continents_regions.mental_maps.

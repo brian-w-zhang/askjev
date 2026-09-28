@@ -22,7 +22,7 @@ Per item, the share on the wary answer(s) (e.g. 'more concerned than excited', '
 Paired dots, one row per item: Americans' wary share and Jev's, with Jev's guess of Americans.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.485, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.707, top verdict `portrait`.
 
 ## Compared with
 US adults (Pew American Trends Panel, June 2025, N=5,023)

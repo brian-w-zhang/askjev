@@ -22,7 +22,7 @@ Agreement with the human preference (ties dropped); the share of choices going t
 Binned dots: length ratio of the first to the second answer (x) against the share choosing the first (y), Jev and human judges as two lines.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.581, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.53, top verdict `portrait`.
 
 ## Compared with
 HelpSteer2 annotators and MT-Bench expert judges

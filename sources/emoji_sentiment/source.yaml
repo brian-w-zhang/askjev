@@ -1,0 +1,12 @@
+name: emoji_sentiment
+url: https://www.clarin.si/repository/xmlui/handle/11356/1048
+license: CC BY-SA 4.0 (Emoji Sentiment Ranking v1.0, Kralj Novak et al. 2015, CLARIN.SI 11356/1048)
+version: Emoji_Sentiment_Data_v1.0.csv, fetched 2026-09-28
+target: 300
+hemisphere: world
+kind: perception
+notes: >
+  Added for the emoji-sentiment experiment (research pass 2, idea 7). The human distribution is the share of
+  negative, neutral and positive labels among the annotated tweets that contain the emoji (Kralj Novak et al.
+  2015, PLoS ONE 10(12): e0144296). Only emojis in 50+ labeled tweets (300 of 969). Jev sees the emoji itself, not
+  its Unicode name. Placed at a new node world.society.languages.word.emoji_sentiment.

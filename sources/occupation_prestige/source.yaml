@@ -1,0 +1,15 @@
+name: occupation_prestige
+url: https://vincentarelbundock.github.io/Rdatasets/ (carData::Duncan, carData::Prestige)
+license: GPL-2 (R package carData: Duncan 1961 and Pineo & Porter 1967 prestige data), via Rdatasets
+version: Rdatasets CSVs, fetched 2026-09-28
+target: 146
+hemisphere: world
+kind: evaluative
+notes: >
+  Added for the occupational prestige experiment (research pass 2, idea 23). Duncan's 45 US occupations (percentage
+  rating the job's standing excellent or good in the 1947 NORC North-Hatt survey; income and education shares from
+  the 1950 census) and Pineo & Porter's 102 Canadian occupations (mean prestige from a 1965 national survey; 1971
+  census income, education, share of women). Aggregates only, kept in meta. Jev is asked the North-Hatt question
+  with five described standings. The 2012 GSS prestige scores (MR124) were the first choice but NORC's supplement
+  file now returns a web page, not the data. "slaughterers.2" (a duplicate title) is dropped. Placed at a new node
+  world.money.careers.occupation_prestige.

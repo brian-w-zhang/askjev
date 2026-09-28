@@ -22,7 +22,7 @@ Jev's expected utility (its answer in years / 10; 'worse than dying now' counted
 Dots per dimension: how much the worst level costs (utility points), people vs Jev.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.583, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.52, top verdict `portrait`.
 
 ## Compared with
 The US EQ-5D-5L value set (Pickard et al. 2019)

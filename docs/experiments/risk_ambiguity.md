@@ -22,7 +22,7 @@ The share choosing the gamble with unknown odds, for Jev, for people, and for Je
 Paired bars: share choosing the unknown-odds gamble, people vs Jev vs Jev's guess of people.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.994, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.961, top verdict `portrait`.
 
 ## Compared with
 choices13k MTurk workers (real stakes)

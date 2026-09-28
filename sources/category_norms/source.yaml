@@ -1,0 +1,15 @@
+name: category_norms
+url: https://osf.io/jgcu6/ (Referential version, item level data)
+license: CC BY 4.0 (Banks, Wingfield & Connell 2023, category production norms, OSF jgcu6)
+version: Referential version_Item level data.csv, fetched 2026-09-28
+target: 464
+hemisphere: world
+kind: perception
+notes: >
+  Added for the first-to-mind and typicality experiments (docs/15 E43, "typical birds"). Banks, Wingfield & Connell
+  2023, Behavior Research Methods 55:1292-1313. First-to-mind: 20 participants per category (Lancaster University),
+  the member each named first; a Choice over the (up to 7) members named first, plus "something else" for the
+  remainder. Typicality: "How good an example of this category is X?", 1 very poor to 5 very good, UK Prolific
+  adults, at least 12 raters per item; only means are published, so they sit in meta. The five level descriptions
+  are this project's, anchored on the study's endpoints. Religion, political systems and religious buildings are
+  left out. Placed at a new node world.society.languages.word.category_members.

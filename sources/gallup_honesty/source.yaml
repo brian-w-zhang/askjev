@@ -1,0 +1,15 @@
+name: gallup_honesty
+url: https://news.gallup.com/poll/1654/honesty-ethics-professions.aspx
+license: Gallup toplines (news.gallup.com), used with attribution for non-commercial research
+version: page fetched 2026-09-28 (latest poll December 1-15, 2025, and each profession's trend table)
+target: 81
+hemisphere: world
+kind: evaluative
+notes: >
+  Added for the profession honesty experiments (research pass 2, idea 24). The current ratings (very high to very
+  low, "no opinion" dropped and renormalized) for 16 professions as the human distribution, and, for 2000, 2005,
+  2010, 2015 and 2020 (the nearest poll within a year), the share rating each profession very high or high as a 5%-bin
+  truth. Politics and religion are left out: members of Congress, journalists, police officers, clergy and labor union
+  leaders are dropped. The five answers are Gallup's own degree words, kept so the comparison matches the poll.
+  The trend table's figures are parsed from the published page, not transcribed.
+  Placed at a new node world.money.careers.profession_honesty.

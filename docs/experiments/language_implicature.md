@@ -22,7 +22,7 @@ Per scale (van Tiel's three sentences averaged), Jev's probability of yes vs peo
 A scatter: people's rate (x) vs Jev's probability (y), one dot per scale, colored by study, diagonal, with the largest gaps labeled.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.501, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.303, top verdict `portrait`.
 
 ## Compared with
 Participants in van Tiel et al. 2016, Gotzner et al. 2018 and Pankratz & van Tiel 2021

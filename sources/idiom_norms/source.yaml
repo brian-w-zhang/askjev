@@ -1,0 +1,14 @@
+name: idiom_norms
+url: https://link.springer.com/article/10.3758/s13428-016-0747-8 (electronic supplementary material 1)
+license: Published research data (Bulkes & Tanner 2017, BRM supplementary material); no license stated; used for non-commercial research
+version: 13428_2016_747_MOESM1_ESM.xlsx, fetched 2026-09-28
+target: 600
+hemisphere: world
+kind: perception
+notes: >
+  Added for the idiom experiments (research pass 2, idea 2). Bulkes & Tanner 2017, Behavior Research Methods
+  49:772-783: 870 American English idioms, about 100 raters per idiom per dimension. Familiarity and literal
+  plausibility means (1-5) are kept in meta; the five level descriptions are this project's. Completion: the
+  study's predictability task (idiom without its last word, one-word answer); counts are parsed from the sheet's
+  "=k/Bn" cells. 200 idioms sampled evenly over familiarity, each asked three ways. Placed at a new node
+  world.society.languages.word.idioms.

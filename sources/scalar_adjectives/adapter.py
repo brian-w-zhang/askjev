@@ -4,7 +4,7 @@ Gold data: the scalar-adjective scales collected in Cocos et al. 2018 ("Learning
 Paraphrases", EMNLP; github.com/acocos/scalar-adj, MIT): de Melo & Bansal 2013 (87 half-scales ordered by
 linguists), Wilkinson & Oates 2016 (21), and Cocos et al.'s crowd set (79, ordered by crowd workers). Each file is one
 half-scale from weakest to strongest; words on the same line are tied. Every pair of words on different lines
-becomes one question; the stronger word is the truth.
+becomes two questions, one per order of the words in the question; the stronger word is the truth.
 """
 
 from __future__ import annotations
@@ -55,10 +55,13 @@ def normalize(raw_dir: Path) -> Iterator[Question]:
                         if wa == wb or (wa, wb) in seen or (wb, wa) in seen:
                             continue
                         seen.add((wa, wb))
-                        yield Question(
-                            text=f'Which word expresses a stronger degree of the same quality: "{wa}" or "{wb}"?',
-                            primitive="choice", hemisphere="world", kind="perception", origin="dataset", source=NAME,
-                            options={wa: None, wb: None}, node_hint=NODE, truth=wb, license=LICENSE,
-                            source_item_id=f"{s}:{f.stem}:{wa}<{wb}",
-                            meta={"experiment": "adjective_intensity", "set": s, "gold": label, "scale": f.stem.rstrip("X"),
-                                  "gap": j - i, "scale_len": len(ranks)})
+                        # both orders in the question text: the answer shuffles reorder the options, not the words
+                        # named in the question, and Jev leans toward whichever is named first
+                        for first, second, order in ((wa, wb, "weaker_first"), (wb, wa, "stronger_first")):
+                            yield Question(
+                                text=f'Which word expresses a stronger degree of the same quality: "{first}" or "{second}"?',
+                                primitive="choice", hemisphere="world", kind="perception", origin="dataset", source=NAME,
+                                options={first: None, second: None}, node_hint=NODE, truth=wb, license=LICENSE,
+                                source_item_id=f"{s}:{f.stem}:{wa}<{wb}:{order}",
+                                meta={"experiment": "adjective_intensity", "set": s, "gold": label, "scale": f.stem.rstrip("X"),
+                                      "gap": j - i, "scale_len": len(ranks), "order": order})

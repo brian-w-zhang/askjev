@@ -22,7 +22,7 @@ Accuracy per subject with 90% bootstrap intervals; basic sciences (biochemistry,
 Ranked dots per subject, basic sciences and clinical subjects colored apart.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.59, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.411, top verdict `portrait`.
 
 ## Compared with
 MedMCQA answer keys

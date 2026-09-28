@@ -22,7 +22,7 @@ Per domain, mean of (Jev's level minus its level for most people), with a 90% bo
 A dot plot, one row per domain, with the gap and its interval; top items per side as labels.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **atlas**, head-to-head strength -1.252, top verdict `portrait`.
+Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.51, top verdict `portrait`.
 
 ## Compared with
 Jev's own guess about most people (not real people; the audience experiments do that)

@@ -22,7 +22,7 @@ Expected minutes per activity from bin midpoints; the difference from the diarie
 Two stacked 24-hour bars, the diaries' average day and Jev's ideal day, colored by activity.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.971, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.82, top verdict `portrait`.
 
 ## Compared with
 American Time Use Survey diary days, 2003-2016 (actual, not ideal, days)

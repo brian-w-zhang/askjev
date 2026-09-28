@@ -22,7 +22,7 @@ Brier score (lower is better) for Jev, the market and a constant base-rate guess
 Calibration plot: stated probability (x) vs how often it happened (y), Jev and the market, with the diagonal; dot size by count.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.445, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.479, top verdict `portrait`.
 
 ## Compared with
 Manifold market prices at each market's mid-life; the resolved outcomes

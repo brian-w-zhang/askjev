@@ -22,7 +22,7 @@ Agreement with the crowd's majority verdict; Jev's verdict mix vs the crowd's; a
 Paired stacked bars of verdict mix (crowd vs Jev), and agreement by how divided the crowd was.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.599, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.436, top verdict `portrait`.
 
 ## Compared with
 r/AmItheAsshole commenters (verdict counts per story)

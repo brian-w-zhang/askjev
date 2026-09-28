@@ -22,7 +22,7 @@ Per dilemma, rank correlation across countries between Jev's expected share and 
 Three small dot plots (one per dilemma): countries sorted by observed share, Jev's estimate beside each.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.008, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.92, top verdict `portrait`.
 
 ## Compared with
 70,000 Moral Machine visitors in 42 countries (Awad et al. 2020)

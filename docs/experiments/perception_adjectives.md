@@ -1,6 +1,6 @@
 # perception_adjectives
 
-family: perception · new questions: 749
+family: perception · new questions: 1498
 
 ## 1. Question
 Given two adjectives from the same scale ('warm' and 'hot', 'big' and 'vast'), does Jev pick the stronger one the way linguists and crowd workers ordered them?
@@ -13,16 +13,16 @@ New questions (sources/scalar_adjectives): 'Which word expresses a stronger degr
 Sources: `scalar_adjectives`
 
 ## 3. Collection
-749 new questions, each asked in both orders (averaged).
+1,498 new questions: each pair with the two words in both orders in the question text, each also asked with the options shuffled (all averaged).
 
 ## 4. Scoring
-Share where Jev's pick matches the gold order, by set and by how far apart the words sit on their scale (neighbors vs two or more steps); the scales where it errs most.
+Per pair, Jev's probability for the stronger word averaged over both word orders; share of pairs where that is above one half, by set and by how far apart the words sit on their scale; the same share per word order, to show how much naming a word first helps it; the scales where it errs most.
 
 ## 5. Visualization
 Bars: agreement by gold set and by distance on the scale, with 90% intervals.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.808, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.08, top verdict `portrait`.
 
 ## Compared with
 Three published gold orderings (linguists and crowd workers)
