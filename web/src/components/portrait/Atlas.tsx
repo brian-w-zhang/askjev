@@ -95,7 +95,7 @@ export default function Atlas({ claims, nNodes, nSources, experiments }: {
 
   return (
     <div className="atlas">
-      <div className="at-bar">
+      <div className={`at-bar${tab === "experiments" ? " static" : ""}`}>
         <div className="tabs" role="tablist" aria-label="Atlas sections">
           {(["experiments", "claims", "coverage", "nodes", "sources"] as Tab[]).map((t) => (
             <button key={t} type="button" role="tab" aria-selected={tab === t} onClick={() => setTab(t)}>

@@ -10,11 +10,13 @@ import type { ExperimentCard } from "./types";
 // The experiments library (docs/16 pass 4): one card per experiment with its result, a thumbnail of its chart and
 // Jev's own verdict on it. Sorted by Jev's head-to-head ranking by default; family facets and search narrow it.
 type Sort = "rank" | "family" | "n";
+const FEW = 7;
 
 export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] }) {
   const [q, setQ] = useState("");
   const [family, setFamily] = useState("");
   const [sort, setSort] = useState<Sort>("rank");
+  const [open, setOpen] = useState(false);
   const needle = q.trim().toLowerCase();
   const follower = useMemeFollower();
   const ranks = useMemo(() => new Map(cards.map((c, i) => [c.id, i + 1])), [cards]);
@@ -25,6 +27,8 @@ export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] })
     for (const c of matches) m.set(c.family, { label: c.family_label, n: (m.get(c.family)?.n ?? 0) + 1 });
     return [...m].sort((a, b) => b[1].n - a[1].n);
   }, [matches]);
+  // the biggest families first; the rest behind "more", though a chosen one always stays visible
+  const famShown = open ? families : families.filter(([f], i) => i < FEW || f === family);
   const shown = useMemo(() => {
     const r = matches.filter((c) => !family || c.family === family);
     if (sort === "family") return [...r].sort((a, b) => a.family_label.localeCompare(b.family_label) || (ranks.get(a.id) ?? 999) - (ranks.get(b.id) ?? 999));
@@ -34,20 +38,35 @@ export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] })
 
   return (
     <>
-      <div className="at-bar ex-filterbar">
-        <input className="pt-input" placeholder="Search experiments: probability, taste, moral machine…" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search experiments" />
-        <div className="pt-filters" role="group" aria-label="Filter by family">
-          <button type="button" className="facet" aria-pressed={!family} onClick={() => setFamily("")}>all <em>{matches.length}</em></button>
-          {families.map(([f, { label, n }]) => (
-            <button key={f} type="button" className="facet" aria-pressed={family === f} onClick={() => setFamily(family === f ? "" : f)}>{label} <em>{n}</em></button>
-          ))}
-          <span className="sp" />
-          <span className="viewtoggle" role="group" aria-label="Sort">
+      <div className="ex-tools">
+        <div className="ex-tools-top">
+          <label className="ex-search">
+            <span aria-hidden>⌕</span>
+            <input placeholder="Search experiments" value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search experiments" />
+            {q && <button type="button" className="x" onClick={() => setQ("")} aria-label="Clear search">×</button>}
+          </label>
+          <div className="ex-sort" role="group" aria-label="Sort">
+            <span>Sort</span>
             <button type="button" aria-pressed={sort === "rank"} onClick={() => setSort("rank")}>Jev&rsquo;s rank</button>
-            <button type="button" aria-pressed={sort === "family"} onClick={() => setSort("family")}>family</button>
-            <button type="button" aria-pressed={sort === "n"} onClick={() => setSort("n")}>size</button>
-          </span>
+            <button type="button" aria-pressed={sort === "family"} onClick={() => setSort("family")}>Family</button>
+            <button type="button" aria-pressed={sort === "n"} onClick={() => setSort("n")}>Size</button>
+          </div>
         </div>
+        <div className={`ex-fams${open ? " open" : ""}`} role="group" aria-label="Filter by family">
+          <button type="button" aria-pressed={!family} onClick={() => setFamily("")}>All <em>{matches.length}</em></button>
+          {famShown.map(([f, { label, n }]) => (
+            <button key={f} type="button" aria-pressed={family === f} onClick={() => setFamily(family === f ? "" : f)}>{label} <em>{n}</em></button>
+          ))}
+          {families.length > FEW && (
+            <button type="button" className="ex-morefam" onClick={() => setOpen(!open)} aria-expanded={open}>
+              {open ? "Show fewer" : `+ ${families.length - FEW} more`}
+            </button>
+          )}
+        </div>
+        <p className="ex-count">
+          {shown.length === cards.length ? `${cards.length} experiments` : `${shown.length} of ${cards.length} experiments`}
+          {(q || family) && <button type="button" onClick={() => { setQ(""); setFamily(""); }}>Clear filters</button>}
+        </p>
       </div>
       {shown.length === 0 && <p className="at-empty">Nothing matches &ldquo;{q}&rdquo;.</p>}
       <div className="ex-grid">

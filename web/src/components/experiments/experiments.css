@@ -2,8 +2,31 @@
    Jev magenta, people ink. Scoped under .pt (the portrait layout) so the map is untouched. */
 
 /* ---------- index ---------- */
-.pt .ex-filterbar { position: static; margin-top: 10px; display: grid; grid-template-columns: 1fr; gap: 10px; }
-.pt .ex-filterbar .pt-input { width: 100%; }
+.pt .ex-tools { margin: 10px 0 14px; display: grid; gap: 10px; }
+.pt .ex-tools-top { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.pt .ex-search { flex: 1 1 280px; display: flex; align-items: center; gap: 8px; height: 38px; padding: 0 10px; background: var(--w-body); box-shadow: inset 0 0 0 1px var(--w-line); }
+.pt .ex-search:focus-within { box-shadow: inset 0 0 0 2px var(--jev); }
+.pt .ex-search span { color: var(--w-fg-2); font-size: 18px; }
+.pt .ex-search input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--w-fg); font: inherit; font-size: 15px; }
+.pt .ex-search .x { border: 0; background: none; color: var(--w-fg-2); font-size: 18px; cursor: pointer; }
+.pt .ex-sort { display: inline-flex; align-items: center; height: 38px; box-shadow: inset 0 0 0 1px var(--w-line); background: var(--w-body); }
+.pt .ex-sort span { padding: 0 10px; font-family: var(--mono); font-size: 11px; color: var(--w-fg-2); text-transform: uppercase; letter-spacing: 0.04em; }
+.pt .ex-sort button { height: 100%; border: 0; border-left: 1px solid var(--w-line); background: none; color: var(--w-fg); padding: 0 12px; font-size: 13.5px; cursor: pointer; }
+.pt .ex-sort button[aria-pressed="true"] { background: var(--w-fg); color: var(--w-body); }
+.pt .ex-fams { display: flex; flex-wrap: wrap; gap: 6px; }
+.pt .ex-fams button { border: 0; background: var(--w-sub); color: var(--w-fg); padding: 4px 10px; font-size: 13px; line-height: 18px; cursor: pointer; }
+.pt .ex-fams button em { font-style: normal; font-family: var(--mono); font-size: 11px; color: var(--w-fg-2); margin-left: 3px; }
+.pt .ex-fams button:hover { box-shadow: inset 0 0 0 1px var(--w-fg-2); }
+.pt .ex-fams button[aria-pressed="true"] { background: var(--jev); color: #fff; }
+.pt .ex-fams button[aria-pressed="true"] em { color: #fff; opacity: 0.8; }
+.pt .ex-fams .ex-morefam { background: none; text-decoration: underline; text-underline-offset: 3px; color: var(--w-fg-2); }
+.pt .ex-count { margin: 0; display: flex; gap: 12px; align-items: baseline; font-family: var(--mono); font-size: 11.5px; color: var(--w-fg-2); }
+.pt .ex-count button { border: 0; background: none; padding: 0; color: var(--w-fg); text-decoration: underline; font: inherit; cursor: pointer; }
+@media (max-width: 600px) {
+  .pt .ex-fams:not(.open) { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px; }
+  .pt .ex-fams button { flex: none; }
+  .pt .ex-sort { width: 100%; } .pt .ex-sort button { flex: 1; }
+}
 .pt .ex-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; margin-top: 14px; }
 .pt .ex-card { display: flex; flex-direction: column; gap: 8px; padding: 12px 14px; background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line); text-decoration: none !important; min-width: 0; }
 .pt .ex-card:hover { box-shadow: 0 0 0 1px var(--w-line), 4px 4px 0 var(--jev); }

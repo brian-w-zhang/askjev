@@ -78,8 +78,8 @@ await run("atlas meme follows the cursor", async () => {
   await p.mouse.move(5, 5); await sleep(300);
   if (await p.$(".ex-follow")) throw new Error("meme stays after leaving the card");
 });
-await run("atlas experiments search", async () => { await p.fill(".ex-filterbar .pt-input", "humor"); await sleep(400); if (!(await p.$$(".ex-grid .ex-card")).length) throw new Error("no experiments for humor"); await p.fill(".ex-filterbar .pt-input", ""); });
-await run("atlas experiment family facet", async () => { const c = await p.$$(".ex-filterbar .pt-filters .facet"); if (c.length > 2) { await c[2].click(); await sleep(300); await c[0].click(); } });
+await run("atlas experiments search", async () => { await p.fill(".ex-search input", "humor"); await sleep(400); if (!(await p.$$(".ex-grid .ex-card")).length) throw new Error("no experiments for humor"); await p.fill(".ex-search input", ""); });
+await run("atlas experiment family facet", async () => { const c = await p.$$(".ex-fams button"); if (c.length > 2) { await c[2].click(); await sleep(300); await c[0].click(); } });
 await run("atlas experiment page", async () => { await p.click(".ex-grid .ex-card"); await p.waitForURL(/\/portrait\/atlas\/[a-z0-9_]+$/); await p.waitForSelector(".ex-result"); await sleep(400); });
 await run("experiment page sections", async () => {
   for (const sel of [".ex-result", ".ex-take", ".ex-caveats", ".ex-where", ".ex-rows-sec"]) if (!(await p.$(sel))) throw new Error(`missing ${sel}`);
