@@ -68,7 +68,7 @@ headlines get 5.2. The same middle-of-the-scale habit the portrait shows (80% of
 turned on its own judgments, and the reason the evaluator ranks by comparisons instead of trusting the score.
 
 ## Baseline: the old 372 findings
-Run through the same pool: **8 keep, 255 atlas, 109 cut**. The keeps are the Moral Machine comparisons and the Big Five
+Run through the same pool: **8 keep, 255 atlas, 109 cut** (v3); **9 keep, 254 atlas, 109 cut** under v4. The keeps are the Moral Machine comparisons and the Big Five
 percentiles; the cuts are corpus counts, embedding themes and topic-indicator cards. The old findings have many
 near-duplicate rows (nine Moral Machine lines), which the experiments merge into one each.
 
@@ -78,7 +78,7 @@ experiments came out `keep`: every experiment card is written like the new-style
 it's compared with) and the terse old findings lose nearly every head-to-head to a detailed card, so the shift lifted
 everything over the line. That is the same preference for detail the portrait sees in Jev's answers, turned on its
 own judging. v4 shifts on the 12 new-style gold cards only (gold keeps average 1.1 on that scale, gold atlases −1.4,
-so the keep line at 0 sits between them). It still keeps most: **134 keep, 17 atlas** of 151. Read the outcome as a
+so the keep line at 0 sits between them). It still keeps most: **134 keep, 17 atlas** of 151, and **175 keep, 17 atlas** of the final 192. Read the outcome as a
 floor (nothing here is noise or a duplicate by Jev's judgment) and the **rank** as the signal: the atlas sorts by it,
 and the portrait candidates are its top, at most two per family.
 
