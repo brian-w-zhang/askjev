@@ -1,4 +1,5 @@
 // Shapes of data/analysis/portrait.json (scripts/portrait/export_page.py).
+import type { Funny } from "./MemeFunny";
 
 export type Dist = Record<string, number>;
 
@@ -49,6 +50,7 @@ export type PortraitData = {
   work: Task[];
   sources: SourceRow[];
   nodes: NodeCard[];
+  memes?: Record<string, Funny>;  // how funny Jev finds each of the page's memes, by name
 };
 
 // What a quiz question needs on the client

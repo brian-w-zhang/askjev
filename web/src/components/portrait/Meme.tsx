@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- local templates served by /portrait/memes, no optimizer needed */
 import type { ReactNode } from "react";
+import MemeFunny, { type Funny } from "./MemeFunny";
 
 // Meme templates (imgflip; files in data/portrait/memes, served by /portrait/memes/[file]) and where their labels go,
 // in percent of the image. Reaction images get a caption above them, the way they're posted now; panel memes get
@@ -24,8 +25,8 @@ export const MEMES = {
 
 export type MemeName = keyof typeof MEMES;
 
-export default function Meme({ name, caption, labels = [], size = "m", tilt = 0, alt }: {
-  name: MemeName; caption?: ReactNode; labels?: ReactNode[]; size?: "s" | "m" | "l"; tilt?: number; alt: string;
+export default function Meme({ name, caption, labels = [], size = "m", tilt = 0, alt, funny }: {
+  name: MemeName; caption?: ReactNode; labels?: ReactNode[]; size?: "s" | "m" | "l"; tilt?: number; alt: string; funny?: Funny;
 }) {
   const d: Def = MEMES[name];
   return (
@@ -38,6 +39,7 @@ export default function Meme({ name, caption, labels = [], size = "m", tilt = 0,
           <span key={i} className={`lab lab-${l.style ?? "outline"}`} style={{ left: `${l.x}%`, top: `${l.y}%`, width: `${l.w}%` }}>{labels[i]}</span>
         ) : null)}
       </div>
+      {funny && <MemeFunny f={funny} />}
     </figure>
   );
 }

@@ -75,7 +75,7 @@ export default function Portrait({ d, showIds = false }: { d: PortraitData; show
       <Intro C={C} d={d} s={s} total={total} nSources={nSources} common={common} />
       <Act1 C={C} R={R} d={d} s={s} />
       <Act2 C={C} d={d} s={s} />
-      <Act3 C={C} R={R} s={s} />
+      <Act3 C={C} R={R} d={d} s={s} />
       <Act4 C={C} R={R} s={s} />
       <Act5 C={C} R={R} d={d} s={s} />
       <Act6 C={C} R={R} d={d} s={s} />
@@ -154,13 +154,13 @@ function Act1({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
   return (
     <>
       <Card id="checkin" field="teal" c={COPY.checkin} showId={s} claims={[checkin]} rows={R(checkin, 6)}
-        aside={<Meme name="chill" size="s" tilt={-2} caption={COPY.checkin.meme} alt="Chill guy meme: a cartoon dog in a sweater, hands in pockets" />}>
+        aside={<Meme name="chill" funny={d.memes?.chill} size="s" tilt={-2} caption={COPY.checkin.meme} alt="Chill guy meme: a cartoon dog in a sweater, hands in pockets" />}>
         <CheckIn rows={R(checkin, 6)} />
       </Card>
       <Checkup C={C} R={R} s={s} />
       <Tests d={d} R={R} s={s} />
       <Card id="calm" field="pink" c={COPY.calm} showId={s} claims={bf} rows={R(neu, 2)}
-        aside={<Meme name="spiderman" size="m" alt="Spider-Man pointing at Spider-Man meme" labels={["jev", "“most people”, according to jev"]} />}
+        aside={<Meme name="spiderman" funny={d.memes?.spiderman} size="m" alt="Spider-Man pointing at Spider-Man meme" labels={["jev", "“most people”, according to jev"]} />}
         vars={{ calmer: `${Math.round(100 - (neu.effect as number))}%`, people: compact(neu.human_n), guess: ordinal(neu.robustness.people_frame_pct) }}>
         <Win title="big_five.plot · percentile among people">
           <div className="pt-legend">{Legend.jev}{Legend.guess}</div>
@@ -187,7 +187,7 @@ function Act1({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
       </Card>
       <Card id="hedge" field="teal" c={COPY.hedge} big={pct(lv.effect as number)} vars={{ mid: pct(lv.effect as number), choice: pct(ml.choice_p_top) }} showId={s}
         claims={[ml, lv]} rows={R(ml, 2)}
-        aside={<Meme name="anakin" size="m" alt="Anakin and Padme four-panel meme"
+        aside={<Meme name="anakin" funny={d.memes?.anakin} size="m" alt="Anakin and Padme four-panel meme"
           labels={["cat or dog person?", "you'll pick one, right?", `“both, no preference” (${catdog})`, "…right?"]} />}>
         <Win title="levels.plot · where your top answer lands">
           <div className="pt-legend">{Legend.jev}{Legend.guess}</div>
@@ -306,7 +306,7 @@ function Act2({ C, d, s }: { C: CFn; d: PortraitData; s: boolean }) {
     <>
       <Card id="loves" field="magenta" c={COPY.loves} vars={{ n: int(pr.n) }} showId={s} claims={[pr]} wide
         rows={pick(d.rows, Object.values(doms).map((x) => x.top[0].id), 3)} asideAt="below"
-        aside={<Meme name="cinema" size="m" tilt={1.5} caption={plain(COPY.loves.meme!, { shawshank: shaw ? num(shaw.level) : "" })} alt="Martin Scorsese 'absolute cinema' meme, hands raised" />}>
+        aside={<Meme name="cinema" funny={d.memes?.cinema} size="m" tilt={1.5} caption={plain(COPY.loves.meme!, { shawshank: shaw ? num(shaw.level) : "" })} alt="Martin Scorsese 'absolute cinema' meme, hands raised" />}>
         <Tiles items={Object.entries(doms).map(([k, v]) => ({ key: k, kind: DOMAIN_NAME[k] ?? label(k), name: short(k, v.top[0].name), level: v.top[0].level }))} />
       </Card>
       <Card id="hates" field="paper" c={COPY.hates} showId={s} claims={[pr]} wide
@@ -314,7 +314,7 @@ function Act2({ C, d, s }: { C: CFn; d: PortraitData; s: boolean }) {
         <Tiles low items={HATE_DOMAINS.filter(([k]) => doms[k]).map(([k, l]) => ({ key: k, kind: l, name: short(k, doms[k].bottom[0].name), level: doms[k].bottom[0].level }))} />
       </Card>
       <Card id="beyond" field="pink" c={COPY.beyond} vars={{ n: int(fb.n) }} showId={s} claims={[fb, book]} rows={pick(d.rows, [more[0].id, less[0].id], 2)}
-        aside={<Meme name="pooh" size="m" alt="Tuxedo Winnie the Pooh meme" labels={[bookName(hp.text), bookName(ari.text)]}
+        aside={<Meme name="pooh" funny={d.memes?.pooh} size="m" alt="Tuxedo Winnie the Pooh meme" labels={[bookName(hp.text), bookName(ari.text)]}
           caption="your book ratings, next to what you think people like" />}>
         <Win title="beyond.plot · your rating minus what you think most people would say">
           <DotRows domain={[-1.3, 1.3]} ticks={[-1, 0, 1]} fmt={(v) => signed(v, 0)} refs={[{ v: 0, zero: true }]}
@@ -341,7 +341,7 @@ function Tiles({ items, low }: { items: { key: string; kind: string; name: strin
 
 /* ---------------------------------------------------------------- part 3: hot takes */
 
-function Act3({ C, R, s }: { C: CFn; R: RFn; s: boolean }) {
+function Act3({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
   const db = C("page_debates"), ht = C("page_hot_takes"), qz = C("page_quiz_debates");
   const debates = R(db, 12);
   const gif = debates.find((r) => r.text.includes("GIF"));
@@ -350,11 +350,11 @@ function Act3({ C, R, s }: { C: CFn; R: RFn; s: boolean }) {
   return (
     <>
       <Card id="debates" field="ink" c={COPY.debates} showId={s} claims={[db]} rows={debates.slice(0, 3)} wide
-        aside={gif && <Meme name="gigachad" size="s" tilt={-1.5} caption={plain(COPY.debates.meme!, { gif: pct(gif.jev![topOf(gif.jev)!]) })} alt="Gigachad meme" />}>
+        aside={gif && <Meme name="gigachad" funny={d.memes?.gigachad} size="s" tilt={-1.5} caption={plain(COPY.debates.meme!, { gif: pct(gif.jev![topOf(gif.jev)!]) })} alt="Gigachad meme" />}>
         <div className="tiles debate">{debates.map((r) => <Debate key={r.id} r={r} />)}</div>
       </Card>
       <Card id="hottakes" field="sage" c={COPY.hottakes} vars={{ pool: int(ht.pool) }} showId={s} claims={[ht]} rows={hots}
-        aside={phys && <Meme name="enjoyer" size="m" alt="Average fan versus average enjoyer meme"
+        aside={phys && <Meme name="enjoyer" funny={d.memes?.enjoyer} size="m" alt="Average fan versus average enjoyer meme"
           caption="physics or socializing with friends?" labels={[`friends: ${pct(phys.human!.dist.socializing ?? 0)} of people`, `physics: you, ${pct(phys.jev!.physics ?? 0)}`]} />}>
         <Versus rows={hots} crowdTop crowdName="the crowd" />
       </Card>
@@ -455,7 +455,7 @@ function Act5({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
     <>
       <Card id="review" field="paper" c={COPY.review} vars={{ tasks: d.work.length }} showId={s}
         claims={[...best.map((t) => C(t.id)), ...worst.map((t) => C(t.id)), clone]} rows={R(clone, 2)}
-        aside={<Meme name="pigeon" size="m" alt="Is this a pigeon meme"
+        aside={<Meme name="pigeon" funny={d.memes?.pigeon} size="m" alt="Is this a pigeon meme"
           labels={["jev", "two pieces of code", `“is this a clone?”`]} caption={`right ${pct(clone.effect as number)} of the time, 95%+ sure on ${pct(clone.decisive)}`} />}>
         <div className="review">
           <div className="rv-h"><span>employee</span><b>Jev</b><span>review period</span><b>{d.work.length} tasks, one pass</b></div>
@@ -536,7 +536,7 @@ function Act6({ C, R, d, s }: { C: CFn; R: RFn; d: PortraitData; s: boolean }) {
   return (
     <>
       <Card id="humor" field="ink" c={COPY.humor} big={pct(h1.effect as number)} vars={{ memes: pct(h1.effect as number), jokes: pct(h2.effect as number) }} showId={s} claims={[h1, h2]} rows={R(h1, 2)}
-        aside={<Meme name="monkey" size="m" caption={COPY.humor.meme} alt="Monkey puppet looking away meme" />}>
+        aside={<Meme name="monkey" funny={d.memes?.monkey} size="m" caption={COPY.humor.meme} alt="Monkey puppet looking away meme" />}>
         <Win title="humor.test">
           <DotRows domain={[0.4, 0.7]} ticks={[0.4, 0.5, 0.6, 0.7]} fmt={(v) => pct(v)} refs={[{ v: 0.5 }]}
             rows={[

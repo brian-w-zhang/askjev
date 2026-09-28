@@ -334,3 +334,4 @@
 .pt .ex-wbar { gap: 8px; }
 .pt .ex-wbar span:first-child { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .pt .ex-wbar span:last-child { flex: none; }
+.pt .ex-memefig .lab.keep-case { text-transform: none; }  /* mocking SpongeBob: the alternating case is the joke */

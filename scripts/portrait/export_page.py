@@ -347,6 +347,9 @@ def main():
         "nodes": [{k: (round(v, 3) if isinstance(v, float) else v) for k, v in r.items()}
                   for r in nodes.select([c for c in nodes.columns if not c.startswith("z_") or c == "z_max"]).iter_rows(named=True)],
     }
+    f = A / "experiments" / "_funny" / "_portrait.json"  # how funny Jev finds the page's memes (experiments/meme_funny.py)
+    if f.exists():
+        out["memes"] = json.loads(f.read_text())
     (A / "portrait.json").write_text(json.dumps(out, default=str, separators=(",", ":")))
     print(f"portrait.json: {len(byid)} claims, {len(rows)} rows, {len(out['work'])} tasks, {len(out['sources'])} sources, "
           f"{len(out['nodes'])} nodes; {(A / 'portrait.json').stat().st_size / 1e6:.1f} MB")

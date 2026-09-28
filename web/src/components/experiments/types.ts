@@ -1,3 +1,4 @@
+import type { Funny } from "@/components/portrait/MemeFunny";
 import type { Row } from "../portrait/types";
 
 // One experiment as scripts/experiments/export.py writes it (data/analysis/experiments.json, private).
@@ -37,5 +38,7 @@ export type Take = { text: string; scores?: Record<string, number>; answers: { q
 // A template with our words on it (docs/17 item 8): label boxes in percent of the image.
 export type ExperimentMeme = {
   name: string; file: string; w: number; h: number; alt: string; caption: string | null;
-  boxes: { x: number; y: number; w: number; style?: "outline" | "ink"; size?: number }[]; texts: string[];
+  boxes: { x: number; y: number; w: number; style?: "outline" | "ink"; size?: number; case?: "keep" }[]; texts: string[];
+  // how funny Jev finds it, from a description in words (it can't see images): its probability for each of 5 levels
+  funny?: Funny;
 };

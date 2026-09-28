@@ -190,7 +190,8 @@ def trim():
     for sl in sorted(used):
         t = cat[sl]
         im = Image.open(MEMES / t["file"]).convert("RGB")
-        l, tp, r, b = _blank_bands(im)
+        # a hand-set crop (catalog "crop": [left, top, right, bottom]) wins where the bands aren't flat, e.g. greentext
+        l, tp, r, b = t["crop"] if t.get("crop") else _blank_bands(im)
         t.pop("trim", None)
         if (im.width - (r - l)) + (im.height - (b - tp)) < 0.06 * min(im.size):
             continue  # nothing worth cutting

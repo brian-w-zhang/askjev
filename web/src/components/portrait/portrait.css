@@ -489,3 +489,13 @@
 .wr-grid b { font-size: 19px; font-weight: 500; letter-spacing: -0.015em; line-height: 1.15; }
 :root[data-theme="dark"] .wrapped, :root[data-theme="dark"] .wr-grid > div { background: #16121a; color: #ebe6ea; }
 :root[data-theme="dark"] .wr-grid span { color: #a9a4a8; }
+/* Jev rates a meme (MemeFunny): five levels, its pick in pink */
+.meme-funny { padding: 7px 10px 8px; box-shadow: 0 -1px 0 var(--w-line); font-family: var(--sans); font-size: 12px; line-height: 1.3; color: var(--w-fg-2); text-align: left; }
+.meme-funny .q b { color: var(--w-fg); font-weight: 600; }
+.meme-funny .opts { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin-top: 6px; }
+.meme-funny .opts > span { display: grid; grid-template-rows: 22px auto auto; justify-items: center; }
+.meme-funny .opts i { display: block; width: 100%; align-self: end; background: var(--w-grid); }
+.meme-funny .opts .on i { background: var(--jev); }
+.meme-funny .opts em { font-style: normal; font-family: var(--mono); font-size: 11px; line-height: 16px; color: var(--w-fg); }
+.meme-funny .opts .on em { color: var(--jev); font-weight: 700; }
+.meme-funny .opts small { font-family: var(--mono); font-size: 9.5px; line-height: 11px; }

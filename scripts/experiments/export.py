@@ -121,6 +121,9 @@ def main():
                                "takeaways": c.get("takeaways") or []}
             mm = memes.resolve(c["meme"]) if c.get("meme") else None
             if mm:
+                fn = OUT / "_funny" / f"{s['id']}.json"
+                if fn.exists():  # how funny Jev finds it (meme_funny.py)
+                    mm["funny"] = json.loads(fn.read_text())
                 out[-1]["meme"] = mm
         take = OUT / "_take" / f"{s['id']}.json"
         if take.exists():

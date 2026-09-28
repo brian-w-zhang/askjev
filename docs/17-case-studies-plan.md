@@ -79,6 +79,13 @@ from them.
 - **Make:** templates go in the gitignored `data/portrait/memes/templates/`, captioned images in
   `data/portrait/memes/exp/<id>.webp` via one script (`scripts/experiments/memes.py`, text boxes per template).
   Served privately like the portrait's memes, with captions labeled as ours.
+- **Never punch at a country, its people or a named person.** Results by country are captioned as Jev's misses, not
+  as a joke about the place, and templates that are photos of real private people or play on poor countries are out.
+- **Jev rates each meme:** it can't see images, so it reads the meme in words (the template's name, a hand-written
+  description of the image and how the format is used, the words on it, the caption and the result it's about) and
+  answers "How funny is this meme?" on five levels described as situations, from no reaction to "the kind of meme
+  people send to friends" (`scripts/experiments/meme_funny.py`). The page shows its pick and how sure it is of each
+  level under the meme.
 
 ## Rows (items 6-7)
 - A private route (`/portrait/atlas/rows?id=&page=`) serves every question id an experiment used, from a list the
