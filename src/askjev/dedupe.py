@@ -47,8 +47,10 @@ def candidate_pairs(since: str | None = None) -> list[dict]:
                      -- items from one dataset are already deduped by its adapter; instrument items are
                      -- intentionally similar (facets, reverse-keyed), so only cross-source pairs are checked
                      and not (b.source = a.source and a.origin in ('dataset', 'wikidata-fact', 'template'))
+                     -- experiment variants (docs/16) reword an existing question on purpose: never duplicates
+                     and not (b.meta ? 'base_id')
                    order by b.embedding <=> a.embedding limit 3) b on true
-               where a.template_id is null and not ('duplicate' = any(a.flags)) {new_a}
+               where a.template_id is null and not ('duplicate' = any(a.flags)) and not (a.meta ? 'base_id') {new_a}
                  and 1 - (a.embedding <=> b.embedding) >= %s""".format(order=order, new_a=new_a),
             ((since, since) if since else ()) + (SIM,),
         ).fetchall()
