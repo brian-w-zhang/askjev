@@ -36,8 +36,8 @@ export const COPY: Record<string, CardCopy> = {
   },
   checkup: {
     title: "Asked properly, on real wellbeing scales, you say: *meh*.",
-    body: "Neither satisfied nor dissatisfied with your life, step {ladder} of 10 on the ladder (you put most people at {ladderPpl}), lonely and stressed some of the time. Your wellbeing score is low, until the scale is flipped: then it jumps from {who} to {whoRev}.",
-    fine: "Five public instruments (life satisfaction SWLS, WHO-5, UCLA loneliness, Perceived Stress, the Cantril ladder), {items} items, scored the way they're scored for people. They were built for humans (“over the last two weeks”), so this shows your habits with these scales, not an inner state. The tick is your answer with the levels reversed: where it lands far from the square, the answer follows the order of the options more than their meaning.",
+    body: "Neither satisfied nor dissatisfied with your life, step {ladder} of 10 on the ladder (you put most people at {ladderPpl}), lonely and stressed some of the time, and a WHO-5 wellbeing score of {who} out of 100, low for a person. Reverse the answer scale and you say the same thing ({whoRev}).",
+    fine: "Five public instruments (life satisfaction SWLS, WHO-5, UCLA loneliness, Perceived Stress, the Cantril ladder), {items} items, scored the way they're scored for people. They were built for humans (“over the last two weeks”), so this shows your habits with these scales, not an inner state. The tick is your answer with the levels reversed; it lands next to the square, so these answers don't depend on the order of the options.",
   },
   tests: {
     title: "Next to the people who took the same online tests, you come out *less anxious, less nerdy and more sincere*.",

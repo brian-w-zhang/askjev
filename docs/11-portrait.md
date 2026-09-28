@@ -160,8 +160,9 @@ HTML dot rows and bars (legible at phone width) and SVG scatters. Light and dark
 **Wellbeing bank.** `sources/wellbeing` adds 18 items from five public instruments (SWLS, WHO-5, UCLA-3, PSS-4, the
 Cantril ladder), each with a "most people" wording, filed at `self.mind.happiness_wellbeing` and run through the normal
 screen and answer stages (a few dozen Jev calls, cached). `export_page.py` scores them from Postgres the way they are
-scored for people, for Jev, for "most people" and with the levels reversed (`page_wellbeing`). The reversed check
-matters: on WHO-5 the answer follows the options' order, so that score isn't read as wellbeing.
+scored for people, for Jev, for "most people" and with the levels reversed (`page_wellbeing`). The reversed check agrees with the base answers (WHO-5 26 vs 24): an earlier version read the stored score of the
+reversed probes, which is in the reversed order, and wrongly reported a flip; scores now come from the distributions,
+which are stored in the original order.
 
 **Getting here.** The map shows the same Map · Portrait · Atlas chips (`components/SiteNav.tsx`), and takes deep links:
 `/?node=<id>` opens a topic, `/?q=<id>` a question, and the address bar follows the open panel.

@@ -115,7 +115,10 @@ def wellbeing() -> tuple[dict, list[dict]]:
             return None
         if q["primitive"] == "choice":  # the ladder: expected step
             return sum(int(k.split("_")[1]) * v for k, v in ans["distribution"].items())
-        return ans["score_scalar"]
+        # from the distribution, which is stored in the original level order for every probe (the stored score scalar
+        # of a reversed-levels probe is in the reversed order, so it can't be compared directly)
+        d = ans["distribution"]
+        return sum(int(k) * v for k, v in d.items()) / (sum(d.values()) or 1)
 
     out, rows = {}, []
     for ins, (name, how, rng, bands) in WELL.items():
