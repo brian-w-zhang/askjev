@@ -26,7 +26,7 @@ For each dilemma, how well Jev's country estimates order the countries (rank cor
 ## Caveats
 - **Not national samples.** The answers come from self-selected visitors to the Moral Machine website, an English-first site, not national samples. The study's authors say so too; "the share in Japan" means the share of Japanese visitors to that site.
 - **Our wording.** The dilemmas were written for this project, paraphrasing the website's classic trolley pages; visitors saw the site's own text and pictures.
-- **Small spread between countries.** Countries differ by a few to twenty points on each dilemma, so ranking them is hard even for a good model, and a correlation across 42 countries is noisy.
+- **Small spread between countries.**
 - **A textbook result.** The switch-versus-push contrast is one of the most taught results in moral psychology, so getting the order right is expected knowledge, not a sign of insight into people.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

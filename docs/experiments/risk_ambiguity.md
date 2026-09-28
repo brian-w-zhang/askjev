@@ -25,7 +25,7 @@ For each problem, the share of Jev's answer on the unknown gamble, and the share
 
 ## Caveats
 - **Not pure ambiguity.** The unknown gamble still lists its possible payoffs, so part of each choice is about amounts, not odds. We split the problems by whether the unknown gamble could beat the known one; Jev shies away in every group.
-- **Small real stakes.** The players were US workers on Mechanical Turk, paid a bonus of 10% of one outcome, about 15 to 18 per problem. Real but small money.
+- **Small real stakes.** The players were US workers on Mechanical Turk, paid a bonus of 10% of one outcome; about 15 to 18 played each problem. Real but small money.
 - **The wording was ours.** The phrase "with probabilities you are not told" is our rendering of the study's hidden-odds display. A different phrasing, like "odds unknown", might read as more or less ominous.
 - **Jev answers each problem fresh.** Players chose five times per problem; Jev answers once, as a probability over the two options. The human share is the share of trials, so the two aren't exactly the same kind of number.
 

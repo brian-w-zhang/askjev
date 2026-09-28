@@ -8,8 +8,8 @@ Upvotes are the internet's verdict on funny. If a model has a feel for what crow
 And when it can't tell, it has to fall back on something. What it falls back on is a finding in itself: a tiebreaker you'd never want in a model that ranks things for you.
 
 ## The people and the data
-- **r/Jokes:** posts from Reddit's joke forum, 2008 to 2019, with their final scores (the rJokes dataset, Weller and Seppi, 2020). We paired jokes posted in the same month where one scored at least 10 times the other, so each pair has a clear winner that both jokes had a fair shot at. 2,301 pairs.
-- **Imgflip:** captions people wrote on popular meme templates on imgflip.com, with their upvotes (a public scrape of about 576,000 memes). Pairs share a template and had similar numbers of views, and the winner has at least 4 times the loser's upvotes. 2,655 pairs.
+- **r/Jokes:** posts from Reddit's joke forum, 2008 to 2019, with their final scores (the rJokes dataset, Weller and Seppi, 2020).
+- **Imgflip:** captions people wrote on popular meme templates on imgflip.com, with their upvotes (a public scrape of about 576,000 memes).
 
 Which item is shown first was randomized when the pairs were built.
 

@@ -10,7 +10,7 @@ A language model has read these puzzles, and their answers, thousands of times. 
 ## The people and the data
 There are six families of traps: the conjunction fallacy (Linda), base-rate neglect (the taxi cab), Monty Hall, the birthday problem, the gambler's fallacy, and the "cognitive reflection" puzzles (bat and ball, lily pads, widgets). The classics are transcribed from the papers that made them famous (Tversky and Kahneman, Frederick, vos Savant's Parade column).
 
-The only human split in the set is Linda's: 85% of 142 University of British Columbia students chose the wrong, more detailed answer. For the other traps the comparison is the right answer.
+The only human split for a trap family is Linda's (the taxi cab's 80% is a median answer, not a split): 85% of 142 University of British Columbia students chose the wrong, more detailed answer. For the other traps the comparison is the right answer.
 
 ## What Jev was asked
 Each puzzle was one multiple-choice question with its answers laid out, for example:

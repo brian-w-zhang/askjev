@@ -23,7 +23,7 @@ Each statement goes on a 0 to 1 scale. A temperament is the average of its state
 
 ## Caveats
 - **Who the people are.**
-- **A four-step scale.** The test has no middle answer: strongly disagree, disagree, agree, strongly agree. We asked Jev with four described steps from "does not describe me at all" to "describes me very well".
+- **A four-step scale.** The test has no middle answer: strongly disagree, disagree, agree, strongly agree. We asked Jev with four described steps from "does not describe me at all" to "describes me very well", or from strongly disagree to strongly agree for the statements about how people should behave.
 - **Feelings Jev won't claim.** The prosocial statements are about feeling deeply and valuing emotional intimacy. A model trained not to claim feelings scores low there for reasons unrelated to how it treats people.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

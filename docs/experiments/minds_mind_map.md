@@ -21,7 +21,7 @@ Every pair of characters, for each capacity, with the study's five answers:
 > *Charlie: much more capable · Charlie: slightly more capable · Both equally capable · Gerald Schiff: slightly more
 > capable · Gerald Schiff: much more capable*
 
-That's 312 questions. Each was also asked with the answers reversed, which also swaps which character comes first, and we average the two.
+That's 312 questions across all 13 characters; the 220 among the 11 characters shown here are the ones analyzed. Each was also asked with the answers reversed, which also swaps which character comes first, and we average the two.
 
 ## How we measured it
 For each character and capacity, its average advantage over the others, from -2 (always "much less capable") to +2 (always "much more"). Feeling is the average of fear and hunger; acting is the average of morality and self-control. We compare Jev's ranking of the characters with people's on each axis (a rank correlation: 1 means the same order).

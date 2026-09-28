@@ -316,8 +316,8 @@ def ideal_day():
         f = lambda r: f"{r['activity']} ({r['ideal'] / 60:.1f} h vs {r['actual'] / 60:.1f} h)"  # noqa: E731
         return Result(
             result=f"Jev's ideal day has more {and_list([f(r) for r in more])} and less {and_list([f(r) for r in less])} "
-                   f"than the average American's real day (ideal vs actual). Its 20 activities add up to {total:.0f} hours.",
-            evidence="20 activities; Americans' means from 181,335 ATUS diary days",
+                   f"than the average American's real day (ideal vs actual). Its {t.height} activities add up to {total:.0f} hours.",
+            evidence=f"{t.height} activities answered (of 20 asked); Americans' means from 181,335 ATUS diary days",
             numbers={"rows": rows, "total_hours": total}, n=t.height,
             chart={"type": "bars2", "labels": [r["activity"] for r in sorted(rows, key=lambda r: -r["actual"])],
                    "a": [round(r["actual"] / 60, 2) for r in sorted(rows, key=lambda r: -r["actual"])],

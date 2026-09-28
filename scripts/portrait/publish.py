@@ -1,7 +1,8 @@
 """Publish the portrait's private data to production (docs/11-portrait.md §7).
 
 Uploads data/analysis/portrait.json, the experiments bundle (data/analysis/experiments.json, from
-scripts/experiments/export.py) and the meme images into a fresh, unguessable Vercel Blob folder and sets the
+scripts/experiments/export.py), each experiment's ordered question list (data/analysis/experiment_rows/, read by
+app/portrait/atlas/rows/route.ts) and the meme images into a fresh, unguessable Vercel Blob folder and sets the
 site's PORTRAIT_URL to it. The site fetches both on the server (components/portrait/data.ts,
 app/portrait/memes/[file]/route.ts), so the folder's address never reaches a browser, and the pages stay behind the
 site key. Nothing is committed to the public repo. Needs BLOB_READ_WRITE_TOKEN (from .env) and the Vercel CLI.
@@ -17,13 +18,18 @@ import re
 import secrets
 import subprocess
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 from sync_prod import env  # noqa: E402  (reads .env without printing it)
 
 ROOT = Path(__file__).resolve().parent.parent.parent
-FILES = [ROOT / "data" / "analysis" / "portrait.json", ROOT / "data" / "analysis" / "experiments.json"] + sorted((ROOT / "data" / "portrait" / "memes").glob("*.webp"))
+A = ROOT / "data" / "analysis"
+# (local file, name in the folder); portrait.json first, since its URL gives the folder's address
+FILES = [(A / "portrait.json", "portrait.json"), (A / "experiments.json", "experiments.json")] \
+    + [(p, f"experiment_rows/{p.name}") for p in sorted((A / "experiment_rows").glob("*.json"))] \
+    + [(p, f"memes/{p.name}") for p in sorted((ROOT / "data" / "portrait" / "memes").glob("*.webp"))]
 
 
 def main() -> None:
@@ -34,17 +40,23 @@ def main() -> None:
     blob_env = {k: v for k, v in os.environ.items() if k not in ("VERCEL_OIDC_TOKEN", "BLOB_STORE_ID")}
     blob_env["BLOB_READ_WRITE_TOKEN"] = token
     folder = "portrait-" + secrets.token_urlsafe(12)
-    base = None
-    for p in FILES:
-        name = p.name if p.suffix == ".json" else f"memes/{p.name}"
+
+    def put(item: tuple[Path, str]) -> str:
+        p, name = item
         out = subprocess.run(["vercel", "blob", "put", str(p), "--pathname", f"{folder}/{name}", "--access", "public"],
                              capture_output=True, text=True, env=blob_env)
         if out.returncode:
-            raise SystemExit(f"upload of {p.name} failed: " + re.sub(r"vercel_blob_rw_\w+", "[redacted]", out.stderr.strip()[-400:]))
+            raise SystemExit(f"upload of {name} failed: " + re.sub(r"vercel_blob_rw_\w+", "[redacted]", out.stderr.strip()[-400:]))
         m = re.search(r"https://\S+", out.stdout + out.stderr)
-        if m and p.suffix == ".json":
-            base = m.group(0).rsplit("/", 1)[0]
-        print("uploaded", name)
+        return m.group(0) if m else ""
+
+    first = put(FILES[0])
+    base = first.rsplit("/", 1)[0] if first else None
+    with ThreadPoolExecutor(8) as pool:
+        for n, _ in enumerate(pool.map(put, FILES[1:]), 2):
+            if n % 50 == 0:
+                print(f"uploaded {n} of {len(FILES)}")
+    print(f"uploaded {len(FILES)} files")
     if not base:
         raise SystemExit("no URL for portrait.json")
     # print only the host, not the unguessable folder

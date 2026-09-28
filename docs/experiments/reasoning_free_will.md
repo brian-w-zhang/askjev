@@ -29,6 +29,6 @@ Jev's probability of "yes" on each story, next to the share of people in the ori
 - **The most important story is missing.** Nichols and Knobe's headline case is Bill, who murders his family in a determined universe; most people say he's fully responsible (72% in the study), reversing their abstract answer. The content filter that hides violent questions from the site removed it, so the contrast the study is known for can't be tested here. We have three stories, not four.
 - **One of the numbers is secondhand.** The 76% for Jeremy comes from secondary summaries of Nahmias and colleagues' study, not from reading the paper itself; the 23% for Mark comes from a published critique quoting the paper's table.
 - **Wording from different studies.** The stories are the studies' own, but they come from two different papers with different descriptions of determinism (a caused universe versus a perfect predicting supercomputer). The framing, not just the case, may move the answers, for people and for Jev.
-- **Yes or no only.** People in these studies answered one way or the other; Jev's answer is a probability of yes. A 7% is a firm no, but it isn't the same kind of number as a 23% of people saying yes.
+- **Yes or no only.** People in these studies answered one way or the other; Jev's answer is a probability of yes. A low probability is a firm no, but it isn't the same kind of number as a share of people saying yes.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

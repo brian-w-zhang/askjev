@@ -14,8 +14,6 @@ Real vote shares from two places: 150 Reddit polls from r/polls with at least 30
 > "save it"?
 > *0% · 5% · 10% · ... · 100%*
 
-That's 300 new questions, each asked with the answer steps in shuffled orders and averaged.
-
 ## How we measured it
 For each option, the middle of Jev's answer against the real share: the average distance in points, how well Jev orders the options by share (a rank correlation: 1 same order, 0 no relation), and how steeply its guess rises with the real share. Two baselines: always guessing an even split, and using Jev's own "most people" probability for the option as if it were a share.
 

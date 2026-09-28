@@ -22,6 +22,6 @@ For the basic needs, the share answering "never": for Jev's "most people" and fo
 ## Caveats
 - **Jev wasn't asked about Africa.** Jev was asked about "most people", not about Africans. The comparison shows the default person Jev imagines, not what it knows about life in Africa, which it might answer very differently if asked directly.
 - **One region.** Afrobarometer covers 39 African countries, pooled with the survey's weights. For most of the world the true "most people" answer is somewhere between these respondents and Jev's picture; no single survey covers everyone.
-- **A small set of items.** Five deprivation items and seven media items, each with about 50,000 answers. The contrast is large, but it rests on a handful of questions.
+- **A small set of items.** Five deprivation items and six media items (the internet asked twice), each with about 50,000 answers. The contrast is large, but it rests on a handful of questions.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

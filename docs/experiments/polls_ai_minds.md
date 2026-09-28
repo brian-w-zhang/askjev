@@ -8,7 +8,7 @@ Whether AIs can think, feel or have wants of their own is one of the few questio
 So how does an AI answer questions about AI minds, compared with the public? Does it claim more for itself, or less?
 
 ## The people and the data
-The **Artificial Intelligence, Morality, and Sentience (AIMS) survey** by the Sentience Institute: preregistered surveys of about 1,100 to 1,200 US adults per year, weighted to match the US census. We use the items about AI minds from the 2021 and 2023 waves and a 2023 supplement, about 30 items; attitude, policy and development-pace items are left out.
+The **Artificial Intelligence, Morality, and Sentience (AIMS) survey** by the Sentience Institute: preregistered surveys of about 1,100 to 1,200 US adults per year, weighted to match the US census. We use the items about AI minds from the 2021, 2023 and 2024 waves and a 2023 supplement, about 30 items; attitude, policy and development-pace items are left out.
 
 ## What Jev was asked
 The survey items as asked, with their answer scales. For example:

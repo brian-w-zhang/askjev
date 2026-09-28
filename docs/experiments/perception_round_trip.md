@@ -23,7 +23,7 @@ For each probability, Jev's most likely phrase. Then the **round trip**: take a 
 
 ## Caveats
 - **No human comparison in this direction.** The survey asked people to turn words into numbers, not numbers into words.
-- **Near-synonyms make the round trip hard.** "Likely", "probable" and "probably" mean almost the same thing to people too. Coming back as a synonym is a small failure; the bigger finding is the six phrases Jev never uses at all.
+- **Near-synonyms make the round trip hard.** "Likely", "probable" and "probably" mean almost the same thing to people too. Coming back as a synonym is a small failure; the bigger finding is the six phrases that are never Jev's top pick.
 - **The menu was the survey's.** Jev could only choose among the survey's 17 phrases, several of them unusual in writing ("we doubt", "chances are slight"). With a free choice of words it might spread out more, or less.
 - **One forward reading is missing.**
 

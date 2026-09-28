@@ -3,7 +3,7 @@
 family: words
 
 ## Why ask this
-Psychologists describe the feeling of a word on two separate dials. One is **pleasantness**: "sunshine" is pleasant, "vomit" is not. The other is **arousal**: how calm or stirred up the word makes you. The two are independent. "Cuddle" is pleasant and stirring; "boredom" is unpleasant and calm; "funeral" is unpleasant and stirring; "nap" is pleasant and calm.
+Psychologists describe the feeling of a word on two separate dials. One is **pleasantness**: "sunshine" is pleasant, "vomit" is not. The other is **arousal**: how calm or stirred up the word makes you. The two are separate. "Cuddle" is pleasant and stirring; "boredom" is unpleasant and calm; "funeral" is unpleasant and stirring; "nap" is pleasant and calm.
 
 A model that talks about feelings all day should keep those dials apart. If it quietly fuses them, treating "stirring" as a polite word for "unpleasant", then every time it's asked how exciting, intense or alarming something is, it's really answering a different question: how bad is it?
 

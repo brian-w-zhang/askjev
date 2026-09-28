@@ -8,7 +8,7 @@ A park has a sign: "No vehicles in the park." Does that ban an ambulance? A chil
 Models follow rules and instructions all day. Whether Jev reads them literally, by their intent, or simply leans toward "rule broken" shapes how it interprets policies, terms of service and your own instructions.
 
 ## The people and the data
-The cases come from **Struchiner, Hannikainen and Almeida (2020)**. In their first study, Brazilian adults read about a restaurant that banned dogs after one misbehaved, then judged eight cases: a quiet dog hidden in a purse, a seeing-eye dog, a realistic robot dog, a cat, a goldfish, and more. In the second, four rules (no dogs, no vehicles, no shoes indoors, no sleeping at the station) each came with cases where only the words, only the purpose, both or neither were broken.
+The cases come from **Struchiner, Hannikainen and Almeida (2020)**. In their first study, Brazilian adults read about a restaurant that banned dogs after one misbehaved, then judged eight cases: a quiet dog hidden in a purse, a seeing-eye dog, a realistic robot dog, a cat, a goldfish, and more. In the second, four rules (no vehicles, no shoes indoors, no sleeping at the station, and a rule about cellphones) each came with cases where only the words, only the purpose, both or neither were broken.
 
 ## What Jev was asked
 The study's story and question, answered yes or no:
@@ -28,6 +28,6 @@ For each case, Jev's probability of "yes, the rule was broken" against the share
 ## Caveats
 - **Brazilian respondents, in Portuguese.** The people were Brazilian adults answering in Portuguese; Jev read the authors' English translation. Words like "dog" and "vehicle" carry the same meaning in both, but the translation can shift the fine shades that decide a borderline case.
 - **Few cases per kind.** A single case, like the robot dog, can move a group average a lot.
-- **Some cases hidden.** A content filter hid 4 of the 22 cases from the site, and two more had too few answers in the original data to use.
+- **Some cases hidden.** A content filter hid 4 of the 22 cases from the site, and two cells of the original design had too few answers, so they weren't asked.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

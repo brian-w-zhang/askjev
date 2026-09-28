@@ -5,7 +5,7 @@ family: polls
 ## Why ask this
 r/polls is a Reddit community where people post simple questions with a few answers and everyone votes: bath or shower, cats or dogs, favorite season, would you give up your phone for a million dollars. It's the largest open record of everyday preferences with real vote counts attached.
 
-A model that talks to millions of people carries a picture of "most people" around with it. Guessing poll winners across tens of thousands of topics shows where that picture is detailed and where it's thin.
+A model that talks to millions of people carries a picture of "most people" around with it. Guessing poll winners across tens of thousands of polls shows where that picture is detailed and where it's thin.
 
 ## The people and the data
 Native Reddit polls from r/polls, collected from a public Reddit archive for 2020 to 2024, each with its archived vote counts.

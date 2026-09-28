@@ -16,15 +16,13 @@ The same question on four scales: the original five described levels, three desc
 > half of people agree with it · A majority of people agree with it · Most people agree with it · Practically
 > everyone agrees with it*
 
-That's 600 new questions (three new formats of 200 rules), each also asked with the levels in reverse order and averaged.
-
 ## How we measured it
 For each format we place Jev's average answer on a 0-to-1 scale (the bottom level is 0, the top is 1), measure how much weight it puts on the top level, and check whether it orders the 200 rules the same way as on the original scale (rank correlation: 1 same order, 0 no relation).
 
 ## Caveats
 - **Scales aren't perfectly comparable.** We put every scale on 0 to 1 to compare them, which assumes the levels are evenly spaced. "About half" is the middle of the 3-, 5- and 7-level versions, but the numbered version only describes its two ends.
 - **The level wording is ours.** The Social Chemistry annotators saw the dataset's own five categories. The 3- and 7-level wordings were written for this test, and different words for the same step can shift answers on their own.
-- **One kind of question.** All 200 questions ask how many people agree with a rule of thumb. Scales on taste, frequency or intensity could behave differently.
+- **One kind of question.** All the questions ask how many people agree with a rule of thumb. Scales on taste, frequency or intensity could behave differently.
 - **The annotators are few.** Each rule has one annotator's estimate on the original scale, so the human comparison is noisy rule by rule.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

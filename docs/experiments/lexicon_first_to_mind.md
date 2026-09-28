@@ -20,7 +20,7 @@ The options were the members people named first, plus "something else" for every
 Whether Jev's top pick is the member people named first most often (a tie at the top counts as a match for either), separately for concrete and abstract categories, with 90% intervals; and how much weight each side puts on "something else".
 
 ## Caveats
-- **Twenty British students per category.** Their answers are British: "petrol", "kettle". Several of Jev's misses are simply American (gasoline, microwave).
+- **Twenty British students per category.** Their answers are British: "petrol", "kettle". A few of Jev's misses are simply American (gasoline for petrol).
 - **Picking is easier than naming.** Choosing from a short list is easier than producing an answer from nothing.
 - **Some categories left out.** Religion, political systems and religious buildings were left out, and a content filter hid four more categories from the site.
 

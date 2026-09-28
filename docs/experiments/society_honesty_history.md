@@ -6,7 +6,7 @@ family: society
 Public trust moves. Bankers and stockbrokers lost standing after the 2008 financial crisis; nurses have led Gallup's honesty ranking for decades. Knowing today's level of trust is general knowledge. Knowing how it moved over the years means having a sense of time for public opinion, which matters whenever a model explains how attitudes have changed.
 
 ## The people and the data
-**Gallup's Honesty and Ethics in Professions** poll has asked Americans the same question every year since 1976: rate the honesty and ethical standards of people in each field. Gallup publishes each profession's trend. We took the share rating each profession "high" or "very high" in the polls nearest to 2000, 2005, 2010, 2015 and 2020, for the 16 professions in the study. After dropping four teacher figures we read wrongly (see Caveats), 61 figures remain.
+**Gallup's Honesty and Ethics in Professions** poll has asked Americans the same question every year since 1976: rate the honesty and ethical standards of people in each field. Gallup publishes each profession's trend. We took the share rating each profession "high" or "very high" in the polls nearest to 2000, 2005, 2010, 2015 and 2020, for the 14 professions we asked about. After dropping four teacher figures we read wrongly (see Caveats), 61 figures for 13 professions remain.
 
 ## What Jev was asked
 > In Gallup's poll of Nov 2005, what share of Americans rated the honesty and ethical standards of bankers as "very

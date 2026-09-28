@@ -215,7 +215,7 @@ def escape_hatch():
             evidence=f"{t.height:,} questions with an 'other' option in {len(by)} topics with 40+; 90% intervals over questions",
             numbers={"topics": by, "overall": float(t["top"].mean())}, n=t.height,
             chart={"type": "bars", "rows": [{"label": x["topic"], "value": x["top"], "ci": x["ci"]} for x in by], "domain": [0, 1]},
-            robustness=f"Mean probability on 'other': {t['p'].mean():.0%} overall, from {by[0]['p']:.0%} to {max(x['p'] for x in by):.0%} by topic.",
+            robustness=f"Mean probability on 'other': {t['p'].mean():.0%} overall, from {min(x['p'] for x in by):.0%} to {max(x['p'] for x in by):.0%} by topic.",
             examples=t.filter(pl.col("top")).sample(3, seed=16)["id"].to_list())
     return spec, run
 
