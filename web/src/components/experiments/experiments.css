@@ -105,7 +105,7 @@
 .pt .ex-page > * { max-width: 1080px; margin-left: auto; margin-right: auto; }
 .pt .ex-crumb { font-family: var(--mono); font-size: 11.5px; color: var(--fg-2); margin: 0 auto 10px; }
 .pt .ex-head h1 { margin: 10px 0 8px; font-size: clamp(28px, 4vw, 44px); font-weight: 500; letter-spacing: -0.03em; line-height: 1.05; }
-.pt .ex-q { margin: 0 0 18px; max-width: 46em; font-size: 16px; color: var(--fg-2); }
+.pt .ex-sub { margin: 0 0 18px; max-width: 46em; font-size: 17px; line-height: 1.45; color: var(--fg-2); }
 .pt .ex-window { background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line), 6px 6px 0 var(--jev); margin-bottom: 22px; }
 .pt .ex-wbar { display: flex; justify-content: space-between; padding: 2px 10px; background: var(--w-sub); box-shadow: 0 1px 0 var(--w-line); font-family: var(--mono); font-size: 11px; color: var(--w-fg-2); }
 .pt .ex-wbody { padding: 14px 16px 16px; display: grid; gap: 12px; min-width: 0; }
@@ -176,4 +176,59 @@
   .pt .ex-opt { grid-template-columns: 1fr auto; }
   .pt .ex-opt .ob { grid-column: 1 / -1; grid-row: 2; }
   .pt .ex-rhead { top: 0; }
+}
+
+/* ---------- case study page (docs/17) ---------- */
+.pt .ex-head.with-meme { display: grid; grid-template-columns: minmax(0, 1fr) minmax(220px, 320px); gap: 24px; align-items: end; }
+.pt .ex-meme { margin: 0 0 18px; background: var(--w-body); box-shadow: 0 0 0 1px var(--w-line), 5px 5px 0 var(--jev); transform: rotate(1.2deg); }
+.pt .ex-meme img { display: block; width: 100%; height: auto; }
+.pt .ex-meme figcaption { padding: 6px 10px 8px; font-size: 12px; color: var(--w-fg-2); }
+.pt .ex-note { margin: 0; font-size: 13.5px; color: var(--w-fg); padding: 8px 10px; background: var(--w-sub); }
+.pt .ex-note b { font-weight: 600; }
+.pt .ex-study { max-width: 44em; }
+.pt .ex-sec { margin: 0 0 26px; }
+.pt .ex-sec h2 { margin: 0 0 8px; font-size: 21px; font-weight: 500; letter-spacing: -0.02em; line-height: 1.2; font-family: var(--sans); text-transform: none; color: var(--fg); }
+.pt .ex-sec p, .pt .ex-sec li { font-size: 16px; line-height: 1.6; }
+.pt .ex-sec p { margin: 0 0 12px; }
+.pt .ex-sec ul { margin: 0 0 12px; padding-left: 20px; }
+.pt .ex-sec li { margin: 0 0 6px; }
+.pt .ex-sec strong { font-weight: 600; }
+.pt .ex-sec code { font-size: 0.88em; }
+.pt .ex-sec blockquote { margin: 0 0 14px; padding: 12px 16px; background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line); }
+.pt .ex-sec blockquote p { margin: 0 0 6px; font-size: 15px; }
+.pt .ex-sec blockquote p:last-child { margin: 0; font-size: 13.5px; color: var(--w-fg-2); }
+.pt .ex-sec.s-found { padding: 16px 18px; background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line); }
+.pt .ex-sec.s-found h2 { color: var(--w-fg); }
+.pt .ex-side { display: grid; gap: 16px; position: sticky; top: 40px; align-self: start; }
+.pt .ex-take, .pt .ex-caveats { background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line); padding: 14px 16px; }
+.pt .ex-take h2, .pt .ex-caveats h2, .pt .ex-where h2, .pt .ex-rows-sec > h2 { margin: 0 0 8px; font-size: 20px; font-weight: 500; letter-spacing: -0.02em; font-family: var(--sans); text-transform: none; color: inherit; }
+.pt .ex-take { box-shadow: 0 0 0 1px var(--w-line), 5px 5px 0 var(--jev); }
+.pt .ex-takeq { margin: 0 0 10px; padding: 0 0 0 12px; border-left: 3px solid var(--jev); }
+.pt .ex-takeq p { margin: 0 0 8px; font-size: 15px; line-height: 1.5; }
+.pt .ex-takea { margin: 0 0 10px; font-size: 12.5px; }
+.pt .ex-takea summary { cursor: pointer; font-family: var(--mono); font-size: 11px; color: var(--w-fg-2); }
+.pt .ex-takea ul { margin: 6px 0 0; padding-left: 16px; }
+.pt .ex-takea li { margin-bottom: 4px; color: var(--w-fg-2); }
+.pt .ex-takea b { color: var(--w-fg); font-weight: 600; }
+.pt .ex-verdict-dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; margin: 0; padding-top: 10px; border-top: 1px solid var(--w-grid); font-size: 12.5px; }
+.pt .ex-verdict-dl dt { font-family: var(--mono); font-size: 10.5px; color: var(--w-fg-2); align-self: center; }
+.pt .ex-verdict-dl dd { margin: 0; }
+.pt .ex-caveats ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.pt .ex-caveats li { font-size: 13.5px; line-height: 1.45; padding-left: 12px; border-left: 2px solid var(--w-grid); }
+.pt .ex-caveats b { font-weight: 600; }
+.pt .ex-where { margin-top: 34px; }
+.pt .ex-tree { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-top: 12px; }
+.pt .ex-branch { background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line); padding: 10px 12px; }
+.pt .ex-parent { display: inline-block; font-family: var(--mono); font-size: 11px; color: var(--w-fg-2); text-decoration: none !important; margin-bottom: 6px; }
+.pt .ex-parent::before { content: "▸ "; }
+.pt .ex-parent:hover { color: var(--jev); }
+.pt .ex-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.pt .ex-chip { display: inline-flex; gap: 6px; align-items: baseline; padding: 2px 8px; font-size: 13px; background: var(--w-sub); color: var(--w-fg); text-decoration: none !important; box-shadow: inset 0 0 0 1px var(--w-grid); }
+.pt .ex-chip em { font-style: normal; font-family: var(--mono); font-size: 10.5px; color: var(--w-fg-2); }
+.pt .ex-chip:hover { background: var(--hl); color: var(--hl-fg); }
+@media (max-width: 760px) {
+  .pt .ex-head.with-meme { grid-template-columns: 1fr; }
+  .pt .ex-meme { max-width: 320px; transform: none; }
+  .pt .ex-side { position: static; }
+  .pt .ex-sec p, .pt .ex-sec li { font-size: 15px; }
 }

@@ -198,7 +198,9 @@ def save(spec: Spec, res: Result, used: set[str] | None = None) -> dict:
     if old.get("card") and old["card"] != d["card"]:
         d["evaluation"] = None  # the card changed; evaluate again
     p.write_text(json.dumps(d, indent=1, default=str))
-    (DOCS / f"{spec.id}.md").write_text(render(spec, d.get("evaluation")))
+    import cases  # the case study is the doc's source when there is one (docs/17)
+    c = cases.load(spec.id)
+    (DOCS / f"{spec.id}.md").write_text(cases.public_md(asdict(spec), c) if c else render(spec, d.get("evaluation")))
     return d
 
 

@@ -20,7 +20,14 @@ export type Experiment = {
   chart: Chart; rows: Row[]; evaluation: Evaluation | null; portrait_rank?: number | null;
   n_rows?: number; n_flagged?: { wrong: number; differs: number }; n_topics?: number;
   topics?: { node: string; n: number; label: string; parent: string; parent_label: string }[];
+  case?: { sections: Partial<Record<"why" | "data" | "asked" | "measured" | "found" | "means", string>>; chart_note: string;
+           caveats: { label: string; text: string }[]; facts: string[] };
+  meme?: { file: string; alt: string | null; caption: string | null };
+  take?: Take;
 };
 export type ExperimentsData = { experiments: Experiment[]; families: Record<string, string> };
 // The index needs only the card fields; charts go along as small thumbnails.
-export type ExperimentCard = Pick<Experiment, "id" | "family" | "family_label" | "title" | "result" | "n" | "new_questions" | "evaluation" | "portrait_rank"> & { chart: Chart };
+export type ExperimentCard = Pick<Experiment, "id" | "family" | "family_label" | "title" | "result" | "n" | "new_questions" | "evaluation" | "portrait_rank" | "meme"> & { chart: Chart };
+
+// Jev's take (docs/17 item 4): its answers to questions about the experiment, and the paragraph built from them.
+export type Take = { text: string; answers: { q: string; a: string; p: number | null }[] };

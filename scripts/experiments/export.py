@@ -18,6 +18,9 @@ import polars as pl
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "portrait"))
 from export_page import row  # noqa: E402
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import cases  # noqa: E402
+
 A = Path("data/analysis")
 OUT = A / "experiments"
 FAMILY = {  # display names and order
@@ -102,6 +105,18 @@ def main():
             "rows": [rows[i] for i in (r.get("examples") or [])[:8] if i in rows],
             "evaluation": {k: ev.get(k) for k in ("outcome", "strength", "top", "interest", "verdict", "checks", "version")} if ev else None,
         })
+        # the case study (docs/17): the site shows every section; the public doc shows the method part
+        c = cases.load(s["id"])
+        if c:
+            out[-1]["result"] = (c.get("result") or r["result"]).strip()
+            out[-1]["case"] = {"sections": c["sections"], "chart_note": c.get("chart_note") or "",
+                               "caveats": c.get("caveats") or [], "facts": c.get("facts") or []}
+            m = c.get("meme") or {}
+            if m.get("file") and (Path("data/portrait/memes") / m["file"]).exists():
+                out[-1]["meme"] = {k: m.get(k) for k in ("file", "alt", "caption")}
+        take = OUT / "_take" / f"{s['id']}.json"
+        if take.exists():
+            out[-1]["take"] = json.loads(take.read_text())
     # every question behind each result, for the paged rows (served privately next to experiments.json)
     RD = A / "experiment_rows"
     RD.mkdir(exist_ok=True)

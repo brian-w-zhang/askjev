@@ -169,6 +169,15 @@ if __name__ == "__main__":
                 path(i).write_text(draft(i))
                 n += 1
         print(f"{n} drafts written")
+    elif cmd == "docs":  # regenerate the public docs from the case files, without rerunning experiments
+        n = 0
+        for i in _ids(args):
+            c = load(i)
+            if c:
+                spec = json.loads((OUT / f"{i}.json").read_text())["spec"]
+                Path(f"docs/experiments/{i}.md").write_text(public_md(spec, c))
+                n += 1
+        print(f"{n} public docs written")
     elif cmd == "check":
         bad = 0
         for i in _ids(args):
