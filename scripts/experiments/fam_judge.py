@@ -375,13 +375,16 @@ def top_grade():
         for name, label in [("wine_notes", "Wine critic notes"), ("stsb_similarity", "Sentence similarity"),
                             ("amazon_reviews", "Amazon review satisfaction"), ("asap_essays", "Seventh-grade essays")]:
             q = source(name)
-            k = len(js(q.row(0, named=True)["options"])) - 1
-            t = pl.DataFrame([{"t": int(_truth(r)), "j": level(js(r["jev_dist"])), "jt": int(top(js(r["jev_dist"])))}
+            # the top level per question: templates within a dataset can have different numbers of levels
+            t = pl.DataFrame([{"t": int(_truth(r)), "j": level(js(r["jev_dist"])), "jt": int(top(js(r["jev_dist"]))),
+                               "k": len(js(r["options"])) - 1}
                               for r in q.iter_rows(named=True) if r["truth"] is not None])
-            rows.append({"label": label, "n": t.height, "levels": k + 1, "true_top": float((t["t"] == k).mean()),
-                         "jev_top": float((t["jt"] == k).mean()),
-                         "top_items_mean": float(t.filter(pl.col("t") == k)["j"].mean()),
-                         "top_items_hit": float((t.filter(pl.col("t") == k)["jt"] == k).mean()),
+            k = int(t["k"].max())
+            top_rows = t.filter(pl.col("t") == pl.col("k"))
+            rows.append({"label": label, "n": t.height, "levels": k + 1, "true_top": float((t["t"] == t["k"]).mean()),
+                         "jev_top": float((t["jt"] == t["k"]).mean()),
+                         "top_items_mean": float(top_rows["j"].mean()),
+                         "top_items_hit": float((top_rows["jt"] == top_rows["k"]).mean()),
                          "rho": spearmanr(t["t"], t["j"]).statistic})
         w = rows[0]
         stingy = [r for r in rows if r["jev_top"] < r["true_top"] * 0.6]

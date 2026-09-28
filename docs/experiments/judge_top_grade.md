@@ -22,7 +22,7 @@ The share of items whose true level is the top one, vs the share where Jev's mos
 Paired bars per dataset: share at the top level, true vs Jev.
 
 ## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.754, top verdict `portrait`.
+Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.75, top verdict `portrait`.
 
 ## Compared with
 The datasets' own levels (critic points, annotator means, stars, teacher scores)
