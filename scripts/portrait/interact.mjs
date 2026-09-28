@@ -15,13 +15,14 @@ const b = await chromium.launch({ channel: "chrome" });
 const ctx = await b.newContext({ viewport: { width, height: width > 800 ? 900 : 844 } });
 const p = await ctx.newPage();
 const logs = [];
+let step = "start";
 const IGNORE = [/THREE\.Clock/];
 p.on("console", (m) => { if (["error", "warning"].includes(m.type()) && !IGNORE.some((r) => r.test(m.text()))) logs.push(`[${step}] ${m.type()}: ${m.text().slice(0, 200)}`); });
 p.on("pageerror", (e) => logs.push(`[${step}] pageerror: ${e.message.slice(0, 200)}`));
 p.on("response", (r) => { if (r.status() >= 400) logs.push(`[${step}] http ${r.status()}: ${r.url().slice(0, 140)}`); });
 await p.addInitScript((t) => localStorage.setItem("askjev.theme", t), theme);
 if (process.env.ASKJEV_KEY) await p.goto(`${base}/?key=${encodeURIComponent(process.env.ASKJEV_KEY)}`); // private production: set the cookie first
-let step = "start", n = 0;
+let n = 0;
 const results = [];
 async function run(name, fn) {
   step = name;
