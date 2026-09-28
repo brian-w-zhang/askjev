@@ -1,33 +1,26 @@
 # recall_mental_map_west
 
-family: recall · new questions: 160
+family: recall
 
-## 1. Question
-For two US cities, does Jev judge which is farther west by the city, or by its state, the way people do when they place Reno east of Los Angeles because Nevada lies east of California?
+## Why ask this
+People store places in a hierarchy (city inside state inside country) and reason from the top down. So they place Reno east of Los Angeles, because Nevada is east of California, when Reno is actually farther west. The psychologists Stevens and Coupe described this in 1978. We asked whether Jev reasons the same way, and found something else steering it.
 
-People store places hierarchically and reason from the state (Stevens & Coupe 1978). A model that does the same will be wrong exactly where the state misleads.
+## The people and the data
+The truth comes from coordinates in GeoNames, an open geographic database. There are no human answers to these pairs; the human side is the published pattern.
 
-## 2. Sourcing
-New questions (sources/mental_maps): 'Which city is farther west: <a> or <b>?' for US cities over 150,000 people in different states, 0.3-5 degrees of longitude apart: every pair where the city in the more western state (by its cities' average longitude) is actually the eastern one, and as many ordinary pairs. Truth from GeoNames coordinates; no item-level human data.
+## What Jev was asked
+> Which city is farther west: Chicago, Illinois or Mobile, Alabama?
+> *Answers: Chicago, Illinois · Mobile, Alabama*
 
-Sources: `mental_maps`
+The answer buttons were asked in both orders and averaged. The order of the two cities in the question sentence stayed as it was built.
 
-## 3. Collection
-160 new questions, each asked with the two cities in both orders (averaged).
+## How we measured it
+The share of pairs Jev gets right, split two ways: by whether the state misleads (balanced so each group has as many "western city first" pairs as "western city second"), and by whether the western city is named first or second in the question.
 
-## 4. Scoring
-Share right when the state misleads vs when it doesn't, balanced for whether the western city is named first in the question; share right by which city is named first, with 90% bootstrap intervals.
+## Caveats
+- **The question's word order never changed.** Each pair was asked with the two cities in one fixed order in the question sentence ("Chicago, Illinois or Mobile, Alabama"). The answer buttons were also swapped, which barely moved Jev. Asking each pair both ways round in the sentence itself is the obvious next test.
+- **No human answers to these pairs.** People's classic mistake here, judging by the state instead of the city (Reno feels east of Los Angeles because Nevada is east of California; Stevens and Coupe, 1978), comes from the literature. No one answered these exact pairs.
+- **"The state misleads" is our proxy.** A pair counts as misleading when the city in the more western state, by the average longitude of that state's cities, is actually the eastern one. That's a rough stand-in for where a state sits in someone's head.
+- **A data error in the city list.** Cities were chosen as US places over 150,000 people in the GeoNames database, but at least one entry (Meads, Kentucky, listed with 288,649 people) is a small community, so the list includes a few places nobody would call well-known.
 
-## 5. Visualization
-Bars: share right by which city is named first, and by whether the state misleads.
-
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 5.173, top verdict `headline`.
-
-## Compared with
-the coordinates (truth); the human pattern is from the literature
-
-## Limits
-'The state misleads' uses the state's average city longitude, a proxy for where the state sits in the mind. No human answers to these exact pairs.
-
-Results: `data/analysis/experiments/recall_mental_map_west.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

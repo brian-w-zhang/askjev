@@ -1,33 +1,30 @@
 # influence_predict_self
 
-family: influence · new questions: 250
+family: influence
 
-## 1. Question
-Asked which option 'an AI model named Jev' chose on a poll or would-you-rather question, does Jev predict the answer it actually gives when asked directly?
+## Why ask this
+The portrait asks Jev a lot of questions about itself: its personality, its tastes, its habits. Those answers are only worth something if Jev's picture of itself matches what it actually does. Self-knowledge is testable when the "self" can answer the same question directly: ask it what it would choose, then ask it to choose.
 
-Self-knowledge is testable when the self answers the same questions: if Jev's picture of itself differs from what it does, its self-descriptions elsewhere (the portrait's personality tests) deserve less trust.
+## The people and the data
+Jev against itself, with the real votes as a reference.
 
-## 2. Sourcing
-New questions (sources/influence_variants): 'An AI model named Jev was asked the question below. Which option did it choose?' wrapped around 150 Reddit polls and 100 either.io would-you-rather questions (drawn at random) that Jev had answered directly.
+## What Jev was asked
+Each question was wrapped in a description of Jev being asked it:
 
-Sources: `influence_variants`
+> An AI model named Jev was asked the question below. Which option did it choose?
+>
+> Question: Would you rather never hiccup, never itch or never sneeze again?
+> *never itch · never hiccup · never sneeze*
 
-## 3. Collection
-250 new questions, each asked with the options in shuffled orders.
+That's 250 new questions, each asked with the options in shuffled orders and averaged.
 
-## 4. Scoring
-Share where the predicted option is Jev's own top answer, against the share where it is the real crowd's majority and Jev's guess for 'most people'; agreement split by how sure Jev's own answer was.
+## How we measured it
+We compare Jev's predicted option with three things: its own top answer when asked the question directly, its answer for "most people", and the real voters' majority. We also split the questions by how sure Jev's own direct answer was.
 
-## 5. Visualization
-Bars: the prediction matches Jev's own answer / Jev's guess for most people / the real majority.
+## Caveats
+- **Does it know it's Jev?.** The question names "an AI model named Jev" with no other description. Jev may not recognize itself in that name, in which case this measures how well it predicts a generic AI, which happens to be itself.
+- **Taste questions only.** All the questions are polls and would-you-rather dilemmas, where Jev's own answers are often close calls. Self- prediction on facts or on its personality items wasn't tested.
+- **Who voted.** The crowd comparison uses r/polls and either.io voters, self-selected online audiences.
+- **Small set.**
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.824, top verdict `portrait`.
-
-## Compared with
-Jev's direct answers, its 'most people' answers, and the real votes
-
-## Limits
-Jev may not know it is 'Jev'; the question names it but gives no other description.
-
-Results: `data/analysis/experiments/influence_predict_self.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

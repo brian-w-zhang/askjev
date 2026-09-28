@@ -2,32 +2,32 @@
 
 family: moral
 
-## 1. Question
-For 25,000 rules of thumb ('It's rude to...', 'You should...'), how many people does Jev think agree, compared with the annotators' estimates?
+## Why ask this
+Every culture runs on thousands of small unwritten rules: text back within a day, don't bring up an ex at dinner, split the bill on a first date or don't. Some of these are shared by nearly everyone; many are argued about endlessly. Knowing a rule is one thing. Knowing whether it's a rule or an opinion is the harder part.
 
-Social Chemistry 101 is a map of everyday morality. Knowing the rules is one thing; knowing which ones people actually argue about is another, and a model that thinks every rule is shared will sound preachy.
+A model that treats every rule of thumb as universal will sound preachy: it will tell you "people generally agree you should..." about things people fight over. This experiment checks how widely Jev thinks everyday rules are shared, against people's own estimates.
 
-## 2. Sourcing
-Existing Social Chemistry 101 questions ('How many people would agree: "<rule>"?', five described levels from 'practically no one' to 'practically everyone'), each with the annotator's estimate. Enough: 25,000 rules.
+## The people and the data
+The rules come from **Social Chemistry 101** (Forbes and colleagues, 2020), a large map of everyday morality built by crowd workers on Amazon Mechanical Turk. Workers read real situations from Reddit and advice columns, wrote "rules of thumb" that apply ("It's rude to cancel plans last minute"), and estimated how many people would agree with each, from "practically no one" to "practically everyone".
 
-Sources: `social_chem`
+The rules cover family, romance, friendship, work, animals and more.
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+## What Jev was asked
+The same question the raters answered, with the dataset's five answer levels:
 
-## 4. Scoring
-The share of rules at each level for Jev (its most likely level) and for annotators; Jev's mean level for the rules annotators put at each level; rank correlation over all rules with a 90% bootstrap interval on the mean gap; the gap by topic.
+> How many people would agree: "It's wrong to try to sabotage a group's success"?
+> *Practically no one agrees with it · A small minority of people agree with it · About half of people agree with it
+> · A clear majority of people agree with it · Practically everyone agrees with it*
 
-## 5. Visualization
-Paired bars: the share of rules at each of the five levels, annotators vs Jev.
+Each rule was asked once as written and once with the five levels in reverse order.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.86, top verdict `portrait`.
+## How we measured it
+For each rule we compare Jev's answer with the raters'.
 
-## Compared with
-Social Chemistry 101 crowd annotators (one estimate per rule)
+## Caveats
+- **One rater is often the whole crowd.** 9,820 of the rules have a single rater's estimate, and at most six people rated any rule. A single MTurk worker's guess about "how many people agree" is noisy, and it is itself a guess about people, not a survey of them.
+- **Who wrote the rules.** The rules come from the Social Chemistry 101 dataset, written by crowd workers from situations in Reddit posts and advice columns. They reflect what English-speaking, mostly American internet users consider normal, not a global sample.
+- **The answer levels are wide.** The five levels follow the dataset's own buckets, and the gap between "a clear majority" and "practically everyone" is where most of the difference sits. A rater and Jev could mean almost the same share and still land on neighboring levels.
+- **Some rules left out.** Rules most raters marked as bad advice were dropped, and a content filter hid rules touching sex, minors and politics from the site, so the most contested rules are underrepresented.
 
-## Limits
-Each rule has one annotator, and their estimate is itself a guess about people. The rules were written from Reddit and advice columns by the dataset's authors.
-
-Results: `data/analysis/experiments/moral_norms.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

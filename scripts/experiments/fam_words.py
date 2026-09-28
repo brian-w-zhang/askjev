@@ -140,7 +140,9 @@ def arousal():
                    "color": w["h_pleasant"].round(2).to_list(), "color_label": "people's pleasantness (1-9)",
                    "x": "people's arousal (1-9)", "y": "Jev's arousal level (0-4)",
                    "labels": [{"label": x["w"], "x": x["h"], "y": x["jev"]} for x in calm[:3] + stir[:3]]},
-            examples=[calm[0]["id"], stir[0]["id"]], n=w.height)
+            examples=[calm[0]["id"], stir[0]["id"]], n=w.height,
+            # the questions behind the result: both scales for the words rated on both, and every arousal question
+            ids=t.filter(((pl.col("dim") == "pleasant") & pl.col("w").is_in(w["w"].to_list())) | (pl.col("dim") == "calming"))["id"].to_list())
     return spec, run
 
 

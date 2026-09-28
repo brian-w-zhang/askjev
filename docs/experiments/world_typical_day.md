@@ -1,33 +1,32 @@
 # world_typical_day
 
-family: world · new questions: 20
+family: world
 
-## 1. Question
-Pick an American at random on a random day: how long did they sleep, work, watch TV, exercise? Does Jev's picture of that day match 181,000 time diaries?
+## Why ask this
+Time-use diaries are the least flattering mirror of daily life. On a random day, most Americans don't work, most don't exercise, and TV takes more time than anything but sleep and work. Ask people what their day looks like and you get something closer to the brochure.
 
-Time-use diaries are the least flattering mirror of daily life: most people don't work on a given day, most don't exercise, and TV takes more time than anything but sleep and work. A model's picture of 'a day' shows whether it knows the diary or the brochure.
+A model asked to picture "a day" has read a lot of brochures. Does it know the diary?
 
-## 2. Sourcing
-New questions (sources/atus_day): for 20 activities, 'Pick an American aged 15 or older at random, on a random day of the year. How much time did they spend <activity> that day?' in 9 bins (none to 10+ hours). The human distribution is the weighted share of ATUS diary days (2003-2016) in each bin.
+## The people and the data
+The American Time Use Survey, run by the Bureau of Labor Statistics: Americans aged 15 and older record everything they did on one day, minute by minute. We use 181,335 diary days from 2003 to 2016 (public domain), weighted to represent the population, and for each of 20 activities the share of days falling in each time bin.
 
-Sources: `atus_day`
+## What Jev was asked
+One question per activity, framed exactly as the diaries measure it:
 
-## 3. Collection
-20 new questions, each asked as written and with the bins in shuffled orders (averaged).
+> Pick an American aged 15 or older at random, on a random day of the year. How much time did they spend relaxing and
+> thinking, doing nothing in particular that day?
+> *None at all · 1 to 29 minutes · 30 to 59 minutes · 1 to 2 hours · 2 to 3 hours · 3 to 5 hours · 5 to 8 hours · 8
+> to 10 hours · 10 hours or more*
 
-## 4. Scoring
-Per activity: Jev's share on 'none' vs the diaries' (how often the activity doesn't happen at all), expected minutes from bin midpoints vs the diaries' weighted mean, and similarity of the distributions; the activities Jev most over- and under-states.
+(In the diaries, 80% of days have none.) That's 20 new questions, each asked with the bins in shuffled orders and averaged.
 
-## 5. Visualization
-Paired rows per activity: minutes per day, diaries (ink) and Jev (magenta), with the share of days at zero.
+## How we measured it
+For each activity, the share of days Jev says have none of it against the diaries', and the average minutes (from the middle of each bin) against the diaries' weighted average. We also check how well Jev orders the activities by time spent (rank correlation: 1 same order, 0 no relation).
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.118, top verdict `portrait`.
+## Caveats
+- **Narrow diary categories.** The diaries code each stretch of time as one main activity. "Relaxing and thinking" and "phone calls, mail and email" count only time coded as exactly that, so they're small in the diaries. Jev likely read them more broadly, which inflates the gap for those two.
+- **The diaries are old.** They cover 2003 to 2016. Screen time has grown since, so Jev's higher computer figure is partly the world changing, not only Jev being wrong.
+- **Coarse answers.** The share of days at zero is exact.
+- **The question is about one day.** "A random American on a random day" includes weekends, holidays and people who don't work. That's the diaries' whole point, and where a picture of a typical weekday goes wrong.
 
-## Compared with
-American Time Use Survey diary days, 2003-2016 (BLS; weighted)
-
-## Limits
-The diaries end in 2016; screen time has grown since. Bin midpoints make minute estimates rough; the zero shares are exact. Diary categories are narrow: 'relaxing and thinking' (ATUS 120301) and 'phone calls, mail and email' (16) count only time coded as that main activity, which Jev's broader reading can't know.
-
-Results: `data/analysis/experiments/world_typical_day.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

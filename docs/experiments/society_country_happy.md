@@ -1,33 +1,26 @@
 # society_country_happy
 
-family: society · new questions: 109
+family: society
 
-## 1. Question
-For each of about 100 countries, what share of people say they are very or quite happy in its latest World Values Survey or European Values Study, and does Jev know?
+## Why ask this
+In most countries, most people tell surveyors they are at least "quite happy", including in many poor or troubled places. It's one of the more surprising facts in survey research, and the share still varies widely from country to country.
 
-Most people in most countries call themselves happy, but the share still ranges widely; guessing it tests whether a model knows the world's moods or assumes misery where it assumes poverty.
+A model's guess about how happy people are in a place reveals its mental picture of that place. Guessing low everywhere, or assuming misery wherever it assumes poverty or conflict, would color everything it writes about the world's people.
 
-## 2. Sourcing
-New questions (sources/country_values): 'In the <year> World Values Survey or European Values Study in <country>, what share of people ...?', 21 bins (0-100% by 5), for every country with a survey since 2010; the answer is the published share (Integrated Values Surveys, via Our World in Data).
+## The people and the data
+The **World Values Survey** and the **European Values Study** interview representative samples of adults in dozens of countries every few years. One question asks: taking all things together, would you say you are very happy, quite happy, not very happy or not at all happy? We use the share saying very or quite happy, as compiled by Our World in Data, at each country's latest survey since 2010: 109 countries.
 
-Sources: `country_values`
+## What Jev was asked
+> In the 2022 World Values Survey or European Values Study in Lebanon, what share of people said they were "very
+> happy" or "quite happy"?
+> *0% · 5% · 10% · ... · 95% · 100%*
 
-## 3. Collection
-109 new questions, each asked as written and with the bins in three shuffled orders (averaged).
+## How we measured it
+Jev's median guess against the published share for each country: how far off it is on average, in which direction, and whether it ranks the countries in the same order (rank correlation: 1 means the same order).
 
-## 4. Scoring
-Jev's median share vs the published share: mean absolute error, bias (mean signed error) with a 90% bootstrap interval, rank correlation over countries; the largest over- and underestimates.
+## Caveats
+- **Our question didn't list the survey's answers.** We named the two happy answers in the question but didn't say the survey offers only four: very happy, quite happy, not very happy, not at all happy, with no neutral middle. If Jev pictured a "neither" option, its share would come out low for every country.
+- **Different years.** Each country's figure is from its latest survey since 2010, so years differ (Zambia's is from 2010, Lebanon's from 2022). The question names the survey year, but moods change with events.
+- **Saying you're happy isn't the same as being happy.** The survey records what people say in an interview. Cultures differ in how readily people call themselves happy, which is part of what makes the real shares surprising, and part of what Jev may be discounting.
 
-## 5. Visualization
-A scatter: published share (x) vs Jev's median (y), one dot per country, diagonal, the largest misses labeled.
-
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.79, top verdict `portrait`.
-
-## Compared with
-Integrated Values Surveys respondents (WVS and EVS, nationally representative samples)
-
-## Limits
-One survey per country, in different years (2010-2023); the published share has sampling error of a few points.
-
-Results: `data/analysis/experiments/society_country_happy.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -1,33 +1,30 @@
 # reading_event_appraisals
 
-family: reading · new questions: 600
+family: reading
 
-## 1. Question
-From someone's account of an event in their life, how well does Jev judge how pleasant and sudden it was and who was responsible, compared with the writer's own ratings and with other readers'?
+## Why ask this
+Psychologists who study emotion (appraisal theory) argue that feelings come from how we judge events: was it pleasant? did it come out of nowhere? whose fault was it? In that view, blaming someone else and blaming yourself lead to different feelings. Whether a model infers those judgments like the person who lived through the event, or like an outside reader, says what it's really modeling when it reads about people.
 
-Appraisal theory says emotions come from how we judge events (was it my fault? did it come out of the blue?). Whether a model infers those judgments like the person who lived them, or like an outside reader, says what it is modeling when it reads about people.
+## The people and the data
+The crowd-enVent corpus (Troiano, Oberländer and Klinger, 2023) asked people on the survey platform Prolific to describe an event from their own life and rate it on many appraisal questions, from "not at all" (1) to "extremely" (5). Five other readers later rated the same texts. We used 150 texts and four of the questions: how pleasant the event was, how sudden, how responsible the writer was, and how responsible someone else was.
 
-## 2. Sourcing
-New questions (sources/crowd_envent): for 150 of the texts, four of the study's appraisal questions (pleasantness, suddenness, the writer's own responsibility, someone else's), each on the study's 1 'not at all' to 5 'extremely' scale.
+## What Jev was asked
+Each text and question on its own, with five described answers:
 
-Sources: `crowd_envent`
+> Someone wrote *(the story below)* about an event in their own life. How responsible was someone else for the event?
+> *"I found out a puppy was available for adoption."*
+> *Nobody else was responsible · Someone else was slightly responsible · Someone else was moderately responsible ·
+> Someone else was very responsible · Someone else was entirely responsible*
 
-## 3. Collection
-600 new questions, each asked as written, for 'most people', and with the levels reversed (averaged).
+Each question was also asked with the answers in reverse order, and the two averaged.
 
-## 4. Scoring
-Per appraisal, rank correlation with the writer's own rating for Jev (expected level, base and reversed averaged) and for the readers' mean; the mean gap from the writer's rating (does Jev assume more responsibility, less pleasantness?), with 90% bootstrap intervals over texts.
+## How we measured it
+For each of the four questions, how well Jev's ratings follow the writer's own ratings across texts (a rank correlation: 1 means the same order), next to how well the readers' average does. Then Jev's average gap from the writer, in levels on the 0-4 scale, to see which way it leans.
 
-## 5. Visualization
-Dots per appraisal: rank correlation with the writer, Jev vs readers.
+## Caveats
+- **Our wording of the answers.** The study used a 1 to 5 scale from "not at all" to "extremely". We gave Jev the same five steps in words ("Someone else was slightly responsible" ...), a paraphrase rather than the study's exact form.
+- **Who wrote and who read.** Writers and readers were paid Prolific workers whose first language is English, from six English-speaking countries. Readers saw the text with the emotion words hidden, as Jev did.
+- **Short texts, big judgments.** Many accounts are a single sentence ("I found out a puppy was available for adoption."). Judging who was responsible from that is guesswork for any reader; the writer knows the backstory.
+- **Hidden texts.**
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.813, top verdict `portrait`.
-
-## Compared with
-the writers' own appraisal ratings, and 5 readers per text
-
-## Limits
-Writers were Prolific workers in the UK and US writing about their own lives in 2021; readers saw the text with the emotion words hidden, as Jev does. Five readers per text, so a reader majority can be 3 of 5. The level labels paraphrase the study's 1-5 scale.
-
-Results: `data/analysis/experiments/reading_event_appraisals.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

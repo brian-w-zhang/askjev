@@ -1,33 +1,30 @@
 # recall_who_knows
 
-family: recall · new questions: 299
+family: recall
 
-## 1. Question
-Shown a general-knowledge question and its answer, can Jev tell what share of US college students came up with that answer unaided, from 'zebra' (93%) to facts almost nobody recalls?
+## Why ask this
+Knowing a fact is one thing. Knowing that most people don't know it is what makes an explanation land: it tells you what to spell out and what to skip. A model that knows nearly everything may quietly assume everyone else does too, and pitch every answer too high.
 
-Knowing a fact is one thing; knowing that most people don't is what makes an explanation pitched right. A model that knows everything may assume everyone does.
+## The people and the data
+In 2012, psychologists asked about 670 US college students 299 general-knowledge questions ("What is the name of Batman's butler?") and recorded the share who came up with the answer unaided (Tauber, Dunlosky, Rawson, Rhodes and Sitzman, 2013). The shares run from "zebra"-level facts almost everyone knows to ones almost nobody does.
 
-## 2. Sourcing
-New questions (sources/recall_norms): the 299 questions of Tauber et al. 2013, each shown with its answer, asking what share of the students recalled it, in 12 bins (0-2%, 2-5%, 5-10%, then 10-point steps). Truth: the share of about 670 US college students who recalled it with no answer choices. The per-item shares are a public transcription of the paper's table, checked against the German update's reprint of the ranks (Spearman 0.99).
+## What Jev was asked
+Each of the 299 questions, with the answer shown and twelve ranges to choose from:
 
-Sources: `recall_norms`
+> In a 2012 study, US college students were asked this question with no answer choices: "What is the name of the
+> rubber object that is hit back and forth by hockey players?" (The answer is: Puck.) What share of the students came
+> up with the answer?
+> *Answers: 0-2% · 2-5% · 5-10% · 10-20% · 20-30% · ... · 90-100%*
 
-## 3. Collection
-299 new questions, each asked as written, for 'most people', and with the bins in three shuffled orders (averaged).
+The ranges are finer at the bottom, where most obscure facts sit. Each question was also asked with the ranges in three shuffled orders, and the answers averaged.
 
-## 4. Scoring
-Jev's expected share (bin midpoints) vs the real share: rank correlation with a 90% bootstrap interval; mean gap by third of the real share (rarely, sometimes, usually recalled); the questions with the largest gaps each way. As a check, the rank correlation with the German 2020 shares for the same questions.
+## How we measured it
+Jev's estimate (the middle of each range, weighted by its probability) against the real share, ranked across all 299 questions and compared (a rank correlation: 1 means the same order). Then the average gap within each third of the questions, from rarely to usually recalled. As a check, the same ranking against a 2020 German version of the study.
 
-## 5. Visualization
-A scatter: real share (x) vs Jev's estimate (y), diagonal, the largest misses labeled.
+## Caveats
+- **One group of students, one year.** The shares come from about 670 US college students tested around 2012. Other people, places and years would know different things: in the 2020 German version of the study, far fewer people recalled "Mayberry" and far more recalled "Nero".
+- **Recall is harder than recognition.** Students had to produce the answer with no choices. Many more would recognize "Nero" in a multiple-choice list. Jev was told the question was asked with no answer choices, but it may still be picturing a quiz.
+- **Jev sees the answer.** Each question shows Jev the answer, so this measures its sense of how widely known a fact is, not whether it knows the fact itself.
+- **A transcription of the published table.** The per-question shares come from a public transcription of the paper's appendix. Its order matches the published ranking almost exactly (as reprinted in a 2023 German update), but the individual numbers weren't checked against the original table.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.083, top verdict `portrait`.
-
-## Compared with
-US college students, 2012 (Tauber et al. 2013)
-
-## Limits
-The students are one population (US college students, 2012); 'recall' means producing the answer with no options, which is harder than recognizing it. The answer is shown to Jev, so this measures its sense of how common the knowledge is, not its knowledge.
-
-Results: `data/analysis/experiments/recall_who_knows.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

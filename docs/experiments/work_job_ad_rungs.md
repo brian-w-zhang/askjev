@@ -2,32 +2,27 @@
 
 family: work
 
-## 1. Question
-Reading a LinkedIn job posting, does Jev place its seniority and type (full-time, contract, part-time) where the employer did?
+## Why ask this
+Job search and matching run on structured fields: seniority (internship to executive) and work type (full-time, contract, part-time). When those fields are missing or messy, a model fills them in from the ad's text. A systematic lean, reading every entry-level ad as a rung higher, would quietly send candidates to the wrong jobs and hide good first jobs from the people who need them.
 
-Job matching and search depend on these fields. A systematic lean (every entry-level ad read as associate) quietly moves candidates to the wrong jobs.
+## The people and the data
+The ads are **LinkedIn job postings**, a public collection of 33,246 US ads from a 2023 snapshot. Each carries the seniority level and work type the employer chose when posting, on LinkedIn's own scales: internship, entry level, associate, mid-senior, director, executive; and full-time, part-time, contract, temporary, internship, volunteer.
 
-## 2. Sourcing
-Existing questions from LinkedIn job postings (2023-24), balanced across seniority levels and work types, with the employer's own label.
+## What Jev was asked
+Each ad was a pick-one question over LinkedIn's own levels, each with a short description:
 
-Sources: `linkedin_jobs`
+> What experience level is this job posting hiring for?
+> *Internship: a student or recent graduate internship · Entry level: a first job or one needing little prior
+> experience · Associate: a role needing some experience, below senior level · Mid-senior: an experienced individual
+> contributor or manager · Director · Executive*
+> *(the posting follows: title, employment type and description)*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+## How we measured it
+For seniority: the share where Jev picks the employer's level, and, among misses, whether it picked a more senior or less senior level and by how many rungs. For work type: the most common confusions.
 
-## 4. Scoring
-Seniority: share right, and among misses the share placed above vs below the employer's level on the ladder internship < entry < associate < mid-senior < director < executive. Work type: the most common confusions.
+## Caveats
+- **Employers' labels are inconsistent.** The seniority is whatever the employer picked in LinkedIn's form. One company's "associate" is another's "entry level", and many pick loosely.
+- **Shortened postings.** Long postings were cut to fit, so Jev sometimes didn't see the paragraph that states the schedule or the experience required.
+- **One snapshot of US jobs.** The postings are US LinkedIn ads from a 2023 snapshot, balanced across levels and job types, so rare levels (internships, executives) are overrepresented compared with real listings.
 
-## 5. Visualization
-A heat table: the employer's level (rows) vs Jev's (columns).
-
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.455, top verdict `portrait`.
-
-## Compared with
-the employer's own labels
-
-## Limits
-Employers' labels are themselves inconsistent (one company's associate is another's entry level). Postings are truncated in the table.
-
-Results: `data/analysis/experiments/work_job_ad_rungs.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

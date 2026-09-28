@@ -57,7 +57,7 @@ def shame_guilt():
         sources=["isear", "empathetic_dialogues"])
 
     def run():
-        rows, ex = [], []
+        rows, ex, used = [], [], []
         for src, shame, guilt, name in [("isear", "shame", "guilt", "ISEAR"),
                                         ("empathetic_dialogues", "ashamed", "guilty", "EmpatheticDialogues")]:
             t = labeled(src)
@@ -68,6 +68,7 @@ def shame_guilt():
                          "guilt_as_shame": float(gs.mean()), "ci_gs": boot(gs), "n_guilt": g.height,
                          "shame_right": float((s["jev"] == shame).mean()), "guilt_right": float((g["jev"] == guilt).mean())})
             ex += seeded(s.filter(pl.col("jev") == guilt)["id"].to_list(), "shame", 2)
+            used += s["id"].to_list() + g["id"].to_list()
         i, e = rows
         return Result(
             result=f"Asked to name the feeling in someone's own story of shame, Jev says guilt {e['shame_as_guilt']:.0%} "
@@ -81,7 +82,7 @@ def shame_guilt():
                    "b": [r["guilt_as_shame"] for r in rows], "a_label": "shame read as guilt",
                    "b_label": "guilt read as shame"},
             robustness="Same direction in both datasets, which differ in language, length and the list of options.",
-            examples=ex)
+            examples=ex, ids=used)
     return spec, run
 
 

@@ -2,32 +2,29 @@
 
 family: risk
 
-## 1. Question
-On the gamble choices that founded prospect theory, re-run in 19 countries in 2020, does Jev choose like people?
+## Why ask this
+In 1979 Daniel Kahneman and Amos Tversky showed that people treat gains and losses differently. They play safe with gains and take risks to avoid losses. This "reflection effect" is the heart of prospect theory, one of the most influential ideas in economics.
 
-Kahneman and Tversky's 1979 problems show people play safe with gains and gamble with losses. Whether a model does the same says a lot about the advice it gives on money and risk.
+People increasingly ask models what to do about money: take the settlement or go to court, lock in a rate or wait. Whether a model has people's risk instincts, the opposite ones, or none, shapes that advice.
 
-## 2. Sourcing
-Existing items from Ruggeri et al. 2020 (4,098 people in 19 countries), 17 choices between gambles, paired by hand into 8 effects. Enough.
+## The people and the data
+In 2020 Ruggeri and colleagues re-ran the original prospect-theory problems with 4,098 people in 19 countries, using the original structure with amounts converted to local currency. We use their published answers, pooled across countries. The data are public on OSF for research use.
 
-Sources: `behavioral_econ`
+From their 17 gamble choices we built 8 classic effects, each a pair of choices that differ in one way: gains vs losses, a certain outcome vs the same odds scaled down, a one-stage vs a two-stage game, one big prize vs split prizes, and a pure framing change where the final amounts are identical.
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+## What Jev was asked
+Each choice was its own question, in the US version's wording:
 
-## 4. Scoring
-For each effect, the difference in the share choosing the key option between the two versions, for people and for Jev; also, on the choices whose expected values differ, how often each side picks the higher expected value.
+> Which would you prefer: an 80% chance of gaining $8,000 (20% chance of $0), or $6,000 for sure?
+> *A 100% guarantee of gaining $6,000 · An 80% chance of gaining $8,000 (20% chance of $0)*
 
-## 5. Visualization
-A forest plot of the 8 effects, people vs Jev, plus a 2x2 of the headline pair (sure thing vs gamble, gains vs losses).
+## How we measured it
+For each effect, we take the share choosing the key option in one version minus the other, for people and for Jev. We also check, on the 6 choices where the two options have different averages, how often each side's majority picks the option that pays more on average.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 5.182, top verdict `portrait`.
+## Caveats
+- **Hypothetical money.** Nobody in the study won or lost real money, and neither did Jev. That's standard for these problems, but choices with real stakes can differ.
+- **Jev reading numbers.** Every problem is a comparison of percentages and dollar amounts. Reading and weighing raw numbers is a limit TypeSafe already documents for Jev, so part of any gap may be arithmetic rather than attitude to risk.
+- **Countries pooled.** The 19 countries are pooled into one "people" number. A single country's pattern could sit closer to or further from Jev's.
+- **Textbook problems.** These are the original 1979 problems, discussed in countless economics courses. A model may have read that people "should" maximize expected value and answer that way, which is itself a finding about its advice, not necessarily about how it handles new risks.
 
-## Compared with
-Ruggeri et al. 2020, 4,098 people in 19 countries
-
-## Limits
-Hypothetical money for both; Jev's answers are probabilities over the two options. The countries are pooled.
-
-Results: `data/analysis/experiments/risk_prospect_theory.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

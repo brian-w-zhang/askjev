@@ -1,33 +1,26 @@
 # society_country_trust
 
-family: society · new questions: 109
+family: society
 
-## 1. Question
-For each of about 100 countries, what share of people say most people can be trusted in its latest World Values Survey or European Values Study, and does Jev know?
+## Why ask this
+Do most people in a country think others can be trusted? The answer ranges from a few percent to over 70%, and it's one of the most studied numbers in social science.
 
-Trust in strangers ranges from under 5% to over 70% of people, and it predicts a great deal about a country. A model's picture of it shows whether it knows the world or projects one country onto all of them.
+A model's guess about trust in a place reveals whether it knows the world country by country, or projects one middling picture onto all of them.
 
-## 2. Sourcing
-New questions (sources/country_values): 'In the <year> World Values Survey or European Values Study in <country>, what share of people ...?', 21 bins (0-100% by 5), for every country with a survey since 2010; the answer is the published share (Integrated Values Surveys, via Our World in Data).
+## The people and the data
+The **World Values Survey** and the **European Values Study** interview representative samples of adults in dozens of countries every few years. One question asks whether "most people can be trusted" or "you need to be very careful in dealing with people". We use the share choosing "can be trusted", as compiled by Our World in Data, at each country's latest survey since 2010: 109 countries.
 
-Sources: `country_values`
+## What Jev was asked
+> In the 2022 World Values Survey or European Values Study in China, what share of people answered "most people can
+> be trusted" (rather than "you need to be very careful in dealing with people")?
+> *0% · 5% · 10% · ... · 95% · 100%*
 
-## 3. Collection
-109 new questions, each asked as written and with the bins in three shuffled orders (averaged).
+## How we measured it
+Jev's median guess against the published share for each country: how far off on average, in which direction, how widely its guesses spread compared with the real shares, and whether it ranks the countries in the same order (rank correlation: 1 means the same order).
 
-## 4. Scoring
-Jev's median share vs the published share: mean absolute error, bias (mean signed error) with a 90% bootstrap interval, rank correlation over countries; the largest over- and underestimates.
+## Caveats
+- **Different years.** Each country's figure is from its latest survey since 2010, so years differ, and the question names the year. Trust can shift with events between surveys.
+- **A known quirk of the question.** The survey question is a blunt either-or ("most people can be trusted" or "you need to be very careful"), and countries may read it differently. Some surprises in the real data, like China's high share, may reflect how the question is understood as much as how much people trust each other.
+- **One number per country.** The published share has a sampling error of a few points, so small misses (under 5 points) mean little.
 
-## 5. Visualization
-A scatter: published share (x) vs Jev's median (y), one dot per country, diagonal, the largest misses labeled.
-
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.879, top verdict `portrait`.
-
-## Compared with
-Integrated Values Surveys respondents (WVS and EVS, nationally representative samples)
-
-## Limits
-One survey per country, in different years (2010-2023); the published share has sampling error of a few points.
-
-Results: `data/analysis/experiments/society_country_trust.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

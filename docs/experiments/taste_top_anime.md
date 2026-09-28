@@ -1,33 +1,28 @@
 # taste_top_anime
 
-family: taste · new questions: 276
+family: taste
 
-## 1. Question
-If Jev ranked every anime it was asked about, what would its top ten be?
+## Why ask this
+Anime has a devoted fan culture with strong opinions about what's great. A ranking from a model shows whether it lands on the fan consensus, on the films outsiders know (Studio Ghibli), or somewhere of its own.
 
-Wrapped-style favorites, but from every item it rated and then a real final among the best, rather than a handful of head-to-heads; the interesting part is what rises to the top and what sinks.
+## The people and the data
+No people here: Jev against its own opinions. How Jev compares with MyAnimeList users is its own experiment.
 
-## 2. Sourcing
-Existing one-at-a-time rating questions ("How much would you enjoy ...", five situation-described levels) under Self > Lifestyle > Ratings > anime_ratings; items from MyAnimeList (series and films). Every item is rated, so the whole list can be ranked; the ratings crowd the top with near-ties, so the top 24 play a round-robin final (new questions, sources/taste_finals).
+## What Jev was asked
+Every title one at a time, with five answers describing what you'd do:
 
-Sources: `taste_ratings`, `taste_finals`
+> How much would you enjoy watching Nogizaka Haruka no Himitsu (TV series)?
+> *You'd give up on it early · You'd finish it but forget it within a week · You'd enjoy it once and not rewatch it ·
+> You'd recommend it to a friend · You'd rewatch it and count it among your favorites*
 
-## 3. Collection
-The ratings exist. New: the finals, 276 head-to-heads among the top 24 ("Which film would you rather watch?"), each asked in both option orders.
+Each was also asked with the answers reversed, and the two averaged. The 24 top-rated titles then played a round-robin final: 276 games of "Which anime would you rather watch?", each asked with the titles in both orders.
 
-## 4. Scoring
-Ratings: each item's expected level (0-4), averaged with the same question asked with the levels reversed. Finals: Jev's probability for each side, averaged over both orders, summed into soft wins; the order is the Bradley-Terry strength fitted to all 276 games. Intransitive triads (A beats B, B beats C, C beats A) are counted as a consistency check.
+## How we measured it
+A title's rating is where Jev's answer lands on the five levels (0 to 4). In the final, each game gives each side Jev's probability of picking it, so a lopsided game counts as nearly a whole win and a close one as about half; the order comes from a standard head-to-head ranking model (Bradley-Terry).
 
-## 5. Visualization
-A ranked list, Wrapped style: the finals' top ten with their win counts, and the ratings' bottom five for contrast.
+## Caveats
+- **Reputation or taste.** The winners are titles that appear on nearly every "best anime" list Jev could have read. A model that has read the rankings will tend to reproduce them, so this list can't tell Jev's taste apart from the fan consensus.
+- **The catalog.** The anime come from a 2016 MyAnimeList dataset, titles with at least 300 ratings, so nothing after 2016 appears, and adult-genre titles were left out of the questions.
+- **The finalists were picked by Jev's own ratings.**
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.054, top verdict `portrait`.
-
-## Compared with
-nothing outside the model: a ranking of Jev's own ratings and choices
-
-## Limits
-A winner is only the best of what was on the list (MyAnimeList (series and films)). Finalists were chosen by Jev's own ratings, so an item it underrated never reached the final.
-
-Results: `data/analysis/experiments/taste_top_anime.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

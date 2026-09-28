@@ -2,32 +2,27 @@
 
 family: taste
 
-## 1. Question
-Does Jev like the beers that BeerAdvocate reviewers like, and where does it disagree most?
+## Why ask this
+Beer enthusiasts have strong shared tastes, hoppy IPAs among their favorites. Comparing Jev with BeerAdvocate's reviewers shows whether a model shares the enthusiasts' palate, or has a style bias of its own.
 
-A real test of taste against a real crowd, not against Jev's own guess about people; the disagreements are the portrait.
+## The people and the data
+BeerAdvocate reviewers, via 1.59 million reviews collected by McAuley, Leskovec and Jurafsky from 1998 to 2012. For each beer we use the distribution of its overall scores, set on the same five levels Jev answers on.
 
-## 2. Sourcing
-Existing rating questions under Self > Lifestyle > Ratings > beer_ratings, each with the real rating distribution of BeerAdvocate reviewers (their ratings binned to the same five levels). Enough: thousands of items.
+## What Jev was asked
+Every beer one at a time:
 
-Sources: `taste_ratings`
+> How much would you enjoy drinking Maudite by Unibroue (Belgian Strong Dark Ale)?
+> *You'd pour it out after a sip · You'd finish the glass but not order it again · You'd drink it again if it was what's
+> on offer · You'd order it again by name · You'd seek it out and keep it stocked at home*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+Each was also asked with the answers reversed, and the two averaged. Jev never saw the reviews.
 
-## 4. Scoring
-Rank correlation (Spearman) between Jev's robust level and the audience's mean level, with a 90% bootstrap interval over items; the items with the largest rank disagreement in each direction. Ranks, not levels, because Jev's described levels and the audience's star ratings aren't the same scale.
+## How we measured it
+Ranks, because the scales differ.
 
-## 5. Visualization
-A scatter of audience rank vs Jev's rank, with the ten biggest disagreements labeled on each side.
+## Caveats
+- **A craft-beer crowd from 1998 to 2012.** BeerAdvocate reviewers are craft-beer enthusiasts, and the reviews stop in 2012. A different crowd, or a later one, might rate hoppy beers very differently.
+- **Small audiences for some beers.**
+- **A model can't taste.** Jev has never had a drink; its ratings reflect how beers and styles are written about.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.646, top verdict `portrait`.
-
-## Compared with
-BeerAdvocate reviewers (their average rating of each item)
-
-## Limits
-Audiences rate what they chose to watch or drink; Jev rates everything. Rank comparisons only.
-
-Results: `data/analysis/experiments/taste_vs_audience_beer.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

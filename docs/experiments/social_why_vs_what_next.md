@@ -2,32 +2,28 @@
 
 family: social
 
-## 1. Question
-On 30,000 everyday social situations, does Jev read people's motives, their feelings, or what will happen next best?
+## Why ask this
+Understanding people runs in two directions. Looking back, you explain an action: why did she apologize? Looking ahead, you predict: what will he do next, how will they feel? They're different skills. Explaining after the fact is easier for most people; prediction is where social intuition gets tested.
 
-Explaining an action after the fact and predicting its consequences are different skills; the gap says which way Jev's social sense points.
+The gap between the two shows which way Jev's social sense points.
 
-## 2. Sourcing
-Existing Social IQa questions (Sap et al. 2019): a one-line situation and a question of one of about ten types (why did X do this, what does X need to do before, how would X feel, what will happen to X...), three answers, one marked right by crowd workers. Enough: 29,500 questions.
+## The people and the data
+**Social IQa** (Sap and colleagues, 2019): tens of thousands of one-line everyday situations, each with a question of one of about ten kinds (why did X do this, what did X need to do first, how would X feel, what will happen to X, what will others want to do next...) and three answers written by crowd workers, one marked right. In the original study, people agreed with the marked answer about 87% of the time.
 
-Sources: `social_iqa`
+## What Jev was asked
+The situation, the question and the three answers:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> In [context], what will happen to Tracy?
+> *go to sleep · not follow Skylar · skylar will look out for tracy*
 
-## 4. Scoring
-The share Jev gets right per question type, with 90% bootstrap intervals; grouped into looking back (motives, what was needed before), feelings and descriptions, and looking ahead (what happens next, what they will want next). Also Jev's stated probability against how often it is right.
+with the context "Tracy obeyed Skylar's order to stay back and not leave."
 
-## 5. Visualization
-Dots per question type with intervals, ordered, colored by looking back / feelings / looking ahead.
+## How we measured it
+The share Jev gets right for each kind of question, grouped into looking back (motives, what was needed first), feelings and descriptions, and looking ahead (what happens next, what they'll want next). We also check whether Jev's confidence matches how often it's right.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.256, top verdict `portrait`.
+## Caveats
+- **Some "right" answers are odd.** The answers were written by crowd workers, and some marked-right answers are strange. For "Bailey was a shy kid at school. They made no friends. What will happen to Bailey?", the marked answer is "get work done". The forward-looking questions seem to have more of these, which alone could explain a few points.
+- **A small gap.** Looking back beats looking ahead by 3 to 5 points. That's a real, consistent difference, but a direction, not a gulf.
+- **One-line situations.** Each situation is a sentence or two with invented names ("Tracy obeyed Skylar's order"), far thinner than real social life.
 
-## Compared with
-Social IQa's crowd-validated answers (people agreed with the marked answer about 87% of the time in the original study)
-
-## Limits
-Answers are crowd-written, and some wrong answers are plausible; differences between types are a few points, so read them as a direction, not a gap in kind.
-
-Results: `data/analysis/experiments/social_why_vs_what_next.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

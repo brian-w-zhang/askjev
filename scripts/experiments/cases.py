@@ -69,16 +69,72 @@ def load(eid: str) -> dict | None:
 
 
 def public_md(spec: dict, case: dict) -> str:
-    """The public doc: the method only (no result, no finding, no meme)."""
+    """The public doc: the method only (no result, no finding, no meme). A sentence that quotes a number from the result
+    file (and not from the spec or the cited facts) states a result, so it stays private."""
     s = case["sections"]
+    res = OUT / f"{spec['id']}.json"
+    known: set[float] = set()
+    _numbers(spec, known)
+    _numbers(case.get("facts") or [], known)
+    ok = set().union(*(_forms(v) for v in known)) if known else set()
+    found: set[float] = set()
+    if res.exists():
+        _numbers(json.loads(res.read_text())["result"], found)
+    private = set().union(*(_forms(v) for v in found)) - ok if found else set()
+
+    spec_forms = set().union(*(_forms(v) for v in _spec_numbers(spec)))
+
+    def states_result(sentence: str) -> bool:
+        if re.search(r"\bJev (put|picked|said|gave|chose|answered|called|filed|rated|named)\b", sentence) or \
+                re.search(r"\bJev (puts|picks|says|gives|calls)\b.*\d", sentence):
+            return True  # Jev's answer to the example
+        for tok in re.findall(r"(?<![\w.])-?\d[\d,]*(?:\.\d+)?", sentence):
+            t = tok.lstrip("-").replace(",", "")
+            if re.fullmatch(r"\d|10|100|(1[89]|20)\d\d", t):
+                continue
+            if t in private or ("Jev" in sentence and t not in spec_forms):  # a result, or Jev's answer to an example
+                return True
+        return False
+
+    def keep(text: str) -> str:
+        # whole paragraphs and list items first (the source is hard-wrapped), then drop the sentences that state results
+        blocks: list[list[str]] = []
+        for line in text.split("\n"):
+            if not line.strip() or line.startswith(">") or line.lstrip().startswith("- ") or not blocks or not blocks[-1] \
+                    or blocks[-1][0].startswith(">"):
+                blocks.append([line] if line.strip() else [])
+            else:
+                blocks[-1].append(line.strip())
+        out = []
+        for bl in blocks:
+            if not bl:
+                out.append("")
+            elif bl[0].startswith(">"):
+                out.append(bl[0])
+            else:
+                para = " ".join(bl)
+                lead = re.match(r"\s*(- )?", para).group(0)
+                parts = re.split(r"(?<=[.!?])\s+(?=[A-Z\"*(])", para[len(lead):])
+                kept = " ".join(p for p in parts if not states_result(p))
+                if kept:
+                    out.append(lead + kept)
+        return re.sub(r"\n{3,}", "\n\n", "\n".join(out)).strip()
+
     lines = [f"# {spec['id']}", "", f"family: {spec['family']}", ""]
     for k, t in SECTIONS:
         if k in PUBLIC and s.get(k):
-            lines += [f"## {t}", s[k], ""]
-    if case.get("caveats"):
-        lines += ["## Caveats"] + [f"- **{c['label']}.** {c['text']}" for c in case["caveats"]] + [""]
+            lines += [f"## {t}", keep(s[k]), ""]
+    cav = [(c["label"], keep(c.get("text", ""))) for c in case.get("caveats") or []]
+    if cav:
+        lines += ["## Caveats"] + [f"- **{l}.**" + (f" {t}" if t else "") for l, t in cav] + [""]
     lines += ["Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`."]
     return "\n".join(lines) + "\n"
+
+
+def _spec_numbers(spec: dict) -> set[float]:
+    out: set[float] = set()
+    _numbers(spec, out)
+    return out
 
 
 # ---- checks ----------------------------------------------------------------------------------------------------------
@@ -125,7 +181,8 @@ def check(eid: str) -> list[str]:
     _numbers(case.get("facts") or [], vals)  # outside numbers, each cited in the case file
     allowed = set().union(*(_forms(v) for v in vals)) if vals else set()
     text = " ".join([case.get("result") or "", case.get("chart_note") or "", *case["sections"].values(),
-                     *(c.get("text", "") + " " + c.get("label", "") for c in case.get("caveats") or [])])
+                     *(c.get("text", "") + " " + c.get("label", "") for c in case.get("caveats") or []),
+                     (case.get("meme") or {}).get("caption") or "", *((case.get("meme") or {}).get("texts") or [])])
     for tok in re.findall(r"(?<![\w.])-?\d[\d,]*(?:\.\d+)?", text):
         t = tok.lstrip("-").replace(",", "")
         if t in allowed:

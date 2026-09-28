@@ -1,33 +1,29 @@
 # taste_top_art
 
-family: taste · new questions: 276
+family: taste
 
-## 1. Question
-If Jev ranked every artwork or art form it was asked about, what would its top ten be?
+## Why ask this
+Art taste is where people most expect a model to parrot the canon. The interesting parts are whether it does, what it does with non-Western works, and what it likes least.
 
-Wrapped-style favorites, but from every item it rated and then a real final among the best, rather than a handful of head-to-heads; the interesting part is what rises to the top and what sinks.
+## The people and the data
+No people here: Jev against its own opinions.
 
-## 2. Sourcing
-Existing one-at-a-time rating questions ("How much would you enjoy ...", five situation-described levels) under Self > Lifestyle > Ratings > art_ratings; items from lists written for this project (famous works, genres). Every item is rated, so the whole list can be ranked; the ratings crowd the top with near-ties, so the top 24 play a round-robin final (new questions, sources/taste_finals).
+## What Jev was asked
+Every entry one at a time, with five answers describing what you'd do:
 
-Sources: `g5_w13_ratings`, `taste_finals`
+> How much would you like seeing Knife Behind Back by Yoshitomo Nara up close?
+> *You'd walk past it without stopping · You'd glance at it and move on · You'd stop and look at it for a minute ·
+> You'd linger and come back to it before leaving · You'd travel to another city just to see it*
 
-## 3. Collection
-The ratings exist. New: the finals, 276 head-to-heads among the top 24 ("Which film would you rather watch?"), each asked in both option orders.
+Each was also asked with the answers reversed, and the two averaged. The 24 top-rated entries then played a round-robin final: 276 games of "Which would you rather see or experience?", each asked with the two names in both orders.
 
-## 4. Scoring
-Ratings: each item's expected level (0-4), averaged with the same question asked with the levels reversed. Finals: Jev's probability for each side, averaged over both orders, summed into soft wins; the order is the Bradley-Terry strength fitted to all 276 games. Intransitive triads (A beats B, B beats C, C beats A) are counted as a consistency check.
+## How we measured it
+An entry's rating is where Jev's answer lands on the five levels (0 to 4). In the final, each game gives each side Jev's probability of picking it, so a lopsided game counts as nearly a whole win and a close one as about half; the order comes from a standard head-to-head ranking model (Bradley-Terry).
 
-## 5. Visualization
-A ranked list, Wrapped style: the finals' top ten with their win counts, and the ratings' bottom five for contrast.
+## Caveats
+- **More wins, lower rank.** The ranking model weighs whom each work beat, not just how often, and the two are close enough that the order between them shouldn't be taken strictly.
+- **A list written by another AI.** The famous works, genres and places were written for this project by Claude, and the list mixes single paintings with whole art forms ("war photography") and buildings. Art forms are judged very differently from a single masterpiece.
+- **Upsetting subjects sink.** War photography comes last, which likely says more about its subject than its artistry: a question about how much you'd like seeing something rewards pleasant subjects.
+- **The finalists were picked by Jev's own ratings.**
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.37, top verdict `portrait`.
-
-## Compared with
-nothing outside the model: a ranking of Jev's own ratings and choices
-
-## Limits
-A winner is only the best of what was on the list (lists written for this project (famous works, genres)). Finalists were chosen by Jev's own ratings, so an item it underrated never reached the final.
-
-Results: `data/analysis/experiments/taste_top_art.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

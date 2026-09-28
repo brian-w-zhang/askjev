@@ -1,33 +1,28 @@
 # taste_top_book
 
-family: taste · new questions: 276
+family: taste
 
-## 1. Question
-If Jev ranked every book it was asked about, what would its top ten be?
+## Why ask this
+A favorite book is a small self-portrait: it says what a reader values (ideas, plot, comfort, jokes). Asking a model about thousands of books one at a time gives a real ranking, and a final among its top picks settles the order at the top. The question is what kind of reader that makes Jev.
 
-Wrapped-style favorites, but from every item it rated and then a real final among the best, rather than a handful of head-to-heads; the interesting part is what rises to the top and what sinks.
+## The people and the data
+No people here: this is Jev against its own opinions. How Jev's taste compares with Goodreads readers is its own experiment ("Jev's taste in books vs Goodreads readers").
 
-## 2. Sourcing
-Existing one-at-a-time rating questions ("How much would you enjoy ...", five situation-described levels) under Self > Lifestyle > Ratings > book_ratings; items from Goodreads (books with many ratings). Every item is rated, so the whole list can be ranked; the ratings crowd the top with near-ties, so the top 24 play a round-robin final (new questions, sources/taste_finals).
+## What Jev was asked
+Every book one at a time, with five answers describing what you'd actually do:
 
-Sources: `taste_ratings`, `taste_finals`
+> How much would you enjoy reading Shift by Hugh Howey?
+> *You'd put it down after a chapter or two · You'd finish it out of duty and forget it soon after · You'd enjoy it
+> once and not reread it · You'd recommend it to a friend · You'd reread it and count it among your favorite books*
 
-## 3. Collection
-The ratings exist. New: the finals, 276 head-to-heads among the top 24 ("Which film would you rather watch?"), each asked in both option orders.
+Each was also asked with the answers in reverse order, and the two averaged. Then the 24 highest-rated books played a round-robin final: 276 games of "Which book would you rather read?", each asked with the titles in both orders.
 
-## 4. Scoring
-Ratings: each item's expected level (0-4), averaged with the same question asked with the levels reversed. Finals: Jev's probability for each side, averaged over both orders, summed into soft wins; the order is the Bradley-Terry strength fitted to all 276 games. Intransitive triads (A beats B, B beats C, C beats A) are counted as a consistency check.
+## How we measured it
+A book's rating is where Jev's answer lands on the five levels (0 to 4). In the final, each game gives the winner Jev's probability of picking it, so a lopsided game counts as nearly a whole win and a close one as about half. The order comes from a standard way of ranking players from head-to-head results (a Bradley-Terry model).
 
-## 5. Visualization
-A ranked list, Wrapped style: the finals' top ten with their win counts, and the ratings' bottom five for contrast.
+## Caveats
+- **The final was close.** Swapping two of them would take very little, so read the top five as a group more than an order.
+- **The catalog decides the contest.** The books are the most-rated titles on Goodreads (each with at least 2,000 ratings): a popular, English-language list from 2017. A reference manual and a scripture turning up at the bottom says as much about what's in the catalog as about Jev.
+- **The finalists were picked by Jev's own ratings.**
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.059, top verdict `portrait`.
-
-## Compared with
-nothing outside the model: a ranking of Jev's own ratings and choices
-
-## Limits
-A winner is only the best of what was on the list (Goodreads (books with many ratings)). Finalists were chosen by Jev's own ratings, so an item it underrated never reached the final.
-
-Results: `data/analysis/experiments/taste_top_book.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -2,32 +2,26 @@
 
 family: knowledge
 
-## 1. Question
-On pub-quiz trivia, which categories does Jev know and which does it miss, and does it find the questions people rated hard harder?
+## Why ask this
+Trivia is a quick map of what a model has absorbed well. A pub quiz database, split into categories, shows where the knowledge is thick and where it thins out, and the database's own difficulty ratings show whether "hard" for people is also hard for the model.
 
-Trivia spans the whole of general culture in one format, so category differences are about knowledge, not question style; the human difficulty ratings give an outside check.
+## The people and the data
+The Open Trivia Database is a free, volunteer-written quiz database (CC BY-SA 4.0), with a category and a difficulty rating on every question.
 
-## 2. Sourcing
-Existing Open Trivia Database questions (CC BY-SA 4.0) with their category and the contributor's difficulty rating. Enough: 2,800 questions, categories with 40+ questions shown.
+## What Jev was asked
+Each question as the database has it, with its four options:
 
-Sources: `opentdb`
+> The cake depicted in Valve's "Portal" franchise most closely resembles which real-world type of cake?
+> *Devil's Food · German Chocolate · Black Forest · Molten Chocolate*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+Each was also asked with the options in shuffled orders.
 
-## 4. Scoring
-Accuracy per category with 90% bootstrap intervals; accuracy by the easy/medium/hard rating.
+## How we measured it
+The share right per category and per difficulty rating, with 90% intervals.
 
-## 5. Visualization
-Ranked dots: one row per category, with the difficulty ratings as a small three-bar inset.
+## Caveats
+- **Written by volunteers.** The Open Trivia Database is written and rated by contributors. Difficulty is one person's judgment, and some answers are the contributor's opinion of what counts as right.
+- **Pop culture ages fast.** Video game and TV trivia is often about details from a specific release or episode; those are exactly the facts that are thinly written up, and some may postdate what Jev learned.
+- **Multiple choice.**
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.164, top verdict `portrait`.
-
-## Compared with
-Open Trivia DB answer keys and difficulty ratings
-
-## Limits
-Difficulty is one contributor's rating; categories are the database's.
-
-Results: `data/analysis/experiments/knowledge_pop_trivia.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -2,32 +2,35 @@
 
 family: minds
 
-## 1. Question
-When one of the characters is 'you', where does Jev rank itself on feeling fear, feeling hunger, telling right from wrong and self-control, compared with where people rank themselves?
+## Why ask this
+In the classic study of how people see minds, one of the characters is "you". People compare themselves with a baby, a dog, a frog, a robot, a dead woman, and rate who is more capable of feeling afraid, feeling hungry, telling right from wrong and self-control. Unsurprisingly, they rank themselves high on all four.
 
-The study's 'you' is a mirror: people put themselves at the top on everything. Jev answering the same questions about itself shows what kind of mind it claims to be, next to a robot, a frog and God.
+Where an AI places itself, next to a robot and a frog, is a direct look at what kind of mind it claims to be.
 
-## 2. Sourcing
-New questions (sources/mind_perception): Gray, Gray & Wegner's 2007 design as run in Weisman's public replication: 13 characters with the original descriptions, all 78 pairs, 'Which character is more capable of <capacity>?' on the study's 5-point scale, for fear and hunger (Experience) and morality and self-control (Agency). 312 questions; 11-16 US MTurk adults per capacity answered every pair.
+## The people and the data
+The design is Gray, Gray and Wegner's 2007 mind-perception study, as run in a public replication with US adults online (11 to 16 per capacity). Four capacities were asked: two about feeling (fear, hunger) and two about acting (morality, self-control). "You" was compared with every other character on each.
 
-Sources: `mind_perception`
+## What Jev was asked
+The same pairwise questions as "Who has a mind? Jev's map next to people's", with "you" as one of the characters:
 
-## 3. Collection
-The 48 pairs involving 'you' among the 312 new questions (no extra calls).
+> Which character is more capable of feeling hungry?
+> Green Frog: The Green Frog can be found throughout eastern North America. This classic 'pond frog' is medium-sized
+> and green or bronze in color. Daily life includes seeking out permanent ponds or slow streams with plenty of
+> vegetation.
+> You: You yourself: the one answering this question.
+> *Green Frog: much more capable · Green Frog: slightly more capable · Both equally capable · You: slightly more
+> capable · You: much more capable*
 
-## 4. Scoring
-Per capacity, the rank of 'you' among the 13 characters by mean advantage (1 = most capable), for Jev and for people, and the characters Jev places just above and below itself; Jev vs Kismet the robot.
+That's 48 of the questions, each averaged over the answers in both orders.
 
-## 5. Visualization
-Dots per capacity: the rank of 'you' for Jev and for people, with Kismet's rank for Jev as a tick.
+## How we measured it
+For each capacity, the characters are ranked by their average advantage over the others (1 = most capable). We compare where "you" lands for Jev and for people, and note who sits just above and below Jev, and where Jev puts Kismet, the robot in the study.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.071, top verdict `portrait`.
+## Caveats
+- **"You" is a different character for each.** The study describes "you" as "the one answering this question". For people that's a human adult; for Jev it's an AI. The comparison is each respondent's view of itself, not two views of the same thing.
+- **A small human sample.** People's self-rankings come from a public replication with 11 to 16 participants per capacity. A rank can move a place or two with a few different people.
+- **No license on the human data.** The replication's data carries no stated license and is used for private research only.
+- **Trained self-descriptions.** How an AI model describes its own feelings is shaped by training choices, not only by what it has learned about the world. Jev saying it feels little hunger may be policy as much as belief.
+- **Two characters missing.** The fetus and God were hidden by the content filter that keeps sensitive questions off the site, so ranks are out of 11, not 13.
 
-## Compared with
-US adults ranking themselves in the same design
-
-## Limits
-The human side is a small replication (11-16 people per capacity), so single pairs are noisy and the comparison is made on character scores averaged over 10 pairs each. Four of the original 18 capacities. 'You' is the respondent: a person for people, Jev for Jev. The fetus and God were left out: the question screen hid 28 of their pairs as sensitive, so the map uses the 55 pairs among the other 11 characters. The replication's repository states no license; its data are used here for private research only.
-
-Results: `data/analysis/experiments/minds_where_jev_puts_itself.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

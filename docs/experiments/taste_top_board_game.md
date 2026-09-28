@@ -1,33 +1,29 @@
 # taste_top_board_game
 
-family: taste · new questions: 276
+family: taste
 
-## 1. Question
-If Jev ranked every board game it was asked about, what would its top ten be?
+## Why ask this
+Board games are social, so a favorite says what kind of evening you want: a clever party game, a long strategy session, a two-player duel. With thousands of games rated one at a time and a final among the best, we can see what Jev reaches for, and whether the ratings and the final agree.
 
-Wrapped-style favorites, but from every item it rated and then a real final among the best, rather than a handful of head-to-heads; the interesting part is what rises to the top and what sinks.
+## The people and the data
+No people here: Jev against its own opinions. How Jev's taste compares with BoardGameGeek users is its own experiment.
 
-## 2. Sourcing
-Existing one-at-a-time rating questions ("How much would you enjoy ...", five situation-described levels) under Self > Lifestyle > Ratings > board_game_ratings; items from BoardGameGeek (ranked games). Every item is rated, so the whole list can be ranked; the ratings crowd the top with near-ties, so the top 24 play a round-robin final (new questions, sources/taste_finals).
+## What Jev was asked
+Every game one at a time, with five answers describing what you'd do:
 
-Sources: `taste_ratings`, `taste_finals`
+> How much would you enjoy playing Medina (2001)?
+> *You'd want to quit before the first game ended · You'd play one game and never ask for it again · You'd play it
+> again if someone else suggested it · You'd suggest it yourself at the next game night · You'd want to own it and
+> play it again and again*
 
-## 3. Collection
-The ratings exist. New: the finals, 276 head-to-heads among the top 24 ("Which film would you rather watch?"), each asked in both option orders.
+Each was also asked with the answers reversed, and the two averaged. The 24 top-rated games then played a round-robin final: 276 games of "Which board game would you rather play?", each asked with the names in both orders.
 
-## 4. Scoring
-Ratings: each item's expected level (0-4), averaged with the same question asked with the levels reversed. Finals: Jev's probability for each side, averaged over both orders, summed into soft wins; the order is the Bradley-Terry strength fitted to all 276 games. Intransitive triads (A beats B, B beats C, C beats A) are counted as a consistency check.
+## How we measured it
+A game's rating is where Jev's answer lands on the five levels (0 to 4). In the final, each matchup counts Jev's probability of picking the winner, so a lopsided game counts as nearly a whole win and a close one as about half; the order comes from a standard head-to-head ranking model (Bradley-Terry).
 
-## 5. Visualization
-A ranked list, Wrapped style: the finals' top ten with their win counts, and the ratings' bottom five for contrast.
+## Caveats
+- **A game with nobody at the table.** The question asks how much "you" would enjoy playing, with no group, no rules explanation and no table time. Famous, easy-to-picture games like Codenames and Carcassonne, which Jev has read the most about, likely gain from that.
+- **The catalog.** The games are those with at least 500 ratings on BoardGameGeek, the main hobby site, so the list is the hobby's catalog, heavy on designer games.
+- **The finalists were picked by Jev's own ratings.**
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.031, top verdict `portrait`.
-
-## Compared with
-nothing outside the model: a ranking of Jev's own ratings and choices
-
-## Limits
-A winner is only the best of what was on the list (BoardGameGeek (ranked games)). Finalists were chosen by Jev's own ratings, so an item it underrated never reached the final.
-
-Results: `data/analysis/experiments/taste_top_board_game.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

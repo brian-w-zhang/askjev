@@ -2,30 +2,29 @@
 
 family: self
 
-## 1. Question
-Asked about itself with no right answer, on which topics does Jev commit to an answer and on which does it hedge?
+## Why ask this
+With no right answer at stake, how firmly someone answers shows where they have settled views. Ask a person their favorite food and they'll answer at once; ask a hard ethical question and they'll hedge. A model might have it the other way around: rehearsed on how to behave, blank on what it likes.
 
-A model's confidence where nothing is at stake shows what it has settled views on. People are usually surest about their tastes and least sure about ethics; a model might be the reverse.
+## The people and the data
+There are no people here. The questions come from banks written for this project about Jev itself (its personality, habits, relationships, tastes, values and way of thinking), grouped by topic on our question map.
 
-## 2. Sourcing
-The questions written for this project about Jev itself (the g5_* banks in the Self hemisphere: personality, lifestyle, love, mind, values), yes/no and pick-one only: 102,000 questions in 42 topics with 500+ each. Datasets with a right answer are left out.
+## What Jev was asked
+Questions about itself, in the second person, for example:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Which describes how you'd react to a newly opened road?
+> *Answers: use it · wonder what it will change*
 
-## 4. Scoring
-Confidence = how far Jev's top probability is above an even split, scaled so 0 is a coin toss (1/k) and 1 is certain; per topic, the mean with a 90% bootstrap interval, and the share of 'torn' answers (confidence under 0.2). The same measure for Jev's answer on behalf of most people.
+> Do you think the fear of death gets smaller with age? *(yes/no)*
 
-## 5. Visualization
-Dots per topic sorted by confidence, from torn to sure, with Jev's confidence about most people as a second, hollow dot.
+Every question was also asked the other way round, "what would most people say?", so the same measure can be taken for Jev's picture of people.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.315, top verdict `portrait`.
+## How we measured it
+For each answer, how far Jev's top choice is above an even split, scaled so 0 is a coin toss and 1 is certain.
 
-## Compared with
-Jev's confidence when answering for most people (its guess, not real people)
+## Caveats
+- **The questions were written by Claude.** Every question here was written for this project by Claude (Anthropic's model), topic by topic, and checked by Jev for clarity. That makes the topics comparable, but it also means the questions reflect how one model imagines a personality quiz. A topic can look "torn" partly because its questions were harder to answer cleanly.
+- **Sure isn't right.** There's no right answer to "which would you pick?", so this measures how committed Jev is, not whether it's correct. A confident answer about its dark side is a stance, not a fact.
+- **Topics come from our map.** Topics are branches of this project's question map, each with at least 500 questions, so their boundaries are ours, and some mix very different questions.
+- **Two kinds of questions pooled.** Yes/no questions and two-or-more-option picks are pooled after rescaling confidence so a coin toss is 0 for each. A pick among five options and a yes/no aren't perfectly comparable.
 
-## Limits
-Topics are the tree's; question wording varies by bank. Confidence here is Jev's probability, not a measure of whether it is right.
-
-Results: `data/analysis/experiments/self_torn_vs_sure.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

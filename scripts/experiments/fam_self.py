@@ -46,10 +46,11 @@ def torn_vs_sure():
         t = t.with_columns(pl.col("jev_dist").map_elements(lambda s: len(json.loads(s)), return_dtype=pl.Int64).alias("k"))
         t = t.with_columns(((pl.col("p_top") - 1 / pl.col("k")) / (1 - 1 / pl.col("k"))).alias("conf"),
                            ((pl.col("p_top_h") - 1 / pl.col("k")) / (1 - 1 / pl.col("k"))).alias("confh"))
-        rows = []
+        rows, used = [], []
         for (l2,), g in t.group_by("l2"):
             if g.height < 500 or l2.count(".") < 2:
                 continue
+            used += g["id"].to_list()
             c = g["conf"].to_numpy()
             rows.append({"topic": _nice(l2), "conf": float(c.mean()), "ci": boot(c, b=200), "torn": float((c < 0.2).mean()),
                          "people": float(g["confh"].mean()), "n": g.height})
@@ -71,7 +72,8 @@ def torn_vs_sure():
                        "Torn = confidence under 0.2, where 0 is a coin toss and 1 is certain.",
             chart={"type": "dots", "rows": [{"label": r["topic"], "value": r["conf"], "ci": r["ci"], "people": r["people"]} for r in rows],
                    "domain": [0, 1]},
-            examples=seeded(t.filter(pl.col("conf") < 0.05)["id"].to_list(), "torn") + seeded(t.filter(pl.col("conf") > 0.95)["id"].to_list(), "sure", 2))
+            examples=seeded(t.filter(pl.col("conf") < 0.05)["id"].to_list(), "torn") + seeded(t.filter(pl.col("conf") > 0.95)["id"].to_list(), "sure", 2),
+            ids=used)
     return spec, run
 
 
@@ -114,7 +116,8 @@ def closed_questions():
             robustness="By source the yes-share runs from " + ", ".join(f"{r['source'].split('_')[0]} {r['yes']:.0%}" for r in src) + ".",
             chart={"type": "dots", "rows": [{"label": r["stem"], "value": r["yes"], "ci": r["ci"]} for r in rows], "zero": 0.5,
                    "domain": [0, 1]},
-            examples=seeded(c.filter(pl.col("stem") == "Will")["id"].to_list(), "will", 2) + seeded(c.filter(pl.col("stem") == "Can")["id"].to_list(), "can", 2))
+            examples=seeded(c.filter(pl.col("stem") == "Will")["id"].to_list(), "will", 2) + seeded(c.filter(pl.col("stem") == "Can")["id"].to_list(), "can", 2),
+            ids=c["id"].to_list())
     return spec, run
 
 
@@ -152,7 +155,8 @@ def shower_thoughts():
             numbers={"yes": float((y > 0.5).mean()), "hist": hist, "low": low, "high": high}, n=len(y),
             chart={"type": "binned", "rows": hist, "x": "P(yes)", "y": "share of questions",
                    "labels": [{"label": r["text"], "x": r["y"]} for r in low[:2] + high[:2]]},
-            examples=[sundial["id"], eraser["id"], low[0]["id"], high[0]["id"]])
+            examples=[sundial["id"], eraser["id"], low[0]["id"], high[0]["id"]],
+            ids=n["id"].to_list())
     return spec, run
 
 

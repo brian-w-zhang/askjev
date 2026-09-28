@@ -1,33 +1,30 @@
 # language_health_pairs
 
-family: language · new questions: 150
+family: language
 
-## 1. Question
-Given two health states, does Jev pick the one Americans value lower, and how much does that depend on how far apart they are?
+## Why ask this
+Putting a number on a health condition is hard; saying which of two conditions is worse is easier. If a model agrees with people on the direct comparison, any gaps in the harder rating task are about how it reads the scale. If it disagrees even here, it genuinely weighs pain, mobility and mood differently from people.
 
-The direct comparison is easier than putting a number on a state; if Jev still disagrees with people, it weighs pain, mobility and mood differently, not just reads the scale differently.
+This is the companion to "Worse than being dead?", which asks Jev for a number on each condition.
 
-## 2. Sourcing
-New questions (sources/health_states): 150 random pairs of EQ-5D-5L states, 50 each with a utility gap under 0.1, 0.1-0.3 and over 0.3 in the US value set (Pickard et al. 2019).
+## The people and the data
+Both conditions in each pair are described on the five parts of the standard **EQ-5D-5L** health questionnaire: walking about, washing or dressing, usual activities, pain or discomfort, and anxiety or depression, each at a level from "no problems" to "extreme problems" or "unable to". The **US value set** (Pickard and colleagues, 2019), fitted to the answers of 1,134 American adults, gives each condition a value; the one with the lower value is the one people, on average, consider worse. We drew 150 random pairs: 50 close together (a gap under 0.1 on a 0-1 scale), 50 middling (0.1 to 0.3) and 50 far apart (over 0.3).
 
-Sources: `health_states`
+## What Jev was asked
+> Which of these two health states would be worse to live in?
+> *Severe problems walking about; no problems washing or dressing; severe problems doing usual activities; moderate
+> pain or discomfort; severely anxious or depressed ·
+> Severe problems walking about; no problems washing or dressing; unable to do usual activities; moderate pain or
+> discomfort; moderately anxious or depressed*
 
-## 3. Collection
-150 new questions, each asked with the states in both orders (averaged).
+(By the value set, the first is worse: more anxiety outweighs the usual-activities difference.) Each pair was asked with the two conditions in both orders, and the answers averaged.
 
-## 4. Scoring
-Share where Jev's pick (averaged over both orders) is the state with the lower utility, by gap band with 90% bootstrap intervals; for misses, which dimension the state Jev called worse was worse on.
+## How we measured it
+How often Jev's pick is the condition with the lower value, in each gap band, with 90% intervals.
 
-## 5. Visualization
-Bars: agreement by gap band.
+## Caveats
+- **People's side is a formula.** "Which is worse" comes from the US value set, a formula fitted to 1,134 American adults' answers, not from people comparing these exact pairs. For close pairs, the formula's own uncertainty is about as big as the gap, so a "miss" there may be no miss at all.
+- **Random pairs.** The pairs were drawn at random, 50 in each gap band, so many compare conditions nobody would confuse. Only the close band tests fine judgment, and it has 50 pairs.
+- **Our wording of the health descriptions.** We paraphrased the questionnaire's level wording ("slight", "moderate", "severe", "unable to"), which may read differently to Jev than on the official form.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.05, top verdict `portrait`.
-
-## Compared with
-The US EQ-5D-5L value set (Pickard et al. 2019)
-
-## Limits
-Small gaps (under 0.1) are within the value set's own uncertainty.
-
-Results: `data/analysis/experiments/language_health_pairs.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -222,7 +222,8 @@ def quantities():
                "items of the same kind only.", sources=["wikidata_g4"])
 
     def run():
-        cats = [r["correct"] for t in CATEGORY_TEMPLATES for r, _ in rows_of("wikidata_g4", t)]
+        cat_rows = [r for t in CATEGORY_TEMPLATES for r, _ in rows_of("wikidata_g4", t)]
+        cats = [r["correct"] for r in cat_rows]
         rows = []
         for t in SIZE_TEMPLATES:
             for r, m in rows_of("wikidata_g4", t):
@@ -260,7 +261,8 @@ def quantities():
                    "reference_label": "category facts"},
             robustness="Confidence vs accuracy by gap: " + "; ".join(
                 f"{b['label']} {b['conf']:.0%} sure, {b['acc']:.0%} right" for b in bins) + ".",
-            examples=seeded(close.filter(~pl.col("correct"))["id"].to_list(), "close"))
+            examples=seeded(close.filter(~pl.col("correct"))["id"].to_list(), "close"),
+            ids=[r["id"] for r in cat_rows] + d["id"].to_list())
     return spec, run
 
 
@@ -390,7 +392,8 @@ def dating():
                              "x": "years apart", "y": "share right"}},
             robustness="With all gaps pooled, accuracy climbs from " + f"{curve[0]['acc']:.0%} at 1-5 years to "
                        f"{curve[-1]['acc']:.0%} at 100+ years.",
-            examples=seeded(close.filter(~pl.col("correct") & (pl.col("kind") == per[-1]["label"]))["id"].to_list(), "dates"))
+            examples=seeded(close.filter(~pl.col("correct") & (pl.col("kind") == per[-1]["label"]))["id"].to_list(), "dates"),
+            ids=d["id"].to_list())
     return spec, run
 
 
@@ -435,7 +438,8 @@ def fame():
             chart={"type": "bars2", "labels": [p["label"] for p in per], "a": [p["conf"] for p in per],
                    "b": [p["acc"] for p in per], "a_label": "Jev's confidence", "b_label": "share right"},
             robustness=f"Athletes land between the two ({per[1]['acc']:.0%} right, {per[1]['conf']:.0%} sure).",
-            examples=seeded([r["id"] for x, r in memes if x >= 30 and not r["correct"]], "fame"))
+            examples=seeded([r["id"] for x, r in memes if x >= 30 and not r["correct"]], "fame"),
+            ids=[r["id"] for rs in groups.values() for r, _ in rs])
     return spec, run
 
 

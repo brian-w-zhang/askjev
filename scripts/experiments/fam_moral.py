@@ -187,7 +187,7 @@ def vignettes():
         sources=["moral_vignettes"])
 
     def run():
-        q = source("moral_vignettes")
+        q = source("moral_vignettes").filter(pl.col("primitive") == "score")  # the wrongness ratings, not the "main reason" picks
         rows = []
         for r in q.iter_rows(named=True):
             h = biggest(r["humans"])

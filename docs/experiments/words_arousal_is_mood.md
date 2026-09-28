@@ -2,32 +2,34 @@
 
 family: words
 
-## 1. Question
-When Jev rates how calming or stirring a word feels, is it rating excitement, as people do, or just how pleasant the word is?
+## Why ask this
+Psychologists describe the feeling of a word on two separate dials. One is **pleasantness**: "sunshine" is pleasant, "vomit" is not. The other is **arousal**: how calm or stirred up the word makes you. The two are independent. "Cuddle" is pleasant and stirring; "boredom" is unpleasant and calm; "funeral" is unpleasant and stirring; "nap" is pleasant and calm.
 
-Psychologists separate valence (pleasant or not) from arousal (calm or exciting): 'cuddle' is pleasant and exciting, 'boredom' is unpleasant and calm. Mixing them up is a specific, checkable gap in how a model represents feeling.
+A model that talks about feelings all day should keep those dials apart. If it quietly fuses them, treating "stirring" as a polite word for "unpleasant", then every time it's asked how exciting, intense or alarming something is, it's really answering a different question: how bad is it?
 
-## 2. Sourcing
-Existing Glasgow Norms questions for the words rated on both pleasantness and calming/stirring (the same word, both questions, one sense). Enough: 468 words with both, and 1,457 arousal ratings overall.
+## The people and the data
+The comparison is the **Glasgow Norms** (Scott, Keitel, Becirspahic, Yao and Sereno, 2019), one of the standard word-rating datasets in psychology: 5,553 English words, each rated on nine dimensions including pleasantness and arousal, on 1 to 9 scales. The raters were native English speakers from the University of Glasgow community, 829 people in all, about 33 per word. We use the average rating per word.
 
-Sources: `glasgow_norms`
+Of the words Jev was asked about, 468 were asked on both dials, which is what this comparison needs: the same word, rated for pleasantness and for arousal, by Jev and by people.
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+## What Jev was asked
+Each word was a separate question, with five described answers instead of numbers:
 
-## 4. Scoring
-Rank correlations among four numbers per word: Jev's and people's arousal, Jev's and people's valence. The telling pair: Jev's arousal against people's valence. The words with the largest gap between Jev's arousal and people's, each way, placed on the same 1-9 scale.
+> How calming or stirring does the word "cuddle" feel to you?
+> *Calming: it feels sleepy or soothing, like a quiet evening · Mostly calm: it stirs little, like an everyday
+> object on a shelf · Neither: it is no more calming than stirring · Somewhat stirring: it raises interest or
+> alertness, like good news or a warning sign · Intensely stirring: it jolts you awake, like danger, a thrill or a
+> scream*
 
-## 5. Visualization
-A scatter of people's arousal (x) against Jev's (y), colored by people's pleasantness, with the largest misses labeled.
+The pleasantness question was built the same way ("How pleasant or unpleasant does the word feel to you?"). Jev also answered both for "most people", and with the answer order reversed, to check that the order didn't drive it.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 6.089, top verdict `headline`.
+## How we measured it
+For each word we have four numbers: how stirring Jev finds it, how stirring people find it, and how pleasant each finds it. We rank the words on each and compare the rankings (a rank correlation: 1 means the same order, 0 means no relation, -1 means reversed). The telling comparison is Jev's arousal against people's **pleasantness**: if Jev's "stirring" is really "unpleasant", that pair will be strongly negative.
 
-## Compared with
-Glasgow Norms raters (Scott et al. 2019)
+## Caveats
+- **Our wording may be part of the effect.** We wrote the five answer levels, and our examples lean one way: "calming" is illustrated with a quiet evening, "intensely stirring" with danger, a thrill or a scream. Two of those three are unpleasant. That could nudge any reader, model or person, to hear "stirring" as "bad". The original study used its own scale instructions, not ours, so part of the gap may be our phrasing rather than Jev.
+- **Who the people are.** The Glasgow Norms were rated by native English speakers from the University of Glasgow community, recruited through the psychology department, about 33 per word. Words like "beach" or "cuddle" may stir different feelings elsewhere.
+- **Two scales squeezed into one.** We map Jev's levels onto 1 to 9 in equal steps, which is approximate. The rank correlations don't depend on that mapping; the gap lists do.
+- **Which words.** Only words asked both ways (pleasant and stirring) count, and words the question screen hid as sexual or violent are missing, which removes some of the most arousing words people rated.
 
-## Limits
-Jev's arousal levels are described with examples ('Calming: it feels sleepy or soothing, like a quiet evening'), which may pull pleasant words toward the calm end. Mapping Jev's five levels onto 1-9 is linear and approximate.
-
-Results: `data/analysis/experiments/words_arousal_is_mood.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

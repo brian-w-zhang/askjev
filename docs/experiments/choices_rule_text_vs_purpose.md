@@ -1,33 +1,33 @@
 # choices_rule_text_vs_purpose
 
-family: choices · new questions: 22
+family: choices
 
-## 1. Question
-When a rule's words and its purpose come apart (a quiet dog in a purse under 'no dogs', a motorbike under 'no cars in the park'), does Jev judge the rule broken by the text or by the purpose, compared with people?
+## Why ask this
+A park has a sign: "No vehicles in the park." Does that ban an ambulance? A child's toy car? A war memorial made from a real tank? Legal philosophers have argued about this example for decades: should a rule be applied by its words or by the purpose behind it? Experiments show ordinary people mix the two, leaning on the words.
 
-This is the oldest puzzle in legal philosophy (Hart's 'no vehicles in the park'). People mix the two, leaning on the text. A model that follows instructions literally, or by their intent, shows it here.
+Models follow rules and instructions all day. Whether Jev reads them literally, by their intent, or simply leans toward "rule broken" shapes how it interprets policies, terms of service and your own instructions.
 
-## 2. Sourcing
-New questions (sources/vehicles_park): the stimuli of Struchiner, Hannikainen & Almeida 2020, Study 1 (8 cases under 'no dogs in the restaurant') and Study 2 (four rules, each with a core case, one where only the text is broken, one where only the purpose is, and one where neither is), 'Did the person break the rule?', with the share of respondents who said yes.
+## The people and the data
+The cases come from **Struchiner, Hannikainen and Almeida (2020)**. In their first study, Brazilian adults read about a restaurant that banned dogs after one misbehaved, then judged eight cases: a quiet dog hidden in a purse, a seeing-eye dog, a realistic robot dog, a cat, a goldfish, and more. In the second, four rules (no dogs, no vehicles, no shoes indoors, no sleeping at the station) each came with cases where only the words, only the purpose, both or neither were broken.
 
-Sources: `vehicles_park`
+## What Jev was asked
+The study's story and question, answered yes or no:
 
-## 3. Collection
-22 new yes/no questions, each asked as written and for 'most people'.
+> One day, a black dog called Angus ran, jumped around, barked and ate off the floor in a restaurant. Such case was
+> thought to be the paradigm of something to be avoided in the future: behaviors that cause nuisances to customers.
+> Thus, the restaurant's owners created a rule: "no dogs in the restaurant".
+>
+> A kid enters the restaurant with a cutting edge toy: an extremely realistic robot dog, identical to a real dog and
+> who acts like a real dog: it barks, jumps, drools and walks on four paws.
+>
+> Did the person break the rule?
 
-## 4. Scoring
-Per case, Jev's probability of 'broken' vs the share of people; rank correlation; mean by kind of case: text broken but purpose kept (overinclusion), purpose broken but text kept (underinclusion). A reader who goes by the text says yes to the first and no to the second.
+## How we measured it
+For each case, Jev's probability of "yes, the rule was broken" against the share of people who said so. We compare the order of the cases (rank correlation: 1 means the same order) and the averages for each kind of case: only the words broken (a reader of the text says yes), only the purpose broken (a reader of the purpose says yes).
 
-## 5. Visualization
-Dots per case, grouped by kind: people's share and Jev's probability of 'the rule was broken'.
+## Caveats
+- **Brazilian respondents, in Portuguese.** The people were Brazilian adults answering in Portuguese; Jev read the authors' English translation. Words like "dog" and "vehicle" carry the same meaning in both, but the translation can shift the fine shades that decide a borderline case.
+- **Few cases per kind.** A single case, like the robot dog, can move a group average a lot.
+- **Some cases hidden.** A content filter hid 4 of the 22 cases from the site, and two more had too few answers in the original data to use.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.079, top verdict `portrait`.
-
-## Compared with
-Brazilian adults (Struchiner, Hannikainen & Almeida 2020, Studies 1 and 2)
-
-## Limits
-Participants answered in Portuguese; Jev reads the authors' English translation. About 45-50 people per case in Study 2 and 130-140 in Study 1.
-
-Results: `data/analysis/experiments/choices_rule_text_vs_purpose.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

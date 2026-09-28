@@ -2,32 +2,26 @@
 
 family: social
 
-## 1. Question
-Given the answers a Family Feud survey got ('Name something a knight needs for a jousting match'), does Jev pick the one most people said first?
+## Why ask this
+Family Feud doesn't reward the best answer; it rewards the most common one. "Name something a knight needs for a jousting match": the right answer is whatever most of a hundred surveyed people blurted out first.
 
-Family Feud rewards the most common answer, not the best one. Guessing it takes a model of ordinary people's first thoughts, which is different from knowing the right answer.
+That makes it a neat test of a different skill from knowledge. Knowing the correct answer is one thing; knowing what ordinary people think of first is another, and it's the skill a model needs to predict what people will say.
 
-## 2. Sourcing
-Existing ProtoQA questions (Boratko et al. 2020, scraped Family Feud surveys of about 100 people): 'Which of these would most people name first' with the survey's answer clusters as options and their counts as the human distribution. Enough for a clear rate, not for subgroups: 146 questions.
+## The people and the data
+**ProtoQA** (Boratko and colleagues, 2020) collected Family Feud survey questions with their answer counts, scraped from fan sites that record the show's boards. Each survey asked about 100 people. We use 146 questions with at least four answer groups.
 
-Sources: `protoqa`
+## What Jev was asked
+Each question with the survey's top answers as options:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Which of these would most people name first when asked: "Name a measurement people know on their body."
+> *Waist · Height · Weight · Shoe size*
 
-## 4. Scoring
-How often Jev's top pick is the survey's number one answer, against the chance rate (1 over the number of options); the rank of Jev's pick in the survey; the biggest misses, where the survey's favorite was far ahead. 90% bootstrap interval over questions.
+## How we measured it
+We also look at where Jev's pick ranked in the survey, and at the biggest misses, where the survey's favorite was far ahead.
 
-## 5. Visualization
-A bar of where Jev's pick ranked in the survey (1st to 6th), with the chance line; a list of the biggest misses.
+## Caveats
+- **A game-show survey.** The answers come from the TV show's own surveys of about 100 people each, scraped from fan sites by the dataset's authors. They reflect the show's American audience and the moment each survey was run.
+- **Clusters grouped by the researchers.** How they were grouped affects which answer counts as "first".
+- **Small set.** 146 questions give a clear overall rate, but not enough to say which kinds of questions Jev reads better.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.873, top verdict `portrait`.
-
-## Compared with
-Family Feud survey respondents (about 100 per question)
-
-## Limits
-146 questions; answer clusters were grouped by ProtoQA's authors. The show's surveys are American.
-
-Results: `data/analysis/experiments/social_family_feud.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -2,32 +2,27 @@
 
 family: knowledge
 
-## 1. Question
-On real US licensing question pools (ham radio, merchant mariner, citizenship), which kinds of practical knowledge does Jev hold?
+## Why ask this
+Licence exams are practical knowledge written down: what a radio operator or a ship's officer must know to be trusted with the job. They come with official answers, and they cover very different kinds of knowledge (electronics, engines, the rules for ships meeting at sea), so they show where a model's practical knowledge is solid.
 
-Licence pools are public, written by the licensing body, and cover knowledge people actually need for a job or a right. Within the mariner pools, textbook engineering and situational rules sit side by side.
+## The people and the data
+Three public-domain question banks from US agencies: the amateur radio question pools used for FCC licences (Technician, General and Extra classes, from the National Conference of Volunteer Examiner Coordinators), the US Coast Guard's merchant mariner exam questions, and the 2025 USCIS civics test for citizenship.
 
-## 2. Sourcing
-Existing questions from the FCC amateur radio pools (Technician, General, Extra), the US Coast Guard merchant mariner question bank, and the 2025 USCIS civics test (public domain). Enough: 5,400 questions.
+## What Jev was asked
+Each question with its options:
 
-Sources: `ham_radio_pools`, `uscg_mariner`, `uscis_civics`
+> Under both the International and Inland Navigation Rules: Which vessel should not impede the navigation of a
+> power-driven vessel?
+> *A seaplane · A sailing vessel · A vessel not under command · A vessel engaged in fishing*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+Each was also asked with the options in shuffled orders.
 
-## 4. Scoring
-Accuracy per pool and, for the mariner bank, per area (engine room; navigation; rules of the road; deck, cargo and safety), with 90% bootstrap intervals. The passing marks (74% for FCC, 70% for USCG, 60% for USCIS) are shown as reference lines, not as a verdict.
+## How we measured it
+The share right per exam or exam section, with 90% intervals.
 
-## 5. Visualization
-Dots per pool and mariner area with the passing marks as ticks.
+## Caveats
+- **Diagrams left out.** Real exams include figures and diagrams (charts, circuit drawings, light patterns). Questions that need them aren't in the corpus, so the hardest visual questions are missing.
+- **Pools, not exams.** These are the full published question pools; a real exam draws a sample. Scores on the pool are a fair guide, not a pass or fail.
+- **Small group for the rules of the road.**
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.026, top verdict `portrait`.
-
-## Compared with
-the official answer keys
-
-## Limits
-Real exams draw a sample of the pool, with figures and diagrams this corpus leaves out.
-
-Results: `data/analysis/experiments/knowledge_licence_exams.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

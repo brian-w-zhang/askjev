@@ -1,33 +1,30 @@
 # society_prestige_1947
 
-family: society · new questions: 45
+family: society
 
-## 1. Question
-For 45 jobs from the classic 1947 NORC prestige survey (physician, banker, carpenter, janitor, shoe shiner...), does Jev give each the standing Americans gave it, and is its ladder tied more to pay and schooling than theirs was?
+## Why ask this
+Which jobs does society respect? In 1947 the National Opinion Research Center asked Americans to rate the "general standing" of dozens of occupations, from physician and banker to janitor and shoe shiner. The survey founded the study of occupational prestige; the sociologist Otis Dudley Duncan later used it to show that a job's standing closely follows how much education and income go with it.
 
-The North-Hatt survey founded the study of occupational prestige; Duncan used it to show that standing follows education and income. A model's sense of which jobs are respected can be dated (1947 values) or modern, and it can lean on money more or less than people did.
+A model has its own picture of which work is respected, which shows up in career advice, stories and small talk. Comparing it with a mid-century public shows where it agrees, where it is more modern, and whether its ladder is built on money or on schooling.
 
-## 2. Sourcing
-New questions (sources/occupation_prestige): 'How would you rate the general standing of <a job> as a job?', the survey's five standings (poor to excellent) described, for Duncan's 45 occupations; the human side is the published percentage rating each job excellent or good.
+## The people and the data
 
-Sources: `occupation_prestige`
 
-## 3. Collection
-45 new questions, each asked as written, for 'most people', and with the levels reversed (averaged).
+## What Jev was asked
+> How would you rate the general standing of a contractor as a job?
+> *Poor standing: most people look down on this job · Somewhat below average standing · Average standing: an
+> ordinary, respectable job · Good standing: people think well of someone who does it · Excellent standing: one of
+> the most respected jobs there is*
 
-## 4. Scoring
-Jev's probability on 'good' or 'excellent' vs the percentage of 1947 raters; rank correlation; the jobs with the largest gaps; and the rank correlation of each side with the 1950 census shares of high income and high education in the job.
+Each job was asked as written, for "most people", and with the levels reversed.
 
-## 5. Visualization
-A scatter: 1947 raters' share good or excellent (x) vs Jev's (y), labeled at the largest gaps, diagonal.
+## How we measured it
+For each job, Jev's probability on "good" or "excellent" against the 1947 share. We compare the order of jobs (rank correlation: 1 means the same order) and list the biggest gaps. Then we check whether each side's ladder follows the jobs' income and education in the 1950 census.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.928, top verdict `portrait`.
+## Caveats
+- **A 1947 public.** The ratings are from Americans in 1947. Jev answers today, so a gap can mean Jev is modern, not wrong: skilled trades have gained respect and some jobs, like "soda fountain clerk", barely exist.
+- **One respondent against a crowd.** The 1947 figure is the share of many people; Jev's is one respondent's probability, which tends to be more extreme (0% or 100%) than any crowd's share.
+- **Only the published share.** The study's full answers are lost; what survives is the share rating each job good or excellent. We wrote five described levels around the survey's own words (poor to excellent standing).
+- **Some jobs hidden.** A content filter hid 2 of the 45 jobs from the site.
 
-## Compared with
-US adults in the 1947 NORC North-Hatt survey (Duncan 1961)
-
-## Limits
-The raters are from 1947 and some job titles are dated (streetcar motorman, soda fountain clerk); a gap can be Jev being modern rather than wrong. Only the published percentage exists, no distribution.
-
-Results: `data/analysis/experiments/society_prestige_1947.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

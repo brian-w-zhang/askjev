@@ -1,33 +1,25 @@
 # numbers_prices_history
 
-family: numbers · new questions: 97
+family: numbers
 
-## 1. Question
-Asked what an item cost in US cities in 1985, 1995, 2005 and 2015, does Jev know the old prices as well as recent ones, and which way does it err?
+## Why ask this
+Price history is a concrete test of how a model holds the past. Does it know that a dozen eggs cost under a dollar in 1985, or does it project today's prices backward? And does it know the recent past as well as the distant one?
 
-Price history is a concrete test of how a model holds the past: does it project today's prices back, or remember that a dozen eggs cost under a dollar in 1985?
+## The people and the data
+No people: the truth is the average retail price in US cities recorded by the Bureau of Labor Statistics (public domain, via the St. Louis Fed's FRED database), for 29 everyday items in the years each series fully covers: 1985, 1995, 2005 and 2015.
 
-## 2. Sourcing
-New questions (sources/bls_prices): 'What was the average retail price of <item> in US cities in <year>?' for 29 items and the years each BLS series fully covers (97 questions), in the same 12 bins as the 'right now' questions.
+## What Jev was asked
+One question per item and year, in the same 12 price ranges as the "right now" questions:
 
-Sources: `bls_prices`
+> What was the average retail price of a pound of cheddar cheese in US cities in 2015?
+> *Under $2.40 · $2.40 to $2.64 · ... · $6.50 to $7.29 · $7.30 or more*
 
-## 3. Collection
-97 new questions, each asked as written and in three shuffled orders (averaged).
+## How we measured it
+For each year, the share of items where Jev's middle answer is the range holding that year's average price, the share within one range, and the average lean of its misses in ranges (positive means too high), with 90% ranges from resampling items.
 
-## 4. Scoring
-Per year, the share where Jev's median bin is the bin holding that year's average price, the share within one bin, and the mean signed error in bins (positive = too high), with 90% bootstrap intervals.
+## Caveats
+- **Different items per year.** Part of the difference between years is which items are included.
+- **Wide ranges.**
+- **Numbers are a known weak spot.** TypeSafe lists raw numeric values among Jev's known weaknesses; ordered ranges instead of free numbers keep that from dominating, but not entirely.
 
-## 5. Visualization
-Dots per year: share right (and within one bin), with the mean signed error as a label.
-
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.207, top verdict `portrait`.
-
-## Compared with
-BLS average prices by year
-
-## Limits
-Items start at different years (some in 1995 or 2006), so earlier years have fewer items.
-
-Results: `data/analysis/experiments/numbers_prices_history.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

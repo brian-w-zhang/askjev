@@ -1,33 +1,28 @@
 # taste_top_culture
 
-family: taste · new questions: 276
+family: taste
 
-## 1. Question
-If Jev ranked every festival or tradition it was asked about, what would its top ten be?
+## Why ask this
+Which celebrations and traditions appeal to someone says what they value: spectacle, family, spirituality, music. For a model that has read about the world's festivals but never attended one, the favorites show which experiences its reading makes most vivid.
 
-Wrapped-style favorites, but from every item it rated and then a real final among the best, rather than a handful of head-to-heads; the interesting part is what rises to the top and what sinks.
+## The people and the data
+No people here: Jev against its own opinions.
 
-## 2. Sourcing
-Existing one-at-a-time rating questions ("How much would you enjoy ...", five situation-described levels) under Self > Lifestyle > Ratings > culture_ratings; items from lists written for this project (festivals, performances, media). Every item is rated, so the whole list can be ranked; the ratings crowd the top with near-ties, so the top 24 play a round-robin final (new questions, sources/taste_finals).
+## What Jev was asked
+Every entry one at a time, with five answers describing what you'd do:
 
-Sources: `g5_w13_ratings`, `taste_finals`
+> How much would you enjoy reading a rock star's biography?
+> *You'd put it down after a page · You'd finish one only if it was assigned · You'd read one if it was lying around ·
+> You'd pick one out at a bookshop · You'd read one after another for weeks*
 
-## 3. Collection
-The ratings exist. New: the finals, 276 head-to-heads among the top 24 ("Which film would you rather watch?"), each asked in both option orders.
+Each was also asked with the answers reversed, and the two averaged. The 24 top-rated entries then played a round-robin final: 276 games of "Which would you rather experience?", each asked with the two names in both orders.
 
-## 4. Scoring
-Ratings: each item's expected level (0-4), averaged with the same question asked with the levels reversed. Finals: Jev's probability for each side, averaged over both orders, summed into soft wins; the order is the Bradley-Terry strength fitted to all 276 games. Intransitive triads (A beats B, B beats C, C beats A) are counted as a consistency check.
+## How we measured it
+An entry's rating is where Jev's answer lands on the five levels (0 to 4). In the final, each game gives each side Jev's probability of picking it, so a lopsided game counts as nearly a whole win and a close one as about half; the order comes from a standard head-to-head ranking model (Bradley-Terry).
 
-## 5. Visualization
-A ranked list, Wrapped style: the finals' top ten with their win counts, and the ratings' bottom five for contrast.
+## Caveats
+- **A list written by another AI.** The festivals, performances and media were written for this project by Claude. What's on the list shapes what can win, and photogenic festivals are well represented.
+- **Everyday media against once-in-a-lifetime events.** The list mixes famous festivals with ordinary media (podcasts, TV). The bottom five are everyday media, so they lose to spectacles by design. That an Indian daily TV serial lands in the bottom five may reflect how such shows are written about in English more than the shows themselves.
+- **The finalists were picked by Jev's own ratings.**
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.452, top verdict `portrait`.
-
-## Compared with
-nothing outside the model: a ranking of Jev's own ratings and choices
-
-## Limits
-A winner is only the best of what was on the list (lists written for this project (festivals, performances, media)). Finalists were chosen by Jev's own ratings, so an item it underrated never reached the final.
-
-Results: `data/analysis/experiments/taste_top_culture.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

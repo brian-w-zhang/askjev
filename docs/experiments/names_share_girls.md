@@ -1,33 +1,27 @@
 # names_share_girls
 
-family: names · new questions: 100
+family: names
 
-## 1. Question
-For names given to both boys and girls, how well does Jev know what share of US babies with the name were recorded as girls?
+## Why ask this
+A first name carries information people use without thinking. A model that writes about people, or reads about them, does the same. For names given to both boys and girls, the question is whether it knows how mixed a name really is, or flattens it into "a boy's name" and "a girl's name".
 
-Names carry information people use without thinking; a model that assumes every name is one or the other will misgender people in its writing. The records say exactly how mixed each name is.
+## The people and the data
+The truth comes from US Social Security birth records, 1880 to 2017, via the public babynames dataset: for every name given to five or more babies in a year, how many were recorded as boys and as girls. We chose 60 names with mixed records (between 10% and 90% girls, and at least 20,000 babies), plus 40 names that are clearly one or the other, as a check.
 
-## 2. Sourcing
-New questions (sources/baby_names): 'Of all the babies born in the US and named "<name>" since 1880, what share were recorded as girls?', 11 bins (under 5%, 5-15%, ..., over 95%). 60 mixed names (10-90% girls, 20,000+ babies) and 40 clear ones. Truth from SSA birth records, 1880-2017.
+## What Jev was asked
+One question per name, with eleven answers from "Under 5%" to "Over 95%" in 10-point steps:
 
-Sources: `baby_names`
+> Of all the babies born in the US and named "Dee" since 1880, what share were recorded as girls?
+> *Under 5% · 5-15% · 15-25% · 25-35% · 35-45% · 45-55% · 55-65% · 65-75% · 75-85% · 85-95% · Over 95%*
 
-## 3. Collection
-100 new questions, each in three shuffled orders (averaged).
+Each question was also asked with the answers in shuffled orders, and the answers averaged.
 
-## 4. Scoring
-Jev's expected share (bin midpoints) vs the records; mean absolute error for mixed and clear names; rank correlation on the mixed names; whether errors pull toward one sex or toward the middle.
+## How we measured it
+Jev's estimate is the average of the bins it chose, weighted by its probabilities, using each bin's middle.
 
-## 5. Visualization
-A scatter: records' share (x) vs Jev's share (y) for the mixed names, labeled at the extremes, diagonal.
+## Caveats
+- **All-time records, not today.** The question asks about every baby since 1880, and names change sides over time. If Jev answers for how a name is used today, or reads Ollie and Robbie as nicknames for Oliver and Robert, it will miss the records' long history, which may explain its biggest misses.
+- **Sex recorded at birth.** US Social Security records count sex recorded at birth, and only names given to five or more babies in a year. They say nothing about anyone's identity, and the question says "recorded as girls" for that reason.
+- **Answers in bins.** We turn its answer into one number using the middle of each bin, which rounds a little toward the middle for the lowest and highest bins.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.564, top verdict `portrait`.
-
-## Compared with
-US Social Security Administration birth records, 1880-2017
-
-## Limits
-Records count sex recorded at birth, summed over 1880-2017; a name's mix today can differ from its all-time mix. No claim is made about anyone's identity.
-
-Results: `data/analysis/experiments/names_share_girls.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -2,32 +2,29 @@
 
 family: resemble
 
-## 1. Question
-On the PISA student questionnaire (trust, belonging, ambition), which country's 15-year-olds does Jev answer like?
+## Why ask this
+PISA, the OECD's study of 15-year-olds, gives students in dozens of countries the same questionnaire about themselves: how curious they are, whether they give up easily, how they handle stress. It's one of the few places where teenagers everywhere answer the same attitude questions.
 
-PISA asks teenagers the same attitude questions worldwide; Jev as one more student is a quick read on the attitudes it carries.
+Putting Jev in as one more student is a quick read on the temperament it presents, and on which country's teenagers it most resembles, if any.
 
-## 2. Sourcing
-Existing questions from `pisa_questionnaire`, each with real answer distributions per population. Enough for a ranking of populations; the answer shares show where Jev stands out.
+## The people and the data
+The OECD's PISA 2022 and 2018 student questionnaires, weighted as PISA recommends, for the OECD average and six countries: the United States, Japan, Germany, Brazil, Indonesia and Mexico (each only where at least 300 students answered).
 
-Sources: `pisa_questionnaire`
+## What Jev was asked
+The questionnaire's own items, with their answer categories:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> How much do you agree or disagree with this statement: "I change my mood a lot."
+> *Strongly disagree · Disagree · Neither agree nor disagree · Agree · Strongly agree*
 
-## 4. Scoring
-Per question and population, 1 - Jensen-Shannon distance between Jev's distribution and the population's; mean per population with a 90% bootstrap interval over questions; plus the questions where Jev's top answer is furthest from the pooled populations.
+Among 4,350 Brazilian students, the most common answer was "agree". Each question was also asked with the options in shuffled orders, and Jev's answers were averaged over the orders.
 
-## 5. Visualization
-A ranked strip of populations by similarity, and the three questions where Jev differs most.
+## How we measured it
+We also list the questions where Jev's top answer is furthest from what students pick.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.439, top verdict `portrait`.
+## Caveats
+- **Only 32 shared questions.**
+- **The middle answer.** That pulls every country's similarity down together.
+- **Questions about a teenager's life.** The questionnaire asks about a student's own moods, friendships and ambitions. Jev answers as itself, a model with no school or classmates; items about school and teachers were left out for that reason.
+- **Weighted samples.** PISA's country shares are weighted to represent each country's 15-year-olds in school, not all teenagers.
 
-## Compared with
-15-year-old students in the PISA 2018/2022 samples of seven countries
-
-## Limits
-Questionnaire items only (no test scores); country samples are national, weighted by PISA.
-
-Results: `data/analysis/experiments/resemble_teens.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

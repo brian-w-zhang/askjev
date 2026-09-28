@@ -16,6 +16,9 @@ from lib import and_list, clip, Result, Spec, boot, humans, js, jsd, norm, seede
 RAW = Path("data/raw/character_traits")
 
 
+DK = re.compile(r"\\bdk\\b|refus|don.?t know|not sure|no opinion", re.I)
+
+
 def country():
     spec = Spec(
         id="resemble_country", family="resemble", title="Which country does Jev answer like?",
@@ -43,18 +46,29 @@ def country():
         per: dict[str, list] = {}
         per_guess: dict[str, list] = {}
         used = 0
+        dk_jev, dk_ppl, dk_top, dk_q = [], [], 0, 0
         for r in q.iter_rows(named=True):
             hs = humans(r["humans"])
             if len(hs) < 30:
                 continue
             used += 1
             jev, ppl = js(r["jev_dist"]), js(r["people_dist"])
+            # "don't know / refused" is an answer Jev takes far more than people do; compare on the substantive
+            # answers (DK dropped and the rest renormalized) and report the DK habit on its own
+            dk = [k for k in jev if DK.search(str(k)) or DK.search(str((js(r["options"]) or {}).get(k) or ""))] \
+                if isinstance(js(r["options"]), dict) else []
+            if dk:
+                dk_q += 1
+                dk_jev.append(sum(jev.get(k, 0) for k in dk))
+                dk_top += top(jev) in dk
+                dk_ppl.append(float(np.mean([sum(norm(h["dist"]).get(k, 0) for k in dk) for h in hs])))
+            sub = lambda d: norm({k: v for k, v in d.items() if k not in dk}) if dk else d  # noqa: E731
             for h in hs:
                 if "Non-national" in h["population"]:  # Pew's urban/partial samples aren't a country's voice
                     continue
-                per.setdefault(h["population"], []).append(1 - jsd(jev, h["dist"]))
+                per.setdefault(h["population"], []).append(1 - jsd(sub(jev), sub(h["dist"])))
                 if ppl:
-                    per_guess.setdefault(h["population"], []).append(1 - jsd(ppl, h["dist"]))
+                    per_guess.setdefault(h["population"], []).append(1 - jsd(sub(ppl), sub(h["dist"])))
         rows = [{"country": c, "sim": float(np.mean(v)), "n": len(v)} for c, v in per.items() if len(v) >= 20]
         rows.sort(key=lambda r: -r["sim"])
         for r in rows[:10] + rows[-5:]:
@@ -62,11 +76,16 @@ def country():
         guess = sorted(((c, float(np.mean(v))) for c, v in per_guess.items() if len(v) >= 20), key=lambda x: -x[1])
         top3 = and_list([r["country"].replace("Czech Rep.", "the Czech Republic") for r in rows[:3]])
         return Result(
-            result=f"Jev's answers are closest to those of people in {top3}, and furthest from those in {rows[-1]['country']} "
-                   f"(similarity {rows[0]['sim']:.2f} vs {rows[-1]['sim']:.2f}); its guess about 'most people' is "
-                   f"closest to {guess[0][0]}.",
-            evidence=f"{used} questions asked in 30+ countries; {len(rows)} countries with 20+ questions; 90% intervals over questions",
-            numbers={"countries": rows, "guess_top": guess[:10], "questions": used},
+            result=f"Where a survey offered 'don't know' or 'refused', Jev took it: {np.mean(dk_jev):.0%} of its answer on the "
+                   f"{dk_q} questions that offered one (its top answer on {dk_top}), where people chose it {np.mean(dk_ppl):.0%} "
+                   f"of the time. Setting those answers aside, its opinions are closest to people in {top3} and "
+                   f"furthest from {rows[-1]['country']} (similarity {rows[0]['sim']:.2f} vs {rows[-1]['sim']:.2f}).",
+            evidence=f"{used} questions asked in 30+ countries; {len(rows)} countries with 20+ questions; 'don't know' and "
+                     "'refused' dropped from both sides and the rest renormalized; 90% intervals over questions",
+            robustness=f"Counting 'don't know' as an answer instead would put the countries whose people use it most at the "
+                       f"top. What Jev thinks most people would say is closest to {guess[0][0]}.",
+            numbers={"countries": rows, "guess_top": guess[:10], "questions": used,
+                     "dk": {"questions": dk_q, "jev_share": float(np.mean(dk_jev)), "people_share": float(np.mean(dk_ppl)), "jev_top": dk_top}},
             chart={"type": "map", "values": {r["country"]: round(r["sim"], 3) for r in rows},
                    "ranked": [{"label": r["country"], "value": round(r["sim"], 3)} for r in rows[:10]],
                    "bottom": [{"label": r["country"], "value": round(r["sim"], 3)} for r in rows[-5:]]},
@@ -221,30 +240,128 @@ def population_match(pid, title, src, question, why, pop_desc, limits):
     def run():
         q = source(src)
         per: dict[str, list] = {}
-        far = []
+        by_q: dict[str, dict] = {}
+        far, neutral = [], []
         for r in q.iter_rows(named=True):
             jd = js(r["jev_dist"])
             hs = humans(r["humans"])
             for h in hs:
-                per.setdefault(h["population"], []).append(1 - jsd(jd, h["dist"]))
+                sim = 1 - jsd(jd, h["dist"])
+                per.setdefault(h["population"], []).append(sim)
+                by_q.setdefault(r["id"], {})[h["population"]] = sim
             if hs:
                 pooled = norm({k: sum(h["dist"].get(k, 0) for h in hs) for k in jd})
                 t = top(jd)
                 far.append({"id": r["id"], "q": r["text"], "jev": t, "p": jd[t], "crowd": pooled.get(t, 0), "crowd_top": top(pooled)})
-        rows = sorted(({"pop": p, "sim": float(np.mean(v)), "n": len(v), "ci90": boot(v)} for p, v in per.items() if len(v) >= 8), key=lambda r: -r["sim"])
-        if not rows:
+                mid = next((k for k in jd if re.search(r"neither|neutral", k)), None)
+                if mid:  # the middle answer: how often it's Jev's top pick, and how often people choose it
+                    neutral.append((t == mid, pooled.get(mid, 0)))
+        if not per:
             return None
+        # score every population on the same questions: populations asked fewer questions can't win on easier ones
+        # the largest set of populations that still share 20+ questions, adding the most-asked first
+        keep, common = [], list(by_q)
+        for p in sorted(per, key=lambda p: -len(per[p])):
+            c2 = [qid for qid in common if p in by_q[qid]]
+            if len(c2) >= 20 or not keep:
+                keep.append(p)
+                common = c2
+        left_out = [p for p in per if p not in keep]
+        if len(common) < 8:
+            return None
+        rows = sorted(({"pop": p, "sim": float(np.mean([by_q[c][p] for c in common])), "n": len(common),
+                        "ci90": boot([by_q[c][p] for c in common])} for p in keep), key=lambda r: -r["sim"])
+        spread = rows[0]["sim"] - rows[-1]["sim"]
+        overlap = rows[0]["ci90"][0] <= rows[-1]["ci90"][1] if len(rows) > 1 else False
         far = sorted([f for f in far if f["jev"] != f["crowd_top"]], key=lambda f: f["crowd"] - f["p"])[:3]
-        head = (f"Jev's answers resemble those of {rows[0]['pop']} with similarity {rows[0]['sim']:.2f}" if len(rows) == 1 else
-                f"Of the {len(rows)} populations, Jev answers most like {rows[0]['pop']} (similarity {rows[0]['sim']:.2f})") + (
-            f" and least like {rows[-1]['pop']} ({rows[-1]['sim']:.2f})" if len(rows) > 1 else "")
+        if len(rows) == 1:
+            head = f"Jev's answers resemble those of {rows[0]['pop']} with similarity {rows[0]['sim']:.2f}"
+        elif overlap:
+            head = (f"On the {len(common)} questions all {len(rows)} populations answered, no population stands out: Jev's "
+                    f"similarity runs only from {rows[-1]['sim']:.2f} ({rows[-1]['pop']}) to {rows[0]['sim']:.2f} "
+                    f"({rows[0]['pop']}), within the noise")
+        else:
+            head = (f"On the {len(common)} questions all {len(rows)} populations answered, Jev answers most like "
+                    f"{rows[0]['pop']} (similarity {rows[0]['sim']:.2f}) and least like {rows[-1]['pop']} ({rows[-1]['sim']:.2f})")
         if far:
             head += (f". Its biggest break: \"{clip(far[0]['q'], 110)}\" Jev picks {far[0]['jev'].replace('_', ' ')} "
                      f"({far[0]['p']:.0%}); {far[0]['crowd']:.0%} of people did")
-        return Result(result=head + ".", evidence=f"{q.height} questions; 90% intervals over questions",
-                      numbers={"populations": rows, "far": far}, n=q.height,
+        return Result(result=head + ".", evidence=f"{len(common)} questions shared by every population (of {q.height}); "
+                      "90% intervals over questions",
+                      numbers={"populations": rows, "far": far, "common": len(common), "spread": spread, "left_out": left_out,
+                               "questions": q.height, "neutral_n": len(neutral), "neutral_top": sum(a for a, _ in neutral),
+                               "neutral_people": float(np.mean([b for _, b in neutral])) if neutral else None},
+                      robustness=(f"Left out because they share too few questions with the rest: {', '.join(left_out)}." if left_out else ""),
+                      n=len(common),
                       chart={"type": "strip", "rows": [{"label": r["pop"], "value": round(r["sim"], 3), "ci": r["ci90"]} for r in rows]},
                       examples=[f["id"] for f in far])
+    return spec, run
+
+
+def americans_era():
+    spec = Spec(
+        id="resemble_americans", family="resemble", title="Does Jev answer like recent Americans or earlier ones?",
+        question="On General Social Survey questions asked in two different years, is Jev's answer closer to Americans' "
+                 "answers from the later year or the earlier one?",
+        why="The GSS has asked the same questions of American adults since 1972. A model's opinions come from text "
+            "written across those decades; whether its answers match recent or older Americans says which era of opinion "
+            "it carries.",
+        sourcing="Existing GSS questions with answer shares per survey year; only questions asked in two years "
+                 "count, so each question is compared across its own years.",
+        scoring="For each question, similarity (1 - Jensen-Shannon distance) between Jev's answer and each year's "
+                "answers; which of the two years Jev is closer to, against the 50% a coin would give, with a 90% interval "
+                "from resampling questions. Also the average similarity to each year, and Jev's biggest breaks from the "
+                "later year's Americans.",
+        chart="Bars: the share of questions where Jev is closer to the later year, to the earlier one, and a coin flip.",
+        compared_with="US adults in the General Social Survey, in each year the question was asked",
+        limits="Only questions asked in two years count. Survey years differ in how the question was fielded.",
+        sources=["gss"])
+
+    def run():
+        rows, ids = [], []
+        for r in source("gss").iter_rows(named=True):
+            hs = [h for h in humans(r["humans"]) if re.search(r"(19|20)\d\d", h["population"])]
+            if len(hs) < 2:
+                continue
+            jd = js(r["jev_dist"])
+            ys = sorted((int(re.search(r"(19|20)\d\d", h["population"]).group(0)), 1 - jsd(jd, h["dist"]), h["dist"]) for h in hs)
+            top = max(jd, key=jd.get)
+            rows.append({"id": r["id"], "q": r["text"], "years": len(ys), "newest": ys[-1][1] > ys[0][1],
+                         "gap": ys[-1][0] - ys[0][0], "margin": abs(ys[-1][1] - ys[0][1]), "sim_new": ys[-1][1],
+                         "sim_old": ys[0][1], "top": top, "p": jd[top], "crowd": ys[-1][2].get(top, 0.0),
+                         "neutral": any(re.search(r"neither|neutral", k) for k in jd),
+                         "top_neutral": bool(re.search(r"neither|neutral", top))})
+            ids.append(r["id"])
+        if len(rows) < 10:
+            return None
+        t = pl.DataFrame(rows)
+        new = float(t["newest"].mean())
+        wide = t.filter(pl.col("gap") >= 20)
+        ci = boot(t["newest"].cast(float).to_numpy())
+        close = float((t["margin"] < 0.02).mean())
+        neu = t.filter(pl.col("neutral"))
+        far = t.with_columns((pl.col("p") - pl.col("crowd")).alias("d")).sort(["d", "id"], descending=[True, False]).head(3)
+        return Result(
+            result=f"On {t.height} questions the GSS asked in two different years, Jev's answer is closer to the later year's "
+                   f"Americans in {new:.0%} and to the earlier year's in {1 - new:.0%}, where a coin would give 50%: "
+                   + ("a slight lean toward more recent Americans" if ci[0] > 0.5 else
+                      "a slight lean toward earlier Americans" if ci[1] < 0.5 else "no era stands out")
+                   + (f". Where the two years are 20+ years apart ({wide.height} questions), the later year wins "
+                      f"{float(wide['newest'].mean()):.0%}." if wide.height >= 10 else "."),
+            evidence=f"{t.height} questions, each compared across its own two survey years; 90% interval on the later-year "
+                     f"share {ci}; on {close:.0%} the two years are within 0.02 of each other; average similarity "
+                     f"{float(t['sim_new'].mean()):.3f} to the later year and {float(t['sim_old'].mean()):.3f} to the earlier",
+            numbers={"newest": new, "oldest": 1 - new, "n": t.height, "wide_n": wide.height,
+                     "wide_newest": float(wide["newest"].mean()) if wide.height else None, "close": close,
+                     "sim_new": float(t["sim_new"].mean()), "sim_old": float(t["sim_old"].mean()),
+                     "neutral_n": neu.height, "neutral_top": int(neu["top_neutral"].sum()),
+                     "neutral_people": float(neu.filter(pl.col("top_neutral"))["crowd"].mean()) if neu["top_neutral"].any() else None,
+                     "far": [{"id": r["id"], "q": r["q"], "jev": r["top"], "p": r["p"], "crowd": r["crowd"]}
+                             for r in far.iter_rows(named=True)]}, n=t.height,
+            chart={"type": "bars", "rows": [{"label": "closer to the later year", "value": new},
+                                            {"label": "closer to the earlier year", "value": 1 - new},
+                                            {"label": "a coin flip", "value": 0.5}], "domain": [0, 1]},
+            examples=seeded(ids, "gss_era"), ids=ids)
     return spec, run
 
 
@@ -255,11 +372,7 @@ EXPERIMENTS = [
                      "PISA asks teenagers the same attitude questions worldwide; Jev as one more student is a quick read on the attitudes it carries.",
                      "15-year-old students in the PISA 2018/2022 samples of seven countries",
                      "Questionnaire items only (no test scores); country samples are national, weighted by PISA."),
-    population_match("resemble_americans", "Jev vs Americans on the General Social Survey", "gss",
-                     "On General Social Survey items (trust, happiness, work, family), how close is Jev to American adults, year by year?",
-                     "The GSS is the longest-running survey of American attitudes; the years Jev resembles most hint at which era of opinion it absorbed.",
-                     "US adults in the General Social Survey, by year",
-                     "Most items are from one or two years, so years are compared on different items; read the overall level, not the year ranking, unless the same item spans years."),
+    americans_era(),
     population_match("resemble_young_slovaks", "Jev vs 1,000 young Slovaks: fears, hobbies and habits", "young_people_survey",
                      "On the Young People Survey (fears, hobbies, music, spending), where does Jev differ from ~1,000 people aged 15-30?",
                      "A single real sample with hundreds of everyday questions; the items where Jev is sure and they aren't are the story.",

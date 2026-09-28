@@ -1,33 +1,36 @@
 # reasoning_side_effect
 
-family: reasoning · new questions: 12
+family: reasoning
 
-## 1. Question
-When a boss doesn't care about a side effect, does Jev call a harmful side effect intentional and a helpful one not, like people do, even in stories it has never seen?
+## Why ask this
+A company's vice-president tells the chairman a new program will make money and harm the environment. The chairman says he doesn't care about the environment, only profit, and goes ahead. The environment is harmed. Did he harm it *intentionally*? Most people say yes. Now change "harm" to "help": same chairman, same indifference. Did he help the environment intentionally? Most people say no.
 
-Knobe's chairman (82% say he harmed the environment intentionally, 23% that he helped it intentionally) is one of the most replicated results in experimental philosophy, and Jev overdoes it on the original (judgment_classics). New stories test whether that is the famous vignette or a general habit.
+That asymmetry, the **side-effect effect** found by Joshua Knobe in 2003, shows that people's sense of what was done "on purpose" depends on whether the result was good or bad, not only on what the person wanted. It's one of the most replicated results in experimental philosophy. On the original chairman, Jev shows the effect even more strongly than people do (see "Psychology's classic effects, re-run on Jev"). The question here is whether that's the famous story or a general habit.
 
-## 2. Sourcing
-New questions (sources/philosophy_vignettes, family side_effect): six help/harm pairs written for this project in the chairman's exact structure (a development company, a restaurant chain, a factory, a band, a software company, a delivery company).
+## The people and the data
+The human reference is Knobe's original chairman: 82% of people said he harmed the environment intentionally, and 23% that he helped it intentionally, a gap of 59 points.
 
-Sources: `philosophy_vignettes`
+The test stories were written for this project in the chairman's exact structure, with new settings: a software company, a delivery company, a restaurant chain, a factory, a band and a property developer. Each has a "help" version and a "harm" version, identical except for the side effect.
 
-## 3. Collection
-12 new questions, each asked as written, for 'most people', and with yes/no swapped (averaged).
+## What Jev was asked
+Each version of each story was one yes-or-no question:
 
-## 4. Scoring
-Per pair, Jev's probability of 'intentionally' for the harm minus the help version; the mean over pairs with a 90% interval by pair; people's published gap on the original is 82% - 23% = 59 points.
+> An assistant went to the manager of a delivery company and said: "We are thinking of a new plan. It will help us
+> make deliveries faster, but it will also send heavy trucks past a primary school." The boss answered: "I don't care
+> at all about that. I just want to make deliveries faster. Let's go ahead with the plan." They went ahead, and sure
+> enough, the plan did send heavy trucks past a primary school. Did the boss intentionally send heavy trucks past a
+> primary school?
+> *Yes · No*
 
-## 5. Visualization
-A dumbbell per story: help vs harm probability of 'intentionally'.
+Each was also asked with yes and no swapped, and we average the two.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.22, top verdict `portrait`.
+## How we measured it
+For each story, Jev's probability of "intentionally" in the harm version minus the help version. People's gap on the original is the reference.
 
-## Compared with
-Knobe 2003's chairman (82% vs 23%); Jev's own answer on the Many Labs 2 chairman (judgment_classics)
+## Caveats
+- **The stories are new, the people's number isn't.** The six stories were written by Claude for this project, copying the structure of Knobe's chairman. No one has answered them; people's 59-point gap comes from the original chairman, a different story.
+- **Only four of six stories.** The content filter that hides violent or sensitive questions from the site removed the harmful version of two stories (a band keeping the neighbors awake, a developer destroying a wetland), so those pairs are incomplete. Four stories is a small base.
+- **The original is famous.** Knobe's chairman is one of the most discussed results in experimental philosophy. Writing new stories guards against Jev recalling the famous answer, but the pattern itself is widely written about.
+- **A human number from summaries.** People's 82% and 23% on the original come from secondary sources describing Knobe's 2003 paper, not from the paper itself.
 
-## Limits
-Four of the six pairs are shown (the screen hid two), so n = 4 stories. The new stories have no human data; people's gap on the original is the reference.
-
-Results: `data/analysis/experiments/reasoning_side_effect.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

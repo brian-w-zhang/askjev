@@ -1,33 +1,30 @@
 # minds_colors_of_feelings
 
-family: minds · new questions: 32
+family: minds
 
-## 1. Question
-Which color goes with anger, joy, shame or relief, and which feeling goes with each color? Does Jev pair them the way people in 31 countries do?
+## Why ask this
+Anger is red. Sadness is... blue, or black, or grey, depending on who you ask. People's color-emotion links are among the most shared associations we have, and they shape design, marketing, flags and poetry. Many are shared across cultures; some aren't.
 
-Color-emotion pairs are among the most universal associations people have (anger red, sadness grey or blue). A model that learned them from text might sharpen the clichés or miss the quieter ones.
+A model learned its colors from text, much of it English. It might reproduce the universal links, sharpen English clichés, or miss the quieter associations people share.
 
-## 2. Sourcing
-New questions (sources/color_emotion): 'Which color do you associate most with the feeling "<emotion>"?' for the 20 emotions of the International Colour-Emotion Association Survey (12 color terms), and the reverse for each color. People's distribution is the share of the emotion's color associations on each color (Jonauskaite et al., OSF 873df, CC BY 4.0).
+## The people and the data
+The **International Colour-Emotion Association Survey** (Jonauskaite and colleagues, 2020) asked 7,387 people in 31 countries which of 20 feelings they associate with each of 12 color terms: red, orange, yellow, green, turquoise, blue, purple, pink, brown, black, grey and white. The data is public under a CC BY license. For each feeling we know what share of all its color associations went to each color.
 
-Sources: `color_emotion`
+## What Jev was asked
+For each feeling, which color goes with it:
 
-## 3. Collection
-32 new questions, each asked as written, for 'most people', and with the options in three shuffled orders (averaged).
+> Which color do you associate most with the feeling "relief"?
+> *red · blue · grey · pink · black · brown · green · white · orange · purple · yellow · turquoise*
 
-## 4. Scoring
-Per emotion, whether Jev's top color is people's top color, and the similarity of the distributions (1 - Jensen-Shannon distance); how concentrated Jev's answer is (its top probability) against people's top share; the same for colors to emotions.
+and for each color, which of the 20 feelings goes with it. That's 32 questions, each with the options in three shuffled orders, averaged, and each also asked for "most people".
 
-## 5. Visualization
-A grid: one row per emotion, people's color shares as a strip of swatches, Jev's pick outlined.
+## How we measured it
+Whether Jev's top color is people's top color for each feeling, whether it's their second choice, and the same in the other direction (color to feeling).
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.586, top verdict `portrait`.
+## Caveats
+- **People could pick several, Jev picks one.** In the survey, people ticked which of 20 feelings go with a color and could tick as many as they liked. So only the top picks are comparable; Jev's answers look far more certain by design.
+- **English color words.** Jev saw the question in English. Some associations are English idioms ("feeling blue", "green with envy") rather than universal ones, and the survey's people came from 31 countries.
+- **The top color is often a weak favorite.** People's most common color carries only about a fifth of the associations on average. "Missing" the top color often means picking a close second, which is why we also count second choices.
+- **Twelve color words, not colors.** The survey used color terms (red, turquoise, brown...), not color patches, so this is about color words and their connotations.
 
-## Compared with
-7,387 people in 31 countries (International Colour-Emotion Association Survey)
-
-## Limits
-People ticked any number of emotions per color; Jev picks one, so its distribution is sharper by design. The comparison of top picks is fair; spread is not.
-
-Results: `data/analysis/experiments/minds_colors_of_feelings.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

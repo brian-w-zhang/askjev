@@ -2,32 +2,28 @@
 
 family: social
 
-## 1. Question
-Reading short everyday stories, how often does Jev say a character feels no clear emotion, compared with the people who annotated them?
+## Why ask this
+Most of reading a story is filling in what isn't said. "Joan lived next to a dumpster. She never thought much about it until one particular day." Nobody says how Joan feels, but a reader starts guessing: dread, disgust, curiosity.
 
-Reading feelings into plain events is most of what reading a story is. A reader that often answers 'no clear emotion' is being literal where people infer.
+A reader that often answers "no clear emotion" is being literal where people infer. That's fine in a contract and a problem in a conversation, where most feelings are implied.
 
-## 2. Sourcing
-Existing StoryCommonsense questions (Rashkin et al. 2018): five-sentence stories, one character, 'Which emotion best describes ...' with Plutchik's eight emotions plus 'no clear emotion'; each with three MTurk annotators' labels. Enough: about 3,000 story lines.
+## The people and the data
+**StoryCommonsense** (Rashkin and colleagues, 2018): five-sentence everyday stories, annotated line by line for each character's feelings by three crowd workers each, using Plutchik's eight basic emotions (joy, trust, fear, surprise, sadness, disgust, anger, anticipation) plus "no clear emotion".
 
-Sources: `storycommonsense`
+## What Jev was asked
+The story up to the line in question, and the nine answers:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Which emotion best describes the feelings of Joan at the end of [story]?
+> *joy or happiness · fear or worry · anger or annoyance · trust or acceptance · disgust · sadness · surprise ·
+> anticipation, looking forward to something · no clear emotion*
 
-## 4. Scoring
-The average share each label gets from annotators vs Jev's average probability on it; how often Jev's top pick is 'no clear emotion' when at least two of the three annotators named the same real emotion. 90% bootstrap intervals over story lines.
+## How we measured it
+The share of all answers that went to each of the nine options, for Jev and for the annotators. Then the story lines where at least two of three annotators named the same real emotion: how often does Jev still say "no clear emotion"?
 
-## 5. Visualization
-Paired bars over the nine labels: annotators vs Jev.
+## Caveats
+- **Annotators were asked to find a feeling.** The annotators' task was to label each character's emotion, which may have pushed them away from "none". The gap is partly Jev being literal and partly annotators reading feelings in.
+- **Writers themselves sometimes feel nothing.** Where the storyteller's own feeling is known, "nothing much" is a real answer: in another experiment ("Does Jev read the writer, or the other readers?"), Jev's "no particular emotion" matches writers who felt nothing more often than other readers do.
+- **A known tendency.** Reading text literally, and not inferring what isn't stated, is on TypeSafe's own list of Jev's known weak spots. This experiment measures how large it is on stories; it isn't a new discovery.
+- **Stories cut off mid-way.** Each question shows the story only up to the line being annotated, as the annotators saw it. Early lines carry little emotional information, which invites "no clear emotion".
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.831, top verdict `headline`.
-
-## Compared with
-StoryCommonsense MTurk annotators (three per story line)
-
-## Limits
-Annotators were asked to find an emotion, which may push them away from 'none'. Literal reading is on TypeSafe's own list of known weak spots (01-jev §6, item 1); this measures it on stories.
-
-Results: `data/analysis/experiments/social_story_no_emotion.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

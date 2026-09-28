@@ -2,32 +2,28 @@
 
 family: work
 
-## 1. Question
-Checking whether a proposed function call does what the user asked, which kinds of mistakes does Jev catch: the wrong function, a missing argument, a wrong value, or two arguments swapped?
+## Why ask this
+AI agents act by calling tools: book a flight, look up an account, run a query. A cheap check before each call ("does this call actually do what the user asked?") is an obvious safety net. What matters is where the net has holes. Some mistakes are easy to see (the wrong function); others hide in plain sight (the right values, in the wrong slots).
 
-Agents call tools; a cheap verifier in front of the call is an obvious safety net. Its blind spot is where the net has a hole.
+## The people and the data
+The calls come from **ToolACE**, a public dataset of user requests paired with a list of available tools and the correct call. We kept requests answered by exactly one call, with two to eight tools on offer.
 
-## 2. Sourcing
-Existing verify-the-call questions built from xLAM function-calling data: half the calls are the dataset's correct ones, half have one perturbation of a known kind.
+## What Jev was asked
+Each call was a yes/no question with the request, the tool list and the proposed call:
 
-Sources: `function_calls`
+> Does the call correctly carry out the request using the tools: right function, and every argument matching what
+> the user asked?
+> *(request, tools and call follow; for example a call to getPregnancyTestResult with test_type: "positive",
+> test_date: …, test_result: "urine test")*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+That example has two arguments swapped: the test type is the urine test and the result is positive.
 
-## 4. Scoring
-Share of each perturbation kind Jev rejects, and the share of correct calls it accepts, with 90% intervals.
+## How we measured it
+For each kind of mistake, the share of broken calls Jev rejects; for correct calls, the share it accepts. Each with a range showing how much it could vary by chance.
 
-## 5. Visualization
-Bars: the share caught per kind of mistake, and correct calls accepted.
+## Caveats
+- **Few swapped calls.** A swap needs two arguments of the same type, so only 45 swapped calls survived the build.
+- **Mistakes made to order.** Half the calls are the dataset's correct ones and half were broken on purpose in one known way. Real agent mistakes can be subtler, or several at once.
+- **Compact tool descriptions.** Jev saw each tool as one line (name, description, parameters with types). Real APIs come with longer docs, which can make a swap easier or harder to spot.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.384, top verdict `portrait`.
-
-## Compared with
-the dataset's correct calls and the known perturbation
-
-## Limits
-Only 45 swapped-argument calls survived the build (swaps need two arguments of the same type), so that bar is the least certain.
-
-Results: `data/analysis/experiments/work_function_call_checks.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

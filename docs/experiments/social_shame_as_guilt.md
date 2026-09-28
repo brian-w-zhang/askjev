@@ -2,32 +2,31 @@
 
 family: social
 
-## 1. Question
-When people describe a time they felt ashamed, does Jev name shame, or does it call it guilt?
+## Why ask this
+Psychologists draw a clear line between two painful feelings. **Guilt** is about something you did: I lied to my cousin, and I feel bad about it. **Shame** is about who you are: I'm the kind of person who lies. Shame is the more corrosive of the two, and it's the one people hide.
 
-Psychologists separate the two: guilt is about something you did, shame is about who you are. A reader that folds shame into guilt misses the more painful feeling, and the confusion should run one way only.
+A reader that hears every story of shame as guilt misses the more painful feeling, and treats a problem with oneself as a problem with an action. If the confusion runs only one way, that's a specific blind spot rather than general noise.
 
-## 2. Sourcing
-Existing questions from two datasets where the writer named their own feeling: ISEAR (people in 37 countries describing a time they felt one of seven emotions, guilt and shame among them) and EmpatheticDialogues (short situations written under one of 32 emotion labels, 'ashamed' and 'guilty' among them). Jev picks one emotion from the dataset's list. Enough: about 400 shame and 400 guilt stories in ISEAR, about 90 of each in EmpatheticDialogues.
+## The people and the data
+Two datasets where people named their own feeling:
+- **ISEAR** (International Survey on Emotion Antecedents and Reactions): about 3,000 students in 37 countries, in the 1990s, each described a situation in which they felt each of seven emotions, shame and guilt among them.
+- **EmpatheticDialogues**: crowd workers were each given one of 32 emotion words and wrote a short situation from their own life in which they felt it, "ashamed" and "guilty" among them.
 
-Sources: `isear`, `empathetic_dialogues`
+## What Jev was asked
+The story, and the dataset's own list of emotions:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Someone described [situation] as a time they felt a strong emotion. Which emotion did they feel?
+> *joy · fear · anger · guilt · shame · disgust · sadness*
 
-## 4. Scoring
-For each dataset, the share of shame stories Jev calls guilt and the share of guilt stories it calls shame, with 90% bootstrap intervals over stories; the gap between the two directions is the finding.
+In EmpatheticDialogues the question was the same idea with all 32 emotion words to choose from.
 
-## 5. Visualization
-Paired bars per dataset: shame read as guilt vs guilt read as shame.
+## How we measured it
+For each dataset: how many shame stories Jev calls guilt, and how many guilt stories it calls shame. If the two numbers are about equal, the feelings are simply hard to tell apart. If one is much larger, the confusion has a direction.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.792, top verdict `portrait`.
+## Caveats
+- **One person's word for a mixed feeling.** The label is the writer's own, and people often feel shame and guilt at once. A story about drinking too much can honestly be both, so some "mistakes" are Jev choosing the other half of a real mix.
+- **Writers wrote to a word.** In EmpatheticDialogues, writers were handed an emotion word ("ashamed") and asked for a story that fits it; in ISEAR, students described a time they felt each of seven emotions. Neither is a spontaneous account.
+- **Translated, short, and older.** ISEAR's stories come from students in 37 countries in the 1990s, many translated into English and very short ("I drink wine too often."). Shame and guilt are also weighted differently across cultures.
+- **The options Jev was offered.** Jev could only pick from each dataset's own list (seven emotions in ISEAR, 32 in EmpatheticDialogues). In the 32-word list, "guilty" and "ashamed" sit side by side among many others.
 
-## Compared with
-The writers' own labels for their feelings
-
-## Limits
-The writer's label is one person's word for a mixed feeling; ISEAR stories were translated and shortened. Jev sees only the list of emotions the dataset offers.
-
-Results: `data/analysis/experiments/social_shame_as_guilt.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

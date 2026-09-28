@@ -2,32 +2,28 @@
 
 family: self
 
-## 1. Question
-In pairs of questions that ask the same thing, does the verb they open with ('Could you…', 'Would you…', 'Do you…', 'Can…') change how often Jev says yes?
+## Why ask this
+Across tens of thousands of real questions, those starting "Can...?" get far more yeses from Jev than those starting "Will...?" (see "Can? Yes. Will? No."). But different questions start with different words for different reasons. Pairs of questions that ask the same thing with a different opening verb separate the word from the topic: whatever difference is left is the word.
 
-self_closed_questions found 'Can…?' questions get more yeses than 'Will…?' ones across different questions. Paired rewordings of the same question separate the verb from the topic: the difference is the word.
+## The people and the data
+There are no people here. Rows below use the pairs of opening words with at least 15 examples.
 
-## 2. Sourcing
-The same-polarity duplicate pairs as in self_reworded (yes/no, at least one from the self banks), grouped by the pair of opening words.
+## What Jev was asked
+Each question on its own, never side by side:
 
-Sources: `g5_w1_lifestyle_love`, `g5_w5_self`, `g5_w9_self_b`, `g5_w9_self_c`, `g5_w10_self_personality`
+> Would you date someone you met at a funeral?
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+and, separately:
 
-## 4. Scoring
-For each pair of opening words with 15+ pairs, the mean difference in Jev's probability of yes, with a 90% bootstrap interval over pairs.
+> Could you fall for someone you met at a funeral?
 
-## 5. Visualization
-Dots with intervals, one row per pair of opening words, around zero.
+## How we measured it
+For each pair, the difference in Jev's probability of yes between the two wordings, oriented so a positive number means the first word gets more yes. Averaged per pair of opening words, with a range for chance variation.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.544, top verdict `headline`.
+## Caveats
+- **Few pairs for the biggest effect.**
+- **"Could" can honestly mean less.** "Could you fall for someone you met at a funeral?" asks whether it's possible; "Would you date them?" asks whether you'd do it. A careful reader should say yes more often to "could". The experiment measures the wording's effect whichever reading Jev takes.
+- **Matched automatically.** The pairs come from the project's duplicate matching (similar meaning, confirmed by Jev), so some differ in a second word too ("date" vs "fall for").
+- **Questions written by Claude.** The questions come from banks written for this project by Claude (Anthropic's model), so the pairs reflect one writer's habits of rephrasing.
 
-## Compared with
-Jev's answer to the same question opened with a different verb
-
-## Limits
-Pairs are few for some verbs (the counts are shown). 'Could you date…' can honestly mean something milder than 'Would you date…'; the result measures the wording, whichever reading Jev takes.
-
-Results: `data/analysis/experiments/self_could_vs_would.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

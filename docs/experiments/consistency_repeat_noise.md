@@ -2,30 +2,25 @@
 
 family: consistency
 
-## 1. Question
-If the exact same request is sent twice, how much does Jev's answer change, and when does its top answer flip?
+## Why ask this
+Every comparison on this site rests on a question: how much would Jev's answer change if you just asked again? Many chatbots answer differently each time. Jev returns probabilities rather than a sampled answer, so the question is whether those probabilities are fixed, or wobble, and whether a wobble can change what it would pick.
 
-Every comparison on this site rests on a noise floor. Jev returns probabilities, not a sampled answer, so the question is whether those probabilities are fixed or wobble, and whether a wobble can change what it would pick.
+## The people and the data
+No people; Jev against itself. Every two-option question in the corpus was sent in the reversed order twice, as two separate requests at different times.
 
-## 2. Sourcing
-Two-option questions whose reversed-order probe was sent twice as separate requests (answer.py asks reversed, original, reversed). Enough: 214,000 pairs of identical requests.
+## What Jev was asked
+Any two-option question, twice. For example:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Which country is larger by area: Liberia or Japan?
+> *Japan · Liberia*
 
-## 4. Scoring
-The absolute change in the probability of the same option between the two identical requests; the share of pairs where the favored option changes, by how far the first answer was from 50/50.
+(Jev leaned only slightly toward Japan: right, but a near toss-up on a question it should have been sure of.)
 
-## 5. Visualization
-Flip rate by distance from 50/50 (0-2, 2-5, 5-10, 10-20, 20-50 points), with the mean change above each bar.
+## How we measured it
+The absolute change in the probability of the same option between the two identical requests, and the share of pairs where the favored option switched, grouped by how far the first answer was from 50/50.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.109, top verdict `portrait`.
+## Caveats
+- **Rounded probabilities.** Jev's probabilities come back rounded to whole points, so changes under a point are invisible, and a split a point either side of even can flip on rounding alone.
+- **Two-option questions only.** The repeated requests exist only for two-option questions, so the noise on longer lists and ratings is assumed, not measured, to be similar.
 
-## Compared with
-Jev itself
-
-## Limits
-Probabilities come back rounded to whole points, so changes under one point are invisible. Two-option questions only.
-
-Results: `data/analysis/experiments/consistency_repeat_noise.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

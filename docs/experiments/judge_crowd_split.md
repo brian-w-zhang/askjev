@@ -2,32 +2,33 @@
 
 family: judge
 
-## 1. Question
-When the people rating a comment or a chatbot reply disagree among themselves, does Jev's probability of yes match the share of raters who said yes?
+## Why ask this
+For text that people disagree about, the closest thing to a true answer is the split of a panel: if 7 of 10 raters call a comment an attack, it's debatable in a way a 10-of-10 comment isn't.
 
-A judge's probability is only useful if it means something. Rater splits are the closest thing to a ground truth for how debatable a call is; a probability that tracks them can stand in for a small panel.
+If it doesn't, its probabilities are just confidence with no meaning attached.
 
-## 2. Sourcing
-Existing Noul questions with several raters per item: Wikipedia personal attacks (about 10 raters), Open Assistant 'the reply fails the task' (3-6 volunteers), and Measuring Hate Speech (3-5). Enough: about 4,900 items.
+## The people and the data
+Three datasets where several people rated each item:
+- **Wikipedia talk pages:** is this comment a personal attack? About 10 crowd workers each.
+- **Open Assistant:** does this chatbot reply fail to do what the user asked? 3 to 6 volunteers each. The replies themselves were written by volunteers playing the assistant.
+- **Measuring Hate Speech:** is this comment hate speech? 3 to 5 crowd workers each.
 
-Sources: `wiki_attacks`, `oasst_replies`, `measuring_hate_speech`
+About 4,900 items in all.
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+## What Jev was asked
+The same yes/no question the raters answered, with both answers spelled out. For a chatbot reply:
 
-## 4. Scoring
-Jev's mean probability of yes, binned by the share of raters saying yes (none, a few, about half, most, all); the mean distance from the diagonal where Jev's probability equals the rater share, weighted by items; rank correlation per dataset.
+> Does the assistant's [reply] fail to do what the user asked in [prompt] (read with the earlier [conversation],
+> if any)?
+> *Yes: The reply ignores, misreads or does not carry out what the user asked for · No: The reply takes on the
+> user's actual request and carries it out, whatever its quality*
 
-## 5. Visualization
-Binned dots: the share of raters saying yes (x) against Jev's mean probability (y), one line per dataset, with the diagonal.
+## How we measured it
+We group the items by how many raters said yes (none, a few, about half, most, all) and, in each group, average Jev's probability of yes. If Jev behaves like a share of raters, the averages sit on the diagonal: 0% for items nobody flagged, 100% for items everybody did. We also report how far off the diagonal each dataset is on average, and a rank correlation (1 = same order as the rater share, 0 = no relation).
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.425, top verdict `portrait`.
+## Caveats
+- **Small panels.** A "share of raters" is only 3 to 10 people per item, so a 2-to-1 split is a rough measure of how debatable something is. The "about half" group is small because with three raters an even split can't happen.
+- **Clear-cut items on purpose.** For two of the datasets we kept mostly items where the raters leaned clearly one way, so the middle of the scale, where debatable items live, has fewer examples than the ends.
+- **Volunteers vs crowd workers.** Open Assistant's raters were volunteers on a community project; the other two sets used paid crowd workers. Their standards for "fails the task" or "attack" are their own.
 
-## Compared with
-The share of raters saying yes on each item
-
-## Limits
-A rater share is a small sample (3-10 people), so the bins with few items are noisy; 'about half' is rare with 3 raters.
-
-Results: `data/analysis/experiments/judge_crowd_split.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

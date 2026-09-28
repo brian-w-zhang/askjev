@@ -2,30 +2,23 @@
 
 family: consistency
 
-## 1. Question
-Every question about Jev was also asked as 'what would most people answer?'. Where do the two answers part, and in which direction?
+## Why ask this
+Every question about Jev was also asked a second way: "what would most people answer?". The gap between the two is a self-image. A model that consistently says it's calmer, less petty and less swayed than the humans it learned from is telling you how it was shaped to present itself.
 
-The gap between 'me' and 'most people' is the self-image. A model that says it's calmer, less petty and less swayed than the humans it learned from is telling you how it was shaped.
+## The people and the data
+No outside people: both answers are Jev's. The questions are every yes/no and rating question about Jev's own life, personality and values. Most were written for this project by Claude, in batches by topic; the rest come from published personality tests and from Social Chemistry's rules of thumb about everyday morality. Taste ratings are left out because they have their own experiment.
 
-## 2. Sourcing
-All yes/no and rating questions in the Self hemisphere asked in both frames, except taste ratings (their own experiment, taste_self_vs_guess). Enough: 60,000 yes/no and 90,000 rating questions.
+## What Jev was asked
+Each question twice, once as written and once for most people. For example:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Would you panic if your car's steering felt strange on a motorway?
 
-## 4. Scoring
-Per topic, Jev's yes-rate for itself minus its yes-rate for most people (the share of questions where P(yes) > 0.5), with 90% bootstrap intervals over questions; for ratings, the mean level gap as a share of the scale. Topics with 300+ questions.
+## How we measured it
+Per topic, the share of questions Jev answers yes about itself, minus the share it thinks most people would, with a 90% interval. For rating questions, the average difference in level as a share of the scale.
 
-## 5. Visualization
-Dots per topic, the gap in yes-rates with intervals, zero line; the largest gaps labeled.
+## Caveats
+- **Both answers are Jev's.** "Most people" is Jev's guess, not real people. This measures Jev's self-image against its picture of others; the personality experiments compare it with real test-takers.
+- **Written for this project.** Most of these questions were written for askjev by Claude, in batches by topic. That makes the coverage wide but the phrasing uniform; a topic's rate partly reflects how its questions happened to be worded.
+- **A yes-bias check.** Yes/no questions can be phrased so that yes is the flattering answer or the unflattering one. Topics mix both, but the direction of a topic's gap depends on that mix.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.199, top verdict `portrait`.
-
-## Compared with
-Jev's own guess of what most people would answer (not real people)
-
-## Limits
-Both answers are Jev's. 'Most people' is its guess, and the topics come from the tree.
-
-Results: `data/analysis/experiments/consistency_self_vs_people.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

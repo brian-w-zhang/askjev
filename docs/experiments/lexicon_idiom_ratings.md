@@ -1,33 +1,36 @@
 # lexicon_idiom_ratings
 
-family: lexicon · new questions: 392
+family: lexicon
 
-## 1. Question
-Does Jev know which idioms are familiar to Americans and which could make sense taken word for word, the way people rated them?
+## Why ask this
+People read idioms using two quick judgments. Is this a phrase I know? And could it make sense word for word? "Kick the bucket" could literally happen; "rain cats and dogs" couldn't. Those two ratings predict how fast people read idioms and how easily they fall back on the literal meaning.
 
-Familiarity and literal plausibility are what people use to read an idiom ('kick the bucket' could happen; 'rain cats and dogs' couldn't). A model that misjudges them will misread figurative language.
+A model that misjudges which idioms are familiar will use rare ones as if everyone knows them, or explain common ones needlessly. And one that misjudges literal plausibility may read a figure of speech too literally, or miss a literal reading.
 
-## 2. Sourcing
-New questions (sources/idiom_norms): 'How familiar is the idiom "X"?' and 'Taken literally, word for word, how plausible is "X"?' on five described levels for 200 idioms from Bulkes & Tanner 2017 (about 100 US adults per idiom and dimension, means on 1-5).
+## The people and the data
+The ratings come from **Bulkes and Tanner (2017)**, who normed 870 American English idioms with about 100 US adults per rating: how familiar each idiom is, and how plausible it is taken literally, each on a 1-to-5 scale.
 
-Sources: `idiom_norms`
+## What Jev was asked
+Two questions per idiom, each with five described levels:
 
-## 3. Collection
-About 400 new questions, each asked as written, for 'most people', and with the levels reversed (averaged).
+> How familiar is the idiom "Wear more than one hat"?
+> *I have never come across it: it means nothing to me · I may have seen it once or twice, but I'm not sure what it
+> means · I have come across it now and then · I hear or read it fairly often · I know it very well: it comes up all
+> the time*
 
-## 4. Scoring
-Per dimension, rank correlation between Jev's expected level and people's mean with a 90% bootstrap interval; the idioms whose rank differs most.
+> Taken literally, word for word, how plausible is "Be someone's better half"?
+> *Taken word for word it makes no sense at all · ... · Taken word for word it describes something ordinary and
+> common*
 
-## 5. Visualization
-Two scatters side by side: people's mean (x) vs Jev's level (y), familiarity and literal plausibility.
+Each was asked as written, for "most people", and with the levels reversed.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.675, top verdict `portrait`.
+## How we measured it
+For each rating, whether Jev ranks the idioms in the same order as people's averages (rank correlation: 1 means the same order, 0 no relation), with 90% intervals, and the idioms whose rank moves most.
 
-## Compared with
-US adults (Bulkes & Tanner 2017)
+## Caveats
+- **People's side is an average only.** The study published only the average rating per idiom, from about 100 US adults each, so we compare rankings, not full answers.
+- **Our answer levels.** People rated on a plain 1-to-5 scale. We wrote five described levels, for familiarity in terms of how often you meet the idiom ("I hear or read it fairly often"). For a model, "how often have you met this" is a strange question; its answer may track how common the phrase is in text, not in speech.
+- **The idioms come in a stiff form.** Each idiom is listed as the study lists it, often with "be" or "get" in front ("Be a close call", "Be someone's better half"). The unnatural form may make familiar idioms look less familiar to Jev.
+- **Different scales.** Jev's answers are on 0-4 and people's averages on 1-5, so only the rankings are comparable; the named idioms are those whose rank moves most.
 
-## Limits
-Only means are published, so ranks are compared. Jev is asked how familiar the idiom is, not how often it has met it.
-
-Results: `data/analysis/experiments/lexicon_idiom_ratings.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

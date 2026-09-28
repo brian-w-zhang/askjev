@@ -1,33 +1,34 @@
 # perception_crowd_of_100
 
-family: perception · new questions: 600
+family: perception
 
-## 1. Question
-When 100 people read the same two sentences and split on whether the second follows, does Jev's probability look like the crowd's split, and does it side with the majority as often as a typical person does?
+## Why ask this
+"People are taking pictures outside a building." Does that mean "people are taking pictures of various things"? Maybe. Datasets that teach and test AI on questions like this usually give each pair one "right" label, often chosen by a handful of annotators. But when researchers asked 100 people per pair (the ChaosNLI project), they found that many pairs have no single answer: the crowd splits.
 
-Most datasets give one 'right' label; ChaosNLI shows that many items have none. That makes it possible to ask a better question than accuracy: does the model know when people disagree?
+That makes a better test than accuracy. A model that reads well should agree with the crowd where people agree, and be unsure where they're split. A model that's confident everywhere is overselling what the text says.
 
-## 2. Sourcing
-New questions (sources/chaosnli): 600 items from ChaosNLI (Nie, Zhou & Bansal 2020), 300 each from SNLI and MNLI, sampled evenly across how split the 100 labels are. Options in plain words (the second sentence is true / might or might not be / is false, given the first).
+## The people and the data
+**ChaosNLI** (Nie, Zhou and Bansal, 2020) collected 100 new judgments from crowd workers for each of thousands of sentence pairs from two standard AI test sets, SNLI and MNLI. For each pair we know how the 100 split between "the second follows", "can't tell" and "the second is false". We took 600 pairs, 300 from each set, spread evenly from nearly unanimous to evenly split; 551 are shown.
 
-Sources: `chaosnli`
+## What Jev was asked
+Each pair was one question with the three answers written out:
 
-## 3. Collection
-600 new questions, each asked as written and with the three options in shuffled orders (averaged).
+> First sentence: "People sitting down, walking around and, taking pictures outside of a building."
+> Second sentence: "People are taking pictures of various things."
+> Taking the first sentence as true, what does it tell you about the second?
+> *The second sentence is true, given the first · The second sentence might or might not be true; the first doesn't
+> settle it · The second sentence is false, given the first*
 
-## 4. Scoring
-Agreement with the crowd's majority, overall and by how split the crowd is (entropy terciles), against the typical person's agreement with the majority (the majority's share); rank correlation between Jev's confidence and the crowd's agreement; similarity of the distributions.
+Each was also asked with the answers in shuffled orders, averaged.
 
-## 5. Visualization
-Binned dots: the crowd's majority share (x) vs Jev's probability on that answer (y), with the diagonal and the typical person's agreement line.
+## How we measured it
+Two things. **Agreement:** how often Jev's top answer is the crowd's majority answer, compared with how often a typical person in the crowd agrees with the majority (which is simply the size of the majority). **Calibration to disagreement:** whether Jev is less sure on the items where people split, measured by the rank correlation between Jev's confidence and the crowd's agreement (1 would mean perfectly in step).
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.321, top verdict `portrait`.
+## Caveats
+- **Our wording of the answers.** The 100 people chose from the standard labels (entailment, neutral, contradiction). We described the same three answers in plain words, so Jev saw different wording from the people it's compared with.
+- **Crowd workers, not everyone.** The labels come from online crowd workers. Their disagreements reflect how carefully people read in that setting, as well as real ambiguity.
+- **Picked to be contested.** We sampled items evenly from clear, mixed and divided ones, so contested items are overrepresented compared with ordinary text. The overall agreement rate would be higher on a random sample.
+- **Some items hidden.**
+- **Famous test sets.** The sentence pairs come from widely used AI test sets, which may have appeared in Jev's training data with their original single labels.
 
-## Compared with
-100 crowd workers per item (ChaosNLI)
-
-## Limits
-The options are paraphrased from the NLI labels; ChaosNLI's workers saw the standard labels.
-
-Results: `data/analysis/experiments/perception_crowd_of_100.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

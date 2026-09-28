@@ -1,33 +1,31 @@
 # taste_top_film
 
-family: taste · new questions: 276
+family: taste
 
-## 1. Question
-If Jev ranked every film it was asked about, what would its top ten be?
+## Why ask this
+If you asked a friend for their favorite film you'd get one answer, maybe with a pause. A model can be asked about thousands of films one at a time, which makes a real ranking possible, not just a gut pick. The interesting parts are what rises to the top, what sinks, and whether the top reflects anything beyond the most celebrated films on the internet.
 
-Wrapped-style favorites, but from every item it rated and then a real final among the best, rather than a handful of head-to-heads; the interesting part is what rises to the top and what sinks.
+## The people and the data
+There are no people in this one: it's Jev against its own opinions. The films come from MovieLens, a long-running film-recommendation site run by the GroupLens research lab. (How Jev's taste compares with MovieLens users is its own experiment: "Jev's taste in films vs MovieLens users".)
 
-## 2. Sourcing
-Existing one-at-a-time rating questions ("How much would you enjoy ...", five situation-described levels) under Self > Lifestyle > Ratings > film_ratings; items from MovieLens (films with enough ratings to be well known). Every item is rated, so the whole list can be ranked; the ratings crowd the top with near-ties, so the top 24 play a round-robin final (new questions, sources/taste_finals).
+## What Jev was asked
+First, every film one at a time, with five answers that describe what you'd actually do:
 
-Sources: `taste_ratings`, `taste_finals`
+> How much would you enjoy watching Hud (1963)?
+> *You'd turn it off within the first twenty minutes · You'd finish it but forget it within a week · You'd enjoy it
+> once and not seek it out again · You'd recommend it to a friend · You'd rewatch it and count it among your
+> favorites*
 
-## 3. Collection
-The ratings exist. New: the finals, 276 head-to-heads among the top 24 ("Which film would you rather watch?"), each asked in both option orders.
+Each film was asked twice, the second time with the answers in reverse order, and the two averaged.
 
-## 4. Scoring
-Ratings: each item's expected level (0-4), averaged with the same question asked with the levels reversed. Finals: Jev's probability for each side, averaged over both orders, summed into soft wins; the order is the Bradley-Terry strength fitted to all 276 games. Intransitive triads (A beats B, B beats C, C beats A) are counted as a consistency check.
+Ratings like these crowd the top with near-ties, so the 24 highest-rated films then played a round-robin final: every film against every other, 276 games, each a simple choice, "Which film would you rather watch?", asked with the two titles in both orders.
 
-## 5. Visualization
-A ranked list, Wrapped style: the finals' top ten with their win counts, and the ratings' bottom five for contrast.
+## How we measured it
+For the ratings, a film's score is where Jev's answer lands on the five levels, 0 (turn it off) to 4 (a favorite). For the final, each game gives the winner Jev's probability of picking it, so a lopsided game counts as nearly a whole win and a close one as about half. The order of the top ten comes from a standard way of ranking players from head-to-head results (a Bradley-Terry model); the win counts shown are the plain totals.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **atlas**, head-to-head strength -1.983, top verdict `portrait`.
+## Caveats
+- **A list of famous films, judged by a model that has read about them.** A top ten led by The Shawshank Redemption and The Godfather looks a lot like the internet's consensus canon, so "Jev's taste" here is hard to separate from what it has read people say about these films.
+- **The finalists were picked by Jev's own ratings.** A film it underrated one at a time never got the chance to win head to head.
+- **Our answer wording.** We wrote the five answer levels ("You'd turn it off within the first twenty minutes" up to "You'd rewatch it and count it among your favorites"). The top level asks for a lot, which is part of why so many films tie near the top and a final was needed.
 
-## Compared with
-nothing outside the model: a ranking of Jev's own ratings and choices
-
-## Limits
-A winner is only the best of what was on the list (MovieLens (films with enough ratings to be well known)). Finalists were chosen by Jev's own ratings, so an item it underrated never reached the final.
-
-Results: `data/analysis/experiments/taste_top_film.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

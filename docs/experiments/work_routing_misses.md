@@ -2,32 +2,30 @@
 
 family: work
 
-## 1. Question
-When Jev sends a customer message to the wrong intent, how wrong is it: a neighbor of the right intent, or somewhere else entirely, and does a longer list of intents make it worse?
+## Why ask this
+Routing is one of the most common jobs a model like Jev does: read a customer's message and send it to the right team, flow or tool. It's the task TypeSafe itself leads with.
 
-Routing is TypeSafe's bread-and-butter use case. A miss between 'order a physical card' and 'get a physical card' costs little; a miss to an unrelated team costs a lot, and a right answer in second place means a two-choice fallback would recover it.
+What matters isn't only how often the router is right, but how it's wrong. A message sent to a neighboring intent ("order a card" vs "get a card") costs little; one sent to an unrelated team costs a lot. And if the right answer is usually the router's second choice, a simple fallback (show both, or ask) recovers most misses.
 
-## 2. Sourcing
-Existing intent and topic routing questions from 13 public datasets (banking, assistants, complaints, support flows, tools, task types) with 7 to 77 options each. Enough: ~30,000 questions.
+## The people and the data
+The menus range from 7 to 77 options.
 
-Sources: `banking77`, `hwu64_intents`, `massive_en`, `clinc150`, `snips_intents`, `multiwoz_domain`, `sgd_dialogue`, `cfpb_complaints`, `abcd_flows`, `airline_complaints`, `skill_select`, `math_routing`, `dolly_tasks`
+Each message's right intent comes from its dataset: labeled by crowd workers (the airline tweets), chosen by the person who wrote the message for it (the Dolly instructions, the ABCD chats), or the product a complaint was filed under.
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+## What Jev was asked
+Each message was one pick-one question, with every intent written out with a one-line description. For example:
 
-## 4. Scoring
-Per dataset: share right; among misses, the share where the right intent was Jev's second choice; the most frequent confusions. Across datasets, rank correlation between the number of options and the share right.
+> What is the customer asking the bank about in this message?
+> *Message: "Where is the card PIN?"*
+> *Options (77): age limit: the minimum age to open or use an account · change PIN: changing the card PIN · ATM
+> support: which ATMs the card works at · … · get a physical card …*
 
-## 5. Visualization
-Paired bars per dataset (ordered by number of options): share right, and the share of misses where the answer was second choice; the top confusions as labels.
+## How we measured it
+For each dataset: the share of messages Jev routes right; among its misses, the share where the right intent was its second choice; and the most common confusions. Across the 13 datasets, we compare menu length with the share right (rank correlation: 1 means longer menus always do better, -1 always worse, 0 no relation).
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.715, top verdict `portrait`.
+## Caveats
+- **Some intents overlap by design.** Many "misses" are between intents a person would also hesitate over. The datasets' labels treat these as wrong, so the share right is a floor.
+- **Clean benchmark messages.** Most of these datasets use short, tidy messages collected or written for research. Real customer messages are longer, messier and often ask two things at once.
+- **Different menus, different difficulty.** Some datasets have crisp, separate intents (travel domains, music vs weather); others blur (task types like "brainstorming" vs "open question"). Comparing datasets mixes menu length with how distinct the intents are.
 
-## Compared with
-each dataset's own labels
-
-## Limits
-Datasets differ in how distinct their intents are; some labels are ambiguous (e.g. 'brainstorming' vs 'open question' in the Dolly task types).
-
-Results: `data/analysis/experiments/work_routing_misses.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

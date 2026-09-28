@@ -1,33 +1,30 @@
 # perception_round_trip
 
-family: perception · new questions: 21
+family: perception
 
-## 1. Question
-Given a probability (0%, 5%, ..., 100%), which phrase does Jev choose for it, and do the phrases survive the round trip from word to number and back?
+## Why ask this
+Reading "likely" as 70% is half the job. The other half is saying "likely" when the chance is 70%: a model that writes summaries, forecasts and advice turns numbers into words all day.
 
-Reading 'likely' as 70% is half the job; the other half is saying 'likely' when the chance is 70%. A model that reads well but writes with only a few favorite phrases will flatten every forecast it writes.
+## The people and the data
+This experiment runs the probability-words survey backwards. The phrases are the 17 from the 2015 Reddit survey behind "What 'probably' means to Jev", from "almost no chance" to "almost certainly". There is no human data for this direction; the comparison is Jev's own forward reading of each phrase.
 
-## 2. Sourcing
-New questions (sources/perception_words): 'An event has a <p>% chance of happening. Which phrase describes that chance best?' for each 5% step, with the 17 survey phrases as options. No human data exists for this direction.
+## What Jev was asked
+For each probability from 0% to 100% in steps of 5, one question with all 17 phrases as options:
 
-Sources: `perception_words`
+> An event has a 5% chance of happening. Which phrase describes that chance best?
+> *Likely · Probable · Probably · Unlikely · We Doubt · About Even · Improbable · We Believe · Probably Not · Highly
+> Likely · Little Chance · Highly Unlikely · Almost Certainly · Almost No Chance · Better Than Even · Very Good Chance
+> · Chances Are Slight*
 
-## 3. Collection
-21 new questions, each asked with the phrases in three shuffled orders (averaged).
+That's 21 questions, each with the phrases in three shuffled orders, averaged.
 
-## 4. Scoring
-Per probability, Jev's top phrase. Per phrase, the probabilities where it is Jev's top pick. The round trip: a phrase's median from the probability experiment, rounded to 5%, then the phrase Jev picks for that number; a phrase survives when it comes back.
+## How we measured it
+For each probability, Jev's most likely phrase. Then the **round trip**: take a phrase, find the number Jev reads into it (from the forward experiment), and ask which phrase Jev picks for that number. A phrase survives if it comes back as itself.
 
-## 5. Visualization
-A strip from 0% to 100% colored by Jev's chosen phrase, with each phrase's forward median marked above.
+## Caveats
+- **No human comparison in this direction.** The survey asked people to turn words into numbers, not numbers into words.
+- **Near-synonyms make the round trip hard.** "Likely", "probable" and "probably" mean almost the same thing to people too. Coming back as a synonym is a small failure; the bigger finding is the six phrases Jev never uses at all.
+- **The menu was the survey's.** Jev could only choose among the survey's 17 phrases, several of them unusual in writing ("we doubt", "chances are slight"). With a free choice of words it might spread out more, or less.
+- **One forward reading is missing.**
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.093, top verdict `portrait`.
-
-## Compared with
-Jev's own forward readings (perception_probability); no human data in this direction
-
-## Limits
-Several phrases mean nearly the same thing ('likely', 'probable', 'probably'), so a phrase can lose the round trip to a near-synonym; the result lists which.
-
-Results: `data/analysis/experiments/perception_round_trip.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

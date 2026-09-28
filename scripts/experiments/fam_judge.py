@@ -407,17 +407,17 @@ def top_grade():
 
 def essays():
     spec = Spec(
-        id="judge_essays", family="judge", title="Jev grades seventh-graders' spelling harder than their teachers",
+        id="judge_essays", family="judge", title="Jev grades seventh-graders' spelling harder than their human graders",
         question="Scoring seventh-grade essays on ideas, organization, and conventions (spelling, grammar, "
-                 "punctuation), is Jev harsher or softer than the teachers who scored them?",
+                 "punctuation), is Jev harsher or softer than the human graders who scored them?",
         why="Automated essay scoring is widely used on children's writing. A grader that is fair on ideas but harsh on "
             "mechanics penalizes exactly the students still learning to spell.",
         sourcing="Existing ASAP essay-set 7 items (Kaggle Hewlett Foundation), one question per trait with the "
-                 "teachers' 4-level rubric described as situations; 700 essays per trait. Enough.",
-        scoring="Per trait, Jev's mean expected level minus the teachers' level, with 90% bootstrap intervals over "
+                 "graders' 4-level rubric described as situations; 700 essays per trait. Enough.",
+        scoring="Per trait, Jev's mean expected level minus the graders' level, with 90% bootstrap intervals over "
                 "essays; rank correlation per trait.",
-        chart="Dots per trait: teachers' mean level and Jev's, with intervals.",
-        compared_with="The teachers' rubric scores in the ASAP dataset",
+        chart="Dots per trait: graders' mean level and Jev's, with intervals.",
+        compared_with="The human graders' rubric scores in the ASAP dataset",
         limits="Names and some capitalized words are replaced with placeholders like @CAPS1 in the data; Jev is told "
                "so, but the placeholders may still read as errors. Essays over 2,000 characters are shown in full.",
         sources=["asap_essays"])
@@ -438,9 +438,9 @@ def essays():
         how = "a full level" if abs(c["gap"]) >= 0.95 else f"{abs(c['gap']):.1f} levels"
         return Result(
             result=f"Jev scores seventh-graders' {c['label']} (spelling, grammar, punctuation) "
-                   f"{how} below their teachers on a 4-level rubric, and agrees with them least there (rank "
+                   f"{how} below their human graders on a 4-level rubric, and agrees with them least there (rank "
                    f"correlation {c['rho']:.2f}); on ideas it is within {abs(next(b for b in by if b['label'] == 'ideas')['gap']):.2f} "
-                   f"of the teachers and tracks them best ({next(b for b in by if b['label'] == 'ideas')['rho']:.2f}).",
+                   f"of the graders and tracks them best ({next(b for b in by if b['label'] == 'ideas')['rho']:.2f}).",
             evidence=f"{t.height:,} scores, {len(by)} traits; 90% intervals over essays",
             numbers={"traits": by}, n=t.height,
             chart={"type": "dots", "domain": [0, 3], "rows": [{"label": b["label"], "value": b["value"], "people": b["people"], "ci": None} for b in by]},

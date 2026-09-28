@@ -1,33 +1,31 @@
 # choices_fair_prices
 
-family: choices · new questions: 23
+family: choices
 
-## 1. Question
-On the price and wage scenarios Kahneman, Knetsch and Thaler put to the public in 1986 (snow shovels after a blizzard, cutting a worker's pay when others work for less), does Jev find the same actions fair and unfair as people did?
+## Why ask this
+In 1986, the psychologist Daniel Kahneman and economists Jack Knetsch and Richard Thaler asked the public about small business decisions: a hardware store raising the price of snow shovels after a blizzard, a landlord raising rent, a store keeping its price when its costs drop. The answers showed that people hold firms to an unwritten sense of fairness: passing on higher costs is fine, exploiting a shortage is not. The study became a classic of behavioral economics.
 
-These scenarios are the classic evidence that people hold firms to a sense of fairness: passing on costs is fine, exploiting a shortage is not. A model advising businesses or customers carries some version of that rulebook; this shows whose.
+Models now advise both businesses and customers. Whose rulebook does Jev carry: the public's, or something closer to a textbook where prices simply follow supply and demand?
 
-## 2. Sourcing
-New questions (sources/fair_prices): the paper's own wording for 22 scenarios (Questions 1-16) plus its UNICEF variant of the doll auction, each rated completely fair / acceptable / unfair / very unfair as in the survey, with the paper's share of respondents rating it acceptable.
+## The people and the data
+The respondents were adults in Toronto and Vancouver, reached by telephone in 1984 and 1985. The paper reports the share who said fair or acceptable. Of the 23 scenarios we asked about, 9 are shown here.
 
-Sources: `fair_prices`
+## What Jev was asked
+The paper's own wording and answers:
 
-## 3. Collection
-23 new questions, each asked as written, for 'most people', and with the four options in shuffled orders (averaged).
+> A grocery store has several months supply of peanut butter in stock which it has on the shelves and in the
+> storeroom. The owner hears that the wholesale price of peanut butter has increased and immediately raises the price
+> on the current stock of peanut butter. Please rate this action as completely fair, acceptable, unfair or very
+> unfair.
+> *Completely fair · Acceptable · Unfair · Very unfair*
 
-## 4. Scoring
-Jev's probability on 'completely fair' or 'acceptable' vs the share of respondents; rank correlation across scenarios, mean gap with a 90% bootstrap interval, and agreement on which side of 50% each scenario falls; the scenarios where they differ most.
+## How we measured it
+For each scenario, Jev's probability on "completely fair" or "acceptable" against the share of respondents who said so. We check whether the scenarios fall in the same order (rank correlation: 1 means the same order), how far apart the two are on average, and whether they land on the same side of 50%.
 
-## 5. Visualization
-A dot plot, one row per scenario ordered by people's share: people's share acceptable and Jev's.
+## Caveats
+- **Most scenarios hidden.** A content filter hid 14 of the 23 scenarios from the site, including the famous snow shovels and most of the wage-cutting ones, likely because they read as political. The 9 left are mostly about prices, so this tells us little about Jev's view of wages.
+- **A 1980s Canadian public.** Their sense of fairness, and the dollar amounts, belong to that time and place.
+- **Grouped answers only.** The paper reports only the share who said "completely fair" or "acceptable", so Jev's four-way answer is grouped the same way.
+- **A famous paper.** These scenarios are textbook material in economics, and Jev may know the published results. Its answers still differ sharply from them, so it isn't simply recalling the paper.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.179, top verdict `portrait`.
-
-## Compared with
-Canadian adults surveyed by telephone (Kahneman, Knetsch & Thaler 1986)
-
-## Limits
-Telephone surveys of Toronto and Vancouver residents in 1984-85 (about 100-195 per scenario); the paper reports only the grouped share rating an action acceptable, so Jev's four-way answer is grouped the same way. Prices and wages are 1980s amounts.
-
-Results: `data/analysis/experiments/choices_fair_prices.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -2,32 +2,26 @@
 
 family: taste
 
-## 1. Question
-Enthusiast audiences have leans of their own: do BoardGameGeek users prefer newer games and BeerAdvocate reviewers stronger beers, and does Jev share those leans?
+## Why ask this
+Enthusiast communities have tastes that outsiders don't share: board-game hobbyists chase the newest designs, beer reviewers prize strength and intensity. If Jev doesn't lean the same way, it tells us which kind of judge it is: a hobbyist or a well-read outsider.
 
-An audience's taste is partly the audience: hobbyists chase the new and the extreme. Where Jev parts from them in a systematic direction, that direction says what kind of taste it has.
+## The people and the data
+BoardGameGeek users, BeerAdvocate reviewers and MovieLens users, via public datasets of their ratings. For each pair of items, the audience's pick is the one most people who rated both preferred. We know each item's release year (from its title), its number of ratings, and each beer's alcohol by volume, so we can check how often each side picks the older game, the more-rated game or the weaker beer.
 
-## 2. Sourcing
-Existing head-to-heads from BoardGameGeek (years and rating counts per game), BeerAdvocate (ABV and review counts per beer) and MovieLens as a control (years and rating counts), with the audience's split. Pairs are kept when the label (year or style) identifies which item is which: about 4,700 board-game, 4,650 film and 1,550 beer pairs.
+## What Jev was asked
+Each pair as a simple choice:
 
-Sources: `boardgame_pairs`, `beer_pairs`, `movielens_pairs`
+> Which board game would you rather play?
+> *Alhambra (2003) · Killer Bunnies and the Quest for the Magic Carrot (2002)*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+Once for itself and once for "most people", each with the options in both orders.
 
-## 4. Scoring
-Per catalog, the share of pairs where the pick is the older item (films, games) or the weaker beer (lower ABV), and where it is the more-rated item, for the audience's majority, Jev's own pick and its 'most people' guess, with 90% bootstrap intervals.
+## How we measured it
+For each lean, the share of pairs where the audience picks that side, and the share where Jev does, each with a 90% interval. For example, among pairs of board games from different years: how often is the pick the older game?
 
-## 5. Visualization
-Paired bars per catalog and lean: audience majority vs Jev.
+## Caveats
+- **Older and more-rated overlap.** Older board games have had more years to collect ratings, so "picks the older game" and "picks the more-rated game" are partly the same lean.
+- **Some pairs couldn't be matched.** To match each option to its year or alcohol content we read the name and year printed in it. Pairs where that couldn't be done reliably were left out, more of them for beers.
+- **Within-genre pairs.** Pairs were drawn within a board-game subdomain or a beer-style family, so the differences are within, not across, kinds.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.973, top verdict `headline`.
-
-## Compared with
-BoardGameGeek users, BeerAdvocate reviewers, MovieLens users (who rated both items)
-
-## Limits
-Older games have had more time to collect ratings, so 'older' and 'more rated' overlap. Pairs were drawn within subdomain or style family.
-
-Results: `data/analysis/experiments/taste_enthusiast_leans.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

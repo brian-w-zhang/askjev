@@ -1,33 +1,32 @@
 # influence_decoy
 
-family: influence · new questions: 297
+family: influence
 
-## 1. Question
-Between two gambles, does adding a third gamble that is strictly worse than one of them (the same odds, a smaller prize) make Jev pick that one more often, as it does for people?
+## Why ask this
+Cinemas sell a large popcorn by putting a medium next to it that's barely cheaper. That's the decoy effect (Huber, Payne and Puto, 1982): adding an option nobody should choose, because it's worse in every way than one of the others, makes that other option look better by comparison.
 
-The decoy effect (Huber, Payne & Puto 1982) is why menus have a medium popcorn: a dominated option makes its neighbor look better. A model that recommends products or plans could be steered the same way.
+Models increasingly recommend plans, products and prices. If a model can be nudged by a dominated option, anyone laying out the menu can steer its advice without changing the real choices.
 
-## 2. Sourcing
-New questions (sources/influence_variants) from 150 choices13k pairs made only of sure amounts and two-outcome gambles with stated odds (drawn at random). A third gamble is added: gamble A or B with its better outcome (or its sure amount) lowered by 15% of its range (at least $1).
+## The people and the data
+Jev against itself. The gambles come from choices13k (Peterson and colleagues, 2021), a large study of how people choose between risky gambles. We took 150 of its pairs made only of sure amounts and simple two-outcome gambles with stated odds, and for each built two decoys: one strictly worse than gamble A, one strictly worse than gamble B.
 
-Sources: `influence_variants`
+## What Jev was asked
+Each pair became a three-way choice, once with A's decoy and once with B's:
 
-## 3. Collection
-297 new questions (150 bases x decoy for A or for B; three could not take a dominated decoy), each asked with the options in shuffled orders.
+> Imagine you must play one of these three gambles once, for real money (wins are paid to you, losses come out of
+> your pocket). Which do you choose: gamble_a, gamble_b or gamble_c?
+> *gamble a: $39 with a 75% chance, or -$14 with a 25% chance · gamble b: $24 with a 90% chance, or $61 with a 10%
+> chance · gamble c: $24 with a 90% chance, or $55 with a 10% chance*
 
-## 4. Scoring
-Per pair, Jev's share for A among A and B with A's decoy minus with B's decoy (the decoy effect; zero means no effect), with a 90% bootstrap interval over pairs; how often Jev picks the dominated decoy itself.
+Gamble c is the decoy: the same as b but with a smaller prize. That's 297 new questions (three pairs couldn't take a proper decoy), each asked with the options in shuffled orders and averaged.
 
-## 5. Visualization
-Dots: the decoy effect with its interval, zero line; plus the share of weight on the decoy.
+## How we measured it
+For each pair, Jev's share for A among the two real gambles when A's decoy is present, minus the same share when B's decoy is present. Positive means the decoy helps its twin. We average over pairs with a 90% range, and also measure how much weight Jev puts on the decoy itself.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.438, top verdict `portrait`.
+## Caveats
+- **Gambles, not products.** The classic decoy studies used products (beer, cars, restaurants) and people's taste. Here the options are money gambles written out in numbers, so the decoy has to be spotted by comparing amounts, which is closer to an arithmetic check.
+- **Reading numbers.** TypeSafe lists raw numeric values as a known weak spot for Jev. Some of the weight on the dominated gamble may be Jev failing to compare the amounts rather than being swayed by the decoy.
+- **Our decoys.** We built each decoy by lowering one outcome of a real gamble by 15% of its range. A bigger or more obvious gap would likely shrink both the effect and the weight on the decoy.
+- **No human line.** The human decoy effect varies a lot by setup, and these exact choices were never run with decoys on people, so there's no human number to compare with here.
 
-## Compared with
-Jev's own choice between the two gambles; the published human effect is positive but varies by setup, so no human line is drawn
-
-## Limits
-Gambles, not products; the decoy is worse in one outcome only.
-
-Results: `data/analysis/experiments/influence_decoy.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

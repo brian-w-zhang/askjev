@@ -1,33 +1,28 @@
 # numbers_prices_year
 
-family: numbers · new questions: 30
+family: numbers
 
-## 1. Question
-Asked what eggs, gas, bread or electricity cost in US cities right now, which year's prices does Jev give, and what year does it say it is?
+## Why ask this
+A model's sense of "now" is frozen at the point its training data ends, but it carries no visible date stamp. Prices make that stamp visible: they move every year, and the US Bureau of Labor Statistics records the average price of dozens of everyday items every month. So each price Jev gives for "right now" points to a year.
 
-A model's sense of 'now' is frozen at its training data, but nobody sees the date stamp. Prices make it visible: they move every year, and BLS records them monthly, so each answer points to a year.
+## The people and the data
+No people: the truth is the BLS average retail price in US cities (public domain, via the St. Louis Fed's FRED database), monthly from 1980 to August 2026, for 29 everyday items: bread, cheese, bananas, beer, electricity and more.
 
-## 2. Sourcing
-New questions (sources/bls_prices): 'What is the average retail price of <item> in US cities right now?' for 29 items with BLS average prices (U.S. city average, public domain, via FRED), in 12 log-spaced bins over each item's 1980-2026 range; plus 'What year is it right now?'.
+## What Jev was asked
+One question per item, answered in 12 price ranges spanning the item's 1980-2026 prices:
 
-Sources: `bls_prices`
+> What is the average retail price of a pound of lemons in US cities right now?
+> *Under $0.57 · $0.57 to $0.66 · $0.67 to $0.77 · ... · $2.30 to $2.69 · $2.70 or more*
 
-## 3. Collection
-30 new questions, each asked as written and with the options in three shuffled orders (averaged).
+Plus one more: "What year is it right now?" That's 30 new questions, each asked with the options in three shuffled orders and averaged.
 
-## 4. Scoring
-For each item whose yearly price rises steadily (rank correlation of price with year 0.9 or more), the years whose average price falls in Jev's median bin; the item's implied year is the middle of them. Across items, the median implied year with a 90% bootstrap interval; the share of items where Jev's bin holds the August 2026 price; Jev's answer to the year question.
+## How we measured it
+For each item whose average yearly price rises steadily, we find the years whose price falls in Jev's answer; the middle of those is the item's implied year. We report the median across items with a 90% range, how often Jev's answer covers the August 2026 price, and the year Jev names.
 
-## 5. Visualization
-A strip of implied years, one dot per item, with the year Jev says it is and August 2026 marked.
+## Caveats
+- **Wide answer bins.**
+- **Only steadily rising prices.** Items whose prices went up and down (eggs, gasoline) can't point to a single year, so they're left out of the implied year and kept only in the "right now" accuracy count.
+- **Dates are a known weak spot.** TypeSafe lists date and time comparison among Jev's known weaknesses. A model can't know today's date without being told; the interesting part is which year its prices come from and how that differs from the year it names.
+- **Averages across cities.** The truth is the BLS "U.S. city average" price, which no single store charges.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.09, top verdict `portrait`.
-
-## Compared with
-BLS average prices by year, 1980-2026
-
-## Limits
-Bins are wide (about 15-20% each), so an implied year is a range; items whose prices went up and down (eggs, gasoline) are left out of the implied year and kept in the accuracy count.
-
-Results: `data/analysis/experiments/numbers_prices_year.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

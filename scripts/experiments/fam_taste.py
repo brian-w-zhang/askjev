@@ -150,10 +150,11 @@ def ranked(dom: str):
         fin = finals(dom)
         if fin:
             top10 = fin[:10]
-            rate_order = {r["id"]: i for i, r in enumerate(t.head(40).to_dicts())}
+            # the ratings' order of the 24 finalists, as taste_choices_vs_ratings reads it
+            rate_order = {it["id"]: n for n, it in enumerate(json.loads(Path("data/raw/taste_finals/top24.json").read_text())[dom]["items"])}
             first_by_rating = t.row(0, named=True)["name"]
             cyc, tri = fin[0]["_cycles"], fin[0]["_triads"]
-            moved = spearmanr([rate_order.get(x["id"], 40) for x in fin], list(range(len(fin)))).statistic
+            moved = spearmanr([rate_order[x["id"]] for x in fin], list(range(len(fin)))).statistic
             head = (f"Out of {t.height:,} {plural}, Jev's final among its 24 favorites crowns {top10[0]['name']} "
                     f"({top10[0]['wins']:.1f} wins of 23), ahead of {top10[1]['name']} and {top10[2]['name']}"
                     + ("" if first_by_rating == top10[0]["name"] else f"; the ratings alone had put {first_by_rating} first")
@@ -162,16 +163,18 @@ def ranked(dom: str):
                    f"{cyc} of {tri} triads are intransitive ({cyc / tri:.1%}). Base vs reversed-level ratings: "
                    f"rank correlation {rho:.2f}." if rho is not None else "")
             items = [{"label": x["name"], "value": round(x["wins"], 1)} for x in top10]
+            extra = {"rho_ratings_vs_finals": float(moved), "loops": cyc / tri}
         else:
             top10 = t.head(10).to_dicts()
             head = (f"Out of {t.height:,} {plural}, Jev's top three are {and_list([x['name'] for x in top10[:3]])}; "
                     f"its least favorite is {bottom[0]['name']}.")
             rob = f"Rank correlation between base and reversed-level answers: {rho:.2f}." if rho is not None else ""
             items = [{"label": x["name"], "value": round(x["score"], 2)} for x in top10]
+            extra = {}
         return Result(
             result=head,
             evidence=f"{t.height:,} items rated" + ("; 276 final games among the top 24" if fin else ""),
-            numbers={"n": t.height, "top": top10, "bottom": bottom, "rho_reversed": rho,
+            numbers={"n": t.height, "top": top10, "bottom": bottom, "rho_reversed": rho, **extra,
                      "finals": [{k: v for k, v in x.items() if not k.startswith("_")} for x in fin] if fin else None},
             chart={"type": "ranked", "items": items, "unit": "wins of 23" if fin else "level (0-4)",
                    "bottom": [{"label": x["name"], "value": round(x["score"], 2)} for x in bottom]},

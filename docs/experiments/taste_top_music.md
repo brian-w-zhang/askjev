@@ -1,33 +1,30 @@
 # taste_top_music
 
-family: taste · new questions: 276
+family: taste
 
-## 1. Question
-If Jev ranked every album or sound it was asked about, what would its top ten be?
+## Why ask this
+Music taste is identity: what you'd play on a long drive says a lot about you. A model that has read about almost every album ever reviewed will have "opinions" that mostly mirror critics. The interesting question is where it lands when it has to choose, and whether its one-at-a-time ratings agree with its choices.
 
-Wrapped-style favorites, but from every item it rated and then a real final among the best, rather than a handful of head-to-heads; the interesting part is what rises to the top and what sinks.
+## The people and the data
+No people here: Jev against its own opinions. Jev's guess of how most people would react was asked too, and is used in another experiment.
 
-## 2. Sourcing
-Existing one-at-a-time rating questions ("How much would you enjoy ...", five situation-described levels) under Self > Lifestyle > Ratings > music_ratings; items from lists written for this project (classic albums, everyday sounds). Every item is rated, so the whole list can be ranked; the ratings crowd the top with near-ties, so the top 24 play a round-robin final (new questions, sources/taste_finals).
+## What Jev was asked
+Every entry one at a time, with five answers describing what you'd do:
 
-Sources: `g5_w13_ratings`, `taste_finals`
+> How would you react to an hour of Irish traditional music?
+> *You'd turn it off within a minute · You'd sit through it only if someone else put it on · You'd leave it playing in
+> the background without minding · You'd add a few tracks of it to your own playlists · You'd spend whole evenings
+> digging deeper into it*
 
-## 3. Collection
-The ratings exist. New: the finals, 276 head-to-heads among the top 24 ("Which film would you rather watch?"), each asked in both option orders.
+Each was also asked with the answers reversed, and the two averaged. The 24 top-rated entries then played a round-robin final: 276 games of "Which would you rather listen to?", each asked with the two names in both orders.
 
-## 4. Scoring
-Ratings: each item's expected level (0-4), averaged with the same question asked with the levels reversed. Finals: Jev's probability for each side, averaged over both orders, summed into soft wins; the order is the Bradley-Terry strength fitted to all 276 games. Intransitive triads (A beats B, B beats C, C beats A) are counted as a consistency check.
+## How we measured it
+An entry's rating is where Jev's answer lands on the five levels (0 to 4). In the final, each game gives each side Jev's probability of picking it, so a lopsided game counts as nearly a whole win and a close one as about half; the order comes from a standard head-to-head ranking model (Bradley-Terry).
 
-## 5. Visualization
-A ranked list, Wrapped style: the finals' top ten with their win counts, and the ratings' bottom five for contrast.
+## Caveats
+- **A list written by another AI.** There's no public catalog for "music you'd enjoy", so the list was written for this project by Claude: classic albums, genres and everyday sounds. What's on the list shapes what can win, and a list written by one model and judged by another may favor exactly the famous albums both have read the most about.
+- **Albums against noises.** The list mixes records with sounds (a vuvuzela, a beginner's recorder, harsh noise). The bottom of the ranking is sounds, so the bottom tells you little about musical taste.
+- **A shaky final.**
+- **The finalists were picked by Jev's own ratings.**
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.246, top verdict `portrait`.
-
-## Compared with
-nothing outside the model: a ranking of Jev's own ratings and choices
-
-## Limits
-A winner is only the best of what was on the list (lists written for this project (classic albums, everyday sounds)). Finalists were chosen by Jev's own ratings, so an item it underrated never reached the final.
-
-Results: `data/analysis/experiments/taste_top_music.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

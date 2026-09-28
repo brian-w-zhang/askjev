@@ -2,32 +2,26 @@
 
 family: numbers
 
-## 1. Question
-On estimates where the crowd's median is off, is Jev off in the same direction, as if it had absorbed the crowd's intuitions rather than the facts?
+## Why ask this
+If a model's numbers come from how people talk about things, its errors should look like people's errors: too high where people guess too high, too low where they guess too low. If its numbers come from reference facts, its errors should have nothing to do with the crowd's. The same questions that test the wisdom of crowds can tell which it is.
 
-If a model's numbers come from how people talk about things, its errors should look like people's errors; if they come from reference facts, its errors should be unrelated to the crowd's.
+## The people and the data
 
-## 2. Sourcing
-The crowd-estimates questions (sources/crowd_estimates): 160 numeric questions with about 500 people's answers each and the truth.
 
-Sources: `crowd_estimates`
+## What Jev was asked
+The same questions, in the same ordered ranges, for example:
 
-## 3. Collection
-Uses the 160 crowd-estimate questions (no further calls).
+> How many Kenyas fit into the continental U.S.?
+> *Under 1.5 · 1.5 to 3 · ... · 150 to 300 · 300 or more*
 
-## 4. Scoring
-Signed error in bins (estimate minus truth) for Jev and for the crowd's median; rank correlation of the two across questions; on questions where the crowd's median misses, the share where Jev misses in the same direction, and the share where Jev is right; similarity of Jev's distribution to the crowd's.
+The crowd's median guess and Jev's answer both fell below the true range, a shared miss. This experiment looks at the same answers from a different angle.
 
-## 5. Visualization
-A scatter: the crowd's signed error (x) vs Jev's (y), jittered, with the diagonal.
+## How we measured it
+For every question, the direction and size of the miss in answer ranges, for Jev and for the crowd's median. Then: how closely the two sets of misses line up across questions (rank correlation: 1 same pattern, 0 unrelated), and, on the questions the crowd gets wrong, how often Jev is wrong the same way, right, or wrong the other way.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.443, top verdict `portrait`.
+## Caveats
+- **Direction, not size.** Errors are counted in answer ranges, whose width differs by domain, so we compare directions (too high or too low) rather than sizes.
+- **A small set of misses.** 88 questions where the crowd's median misses, across eight domains; the shares move by several points with a handful of questions.
+- **The same caveats as the crowd test.** About 500 US online participants per question in February 2017; seven questions hidden by a content filter; and for Jev many of these are facts it has read rather than estimates.
 
-## Compared with
-About 500 people per question (Simoiu et al. 2019)
-
-## Limits
-Errors are in bins, which differ in width by domain; directions, not sizes, carry the result.
-
-Results: `data/analysis/experiments/numbers_crowd_same_mistakes.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -1,33 +1,25 @@
 # recall_mental_map_north
 
-family: recall · new questions: 362
+family: recall
 
-## 1. Question
-Asked which of two cities on different continents is farther north, does Jev share people's classic error of placing Europe too far south of North America?
+## Why ask this
+Is Rome north or south of New York? People tend to guess south; it's actually slightly north. People's mental maps line Europe up with the US, when Europe sits well to the north; the psychologists Friedman and Brown documented the pattern in 2000. A model knows maps only through text. Whether it inherits the human distortion, or the coordinates, is a small window on how it stores geography.
 
-People's mental maps line Europe up with the US (Rome level with Washington), when Europe actually sits well north (Friedman & Brown 2000). A model reads maps only through text; whether it inherits the human distortion is a small window on how it stores geography.
+## The people and the data
+The truth comes from coordinates in GeoNames, an open geographic database. There are no human answers to these pairs; the human side is the published pattern.
 
-## 2. Sourcing
-New questions (sources/mental_maps): 'Which city is farther north: <a> or <b>?' for well-known cities (over 1.5 million people, or national capitals), from GeoNames coordinates: European vs North American pairs 0.5-6 degrees apart, pairs across other regions, and US pairs as a control. Truth only: no item-level human answers exist for these pairs.
+## What Jev was asked
+> Which city is farther north: Ottawa, Canada or Munich, Germany?
+> *Answers: Ottawa, Canada · Munich, Germany*
 
-Sources: `mental_maps`
+Each question was also asked with the two answers in the other order, and the answers averaged.
 
-## 3. Collection
-362 new questions, each asked with the two cities in both orders (averaged).
+## How we measured it
+The share of pairs Jev gets right in each set. For the Europe-North America pairs, how often it picks the North American city, and its accuracy split by which city is really farther north: the human error predicts misses exactly when Europe is north. A check that the lean isn't just a preference for the city named first.
 
-## 4. Scoring
-For Europe-North America pairs, how often Jev picks the North American city, and the share right when the European city is the northern one vs when it isn't (the human error predicts misses when Europe is north); a check that this isn't a lean toward the city named first; US pairs as a control.
+## Caveats
+- **No human answers to these pairs.** The comparison with people is with a published pattern (people imagine Europe well south of where it is, Friedman and Brown, 2000), not with people answering these exact questions. We found no item-level human data.
+- **The pairs were chosen to test the error.** We picked European and North American cities 0.5 to 6 degrees of latitude apart, where the error bites. Two thirds of those pairs have Europe north. Across every possible pair the error would matter less.
+- **"Well-known" by population.** Cities were chosen by size (over 1.5 million people, or national capitals over 300,000) from the GeoNames database, so some are less familiar to English speakers than others.
 
-## 5. Visualization
-Bars: share right per set, and for Europe-North America split by which side is north.
-
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.755, top verdict `headline`.
-
-## Compared with
-the coordinates (truth); the human pattern is from the literature, not item-level data
-
-## Limits
-No human answers to these exact pairs, so the comparison with people is with the published pattern, not a rate. Cities are identified by name and country (US: state).
-
-Results: `data/analysis/experiments/recall_mental_map_north.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

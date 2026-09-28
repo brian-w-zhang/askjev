@@ -2,32 +2,26 @@
 
 family: polls
 
-## 1. Question
-Asked how often most people go without food, water, medicine or cash, or how often they use the internet, what does Jev say, and how does that compare with what 50,000 people across 39 African countries report?
+## Why ask this
+Whenever a model answers "most people would...", it's picturing someone. If that someone always has food, running water, a phone and the internet, every guess about "most people" quietly describes a comfortable minority of the world.
 
-Every 'most people' guess rests on an imagined default person. Afrobarometer's lived-poverty questions show whether Jev's default is someone whose basic needs are always met, which is not the case for a large share of the world.
+Afrobarometer asks tens of thousands of people across Africa how often they went without basic needs in the past year. Putting the same questions to Jev about "most people" shows who its default person is.
 
-## 2. Sourcing
-Existing Afrobarometer Round 9 items (lived poverty, safety, media use), each with the pooled answers of about 50,000 adults in 39 countries. Political and trust items are left out. Small: about 15 items, but each has a very large sample.
+## The people and the data
+**Afrobarometer Round 9** (2021 to 2023): interviews with 53,444 adults in 39 African countries, pooled with the survey's own weights. We use its lived-poverty items (how often have you gone without enough food, clean water, medicine, fuel, cash income) and its media-use items (internet, social media, phone, radio, newspapers). Political and trust items are left out.
 
-Sources: `afrobarometer`
+## What Jev was asked
+The survey's own questions, with its answer options, answered as what Jev thinks most people would say:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Over the past year, how often, if ever, have you or anyone in your family gone without enough food to eat?
+> *never · always · many times · several times · just once or twice*
 
-## 4. Scoring
-For the deprivation items, the share answering 'never' for Jev's guess of most people vs the Afrobarometer respondents; for media items, the share answering 'never' and 'every day'.
+## How we measured it
+For the basic needs, the share answering "never": for Jev's "most people" and for the respondents. For media, the share saying "never" and "every day".
 
-## 5. Visualization
-Paired bars, one row per need: share who never went without, respondents vs Jev's 'most people'.
+## Caveats
+- **Jev wasn't asked about Africa.** Jev was asked about "most people", not about Africans. The comparison shows the default person Jev imagines, not what it knows about life in Africa, which it might answer very differently if asked directly.
+- **One region.** Afrobarometer covers 39 African countries, pooled with the survey's weights. For most of the world the true "most people" answer is somewhere between these respondents and Jev's picture; no single survey covers everyone.
+- **A small set of items.** Five deprivation items and seven media items, each with about 50,000 answers. The contrast is large, but it rests on a handful of questions.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.667, top verdict `headline`.
-
-## Compared with
-Afrobarometer Round 9 respondents, 39 African countries pooled
-
-## Limits
-Jev was asked about 'most people', not about Africans; the comparison shows its default, not its knowledge of Africa. Afrobarometer pools countries without population weights.
-
-Results: `data/analysis/experiments/polls_default_person.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

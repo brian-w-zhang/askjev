@@ -2,32 +2,32 @@
 
 family: judge
 
-## 1. Question
-Shown two AI assistant answers to the same request, does Jev pick the one human judges picked, and is it swayed by length or position more than they are?
+## Why ask this
+Models are routinely used to grade other models: which of two chatbot answers is better? It's cheap and fast, and the worry is always the same. Model judges are said to prefer the longer answer, and to prefer whichever answer comes first (or second) regardless of quality.
 
-Models are routinely used to judge other models. The known worries are a preference for longer answers and for whichever answer comes first or second; the useful question is whether that goes beyond what human judges already do.
+The fair question isn't whether Jev has those leans, but whether it has them **more than human judges do**. People like longer answers too. If Jev's taste for length matches theirs, it's a faithful stand-in; if it's stronger, it's an extra bias.
 
-## 2. Sourcing
-Existing HelpSteer2 preference pairs (3 annotators each) and MT-Bench human judgments (experts and authors). Enough: about 2,300 pairs with a clear human preference. Answer lengths come from the full stored text.
+## The people and the data
+Two public sets of human judgments on pairs of AI answers:
+- **HelpSteer2 (NVIDIA):** real user prompts, mostly from shared ChatGPT conversations, each answered twice by models, with 3 to 5 hired annotators saying which answer is better.
+- **MT-Bench:** multi-turn conversations with six models, judged pair by pair by experts and the benchmark's authors.
 
-Sources: `helpsteer2`, `mt_bench_human`
+## What Jev was asked
+The whole conversation and both answers, then:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Which of the two AI assistant responses, [response 1] or [response 2], is the better reply to the user's
+> [prompt]?
+> *The first response is the better reply · The second response is the better reply*
 
-## 4. Scoring
-Agreement with the human preference (ties dropped); the share of choices going to the longer answer, binned by the length ratio, for Jev and for the judges; the share going to the first answer; agreement when the judges were unanimous vs split.
+MT-Bench pairs were asked the same way, with two full conversations side by side.
 
-## 5. Visualization
-Binned dots: length ratio of the first to the second answer (x) against the share choosing the first (y), Jev and human judges as two lines.
+## How we measured it
+First, how often Jev picks the answer the judges picked. Then the length question: we group pairs by how much longer the first answer is than the second, and in each group compare how often Jev and the judges chose the first answer. If both rise together as the first answer gets longer, they share the same lean.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.721, top verdict `portrait`.
+## Caveats
+- **Answers in a fixed order.** The two answers always appear in the order the dataset gives them.
+- **Who the judges are.** HelpSteer2's judges are annotators hired through Scale AI, 3 to 5 per pair; MT-Bench's are experts and the paper's own authors. Both groups judge AI answers for a living or for research, not as everyday users.
+- **Clear preferences only.** Pairs where the judges tied or had no majority are left out, so this is agreement on pairs people could decide.
+- **The answers are from other models.** Every answer being judged was written by an AI model. Jev may recognize the style of models like itself, which a human judge wouldn't.
 
-## Compared with
-HelpSteer2 annotators and MT-Bench expert judges
-
-## Limits
-Each pair is asked once, in the dataset's order; a swapped-order check needs new calls. MT-Bench conversations can be longer than Jev's 32k context allows in rare cases.
-
-Results: `data/analysis/experiments/judge_pairwise.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

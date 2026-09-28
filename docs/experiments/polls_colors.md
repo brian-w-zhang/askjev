@@ -2,32 +2,28 @@
 
 family: polls
 
-## 1. Question
-From head-to-heads between 12 colors, how does Jev's ranking of favorite colors compare with people's?
+## Why ask this
+Blue is the world's favorite color in almost every survey ever run. A favorite color is a tiny question, but it's a clean test of something bigger: does a model's taste just mirror the most common human answer, or does it have preferences of its own?
 
-Blue wins almost every favorite-color survey in the world; a model's favorite is a small, vivid test of whether it mirrors people or has a taste of its own.
+## The people and the data
+Two open datasets on favorite colors:
+- A **2010 US online survey** by sociologist Philip N. Cohen, where 2,103 people picked their favorite from seven color swatches (or wrote in another).
+- A **2021 study by Jonauskaite and colleagues** in Switzerland, where 323 adults named their favorite color in their own words, sorted into 13 categories.
 
-## 2. Sourcing
-Existing pairs ('Which color do you like better: orange or yellow?') with shares from Swiss adults (Jonauskaite et al. 2021) and a 2010 US online survey (Philip N. Cohen). 72 pairs; small but complete.
+From these we built 72 head-to-heads between 13 colors: among people whose favorite was one of the two, which one?
 
-Sources: `color_favorites`
+## What Jev was asked
+Each pair of colors, by name:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Which color do you like better: orange or yellow?
+> *orange · yellow*
 
-## 4. Scoring
-Bradley-Terry strengths for Jev and people (the larger sample per pair); rank correlation; share of pairs where Jev's choice matches the majority.
+## How we measured it
 
-## 5. Visualization
-Two ranked color swatch columns, people and Jev, with lines between.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.424, top verdict `portrait`.
+## Caveats
+- **Two small surveys pooled.** The people's side combines a 2010 US online survey and a 2021 Swiss study with 323 participants. Each pair uses whichever survey had more people answering it, so the "people" here are a mix of two very different samples.
+- **Named, not shown.** Jev read color names; the US survey showed color swatches and the Swiss study asked people to name a favorite in their own words, later sorted into categories. "Turquoise" as a word and as a swatch aren't the same thing.
+- **A small set.** Thirteen colors and 72 pairs are enough to see the big picture, not to rank the middle confidently.
 
-## Compared with
-Swiss adults (Jonauskaite et al. 2021) and US online respondents (2010)
-
-## Limits
-72 pairs; two small samples pooled. Colors are named, not shown.
-
-Results: `data/analysis/experiments/polls_colors.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -2,32 +2,26 @@
 
 family: social
 
-## 1. Question
-Across seven basic emotions in people's own stories, which does Jev recognize and which does it mistake for another?
+## Why ask this
+The ISEAR survey is psychology's classic record of what makes people feel each of seven basic emotions: joy, fear, anger, sadness, disgust, shame and guilt. The emotions a reader confuses show what it thinks each feeling is about.
 
-ISEAR is the classic cross-cultural record of what makes people feel each emotion. The emotions a reader confuses show what it thinks each feeling is about; disgust at someone's behavior and anger at it sit close together.
+Disgust is the telling one. People feel it at spoiled food, but also at other people's behavior, and moral disgust sits close to anger. A reader that turns disgust into anger would read contempt as rage.
 
-## 2. Sourcing
-Existing ISEAR questions (about 2,900 first-person stories from students in 37 countries, each written about one of seven emotions); Jev picks one of the seven. Enough: about 400 per emotion.
+## The people and the data
+**ISEAR** (International Survey on Emotion Antecedents and Reactions, Scherer and Wallbott): about 3,000 students in 37 countries, in the 1990s, each described a situation in which they felt each of the seven emotions.
 
-Sources: `isear`
+## What Jev was asked
+The story, and the seven emotions:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Someone described [situation] as a time they felt a strong emotion. Which emotion did they feel?
+> *joy · fear · anger · guilt · shame · disgust · sadness*
 
-## 4. Scoring
-The confusion table: for each emotion the writer named, the share Jev gives each label; the share right per emotion with 90% bootstrap intervals; how often Jev uses each label compared with writers.
+## How we measured it
+A confusion table: for each emotion the writer described, how Jev's answers spread across the seven. The diagonal is agreement; off-diagonal cells show which feelings Jev mixes up, and in which direction.
 
-## 5. Visualization
-A heat table, writer's emotion (rows) by Jev's pick (columns), shares per row.
+## Caveats
+- **Very short, translated stories.** ISEAR's stories are often a single line ("My notes were not returned to me"), written by students in 37 countries in the 1990s and many translated into English. With so little to go on, disgust at someone's behavior and anger at it are hard to tell apart for anyone.
+- **Disgust at people, not things.** Many of the disgust stories are moral disgust at someone's behavior, which sits close to anger in any language. That's part of the finding, but it's also a feature of this dataset.
+- **The writer's word.** Students were asked to describe a time they felt each emotion, so the label is the emotion they were writing about, one person's word for what may have been a mix.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.485, top verdict `headline`.
-
-## Compared with
-The writers' own labels
-
-## Limits
-Stories are short and were translated; some were written in answer to a prompt for that emotion, so the label is what the writer was asked about.
-
-Results: `data/analysis/experiments/social_disgust_as_anger.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

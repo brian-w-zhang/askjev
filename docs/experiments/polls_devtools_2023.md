@@ -2,32 +2,26 @@
 
 family: polls
 
-## 1. Question
-When developers' preferences between two tools moved a lot between the 2023 and 2025 Stack Overflow surveys, is Jev closer to the old preference or the new one?
+## Why ask this
+A model's opinions are frozen at the moment its training data ends, while the world keeps moving. Developer tools move fast: a framework that everyone wanted to keep using one year can fall out of favor two years later.
 
-A model's opinions are frozen at training time while the world moves; developer tools move fast, and three survey years show which moment Jev's taste reflects.
+Stack Overflow's yearly developer survey records those shifts. Comparing Jev with three survey years shows which moment its taste reflects, and whether its recommendations about tools might be out of date.
 
-## 2. Sourcing
-Existing Stack Overflow Developer Survey pairs ('Which X would you rather work with over the next year: A or B?'), with the share of respondents who had used both and wanted to keep exactly one, per survey year 2023-2025. Enough for the pairs with 50+ such respondents in both years.
+## The people and the data
+The **Stack Overflow Developer Survey** asks developers which technologies they've worked with and which they want to keep working with. From three years (2023, 2024, 2025) we built head-to-heads: among respondents who had used both tools in a pair and wanted to keep using exactly one, which one did they pick? We focus on the 49 pairs where that preference moved by 20 points or more between 2023 and 2025, with at least 50 such respondents in both years.
 
-Sources: `so_survey_pairs`
+## What Jev was asked
+One question per pair, the way a developer might be asked:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Which web framework or web technology would you rather work with over the next year: Next.js or Spring Boot?
+> *Next.js · Spring Boot*
 
-## 4. Scoring
-On pairs where the 2023-to-2025 share moved 20 points or more, the share where Jev's probability is closer to 2023 than to 2025; agreement with each year's majority on pairs with a 60%+ majority; a stricter check with 100+ respondents per year.
+## How we measured it
+For each moved pair, is Jev's probability closer to the 2023 share or the 2025 share? We also check, year by year, how often Jev's pick matches a clear majority (60% or more) among developers.
 
-## 5. Visualization
-Slope chart: each moved pair from its 2023 share to its 2025 share, with Jev's position marked.
+## Caveats
+- **"Closer" isn't "agrees".** So part of the result is Jev leaning further in the old direction than developers ever did, not matching 2023 exactly.
+- **Small, changing samples.** Each pair's share comes only from respondents who had used both tools, sometimes about 50 people. Samples this small bounce around from year to year, and a pull toward 2023 could partly be the 2025 numbers being noisier.
+- **Who answers the survey.** Stack Overflow's survey reaches developers who visit the site and choose to answer, from 49,191 to 89,184 a year; they are not all developers, and the mix changes each year.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.048, top verdict `portrait`.
-
-## Compared with
-Stack Overflow Developer Survey respondents, 2023, 2024 and 2025
-
-## Limits
-Survey respondents who used both tools; yearly samples differ in size. A pull toward 2023 could partly be regression to the mean if the 2025 samples are noisier; the stricter check addresses it.
-
-Results: `data/analysis/experiments/polls_devtools_2023.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

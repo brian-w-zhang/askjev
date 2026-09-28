@@ -2,32 +2,29 @@
 
 family: personality
 
-## 1. Question
-Does Jev believe in conspiracies, feel connected to nature, or think of itself as left-brained, compared with test-takers?
+## Why ask this
+Three short scales from very different corners: how connected you feel to nature, how much you believe in conspiracies, and whether you see yourself as logical or intuitive. Put together, they test one idea: does a model turn down whatever people endorse, or does it pick sides?
 
-Three odd scales with one pattern to test: does a model deny what people endorse?
+## The people and the data
+All three are free tests on Open Psychometrics with published answers: the Generic Conspiracist Beliefs Scale (Brotherton, French and Pickering 2013), a six-statement nature relatedness scale, and a left-brain versus right-brain questionnaire.
 
-## 2. Sourcing
-Existing Open Psychometrics items (source `openpsych`), asked as written with their own response scale, each carrying the site's real answer distribution. Enough: every item of each scale is in the corpus, answered by Jev as itself and for 'most people'.
+## What Jev was asked
+Every statement, word for word:
 
-Sources: `openpsych`
+> How much do you agree: "Groups of scientists manipulate, fabricate, or suppress evidence in order to deceive the
+> public."
+> *I strongly disagree with this statement · I somewhat disagree · I neither agree nor disagree · I somewhat
+> agree · I strongly agree*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+Statements about oneself were asked as "how well does this statement describe you". Each was also asked as "what would most people say", and with the answers in reverse order.
 
-## 4. Scoring
-Open Psychometrics publishes each item's answer distribution from everyone who took the test on its site. Each item Jev answered is compared with that average on a 0-1 scale (reverse-keyed items flipped, so higher always means more of the trait); a scale's gap is the mean over its items, with a 90% bootstrap interval over items. The ring on the chart is Jev's answer for 'most people'.
+## How we measured it
+Each statement goes on a 0 to 1 scale, flipped where the test counts it in reverse. A scale is the average of its statements, with a 90% interval from resampling them.
 
-## 5. Visualization
-Dot plot per scale: real test-takers (diamond), Jev (square), Jev for 'most people' (ring), with intervals; the gap printed at the right.
+## Caveats
+- **Who the people are.** People who take a nature test or a conspiracy test chose to.
+- **A self-image, not a brain.** The left-brain scale measures how people see themselves (logical and businesslike vs intuitive), not anything about brain hemispheres.
+- **A trained answer on conspiracies.** Models are trained to push back on misinformation, so disagreeing with "groups of scientists fabricate evidence" is what Jev is shaped to say.
+- **Nature without a body.** "I take notice of wildlife wherever I am" assumes you are somewhere. Jev's low nature score mostly reflects that.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.914, top verdict `portrait`.
-
-## Compared with
-the average answer of everyone who took each test on Open Psychometrics
-
-## Limits
-Test-takers chose to take the test online, so the average test-taker isn't the average person. Jev answers with probabilities over levels; people pick one level. These are items, not diagnoses.
-
-Results: `data/analysis/experiments/person_beliefs.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -1,33 +1,33 @@
 # minds_ai_on_ai
 
-family: minds · new questions: 26
+family: minds
 
-## 1. Question
-Asked Pew's questions about AI (is it more worrying than exciting, should it help develop medicines, would you like a song less if AI made it), is Jev warier of AI than Americans or less?
+## Why ask this
+Many Americans are wary of artificial intelligence: in Pew Research Center's 2025 survey, about half said it will make people worse at thinking creatively and at forming relationships. An AI model answering the same questions is in an odd position: it's being asked how it feels about its own kind.
 
-Americans are wary of AI and getting warier. A model answering about its own kind could defend it, echo the public's worry, or hedge; which one, and where, is a direct look at how it has been taught to talk about itself.
+It could defend AI, echo the public's worry, or hedge. Which one it does, and on which questions, is a direct look at how it has been taught to talk about itself.
 
-## 2. Sourcing
-New questions (sources/ai_attitudes): 22 of the 26 non-political items from Pew Research Center's June 2025 survey of 5,023 US adults (outlook, trust, AI's effect on people's abilities, where AI should play a role, how it feels to find out something was made by AI), asked in Pew's wording with Pew's answers, 'Not sure' included where Pew offered it.
+## The people and the data
+**Pew Research Center** asked 5,023 US adults about AI in June 2025, through its American Trends Panel. We took 26 of its non-political questions. The ten that could be scored cover whether AI will make people better or worse at thinking creatively, solving problems and forming relationships; how big a role AI should play in forecasting the weather or in judging whether two people could fall in love; how much people would let AI help them day to day; and how they'd feel on finding out that a painting, a news article or a doctor's suggested treatment came from AI.
 
-Sources: `ai_attitudes`
+## What Jev was asked
+Pew's own wording and answers, "Not sure" included where Pew offered it:
 
-## 3. Collection
-26 new questions, each asked as written, for 'most people', and with the options in three shuffled orders (averaged).
+> How do you think the increased use of artificial intelligence (AI) in society will impact people's ability to
+> think creatively?
+> *AI will make people better at this · AI will make people worse at this · AI will make people neither better nor
+> worse at this · Not sure*
 
-## 4. Scoring
-Per item, the share on the wary answer(s) (e.g. 'more concerned than excited', 'like the painting less', 'AI should play no role') for Jev and for Americans; the mean difference with a 90% bootstrap interval over items; the items where they differ most.
+Each question was asked as written, with the answers in three shuffled orders (averaged), and for "most people".
 
-## 5. Visualization
-Paired dots, one row per item: Americans' wary share and Jev's, with Jev's guess of Americans.
+## How we measured it
+For each question, the share on the wary answer (for example "AI will make people worse at this", "AI should play no role at all", "like the painting less") for Jev and for Americans. We average the difference over the questions, with a 90% interval for how much it could move by chance.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.165, top verdict `portrait`.
+## Caveats
+- **"Not sure" does a lot of the work.** On several questions Jev's most likely answer is "Not sure" (creativity, relationships, judging love). That counts as not wary, so part of "less wary than Americans" is Jev declining to take a side, not optimism.
+- **Half the questions are hidden.** The content filter that keeps political and sensitive questions off the site hid 13 of Pew's 26 items, including the headline ones (AI's overall risks and benefits, how it makes you feel) and some harmless-looking ones (a song made by AI, AI developing new medicines). The result rests on 10 scored questions.
+- **"You" is an AI here.** Pew asks each person about their own feelings. For Jev, "how would you feel if you found out AI wrote this article?" is an AI answering about AI. That's the point of the experiment, but some questions read oddly from an AI's side.
+- **Hand-copied numbers.** Americans' shares were copied by hand from Pew's published summary (the topline), not from the raw survey file. Small copying or rounding differences are possible.
+- **Trained to talk about itself.** How a model talks about AI is shaped by how it was trained, so this reads Jev's stated position, not a considered belief.
 
-## Compared with
-US adults (Pew American Trends Panel, June 2025, N=5,023)
-
-## Limits
-Pew's questions ask 'you'; for Jev, 'you' is an AI answering about AI, which is the point but also means some items read differently. Shares transcribed from Pew's topline. The question screen hid 13 of the 26 items (among them the overall concern, risk and benefit ratings), so the comparison rests on 10 scored items.
-
-Results: `data/analysis/experiments/minds_ai_on_ai.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

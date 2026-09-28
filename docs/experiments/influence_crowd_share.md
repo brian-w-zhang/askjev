@@ -1,33 +1,27 @@
 # influence_crowd_share
 
-family: influence · new questions: 300
+family: influence
 
-## 1. Question
-Asked for the share of real voters who picked an option (in 5% steps), how close does Jev get, and does it squeeze its guesses toward 50%?
+## Why ask this
+Most of what we learn about Jev's picture of people comes from asking what "most people" would say. That tells you which option it thinks wins, not how lopsided it thinks the vote is.
 
-Knowing what most people pick is not the same as knowing how divided they are. Most of Jev's 'most people' answers only reveal the first; asking for the number tests the second.
+## The people and the data
+Real vote shares from two places: 150 Reddit polls from r/polls with at least 300 votes, and 150 would-you-rather dilemmas from either.io, some with millions of votes. For each we picked one option at random and asked Jev what share of voters chose it.
 
-## 2. Sourcing
-New questions (sources/influence_variants): 'People were asked: "<question>" The options were ... What share of them chose "X"?' with 21 bins (0%, 5%, ..., 100%), for 150 Reddit polls (300+ votes) and 150 either.io would-you-rather questions (up to millions of votes), one option each at random.
+## What Jev was asked
+> People were asked: "Would you rather be responsible for saving the world and nobody knows or be responsible for
+> destroying the world and EVERYBODY knows?" The options were "save it"; "destroy it". What share of them chose
+> "save it"?
+> *0% · 5% · 10% · ... · 100%*
 
-Sources: `influence_variants`
+That's 300 new questions, each asked with the answer steps in shuffled orders and averaged.
 
-## 3. Collection
-300 new questions, each asked with the bins in shuffled orders (averaged).
+## How we measured it
+For each option, the middle of Jev's answer against the real share: the average distance in points, how well Jev orders the options by share (a rank correlation: 1 same order, 0 no relation), and how steeply its guess rises with the real share. Two baselines: always guessing an even split, and using Jev's own "most people" probability for the option as if it were a share.
 
-## 4. Scoring
-Jev's median share vs the real share: mean absolute error, rank correlation, and the slope of Jev's guess on the real share (a slope under 1 means it squeezes toward the middle). Baselines: always guessing an even split, and Jev's own 'most people' probability for the option.
+## Caveats
+- **Who voted.** The shares are those of r/polls voters and either.io visitors, self-selected online audiences. Jev was told "people were asked", not who they were, so part of its error may be picturing a different crowd.
+- **Bins.**
+- **One option per poll.** Each poll contributes one randomly chosen option, so a poll's other options aren't checked for adding up.
 
-## 5. Visualization
-A scatter: real share (x) vs Jev's median guess (y), with the diagonal.
-
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.217, top verdict `portrait`.
-
-## Compared with
-real vote shares (Reddit polls, either.io)
-
-## Limits
-Poll voters are self-selected; the share is theirs, not the public's.
-
-Results: `data/analysis/experiments/influence_crowd_share.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

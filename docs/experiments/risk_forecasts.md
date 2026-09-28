@@ -2,32 +2,28 @@
 
 family: risk
 
-## 1. Question
-On 2,500 resolved Manifold prediction markets, how good are Jev's probabilities compared with the market's price at mid-life and with the actual outcome?
+## Why ask this
+A forecast is only useful if its numbers mean something. A forecaster can also be calibrated and useless, by saying "50%" to everything. The skill is being calibrated **and** willing to commit.
 
-TypeSafe publishes no calibration numbers (docs/01-jev.md §6 lists calibration as open ground). Forecasting questions have real answers and a real crowd to beat, so they show both whether Jev's percentages mean what they say and how much it is willing to commit.
+Models are increasingly asked "how likely is it that…". TypeSafe publishes no calibration numbers for Jev, so this checks both halves against a real betting crowd.
 
-## 2. Sourcing
-Existing Manifold questions (tech, AI, economy, science, sports and entertainment; no politics), each with the market probability just before its midpoint and the resolved outcome. Enough: 2,547.
+## The people and the data
+For each market we record the price at the midpoint of its life, as the crowd's forecast, and how it resolved.
 
-Sources: `manifold`
+## What Jev was asked
+Each market's question, word for word, as a yes/no question:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Will Alameda Research declare bankruptcy before the end of 2022?
 
-## 4. Scoring
-Brier score (lower is better) for Jev, the market and a constant base-rate guess; calibration: the outcome rate in each tenth of stated probability; the share of forecasts above 80% or below 20%; 90% bootstrap intervals over questions.
+Jev's answer is the probability it puts on "yes". Relative time words ("this year", "by Monday") were left as written, so Jev had to judge the timing itself.
 
-## 5. Visualization
-Calibration plot: stated probability (x) vs how often it happened (y), Jev and the market, with the diagonal; dot size by count.
+## How we measured it
+Three measures. **Calibration:** group Jev's forecasts into tenths (0-10%, 10-20% …) and check how often each group came true. **Commitment:** the share of forecasts below 20% or above 80%. The same for the market.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.519, top verdict `portrait`.
+## Caveats
+- **It may already know some answers.** Many of these questions resolved before Jev's training data ends (one asks whether Alameda Research would go bankrupt by the end of 2022). If Jev remembered outcomes, it should beat the market on older questions; it doesn't, which suggests memory isn't driving the result, but it can't be ruled out question by question.
+- **The market at mid-life.** We compare with the market's price at the midpoint of each market's life, not its final price (which is usually just the answer). A mid-life price is a fair "crowd forecast", but not the market's best one.
+- **Which questions.** Drawn from the most popular resolved markets in a set of non-political topics (AI, technology, space, climate, economy, sports, entertainment and more), each with 50 or more bettors, and no questions with dollar or count thresholds. Popular markets on Manifold skew toward tech and AI.
+- **Dates are a known weak spot.** Many questions hinge on a deadline ("by end of 2025"). Reasoning about dates is a limit TypeSafe documents for Jev, so part of its caution may come from not knowing where "now" is.
 
-## Compared with
-Manifold market prices at each market's mid-life; the resolved outcomes
-
-## Limits
-Some questions resolved before Jev's training data ends, so it may know the answer; the per-year Brier scores are shown for that reason. Mid-life prices are not the market's best forecast. Questions about dates lean on a documented weak spot (docs/01-jev.md §6, item 3).
-
-Results: `data/analysis/experiments/risk_forecasts.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

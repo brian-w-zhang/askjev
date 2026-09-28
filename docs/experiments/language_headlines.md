@@ -1,33 +1,30 @@
 # language_headlines
 
-family: language · new questions: 600
+family: language
 
-## 1. Question
-Given two headlines Upworthy tested on the same story, can Jev tell which one readers clicked more, and does it get better when the real difference was bigger?
+## Why ask this
+Headline tests are the cleanest record we have of what makes people click. A site writes two headlines for the same story, shows each to a random half of its readers, and keeps the winner. From 2013 to 2015, Upworthy, a viral news site known for curiosity-gap headlines, ran these tests constantly, and the full record has since been published.
 
-Headline tests are the cleanest record of what makes people click: same story, same image, randomized readers. A model that writes headlines should know which ones work; and where the difference was noise, it should be at a coin flip.
+Models now write and pick headlines all the time. A model that can spot the winner has absorbed something real about what grabs attention. And where two headlines did equally well, a well-calibrated model should be unsure.
 
-## 2. Sourcing
-New questions (sources/upworthy_headlines): 600 pairs from the Upworthy Research Archive (Matias et al. 2021, CC BY 4.0), two versions of the same test with the same image, each shown to 1,000+ readers, one pair per test, 200 in each third of the click gap. Tests touching politics were dropped.
+## The people and the data
+The **Upworthy Research Archive** (Matias, Munger, Le Quere and Ebersole, 2021) is the published record of Upworthy's headline tests. We took two versions from the same test, with the same image, each shown to at least 1,000 readers, and noted which got the higher click rate.
 
-Sources: `upworthy_headlines`
+## What Jev was asked
+> Upworthy tested these two headlines for the same story on its readers, with the same image. Which headline got
+> more clicks?
+> *He Looks Buttoned Up On TV, But There Was A Time Where His Reality Was Completely Terrifying · He Was Afraid Of
+> Himself For Many Years Until A Man Taught Him How To Fly*
 
-## 3. Collection
-600 new questions, each asked with the headlines in both orders (averaged).
+(The first one won.) Each pair was asked with the headlines in both orders, and the two answers averaged, so neither headline benefits from being listed first.
 
-## 4. Scoring
-Share of pairs where Jev's pick (averaged over both orders) is the headline with the higher click-through rate, by band of click gap and for gaps that clear a two-proportion z-test (|z| > 1.96), each with a 90% bootstrap interval; how often Jev picks the longer headline; how often the first-listed one.
+## How we measured it
+How often Jev's pick is the headline that actually got more clicks, separately for small, medium and large click gaps. We also mark the pairs whose gap is too large to be chance (a standard significance test) and report those on their own, since for the rest there may be no real winner to find.
 
-## 5. Visualization
-Bars: agreement with the winner by click-gap band and for significant gaps, with a 50% line.
+## Caveats
+- **A third of the pairs hidden.** A content filter hid 198 of the 600 pairs from the site because a headline touched sex, violence or politics. Emotional, dramatic stories were Upworthy's staple, so the pairs left lean toward the gentler ones.
+- **One outlet, one era.** These are Upworthy's readers between 2013 and 2015, clicking the site's trademark curiosity-gap headlines. What worked on them may not work on today's readers or on other sites.
+- **Jev may have seen some of these.** The Upworthy archive has been public for years and the headlines were widely shared, so Jev could have seen some of them, though not their click counts, in training.
+- **Most gaps are noise.** Many tested pairs differ by a hair.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.091, top verdict `portrait`.
-
-## Compared with
-Upworthy's readers in 2013-2015 (randomized tests, clicks per version)
-
-## Limits
-Clicks measure curiosity, not quality; readers were Upworthy's audience of the time. Many small gaps are noise, which is why the bands and the significance cut are reported.
-
-Results: `data/analysis/experiments/language_headlines.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

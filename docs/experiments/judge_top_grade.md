@@ -2,32 +2,29 @@
 
 family: judge
 
-## 1. Question
-Asked to read how highly a critic rated a wine, how close two sentences are in meaning, or how satisfied a reviewer is, how often does Jev land on the top level compared with the real answer?
+## Why ask this
+A lot of everyday model work is reading a judgment off a piece of text: how highly did this critic rate the wine, how satisfied is this customer, how good is this essay, do these two sentences mean the same thing? The answer feeds rankings, dashboards and grades.
 
-Reading a judgment off text is a common task (inferring ratings, grading, deduplication). If a reader shies away from the top of every scale, the best items blur into the very good ones.
+A reader who shies away from the top of every scale does quiet damage: the excellent blurs into the very good, and the best items never stand out. So we checked how often Jev gives the top grade compared with how often it's actually deserved.
 
-## 2. Sourcing
-Existing Score questions with a known level: wine critic notes (Wine Enthusiast points binned into 5 even groups), STS-B sentence pairs (6 levels of similarity from annotators' means), Amazon reviews (5 star levels) and seventh-grade essays (ASAP, 4 teacher score levels). Enough: about 7,400 items, the first three balanced by level.
+## The people and the data
+Four datasets where the right level is known:
+- **Wine Enthusiast tasting notes** with the critic's points (80 to 100), grouped into five bands.
+- **Sentence pairs** from the STS Benchmark, with the average of five crowd ratings of how close in meaning they are.
+- **Amazon reviews** with the writer's own 1 to 5 stars.
+- **Seventh-grade essays** from a public essay-scoring competition, scored by two human graders who agreed.
 
-Sources: `wine_notes`, `stsb_similarity`, `amazon_reviews`, `asap_essays`
+About 7,400 items in all.
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+## What Jev was asked
+Each dataset got its own question with described levels, the top level spelled out like the others. For the wine: "How highly does the critic rate the wine in [note]?", with only the tasting note shown (no price, grape or region). For sentence pairs: how close in meaning is the second sentence to the first, on six levels paraphrased from the dataset's own guidelines.
 
-## 4. Scoring
-The share of items whose true level is the top one, vs the share where Jev's most likely level is the top one; Jev's mean level for the top-level items; rank correlation per set.
+## How we measured it
+For each dataset, the share of items that truly belong at the top level, against the share where Jev's most likely answer is the top level. We also check that Jev orders items sensibly overall (a rank correlation: 1 = same order, 0 = no relation), so the gap isn't just noise.
 
-## 5. Visualization
-Paired bars per dataset: share at the top level, true vs Jev.
+## Caveats
+- **Our levels, our cut-offs.** We turned each dataset's scale into described levels (for wine, point bands like 94-100 for "top"), and wrote the descriptions. A top level described as "exceptional" invites caution; a different wording or cut could move the share.
+- **Balanced on purpose.** The wine, sentence and review sets were sampled with about equal numbers at each level, so exactly a fifth or a sixth of items belong at the top. That's what makes the comparison clean, but it isn't how often the top grade is deserved in real life.
+- **Essays overlap another experiment.** The essay part is the same data as "Jev grades seventh-graders' spelling harder than their teachers", seen from the top of the scale.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.75, top verdict `portrait`.
-
-## Compared with
-The datasets' own levels (critic points, annotator means, stars, teacher scores)
-
-## Limits
-The levels are described situations written for Jev from each dataset's scale; bin edges are ours.
-
-Results: `data/analysis/experiments/judge_top_grade.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

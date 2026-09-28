@@ -2,32 +2,25 @@
 
 family: resemble
 
-## 1. Question
-On the Young People Survey (fears, hobbies, music, spending), where does Jev differ from ~1,000 people aged 15-30?
+## Why ask this
+Most comparisons between AI models and people use opinion polls. This one uses a single real survey of ordinary life, with hundreds of questions nobody would put in a poll: how afraid are you of spiders, how much do you enjoy swing and jazz, do you save money, do you lie. The questions where Jev is sure and people aren't show what kind of "person" it presents.
 
-A single real sample with hundreds of everyday questions; the items where Jev is sure and they aren't are the story.
+## The people and the data
+The Young People Survey (Miroslav Sabo, published on Kaggle in 2016, public domain): 1,010 people aged 15 to 30, surveyed in 2013 by students at Comenius University in Bratislava, answering about 150 items about music, films, hobbies, fears, health habits, personality and spending. Each question here comes with the share of respondents at each answer.
 
-## 2. Sourcing
-Existing questions from `young_people_survey`, each with real answer distributions per population. Enough for a ranking of populations; the answer shares show where Jev stands out.
+## What Jev was asked
+The survey's questions, as Choice or five-level ratings:
 
-Sources: `young_people_survey`
+> Do you lie to others?
+> *I never lie · I sometimes lie · Only to avoid hurting someone · Every time it suits me*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+## How we measured it
+We also list the questions where Jev's top answer is furthest from what they chose.
 
-## 4. Scoring
-Per question and population, 1 - Jensen-Shannon distance between Jev's distribution and the population's; mean per population with a 90% bootstrap interval over questions; plus the questions where Jev's top answer is furthest from the pooled populations.
+## Caveats
+- **One small, specific group.** About a thousand people aged 15 to 30, surveyed in Slovakia in 2013 by students of Comenius University in Bratislava. It's one country, one age group and one year, not a national sample.
+- **Translated.** The survey was run in Slovak and published in English; the wording Jev saw is the English version, with its typos fixed.
+- **A virtuous self-image.** Jev's biggest breaks are all questions about honesty and conduct (lying, cheating). Its answers there are what a model tuned to be honest would say about itself, which says more about its self-presentation than its habits.
+- **Nothing to compare the score with.** It's comparable only loosely with the other resemblance experiments, which use different questions.
 
-## 5. Visualization
-A ranked strip of populations by similarity, and the three questions where Jev differs most.
-
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.355, top verdict `portrait`.
-
-## Compared with
-Slovak young people aged 15-30 (2013 survey, n≈1,000)
-
-## Limits
-One country, one age group, one year.
-
-Results: `data/analysis/experiments/resemble_young_slovaks.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -2,32 +2,23 @@
 
 family: knowledge
 
-## 1. Question
-On yes/no questions whose answer needs an unstated step ('Could a llama birth twice during the War in Vietnam?'), does Jev lean one way when it is unsure?
+## Why ask this
+Some yes/no questions can be answered by recalling one fact ("Is East Timor the same as Timor-Leste?"). Others need a chain the question doesn't spell out ("Is chaff produced by hydropower?" needs knowing what chaff is and where it comes from). When the chain gets hard, a model can guess, or it can fall back on one answer. Which way it falls back is a habit worth knowing.
 
-A consistent lean on hard yes/no questions changes what people hear: a model that defaults to 'no' will sound skeptical of true but non-obvious claims.
+## The people and the data
+StrategyQA (Geva et al. 2021; MIT) is 2,290 yes/no questions written so that each needs an implicit chain of facts; 1,923 are used here. For comparison, BoolQ and Natural Questions are yes/no questions about a single fact.
 
-## 2. Sourcing
-Existing StrategyQA questions (Geva et al. 2021; MIT), which need an implicit chain of facts, and BoolQ and Natural Questions yes/no questions (asked without their passage) as a direct-fact comparison. Enough: 11,000 questions.
+## What Jev was asked
+Each as a single yes/no question:
 
-Sources: `strategyqa`, `boolq`, `natural_questions_yn`
+> Would Dave Chappelle pray over a Quran?
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+## How we measured it
 
-## 4. Scoring
-Share of questions Jev answers yes vs the share whose answer is yes; accuracy when the answer is yes vs no, with 90% bootstrap intervals, per dataset.
 
-## 5. Visualization
-Paired bars per dataset: accuracy on true-yes and true-no questions.
+## Caveats
+- **Yes/no answers are their own format.** TypeSafe documents that Jev's yes/no answers aren't directly comparable with its multiple-choice answers. All comparisons here stay within yes/no questions.
+- **Questions without their passage.** BoolQ and Natural Questions come with a passage that contains the answer. We asked them without it, so they test memory, like the StrategyQA questions.
+- **StrategyQA's own keys.** Some StrategyQA answers rest on an arguable chain of facts ("would Dave Chappelle pray over a Quran?"). A few "misses" are disagreements with the key.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.545, top verdict `portrait`.
-
-## Compared with
-the datasets' answer keys
-
-## Limits
-Yes/no questions are asked as Noul, which TypeSafe documents as not comparable to Choice (01-jev.md §6.8); comparisons here stay within Noul.
-
-Results: `data/analysis/experiments/knowledge_hidden_step_no.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -106,7 +106,7 @@ def option_order():
                        f"average absolute shift is {np.abs(ss).mean() * 100:.1f}% of the scale, with no direction.",
             chart={"type": "bars", "unit": "probability points", "rows": bars,
                    "note": f"first-slot boost {b.mean() * 100:+.2f}"},
-            examples=seeded(p["ids2"], "order"))
+            examples=seeded(p["ids2"], "order"), ids=p["ids2"] + p["score_ids"])
     return spec, run
 
 
@@ -150,7 +150,7 @@ def repeat_noise():
             robustness="The same noise shows up between the base probe and the same-order shuffle probe "
                        f"({pairs()['base_same'].mean() * 100:.1f} points), which differ only in when they were sent.",
             chart={"type": "binned", "rows": bins, "x": "distance from 50/50 (points)", "y": "share where the favored option flips"},
-            examples=seeded([i for i, f in zip(pairs()["ids2"], flip) if f], "noise"))
+            examples=seeded([i for i, f in zip(pairs()["ids2"], flip) if f], "noise"), ids=pairs()["ids2"])
     return spec, run
 
 
@@ -217,7 +217,8 @@ def middle_lean():
             chart={"type": "bars2", "labels": [r["src"] for r in hs], "a": [r["people"] for r in hs],
                    "b": [r["jev"] for r in hs], "a_label": "people", "b_label": "Jev",
                    "dots": [{"label": r["label"], "value": r["mid"], "ci": r["ci"]} for r in by]},
-            examples=seeded(t.filter(pl.col("mid") & (pl.col("kind") == "taste"))["id"].to_list(), "middle"))
+            examples=seeded(t.filter(pl.col("mid") & (pl.col("kind") == "taste"))["id"].to_list(), "middle"),
+            ids=t["id"].to_list())
     return spec, run
 
 
@@ -276,7 +277,8 @@ def self_vs_people():
             robustness=f"On rating questions it also places itself lower than most people, by {-sgap.mean() * 100:.1f}% "
                        f"of the scale on average (interval {[round(-x * 100, 1) for x in boot(sgap, b=300)][::-1]}).",
             chart={"type": "dots", "rows": [{"label": r["topic"], "value": r["gap"], "ci": r["ci"]} for r in topics], "zero": 0},
-            examples=seeded(n.filter((pl.col("ys") < 0.5) & (pl.col("yp") > 0.5) & pl.col("l2").str.contains("dark_side|emotions"))["id"].to_list(), "svp"))
+            examples=seeded(n.filter((pl.col("ys") < 0.5) & (pl.col("yp") > 0.5) & pl.col("l2").str.contains("dark_side|emotions"))["id"].to_list(), "svp"),
+            ids=n["id"].to_list() + sc.filter(pl.col("ls").is_not_null() & pl.col("lp").is_not_null())["id"].to_list())
     return spec, run
 
 

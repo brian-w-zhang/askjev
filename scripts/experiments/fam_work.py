@@ -128,7 +128,7 @@ def calibration():
         return Result(
             result=f"On yes/no work Jev is close to honest: it overstates its confidence by {over['noul']['gap'] * 100:.0f} "
                    f"points on average. Picking from a list it overstates by {over['choice']['gap'] * 100:.0f}: it puts "
-                   f"99%+ on {max99['choice']:.0%} of its picks (and on almost no yes/no answers), and when 95%+ sure "
+                   f"99%+ on {max99['choice']:.0%} of its picks (against {max99['noul']:.0%} of yes/no answers), and when 95%+ sure "
                    f"it is right {s95['choice']:.0%} of the time on picks vs {s95['noul']:.0%} on yes/no. In "
                    f"{L1.get(worst['l1'], worst['l1'])}, 95%+ sure means right {worst['acc']:.0%} of the time.",
             evidence=f"{q.height:,} questions; overconfidence 90% intervals: yes/no {over['noul']['ci']}, pick-one "

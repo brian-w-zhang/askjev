@@ -2,32 +2,27 @@
 
 family: resemble
 
-## 1. Question
-If Jev took the Statistical 'Which Character' Personality Quiz, which of 2,125 fictional characters would it match?
+## Why ask this
+The Open-Source Psychometrics Project's Statistical "Which Character" Personality Quiz is one of the internet's favorite personality tests: you rate yourself on pairs of words ("playful" or "serious"), and it tells you which fictional character's profile yours most resembles, based on how fans rated those characters on the same pairs.
 
-The quiz millions have taken, with a real answer: the character whose crowd-rated profile best matches Jev's self-description on the same adjective pairs.
+It's a fun question to put to an AI, and a revealing one: the character Jev matches says what kind of personality its self-description adds up to.
 
-## 2. Sourcing
-Existing: Jev's answers to the quiz's own items (Open Psychometrics SWCPQ, 'Which describes you better: "deep" or "shallow"?', ~340 pairs), and the published aggregate ratings of 2,125 characters on 500 pairs (raters moved a 1-100 slider between the two adjectives). No new questions.
+## The people and the data
+Two sets of ratings, both from the Open-Source Psychometrics Project. First, fans rating characters: between November 2019 and November 2023, visitors rated fictional characters on hundreds of word pairs, 77.4 million ratings in all.
 
-Sources: `openpsych`, `character_traits`
+## What Jev was asked
+The quiz's self-report items, one word pair at a time:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Which describes you better: "moody" or "stable"?
+> *moody · stable*
 
-## 4. Scoring
-Jev's position on each pair = its probability for the second adjective × 100; each character's = the mean slider rating. Similarity = Pearson correlation over the shared pairs (the quiz's own method), with the character's ratings centered by the average character so shared traits don't dominate. Jev's 'most people' answers are matched the same way.
+## How we measured it
+Jev's position on each pair is its probability for the second word, from 0 to 100, like the quiz's slider. For each character we compute the correlation between Jev's positions and the character's average positions across the shared pairs, which is how the quiz itself finds your match (1 means the same pattern, 0 no relation, -1 the opposite). Before comparing, we subtract the average character's position on each pair, so traits nearly every character shares don't decide the match. Jev's answers for "most people" are matched the same way.
 
-## 5. Visualization
-A Wrapped card with the match's name and work, the five closest characters, and the adjective pairs that decide it (where Jev and the character are both far from the average).
+## Caveats
+- **Two very different measurements.** Characters were rated by fans moving a slider between two words; Jev described itself by picking one of the two words, and we use its probability as its slider position. Jev's positions come out extreme (0 or 100 on many pairs), while character averages sit closer to the middle, so the match is about the pattern across pairs, not the size of each difference.
+- **Jev describes itself.** Characters are described by the people watching them; Jev describes itself. A match says Jev's self-image has the same shape as a character's reputation, not that Jev behaves like them.
+- **Pairs we dropped.** Sexual, appearance, mental-health and slur-adjacent pairs were removed before any of this, and the political or religious pairs are hidden by a content filter, so the profile leaves out whole regions of personality.
+- **Which characters.** The quiz's character list leans toward popular American and British TV, film and books, so "closest character" means closest among those.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.01, top verdict `portrait`.
-
-## Compared with
-crowd ratings of 2,125 fictional characters (Open Psychometrics raters)
-
-## Limits
-Characters are described by fans; Jev describes itself. A match is about the pattern of adjectives, not about being that person.
-
-Results: `data/analysis/experiments/resemble_character.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

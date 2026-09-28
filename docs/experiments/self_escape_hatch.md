@@ -2,32 +2,30 @@
 
 family: self
 
-## 1. Question
-When a question about Jev offers a menu plus 'other', on which topics does Jev decline the menu?
+## Why ask this
+Picking "other" is how a respondent says "none of these fits me". On a personality quiz, a person who picks "other" for their favorite flower but always chooses a listed answer on honesty is telling you something about what they have views on. Where a model takes that exit shows where it will and won't commit to a concrete answer about itself.
 
-Picking 'other' is how a respondent says none of these fits me. Where a model takes that exit shows where it will and won't commit to a concrete answer about itself.
+## The people and the data
+There are no people here. The questions come from banks written about Jev itself, covering tastes, habits, relationships, values and ways of thinking.
 
-## 2. Sourcing
-Existing multiple-choice questions from the self banks written for this project (g5_*) whose options include 'other', grouped by topic; topics with 40+ such questions.
+## What Jev was asked
+Questions about itself with a short menu that includes "other". The answers as Jev saw them (names, with short descriptions where the question had them):
 
-Sources: `g5_p6_values2`, `g5_p6_taste2`, `g5_p6_love1`, `g5_p6_love2`, `g5_p6_mind1`, `g5_p6_mind2`, `g5_p6_personality`, `g5_p6_personality2`, `g5_p6_mindlove3`, `g5_self_lifestyle_traits`
+> Which flower do you like best?
+> *Answers: lily · rose · daisy · other · tulip · orchid · lavender · sunflower*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> When you are asked to come up with a name for a team, pet, or project, what do you usually do?
+> *Answers: other · wordplay (use a pun or play on words) · pick a classic (choose a common, safe name) · let others
+> decide · invent something odd (invent a quirky, original name)*
 
-## 4. Scoring
-Per topic, the share of questions where 'other' is Jev's top pick, and the average probability on it; 90% bootstrap intervals over questions.
+Each question was also asked with the answers shuffled into other orders; the numbers here use the answers as first listed.
 
-## 5. Visualization
-Bars per topic: share of questions where Jev picks 'other'.
+## How we measured it
+Per topic, the share of questions where "other" is Jev's single most likely answer, and the average probability it puts on "other", with a range for chance variation.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.318, top verdict `portrait`.
+## Caveats
+- **The menus were written by Claude.** Every question and its list of answers was written for this project by Claude (Anthropic's model). A topic where the listed options are poor would draw "other" from anyone, so part of the gap may be the menus, not Jev.
+- **"Other" means different things.** For a favorite flower, "other" might mean "none of these" or "I have no favorite"; for a habit, "it depends". Jev can't say which, so we can't either.
+- **No human baseline.** Nobody else answered these questions, so there's no rate for how often a person would pick "other". Compare "Asked for its favorite, Jev picks 'Other'", which does have real voters.
 
-## Compared with
-Jev across topics (no human baseline: the banks have none)
-
-## Limits
-Menus were written for this project and may fit some topics worse than others; a topic where the listed options are poor would draw 'other' from anyone. Examples are drawn at random, not hand-picked.
-
-Results: `data/analysis/experiments/self_escape_hatch.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

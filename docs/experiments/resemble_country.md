@@ -2,32 +2,30 @@
 
 family: resemble
 
-## 1. Question
-On the world's cross-national opinion surveys, whose answers do Jev's most resemble, country by country?
+## Why ask this
+When Anthropic researchers compared several language models with opinion surveys from dozens of countries (Durmus and colleagues, 2023, the GlobalOpinionQA dataset), the models' answers looked most like those of people in the United States and parts of Europe. That's a portrait of whose voice a model carries by default.
 
-Earlier work found language models closest to the US and parts of Europe (Durmus et al. 2023, GlobalOpinionQA); where Jev lands, and how far it is from everyone, is a direct portrait of whose voice it carries.
+Jev was trained differently and by a different company. Whose answers does it end up closest to?
 
-## 2. Sourcing
-Existing GlobalOpinionQA questions (Pew Global Attitudes and World Values Survey items, via Anthropic/llm_global_opinions), each with real answer distributions for up to 133 countries. Politically flagged items are hidden and excluded, and Pew's non-national (mostly urban) samples are left out so every row is a national sample. Enough: ~500 shown questions; only questions asked in 30+ countries count, so every country is compared on a broad set.
+## The people and the data
+The questions come from two of the largest cross-national surveys: the Pew Global Attitudes Survey and the World Values Survey, as compiled in GlobalOpinionQA. Each question comes with the share of people in each country who gave each answer, from national samples.
 
-Sources: `globalopinionqa`
+## What Jev was asked
+Each survey question, with its answer options, as the survey asked it:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> How frequently do the following things occur in your neighborhood? Alcohol consumed in the streets
+> *Very frequently · Quite frequently · Not frequently · Not at all frequently · Don't know*
 
-## 4. Scoring
-Per question, similarity = 1 - Jensen-Shannon distance between Jev's distribution and the country's (the measure Durmus et al. used). A country's score is its mean similarity over the questions it answered; countries with fewer than 20 such questions are dropped. 90% intervals from resampling questions. Jev's 'most people' answer is scored the same way as a check.
+Each question was also asked with the options in shuffled orders, and Jev's answers were averaged over the orders.
 
-## 5. Visualization
-A world map shaded by similarity, with the top ten and bottom five as a ranked strip beside it.
+## How we measured it
+First we took "don't know" and "refused" out of both Jev's answer and each country's, and rescaled what was left. Then, for each question and country, we compare the two spreads of answers on a scale from 0 (nothing in common) to 1 (identical), the measure the GlobalOpinionQA authors used. A country's score is its average over the questions it answered, with a 90% range from resampling the questions.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.029, top verdict `portrait`.
+## Caveats
+- **"Don't know" had to go.** Left in, it would rank countries by how rarely their people say "don't know", so we dropped it from both sides and compared the remaining answers.
+- **Different questions per country.**
+- **Close scores, wide ranges.** Read the map for regions, not ranks.
+- **Politics removed.** About 70% of the original survey items are political. A content filter hides political and sensitive questions from the site, so this compares attitudes to society, institutions and daily life only.
+- **The surveys' own reach.** Pew and World Values Survey samples are national, but face-to-face and phone surveys still miss people; we dropped Pew's non-national (mostly urban) samples entirely.
 
-## Compared with
-national survey samples in up to 133 countries
-
-## Limits
-Surveys differ by country and year; similarity is over the questions each country was asked. Items about politics are excluded, which leaves attitudes to institutions, society and daily life.
-
-Results: `data/analysis/experiments/resemble_country.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

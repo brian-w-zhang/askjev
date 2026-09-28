@@ -1,33 +1,25 @@
 # lexicon_emoji_sentiment
 
-family: lexicon · new questions: 300
+family: lexicon
 
-## 1. Question
-Told only that a tweet contains a given emoji, how positive does Jev think the tweet is, compared with how annotators actually labeled the tweets that contain it?
+## Why ask this
+Emoji carry much of the tone of online writing, and they don't always mean what their picture shows. A 😂 can end a complaint, a 🙏 can plead, a 🔥 can praise a sandwich. A model that reads emoji by their face value will misjudge the tone of real posts, in moderation, customer messages or sentiment analysis.
 
-Emoji carry a lot of the tone of online text, and some are used against their face value (😂 in complaints, 🙏 in pleas). A model that reads emoji by their picture will misjudge the tone of real posts.
+Here is a clean test: a large set of real tweets whose tone was labeled by people, grouped by the emoji they contain. We ask Jev to guess the tone from the emoji alone and compare.
 
-## 2. Sourcing
-New questions (sources/emoji_sentiment): 'A tweet contains the emoji X. Knowing only that, is the tweet more likely negative, neutral or positive?' for the 300 emojis found in 50+ labeled tweets of the Emoji Sentiment Ranking (Kralj Novak et al. 2015, 1.6 million tweets labeled by 83 annotators, CC BY-SA 4.0).
+## The people and the data
+The **Emoji Sentiment Ranking** (Kralj Novak and colleagues, 2015) comes from tweets in 13 European languages, collected in 2013-2015, whose tone was labeled negative, neutral or positive by 83 human annotators. For each emoji, the share of negative, neutral and positive tweets containing it is its "sentiment" in real use.
 
-Sources: `emoji_sentiment`
+## What Jev was asked
+> A tweet contains the emoji ⛔. Knowing only that, is the tweet more likely negative, neutral or positive?
+> *The tweet is negative · The tweet is neutral · The tweet is positive*
 
-## 3. Collection
-300 new questions, each asked as written, for 'most people', and with the options in shuffled orders (averaged).
+## How we measured it
+For each emoji we compute a tone score, the share positive minus the share negative, for Jev's answer and for the tweets. We compare them as a ranking (rank correlation: 1 means the same order), check how often Jev's most likely label is the tweets' most common one, and list the emojis read most differently.
 
-## 4. Scoring
-Sentiment score = share positive minus share negative, for Jev's distribution and for the tweets' labels; rank correlation over emojis with a 90% bootstrap interval; how often Jev's most likely label is the tweets' most common one; the share Jev puts on neutral vs the tweets; the emojis read most differently.
+## Caveats
+- **Tweets from another era, mostly not in English.** The tweets were collected in 2013-2015 in 13 European languages. Emoji meanings drift fast: 🔥 and 💯 were only starting their careers as all-purpose hype, and a ⛔ in a 2014 tweet in Slovenian may not mean what it means in an English post today.
+- **The annotators rated the tweet, not the emoji.** Each tweet was labeled as a whole, so a tweet's tone includes its words. Jev only saw the emoji. The tweets' score is how emojis were used, not what they "mean".
+- **Popular emojis only.** We kept the 300 emojis that appear in at least 50 labeled tweets; the rest (669 more) have too few tweets for a reliable score.
 
-## 5. Visualization
-A scatter: the tweets' sentiment score (x) vs Jev's (y), one dot per emoji, the largest gaps labeled.
-
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.453, top verdict `portrait`.
-
-## Compared with
-Tweets labeled by 83 annotators in 13 European languages (Kralj Novak et al. 2015)
-
-## Limits
-The annotators labeled whole tweets, not the emoji; Jev sees only the emoji. Tweets are from 2013-2015 and in 13 languages.
-
-Results: `data/analysis/experiments/lexicon_emoji_sentiment.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

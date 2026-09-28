@@ -1,33 +1,31 @@
 # perception_amount
 
-family: perception · new questions: 9
+family: perception
 
-## 1. Question
-How many does Jev think 'a couple', 'a few', 'several', 'many', 'dozens', 'scores of' and 'hundreds of' are, compared with people?
+## Why ask this
+"A few", "several", "many", "dozens": people use them constantly and never agree exactly. Some have literal meanings that everyday use has drifted from: a dozen is twelve, a score is twenty. When a model reads "several complaints came in" or writes "dozens of users were affected", it should mean roughly what a reader would.
 
-Amount words are vaguer than probability words, and some have old literal meanings ('a score' is 20) that most people no longer use. Which way a model reads them shows whether it goes by the dictionary or by usage.
+Amount words are also a window into how a model learned language: from the dictionary, or from how people actually talk.
 
-## 2. Sourcing
-New questions (sources/perception_words): 'What number would you assign to the phrase "<phrase>"?' for 9 of the survey's 10 phrases ('fractions of' is left out: the bins hold counts), with 15 ordered bins from 1 to more than 1,000. Respondents' numbers are put in the same bins.
+## The people and the data
+The same 2015 Reddit survey behind "What 'probably' means to Jev" (46 people on r/samplesize, public on GitHub under an MIT license) also asked what number people would assign to ten amount phrases. We use nine of them.
 
-Sources: `perception_words`
+## What Jev was asked
+The survey's own question, with 15 answers from 1 to more than 1,000, finer at the bottom:
 
-## 3. Collection
-9 new questions, asked as written, for 'most people', and in three shuffled orders (averaged).
+> What number would you assign to the phrase "Several"?
+> *1 · 2 · 3 · 4 · 5 · 6 to 7 · 8 to 10 · 11 to 15 · 16 to 25 · 26 to 50 · 51 to 100 · 101 to 250 · 251 to 500 · 501 to
+> 1,000 · More than 1,000*
 
-## 4. Scoring
-Per phrase, the bin holding Jev's median vs the bin holding people's median; rank correlation of the medians; the phrases where they differ.
+Each of the nine was also asked with the answers in three shuffled orders (averaged), and for "most people". Each person's number from the survey is placed in the same bins.
 
-## 5. Visualization
-A ridge chart on a log axis: one row per phrase, people's and Jev's distributions over the bins.
+## How we measured it
+For each phrase, the bin that holds the middle of Jev's answer against the bin that holds the middle of people's, and the order of the phrases (a rank correlation: 1 means the same order).
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.195, top verdict `portrait`.
+## Caveats
+- **A small online sample.** 46 people answered on Reddit's r/samplesize in 2015. Amount words vary between speakers (is "a couple" exactly two?), and a different crowd would shift some answers.
+- **No context.** "How many is 'several'?" has no answer without knowing what's being counted: several people, several grains of rice, several years. People and Jev each had to imagine something. See "Does 'a few' grow with the crowd?" for what happens when the thing is named.
+- **Wide, uneven bins.** A one-bin difference near the top is a big number; near the bottom it's one or two.
+- **One phrase left out.** The survey also asked about "fractions of", which is less than one; our bins start at 1, so it's not here.
 
-## Compared with
-46 Reddit respondents (zonination 2015)
-
-## Limits
-46 people answered the original survey on Reddit's r/samplesize in 2015: a small, online, English-speaking sample. Each person gave one number; Jev gives a probability over the bins, and its median is compared with theirs.
-
-Results: `data/analysis/experiments/perception_amount.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

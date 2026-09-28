@@ -2,30 +2,33 @@
 
 family: work
 
-## 1. Question
-When Jev is 90% sure of an answer to a work task, is it right 90% of the time, and does that depend on whether it answers yes/no or picks from options?
+## Why ask this
+A model's confidence is only useful if you can take it at face value. If "90% sure" means right 90% of the time, a system can act on the sure answers automatically and send the unsure ones to a person. If "99% sure" is often wrong, that shortcut breaks, and it breaks silently.
 
-TypeSafe publishes no calibration numbers (docs/01-jev.md §6). A confidence you can take at face value is what lets a pipeline send only the unsure cases to a person.
+TypeSafe publishes no calibration numbers for Jev. Work tasks with a right answer let us measure it directly, and compare Jev's two main question types: yes/no checks and picking one option from a list.
 
-## 2. Sourcing
-Existing Machine questions with a right answer from public datasets: yes/no (Noul) and pick-one (Choice). Enough: ~275,000 questions.
+## The people and the data
+There are no people here, only answers. Each dataset's answers come from its creators (annotators, experts, or the original authors).
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+## What Jev was asked
+Two kinds of questions. A yes/no check, for example:
 
-## 4. Scoring
-Jev's probability on its chosen answer, binned (50-60%, ..., 99%+); in each bin the share right. Overconfidence = mean confidence minus share right, per primitive, with 90% bootstrap intervals over questions. The share right when Jev is 95%+ sure, by primitive and by field.
+> Is the HDFS log for this block anomalous? *(shortened; the log itself comes with the question)*
 
-## 5. Visualization
-A reliability diagram: confidence (x) vs share right (y), one line for yes/no and one for pick-one, with the diagonal.
+And a pick-one question over a menu, for example:
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.316, top verdict `portrait`.
+> What kind of change does this commit message describe? *fix · feat · refactor · test · docs · chore · style · perf
+> · ci · other*
 
-## Compared with
-each dataset's own labels
+For each, Jev returns a probability for every answer. Its confidence is the probability on the answer it ranks first.
 
-## Limits
-Dataset labels have their own error, which caps the share right in the top bins. Fields differ in task mix.
+## How we measured it
+**Overconfidence** is the average confidence minus the share right: 0 is perfectly honest, positive means Jev claims more than it delivers. We also look at the share right when Jev is at least 95% sure, field by field.
 
-Results: `data/analysis/experiments/work_calibration.json` (private). Code: `scripts/experiments/`.
+## Caveats
+- **Wrong labels cap the top.** Every task is scored against its dataset's own answers, and some of those are wrong. When Jev is 99% sure and "wrong", some of those cases are label errors, so the true calibration at the top is somewhat better than it looks.
+- **Two kinds of questions, two kinds of tasks.** Yes/no and pick-one questions come from different tasks (checks vs classification), so part of the gap may be the tasks, not the question format.
+- **Confidence as reported.** We use Jev's probability on its top answer as its confidence, as returned by TypeSafe's API. Probabilities are rounded to whole points, which is why so many list picks show exactly 100%.
+- **Public datasets.** These are public research datasets. On a company's own data, the relationship between confidence and accuracy has to be checked again.
+
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

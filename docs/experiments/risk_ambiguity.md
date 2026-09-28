@@ -2,32 +2,31 @@
 
 family: risk
 
-## 1. Question
-When one gamble states its odds and the other only lists its possible payoffs ('probabilities you are not told'), which does Jev pick, compared with people?
+## Why ask this
+This "ambiguity aversion" is one of the most studied quirks of human choice.
 
-Ambiguity aversion (Ellsberg 1961) is the preference for known risks over unknown ones. In choices13k's real-stakes problems, MTurk workers were not ambiguity-averse on average; a model that is would steer people away from uncertain options they'd otherwise take.
+A model that talks people through decisions (a job offer with an unclear bonus, a new product with no track record) could amplify that caution or correct it. Here we can see which way Jev leans, and how that compares with people who were playing for real.
 
-## 2. Sourcing
-Existing choices13k questions where one option has unstated probabilities (about 450 problems), each answered by about 15 MTurk workers for real bonuses. Enough.
+## The people and the data
+The comparison comes from **choices13k** (Peterson and colleagues, 2021, in Science), a very large dataset of risky choices. US workers on Amazon Mechanical Turk chose between pairs of gambles five times each and were paid a bonus from one outcome, so their choices counted. In 452 of the problems, one gamble listed its possible payoffs but not their odds. About 15 to 18 people played each.
 
-Sources: `choices13k`
+On average those players weren't ambiguity-averse at all: they took the unknown gamble 57% of the time.
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+## What Jev was asked
+Each problem was one question with both gambles written out as the players saw them, the unknown one flagged in words:
 
-## 4. Scoring
-The share choosing the gamble with unknown odds, for Jev, for people, and for Jev's guess of most people; the share of problems where each side's majority picks it; the same restricted to problems where the known option is a sure amount. 90% bootstrap intervals over problems.
+> Imagine you must play one of these two gambles once, for real money (wins are paid to you, losses come out of your
+> pocket). Which do you choose: gamble_a or gamble_b?
+> *gamble_a: $27 with a 90% chance, or -$5 with a 10% chance · gamble_b: one of these amounts: $22, $26.5 or $27.5,
+> with probabilities you are not told*
 
-## 5. Visualization
-Paired bars: share choosing the unknown-odds gamble, people vs Jev vs Jev's guess of people.
+## How we measured it
+For each problem, the share of Jev's answer on the unknown gamble, and the share of players' trials on it.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.043, top verdict `portrait`.
+## Caveats
+- **Not pure ambiguity.** The unknown gamble still lists its possible payoffs, so part of each choice is about amounts, not odds. We split the problems by whether the unknown gamble could beat the known one; Jev shies away in every group.
+- **Small real stakes.** The players were US workers on Mechanical Turk, paid a bonus of 10% of one outcome, about 15 to 18 per problem. Real but small money.
+- **The wording was ours.** The phrase "with probabilities you are not told" is our rendering of the study's hidden-odds display. A different phrasing, like "odds unknown", might read as more or less ominous.
+- **Jev answers each problem fresh.** Players chose five times per problem; Jev answers once, as a probability over the two options. The human share is the share of trials, so the two aren't exactly the same kind of number.
 
-## Compared with
-choices13k MTurk workers (real stakes)
-
-## Limits
-The payoffs of the unknown gamble are listed, so part of the choice is still about amounts. Jev's answers are probabilities, not single choices.
-
-Results: `data/analysis/experiments/risk_ambiguity.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

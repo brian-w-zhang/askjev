@@ -2,32 +2,30 @@
 
 family: work
 
-## 1. Question
-On work cases written to be deliberately borderline, does Jev's confidence drop, or is it as sure as on the clear ones?
+## Why ask this
+The most useful thing a model doing checks can know is when it doesn't know. If its confidence drops on the cases a careful person would also find hard, a pipeline can send exactly those to a human and trust the rest. If it's just as sure on hard cases as on easy ones, every answer needs checking.
 
-A model that knows when a case is hard can hand exactly those to a person. Public datasets don't mark which cases are borderline; the questions written for this project in TypeSafe's style do.
+Public datasets rarely say which cases are borderline. The work cases written for this project do.
 
-## 2. Sourcing
-Existing authored questions for TypeSafe's Machine leaves with no public data (claims triage, KYC, ad alignment, listing compliance, moderation enforcement, response verification, prohibited claims, methods checks, hiring evidence, purchase intent): 7,450 inputs written by hand, about 30% marked borderline at writing time. Plus the examples in TypeSafe's own docs, and public data for contrast. Enough.
+## The people and the data
+There are no human raters here. We compare four groups of work cases:
 
-Sources: `typesafe_authored`, `typesafe_seeds`
+## What Jev was asked
+Each case was a yes/no or pick-one question over a written input. For example, a know-your-customer check:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Does the application contain everything the policy requires before this account can be opened?
+> *Every item the policy requires for this customer type is present and consistent · At least one required item is
+> missing, expired or inconsistent*
+> *(the policy and the application follow: required photo ID, proof of address within 3 months, tax ID; the
+> applicant's documents)*
 
-## 4. Scoring
-Share right and share of answers at 95%+ confidence for clear vs borderline cases, per primitive, with 90% bootstrap intervals; the same for the docs' own examples and for public datasets.
+## How we measured it
+For each group, two numbers: how often Jev's top answer matches the label, and how often it put 95% or more on its answer. Each comes with a range showing how much it could vary by chance, and we split yes/no from pick-one questions.
 
-## 5. Visualization
-Paired bars: share right and share 95%+ sure, for docs examples, clear authored, borderline authored and public data.
+## Caveats
+- **Written for this project, by Claude.** The clear and borderline cases were written for this project by Claude (Anthropic's model) subagents, in TypeSafe's style, with a label and a "borderline" flag set at writing time. They are synthetic: tidier than real inputs, and one author's idea of what's hard. The labels are that author's judgment, not independent ground truth.
+- **The writer knew which were hard.** The author marked cases borderline while writing them, so borderline cases may carry tells (hedged wording, conflicting details) that make them look hard. Jev's lower confidence could partly be reading those tells.
+- **Few docs examples.**
+- **Public data is a different mix.**
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.704, top verdict `portrait`.
-
-## Compared with
-the author's labels (authored), the docs' answers, and public datasets' labels
-
-## Limits
-Authored labels are the author's judgment, not independent ground truth, and the author knew which cases were borderline. The docs examples are few (a few hundred).
-
-Results: `data/analysis/experiments/work_knows_hard_cases.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

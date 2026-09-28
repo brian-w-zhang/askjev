@@ -1,33 +1,32 @@
 # numbers_lethal_events
 
-family: numbers · new questions: 81
+family: numbers
 
-## 1. Question
-How many Americans a year die of botulism, tornadoes, diabetes or stroke? Does Jev show the famous 1978 pattern of overestimating rare, dramatic deaths and underestimating common, quiet ones?
+## Why ask this
+In 1978 Lichtenstein and colleagues asked Americans how many people die each year of 41 causes, from botulism and tornadoes to diabetes and stroke. The result became the textbook picture of the availability bias: people's estimates were squashed toward the middle. Rare, vivid causes that make the news were overestimated; common, quiet killers were underestimated.
 
-Lichtenstein and colleagues' 1978 chart is the textbook picture of the availability bias: people's estimates are squashed toward the middle, so rare dramatic deaths are overestimated and common diseases underestimated. A model trained on the same news-heavy text might inherit the squash, or read the statistics instead.
+A model trained on news-heavy text might inherit that squash, or it might have read the statistics instead. The answer says something about where its sense of risk comes from.
 
-## 2. Sourcing
-New questions (sources/lethal_events): for each of the study's 41 causes, 'In the United States in the mid-1970s, about how many people died each year from <cause>?', in 13 log bins (about half an order of magnitude each), once with the study's reference (about 50,000 motor-vehicle deaths a year) and once without. Truth: the 1970s vital statistics the study used; people: the study's geometric mean estimates (Pachur's 2024 compilation, OSF u4d7g).
+## The people and the data
+The 1978 study's 41 causes, each with the yearly US death count from the vital statistics of the time and the participants' average estimate, as compiled by Pachur in 2024 (open data on OSF). The participants were given one reference point, as Jev was: about 50,000 people a year died in motor-vehicle accidents.
 
-Sources: `lethal_events`
+## What Jev was asked
+One question per cause, with the study's reference, in ordered bins:
 
-## 3. Collection
-81 new questions (41 causes x 2 versions, less motor-vehicle accidents in the version where they are the reference), each asked as written and with the bins in three shuffled orders (averaged).
+> For reference, about 50,000 people a year died in motor vehicle accidents. In the United States in the mid-1970s,
+> about how many people died each year from measles?
+> *None · 1 to 9 · 10 to 29 · 30 to 99 · 100 to 299 · 300 to 999 · 1,000 to 2,999 · 3,000 to 9,999 · 10,000 to 29,999
+> · 30,000 to 99,999 · 100,000 to 299,999 · 300,000 to 999,999 · 1 million or more*
 
-## 4. Scoring
-Jev's estimate = the geometric middle of its median bin. On a log scale: rank correlation of Jev's and people's estimates with the truth; the slope of estimate on truth (1 = unbiased spread, below 1 = squashed toward the middle); the mean log ratio (estimate / truth) for the causes Pachur codes as dramatic vs the rest. Main numbers use the version with the reference, as people had.
+Each cause was also asked without the reference. That's 81 new questions, each asked with the bins in three shuffled orders and averaged.
 
-## 5. Visualization
-The 1978 log-log chart: true deaths (x) vs estimates (y), people's points and Jev's, with the diagonal.
+## How we measured it
+Jev's estimate is the middle of its median bin (on a log scale). On log scales, we compare how well estimates order the causes, how steep the estimate-versus-truth line is (1 means no squash, lower means rare causes are pushed up and common ones down), and how much more dramatic causes are overestimated than quiet ones, for Jev and for the 1978 public.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.05, top verdict `portrait`.
+## Caveats
+- **People's side is an average.** The study published one geometric-mean estimate per cause, not each person's answer, so the human dots are averages and can't show how spread out people were.
+- **Jev knows later statistics.** We ask about the mid-1970s and score against the 1970s counts, but Jev has read decades of later statistics and the 1978 paper itself, one of the most cited in the psychology of risk. Knowing the famous result could help it avoid the famous bias.
+- **Numbers are a known weak spot.** TypeSafe lists raw numeric values as a known weakness of Jev. We gave it ordered answer bins (1 to 9, 10 to 29, ... 1 million or more) instead of asking for a number, and each bin spans about a factor of three.
+- **Which causes count.** Which causes count as "dramatic" follows Pachur's 2024 compilation, not our judgment.
 
-## Compared with
-US adults in 1978 (geometric means; Lichtenstein et al. 1978) and the 1970s death counts
-
-## Limits
-People's side is a published mean per cause, not a distribution. Jev answers about the 1970s knowing (presumably) later statistics too; its errors are compared on the 1970s truth. Bins cap precision at about a factor of three.
-
-Results: `data/analysis/experiments/numbers_lethal_events.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -2,30 +2,34 @@
 
 family: work
 
-## 1. Question
-Across 120 kinds of machine work in 14 fields, does knowing the field (legal, code, healthcare...) tell you how often Jev gets it right, or does it depend on the specific task?
+## Why ask this
+When companies pick an AI model, they usually ask about fields: is it good at legal work? At code? At customer support? That question assumes a model is roughly equally reliable across a field's tasks. If that's wrong, the only honest answer to "is it good at code?" is "which code task?".
 
-Buyers pick a model per field ('is it good at legal?'). If reliability swings more between tasks inside a field than between fields, that question is the wrong one, and every new task needs its own check.
+Jev is built for exactly this kind of work: short, repeatable judgments inside larger systems (route this ticket, check this log line, classify this clause). So we can test the assumption across a wide range of real tasks.
 
-## 2. Sourcing
-Existing Machine-hemisphere questions from public labeled datasets with a right answer (Noul, Choice), grouped by the tree's field (level 1) and by source task. Authored TypeSafe-style questions are left out (their labels are the author's), and so are graded-scale tasks (work_grading_scales). Enough: ~270,000 questions, 120+ tasks.
+## The people and the data
+They include intent routing for banks and airlines, clause types in contracts, spam and phishing detection, log analysis from computer clusters, commit messages from open-source projects, diagnosis codes, product search relevance and many more.
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+Each dataset's answers were written by its creators: annotators, domain experts, the authors of the original content (a commit's own label, a review's own star rating), or automated rules. Questions written for this project are left out, as are tasks graded on a scale.
 
-## 4. Scoring
-Per task, the share Jev gets right (its most likely answer equals the dataset's label). Per field, the pooled share with a 90% bootstrap interval over tasks, and the lowest and highest task in it. The share of the variance in task-level results that the field explains (between-field over total).
+## What Jev was asked
+Each task is a template applied to a real input. For example, for commit messages:
 
-## 5. Visualization
-One row per field: a dot at the pooled share, a line from its weakest to its strongest task, weakest and strongest named.
+> What kind of change does commit_message describe?
+> *Input: "can't get the proper last tag from commit history. repo.tags returns a list sorted by the name rather
+> than date, fix it by sorting them before iteration"*
+> *Options: fix · feat · refactor · test · docs · chore · style · perf · ci · other, each with a one-line
+> description*
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.423, top verdict `portrait`.
+Jev picks one option (or answers yes/no), and its answer counts as right when its top choice matches the dataset's label.
 
-## Compared with
-each dataset's own labels (a right answer, not a crowd)
+## How we measured it
+For each task, the share of questions Jev gets right. For each field, the pooled share with a range showing how much it could vary by chance, and the weakest and strongest task inside it. Then one number: of all the variation between tasks, how much is explained by which field they're in (0% none, 100% all).
 
-## Limits
-A dataset's label is not always right, and harder datasets sit in some fields. Tasks differ in chance level (2 to 77 options). Indicators, not a ranking of fields.
+## Caveats
+- **The labels aren't always right.** Every task is scored against its dataset's own answers, written by the people who made it: commit authors, annotators, sometimes automatic rules. Some are debatable. A commit titled "remove useless test on _getCommand method" is labeled a refactor; Jev says it's about tests, and many people would agree.
+- **Tasks aren't equally hard.** We don't adjust for chance, so a field full of many-option tasks looks worse than one full of yes/no checks.
+- **Public datasets, not your data.** These are public research datasets, cleaned and balanced by their authors. A company's real tickets, logs or contracts can be messier, and a task's score here is a starting estimate, not a guarantee.
+- **Fields are our grouping.** We sorted tasks into 14 fields by where they sit in the project's topic tree. A few tasks could belong to two fields (a medical-trial summary is both research and healthcare).
 
-Results: `data/analysis/experiments/work_task_not_domain.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

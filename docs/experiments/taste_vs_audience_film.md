@@ -2,32 +2,29 @@
 
 family: taste
 
-## 1. Question
-Does Jev like the films that MovieLens users like, and where does it disagree most?
+## Why ask this
+Most of what Jev says about taste can only be checked against itself. Films are different: MovieLens, a recommendation site run by the GroupLens research lab, has millions of real ratings.
 
-A real test of taste against a real crowd, not against Jev's own guess about people; the disagreements are the portrait.
+## The people and the data
+MovieLens users: people who signed up to a free film-recommendation site and rated films they'd seen, between 1995 and 2023. For each film we use the distribution of its ratings, turned into the same five levels Jev answers on.
 
-## 2. Sourcing
-Existing rating questions under Self > Lifestyle > Ratings > film_ratings, each with the real rating distribution of MovieLens users (their ratings binned to the same five levels). Enough: thousands of items.
+## What Jev was asked
+Every film one at a time:
 
-Sources: `taste_ratings`
+> How much would you enjoy watching Hud (1963)?
+> *You'd turn it off within the first twenty minutes · You'd finish it but forget it within a week · You'd enjoy it
+> once and not seek it out again · You'd recommend it to a friend · You'd rewatch it and count it among your
+> favorites*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+Each was also asked with the answers in reverse order, and the two averaged. Jev never saw the MovieLens ratings.
 
-## 4. Scoring
-Rank correlation (Spearman) between Jev's robust level and the audience's mean level, with a 90% bootstrap interval over items; the items with the largest rank disagreement in each direction. Ranks, not levels, because Jev's described levels and the audience's star ratings aren't the same scale.
+## How we measured it
+Ranks rather than levels, because Jev's described levels and people's stars aren't the same scale. The biggest disagreements are the films whose two ranks are furthest apart.
 
-## 5. Visualization
-A scatter of audience rank vs Jev's rank, with the ten biggest disagreements labeled on each side.
+## Caveats
+- **Fans rate what they chose to watch.** MovieLens users rate films they picked, and people pick films they expect to like, so a niche documentary gets rated mostly by its fans. Jev rates every film cold. That alone pushes some niche titles higher for the audience.
+- **Stars squeezed into five levels.** The bins are our choice, so we compare ranks, not levels.
+- **A famous-film list.** Its rating may track what critics wrote as much as anything else.
+- **Reputations change.** MovieLens ratings span 1995 to 2023, but what's written about a film or its star keeps changing. One possible reason Jev rates Bill Cosby's stand-up film so low is what has been written about Cosby since; we can't test that here.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.915, top verdict `portrait`.
-
-## Compared with
-MovieLens users (their average rating of each item)
-
-## Limits
-Audiences rate what they chose to watch or drink; Jev rates everything. Rank comparisons only.
-
-Results: `data/analysis/experiments/taste_vs_audience_film.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -2,32 +2,28 @@
 
 family: taste
 
-## 1. Question
-Does Jev like the board games that BoardGameGeek users like, and where does it disagree most?
+## Why ask this
+Board-game hobbyists have a strong, shared sense of what makes a game good: deep strategy, clever mechanics, the newest releases. Comparing Jev with them shows whether a model sides with the hobby or with the family game shelf.
 
-A real test of taste against a real crowd, not against Jev's own guess about people; the disagreements are the portrait.
+## The people and the data
+BoardGameGeek users: the main online community of board-game hobbyists, whose 1-to-10 ratings form the hobby's standard rankings. For each game we use the distribution of its ratings, set on the same five levels Jev answers on.
 
-## 2. Sourcing
-Existing rating questions under Self > Lifestyle > Ratings > board_game_ratings, each with the real rating distribution of BoardGameGeek users (their ratings binned to the same five levels). Enough: thousands of items.
+## What Jev was asked
+Every game one at a time:
 
-Sources: `taste_ratings`
+> How much would you enjoy playing Medina (2001)?
+> *You'd want to quit before the first game ended · You'd play one game and never ask for it again · You'd play it
+> again if someone else suggested it · You'd suggest it yourself at the next game night · You'd want to own it and
+> play it again and again*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+Each was also asked with the answers reversed, and the two averaged. Jev never saw the BoardGameGeek ratings.
 
-## 4. Scoring
-Rank correlation (Spearman) between Jev's robust level and the audience's mean level, with a 90% bootstrap interval over items; the items with the largest rank disagreement in each direction. Ranks, not levels, because Jev's described levels and the audience's star ratings aren't the same scale.
+## How we measured it
+Ranks, because the scales differ.
 
-## 5. Visualization
-A scatter of audience rank vs Jev's rank, with the ten biggest disagreements labeled on each side.
+## Caveats
+- **Hobbyists rate what they bought.** BoardGameGeek users are enthusiasts who rate games they chose; a new heavy game gets rated mostly by the fans who sought it out. Jev rates everything cold.
+- **New games are the ones Jev knows least.** The games Jev likes less than hobbyists are mostly from the last few years, the ones least written about by the time Jev was trained. Low familiarity may read as low appeal.
+- **Ratings squeezed into five levels.** BoardGameGeek ratings run 1 to 10; we binned them onto our five described levels. We compare ranks, not levels.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.178, top verdict `portrait`.
-
-## Compared with
-BoardGameGeek users (their average rating of each item)
-
-## Limits
-Audiences rate what they chose to watch or drink; Jev rates everything. Rank comparisons only.
-
-Results: `data/analysis/experiments/taste_vs_audience_board_game.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

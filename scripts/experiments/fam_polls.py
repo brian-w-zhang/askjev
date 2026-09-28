@@ -171,7 +171,7 @@ def wyr():
 
 def devtools():
     spec = Spec(
-        id="polls_devtools_2023", family="polls", title="Jev's taste in dev tools is stuck in 2023",
+        id="polls_devtools_2023", family="polls", title="Jev's dev-tool picks lean toward 2023",
         question="When developers' preferences between two tools moved a lot between the 2023 and 2025 Stack Overflow "
                  "surveys, is Jev closer to the old preference or the new one?",
         why="A model's opinions are frozen at training time while the world moves; developer tools move fast, and "
@@ -189,20 +189,24 @@ def devtools():
         sources=["so_survey_pairs"])
 
     def run():
-        moved, agree = [], defaultdict(list)
+        moved, agree, used = [], defaultdict(list), set()
         for r in source("so_survey_pairs").iter_rows(named=True):
             j = norm(js(r["jev_dist"]))
             hs = {h["population"].split("Survey ")[1][:4]: (norm(h["dist"]), h.get("n") or 0) for h in humans(r["humans"])}
             for y, (d, n) in hs.items():
                 if n >= 30 and max(d.values()) >= 0.6:
                     agree[y].append(top(j) == top(d))
+                    used.add(r["id"])
             if "2023" in hs and "2025" in hs and min(hs["2023"][1], hs["2025"][1]) >= 50:
                 k = list(j)[0]
                 a, b = hs["2023"][0].get(k, 0), hs["2025"][0].get(k, 0)
                 if abs(b - a) >= 0.2:
+                    used.add(r["id"])
                     moved.append({"id": r["id"], "text": r["text"], "key": k, "y2023": a, "y2025": b, "jev": j[k],
                                   "n": min(hs["2023"][1], hs["2025"][1]), "closer_2023": abs(j[k] - a) < abs(j[k] - b)})
-        m = pl.DataFrame(moved)
+        m = pl.DataFrame(moved).with_columns(
+            ((pl.col("jev") - pl.col("y2023")).abs().gt(0.2) & (pl.col("jev") - pl.col("y2025")).abs().gt(0.2)).alias("far"),
+            ((pl.col("jev") - pl.col("y2023")) * (pl.col("jev") - pl.col("y2025")) <= 0).alias("between"))
         strict = m.filter(pl.col("n") >= 100)
         ag = {y: float(np.mean(v)) for y, v in sorted(agree.items())}
         ex = strict.with_columns((pl.col("y2025") - pl.col("y2023")).abs().alias("mv")).sort("mv", descending=True).head(3).to_dicts()
@@ -211,17 +215,19 @@ def devtools():
             if any(re.sub(r"\W+", "_", o.lower()).strip("_") == x["key"] for o in name(x).split(" or ")) else x["key"].replace("_", " ")
         return Result(
             result=f"On {m.height} tool pairs where developers' preference moved 20+ points between the 2023 and 2025 "
-                   f"surveys, Jev sits closer to the 2023 answer in {m['closer_2023'].mean():.0%}. Its agreement with "
+                   f"surveys, Jev sits closer to the 2023 answer in {m['closer_2023'].mean():.0%}, though in {int(m['far'].sum())} of "
+                   f"them it is more than 20 points from both years and sits between the two only {int(m['between'].sum())} "
+                   f"times, so part of this is Jev's own view rather than an old one. Its agreement with "
                    f"each year's majority falls from {ag['2023']:.0%} (2023) to {ag['2025']:.0%} (2025). Example: "
                    f"{name(ex[0])}: developers choosing {opt(ex[0])} went from {ex[0]['y2023']:.0%} to "
                    f"{ex[0]['y2025']:.0%}; Jev gives it {ex[0]['jev']:.0%}.",
             evidence=f"{m.height} moved pairs; stricter check (100+ respondents both years): {strict['closer_2023'].mean():.0%} "
                      f"of {strict.height} closer to 2023",
-            numbers={"moved": m.to_dicts(), "agree_by_year": ag, "strict": {"n": strict.height, "closer_2023": strict["closer_2023"].mean()}},
+            numbers={"moved": m.to_dicts(), "agree_by_year": ag, "far_from_both": int(m["far"].sum()), "between": int(m["between"].sum()), "strict": {"n": strict.height, "closer_2023": strict["closer_2023"].mean()}},
             n=m.height, robustness="Year-by-year agreement with clear majorities: " + ", ".join(f"{y} {v:.0%}" for y, v in ag.items()) + ".",
             chart={"type": "slope", "rows": [{"label": name(x), "a": x["y2023"], "b": x["y2025"], "jev": x["jev"]} for x in m.to_dicts()],
                    "a_label": "2023", "b_label": "2025"},
-            examples=[x["id"] for x in ex])
+            examples=[x["id"] for x in ex], ids=sorted(used))
     return spec, run
 
 

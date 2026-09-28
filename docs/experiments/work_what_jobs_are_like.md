@@ -1,33 +1,31 @@
 # work_what_jobs_are_like
 
-family: work · new questions: 495
+family: work
 
-## 1. Question
-How often does a nurse deal with angry people, a web developer face deadlines, a roofer work in the weather? Does Jev know what jobs are like, compared with what the people doing them report?
+## Why ask this
+People ask models about careers all the time: what's it like to be a nurse, is being a flight attendant stressful, would I be sitting all day as a web developer. The answer a model gives is its picture of the job. That picture could match what workers experience, or it could be the reputation of the job, the version from TV and headlines.
 
-Models are asked about careers constantly. O*NET asks incumbent workers directly, so the gap between Jev and them is the gap between a job's reputation and its reality.
+The US Department of Labor asks workers directly how often they face angry people, deadlines, weather, disease and more. So we can check Jev's picture against the people doing the jobs.
 
-## 2. Sourcing
-New questions (sources/onet_context): 12 O*NET Work Context items (angry people, conflict, weather, deadlines, public speaking, email, disease, sitting, freedom to decide, cost of mistakes, automation, competition) for 46 well-known occupations, with O*NET's own five answers; the human distribution is the share of surveyed workers choosing each (O*NET 29.0, CC BY 4.0).
+## The people and the data
+The comparison is **O*NET Work Context** (version 29.0), part of the US Department of Labor's occupational database. O*NET surveys people currently working in each occupation, asking how often each condition is part of their job, and publishes the share choosing each answer. We used 12 conditions (dealing with angry people, conflict, working in the weather, time pressure, public speaking, email, exposure to disease, sitting, freedom to make decisions, how serious mistakes are, automation, competition) for 46 well-known occupations, from nurses and cashiers to air traffic controllers and roofers. The data are CC BY 4.0.
 
-Sources: `onet_context`
+## What Jev was asked
+Each pair was one question, with O*NET's own five answers:
 
-## 3. Collection
-495 new questions (rows O*NET marks as unreliable are left out), each asked as written, for 'most people', and with the levels reversed (averaged).
+> How often is a fast food worker exposed to diseases or infections at work?
+> *Never · Once a year or more but not every month · Once a month or more but not every week · Once a week or more
+> but not every day · Every day*
 
-## 4. Scoring
-Per item, rank correlation across occupations between Jev's expected level and the workers' mean level, and the mean gap (Jev minus workers) with a 90% bootstrap interval over occupations; the occupation-item pairs with the largest gaps.
+Jev also answered with the answers in reverse order, and we average the two.
 
-## 5. Visualization
-A dot plot, one row per item: the mean gap with its interval, and the rank correlation as a label.
+## How we measured it
+Each answer becomes a level from 0 (never, or the lowest) to 4 (every day, or the highest). For each condition, we rank the occupations by Jev's level and by the workers' average and compare the rankings (1 means the same order), and we average the gap between Jev and the workers, with a range showing how much it could vary by chance.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.521, top verdict `portrait`.
+## Caveats
+- **Who the workers are.** O*NET surveys a sample of people working in each occupation in the US, often a few dozen per job. Their answers describe US jobs at the time of the survey; a cashier's job in another country may differ.
+- **Workers describe their own jobs.** Self-reports can understate hazards people have gotten used to, or overstate what feels important about their work. Jev's picture is closer to how a job is described from outside. The gap is between reputation and self-report, not between Jev and objective truth.
+- **One typical worker vs a spread.** Jev answers about a typical member of each occupation; the survey spreads across many real workers, from quiet shifts to hectic ones. We compare averages.
+- **O*NET's wording.** The five answers are O*NET's own ("Once a week or more but not every day"), but the question sentences are ours, written around each O*NET item.
 
-## Compared with
-US workers in each occupation (O*NET 29.0 incumbent surveys)
-
-## Limits
-O*NET answers come from samples of incumbents (median a few dozen per occupation); Jev answers about a typical member of the occupation.
-
-Results: `data/analysis/experiments/work_what_jobs_are_like.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

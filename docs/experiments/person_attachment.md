@@ -2,32 +2,29 @@
 
 family: personality
 
-## 1. Question
-On the ECR attachment scales, is Jev anxious or avoidant in close relationships, compared with ~51,000 test-takers?
+## Why ask this
+Attachment theory sorts how adults handle closeness along two lines: anxiety (worrying a partner will leave) and avoidance (not wanting to depend on anyone). It's one of the most popular personality frameworks online, and it's also a strange one to put to a chatbot, whose whole job is to be there when asked.
 
-Attachment is how people describe needing others; a model's answers show what relationship it imagines having.
+So the question is less "does Jev have an attachment style" than "what relationship does it imagine having": secure, clingy, or distant?
 
-## 2. Sourcing
-Existing Open Psychometrics items (source `openpsych`), asked as written with their own response scale, each carrying the site's real answer distribution. Enough: every item of each scale is in the corpus, answered by Jev as itself and for 'most people'.
+## The people and the data
 
-Sources: `openpsych`
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+## What Jev was asked
+Every statement, word for word:
 
-## 4. Scoring
-Open Psychometrics publishes each item's answer distribution from everyone who took the test on its site. Each item Jev answered is compared with that average on a 0-1 scale (reverse-keyed items flipped, so higher always means more of the trait); a scale's gap is the mean over its items, with a 90% bootstrap interval over items. The ring on the chart is Jev's answer for 'most people'.
+> How well does this statement describe you: "I worry about being abandoned."
+> *This does not describe me at all · This describes me a little · This describes me moderately well · This
+> describes me well · This describes me very well*
 
-## 5. Visualization
-Dot plot per scale: real test-takers (diamond), Jev (square), Jev for 'most people' (ring), with intervals; the gap printed at the right.
+Each was also asked as "what would most people say", and with the answers in reverse order.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.023, top verdict `portrait`.
+## How we measured it
+Each statement is put on a 0 to 1 scale for Jev and for the test-takers, with statements that count in reverse flipped, so higher always means more anxious or more avoidant.
 
-## Compared with
-the average answer of everyone who took each test on Open Psychometrics
+## Caveats
+- **Who the people are.** People curious about their relationship style chose to take it; they aren't a random sample.
+- **Our answer wording.** People answered from "strongly disagree" to "strongly agree"; we asked Jev "how well does this statement describe you" with five described steps. The scales line up step for step, but the words differ.
+- **There is no partner.** Statements about a romantic partner describe a relationship Jev doesn't have. A low score on turning to a partner may mean "I don't have one" as much as "I keep my distance", which muddies the avoidance scale.
 
-## Limits
-Test-takers chose to take the test online, so the average test-taker isn't the average person. Jev answers with probabilities over levels; people pick one level. These are items, not diagnoses.
-
-Results: `data/analysis/experiments/person_attachment.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

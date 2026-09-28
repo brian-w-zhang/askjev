@@ -1,33 +1,31 @@
 # perception_settings
 
-family: perception · new questions: 51
+family: perception
 
-## 1. Question
-Does Jev read the same probability phrase differently in a weather forecast, a doctor's warning about side effects, and an intelligence report?
+## Why ask this
+"A slight chance of rain" and "a slight chance of a fatal side effect" use the same words, but people hear different numbers. Research on how people read these phrases (Weber and Hilton, 1990) found the numbers shift with the setting: with how common the event usually is, and with how bad it would be.
 
-For people, the same word shifts with the stakes and the base rate of the event (Weber & Hilton 1990). A model that reads 'likely' identically everywhere is simpler, but not how people talk.
+It also isn't how people talk, and it may miss what a doctor who says a side effect is "unlikely" is really conveying.
 
-## 2. Sourcing
-New questions (sources/perception_words): each of the 17 phrases in three settings, e.g. 'A doctor describes the chance that a new medication causes a side effect with the phrase "likely". What probability does that suggest?', same 21 bins. No human data for the settings.
+## The people and the data
+This experiment has no human answers of its own; it compares Jev with itself. The phrases are the 17 from the 2015 Reddit survey behind "What 'probably' means to Jev". Each was placed in three settings we wrote: a weather forecast, a doctor describing a new medication's side effects, and an intelligence report.
 
-Sources: `perception_words`
+## What Jev was asked
+Each phrase in each setting, answered as one of 21 steps from 0% to 100%:
 
-## 3. Collection
-51 new questions, each asked with the bins in three shuffled orders (averaged).
+> A weather forecaster describes the chance of rain tomorrow with the phrase "almost certainly". What probability of
+> rain does that suggest?
+> *0% · 5% · 10% · ... · 95% · 100%*
 
-## 4. Scoring
-Per phrase and setting, Jev's median minus its median for the bare phrase; mean shift per setting with a 90% bootstrap interval over phrases; the phrases that move most.
+The doctor's version: "A doctor describes the chance that a new medication causes a side effect with the phrase ..."; the intelligence version: "An intelligence report describes the chance of an event next month with the phrase ...". That's 51 questions, each with the steps in three shuffled orders, averaged.
 
-## 5. Visualization
-A dot plot: one row per phrase, the bare reading and the three settings as colored dots.
+## How we measured it
+For each phrase and setting, the middle of Jev's answer minus its answer for the bare phrase. We average those shifts over the phrases for each setting.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.292, top verdict `portrait`.
+## Caveats
+- **No human comparison.** People weren't asked these exact questions. The finding that people shift with the setting comes from other studies with other phrases and settings, so "less than people" is a general comparison, not a measured one.
+- **Our settings.** We wrote the three settings. Real forecasts, warnings and reports come with much more context (the event, the stakes, the speaker's track record), which is what moves people most.
+- **Steps of 5.** Jev answers in 5-point steps, so shifts smaller than a step don't show. An average of 4 points means most phrases didn't move at all and a few moved a lot.
+- **A strange answer.** The bare phrase was hidden by the content filter (a false alarm), so we can't compare, but it's likely a misread of the negation, a documented weak spot for Jev (double negatives and indirection).
 
-## Compared with
-Jev's own reading of the bare phrase (perception_probability)
-
-## Limits
-Jev only; the shifts are not compared with people here.
-
-Results: `data/analysis/experiments/perception_settings.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

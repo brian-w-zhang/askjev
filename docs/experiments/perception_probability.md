@@ -1,33 +1,30 @@
 # perception_probability
 
-family: perception · new questions: 17
+family: perception
 
-## 1. Question
-When someone says 'highly likely', 'we doubt' or 'about even', what probability does Jev read into it, and does it read the phrases the way people do?
+## Why ask this
+Weather forecasters, doctors and intelligence analysts rarely give numbers. They say an attack is "likely", a side effect "unlikely", a recovery "probable".
 
-Probability words are how forecasts, doctors and intelligence reports talk. A model that reads them differently from people will mistranslate every hedge in both directions.
+A model now reads and writes a lot of this language. If it hears "we doubt" as a coin flip where people hear one in four, every hedge it summarizes or writes will be shifted.
 
-## 2. Sourcing
-New questions (sources/perception_words): the zonination survey's own wording, 'What probability would you assign to the phrase "<phrase>"?', for its 17 phrases, answered as 21 ordered bins (0%, 5%, ..., 100%). Each of the 46 respondents' answers is put in the same bins.
+## The people and the data
+The human side is a small, well-loved survey: in 2015, 46 people on Reddit's r/samplesize were asked what probability they would assign to 17 phrases, from "almost certainly" to "almost no chance". The survey's author published every answer under an MIT license (zonination on GitHub), with a chart of one ridge per phrase that this page copies.
 
-Sources: `perception_words`
+## What Jev was asked
+The survey's own question, with the answer as one of 21 steps from 0% to 100%:
 
-## 3. Collection
-17 new questions, each asked as written, for 'most people', and with the bins in three shuffled orders (the shuffles are averaged).
+> What probability would you assign to the phrase "We Believe"?
+> *0% · 5% · 10% · ... · 95% · 100%*
 
-## 4. Scoring
-Per phrase, the median of Jev's distribution vs the respondents' median; rank correlation of the medians; the median absolute gap in points; the spread (10th to 90th percentile) of each; similarity of the two distributions (1 - Jensen-Shannon distance).
+That's one question per phrase. Each was also asked with the steps in three shuffled orders (we average all four), and once for "most people" to see what Jev thinks others would say.
 
-## 5. Visualization
-A ridge chart like the zonination original: one row per phrase, people's distribution as a ridge and Jev's as a second ridge, ordered by people's median.
+## How we measured it
+For each phrase, the middle of Jev's answer (the median of its probabilities over the 21 steps) against the middle of the 46 people's answers. We also compare the order of the phrases (a rank correlation: 1 means the same order) and how spread out each reading is.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.387, top verdict `portrait`.
+## Caveats
+- **A small online sample.** The 46 people answered a 2015 survey posted to Reddit's r/samplesize: English-speaking, online, self-selected. A group of intelligence analysts or doctors would read "we doubt" and "probable" differently.
+- **One phrase is missing.**
+- **Rounding to steps of 5.** A person's answer can move by up to half a step.
+- **Capitalized phrases, no context.** The survey, and our question, give the phrase alone ("We Doubt"), with no sentence around it. In real text the same words carry more context; see the settings experiment for that.
 
-## Compared with
-46 Reddit respondents (zonination 2015)
-
-## Limits
-46 people answered the original survey on Reddit's r/samplesize in 2015: a small, online, English-speaking sample. Each person gave one number; Jev gives a probability over the bins, and its median is compared with theirs.
-
-Results: `data/analysis/experiments/perception_probability.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

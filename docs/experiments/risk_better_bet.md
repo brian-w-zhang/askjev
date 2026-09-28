@@ -2,32 +2,29 @@
 
 family: risk
 
-## 1. Question
-Choosing between two gambles, how strongly does Jev lean toward the one that pays more on average, compared with people choosing for real money?
+## Why ask this
+Offer someone two gambles and the one with the better average payoff doesn't always win. People follow a better bet more often the bigger its edge, and when the edge is tiny they're close to a coin flip, swayed by how the options look. That curve, from indifferent to decisive, is one of the most measured patterns in decision science.
 
-A model could be a cold expected-value maximizer or a coin flipper. Human choices sit in between: people follow a better bet more the bigger its edge. Whether Jev draws the same curve says whether its sense of risk is human-shaped.
+A model asked about money could sit anywhere on it: a cold calculator that always picks the higher average, a coin flipper, or something human-shaped. Where Jev lands says whether its sense of risk is people's sense of risk.
 
-## 2. Sourcing
-Existing choices13k questions (Peterson et al. 2021, Science): about 1,900 two-gamble problems with stated odds, each answered by about 15 US MTurk workers playing for real bonuses. Wulff et al.'s meta-analysis of described gambles (about 460 problems) as a second population. Problems with unstated odds are left to risk_ambiguity. Enough.
+## The people and the data
+The main comparison is **choices13k** (Peterson and colleagues, 2021, in Science), one of the largest datasets of risky choices. US workers on Amazon Mechanical Turk chose between pairs of gambles, and were paid a bonus of 10% of one outcome, so their choices had real, if small, consequences. We use the 1,928 problems where players got no feedback between rounds, about 15 to 18 people each.
 
-Sources: `choices13k`, `wulff_description`
+## What Jev was asked
+Each problem was one question with the two gambles written out in dollars, the way players saw them:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Imagine you must play one of these two gambles once, for real money (wins are paid to you, losses come out of your
+> pocket). Which do you choose: gamble_a or gamble_b?
+> *gamble_a: $24 for sure · gamble_b: $19 with an 80% chance, $36 with a 10% chance, $38 with a 5% chance, $42 with
+> a 2.5% chance, $50 with a 1.25% chance, $66 with a 0.625% chance, or $98 with a 0.625% chance*
 
-## 4. Scoring
-For each problem, the expected-value edge of the better gamble as a share of the largest payoff; the share choosing the better gamble, binned by edge, for Jev and for people; the rank correlation of the choice shares over problems; the share of problems where each side's majority picks the better gamble.
+## How we measured it
+For every problem we compute the better gamble's **edge**: how much more it pays on average, as a share of its largest payoff. We sort problems into six bins by edge and, in each bin, compare how often Jev and people pick the better gamble. We also rank all problems by how strongly each side chose gamble B and compare the two rankings (rank correlation: 1 same order, 0 no relation), and count the problems where each side's majority picks the better gamble.
 
-## 5. Visualization
-Two lines over the edge bins: share choosing the better gamble, people vs Jev, with the 50% line.
+## Caveats
+- **Small real stakes for people, none for Jev.** The choices13k players were paid a bonus of 10% of one outcome, so their money was real but small. Jev has no stake at all, so its choices are hypothetical by construction.
+- **Few people per problem.** Each problem was played by about 15 to 18 workers, so a single problem's human share is noisy.
+- **Numbers-heavy wording.** Some gambles list up to nine outcomes, several with odds under a tenth of a percent. Weighing that many percentages is arithmetic, a weak spot TypeSafe documents for Jev, so this is partly a test of reading numbers.
+- **A second, different population.** The Wulff et al. problems come from many older studies pooled together, with real or hypothetical payoffs the transcripts don't distinguish. On those Jev falls further behind people, so the headline depends on which people you compare with.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.971, top verdict `portrait`.
-
-## Compared with
-choices13k MTurk workers (real stakes); participants in Wulff et al. 2018's described-gamble studies
-
-## Limits
-Jev's answers are probabilities over two options, not a single real choice. Reading payoffs and percentages leans on numbers, a weak spot TypeSafe documents for Jev (docs/01-jev.md §6, item 2), so this is labeled known territory.
-
-Results: `data/analysis/experiments/risk_better_bet.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

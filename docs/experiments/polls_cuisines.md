@@ -2,32 +2,26 @@
 
 family: polls
 
-## 1. Question
-Ranking 40 world cuisines from head-to-heads, how does Jev's own ranking compare with Americans' (FiveThirtyEight's Food World Cup), and how well does it guess theirs?
+## Why ask this
+A model can know what people like without liking it itself. It can know that Americans love Italian and Mexican food and still, asked for its own taste, rank something else first. The gap between the two is worth seeing: it shows where Jev's "own" answers diverge from the crowd it can describe perfectly well.
 
-The gap between Jev's taste and its model of American taste is visible here: it can know that Americans love Italian food and still rank something else first itself.
+Food is a good test, because FiveThirtyEight once ran a bracket-style survey of which world cuisines Americans like.
 
-## 2. Sourcing
-Existing FiveThirtyEight/SurveyMonkey Food World Cup pairs (about 790 head-to-heads, each with the share of about 1,000 US adults preferring each cuisine). Enough.
+## The people and the data
+FiveThirtyEight's **Food World Cup** (2014, run with SurveyMonkey): about 1,000 US adults rated 40 world cuisines, from Italian and Mexican to Ghanaian and Bosnian. From their ratings we built about 790 head-to-heads, each with the share of respondents who preferred one cuisine to the other.
 
-Sources: `food_538`
+## What Jev was asked
+Every head-to-head, twice: once for its own taste, and once for what it thinks most people would say.
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Which cuisine do you like more: American food or Ghanaian food?
+> *American food · Ghanaian food*
 
-## 4. Scoring
-Bradley-Terry strengths from the head-to-heads, for Jev's answers, Jev's guess of most people and the US respondents; rank correlations between the three; the cuisines Jev ranks furthest from Americans.
+## How we measured it
+From each set of head-to-heads we build a ranking of the 40 cuisines (a standard model that turns many one-on-one wins into one order). Then we compare three rankings: Jev's own taste, its guess of Americans, and Americans' actual preferences, with rank correlations (1 = same order, 0 = no relation).
 
-## 5. Visualization
-Three-column slope chart of cuisine ranks: Jev, Jev's guess of people, Americans.
+## Caveats
+- **Americans in 2014.** The survey ran in 2014 with about 1,000 US adults; American tastes in food have changed since, especially toward cuisines that were less familiar then.
+- **Many hadn't tried the food.** Respondents rated cuisines they may never have eaten, and a cuisine people don't know tends to lose. Jev has read about every one of them, which may explain some of its generosity toward less-familiar cuisines.
+- **Rankings from pairs.** Both rankings are built from the same head-to-heads with a standard ranking model, so a cuisine's exact rank can shift by a few places with small changes in its matchups.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.495, top verdict `portrait`.
-
-## Compared with
-US adults in the 2014 FiveThirtyEight Food World Cup survey
-
-## Limits
-Americans in 2014; many respondents hadn't tried every cuisine.
-
-Results: `data/analysis/experiments/polls_cuisines.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

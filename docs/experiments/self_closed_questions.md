@@ -2,32 +2,26 @@
 
 family: self
 
-## 1. Question
-On 80,000 yes/no questions people actually posted online (Stack Exchange, Quora, Yahoo Answers, chatbot logs), does Jev lean yes or no, and does the way a question starts decide it?
+## Why ask this
+People ask models yes/no questions all day, many with no settled answer: "Will this ever work?", "Can you do X?", "Was that a mistake?". On questions like these the model's lean is a default rather than knowledge, and if the way a question starts predicts the answer, that's a habit worth knowing before trusting its yes or no.
 
-These questions have no answer key, so Jev's lean is a default, not knowledge. If the first word of a question predicts its answer, that's a habit worth knowing before trusting its yes or no.
+## The people and the data
+The questions are real, written by people on four public sites: Stack Exchange (56 non-programming sites such as travel, cooking and English usage), Quora, Yahoo Answers, and first messages people sent to chatbots (WildChat and a few similar public collections).
 
-## 2. Sourcing
-Existing closed questions from four public Q&A sources, asked as yes/no. Enough: 79,700 questions; first words with 300+ questions.
+## What Jev was asked
+Each question exactly as the person wrote it, as a yes/no question:
 
-Sources: `stackexchange_closed`, `quora_closed`, `yahoo_closed`, `wildchat_closed`
+> Do pilots use flaps during take-off?
+> Will the USC Trojans make it a 3-Peat in College Football?
+> Can you say "two groups of people stared at each other"?
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+## How we measured it
+Also the share where Jev sits within 10 points of 50/50.
 
-## 4. Scoring
-Share where P(yes) > 0.5, overall, by source and by the question's first word, with 90% bootstrap intervals; the share within 10 points of 50/50.
+## Caveats
+- **No answer key.** These are real questions with no verified answers, so we can't tell whether "Will...?" questions really deserve more no's. What we measure is Jev's default, not its accuracy.
+- **The word travels with the topic.** "Will...?" questions are about the future and "Can...?" questions are often about what's possible, so the opening word and the subject come together. This shows a pattern, not its cause; paired rewordings of the same question separate the two (see "'Could you?' gets a yes that 'Would you?' doesn't").
+- **Filtered questions.** Questions were kept only if they stand alone as one clear yes/no question: no personal pronouns, no homework math, nothing needing context or dated. Religion and politics sites were left out, and a content filter hides political and sensitive questions from the site.
+- **Mostly Stack Exchange.** About two thirds of the questions come from Stack Exchange's non-programming sites (travel, cooking, English usage, DIY...), so its topics weigh most.
 
-## 5. Visualization
-Dots per first word (Can, Have, Has, ... Will, Was), yes-share with intervals, line at 50%.
-
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.621, top verdict `portrait`.
-
-## Compared with
-Nothing outside the model: no answer key exists for these questions
-
-## Limits
-A question's first word travels with its subject (Will... is about the future, Can... often about what's possible), so this shows a pattern, not its cause.
-
-Results: `data/analysis/experiments/self_closed_questions.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

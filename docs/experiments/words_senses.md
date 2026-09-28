@@ -2,32 +2,32 @@
 
 family: words
 
-## 1. Question
-Asked how much it experiences each word through sight, hearing, touch, taste and smell, does Jev give the sensory profile people give?
+## Why ask this
+How do you know a "mustache"? Mostly by seeing it. "Thunder"? By hearing. "Velvet"? By touch. The **Lancaster Sensorimotor Norms** asked people how much they experience tens of thousands of words through each sense, and the answers describe how grounded our words are in our bodies: for most concrete words, sight dominates.
 
-The Lancaster Sensorimotor Norms record how people experience 40,000 words through each sense. A model has no senses; which sense it misjudges most says something about what text leaves out.
+A model has no senses. It knows words from text, where the look of things is rarely described because everyone can see it. Which sense it misjudges most is a clue to what text leaves out.
 
-## 2. Sourcing
-Existing Lancaster questions ('How much do you experience "<word>" by <sense>?', five described levels), about 1,980 words per sense, each with the human mean on the norms' 0-5 scale; plus 1,131 'Through which sense do you mostly experience ...' questions and 2,840 'which of two words ... more through <sense>' pairs with answers from the norms. Enough.
+## The people and the data
+The Lancaster Sensorimotor Norms (Lynott and colleagues, 2020) cover 39,707 English words, rated by participants on how much they experience each word through sight, hearing, touch, taste and smell, on a scale from 0 (not at all) to 5 (greatly). We use about 1,980 concrete, common words per sense. A second set of questions uses the same norms to ask which single sense dominates a word, where one clearly does.
 
-Sources: `lancaster`, `lancaster_modality`
+## What Jev was asked
+One question per word and sense, with five described answers written for this project:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> How much do you experience "mustache" by seeing?
+> *Not at all: seeing plays no part in experiencing it · Slightly: its sight comes up only now and then, as a minor
+> detail · Moderately: its sight is one noticeable part of experiencing it, alongside others · Strongly: its sight
+> is one of the main ways I experience it · Greatly: seeing is central to experiencing it; its sight is what it is
+> mostly about*
 
-## 4. Scoring
-Per sense: rank correlation with the human mean, and the mean rating on a common 0-5 scale (Jev's level x 5/4), with 90% bootstrap intervals. For the dominant-sense questions, a confusion table of Jev's answer against the norms' dominant sense.
+Plus 1,131 questions like "Through which sense do you mostly experience ...?", with sight, hearing, touch, taste, smell and body sensation as the options. Each was also asked with the answers reversed or shuffled, and averaged.
 
-## 5. Visualization
-Paired bars per sense: people's mean vs Jev's mean on 0-5, with the rank correlation printed per row.
+## How we measured it
+For each sense, Jev's average rating on the 0 to 5 scale next to people's, and how closely the two rankings of words agree (a rank correlation: 1 means the same order). For the dominant-sense questions, how often Jev names the sense the norms say dominates.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.807, top verdict `portrait`.
+## Caveats
+- **A mapped scale.** We map Jev's levels onto 0 to 5 evenly. The sight gap is too large to be a mapping artifact, and the rankings, which don't use the mapping, point the same way.
+- **"You" is a model.** The question asks "how much do you experience" the word. Jev has no senses; it may be answering how much the word's meaning is about seeing, which is a different question from how people experience it.
+- **Our level wording.** Our levels describe sight as "one of the main ways I experience it" or "what it is mostly about". Jev may reserve those for words that are about seeing (colors, views) rather than things we mostly know by looking at them.
+- **Averages only.** The norms publish averages per word, not each rater's answer, so we compare with averages.
 
-## Compared with
-Lancaster Sensorimotor Norms raters (Lynott et al. 2020, US and UK, MTurk and Prolific)
-
-## Limits
-The 0-5 mapping is approximate (Jev's levels are described in words, people's are numbered); the gap for sight is large enough that the conclusion doesn't depend on it, and the rank correlation, which doesn't use the mapping, points the same way.
-
-Results: `data/analysis/experiments/words_senses.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

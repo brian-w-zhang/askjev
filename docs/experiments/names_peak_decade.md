@@ -1,33 +1,27 @@
 # names_peak_decade
 
-family: names · new questions: 107
+family: names
 
-## 1. Question
-Given a first name, does Jev know the decade when it was most popular for US babies?
+## Why ask this
+Names go in and out of fashion, so a name hints at a birth year: you can guess a Mildred's age differently from a Madison's. A model that has read a lot about people should know those curves. This checks how well.
 
-FiveThirtyEight's 'how to tell someone's age when all you know is her name' made this famous: names carry a birth year. A model that knows the curves can tell a Mildred from a Madison.
+## The people and the data
+The truth comes from US Social Security birth records, 1880 to 2017, via the public babynames dataset: how many babies got each name each year. For each name we take the decade with the most births. We picked 107 popular names with a clear peak, about ten peaking in each decade from the 1880s to the 2010s.
 
-## 2. Sourcing
-New questions (sources/baby_names): 'In which decade were the most US babies named "<name>" born?', options the 1880s to the 2010s; about 10 names peaking in each decade (30,000+ babies, a clear peak). Truth from SSA birth records.
+## What Jev was asked
+One question per name, with a choice of decades:
 
-Sources: `baby_names`
+> In which decade were the most US babies named "Maude" born?
+> *The 1880s · The 1890s · The 1900s · … · The 2000s · The 2010s*
 
-## 3. Collection
-107 new questions, each in three shuffled orders (averaged).
+Each question was also asked with the decades in shuffled orders, and the answers averaged.
 
-## 4. Scoring
-Share where Jev's top decade is the peak; share within one decade; mean error in decades, by the true decade (does it know old names as well as new ones?); direction of the misses.
+## How we measured it
+Jev's answer is the decade it gave the most weight. We count how often that's the records' peak decade exactly, how often it's within one decade, and whether its misses lean early or late.
 
-## 5. Visualization
-A confusion strip: true peak decade (x) vs Jev's decade (y), dot size = names; plus ridges for a few names (records' births by decade vs Jev's distribution).
+## Caveats
+- **The records stop in 2017.** The data runs from 1880 to 2017, so "the 2010s" covers only eight years, and a name still rising after 2017 may have peaked later than the records show.
+- **Births, not living people.** A name's peak decade of births isn't the same as the age of people with that name today; names that peaked long ago have few living bearers.
+- **Only popular names with a clear peak.** We picked names with at least 30,000 babies and one decade that stands out, about ten per decade. Names with a flat or double peak, where the question is ambiguous, are left out.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.327, top verdict `portrait`.
-
-## Compared with
-US Social Security Administration birth records, 1880-2017
-
-## Limits
-Births, not living people: a name that peaked in the 1910s has few living bearers.
-
-Results: `data/analysis/experiments/names_peak_decade.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

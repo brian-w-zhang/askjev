@@ -1,33 +1,28 @@
 # world_ideal_day
 
-family: world · new questions: 20
+family: world
 
-## 1. Question
-Asked how it would spend an ideal day, how much time does Jev give to sleep, work, reading, TV and exercise, compared with how Americans actually spend theirs?
+## Why ask this
+An ideal day is a compact self-portrait. What someone would do more of, and what they'd drop, says what they value. Asked about its own ideal day, Jev has to trade hours between sleep, work, reading, TV and people, and the trades are revealing when set next to how Americans actually spend theirs.
 
-An ideal day is a compact self-portrait: what it would do more of, what it would drop. The gap from the diaries is the gap between aspiration and habit, the thing people report about themselves too.
+## The people and the data
+Jev's side has no human data. For the comparison we use the American Time Use Survey diaries (Bureau of Labor Statistics, 2003 to 2016, 181,335 days, weighted): the average minutes Americans actually spend on each of the same 20 activities.
 
-## 2. Sourcing
-New questions (sources/atus_day): 'On an ideal day for you, how much time would you spend <activity>?' for the same 20 activities and 9 bins. Compared with the ATUS diaries' weighted means (no human data on ideal days).
+## What Jev was asked
+The same 20 activities as in "A random American's day, as Jev pictures it", asked about its own ideal day:
 
-Sources: `atus_day`
+> On an ideal day for you, how much time would you spend relaxing and thinking, doing nothing in particular?
+> *None at all · 1 to 29 minutes · 30 to 59 minutes · 1 to 2 hours · 2 to 3 hours · 3 to 5 hours · 5 to 8 hours · 8
+> to 10 hours · 10 hours or more*
 
-## 3. Collection
-20 new questions (self), each asked as written and with the bins in shuffled orders (averaged).
+That's 20 new questions, each asked with the bins in shuffled orders and averaged.
 
-## 4. Scoring
-Expected minutes per activity from bin midpoints; the difference from the diaries' mean; the total of Jev's ideal day in hours (a check that it adds up to about 24).
+## How we measured it
+For each activity, Jev's ideal time (from the middle of each bin) against the diaries' average, and the total of its ideal day, as a check that the answers add up to a real day.
 
-## 5. Visualization
-Two stacked 24-hour bars, the diaries' average day and Jev's ideal day, colored by activity.
+## Caveats
+- **Ideal against actual.** There's no survey of Americans' ideal days here, only their real ones. The gap mixes Jev's tastes with the ordinary distance between anyone's ideal and their actual day; most people would also like less commuting and more reading.
+- **A day for a model.** Jev has no body to sleep or commute. Its answers describe the day it thinks it should want, which is a self-portrait, not a schedule.
+- **Coarse answers.** Nine time bins per activity, with hours from the middle of each bin. That the total lands near 24 hours suggests the answers hang together, but each figure is rough.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.181, top verdict `portrait`.
-
-## Compared with
-American Time Use Survey diary days, 2003-2016 (actual, not ideal, days)
-
-## Limits
-Ideal vs actual is not like for like; the comparison says where Jev's ideal departs from real life, not what Americans would call ideal. Activities overlap little but the bins are coarse.
-
-Results: `data/analysis/experiments/world_ideal_day.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

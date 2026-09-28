@@ -2,32 +2,28 @@
 
 family: minds
 
-## 1. Question
-Asked what most people would answer to Pew's AI questions, does Jev get Americans' wariness right, or does it paint them as keener (or warier) than they are?
+## Why ask this
+Separate from its own opinion, a model carries a picture of what *people* think, and that picture shapes how it talks to them. If it believes the public is terrified of AI, it may over-reassure; if it believes the public is relaxed, it may miss real concerns. Pew's survey gives the real answers to check that picture against.
 
-Separate from its own view, a model's picture of public opinion about AI shapes how it talks to people about AI. The Pew toplines give the real answer.
+## The people and the data
+**Pew Research Center** asked 5,023 US adults about AI in June 2025. We use the same questions as "An AI's feelings about AI, next to Americans'": whether AI will make people better or worse at thinking creatively, solving problems and forming relationships; how big a role it should play in weather forecasts and in judging whether two people could fall in love; how much people would let it help them; and how they'd feel on finding out a painting, a news article or a doctor's treatment came from AI.
 
-## 2. Sourcing
-New questions (sources/ai_attitudes): 22 of the 26 non-political items from Pew Research Center's June 2025 survey of 5,023 US adults (outlook, trust, AI's effect on people's abilities, where AI should play a role, how it feels to find out something was made by AI), asked in Pew's wording with Pew's answers, 'Not sure' included where Pew offered it.
+## What Jev was asked
+The same questions, in Pew's wording, but asking what most people would answer. For example:
 
-Sources: `ai_attitudes`
+> How much would you be willing to let artificial intelligence (AI) assist you with your day-to-day tasks and
+> activities? *(asked for what most people would say)*
+> *A lot · A little · Not at all*
 
-## 3. Collection
-The 'most people' answers to the same 26 new questions (no extra calls).
+Each was asked with the answers in three shuffled orders, averaged.
 
-## 4. Scoring
-Per item, the wary share in Jev's 'most people' answer vs Americans'; mean difference with a 90% bootstrap interval over items; rank correlation over items; the biggest misreadings.
+## How we measured it
+For each question, the share Jev expects on the wary answer against the share of Americans who gave it. We average the difference, with a 90% interval for chance, and compare the order of the questions (a rank correlation: 1 means the same order).
 
-## 5. Visualization
-Paired dots per item: Americans' wary share and Jev's guess of it.
+## Caveats
+- **Only 10 questions.** The content filter that keeps political and sensitive questions off the site hid 13 of Pew's 26 items, and 3 of the rest have no clear wary answer. Ten questions is enough for a direction, not a precise gap.
+- **"Most people" is vague.** Jev was asked what most people would say, not "most Americans in 2025". Some of the gap may be Jev imagining a different public.
+- **Hand-copied numbers.** Americans' shares were copied by hand from Pew's published summary, so small copying or rounding differences are possible.
+- **Fewer "not sure"s.** Pew's respondents could say "Not sure", and Jev's own answers often do. Its guess of the public rarely puts much weight there, which pushes its guesses to be more decided than the real answers.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.13, top verdict `portrait`.
-
-## Compared with
-US adults (Pew American Trends Panel, June 2025, N=5,023)
-
-## Limits
-Pew's questions ask 'you'; for Jev, 'you' is an AI answering about AI, which is the point but also means some items read differently. Shares transcribed from Pew's topline. The question screen hid 13 of the 26 items (among them the overall concern, risk and benefit ratings), so the comparison rests on 10 scored items.
-
-Results: `data/analysis/experiments/minds_knows_americans_on_ai.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

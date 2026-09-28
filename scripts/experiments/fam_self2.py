@@ -160,7 +160,8 @@ def modal():
             numbers={"rows": rows}, n=sum(r["n"] for r in rows),
             chart={"type": "dots", "zero": 0, "rows": [{"label": r["label"], "value": r["value"], "ci": r["ci"],
                                                          "right": f"n={r['n']}"} for r in rows]},
-            examples=[top["a"], top["b"]] if top else [])
+            examples=[top["a"], top["b"]] if top else [],
+            ids=[x for k, lst in ex.items() if len(eff[k]) >= 15 for _, r in lst for x in (r["a"], r["b"])])
     return spec, run
 
 

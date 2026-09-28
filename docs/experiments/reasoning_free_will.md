@@ -1,33 +1,34 @@
 # reasoning_free_will
 
-family: reasoning · new questions: 4
+family: reasoning
 
-## 1. Question
-Told the universe is fully determined, does Jev say people can be morally responsible, and does a vivid crime change its answer the way it changes people's?
+## Why ask this
+If everything you do was fully caused by what happened before, down to the beginning of the universe, can you be blamed for anything? Philosophers have argued this for centuries. In the 2000s, experimental philosophers asked ordinary people, and found a split. Described abstractly, most people say no: in a determined universe, nobody is fully responsible. Told a vivid story about a particular person doing something wrong, many say yes, that person is responsible anyway.
 
-Nichols and Knobe found people are incompatibilists in the abstract (86% say no one can be fully responsible in a determined universe) but blame a vivid murderer anyway (72%). Whether a model has the same split between principle and case says how it weighs rules against feelings.
+That split between principle and case says a lot about how someone weighs rules against gut reactions. A model trained on philosophy might follow the principle every time, or it might react to the story like people do.
 
-## 2. Sourcing
-New questions (sources/philosophy_vignettes, family free_will): Nichols & Knobe 2007's abstract and concrete (Bill) conditions and its low-affect (Mark) case and Nahmias et al. 2005's supercomputer case (Jeremy), with the published splits as two-option distributions.
+## The people and the data
+The stories and people's answers come from two well-known studies:
+- **Nichols and Knobe (2007):** a universe where everything is caused by what came before, described in detail, then either an abstract question (can anyone be fully responsible?) or a specific person (Mark, who cheats on his taxes as he has many times before). In the abstract, 14% said yes; for Mark, 23% said it's possible he's fully responsible.
+- **Nahmias and colleagues (2005):** a supercomputer that predicts everything with perfect accuracy, including that Jeremy will rob a bank years before he's born. 76% said Jeremy robs the bank of his own free will.
 
-Sources: `philosophy_vignettes`
+## What Jev was asked
+The studies' stories, word for word, each ending in a yes-or-no question:
 
-## 3. Collection
-4 new questions, each asked as written, for 'most people', and with yes/no swapped (averaged).
+> Imagine a universe (Universe A) in which everything that happens is completely caused by whatever happened before
+> it. [...] In Universe A, as he has done many times in the past, Mark arranges to cheat on his taxes. Is it possible
+> that Mark is fully morally responsible for cheating on his taxes?
+> *Yes · No*
 
-## 4. Scoring
-Jev's probability of 'yes' per vignette vs people's share; the gap between the concrete and abstract conditions, for Jev and for people.
+Each was also asked with yes and no swapped, and for "most people"; the numbers here are Jev's own answer, averaged over both orders.
 
-## 5. Visualization
-Paired dots per vignette: people's share saying yes and Jev's probability.
+## How we measured it
+Jev's probability of "yes" on each story, next to the share of people in the original study who said yes.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.738, top verdict `portrait`.
+## Caveats
+- **The most important story is missing.** Nichols and Knobe's headline case is Bill, who murders his family in a determined universe; most people say he's fully responsible (72% in the study), reversing their abstract answer. The content filter that hides violent questions from the site removed it, so the contrast the study is known for can't be tested here. We have three stories, not four.
+- **One of the numbers is secondhand.** The 76% for Jeremy comes from secondary summaries of Nahmias and colleagues' study, not from reading the paper itself; the 23% for Mark comes from a published critique quoting the paper's table.
+- **Wording from different studies.** The stories are the studies' own, but they come from two different papers with different descriptions of determinism (a caused universe versus a perfect predicting supercomputer). The framing, not just the case, may move the answers, for people and for Jev.
+- **Yes or no only.** People in these studies answered one way or the other; Jev's answer is a probability of yes. A 7% is a firm no, but it isn't the same kind of number as a 23% of people saying yes.
 
-## Compared with
-US undergraduates (Nichols & Knobe 2007; Nahmias et al. 2005)
-
-## Limits
-Three vignettes are shown (n = 3): the screen hid the Bill murder case, so the concrete-vs-abstract contrast Nichols & Knobe are known for can't be tested; the result is Jev's answer on each.
-
-Results: `data/analysis/experiments/reasoning_free_will.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

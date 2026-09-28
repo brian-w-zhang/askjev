@@ -1,33 +1,30 @@
 # perception_adjectives
 
-family: perception · new questions: 1498
+family: perception
 
-## 1. Question
-Given two adjectives from the same scale ('warm' and 'hot', 'big' and 'vast'), does Jev pick the stronger one the way linguists and crowd workers ordered them?
+## Why ask this
+"Good", "great", "excellent": the same quality in stronger and stronger doses. People grade things this way all the time, in reviews ("decent" versus "outstanding"), feedback ("fine" versus "impressive") and hedges ("a bit worried" versus "alarmed"). The differences are subtle: is "dim" darker than "dark"? Is "pleased" happier than "content"?
 
-Intensity is how people grade things in words, and it is subtle: 'dim' vs 'dark', 'content' vs 'pleased'. A model that gets the order wrong will misread reviews, feedback and hedges.
+A model that gets these orderings wrong misreads how strong a review, a complaint or a compliment really is.
 
-## 2. Sourcing
-New questions (sources/scalar_adjectives): 'Which word expresses a stronger degree of the same quality: "<a>" or "<b>"?' for every pair of differently ranked words in three gold sets: de Melo & Bansal 2013 (linguists), Wilkinson & Oates 2016, and Cocos et al. 2018 (crowd). 749 pairs.
+## The people and the data
+Researchers who build language tools have published ordered lists of adjectives for this purpose, and we use three of them, as collected by Cocos and colleagues (2018): lists ordered by linguists (de Melo and Bansal, 2013), a smaller set by Wilkinson and Oates (2016), and a set ordered by crowd workers (Cocos and colleagues). Each list is a scale from weakest to strongest, such as "plain < unattractive < ugly". Every pair of words on different rungs of the same scale is a question: 749 pairs in all.
 
-Sources: `scalar_adjectives`
+## What Jev was asked
+One question per pair, with the two words as the options:
 
-## 3. Collection
-1,498 new questions: each pair with the two words in both orders in the question text, each also asked with the options shuffled (all averaged).
+> Which word expresses a stronger degree of the same quality: "attractive" or "gorgeous"?
+> *attractive · gorgeous*
 
-## 4. Scoring
-Per pair, Jev's probability for the stronger word averaged over both word orders; share of pairs where that is above one half, by set and by how far apart the words sit on their scale; the same share per word order, to show how much naming a word first helps it; the scales where it errs most.
+Every pair was asked twice, once with each word named first, and each of those with the options in both orders. That's 1,498 questions; the answer for a pair is the average.
 
-## 5. Visualization
-Bars: agreement by gold set and by distance on the scale, with 90% intervals.
+## How we measured it
+For each pair, Jev's probability for the word the list ranks stronger, averaged over both orders. A pair counts as right when that probability is above one half. We break the results down by how far apart the words sit on their scale and by which word the question named first.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.194, top verdict `portrait`.
+## Caveats
+- **The answer key isn't always right.** The orderings come from three published lists, and they disagree with each other on some scales. Jev's most confident "mistakes" are all on one scale where the list ranks "gorgeous" and "lovely" below "beautiful" and "pretty", which most readers would call backwards; another list orders "warm < cold < freezing" on one scale. Some misses are the list's, not Jev's.
+- **Naming a word first gives it a small handicap.** Jev leans toward the word named second. We asked every pair both ways and average them, so the headline isn't biased; the gap between the two orders shows how much the wording alone can move an answer.
+- **Pairs, not ladders.** Jev only ever compares two words. Getting every pair right doesn't guarantee a consistent ladder of five, and "stronger degree of the same quality" is our wording, not the lists'.
+- **English, and mostly common words.** The scales are English adjectives chosen by researchers, most of them common. Rare, technical or regional words aren't covered.
 
-## Compared with
-Three published gold orderings (linguists and crowd workers)
-
-## Limits
-Gold orderings disagree with each other on some scales; a 'miss' can be a defensible order.
-
-Results: `data/analysis/experiments/perception_adjectives.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

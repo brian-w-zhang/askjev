@@ -1,33 +1,31 @@
 # world_ladder
 
-family: world · new questions: 146
+family: world
 
-## 1. Question
-For each of about 145 countries, does Jev know how people there rate their lives on the Gallup ladder (0 = worst possible life, 10 = best), and where is it most wrong?
+## Why ask this
+Every year the World Happiness Report ranks countries by how people there rate their own lives, and every year it has surprises: Costa Rica and Mexico near the top, rich East Asian countries in the middle. A model that assumes money buys happiness would miss exactly those.
 
-The World Happiness Report is one of the most quoted rankings on earth, and it holds surprises (Costa Rica and Mexico near the top, rich East Asia in the middle). A model that simply maps wealth to happiness will get those wrong in a telling way.
+Knowing how a country rates its life is also knowing something about the people there, beyond GDP tables.
 
-## 2. Sourcing
-New questions (sources/whr_ladder): one per country, the Gallup ladder question described in full, asking the country's 2022-2024 average, answered in half-step bins (below 3.0, 3.0-3.5, ..., 8.0 or above). Truth: the World Happiness Report 2025 averages via Our World in Data (CC BY 4.0). GDP per head and region are used in the analysis only.
+## The people and the data
+The Gallup World Poll asks people in each country every year to place their life on a ladder from 0 (the worst possible life for them) to 10 (the best). The World Happiness Report 2025 publishes each country's average over 2022-2024; we use those averages as published by Our World in Data (CC BY 4.0), for 145 countries.
 
-Sources: `whr_ladder`
+## What Jev was asked
+One question per country, describing the ladder in full:
 
-## 3. Collection
-About 146 new questions, each asked as written and with the bins in three shuffled orders (averaged).
+> The Gallup World Poll asks people to imagine a ladder with steps numbered from 0 at the bottom, the worst possible
+> life for them, to 10 at the top, the best possible life, and to say which step they stand on now. What was the
+> average answer in Botswana in 2022-2024?
+> *Below 3.0 · 3.0 to 3.5 · 3.5 to 4.0 · ... · 7.5 to 8.0 · 8.0 or above*
 
-## 4. Scoring
-Jev's expected score (bin midpoints) against the published average: rank correlation, mean absolute error, exact-bin rate; the countries it most over- and underrates; whether its errors follow wealth (rank correlation of the error with GDP per head) and region.
+That's 146 new questions, each asked with the answer bins in three shuffled orders and averaged.
 
-## 5. Visualization
-A scatter: published average (x) vs Jev's estimate (y), with the diagonal and the biggest misses labeled.
+## How we measured it
+Jev's estimate is the middle of its answer across the bins. We compare it with the published average: how well Jev orders the countries (a rank correlation: 1 same order, 0 no relation), the average miss in ladder steps, how often it picks the right half-point bin, and whether its misses line up with a country's wealth or region.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.564, top verdict `portrait`.
+## Caveats
+- **It may remember the rankings.** The World Happiness Report is published every year and widely covered. Jev may recall older editions better than the 2025 one we score against, which would explain misses where a country's rating moved sharply in recent years (Afghanistan's collapse, Botswana's fall).
+- **Half-step answers.**
+- **The truth has error too.** Each country's figure is a three-year average of Gallup samples, with sampling error of around 0.1.
 
-## Compared with
-World Happiness Report 2025 (Gallup World Poll, 2022-2024)
-
-## Limits
-Country averages carry sampling error of about 0.1; bins are half a step wide. The question names the years, and Jev may know older reports better than this one.
-
-Results: `data/analysis/experiments/world_ladder.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

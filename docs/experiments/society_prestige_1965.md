@@ -1,33 +1,30 @@
 # society_prestige_1965
 
-family: society · new questions: 101
+family: society
 
-## 1. Question
-For 102 occupations from the Pineo-Porter Canadian prestige survey, does Jev order jobs by standing the way Canadians did, and which jobs has it promoted or demoted?
+## Why ask this
+The second classic study of job prestige asked Canadians in 1965 to rate the standing of about a hundred occupations. Paired with census records of each job's pay, schooling and share of women, it shows what a mid-century public's ladder of respectable work was built on.
 
-The second classic prestige study, with a census record of each job's pay, schooling and share of women. It shows whether a model's picture of respectable work matches a mid-century public, and where it has moved.
+Comparing Jev with it shows two things: which jobs Jev has promoted or demoted relative to that public, and whether its sense of standing rests on money, on education, or on something else.
 
-## 2. Sourcing
-New questions (sources/occupation_prestige): the same standing question with five described levels for the 102 occupations in Fox's carData `Prestige` data (one duplicate title dropped); the human side is the published mean prestige score.
+## The people and the data
+**Pineo and Porter's** survey of Canadians (1965) gave each of 102 occupations a mean prestige score.
 
-Sources: `occupation_prestige`
+## What Jev was asked
+> How would you rate the general standing of firefighters as a job?
+> *Poor standing: most people look down on this job · Somewhat below average standing · Average standing: an
+> ordinary, respectable job · Good standing: people think well of someone who does it · Excellent standing: one of
+> the most respected jobs there is*
 
-## 3. Collection
-101 new questions, each asked as written, for 'most people', and with the levels reversed (averaged).
+Each occupation was asked as written, for "most people", and with the levels reversed; the two orders are averaged.
 
-## 4. Scoring
-Rank correlation between Jev's expected level (base and reversed averaged) and the mean prestige score, with a 90% bootstrap interval; the occupations whose rank moves most; each side's rank correlation with 1971 income, years of education and share of women.
+## How we measured it
+Whether Jev ranks the occupations in the same order as the 1965 scores (rank correlation: 1 means the same order), the occupations whose rank moves most, and how closely each side's ranking follows the jobs' income, education and share of women.
 
-## 5. Visualization
-A rank scatter: Canadians' rank (x) vs Jev's rank (y), with the ten largest moves labeled.
+## Caveats
+- **A 1965 public, a 1971 census.** The prestige scores are from a Canadian survey in 1965 and the pay, schooling and gender figures from the 1971 census. Several of the jobs have changed beyond recognition since: a 1965 "computer operator" ran machines, a typist typed for a living. A gap can be Jev being modern.
+- **The jobs Jev demotes are mostly women's jobs.** That could be a lean against women's work or simply that those clerical jobs have lost standing since; this data can't separate the two.
+- **Averages only.** The survey published a mean prestige score per job, not full answers, so we compare rankings. We asked Jev with five described levels of "general standing", the wording of the older American survey.
+- **Some jobs hidden.** A content filter hid 2 of the 101 occupations from the site.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.527, top verdict `portrait`.
-
-## Compared with
-Canadian adults in the 1965 national prestige survey (Pineo & Porter 1967)
-
-## Limits
-Mean scores only; survey from 1965, census from 1971. Titles are the census's (some dated).
-
-Results: `data/analysis/experiments/society_prestige_1965.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

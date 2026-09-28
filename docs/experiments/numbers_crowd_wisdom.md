@@ -1,33 +1,29 @@
 # numbers_crowd_wisdom
 
-family: numbers · new questions: 160
+family: numbers
 
-## 1. Question
-How far is it from Houston to Atlanta, how many people live in Algeria, how many watts does a desktop computer draw? Is Jev closer than a typical person, and closer than the crowd's median?
+## Why ask this
+The wisdom of crowds says that the median of many independent guesses beats almost every individual guesser: ask 500 people how far Houston is from Atlanta and the middle answer is closer than most of them. A language model has read what everyone has written. Is it one more guesser, or already a crowd?
 
-The wisdom of crowds says the median of many guesses beats almost every individual. A model has read everyone's writing: is it a single guesser, or already a crowd?
+## The people and the data
+A large 2019 study by Simoiu and colleagues at Stanford, which ran estimation questions on about 500 people each in February 2017 (public data, MIT license). We use its eight text-only domains, 20 questions each: celebrities' ages, distances between US cities, dates in US history, GDP per person, how many of one country fit into the continental US, calories in foods, appliance wattage and country populations.
 
-## 2. Sourcing
-New questions (sources/crowd_estimates): the 160 text-only numeric questions of Simoiu et al. 2019 (8 domains x 20, about 500 people each, February 2017, MIT license), asked as the study asked them, with fixed ordered bins per domain. Each person's answer is binned the same way.
+## What Jev was asked
+Each question as the study asked it, with ordered answer ranges fixed per domain:
 
-Sources: `crowd_estimates`
+> How many Kenyas fit into the continental U.S.?
+> *Under 1.5 · 1.5 to 3 · 3 to 5 · 5 to 8 · 8 to 12 · 12 to 20 · 20 to 30 · 30 to 50 · 50 to 80 · 80 to 150 · 150 to 300 ·
+> 300 or more*
 
-## 3. Collection
-160 new questions, each asked as written and with the bins in three shuffled orders (averaged).
+(The answer is in the 12 to 20 range. Jev's middle answer fell lower, in 3 to 5; the crowd's most common range was 5 to 8.) That's 160 new questions, each asked with the ranges in three shuffled orders and averaged.
 
-## 4. Scoring
-Per domain and overall: share where Jev's median bin holds the true answer, against the share of individual people whose answer lands in it (the typical person) and whether the crowd's median bin holds it; mean distance in bins from the truth for Jev and for the crowd's median.
+## How we measured it
+Per domain and overall: how often Jev's middle answer is the right range, how often the crowd's median guess is, and how often an individual person's guess is (the typical person). We also measure how many ranges off each is.
 
-## 5. Visualization
-Paired bars per domain: typical person, crowd median and Jev, share in the right bin.
+## Caveats
+- **Knowing vs estimating.** For people these were estimates; for Jev many are facts it has read (a country's population, a celebrity's birth year). Beating the crowd there is closer to recall than to judgment.
+- **A pinned date.** People answered in February 2017. Questions that depend on the date (ages, populations, GDP) are pinned to 2016 or February 2017 in the wording, and Jev has to answer as of then.
+- **Ranges, not numbers.** Every answer, people's and Jev's, is put into fixed ranges per domain (about 20-50% wide), so "right" means the right range.
+- **Who guessed.** The guessers were about 500 US online participants per question, recruited for the study, not a national sample.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.838, top verdict `portrait`.
-
-## Compared with
-About 500 US online participants per question (Simoiu et al. 2019) and the study's answer key
-
-## Limits
-Bins are coarse, so 'right' means within a bin (about 20-50% wide). People answered in 2017; populations and GDP are pinned to 2016 in the wording.
-
-Results: `data/analysis/experiments/numbers_crowd_wisdom.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

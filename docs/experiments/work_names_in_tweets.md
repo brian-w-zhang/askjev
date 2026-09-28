@@ -2,32 +2,30 @@
 
 family: work
 
-## 1. Question
-Given a name in a sentence, can Jev say what kind of thing it names, in edited news text and in tweets?
+## Why ask this
+Deciding what a name refers to (a person, a place, a company, a product) is a basic building block for search, moderation, analytics and customer support. In edited news, names follow conventions: capitalized, introduced, with context. On social media, companies, their products, bands and apps share names, get abbreviated, and appear without introduction.
 
-Entity typing feeds search, moderation and analytics. News names follow conventions; tweets name brands, products and groups in ways that break them.
+## The people and the data
+- **CoNLL-2003:** English news stories, with each name tagged as a person, organization, location or other.
+- **WNUT-17:** tweets and other social posts, built around rare and emerging names, tagged as a person, location, corporation, product, creative work or group.
 
-## 2. Sourcing
-Existing questions from CoNLL-2003 (news: person, organization, location, other) and WNUT-17 (tweets: person, location, group, corporation, product, creative work), balanced by type.
+The tags come from each dataset's annotators. We balanced the questions across types.
 
-Sources: `entity_typing`
+## What Jev was asked
+Each name was one pick-one question with its sentence:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> What type of entity is "Super City" in this sentence?
+> *Sentence: "RT @tommcfly: Working on some final Super Site stuff all day. Can't believe the Super City is nearly
+> open!"*
+> *Options: group (a band, sports team, political party or other group of people that is not a company) · person ·
+> product · location · corporation · creative work*
 
-## 4. Scoring
-Share right per type in each corpus, and the most common confusion for the weakest types.
+## How we measured it
+The share of names Jev types right, per type and corpus, and the most common wrong type for the weakest ones.
 
-## 5. Visualization
-Bars per type, news and tweets.
+## Caveats
+- **Tweets chosen to be hard.** The tweet dataset (WNUT-17) was built on purpose from rare and newly emerging names, so it's harder than everyday social media.
+- **Brand names are genuinely ambiguous.** Without knowing it's a store's name, many readers would say the same. Companies, their products and their apps often share a name.
+- **Different menus.** News names were sorted into four types, tweet names into six, so the two corpora aren't directly comparable beyond people and places.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.926, top verdict `portrait`.
-
-## Compared with
-each dataset's own labels
-
-## Limits
-WNUT-17 was built from rare and emerging names on purpose.
-
-Results: `data/analysis/experiments/work_names_in_tweets.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

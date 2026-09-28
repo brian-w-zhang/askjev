@@ -23,6 +23,10 @@ OUT = A / "experiments"
 DOCS = Path("docs/experiments")
 RNG = np.random.default_rng(16)
 
+# Groups come out in first-seen order everywhere, so two runs write identical tables (table() is sorted by id).
+_group_by = pl.DataFrame.group_by
+pl.DataFrame.group_by = lambda self, *by, maintain_order=True, **kw: _group_by(self, *by, maintain_order=maintain_order, **kw)
+
 
 @dataclass
 class Spec:

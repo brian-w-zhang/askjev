@@ -2,32 +2,29 @@
 
 family: social
 
-## 1. Question
-When a feeling comes in a strong and a mild word (furious or angry, terrified or afraid, devastated or sad), which one does Jev use?
+## Why ask this
+Feelings come in strengths. Furious is more than angry, terrified is more than afraid, devastated is more than sad. When a reader picks the milder word, it quietly turns the volume down on what the person said.
 
-Picking the milder word is a quiet form of downplaying. If Jev turns fury into anger and terror into fear, its summaries of how people feel will read calmer than the people wrote them.
+That matters for any model that summarizes feedback, triages messages or writes back to people: if it hears fury as annoyance and terror as worry, its summaries will read calmer than the people who wrote them.
 
-## 2. Sourcing
-Existing EmpatheticDialogues questions: a short situation written by someone feeling one of 32 named emotions, and Jev picks one of the 32. Three pairs of the same feeling at two strengths are in the list. Enough: about 90 stories per label.
+## The people and the data
+**EmpatheticDialogues**, a dataset from Facebook AI researchers: crowd workers were each given one of 32 emotion words and wrote a short situation from their own life in which they felt it. Three of the 32 come in a strong and a mild version of the same feeling: furious and angry, terrified and afraid, devastated and sad.
 
-Sources: `empathetic_dialogues`
+## What Jev was asked
+The situation, and all 32 words to choose from:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Someone wrote [situation] about a time in their own life. Which emotion were they feeling?
+> *sad · angry · proud · afraid · caring · guilty · joyful · ... · furious · ... · terrified · devastated · ...*
+> (32 words in all)
 
-## 4. Scoring
-For each pair, the share of stories written under the strong word that Jev calls by the mild one, and the reverse; plus, over all 32 labels, how often Jev uses each word relative to how often writers did. 90% bootstrap intervals over stories.
+For example, someone wrote under "furious": "I won tickets to a concert and when we got there, they were supposed to have the tickets at the box office and they didn't so the refused us no matter how much proof we gave that we won.
 
-## 5. Visualization
-Paired bars per pair: strong read as mild vs mild read as strong; a ranked strip of the words Jev uses least relative to writers.
+## How we measured it
+For each pair, how many stories written for the strong word Jev calls by the mild one, and how many written for the mild word it calls by the strong one. Across all 32 words, we also compare how often Jev uses each word with how often writers were given it.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.69, top verdict `portrait`.
+## Caveats
+- **A story written to a word.** Each writer was handed an emotion word and asked to describe a time they felt it. A story written for "furious" may genuinely read as plain anger; the label is the prompt, not a measurement of intensity.
+- **No other readers to compare.** We compare Jev with the word the writer was given, not with how other people would label the same story. Other readers might soften these stories too.
+- **Many near-synonyms.** With that many close options, any reader will spread its answers; what matters is that Jev's errors all go one direction.
 
-## Compared with
-The writers' own labels (the label they were asked to write about)
-
-## Limits
-Writers chose a label before writing, so a story under 'furious' may read as plain anger. The comparison is Jev's pick vs the prompt label, not vs other readers.
-
-Results: `data/analysis/experiments/social_mild_emotions.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

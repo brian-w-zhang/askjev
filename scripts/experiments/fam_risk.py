@@ -159,13 +159,14 @@ DOSPERT = {"E": "ethical", "F": "financial", "H": "health and safety", "R": "rec
 def everyday():
     spec = Spec(
         id="risk_everyday", family="risk", title="Which everyday risks Jev would take",
-        question="Asked how likely it would be to do 110 risky things (bungee jumping, shoplifting, betting a week's "
+        question="Asked how likely it would be to do dozens of risky things (bungee jumping, shoplifting, betting a week's "
                  "income, speaking up for an unpopular cause), does Jev order them like adults do?",
         why="Risk-taking isn't one trait: people who'd skydive may never gamble. The DOSPERT scale splits it into "
             "ethical, financial, health, recreational and social risks, so the profile says what kind of risk-taker "
             "Jev plays.",
         sourcing="Existing Basel-Berlin Risk Study items (DOSPERT, five described likelihood levels), each with the "
-                 "answers of about 1,500 adults in Basel and Berlin. Enough: 110 activities in five domains.",
+                 "answers of about 1,500 adults in Basel and Berlin. The likelihood frame only (DOSPERT also asks how risky and how "
+                 "beneficial each activity seems). Enough: every activity in five domains.",
         scoring="Jev's expected level (0-4) per activity vs the adults' mean level; rank correlation over activities; "
                 "per domain, the mean gap with a 90% bootstrap interval over activities; the activities with the "
                 "largest gap each way.",
@@ -176,7 +177,10 @@ def everyday():
 
     def run():
         rows = []
-        for r in source("bbrs_risk").filter(pl.col("primitive") == "score").iter_rows(named=True):
+        # the likelihood frame only: DOSPERT asks each activity three ways (how likely, how risky, how much benefit),
+        # and only "how likely would you be to do this" measures willingness to take the risk
+        likely = pl.col("text").str.starts_with("How likely would you be to do this")
+        for r in source("bbrs_risk").filter((pl.col("primitive") == "score") & likely).iter_rows(named=True):
             dom = (js(r["meta"]) or {}).get("domain")
             if dom in DOSPERT:
                 m = re.search(r'"(.+)"', r["text"])

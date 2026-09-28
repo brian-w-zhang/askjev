@@ -1,33 +1,30 @@
 # minds_first_word
 
-family: minds · new questions: 400
+family: minds
 
-## 1. Question
-Hearing 'bread', most people think 'butter'. Given a word and the most common responses people gave, does Jev pick people's first association, and is it as predictable as they are?
+## Why ask this
+Say "bread" and most people think "butter". Say "top" and most say "bottom". **Free association** is one of the oldest tools in psychology: the first word that comes to mind shows how concepts are wired together. For some cues people agree strongly; for others their answers scatter.
 
-Free association is a window on how concepts are wired. People agree strongly on some cues and not at all on others; a model that always goes for the obvious answer shows a mind with less spread than a crowd's.
+A model that has read billions of sentences should know the common links. The interesting questions are whether it picks the same first word people do, and whether it's as predictable as a crowd or more so.
 
-## 2. Sourcing
-New questions (sources/word_associations): 'What is the first word that comes to mind when you hear the word "<cue>"?' for 400 cues from the USF free association norms (Nelson et al. 2004; about 150 students per cue), options the cue's seven most common responses plus 'some other word'. Cues are sampled evenly across how predictable the top response is.
+## The people and the data
+The **University of South Florida free association norms** (Nelson, McEvoy and Schreiber, 2004) are a standard resource in psychology: for each of a large set of cue words, about 150 students wrote the first word that came to mind. The norms list how often each answer came up. We took 400 cues, spread evenly from cues where most people give the same answer to cues where answers scatter.
 
-Sources: `word_associations`
+## What Jev was asked
+Each cue with people's seven most common answers and an eighth option:
 
-## 3. Collection
-400 new questions, each asked as written, for 'most people', and with the options in three shuffled orders (averaged).
+> What is the first word that comes to mind when you hear the word "row"?
+> *oar · boat · eggs · line · aisle · chair · column · Some other word*
 
-## 4. Scoring
-Share of cues where Jev's top pick is people's most common response, by quarter of predictability; Jev's probability on people's top response vs its actual share (does Jev exaggerate the obvious?); how often Jev picks 'some other word' vs how often people's answer fell outside the seven.
+Each was asked with the options in three shuffled orders (averaged), and for "most people".
 
-## 5. Visualization
-Binned by how predictable the cue is (people's top share): people's top share, Jev's probability on that response, and how often Jev picks it.
+## How we measured it
+How often Jev's top pick is people's most common answer, split by how predictable the cue is; how much probability Jev puts on that top answer compared with the share of people who gave it; and how often Jev picks "some other word" compared with how often people's answers fell outside the seven.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.107, top verdict `portrait`.
+## Caveats
+- **A menu, not free association.** People said whatever came to mind.
+- **Older American students.** The associations come from the University of South Florida norms, published in 2004: students in one US state, about 150 per cue. Word associations drift with time and place ("tablet" meant something else before smartphones).
+- **Some cues hidden.**
+- **"Some other word" is a hard sell.** A choice labeled "some other word" is vague next to seven concrete words, which may be why Jev almost never picks it. It says less about Jev's associations than about how the menu looks.
 
-## Compared with
-University of South Florida students (Nelson et al. 2004)
-
-## Limits
-Jev chooses from people's own top seven responses instead of producing a word, so it can't show associations nobody gave; the norms are from US students in the 1970s-1990s.
-
-Results: `data/analysis/experiments/minds_first_word.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

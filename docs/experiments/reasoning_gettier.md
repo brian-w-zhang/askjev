@@ -1,33 +1,34 @@
 # reasoning_gettier
 
-family: reasoning · new questions: 8
+family: reasoning
 
-## 1. Question
-When someone believes something true, with good reason, but is right only by luck (a Gettier case), does Jev say they really know it, and how does that compare with clear knowledge and a clear false belief?
+## Why ask this
+Ana looks at the kitchen clock. It says three o'clock, and it *is* three o'clock. But the clock stopped exactly twelve hours ago. Does Ana know the time?
 
-Philosophers since Gettier (1963) mostly say lucky true beliefs aren't knowledge, and replications find ordinary people across cultures mostly agree (Kim & Yuan 2015; Machery et al. 2017). A model that tracks only truth and justification would say they know.
+She has a true belief with a good reason, which is how philosophers once defined knowledge. In 1963 Edmund Gettier published a short paper with cases like this, and most philosophers since have agreed: being right by luck isn't knowing. These **Gettier cases** are a neat test of whether a model tracks *why* someone is right, not just whether they are. A system that checks only "true" and "justified" would say Ana knows.
 
-## 2. Sourcing
-New questions (sources/philosophy_vignettes, family gettier): the published car case with its split, five Gettier cases written for this project (a stopped clock, a borrowed car, fake barns, the ten coins, a dog that looks like a sheep), and two controls (a working clock, a wrong clock). No human split is used: the car case's published split could not be verified.
+## The people and the data
+There are eight short stories. One is a published case from the experimental-philosophy literature: Bob thinks his friend Jill drives an American car because she has long driven a Buick; the Buick was stolen, and she now drives a Pontiac, another American car. He's right, but for the wrong reason. Five are Gettier cases written for this project: a stopped clock, a borrowed car, fake barns, ten coins in a pocket, and a dog that looks like a sheep. Two are controls: a clock that works (clear knowledge) and a clock that's wrong (a false belief).
 
-Sources: `philosophy_vignettes`
+There's no human split to compare with: the published car case's reported numbers couldn't be verified, so they aren't used. What we know from the literature is qualitative: most people, like most philosophers, deny knowledge in these cases.
 
-## 3. Collection
-8 new questions, each asked as written, for 'most people', and with the two answers swapped (averaged).
+## What Jev was asked
+Each story ended with the same choice:
 
-## 4. Scoring
-Jev's probability of 'really knows' on the Gettier cases vs the knowledge control and the false-belief control.
+> Henry is driving through a region where, unknown to him, almost every barn is a fake: a painted facade with nothing
+> behind it. He looks at the one real barn in the region and thinks, "That's a barn." Does Henry really know that it
+> is a barn, or does he only believe it?
+> *He or she really knows it · He or she only believes it*
 
-## 5. Visualization
-Bars: probability of 'really knows' per case, controls marked.
+Each was also asked with the two answers swapped, and we average the two.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.348, top verdict `portrait`.
+## How we measured it
+The weight Jev puts on "really knows", story by story, next to the two controls: if it treats lucky guesses like knowledge, the Gettier stories will sit near the working clock; if not, near the wrong one.
 
-## Compared with
-Jev's own answers on clear knowledge and a clear false belief; the replicated finding that most people deny knowledge in Gettier cases (no number used)
+## Caveats
+- **No human numbers for these stories.** Five of the Gettier stories were written for this project and have no human answers. The published car case had a reported split we couldn't verify, so we left it out. The comparison with people is the general finding, not a number.
+- **Famous cases.** The stopped clock, the fake barns and the ten coins are textbook examples in philosophy, usually presented with the conclusion that they aren't knowledge. Jev may be repeating the textbook rather than judging the story.
+- **Two words carry a lot.** The answers are "really knows it" versus "only believes it". The word "really" invites doubt, and a different pair of answers (say, "knows" versus "doesn't know") might shift every number.
+- **Small set.** Six Gettier stories and two controls. A single story changing its answer would move the average noticeably.
 
-## Limits
-No human split for these exact vignettes; the comparison with people is qualitative.
-
-Results: `data/analysis/experiments/reasoning_gettier.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

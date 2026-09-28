@@ -1,33 +1,30 @@
 # influence_scale_format
 
-family: influence · new questions: 600
+family: influence
 
-## 1. Question
-Asked how many people agree with an everyday rule, does Jev's answer depend on whether the scale has 3, 5 or 7 levels, or on whether the levels are described in words or just numbered?
+## Why ask this
+Survey designers know the answer scale shapes the answer: add more levels, drop the labels, and people move (Schwarz, 1999). A model filling in questionnaires, or being evaluated with them, carries its own scale habits. If Jev's answers depend on how many boxes it's given, every rating it produces is partly an artifact of the form.
 
-Survey designers know the scale shapes the answer (Schwarz 1999). A model answering questionnaires, or being evaluated with them, inherits whatever its scale habits are; this is where its known middle-lean (01-jev §6) meets a controlled test.
+## The people and the data
+The questions are 200 rules of thumb from Social Chemistry 101 (Forbes and colleagues, 2020), a dataset of everyday social norms written from Reddit and advice columns, each with a crowd annotator's estimate of how many people agree. We drew them at random and compared Jev's answers across four formats of the same question.
 
-## 2. Sourcing
-New questions (sources/influence_variants): 200 Social Chemistry 101 'How many people would agree' questions (drawn at random), asked with 3 described levels, 7 described levels, and 5 numbered levels with only the ends described, next to the original 5 described levels.
+## What Jev was asked
+The same question on four scales: the original five described levels, three described levels, seven described levels, and five numbered levels with only the ends described. The seven-level version:
 
-Sources: `influence_variants`
+> How many people would agree: "It's good to help people learn about themselves"?
+> *Practically no one agrees with it · Very few people agree with it · A minority of people agree with it · About
+> half of people agree with it · A majority of people agree with it · Most people agree with it · Practically
+> everyone agrees with it*
 
-## 3. Collection
-600 new questions, each asked as written and with the levels reversed (averaged).
+That's 600 new questions (three new formats of 200 rules), each also asked with the levels in reverse order and averaged.
 
-## 4. Scoring
-Per format, Jev's mean position on a 0-1 scale (level / (levels - 1)), the share of weight on the top level and on the middle level, and the rank correlation with the original format and with the annotators across rules.
+## How we measured it
+For each format we place Jev's average answer on a 0-to-1 scale (the bottom level is 0, the top is 1), measure how much weight it puts on the top level, and check whether it orders the 200 rules the same way as on the original scale (rank correlation: 1 same order, 0 no relation).
 
-## 5. Visualization
-Dots per format: Jev's mean position with its 90% interval, and the annotators' mean on the original.
+## Caveats
+- **Scales aren't perfectly comparable.** We put every scale on 0 to 1 to compare them, which assumes the levels are evenly spaced. "About half" is the middle of the 3-, 5- and 7-level versions, but the numbered version only describes its two ends.
+- **The level wording is ours.** The Social Chemistry annotators saw the dataset's own five categories. The 3- and 7-level wordings were written for this test, and different words for the same step can shift answers on their own.
+- **One kind of question.** All 200 questions ask how many people agree with a rule of thumb. Scales on taste, frequency or intensity could behave differently.
+- **The annotators are few.** Each rule has one annotator's estimate on the original scale, so the human comparison is noisy rule by rule.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.555, top verdict `portrait`.
-
-## Compared with
-Jev's answers on the original 5-level format; Social Chemistry annotators (original format only)
-
-## Limits
-Positions on different scales are only roughly comparable; 'about half' is the middle of the 3, 5 and 7 level versions, but not of the numbered one.
-
-Results: `data/analysis/experiments/influence_scale_format.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

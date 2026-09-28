@@ -2,30 +2,27 @@
 
 family: consistency
 
-## 1. Question
-Jev's most likely answer on a rating scale is often the middle level. Is that a habit with every scale, or does it depend on what is being rated?
+## Why ask this
+Anyone who has written a survey knows the middle option: "neither agree nor disagree", "sometimes", "it's fine". Jev picks it a lot, which the portrait already showed. The open question is whether that's a habit with every scale, like a person ticking the middle box to get through a form, or whether it depends on the subject. If it follows the subject, it's a stance, not a tic.
 
-The middle-lean is already known (it's in the old ledger, and people have a milder version); what isn't known is where it switches on. If it follows the subject rather than the scale, it's a stance, not a tic.
+## The people and the data
 
-## 2. Sourcing
-Every rating question with an odd number of levels (3, 5 or 7), so a middle exists: 117,000 questions, grouped by the kind of question the tree assigns (taste, personality, evaluative, values, perception, social); for 14 sources, real people's answers to the same items.
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+## What Jev was asked
+Rating questions with described levels, for example:
 
-## 4. Scoring
-Share of questions whose most likely level is the middle one, by kind, with 90% bootstrap intervals; on the items with human data, Jev's middle share next to the people's.
+> How much would you enjoy working through a spot-the-difference puzzle?
+> *You'd give up on it within minutes · You'd finish it but not pick up another · You'd do one when it happened to
+> be lying around · You'd seek out a new one on your own · You'd do one every day and hunt for harder ones*
 
-## 5. Visualization
-Dots per kind (share at the middle), and paired bars for the sources with people's answers.
+Each was also asked with the levels in reverse order.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 5.174, top verdict `headline`.
+## How we measured it
+For each question, whether Jev's most likely answer is the middle level. Then the share of questions where it is, by kind of question (from the map's topics), with 90% intervals, and, on the datasets with people's ratings, the same share for the people.
 
-## Compared with
-Real respondents on 14 sources (captions, jokes, personality items, taste ratings, norms, sound symbolism)
+## Caveats
+- **Already known.** The middle habit itself isn't new: the portrait found it first, and people show a milder version on surveys. TypeSafe's list of Jev's known weaknesses doesn't include it. What's new here is where it switches on and off.
+- **Scales aren't all alike.** The questions come from many sources with different answer wordings, and most have five levels. A middle level described as "neither" invites different answers from one described as a situation.
+- **Kinds come from the map.** "Taste", "personality" and the other kinds are the tree's labels for each question's topic; they overlap sources, so a kind's rate partly reflects which datasets feed it.
 
-## Limits
-Known pattern (old ledger `middle_lean`). Scales differ in wording across sources; five-level scales dominate. Kinds come from the tree and overlap sources.
-
-Results: `data/analysis/experiments/consistency_middle_lean.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

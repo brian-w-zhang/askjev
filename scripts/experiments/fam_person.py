@@ -10,7 +10,7 @@ from __future__ import annotations
 import json
 from functools import lru_cache
 
-from lib import A, Result, Spec, ordinal
+from lib import A, Result, Spec, full_meta, ordinal, source
 
 HOW_SCALES = ("Open Psychometrics publishes each item's answer distribution from everyone who took the test on its "
               "site. Each item Jev answered is compared with that average on a 0-1 scale (reverse-keyed items flipped, "
@@ -28,6 +28,15 @@ def ledger() -> dict:
 def scales(ids: list[str]) -> list[dict]:
     L = ledger()
     return [L[i] for i in ids if i in L]
+
+
+def scale_items(claims: list[dict]) -> list[str]:
+    """The shown questions behind scale claims: the keyed Open Psychometrics items of each claim's instrument and scale."""
+    M = full_meta("openpsych")
+    shown = set(source("openpsych").filter(__import__("polars").col("primitive") == "score")["id"])
+    want = {(c.get("instrument"), c.get("scale")) for c in claims}
+    return sorted(i for i, m in M.items() if i in shown and m.get("keyed") in ("+", "-")
+                  and (m.get("instrument"), m.get("scale")) in want)
 
 
 # family id: (title, question, why, scale claim ids with display labels, headline builder)
@@ -135,7 +144,7 @@ def scale_family(fid: str):
             numbers={"scales": rows}, n=sum(r["n_items"] for r in rows),
             chart={"type": "dots", "domain": [0, 1], "rows": [{"label": r["label"], "value": r["self"], "people": r["people"],
                                                                 "guess": r["guess"], "right": f"{r['gap']:+.2f}"} for r in rows]},
-            examples=[e for c in cs for e in c.get("examples", [])][:3])
+            examples=[e for c in cs for e in c.get("examples", [])][:3], ids=scale_items(cs))
     return spec, run
 
 
@@ -170,7 +179,8 @@ def bigfive():
             evidence="50 items, 10 per trait; 90% intervals from resampling items; reversed-scale answers agree within the intervals",
             numbers={"traits": rows}, n=50,
             chart={"type": "dots", "domain": [0, 100], "rows": [{"label": r["label"], "value": r["pct"], "ci": r["ci"], "guess": r["guess"]} for r in rows]},
-            examples=cs[0]["examples"][:3])
+            examples=cs[0]["examples"][:3],
+            ids=[i["id"] for t in json.loads((A / "tier1_bigfive.json").read_text())["traits"].values() for i in t["items"]])
     return spec, run
 
 

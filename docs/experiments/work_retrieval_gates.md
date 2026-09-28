@@ -2,32 +2,31 @@
 
 family: work
 
-## 1. Question
-Asked whether a retrieved passage answers a query or belongs in the context, which way does Jev err: letting in passages that don't help, or throwing out ones that do?
+## Why ask this
+Systems that answer questions from documents usually retrieve a pile of passages and then decide which ones go into the expensive model's context. A cheap model as the gate is a natural fit. Its errors cost differently: letting in useless passages wastes context and can distract; throwing out a useful one can make the right answer impossible, especially for questions that need two facts chained together.
 
-Retrieval pipelines use a cheap model as a gate before the expensive one. A generous gate wastes context; a strict one drops the evidence a multi-step question needs.
+## The people and the data
+- **MS MARCO:** real web search queries (from Microsoft) with passages retrieved from web pages; the passage a human annotator used for the answer is marked useful.
+- **HotpotQA:** questions that need two facts from two Wikipedia paragraphs, mixed with distractor paragraphs on the same topic.
+- **QNLI:** a question and a single Wikipedia sentence that does or doesn't answer it.
 
-## 2. Sourcing
-Existing yes/no questions from MS MARCO (web search passages vs real queries), HotpotQA (paragraphs needed for two-step questions vs distractors on the same topic) and QNLI (does a Wikipedia sentence answer the question).
+## What Jev was asked
+Each item was a yes/no question over a passage and a question. For HotpotQA (MS MARCO and QNLI ask "does the passage contain an answer to the query?"):
 
-Sources: `msmarco_relevance`, `hotpot_gating`, `qnli_gating`
+> Should the passage go into the context for answering the question?
+> *The passage states a fact that is needed to answer the question · The passage may be on a related topic, but
+> nothing in it is needed to answer the question*
+> *(the question and the passage follow, for example a paragraph about Golub Corporation, the parent company of Price
+> Chopper Supermarkets)*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+That paragraph is one of the two a question needs; Jev leaned toward leaving it out.
 
-## 4. Scoring
-Per set, the share of useful passages Jev rejects and of useless passages it lets in, with 90% intervals.
+## How we measured it
+For each dataset, two error rates: the share of useful passages Jev rejects, and the share of useless passages it lets in.
 
-## 5. Visualization
-Paired bars per set: useful passages rejected vs useless ones let in.
+## Caveats
+- **Web search labels are partial.** In MS MARCO, a passage is marked useful if the human annotator used it to write the answer. Other passages that also answer the query are marked not useful, so some of Jev's "let in" errors are passages that do help.
+- **"Needed" is subtle for two-step questions.** A HotpotQA question often needs a "bridge" paragraph that names an entity without stating the answer. Our guess, not measured here, is that Jev reads "needed" as "contains the answer" and throws those out.
+- **Question wording.** For HotpotQA we asked whether the passage states a fact needed to answer the question. A wording that mentioned intermediate steps might change the result.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.577, top verdict `portrait`.
-
-## Compared with
-each dataset's own labels
-
-## Limits
-MS MARCO's labels mark the passage a human annotator used, so some unmarked passages do answer the query; that inflates its 'let in' rate.
-
-Results: `data/analysis/experiments/work_retrieval_gates.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

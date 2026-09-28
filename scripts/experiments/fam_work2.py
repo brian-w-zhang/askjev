@@ -79,7 +79,7 @@ def legal():
             if "m_task" in cuad.columns else []
         c = next(o for o in out if o["label"].startswith("contract"))
         o = next(o for o in out if o["label"] == "overruling")
-        worse = [x for x in out if x["miss"] > x["fa"] + 0.05]
+        worse = [x for x in out if x["miss"] > x["fa"]]
         miss_all = 1 - float(d.filter(pl.col("truth") == "true")["ok"].mean())
         fa_all = 1 - float(d.filter(pl.col("truth") == "false")["ok"].mean())
         pretty = lambda t: t.replace("cuad_", "").replace("_", " ")  # noqa: E731

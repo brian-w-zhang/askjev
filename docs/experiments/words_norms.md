@@ -2,32 +2,35 @@
 
 family: words
 
-## 1. Question
-Rating thousands of English words on the dimensions psycholinguists norm (pleasantness, excitement, age of learning, familiarity, size, imageability, concreteness), where does Jev agree with people?
+## Why ask this
+Psychologists measure what words mean to people beyond their dictionary definitions: how pleasant a word feels, how exciting, how concrete, how big the thing it names is, how early children learn it, how familiar it is. These **word norms** are collected by asking many people to rate thousands of words, and they're used everywhere from memory research to building reading tests.
 
-Word norms are how psychology measures what words mean to people beyond their definitions. A model learns words only from text, so the dimensions it gets right and wrong show what text does and doesn't carry.
+A language model learns words only from text. Where its ratings match people's, text carries that part of meaning; where they don't, something about how people experience words isn't written down.
 
-## 2. Sourcing
-Existing rating questions built from the Glasgow Norms (Scott et al. 2019, 5,553 words rated on 1-9 or 1-7 scales) and the Brysbaert et al. 2014 concreteness ratings (1-5), with each word's human mean. Enough: about 1,000-2,000 words per dimension, 11,857 ratings.
+## The people and the data
+Two standard datasets:
+- **The Glasgow Norms** (Scott and colleagues, 2019): 5,553 English words, each rated on nine dimensions by native English speakers from the University of Glasgow community, about 33 raters per word. We use six: pleasantness, excitement (arousal), age of learning, familiarity, size and imageability.
+- **Brysbaert, Warriner and Kuperman's concreteness ratings** (2014), covering 39,954 English words on a scale from abstract to concrete.
 
-Sources: `glasgow_norms`, `concreteness`
+## What Jev was asked
+One question per word and dimension, with five described answers written for this project, for example:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> How calming or stirring does the word "link" feel to you?
+> *Calming: it feels sleepy or soothing, like a quiet evening · Mostly calm: it stirs little, like an everyday
+> object on a shelf · Neither: it is no more calming than stirring · Somewhat stirring: it raises interest or
+> alertness, like good news or a warning sign · Intensely stirring: it jolts you awake, like danger, a thrill or a
+> scream*
 
-## 4. Scoring
-Per dimension, rank correlation between Jev's robust level and the human mean, with a 90% bootstrap interval over words. Ranks because Jev's five described levels and the norms' numeric scales differ.
+Each was also asked with the answers reversed, and we average the two.
 
-## 5. Visualization
-Dots with intervals, one row per dimension, sorted by agreement.
+## How we measured it
+For each dimension we rank the words by Jev's answer and by people's average, and compare the rankings (a rank correlation: 1 means the same order, 0 means no relation). Rankings let us compare Jev's five described levels with people's numbered scales.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.15, top verdict `portrait`.
+## Caveats
+- **Our wording, their scales.** People rated on numbered scales (1 to 9, 1 to 7, 1 to 5) with the studies' own instructions. The comparison uses rankings so the scales don't have to line up, but our examples can still lean an answer.
+- **Averages only.** We compare Jev with each word's average rating. How much people disagreed about a word isn't used, so a word that splits people counts the same as one they agree on.
+- **Two groups of raters.** Most dimensions come from the Glasgow Norms (native English speakers from the University of Glasgow community, about 33 per word); concreteness comes from a separate, much larger study. Different people, different years.
+- **Common words.** The words are mostly familiar English words. Rare, technical or slang words may behave differently.
+- **Some words hidden.** Words the content filter flagged as sexual, violent or political are hidden from the site and left out, which removes some of the most emotional words people rated.
 
-## Compared with
-Glasgow Norms raters (UK students, about 30 per word per scale); Brysbaert et al. 2014 raters (US, MTurk)
-
-## Limits
-Jev's scales use described levels written for this project ('Calming: it feels sleepy or soothing'), not the norms' numbered anchors, so part of any gap is wording. Human means only; no per-rater spread.
-
-Results: `data/analysis/experiments/words_norms.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

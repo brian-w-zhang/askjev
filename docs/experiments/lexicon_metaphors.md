@@ -1,33 +1,33 @@
 # lexicon_metaphors
 
-family: lexicon · new questions: 600
+family: lexicon
 
-## 1. Question
-Rating two-word expressions for how apt and how familiar they are ('dark thoughts', 'acid test', 'fan brush'), does Jev agree with people, and does it treat metaphors and literal expressions alike?
+## Why ask this
+A metaphor works when the describing word captures something that matters about the thing described: "dark thoughts" lands, "fragrant shadow" is a stretch. That quality is called **aptness**, and it's what separates a striking image from a strained one. Familiarity is different: "acid test" is a stock phrase whether or not it's apt.
 
-Aptness is what makes a metaphor land. A model that finds every metaphor apt, or rates metaphors below plain descriptions, will write and read figurative language differently from people.
+A model that finds every metaphor apt can't help you cut a weak image from your writing, and one that can't tell a metaphor from a literal phrase reads figurative language flatly.
 
-## 2. Sourcing
-New questions (sources/metaphor_norms): 'How apt is the expression "X": how well does the describing word capture important features of what it describes?' and 'How familiar is the expression "X"?' on seven described levels, for 300 expressions (207 metaphors, 93 literal) from the 2025 metaphor norms (OSF xk3j9); people's full rating distributions (about 25 raters each, expression shown alone).
+## The people and the data
+The ratings come from a set of **metaphor norms** published in 2025: 300 two-word expressions, 207 metaphors ("dark thoughts", "acid test") and 93 literal expressions ("fan brush"), each rated for aptness by about 25 people and for familiarity by about 27, on a 1-to-7 scale.
 
-Sources: `metaphor_norms`
+## What Jev was asked
+Two questions per expression, with seven described levels each:
 
-## 3. Collection
-600 new questions, each asked as written, for 'most people', and with the levels reversed (averaged).
+> How apt is the expression "fragrant shadow": how well does the describing word capture important features of what
+> it describes?
+> *Not apt at all: the first word captures nothing important about what it describes · Barely apt: the link is
+> strained · Slightly apt: a weak link · Somewhat apt: the link works but is ordinary · Fairly apt: it captures
+> something real · Very apt: it captures important features well · Perfectly apt: it captures exactly what matters*
 
-## 4. Scoring
-Per dimension, rank correlation with people's mean and a 90% bootstrap interval; Jev's mean level minus people's for metaphors and for literal expressions (on the same 0-6 scale); distribution similarity.
+and "How familiar is the expression?" Each was asked as written, for "most people", and with the levels reversed.
 
-## 5. Visualization
-Paired dots per group (metaphors, literal) and dimension: people's mean and Jev's, 0-6.
+## How we measured it
+For each question, whether Jev ranks the expressions in the same order as people (rank correlation: 1 means the same order), and Jev's average rating against people's on the same 0-6 scale, separately for metaphors and literal expressions.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.36, top verdict `portrait`.
+## Caveats
+- **Our answer levels.** People rated from 1 to 7 against the study's definitions. We wrote seven described levels ("Somewhat apt: the link works but is ordinary", "Fairly apt: it captures something real"). The middle levels sound approving, which may pull any rater upward; people's ratings were collected on the plain scale.
+- **Expressions alone.** We used the ratings people gave to each expression shown on its own, without a sentence around it. Out of context, a strange pairing like "lonely oval" is hard to judge for anyone.
+- **About 25 raters each.** Each expression's aptness was rated by about 25 people, so the ranking of any one expression is noisy.
+- **Data with no stated license.** The rating data comes from a public research project that states no license (the article itself is open access); we use it for private research only.
 
-## Compared with
-Crowd raters, expression shown in isolation (OSF xk3j9)
-
-## Limits
-The OSF project states no license (the article is CC BY 4.0). Level descriptions are this project's; the study's scale was 1-7 with defined endpoints.
-
-Results: `data/analysis/experiments/lexicon_metaphors.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

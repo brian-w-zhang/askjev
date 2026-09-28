@@ -2,32 +2,22 @@
 
 family: minds
 
-## 1. Question
-Color-emotion associations differ a little by country. Of 31 countries, whose associations do Jev's color picks resemble most?
+## Why ask this
+Most color-feeling links are shared worldwide, but the details differ from country to country. Which country's details a model reproduces is a small test of whose culture its defaults come from. Text on the internet is heavily English, so a model's associations might lean English-speaking even for something as basic as the color of relief.
 
-The universal core is shared, but details differ (white and grief, red and love). Which country's details Jev reproduces is a small test of whose culture a model's defaults come from.
+## The people and the data
 
-## 2. Sourcing
-The 20 emotion-to-color questions of sources/color_emotion, each carrying a distribution per country of origin (31 countries, 70 to 700 people each).
 
-Sources: `color_emotion`
+## What Jev was asked
+No new questions: this reuses Jev's answers to the 20 questions "Which color do you associate most with the feeling ...?" from the colors-of-feelings experiment, and compares them with each country's answers.
 
-## 3. Collection
-Uses minds_colors_of_feelings' questions (no further calls).
+## How we measured it
+For each country and each feeling, how similar Jev's colors are to that country's (a similarity score from 0 to 1, where 1 means identical shares), averaged over the 20 feelings. We also estimate how much each country's score could move by chance (a 90% interval) to see which differences are real.
 
-## 4. Scoring
-Per country, the mean over the 20 emotions of 1 - Jensen-Shannon distance between Jev's distribution and the country's, with a 90% bootstrap interval over emotions; Jev's 'most people' answer scored the same way as a check.
+## Caveats
+- **Small differences.** Countries mostly agree on colors and feelings, so the gaps between them are small. The top of the list is suggestive, not a clear ranking: more than half the countries can't be told apart from the leader.
+- **Uneven country samples.** Some countries have several hundred participants, others under a hundred, and none is a national sample.
+- **One pick versus many.** The similarity compares a sharp answer with a spread-out one, which keeps every score low.
+- **English prompts.**
 
-## 5. Visualization
-A ranked list of countries by similarity (top ten and bottom five).
-
-## 6. Evaluation
-Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.078, top verdict `portrait`.
-
-## Compared with
-People in 31 countries (International Colour-Emotion Association Survey)
-
-## Limits
-Countries differ far less than emotions do, so the spread between countries is small; the interval says which differences hold.
-
-Results: `data/analysis/experiments/minds_colors_by_country.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

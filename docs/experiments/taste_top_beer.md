@@ -1,33 +1,29 @@
 # taste_top_beer
 
-family: taste · new questions: 276
+family: taste
 
-## 1. Question
-If Jev ranked every beer it was asked about, what would its top ten be?
+## Why ask this
+Beer is a taste with strong tribes: hop lovers, stout people, Belgian loyalists, lager purists. Which tribe a model joins, and whether it reaches for the prestige bottles or the everyday ones, is a fun and telling read.
 
-Wrapped-style favorites, but from every item it rated and then a real final among the best, rather than a handful of head-to-heads; the interesting part is what rises to the top and what sinks.
+## The people and the data
+No people here: Jev against its own opinions. How Jev compares with BeerAdvocate's reviewers is its own experiment.
 
-## 2. Sourcing
-Existing one-at-a-time rating questions ("How much would you enjoy ...", five situation-described levels) under Self > Lifestyle > Ratings > beer_ratings; items from BeerAdvocate (reviewed beers). Every item is rated, so the whole list can be ranked; the ratings crowd the top with near-ties, so the top 24 play a round-robin final (new questions, sources/taste_finals).
+## What Jev was asked
+Every beer one at a time, with five answers describing what you'd do:
 
-Sources: `taste_ratings`, `taste_finals`
+> How much would you enjoy drinking Maudite by Unibroue (Belgian Strong Dark Ale)?
+> *You'd pour it out after a sip · You'd finish the glass but not order it again · You'd drink it again if it was
+> what's on offer · You'd order it again by name · You'd seek it out and keep it stocked at home*
 
-## 3. Collection
-The ratings exist. New: the finals, 276 head-to-heads among the top 24 ("Which film would you rather watch?"), each asked in both option orders.
+Each was also asked with the answers reversed, and the two averaged. The 24 top-rated beers then played a round-robin final: 276 games of "Which beer would you rather drink?", each asked with the names in both orders.
 
-## 4. Scoring
-Ratings: each item's expected level (0-4), averaged with the same question asked with the levels reversed. Finals: Jev's probability for each side, averaged over both orders, summed into soft wins; the order is the Bradley-Terry strength fitted to all 276 games. Intransitive triads (A beats B, B beats C, C beats A) are counted as a consistency check.
+## How we measured it
+A beer's rating is where Jev's answer lands on the five levels (0 to 4). In the final, each game gives each side Jev's probability of picking it, so a lopsided game counts as nearly a whole win and a close one as about half; the order comes from a standard head-to-head ranking model (Bradley-Terry).
 
-## 5. Visualization
-A ranked list, Wrapped style: the finals' top ten with their win counts, and the ratings' bottom five for contrast.
+## Caveats
+- **A model can't taste.** Jev has never had a drink. Its picks come from what's written about these beers: reviews, style guides, reputations. A Belgian classic with a famous name has a lot of admiring text behind it.
+- **The catalog.** The beers are those with at least 100 reviews on BeerAdvocate between 1998 and 2012, a craft-beer enthusiast site, so the list is heavy on American craft and Belgian styles and stops in 2012.
+- **The least consistent final.**
+- **The finalists were picked by Jev's own ratings.**
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **atlas**, head-to-head strength -0.003, top verdict `portrait`.
-
-## Compared with
-nothing outside the model: a ranking of Jev's own ratings and choices
-
-## Limits
-A winner is only the best of what was on the list (BeerAdvocate (reviewed beers)). Finalists were chosen by Jev's own ratings, so an item it underrated never reached the final.
-
-Results: `data/analysis/experiments/taste_top_beer.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

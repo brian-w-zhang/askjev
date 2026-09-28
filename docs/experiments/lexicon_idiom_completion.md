@@ -1,33 +1,27 @@
 # lexicon_idiom_completion
 
-family: lexicon · new questions: 200
+family: lexicon
 
-## 1. Question
-Given an idiom without its last word ('Be a bad apple in the ___'), does Jev give the idiom's own word, and does it follow people when they mostly give a different one?
+## Why ask this
+Idioms are phrases whose meaning isn't the sum of their words, and they wear down with use. Many people finish "a bad apple in the ___" with "bunch" rather than "barrel", or "let off ___" with "easy" rather than "lightly". Which ending people produce shows which idioms are still alive in their standard form and which have drifted.
 
-People's completions show which idioms are alive: many people finish 'a bad apple in the...' with 'bunch'. A model trained on text may know the dictionary form better than people, or follow the drift.
+A model trained on vast amounts of edited text might know the dictionary form better than people remember it, or it might follow the drift in how people actually talk. Which one tells you whether it writes like a style guide or like a person.
 
-## 2. Sourcing
-New questions (sources/idiom_norms): 'Finish this idiom with one word: "Be a bad apple in the ___"' for 200 idioms from Bulkes & Tanner 2017 (870 American English idioms, about 100 US adults each), a Choice over the idiom's word, up to five other completions people gave at least twice, and 'another word'; people's completions are the human distribution.
+## The people and the data
+The idioms and completions come from **Bulkes and Tanner (2017)**, who normed 870 American English idioms with about 100 US adults per task. In one task, people saw each idiom with its last word missing and wrote the first word that came to mind.
 
-Sources: `idiom_norms`
+## What Jev was asked
+> Finish this idiom with one word: "Be let off ___"
+> *easy · here · work · early · easily · lightly · another word*
 
-## 3. Collection
-Up to 200 new questions, each asked as written, for 'most people', and with the options shuffled (averaged).
+The options were the idiom's own word and the other words at least two people wrote, plus "another word".
 
-## 4. Scoring
-Share where Jev's top pick is the idiom's word, vs the share of people who gave it; on idioms where people's most common answer was a different word, which of the two Jev picks; agreement with people by how familiar the idiom is (terciles of the study's familiarity ratings).
+## How we measured it
+How often Jev's top pick is the idiom's own last word, against the share of people who wrote it, overall and for the least, middle and most familiar thirds of idioms (familiarity from the same study). Then, on the idioms where most people wrote a different word, whether Jev goes with the idiom or with the crowd.
 
-## 5. Visualization
-Bars by familiarity tercile: share of people giving the idiom's word vs Jev picking it.
+## Caveats
+- **The idioms come in a stiff form.** The study lists each idiom in a standard form, often with "be" or "get" in front: "Be a happy ___", "Be let off ___". Out of context, "Be a happy ___" invites "day" as naturally as "medium", so some of the crowd's "drift" is the fragment, not forgetting.
+- **Picking is easier than writing.** Seeing the right word on a short list makes it much easier to find.
+- **American idioms, American readers.** The 870 idioms are American English, rated by about 100 US adults each. British or other idioms, and readers elsewhere, might go differently.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.991, top verdict `portrait`.
-
-## Compared with
-US adults (Bulkes & Tanner 2017)
-
-## Limits
-Jev picks from the completions people gave rather than writing its own word, which makes the idiom's word easier to find.
-
-Results: `data/analysis/experiments/lexicon_idiom_completion.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

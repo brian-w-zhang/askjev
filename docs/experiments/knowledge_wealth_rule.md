@@ -2,32 +2,27 @@
 
 family: knowledge
 
-## 1. Question
-Asked which of two countries has more doctors, internet users, unemployment or smokers, does Jev know the numbers, or lean on which country is richer?
+## Why ask this
+Most facts about countries follow money. Richer countries have more doctors per person, longer lives, fewer people working the land. A model can get many country comparisons right just by knowing which country is richer, without knowing the actual numbers. The test is the exceptions: when the world goes against the pattern, does Jev still get it right, or does it fall back on the rule of thumb?
 
-A rule of thumb (rich countries have more of the good things) gets most such questions right and fails exactly where the world is surprising. Where accuracy splits on whether the truth fits the rule, the model is using the rule, not the fact.
+## The people and the data
+Each question pairs two countries on one indicator. For every pair we know which country is richer, so we can say whether the right answer is the one wealth predicts.
 
-## 2. Sourcing
-Existing World Bank pairs (24 indicators, 2019-2023 averages; CC BY 4.0), each with the two values; GDP per person taken from the same corpus's GDP questions. Pairs touching contested politics are flagged and left out. Enough: 8,000 pairs.
+## What Jev was asked
+Two-option questions like:
 
-Sources: `worldbank_pairs`
+> Which country has a larger share of its population aged sixty-five or older: New Zealand or Jamaica?
+> *Jamaica · New Zealand*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+Each pair was also asked with the two countries in the other order.
 
-## 4. Scoring
-For each indicator, whether the richer country usually has the higher value (the rule's direction, from the data). Each pair is 'fits the rule' when the right answer is the side the rule predicts, else 'against the rule'. Accuracy in each group, per indicator and overall, with 90% bootstrap intervals.
+## How we measured it
 
-## 5. Visualization
-A dumbbell per indicator: accuracy when the answer fits the wealth rule vs when it goes against it, sorted by the gap.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.032, top verdict `portrait`.
+## Caveats
+- **Close calls sit against the pattern.** Pairs that break the wealth pattern tend to be closer in value, and close calls are harder anyway.
+- **Who counts as rich.** Wealth here is GDP per person, known for 150 countries; pairs involving other countries are left out.
+- **Averages over years.** The values are World Bank averages over recent years (2019 to 2023). A country that changed fast can make an honest answer look wrong.
+- **Politics left out.** Comparisons touching contested political topics were flagged and excluded.
 
-## Compared with
-World Bank World Development Indicators
-
-## Limits
-GDP per person is known for 150 countries; pairs without it are skipped. Some indicators barely follow wealth (forest cover, rainfall); they're shown as the control.
-
-Results: `data/analysis/experiments/knowledge_wealth_rule.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

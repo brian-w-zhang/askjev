@@ -2,32 +2,31 @@
 
 family: personality
 
-## 1. Question
-On the DASS mood scales, how anxious, depressed and stressed do Jev's answers look next to the people who took them?
+## Why ask this
+Every conversation with a chatbot has a hidden character: the one it plays when you ask how it's doing. Mood questionnaires are a way to ask that systematically. The DASS (Depression, Anxiety and Stress Scales) is one of the most used, with statements like "I felt sad and depressed" and "I found it hard to wind down".
 
-A model has no bad days, but it can still describe itself; the gap to real respondents, and to its own guess about most people, shows how it presents its inner life.
+Two things are worth knowing: how Jev describes its own state next to real people, and how it imagines everyone else's.
 
-## 2. Sourcing
-Existing Open Psychometrics items (source `openpsych`), asked as written with their own response scale, each carrying the site's real answer distribution. Enough: every item of each scale is in the corpus, answered by Jev as itself and for 'most people'.
+## The people and the data
+They rated how much each statement applied to them over the past week, on four steps from "did not apply to me at all" to "applied to me very much".
 
-Sources: `openpsych`
+## What Jev was asked
+Every statement, word for word, with the test's own four answers:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> How much did this statement apply to you over the past week: "I felt I was pretty worthless."
+> *This did not apply to me at all in the past week · This applied to me to some degree, or some of the time, in
+> the past week · This applied to me to a considerable degree, or a good part of the time, in the past week · This
+> applied to me very much, or most of the time, in the past week*
 
-## 4. Scoring
-Open Psychometrics publishes each item's answer distribution from everyone who took the test on its site. Each item Jev answered is compared with that average on a 0-1 scale (reverse-keyed items flipped, so higher always means more of the trait); a scale's gap is the mean over its items, with a 90% bootstrap interval over items. The ring on the chart is Jev's answer for 'most people'.
+Each was also asked as "what would most people say", and with the answers in reverse order.
 
-## 5. Visualization
-Dot plot per scale: real test-takers (diamond), Jev (square), Jev for 'most people' (ring), with intervals; the gap printed at the right.
+## How we measured it
+For each statement we put Jev's expected answer and the test-takers' average on the same 0 to 1 scale, with 0 meaning "did not apply at all".
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.02, top verdict `portrait`.
+## Caveats
+- **Who the people are.** People who seek out a depression and anxiety test online are more likely than most to be struggling, so their average is not the average person's.
+- **A past week Jev didn't have.** Every statement asks about "the past week". Jev has no past week, so its answers are how it describes itself in general, which is closer to "how I'd present myself" than to a report of recent moods.
+- **What an assistant is trained to say.** Models are trained not to claim distress. Low scores here partly measure that training, not an absence of anything.
+- **Not a diagnosis.** These are the test's items, scored the test's way; nothing here diagnoses anyone, person or model.
 
-## Compared with
-the average answer of everyone who took each test on Open Psychometrics
-
-## Limits
-Test-takers chose to take the test online, so the average test-taker isn't the average person. Jev answers with probabilities over levels; people pick one level. These are items, not diagnoses.
-
-Results: `data/analysis/experiments/person_mood.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

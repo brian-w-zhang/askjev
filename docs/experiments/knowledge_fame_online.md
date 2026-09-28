@@ -2,32 +2,26 @@
 
 family: knowledge
 
-## 1. Question
-Asked which of two people, athletes or internet phenomena is better known, how often does Jev pick the one the world actually looks up more, and is it as sure as it should be?
+## Why ask this
+Fame is a fact about people's attention, not about the thing itself. A model trained on text has seen the famous far more often than the obscure, so it should know fame well. Where it doesn't, its picture of what people care about is thin or out of date. Comparing historical figures with internet phenomena shows where that picture holds.
 
-Fame is a fact about people's attention, not about the thing itself. A model trained on text has seen the famous more often, so it should know fame well; where it doesn't, its picture of what people care about is out of date or thin.
+## The people and the data
+Fame comes from two public sources. Pantheon (CC BY-SA 4.0) scores historical figures and athletes by how many language editions of Wikipedia cover them and how often they're read. For internet phenomena, we use English Wikipedia page views from 2023 to 2025 for memes listed in Wikidata (CC0).
 
-## 2. Sourcing
-Existing questions: Pantheon historical figures and athletes (fame by the Historical Popularity Index: Wikipedia languages and page views; CC BY-SA 4.0) and Wikidata internet phenomena (fame by English Wikipedia page views 2023-2025; CC0). Politicians flagged political are left out. Enough: 7,000 pairs.
+## What Jev was asked
+Two-option questions:
 
-Sources: `pantheon_history`, `pantheon_sports`, `wikidata_memes`
+> Which internet meme is better known: "Benadryl challenge" or "Videobombing"?
+> *Videobombing · Benadryl challenge: Internet challenge*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+Each was also asked with the two options in the other order.
 
-## 4. Scoring
-Accuracy and mean confidence per domain with 90% bootstrap intervals; for memes, accuracy by how many times more views the better-known one had.
+## How we measured it
 
-## 5. Visualization
-Paired bars per domain: Jev's confidence vs its accuracy, so overconfidence shows as a gap.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.667, top verdict `portrait`.
+## Caveats
+- **Page views are a stand-in for fame.** Fame here is English Wikipedia page views (for memes) and the Pantheon popularity index (for historical figures). Both favor recent, English-language interest; a meme famous in Japan can look obscure.
+- **Politicians left out.** Pairs flagged as political were excluded, which removes many of the most famous historical figures.
+- **A moving target.** Meme fame is measured over 2023 to 2025. What Jev learned may reflect an earlier internet, when a different meme was on top.
 
-## Compared with
-Wikipedia attention (Pantheon HPI, page views)
-
-## Limits
-Page views are a proxy for fame and favor recent and English-language interest.
-
-Results: `data/analysis/experiments/knowledge_fame_online.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

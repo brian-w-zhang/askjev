@@ -2,32 +2,27 @@
 
 family: personality
 
-## 1. Question
-Which humor styles does Jev claim (affiliative, self-enhancing, aggressive, self-defeating), next to ~1,000 test-takers?
+## Why ask this
+The Humor Styles Questionnaire splits how people use jokes into four styles: affiliative (joking to connect with people), self-enhancing (keeping a humorous outlook to cope), aggressive (teasing, mockery) and self-defeating (making yourself the butt of the joke). It pairs with the humor experiments, where Jev struggles to tell which joke people found funnier: here, the question is how it describes its own sense of humor.
 
-Pairs with the humor experiments: a model that can't tell which joke is funnier, describing how it jokes.
+## The people and the data
 
-## 2. Sourcing
-Existing Open Psychometrics items (source `openpsych`), asked as written with their own response scale, each carrying the site's real answer distribution. Enough: every item of each scale is in the corpus, answered by Jev as itself and for 'most people'.
 
-Sources: `openpsych`
+## What Jev was asked
+Every statement, word for word, with the test's own answers:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> How often is this statement true of you: "I usually don't like to tell jokes or amuse people."
+> *This is never or very rarely true of me · This is rarely true of me · This is sometimes true of me · This is
+> often true of me · This is very often or always true of me*
 
-## 4. Scoring
-Open Psychometrics publishes each item's answer distribution from everyone who took the test on its site. Each item Jev answered is compared with that average on a 0-1 scale (reverse-keyed items flipped, so higher always means more of the trait); a scale's gap is the mean over its items, with a 90% bootstrap interval over items. The ring on the chart is Jev's answer for 'most people'.
+Each was also asked as "what would most people say", and with the answers in reverse order.
 
-## 5. Visualization
-Dot plot per scale: real test-takers (diamond), Jev (square), Jev for 'most people' (ring), with intervals; the gap printed at the right.
+## How we measured it
+Each statement goes on a 0 to 1 scale, flipped where the test counts it in reverse, so higher always means more of that style. A style is the average of its eight statements, with a 90% interval from resampling them.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.146, top verdict `portrait`.
+## Caveats
+- **A small crowd.**
+- **Questions about a social life.** "I laugh and joke a lot with my closest friends" assumes friends. Jev's low answers on the friendly style may mean "I don't have that life" more than "I'm not funny".
+- **Self-mocking is hard to own.** Models are trained to be modest but not self-deprecating in a way that sounds distressed; that pulls the self-defeating style down for reasons unrelated to humor.
 
-## Compared with
-the average answer of everyone who took each test on Open Psychometrics
-
-## Limits
-Test-takers chose to take the test online, so the average test-taker isn't the average person. Jev answers with probabilities over levels; people pick one level. These are items, not diagnoses.
-
-Results: `data/analysis/experiments/person_humor_style.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

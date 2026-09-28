@@ -2,32 +2,26 @@
 
 family: knowledge
 
-## 1. Question
-Comparing two foods by a nutrient, or two animals by lifespan, gestation or clutch size, which quantities does Jev know and which does it guess?
+## Why ask this
+Numbers about food and animals are everyday knowledge: which has more protein, which animal lives longer. A model might know the headline numbers (calories, protein) and be vague about the rest (minerals, vitamins). Holding the comparison easy (one value at least twice the other) isolates which kinds of numbers it has actually absorbed.
 
-Everyday health and nature questions are exactly these comparisons ('does kale have more calcium than milk?'). Holding the size of the gap fixed separates what the model knows from what is just hard.
+## The people and the data
+No people; the answers come from two public databases. USDA FoodData Central (public domain) gives nutrients per 100 grams for thousands of foods; AnAge (CC BY 3.0) gives life-history traits for thousands of animal species: maximum lifespan, gestation, incubation, age at maturity, litter size.
 
-## 2. Sourcing
-Existing USDA FoodData Central pairs (13 nutrients per 100 g; CC0) and AnAge pairs (5 life-history traits; CC BY 3.0), each with both values. Only pairs where one value is at least twice the other are scored, so every quantity is judged on clear-cut cases. Enough: 9,000 such pairs.
+## What Jev was asked
+Two-option questions:
 
-Sources: `usda_nutrients`, `anage_pairs`
+> Gram for gram, which has more vitamin C: raw garlic or jarred salsa?
+> *raw garlic · jarred salsa*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+Each was also asked with the two options in the other order.
 
-## 4. Scoring
-Accuracy per quantity on pairs at least 2x apart, with 90% bootstrap intervals; for nutrients, accuracy when the richer food is from the food group that is usually richer vs when it isn't.
+## How we measured it
 
-## 5. Visualization
-Ranked dots: one row per quantity, accuracy with its interval, foods and animals colored apart.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.362, top verdict `portrait`.
+## Caveats
+- **Fortified and processed foods.** The USDA table includes cured, fortified and processed foods (cured ham carries added vitamin C). Jev has to know those too, which is fair, but some "misses" are surprising for a reason, not ignorance.
+- **Record values for animals.** AnAge lists maximum recorded values (the longest-lived individual, not the typical one), which can surprise even experts.
+- **Clear-cut cases only.** Only pairs at least twice apart are scored, so every quantity is judged on easy comparisons; the gaps between quantities would likely widen on close calls.
 
-## Compared with
-USDA FoodData Central and AnAge values
-
-## Limits
-USDA values include fortified and cured foods (cured ham carries added vitamin C), which is part of what the model must know. AnAge values are maximum recorded, not typical.
-
-Results: `data/analysis/experiments/knowledge_nature_numbers.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

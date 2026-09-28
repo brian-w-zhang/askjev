@@ -2,32 +2,33 @@
 
 family: judge
 
-## 1. Question
-Reading a review, does Jev hear the complaints louder than the writer meant them?
+## Why ask this
+Most real reviews are mixed: it's pretty, but thin; easy to use, but it broke after two years. How a reader weighs the gripes against the praise decides everything downstream: the summary a model writes, the ticket it routes to support, the rating it infers when there isn't one.
 
-Most real reviews mix praise and gripes. Whether a reader weights the gripes more is a negativity bias, and it changes summaries, routing, and any rating a model infers.
+People have a known negativity bias; bad news weighs more than good. The question is whether Jev reads a mixed review as the writer meant it, or hears the complaints louder.
 
-## 2. Sourcing
-Existing Amazon reviews with their star rating (Jev reads the text and picks one of five described levels of satisfaction) and Steam reviews with the player's thumbs up or down. Enough: about 4,700.
+## The people and the data
+Two kinds of reviews, each with the writer's own verdict:
+- **Amazon:** reviews from Amazon's public multilingual review corpus (English part), balanced to 1,000 reviews per star rating, with the writer's 1 to 5 stars.
+- **Steam:** English reviews of video games from Steam's public store, each with the player's own thumbs up (would recommend) or thumbs down.
 
-Sources: `amazon_reviews`, `steam_reviews`
+## What Jev was asked
+For Amazon, one question with five described levels:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> How satisfied is the reviewer in [review]?
+> *The reviewer considers the purchase a failure and warns others away from it · The reviewer is let down: the
+> product fell short in ways that matter to them · The reviewer is torn: the product has real upsides and real
+> downsides for them · The reviewer is pleased with the product, with a minor reservation · The reviewer is
+> delighted and recommends it without reservation*
 
-## 4. Scoring
-Jev's mean level for each star rating; the share of 3-star reviews it reads as a let-down or a failure vs as pleased; on Steam, the share of thumbs-up reviews read as thumbs-down and the reverse.
+For Steam, a yes/no question: does the player who wrote this review recommend the game?
 
-## 5. Visualization
-Dots per star rating: the star level (0-4) and Jev's mean reading of the same reviews.
+## How we measured it
+We line up the five levels with the five star ratings (1 star = "a failure", 3 stars = "torn", 5 stars = "delighted") and average Jev's reading for each star rating. The telling group is 3-star reviews: how many does Jev push down to "let down" or "failure", and how many up to "pleased"? On Steam, we count the mistakes in each direction.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.859, top verdict `portrait`.
+## Caveats
+- **Stars are a summary, not the answer.** A star rating is the writer's own verdict, but people use stars differently: some give 3 to anything they wouldn't buy again, some to anything that works. Jev's reading of the text can be reasonable and still differ.
+- **Our five levels.** We wrote the five satisfaction levels ("let down", "torn", "pleased with a minor reservation"...) and mapped 3 stars to "torn". If writers use 3 stars for "disappointed", the level we called the answer is off, not Jev.
+- **Two different sites.** Amazon reviews come from a research release with 1,000 reviews per star rating; Steam reviews are English reviews of about a thousand games, at most 8 per game. Neither is a random sample of what people write.
 
-## Compared with
-The reviewers' own star ratings and thumbs
-
-## Limits
-A star rating is the writer's summary, not the only right reading of the text.
-
-Results: `data/analysis/experiments/judge_mixed_reviews.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

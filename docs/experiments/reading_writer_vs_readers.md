@@ -1,33 +1,30 @@
 # reading_writer_vs_readers
 
-family: reading · new questions: 598
+family: reading
 
-## 1. Question
-When someone describes an event from their life, does Jev name the emotion they actually felt, or the one other readers guess, and how often do those differ?
+## Why ask this
+Most emotion datasets label a text by what readers see in it. But what a reader sees and what the writer felt can differ: we project feelings onto other people's stories all the time. A dataset that also records the writer's own answer can tell reading the page apart from reading the person, and a model trained on text might be a very good reader of pages and still miss the person.
 
-Most emotion datasets label a text by what readers see in it. crowd-enVent also has the writer's own answer, so it can tell reading the page apart from reading the person; a model trained on text might be a very good reader and still miss the writer.
+## The people and the data
+The crowd-enVent corpus (Troiano, Oberländer and Klinger, 2023) asked people on the survey platform Prolific to recall an event from their own life in which they felt a given emotion, describe it, and rate it. That gave 6,600 descriptions from 2,379 writers. A later group of readers then saw 1,200 of the texts, with the emotion words hidden, and guessed what the writer felt, five readers per text.
 
-## 2. Sourcing
-New questions (sources/crowd_envent): 'Someone wrote <story> about an event in their own life. Which emotion did the writer feel?' with the study's 13 options (anger ... trust, and no particular emotion), for 598 of the 1,200 texts that 5 readers also judged, about 46 per writer emotion; the emotion words are hidden as they were for the readers.
+## What Jev was asked
+Each text on its own, with the study's 13 answers:
 
-Sources: `crowd_envent`
+> Someone wrote *(the story below)* about an event in their own life. Which emotion did the writer feel?
+> *"i got the strawberries out of the fridge and they had gone off, exploded and gone furry."*
+> *Answers: joy · fear · anger · guilt · pride · shame · trust · relief · boredom · disgust · sadness · surprise · no
+> particular emotion*
 
-## 3. Collection
-598 new questions, each asked as written, for 'most people', and with the options in three shuffled orders (averaged).
+Each question was also asked with the answers in three shuffled orders, and the answers averaged.
 
-## 4. Scoring
-Share where Jev's top emotion is the writer's, and where it is the readers' majority; the same for the readers' majority and for an average single reader against the writer; on texts where the readers' majority and the writer differ, whom Jev sides with; hit rate per writer emotion, 90% bootstrap intervals.
+## How we measured it
+How often Jev's top answer is the writer's emotion, compared with how often the readers' majority names it and how often a single reader does. Where the readers' majority and the writer disagree, whose side Jev takes. And the hit rate for each emotion the writers felt.
 
-## 5. Visualization
-Paired bars per writer emotion: how often the readers' majority names it, and how often Jev does.
+## Caveats
+- **"The writer's emotion" was assigned.** Each writer was asked to recall an event in which they felt a given emotion, so the "right answer" is the emotion they were prompted with. A writer asked for a "no particular emotion" story may still have written something that reads as mildly sad or annoyed.
+- **Who wrote and who read.** Writers and readers were paid Prolific workers whose first language is English, from the US, UK, Canada, Australia, New Zealand and Ireland. Readers saw each text with the emotion words hidden, as Jev did.
+- **Five readers is a small crowd.** A "majority" can be three of five, so the readers' answer per text is noisy. Comparing Jev with one average reader as well as with the majority helps, but neither is a large crowd.
+- **Hidden texts.** The filter flags sensitive subjects, so the texts that remain may lean away from the most upsetting events.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.804, top verdict `portrait`.
-
-## Compared with
-the writers' own emotion, and 5 readers per text (crowd-enVent, Troiano et al. 2023)
-
-## Limits
-Writers were Prolific workers in the UK and US writing about their own lives in 2021; readers saw the text with the emotion words hidden, as Jev does. Five readers per text, so a reader majority can be 3 of 5.
-
-Results: `data/analysis/experiments/reading_writer_vs_readers.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

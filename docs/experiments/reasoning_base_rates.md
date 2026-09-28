@@ -1,33 +1,33 @@
 # reasoning_base_rates
 
-family: reasoning · new questions: 6
+family: reasoning
 
-## 1. Question
-Told how common something is and how reliable a witness or test is, does Jev combine the two the way Bayes' rule does, or answer with the witness's reliability, as most people do?
+## Why ask this
+A test for a rare disease is 90% accurate, and your result is positive. What's the chance you have it? Most people say about 90%. If only 1 in 20 people who take the test have the disease, the real answer is closer to one in three, because the false alarms from the healthy majority outnumber the true cases. Forgetting how rare the thing was to begin with is called **base-rate neglect**. It's behind false-positive panics, bad screening decisions and jumpy fraud alerts.
 
-Base-rate neglect is the classic error behind false-positive panics: people told a 90%-accurate test is positive think the chance is 90%, whatever the base rate. The taxi cab problem's median answer was 80% where the right one is 41%.
+How likely is it that it really was Blue? The right answer is 41%. People's most common answer was 80%, the witness's reliability alone.
 
-## 2. Sourcing
-New questions (sources/reasoning_traps, family base_rate): the taxi cab problem as published (Tversky & Kahneman 1982) and five isomorphs (buses, factory parts, a clinic test, a screening, and a control where the base rate is 50% so reliability is the answer), answered in 21 bins (0% to 100%).
+## The people and the data
+The human comparison is the original study (Tversky and Kahneman, 1982), where people's median answer to the taxi cab problem was 80%. The other problems were written for this project with new stories and numbers: a bus that hit a mailbox, parts from two factory machines, a clinic test, a disease screening, and a control where the base rate is 50%, so the witness's reliability really is the answer.
 
-Sources: `reasoning_traps`
+## What Jev was asked
+Each problem was one question with 21 answers, from 0% to 100% in steps of 5:
 
-## 3. Collection
-6 new questions, each in three shuffled orders (averaged), within the traps batch.
+> A rare condition affects 5% of the people who come to a clinic. A test for it gives the right result 90% of the
+> time, whether or not a person has the condition. A patient tests positive. What is the probability that the
+> patient has the condition?
+> *0% · 5% · 10% · ... · 95% · 100%*
 
-## 4. Scoring
-Per item, Jev's median against the Bayesian answer and the lure (the reliability alone); people's published median for the taxi cab.
+Each was asked with the answers in three different orders, and we average over them.
 
-## 5. Visualization
-Dots per item: Jev's median (magenta), the Bayesian answer (tick) and the lure (grey), on 0-100%.
+## How we measured it
+For each problem we take the middle of Jev's answer (the median of its probabilities over the 21 choices) and place it next to two numbers: the correct answer from Bayes' rule, and the "lure", the reliability of the witness or test alone, which is what people tend to say.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 4.524, top verdict `portrait`.
+## Caveats
+- **The taxi cab is famous.** The taxi cab problem and its answer (about 41%) appear in countless textbooks and blog posts. The four new versions, written for this project, are the real test.
+- **Six problems.** Five problems plus one control is a small set. It shows a pattern, not a rate, and a single miss (the factory problem) is a sixth of the evidence.
+- **Only one human comparison.** People's median of 80% comes from the original 1982 study. The new versions have no human answers, so "unlike people" rests on the classic alone and on the well-known general finding.
+- **Answers in steps of 5.** Being within 5 points of the right answer counts as right.
+- **Arithmetic is a known weak spot.** Working these out means combining two percentages. TypeSafe documents numbers as a weak spot for Jev, which may be what went wrong on the factory problem.
 
-## Compared with
-Bayes' rule; people's median answer on the taxi cab (80%, Tversky & Kahneman 1982)
-
-## Limits
-Six items; bins are 5 points wide, so answers within 5 points of Bayes count as right.
-
-Results: `data/analysis/experiments/reasoning_base_rates.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

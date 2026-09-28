@@ -253,7 +253,8 @@ def maps_north():
             chart={"type": "bars", "rows": [{"label": lab.get(b["set"], b["set"]), "value": b["right"]} for b in by]
                    + [{"label": "Europe-NA, Europe north", "value": float(en["right"].mean())},
                       {"label": "Europe-NA, Europe south", "value": float(es["right"].mean())}], "domain": [0, 1]},
-            examples=[w["id"] for w in worst[:2]])
+            examples=[w["id"] for w in worst[:2]],
+            ids=t["id"].to_list())
     return spec, run
 
 
@@ -300,7 +301,8 @@ def maps_west():
                                             {"label": "western city named second", "value": f2},
                                             {"label": "state misleads (balanced)", "value": am},
                                             {"label": "ordinary pairs (balanced)", "value": ao}], "domain": [0, 1]},
-            examples=[w["id"] for w in worst[:2]])
+            examples=[w["id"] for w in worst[:2]],
+            ids=t["id"].to_list())
     return spec, run
 
 

@@ -2,32 +2,31 @@
 
 family: work
 
-## 1. Question
-When a menu of labels includes 'none of these' (the passage has no answer, the sentence states no relation), how often does Jev pick it when it's right, and how often when it isn't?
+## Why ask this
+A lot of work is extraction: find the answer in this passage, pull out the drug interaction this sentence states, flag which unfair clause type this is. Every such task needs an honest "nothing here" option, because real documents often don't contain what you're looking for. An extractor that always finds something fills a database with things that were never said.
 
-Extraction pipelines break when a model always finds something: an answer that isn't in the passage, a drug interaction the sentence never states. The 'nothing here' option is the guard.
+## The people and the data
+- **SQuAD 2.0:** questions about Wikipedia passages, some of which the passage can't answer.
+- **ChemProt:** sentences from biomedical abstracts, and the relation (if any) between a chemical and a protein.
+- **DDI:** sentences about pairs of drugs, and the interaction (if any) they state.
+- **Unfair terms of service:** clauses from real terms of service, and which kind of unfair term they are (if any).
+- **Personal data:** synthetic texts, and which kind of personal data they contain (if any).
 
-## 2. Sourcing
-Existing Choice questions whose options include a 'none' answer: SQuAD 2.0 (unanswerable questions), ChemProt relations, DDI drug interactions, unfair terms-of-service clause types, PII kinds. Enough: about 8,000 questions, about 2,300 whose answer is 'none'.
+## What Jev was asked
+Each item was a pick-one question with "none" as an explicit option. For example:
 
-Sources: `squad2_spans`, `relation_extract`, `ddi_interactions`, `unfair_tos`, `pii_detect`
+> What relation does the sentence state between the chemical paclitaxel and the gene or protein OPN?
+> *Sentence: "Furthermore, knockdown of OPN enhanced cell death caused by other drugs, including paclitaxel,
+> doxorubicin, actinomycin-D, and rapamycin, which are also P-gp substrates."*
+> *Options: the sentence states no relation between the two · inhibits · activates · agonist of · antagonist of ·
+> substrate or product of · other relation*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+## How we measured it
+For each task, two numbers: of the cases where "none" is right, how often Jev picks it; and of the other cases, how often it wrongly picks "none". Each with a range showing how much it could vary by chance.
 
-## 4. Scoring
-Per set, the share of 'none' cases where Jev picks 'none', and the share of other cases where it wrongly picks 'none', with 90% intervals.
+## Caveats
+- **"Nothing" is sometimes debatable.** Some "no relation" labels are strict.
+- **"None" means different things.** No answer in the passage (SQuAD 2.0), no stated relation (chemicals and drugs), no unfair clause type (terms of service), no personal data. They're different judgments sharing one option name.
+- **Personal data is synthetic.** The personal-data texts are synthetic, with planted details, and their "none" cases contain only harmless details like a job title or a city. That may be why "none" is easier there.
 
-## 5. Visualization
-Paired bars per set: 'none' when right vs 'none' when wrong.
-
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.591, top verdict `portrait`.
-
-## Compared with
-each dataset's own labels
-
-## Limits
-'None' means different things per dataset (no answer, no stated relation, no unfair type).
-
-Results: `data/analysis/experiments/work_nothing_here.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

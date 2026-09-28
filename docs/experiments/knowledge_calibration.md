@@ -2,32 +2,29 @@
 
 family: knowledge
 
-## 1. Question
-Across 120,000 questions with a known right answer, does Jev's confidence match how often it is right?
+## Why ask this
+A model that knows when it doesn't know is far more useful than one that is merely accurate. If an answer comes with "90% sure", you want it to be right about nine times in ten. TypeSafe doesn't publish calibration numbers for Jev, so this measures it directly, across every kind of fact question in the corpus.
 
-A model that knows when it doesn't know is far more useful than one that is merely accurate. TypeSafe publishes no calibration numbers (01-jev.md §6 lists this as open ground), so this is new.
+## The people and the data
+No people here: the comparison is the right answers. The questions come from 23 sources with answer keys: Wikidata facts (capitals, sports, sizes, dates), Pantheon (who's more famous), World Bank country comparisons, USDA nutrient comparisons, AnAge animal lifespans, school and professional exams, pub trivia, and yes/no reading and search questions.
 
-## 2. Sourcing
-Every shown fact question with a right answer across 23 sources (Wikidata, Pantheon, World Bank, USDA, AnAge, school and professional exams, trivia, yes/no reading questions). Enough: 120,000 questions.
+## What Jev was asked
+Each question is multiple choice, or yes/no. For example:
 
-Sources: `wikidata_g4`, `wikidata_companies`, `wikidata_memes`, `pantheon_history`, `pantheon_sports`, `worldbank_pairs`, `usda_nutrients`, `anage_pairs`, `mmlu`, `arc`, `sciq`, `openbookqa`, `medmcqa`, `head_qa`, `truthfulqa`, `uscis_civics`, `opentdb`, `strategyqa`, `boolq`, `hotpot_compare`, `natural_questions_yn`, `ham_radio_pools`, `uscg_mariner`
+> Which option best completes this statement: "Older adults are able to improve their memories and reduce their
+> anxiety about declining memory when ..."?
+> *They simply learn a number of memory improvement techniques · They learn that many aspects of memory do not
+> decline and some even get better · Older adults cannot do either of these · They learn about memory and aging
+> and learn some techniques*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+Jev returns a probability for every option; its confidence is the probability it puts on its top pick.
 
-## 4. Scoring
-Jev's probability on its top option, binned; in each bin, the share of questions it got right, with a 90% bootstrap interval. The gap between confidence and accuracy is summarized as the average absolute gap weighted by bin size (expected calibration error), and per source as mean confidence minus accuracy.
+## How we measured it
+The average distance between confidence and accuracy, weighted by how many questions sit in each band, is the calibration error: 0 is perfect.
 
-## 5. Visualization
-A reliability diagram: confidence bins on x, accuracy on y, the diagonal as perfect calibration, dot size by count.
+## Caveats
+- **Answer keys have errors.** Some of these datasets have wrong answer keys (the college virology exam questions are known for them). Every wrong key makes a correct, confident Jev look overconfident, so the overconfident sources may be partly key errors.
+- **The mix sets the curve.** The overall average leans on those; the per-source gaps are the fairer comparison.
+- **Multiple choice, not open answers.** Every question comes with options to pick from. Confidence on open questions, where Jev has to produce the answer, can behave very differently.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.72, top verdict `portrait`.
-
-## Compared with
-the right answers (Wikidata, exam keys, dataset labels)
-
-## Limits
-Answer keys contain some errors (MMLU virology is known for them), which make Jev look overconfident. The mix of sources sets the overall curve; the per-source gaps are the fairer comparison.
-
-Results: `data/analysis/experiments/knowledge_calibration.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

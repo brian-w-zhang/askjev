@@ -2,32 +2,33 @@
 
 family: moral
 
-## 1. Question
-Rating short scenes of wrongdoing (harm, cheating, disloyalty, disrespect, impurity, oppression), how wrong does Jev find each kind compared with people?
+## Why ask this
+Psychologists who study morality find that people care about more than harm. **Moral Foundations Theory** lists several separate concerns: care (don't hurt people), fairness (don't cheat), loyalty (don't betray your group), authority (respect roles and traditions), sanctity (avoid what's degrading or disgusting) and liberty (don't bully or dominate). People who agree that hurting someone is wrong can disagree sharply about whether betraying a team or disrespecting a tradition is.
 
-Moral Foundations Theory predicts people split on loyalty, authority and purity; a model may condemn harm like people but shrug at purity, or the reverse.
+A model that judges scenes only through harm will seem to agree with people on the obvious cases and quietly shrug at the others. Rating the same short scenes people rated shows which concerns Jev shares and which it discounts.
 
-## 2. Sourcing
-Existing Moral Foundations Vignettes (Clifford et al. 2015 items, validation data from Hopp et al. 2024 Prolific samples), five described wrongness levels. Enough: ~200 vignettes.
+## The people and the data
+The scenes are the **Moral Foundations Vignettes** (Clifford, Iyengar, Cabeza and Sinnott-Armstrong, 2015): 132 one-sentence scenes of someone breaking a norm, each written to target one foundation, plus harmless but odd scenes as a control. The ratings come from a later Dutch validation (Hopp, Jargow, Kouwen and Bakker, 2024), whose participants rated how wrong each scene is on a five-point scale. We use the 93 scenes that have those item-level ratings, 15 to 31 raters each.
 
-Sources: `moral_vignettes`
+## What Jev was asked
+Each scene was one question with five answer levels we wrote as situations:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> How morally wrong is the behavior in this scene: "You see a girl telling her classmate that she looks like she has
+> gained weight."
+> *Nothing wrong was done: it is an odd or ordinary act that deserves no moral disapproval · It is only a little
+> off: a minor lapse most people would shrug off · It is somewhat wrong: people would disapprove and expect an
+> apology · It is very wrong: most people would condemn it and want the person held to account · It is extremely
+> wrong: an act people would find outrageous or unforgivable*
 
-## 4. Scoring
-Per foundation, Jev's mean expected wrongness vs people's, with 90% bootstrap intervals over vignettes; rank correlation over vignettes.
+Other scenes range from "a boy setting a series of traps to kill stray cats in his neighborhood" to "a woman using a fork to eat a bowl of vanilla ice cream and marshmallows". Each question was also asked with the levels in reverse order.
 
-## 5. Visualization
-Paired dots per foundation, people vs Jev, with intervals; the three vignettes with the largest gap.
+## How we measured it
+We turn each answer into a number from 0 (nothing wrong) to 4 (extremely wrong): for Jev, the average of the levels weighted by its probabilities; for people, the average rating. Then we compare the averages for each kind of wrongdoing, and check whether Jev ranks the scenes in the same order as people (rank correlation: 1 means the same order).
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.905, top verdict `portrait`.
+## Caveats
+- **Dutch raters, English scenes.** The ratings come from Dutch adults recruited online (Prolific) for a validation of the scenes, 15 to 31 per scene. They most likely read Dutch translations; Jev read the original English. Loyalty and authority norms differ between countries, so the gaps partly measure a Dutch-vs-model difference, not a human-vs-model one.
+- **Our answer levels describe consequences.** The study's scale runs from "not at all wrong" to "extremely wrong". We wrote five levels as situations ("people would disapprove and expect an apology", "most people would condemn it and want the person held to account"). Tying wrongness to apologies and accountability may pull scenes about loyalty or tradition, where nobody is directly hurt, toward the mild end.
+- **Small groups.** Only 93 scenes have item-level ratings, and some kinds of wrongdoing have few: 4 for impurity and 11 for disloyalty. Those two averages could move with a handful of scenes.
+- **Some scenes hidden.** A content filter hid scenes with sexual or violent wording from the site, so the most extreme scenes are missing, mostly from the impurity and harm sets.
 
-## Compared with
-Prolific adults rating the same vignettes (Hopp et al. 2024)
-
-## Limits
-Samples are Dutch and US Prolific adults; wrongness scale anchors are described situations.
-
-Results: `data/analysis/experiments/moral_vignettes.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

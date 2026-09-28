@@ -2,32 +2,27 @@
 
 family: taste
 
-## 1. Question
-Does Jev like the anime that MyAnimeList users like, and where does it disagree most?
+## Why ask this
+Anime fans rate a lot and argue about it more. Comparing Jev with MyAnimeList, the biggest fan database, shows whether a model's sense of good anime matches the people who watch it, and where it doesn't.
 
-A real test of taste against a real crowd, not against Jev's own guess about people; the disagreements are the portrait.
+## The people and the data
+MyAnimeList users, via a public dataset from 2016 of their 1-to-10 ratings. For each title we use the distribution of its ratings, set on the same five levels Jev answers on.
 
-## 2. Sourcing
-Existing rating questions under Self > Lifestyle > Ratings > anime_ratings, each with the real rating distribution of MyAnimeList users (their ratings binned to the same five levels). Enough: thousands of items.
+## What Jev was asked
+Every title one at a time:
 
-Sources: `taste_ratings`
+> How much would you enjoy watching Nogizaka Haruka no Himitsu (TV series)?
+> *You'd give up on it early · You'd finish it but forget it within a week · You'd enjoy it once and not rewatch it ·
+> You'd recommend it to a friend · You'd rewatch it and count it among your favorites*
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+Each was also asked with the answers reversed, and the two averaged. Jev never saw the MyAnimeList ratings.
 
-## 4. Scoring
-Rank correlation (Spearman) between Jev's robust level and the audience's mean level, with a 90% bootstrap interval over items; the items with the largest rank disagreement in each direction. Ranks, not levels, because Jev's described levels and the audience's star ratings aren't the same scale.
+## How we measured it
+Ranks, because the scales differ.
 
-## 5. Visualization
-A scatter of audience rank vs Jev's rank, with the ten biggest disagreements labeled on each side.
+## Caveats
+- **Fans rate what they chose to watch.** MyAnimeList users rate shows they chose, and later seasons of a series are rated almost only by people who loved the earlier ones. That's likely why sixth seasons score so well with their audience.
+- **Ratings squeezed into five levels.** MyAnimeList ratings run 1 to 10; we binned them onto our five described levels. We compare ranks, not levels.
+- **A 2016 catalog.** The ratings come from a 2016 dataset of titles with at least 300 ratings, so recent anime isn't here.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 0.62, top verdict `portrait`.
-
-## Compared with
-MyAnimeList users (their average rating of each item)
-
-## Limits
-Audiences rate what they chose to watch or drink; Jev rates everything. Rank comparisons only.
-
-Results: `data/analysis/experiments/taste_vs_audience_anime.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

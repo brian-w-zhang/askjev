@@ -2,32 +2,26 @@
 
 family: polls
 
-## 1. Question
-On 750 would-you-rather questions voted on by millions (either.io), does Jev pick what most people pick, and where does it split from them hardest?
+## Why ask this
+Would-you-rather questions are pure preference: there's no right answer, only what people would pick. The site either.io has collected votes on thousands of them, often more than a million votes per question, which makes the crowd's answer about as stable as a preference ever gets.
 
-Would-you-rather is pure preference with huge samples; the biggest disagreements are Jev's quirks in plain view.
+Where Jev agrees with a million people, it has absorbed ordinary taste. Where it confidently disagrees, the disagreement is a small, plain look at its quirks.
 
-## 2. Sourcing
-Existing either.io questions with vote shares (typically hundreds of thousands to millions of votes). Enough.
+## The people and the data
+Would-you-rather questions from either.io with their vote counts, from a public scrape of the site.
 
-Sources: `wyr`
+## What Jev was asked
+Each dilemma exactly as the site words its two options:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Which would you rather?
+> *Ride in a hot air balloon · Ride in a hovercraft*
 
-## 4. Scoring
-Share where Jev's own choice and its guess of most people match the majority; the questions with the largest gap between Jev's probability and the vote share, among those where voters were clear (60%+).
+## How we measured it
+How often Jev's own pick matches the majority, and the same for its guess of most people. Then the questions where Jev's probability is furthest from the vote share, among questions where voters were clear (60% or more one way).
 
-## 5. Visualization
-Scatter of vote share vs Jev's probability for option A, with the five biggest disagreements labeled.
+## Caveats
+- **A game site's voters.** The votes come from either.io, a would-you-rather game site. Voters are self-selected, anonymous, and often voting for fun; the numbers are enormous but the crowd is not a sample of anyone in particular.
+- **Only popular questions.** We kept questions with at least 1,000 votes (the median question has over a million), which are the site's most-played ones. Sexual items are hidden by the content filter and some were removed.
+- **A copy of the site's data.** The data is a public scrape of either.io published on Kaggle, and we use it for private research only.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 2.717, top verdict `portrait`.
-
-## Compared with
-either.io voters
-
-## Limits
-Self-selected voters on a game site.
-
-Results: `data/analysis/experiments/polls_would_you_rather.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

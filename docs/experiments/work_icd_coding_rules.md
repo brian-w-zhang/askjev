@@ -2,32 +2,29 @@
 
 family: work
 
-## 1. Question
-Asked which ICD-10-CM chapter a diagnosis belongs to, where does Jev go wrong: the medicine, or the coding conventions?
+## Why ask this
+Medical coding turns a diagnosis into a code from ICD-10, the classification hospitals and insurers use for billing and statistics. It's a common job for AI, and it follows rules that aren't purely medical. The clearest example: how an injury happened (a fall from a ladder, a car crash, a dog bite) is coded in its own chapter, **external causes**, separate from the injury itself (a fractured wrist goes in the injury chapter).
 
-Medical coding follows rules that aren't medical: how an injury happened (a fall, a car crash) is coded in its own chapter, separate from the injury. A model that reasons from the medicine will be right about the body and wrong about the book.
+A model that reasons from the medicine will file "fell from a ladder" with the injury. A coder won't. That's a clean test of whether Jev knows the domain's conventions or just the domain.
 
-## 2. Sourcing
-Existing questions: an ICD-10-CM code's description, pick its chapter from the chapters' names; 95 or 96 codes per chapter.
+## The people and the data
+No people: the answer key is the code book itself.
 
-Sources: `icd10_chapter`
+## What Jev was asked
+Each code was one pick-one question with the chapters' official titles:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Which ICD-10-CM chapter does the diagnosis belong to?
+> *Diagnosis: "Driver of bus injured in collision with unspecified motor vehicles in traffic accident, initial
+> encounter"*
+> *Options: the 21 chapter titles, from "Certain infectious and parasitic diseases" to "External causes of
+> morbidity" and "Factors influencing health status and contact with health services"*
 
-## 4. Scoring
-Share right per chapter, and the most common confusions.
+## How we measured it
+The share of codes Jev places in the right chapter, chapter by chapter, and the most common wrong chapter for each.
 
-## 5. Visualization
-Bars per chapter: the share right, lowest first.
+## Caveats
+- **Descriptions only.** Jev saw each code's official one-line description, not a patient record. Real coding starts from clinical notes, where the circumstances of an injury may be spelled out or missing.
+- **The chapter names are what Jev had.** A human coder learns that "how it happened" has its own chapter; from the titles alone that rule isn't obvious.
+- **About 95 codes per chapter.** Each chapter is represented by about 95 codes, spread across its categories. Per-chapter shares are rough to a few points.
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.524, top verdict `headline`.
-
-## Compared with
-the ICD-10-CM chapter each code belongs to
-
-## Limits
-Descriptions only, no clinical notes; the chapter names are what Jev picks from.
-
-Results: `data/analysis/experiments/work_icd_coding_rules.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -2,32 +2,28 @@
 
 family: polls
 
-## 1. Question
-On polls inside hobby and fan subreddits (r/Berserk, r/Naruto, r/thebachelor, r/Kanye...), which communities' votes does Jev guess best?
+## Why ask this
+Every fandom has inside opinions: the best arc, the worst contestant, the album real fans rank first. Those opinions are niche knowledge that shows up in a model's training data very unevenly, heavy for some communities and nearly absent for others.
 
-A fandom's inside opinions ('best arc', 'worst contestant') are niche knowledge that shows up in training data unevenly. Where Jev can't beat chance, it doesn't know the community.
+So a simple test tells you something about Jev's cultural coverage: in which communities can it guess what the fans voted for, and where does it do no better than picking at random?
 
-## 2. Sourcing
-Existing polls from 30 hobby and fan subreddits with vote shares. Politics-tagged polls dropped. Enough for communities with 40+ polls.
+## The people and the data
+Native Reddit polls from 35 hobby and fan communities (anime, games, rap artists, TV shows, tabletop games and more), collected from a public Reddit archive for 2020 to 2024, each with its vote counts.
 
-Sources: `reddit_hobby_polls`
+## What Jev was asked
+Each poll as posted, with its options, asking what most people would say. For example, from a Kingdom Hearts fan community:
 
-## 3. Collection
-Existing questions only; no new Jev calls.
+> Which Kingdom Hearts handheld game do you think was the best?
+> *recoded ds · 358 2 days ds · birth by sleep psp · dream drop distance 3ds*
 
-## 4. Scoring
-Per community, share of polls where Jev's guess names the winner, and its lift over chance; overall rate with a 90% bootstrap interval.
+(Poll options were stored as short labels, so Jev saw them in this plain form.)
 
-## 5. Visualization
-Ranked bars: communities by lift over chance, with the chance line.
+## How we measured it
+For each community, how often Jev's guess names the option that got the most votes, against what a random guess would get (one divided by the number of options).
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 1.837, top verdict `portrait`.
+## Caveats
+- **Some polls are about things after Jev's training.** Fan polls about a new episode, season or album can concern events Jev never read about, and those are unwinnable. This probably hurts fast-moving communities (a reality show, an active artist) most.
+- **Communities differ in size and style.** We kept polls with 50 or more votes; hobby polls are smaller than general ones (the median is 272 votes), so a single poll can be decided by a few dozen fans.
+- **Each community is its own crowd.** Fans of a series vote as insiders, often against the general reputation. That's the point of the test, but it means "guessing wrong" here can mean "guessing what outsiders think".
 
-## Compared with
-Voters in each subreddit's own polls
-
-## Limits
-Community sizes and poll styles differ; some polls are about events after Jev's training data.
-
-Results: `data/analysis/experiments/polls_fandoms.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

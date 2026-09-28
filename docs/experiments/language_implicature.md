@@ -1,33 +1,34 @@
 # language_implicature
 
-family: language · new questions: 234
+family: language
 
-## 1. Question
-When someone says the food is 'good', do you conclude they think it's not excellent? People draw that inference for some word pairs and not others; does Jev draw it for the same ones?
+## Why ask this
+If a friend says the food at a new place is "good", you probably hear "good, not great". If they say they "tried" to fix your bike, you hear that they didn't manage it. Linguists call these **scalar implicatures**: by choosing a weaker word when a stronger one was available, the speaker hints the stronger one doesn't apply. The surprise, called **scalar diversity**, is that this works very differently for different words: nearly everyone hears "some" as "not all", but hardly anyone hears "pretty" as "not beautiful".
 
-'Scalar diversity' is one of the best-documented facts in pragmatics: 'some' almost always implies 'not all', 'pretty' almost never implies 'not beautiful'. Reading what people mean beyond what they say is what a language model is for, and here there are exact human rates per word pair.
+Reading what people mean beyond what they literally say is much of what a language model is for. Here there are exact human rates for each word pair, so we can see whether Jev hears the same hints people do.
 
-## 2. Sourcing
-New questions (sources/scalar_implicature): 'Mary says: "The food is good." Would you conclude from this that, according to Mary, the food is not excellent?' for 43 scales from van Tiel et al. 2016 (three sentences each, as in the study), 70 from Gotzner et al. 2018 and 50 from Pankratz & van Tiel 2021, each with the study's share of people who said yes.
+## The people and the data
+Three published experiments, compiled by Hu, Levy, Degen and Schuster (2023):
+- **van Tiel, van Miltenburg, Zevakhina and Geurts (2016):** 43 word pairs across adjectives, verbs, quantifiers and adverbs, each tested in three different sentences.
+- **Gotzner, Solt and Benz (2018):** 70 adjective pairs.
+- **Pankratz and van Tiel (2021):** 50 adjective pairs.
 
-Sources: `scalar_implicature`
+In each, English speakers read a short statement from "Mary" and said whether they'd draw the inference.
 
-## 3. Collection
-234 new yes/no questions, each asked as written and for 'most people'.
+## What Jev was asked
+The same question format the studies used, answered yes or no:
 
-## 4. Scoring
-Per scale (van Tiel's three sentences averaged), Jev's probability of yes vs people's rate: rank correlation with a 90% bootstrap interval, mean level, and spread across scales (does Jev show the diversity, or one rate for everything?). By word class (adjectives vs verbs and quantifiers). The scales with the biggest gaps. Jev's 'most people' answer is scored the same way.
+> Mary says: "It is ajar." Would you conclude from this that, according to Mary, it is not open?
 
-## 5. Visualization
-A scatter: people's rate (x) vs Jev's probability (y), one dot per scale, colored by study, diagonal, with the largest gaps labeled.
+Other pairs: "The food is good" → not excellent; "The candidate tried" → did not succeed. There were 234 questions in all (van Tiel's pairs come in three sentences each, averaged per pair). Jev also answered each for "most people".
 
-## 6. Evaluation
-Jev's verdict (evaluator v4): **keep**, head-to-head strength 3.583, top verdict `portrait`.
+## How we measured it
+For each word pair, Jev's probability of "yes" against the share of people who said yes. We check whether Jev ranks the pairs in the same order as people (rank correlation: 1 means the same order), whether it says yes as often overall, and whether its answers vary as much from pair to pair as people's do.
 
-## Compared with
-Participants in van Tiel et al. 2016, Gotzner et al. 2018 and Pankratz & van Tiel 2021
+## Caveats
+- **A documented weak spot.** TypeSafe already lists literal reading among Jev's known weak spots. These questions ask for an inference a speaker implies but never states, so a model that answers the literal question will say no more often. This experiment measures how much, pair by pair; it doesn't discover the tendency.
+- **Three studies, three crowds.** The human rates come from three separate studies with different participants and years. Each gives one number per word pair and doesn't say how many people answered it, so we can't tell how precise each rate is.
+- **Some sentences transcribed by hand.** For ten non-adjective pairs we rebuilt the sentences by hand from the paper. The "may"/"will" pair is the likeliest casualty: we asked whether "the teacher will not come", which is a much stronger reading than "won't necessarily come".
+- **Few verbs and quantifiers.** Only nine of the pairs are verbs, quantifiers or adverbs ("some"/"all", "try"/"succeed"); the rest are adjectives. Any statement about word class rests on those nine.
 
-## Limits
-Rates were collected in different studies with different participant pools; each is one number per scale. van Tiel's three sentences share one human rate. The question asks for an inference that people may draw but not endorse, and Jev answers the literal question (a documented tendency, 01-jev §6 item 1).
-
-Results: `data/analysis/experiments/language_implicature.json` (private). Code: `scripts/experiments/`.
+Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.
