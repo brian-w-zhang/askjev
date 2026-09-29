@@ -186,7 +186,7 @@ export default function Atlas({ claims, nNodes, nSources, experiments }: {
             <thead><tr><th>source</th><th>family</th><th>side</th><th style={{ textAlign: "right" }}>questions</th><th style={{ textAlign: "right" }}>right answer</th><th style={{ textAlign: "right" }}>human answers</th><th style={{ textAlign: "right" }}>shown</th></tr></thead>
             <tbody>
               {shownSources.map((s) => (
-                <tr key={`${s.source}-${s.hemisphere}`}>
+                <tr key={`${s.source}-${s.hemisphere}-${s.family}`}>
                   <td className="at-mono">{s.source}</td><td>{s.family}</td><td>{s.hemisphere}</td>
                   <td className="n">{s.n.toLocaleString("en-US")}</td><td className="n">{pctf(s.truth)}</td><td className="n">{pctf(s.humans)}</td><td className="n">{pctf(s.shown)}</td>
                 </tr>

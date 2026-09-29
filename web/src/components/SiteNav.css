@@ -11,6 +11,6 @@ button.snav { border: 0; cursor: pointer; } /* "Map" is a button on the map (it 
    the open side panel would then cover it, it steps aside as it does on phones */
 @media (max-width: 1360px) { .sitenav { left: 574px; transform: none; } }
 @media (max-width: 1233px) { body.panel-open .sitenav { display: none; } }
-@media (max-width: 760px) { .sitenav { top: auto; bottom: 14px; right: 50%; transform: translateX(50%); } }
+@media (max-width: 760px) { .sitenav { top: auto; bottom: 14px; left: 50%; transform: translateX(-50%); } }
 /* on phones the panel is a bottom sheet: step aside while it's open */
 @media (max-width: 760px) { body.panel-open .sitenav { display: none; } }

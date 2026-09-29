@@ -40,7 +40,12 @@ await run("map open result", async () => { const r = await p.$$(".results button
 await run("map url follows panel", async () => { const u = new URL(p.url()); if (!u.searchParams.get("q") && !u.searchParams.get("node")) throw new Error(`url ${p.url()}`); });
 await run("map panel back", async () => { const bb = await p.$("button[aria-label=Back]"); if (bb && !(await bb.isDisabled())) { await bb.click(); await sleep(1500); } });
 await run("map escape", async () => { await p.keyboard.press("Escape"); await sleep(800); await p.keyboard.press("Escape"); await sleep(800); });
-await run("map theme toggle", async () => { await p.click(".themebtn"); await sleep(1200); await p.click(".themebtn"); await sleep(800); });
+await run("map theme toggle", async () => {
+  const before = await p.getAttribute(".themeswitch", "aria-checked");
+  await p.click(".themeswitch"); await sleep(1200);
+  if ((await p.getAttribute(".themeswitch", "aria-checked")) === before) throw new Error("theme didn't switch");
+  await p.click(".themeswitch"); await sleep(800);
+});
 await run("map deep link node", async () => { await p.goto(base + "/?node=self.mind.happiness_wellbeing", { waitUntil: "networkidle" }); await p.waitForSelector("[data-testid=panel][data-open=true]", { timeout: 20000 }); await sleep(3000); });
 await run("map deep link question", async () => { await p.goto(base + "/?q=a25ebfe342b6963c02b2dc2a", { waitUntil: "networkidle" }); await p.waitForSelector("[data-testid=panel][data-open=true]", { timeout: 20000 }); await sleep(3000); });
 await run("map bad deep link", async () => { await p.goto(base + "/?node=does.not.exist", { waitUntil: "networkidle" }); await sleep(4000); });
@@ -65,7 +70,8 @@ await run("portrait calibration", async () => {
   await p.click("#calibration .pt-btn"); await sleep(400);
 });
 await run("portrait keyboard", async () => { await p.$eval(".pt", (e) => { e.scrollTop = 0; }); await p.keyboard.press("Tab"); await p.keyboard.press("Tab"); await p.keyboard.press("Tab"); const f = await p.evaluate(() => document.activeElement?.tagName); if (!f || f === "BODY") throw new Error("focus lost"); });
-await run("portrait theme", async () => { await p.click(".pt-nav .pt-chipnav.dark"); await sleep(600); await p.click(".pt-nav .pt-chipnav.dark"); await sleep(400); });
+// the portrait and atlas are dark only (ThemeToggle.tsx): check it switched, whatever theme the map was in
+await run("portrait is dark", async () => { if ((await p.getAttribute("html", "data-theme")) !== "dark") throw new Error("portrait not dark"); });
 await run("portrait to atlas", async () => { await p.click(".pt-nav >> text=Atlas"); await p.waitForURL(/atlas/); await sleep(1200); });
 
 // ---- atlas ----
