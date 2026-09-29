@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element -- the tweet screenshot is a local file served by /portrait/memes */
 import type { ReactNode } from "react";
+import Link from "next/link";
 import type { Claim, PortraitData, QuizItem, Row } from "./types";
 import { compact, domain, int, label, num, optionLabel, ordinal, pct, signed, topOf } from "./fmt";
 import { Card, Legend, Nav, Win, fill, pick } from "./ui";
@@ -593,7 +594,7 @@ function End({ C, d, s, common }: { C: CFn; d: PortraitData; s: boolean; common:
             <h2 className="card-t xl">{COPY.closer.title}</h2>
             <p className="card-b">{fill(COPY.closer.body, { placed: `about ${pct((C("pipeline_placement").effect as number) / C("landscape_families").n)}` })}</p>
             <Wrapped C={C} d={d} />
-            <p className="links"><a href="/portrait/atlas">everything else, in the atlas →</a> <a href="#fineprint">the full fine print ↓</a></p>
+            <p className="links"><Link href="/portrait/atlas">everything else, in the atlas →</Link> <a href="#fineprint">the full fine print ↓</a></p>
           </div>
         </div>
       </section>
