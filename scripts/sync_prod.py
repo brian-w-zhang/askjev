@@ -76,7 +76,8 @@ def env(key: str) -> str | None:
 
 
 def psql(url: str, sql: str) -> None:
-    subprocess.run([PSQL, url, "-v", "ON_ERROR_STOP=1", "-q", "-c", sql], check=True)
+    # on stdin, not -c: a delta that removes 22k questions inlines their ids several times, past the argument limit
+    subprocess.run([PSQL, url, "-v", "ON_ERROR_STOP=1", "-q"], input=sql, text=True, check=True)
 
 
 def schema(src: str, section: str) -> str:
