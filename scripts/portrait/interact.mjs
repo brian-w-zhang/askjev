@@ -58,16 +58,35 @@ await run("portrait receipts", async () => {
   await sleep(500);
 });
 await run("portrait quiz", async () => {
-  await p.$eval("#quiz", (e) => e.scrollIntoView());
+  await p.$eval("#you", (e) => e.scrollIntoView());
   for (const q of await p.$$(".qz")) { const o = await q.$$("button.o"); if (o.length) await o[0].click(); await sleep(100); }
   if ((await p.$$(".qz .res")).length < 5) throw new Error("quiz did not reveal all");
 });
-await run("portrait you vs jev", async () => { await p.$eval("#you", (e) => e.scrollIntoView()); await sleep(400); if (!(await p.$(".youvs"))) throw new Error("no summary"); });
-await run("portrait calibration", async () => {
-  await p.$eval("#calibration", (e) => e.scrollIntoView()); await sleep(400);
-  const svg = await p.$("#calibration svg"); const bb = await svg.boundingBox();
-  for (const [fx, fy] of [[0.5, 0.5], [0.6, 0.45], [0.72, 0.35], [0.84, 0.25], [0.95, 0.12]]) await p.mouse.click(bb.x + bb.width * fx, bb.y + bb.height * fy);
-  await p.click("#calibration .pt-btn"); await sleep(400);
+await run("portrait you vs jev", async () => { await sleep(400); if (!(await p.$(".youvs"))) throw new Error("no summary"); });
+// the chapters' own controls: every chapter present, the type flips, the ruler and the trolley switch, links open case studies
+await run("portrait chapters", async () => {
+  for (const id of ["meet", "character", "taste", "words", "numbers", "morals", "pressure", "minds", "edges"]) if (!(await p.$(`#${id}`))) throw new Error(`missing #${id}`);
+  const imgs = await p.$$eval("#taste img", (xs) => xs.length);
+  if (imgs < 10) throw new Error(`only ${imgs} taste pictures`);
+});
+await run("portrait type flip", async () => {
+  await p.$eval("#character", (e) => e.scrollIntoView());
+  await p.click("#character .tf-tabs button:nth-child(2)"); await sleep(500);
+  const t = await p.$$eval("#character .tf-t b", (xs) => xs.map((x) => x.textContent).join(""));
+  if (t.length !== 4) throw new Error(`type tiles ${t}`);
+  await p.click("#character .tf-tabs button:nth-child(1)");
+});
+await run("portrait ruler and trolley", async () => {
+  await p.$eval("#words", (e) => e.scrollIntoView()); await p.click("#words .pr .tf-tabs button:nth-child(2)"); await sleep(900);
+  await p.$eval("#morals", (e) => e.scrollIntoView());
+  for (const k of [3, 2, 1]) { await p.click(`#morals .tr .tf-tabs button:nth-child(${k})`); await sleep(600); }
+  await sleep(2400);
+  const tr = await p.$eval("#morals .trolley", (g) => g.getAttribute("transform"));
+  if (!/translate\(3[0-9]{2}/.test(tr ?? "")) throw new Error(`trolley didn't reach the branch: ${tr}`);
+});
+await run("portrait case study link", async () => {
+  const href = await p.$eval("#numbers .st-reads a", (a) => a.getAttribute("href"));
+  if (!/^\/portrait\/atlas\/[a-z0-9_]+$/.test(href ?? "")) throw new Error(`link ${href}`);
 });
 await run("portrait keyboard", async () => { await p.$eval(".pt", (e) => { e.scrollTop = 0; }); await p.keyboard.press("Tab"); await p.keyboard.press("Tab"); await p.keyboard.press("Tab"); const f = await p.evaluate(() => document.activeElement?.tagName); if (!f || f === "BODY") throw new Error("focus lost"); });
 // the portrait and atlas are dark only (ThemeToggle.tsx): check it switched, whatever theme the map was in

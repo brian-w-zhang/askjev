@@ -106,6 +106,14 @@ def main():
     numbers(P["claims"], vals)
     numbers(P["rows"], vals)
     numbers(P["work"], vals)
+    st = P.get("story") or {}
+    numbers(st, vals)  # the chapters' numbers, copied from the experiments' result files (story.py)
+    # derived on the page: 1 minus a share, a ratio of two scales, the top/bottom of a range
+    p = st.get("personality") or {}
+    for t in p.get("bigfive", []):
+        vals.add(1 - t["pct"] / 100)
+    for h in p.get("honesty", []):
+        vals.add(round(h["jev"] / h["people"], 1))
     for v in vals:
         allowed |= forms(v)
     # sums the page prints: totals of claim n across a figure's claims, shown minus hidden, derived chart parts

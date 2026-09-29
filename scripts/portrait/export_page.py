@@ -347,6 +347,9 @@ def main():
         "nodes": [{k: (round(v, 3) if isinstance(v, float) else v) for k, v in r.items()}
                   for r in nodes.select([c for c in nodes.columns if not c.startswith("z_") or c == "z_max"]).iter_rows(named=True)],
     }
+    st = A / "story.json"  # the chapters built from the experiments (story.py)
+    if st.exists():
+        out["story"] = json.loads(st.read_text())
     f = A / "experiments" / "_funny" / "_portrait.json"  # how funny Jev finds the page's memes (experiments/meme_funny.py)
     if f.exists():
         out["memes"] = json.loads(f.read_text())

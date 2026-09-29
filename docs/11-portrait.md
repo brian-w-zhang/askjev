@@ -125,37 +125,30 @@ and can't say. Rules:
 shared UI files are untouched. The map's body never scrolls, so the portrait scrolls inside its own `.pt` container
 (scroll-snap, proximity), and all its styles are scoped under `.pt`.
 
-**Words.** Every word on the page is in `components/portrait/copy.ts`, keyed by card id: `{name}` placeholders are
-filled from the ledger by `Portrait.tsx` (a missing one shows as ⟨name⟩), `*text*` is highlighted. `/portrait?ids`
-shows each card's id so its words can be found.
+**The story.** The page is nine chapters built from the experiments, then the reader's turn, the limits and the fine
+print (`components/portrait/story/`). `scripts/portrait/story.py` copies each chapter's numbers from the experiments'
+result files into `data/analysis/story.json`, which `export_page.py` puts into `portrait.json` as `story`; no number
+is typed into the page. Chapters are written in the third person and each ends with links to its case studies.
 
-**Data.** `export_page.py` writes `data/analysis/portrait.json`: the ledger, the real rows behind every example, the
-Wrapped card data (`page_checkin`, `page_debates`, `page_hot_takes`, `page_quiz_debates`, `page_misses` with a hand
-verdict on whose miss it was, `page_ratings`), the work tasks with chance levels, the source table and the node cards.
-`components/portrait/data.ts` reads it on the server and re-reads it when it changes. It is never copied into
-`web/public`, so the findings stay out of the public repo.
+| Chapter | Built from | Visual |
+|---|---|---|
+| meet Jev | the question count, Jev's own top three experiments | hero, three linked findings |
+| character | Big Five, the four-letter type, honesty-humility, the dark triad | stat rows, letter tiles that flip to Jev's guess for most people, a saint-or-villain meter |
+| taste | the twelve taste finals, the favorite dodge | a Letterboxd-style top four with posters, a shelf of each domain's winner with its picture |
+| words | probability phrases, amount words, kiki/bouba, calm vs stirring, colors of feelings, hex names | a ruler whose words slide between people's and Jev's readings, dictionary entries, shapes, swatches |
+| numbers | prices by year, death tolls, the two-thirds game, lost wallets | a receipt, a log ladder, a number line, range bars |
+| morals | trolley dilemmas in 42 countries, the Moral Machine, free will | an animated trolley per dilemma, effect rows, a quote card |
+| pressure | a claimed crowd, a pushy user, anchoring | chat bubbles whose bars fill as they scroll in |
+| minds | where Jev ranks itself among minds, unknown odds | a podium of ranks |
+| rough edges | eight specific misses | bug tickets linking to each case study |
 
-**Memes.** Templates from imgflip plus the tweet screenshot live in `data/portrait/memes/` (gitignored) and are served
-by `app/portrait/memes/[file]/route.ts`. `Meme.tsx` holds each template's label positions. About one card in three
-gets one, never on the values cards: reaction images take a caption above them, panel memes take labels, and every
-number in a meme comes from the ledger. They sit beside the card on wide screens and below it on phones.
+**Pictures.** Each taste winner's picture is the lead image of its Wikipedia article (`scripts/portrait/taste_images.py`,
+titles chosen by hand, recorded with their source page in `data/portrait/memes/taste.json`), stored with the memes and
+served by the same private route. A few case-study memes, with Jev's funniness rating, sit beside chapter headings.
 
-**Cards** (field color · visual · meme):
-
-| Part | Cards |
-|---|---|
-| intro | tweet (ink) · so I asked (stats) · three ways to answer (one question) · where the questions come from (unit chart) |
-| how are you | check-in vs Reddit (chill guy) · checkup on five real wellbeing scales · online tests vs their real test-takers · Big Five percentiles (Spider-Man) · ISTJ · the middle-level habit (Anakin/Padme) |
-| taste | top picks per domain (absolute cinema) · things you could do without · beyond reputation (tuxedo Pooh) |
-| hot takes | internet debates (gigachad) · you vs a confident crowd (average enjoyer) · the quiz |
-| values | Moral Machine · women vs men dilemmas · Moral Foundations · gambles (binned density) |
-| work | performance review (is this a pigeon) · career code (RIASEC) · draw-first calibration · five strongest and weakest knowledge domains · you helped build the map |
-| rough edges | humor (monkey puppet) · confident misses and whose fault · shuffle stability |
-| end | you vs Jev · what this can't tell you · closer with the Wrapped summary tiles · the full fine print |
-
-Every card has fine print and a "receipts" toggle with the tier, n, interval, ledger ids and real rows. Charts are
-HTML dot rows and bars (legible at phone width) and SVG scatters. Light and dark themes share the map's
-`askjev.theme` key.
+**Motion.** Boxes rise in as they scroll into view, the trolley rolls, the ruler's words slide, the chat bars fill.
+Everything is readable without it: content is hidden for the entrance only once the script runs, and
+`prefers-reduced-motion` turns it off.
 
 **Wellbeing bank.** `sources/wellbeing` adds 18 items from five public instruments (SWLS, WHO-5, UCLA-3, PSS-4, the
 Cantril ladder), each with a "most people" wording, filed at `self.mind.happiness_wellbeing` and run through the normal
