@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useStore, type ToolId } from "@/lib/store";
 import { INDICATORS, RAMP_CSS } from "@/lib/color";
 import { LAYOUTS, LAYOUT_KEY, type LayoutKind } from "@/lib/layout";
-import { refreshFilters, resetView } from "@/lib/actions";
+import { refreshFilters } from "@/lib/actions";
 
 // The search window's tools row (docs/07-ui.md, Search), like the row under a search engine's box: each tab
 // names its current setting and opens a panel right under the box. Keys 1-6 switch layouts.
@@ -60,11 +60,8 @@ export function ToolTabs({ onLucky }: { onLucky: () => void }) {
         </svg>
         {nFilters > 0 && <b className="num">{nFilters}</b>}
       </button>
-      <button className="resetbtn" onClick={resetView} title="Reset view: clear the search and selection, fly home (Esc)" aria-label="Reset view">
-        <span aria-hidden>⌂</span>
-      </button>
       <button className="luckybtn" onClick={onLucky} title="Fly to a random question">
-        Feeling lucky
+        I&apos;m feeling lucky
       </button>
     </div>
   );

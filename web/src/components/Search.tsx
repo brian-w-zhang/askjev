@@ -234,14 +234,24 @@ export function Search() {
         <div className="finder-title">
           <span className="brand">askjev</span>
           <span className="count num">{ready ? `${(starData()?.count ?? 0).toLocaleString()} questions` : "Loading questions"}</span>
+          {/* light / dark slider: one control; any click flips it and the white thumb slides to the other icon */}
           <button
-            className="themebtn"
+            className="themeswitch"
+            role="switch"
+            aria-checked={theme === "dark"}
+            aria-label="Dark mode"
+            title={theme === "dark" ? "Switch to light" : "Switch to dark"}
+            data-on={theme}
             onClick={() => useStore.getState().set({ theme: theme === "light" ? "dark" : "light" })}
-            aria-label={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
-            title={theme === "light" ? "Dark mode" : "Light mode"}
           >
-            <span aria-hidden>{theme === "light" ? "☾" : "☀"}</span>
-            {theme === "light" ? "Dark" : "Light"}
+            <i className="thumb" aria-hidden />
+            <svg className="ic sun" viewBox="0 0 12 12" aria-hidden>
+              <circle cx="6" cy="6" r="2.4" fill="currentColor" />
+              <path d="M6 .6v1.5M6 9.9v1.5M.6 6h1.5M9.9 6h1.5M2.2 2.2l1 1M8.8 8.8l1 1M2.2 9.8l1-1M8.8 3.2l1-1" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" />
+            </svg>
+            <svg className="ic moon" viewBox="0 0 12 12" aria-hidden>
+              <path d="M7.5 0.8A5.3 5.3 0 1 0 11.2 8.3 4.3 4.3 0 0 1 7.5 0.8Z" fill="currentColor" />
+            </svg>
           </button>
         </div>
         <div className="search-field">

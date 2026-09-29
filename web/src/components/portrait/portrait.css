@@ -74,16 +74,17 @@
 .pt code { font-family: var(--mono); font-size: 0.9em; }
 
 /* ---------- nav: small white chips over the page, as on typesafe.ai ---------- */
-.pt-nav { position: sticky; top: 0; z-index: 40; height: 0; display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; padding: 0 8px; pointer-events: none; }
-.pt-nav > * { pointer-events: auto; margin-top: 6px; }
-.pt-nav .grp { display: flex; gap: 2px; }
-.pt-chipnav { display: inline-block; background: var(--nav); color: #1e1e1e; padding: 1px 6px; font-size: 13px; line-height: 20px; text-decoration: none !important; border: 0; box-shadow: 0 0 0 1px rgba(30, 30, 30, 0.12); }
-:root[data-theme="dark"] .pt-chipnav { color: #ebe6ea; box-shadow: none; }
-.pt-chipnav:hover { background: var(--hl); color: var(--hl-fg); }
-.pt-chipnav[aria-current="page"] { text-decoration: underline !important; }
-.pt-chipnav.dark { background: #1e1e1e; color: #fefefe; }
-:root[data-theme="dark"] .pt-chipnav.dark { background: #e551ba; }
-.pt-nav .brand { font-weight: 600; letter-spacing: -0.02em; }
+/* the nav, measured from typesafe.ai's: flush to the top (the brand flush left too), links centered, square chips of
+   18px/500 type with 8×6 padding and 5px gaps, no outline; hover fills solid magenta and keeps the text color */
+.pt-nav { position: sticky; top: 0; z-index: 40; height: 0; display: grid; grid-template-columns: 1fr auto 1fr; align-items: start; pointer-events: none; }
+.pt-nav > * { pointer-events: auto; }
+.pt-nav .grp { display: flex; gap: 5px; }
+.pt-nav .grp:first-child { justify-self: start; }
+.pt-chipnav { display: inline-block; background: var(--nav); color: rgba(30, 30, 30, 0.86); padding: 8px 6px; font-family: var(--sans); font-size: 18px; font-weight: 500; line-height: 18px; letter-spacing: 0.03em; text-decoration: none !important; border: 0; transition: background-color 0.2s cubic-bezier(0.12, 0.23, 0.5, 1), color 0.2s cubic-bezier(0.12, 0.23, 0.5, 1); }
+:root[data-theme="dark"] .pt-chipnav { color: #ebe6ea; }
+.pt-chipnav:hover { background: #d45bb6; }
+.pt-chipnav[aria-current="page"] { text-decoration: underline !important; text-underline-offset: 3px; }
+.pt-nav .brand { letter-spacing: 0.03em; }
 
 /* ---------- cards ---------- */
 .card { position: relative; min-height: 100svh; display: flex; align-items: center; padding: 64px 16px 56px; scroll-snap-align: start; background: var(--field, var(--f-paper)); }

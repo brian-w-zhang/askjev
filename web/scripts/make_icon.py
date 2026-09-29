@@ -1,49 +1,117 @@
-"""The askjev icon (docs/07-ui.md, Look), drawn on a 32-pixel grid so it stays crisp at favicon size:
-three dithered clusters in the hemisphere colors (World top, Machine left, Self right) joined to a white
-root by pink branches, on an ink square. Writes src/app/icon.svg, src/app/favicon.ico and
-src/app/apple-icon.png.   python3 web/scripts/make_icon.py"""
+"""The askjev icon (docs/07-ui.md, Look): a play on TypeSafe's logo. Their mark is interlocking isometric blocks drawn in
+heavy black line on hot magenta; ours is a question mark built from the same blocks: a voxel "?" one block deep,
+projected isometrically, with a line on every crease and silhouette edge and none on the seams between blocks that
+share a face.
+- icon.svg: the line art as vectors (what browsers show in the tab; crisp at any pixel density)
+- apple-icon.png: the line art at 180 px
+- favicon.ico: the fallback for small raster sizes, solid instead (white top, ink side, plum front), because thin
+  diagonal lines smear at 16 px
+    python3 web/scripts/make_icon.py"""
+import math
+from collections import Counter
 from pathlib import Path
-from PIL import Image
+from PIL import Image, ImageDraw
 
-INK, PAPER, PINK = "#1E1E1E", "#FEFEFE", "#FF78F2"
-WORLD, SELF, MACHINE = "#7D89E6", "#F386A1", "#E8663D"
-N = 32
-px: dict[tuple[int, int], str] = {}
+MAGENTA, INK, PAPER, PLUM = "#E052C8", "#1E1E1E", "#FEFEFE", "#7A2A6E"
+GLYPH = [  # the "?" as blocks, top row first: a squared hook, its stem, a gap, the dot
+    "XXXX",
+    "X..X",
+    "...X",
+    ".XXX",
+    ".X..",
+    "....",
+    ".X..",
+]
+LINE = 0.40  # stroke width, in block units: as heavy as TypeSafe's tab icon, and enough to read at 16 css px
+APP = Path(__file__).resolve().parents[1] / "src" / "app"
 
-def line(x0, y0, x1, y1, c):
-    steps = max(abs(x1 - x0), abs(y1 - y0))
-    for i in range(steps + 1):
-        px[(round(x0 + (x1 - x0) * i / steps), round(y0 + (y1 - y0) * i / steps))] = c
+C30, S30 = math.cos(math.pi / 6), 0.5
+# Seen as TypeSafe's blocks are: the letterform lies on the left vertical plane and the view is from below, so the
+# hook's loop becomes a hexagonal frame with a small cube in its inside corner, like their left piece. Built upside
+# down and viewed from above (rows top-first along +y), then mirrored vertically in `proj`.
+VOX = {(x, y, 0) for y, row in enumerate(GLYPH) for x, ch in enumerate(row) if ch == "X"}
+# the dot sits half a block lower (1.5 blocks of gap): seen from below, one block lets the stem's point touch it
+DOT = len(GLYPH) - 1
+VOX = {(x, y + 0.5 if y == DOT else y, z) for (x, y, z) in VOX}
 
-def cluster(cx, cy, r, c):
-    # a solid core with a checker-dithered rim, like the nebula's halftone
-    for y in range(cy - r, cy + r + 1):
-        for x in range(cx - r, cx + r + 1):
-            d = ((x - cx) ** 2 + (y - cy) ** 2) ** 0.5
-            if d <= r - 1.3 or (d <= r + 0.3 and (x + y) % 2 == 0):
-                px[(x, y)] = c
 
-root = (16, 18)
-hemis = [((16, 7), WORLD), ((7, 24), MACHINE), ((25, 24), SELF)]
-for (hx, hy), _ in hemis:
-    line(root[0], root[1], hx, hy, PINK)
-for (hx, hy), c in hemis:
-    cluster(hx, hy, 4, c)
-for dx in (-1, 0, 1):
-    for dy in (-1, 0, 1):
-        px[(root[0] + dx, root[1] + dy)] = PAPER
+def faces():
+    """Visible faces seen from +x +y +z, back to front: (orientation, 4 corners, voxel)."""
+    out = []
+    for (x, y, z) in VOX:
+        if (x, y + 1, z) not in VOX: out.append(("y", [(x, y + 1, z), (x + 1, y + 1, z), (x + 1, y + 1, z + 1), (x, y + 1, z + 1)], (x, y, z)))
+        if (x + 1, y, z) not in VOX: out.append(("x", [(x + 1, y, z), (x + 1, y + 1, z), (x + 1, y + 1, z + 1), (x + 1, y, z + 1)], (x, y, z)))
+        if (x, y, z + 1) not in VOX: out.append(("z", [(x, y, z + 1), (x + 1, y, z + 1), (x + 1, y + 1, z + 1), (x, y + 1, z + 1)], (x, y, z)))
+    return sorted(out, key=lambda f: (sum(f[2]), {"y": 2, "x": 1, "z": 1}[f[0]]))
 
-app = Path(__file__).resolve().parent.parent / "src" / "app"
-rects = "".join(f'<rect x="{x}" y="{y}" width="1" height="1" fill="{c}"/>' for (x, y), c in sorted(px.items()) if 0 <= x < N and 0 <= y < N)
-(app / "icon.svg").write_text(
-    f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {N} {N}" shape-rendering="crispEdges">'
-    f'<rect width="{N}" height="{N}" fill="{INK}"/>{rects}</svg>\n'
-)
-img = Image.new("RGBA", (N, N), INK)
-for (x, y), c in px.items():
-    if 0 <= x < N and 0 <= y < N:
-        img.putpixel((x, y), Image.new("RGB", (1, 1), c).getpixel((0, 0)))
-img.resize((64, 64), Image.NEAREST).save(app / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48), (64, 64)])
-img.resize((180, 180), Image.NEAREST).save(app / "apple-icon.png")
-img.resize((256, 256), Image.NEAREST).save(Path("/private/tmp/claude-501/-Users-junzhang-Projects-askjev/34611009-f72c-4bb2-9589-d4ed63ccce93/scratchpad/icon_preview.png"))
-print("wrote icon.svg, favicon.ico, apple-icon.png")
+
+F = faces()
+edge = lambda a, b: tuple(sorted([a, b]))
+# an edge two visible faces of one orientation share is a seam inside one flat surface: no line there
+SEAMS = {k for k, n in Counter((o, edge(cs[i], cs[(i + 1) % 4])) for o, cs, _ in F for i in range(4)).items() if n > 1}
+proj = lambda p: ((p[0] - p[2]) * C30, p[1] - (p[0] + p[2]) * S30)  # isometric, mirrored top to bottom
+PTS = [proj(c) for _, cs, _ in F for c in cs]
+X0, X1 = min(p[0] for p in PTS), max(p[0] for p in PTS)
+Y0, Y1 = min(p[1] for p in PTS), max(p[1] for p in PTS)
+
+
+def fit(size: float, pad: float):
+    """Scale and offset that center the mark in a square of `size` with `pad` margin (fraction)."""
+    s = size * (1 - 2 * pad) / max(X1 - X0, Y1 - Y0)
+    return s, (size - (X1 - X0) * s) / 2 - X0 * s, (size - (Y1 - Y0) * s) / 2 - Y0 * s
+
+
+def svg(size=64, pad=0.02) -> str:
+    """Line art on a transparent background, like TypeSafe's own tab icon. With no background to paint over hidden
+    lines, each face's lines are masked by every face drawn after it (the faces nearer the viewer). The stroke color
+    follows the system theme: white on dark tab bars, ink on light ones."""
+    s, ox, oy = fit(size, pad)
+    T = lambda p: f"{proj(p)[0] * s + ox:.2f},{proj(p)[1] * s + oy:.2f}"
+    polys = [" ".join(T(c) for c in cs) for _, cs, _ in F]
+    defs, parts = [], []
+    for k, (o, cs, _) in enumerate(F):
+        lines = [(cs[i], cs[(i + 1) % 4]) for i in range(4) if (o, edge(cs[i], cs[(i + 1) % 4])) not in SEAMS]
+        if not lines:
+            continue
+        d = " ".join(f"M{T(a)}L{T(b)}" for a, b in lines)
+        nearer = polys[k + 1:]
+        if nearer:
+            holes = "".join(f'<polygon points="{pp}" fill="#000"/>' for pp in nearer)
+            defs.append(f'<mask id="m{k}" maskUnits="userSpaceOnUse" x="0" y="0" width="{size}" height="{size}"><rect width="{size}" height="{size}" fill="#fff"/>{holes}</mask>')
+            parts.append(f'<path d="{d}" mask="url(#m{k})"/>')
+        else:
+            parts.append(f'<path d="{d}"/>')
+    style = (f"path{{stroke:{INK};stroke-width:{LINE * s:.2f};stroke-linecap:round;fill:none}}"
+             f"@media (prefers-color-scheme: dark){{path{{stroke:{PAPER}}}}}")
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {size} {size}"><style>{style}</style>'
+            f'<defs>{"".join(defs)}</defs>{"".join(parts)}</svg>\n')
+
+
+def raster(size: int, solid: bool, pad: float) -> Image.Image:
+    SS = 8
+    W = size * SS
+    s, ox, oy = fit(W, pad)
+    T = lambda p: (proj(p)[0] * s + ox, proj(p)[1] * s + oy)
+    im = Image.new("RGB", (W, W), MAGENTA)
+    d = ImageDraw.Draw(im)
+    lw = max(1, round(LINE * s))
+    for o, cs, _ in F:
+        d.polygon([T(c) for c in cs], fill={"y": PAPER, "x": INK, "z": PLUM}[o] if solid else MAGENTA)
+        if solid:
+            continue
+        for i in range(4):
+            a, b = cs[i], cs[(i + 1) % 4]
+            if (o, edge(a, b)) in SEAMS:
+                continue
+            d.line([T(a), T(b)], fill=INK, width=lw)
+            for q in (T(a), T(b)):
+                d.ellipse([q[0] - lw / 2, q[1] - lw / 2, q[0] + lw / 2, q[1] + lw / 2], fill=INK)
+    return im.resize((size, size), Image.LANCZOS)
+
+
+(APP / "icon.svg").write_text(svg())
+raster(180, solid=False, pad=0.14).save(APP / "apple-icon.png")
+# RGBA entries (Next.js can't decode an .ico of 24-bit RGB images), each size drawn at its own resolution
+icons = [raster(k, solid=True, pad=0.05).convert("RGBA") for k in (16, 32, 48, 64)]
+icons[-1].save(APP / "favicon.ico", sizes=[im.size for im in icons], append_images=icons[:-1])
+print("wrote", APP / "icon.svg", APP / "apple-icon.png", APP / "favicon.ico")

@@ -1,10 +1,16 @@
-/* the map's site nav (SiteNav.tsx): typesafe.ai's white nav chips, top center; bottom center on phones */
-.sitenav { position: fixed; top: 8px; left: 50%; transform: translateX(-50%); z-index: 35; display: flex; gap: 2px; }
-.sitenav .snav { display: inline-block; background: #fefefe; color: #1e1e1e; padding: 1px 7px; font-family: var(--sans); font-size: 13px; line-height: 20px; text-decoration: none; box-shadow: 0 0 0 1px rgba(30, 30, 30, 0.14); }
-.sitenav .snav:hover { background: var(--pink); }
+/* the map's site nav (SiteNav.tsx), measured from typesafe.ai's: flush to the top, centered, square chips of 18px/500
+   type with 8×6 padding and 5px gaps, no outline; hover fills solid magenta and keeps the text color */
+.sitenav { position: fixed; top: 0; left: 50%; transform: translateX(-50%); z-index: 35; display: flex; gap: 5px; }
+.sitenav .snav { display: inline-block; background: #fefefe; color: rgba(30, 30, 30, 0.86); padding: 8px 6px; font-family: var(--sans); font-size: 18px; font-weight: 500; line-height: 18px; letter-spacing: 0.03em; text-decoration: none; transition: background-color 0.2s cubic-bezier(0.12, 0.23, 0.5, 1), color 0.2s cubic-bezier(0.12, 0.23, 0.5, 1); }
+.sitenav .snav:hover { background: #d45bb6; }
 .sitenav .snav.here { text-decoration: underline; text-underline-offset: 3px; }
-:root[data-theme="dark"] .sitenav .snav { background: #1d191c; color: #ebe6ea; box-shadow: none; }
-:root[data-theme="dark"] .sitenav .snav:hover { background: #e551ba; color: #fefefe; }
-@media (max-width: 760px) { .sitenav { top: auto; bottom: 14px; } }
+:root[data-theme="dark"] .sitenav .snav { background: #1d191c; color: #ebe6ea; }
+:root .sitenav .snav:hover, :root[data-theme="dark"] .sitenav .snav:hover { background: #d45bb6; } /* the hover fill must beat the dark chip color */
+button.snav { border: 0; cursor: pointer; } /* "Map" is a button on the map (it resets the view) */
+/* where centered would run into the search window, it sits just right of it instead (still flush to the top); where
+   the open side panel would then cover it, it steps aside as it does on phones */
+@media (max-width: 1360px) { .sitenav { left: 574px; transform: none; } }
+@media (max-width: 1233px) { body.panel-open .sitenav { display: none; } }
+@media (max-width: 760px) { .sitenav { top: auto; bottom: 14px; right: 50%; transform: translateX(50%); } }
 /* on phones the panel is a bottom sheet: step aside while it's open */
 @media (max-width: 760px) { body.panel-open .sitenav { display: none; } }

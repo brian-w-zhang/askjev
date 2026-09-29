@@ -17,7 +17,7 @@ export function Nav({ here }: { here: "portrait" | "atlas" }) {
         <Link className="pt-chipnav" href="/portrait" prefetch={false} aria-current={here === "portrait" ? "page" : undefined}>Portrait</Link>
         <Link className="pt-chipnav" href="/portrait/atlas" prefetch={false} aria-current={here === "atlas" ? "page" : undefined}>Atlas</Link>
       </div>
-      <div className="grp"><ThemeToggle /></div>
+      <ThemeToggle />
     </nav>
   );
 }

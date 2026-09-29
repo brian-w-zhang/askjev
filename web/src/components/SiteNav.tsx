@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import { useStore } from "@/lib/store";
-import { openQuestion, selectNode, travel } from "@/lib/actions";
+import { openQuestion, selectNode, travel, resetView } from "@/lib/actions";
 import "./SiteNav.css";
 
 // The map's links to the portrait and atlas: small white chips at the top, like typesafe.ai's nav (at the bottom on
@@ -54,7 +54,8 @@ export default function SiteNav() {
   }, []);
   return (
     <nav className="sitenav" aria-label="Site">
-      <span className="snav here" aria-current="page">Map</span>
+      {/* on the map, "Map" is the reset: clears the search and selection and flies home (as Esc does) */}
+      <button className="snav here" aria-current="page" onClick={resetView} title="Reset the map view (Esc)">Map</button>
       <Link className="snav" href="/portrait" prefetch={false}>Portrait</Link>
       <Link className="snav" href="/portrait/atlas" prefetch={false}>Atlas</Link>
     </nav>

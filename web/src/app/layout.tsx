@@ -20,7 +20,8 @@ export const viewport: Viewport = {
 };
 
 // Picks the theme before first paint (saved choice, else the system's), so dark mode never flashes light.
-const THEME_SCRIPT = `try{var t=localStorage.getItem("askjev.theme");if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme="light"}`;
+// Only the map offers both themes; every other page (portrait, atlas) is always dark.
+const THEME_SCRIPT = `try{if(location.pathname!=="/"){document.documentElement.dataset.theme="dark";throw 1}var t=localStorage.getItem("askjev.theme");if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t}catch(e){if(e!==1)document.documentElement.dataset.theme="light"}`;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

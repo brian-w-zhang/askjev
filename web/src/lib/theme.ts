@@ -76,7 +76,7 @@ export const THEMES: Record<Theme, ThemeColors> = {
     dither: [
       ["#FEFEFE", 0], ["#F8DDEA", 0], ["#E4DCF6", 0], ["#DBF0FF", 0], ["#C4D6F5", 0], ["#C8CBE4", 0],
       ["#B7B0D8", 0], ["#FFA1FF", 1], ["#D45BB6", 1], ["#F386A1", 4], ["#4B5BD6", 2], ["#7D89E6", 2],
-      ["#E8663D", 3], ["#03AA5C", 0], ["#1E1E1E", 0], ["#F8CFE3", 0],
+      ["#E8663D", 3], ["#D45BB6", 0], ["#1E1E1E", 0], ["#F8CFE3", 0],
     ],
   },
   dark: {
@@ -112,10 +112,10 @@ export const THEMES: Record<Theme, ThemeColors> = {
     dither: [
       ["#0D0B14", 0], ["#161630", 0], ["#27234A", 0], ["#443870", 0], ["#7E4880", 0], ["#35295C", 0],
       ["#4A4660", 0], ["#FF78F2", 1], ["#D45BB6", 1], ["#F386A1", 4], ["#7D89E6", 2], ["#A6AEF0", 2],
-      ["#F0885E", 3], ["#03AA5C", 0], ["#FEFEFE", 0], ["#5E3F78", 0],
+      ["#F0885E", 3], ["#D45BB6", 0], ["#FEFEFE", 0], ["#5E3F78", 0],
     ],
   },
 };
 
-export const JEV_GREEN = "#03AA5C"; // Jev's own path and answers, in both themes
+export const JEV_GREEN = "#D45BB6"; // Jev's own acts (its pick, its walk) and the selection, in both themes: typesafe.ai's magenta
 export const HOT = "#D45BB6"; // worth a look
