@@ -48,11 +48,51 @@ export function resetView() {
   home(1.6);
 }
 
+const REVEAL_PER_LEVEL = 0.12; // seconds per level: the trail draws out quickly, no camera ride along it
+
+/**
+ * Light the trail root → … → the last node of `path` (ink in light mode, white in dark), replacing whatever trail was
+ * lit before, so the lit path always matches what's open. No camera follow; unchanged trails aren't redrawn.
+ */
+export function lightPath(path: string[]) {
+  const s = useStore.getState();
+  if (!path.length) return;
+  const same = s.pathA.length === path.length && s.pathA.every((x, i) => x === path[i]);
+  if (same && anim.A.active) return;
+  Object.assign(anim, { follow: null, fork: -1 });
+  anim.B.active = false;
+  s.set({ pathA: path, pathB: [] });
+  startLight("A", path, REVEAL_PER_LEVEL);
+}
+
+let revealing: string | null = null;
+/**
+ * Show a question on the map however it was opened (its dot, its label, a topic's list, a thread link, Back): light
+ * its trail, mark its dot, and move the camera straight to the dot from wherever it is. The search journey does
+ * the same with a slower, followed walk from the root; if it already landed here, this does nothing.
+ */
+export async function revealQuestion(id: string, path: string[]) {
+  const node = last(path);
+  if (!node || revealing === id) return;
+  revealing = id;
+  try {
+    showJevPick(null);
+    await ensurePath(path);
+    lightPath(path);
+    useStore.getState().set({ selected: node });
+    const i = await starIndex(node, id);
+    if (i >= 0 && useStore.getState().focusStar !== i) await landOnStar(i, 1.0);
+  } finally {
+    if (revealing === id) revealing = null;
+  }
+}
+
 export function selectNode(id: string, opts: { fly?: boolean; panel?: boolean } = {}) {
   showJevPick(null);
   const s = useStore.getState();
   anim.trackStar = -1;
   s.set({ selected: id, focusStar: -1, ...(opts.panel === false ? {} : { panel: { kind: "node", id } }) });
+  lightPath(ancestors(id)); // a topic lights its own trail, so the lit path always matches what's open
   const p = anim.placed.get(id);
   const n = s.nodes[id];
   if (p && n && opts.fly !== false) flyTo([p.x, p.y, p.z], frameDist(id));
@@ -263,9 +303,8 @@ export async function openStar(i: number) {
   const nodeId = d.nodeIds[d.node[i]];
   const q = (await loadTexts(nodeId))[i - d.offsets.get(nodeId)![0]];
   if (!q) return;
-  showJevPick(null);
-  useStore.getState().set({ selected: nodeId, hoverStar: -1 });
-  // the card opens right away (its data was prefetched on hover) while the camera flies in beside it
+  useStore.getState().set({ hoverStar: -1 });
+  // the card opens right away (its data was prefetched on hover) while the trail lights and the camera moves in
   openQuestion(q.id);
-  await landOnStar(i, 1.0);
+  await revealQuestion(q.id, ancestors(nodeId));
 }

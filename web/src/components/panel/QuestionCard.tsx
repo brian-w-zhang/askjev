@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import { useStore } from "@/lib/store";
-import { jevFile, openQuestion, selectNode, travel, type Walk } from "@/lib/actions";
+import { jevFile, openQuestion, revealQuestion, selectNode, type Walk } from "@/lib/actions";
 import type { Hemisphere } from "@/lib/types";
 import { Crumbs, pct } from "./Panel";
 import { Info } from "./Info";
@@ -49,18 +49,16 @@ export function QuestionCard({ id, note, onClose }: { id: string; note?: string;
   const { data: d, error: err } = useResource<QData>(questionUrl(id));
   const [frameSel, setFrame] = useState<string | null>(null);
   const [popSel, setPop] = useState<string | null>(null);
-  const selected = useStore((s) => s.selected);
   // defaults until the reader picks: Jev's own frame, and the first human population
   const baseFrames = d ? new Set(d.probes.filter((p) => p.variant_kind === "base").map((p) => p.frame)) : null;
   const frame = frameSel ?? (baseFrames && !baseFrames.has("self") ? [...baseFrames][0] ?? "self" : "self");
   const pop = popSel ?? d?.human[0]?.population ?? "";
 
-  // Light the path to this question's node when the card opens from somewhere else.
+  // However the card was opened (a dot, a topic's list, a thread link, Back), light this question's trail and mark
+  // its dot; a no-op when a search journey or a dot click already did.
   useEffect(() => {
     if (!d) return;
-    const path = d.ancestors.map((a) => a.id);
-    if (selected !== d.question.node_id) travel(path);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    revealQuestion(d.question.id, d.ancestors.map((a) => a.id));
   }, [d]);
 
   const view = useMemo(() => {
