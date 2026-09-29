@@ -3,7 +3,9 @@
 family: work
 
 ## Why ask this
-Trust-and-safety filtering is one of the first jobs anyone gives a fast classifier: is this spam, is this phishing, does this message leak someone's personal data, is this prompt trying to trick an AI. The useful question isn't overall accuracy but which threats get through. Old abuse (spam, phishing) is well known and heavily written about; newer abuse (jailbreaks, unsafe AI replies, sophisticated job scams) is less so.
+Trust-and-safety filtering is one of the first jobs anyone gives a fast classifier: is this spam, is this phishing, does this message leak someone's personal data, is this prompt trying to trick an AI.
+
+The useful question isn't overall accuracy but which threats get through: one missed fake job ad can cost a job seeker their savings. Old abuse (spam, phishing) is well known and heavily written about; newer abuse (jailbreaks, unsafe AI replies, sophisticated job scams) is less so.
 
 ## The people and the data
 - **Spam and phishing email**, **SMS spam** and **YouTube comment spam**, from classic spam corpora.

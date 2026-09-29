@@ -3,7 +3,9 @@
 family: work
 
 ## Why ask this
-Code review asks two different skills. One is reading: does this comment describe this function, does this commit message match this change? The other is reasoning about behavior: can this function overflow a buffer, does this change need a second look? A model strong at the first and weak at the second would look very helpful in code review while missing exactly what matters.
+Code review asks two different skills. One is reading: does this comment describe this function, does this commit message match this change? The other is reasoning about behavior: can this function overflow a buffer, does this change need a second look?
+
+A model strong at the first and weak at the second would look very helpful in code review while missing exactly what matters.
 
 ## The people and the data
 - **Docstring vs function** (CodeSearchNet, Python, JavaScript, Java and Go): the function's own docstring, or one from another function in the same project.

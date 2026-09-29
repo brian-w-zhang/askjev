@@ -3,7 +3,9 @@
 family: recall
 
 ## Why ask this
-Is Rome north or south of New York? People tend to guess south; it's actually slightly north. People's mental maps line Europe up with the US, when Europe sits well to the north; the psychologists Friedman and Brown documented the pattern in 2000. A model knows maps only through text. Whether it inherits the human distortion, or the coordinates, is a small window on how it stores geography.
+Is Rome north or south of New York? People tend to guess south; it's actually slightly north. People's mental maps line Europe up with the US, when Europe sits well to the north; the psychologists Friedman and Brown documented the pattern in 2000.
+
+A model knows maps only through text. Whether it inherits the human distortion or the coordinates is a small window on how it stores geography, and it matters for anyone asking it about climate, daylight or travel between the two continents, where "how far north" is the whole question.
 
 ## The people and the data
 The truth comes from coordinates in GeoNames, an open geographic database. There are no human answers to these pairs; the human side is the published pattern.

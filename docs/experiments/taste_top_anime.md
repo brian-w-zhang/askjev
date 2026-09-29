@@ -3,7 +3,9 @@
 family: taste
 
 ## Why ask this
-Anime has a devoted fan culture with strong opinions about what's great. A ranking from a model shows whether it lands on the fan consensus, on the films outsiders know (Studio Ghibli), or somewhere of its own.
+Anime has a devoted fan culture with strong opinions about what's great, and "what should I watch next?" is a common thing to ask a model. Its answer depends on its own sense of which shows are worth your time.
+
+A full ranking shows where that sense sits: on the fan consensus, on the films outsiders know (Studio Ghibli), or somewhere of its own.
 
 ## The people and the data
 No people here: Jev against its own opinions. Adult-genre titles were left out. How Jev compares with MyAnimeList users is its own experiment.

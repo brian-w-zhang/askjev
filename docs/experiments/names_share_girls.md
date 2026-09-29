@@ -3,7 +3,9 @@
 family: names
 
 ## Why ask this
-A first name carries information people use without thinking: reading "Jamie" or "Dakota" in an email, most readers quietly guess a sex. A model that writes about people, or reads about them, does the same, and one that assumes every name belongs to one sex will misgender people in its writing. For names given to both boys and girls, the question is whether Jev knows how mixed a name really is, or flattens it into "a boy's name" and "a girl's name".
+A first name carries information people use without thinking: reading "Jamie" or "Dakota" in an email, most readers quietly guess a sex. A model that writes about people, or reads about them, does the same, and one that assumes every name belongs to one sex will misgender people in its writing.
+
+For names given to both boys and girls, the question is whether Jev knows how mixed a name really is, or flattens it into "a boy's name" and "a girl's name".
 
 ## The people and the data
 No survey here: the truth is US Social Security birth records, 1880 to 2017, via the public babynames dataset. For every name given to five or more babies in a year, they count how many were recorded as boys and as girls. The experiment uses 60 names with mixed records (between 10% and 90% girls, and at least 20,000 babies in all), plus 40 names that are clearly one or the other, as a check.

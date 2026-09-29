@@ -3,7 +3,9 @@
 family: work
 
 ## Why ask this
-Job search and matching run on structured fields: seniority (internship to executive) and work type (full-time, contract, part-time). When those fields are missing or messy, a model fills them in from the ad's text. A systematic lean, reading every entry-level ad as a rung higher, would quietly send candidates to the wrong jobs and hide good first jobs from the people who need them.
+Job search and matching run on structured fields: seniority (internship to executive) and work type (full-time, contract, part-time). A graduate filtering for "entry level, part-time" only sees the ads tagged that way. When those fields are missing or messy, a model is often asked to fill them in from the ad's text.
+
+A systematic lean, reading every entry-level ad as a rung higher, would quietly send candidates to the wrong jobs and hide good first jobs from the people who need them.
 
 ## The people and the data
 The ads are **LinkedIn job postings**, a public collection of 33,246 US ads from a 2023 snapshot.

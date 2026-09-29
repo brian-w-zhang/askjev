@@ -3,7 +3,9 @@
 family: knowledge
 
 ## Why ask this
-Knowing that the Main is a German river is one skill; knowing it's longer than another river is another. The first is a label, the second a magnitude. How close two sizes can be before a model starts guessing, and whether its confidence drops as the call gets closer, says how finely it has stored the numbers behind the facts.
+Knowing that Lyon is a French city is one skill; knowing whether it's bigger than Marseille is another. The first is a label, the second a magnitude, and everyday questions lean on both: which route is longer, which country is bigger, which stadium holds more people.
+
+How close two sizes can be before a model starts guessing, and whether its confidence drops as the call gets closer, says how finely it has stored the numbers behind the facts. A model that sounds just as sure on a coin flip as on a clear case is hard to trust on any comparison.
 
 ## The people and the data
 No people: the answers come from Wikidata, the free knowledge base behind Wikipedia.

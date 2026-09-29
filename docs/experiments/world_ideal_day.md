@@ -5,6 +5,8 @@ family: world
 ## Why ask this
 An ideal day is a compact self-portrait. What someone would do more of, and what they'd drop, says what they value. Asked about its own ideal day, Jev has to trade hours between sleep, work, reading, TV and people, and the trades are revealing when set next to how Americans actually spend theirs.
 
+The same picture of a good day shapes the advice it gives: ask it to plan a weekend, a study schedule or a healthier routine, and its own idea of how hours should be spent comes along.
+
 ## The people and the data
 No one has surveyed Americans' ideal days, so Jev's answers are set against their real ones: the American Time Use Survey (Bureau of Labor Statistics), where Americans log everything they did on one day. The comparison uses 181,335 diary days from 2003 to 2016, weighted to represent the population, and the average minutes spent on each of the same 20 activities.
 

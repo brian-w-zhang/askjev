@@ -3,7 +3,9 @@
 family: self
 
 ## Why ask this
-People ask models yes/no questions all day, many with no settled answer: "Will this ever work?", "Can you do X?", "Was that a mistake?". On questions like these the model's lean is a default rather than knowledge, and if the way a question starts predicts the answer, that's a habit worth knowing before trusting its yes or no.
+People ask models yes/no questions all day, many with no settled answer: "Will this ever work?", "Can I fix this myself?", "Was that a mistake?". On questions like these the model's answer is a lean, not a looked-up fact.
+
+If the way a question starts predicts that lean, then asking "can it happen?" instead of "will it happen?" changes the answer someone walks away with. That's a habit worth knowing before trusting a model's yes or no.
 
 ## The people and the data
 The questions are real, written by people in four public places: Stack Exchange (56 non-programming sites such as travel, cooking and English usage), Quora, Yahoo Answers, and the first messages people sent to chatbots (WildChat and a few similar public collections).

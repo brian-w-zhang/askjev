@@ -3,7 +3,9 @@
 family: knowledge
 
 ## Why ask this
-Knowing roughly when something happened is a sign of how densely a model has read about it. Holding the gap in years fixed and switching what's being dated shows which worlds it knows in fine detail and which only in outline.
+Which came out first, Portal or Half-Life 2? Did "Draw My Life" videos come before or after the "Please, come to Brazil" comments? Nobody looks these up, but a model answering questions about games, products or internet culture leans on this kind of sense of order all the time.
+
+Knowing roughly when something happened is also a sign of how densely a model has read about it. Holding the gap in years fixed and switching what's being dated shows which worlds it knows in fine detail and which only in outline.
 
 ## The people and the data
 

@@ -293,7 +293,7 @@ def population_match(pid, title, src, question, why, pop_desc, limits):
                                "neutral_people": float(np.mean([b for _, b in neutral])) if neutral else None},
                       robustness=(f"Left out because they share too few questions with the rest: {', '.join(left_out)}." if left_out else ""),
                       n=len(common),
-                      chart={"type": "strip", "rows": [{"label": r["pop"], "value": round(r["sim"], 3), "ci": r["ci90"]} for r in rows]},
+                      chart={"type": "strip", "fmt": "num2", "rows": [{"label": r["pop"], "value": round(r["sim"], 3), "ci": r["ci90"]} for r in rows]},
                       examples=[f["id"] for f in far])
     return spec, run
 

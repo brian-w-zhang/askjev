@@ -3,7 +3,9 @@
 family: work
 
 ## Why ask this
-Systems that answer questions from documents usually retrieve a pile of passages and then decide which ones go into the expensive model's context. A cheap model as the gate is a natural fit. Its errors cost differently: letting in useless passages wastes context and can distract; throwing out a useful one can make the right answer impossible, especially for questions that need two facts chained together.
+Systems that answer questions from documents usually retrieve a pile of passages and then decide which ones go into the expensive model's context. A cheap model as the gate is a natural fit.
+
+Its two kinds of error cost differently. Letting in useless passages wastes context and can distract. Throwing out a useful one can make the right answer impossible, especially for questions that chain two facts: to answer "which company owns the supermarket chain where she worked?", the paragraph naming the chain matters even though it doesn't contain the answer.
 
 ## The people and the data
 - **MS MARCO:** real web search queries (from Microsoft) with passages retrieved from web pages; the passage a human annotator used for the answer is marked useful.

@@ -30,6 +30,6 @@ Each word has four numbers: how stirring Jev finds it, how stirring people find 
 - **The wording may be part of the effect.** The five answer levels were written for this project, and their examples lean one way: "calming" is illustrated with a quiet evening, "intensely stirring" with danger, a thrill or a scream. Two of those three are unpleasant. That could nudge any reader, model or person, to hear "stirring" as "bad". The original study used its own scale instructions, not these, so part of the gap may be the project's phrasing rather than Jev.
 - **Who the people are.** The Glasgow Norms were rated by native English speakers from the University of Glasgow community, recruited through the psychology department, about 33 per word. Words like "beach" or "cuddle" may stir different feelings elsewhere.
 - **Two scales squeezed into one.** Jev's levels are mapped onto 1 to 9 in equal steps, which is approximate. The rank correlations don't depend on that mapping; the gap lists do.
-- **Which words.** Only words asked both ways (pleasant and stirring) count, and words the question screen hid as sexual or violent are missing, which removes some of the most arousing words people rated.
+- **Which words.** Only words asked both ways (pleasant and stirring) count, and words a content filter hides from the site as sexual or violent are missing, which removes some of the most arousing words people rated.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

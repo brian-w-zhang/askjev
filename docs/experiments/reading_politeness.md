@@ -3,7 +3,9 @@
 family: reading
 
 ## Why ask this
-Tone is a large part of how people react to a message. A request can be granted or refused on its phrasing alone. A model that writes, rewrites and summarizes messages all day should hear politeness the way people do: the "please" and "thanks" that soften, the direct "you" and bare questions that don't.
+"Could you take a look when you get a chance?" and "Why haven't you fixed this?" ask for the same thing, and only one of them gets a friendly reply. Tone is a large part of how people react to a message; a request can be granted or refused on its phrasing alone.
+
+A model that writes, rewrites and summarizes messages all day should hear politeness the way people do: the "please" and "thanks" that soften, the direct "you" and bare questions that don't. If it misjudges tone, the drafts it polishes and the replies it suggests will land wrong.
 
 ## The people and the data
 The Stanford Politeness Corpus (Danescu-Niculescu-Mizil and colleagues, 2013) collected requests Wikipedia editors wrote to each other on their talk pages and had five US crowd workers on Amazon Mechanical Turk rate each one, around 2012, on a slider from very impolite (1) to very polite (25). The experiment took 500 of the 4,353 rated requests, 100 from each fifth of the politeness range, so polite and rude requests are equally represented.

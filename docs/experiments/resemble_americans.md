@@ -5,6 +5,8 @@ family: resemble
 ## Why ask this
 The General Social Survey has asked Americans the same questions about their lives and attitudes since 1972. That makes it a way to ask not just "how much does Jev sound like Americans?" but "like Americans of when?" A model trained on decades of text might carry an older average, or the most recent one.
 
+That matters for anyone using a model to stand in for the public, in market research or survey drafts: a picture of Americans from thirty years ago would get today's answers wrong in ways that look plausible.
+
 ## The people and the data
 The General Social Survey interviews a fresh national sample of US adults every year or two. The data is its 1972-2024 cumulative file from NORC at the University of Chicago, weighted as the survey recommends. Each question is compared only across its own two years, so the "earlier" Americans for one question may be from the 1970s and for another from the 2000s.
 

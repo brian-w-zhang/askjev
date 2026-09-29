@@ -3,7 +3,9 @@
 family: personality
 
 ## Why ask this
-The Humor Styles Questionnaire splits how people use jokes into four styles: affiliative (joking to connect with people), self-enhancing (keeping a humorous outlook to cope), aggressive (teasing, mockery) and self-defeating (making yourself the butt of the joke). It pairs with the humor experiments, where Jev struggles to tell which joke people found funnier: here, the question is how it describes its own sense of humor.
+The Humor Styles Questionnaire splits how people use jokes into four styles: affiliative (joking to connect with people), self-enhancing (keeping a humorous outlook to cope), aggressive (teasing, mockery) and self-defeating (making yourself the butt of the joke). Someone who jokes to bring people together and someone who jokes at others' expense can be equally funny, and very different company.
+
+A model's jokes are part of how it comes across in every conversation. In the humor experiments Jev struggles to tell which joke people found funnier; here, the question is how it describes its own sense of humor.
 
 ## The people and the data
 Open Psychometrics, a website of free personality tests, runs it online and publishes the anonymous answers.
@@ -23,6 +25,6 @@ Each statement goes on a 0 to 1 scale, flipped where the test counts it in rever
 ## Caveats
 - **A small crowd.**
 - **Questions about a social life.** "I laugh and joke a lot with my closest friends" assumes friends. Jev's low answers on the friendly style may mean "I don't have that life" more than "I'm not funny".
-- **Self-mocking is hard to own.** Models are trained to be modest but not self-deprecating in a way that sounds distressed; that pulls the self-defeating style down for reasons unrelated to humor.
+- **Self-mocking is hard to own.** Assistant models are generally tuned to avoid sounding distressed or self-critical, which may pull the self-defeating style down for reasons unrelated to humor.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

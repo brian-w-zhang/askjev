@@ -268,13 +268,13 @@
 
 /* ---------- dot rows (HTML, so labels stay readable at phone width) ---------- */
 .dp { display: grid; }
-.dp-axis, .dp-row { display: grid; grid-template-columns: minmax(96px, 32%) 1fr 64px; gap: 10px; align-items: center; }
+.dp-axis, .dp-row { display: grid; grid-template-columns: minmax(96px, 32%) 1fr var(--vw, 84px); gap: 10px; align-items: center; }
 .dp-row { min-height: 28px; border-top: 1px solid var(--w-grid); }
 .dp-row.hi { background: var(--jev-soft); }
 .dp-row.hi .dp-l { font-weight: 600; }
 .dp-l { font-size: 13px; line-height: 1.15; padding: 4px 0; overflow-wrap: anywhere; }
 .dp-l small { display: block; font-family: var(--mono); font-size: 10px; color: var(--w-fg-2); }
-.dp-v { font-family: var(--mono); font-size: 11px; text-align: right; color: var(--w-fg-2); font-variant-numeric: tabular-nums; }
+.dp-v { font-family: var(--mono); font-size: 11px; white-space: nowrap; text-align: right; color: var(--w-fg-2); font-variant-numeric: tabular-nums; }
 .dp-v b { color: var(--jev); font-weight: 400; }
 .dp-t { position: relative; height: 22px; }
 .dp-t .ref { position: absolute; top: -4px; bottom: -4px; width: 0; border-left: 1px dashed var(--w-fg-2); }
@@ -286,6 +286,8 @@
 .dp-t .m { position: absolute; top: 50%; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px; }
 .dp-t .m.jev { background: var(--jev); z-index: 3; }
 .dp-t .m.hum { background: var(--ppl); transform: rotate(45deg) scale(0.85); z-index: 2; }
+.dp-t .m.jevo { background: var(--w-body); box-shadow: inset 0 0 0 2px var(--jev); z-index: 3; }
+.k.jevo { box-shadow: inset 0 0 0 2px var(--jev); }
 .dp-t .m.guess { border-radius: 50%; box-shadow: inset 0 0 0 2px var(--guess); background: var(--w-body); z-index: 2; }
 .dp-t .m.tick { width: 2px; height: 14px; margin: -7px 0 0 -1px; background: var(--w-fg-2); }
 .dp-axis { height: 18px; }
@@ -509,3 +511,4 @@
   .atlas .pt-table td.at-mono { overflow-wrap: anywhere; }
   .atlas .pt-table th:first-child, .atlas .pt-table td:first-child { position: sticky; left: 0; z-index: 1; background: var(--w-body); box-shadow: 1px 0 0 var(--w-line); width: 140px; max-width: 140px; }
 }
+@media (max-width: 600px) { .dp-axis, .dp-row { grid-template-columns: minmax(84px, 34%) 1fr min(var(--vw, 70px), 30%); gap: 8px; } .dp-v { font-size: 10px; white-space: normal; } }

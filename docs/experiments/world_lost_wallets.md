@@ -20,13 +20,13 @@ The experiment described in full, per country and condition:
 > the owner to return it?
 > *0% · 5% · 10% · ... · 100%*
 
-(In Peru, about 13%.) Plus one direct question: which wallets were returned more often, with money or without? 84 new questions in all, each asked with the options in shuffled orders and averaged.
+(In Peru, about 13%.) Plus one direct question: which wallets were returned more often, with money or without? 84 questions in all, each asked with the options in shuffled orders and averaged.
 
 ## How it was measured
 Jev's estimate is the middle of its answer. It is compared with the real return rate: how well Jev orders the 40 countries (rank correlation: 1 same order, 0 no relation), the average miss in percentage points, and, for each country, whether Jev's estimate with money is higher than without, as the real rates almost always are.
 
 ## Caveats
-- **Every estimate near 50%.** A model hedging toward the middle of a 0-100% scale will score a moderate rank correlation and a large average error at the same time, which is what happened.
+- **A middle-of-the-scale guess.** Estimates that hug the middle of a 0-100% scale can earn a moderate rank correlation and a large average miss at the same time.
 - **It may know the study.** The study was covered widely in 2019. Jev knowing the headline (money helps) when asked directly, but not applying it country by country, looks like remembering a fact rather than reasoning from it.
 - **Pooled across places.** Each country's rate pools several cities and kinds of institutions (banks, hotels, post offices, museums). Jev was told the setting in general terms, not which city or desk.
 - **Human predictions not used.** The study also surveyed economists and ordinary people, who predicted that money would reduce returns. Those predictions are cited from the paper; their data weren't used here.

@@ -3,7 +3,9 @@
 family: polls
 
 ## Why ask this
-Blue is the world's favorite color in almost every survey ever run. A favorite color is a tiny question, but it's a clean test of something bigger: does a model's taste just mirror the most common human answer, or does it have preferences of its own? Colors are also a case where there is no right answer to lean on, only taste.
+Blue is the world's favorite color in almost every survey ever run. A favorite color is a tiny question, but it's a clean test of something bigger: does a model's taste just mirror the most common human answer, or does it have preferences of its own?
+
+Colors are a case where there is no right answer to lean on, only taste, and models are increasingly asked for taste: which palette for a logo, which paint for a bedroom, which shirt for an interview.
 
 ## The people and the data
 Two open datasets on favorite colors:

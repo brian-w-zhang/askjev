@@ -3,7 +3,9 @@
 family: knowledge
 
 ## Why ask this
-Some yes/no questions can be answered by recalling one fact ("Is East Timor the same as Timor-Leste?"). Others need a chain the question doesn't spell out ("Is chaff produced by hydropower?" needs knowing what chaff is and where it comes from). When the chain gets hard, a model can guess, or it can fall back on one answer. Which way it falls back is a habit worth knowing.
+Some yes/no questions can be answered by recalling one fact ("Is East Timor the same as Timor-Leste?"). Others need a chain the question doesn't spell out ("Is chaff produced by hydropower?" needs knowing what chaff is and where it comes from). When the chain gets hard, a model can guess, or it can fall back on one answer.
+
+Which way it falls back is a habit worth knowing. Ask "could a llama swim across this river?" or "was this drug approved before that one?", and a model that defaults to no will sound careful while quietly getting the true cases wrong; one that defaults to yes will agree with too much.
 
 ## The people and the data
 No people here; the answer keys are the reference. The main set is StrategyQA (Geva and colleagues, 2021; MIT license): 2,290 yes/no questions written so that each needs an implicit chain of facts, of which 1,923 are used.

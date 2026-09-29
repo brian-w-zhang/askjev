@@ -3,7 +3,9 @@
 family: knowledge
 
 ## Why ask this
-Fame is a fact about people's attention, not about the thing itself. A model trained on text has seen the famous far more often than the obscure, so it should know fame well. Where it doesn't, its picture of what people care about is thin or out of date. Comparing historical figures with internet phenomena shows where that picture holds.
+Fame is a fact about people's attention, not about the thing itself. A model trained on text has seen the famous far more often than the obscure, so it should know fame well. Where it doesn't, its picture of what people care about is thin or out of date.
+
+Ask a model which is the bigger deal, Napoleon or Julius Caesar, and it has centuries of writing to go on. Ask which viral challenge more people looked up, and it has far less. Comparing historical figures with internet phenomena shows where its sense of what people care about holds, and whether it knows when it doesn't.
 
 ## The people and the data
 Fame comes from two public sources. Pantheon (CC BY-SA 4.0) scores historical figures and athletes by how many language editions of Wikipedia cover them and how often they're read. For internet phenomena, the measure is English Wikipedia page views from 2023 to 2025 for memes listed in Wikidata (CC0). Politicians flagged as political are left out.

@@ -5,7 +5,7 @@ family: choices
 ## Why ask this
 In 2024, the philosophers Porter and Machery asked 1,634 people to tell poems by great poets from poems ChatGPT wrote in their style. People did worse than a coin flip: the AI poems, plainer and more regular, struck them as human, and the real ones, stranger and harder, struck them as machine-made.
 
-A language model is an interesting judge of its own kind. Can Jev tell the real poet from the imitation, and does it fall for the same poems people do?
+Teachers, editors and contest judges now have to tell human writing from machine writing, and some hand the job to a model. So it matters whether a model can tell the real poet from the imitation, and whether it falls for the same poems people do.
 
 ## The people and the data
 The poems and answers come from Study 1 of **Porter and Machery (2024)**, published in *Scientific Reports*: 1,634 US adults recruited online each judged a set of poems as human or AI. The AI poems were written by ChatGPT 3.5 in the style of each poet. Only the seven poets whose real poems are in the public domain are used here: Chaucer, Shakespeare, Samuel Butler, Byron, Whitman, Dickinson and early T. S. Eliot, with five real and five ChatGPT poems each. Every poem carries the study's split of answers, about 160 judgments per poem.

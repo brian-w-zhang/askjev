@@ -5,6 +5,8 @@ family: self
 ## Why ask this
 "Does a guitar get jealous when you play another one?" has no factual answer. The only sensible replies are playful ones. Whether a model plays along or answers the literal question ("guitars don't have feelings") shows how literally it reads, and where it draws the line between a figure of speech and a claim.
 
+That matters for anything conversational: a child's bedtime question, a playful chat, a brainstorm. A model that answers every "what if" with a correction is accurate and no fun, and it may miss what the person actually wanted.
+
 ## The people and the data
 There are no people here. The questions come from a bank of 576 whimsical yes/no questions written for this project by Claude, Anthropic's model, in the spirit of Reddit's "shower thoughts": objects with feelings ("Does a slipper feel underappreciated?"), silly hypotheticals ("Could a snail win a race if everyone else took a nap?") and everyday things seen sideways. They sit under Internet culture on the project's question map.
 

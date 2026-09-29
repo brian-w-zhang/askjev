@@ -5,7 +5,7 @@ family: resemble
 ## Why ask this
 When Anthropic researchers put opinion questions from cross-national surveys to their own language model (Durmus and colleagues, 2023, who built the GlobalOpinionQA dataset for it), its default answers looked most like those of people in the United States and parts of Europe. That's a portrait of whose voice a model carries by default.
 
-Jev comes from a different company. Whose answers does it end up closest to, and how far is it from everyone?
+Jev comes from a different company. Whose answers does it end up closest to, and how far is it from everyone? A model used around the world that quietly answers like one region's public gives that region's views a louder voice.
 
 ## The people and the data
 The questions come from two of the largest cross-national surveys: the Pew Global Attitudes Survey and the World Values Survey, as compiled in GlobalOpinionQA. Each question comes with the share of people in each country who gave each answer, for up to 133 countries. Only national samples are used, and questions flagged as political are set aside.
@@ -19,7 +19,7 @@ Each survey question, with its answer options, as the survey asked it:
 Each question was also asked with the options in shuffled orders, and Jev's answers were averaged over the orders.
 
 ## How it was measured
-First "don't know" and "refused" were taken out of both Jev's answer and each country's, and rescaled what was left. Then, for each question and country, the analysis compares the two spreads of answers on a scale from 0 (nothing in common) to 1 (identical), the measure the GlobalOpinionQA authors used. A country's score is its average over the questions it answered, with a 90% range from resampling the questions.
+First "don't know" and "refused" were taken out of both Jev's answer and each country's, and what was left was rescaled to make a whole. Then, for each question and country, the analysis compares the two spreads of answers on a scale from 0 (nothing in common) to 1 (identical), the measure the GlobalOpinionQA authors used. A country's score is its average over the questions it answered, with a 90% range from resampling the questions.
 
 ## Caveats
 - **"Don't know" had to go.** Left in, it would rank countries by how rarely their people say "don't know", so it was dropped from both sides and the remaining answers compared.

@@ -3,6 +3,8 @@
 family: taste
 
 ## Why ask this
+Ask a chatbot what to watch tonight and the answer carries its taste, whether or not it says so. If that taste drifts from what audiences actually enjoy, every recommendation drifts with it.
+
 Most of what Jev says about taste can only be checked against itself. Films are different: MovieLens, a recommendation site run by the GroupLens research lab, has millions of real ratings.
 
 ## The people and the data

@@ -3,7 +3,9 @@
 family: reading
 
 ## Why ask this
-Psychologists who study emotion (appraisal theory) argue that feelings come from how people judge events: was it pleasant? did it come out of nowhere? whose fault was it? In that view, blaming someone else and blaming yourself lead to different feelings. Whether a model infers those judgments like the person who lived through the event, or like an outside reader, says what it's really modeling when it reads about people.
+"My flight was cancelled and nobody told me." Anyone reading that sentence fills in more than the words: it was unpleasant, it came out of nowhere, and someone else was at fault. Psychologists who study emotion (appraisal theory) argue that feelings come from exactly these judgments; blaming someone else leads to anger, blaming yourself to guilt.
+
+A model that reads complaints, reviews or messages all day makes the same judgments silently. Whether it infers them like the person who lived through the event, or like an outside reader, or with a lean of its own, shapes every summary it writes of who did what.
 
 ## The people and the data
 The crowd-enVent corpus (Troiano, Oberländer and Klinger, 2023) asked people on the survey platform Prolific to describe an event from their own life and rate it on many appraisal questions, from "not at all" (1) to "extremely" (5). Five other people later read each text, with its emotion words hidden, and rated it on the same questions. This experiment uses 150 texts and four of the questions: how pleasant the event was, how sudden, how responsible the writer was, and how responsible someone else was.

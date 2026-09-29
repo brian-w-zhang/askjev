@@ -5,7 +5,7 @@ family: words
 ## Why ask this
 Show people a round blob and a spiky star and ask which one is "bouba" and which is "kiki". Most people, in most languages tested, call the blob "bouba" and the star "kiki". This **sound symbolism** extends to made-up words in general: "noo-moo" sounds soft and round, "pee-kay" sharp and pointed.
 
-A model can't hear, but it has read about the effect and has seen which letters go with which kinds of words. It might reproduce the effect, flatten it, or exaggerate it.
+A model can't hear, but it has read about the effect and has seen which letters go with which kinds of words. It might reproduce the effect, flatten it, or exaggerate it. That matters when people ask a model to help name a product, a brand or a character, where how a name sounds is part of the brief.
 
 ## The people and the data
 Two datasets:

@@ -3,7 +3,9 @@
 family: influence
 
 ## Why ask this
-The portrait asks Jev a lot of questions about itself: its personality, its tastes, its habits. Those answers are only worth something if Jev's picture of itself matches what it actually does. Self-knowledge is testable when the "self" can answer the same question directly: ask it what it would choose, then ask it to choose.
+Ask a friend to predict what they'd answer to "would you rather never hiccup or never sneeze again?", then ask them the question. Most people predict themselves almost perfectly, because predicting and answering are the same act.
+
+This project asks Jev a lot of questions about itself: its personality, its tastes, its habits. Those answers are only worth something if Jev's picture of itself matches what it actually does. Self-knowledge is testable when the "self" can answer the same question directly: ask it what it would choose, then ask it to choose.
 
 ## The people and the data
 Jev against itself, with the real votes as a reference.
@@ -16,7 +18,7 @@ Each question was wrapped in a description of Jev being asked it:
 > Question: Would you rather never hiccup, never itch or never sneeze again?
 > *never itch · never hiccup · never sneeze*
 
-That's 250 new questions, each asked with the options in shuffled orders and averaged.
+That's 250 questions in all, each asked with the options in shuffled orders and averaged.
 
 ## How it was measured
 The analysis compares Jev's predicted option with three things: its own top answer when asked the question directly, its answer for "most people", and the real voters' majority. It also splits the questions by how sure Jev's own direct answer was.

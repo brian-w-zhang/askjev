@@ -28,9 +28,8 @@ Each was asked as written, for "most people", and with the levels reversed.
 For each rating, whether Jev ranks the idioms in the same order as people's averages (rank correlation: 1 means the same order, 0 no relation), with 90% intervals, and the idioms whose rank moves most.
 
 ## Caveats
-- **People's side is an average only.** The study published only the average rating per idiom, from about 100 US adults each, so the comparison is of rankings, not full answers.
+- **People's side is an average only.** So only the rankings are compared, and the named idioms are those whose rank moves most.
 - **The project's answer levels.** People rated on a plain 1-to-5 scale. Jev got five described levels written for this project, for familiarity in terms of how often you meet the idiom ("I hear or read it fairly often"). For a model, "how often have you met this" is a strange question; its answer may track how common the phrase is in text, not in speech.
 - **The idioms come in a stiff form.** Each idiom is listed as the study lists it, often with "be" or "get" in front ("Be a close call", "Be someone's better half"). The unnatural form may make familiar idioms look less familiar to Jev.
-- **Different scales.** Jev's answers are on 0-4 and people's averages on 1-5, so only the rankings are comparable; the named idioms are those whose rank moves most.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -3,7 +3,7 @@
 family: work
 
 ## Why ask this
-The most useful thing a model doing checks can know is when it doesn't know. If its confidence drops on the cases a careful person would also find hard, a pipeline can send exactly those to a human and trust the rest. If it's just as sure on hard cases as on easy ones, every answer needs checking.
+The most useful thing a model doing checks can know is when it doesn't know. If its confidence drops on the cases a careful person would also find hard, a system can send exactly those to a human and trust the rest. If it's just as sure on hard cases as on easy ones, every answer needs checking.
 
 Public datasets rarely say which cases are borderline. The work cases written for this project do.
 

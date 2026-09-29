@@ -23,7 +23,7 @@ Jev's guess of what most people would say is checked for whether it names the op
 
 ## Caveats
 - **Reddit is not "most people".** The voters are r/polls users: mostly young, online and English-speaking, and they vote on whatever reaches the front of the subreddit. Jev was asked what "most people" would say, which is a different crowd.
-- **Joke options and small polls.** Reddit polls often include a joke answer or a "see results" option (the latter was dropped), and only polls with 100 or more votes were kept, so a few percentage points of any poll are noise.
+- **Joke options and small polls.** Reddit polls often include a joke answer, which can win or split the vote. Only polls with 100 or more votes were kept, but a close result on a small poll is still partly noise.
 - **Topics are the project's grouping.** Each poll was placed in a topic of the project's question map automatically; a poll can land in a topic that fits it only loosely, and topics with fewer than 40 polls aren't compared.
 - **Politics left out.** A content filter hides political and sensitive polls from the site, and they aren't counted here.
 

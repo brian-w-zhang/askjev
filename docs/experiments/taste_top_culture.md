@@ -3,10 +3,12 @@
 family: taste
 
 ## Why ask this
-Which celebrations and traditions appeal to someone says what they value: spectacle, family, spirituality, music. For a model that has read about the world's festivals but never attended one, the favorites show which experiences its reading makes most vivid.
+Which celebrations and traditions appeal to someone says what they value: spectacle, family, spirituality, music. Ask a friend where to spend a week off and the answer shows theirs.
+
+A model has read about the world's festivals but never attended one, so its favorites show which experiences its reading makes most vivid. Anyone asking it for travel ideas or weekend plans gets those favorites first.
 
 ## The people and the data
-No people here: Jev against its own opinions. The one-at-a-time ratings already existed; only the 276 games of the final were new.
+No people here: Jev against its own opinions.
 
 ## What Jev was asked
 Every entry one at a time, with five answers describing what you'd do:
@@ -23,6 +25,6 @@ An entry's rating is where Jev's answer lands on the five levels (0 to 4). In th
 ## Caveats
 - **A list written by another AI.** The festivals, performances and media were written for this project by Claude. What's on the list shapes what can win, and photogenic festivals are well represented.
 - **Everyday media against once-in-a-lifetime events.** The list mixes famous festivals with ordinary media (podcasts, TV). Four of the bottom five are everyday media, so they lose to spectacles by design. That an Indian daily TV serial lands in the bottom five may reflect how such shows are written about in English more than the shows themselves.
-- **The finalists were picked by Jev's own ratings.**
+- **The finalists were picked by Jev's own ratings.** Its ratings and its head-to-head picks agree only moderately, so an entry rated just below the cut might have done well in the final too.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

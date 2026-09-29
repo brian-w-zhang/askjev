@@ -3,7 +3,9 @@
 family: work
 
 ## Why ask this
-In legal review, the two kinds of mistake cost very different amounts. Missing a clause that's really there (an uncapped liability, a most-favored-nation promise) can sink a deal or a lawsuit. Flagging a clause that isn't there costs a lawyer a minute to dismiss. So before trusting a model with contract or case review, you want to know not just how often it's right, but which way it's wrong.
+In legal review, the two kinds of mistake cost very different amounts. Missing a clause that's really there (an uncapped liability, a most-favored-nation promise) can sink a deal or a lawsuit. Flagging a clause that isn't there costs a lawyer a minute to dismiss.
+
+So before trusting a model with contract or case review, you want to know not just how often it's right, but which way it's wrong.
 
 ## The people and the data
 The tasks come from **LegalBench** (Guha and colleagues, 2023), a collection of legal reasoning tasks written and labeled by lawyers and law students, plus **CaseHOLD** (Zheng and colleagues, 2021):

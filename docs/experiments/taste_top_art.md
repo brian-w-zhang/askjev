@@ -3,10 +3,12 @@
 family: taste
 
 ## Why ask this
-Art taste is where people most expect a model to parrot the canon. The interesting parts are whether it does, what it does with non-Western works, and what it likes least.
+Art taste is where people most expect a model to parrot the canon. Ask one what to see on a day in Paris or Beijing and it will name something; whether that is the Mona Lisa every time, or a wider spread, depends on the taste it absorbed.
+
+So the questions are whether Jev sticks to the Western canon, what it does with non-Western works, and what it likes least. A model that plans trips, recommends exhibitions or writes about art passes those leanings on.
 
 ## The people and the data
-No people here: Jev against its own opinions. The one-at-a-time ratings already existed; only the 276 games of the final were new.
+No people here: Jev against its own opinions.
 
 ## What Jev was asked
 Every entry one at a time, with five answers describing what you'd do:
@@ -24,6 +26,6 @@ An entry's rating is where Jev's answer lands on the five levels (0 to 4). In th
 - **More wins, lower rank.** The ranking model weighs whom each work beat, not just how often, and the two are close enough that the order between them shouldn't be taken strictly.
 - **A list written by another AI.** The famous works, genres and places were written for this project by Claude, and the list mixes single paintings with whole art forms ("war photography") and buildings. Art forms are judged very differently from a single masterpiece.
 - **Upsetting subjects sink.** War photography comes last, which likely says more about its subject than its artistry: a question about how much you'd like seeing something rewards pleasant subjects.
-- **The finalists were picked by Jev's own ratings.**
+- **The finalists were picked by Jev's own ratings.** Its ratings and its head-to-head picks agree only loosely, so a work rated just below the cut might have done well in the final too.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

@@ -3,7 +3,9 @@
 family: personality
 
 ## Why ask this
-A language model is made of the internet: forums, fan wikis, technical manuals, arguments about starships. If any personality test should call it a nerd, it's this one. Whether it agrees is a small, fun check on how it sees itself, and on whether it describes itself through what it knows or through what it does.
+A language model is made of the internet: forums, fan wikis, technical manuals, arguments about starships. If any personality test should call it a nerd, it's this one.
+
+Whether it agrees is a small, fun check on how it sees itself. It also tests something more general: when a model answers a questionnaire written for people, does it describe itself through what it knows, or through a life it doesn't have?
 
 ## The people and the data
 The Nerdy Personality Attributes Scale (NPAS) was built by Open Psychometrics from statements that separate self-described nerds from everyone else. The takers chose to take a nerd test, so they are a nerdier crowd than the general public.

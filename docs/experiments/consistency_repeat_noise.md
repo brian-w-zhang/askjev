@@ -5,6 +5,8 @@ family: consistency
 ## Why ask this
 Every comparison on this site rests on a question: how much would Jev's answer change if you just asked again? Many chatbots answer differently each time. Jev returns probabilities rather than a sampled answer, so the question is whether those probabilities are fixed, or wobble, and whether a wobble can change what it would pick.
 
+It matters beyond this site too. A spam filter that says "spam" today and "fine" tomorrow on the same email, or a review check that flips on a resubmitted form, is hard to trust, and hard to debug.
+
 ## The people and the data
 No people; Jev against itself. Each two-option question on the site is asked three times as part of its usual checks: with the options reversed, in the original order, and reversed again. The two reversed requests are identical word for word and were sent separately, at different times.
 

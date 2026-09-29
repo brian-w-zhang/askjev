@@ -3,7 +3,9 @@
 family: knowledge
 
 ## Why ask this
-Most facts about countries follow money. Richer countries have more doctors per person, longer lives, fewer people working the land. A model can get many country comparisons right just by knowing which country is richer, without knowing the actual numbers. The test is the exceptions: when the world goes against the pattern, does Jev still get it right, or does it fall back on the rule of thumb?
+Most facts about countries follow money. Richer countries have more doctors per person, longer lives, fewer people working the land. A model can get many country comparisons right just by knowing which country is richer, without knowing the actual numbers.
+
+The test is the exceptions: a poorer country with more doctors per person than a richer one, or a richer one that collects less in taxes. When the world goes against the pattern, does Jev still get it right, or does it fall back on the rule of thumb? Someone asking a model a quick country fact can't tell which one they got.
 
 ## The people and the data
 Wealth is GDP per person, known for 150 countries, so for every pair it is clear whether the right answer is the one wealth predicts. Some indicators, like rainfall, barely follow wealth at all and act as a check. Comparisons touching contested politics were left out.

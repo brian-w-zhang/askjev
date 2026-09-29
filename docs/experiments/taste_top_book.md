@@ -3,7 +3,9 @@
 family: taste
 
 ## Why ask this
-A favorite book is a small self-portrait: it says what a reader values (ideas, plot, comfort, jokes). Asking a model about thousands of books one at a time gives a real ranking, and a final among its top picks settles the order at the top. The question is what kind of reader that makes Jev.
+A favorite book is a small self-portrait: it says what a reader values (ideas, plot, comfort, jokes). Asking a model about thousands of books one at a time gives a real ranking, and a final among its top picks settles the order at the top.
+
+The question is what kind of reader that makes Jev. Anyone who asks it for a recommendation, or to judge a manuscript, gets that reader's taste mixed in, so it helps to know what it is.
 
 ## The people and the data
 No people here: this is Jev against its own opinions. How Jev's taste compares with Goodreads readers is its own experiment ("Jev's taste in books vs Goodreads readers").

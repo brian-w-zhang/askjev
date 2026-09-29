@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { DotRows, type DotRow } from "../portrait/charts";
+import { DotRows, type DotRow, type MarkKind } from "../portrait/charts";
 import type { Chart as ChartData } from "./types";
 
 // The experiments' chart library (docs/16 pass 3, step 5). Every experiment's result file carries a chart spec
@@ -40,11 +40,15 @@ function extent(values: number[], zero: boolean, pad = 0.06): [number, number] {
   if (lo >= 0 && hi <= 1 && hi - lo > 0.25) return [0, 1];
   if (hi === lo) { lo -= 1; hi += 1; }
   const p = (hi - lo) * pad;
-  // round the ends outward to a readable step, so axes read 0 to 1 or -0.5 to 1, not -0.41 to 0.75
-  const raw = (hi - lo + 2 * p) / 4;
+  // round the ends outward to a readable step, so axes read 0 to 1 or -0.5 to 1, not -0.41 to 0.75; a fine step keeps
+  // a 0-4 scale from growing to -2..6, and data that can't go below zero never gets a negative axis
+  const raw = (hi - lo + 2 * p) / 6;
   const mag = 10 ** Math.floor(Math.log10(raw || 1));
   const step = [1, 2, 2.5, 5, 10].map((m) => m * mag).find((x) => x >= raw) ?? raw;
-  return [Math.floor((lo - p) / step) * step, Math.ceil((hi + p) / step) * step];
+  const b = Math.ceil((hi + p) / step) * step;
+  let a = Math.floor((lo - p) / step) * step;
+  if (lo >= 0 && a < 0) a = 0;
+  return [Number(a.toFixed(6)), Number(b.toFixed(6))];
 }
 
 // ---- rows of dots: dots, effects, forest, strip, range, dumbbell, slope ------------------------------------------------
@@ -64,10 +68,12 @@ function rowsChart(c: ChartData, mini: boolean) {
       push(p, j); link = true;
       value = j !== null && p !== null ? <><b>{j.toFixed(2)}</b> · {p.toFixed(2)}</> : null;
     } else if (t === "dumbbell" || t === "slope") {
-      const a = num(r.a), b = num(r.b);
-      if (a !== null) marks.push({ v: a, kind: "hum", title: `${str(c.a_label)} ${a}` });
-      if (b !== null) marks.push({ v: b, kind: "jev", title: `${str(c.b_label)} ${b}` });
-      push(a, b); link = true;
+      const a = num(r.a), b = num(r.b), j = num(r.jev);
+      const K = pairKinds(c);
+      if (a !== null) marks.push({ v: a, kind: K.a, title: `${str(c.a_label)} ${a}` });
+      if (b !== null) marks.push({ v: b, kind: K.b, title: `${str(c.b_label)} ${b}` });
+      if (j !== null) marks.push({ v: j, kind: K.jev, title: `${str(c.jev_label) || "Jev"} ${j}` });
+      push(a, b, j); link = true;
       value = t === "slope" && a !== null && b !== null ? <><b>{c.rank ? b : fmtPct(b)}</b> · {c.rank ? a : fmtPct(a)}</> : null;
     } else {
       const v = num(r.value), p = num(r.people), g = num(r.guess);
@@ -85,6 +91,7 @@ function rowsChart(c: ChartData, mini: boolean) {
       }
       push(v, p, g, ...(ci ?? []), ...(ciP ?? []));
       value = r.right !== undefined ? str(r.right) : r.note !== undefined ? str(r.note) : null;
+      if (!sub && r.group) sub = str(r.group); // a row's group (e.g. which part of a rule was broken) under its label
       link = p !== null && v !== null;
     }
     dr.push({ key: `${i}`, label: pretty(str(r.label)), sub: mini ? null : sub, marks, ci, ciP, value: mini ? null : value, hi: r.hi === true, link });
@@ -94,14 +101,30 @@ function rowsChart(c: ChartData, mini: boolean) {
   const ranks = t === "slope" && Boolean(c.rank);
   if (ranks && vals.length) domain = [Math.max(...vals) + 0.5, Math.min(...vals) - 0.5]; // ranks: 1 on the right
   const shown = mini ? dr.slice(0, 7) : dr;
-  const fmt = ranks ? (v: number) => String(Math.round(v)) : fmtFor(domain);
+  // "fmt": "num" for 0-1 values that aren't shares (a rank correlation), so the axis reads 0.5, not 50%
+  const fmt = ranks ? (v: number) => String(Math.round(v)) : c.fmt === "num" ? (v: number) => v.toFixed(1).replace(/\.0$/, "") : c.fmt === "num2" ? (v: number) => v.toFixed(2) : fmtFor(domain);
   const ticks = ranks ? [] : niceTicks(domain, mini ? 3 : 5);
   return (
     <div className={mini ? "ex-mini-rows" : undefined}>
-      <DotRows rows={shown} domain={domain} ticks={ticks} fmt={fmt} refs={[...(zero ? [{ v: num(c.zero) ?? 0, zero: true }] : []), ...(num(c.ref) !== null ? [{ v: c.ref as number }] : [])]} />
+      <DotRows rows={shown} domain={domain} ticks={ticks} fmt={fmt} valueWidth={mini ? undefined : valueWidth(rows)} refs={[...(zero ? [{ v: num(c.zero) ?? 0, zero: true }] : []), ...(num(c.ref) !== null ? [{ v: c.ref as number }] : [])]} />
       {!mini && <Legend c={c} />}
     </div>
   );
+}
+
+// what each series of a two-sided row chart is: by default a = people, b = Jev; with Jev's own answer on the row too,
+// a and b are both people (say two survey years). A spec can say it outright: marks {a, b, jev} (jevo = Jev again)
+function pairKinds(c: ChartData): { a: MarkKind; b: MarkKind; jev: MarkKind } {
+  const withJev = arr(c.rows).some((r) => num(r.jev) !== null);
+  const d = withJev ? { a: "tick", b: "hum", jev: "jev" } : { a: "hum", b: "jev", jev: "jev" };
+  return { ...d, ...((c.marks as Record<string, MarkKind>) ?? {}) } as { a: MarkKind; b: MarkKind; jev: MarkKind };
+}
+const KIND_WORDS: Record<string, string> = { jev: "Jev", hum: "people", guess: "what Jev thinks most people would say", tick: "", jevo: "Jev" };
+
+// the value column fits the chart's longest right-hand note ("index 0.10 · truth 27"), within reason
+function valueWidth(rows: Obj[]): number | undefined {
+  const n = Math.max(0, ...rows.map((r) => str(r.right ?? r.note ?? "").length));
+  return n > 11 ? Math.min(170, Math.round(n * 6.4 + 8)) : undefined;
 }
 
 function Legend({ c }: { c: ChartData }) {
@@ -112,6 +135,17 @@ function Legend({ c }: { c: ChartData }) {
   const hasT = rows.some((r) => r.others || r.lo);
   const a = t === "dumbbell" || t === "slope" ? str(c.a_label) || "people" : "people";
   const b = t === "dumbbell" || t === "slope" ? str(c.b_label) || "Jev" : "Jev";
+  if (t === "dumbbell" || t === "slope") {
+    const K = pairKinds(c);
+    const hasJ = rows.some((r) => num(r.jev) !== null);
+    const items: [MarkKind, string][] = [[K.b, b], [K.a, a], ...(hasJ ? [[K.jev, str(c.jev_label) || KIND_WORDS[K.jev] || "Jev"]] as [MarkKind, string][] : [])];
+    return (
+      <p className="ex-legend">
+        {items.map(([k, l]) => <span key={`${k}${l}`}><i className={`k ${k}`} />{l}</span>)}
+        {c.x ? <span className="ax">{str(c.x)}</span> : null}
+      </p>
+    );
+  }
   return (
     <p className="ex-legend">
       <span><i className="k jev" />{b}</span>
@@ -124,12 +158,12 @@ function Legend({ c }: { c: ChartData }) {
 }
 
 // ---- bars: ranked, bars, bars2, mix --------------------------------------------------------------------------------------
-function Bars({ rows, max, fmt, mini, labels, mark }: {
+function Bars({ rows, max, fmt, mini, labels, mark, markLabel }: {
   rows: { label: string; a?: number | null; b: number; ci?: [number, number] }[]; max: number; fmt: (v: number) => string;
-  mini: boolean; labels?: [string, string]; mark?: number | null;
+  mini: boolean; labels?: [string, string]; mark?: number | null; markLabel?: string;
 }) {
   const w = (v: number) => `${Math.max(0, Math.min(1, v / (max || 1))) * 100}%`;
-  const paired = rows.some((r) => r.a !== undefined && r.a !== null);
+  const paired = labels !== undefined || rows.some((r) => r.a !== undefined && r.a !== null);
   return (
     <div className={`ex-bars${mini ? " mini" : ""}${paired ? " paired" : ""}`}>
       {rows.map((r, i) => (
@@ -142,13 +176,13 @@ function Bars({ rows, max, fmt, mini, labels, mark }: {
             {r.ci && <i className="ci" style={{ left: w(r.ci[0]), width: `calc(${w(r.ci[1])} - ${w(r.ci[0])})` }} />}
             {mark !== undefined && mark !== null && <i className="ref" style={{ left: w(mark) }} />}
           </span>
-          {!mini && <span className="v"><b>{fmt(r.b)}</b>{r.a !== undefined && r.a !== null ? <> · <span className="pv">{fmt(r.a)}</span></> : ""}</span>}
+          {!mini && <span className="v"><b>{fmt(r.b)}</b>{r.a !== undefined && r.a !== null ? <> · <span className="pv">{fmt(r.a)}</span></> : paired ? <> · <span className="pv" title="not asked or hidden">—</span></> : ""}</span>}
         </div>
       ))}
-      {!mini && labels && (
+      {!mini && (labels || (markLabel && mark !== undefined && mark !== null)) && (
         <p className="ex-legend">
-          <span><i className="k jev" />{labels[1]}</span><span><i className="k bar" />{labels[0]}</span>
-          {mark !== undefined && mark !== null && <span><i className="k tick" />{fmt(mark)}</span>}
+          {labels && <><span><i className="k jev" />{labels[1]}</span><span><i className="k bar" />{labels[0]}</span></>}
+          {mark !== undefined && mark !== null && <span><i className="k tick" />{markLabel ? `${markLabel}: ${fmt(mark)}` : fmt(mark)}</span>}
         </p>
       )}
     </div>
@@ -165,7 +199,7 @@ function barsChart(c: ChartData, mini: boolean) {
     const rows = items.slice(0, mini ? 5 : 10).map((x, i) => ({ label: `${i + 1}. ${str(x.label)}`, b: num(x.value) ?? 0 }));
     return (
       <>
-        <Bars rows={rows} max={max} fmt={fmt} mini={mini} />
+        <Bars rows={rows} max={max} fmt={fmt} mini={mini} mark={num(c.chance)} markLabel="chance" />
         {!mini && arr(c.bottom).length > 0 && (
           <p className="ex-foot">At the bottom: {arr(c.bottom).map((x) => str(x.label)).join(" · ")}</p>
         )}
@@ -183,9 +217,9 @@ function barsChart(c: ChartData, mini: boolean) {
     } else {
       labels = arr<string>(c.labels).map(str); a = arr<number>(c.a); b = arr<number>(c.b); la = str(c.a_label) || "people"; lb = str(c.b_label) || "Jev";
     }
-    const max = Math.max(...a, ...b, 0);
+    const max = Math.max(...a.filter((x) => num(x) !== null), ...b.filter((x) => num(x) !== null), 0);
     const fmt = max <= 1 ? (v: number) => `${Math.round(v * 100)}%` : (v: number) => v.toFixed(1);
-    const rows = labels.map((l, i) => ({ label: pretty(l), a: a[i] ?? 0, b: b[i] ?? 0 })).slice(0, mini ? 6 : 40);
+    const rows = labels.map((l, i) => ({ label: pretty(l), a: num(a[i]), b: num(b[i]) ?? 0 })).slice(0, mini ? 6 : 40);
     return <Bars rows={rows} max={max} fmt={fmt} mini={mini} labels={[la, lb]} mark={num(c.ref)} />;
   }
   // bars
@@ -204,11 +238,38 @@ function barsChart(c: ChartData, mini: boolean) {
 }
 
 // ---- x-y charts: scatter, rankscatter, binned, calibration, reliability ------------------------------------------------
-type Series = { name: string; kind: "jev" | "hum" | "alt"; pts: [number, number][]; line: boolean };
+type Series = { name: string; kind: "jev" | "hum" | "alt" | "alt2"; pts: [number, number][]; line: boolean };
 
-function XY({ series, labels = [], xd, yd, xl, yl, diagonal, mini, xcats, links = [] }: {
+// a log10 axis labels its ticks with the real values: 0.01, 1, 100, 10k
+const pow = (v: number) => {
+  const x = 10 ** v;
+  if (x >= 1e6) return `${Math.round(x / 1e6)}M`;
+  if (x >= 1e3) return `${Math.round(x / 1e3)}k`;
+  return x >= 1 ? String(Math.round(x)) : String(Number(x.toPrecision(1)));
+};
+// labels beside their points: try right, left, above-right, below-right; skip one that would collide or leave the plot
+function placeLabels(labels: { label: string; x: number; y: number }[], sx: (v: number) => number, sy: (v: number) => number, W: number, H: number) {
+  const boxes: [number, number, number, number][] = [];
+  const out: { text: string; x: number; y: number; anchor: "start" | "end" }[] = [];
+  const hit = (b: [number, number, number, number]) => boxes.some((o) => b[0] < o[2] && b[2] > o[0] && b[1] < o[3] && b[3] > o[1]);
+  for (const l of labels) {
+    const text = l.label.length > 28 ? `${l.label.slice(0, 27)}…` : l.label;
+    const w = text.length * 6.1 + 2, h = 12, px = sx(l.x), py = sy(l.y);
+    for (const [dx, dy, anchor] of [[6, -4, "start"], [-6, -4, "end"], [6, -12, "start"], [6, 12, "start"], [-6, 12, "end"]] as [number, number, "start" | "end"][]) {
+      const x0 = anchor === "start" ? px + dx : px + dx - w, y0 = py + dy - h + 3;
+      const b: [number, number, number, number] = [x0, y0, x0 + w, y0 + h];
+      if (x0 < 2 || x0 + w > W - 2 || y0 < 0 || y0 + h > H) continue;
+      if (hit(b)) continue;
+      boxes.push(b); out.push({ text, x: px + dx, y: py + dy, anchor }); break;
+    }
+  }
+  return out;
+}
+
+function XY({ series, labels = [], xd, yd, xl, yl, diagonal, mini, xcats, links = [], xlog, ylog }: {
   series: Series[]; labels?: { label: string; x: number; y: number }[]; xd: [number, number]; yd: [number, number];
   xl?: string; yl?: string; diagonal?: boolean; mini: boolean; xcats?: string[]; links?: [[number, number], [number, number]][];
+  xlog?: boolean; ylog?: boolean;
 }) {
   // a narrow canvas: at phone width it shrinks little, so its labels stay readable; on desktop it's capped in CSS
   const W = mini ? 220 : 480, H = mini ? 130 : 330, m = mini ? { l: 6, r: 6, t: 6, b: 6 } : { l: 44, r: 14, t: 12, b: 40 };
@@ -216,7 +277,7 @@ function XY({ series, labels = [], xd, yd, xl, yl, diagonal, mini, xcats, links 
   const r2 = (v: number) => Math.round(v * 100) / 100;
   const sx = (v: number) => r2(m.l + ((v - xd[0]) / (xd[1] - xd[0] || 1)) * (W - m.l - m.r));
   const sy = (v: number) => r2(H - m.b - ((v - yd[0]) / (yd[1] - yd[0] || 1)) * (H - m.t - m.b));
-  const fx = fmtFor(xd), fy = fmtFor(yd);
+  const fx = xlog ? pow : fmtFor(xd), fy = ylog ? pow : fmtFor(yd);
   const dense = series.reduce((a, s) => a + s.pts.length, 0) > 400;
   return (
     <figure className={`ex-xy${mini ? " mini" : ""}`}>
@@ -241,8 +302,8 @@ function XY({ series, labels = [], xd, yd, xl, yl, diagonal, mini, xcats, links 
             </g>
           );
         })}
-        {!mini && labels.map((l, i) => (
-          <text key={i} className="lab" x={sx(l.x) + 6} y={sy(l.y) - 5}>{l.label.length > 28 ? `${l.label.slice(0, 27)}…` : l.label}</text>
+        {!mini && placeLabels(labels, sx, sy, W, H).map((l, i) => (
+          <text key={i} className="lab" x={l.x} y={l.y} textAnchor={l.anchor}>{l.text}</text>
         ))}
         {!mini && xl && <text className="axl" x={(W + m.l) / 2} y={H - 6} textAnchor="middle">{xl}</text>}
         {!mini && yl && <text className="axl" x={12} y={(H - m.b + m.t) / 2} textAnchor="middle" transform={`rotate(-90 12 ${(H - m.b + m.t) / 2})`}>{yl}</text>}
@@ -264,21 +325,33 @@ function xyChart(c: ChartData, mini: boolean) {
     const xd: [number, number] = d ?? extent(pts.map((p) => p[0]), false, 0.03), yd: [number, number] = d ?? extent(pts.map((p) => p[1]), false, 0.03);
     const pp = arr<[number, number]>(c.points_people).filter((p) => Array.isArray(p) && num(p[0]) !== null && num(p[1]) !== null);
     const lg = Boolean(c.log);
-    const tf = (p: [number, number]): [number, number] => (lg ? [Math.log10(Math.max(p[0], 1e-9)), Math.log10(Math.max(p[1], 1e-9))] : p);
+    // "log": the stored values are already log10; the axes label them with the real numbers
+    const tf = (p: [number, number]): [number, number] => p;
     const P = pts.map(tf), Q = pp.map(tf);
     const both = [...P, ...Q];
     const xd2 = d && !lg ? xd : extent(both.map((p) => p[0]), false, 0.03), yd2 = d && !lg ? yd : extent(both.map((p) => p[1]), false, 0.03);
     const labels = arr(c.labels).map((l) => { const [x, y] = tf([num(l.x) ?? 0, num(l.y) ?? 0]); return { label: str(l.label), x, y }; });
     const series: Series[] = [{ name: "Jev", kind: "jev", pts: P, line: false }];
     if (Q.length) series.push({ name: "people", kind: "hum", pts: Q, line: false });
-    return <XY series={series} labels={labels} xd={xd2} yd={yd2} xl={`${str(c.x)}${lg ? " (log10)" : ""}`} yl={`${str(c.y)}${lg ? " (log10)" : ""}`} diagonal={Boolean(c.diagonal) || t === "rankscatter"} mini={mini} />;
+    const axis = (a: string) => (lg && !/log/i.test(a) ? `${a} (log scale)` : a.replace(/\s*\(log10\)/i, " (log scale)"));
+    return <XY series={series} labels={labels} xd={xd2} yd={yd2} xl={axis(str(c.x))} yl={axis(str(c.y))} diagonal={Boolean(c.diagonal) || t === "rankscatter"} mini={mini} xlog={lg} ylog={lg} />;
+  }
+  if (t === "binned" && c.lines && typeof c.lines === "object") {
+    // several lines over a numeric x (one per dataset), each point {x, value}
+    const kinds: Series["kind"][] = ["jev", "alt", "alt2"];
+    const series: Series[] = Object.entries(c.lines as Record<string, Obj[]>).map(([name, pts], i) => ({
+      name, kind: kinds[i % kinds.length], line: true,
+      pts: pts.map((p) => [num(p.x) ?? 0, num(p.value) ?? 0] as [number, number]),
+    }));
+    return <XY series={series} xd={[0, 1]} yd={[0, 1]} xl={str(c.x)} yl={str(c.y)} diagonal={Boolean(c.diagonal)} mini={mini} />;
   }
   if (t === "binned") {
     const rows = arr(c.rows);
     const xcats = rows.map((r) => str(r.label));
-    const series: Series[] = [{ name: str(c.y) || "Jev", kind: "jev", pts: rows.map((r, i) => [i, num(r.value) ?? 0] as [number, number]), line: true }];
+    const series: Series[] = [{ name: str(c.jev_label) || "Jev", kind: "jev", pts: rows.map((r, i) => [i, num(r.value) ?? 0] as [number, number]), line: true }];
     if (rows.some((r) => num(r.people) !== null)) series.push({ name: "people", kind: "hum", pts: rows.map((r, i) => [i, num(r.people) ?? 0] as [number, number]), line: true });
     if (rows.some((r) => num(r.agree) !== null)) series.push({ name: "agrees with the majority", kind: "alt", pts: rows.map((r, i) => [i, num(r.agree) ?? 0] as [number, number]), line: true });
+    if (rows.some((r) => num(r.conf) !== null)) series.push({ name: "how sure Jev was", kind: "alt", pts: rows.map((r, i) => [i, num(r.conf) ?? 0] as [number, number]), line: true });
     const ys = series.flatMap((s) => s.pts.map((p) => p[1]));
     const yd: [number, number] = ys.every((y) => y >= 0 && y <= 1) ? [0, 1] : extent(ys, false);
     return <XY series={series} xd={[-0.5, rows.length - 0.5]} yd={yd} xl={str(c.x)} yl={str(c.y)} mini={mini} xcats={xcats} />;
@@ -309,7 +382,6 @@ function heat(c: ChartData, mini: boolean) {
   return (
     <div className={`ex-heat${mini ? " mini" : ""}`}>
       <table>
-        {!mini && <caption>rows: {str(c.y)} · columns: {str(c.x)} · shade = share of the row</caption>}
         {!mini && <thead><tr><th />{xs.map((x) => <th key={x}>{pretty(x)}</th>)}</tr></thead>}
         <tbody>
           {ys.map((y) => (
@@ -323,6 +395,7 @@ function heat(c: ChartData, mini: boolean) {
           ))}
         </tbody>
       </table>
+      {!mini && <p className="ex-foot">rows: {str(c.y)} · columns: {str(c.x)} · shade: share of the row</p>}
     </div>
   );
 }
@@ -415,8 +488,9 @@ function special(c: ChartData, mini: boolean): ReactNode {
       return (
         <>
           {!mini && <p className="ex-big">{str(c.letters)}</p>}
-          <DotRows rows={rows.map((r, i) => ({ key: `${i}`, label: r.label, marks: [...(r.pp !== null ? [{ v: 1 - r.pp, kind: "hum" as const }] : []), { v: 1 - r.p, kind: "jev" as const }], ci: r.ci ? [1 - r.ci[1], 1 - r.ci[0]] : undefined, link: r.pp !== null }))}
+          <DotRows rows={rows.map((r, i) => ({ key: `${i}`, label: r.label, marks: [...(r.pp !== null ? [{ v: 1 - r.pp, kind: "guess" as const }] : []), { v: 1 - r.p, kind: "jev" as const }], ci: r.ci ? [1 - r.ci[1], 1 - r.ci[0]] : undefined, link: r.pp !== null }))}
             domain={[0, 1]} ticks={mini ? [] : [0, 0.5, 1]} fmt={(v) => `${Math.round(v * 100)}%`} refs={[{ v: 0.5 }]} />
+          {!mini && <p className="ex-legend"><span><i className="k jev" />Jev</span>{rows.some((r) => r.pp !== null) && <span><i className="k guess" />what Jev thinks most people would pick</span>}</p>}
         </>
       );
     }

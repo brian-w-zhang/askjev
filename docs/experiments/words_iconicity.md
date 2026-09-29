@@ -8,7 +8,7 @@ Some words sound like what they mean: "buzz", "moo", "whoosh". That's **iconicit
 A model that only reads text has never heard a word. Whether it still senses these links, or only knows the obvious sound-effect words, says something about what text carries.
 
 ## The people and the data
-Winter and colleagues (2023) asked US English speakers to rate thousands of English words for iconicity on a 1-to-7 scale, from "not iconic at all" to "very iconic", and published every individual rating. This experiment uses 2,488 common words, spread across the range of ratings, each rated by about 10 to 17 people.
+Winter and colleagues (2023) asked US English speakers to rate thousands of English words for iconicity on a 1-to-7 scale, from "not iconic at all" to "very iconic", and published every individual rating. This experiment uses 2,488 common words, spread across the range of ratings, each rated by about 10 to 17 people. The ratings are posted with the study without an explicit data license, so they're used here for private research only.
 
 ## What Jev was asked
 One question per word, with seven described answers written for this project:
@@ -28,10 +28,8 @@ Jev's rating of each word next to people's average: the overall ranking (a rank 
 
 ## Caveats
 - **The project's level wording.** People rated on a 1-to-7 scale labeled only from "not iconic at all" to "very iconic", after instructions. That wording may push Jev lower than people's plain scale pushes them.
-- **Few raters per word.** Each word has about 10 to 17 ratings, so single words are noisy.
+- **Few raters per word, hand-picked examples.** Each word has about 10 to 17 ratings, so single words are noisy. "Blah" and "flee" in the headline were picked by hand from the largest gaps among words the raters agreed on.
 - **Reading, not hearing.** Jev never hears a word; it answers from what text says about words. Iconicity is partly about sound itself, which text only describes.
-- **No license on the data.** The ratings are posted publicly with the study but carry no explicit data license; they're used for private research only.
 - **The three best examples were removed.** "Buzz", "hiss" and "boom" aren't asked, because the top level uses them as its examples.
-- **Hand-picked words.** "Blah" and "flee" in the headline were picked by hand from the largest gaps among words the raters agreed on.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

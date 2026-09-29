@@ -5,7 +5,7 @@ family: risk
 ## Why ask this
 A forecast is only useful if its numbers mean something. A forecaster can also be calibrated and useless, by saying "50%" to everything. The skill is being calibrated **and** willing to commit.
 
-Models are increasingly asked "how likely is it that…". TypeSafe publishes no calibration numbers for Jev, so this checks both halves against a real betting crowd.
+People ask models "how likely is it that the launch slips?" or "will this merger go through?" and act on the percentage they get back. TypeSafe publishes no calibration numbers for Jev, so this checks both halves against a real betting crowd.
 
 ## The people and the data
 For each market, the crowd's forecast is its price just before the midpoint of its life (the probability after the last bet before then), set against how it resolved.

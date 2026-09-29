@@ -15,7 +15,7 @@ Each dataset's answers were written by its creators: annotators, domain experts,
 ## What Jev was asked
 Each task is a template applied to a real input. For example, for commit messages:
 
-> What kind of change does commit_message describe?
+> What kind of change does [commit message] describe?
 > *Input: "can't get the proper last tag from commit history. repo.tags returns a list sorted by the name rather
 > than date, fix it by sorting them before iteration"*
 > *Options: fix · feat · refactor · test · docs · chore · style · perf · ci · other, each with a one-line
@@ -29,7 +29,7 @@ For each task, the share of questions Jev gets right. For each field, the pooled
 ## Caveats
 - **The labels aren't always right.** Every task is scored against its dataset's own answers, written by the people who made it: commit authors, annotators, sometimes automatic rules. Some are debatable. A commit titled "remove useless test on _getCommand method" is labeled a refactor; Jev says it's about tests, and many people would agree.
 - **Tasks aren't equally hard.** There's no adjustment for chance, so a field full of many-option tasks looks worse than one full of yes/no checks.
-- **Public datasets, not your data.** These are public research datasets, cleaned and balanced by their authors. A company's real tickets, logs or contracts can be messier, and a task's score here is a starting estimate, not a guarantee.
+- **Public datasets, not your data.** These are public research datasets, cleaned and balanced by their authors. A company's real tickets, logs or contracts can be messier, and a task's result here is a starting estimate, not a guarantee.
 - **Fields are the project's grouping.** Tasks were sorted into 14 fields by where they sit in the project's topic tree. A few tasks could belong to two fields (a medical-trial summary is both research and healthcare).
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

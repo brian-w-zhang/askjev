@@ -3,7 +3,9 @@
 family: personality
 
 ## Why ask this
-Helen Fisher proposed four broad temperaments: curious and energetic, cautious and rule-following, analytical and tough-minded, and prosocial and empathetic. The typology is popular on dating apps, which makes it a light way to ask which one a model would claim.
+Helen Fisher proposed four broad temperaments: curious and energetic, cautious and rule-following, analytical and tough-minded, and prosocial and empathetic. Her questionnaire became popular through dating apps, where people answer statements like "I feel emotions more deeply than most people" and get matched on the result.
+
+Asking a model the same statements is a light way to see how it describes itself. People chat with assistants as if they had a personality, and the self-portrait it gives when asked directly shapes that impression, whether it claims to be warm and adventurous or careful and rule-bound.
 
 ## The people and the data
 Open Psychometrics, a website of free personality tests, runs it online and publishes the anonymous answers.

@@ -3,7 +3,9 @@
 family: taste
 
 ## Why ask this
-Board games are social, so a favorite says what kind of evening you want: a clever party game, a long strategy session, a two-player duel. With thousands of games rated one at a time and a final among the best, it's possible to see what Jev reaches for, and whether the ratings and the final agree.
+Board games are social, so a favorite says what kind of evening you want: a clever party game, a long strategy session, a two-player duel.
+
+Models get asked for recommendations like "a game for six people who don't play much". Their own leanings color those answers. With thousands of games rated one at a time and a final among the best, it's possible to see what Jev reaches for, and whether its ratings and its head-to-head picks agree.
 
 ## The people and the data
 No people here: Jev against its own opinions. How Jev's taste compares with BoardGameGeek users is its own experiment.

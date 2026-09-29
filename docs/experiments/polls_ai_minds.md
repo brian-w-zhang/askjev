@@ -3,9 +3,9 @@
 family: polls
 
 ## Why ask this
-Whether AIs can think, feel or have wants of their own is one of the few questions where a model is both the subject and a witness. People's answers vary widely, and they're tracked every year by a survey built for exactly this.
+Ask a chatbot "do you have feelings?" or "could you ever be conscious?" and its reply shapes what people come to believe about AI. The public is split on these questions, and a US survey has tracked that split since 2021.
 
-So how does an AI answer questions about AI minds, compared with the public? Does it claim more for itself, or less?
+Here a model is both the subject and a witness. Comparing its answers with the public's shows whether it claims more for AI minds than people do, or less, and where it draws the line between thinking and feeling.
 
 ## The people and the data
 The **Artificial Intelligence, Morality, and Sentience (AIMS) survey** by the Sentience Institute (Pauketat, Ladak and Anthis): preregistered surveys of about 1,100 to 1,200 US adults per year, weighted to match the US census. This experiment uses the items about AI minds from the 2021, 2023 and 2024 waves and a 2023 supplement, about 30 items; attitude, policy and development-pace items are left out.

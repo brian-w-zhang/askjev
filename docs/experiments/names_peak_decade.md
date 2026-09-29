@@ -3,7 +3,9 @@
 family: names
 
 ## Why ask this
-Names go in and out of fashion, so a name hints at a birth year: you can guess a Mildred's age differently from a Madison's. FiveThirtyEight made the idea famous with "how to tell someone's age when all you know is her name". A model that has read a lot about people should know those popularity curves. This checks how well.
+Names go in and out of fashion, so a name hints at a birth year: you can guess a Mildred's age differently from a Madison's. FiveThirtyEight made the idea famous with "how to tell someone's age when all you know is her name".
+
+A model that has read a lot about people should know those popularity curves, and it leans on them whenever it writes a character, guesses who a customer might be, or picks a believable name for a person of a given age. If its sense of which names are old and which are new is off, those choices quietly go wrong.
 
 ## The people and the data
 The truth comes from US Social Security birth records, 1880 to 2017, via the public babynames dataset: how many babies got each name each year. For each name, the peak is the decade with the most births. The project picked 107 popular names (each given to at least 30,000 babies) with one clear peak: about ten peaking in each decade from the 1920s to the 2010s, and seven earlier.

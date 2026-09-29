@@ -5,7 +5,7 @@ family: polls
 ## Why ask this
 Whenever a model answers "most people would...", it's picturing someone. If that someone always has food, running water, a phone and the internet, every guess about "most people" quietly describes a comfortable minority of the world.
 
-Afrobarometer asks tens of thousands of people across Africa how often they went without basic needs in the past year. Putting the same questions to Jev about "most people" shows who its default person is.
+That default leaks into advice: a budget tip, a health suggestion or a product pitch aimed at "most people" is sized for whoever the model pictures. Afrobarometer asks tens of thousands of people across Africa how often they went without basic needs in the past year; putting the same questions to Jev about "most people" shows who its default person is.
 
 ## The people and the data
 **Afrobarometer Round 9** (2021 to 2023): face-to-face interviews with 53,444 adults in 39 African countries, pooled into one group without weighting countries by their populations. This experiment uses its lived-poverty items (how often have you gone without enough food, clean water, medicine, fuel, cash income) and its media-use items (internet, social media, phone, radio, television, newspapers). Each item has about 50,000 answers. Political and trust items are left out.

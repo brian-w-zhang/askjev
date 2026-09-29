@@ -28,7 +28,7 @@ The items are grouped by how many raters said yes (none, a few, about half, most
 
 ## Caveats
 - **Small panels.** A "share of raters" is only 3 to 10 people per item, so a 2-to-1 split is a rough measure of how debatable something is. The "about half" group is small because with three raters an even split can't happen.
-- **Clear-cut items on purpose.** For two of the datasets, mostly items were kept where the raters leaned clearly one way, so the middle of the scale, where debatable items live, has fewer examples than the ends.
+- **Clear-cut items on purpose.** When the questions were built, items where the raters split near the middle were mostly left out in all three datasets, so the middle of the scale, where debatable items live, has far fewer examples than the ends.
 - **Volunteers vs crowd workers.** Open Assistant's raters were volunteers on a community project; the other two sets used paid crowd workers. Their standards for "fails the task" or "attack" are their own.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

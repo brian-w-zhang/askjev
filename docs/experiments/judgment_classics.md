@@ -27,7 +27,6 @@ The other version is identical except Program A reads "400 people will die".
 For each problem, the **effect** is how much the answer moves between the two versions: the share picking the key option in one version minus the other (or, for rating questions, the average rating on a 0 to 1 scale). It is computed for people and for Jev. Jev "reproduces" an effect when it moves the same way by at least half as much, and "reverses" it when it moves the other way by at least 0.10. Only the 8 effects that moved people by at least 0.10 are scored.
 
 ## Caveats
-- **Jev sees both versions; people saw one.** In Many Labs each person answered only one version of each problem, so nobody could notice the trick.
 - **Famous problems, possibly memorized.** The Asian disease problem, the trolley problem and the Knobe chairman are among the most discussed vignettes in psychology. Jev has almost certainly read about them. Refusing the framing effect may be what it learned people should do, not a sign that it reasons past framing on new problems.
 - **The human sample.** Many Labs volunteers were mostly university participants and online panels across dozens of labs, more Western and more educated than the world. The effects are pooled across all of them; some differ by country.
 - **Some effects barely replicate in people.** Four of the twelve paradigms (sunk cost, tempting fate, the affect lottery and the custody question) moved people by less than 0.10, so they don't count toward the eight. A "miss" there says nothing about Jev.

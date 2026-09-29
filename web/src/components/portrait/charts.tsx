@@ -2,15 +2,17 @@ import type { ReactNode } from "react";
 
 // Plain HTML/SVG charts. Row charts are HTML so their labels stay legible at phone width.
 
-type Mark = { v: number; kind: "jev" | "guess" | "hum" | "tick"; title?: string };
+// jevo: Jev in a second condition (a hollow square), for charts that compare Jev with itself
+export type MarkKind = "jev" | "jevo" | "guess" | "hum" | "tick";
+type Mark = { v: number; kind: MarkKind; title?: string };
 export type DotRow = {
   key: string; label: ReactNode; sub?: ReactNode; marks: Mark[]; ci?: [number, number]; ciP?: [number, number];
   value?: ReactNode; hi?: boolean; link?: boolean;
 };
 
-export function DotRows({ rows, domain, ticks, refs = [], band, fmt = (x) => String(x) }: {
+export function DotRows({ rows, domain, ticks, refs = [], band, fmt = (x) => String(x), valueWidth }: {
   rows: DotRow[]; domain: [number, number]; ticks: number[]; refs?: { v: number; zero?: boolean }[];
-  band?: [number, number]; fmt?: (x: number) => string;
+  band?: [number, number]; fmt?: (x: number) => string; valueWidth?: number;
 }) {
   // the domain may run either way (ranks put 1 on the right), so clamp to its low and high ends, not its first and last
   const lo = Math.min(domain[0], domain[1]), hi = Math.max(domain[0], domain[1]);
@@ -25,7 +27,7 @@ export function DotRows({ rows, domain, ticks, refs = [], band, fmt = (x) => Str
     </div>
   );
   return (
-    <div className="dp">
+    <div className="dp" style={valueWidth ? ({ "--vw": `${valueWidth}px` } as React.CSSProperties) : undefined}>
       <div className="dp-axis">
         <span />
         <div className="dp-t">

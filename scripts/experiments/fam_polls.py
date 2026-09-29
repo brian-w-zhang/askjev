@@ -300,7 +300,7 @@ def cuisines():
                    f"they rank it {ordinal(rk['people'][d[-1]])}.",
             evidence=f"{len(items)} cuisines from Food World Cup head-to-heads",
             numbers={"ranks": rk, "labels": lab, "rho_self": r_self, "rho_guess": r_guess}, n=len(items),
-            chart={"type": "slope", "rows": [{"label": lab[i], "a": rk["people"][i], "b": rk["jev"][i], "jev": rk["guess"][i]} for i in items],
+            chart={"type": "slope", "marks": {"a": "hum", "b": "jev", "jev": "guess"}, "rows": [{"label": lab[i], "a": rk["people"][i], "b": rk["jev"][i], "jev": rk["guess"][i]} for i in items],
                    "a_label": "Americans", "b_label": "Jev", "rank": True})
     return spec, run
 

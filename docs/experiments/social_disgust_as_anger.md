@@ -20,7 +20,7 @@ The story, and the seven emotions:
 A confusion table: for each emotion the writer described, how Jev's answers spread across the seven. The diagonal is agreement; off-diagonal cells show which feelings Jev mixes up, and in which direction.
 
 ## Caveats
-- **Very short, translated stories.** ISEAR's stories are often a single line ("My notes were not returned to me"), written by students in 37 countries in the 1990s and many translated into English. With so little to go on, disgust at someone's behavior and anger at it are hard to tell apart for anyone.
+- **Very short, translated stories.** ISEAR's stories are often a single line ("My notes were not returned to me"), written by students in 37 countries in the 1990s and many translated into English. With so little to go on, some stories fit several emotions.
 - **Disgust at people, not things.** Many of the disgust stories are moral disgust at someone's behavior, which sits close to anger in any language. That's part of the finding, but it's also a feature of this dataset.
 - **The writer's word.** Students were asked to describe a time they felt each emotion, so the label is the emotion they were writing about, one person's word for what may have been a mix.
 

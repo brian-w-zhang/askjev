@@ -18,7 +18,7 @@ Each pair became a three-way choice, once with A's decoy and once with B's:
 > *gamble a: $39 with a 75% chance, or -$14 with a 25% chance · gamble b: $24 with a 90% chance, or $61 with a 10%
 > chance · gamble c: $24 with a 90% chance, or $55 with a 10% chance*
 
-Gamble c is the decoy: the same as b but with a smaller prize. That's 297 new questions (three pairs couldn't take a proper decoy), each asked with the options in shuffled orders and averaged.
+Gamble c is the decoy: the same as b but with a smaller prize. That's 297 questions (three pairs couldn't take a proper decoy), each asked with the options in shuffled orders and averaged.
 
 ## How it was measured
 For each pair, Jev's share for A among the two real gambles when A's decoy is present, minus the same share when B's decoy is present. Positive means the decoy helps its twin. The analysis averages over pairs with a 90% range, and also measures how much weight Jev puts on the decoy itself.

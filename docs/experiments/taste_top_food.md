@@ -5,6 +5,8 @@ family: taste
 ## Why ask this
 Everyone has a food personality: sweet tooth, cheese person, spice seeker, picky eater. A model has never tasted anything, so its "favorites" can only come from what it has absorbed from how people write about eating: menus, recipes, reviews and dares.
 
+Asking which foods it would pick shows whose tastes that writing carries. A model that suggests dinners, plans menus or describes a dish will lean the same way, toward the foods people write about most warmly.
+
 ## The people and the data
 No people here: Jev against its own opinions.
 
@@ -24,6 +26,6 @@ A food's rating is where Jev's answer lands on the five levels (0 to 4). In the 
 - **A list written by another AI.** There's no public catalog of "foods you'd like", so the dishes, ingredients, cheeses and drinks were written for this project by Claude. What's on the list shapes what can win.
 - **Some items sound better than others.** Most items are just names ("plums"), but a few are phrased as experiences ("being offered churros with chocolate"). A scene can sound more appealing than a bare noun, which may help those items.
 - **A model can't taste.** Jev has never eaten anything. Its picks come from how food is written about: dessert and comfort food get warm prose, and fermented shark gets horror stories.
-- **The finalists were picked by Jev's own ratings.**
+- **The finalists were picked by Jev's own ratings.** Since its ratings and its head-to-head picks barely agree, a food rated just below the cut might have done well in the final too.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

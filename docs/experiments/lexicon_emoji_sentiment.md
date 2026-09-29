@@ -5,7 +5,7 @@ family: lexicon
 ## Why ask this
 Emoji carry much of the tone of online writing, and they don't always mean what their picture shows. A 😂 can end a complaint, a 🙏 can plead, a 🔥 can praise a sandwich. A model that reads emoji by their face value will misjudge the tone of real posts, in moderation, customer messages or sentiment analysis.
 
-Here is a clean test: a large set of real tweets whose tone was labeled by people, grouped by the emoji they contain. Jev is asked to guess the tone from the emoji alone and compare.
+A large set of real tweets whose tone was labeled by people, grouped by the emoji they contain, makes a clean test: Jev guesses the tone from the emoji alone, and its guess is compared with how the emoji was really used.
 
 ## The people and the data
 The **Emoji Sentiment Ranking** (Kralj Novak and colleagues, 2015) comes from 1.6 million tweets in 13 European languages, collected in 2013-2015, whose tone was labeled negative, neutral or positive by 83 human annotators. For each emoji, the share of negative, neutral and positive tweets containing it is its "sentiment" in real use.

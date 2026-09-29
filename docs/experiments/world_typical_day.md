@@ -18,7 +18,7 @@ One question per activity, framed exactly as the diaries measure it:
 > *None at all · 1 to 29 minutes · 30 to 59 minutes · 1 to 2 hours · 2 to 3 hours · 3 to 5 hours · 5 to 8 hours · 8
 > to 10 hours · 10 hours or more*
 
-(In the diaries, 80% of days have none.) That's 20 new questions, each asked with the bins in shuffled orders and averaged.
+(In the diaries, 80% of days have none.) There was one such question for each of the 20 activities, each asked with the bins in shuffled orders and averaged.
 
 ## How it was measured
 For each activity, the share of days Jev says have none of it against the diaries', and the average minutes (from the middle of each bin) against the diaries' weighted average. The analysis also checks how well Jev orders the activities by time spent (rank correlation: 1 same order, 0 no relation).

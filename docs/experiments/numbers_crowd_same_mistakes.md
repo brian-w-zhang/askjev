@@ -3,7 +3,9 @@
 family: numbers
 
 ## Why ask this
-If a model's numbers come from how people talk about things, its errors should look like people's errors: too high where people guess too high, too low where they guess too low. If its numbers come from reference facts, its errors should have nothing to do with the crowd's. The same questions that test the wisdom of crowds can tell which it is.
+Ask 500 people how many Kenyas fit into the continental U.S. and their typical guess comes out too low. Crowds miss in a shared direction when they share the same rough impressions of how big, old or common things are.
+
+If a model's numbers come from how people talk about things, its errors should look like people's errors: too high where people guess too high, too low where they guess too low. If its numbers come from reference facts, its errors should have little to do with the crowd's. The same questions that test the wisdom of crowds can tell which it is.
 
 ## The people and the data
 The same 160 estimation questions as "Jev vs the wisdom of 500 people" (Simoiu and colleagues, 2019), each with about 500 US online participants' guesses from February 2017 and the true answer, across eight domains. On 88 of them the crowd's median guess lands in the wrong answer range; those misses are the heart of this experiment.
@@ -14,7 +16,7 @@ The same questions, in the same ordered ranges, for example:
 > How many Kenyas fit into the continental U.S.?
 > *Under 1.5 · 1.5 to 3 · ... · 150 to 300 · 300 or more*
 
-The crowd's median guess and Jev's answer both fell below the true range, a shared miss. This experiment looks at the same answers from a different angle.
+Here the crowd's median guess and Jev's answer both fell below the true range, a shared miss. The answers are the same ones as in the crowd comparison; this experiment looks at where the misses fall.
 
 ## How it was measured
 For every question, the direction and size of the miss in answer ranges, for Jev and for the crowd's median. Then: how closely the two sets of misses line up across questions (rank correlation: 1 same pattern, 0 unrelated), and, on the questions the crowd gets wrong, how often Jev is wrong the same way, right, or wrong the other way.

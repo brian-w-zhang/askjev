@@ -3,10 +3,12 @@
 family: knowledge
 
 ## Why ask this
-Medicine is where people most want a model to be right, and where confident wrong answers do the most harm. Splitting a large medical exam by subject shows where Jev's knowledge is solid (the science underneath) and where it thins (the specialties), and whether its confidence tracks that.
+People ask models about a toothache, an eye drop or a drug interaction every day. Medicine is where they most want a model to be right, and where a confident wrong answer does the most harm.
+
+A single exam average hides where the knowledge is. Splitting a large medical exam by subject shows whether Jev is solid on the science underneath and thinner on the specialties, and whether its confidence drops where its accuracy does.
 
 ## The people and the data
-
+MedMCQA (Pal et al. 2022; Apache 2.0 on its Hugging Face release) collects multiple-choice questions from India's AIIMS and NEET PG postgraduate medical entrance exams, the tests doctors take to enter specialist training, each tagged with a subject and an answer key.
 
 ## What Jev was asked
 Each question with its four options:

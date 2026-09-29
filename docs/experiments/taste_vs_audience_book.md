@@ -5,6 +5,8 @@ family: taste
 ## Why ask this
 Books have a huge, opinionated audience. Comparing Jev's ranking with real readers' ratings shows whether a model that has read about every one of these books likes the same ones the people who actually read them do.
 
+It matters because "what should I read next?" is one of the most common things people ask a model. A recommender whose taste runs opposite to the readers of a genre will steer a fantasy or romance fan toward books they won't finish.
+
 ## The people and the data
 The readers are Goodreads users, via goodbooks-10k, a public dataset collected in 2017 with millions of star ratings of the site's most-rated books, from bestsellers to scripture. For each one it uses the whole spread of 1-to-5-star ratings, set on the same five levels Jev answers on.
 
@@ -21,7 +23,7 @@ Each was also asked with the answers reversed, and the two averaged. Jev never s
 Ranks, because Jev's described levels and people's stars aren't the same scale.
 
 ## Caveats
-- **Fans rate what they chose to read.** Goodreads users rate books they chose, often books they already expected to love. A devotional text or the fourth book in a romance series gets rated mostly by its fans; Jev rates everything cold. Much of the gap below comes from that.
+- **Fans rate what they chose to read.** Goodreads users rate books they chose, often books they already expected to love. A devotional text or the fourth book in a romance series gets rated mostly by its fans; Jev rates everything cold. Part of the gap likely comes from that.
 - **Stars squeezed into five levels.** Goodreads uses 1 to 5 stars; each star is set on one of the project's five described levels to show them next to Jev's. The comparison is of ranks, not levels.
 - **A popular-books list from 2017.** The books are goodbooks-10k titles with at least 2,000 ratings, a popular, English-language list frozen in 2017.
 

@@ -199,6 +199,16 @@ def check(eid: str) -> list[str]:
             problems.append(f"jargon: {m.group(0)}")
     if not case.get("caveats"):
         problems.append("no caveats")
+    # a list item with an unquoted "label: text" parses as a mapping, which the page can't render
+    for k in ("takeaways", "facts"):
+        for x in case.get(k) or []:
+            if not isinstance(x, str):
+                problems.append(f"{k} item is not plain text (quote it): {str(x)[:60]}")
+    for c in case.get("caveats") or []:
+        if not isinstance(c, dict) or not isinstance(c.get("label"), str) or not isinstance(c.get("text"), str):
+            problems.append(f"caveat is not {{label, text}}: {str(c)[:60]}")
+    if not isinstance(case.get("result") or "", str) or not isinstance(case.get("chart_note") or "", str):
+        problems.append("result or chart_note is not plain text")
     for f in case.get("facts") or []:
         if "(" not in f:
             problems.append(f"fact without a source: {f}")

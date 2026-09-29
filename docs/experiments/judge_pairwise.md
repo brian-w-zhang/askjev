@@ -25,7 +25,7 @@ MT-Bench pairs were asked the same way, with two full conversations side by side
 First, how often Jev picks the answer the judges picked. Then the length question: the analysis groups pairs by how much longer the first answer is than the second, and in each group compares how often Jev and the judges chose the first answer. If both rise together as the first answer gets longer, they share the same lean.
 
 ## Caveats
-- **Answers in a fixed order.** The two answers always appear in the order the dataset gives them.
+- **Answers in a fixed order.** The two answers always appear in the order the dataset gives them. Shuffling the option labels doesn't swap the answers themselves, so a pull toward the first or second answer can't be fully separated from content.
 - **Who the judges are.** HelpSteer2's judges are annotators hired through Scale AI, 3 to 5 per pair; MT-Bench's are experts and the paper's own authors. Both groups judge AI answers for a living or for research, not as everyday users.
 - **Clear preferences only.** Pairs where the judges tied or had no majority are left out, so this is agreement on pairs people could decide.
 - **The answers are from other models.** Every answer being judged was written by an AI model. Jev may recognize the style of models like itself, which a human judge wouldn't.

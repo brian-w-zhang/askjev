@@ -25,6 +25,6 @@ For each phrase, the middle of Jev's answer (the median of its probabilities ove
 - **A small online sample.** The 46 people answered a 2015 survey posted to Reddit's r/samplesize: English-speaking, online, self-selected. A group of intelligence analysts or doctors would read "we doubt" and "probable" differently.
 - **One phrase is missing.**
 - **Rounding to steps of 5.** A person's answer can move by up to half a step.
-- **Capitalized phrases, no context.** The survey, and the project's question, give the phrase alone ("We Doubt"), with no sentence around it. In real text the same words carry more context; see the settings experiment for that.
+- **Capitalized phrases, no context.** The survey, and the project's question, give the phrase alone ("We Doubt"), with no sentence around it. In real text the same words carry more context; "Does 'likely' mean less when it's a side effect?" tests that.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

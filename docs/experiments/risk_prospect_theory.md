@@ -19,7 +19,7 @@ Each choice was its own question, in the US version's wording:
 > *A 100% guarantee of gaining $6,000 · An 80% chance of gaining $8,000 (20% chance of $0)*
 
 ## How it was measured
-For each effect, the analysis takes the share choosing the key option in one version minus the other, for people and for Jev. It also checks, on the 6 choices where the two options have different averages, how often each side's majority picks the option that pays more on average.
+For each effect, the analysis takes the share choosing the key option in one version minus the other, for people and for Jev. It also checks, on the 6 choices where the two options have different averages, how often each side's likelier choice is the option that pays more on average.
 
 ## Caveats
 - **Hypothetical money.** Nobody in the study won or lost real money, and neither did Jev. That's standard for these problems, but choices with real stakes can differ.

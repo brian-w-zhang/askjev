@@ -153,7 +153,7 @@ def appraisals():
                      "Jev's mean gap from the writer: "
                      + "; ".join(f"{o['app'].replace('_', ' ')} {o['ci']}" for o in out),
             numbers={"appraisals": out}, n=t.height,
-            chart={"type": "dots", "domain": [0, 1], "rows": [{"label": o["label"], "value": o["rho_jev"], "people": o["rho_readers"],
+            chart={"type": "dots", "domain": [0, 1], "fmt": "num", "rows": [{"label": o["label"], "value": o["rho_jev"], "people": o["rho_readers"],
                                                                "right": f"{o['gap_jev']:+.2f}"} for o in out]},
             examples=seeded(t["id"].to_list(), "appraisal"))
     return spec, run

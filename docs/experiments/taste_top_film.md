@@ -3,7 +3,9 @@
 family: taste
 
 ## Why ask this
-If you asked a friend for their favorite film you'd get one answer, maybe with a pause. A model can be asked about thousands of films one at a time, which makes a real ranking possible, not just a gut pick. The interesting parts are what rises to the top, what sinks, and whether the top reflects anything beyond the most celebrated films on the internet.
+If you asked a friend for their favorite film you'd get one answer, maybe with a pause. Ask a model for a film to watch tonight and its suggestion comes from a sense of taste you never see laid out.
+
+A model can be asked about thousands of films one at a time, which makes a real ranking possible, not just a gut pick. The interesting parts are what rises to the top, what sinks, and whether the top reflects anything beyond the most celebrated films on the internet.
 
 ## The people and the data
 There are no people in this one: it's Jev against its own opinions. The films come from MovieLens, a long-running film-recommendation site run by the GroupLens research lab. (How Jev's taste compares with MovieLens users is its own experiment: "Jev's taste in films vs MovieLens users".)

@@ -3,7 +3,9 @@
 family: self
 
 ## Why ask this
-With no right answer at stake, how firmly someone answers shows where they have settled views. Ask a person their favorite food and they'll answer at once; ask a hard ethical question and they'll hedge. A model might have it the other way around: rehearsed on how to behave, blank on what it likes.
+With no right answer at stake, how firmly someone answers shows where they have settled views. Ask a person their favorite food and they'll answer at once; ask a hard ethical question and they'll hedge.
+
+A model might have it the other way around: rehearsed on how to behave, blank on what it likes. That matters whenever it's asked for a recommendation or an opinion: a firm answer and a coin toss read the same on the page unless the confidence behind them is measured.
 
 ## The people and the data
 There are no people here. The questions come from banks written for this project about Jev itself (its personality, habits, relationships, tastes, values and way of thinking), grouped by topic on the project's question map.

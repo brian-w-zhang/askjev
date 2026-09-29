@@ -5,6 +5,8 @@ family: numbers
 ## Why ask this
 A model's sense of "now" is frozen at the point its training data ends, but it carries no visible date stamp. Prices make that stamp visible: they move every year, and the US Bureau of Labor Statistics records the average price of dozens of everyday items every month. So each price Jev gives for "right now" points to a year.
 
+That matters for ordinary questions: someone budgeting a grocery run, pricing a used car or checking whether a quote sounds fair gets the model's idea of "normal", and if that idea is years out of date, every estimate is quietly too low.
+
 ## The people and the data
 No people: the truth is the BLS average retail price in US cities (public domain, via the St. Louis Fed's FRED database), monthly from 1980 to August 2026, for 29 everyday items: bread, cheese, bananas, beer, eggs, gasoline, electricity and more.
 

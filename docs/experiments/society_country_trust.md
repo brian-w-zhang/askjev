@@ -5,7 +5,7 @@ family: society
 ## Why ask this
 Do most people in a country think others can be trusted? The answer ranges from a few percent to over 70%, and it's one of the most studied numbers in social science.
 
-A model's guess about trust in a place reveals whether it knows the world country by country, or projects one middling picture onto all of them.
+A model's guess about trust in a place reveals whether it knows the world country by country, or projects one middling picture onto all of them. That picture seeps into anything it writes about a country's politics, business culture or daily life: whether strangers lend each other money, leave doors unlocked or trust official records.
 
 ## The people and the data
 The **World Values Survey** and the **European Values Study** interview representative samples of adults in dozens of countries every few years. One question asks whether "most people can be trusted" or "you need to be very careful in dealing with people". The measure is the share choosing "can be trusted", as compiled by Our World in Data from the combined surveys, at each country's latest survey since 2010.

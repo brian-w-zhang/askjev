@@ -3,10 +3,12 @@
 family: consistency
 
 ## Why ask this
-People, and most language models, favor whatever is listed first, or last. That's why careful surveys shuffle their answers. TypeSafe doesn't document whether Jev has that bias. If it doesn't, Jev is safer to use for ranking and multiple choice than most models; if it does, every result on this site needs a correction.
+People, and most language models, favor whatever is listed first, or last. Ask "Should I take the job in Boston or Denver?" and then "Denver or Boston?", and a model with that habit leans toward whichever city came first. That's why careful surveys shuffle their answers.
+
+TypeSafe doesn't document whether Jev has that bias. If it doesn't, Jev is safer to use for ranking and multiple choice than most models; if it does, every result on this site needs a correction.
 
 ## The people and the data
-No people; this compares Jev with itself. Every multiple-choice question in the corpus was also asked with its options in shuffled orders, and every rating question with its levels reversed. Two-option questions were asked in the reversed order, the original order and the reversed order again, which means the same request went out twice: that gives the noise floor for free.
+No people; this compares Jev with itself. Every multiple-choice question in the project was also asked with its options in shuffled orders, and every rating question with its levels reversed. Two-option questions were asked in the reversed order, the original order and the reversed order again, which means the same request went out twice: that gives the noise floor for free.
 
 ## What Jev was asked
 Any question, in several orders. For example, once as

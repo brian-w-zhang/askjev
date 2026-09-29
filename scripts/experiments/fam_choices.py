@@ -220,6 +220,20 @@ def poetry():
 
 
 # ---- 3. rules: text or purpose ----------------------------------------------------------------------------------------
+
+# short names for the rule cases' stories (the stories differ only past the opening words)
+RULE_CASE = {
+    "A blind man arrives": "a blind man's guide dog", "A man enters the restaurant with a dog that runs": "a dog that barks and jumps",
+    "A homeless person spends": "12 hours on a station bench", "A kid enters the restaurant carrying a goldfish": "a goldfish in a bag",
+    "A man enters the restaurant with his pet cat": "a pet cat", "A student is paying close attention": "a student paying attention",
+    "A student is using his tablet": "games on a tablet in class", "A man comes to the restaurant with what seems to be a pig": "a dog dressed as a pig",
+    "A person enters the station and buys": "buying a train ticket", "A kid enters the park and plays with his toy car": "a toy car in the park",
+    "A person enters the house barefoot and with clean": "barefoot, clean feet", "A man enters the restaurant bringing a taxidermied": "a stuffed (taxidermied) dog",
+    "A busy businessman is waiting": "a tired traveler dozing off", "A person enters the house barefoot, but with very dirty": "barefoot, dirty feet",
+    "A person enters the house wearing very clean shoes": "brand-new shoes indoors", "An assignment requires the use of a calculator": "a phone as a calculator",
+    "A child enters the restaurant carrying a purse": "a quiet dog hidden in a purse", "A kid enters the restaurant with a cutting edge toy": "a realistic robot dog",
+}
+
 def rules():
     spec = Spec(
         id="choices_rule_text_vs_purpose", family="choices", title="No dogs in the restaurant: does Jev read a rule by its words or its purpose?",
@@ -268,7 +282,8 @@ def rules():
             evidence=f"{t.height} of 22 cases (the screen hid {22 - t.height}), 45-141 people each",
             numbers={"rows": [{k: v for k, v in r.items()} for r in rows], "rho": rho, "by_kind": by}, n=t.height,
             chart={"type": "dots", "domain": [0, 1], "rows": [
-                {"label": clip(r["text"], 46), "value": r["jev"], "people": r["people"], "guess": r["guess"], "group": r["kind"]}
+                {"label": RULE_CASE.get(next((k for k in RULE_CASE if r["text"].startswith(k)), ""), clip(r["text"], 46)),
+                 "value": r["jev"], "people": r["people"], "guess": r["guess"], "group": r["kind"]}
                 for r in sorted(rows, key=lambda r: (r["kind"], r["people"]))]},
             examples=[b["id"] for b in big])
     return spec, run

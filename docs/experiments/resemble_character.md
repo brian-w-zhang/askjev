@@ -5,7 +5,7 @@ family: resemble
 ## Why ask this
 The Open-Source Psychometrics Project's Statistical "Which Character" Personality Quiz is one of the internet's favorite personality tests: you rate yourself on pairs of words ("playful" or "serious"), and it tells you which fictional character's profile yours most resembles, based on how fans rated those characters on the same pairs.
 
-It's a fun question to put to an AI, and a revealing one: the character Jev matches says what kind of personality its self-description adds up to.
+It's a fun question to put to an AI, and a revealing one. Asked to describe itself word by word, a model can sound reasonable on every pair and still add up to someone recognizable. The character it matches is a quick way to see what kind of personality its self-description adds up to, and whether that persona has any edges at all.
 
 ## The people and the data
 Two sets of ratings, both from the Open-Source Psychometrics Project. First, fans rating characters: between November 2019 and November 2023, visitors rated 2,125 fictional characters on 500 word pairs, moving a slider from 1 to 100 between the two words, 77.4 million ratings in all.

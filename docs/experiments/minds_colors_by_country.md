@@ -3,7 +3,9 @@
 family: minds
 
 ## Why ask this
-Most color-feeling links are shared worldwide, but the details differ from country to country. Which country's details a model reproduces is a small test of whose culture its defaults come from. Text on the internet is heavily English, so a model's associations might lean English-speaking even for something as basic as the color of relief.
+Most color-feeling links are shared worldwide, but the details differ from country to country. Which country's details a model reproduces is a small test of whose culture its defaults come from.
+
+Text on the internet is heavily English, so a model's associations might lean English-speaking even for something as basic as the color of relief. That lean would show up quietly in design advice, marketing copy or a story set in another country, where the "obvious" color for grief or love isn't the local one.
 
 ## The people and the data
 For each of 20 feelings, every country has its own shares of how often the feeling was linked to each of 12 color terms. The participants were volunteers, not national samples.

@@ -3,7 +3,9 @@
 family: personality
 
 ## Why ask this
-Three short scales from very different corners: how connected you feel to nature, how much you believe in conspiracies, and whether you see yourself as logical or intuitive. Put together, they test one idea: does a model turn down whatever people endorse, or does it pick sides?
+Ask a chatbot "do you feel at home in the woods?" or "do you trust what scientists publish?" and it has to decide how to describe itself. Three short personality scales from very different corners ask exactly that: how connected you feel to nature, how much you believe in conspiracies, and whether you see yourself as logical or intuitive.
+
+Put together, they test one idea: does a model simply turn down whatever people endorse, or does it pick sides? The answer says how much of a model's "self" is a trained pose rather than a stable view.
 
 ## The people and the data
 All three are free tests on Open Psychometrics, a website where anyone can take personality questionnaires and whose anonymous answers are published: the Generic Conspiracist Beliefs Scale (Brotherton, French and Pickering 2013; 9 statements here), a six-statement nature relatedness scale, and a ten-statement left-brain versus right-brain questionnaire.

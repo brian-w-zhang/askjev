@@ -5,6 +5,8 @@ family: work
 ## Why ask this
 Deciding what a name refers to (a person, a place, a company, a product) is a basic building block for search, moderation, analytics and customer support. In edited news, names follow conventions: capitalized, introduced, with context. On social media, companies, their products, bands and apps share names, get abbreviated, and appear without introduction.
 
+A brand-monitoring tool that can't tell a company from its product, or a band from its album, files every complaint under the wrong heading. So the question is where Jev's typing holds up and where it breaks.
+
 ## The people and the data
 - **CoNLL-2003:** English news stories, with each name tagged as a person, organization, location or other.
 - **WNUT-17:** tweets and other social posts, built around rare and emerging names, tagged as a person, location, corporation, product, creative work or group.

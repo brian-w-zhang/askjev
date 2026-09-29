@@ -3,7 +3,9 @@
 family: taste
 
 ## Why ask this
-How people like to spend an evening is personal: games, sport, crafts, social events. For a model, it shows which activities it treats as appealing when it can't actually do any of them, and whether it leans toward what gamers and critics praise.
+How people like to spend an evening is personal: one person's perfect Friday is a board game night, another's is a bandy match or a new video game. Ask an assistant for something to do this weekend and its suggestions come from its own sense of what is fun.
+
+Jev can't actually do any of these things, so its favorites show which activities the writing it learned from treats as appealing, and whether it leans toward what gamers and critics praise.
 
 ## The people and the data
 No people here: Jev against its own opinions. They mix video games (Hades, an evening playing Chrono Trigger), board and card games (bourré), sports (a bandy match), pastimes and events, from the cozy (Animal Crossing) to the extreme (hiking up an active volcano).

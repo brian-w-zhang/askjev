@@ -3,7 +3,9 @@
 family: work
 
 ## Why ask this
-A lot of work is extraction: find the answer in this passage, pull out the drug interaction this sentence states, flag which unfair clause type this is. Every such task needs an honest "nothing here" option, because real documents often don't contain what you're looking for. An extractor that always finds something fills a database with things that were never said.
+A lot of work is extraction: find the answer in this passage, pull out the drug interaction this sentence states, flag which unfair clause type this is. A sentence that merely lists two drugs side by side states no interaction between them, and the right answer is "nothing here".
+
+Every such task needs that honest option, because real documents often don't contain what you're looking for. An extractor that always finds something fills a database with things that were never said, and nobody notices until someone relies on them.
 
 ## The people and the data
 The right answers are each dataset's own labels.

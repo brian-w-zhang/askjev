@@ -25,7 +25,7 @@ Each rule was asked once as written and once with the five levels in reverse ord
 For each rule, Jev's answer is compared with the raters'.
 
 ## Caveats
-- **One rater is often the whole crowd.** 9,820 of the rules have a single rater's estimate, and at most six people rated any rule. A single MTurk worker's guess about "how many people agree" is noisy, and it is itself a guess about people, not a survey of them.
+- **One rater is often the whole crowd.** 9,820 of the rules have a single rater's estimate, and at most six people rated any rule. A single crowd worker's guess about "how many people agree" is noisy, and it is itself a guess about people, not a survey of them.
 - **Who wrote the rules.** The rules come from the Social Chemistry 101 dataset, written by crowd workers from situations in Reddit posts and advice columns. They reflect what English-speaking, mostly American internet users consider normal, not a global sample.
 - **The answer levels are wide.** The five levels follow the dataset's own buckets, and the gap between "a clear majority" and "practically everyone" is where most of the difference sits. A rater and Jev could mean almost the same share and still land on neighboring levels.
 - **Some rules left out.** Rules most raters marked as bad advice were dropped, and a content filter hid rules touching sex, minors and politics from the site, so the most contested rules are underrepresented.

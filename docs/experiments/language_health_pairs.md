@@ -3,7 +3,7 @@
 family: language
 
 ## Why ask this
-Putting a number on a health condition is hard; saying which of two conditions is worse is easier. If a model agrees with people on the direct comparison, any gaps in the harder rating task are about how it reads the scale. If it disagrees even here, it genuinely weighs pain, mobility and mood differently from people.
+Is being unable to do your usual work worse than feeling severely anxious? Health systems answer questions like that all the time, because the values people put on health conditions help decide which treatments get paid for. Putting a number on a condition is hard; saying which of two conditions is worse is easier. If a model agrees with people on the direct comparison, any gaps in the harder rating task are about how it reads the scale. If it disagrees even here, it weighs pain, mobility and mood differently from people.
 
 This is the companion to "Worse than being dead?", which asks Jev for a number on each condition.
 

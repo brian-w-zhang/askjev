@@ -5,6 +5,8 @@ family: taste
 ## Why ask this
 Anime fans rate a lot and argue about it more. Comparing Jev with MyAnimeList, the biggest fan database, shows whether a model's sense of good anime matches the people who watch it, and where it doesn't.
 
+Someone asking "what should I watch after Cowboy Bebop?" gets the model's taste, not the fandom's. Knowing where the two part ways shows which recommendations to trust.
+
 ## The people and the data
 MyAnimeList users, via a public 2016 dataset of their 1-to-10 ratings. For each title, the experiment uses the distribution of its ratings, set on the same five levels Jev answers on.
 

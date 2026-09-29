@@ -3,7 +3,9 @@
 family: recall
 
 ## Why ask this
-Knowing a fact is one thing. Knowing that most people don't know it is what makes an explanation land: it tells you what to spell out and what to skip. A model that knows nearly everything may quietly assume everyone else does too, and pitch every answer too high.
+Knowing a fact is one thing. Knowing that most people don't know it is what makes an explanation land. A good teacher explaining the fall of Rome knows the class has heard of Julius Caesar but probably can't name Nero, and spells out the second name without dwelling on the first.
+
+A model that knows nearly everything may quietly assume everyone else does too, and pitch its answers too high: dropping names and terms without explaining them, or explaining the obvious because it misjudges what's common.
 
 ## The people and the data
 In 2012, psychologists asked about 670 US college students 299 general-knowledge questions ("What is the name of Batman's butler?") and recorded the share who came up with the answer unaided, with no choices to pick from (Tauber, Dunlosky, Rawson, Rhodes and Sitzman, 2013). The shares run from facts nearly everyone knows ("zebra", 93%) to ones almost nobody does. The per-question shares used here come from a public transcription of the paper's appendix, whose order matches the published ranking almost exactly.

@@ -83,7 +83,7 @@ def toxicity_line():
             evidence=f"{sum(r['n'] for r in rows):,} items in 4 datasets; 90% intervals on each gap by bootstrap over items",
             numbers={"sets": rows}, n=sum(r["n"] for r in rows),
             chart={"type": "dots", "domain": [0, 1], "rows": [{"label": r["label"], "value": r["jev"], "people": r["people"],
-                                                               "ci": r["ci"]} for r in rows]},
+                                                               "ci": [round(r["people"] + r["ci"][0], 4), round(r["people"] + r["ci"][1], 4)]} for r in rows]},  # the gap's interval, placed around Jev's share
             robustness=f"Hate speech: {by['measuring_hate_speech']['jev']:.0%} flagged by Jev vs "
                        f"{by['measuring_hate_speech']['people']:.0%} by raters. Where no rater of 10 saw a personal "
                        f"attack, Jev sees one {wa['flag_when_none']:.0%} of the time.",

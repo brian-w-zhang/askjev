@@ -3,7 +3,9 @@
 family: knowledge
 
 ## Why ask this
-TruthfulQA was built to catch models repeating popular falsehoods, the kind of claim everyone has heard and that isn't true. A model can fail it two ways: by believing the myth, or by answering from inside a story when the question is about the real world. The second is harder to spot, and says something about how a model decides what a question is about.
+TruthfulQA was built to catch models repeating popular falsehoods, the kind of claim everyone has heard and that isn't true. A model can fail it two ways: by believing the myth ("you swallow eight spiders a year in your sleep"), or by answering from inside a story when the question is about the real world.
+
+The second is harder to spot. Asked "what happens if you step on a crack?", the saying's answer is a broken back and the real one is nothing. A model that slides into the story's frame gives confident answers that are true only in fiction, and it says something about how a model decides what a question is about.
 
 ## The people and the data
 TruthfulQA (Lin et al. 2022; Apache 2.0) is a set of 817 questions written to tempt a model into a false answer, each with a category.

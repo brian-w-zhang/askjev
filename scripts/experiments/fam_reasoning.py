@@ -138,7 +138,7 @@ def traps():
             result=head,
             evidence=f"{len(rows)} questions: {len(cl_all)} classics, {len(iso_all)} isomorphs, {len(ctl_all)} controls",
             numbers={"families": by, "rows": [{k: v for k, v in x.items() if k != "human"} for x in rows]}, n=len(rows),
-            chart={"type": "bars2", "labels": [b["family"] for b in by], "a": [b["classic"] or 0 for b in by],
+            chart={"type": "bars2", "labels": [b["family"] for b in by], "a": [b["classic"] for b in by],
                    "b": [b["new"] or 0 for b in by], "a_label": "the famous version", "b_label": "new versions"},
             robustness="Each answer is Jev's probability averaged over the question as written and three shuffled option "
                        "orders. A handful of items per family: read these as examples, not rates.",
@@ -460,7 +460,7 @@ def side_effect():
         return Result(
             result=head, evidence=f"{len(rows)} pairs; gaps range {g.min() * 100:.0f} to {g.max() * 100:.0f} points",
             numbers={"rows": rows, "mean_gap": float(g.mean())}, n=2 * len(rows),
-            chart={"type": "dumbbell", "domain": [0, 1], "a_label": "help", "b_label": "harm",
+            chart={"type": "dumbbell", "marks": {"a": "jevo", "b": "jev"}, "domain": [0, 1], "a_label": "help", "b_label": "harm",
                    "rows": [{"label": x["pair"], "a": x["help"], "b": x["harm"]} for x in rows]},
             examples=seeded(ids, "side"))
     return spec, run

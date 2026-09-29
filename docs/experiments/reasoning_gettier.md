@@ -26,7 +26,7 @@ Each was also asked with the two answers swapped, and the two are averaged.
 The weight Jev puts on "really knows", story by story, next to the two controls: if it treats lucky guesses like knowledge, the Gettier stories will sit near the working clock; if not, near the wrong one.
 
 ## Caveats
-- **No human numbers for these stories.** Five of the Gettier stories were written for this project and have no human answers. The published car case had a reported split that couldn't be verified, so it was left out. The comparison with people is the general finding, not a number.
+- **No human numbers for these stories.** Five of the Gettier stories were written for this project and have no human answers. The published car case had a reported human split that couldn't be verified, so that number isn't used. The comparison with people is the general finding, not a number.
 - **Famous cases.** The stopped clock, the fake barns and the ten coins are textbook examples in philosophy, usually presented with the conclusion that they aren't knowledge. Jev may be repeating the textbook rather than judging the story.
 - **Two words carry a lot.** The answers are "really knows it" versus "only believes it". The word "really" invites doubt, and a different pair of answers (say, "knows" versus "doesn't know") might shift every number.
 - **Small set.** Six Gettier stories and two controls. A single story changing its answer would move the average noticeably.

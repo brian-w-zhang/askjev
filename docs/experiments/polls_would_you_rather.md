@@ -17,7 +17,7 @@ Each dilemma exactly as the site words its two options:
 > *Ride in a hot air balloon · Ride in a hovercraft*
 
 ## How it was measured
-How often Jev's own pick matches the majority, and the same for its guess of most people. Then the questions where Jev's probability is furthest from the vote share, among questions where voters were clear (60% or more one way).
+How often Jev's own pick matches the majority, and the same for what it thinks most people would pick. Then the questions where Jev's probability is furthest from the vote share, among questions where voters were clear (60% or more one way).
 
 ## Caveats
 - **A game site's voters.** The votes come from either.io, a would-you-rather game site. Voters are self-selected, anonymous, and often voting for fun; the numbers are enormous but the crowd is not a sample of anyone in particular.

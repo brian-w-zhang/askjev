@@ -182,7 +182,7 @@ def wealth():
                    + ".",
             evidence=f"{t.height:,} pairs over {len(per)} indicators; 90% intervals {fci} and {aci}",
             numbers={"fits": fa, "against": aa, "ci_fits": fci, "ci_against": aci, "per_indicator": per, "wide": wide}, n=t.height,
-            chart={"type": "dumbbell", "rows": [{"label": p["label"], "a": p["fits"], "b": p["against"]} for p in per],
+            chart={"type": "dumbbell", "marks": {"a": "jevo", "b": "jev"}, "rows": [{"label": p["label"], "a": p["fits"], "b": p["against"]} for p in per],
                    "a_label": "fits the wealth rule", "b_label": "against it", "domain": [0, 1]},
             robustness=f"Pairs against the pattern are closer on average, so the split is partly about closeness: on "
                        f"pairs at least 2x apart it is {wide['fits']:.0%} vs {wide['against']:.0%}. Jev picks the richer "
@@ -554,7 +554,7 @@ def medicine():
                  "and where does it thin out?",
         why="Medical questions are a common real use, and a single average hides that a model can know biochemistry "
             "cold and still miss the clinical details that decide a treatment.",
-        sourcing="Existing MedMCQA questions (Pal et al. 2022, AIIMS and NEET PG entrance exams; MIT) with their subject. "
+        sourcing="Existing MedMCQA questions (Pal et al. 2022, AIIMS and NEET PG entrance exams; Apache 2.0) with their subject. "
                  "Enough: 4,900 questions, subjects with 60+ shown.",
         scoring="Accuracy per subject with 90% bootstrap intervals; basic sciences (biochemistry, physiology, anatomy, "
                 "pathology, pharmacology, microbiology) vs clinical subjects; mean confidence vs accuracy per group.",

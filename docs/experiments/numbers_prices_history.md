@@ -5,11 +5,13 @@ family: numbers
 ## Why ask this
 Price history is a concrete test of how a model holds the past. Does it know that a dozen eggs cost under a dollar in 1985, or does it project today's prices backward? And does it know the recent past as well as the distant one?
 
+People ask models to put old prices in context: what a 1995 salary was worth, whether the rent in an old letter was cheap. A model that quietly carries one decade's prices into every other gets those comparisons wrong without saying so.
+
 ## The people and the data
 No people: the truth is the average retail price in US cities recorded by the Bureau of Labor Statistics (public domain, via the St. Louis Fed's FRED database). There are 29 everyday items, from cheddar cheese to field-grown tomatoes, each asked for 1985, 1995, 2005 and 2015 wherever its price series covers the full year.
 
 ## What Jev was asked
-One question per item and year, in the same 12 price ranges as the "right now" questions:
+One question per item and year, in 12 price ranges, like the questions about today's prices in "What year are Jev's prices from?":
 
 > What was the average retail price of a pound of cheddar cheese in US cities in 2015?
 > *Under $2.40 · $2.40 to $2.64 · ... · $6.50 to $7.29 · $7.30 or more*

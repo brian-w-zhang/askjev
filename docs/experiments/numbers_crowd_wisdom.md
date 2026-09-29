@@ -5,6 +5,8 @@ family: numbers
 ## Why ask this
 The wisdom of crowds says that the median of many independent guesses beats almost every individual guesser: ask 500 people how far Houston is from Atlanta and the middle answer is closer than most of them. A language model has read what everyone has written. Is it one more guesser, or already a crowd?
 
+It matters whenever someone asks a model for a ballpark figure: how many calories in a meal, what a heater draws, how big a country is. If the model is a better estimator than a crowd, its guess is worth more than asking around; if it's just one more guesser, it isn't.
+
 ## The people and the data
 The guesses come from a large 2019 study by Simoiu and colleagues at Stanford, which put estimation questions to US online participants recruited for the study, about 500 per question, in February 2017 (public data, MIT license). This experiment uses its eight text-only domains, 20 questions each: celebrities' ages, distances between US cities, dates in US history, GDP per person, how many of one country fit into the continental US, calories in foods, appliance wattage and country populations. Each person's typed number was sorted into the same answer ranges Jev saw.
 
@@ -15,7 +17,7 @@ Each question as the study asked it, with ordered answer ranges fixed per domain
 > *Under 1.5 · 1.5 to 3 · 3 to 5 · 5 to 8 · 8 to 12 · 12 to 20 · 20 to 30 · 30 to 50 · 50 to 80 · 80 to 150 · 150 to 300 ·
 > 300 or more*
 
-(The answer is in the 12 to 20 range. Jev's middle answer fell lower, in 3 to 5; the crowd's most common range was 5 to 8.) That's 160 new questions, each asked with the ranges in three shuffled orders and averaged.
+(The answer is in the 12 to 20 range. Jev's middle answer fell lower, in 3 to 5; the crowd's most common range was 5 to 8.) That's 160 questions in all, each asked with the ranges in three shuffled orders and averaged.
 
 ## How it was measured
 Per domain and overall: how often Jev's middle answer is the right range, how often the crowd's median guess is, and how often an individual person's guess is (the typical person). The analysis also measures how many ranges off each is.

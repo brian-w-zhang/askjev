@@ -22,7 +22,7 @@ The time-trade-off question, with the answers as whole years:
 (The US value set rates this state worse than dead.) Each question was asked as written, for "most people", and with the answers shuffled.
 
 ## How it was measured
-Jev's answer becomes a value: its expected number of years divided by ten, with "worse than dying now" counted as -0.2. Those values are compared with the value set's: do they rank the states in the same order (rank correlation: 1 means the same order), and is Jev higher or lower on average? Then the analysis works out how much each problem area costs in Jev's answers, by fitting the same kind of formula to them, and compare its weights with people's.
+Jev's answer becomes a value: its expected number of years divided by ten, with "worse than dying now" counted as -0.2. Those values are compared with the value set's: do they rank the states in the same order (rank correlation: 1 means the same order), and is Jev higher or lower on average? Then the analysis works out how much each problem area costs in Jev's answers, by fitting the same kind of formula to them, and compares its weights with people's.
 
 ## Caveats
 - **People's side is a model, not raw answers.** The US value set is a formula fitted to 1,134 American adults' answers to questions like these. Jev is compared with the formula's value for each state, which smooths over how much individual people disagree.

@@ -3,7 +3,9 @@
 family: knowledge
 
 ## Why ask this
-Numbers about food and animals are everyday knowledge: which has more protein, which animal lives longer. A model might know the headline numbers (calories, protein) and be vague about the rest (minerals, vitamins). Holding the comparison easy (one value at least twice the other) isolates which kinds of numbers it has actually absorbed.
+Numbers about food and animals are everyday knowledge: does a banana or a potato have more potassium, does a parrot or a dog live longer. A model might know the headline numbers (calories, protein) well and be vague about the rest (minerals, vitamins, how long an egg takes to hatch).
+
+People ask models exactly these questions when planning meals or checking a fact, and a confident wrong answer looks the same as a right one. Keeping every comparison easy (one value at least twice the other) shows which kinds of numbers Jev has actually absorbed, rather than how well it splits hairs.
 
 ## The people and the data
 No people; the answers come from two public databases. USDA FoodData Central (CC0) gives 13 nutrients per 100 grams for thousands of foods; AnAge (CC BY 3.0) gives five life-history traits for thousands of animal species: maximum lifespan, gestation, incubation, age at maturity, litter size.

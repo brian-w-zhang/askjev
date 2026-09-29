@@ -5,6 +5,8 @@ family: taste
 ## Why ask this
 Ask someone whether they'd enjoy something and then whether most people would, and the gap tells you how they see themselves: pickier, more adventurous, more highbrow.
 
+A model that recommends films or restaurants answers both questions all the time, "what would you pick?" and "what do people like?".
+
 ## The people and the data
 No real people: both answers come from Jev. Films, books, board games, anime and beers come from real rating catalogs (MovieLens, Goodreads, BoardGameGeek, MyAnimeList, BeerAdvocate); music, food, places, art, nature, activities and culture come from lists written for this project.
 
@@ -19,7 +21,7 @@ Each item twice. Once as itself:
 And once with the instruction "Do not give your own view. Choose the answer that most people would give (the most common human answer)", with the same question and answers.
 
 ## How it was measured
-For each item, the gap is Jev's own level minus its level for most people, on the 0-to-4 scale. The gaps are averaged per domain, with a 90% interval from resampling items, and list the items where the gap is largest in each direction.
+For each item, the gap is Jev's own level minus its level for most people, on the 0-to-4 scale. The gaps are averaged per domain, with a 90% interval from resampling items, and the items where the gap is largest in each direction are listed.
 
 ## Caveats
 - **Both sides are Jev.** "Most people" here is Jev's own guess, not real people. This is a picture of how Jev sees itself against its idea of the crowd; the comparisons with real audiences are separate experiments.

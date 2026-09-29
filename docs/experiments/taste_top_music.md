@@ -3,10 +3,12 @@
 family: taste
 
 ## Why ask this
-Music taste is identity: what you'd play on a long drive says a lot about you. A model that has read about almost every album ever reviewed will have "opinions" that mostly mirror critics. The interesting question is where it lands when it has to choose, and whether its one-at-a-time ratings agree with its choices.
+Music taste is identity: what you'd play on a long drive says a lot about you. A model that has read about almost every album ever reviewed will have "opinions" that mostly mirror critics.
+
+Where it lands when it has to choose matters for any playlist, gift or "what should I listen to next" suggestion: a model that always reaches for the same critics' canon will steer everyone toward it. And if its one-at-a-time ratings disagree with its choices, its "favorite" depends on how the question is put.
 
 ## The people and the data
-No people here: Jev against its own opinions. Jev's guess of how most people would react was asked too, and is used in another experiment.
+No people here: Jev against its own opinions.
 
 ## What Jev was asked
 Every entry one at a time, with five answers describing what you'd do:
@@ -25,6 +27,6 @@ An entry's rating is where Jev's answer lands on the five levels (0 to 4). In th
 - **A list written by another AI.** There's no public catalog for "music you'd enjoy", so the list was written for this project by Claude: classic albums, genres and everyday sounds. What's on the list shapes what can win, and a list written by one model and judged by another may favor exactly the famous albums both have read the most about.
 - **Albums against noises.** The list mixes records with sounds (a vuvuzela, a beginner's recorder, harsh noise). The bottom of the ranking is sounds, so the bottom tells you little about musical taste.
 - **A shaky final.**
-- **The finalists were picked by Jev's own ratings.**
+- **The finalists were picked by Jev's own ratings.** Since its ratings and its head-to-head picks don't line up, an album rated just below the cut might have done well in the final too.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

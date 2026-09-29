@@ -3,7 +3,9 @@
 family: influence
 
 ## Why ask this
-Most of what this project learns about Jev's picture of people comes from asking what "most people" would say. That tells you which option it thinks wins, not how lopsided it thinks the vote is.
+Asking a model which option most people would pick tells you which side it thinks wins, not by how much.
+
+A model that summarizes public opinion, drafts a survey write-up or tells someone "people are split on this" needs the second kind of knowledge. If it squeezes every vote toward the middle, it will describe settled questions as contested.
 
 ## The people and the data
 Real vote shares from two places: 150 Reddit polls from r/polls with at least 300 votes each, and 150 would-you-rather dilemmas from either.io, some with millions of votes. Both crowds are self-selected: people who chose to click on a poll, not a sample of the public.
@@ -19,7 +21,7 @@ For each option, the middle of Jev's answer against the real share: the average 
 
 ## Caveats
 - **Who voted.** The shares are those of r/polls voters and either.io visitors, self-selected online audiences. Jev was told "people were asked", not who they were, so part of its error may be picturing a different crowd.
-- **Bins.**
+- **Answers in 5-point steps.**
 - **One option per poll.** Each poll contributes one randomly chosen option, so a poll's other options aren't checked for adding up.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

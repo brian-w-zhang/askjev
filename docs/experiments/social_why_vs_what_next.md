@@ -5,7 +5,7 @@ family: social
 ## Why ask this
 Understanding people runs in two directions. Looking back, you explain an action: why did she apologize? Looking ahead, you predict: what will he do next, how will they feel? They're different skills. An explanation can lean on knowing how things turned out; a prediction has to work from the situation alone.
 
-The gap between the two shows which way Jev's social sense points.
+An assistant does both all the time: explaining why a coworker's message sounded curt, or guessing how a friend will react to news. If it is much better at one than the other, its advice will be sound in one direction and shaky in the other, and the gap shows which way Jev's social sense points.
 
 ## The people and the data
 **Social IQa** (Sap and colleagues, 2019): tens of thousands of one-line everyday situations with invented names, each with a question of one of about ten kinds (why did X do this, what did X need to do first, how would X feel, what will happen to X, what will others want to do next...) and three answers written by crowd workers, one marked right. In the original study, people agreed with the marked answer about 87% of the time.

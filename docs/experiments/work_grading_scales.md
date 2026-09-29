@@ -5,7 +5,7 @@ family: work
 ## Why ask this
 A lot of work is grading on a scale: how relevant is this search result, how many stars would this review give, how good is this essay, how close are these two sentences in meaning. There are two ways to be useful at it. You can get the **order** right (this item is better than that one), which is enough for ranking. Or you can get the **level** right (this is a 3, not a 2), which is what you need for thresholds and grades.
 
-The experiment measured both, across 11 grading tasks, and looked for tasks where Jev's scale is shifted: consistently harsher or more generous than the people who wrote the labels.
+A model can be good at one and poor at the other. A grader that ranks essays sensibly but sits one notch harsher than the teachers would still fail students who should pass a cut-off, so it's worth knowing which kind of useful Jev is, and whether its scale is shifted on some tasks: consistently harsher or more generous than the people who wrote the labels.
 
 ## The people and the data
 

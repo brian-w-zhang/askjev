@@ -201,8 +201,10 @@ def everyday():
             evidence=f"{t.height} activities in 5 domains; domains whose gap clears the noise: "
                      + (", ".join(f"{b['label']} ({b['jev'] - b['people']:+.2f})" for b in sig) or "none"),
             numbers={"rho": rho, "domains": by, "more": more, "less": less}, n=t.height,
+            # the interval is the gap's; drawn on the 0-4 axis it sits around Jev's dot, measured from people's
             chart={"type": "dots", "domain": [0, 4], "rows": [{"label": b["label"], "value": b["jev"], "people": b["people"],
-                                                                "ci": b["ci"]} for b in by]},
+                                                                "ci": [round(b["people"] + b["ci"][0], 3), round(b["people"] + b["ci"][1], 3)]}
+                                                               for b in by]},
             examples=[more[0]["id"], less[0]["id"]])
     return spec, run
 

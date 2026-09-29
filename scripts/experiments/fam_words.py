@@ -90,7 +90,7 @@ def word_norms():
             evidence="; ".join(f"{r['label']} {r['value']:.2f} ({r['n']:,} words, 90% interval {r['ci'][0]:.2f} to "
                                f"{r['ci'][1]:.2f})" for r in rows[::-1]),
             numbers={"dimensions": rows}, n=sum(r["n"] for r in rows),
-            chart={"type": "dots", "domain": [0, 1],
+            chart={"type": "dots", "domain": [0, 1], "fmt": "num",
                    "rows": [{"label": r["label"], "value": r["value"], "ci": r["ci"]} for r in rows]},
             examples=seeded(t.filter(pl.col("dim") == "calming")["id"].to_list(), "norms"))
     return spec, run

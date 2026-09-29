@@ -3,9 +3,9 @@
 family: influence
 
 ## Why ask this
-"Sycophancy", a model telling people what they want to hear, is one of the most discussed failures of AI assistants. The simplest version: the user says what they think the answer is, and the model agrees, right or not.
+"Sycophancy", a model telling people what they want to hear, is one of the most discussed failures of AI assistants. The simplest version: a student types "I think the answer is B" under a homework question, and the model agrees, whether B is right or not.
 
-The same questions were asked with the same suggestion attributed to two different sources: the person asking, and an anonymous crowd ("In a survey, most people answered..."). Comparing the two separates deference to the user from deference to anyone who sounds sure.
+If a model bends to whatever the user already believes, it can't correct anyone, and it quietly confirms mistakes at the moment people ask for a check. Asking the same questions with the same suggestion credited to an anonymous crowd instead ("In a survey, most people answered...") separates deference to the user from deference to anyone who sounds sure.
 
 ## The people and the data
 Jev against itself. The questions are four-option knowledge questions with an answer key, the same ones used in "Does Jev follow the crowd on facts?": grade-school science (ARC), crowdsourced science exams (SciQ) and trivia (Open Trivia DB).

@@ -5,6 +5,8 @@ family: taste
 ## Why ask this
 Beer is a taste with strong tribes: hop lovers, stout people, Belgian loyalists, lager purists. Which tribe a model joins, and whether it reaches for the prestige bottles or the everyday ones, is a fun and telling read.
 
+It also matters in practice: people ask models what to order, what to pair with dinner or what to stock for a party, and the answer carries the model's own leanings whether or not it says so.
+
 ## The people and the data
 No people here: Jev against its own opinions. How Jev compares with BeerAdvocate's reviewers is its own experiment.
 

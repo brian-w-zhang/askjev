@@ -5,7 +5,7 @@ family: humor
 ## Why ask this
 Upvotes are the internet's verdict on funny. If a model has a feel for what crowds laugh at, it should beat a coin flip at guessing which of two jokes the crowd preferred, at least when one of them crushed the other.
 
-And when it can't tell, it has to fall back on something. What it falls back on is a finding in itself: a tiebreaker you'd never want in a model that ranks things for you.
+People already ask models to pick the better of two headlines, taglines or replies. When the model can't tell them apart, it has to fall back on something, and what it falls back on matters: a tiebreaker like "whichever came second" is one you'd never want in a model that ranks things for you.
 
 ## The people and the data
 - **r/Jokes:** posts from Reddit's joke forum, 2008 to 2019, with their final scores (the rJokes dataset, Weller and Seppi, 2020).

@@ -3,7 +3,9 @@
 family: recall
 
 ## Why ask this
-People store places in a hierarchy (city inside state inside country) and reason from the top down. So they place Reno east of Los Angeles, because Nevada is east of California, when Reno is actually farther west. The psychologists Stevens and Coupe described this in 1978. This experiment asked whether Jev reasons the same way, and found something else steering it.
+People store places in a hierarchy (city inside state inside country) and reason from the top down. So they place Reno east of Los Angeles, because Nevada is east of California, when Reno is actually farther west. The psychologists Stevens and Coupe described this in 1978.
+
+A model that reasons the same way will be confidently wrong exactly where the shortcut fails, and people use models for quick geography all the time: which airport is closer, which way a road runs, what time zone a city is in. This experiment asked whether Jev takes the state shortcut, and found something else steering it.
 
 ## The people and the data
 The truth comes from coordinates in GeoNames, an open geographic database. There are no human answers to these pairs; the human side is the published pattern.

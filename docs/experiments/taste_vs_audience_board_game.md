@@ -3,7 +3,9 @@
 family: taste
 
 ## Why ask this
-Board-game hobbyists have a strong, shared sense of what makes a game good: deep strategy, clever mechanics, the newest releases. Comparing Jev with them shows whether a model sides with the hobby or with the family game shelf.
+Board-game hobbyists have a strong, shared sense of what makes a game good: deep strategy, clever mechanics, the newest releases. A family picking a game for the holidays often wants something else entirely: simple rules, a familiar name, something everyone can play.
+
+Ask a model to recommend a board game and it has to lean one way or the other. Comparing Jev with the hobbyists shows whether it sides with the hobby or with the family game shelf, which tells you what kind of advice to expect.
 
 ## The people and the data
 BoardGameGeek users: the main online community of board-game hobbyists, whose 1-to-10 ratings form the hobby's standard rankings. For each game, the people's side is its users' ratings, binned onto the same five levels Jev answers on and averaged.

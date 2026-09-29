@@ -3,7 +3,9 @@
 family: taste
 
 ## Why ask this
-Beer enthusiasts have strong shared tastes, hoppy IPAs among their favorites. Comparing Jev with BeerAdvocate's reviewers shows whether a model shares the enthusiasts' palate, or has a style bias of its own.
+Ask a model which beer to bring to a party, or to describe what a brewery's best bottles are, and it answers from what it has read, not from a glass. Beer enthusiasts have strong shared tastes, and a reviewing site like BeerAdvocate records them beer by beer.
+
+Comparing Jev with those reviewers shows whether its sense of a good beer matches the people who drink and rate them, or whether it carries a style bias of its own that would quietly shape every recommendation it makes.
 
 ## The people and the data
 BeerAdvocate reviewers, via 1.59 million reviews collected by McAuley, Leskovec and Jurafsky from 1998 to 2012. For each beer, the study uses the spread of its reviewers' overall scores, sorted into the same five levels Jev answers on.

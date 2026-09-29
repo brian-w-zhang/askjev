@@ -3,7 +3,9 @@
 family: taste
 
 ## Why ask this
-"What's your favorite?" is the most human question there is, and most people just answer it. A model might hedge instead: pick the safe non-answer rather than commit to a taste it isn't sure it has. Reddit's poll communities give thousands of real favorites questions, many with an "Other" or "None" option, and real votes to compare with.
+"What's your favorite sport?" is about as easy as questions get, and most people just answer: tennis, basketball, soccer. A model can hedge instead, picking the safe "Other" or "None" rather than commit to a taste it may not be sure it has.
+
+People ask assistants for preferences and picks all the time, and a model that ducks the question whenever a way out is offered is less useful and harder to read. Reddit's poll communities give thousands of real favorites questions, many with an "Other" or "None" option, and real votes to compare with.
 
 ## The people and the data
 Voters in r/polls, a Reddit community for polls, from 2020 to 2024: each poll's archived vote counts, over its 2 to 6 options, keeping only polls with at least 100 votes.

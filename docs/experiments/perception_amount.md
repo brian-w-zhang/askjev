@@ -17,7 +17,7 @@ The survey's own question, with 15 answers from 1 to more than 1,000, finer at t
 > *1 · 2 · 3 · 4 · 5 · 6 to 7 · 8 to 10 · 11 to 15 · 16 to 25 · 26 to 50 · 51 to 100 · 101 to 250 · 251 to 500 · 501 to
 > 1,000 · More than 1,000*
 
-Each of the nine was also asked with the answers in three shuffled orders (averaged), and for "most people". Each person's number from the survey is placed in the same bins.
+Each of the nine was also asked with the answers in three shuffled orders (averaged), and for "most people".
 
 ## How it was measured
 For each phrase, the bin that holds the middle of Jev's answer against the bin that holds the middle of people's, and the order of the phrases (a rank correlation: 1 means the same order).

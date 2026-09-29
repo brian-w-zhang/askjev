@@ -3,7 +3,9 @@
 family: work
 
 ## Why ask this
-One of the most common jobs for a small, fast model is checking a bigger model's output: did the chatbot's reply stick to the documents it was given, or did it make something up? A good checker catches invented facts without accusing honest answers, and catches errors that are only partly wrong, not just the obvious ones.
+One of the most common jobs for a small, fast model is checking a bigger model's output. A support bot is handed the store's policy page ("returns within a month") and tells a customer they have two months: did the reply stick to the documents it was given, or did it make something up?
+
+A good checker catches invented facts without accusing honest answers, and catches replies that are only partly wrong, not just the obvious ones. A checker that cries wolf gets switched off; one that misses the one wrong sentence in a mostly right summary lets exactly the errors through that people are least likely to spot.
 
 ## The people and the data
 Three public datasets:

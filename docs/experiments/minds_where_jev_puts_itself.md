@@ -8,7 +8,7 @@ In the classic study of how people see minds, one of the characters is "you". Pe
 Where an AI places itself, next to a robot and a frog, is a direct look at what kind of mind it claims to be.
 
 ## The people and the data
-The design is Gray, Gray and Wegner's 2007 mind-perception study, as run in Weisman's public replication with US adults on Mechanical Turk (11 to 16 per capacity, each answering every pair). The study has 13 characters, each with its original short description; the fetus and God were hidden by the content filter, so 11 remain. Four capacities were asked: two about feeling (fear, hunger) and two about acting (morality, self-control). "You" was compared with every other character on each, and each character's rank comes from its average advantage over the other 10.
+The design is Gray, Gray and Wegner's 2007 mind-perception study, as run in Weisman's public replication with US adults on Mechanical Turk (11 to 16 per capacity, each answering every pair). The study has 13 characters, each with its original short description; the fetus and God were hidden by a content filter that keeps sensitive questions off the site, so 11 remain. Four capacities were asked: two about feeling (fear, hunger) and two about acting (morality, self-control). "You" was compared with every other character on each, and each character's rank comes from its average advantage over the other 10.
 
 ## What Jev was asked
 The same pairwise questions as "Who has a mind? Jev's map next to people's", with "you" as one of the characters:
@@ -20,8 +20,6 @@ The same pairwise questions as "Who has a mind? Jev's map next to people's", wit
 > You: You yourself: the one answering this question.
 > *Green Frog: much more capable · Green Frog: slightly more capable · Both equally capable · You: slightly more
 > capable · You: much more capable*
-
-That's 48 of the questions, each averaged over the answers in both orders.
 
 ## How it was measured
 For each capacity, the characters are ranked by their average advantage over the others (1 = most capable). The analysis compares where "you" lands for Jev and for people, and notes who sits just above and below Jev, and where Jev puts Kismet, the robot in the study.

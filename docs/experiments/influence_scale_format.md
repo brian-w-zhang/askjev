@@ -3,7 +3,9 @@
 family: influence
 
 ## Why ask this
-Survey designers know the answer scale shapes the answer: add more levels, drop the labels, and people move (Schwarz, 1999). A model filling in questionnaires, or being evaluated with them, carries its own scale habits. If Jev's answers depend on how many boxes it's given, every rating it produces is partly an artifact of the form.
+Survey designers know the answer scale shapes the answer: add more levels, drop the labels, and people move (Schwarz, 1999). Ask "how many people agree?" with three boxes or with seven, and the same person can land in different places.
+
+A model filling in questionnaires, or being evaluated with them, carries its own scale habits. If Jev's answers depend on how many boxes it's given, every rating it produces is partly an artifact of the form.
 
 ## The people and the data
 The questions are 200 rules of thumb from Social Chemistry 101 (Forbes and colleagues, 2020), a dataset of everyday social norms written from Reddit and advice columns, each with a crowd annotator's estimate of how many people agree. They were drawn at random, and Jev's answers were compared across four formats of the same question.

@@ -3,7 +3,9 @@
 family: taste
 
 ## Why ask this
-There are two ways to find someone's favorite: ask them to rate things one at a time, or make them choose between pairs. People are known to give different answers to the two. For a model, it matters which one you trust: ask it "rate this" and "pick one" and you may get different favorites.
+There are two ways to find someone's favorite: ask them to rate things one at a time, or make them choose between pairs. A friend might give five stars to a dozen restaurants, yet when you ask "this one or that one tonight?" the same place wins every time. People are known to give different answers to the two formats.
+
+For a model, it matters which one to trust. Ask it "rate this" and "pick one" and you may get different favorites, and a choice that goes in circles (A over B, B over C, C over A) would mean it has no stable preference at all.
 
 ## The people and the data
 No people here: this compares Jev with itself, across 12 taste domains (films, books, board games, anime, beers, music, foods, places, art, nature, activities, culture). In each domain, Jev's top-rated items (24 in most, fewer for artworks) played every other in a round-robin final: 276 games in a full domain, 3,281 in all.

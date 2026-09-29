@@ -25,7 +25,7 @@ For each dataset: the share of messages Jev routes right; among its misses, the 
 
 ## Caveats
 - **Some intents overlap by design.** Many "misses" are between intents a person would also hesitate over. The datasets' labels treat these as wrong, so the share right is a floor.
-- **Clean benchmark messages.** Most of these datasets use short, tidy messages collected or written for research. Real customer messages are longer, messier and often ask two things at once.
+- **Clean research messages.** Most of these datasets use short, tidy messages collected or written for research. Real customer messages are longer, messier and often ask two things at once.
 - **Different menus, different difficulty.** Some datasets have crisp, separate intents (travel domains, music vs weather); others blur (task types like "brainstorming" vs "open question"). Comparing datasets mixes menu length with how distinct the intents are.
 
 Results, the chart and Jev's take are private; the atlas shows them. Code: `scripts/experiments/`.

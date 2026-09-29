@@ -3,7 +3,9 @@
 family: humor
 
 ## Why ask this
-Humor is where a model's taste could differ most from people's, and "can't rank jokes" is too blunt a verdict. Maybe it can rank some kinds of jokes and not others. Putting three very different crowds side by side separates the two.
+Ask a model to pick the funniest of three toast openers, or to punch up a caption, and it has to judge what will make people laugh. Humor is where a model's taste could differ most from people's, and "can't rank jokes" is too blunt a verdict: it might rank some kinds of jokes well and others not at all.
+
+Putting three very different crowds side by side separates the two: classic jokes that have circulated for decades, news headlines with one word swapped for a laugh, and one-off captions written for a weekly cartoon contest.
 
 ## The people and the data
 - **Classic jokes (Jester):** a joke-recommendation site run at UC Berkeley (Goldberg and colleagues, 2001), where users rated jokes on a slider from -10 to +10.

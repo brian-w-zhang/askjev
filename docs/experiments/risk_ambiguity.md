@@ -5,7 +5,7 @@ family: risk
 ## Why ask this
 This "ambiguity aversion" is one of the most studied quirks of human choice.
 
-A model that talks people through decisions (a job offer with an unclear bonus, a new product with no track record) could amplify that caution or correct it. Here it's possible to see which way Jev leans, and how that compares with people who were playing for real.
+A model that talks people through decisions (a job offer with an unclear bonus, a new product with no track record) could amplify that caution or correct it. This shows which way Jev leans, and how that compares with people who were playing for real.
 
 ## The people and the data
 The comparison comes from **choices13k** (Peterson and colleagues, 2021, in Science), a very large dataset of risky choices. US workers on Amazon Mechanical Turk chose between pairs of gambles five times each and were paid a bonus of 10% of one outcome, so their choices counted. In 452 of the problems, one gamble listed its possible payoffs but not their odds. About 15 to 18 people played each.
@@ -21,7 +21,7 @@ Each problem was one question with both gambles written out as the players saw t
 > with probabilities you are not told*
 
 ## How it was measured
-For each problem, the share of Jev's answer on the unknown gamble, and the share of players' trials on it.
+For each problem, the share of Jev's answer on the unknown gamble, and the share of players' trials on it. These are averaged across problems; separately, the analysis counts the problems where each side more often picks the unknown gamble.
 
 ## Caveats
 - **Not pure ambiguity.** The unknown gamble still lists its possible payoffs, so part of each choice is about amounts, not odds. The problems were split by whether the unknown gamble could beat the known one; Jev shies away in every group.

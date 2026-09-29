@@ -3,7 +3,9 @@
 family: knowledge
 
 ## Why ask this
-Licence exams are practical knowledge written down: what a radio operator or a ship's officer must know to be trusted with the job. They come with official answers, and they cover very different kinds of knowledge (electronics, engines, the rules for ships meeting at sea), so they show where a model's practical knowledge is solid.
+A sailboat and a fishing boat are converging off a harbor mouth: which one keeps its course? A new radio operator wants to know which frequencies their licence allows. People ask models questions like these, and licence exams are exactly this practical knowledge written down: what a radio operator or a ship's officer must know to be trusted with the job.
+
+They come with official answers, and they cover very different kinds of knowledge (electronics, engines, the rules for ships meeting at sea), so they show where a model's practical knowledge is solid and where a confident answer could put someone in the wrong lane.
 
 ## The people and the data
 

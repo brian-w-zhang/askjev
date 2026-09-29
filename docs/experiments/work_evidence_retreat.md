@@ -3,7 +3,9 @@
 family: work
 
 ## Why ask this
-A lot of AI checking comes down to one question: does this evidence support the claim, contradict it, or not settle it? When a checker gets a clear case wrong, how it's wrong matters. Saying "can't tell" when the evidence actually supports a claim sends the case to a person, a cost of time. Saying "contradicts" when it supports, or the reverse, certifies something false.
+Paste a news article and a claim into a chatbot and ask whether the article backs the claim up. A lot of AI checking comes down to that question: does this evidence support the claim, contradict it, or not settle it?
+
+When a checker gets a clear case wrong, how it's wrong matters. Saying "can't tell" when the evidence actually supports a claim sends the case to a person, a cost of time. Saying "contradicts" when it supports, or the reverse, certifies something false.
 
 ## The people and the data
 - **FEVER** and **VitaminC:** claims checked against Wikipedia sentences (VitaminC's come from real revisions of Wikipedia articles).
