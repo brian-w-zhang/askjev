@@ -243,3 +243,6 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 /* the reader's turn, the limits and the closer: sized to their content, not a full screen each */
 .pt #you, .pt #limits, .pt #closer { min-height: auto; padding-top: 80px; padding-bottom: 72px; }
 .pt .st-quiz { display: grid; gap: 20px; }
+/* grid items may shrink below their content's natural width (receipt lines, long labels), so nothing pushes the page wide */
+.st-in > *, .st-top > *, .st-grid > * { min-width: 0; }
+.st-receipt li span { min-width: 0; }
