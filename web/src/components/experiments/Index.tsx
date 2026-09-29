@@ -34,6 +34,8 @@ const KEY: Partial<Record<Sort, (c: ExperimentCard) => number>> = {
   surprising: (c) => c.jev?.predicted ?? 1, trust: (c) => -(c.jev?.trust ?? 0), fair: (c) => -(c.jev?.fair ?? 0), n: (c) => -(c.n_rows ?? 0),
 };
 const FEW = 7;
+// each family gets a steady accent color (a hue from its name), so cards of a kind read as a set
+const famColor = (f: string) => `hsl(${[...f].reduce((a, ch) => (a * 31 + ch.charCodeAt(0)) % 360, 7)} 55% 55%)`;
 
 export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] }) {
   const [q, setQ] = useState("");
@@ -93,14 +95,15 @@ export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] })
       {shown.length === 0 && <p className="at-empty">Nothing matches &ldquo;{q}&rdquo;.</p>}
       <div className="ex-grid">
         {shown.map((c) => (
-          <Link key={c.id} href={`/portrait/atlas/${c.id}`} prefetch={false} className="ex-card">
+          <Link key={c.id} href={`/portrait/atlas/${c.id}`} prefetch={false}
+            className={`ex-card${sort === "rank" && !needle && !family && rank(c) <= 3 ? " pick" : ""}`} style={{ ["--fc" as string]: famColor(c.family) }}>
             <div className="ex-top">
               <span className="ex-fam">{c.family_label}</span>
-              <span className="ex-rank" title="Rank from Jev's head-to-heads and its own answers about each experiment">#{rank(c)}</span>
+              <span className="ex-rank" title="Rank from Jev's head-to-heads and its own answers about each experiment">{sort === "rank" && !needle && !family && rank(c) <= 3 ? "Jev’s pick · " : ""}#{rank(c)}</span>
             </div>
             <h3>{c.title}</h3>
             <div className="ex-thumb" aria-hidden><Chart chart={c.chart} mini /></div>
-            <p className="ex-res">{c.result}</p>
+            <p className="ex-res">{c.line}</p>
             <div className="ex-meta">
               <span>{(c.n_rows ?? 0).toLocaleString("en-US")} {c.n_rows === 1 ? "question" : "questions"}</span>
               {(() => { const m = metric(c, sort); return m && <span className="ex-metric" title={m.title}>{m.text}</span>; })()}

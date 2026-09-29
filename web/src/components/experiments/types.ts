@@ -29,7 +29,7 @@ export type Experiment = {
 export type ExperimentsData = { experiments: Experiment[]; families: Record<string, string> };
 // The index needs only the card fields; charts go along as small thumbnails.
 export type ExperimentCard = Pick<Experiment, "id" | "family" | "family_label" | "title" | "result" | "n" | "new_questions" | "n_rows" | "evaluation" | "portrait_rank"> & {
-  chart: Chart; jev: JevMetrics | null;
+  chart: Chart; jev: JevMetrics | null; line: string;
 };
 // Jev's answers about an experiment, for the index's sorts: probabilities 0-1, levels 0-4 with their words
 export type JevMetrics = {

@@ -346,3 +346,24 @@
 .pt .ex-xy .s.alt2 circle { fill: var(--w-fg-2); }
 .pt .ex-xy .s.alt2 polyline { stroke: var(--w-fg-2); stroke-dasharray: 2 3; }
 .pt .ex-legend .k.alt2 { background: var(--w-fg-2); }
+
+/* ---------- index polish: family accents, Jev's top picks, quiet thumbnails, a stats strip ---------- */
+.pt .ex-card { border-top: 3px solid var(--fc, var(--w-line)); transition: transform 0.15s ease, box-shadow 0.15s ease; }
+.pt .ex-card:hover, .pt .ex-card:focus-visible { transform: translate(-2px, -2px); }
+.pt .ex-card .ex-fam { color: var(--w-fg); display: inline-flex; align-items: center; gap: 6px; }
+.pt .ex-card .ex-fam::before { content: ""; width: 8px; height: 8px; background: var(--fc, var(--w-fg-2)); }
+.pt .ex-card.pick { box-shadow: 0 0 0 1px var(--jev), 4px 4px 0 var(--jev); }
+.pt .ex-card.pick .ex-rank { color: var(--jev); font-weight: 600; }
+.pt .ex-card h3 { font-size: 17.5px; text-wrap: balance; }
+.pt .ex-res { -webkit-line-clamp: 4; color: var(--w-fg-2); }
+.pt .ex-thumb { height: 118px; min-height: 0; max-height: none; display: flex; align-items: center; }
+.pt .ex-thumb > * { width: 100%; }
+/* thumbnails are shapes, not charts to read: no tiny labels or ticks */
+.pt .ex-thumb .dp-l, .pt .ex-thumb .dp-v, .pt .ex-thumb .dp-axis, .pt .ex-thumb .ex-bar .l, .pt .ex-thumb .ex-bar .v,
+.pt .ex-thumb .ex-legend, .pt .ex-thumb .ex-foot, .pt .ex-thumb text { display: none !important; }
+.pt .ex-thumb .dp-row { grid-template-columns: 0 1fr 0; gap: 0; min-height: 14px; border-top-color: transparent; }
+.pt .ex-thumb .ex-bar { grid-template-columns: 1fr !important; }
+.pt .at-stats { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 4px 0 2px; }
+.pt .at-stats div { display: grid; }
+.pt .at-stats dt { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--fg-2); }
+.pt .at-stats dd { margin: 0; font-size: 30px; line-height: 1.05; font-weight: 600; letter-spacing: -0.03em; }

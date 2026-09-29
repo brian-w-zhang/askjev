@@ -39,6 +39,7 @@ export default async function AtlasPage() {
   const cards: ExperimentCard[] = (x?.experiments ?? []).map((e) => ({
     id: e.id, family: e.family, family_label: e.family_label, title: e.title, result: e.result, n: e.n,
     new_questions: e.new_questions, n_rows: e.n_rows ?? 0, evaluation: e.evaluation, portrait_rank: e.portrait_rank ?? null, chart: thumb(e.chart), jev: jevOf(e),
+    line: e.case?.takeaways?.[0] ?? e.result, // the first takeaway: one whole sentence, not a clipped paragraph
   }));
   return (
     <main>
@@ -47,6 +48,11 @@ export default async function AtlasPage() {
         <header className="at-head">
           <span className="pt-tag">Jev.Atlas</span>
           <h1>Experiments</h1>
+          <dl className="at-stats">
+            <div><dt>experiments</dt><dd>{cards.length}</dd></div>
+            <div><dt>families</dt><dd>{new Set(cards.map((c) => c.family)).size}</dd></div>
+            {d && <div><dt>questions on the map</dt><dd>{((d.claims.landscape_families?.n ?? 0) - (d.claims.landscape_hidden?.n ?? 0)).toLocaleString("en-US")}</dd></div>}
+          </dl>
           <p>
             Each experiment gathers many of Jev&rsquo;s answers into one thing you can learn about it in a minute, compared with
             real people or a right answer where one exists. The <Link href="/portrait" prefetch={false}>portrait</Link> picks a
