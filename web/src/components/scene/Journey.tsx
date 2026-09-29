@@ -95,6 +95,12 @@ function Tracker() {
     }
     const sc = head ? toScreen(head[0], head[1], head[2]) : null;
     moveCard(cards.walker, sc ? sc.x : null, sc ? sc.y : 0, true);
+    // the chip sits right of the dot; near the right edge (phones) it flips to the left so it stays on screen
+    const chip = cards.walker?.querySelector<HTMLElement>(".walker-chip");
+    if (sc && chip) {
+      const flip = sc.x + 22 + chip.offsetWidth > window.innerWidth - 4 && sc.x > window.innerWidth / 2;
+      if (cards.walker!.classList.contains("flip") !== flip) cards.walker!.classList.toggle("flip", flip);
+    }
     const key = `${j.phase}|${at}`;
     if (key !== lastKey.current) {
       lastKey.current = key;
@@ -116,6 +122,15 @@ function Tracker() {
       starWorld(i, p, now(), w);
       const ds = toScreen(w[0], w[1], w[2]);
       moveCard(cards.dest, ds ? ds.x : null, ds ? ds.y : 0, true);
+      // the callout is centered over the mark; near an edge it slides along so the question stays readable
+      const co = cards.dest?.querySelector<HTMLElement>(".dest-callout");
+      if (ds && co) {
+        const cw = co.offsetWidth, W = window.innerWidth;
+        const l = ds.x - cw / 2, r = ds.x + cw / 2;
+        const shift = l < 6 ? 6 - l : r > W - 6 ? W - 6 - r : 0;
+        const v = `${Math.round(shift)}px`;
+        if (co.style.getPropertyValue("--shift") !== v) co.style.setProperty("--shift", v);
+      }
     } else moveCard(cards.dest, null, 0);
   });
   return null;

@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { q } from "@/lib/server/db";
 import { PORTRAIT_URL } from "@/components/portrait/data";
@@ -8,24 +8,29 @@ import type { Row } from "@/components/portrait/types";
 // scripts/experiments/export.py (data/analysis/experiment_rows/<id>.json, or the same file in the Blob folder in
 // production); the questions and Jev's answers come from the database.
 const PAGE = 5;
-const lists = new Map<string, [string, string][]>();
+const lists = new Map<string, { data: [string, string][]; mtime: number }>();
 
 async function list(id: string): Promise<[string, string][] | null> {
   if (!/^[a-z0-9_]+$/.test(id)) return null;
   const hit = lists.get(id);
-  if (hit) return hit;
+  if (hit && PORTRAIT_URL) return hit.data; // published files change only with a deploy
   let data: [string, string][] | null = null;
+  let mtime = 0;
   try {
     if (PORTRAIT_URL) {
       const r = await fetch(`${PORTRAIT_URL}/experiment_rows/${id}.json`, { cache: "no-store" });
       data = r.ok ? await r.json() : null;
     } else {
-      data = JSON.parse(await readFile(path.join(process.cwd(), "..", "data", "analysis", "experiment_rows", `${id}.json`), "utf-8"));
+      // locally the export rewrites these files, so a changed file is read again rather than served stale
+      const f = path.join(process.cwd(), "..", "data", "analysis", "experiment_rows", `${id}.json`);
+      mtime = (await stat(f)).mtimeMs;
+      if (hit && hit.mtime === mtime) return hit.data;
+      data = JSON.parse(await readFile(f, "utf-8"));
     }
   } catch {
     data = null;
   }
-  if (data) lists.set(id, data);
+  if (data) lists.set(id, { data, mtime });
   return data;
 }
 

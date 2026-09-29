@@ -26,7 +26,8 @@
 .pt .ex-count { margin: 0; display: flex; gap: 12px; align-items: baseline; font-family: var(--mono); font-size: 11.5px; color: var(--w-fg-2); }
 .pt .ex-count button { border: 0; background: none; padding: 0; color: var(--w-fg); text-decoration: underline; font: inherit; cursor: pointer; }
 @media (max-width: 600px) {
-  .pt .ex-fams:not(.open) { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px; }
+  .pt .ex-fams:not(.open) { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px;
+    -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); mask-image: linear-gradient(90deg, #000 85%, transparent); }  /* the fade says "more this way" */
   .pt .ex-fams button { flex: none; }
   .pt .ex-sort { width: 100%; } .pt .ex-sort button, .pt .ex-sort select { flex: 1; }
 }

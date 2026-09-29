@@ -56,6 +56,26 @@ export function assign<K>(pool: Slot<K>[], wanted: K[]) {
   }
 }
 
+// Labels and cards stay on screen (phones especially): widths are measured once per text, not every frame
+const EDGE = 4;
+const widths = new WeakMap<HTMLElement, { text: string; w: number; epoch: number }>();
+let fontEpoch = 0; // web fonts arriving change every label's width, so they invalidate the cache
+if (typeof document !== "undefined") document.fonts?.addEventListener?.("loadingdone", () => { fontEpoch++; });
+function widthOf(el: HTMLElement): number {
+  const t = el.textContent ?? "";
+  const c = widths.get(el);
+  if (c && c.text === t && c.epoch === fontEpoch && c.w > 0) return c.w;
+  const w = el.offsetWidth;
+  widths.set(el, { text: t, w, epoch: fontEpoch });
+  return w;
+}
+/** The x that keeps a box of width w, anchored at `left`, inside the viewport. */
+function inside(left: number, w: number): number {
+  const W = typeof window === "undefined" ? Infinity : window.innerWidth;
+  if (w >= W - 2 * EDGE) return EDGE;
+  return Math.min(Math.max(left, EDGE), W - EDGE - w);
+}
+
 /** Fade toward wanted/unwanted and put the label's bottom-center at (x, y); x = null hides it. */
 export function place<K>(s: Slot<K>, x: number | null, y: number, k: number) {
   const el = s.el;
@@ -69,7 +89,9 @@ export function place<K>(s: Slot<K>, x: number | null, y: number, k: number) {
   }
   el.style.visibility = "visible";
   el.style.opacity = s.o.toFixed(3);
-  el.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px) translate(-50%, -100%)`;
+  const w = widthOf(el);
+  const left = inside(x - w / 2, w);
+  el.style.transform = `translate(${left.toFixed(1)}px, ${y.toFixed(1)}px) translate(0, -100%)`;
 }
 
 /** Show a card beside a screen point (or centered on it), or hide it (x = null). */
@@ -80,5 +102,10 @@ export function moveCard(el: HTMLDivElement | null, x: number | null, y: number,
     return;
   }
   el.style.visibility = "visible";
-  el.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px) ${center ? "translate(-50%, -50%)" : "translate(14px, -50%)"}`;
+  const w = widthOf(el);
+  const W = typeof window === "undefined" ? Infinity : window.innerWidth;
+  // beside the point on the right; flipped to the left when it wouldn't fit; centered cards just stay inside
+  const want = center ? x - w / 2 : x + 14 + w > W - EDGE ? x - 14 - w : x + 14;
+  const left = inside(want, w);
+  el.style.transform = `translate(${left.toFixed(1)}px, ${y.toFixed(1)}px) translate(0, -50%)`;
 }

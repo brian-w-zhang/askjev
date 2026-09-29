@@ -74,7 +74,7 @@ export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] })
             </select>
           </label>
         </div>
-        <div className={`ex-fams${open ? " open" : ""}`} role="group" aria-label="Filter by family">
+        <div className={`ex-fams${open ? " open" : ""}`} role="group" aria-label="Filter by family" data-scroll="x">
           <button type="button" aria-pressed={!family} onClick={() => setFamily("")}>All <em>{matches.length}</em></button>
           {famShown.map(([f, { label, n }]) => (
             <button key={f} type="button" aria-pressed={family === f} onClick={() => setFamily(family === f ? "" : f)}>{label} <em>{n}</em></button>

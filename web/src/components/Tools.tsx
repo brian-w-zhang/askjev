@@ -39,8 +39,8 @@ export function ToolTabs({ onLucky }: { onLucky: () => void }) {
   // each tab's value gets the width of its longest option (the pixel font is monospaced), so picking another
   // layout or color never slides the tabs after it
   const tab = (t: ToolId, name: string, value: string, longest: number) => (
-    <button className="tooltab" aria-expanded={tool === t} aria-controls="toolpanel" onClick={() => toggle(t)}>
-      {name} <b style={{ minWidth: `${longest}ch` }}>{value}</b> <span aria-hidden>{tool === t ? "▴" : "▾"}</span>
+    <button className="tooltab" aria-expanded={tool === t} aria-controls="toolpanel" onClick={() => toggle(t)} aria-label={`${name}: ${value}`}>
+      <span className="tt-name">{name} </span><b style={{ minWidth: `${longest}ch` }}>{value}</b> <span aria-hidden>{tool === t ? "▴" : "▾"}</span>
     </button>
   );
   return (
