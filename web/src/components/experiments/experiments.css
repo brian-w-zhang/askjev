@@ -347,13 +347,7 @@
 .pt .ex-xy .s.alt2 polyline { stroke: var(--w-fg-2); stroke-dasharray: 2 3; }
 .pt .ex-legend .k.alt2 { background: var(--w-fg-2); }
 
-/* ---------- index polish: family accents, Jev's top picks, quiet thumbnails, a stats strip ---------- */
-.pt .ex-card { border-top: 3px solid var(--fc, var(--w-line)); transition: transform 0.15s ease, box-shadow 0.15s ease; }
-.pt .ex-card:hover, .pt .ex-card:focus-visible { transform: translate(-2px, -2px); }
-.pt .ex-card .ex-fam { color: var(--w-fg); display: inline-flex; align-items: center; gap: 6px; }
-.pt .ex-card .ex-fam::before { content: ""; width: 8px; height: 8px; background: var(--fc, var(--w-fg-2)); }
-.pt .ex-card.pick { box-shadow: 0 0 0 1px var(--jev), 4px 4px 0 var(--jev); }
-.pt .ex-card.pick .ex-rank { color: var(--jev); font-weight: 600; }
+/* ---------- index: quiet thumbnails, a stats strip ---------- */
 .pt .ex-card h3 { font-size: 17.5px; text-wrap: balance; }
 .pt .ex-res { -webkit-line-clamp: 4; color: var(--w-fg-2); }
 .pt .ex-thumb { height: 118px; min-height: 0; max-height: none; display: flex; align-items: center; }
