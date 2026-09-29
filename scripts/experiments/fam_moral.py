@@ -35,8 +35,9 @@ def moral_machine():
                  "how does that compare with millions of players?",
         why="The largest study of machine ethics preferences (Awad et al. 2018, Nature) measured what people want a car "
             "to do; a model answering the same dilemmas shows which of those preferences it shares and which it drops.",
-        sourcing="Existing Moral Machine scenarios (26,020 shown dilemmas reconstructed from the study's data), each "
-                 "with the real players' split, for the world and 10 countries. Enough.",
+        sourcing="Existing Moral Machine scenarios (26,020 dilemmas reconstructed from the study's data), each with "
+                 "the real players' split, for the world and 10 countries. The site shows 4,031 of them, 1,000 per kind of "
+                 "dilemma; the analysis uses all 26,020. Enough.",
         scoring="The study's own regression: for each factor, the change in the probability of sparing a side per unit "
                 "difference (AMCE), fitted to Jev's probabilities and to players' shares; 90% intervals by bootstrap over "
                 "scenarios. Countries compared by distance of their nine-factor profile to Jev's.",

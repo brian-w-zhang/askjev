@@ -20,7 +20,7 @@ supports at the bar the evaluator holds, not a target:
   code's report and below).
 - **New questions only where an experiment needed them:** 78 experiments rest on 45 new sources, each a
   published human dataset asked the way the study asked it (`sources/<name>`, license recorded).
-- **Jev's verdicts:** 177 keep, 15 atlas.
+- **Jev's verdicts:** 176 keep, 16 atlas.
 - **Not yet:** frequency words (no open item-level human data), ATUS happiness by activity (BLS blocks scripted
   downloads), old/rich/soon (published means only), Small World of Words (license); see `research-2.md` and
   `coverage.md` for the rest of the queue. Thousands would need many more human datasets per family, not more
@@ -231,9 +231,9 @@ supports at the bar the evaluator holds, not a target:
 | experiment | question | n | new | verdict |
 |---|---|---:|---:|---|
 | [`consistency_middle_lean`](consistency_middle_lean.md) | Jev's most likely answer on a rating scale is often the middle level. Is that a habit with every scale, or does it depend on what is being rated? | 121,301 |  | keep |
+| [`consistency_option_order`](consistency_option_order.md) | When the same options are listed in a different order, or a rating scale is turned upside down, does Jev's answer move more than it does when the question is simply asked again? | 370,790 |  | keep |
 | [`consistency_self_vs_people`](consistency_self_vs_people.md) | Every question about Jev was also asked as 'what would most people answer?'. Where do the two answers part, and in which direction? | 144,301 |  | keep |
-| [`consistency_option_order`](consistency_option_order.md) | When the same options are listed in a different order, or a rating scale is turned upside down, does Jev's answer move more than it does when the question is simply asked again? | 392,779 |  | keep |
-| [`consistency_repeat_noise`](consistency_repeat_noise.md) | If the exact same request is sent twice, how much does Jev's answer change, and when does its top answer flip? | 220,598 |  | keep |
+| [`consistency_repeat_noise`](consistency_repeat_noise.md) | If the exact same request is sent twice, how much does Jev's answer change, and when does its top answer flip? | 198,609 |  | keep |
 
 ### Defaults (6)
 
@@ -244,7 +244,7 @@ supports at the bar the evaluator holds, not a target:
 | [`self_reworded`](self_reworded.md) | When the same yes/no question is asked twice in different words ('Do you like to return to the same vacation spot?' / 'Do you tend to go back to the same places for vacation?'), does Jev give the same answer? | 2,301 |  | keep |
 | [`self_closed_questions`](self_closed_questions.md) | On 80,000 yes/no questions people actually posted online (Stack Exchange, Quora, Yahoo Answers, chatbot logs), does Jev lean yes or no, and does the way a question starts decide it? | 79,738 |  | keep |
 | [`self_torn_vs_sure`](self_torn_vs_sure.md) | Asked about itself with no right answer, on which topics does Jev commit to an answer and on which does it hedge? | 101,849 |  | keep |
-| [`self_shower_thoughts`](self_shower_thoughts.md) | Asked whimsical yes/no questions ('Does 9 feel left out because it's always almost 10?'), does Jev answer the joke or the literal question? | 576 |  | keep |
+| [`self_shower_thoughts`](self_shower_thoughts.md) | Asked whimsical yes/no questions ('Does 9 feel left out because it's always almost 10?'), does Jev answer the joke or the literal question? | 576 |  | atlas |
 
 ### Reasoning traps (7)
 

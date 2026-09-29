@@ -24,3 +24,5 @@ notes: >
   Wave 3: run with ASKJEV_TARGET_MORAL_MACHINE=8000 (of the 26,020 eligible configurations); rows 1-3000 are unchanged.
   Wave 5: run with ASKJEV_TARGET_MORAL_MACHINE=18000 (same exclusions and n >= 100); rows 1-8000 are unchanged.
   Self-real wave: run with ASKJEV_TARGET_MORAL_MACHINE=26020 (every eligible configuration, n >= 100, same exclusions); rows 1-18000 are unchanged.
+  Thinned for display (2026-09-28): 1,000 per topic kept in this salted-hash order, 21,989 hidden with the 'thinned'
+  flag (scripts/thin_source.py; nothing deleted, answers kept). 4,031 shown.

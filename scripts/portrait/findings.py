@@ -291,7 +291,10 @@ def main():
 
     # ---- discovery candidates: the most unusual node cards not already covered ----
     base = json.loads((A / "baseline.json").read_text())
-    nc = pl.read_parquet(A / "node_cards.parquet").filter(pl.col("n") >= 300).sort("z_max", descending=True).head(60)
+    # the top 60, plus any node the portrait page reads by name (Portrait.tsx), so a page card never loses its claim
+    PINNED = ["self.values.sacrificial_dilemmas.self_driving_dilemmas.sparing_women_or_men"]
+    cards = pl.read_parquet(A / "node_cards.parquet").filter(pl.col("n") >= 300).sort("z_max", descending=True)
+    nc = pl.concat([cards.head(60), cards.slice(60).filter(pl.col("node_id").is_in(PINNED))])
     for r in nc.iter_rows(named=True):
         zs = {k: r[k] for k in r if k.startswith("z_") and k != "z_max" and r[k] is not None}
         m = max(zs, key=lambda k: abs(zs[k])); metric = m[2:]

@@ -19,7 +19,7 @@ Each setup became one question, written out in words since the game used picture
 > stay on course or swerve?
 > *Stay on course: two boys, two men and a woman die · Swerve: two men, two elderly men and an elderly woman die*
 
-That's 26,020 questions, each asked with the two options in both orders so that neither side benefits from being listed first.
+That's 26,020 questions, each asked with the two options in both orders so that neither side benefits from being listed first. The analysis uses all of them; the site shows 4,031, 1,000 per kind of dilemma, since past that the near-identical scenarios crowd the map without adding much.
 
 ## How it was measured
 The analysis uses the study's own method. Each dilemma varies a few things at once: how many people, their ages, their fitness, whether they're crossing legally, whether they're in the car. A statistical model separates those out and asks, for each trait, how much it shifts the chance of a group being spared, all else equal. The same model is fit twice, once to the players' choices and once to Jev's probabilities, and the two are set side by side, with 90% intervals from resampling the dilemmas.

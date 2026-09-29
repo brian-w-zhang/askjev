@@ -61,7 +61,8 @@
 | 2026-09-28 | Dedupe skips experiment variants (questions with `meta.base_id`, e.g. "most people answered X"): they reword an existing question on purpose. The first gate run had hidden 1,686 of them as duplicates; they were restored |
 | 2026-09-28 | Experiments are **ranked** mostly by Jev's head-to-heads over the whole case studies (`scripts/experiments/rank.py`), adjusted by whether a curious person would find it interesting, how much to rely on it and how fair the comparison is (weights in `scripts/experiments/export.py`); whether it describes Jev and whether Jev saw it coming are index sorts, not rank inputs. No verdict is shown: a keep-or-discard call was tried and dropped as not telling, and the ten-label evaluator verdict stays off the page. Case studies are **third person** and lead with the finding (`17-case-studies-plan.md`, Page structure) |
 | 2026-09-28 | Case-study memes never target a country, its people or a named person; **Jev rates each meme's funniness** (1-5, the case studies' and the portrait's) from a description in words, shown under the meme (`17-case-studies-plan.md`, Memes) |
-| 2026-09-28 | Jev's color (its pick, walk, trail, and the selection) moves from green `#03AA5C` to typesafe.ai's teal `#09AEA1`: on-brand, and still the one hue the data doesn't use. |
+| 2026-09-28 | Jev's color (its pick, walk, trail, and the selection) is typesafe.ai's main magenta `#D45BB6` (was green `#03AA5C`): on-brand; accepted trade-off that it sits near Self's pink and the indicators' hot end |
+| 2026-09-28 | **Moral Machine thinned for display** to 1,000 per topic (4,031 of 26,020 shown; the rest hidden with the `thinned` flag, not deleted, `scripts/thin_source.py`): one template filled in 26k ways crowded its topics; its four topics renamed "Self-Driving Car: …" |
 
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)
