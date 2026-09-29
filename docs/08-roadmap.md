@@ -63,6 +63,7 @@
 | 2026-09-28 | Case-study memes never target a country, its people or a named person; **Jev rates each meme's funniness** (1-5, the case studies' and the portrait's) from a description in words, shown under the meme (`17-case-studies-plan.md`, Memes) |
 | 2026-09-28 | Jev's color (its pick, walk, trail, and the selection) is typesafe.ai's main magenta `#D45BB6` (was green `#03AA5C`): on-brand; accepted trade-off that it sits near Self's pink and the indicators' hot end |
 | 2026-09-28 | **Moral Machine thinned for display** to 1,000 per topic (4,031 of 26,020 shown; the rest hidden with the `thinned` flag, not deleted, `scripts/thin_source.py`): one template filled in 26k ways crowded its topics; its four topics renamed "Self-Driving Car: …" |
+| 2026-09-28 | The site is **open, no site key** (`SITE_KEY` unset): Brian shares the link with TypeSafe directly instead of a keyed link |
 
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)
