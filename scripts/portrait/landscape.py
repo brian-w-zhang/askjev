@@ -18,12 +18,14 @@ from askjev import db
 
 A = Path("data/analysis")
 FAMILIES = [  # (family, regex over source name); first match wins; authored banks are decided by origin
-    ("instruments & norms", r"^(ipip|ipip_neo_norms|openpsych|icar_sapa|oejts|mfq|bbrs_risk|lancaster|lancaster_modality|glasgow_norms|concreteness|iconicity_ratings|pseudoword_shapes|bouba_kiki|choices13k|wulff_description|behavioral_econ|moral_vignettes|onet_interests)$"),
-    ("polls & surveys", r"^(reddit_polls|reddit_hobby_polls|gss|pisa_questionnaire|afrobarometer|globalopinionqa|young_people_survey|philpapers_survey|aims_survey|mxmh_music|color_favorites|wyr|protoqa)$"),
-    ("crowd judgments", r"^(moral_machine|social_chem|scruples|scruples_anecdotes|social_iqa|moral_stories|moralchoice|daily_dilemmas|ethics_.*|humicroedit|caption_contest|jester|storycommonsense|empathetic_dialogues|isear|character_traits)$"),
+    ("instruments & norms", r"^(ipip|ipip_neo_norms|openpsych|icar_sapa|oejts|mfq|bbrs_risk|lancaster|lancaster_modality|glasgow_norms|concreteness|iconicity_ratings|pseudoword_shapes|bouba_kiki|choices13k|wulff_description|behavioral_econ|moral_vignettes|onet_interests|scalar_adjectives|scalar_implicature|metaphor_norms|humor_words|idiom_norms|category_norms|word_associations|mind_perception|recall_norms|health_states|perception_words|mental_maps|wellbeing)$"),
+    ("polls & surveys", r"^(reddit_polls|reddit_hobby_polls|gss|pisa_questionnaire|afrobarometer|globalopinionqa|young_people_survey|philpapers_survey|aims_survey|mxmh_music|color_favorites|wyr|protoqa|onet_context|color_emotion|country_values|trolley_countries|science_literacy|ai_attitudes|fair_prices|gallup_honesty|occupation_prestige)$"),
+    ("crowd judgments", r"^(moral_machine|social_chem|scruples|scruples_anecdotes|social_iqa|moral_stories|moralchoice|daily_dilemmas|ethics_.*|humicroedit|caption_contest|jester|storycommonsense|empathetic_dialogues|isear|character_traits|emoji_sentiment|xkcd_colors|crowd_envent|chaosnli|politeness|crowd_estimates|effort_forecasts|ai_poetry)$"),
     ("taste pairs & ratings", r"(_pairs$|^taste_ratings$|^food_538$)"),
     ("internet culture", r"^(imgflip_captions|rjokes_pairs|wikidata_memes)$"),
     ("real asked questions", r"^(stackexchange_closed|quora_closed|yahoo_closed|wildchat_closed|ask-box|manifold)$"),
+    ("records & statistics", r"^(baby_names|bls_prices|lethal_events|whr_ladder|atus_day|lost_wallets|vehicles_park|upworthy_headlines)$"),
+    ("experiment designs", r"^(taste_finals|influence_variants|reasoning_traps|beauty_contest|philosophy_vignettes|anchoring)$"),
     ("knowledge & exams", r"^(mmlu|arc|sciq|openbookqa|boolq|strategyqa|truthfulqa|commonsense_qa|medmcqa|head_qa|uscg_mariner|nrc_gfe|ham_radio_pools|uscis_civics|opentdb|natural_questions_yn|vital\d*|wikidata_.*|pantheon_.*|worldbank_pairs|usda_nutrients|anage_pairs|wikidata_companies|hotpot_compare|nba)$"),
 ]
 

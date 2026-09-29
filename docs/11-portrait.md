@@ -125,13 +125,17 @@ and can't say. Rules:
 shared UI files are untouched. The map's body never scrolls, so the portrait scrolls inside its own `.pt` container
 (scroll-snap, proximity), and all its styles are scoped under `.pt`.
 
-**The story.** The page is nine chapters built from the experiments, then the reader's turn, the limits and the fine
+**The story.** The page is thirteen chapters: four on the project (how is Jev, why ask, how it was made, Jev's jobs, in Brian's voice) and nine built from the experiments, then the reader's turn, the limits and the fine
 print (`components/portrait/story/`). `scripts/portrait/story.py` copies each chapter's numbers from the experiments'
 result files into `data/analysis/story.json`, which `export_page.py` puts into `portrait.json` as `story`; no number
 is typed into the page. Chapters are written in the third person and each ends with links to its case studies.
 
 | Chapter | Built from | Visual |
 |---|---|---|
+| how is Jev? | TypeSafe's "nobody asks how Jev's doing" tweet; six Reddit check-in polls; five wellbeing scales scored as for a person | the tweet, a check-in poll, four gauges |
+| why ask | Diogo Almeida's words on benchmarks and weird experiments (Latent Space); Jev's own top three findings | quote cards, a readme, a "universal classifier" riff linking into the chapters |
+| how it was made | every source (`landscape_sources.parquet` + each `source.yaml`), the tree's origins (`nodes.source`), the pipeline claims | a stats strip, an interactive treemap of 312 sources in 11 families, the tree's origins per hemisphere, the pipeline in seven steps |
+| Jev's jobs | every call in `data/calls` sorted by the words it sent (`scripts/portrait/jev_jobs.py`), one question's real trip | a log-scale board of jobs that opens to the exact words Jev reads, what isn't Jev, one question from source to star |
 | meet Jev | the question count, Jev's own top three experiments | hero, three linked findings |
 | character | Big Five, the four-letter type, honesty-humility, the dark triad | stat rows, letter tiles that flip to Jev's guess for most people, a saint-or-villain meter |
 | taste | the twelve taste finals, the favorite dodge | a Letterboxd-style top four with posters, a shelf of each domain's winner with its picture |

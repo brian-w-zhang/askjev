@@ -34,6 +34,122 @@ def r2(x, k=3):
     return None if x is None else round(float(x), k)
 
 
+FAMILY_WHAT = {
+    "machine task datasets": "Labeled datasets for the work Jev is built for: tickets, reviews, code, logs, documents, each with its right answer.",
+    "authored banks": "Questions written for this project where no dataset existed, kept only if Jev, not told where they belong, filed them where they were meant to go.",
+    "crowd judgments": "Stories, dilemmas and texts that crowds of people judged, so Jev's answer sits next to theirs.",
+    "knowledge & exams": "Trivia, exams and facts from Wikidata and public tables, each with a checkable answer.",
+    "real asked questions": "Questions real people asked online (Stack Exchange, Quora, chatbot logs, prediction markets), turned into closed questions.",
+    "polls & surveys": "Polls and surveys with the real split of votes: Reddit polls, the General Social Survey, world surveys.",
+    "taste pairs & ratings": "Head-to-heads between films, books, games and foods, with how real audiences rated them.",
+    "instruments & norms": "Published personality tests and word norms, where thousands of people rated the same items.",
+    "internet culture": "Memes and jokes, with the upvotes they got.",
+    "experiment designs": "Questions built for a specific experiment: decoys, anchors, rewordings, classic traps.",
+    "records & statistics": "Real-world records to estimate: prices, death tolls, baby names, how people spend a day.",
+}
+
+
+def source_notes() -> dict:
+    """First sentence and license of each source's source.yaml (sources/<name>/)."""
+    import yaml
+    out = {}
+    for f in Path("sources").glob("*/source.yaml"):
+        try:
+            y = yaml.safe_load(f.read_text())
+        except Exception:  # noqa: BLE001
+            continue
+        note = " ".join(str(y.get("notes") or "").split())
+        first = note.split(". ")[0].rstrip(".") + "." if note else ""
+        clip = lambda t, k: t if len(t) <= k else t[:k].rsplit(" ", 1)[0].rstrip(",;(") + "…"  # noqa: E731
+        out[f.parent.name] = {"line": clip(first, 240), "license": clip(" ".join(str(y.get("license") or "").split()), 90),
+                              "url": str(y.get("url") or "").split(" ")[0][:120]}
+    return out
+
+
+# every job Jev does in the project, with the words it's sent (copied from the code named in `where`)
+JOB_INFO = {
+    "place a question on the tree": ("choice", "pipeline · src/askjev/place.py", "Within The Self, which topic area does the question in `question` belong to?",
+                                     "Walks the tree one level at a time, three paths at once, or picks from the nearest topics by embedding."),
+    "describe each question": ("yes/no + scale", "pipeline · src/askjev/answer.py", "Does the question in `subject` have a single correct answer that could be checked against facts?",
+                               "Four checks per question: is it factual, ambiguous, revealing about the answerer, and how much would people disagree."),
+    "screen for politics and sensitive content": ("yes/no", "pipeline · src/askjev/answer.py", "Is the question in `subject` about a contested political or partisan issue (elections, parties, politicians, …)?",
+                                                   "Hides contested politics and graphic content from the map; a narrower second pass released what the first caught by mistake."),
+    "flag known weak spots": ("yes/no", "pipeline · src/askjev/answer.py", "Does answering the question in `subject` require arithmetic, counting, exact numbers, or comparing dates?",
+                              "Marks the kinds of question TypeSafe documents as weak spots, so they aren't sold as discoveries."),
+    "answer as asked": ("choice · yes/no · scale", "pipeline · src/askjev/answer.py", "Who is the greater basketball player?",
+                        "Every question as written, then again with its options reordered or its scale turned upside down."),
+    "answer for most people": ("choice · yes/no · scale", "pipeline · src/askjev/answer.py", "Do not give your own view. Choose the answer that most people would give (the most common human answer).",
+                               "The same question with one extra instruction: answer as most people would."),
+    "check for duplicates": ("yes/no", "pipeline · src/askjev/dedupe.py", "Is `candidate` asking essentially the same question as `question` (same meaning and same answer options)?",
+                             "Near neighbors by embedding, then Jev decides which are really the same question."),
+    "rank experiments head to head": ("choice", "experiments · scripts/experiments/rank.py", "Each option is one experiment about Jev, an AI model. Which one teaches a curious general reader something more surprising and specific about how the model behaves, clearly stated and backed by a real comparison?",
+                                      "Two case studies side by side, both orders; the picks become Jev's ranking of its own experiments."),
+    "judge an experiment": ("yes/no · scale · choice", "experiments · scripts/experiments/take.py", "This experiment is about you, the AI model named Jev. Does its result match how you see yourself?",
+                            "Its verdict on each experiment: does it describe it, would it have predicted it, is the comparison fair, which caveat matters."),
+    "rerank search results": ("choice", "site · web/src/app/api/rerank", "Which of these questions best matches the search `query`?",
+                              "The map's search finds candidates by embedding; Jev picks the best match."),
+    "rate a meme": ("scale", "experiments · scripts/experiments/meme_funny.py", "How funny is this meme?",
+                    "Read as a description in words (it can't see images), each case study's meme gets a rating from 1 to 5."),
+}
+
+
+def option_label(qid: str, key: str) -> str:
+    """An answer option's words as the question shows them (the stored key is a slug)."""
+    from askjev import db
+    with db.connect() as c:
+        o = c.execute("select options from questions where id = %s", (qid,)).fetchone()
+    opts = (o or {}).get("options") or {}
+    if isinstance(opts, str):
+        opts = json.loads(opts)
+    v = opts.get(key) if isinstance(opts, dict) else None
+    if v:
+        return v.strip()
+    # a slug only: back to words, "no_i_m_not_feeling_sleepy" -> "no, I'm not feeling sleepy"
+    t = " " + key.replace("_", " ") + " "
+    t = t.replace(" i m ", " I'm ").replace(" i ", " I ").replace(" don t ", " don't ").replace(" can t ", " can't ").strip()
+    first, _, rest = t.partition(" ")
+    return f"{first}, {rest}" if first in ("no", "yes") and rest else t
+
+
+def methods() -> dict:
+    import polars as pl
+    t = pl.read_parquet(A / "landscape_sources.parquet")
+    notes = source_notes()
+    fams = []
+    for (fam,), g in t.group_by("family"):
+        srcs = g.group_by("source").agg(pl.col("n").sum(), (pl.col("truth") * pl.col("n")).sum().alias("tn"),
+                                         (pl.col("humans") * pl.col("n")).sum().alias("hn")).sort("n", descending=True)
+        fams.append({"family": fam, "what": FAMILY_WHAT.get(fam, ""), "n": int(srcs["n"].sum()),
+                     "sources": [{"source": r["source"], "n": int(r["n"]), "truth": round(r["tn"] / r["n"], 2), "humans": round(r["hn"] / r["n"], 2),
+                                  **notes.get(r["source"], {})} for r in srcs.iter_rows(named=True)]})
+    fams.sort(key=lambda f: -f["n"])
+    P = json.loads((A / "portrait.json").read_text())["claims"]
+    pl_ = {k: P[k] for k in ("pipeline_flow", "pipeline_placement", "pipeline_screen", "pipeline_round_trip", "pipeline_dedupe",
+                              "pipeline_bill", "landscape_anchoring", "landscape_real_vs_authored", "landscape_families", "landscape_hidden") if k in P}
+    from askjev import db
+    with db.connect() as c:
+        tree = [dict(r) for r in c.execute("select hemisphere, source, count(*) n from nodes where status='active' and hemisphere <> 'root' group by 1, 2")]
+        depth = c.execute("select max(depth) d, count(*) n from nodes where status='active'").fetchone()
+    jobs = json.loads((A / "jev_jobs.json").read_text()) if (A / "jev_jobs.json").exists() else None
+    f = lambda k: pl_[k]  # noqa: E731
+    return {
+        "families": fams,
+        "total": f("landscape_families")["n"], "hidden": f("landscape_hidden")["n"],
+        "truth": f("landscape_anchoring")["anchoring"]["truth"], "humans": f("landscape_anchoring")["anchoring"]["humans"],
+        "human_dists": f("landscape_anchoring")["human_distributions"], "median_people": f("landscape_anchoring")["median_n"],
+        "real": f("landscape_real_vs_authored")["effect"],
+        "tree": tree, "tree_depth": depth["d"], "tree_nodes": depth["n"],
+        "placement": f("pipeline_placement")["methods"], "placement_eval": f("pipeline_placement").get("routing_eval"),
+        "screen": {k: f("pipeline_screen")[k] for k in ("first_hidden", "rechecked", "released", "by_rule")},
+        "round_trip": {"n": f("pipeline_round_trip")["n"], "kept": f("pipeline_round_trip")["effect"]},
+        "dedupe": f("pipeline_dedupe")["n"],
+        "calls": f("pipeline_bill")["n"], "median_ms": f("pipeline_bill")["median_ms"],
+        "first_call": f("pipeline_bill")["first"][:10], "last_call": f("pipeline_bill")["last"][:10],
+        "jobs": jobs,
+        "job_info": {k: {"type": v[0], "where": v[1], "ask": v[2], "what": v[3]} for k, v in JOB_INFO.items()},
+    }
+
+
 def main():
     exps = json.loads((A / "experiments.json").read_text())["experiments"]
     by = {e["id"]: e for e in exps}
@@ -152,6 +268,36 @@ def main():
         "ambiguity": {"jev": r2(ra["jev"], 2), "people": r2(ra["people"], 2)},
         "links": [link(i) for i in ("minds_where_jev_puts_itself", "risk_ambiguity", "minds_mind_map")],
     }
+
+    # ---- how it was made: the sources, the tree, the pipeline and every job Jev does
+    out["methods"] = methods()
+
+    # ---- "how is Jev doing?": the check-in polls it answered, and five wellbeing scales scored as for a person
+    P = json.loads((A / "portrait.json").read_text())
+    ck = []
+    for i in P["claims"]["page_checkin"]["examples"]:
+        r = P["rows"].get(i)
+        if not r or not r.get("jev") or not r.get("human"):
+            continue
+        top = max(r["jev"], key=r["jev"].get)
+        lab = option_label(i, top)
+        ck.append({"q": r["text"], "a": lab, "p": r["jev"][top], "people": r["human"]["dist"].get(top, 0), "n": r["human"].get("n")})
+    out["howdy"] = {"checkin": ck, "scales": P["claims"]["page_wellbeing"]["instruments"]}
+
+    # ---- one question's trip through the pipeline, from the database (the "Are you lonely?" check-in poll)
+    from askjev import db
+    qid = next((i for i in P["claims"]["page_checkin"]["examples"] if (P["rows"].get(i) or {}).get("text") == "Are you lonely?"), None)
+    if qid:
+        r = P["rows"][qid]
+        with db.connect() as c:
+            q = c.execute("select source, node_id from questions where id = %s", (qid,)).fetchone()
+            path = c.execute("select label from nodes where path @> (select path from nodes where id = %s) and depth > 0 order by depth",
+                             (q["node_id"],)).fetchall()
+            pl = c.execute("select method, confidence from placements where question_id = %s order by created_at desc limit 1", (qid,)).fetchone()
+        out["trip"] = {"id": qid, "text": r["text"], "source": q["source"], "path": [x["label"] for x in path],
+                       "method": pl["method"] if pl else None, "confidence": r2(pl["confidence"], 2) if pl else None,
+                       "jev": r["jev"], "people": r.get("people"), "human": r["human"]["dist"], "n": r["human"].get("n"),
+                       "population": r["human"].get("population")}
 
     # ---- rough edges and Jev's own favorites among its experiments
     out["edges"] = [{**link(i), "line": take(i)} for i in EDGES if i in by]

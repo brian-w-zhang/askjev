@@ -114,6 +114,9 @@ def main():
         vals.add(1 - t["pct"] / 100)
     for h in p.get("honesty", []):
         vals.add(round(h["jev"] / h["people"], 1))
+    me = st.get("methods") or {}
+    for hemi in ("world", "self", "machine"):  # topics per hemisphere, summed over where they came from
+        vals.add(float(sum(t["n"] for t in me.get("tree", []) if t["hemisphere"] == hemi)))
     for v in vals:
         allowed |= forms(v)
     # sums the page prints: totals of claim n across a figure's claims, shown minus hidden, derived chart parts

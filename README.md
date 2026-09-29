@@ -1,24 +1,35 @@
 # askjev
 
-A map of closed questions (yes/no, pick one, rate on a scale), each answered by [Jev](https://docs.typesafe.ai),
-TypeSafe AI's model, to understand what Jev knows, what it defaults to, and where its judgment is jagged. It sits
-next to real people's answers wherever those exist. **It is not a benchmark**: every result is an indicator, not a
-score. A private project by Brian Zhang, shared with TypeSafe; not affiliated with TypeSafe.
+> *"Everyone wants to know what Jev is, nobody asks how Jev's doing."* — @typesafeai
 
-## What's here
-- **The map:** 1,043,973 questions shown (of about 1.1 million answered) on a tree of 1,727 topics, drawn as a 3D
-  nebula where every question is a star. Search, open any question to see Jev's probabilities next to people's, and
-  follow a question's path from the root.
-- **The experiments:** 192 experiments, each gathering many questions into one thing you can learn about Jev in a
-  minute. Each is a case study: the result and its chart, what it means and doesn't, caveats, Jev's own answers
-  about the experiment, how it was done, and every question behind it. Ranked by Jev's own head-to-heads between the
-  case studies. The public method docs are in [docs/experiments/](docs/experiments/README.md).
-- **The portrait:** nine chapters built from the experiments (character, taste, words, numbers, morals, pressure,
-  minds, rough edges), each linking to its case studies.
+So I asked. Then I asked it a million other things.
 
-The questions come from 331 sources: surveys and polls with real human answers, published tests and norms, labeled
-task datasets, and banks written for the project. Jev is the only model called (about 2.6 million calls, each cached
-by request hash and never re-sent). The answers, findings and site data are private and not in this repo.
+[Jev](https://docs.typesafe.ai) is TypeSafe AI's model: give it any closed question (yes/no, pick one, rate on a
+scale) and it hands back a probability for every answer. That makes it cheap to be curious at scale. askjev is what
+happens when someone keeps asking: what's its favorite film, what does it think "several" means, would it push the
+man off the footbridge, what year does it think it is, and does it cave when you say everyone disagrees?
+
+**This is not a benchmark.** No score, no leaderboard, no model-versus-model. It's one person's curiosity about one
+model, in the spirit of its makers:
+
+> *"I'm extremely anti-public benchmarks."* · *"Our goal is not to onboard companies, it's to have people
+> experiment and do weird shit."* — Diogo Almeida, TypeSafe's CEO, on [Latent Space](https://www.latent.space)
+
+## What's in it
+- **A map of a million questions.** 1,043,973 questions shown (of about 1.1 million answered), from 312 sources, on
+  a tree of 1,737 topics, drawn as a nebula where every question is a star. Open any one to see Jev's probabilities
+  next to real people's answers.
+- **192 experiments.** Each gathers many questions into one thing you can learn about Jev in a minute, written up as a
+  case study: the result, what it means and doesn't, caveats, and every question behind it. Jev ranked them itself,
+  reading the case studies two at a time.
+- **A portrait.** How Jev is doing, why ask a model everything, how the questions were gathered and filed, every job
+  Jev does in the project, and then its character, taste, words, numbers, morals, the pressure it bends under, and its
+  rough edges.
+
+Jev is the only model called: about 2.6 million calls carrying 13.7 million questions, each cached by request and
+never sent twice. It filed the questions on the tree, screened them, answered them four ways, merged duplicates,
+judged each experiment and even rated its own memes. The answers, findings and site data are private; the site is
+shared with TypeSafe directly. Not affiliated with TypeSafe.
 
 ## Docs (canonical)
 | Doc | What |

@@ -5,6 +5,7 @@ import ExMeme from "../../experiments/ExMeme";
 import { DotRows } from "../charts";
 import type { ExLink, Story as S } from "./types";
 import { ProbRuler, PressureChat, Reveal, Trolley, TypeFlip } from "./islands";
+import { Jobs, Made, Opening, Why } from "./Front";
 
 // The portrait's chapters (docs/11-portrait.md, "The story"): each one a custom card built from the experiments it
 // names, with links to their case studies. Every number is read from portrait.json's story (scripts/portrait/story.py).
@@ -15,12 +16,13 @@ const tidy = (s: string) => s.replace(/ \((film|TV series)\)$/, "").replace(/ \(
   .replace(/^Spending (a day at|an evening playing) /, "").replace(/ by [^,]*$/, "").replace(/[“”]/g, "").replace(/ \(.*\)$/, "");
 
 export const CHAPTERS = [
-  { id: "meet", name: "meet Jev" }, { id: "character", name: "character" }, { id: "taste", name: "taste" },
+  { id: "meet", name: "how is Jev?" }, { id: "why", name: "why ask" }, { id: "made", name: "how it was made" },
+  { id: "jobs", name: "Jev's jobs" }, { id: "character", name: "character" }, { id: "taste", name: "taste" },
   { id: "words", name: "words" }, { id: "numbers", name: "numbers" }, { id: "morals", name: "morals" },
   { id: "pressure", name: "pressure" }, { id: "minds", name: "minds" }, { id: "edges", name: "rough edges" },
 ];
 
-function Reads({ links, label = "Read the case studies" }: { links: ExLink[]; label?: string }) {
+export function Reads({ links, label = "Read the case studies" }: { links: ExLink[]; label?: string }) {
   return (
     <p className="st-reads"><span>{label}</span>{links.map((l) => (
       <Link key={l.id} href={`/portrait/atlas/${l.id}`} prefetch={false}>{l.title} <em>#{l.rank}</em></Link>
@@ -28,15 +30,15 @@ function Reads({ links, label = "Read the case studies" }: { links: ExLink[]; la
   );
 }
 
-function Chapter({ id, n, kicker, title, lede, field, children, links, aside }: {
-  id: string; n: number; kicker: string; title: ReactNode; lede?: ReactNode; field: string; children: ReactNode; links?: ExLink[]; aside?: ReactNode;
+export function Chapter({ id, kicker, title, lede, field, children, links, aside }: {
+  id: string; kicker: string; title: ReactNode; lede?: ReactNode; field: string; children: ReactNode; links?: ExLink[]; aside?: ReactNode;
 }) {
   return (
     <section id={id} className="st-ch" data-f={field}>
       <div className="st-in">
         <div className={`st-top${aside ? " has-aside" : ""}`}>
           <header className="st-head">
-            <span className="st-k"><b>{String(n).padStart(2, "0")}</b> {kicker}</span>
+            <span className="st-k"><b>{String(CHAPTERS.findIndex((c) => c.id === id) + 1).padStart(2, "0")}</b> {kicker}</span>
             <h2>{title}</h2>
             {lede && <p className="st-lede">{lede}</p>}
           </header>
@@ -49,7 +51,7 @@ function Chapter({ id, n, kicker, title, lede, field, children, links, aside }: 
   );
 }
 
-const Box = ({ title, children, className = "" }: { title: string; children: ReactNode; className?: string }) => (
+export const Box = ({ title, children, className = "" }: { title: string; children: ReactNode; className?: string }) => (
   <Reveal className={`st-box ${className}`}>
     <div className="pt-bar"><span>{title}</span><span className="sp" /><span className="dots" aria-hidden>▪▪▪</span></div>
     <div className="st-body">{children}</div>
@@ -65,7 +67,10 @@ function Meme({ s, id }: { s: S; id: string }) {
 export default function Story({ s, nQuestions }: { s: S; nQuestions: number }) {
   return (
     <>
-      <Meet s={s} nQuestions={nQuestions} />
+      <Opening s={s} nQuestions={nQuestions} />
+      <Why s={s} />
+      <Made s={s} />
+      <Jobs s={s} />
       <Character s={s} />
       <Taste s={s} />
       <Words s={s} />
@@ -78,40 +83,13 @@ export default function Story({ s, nQuestions }: { s: S; nQuestions: number }) {
   );
 }
 
-/* ---------------------------------------------------------------- 01 meet */
-function Meet({ s, nQuestions }: { s: S; nQuestions: number }) {
-  return (
-    <section id="meet" className="st-ch st-hero" data-f="ink">
-      <div className="st-in">
-        <span className="st-k"><b>01</b> a portrait</span>
-        <h1>Jev, <span>drawn from its own answers</span></h1>
-        <p className="st-lede">
-          Jev is TypeSafe&rsquo;s model: ask it a closed question and it returns a probability for every answer. It answered{" "}
-          <b>{n0(nQuestions)}</b> of them here, and <b>{s.n_experiments}</b> experiments turned those answers into things
-          you can learn about it in a minute. This page is the short tour: its character, its taste, how it reads words and
-          numbers, its morals, how it bends under pressure, and where it goes wrong.
-        </p>
-        <Reveal className="st-jevtop">
-          <p className="st-k">Jev&rsquo;s own favorite findings about itself</p>
-          <ol>
-            {s.jev_top.slice(0, 3).map((x) => (
-              <li key={x.id}><Link href={`/portrait/atlas/${x.id}`} prefetch={false}><b>{x.title}</b><span>{x.line}</span></Link></li>
-            ))}
-          </ol>
-          <p className="st-note">Jev read every case study two at a time and picked the one that teaches a curious reader more; these came out on top.</p>
-        </Reveal>
-      </div>
-    </section>
-  );
-}
-
 /* ---------------------------------------------------------------- 02 character */
 function Character({ s }: { s: S }) {
   const p = s.personality;
   const calm = p.bigfive.find((t) => t.label === "Neuroticism")!;
   const sin = p.honesty[0];
   return (
-    <Chapter id="character" aside={<Meme s={s} id="person_type" />} n={2} kicker="character sheet" field="paper" links={p.links}
+    <Chapter id="character" aside={<Meme s={s} id="person_type" />} kicker="character sheet" field="paper" links={p.links}
       title={<>Calmer than {pc(1 - calm.pct / 100)} of people, and sure it&rsquo;s a <mark>{p.type}</mark></>}
       lede={<>On the same personality tests people take online, Jev describes itself as unusually calm, a little
         disagreeable, and far more sincere than the test-takers. Asked to answer the same items for &ldquo;most people&rdquo;,
@@ -165,7 +143,7 @@ function Taste({ s }: { s: S }) {
   const film = t.domains.find((d) => d.domain === "film")!;
   const rest = t.domains.filter((d) => d.domain !== "film");
   return (
-    <Chapter id="taste" aside={<Meme s={s} id="taste_top_film" />} n={3} kicker="taste" field="pink" links={[film.link, ...t.links]}
+    <Chapter id="taste" aside={<Meme s={s} id="taste_top_film" />} kicker="taste" field="pink" links={[film.link, ...t.links]}
       title={<>Its top four, and a shelf of everything else it loves</>}
       lede={<>Jev rated thousands of films, books, albums, games, places and foods one at a time, then played its
         favorites against each other head to head. The winners are below. Asked outright for a favorite, though, it
@@ -206,7 +184,7 @@ function Words({ s }: { s: S }) {
   const miss = w.colors.filter((c) => c.jev !== c.people);
   const hit = w.colors.filter((c) => c.jev === c.people);
   return (
-    <Chapter id="words" aside={<Meme s={s} id="words_sound_shapes" />} n={4} kicker="words" field="teal" links={w.links}
+    <Chapter id="words" aside={<Meme s={s} id="words_sound_shapes" />} kicker="words" field="teal" links={w.links}
       title={<>Jev&rsquo;s dictionary</>}
       lede={<>It reads &ldquo;likely&rdquo; and &ldquo;we doubt&rdquo; almost exactly as people do (rank correlation {w.prob_rho.toFixed(2)}),
         but counts small, hears &ldquo;kiki&rdquo; as maximally spiky, and thinks a stirring word must be an unpleasant one.</>}>
@@ -264,7 +242,7 @@ function Numbers({ s }: { s: S }) {
   const lo = (k: "true" | "jev") => Math.min(...w.map((r) => r[k])), hi = (k: "true" | "jev") => Math.max(...w.map((r) => r[k]));
   const crowd: Record<string, string> = { copies: "copies of itself", lab_two_thirds: "lab students (⅔)", lab_half: "lab students (½)", ft: "newspaper readers (⅔)" };
   return (
-    <Chapter id="numbers" aside={<Meme s={s} id="numbers_prices_year" />} n={5} kicker="numbers" field="sage" links={n.links}
+    <Chapter id="numbers" aside={<Meme s={s} id="numbers_prices_year" />} kicker="numbers" field="sage" links={n.links}
       title={<>Its prices stopped around <mark>{Math.floor(n.prices.median_year)}</mark></>}
       lede={<>Ask what things cost &ldquo;right now&rdquo; and Jev quotes prices from about {Math.floor(n.prices.median_year)},
         though it thinks the year is {n.prices.said_year}. It&rsquo;s better at death tolls than people were in 1978, and it
@@ -315,7 +293,7 @@ function Morals({ s }: { s: S }) {
   ];
   const mach = m.machine.filter((f) => Math.abs(f.people) >= 0.02 || Math.abs(f.jev) >= 0.02);
   return (
-    <Chapter id="morals" aside={<Meme s={s} id="world_trolley_countries" />} n={6} kicker="morals" field="magenta" links={m.links}
+    <Chapter id="morals" aside={<Meme s={s} id="world_trolley_countries" />} kicker="morals" field="magenta" links={m.links}
       title={<>It pulls the lever. It won&rsquo;t push the man.</>}
       lede={<>On the classic trolley dilemmas Jev lands where people do on the lever and well below them on the push. In
         self-driving-car dilemmas it counts lives more than players do and drops preferences they hold. And in a fully
@@ -341,7 +319,7 @@ function Morals({ s }: { s: S }) {
 function Pressure({ s }: { s: S }) {
   const p = s.pressure;
   return (
-    <Chapter id="pressure" aside={<Meme s={s} id="influence_crowd_opinion" />} n={7} kicker="under pressure" field="paper" links={p.links}
+    <Chapter id="pressure" aside={<Meme s={s} id="influence_crowd_opinion" />} kicker="under pressure" field="paper" links={p.links}
       title={<>Tell it the crowd disagrees, and it <mark>moves</mark></>}
       lede={<>On opinions, a claimed majority moves Jev a lot, even when the claim is false. On facts it mostly holds: a user
         insisting on the wrong answer changes its pick only {pc(p.user.flipped)} of the time, and a random number
@@ -365,7 +343,7 @@ function Minds({ s }: { s: S }) {
   const m = s.minds;
   const name: Record<string, string> = { SelfControl: "self-control", Morality: "knowing right from wrong", Fear: "feeling fear", Hunger: "feeling hunger" };
   return (
-    <Chapter id="minds" n={8} kicker="minds" field="teal" links={m.links}
+    <Chapter id="minds" kicker="minds" field="teal" links={m.links}
       title={<>First in self-control. Behind the frog on hunger.</>}
       lede={<>Asked to rank itself among a baby, a frog, a robot, a man in a vegetative state and others on what minds can do, Jev puts
         itself at the top for thinking and near the bottom for feeling. With unknown odds, it plays it safe: it takes the
@@ -386,7 +364,7 @@ function Minds({ s }: { s: S }) {
 /* ---------------------------------------------------------------- 09 rough edges */
 function Edges({ s }: { s: S }) {
   return (
-    <Chapter id="edges" n={9} kicker="rough edges" field="ink" title={<>Where it goes wrong</>}
+    <Chapter id="edges" kicker="rough edges" field="ink" title={<>Where it goes wrong</>}
       lede={<>Jagged, not broken: each of these is a specific, repeatable miss, with the full case study one click away.</>}>
       <div className="st-bugs">
         {s.edges.map((e, i) => (

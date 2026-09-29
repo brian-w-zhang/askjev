@@ -47,7 +47,27 @@ export type Story = {
     self: { cap: string; jev: number; people: number; above: string | null; below: string | null }[];
     ambiguity: VS; links: ExLink[];
   };
+  howdy: {
+    checkin: { q: string; a: string; p: number; people: number; n: number | null }[];
+    scales: Record<string, { name: string; items: number; range: [number, number]; self: number; people: number; reversed: number | null; band_self: string; band_people: string }>;
+  };
+  methods: Methods;
+  trip?: { id: string; text: string; source: string; path: string[]; method: string | null; confidence: number | null;
+    jev: Record<string, number>; people: Record<string, number> | null; human: Record<string, number>; n: number | null; population: string | null };
   edges: (ExLink & { line: string })[];
   jev_top: (ExLink & { line: string })[];
   memes: Record<string, ExperimentMeme>;
+};
+
+export type Source = { source: string; n: number; truth: number; humans: number; line?: string; license?: string; url?: string };
+export type Methods = {
+  families: { family: string; what: string; n: number; sources: Source[] }[];
+  total: number; hidden: number; truth: number; humans: number; human_dists: number; median_people: number; real: number;
+  tree: { hemisphere: string; source: string; n: number }[]; tree_depth: number; tree_nodes: number;
+  placement: Record<string, number>; placement_eval: string | null;
+  screen: { first_hidden: number; rechecked: number; released: number; by_rule: number };
+  round_trip: { n: number; kept: number }; dedupe: number;
+  calls: number; median_ms: number; first_call: string; last_call: string;
+  jobs: { calls: Record<string, number>; questions: Record<string, number>; n_calls: number; n_questions: number } | null;
+  job_info: Record<string, { type: string; where: string; ask: string; what: string }>;
 };
