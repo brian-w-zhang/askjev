@@ -66,6 +66,7 @@
 | 2026-09-28 | The site is **open, no site key** (`SITE_KEY` unset): Brian shares the link with TypeSafe directly instead of a keyed link |
 | 2026-09-29 | **Portrait rebuilt as chapters from the experiments** (`11-portrait.md` §7, The story): character, taste with pictures, words, numbers, morals, pressure, minds and rough edges, each a custom visual with links to its case studies; third person; numbers copied from result files by `story.py`; the Wrapped-style summary is gone |
 | 2026-09-29 | **Framing: curiosity, not a benchmark.** The portrait opens with TypeSafe's "nobody asks how Jev's doing" tweet and Jev's answers, then why ask (the stance in the project's own words: not a benchmark, just curious), how the data was gathered (a source treemap, the tree's origins, the pipeline) and every job Jev does (counted from the call logs); the README leads the same way |
+| 2026-09-30 | **Dataset on Hugging Face** (`brian-w-zhang/askjev`, dataset repo), **private** until TypeSafe has seen the findings, shared with them alongside; built by `scripts/export_hf.py`, checked by `scripts/hf/check.py`, uploaded by the `/publish-dataset` skill. CC BY-NC-SA 4.0. Tables: questions, answers, question_meta, tree, placements, human_dists, experiments, a calls sample. Hidden questions never ship. Yahoo Answers words withheld with a `restore_ref` and `restore_yahoo.py`; MovieLens and Last.fm human data dropped; Reddit and Quora text ships with attribution and a removal route |
 | 2026-09-30 | **Atlas: coverage replaces the old claims.** A Coverage tab measures, for every branch and topic, the share of its shown questions used by an experiment about that topic, apart from corpus-wide ones (calibration, option order, repeat noise, self vs people, torn vs sure, closed-question lean), plus the share with a right answer or real people's answers (`scripts/experiments/coverage.py`, run by `export.py`). The old per-topic claims tab and the hand-written coverage list are retired; the search box no longer sticks; the heading follows the open tab. New experiments go where coverage is thin, from data already in the corpus first |
 
 ## M0: Setup
@@ -102,7 +103,7 @@
 ## M5: Outreach
 Plan (from `resources/references/notion/become-typesafe-first-intern.md`): apply to "Member of Staff:
 Create your own role", then send a short Discord DM to Sasha Sheng linking this one project.
-- [ ] Send the findings privately to TypeSafe; ask about the "Jev" name and anything they want held back
+- [ ] Send the findings privately to TypeSafe, with the private dataset link; ask about the "Jev" name, anything they want held back, and whether Jev's answers may be published
 - [ ] Anything public happens only after they've seen it and agreed
 
 ## M6: Scale (after outreach, or alongside it)
