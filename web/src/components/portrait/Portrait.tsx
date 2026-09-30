@@ -4,7 +4,7 @@ import type { PortraitData, QuizItem } from "./types";
 import { compact, int, label, optionLabel } from "./fmt";
 import { Card, Nav, fill } from "./ui";
 import { HBars } from "./charts";
-import { Quiz, QuizProvider, YouVsJev } from "./Quiz";
+import { QuizProvider } from "./Quiz";
 import ChapterRail from "./ChapterRail";
 import { COPY, LIMITS } from "./copy";
 import Story, { CHAPTERS } from "./story/Story";
@@ -29,16 +29,13 @@ export default function Portrait({ d, showIds = false }: { d: PortraitData; show
     id: r.id, text: r.text, domain: "debate", options: Object.keys(r.jev!).map((k) => ({ key: k, label: optionLabel(r, k) })),
     jev: r.jev!, human: r.human!.dist, n: r.human!.n,
   }));
-  const chapters = [...CHAPTERS, { id: "you", name: "your turn" }];
+  const chapters = CHAPTERS;
   if (!d.story) return <main style={{ padding: 32 }}>No story data. Run scripts/portrait/story.py, then export_page.py.</main>;
   return (
     <QuizProvider items={quiz}>
       <Nav here="portrait" />
       <ChapterRail chapters={chapters} />
       <Story s={d.story} nQuestions={shown} />
-      <Card id="you" field="pink" c={{ ...COPY.you, kicker: "10 · your turn", title: "You vs Jev: guess what people said, then see where Jev landed." }} showId={showIds} claims={[C("page_quiz_debates")]}>
-        <div className="st-quiz"><Quiz /><YouVsJev /></div>
-      </Card>
       <Card id="limits" field="paper" c={COPY.limits} showId={showIds}>
         <ol className="limits">{LIMITS.map((l) => <li key={l}>{fill(l, common)}</li>)}</ol>
       </Card>

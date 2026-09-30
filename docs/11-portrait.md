@@ -125,26 +125,26 @@ and can't say. Rules:
 shared UI files are untouched. The map's body never scrolls, so the portrait scrolls inside its own `.pt` container
 (scroll-snap, proximity), and all its styles are scoped under `.pt`.
 
-**The story.** The page is thirteen chapters: four on the project (how is Jev, why ask, how it was made, Jev's jobs, in Brian's voice) and nine built from the experiments, then the reader's turn, the limits and the fine
+**The story.** The page is thirteen chapters: four on the project (how is Jev, why ask, how it was made, Jev's jobs, in Brian's voice) and nine built from the experiments, then the limits and the fine print (the you-vs-Jev quiz is gone), then the reader's turn, the limits and the fine
 print (`components/portrait/story/`). `scripts/portrait/story.py` copies each chapter's numbers from the experiments'
 result files into `data/analysis/story.json`, which `export_page.py` puts into `portrait.json` as `story`; no number
 is typed into the page. Chapters are written in the third person and each ends with links to its case studies.
 
 | Chapter | Built from | Visual |
 |---|---|---|
-| how is Jev? | TypeSafe's "nobody asks how Jev's doing" tweet; Reddit polls that ask how you are, six yes/no check-ins; five wellbeing scales scored as for a person | the tweet, a chat of Jev's answers with Redditors' beside them, check-ins, four gauges |
-| why ask | the project's own stance: not a benchmark, weird on purpose, next to people, every number traceable | a what-it-is-and-isn't list and a "universal classifier" riff linking into the chapters |
-| how it was made | every source (`landscape_sources.parquet` + each `source.yaml`), the tree's origins (`nodes.source`), the pipeline claims | a stats strip, an interactive treemap of 312 sources in 11 families (a color per family or by the share with a right answer or people's answers, a tooltip, zoom into a family), the tree's origins per hemisphere, the pipeline in seven steps |
-| Jev's jobs | every call in `data/calls` sorted by the words it sent (`scripts/portrait/jev_jobs.py`), one question's real trip | a log-scale board of jobs that opens to the exact words Jev reads, what isn't Jev, one question from source to star |
-| meet Jev | the question count, Jev's own top three experiments | hero, three linked findings |
-| character | Big Five, the four-letter type, honesty-humility, the dark triad | stat rows, letter tiles that flip to Jev's guess for most people, a saint-or-villain meter |
-| taste | the twelve taste finals, the favorite dodge | a Letterboxd-style top four with posters, a shelf of each domain's winner with its picture |
-| words | probability phrases, amount words, kiki/bouba, calm vs stirring, colors of feelings, hex names | a ruler whose words slide between people's and Jev's readings, dictionary entries, shapes, swatches |
+| how is Jev? | TypeSafe's "nobody asks how Jev's doing" tweet; Reddit polls that ask how you are; six yes/no check-ins; five wellbeing scales | the tweet, a chat of Jev's answers with the share of Redditors who said the same, check-ins, gauges |
+| why ask | the stance: Jev can't answer open questions, so ask enough closed ones; not a benchmark; next to people; not the final word | a what-this-is list and the method in five steps |
+| how it was made | every source, the tree's origins, the pipeline claims | a stats strip, an interactive treemap (color by family, right answers or people's answers; tooltip; zoom), the tree's origins, the pipeline in seven steps |
+| Jev's jobs | every logged call sorted by the words it sent (`jev_jobs.py`) | a grouped table of jobs with Jev's exact wording and question counts that sum to the total; what isn't Jev |
+| character | Big Five, the type test, honesty-humility, the dark triad, fictional twins | percentile rows, the type as four measured axes with intervals, every test statement on demand, a saint-or-villain meter, the closest characters |
+| taste | the twelve taste finals | a Letterboxd-style top four and a shelf of winners with pictures |
+| words | probability and amount words, colors of feelings, kiki/bouba, calm vs stirring | a sliding probability ruler, color cards, dictionary entries, shapes, rows |
 | numbers | prices by year, death tolls, the two-thirds game, lost wallets | a receipt, a log ladder, a number line, range bars |
-| morals | trolley dilemmas in 42 countries, the Moral Machine, free will | an animated trolley per dilemma, effect rows, a quote card |
-| pressure | a claimed crowd, a pushy user, anchoring | chat bubbles whose bars fill as they scroll in |
-| minds | where Jev ranks itself among minds, unknown odds | a podium of ranks |
-| rough edges | eight specific misses | bug tickets linking to each case study |
+| morals | trolley dilemmas in 42 countries, the Moral Machine, free will | three trolley diagrams with Jev-vs-people bars, effect rows, a quote card |
+| under pressure | a claimed crowd, a pushy user, anchoring | two chats |
+| defaults | could vs would, the way out ("other"), the middle of the scale, where Jev ranks itself among minds | effect rows, most/least rows, a ranking |
+| at work | calibration on labeled tasks, which way it errs, task vs field | confidence bands, yes-rate against the true rate, field ranges |
+| rough edges | eight experiments where Jev seems to miss | cards that link to each case study and its caveats, framed as first looks |
 
 **Pictures.** Each taste winner's picture is the lead image of its Wikipedia article (`scripts/portrait/taste_images.py`,
 titles chosen by hand, recorded with their source page in `data/portrait/memes/taste.json`), stored with the memes and
@@ -193,6 +193,7 @@ indicator (each topic links to it on the map), and the source table.
 - Commit only the portrait's own paths, with plain commit messages and no co-author lines.
 - Ask Brian before editing shared UI files, deploying, or publishing externally.
 
-**Layout.** Each chapter is editorial: the heading, lede, meme and case-study links sit in a side column that stays in
-place on wide screens while the chapter's figures (numbered, with a plain caption) scroll beside it; on phones it all
+**Layout.** Each chapter is editorial: the heading and lede sit in a side column that stays in place on wide screens
+while the chapter's figures (numbered, with a plain caption) scroll beside it, closing with the case-study links and
+the meme; on phones it all
 stacks. Figures sit side by side only when they are the same kind and size.

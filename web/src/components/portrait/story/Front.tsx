@@ -36,7 +36,7 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
             <div key={d.id} className="op-ex">
               <p className="op-me">{d.q}</p>
               <p className="op-jev"><span>Jev</span>{d.a} <em>{pc(d.p)} sure</em></p>
-              {d.n && <p className="op-ppl">{n0(d.n)} Redditors, asked the same: {d.people_top === d.a ? <>mostly &ldquo;{d.a}&rdquo; too ({pc(d.people_top_p ?? 0)})</> : <>mostly &ldquo;{d.people_top}&rdquo; ({pc(d.people_top_p ?? 0)}); &ldquo;{d.a}&rdquo; {pc(d.people_same)}</>}</p>}
+              {d.n && <p className="op-ppl">{pc(d.people_same)} of {n0(d.n)} Redditors said the same</p>}
             </div>
           ))}
         </Reveal>
@@ -80,33 +80,33 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
 export function Why({ s }: { s: S }) {
   return (
     <Chapter id="why" kicker="why ask" field="paper"
-      title={<>Not a benchmark. <mark>Just curious.</mark></>}
-      lede={<>Jev answers in about a quarter of a second, for a fraction of a cent. At that price you stop asking which questions
-        are worth asking. Everything anyone might ask is a list that never ends, so I started with a million, and kept going
-        wherever an answer was strange.</>}>
+      title={<>Jev can&rsquo;t answer open questions. <mark>So I asked a million closed ones.</mark></>}
+      lede={<>Jev only answers closed questions: yes or no, pick one, rate on a scale. You can&rsquo;t ask it what it&rsquo;s like.
+        But you can ask it enough small things, its favorite film, what &ldquo;several&rdquo; means, whether it would pull the
+        lever, that an answer to the open question starts to show. At a quarter of a second and a fraction of a cent per answer,
+        there was no reason to stop at a few.</>}>
       <Box title="What this is, and isn’t">
         <dl className="why-d">
-          <div><dt>There&rsquo;s no score.</dt><dd>Nothing here adds up to a number for Jev, and nothing ranks it against another model.
-            A benchmark asks &ldquo;how good?&rdquo;; this asks &ldquo;what&rsquo;s it like?&rdquo;</dd></div>
-          <div><dt>Weird on purpose.</dt><dd>Its favorite film, what it thinks &ldquo;several&rdquo; means, whether a stirring word
-            has to be an unpleasant one. The questions nobody would put in a test are the ones that say the most.</dd></div>
-          <div><dt>Next to people.</dt><dd>Wherever real people answered the same question, in a poll, a survey or a study, their
-            answer sits beside Jev&rsquo;s. Where there&rsquo;s a right answer, that&rsquo;s there too.</dd></div>
-          <div><dt>Every number has a receipt.</dt><dd>Each finding links to its case study, and each case study to every question
-            behind it. {s.n_experiments} of them, including the ones where Jev looks odd.</dd></div>
+          <div><dt>Not a benchmark.</dt><dd>Nothing here adds up to a score, and nothing ranks Jev against another model. A benchmark
+            asks how good a model is; this asks what it&rsquo;s like.</dd></div>
+          <div><dt>Curious, and a little weird.</dt><dd>The questions nobody would put in a test, its taste, its temperament, what it
+            assumes about people, often say the most.</dd></div>
+          <div><dt>Next to people.</dt><dd>Wherever real people answered the same question, in a poll, a survey or a published study,
+            their answer sits beside Jev&rsquo;s. Where there&rsquo;s a right answer, that&rsquo;s there too.</dd></div>
+          <div><dt>Not the final word.</dt><dd>These are first looks, not settled findings. Each rests on one set of questions, one way
+            of asking and one crowd of people, and some could be explained by the method as much as by Jev. Every claim links to its
+            case study, which spells out where the data came from and what could bias it. Read those before quoting anything.</dd></div>
         </dl>
       </Box>
-      <Box title="A universal classifier, asked the wrong questions">
-        <p className="why-p">People call Jev a universal classifier: give it any closed question and it hands back a probability for
-          every answer. Fair enough. So:</p>
-        <ul className="why-ask">
-          <li><a href="#taste">Does a universal classifier have a Letterboxd top four?</a> <em>It does.</em></li>
-          <li><a href="#numbers">Does it know what year it is?</a> <em>Sort of.</em></li>
-          <li><a href="#words">Does it think &ldquo;kiki&rdquo; is spiky?</a> <em>Very.</em></li>
-          <li><a href="#morals">Would it push the man off the footbridge?</a> <em>Rarely.</em></li>
-          <li><a href="#pressure">Does it cave when you say everyone disagrees?</a> <em>On opinions.</em></li>
-          <li><a href="#minds">Does it think it has a mind?</a> <em>For thinking, yes.</em></li>
-        </ul>
+      <Box title="The method, in one breath">
+        <ol className="mth">
+          <li><b>Gather</b> closed questions from {s.methods.families.reduce((a, f) => a + f.sources.length, 0)} sources, keeping real people&rsquo;s answers and right answers wherever they exist.</li>
+          <li><b>File</b> each one on a tree of topics, with Jev doing the filing.</li>
+          <li><b>Ask</b> Jev each question four ways: as written, for &ldquo;most people&rdquo;, with the options reordered and with scales reversed.</li>
+          <li><b>Compare</b> in {s.n_experiments} experiments, each a set of questions chosen to test one thing, against people or a right answer.</li>
+          <li><b>Write up</b> every experiment as a case study, with its caveats and every question behind it.</li>
+        </ol>
+        <p className="st-note">The next two chapters show each step in detail.</p>
       </Box>
     </Chapter>
   );
@@ -182,71 +182,60 @@ export function Made({ s }: { s: S }) {
 
 /* ---------------------------------------------------------------- 04 Jev's jobs */
 const NOT_JEV: [string, string][] = [
-  ["Claude", "wrote the questions no dataset had, the topic descriptions, the case studies and the meme captions, with me editing"],
-  ["bge-small (local embeddings)", "finds similar questions: search candidates, near-duplicates, the nearest topics for a fast walk, the map's Meaning layout"],
-  ["Postgres + pgvector", "every question, answer, crowd and call"],
-  ["Python", "the pipeline: sources, screening, placement, answering, experiments"],
-  ["Next.js + three.js", "this site and the map, with every question drawn as a star"],
-  ["Vercel", "hosting, the AI Gateway that carries every call to Jev, and private storage for the results"],
+  ["Claude Opus 5.5", "wrote the synthetic questions where no dataset existed, the topic descriptions, the case studies and the meme captions, with me editing"],
+  ["bge-small, run locally", "turns every question and topic into an embedding, to find similar questions for search and duplicates, the nearest topics for a quick filing, and the map's layout by meaning"],
+  ["Postgres with pgvector", "stores every question, answer, crowd, embedding and call"],
+  ["Python", "the pipeline: sources, screening, filing, answering, experiments"],
+  ["Next.js and three.js", "this site, and the map with every question drawn as a star"],
+  ["Vercel", "hosting, the AI Gateway every call to Jev goes through, and private storage for the results"],
+];
+const GROUPS: [string, string[]][] = [
+  ["Building the map", ["describe each question", "screen for politics and sensitive content", "flag known weak spots", "place a question on the tree", "check for duplicates"]],
+  ["Answering", ["answer as asked", "answer for most people"]],
+  ["Judging its own experiments", ["judge an experiment", "rank experiments head to head", "rate a meme"]],
+  ["On the site", ["rerank search results"]],
 ];
 
 export function Jobs({ s }: { s: S }) {
   const m = s.methods;
   const q = m.jobs?.questions ?? {};
-  const jobs = Object.keys(m.job_info).map((k) => ({ k, n: q[k] ?? 0, ...m.job_info[k] })).sort((a, b) => b.n - a.n);
-  const max = Math.log10(Math.max(...jobs.map((j) => j.n), 10));
+  const all = Object.values(q).reduce((a, n) => a + n, 0);
+  const max = Math.log10(Math.max(...Object.values(q), 10));
   return (
     <Chapter id="jobs" kicker="Jev's jobs" field="teal"
-      title={<>Jev did almost everything here, including grading its own experiments</>}
-      lede={<>Jev is the only model this project calls. Beyond answering the questions, it filed them, screened them, described
-        them, merged duplicates, reranked search, judged each experiment, ranked the case studies against each other and rated
-        its own memes. Here is every job, with the exact words it was sent and how many times.</>}>
-      <Box title="Every job Jev did, by questions sent (log scale)">
-        <ul className="jb">
-          {jobs.map((j, i) => (
-            <li key={j.k}>
-              <details open={i === 0}>
-                <summary>
-                  <span className="jb-k">{j.k}</span>
-                  <span className="jb-t"><i style={{ width: `${Math.max(2, (Math.log10(Math.max(j.n, 1)) / max) * 100)}%` }} /></span>
-                  <span className="jb-n">{mil(j.n)}</span>
-                </summary>
-                <div className="jb-d">
-                  <p className="jb-ask"><span>Jev reads</span>&ldquo;{j.ask}&rdquo;</p>
-                  <p>{j.what}</p>
-                  <p className="jb-m"><em>{j.type}</em> · <code>{j.where}</code></p>
-                </div>
-              </details>
-            </li>
+      title={<>Jev, studying Jev</>}
+      lede={<>Jev is the only model this project calls, so it did most of the work of studying itself: it filed the questions,
+        screened them, answered them, judged the experiments about it, and even rated the memes on this page.</>}>
+      <Box title="Every job Jev did, with the words it was sent and how many questions">
+        <div className="jt">
+          {GROUPS.map(([g, keys]) => (
+            <div key={g} className="jt-g">
+              <p className="jt-h">{g}</p>
+              {keys.filter((k) => m.job_info[k]).map((k) => {
+                const n = q[k] ?? 0, j = m.job_info[k];
+                return (
+                  <div key={k} className="jt-r">
+                    <div className="jt-k"><b>{k}</b><span>{j.what}</span></div>
+                    <p className="jt-ask">&ldquo;{j.ask}&rdquo;</p>
+                    <div className="jt-n"><b>{n0(n)}</b><i style={{ width: `${Math.max(3, (Math.log10(Math.max(n, 1)) / max) * 100)}%` }} /></div>
+                  </div>
+                );
+              })}
+            </div>
           ))}
-        </ul>
-        <p className="st-note">Tap a job to see the exact words Jev reads. The bars count questions, and they add up: the {mil(m.jobs?.n_questions ?? 0)} questions
-          across all jobs travelled in {mil(m.jobs?.n_calls ?? 0)} calls, because one call can carry many questions (the four
-          checks on each question go together, for instance). Counted from the call logs; answers with the options reordered or
-          reversed are counted under &ldquo;answer as asked&rdquo;.</p>
+          <div className="jt-r jt-tot">
+            <div className="jt-k"><b>all jobs</b><span>questions travel in batches, so these went out in {n0(m.jobs?.n_calls ?? 0)} calls</span></div>
+            <p className="jt-ask" />
+            <div className="jt-n"><b>{n0(all)}</b></div>
+          </div>
+        </div>
+        <p className="st-note">Counted from the log of every call. The counts are questions: they add up to the total, and one call carries
+          many (the four checks on a question go together). Answers with the options reordered or reversed count as &ldquo;answer as
+          asked&rdquo;. Bars are on a log scale so the small jobs show.</p>
       </Box>
-      <div className="st-grid two">
-        <Box title="Everything that isn’t Jev">
-          <dl className="nj">{NOT_JEV.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl>
-        </Box>
-        {s.trip && (() => {
-          const t = s.trip!;
-          const yes = (d: Record<string, number> | null) => pc(d?.yes ?? 0);
-          return (
-            <Box title={`one question's trip · ${t.id.slice(0, 8)}`}>
-              <ol className="trip">
-                <li><span>source</span>a poll on Reddit: &ldquo;{t.text}&rdquo;, {t.n ? n0(t.n) : ""} votes kept with it</li>
-                <li><span>screen</span>Jev: not contested politics, not graphic, so it stays on the map</li>
-                <li><span>place</span>Jev files it{t.method === "jev_fast" ? " in one step, choosing among the nearest topics" : ", walking the tree"}{t.confidence !== null ? ` (${pc(t.confidence)} sure)` : ""}: {t.path.join(" → ")}</li>
-                <li><span>answer</span>asked as itself, Jev says yes {yes(t.jev)}; asked for most people, yes {yes(t.people)}</li>
-                <li><span>compare</span>the {t.population ?? "voters"}: yes {yes(t.human)}</li>
-                <li><span>after</span>one row in a case study, one star on the map</li>
-              </ol>
-              <p className="st-note"><a href={`/?q=${t.id}`}>open this question on the map →</a></p>
-            </Box>
-          );
-        })()}
-      </div>
+      <Box title="Everything that isn’t Jev">
+        <dl className="nj">{NOT_JEV.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl>
+      </Box>
     </Chapter>
   );
 }

@@ -52,37 +52,25 @@ await run("map bad deep link", async () => { await p.goto(base + "/?node=does.no
 await run("map nav to portrait", async () => { await p.goto(base + "/", { waitUntil: "networkidle" }); await p.click("nav.sitenav >> text=Portrait"); await p.waitForURL(/\/portrait$/); await sleep(1500); });
 
 // ---- portrait ----
-await run("portrait receipts", async () => {
-  const s = await p.$$(".receipts summary"); if (!s.length) throw new Error("no receipts");
-  for (const x of s) { await x.scrollIntoViewIfNeeded(); await x.click(); }
-  await sleep(500);
-});
-await run("portrait quiz", async () => {
-  await p.$eval("#you", (e) => e.scrollIntoView());
-  for (const q of await p.$$(".qz")) { const o = await q.$$("button.o"); if (o.length) await o[0].click(); await sleep(100); }
-  if ((await p.$$(".qz .res")).length < 5) throw new Error("quiz did not reveal all");
-});
-await run("portrait you vs jev", async () => { await sleep(400); if (!(await p.$(".youvs"))) throw new Error("no summary"); });
-// the chapters' own controls: every chapter present, the type flips, the ruler and the trolley switch, links open case studies
 await run("portrait chapters", async () => {
-  for (const id of ["meet", "character", "taste", "words", "numbers", "morals", "pressure", "minds", "edges"]) if (!(await p.$(`#${id}`))) throw new Error(`missing #${id}`);
+  for (const id of ["meet", "why", "made", "jobs", "character", "taste", "words", "numbers", "morals", "pressure", "defaults", "work", "edges"]) if (!(await p.$(`#${id}`))) throw new Error(`missing #${id}`);
   const imgs = await p.$$eval("#taste img", (xs) => xs.length);
   if (imgs < 10) throw new Error(`only ${imgs} taste pictures`);
 });
-await run("portrait type flip", async () => {
-  await p.$eval("#character", (e) => e.scrollIntoView());
-  await p.click("#character .tf-tabs button:nth-child(2)"); await sleep(500);
-  const t = await p.$$eval("#character .tf-t b", (xs) => xs.map((x) => x.textContent).join(""));
-  if (t.length !== 4) throw new Error(`type tiles ${t}`);
-  await p.click("#character .tf-tabs button:nth-child(1)");
+await run("portrait treemap", async () => {
+  await p.$eval("#made", (e) => e.scrollIntoView());
+  await p.click("#made .ls-mode button >> nth=1"); await sleep(400);
+  await p.click("#made .ls-key button >> nth=0"); await sleep(700);
+  if (!(await p.$("#made .ls-crumb b"))) throw new Error("no zoom");
+  await p.click("#made .ls-crumb button"); await sleep(500);
 });
-await run("portrait ruler and trolley", async () => {
+await run("portrait question list", async () => {
+  await p.$eval("#character", (e) => e.scrollIntoView());
+  await p.click("#character .ql-b >> nth=1");
+  await p.waitForSelector("#character .ql-rows .ex-q", { timeout: 20000 });
+});
+await run("portrait ruler", async () => {
   await p.$eval("#words", (e) => e.scrollIntoView()); await p.click("#words .pr .tf-tabs button:nth-child(2)"); await sleep(900);
-  await p.$eval("#morals", (e) => e.scrollIntoView());
-  for (const k of [3, 2, 1]) { await p.click(`#morals .tr .tf-tabs button:nth-child(${k})`); await sleep(600); }
-  await sleep(2400);
-  const tr = await p.$eval("#morals .trolley", (g) => g.getAttribute("transform"));
-  if (!/translate\(3[0-9]{2}/.test(tr ?? "")) throw new Error(`trolley didn't reach the branch: ${tr}`);
 });
 await run("portrait case study link", async () => {
   const href = await p.$eval("#numbers .st-reads a", (a) => a.getAttribute("href"));

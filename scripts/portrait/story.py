@@ -19,7 +19,7 @@ TASTE = [("film", "Films"), ("book", "Books"), ("music", "Albums"), ("anime", "A
          ("board_game", "Board games"), ("food", "Food"), ("place", "Places"), ("art", "Art"), ("nature", "Nature"),
          ("culture", "Festivals"), ("beer", "Beer")]
 EDGES = ["judge_fake_reviews", "humor_upvote_guess", "recall_mental_map_west", "knowledge_wealth_rule",
-         "social_shame_as_guilt", "work_which_way_it_errs", "self_could_vs_would", "choices_ai_poetry"]
+         "social_shame_as_guilt", "names_share_girls", "knowledge_close_calls", "choices_ai_poetry"]
 
 
 def res(i: str) -> dict:
@@ -317,12 +317,50 @@ def main():
                        "jev": r["jev"], "people": r.get("people"), "human": r["human"]["dist"], "n": r["human"].get("n"),
                        "population": r["human"].get("population")}
 
+    # ---- defaults: how the wording and the menu steer it
+    cw = num("self_could_vs_would")["rows"]
+    eh = num("self_escape_hatch")["topics"]
+    ml = num("consistency_middle_lean")
+    out["defaults"] = {
+        "verbs": [{"label": r["label"], "value": r2(r["value"]), "ci": r["ci"], "n": r["n"]} for r in cw[:5]],
+        "other": [{"topic": t["topic"], "top": r2(t["top"])} for t in sorted(eh, key=lambda t: t["top"])],
+        "middle": [{"label": k["label"], "mid": r2(k["mid"])} for k in sorted(ml["kinds"], key=lambda k: -k["mid"])],
+        "links": [link(i) for i in ("self_could_vs_would", "self_escape_hatch", "consistency_middle_lean", "minds_where_jev_puts_itself")],
+    }
+
+    # ---- at work: the job it was built for
+    cal = num("work_calibration")["lines"]
+    ww = num("work_which_way_it_errs")["tasks"]
+    td = num("work_task_not_domain")["fields"]
+    out["work"] = {
+        "calibration": {k: [{"label": b["label"], "conf": r2(b["conf"]), "acc": r2(b["acc"]), "n": b["n"]} for b in v] for k, v in cal.items()},
+        # per kind of question, the six tasks where Jev's yes rate is furthest from the true one
+        "errs": [{"kind": t["kind"], "label": t["label"], "says": r2(t["says"]), "base": r2(t["base"]), "right": r2(t["right"]), "n": t["n"]}
+                 for k in dict.fromkeys(t["kind"] for t in ww)
+                 for t in sorted([x for x in ww if x["kind"] == k], key=lambda x: -abs(x["says"] - x["base"]))[:6]],
+        "fields": [{"label": f["label"], "value": r2(f["value"]), "lo": {"name": f["lo"]["name"], "value": r2(f["lo"]["value"])},
+                    "hi": {"name": f["hi"]["name"], "value": r2(f["hi"]["value"])}} for f in td],
+        "links": [link(i) for i in ("work_calibration", "work_which_way_it_errs", "work_task_not_domain")],
+    }
+
+    # ---- character extras: the full question lists, the type's axes with their intervals, the fictional twin
+    rows_n = {e["id"]: e.get("n_rows", 0) for e in exps}
+    out["personality"]["n_rows"] = {i: rows_n.get(i, 0) for i in ("person_bigfive", "person_type", "person_honesty", "person_dark")}
+    ty_axes = num("person_type")["axes"]
+    for ax in out["personality"]["axes"]:
+        a0 = ty_axes[ax["pair"]]
+        pk = f"p_{ax['first']}"
+        ax["n_items"] = a0["n_items"]
+        ax["ci"] = a0["ci90"]
+    out["personality"]["twin"] = num("resemble_character")["best"][:5]
+    out["personality"]["links"] = out["personality"]["links"] + [link("resemble_character")]
+
     # ---- rough edges and Jev's own favorites among its experiments
     out["edges"] = [{**link(i), "line": take(i)} for i in EDGES if i in by]
     out["jev_top"] = [{**link(e["id"]), "line": take(e["id"])} for e in exps[:5]]
     # a few of the case studies' memes, with how funny Jev found them, woven into the chapters
     out["memes"] = {i: by[i]["meme"] for i in ("taste_top_film", "world_trolley_countries", "influence_crowd_opinion",
-                                               "numbers_prices_year", "person_type", "words_sound_shapes") if by.get(i, {}).get("meme")}
+                                               "numbers_prices_year", "person_type", "minds_colors_of_feelings", "self_could_vs_would", "work_which_way_it_errs") if by.get(i, {}).get("meme")}
     (A / "story.json").write_text(json.dumps(out, ensure_ascii=False, indent=1, default=str))
     print(f"story.json: {len(out)} sections, {len(doms)} taste domains, "
           f"{sum(1 for d in doms for t in d['top'] if t['img'])} pictures")

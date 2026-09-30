@@ -9,8 +9,9 @@ export type Story = {
   personality: {
     bigfive: { label: string; pct: number; guess: number; ci: [number, number] }[];
     type: string; type_people: string;
-    axes: { pair: string; first: string; other: string; p_first: number; people_p_first: number; jev: string; people: string }[];
+    axes: { pair: string; first: string; other: string; p_first: number; people_p_first: number; jev: string; people: string; n_items: number; ci: [number, number] }[];
     honesty: ({ label: string } & VS)[]; dark: ({ label: string } & VS)[]; links: ExLink[];
+    n_rows?: Record<string, number>; twin?: { name: string; work: string; r: number }[];
   };
   taste: {
     domains: {
@@ -55,6 +56,16 @@ export type Story = {
   methods: Methods;
   trip?: { id: string; text: string; source: string; path: string[]; method: string | null; confidence: number | null;
     jev: Record<string, number>; people: Record<string, number> | null; human: Record<string, number>; n: number | null; population: string | null };
+  defaults: {
+    verbs: { label: string; value: number; ci: number[]; n: number }[];
+    other: { topic: string; top: number }[]; middle: { label: string; mid: number }[]; links: ExLink[];
+  };
+  work: {
+    calibration: Record<"noul" | "choice", { label: string; conf: number; acc: number; n: number }[]>;
+    errs: { kind: string; label: string; says: number; base: number; right: number; n: number }[];
+    fields: { label: string; value: number; lo: { name: string; value: number }; hi: { name: string; value: number } }[];
+    links: ExLink[];
+  };
   edges: (ExLink & { line: string })[];
   jev_top: (ExLink & { line: string })[];
   memes: Record<string, ExperimentMeme>;

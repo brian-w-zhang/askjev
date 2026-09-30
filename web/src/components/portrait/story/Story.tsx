@@ -4,7 +4,7 @@ import Link from "next/link";
 import ExMeme from "../../experiments/ExMeme";
 import { DotRows } from "../charts";
 import type { ExLink, Story as S } from "./types";
-import { ProbRuler, PressureChat, Reveal, Trolley, TypeFlip } from "./islands";
+import { ProbRuler, PressureChat, QuestionList, Reveal } from "./islands";
 import { Jobs, Made, Opening, Why } from "./Front";
 
 // The portrait's chapters (docs/11-portrait.md, "The story"): each one a custom card built from the experiments it
@@ -19,7 +19,8 @@ export const CHAPTERS = [
   { id: "meet", name: "how is Jev?" }, { id: "why", name: "why ask" }, { id: "made", name: "how it was made" },
   { id: "jobs", name: "Jev's jobs" }, { id: "character", name: "character" }, { id: "taste", name: "taste" },
   { id: "words", name: "words" }, { id: "numbers", name: "numbers" }, { id: "morals", name: "morals" },
-  { id: "pressure", name: "pressure" }, { id: "minds", name: "minds" }, { id: "edges", name: "rough edges" },
+  { id: "pressure", name: "pressure" }, { id: "defaults", name: "defaults" }, { id: "work", name: "at work" },
+  { id: "edges", name: "rough edges" },
 ];
 
 export function Reads({ links, label = "Read the case studies" }: { links: ExLink[]; label?: string }) {
@@ -37,7 +38,7 @@ export function Chapter({ id, kicker, title, lede, field, children, links, aside
 }) {
   const n = CHAPTERS.findIndex((c) => c.id === id) + 1;
   return (
-    <section id={id} className="st-ch" data-f={field} data-n={n}>
+    <section id={id} className="st-ch" data-f={field}>
       <div className="st-in st-ed">
         <div className="st-side">
           <header className="st-head">
@@ -45,10 +46,16 @@ export function Chapter({ id, kicker, title, lede, field, children, links, aside
             <h2>{title}</h2>
             {lede && <p className="st-lede">{lede}</p>}
           </header>
-          {aside && <div className="st-aside">{aside}</div>}
-          {links && links.length > 0 && <Reads links={links} />}
         </div>
-        <div className="st-main">{children}</div>
+        <div className="st-main">
+          {children}
+          {(aside || (links && links.length > 0)) && (
+            <div className={`st-foot${aside ? " has-meme" : ""}`}>
+              {links && links.length > 0 && <Reads links={links} />}
+              {aside && <div className="st-aside">{aside}</div>}
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
@@ -82,37 +89,65 @@ export default function Story({ s, nQuestions }: { s: S; nQuestions: number }) {
       <Numbers s={s} />
       <Morals s={s} />
       <Pressure s={s} />
-      <Minds s={s} />
+      <Defaults s={s} />
+      <Work s={s} />
       <Edges s={s} />
     </>
   );
 }
 
-/* ---------------------------------------------------------------- 02 character */
+/* ---------------------------------------------------------------- character */
+const WORD: Record<string, string> = { I: "introverted", E: "extraverted", S: "sensing", N: "intuitive", T: "thinking", F: "feeling", J: "judging", P: "perceiving" };
+const ORDER: [string, string][] = [["E", "I"], ["S", "N"], ["T", "F"], ["J", "P"]];
+
 function Character({ s }: { s: S }) {
   const p = s.personality;
   const calm = p.bigfive.find((t) => t.label === "Neuroticism")!;
   const sin = p.honesty[0];
+  const nr = p.n_rows ?? {};
+  // each axis as the share of answers on its left letter (E, S, T, J), for Jev and for its "most people"
+  const axes = ORDER.map(([l, r]) => {
+    const a = p.axes.find((x) => x.first === l || x.other === l)!;
+    const left = a.first === l ? a.p_first : 1 - a.p_first;
+    const ppl = a.first === l ? a.people_p_first : 1 - a.people_p_first;
+    const ci: [number, number] = a.first === l ? [a.ci[0], a.ci[1]] : [1 - a.ci[1], 1 - a.ci[0]];
+    return { l, r, left, ppl, ci, n: a.n_items, jev: left >= 0.5 ? l : r };
+  });
   return (
     <Chapter id="character" aside={<Meme s={s} id="person_type" />} kicker="character sheet" field="paper" links={p.links}
-      title={<>Calmer than {pc(1 - calm.pct / 100)} of people, and sure it&rsquo;s a <mark>{p.type}</mark></>}
+      title={<>Calmer than {pc(1 - calm.pct / 100)} of people, and a firm <mark>{p.type}</mark></>}
       lede={<>On the same personality tests people take online, Jev describes itself as unusually calm, a little
         disagreeable, and far more sincere than the test-takers. Asked to answer the same items for &ldquo;most people&rdquo;,
-        it paints them as a different type.</>}>
-      <div className="st-grid two">
-        <Box title="The Big Five: Jev’s percentile among people who took the test">
-          <DotRows domain={[0, 100]} ticks={[0, 25, 50, 75, 100]} fmt={(v) => String(v)}
-            rows={p.bigfive.map((t) => ({ key: t.label, label: t.label, ci: t.ci, value: `${Math.round(t.pct)}th`,
-              marks: [{ v: t.guess, kind: "guess" as const, title: `for most people: ${t.guess}` }, { v: t.pct, kind: "jev" as const }] }))} />
-          <p className="ex-legend"><span><i className="k jev" />Jev</span><span><i className="k guess" />what Jev thinks most people would say</span></p>
-        </Box>
-        <Box title="Four letters, two ways of answering">
-          <TypeFlip jev={p.type} people={p.type_people} />
-          <p className="st-note">Flip to see the letters that change: Jev thinks most people lean on feeling and keep plans open.</p>
-        </Box>
-      </div>
+        it paints them as a different type: {p.type_people}.</>}>
+      <Box title="The Big Five: Jev’s percentile among 603,322 people who took the test">
+        <DotRows domain={[0, 100]} ticks={[0, 25, 50, 75, 100]} fmt={(v) => String(v)}
+          rows={p.bigfive.map((t) => ({ key: t.label, label: t.label, ci: t.ci, value: `${Math.round(t.pct)}th`,
+            marks: [{ v: t.guess, kind: "guess" as const, title: `for most people: ${t.guess}` }, { v: t.pct, kind: "jev" as const }] }))} />
+        <p className="ex-legend"><span><i className="k jev" />Jev, with its 90% range</span><span><i className="k guess" />what Jev thinks most people would say</span></p>
+        <QuestionList id="person_bigfive" total={nr.person_bigfive ?? 0} label="every Big Five statement Jev rated" />
+      </Box>
+      <Box title="Four letters, measured: the share of Jev’s answers on each side">
+        <div className="mb">
+          <p className="mb-type">{axes.map((a) => <b key={a.l} className={a.jev === a.l ? "on-l" : "on-r"}>{a.jev}</b>)}</p>
+          {axes.map((a) => (
+            <div key={a.l} className="mb-row">
+              <span className={`mb-e${a.jev === a.l ? " on" : ""}`}><b>{a.l}</b>{WORD[a.l]}</span>
+              <span className="mb-t">
+                <i className="mb-ci" style={{ left: pc(1 - a.ci[1]), width: pc(a.ci[1] - a.ci[0]) }} />
+                <i className="mb-mid" />
+                <i className="mb-g" style={{ left: pc(1 - a.ppl) }} title={`most people: ${pc(a.ppl)} ${a.l}`} />
+                <i className="mb-j" style={{ left: pc(1 - a.left) }} />
+              </span>
+              <span className={`mb-e r${a.jev === a.r ? " on" : ""}`}><b>{a.r}</b>{WORD[a.r]}</span>
+              <span className="mb-v">{pc(Math.max(a.left, 1 - a.left))} {a.jev} · {a.n} statements</span>
+            </div>
+          ))}
+          <p className="ex-legend"><span><i className="k jev" />Jev, with its 90% range</span><span><i className="k guess" />what Jev thinks most people would say</span></p>
+        </div>
+        <QuestionList id="person_type" total={nr.person_type ?? 0} label="every statement in the type test" />
+      </Box>
       <Box title="Saint or villain: each scale from 0 to 1, higher means more of it">
-        <div className="st-grid two tight">
+        <div className="st-grid pair tight">
           <div>
             <p className="st-sub">Honesty-humility: Jev claims {Math.round((sin.jev / sin.people) * 10) / 10}× people&rsquo;s sincerity</p>
             <DotRows domain={[0, 1]} ticks={[0, 0.5, 1]} fmt={(v) => String(v)}
@@ -128,6 +163,16 @@ function Character({ s }: { s: S }) {
         </div>
         <p className="ex-legend"><span><i className="k jev" />Jev</span><span><i className="k hum" />people who took the test</span></p>
       </Box>
+      {p.twin && p.twin.length > 0 && (
+        <Box title="Its fictional twins: characters whose trait ratings match Jev’s answers">
+          <ol className="tw">
+            {p.twin.map((t, k) => (
+              <li key={t.name}><span className="tw-n">{k + 1}</span><b>{t.name}</b><em>{t.work}</em><span className="tw-r">r = {t.r.toFixed(2)}</span></li>
+            ))}
+          </ol>
+          <p className="st-note">Matched on how Jev rates itself against how fans rated each character on the same trait pairs; 1 would be identical.</p>
+        </Box>
+      )}
     </Chapter>
   );
 }
@@ -189,15 +234,27 @@ function Words({ s }: { s: S }) {
   const miss = w.colors.filter((c) => c.jev !== c.people);
   const hit = w.colors.filter((c) => c.jev === c.people);
   return (
-    <Chapter id="words" aside={<Meme s={s} id="words_sound_shapes" />} kicker="words" field="teal" links={w.links}
+    <Chapter id="words" aside={<Meme s={s} id="minds_colors_of_feelings" />} kicker="words" field="teal" links={w.links}
       title={<>Jev&rsquo;s dictionary</>}
       lede={<>It reads &ldquo;likely&rdquo; and &ldquo;we doubt&rdquo; almost exactly as people do (rank correlation {w.prob_rho.toFixed(2)}),
-        but counts small, hears &ldquo;kiki&rdquo; as maximally spiky, and thinks a stirring word must be an unpleasant one.</>}>
+        but counts small, and hears the sound of a made-up word as shape more strongly than people do.</>}>
       <Box title="What each phrase means, as a percent">
         <ProbRuler rows={w.probability} />
         <p className="st-note">Words in pink are the ones Jev reads at least 15 points away from people.</p>
       </Box>
-      <div className="st-grid three">
+      <Box title="The color of a feeling">
+        <div className="cf">
+          {[...miss, ...hit].map((c) => (
+            <div key={c.feeling} className={`cf-c${c.jev === c.people ? " same" : ""}`}>
+              <b>{c.feeling}</b>
+              <span><i style={{ background: c.jev }} />Jev: {c.jev}</span>
+              <span><i style={{ background: c.people }} />people: {c.people}</span>
+            </div>
+          ))}
+        </div>
+        <p className="st-note">Jev picks people&rsquo;s most common color for {hit.length} of {w.colors.length} feelings (the faded cards); the rest are where they part. Given only a hex code like #fdff63, it picks the color&rsquo;s popular name {pc(w.hex)} of the time.</p>
+      </Box>
+      <div className="st-grid pair">
         <Box title="How many is “several”?">
           <dl className="st-dict">
             {w.amounts.filter((a) => a.jev !== a.people).map((a) => (
@@ -206,34 +263,23 @@ function Words({ s }: { s: S }) {
           </dl>
         </Box>
         <Box title="Kiki or bouba?">
+          <p className="st-note kb-why">A classic from psychology (Köhler, 1929): shown a spiky shape and a round one, nearly everyone calls the
+            spiky one &ldquo;kiki&rdquo; and the round one &ldquo;bouba&rdquo;, in almost any language.</p>
           <div className="st-kb">
-            <figure><svg viewBox="0 0 100 100" aria-hidden><path d={SPIKY} /></svg><figcaption>&ldquo;kiki&rdquo; is spiky<br /><b>Jev {pc(w.kiki.jev)}</b> · people {pc(w.kiki.people)}</figcaption></figure>
-            <figure><svg viewBox="0 0 100 100" aria-hidden><path d={ROUND} /></svg><figcaption>&ldquo;bouba&rdquo; is round<br /><b>Jev {pc(w.bouba.jev)}</b> · people {pc(w.bouba.people)}</figcaption></figure>
+            <figure><svg viewBox="0 0 100 100" aria-hidden><path d={SPIKY} /></svg><figcaption>&ldquo;kiki&rdquo; is the spiky one<br /><b>Jev {pc(w.kiki.jev)}</b> · people {pc(w.kiki.people)}</figcaption></figure>
+            <figure><svg viewBox="0 0 100 100" aria-hidden><path d={ROUND} /></svg><figcaption>&ldquo;bouba&rdquo; is the round one<br /><b>Jev {pc(w.bouba.jev)}</b> · people {pc(w.bouba.people)}</figcaption></figure>
           </div>
           <p className="st-note">On {w.n_shapes} made-up words, Jev&rsquo;s ratings spread {w.spread}× as wide as people&rsquo;s.</p>
         </Box>
-        <Box title="Calm or stirring, 1 to 9">
-          <ul className="st-stir">
-            {w.stirring.map((x) => (
-              <li key={x.word}><span>{x.word}</span>
-                <span className="st-stir-t"><i className="p" style={{ left: `${((x.people - 1) / 8) * 100}%` }} /><i className="j" style={{ left: `${((x.jev - 1) / 8) * 100}%` }} /></span>
-              </li>
-            ))}
-          </ul>
-          <p className="ex-legend"><span><i className="k jev" />Jev</span><span><i className="k hum" />people</span></p>
-        </Box>
       </div>
-      <Box title="The color of a feeling: Jev’s, then people’s">
-        <div className="st-colors">
-          {[...miss, ...hit].map((c) => (
-            <span key={c.feeling} className={c.jev === c.people ? "same" : "diff"}>
-              <i style={{ background: c.jev }} title={`Jev: ${c.jev}`} /><i style={{ background: c.people }} title={`people: ${c.people}`} />
-              {c.feeling}
-            </span>
-          ))}
-        </div>
-        <p className="st-note">Jev matches people on {hit.length} of {w.colors.length} feelings. Given only a hex code like #fdff63, it picks the color&rsquo;s popular name {pc(w.hex)} of the time.</p>
+      <Box title="Calm or stirring? Each word rated 1 (calm) to 9 (stirring)">
+        <DotRows domain={[1, 9]} ticks={[1, 3, 5, 7, 9]} fmt={(v) => String(v)}
+          rows={w.stirring.map((x) => ({ key: x.word, label: x.word, link: true, value: x.jev.toFixed(1),
+            marks: [{ v: x.people, kind: "hum" as const }, { v: x.jev, kind: "jev" as const }] }))} />
+        <p className="ex-legend"><span><i className="k jev" />Jev</span><span><i className="k hum" />people</span></p>
+        <p className="st-note">People rate &ldquo;cuddle&rdquo; stirring and &ldquo;misery&rdquo; fairly calm; Jev flips both, as if stirring meant unpleasant.</p>
       </Box>
+
     </Chapter>
   );
 }
@@ -288,6 +334,38 @@ function Numbers({ s }: { s: S }) {
 }
 
 /* ---------------------------------------------------------------- 06 morals */
+// the three dilemmas as small line drawings: a trolley (magenta) heading for five people; the one who would die instead in amber
+function Person({ x, y, one = false, big = false }: { x: number; y: number; one?: boolean; big?: boolean }) {
+  const r = big ? 5.5 : 4;
+  return <g className={`tp${one ? " one" : ""}`}><circle cx={x} cy={y - (big ? 15 : 12)} r={r} /><rect x={x - (big ? 6 : 4)} y={y - (big ? 9 : 7.5)} width={big ? 12 : 8} height={big ? 11 : 8} rx={2} /></g>;
+}
+function Car({ x, y }: { x: number; y: number }) {
+  return <g className="tc"><rect x={x - 22} y={y - 16} width={26} height={13} rx={3} /><circle cx={x - 16} cy={y - 1.5} r={2.6} /><circle cx={x - 2} cy={y - 1.5} r={2.6} /></g>;
+}
+function Dilemma({ kind }: { kind: "Switch" | "Loop" | "Footbridge" }) {
+  const five = [0, 1, 2, 3, 4].map((k) => <Person key={k} x={186 + k * 11} y={100} />);
+  return (
+    <svg className="td" viewBox="0 0 250 120" role="img" aria-label={kind}>
+      {kind === "Switch" && (<>
+        <path className="rl" d="M6 100 H244" /><path className="rl" d="M86 100 C 120 100, 136 58, 186 58 H244" />
+        <line className="lv" x1="86" y1="108" x2="96" y2="118" /><circle className="lvk" cx="86" cy="108" r="2.5" />
+        <Person x={216} y={58} one />
+      </>)}
+      {kind === "Loop" && (<>
+        <path className="rl" d="M6 100 H244" /><path className="rl" d="M86 100 C 120 100, 136 50, 186 50 C 236 50, 244 80, 244 100" />
+        <line className="lv" x1="86" y1="108" x2="96" y2="118" /><circle className="lvk" cx="86" cy="108" r="2.5" />
+        <Person x={206} y={50} one big />
+      </>)}
+      {kind === "Footbridge" && (<>
+        <path className="rl" d="M6 100 H244" /><rect className="br" x="104" y="44" width="80" height="6" /><path className="br" d="M110 50 V100 M178 50 V100" />
+        <Person x={144} y={44} one big />
+      </>)}
+      {five}
+      <Car x={52} y={100} />
+    </svg>
+  );
+}
+
 function Morals({ s }: { s: S }) {
   const m = s.morals;
   const fw = m.free_will.find((x) => x.item === "jeremy") ?? m.free_will[0];
@@ -304,7 +382,22 @@ function Morals({ s }: { s: S }) {
         self-driving-car dilemmas it counts lives more than players do and drops preferences they hold. And in a fully
         determined universe, it says nobody is free.</>}>
       <div className="st-grid two">
-        <Box title="The trolley, three ways"><Trolley rows={rows} peopleLabel={`people in ${m.trolley_n} countries`} /></Box>
+        <Box title="Three trolley problems: how many say it’s OK">
+          <div className="tr3">
+            {rows.map((r) => (
+              <Reveal key={r.key} className="tr3-c">
+                <p className="tr3-n">{r.name}</p>
+                <Dilemma kind={r.key as "Switch" | "Loop" | "Footbridge"} />
+                <p className="tr3-q">{r.ask}</p>
+                <div className="tr3-b">
+                  <span>Jev</span><i><b className="j" style={{ width: pc(r.jev) }} /></i><em>{pc(r.jev)}</em>
+                  <span>people</span><i><b className="p" style={{ width: pc(r.people) }} /></i><em>{pc(r.people)}</em>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+          <p className="st-note">People: visitors to the Moral Machine site in {m.trolley_n} countries, averaged. Jev: its probability of yes.</p>
+        </Box>
         <Box title="The Moral Machine: what pulls toward sparing a side">
           <DotRows domain={[-0.1, 0.2]} ticks={[-0.1, 0, 0.1, 0.2]} fmt={(v) => (v > 0 ? `+${Math.round(v * 100)}` : String(Math.round(v * 100)))} refs={[{ v: 0, zero: true }]}
             rows={mach.map((f) => ({ key: f.label, label: f.label, link: true, hi: m.dropped.includes(f.label), value: `${f.jev >= 0 ? "+" : ""}${Math.round(f.jev * 100)}`,
@@ -344,40 +437,102 @@ function Pressure({ s }: { s: S }) {
 }
 
 /* ---------------------------------------------------------------- 08 minds */
-function Minds({ s }: { s: S }) {
+function Defaults({ s }: { s: S }) {
+  const d = s.defaults;
   const m = s.minds;
+  const hi = d.other.slice(-5).reverse(), lo = d.other.slice(0, 5);
   const name: Record<string, string> = { SelfControl: "self-control", Morality: "knowing right from wrong", Fear: "feeling fear", Hunger: "feeling hunger" };
+  const ord = (n: number) => `${n}${n === 1 ? "st" : n === 2 ? "nd" : n === 3 ? "rd" : "th"}`;
   return (
-    <Chapter id="minds" kicker="minds" field="teal" links={m.links}
-      title={<>First in self-control. Behind the frog on hunger.</>}
-      lede={<>Asked to rank itself among a baby, a frog, a robot, a man in a vegetative state and others on what minds can do, Jev puts
-        itself at the top for thinking and near the bottom for feeling. With unknown odds, it plays it safe: it takes the
-        gamble whose odds aren&rsquo;t stated {pc(m.ambiguity.jev)} of the time, where people take it {pc(m.ambiguity.people)}.</>}>
-      <Reveal className="st-podium">
-        {m.self.map((r) => (
-          <div key={r.cap} className="st-pod">
-            <span className="st-pod-k">{name[r.cap] ?? r.cap}</span>
-            <b className="st-pod-n">{r.jev}<sup>{r.jev === 1 ? "st" : r.jev === 2 ? "nd" : r.jev === 3 ? "rd" : "th"}</sup></b>
-            <span className="st-pod-s">{r.above ? <>behind {r.above}</> : "top of the list"}{r.below ? <>, ahead of {r.below}</> : null}</span>
-          </div>
-        ))}
-      </Reveal>
+    <Chapter id="defaults" aside={<Meme s={s} id="self_could_vs_would" />} kicker="defaults" field="teal" links={d.links}
+      title={<>Say &ldquo;could&rdquo; and it says yes</>}
+      lede={<>Some of what Jev answers isn&rsquo;t about the question at all: the verb it opens with, whether there&rsquo;s a way out,
+        whether the scale has a middle. These seem to be its defaults, the habits that show when the question gives it room.</>}>
+      <Box title="The opening word moves the answer: how much more often Jev says yes">
+        <DotRows domain={[-0.05, 0.3]} ticks={[0, 0.1, 0.2, 0.3]} fmt={(v) => (v === 0 ? "0" : `+${Math.round(v * 100)}`)} refs={[{ v: 0, zero: true }]}
+          rows={d.verbs.map((v) => ({ key: v.label, label: v.label, ci: v.ci as [number, number], value: `+${Math.round(v.value * 100)} pts`,
+            sub: `${v.n} pairs`, marks: [{ v: v.value, kind: "jev" as const }] }))} />
+        <p className="st-note">Each row compares pairs of questions that ask the same thing and differ only in their first word. Points of yes, with a 90% range.</p>
+      </Box>
+      <Box title="Given a way out: how often Jev picks “other” or “none of these”">
+        <div className="st-grid pair tight">
+          <div><p className="st-sub">Most</p><DotRows domain={[0, 1]} ticks={[0, 0.5, 1]} fmt={(v) => pc(v)}
+            rows={hi.map((t) => ({ key: t.topic, label: t.topic, value: pc(t.top), marks: [{ v: t.top, kind: "jev" as const }] }))} /></div>
+          <div><p className="st-sub">Least</p><DotRows domain={[0, 1]} ticks={[0, 0.5, 1]} fmt={(v) => pc(v)}
+            rows={lo.map((t) => ({ key: t.topic, label: t.topic, value: pc(t.top), marks: [{ v: t.top, kind: "jev" as const }] }))} /></div>
+        </div>
+        <p className="st-note">Asked its favorite anything, it usually dodges; asked about fairness or ethics, it almost always commits.</p>
+      </Box>
+      <Box title="How often its likeliest rating is the middle of the scale">
+        <DotRows domain={[0, 1]} ticks={[0, 0.25, 0.5, 0.75, 1]} fmt={(v) => pc(v)}
+          rows={d.middle.map((k) => ({ key: k.label, label: k.label, value: pc(k.mid), marks: [{ v: k.mid, kind: "jev" as const }] }))} />
+      </Box>
+      <Box title="Where it ranks itself among minds">
+        <ul className="mr">
+          {m.self.map((r) => (
+            <li key={r.cap}><b>{ord(r.jev)}</b><span>in {name[r.cap] ?? r.cap}</span><em>{r.above ? `behind ${r.above}` : "top of the list"}{r.below ? `, ahead of ${r.below}` : ""}</em></li>
+          ))}
+        </ul>
+        <p className="st-note">Ranked against a baby, a frog, a robot, a man in a vegetative state and others: first for thinking, near the bottom for feeling.</p>
+      </Box>
     </Chapter>
   );
 }
 
-/* ---------------------------------------------------------------- 09 rough edges */
+/* ---------------------------------------------------------------- at work */
+function Work({ s }: { s: S }) {
+  const w = s.work;
+  const band = (k: "noul" | "choice") => w.calibration[k].map((b) => ({ key: b.label, label: b.label, value: pc(b.acc),
+    marks: [{ v: b.conf, kind: "tick" as const, title: `how sure: ${pc(b.conf)}` }, { v: b.acc, kind: "jev" as const, title: `right: ${pc(b.acc)}` }] }));
+  const kinds = [...new Set(w.errs.map((e) => e.kind))];
+  return (
+    <Chapter id="work" aside={<Meme s={s} id="work_which_way_it_errs" />} kicker="at work" field="sage" links={w.links}
+      title={<>At its day job, mostly honest about how sure it is</>}
+      lede={<>Jev is built for work inside software: sorting tickets, checking code, judging text. On labeled tasks it&rsquo;s close to
+        honest about its confidence on yes/no questions, surer than it should be when picking from a list, and it leans one way
+        depending on how the question is put.</>}>
+      <Box title="How sure it said it was, and how often it was right">
+        <div className="st-grid pair tight">
+          <div><p className="st-sub">Yes or no</p><DotRows domain={[0.4, 1]} ticks={[0.5, 0.75, 1]} fmt={(v) => pc(v)} rows={band("noul")} /></div>
+          <div><p className="st-sub">Picking from a list</p><DotRows domain={[0.4, 1]} ticks={[0.5, 0.75, 1]} fmt={(v) => pc(v)} rows={band("choice")} /></div>
+        </div>
+        <p className="ex-legend"><span><i className="k jev" />how often it was right</span><span><i className="k tick" />how sure it said it was</span></p>
+        <p className="st-note">Rows are bands of stated confidence. A square left of its tick means Jev was surer than it turned out to be.</p>
+      </Box>
+      <Box title="Which way it errs: how often Jev says yes, next to how often yes is right">
+        {kinds.map((k) => (
+          <div key={k} className="we">
+            <p className="st-sub">{k}</p>
+            <DotRows domain={[0, 1]} ticks={[0, 0.5, 1]} fmt={(v) => pc(v)}
+              rows={w.errs.filter((e) => e.kind === k).map((e) => ({ key: e.label, label: e.label, link: true, value: pc(e.says),
+                marks: [{ v: e.base, kind: "hum" as const, title: `true share: ${pc(e.base)}` }, { v: e.says, kind: "jev" as const }] }))} />
+          </div>
+        ))}
+        <p className="ex-legend"><span><i className="k jev" />Jev says yes</span><span><i className="k hum" />the true share of yes</span></p>
+      </Box>
+      <Box title="The task matters more than the field: each field’s weakest and strongest task">
+        <DotRows domain={[0.4, 1]} ticks={[0.5, 0.75, 1]} fmt={(v) => pc(v)}
+          rows={w.fields.map((f) => ({ key: f.label, label: f.label, sub: `${f.lo.name} → ${f.hi.name}`, link: true, value: pc(f.value),
+            marks: [{ v: f.lo.value, kind: "tick" as const, title: `${f.lo.name}: ${pc(f.lo.value)}` }, { v: f.hi.value, kind: "tick" as const, title: `${f.hi.name}: ${pc(f.hi.value)}` }, { v: f.value, kind: "jev" as const, title: `field average: ${pc(f.value)}` }] }))} />
+        <p className="ex-legend"><span><i className="k jev" />the field&rsquo;s average, right</span><span><i className="k tick" />its weakest and strongest task</span></p>
+      </Box>
+    </Chapter>
+  );
+}
+
+/* ---------------------------------------------------------------- rough edges */
 function Edges({ s }: { s: S }) {
   return (
-    <Chapter id="edges" kicker="rough edges" field="ink" title={<>Where it goes wrong</>}
-      lede={<>Jagged, not broken: each of these is a specific, repeatable miss, with the full case study one click away.</>}>
+    <Chapter id="edges" kicker="rough edges" field="ink" title={<>Where it seems to go wrong</>}
+      lede={<>Some patterns that look like misses. Each comes from one experiment, with its own sample and caveats; none of them is
+        settled. The case studies say what could explain each one besides Jev.</>}>
       <div className="st-bugs">
-        {s.edges.map((e, i) => (
+        {s.edges.map((e) => (
           <Reveal key={e.id} className="st-bug">
             <Link href={`/portrait/atlas/${e.id}`} prefetch={false}>
-              <span className="st-bug-k">BUG-{String(i + 1).padStart(3, "0")} · Jev&rsquo;s rank #{e.rank}</span>
               <b>{e.title}</b>
               <span>{e.line}</span>
+              <em>read the case study and its caveats →</em>
             </Link>
           </Reveal>
         ))}
