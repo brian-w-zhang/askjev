@@ -575,3 +575,29 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 .walk li.end span { background: var(--jev); color: #fff; font-weight: 600; }
 .walk li i { font-style: normal; color: var(--w-fg-2); transform: rotate(-90deg); }
 .why-d div + div { margin-top: 2px; }
+
+.st-receipt li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 10px; }
+.st-receipt li small { grid-column: 1 / -1; font-size: 10.5px; color: #777; margin-top: -1px; }
+
+/* jaggedness web */
+.web-w { max-width: 620px; margin: 0 auto; }
+.web { width: 100%; height: auto; display: block; overflow: visible; }
+.web-g { fill: none; stroke: var(--w-grid); }
+.web-s { stroke: var(--w-grid); }
+.web-t { font-family: var(--mono); font-size: 8.5px; fill: var(--w-fg-2); }
+.web-right { fill: color-mix(in oklab, var(--jev) 28%, transparent); stroke: var(--jev); stroke-width: 2; stroke-linejoin: round; }
+.web-sure { fill: none; stroke: var(--w-fg); stroke-width: 1.2; stroke-dasharray: 4 3; }
+.web-d { fill: var(--jev); }
+.web-l { font-size: 10.5px; fill: var(--w-fg); }
+.web-l.weak { fill: var(--jev); font-weight: 700; }
+
+/* why ask */
+.oq { list-style: none; margin: 0; padding: 0; display: grid; }
+.oq li { border-top: 1px solid var(--w-grid); } .oq li:first-child { border-top: 0; }
+.oq a { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 4px 18px; padding: 10px 2px; text-decoration: none; }
+.oq a:hover b { color: var(--jev); }
+.oq b { font-size: 15px; } .oq span { font-size: 13px; color: var(--w-fg-2); }
+@media (max-width: 640px) { .oq a { grid-template-columns: 1fr; } }
+.way { display: grid; gap: 6px; padding: 14px 16px; background: var(--w-sub); text-decoration: none !important; }
+.way b { font-size: 17px; } .way span { font-size: 13.5px; color: var(--w-fg-2); } .way em { font-style: normal; font-family: var(--mono); font-size: 12px; color: var(--jev); }
+.way:hover { box-shadow: inset 0 0 0 1px var(--jev); }

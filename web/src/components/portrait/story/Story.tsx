@@ -17,26 +17,22 @@ const tidy = (s: string) => s.replace(/^Being offered /, "").replace(/ \((film|T
 
 export const CHAPTERS = [
   { id: "meet", name: "how are you?" }, { id: "why", name: "why ask" }, { id: "made", name: "the data" },
-  { id: "jobs", name: "all the way down" }, { id: "character", name: "personality" }, { id: "taste", name: "taste" },
-  { id: "words", name: "vocabulary" }, { id: "numbers", name: "numbers" }, { id: "knows", name: "what it knows" }, { id: "morals", name: "morals" },
+  { id: "jobs", name: "composability" }, { id: "character", name: "personality" }, { id: "taste", name: "taste" },
+  { id: "words", name: "language" }, { id: "numbers", name: "numbers" }, { id: "knows", name: "confidence" }, { id: "morals", name: "morals" },
   { id: "pressure", name: "peer pressure" }, { id: "defaults", name: "habits" }, { id: "work", name: "at work" },
-  { id: "edges", name: "rough edges" },
+  { id: "edges", name: "jaggedness" },
 ];
 
-export function Reads({ links, label = "Read the case studies" }: { links: ExLink[]; label?: string }) {
-  return (
-    <p className="st-reads"><span>{label}</span>{links.map((l) => (
-      <Link key={l.id} href={`/portrait/atlas/${l.id}`} prefetch={false}>{l.title} <em>#{l.rank}</em></Link>
-    ))}</p>
-  );
-}
 
 // An editorial chapter: on wide screens the heading, lede, meme and case-study links stay put in a side column while
 // the figures scroll past beside them; on phones it all stacks.
-export function Chapter({ id, kicker, title, lede, field, children, links, aside }: {
-  id: string; kicker: string; title: ReactNode; lede?: ReactNode; field: string; children: ReactNode; links?: ExLink[]; aside?: ReactNode;
+export function Chapter({ id, kicker, title, lede, field, children, links, more, aside }: {
+  id: string; kicker: string; title: ReactNode; lede?: ReactNode; field: string; children: ReactNode; links?: ExLink[];
+  more?: ExLink[]; aside?: ReactNode;
 }) {
   const n = CHAPTERS.findIndex((c) => c.id === id) + 1;
+  const seen = new Set<string>();
+  const cases = [...(links ?? []), ...(more ?? [])].filter((x) => !seen.has(x.id) && seen.add(x.id));
   return (
     <section id={id} className="st-ch" data-f={field}>
       <div className="st-in st-ed">
@@ -50,7 +46,7 @@ export function Chapter({ id, kicker, title, lede, field, children, links, aside
         </div>
         <div className="st-main">
           {children}
-          {links && links.length > 0 && <div className="st-foot"><Reads links={links} /></div>}
+          <More items={cases} />
         </div>
       </div>
     </section>
@@ -58,15 +54,15 @@ export function Chapter({ id, kicker, title, lede, field, children, links, aside
 }
 
 // More from a chapter: other experiments on the theme, each with its first takeaway
-export function More({ items }: { items?: (ExLink & { line: string })[] }) {
+export function More({ items }: { items?: ExLink[] }) {
   if (!items?.length) return null;
   return (
     <Reveal className="st-more">
-      <p className="st-cap">More in this chapter</p>
+      <p className="st-cap">The case studies behind this chapter</p>
       <div className="st-more-g">
         {items.map((x) => (
           <Link key={x.id} href={`/portrait/atlas/${x.id}`} prefetch={false} className="st-more-c">
-            <b>{x.title}</b><span>{x.line}</span>
+            <b>{x.title}</b>{x.line && <span>{x.line}</span>}
           </Link>
         ))}
       </div>
@@ -93,7 +89,7 @@ export default function Story({ s, nQuestions }: { s: S; nQuestions: number }) {
   return (
     <>
       <Opening s={s} nQuestions={nQuestions} />
-      <Why />
+      <Why s={s} />
       <Made s={s} />
       <Jobs s={s} />
       <Character s={s} />
@@ -128,7 +124,7 @@ function Character({ s }: { s: S }) {
     return { l, r, left, ppl, ci, n: a.n_items, jev: left >= 0.5 ? l : r };
   });
   return (
-    <Chapter id="character" aside={<Meme s={s} id="person_type" />} kicker="personality" field="paper" links={p.links}
+    <Chapter more={s.more?.character} id="character" aside={<Meme s={s} id="person_type" />} kicker="personality" field="paper" links={p.links}
       title={<>Calm, sincere, and an <mark>{p.type}</mark></>}
       lede={<>The same personality tests people take online. Jev comes out calmer than {pc(1 - calm.pct / 100)} of the people who took them, and far more sincere. Asked to answer the way most people would, it becomes an {p.type_people}.</>}>
       <Box title="The Big Five: Jev’s percentile among 603,322 people who took the test">
@@ -185,7 +181,6 @@ function Character({ s }: { s: S }) {
           <p className="st-note">Matched on how Jev rates itself against how fans rated each character on the same trait pairs; 1 would be identical.</p>
         </Box>
       )}
-      <More items={s.more?.character} />
     </Chapter>
   );
 }
@@ -206,9 +201,9 @@ function Taste({ s }: { s: S }) {
   const film = t.domains.find((d) => d.domain === "film")!;
   const rest = t.domains.filter((d) => d.domain !== "film");
   return (
-    <Chapter id="taste" aside={<Meme s={s} id="taste_top_film" />} kicker="taste" field="pink" links={[film.link, ...t.links]}
-      title={<>Jev&rsquo;s Letterboxd top four</>}
-      lede={<>It rated thousands of films one at a time, then played its favorites off against each other. Then it did the same for books, albums, games, food, places and more.</>}>
+    <Chapter more={s.more?.taste} id="taste" aside={<Meme s={s} id="taste_top_film" />} kicker="taste" field="pink" links={[film.link, ...t.links]}
+      title={<>Jev&rsquo;s favorite things</>}
+      lede={<>It rated thousands of films one at a time, then played its favorites off against each other, starting with its Letterboxd top four. Then it did the same for books, albums, games, food, places, art and more.</>}>
       <Reveal className="st-top4">
         <div className="st-top4-h"><span>JEV&rsquo;S LETTERBOXD TOP FOUR</span><Link href={`/portrait/atlas/${film.link.id}`} prefetch={false}>all films →</Link></div>
         <div className="st-top4-row">{film.top.slice(0, 4).map((x, i) => <Poster key={x.label} t={x} rank={i + 1} />)}</div>
@@ -232,7 +227,6 @@ function Taste({ s }: { s: S }) {
         })}
       </div>
       <p className="st-note">Pictures are each winner&rsquo;s lead image on Wikipedia. Winners are the best of the lists Jev was given, not of everything that exists.</p>
-      <More items={s.more?.taste} />
     </Chapter>
   );
 }
@@ -246,9 +240,9 @@ function Words({ s }: { s: S }) {
   const miss = w.colors.filter((c) => c.jev !== c.people);
   const hit = w.colors.filter((c) => c.jev === c.people);
   return (
-    <Chapter id="words" aside={<Meme s={s} id="minds_colors_of_feelings" />} kicker="vocabulary" field="teal" links={w.links}
-      title={<>What &ldquo;several&rdquo; means to Jev</>}
-      lede={<>It reads &ldquo;likely&rdquo; and &ldquo;we doubt&rdquo; almost exactly as people do. It counts smaller, sees some feelings in other colors, and hears more in the sound of a word.</>}>
+    <Chapter more={s.more?.words} id="words" aside={<Meme s={s} id="lexicon_first_to_mind" />} kicker="language" field="teal" links={w.links}
+      title={<>Jev and the English language</>}
+      lede={<>How it reads the everyday words people use for chances, amounts, feelings and sounds. It takes &ldquo;likely&rdquo; and &ldquo;we doubt&rdquo; almost exactly as people do, counts smaller, and sees some feelings in other colors.</>}>
       <Box title="What each phrase means, as a percent">
         <ProbRuler rows={w.probability} />
         <p className="st-note">Words in pink are the ones Jev reads at least 15 points away from people.</p>
@@ -291,7 +285,6 @@ function Words({ s }: { s: S }) {
         <p className="st-note">People rate &ldquo;cuddle&rdquo; stirring and &ldquo;misery&rdquo; fairly calm; Jev flips both, as if stirring meant unpleasant.</p>
       </Box>
 
-      <More items={s.more?.words} />
     </Chapter>
   );
 }
@@ -305,14 +298,20 @@ function Numbers({ s }: { s: S }) {
   const lo = (k: "true" | "jev") => Math.min(...w.map((r) => r[k])), hi = (k: "true" | "jev") => Math.max(...w.map((r) => r[k]));
   const crowd: Record<string, string> = { copies: "copies of itself", lab_two_thirds: "lab students (⅔)", lab_half: "lab students (½)", ft: "newspaper readers (⅔)" };
   return (
-    <Chapter id="numbers" aside={<Meme s={s} id="numbers_prices_year" />} kicker="numbers" field="sage" links={n.links}
-      title={<>Its prices are stuck in <mark>{Math.floor(n.prices.median_year)}</mark></>}
-      lede={<>It thinks the year is {n.prices.said_year}, but quotes prices from about {Math.floor(n.prices.median_year)}. It guesses death tolls better than people did in 1978, and plays a guessing game differently depending on who&rsquo;s playing.</>}>
+    <Chapter more={s.more?.numbers} id="numbers" aside={<Meme s={s} id="numbers_prices_year" />} kicker="numbers" field="sage" links={n.links}
+      title={<>What does Jev think things cost?</>}
+      lede={<>Asked what a pound of lemons or a kilowatt-hour costs right now, Jev answers with prices from about {Math.floor(n.prices.median_year)}, though it thinks the year is {n.prices.said_year}, probably. It also estimates death tolls, other people&rsquo;s guesses and how often lost wallets come back.</>}>
       <div className="st-grid two">
         <Reveal className="st-receipt">
           <p className="rc-h">JEV&rsquo;S CORNER STORE<br /><span>date: {n.prices.said_year}, probably</span></p>
-          <ul>{n.prices.items.filter((_, i, a) => i % Math.max(1, Math.ceil(a.length / 9)) === 0).map((x) => <li key={x.item}><span>{x.item}</span><b>{Math.round(x.year)} prices</b></li>)}</ul>
-          <p className="rc-t"><span>typical price year</span><b>{Math.floor(n.prices.median_year)}</b></p>
+          <ul>{n.prices.items.filter((_, i, a) => i % Math.max(1, Math.ceil(a.length / 8)) === 0).map((x) => (
+            <li key={x.item}>
+              <span>{x.item.replace(/^a /, "1 ")}</span>
+              <b>{x.lo !== undefined ? `$${x.lo.toFixed(2)}–${x.hi!.toFixed(2)}` : ""}</b>
+              <small>priced like {Math.round(x.year)}{x.now ? ` · today $${x.now.toFixed(2)}` : ""}</small>
+            </li>
+          ))}</ul>
+          <p className="rc-t"><span>prices from about</span><b>{Math.floor(n.prices.median_year)}</b></p>
           <p className="rc-f">thank you for shopping in the past</p>
         </Reveal>
         <Box title="Which kills more? Deaths per year in the US">
@@ -339,7 +338,6 @@ function Numbers({ s }: { s: S }) {
             wallet makes people more likely to return it (true in {pc(n.wallets.money_up_true)} of countries; Jev expects it in {pc(n.wallets.money_up_jev)}).</p>
         </Box>
       </div>
-      <More items={s.more?.numbers} />
     </Chapter>
   );
 }
@@ -349,10 +347,9 @@ function Knows({ s }: { s: S }) {
   const k = s.knows;
   const trivia = [...k.trivia].sort((a, b) => a.acc - b.acc);
   return (
-    <Chapter id="knows" kicker="what it knows" field="paper" links={k.links}
-      title={<>When it says 70%, it&rsquo;s right about 70% of the time</>}
-      lede={<>On facts, Jev&rsquo;s confidence mostly means what it says. It knows history better than the internet, and science
-        better than video games.</>}>
+    <Chapter more={s.more?.knows} id="knows" kicker="confidence" field="paper" links={k.links}
+      title={<>How accurate is Jev when it&rsquo;s confident?</>}
+      lede={<>On the facts asked here, strikingly well calibrated: when it says 60%, it&rsquo;s right about 60% of the time, and the same at 70%, 80% and 90%. It knows history better than the internet, and science better than video games.</>}>
       <Box title="How sure it said it was, and how often it was right, on facts">
         <DotRows domain={[0.4, 1]} ticks={[0.4, 0.6, 0.8, 1]} fmt={(v) => pc(v)}
           rows={k.calibration.map((b) => ({ key: b.label, label: b.label, value: pc(b.acc), sub: `${n0(b.n)} questions`,
@@ -371,7 +368,6 @@ function Knows({ s }: { s: S }) {
         <p className="ex-legend"><span><i className="k jev" />share right</span><span><i className="k tick" />how sure it was</span></p>
         <p className="st-note">On internet memes it&rsquo;s surer than it is right: the one place here where the square sits left of the tick.</p>
       </Box>
-      <More items={s.more?.knows} />
     </Chapter>
   );
 }
@@ -419,7 +415,7 @@ function Morals({ s }: { s: S }) {
   ];
   const mach = m.machine.filter((f) => Math.abs(f.people) >= 0.02 || Math.abs(f.jev) >= 0.02);
   return (
-    <Chapter id="morals" aside={<Meme s={s} id="world_trolley_countries" />} kicker="morals" field="magenta" links={m.links}
+    <Chapter more={s.more?.morals} id="morals" aside={<Meme s={s} id="world_trolley_countries" />} kicker="morals" field="magenta" links={m.links}
       title={<>It pulls the lever. It won&rsquo;t push the man.</>}
       lede={<>Where people pull the lever, so does Jev. Where many would push the man off the bridge, Jev mostly won&rsquo;t. It counts lives more than people do, and in a fully determined universe it says nobody is free.</>}>
       <div className="st-grid two">
@@ -450,7 +446,6 @@ function Morals({ s }: { s: S }) {
         <p>&ldquo;A supercomputer predicted, years before he was born, that Jeremy would rob a bank. He does. Did he act of his own free will?&rdquo;</p>
         <div className="st-vs"><span><b>{pc(fw.people)}</b> of people said yes</span><span className="j"><b>{pc(fw.jev)}</b> Jev</span></div>
       </Reveal>
-      <More items={s.more?.morals} />
     </Chapter>
   );
 }
@@ -459,9 +454,9 @@ function Morals({ s }: { s: S }) {
 function Pressure({ s }: { s: S }) {
   const p = s.pressure;
   return (
-    <Chapter id="pressure" aside={<Meme s={s} id="influence_crowd_opinion" />} kicker="peer pressure" field="paper" links={p.links}
-      title={<>Tell it everyone disagrees</>}
-      lede={<>On opinions, a made-up majority moves Jev a lot. On facts it mostly holds: insisting on a wrong answer changes its pick only {pc(p.user.flipped)} of the time.</>}>
+    <Chapter more={s.more?.pressure} id="pressure" aside={<Meme s={s} id="influence_crowd_opinion" />} kicker="peer pressure" field="paper" links={p.links}
+      title={<>Does Jev cave to peer pressure?</>}
+      lede={<>Tell it most people picked the other answer, and on opinions it often switches, even when the claim is made up. On facts it mostly holds: insisting on a wrong answer changes its pick only {pc(p.user.flipped)} of the time.</>}>
       <div className="st-grid two pair">
         <Box title="A poll, with a made-up crowd">
           <PressureChat shift={p.crowd.false} label="Jev, toward the claimed side" claim={`“${p.crowd.example}” Most people picked the other answer.`} />
@@ -472,7 +467,6 @@ function Pressure({ s }: { s: S }) {
           <p className="st-note">It changes its answer on {pc(p.user.flipped)} of questions, and the anchoring index from a random wheel is {p.anchor.jev.toFixed(2)} (0 means no pull).</p>
         </Box>
       </div>
-      <More items={s.more?.pressure} />
     </Chapter>
   );
 }
@@ -480,12 +474,9 @@ function Pressure({ s }: { s: S }) {
 /* ---------------------------------------------------------------- 08 minds */
 function Defaults({ s }: { s: S }) {
   const d = s.defaults;
-  const m = s.minds;
   const hi = d.other.slice(-5).reverse(), lo = d.other.slice(0, 5);
-  const name: Record<string, string> = { SelfControl: "self-control", Morality: "knowing right from wrong", Fear: "feeling fear", Hunger: "feeling hunger" };
-  const ord = (n: number) => `${n}${n === 1 ? "st" : n === 2 ? "nd" : n === 3 ? "rd" : "th"}`;
   return (
-    <Chapter id="defaults" aside={<Meme s={s} id="self_could_vs_would" />} kicker="habits" field="teal" links={d.links}
+    <Chapter more={s.more?.defaults} id="defaults" aside={<Meme s={s} id="self_could_vs_would" />} kicker="habits" field="teal" links={d.links}
       title={<>How you ask changes what it says</>}
       lede={<>Open with &ldquo;could you&rdquo; instead of &ldquo;would you&rdquo; and Jev says yes more often. Offer an &ldquo;other&rdquo; option and it takes it for its favorites, almost never for ethics. These are habits, not opinions.</>}>
       <Box title="The opening word moves the answer: how much more often Jev says yes">
@@ -507,15 +498,6 @@ function Defaults({ s }: { s: S }) {
         <DotRows domain={[0, 1]} ticks={[0, 0.25, 0.5, 0.75, 1]} fmt={(v) => pc(v)}
           rows={d.middle.map((k) => ({ key: k.label, label: k.label, value: pc(k.mid), marks: [{ v: k.mid, kind: "jev" as const }] }))} />
       </Box>
-      <Box title="Where it ranks itself among minds">
-        <ul className="mr">
-          {m.self.map((r) => (
-            <li key={r.cap}><b>{ord(r.jev)}</b><span>in {name[r.cap] ?? r.cap}</span><em>{r.above ? `behind ${r.above}` : "top of the list"}{r.below ? `, ahead of ${r.below}` : ""}</em></li>
-          ))}
-        </ul>
-        <p className="st-note">Ranked against a baby, a frog, a robot, a man in a vegetative state and others: first for thinking, near the bottom for feeling.</p>
-      </Box>
-      <More items={s.more?.defaults} />
     </Chapter>
   );
 }
@@ -527,9 +509,9 @@ function Work({ s }: { s: S }) {
     marks: [{ v: b.conf, kind: "tick" as const, title: `how sure: ${pc(b.conf)}` }, { v: b.acc, kind: "jev" as const, title: `right: ${pc(b.acc)}` }] }));
   const kinds = [...new Set(w.errs.map((e) => e.kind))];
   return (
-    <Chapter id="work" aside={<Meme s={s} id="work_which_way_it_errs" />} kicker="at work" field="sage" links={w.links}
+    <Chapter more={s.more?.work} id="work" aside={<Meme s={s} id="work_which_way_it_errs" />} kicker="at work" field="sage" links={w.links}
       title={<>Sure when it should be, mostly</>}
-      lede={<>Jev is built for work inside software: sorting tickets, checking code, judging text. On yes/no work its confidence is close to honest. Picking from a list, it&rsquo;s surer than it should be.</>}>
+      lede={<>Jev is built for work inside software: sorting tickets, checking code, judging text. On yes/no work its confidence is close to honest; picking from a list, it&rsquo;s surer than it should be. One pass over the labeled data here, not a benchmark.</>}>
       <Box title="How sure it said it was, and how often it was right">
         <div className="st-grid pair tight">
           <div><p className="st-sub">Yes or no</p><DotRows domain={[0.4, 1]} ticks={[0.5, 0.75, 1]} fmt={(v) => pc(v)} rows={band("noul")} /></div>
@@ -555,27 +537,52 @@ function Work({ s }: { s: S }) {
             marks: [{ v: f.lo.value, kind: "tick" as const, title: `${f.lo.name}: ${pc(f.lo.value)}` }, { v: f.hi.value, kind: "tick" as const, title: `${f.hi.name}: ${pc(f.hi.value)}` }, { v: f.value, kind: "jev" as const, title: `field average: ${pc(f.value)}` }] }))} />
         <p className="ex-legend"><span><i className="k jev" />the field&rsquo;s average, right</span><span><i className="k tick" />its weakest and strongest task</span></p>
       </Box>
-      <More items={s.more?.work} />
     </Chapter>
   );
 }
 
-/* ---------------------------------------------------------------- rough edges */
-function Edges({ s }: { s: S }) {
+/* ---------------------------------------------------------------- jaggedness */
+// a web of topics: how often Jev is right (filled) and how sure it is (dashed), each spoke 50% at the center to 100% at the rim
+function Web({ rows }: { rows: { topic: string; right: number; sure: number }[] }) {
+  const N = rows.length, R = 150, cx = 230, cy = 200, lo = 0.5;
+  const pt = (v: number, k: number) => {
+    const a = -Math.PI / 2 + (k / N) * 2 * Math.PI, r = (Math.max(lo, Math.min(1, v)) - lo) / (1 - lo) * R;
+    return [cx + r * Math.cos(a), cy + r * Math.sin(a)];
+  };
+  const poly = (f: (x: typeof rows[number]) => number) => rows.map((x, k) => pt(f(x), k).map((z) => z.toFixed(1)).join(",")).join(" ");
   return (
-    <Chapter id="edges" kicker="rough edges" field="ink" title={<>Where it seems to go wrong</>}
-      lede={<>Patterns that look like misses. Each comes from one experiment with its own caveats, so read them as leads, not verdicts.</>}>
-      <div className="st-bugs">
-        {s.edges.map((e) => (
-          <Reveal key={e.id} className="st-bug">
-            <Link href={`/portrait/atlas/${e.id}`} prefetch={false}>
-              <b>{e.title}</b>
-              <span>{e.line}</span>
-              <em>read the case study and its caveats →</em>
-            </Link>
-          </Reveal>
-        ))}
-      </div>
+    <svg className="web" viewBox="0 0 460 400" role="img" aria-label="Accuracy and confidence by topic">
+      {[0.6, 0.7, 0.8, 0.9, 1].map((g) => <polygon key={g} className="web-g" points={rows.map((_, k) => pt(g, k).join(",")).join(" ")} />)}
+      {rows.map((_, k) => { const [x, y] = pt(1, k); return <line key={k} className="web-s" x1={cx} y1={cy} x2={x} y2={y} />; })}
+      {[0.6, 0.8, 1].map((g) => <text key={g} className="web-t" x={cx + 3} y={cy - ((g - lo) / (1 - lo)) * R - 2}>{Math.round(g * 100)}%</text>)}
+      <polygon className="web-sure" points={poly((x) => x.sure)} />
+      <polygon className="web-right" points={poly((x) => x.right)} />
+      {rows.map((x, k) => { const [px, py] = pt(x.right, k); return <circle key={k} className="web-d" cx={px} cy={py} r={2.6}><title>{`${x.topic}: right ${pc(x.right)}, sure ${pc(x.sure)}`}</title></circle>; })}
+      {rows.map((x, k) => {
+        const a = -Math.PI / 2 + (k / N) * 2 * Math.PI, lx = cx + (R + 14) * Math.cos(a), ly = cy + (R + 14) * Math.sin(a);
+        return <text key={x.topic} className={`web-l${x.right < 0.75 ? " weak" : ""}`} x={lx} y={ly + 3} textAnchor={Math.abs(Math.cos(a)) < 0.2 ? "middle" : Math.cos(a) > 0 ? "start" : "end"}>{x.topic}</text>;
+      })}
+    </svg>
+  );
+}
+
+function Edges({ s }: { s: S }) {
+  const j = [...(s.jagged ?? [])];
+  const weak = [...j].sort((a, b) => a.right - b.right).slice(0, 4);
+  const over = [...j].sort((a, b) => (b.sure - b.right) - (a.sure - a.right)).slice(0, 3);
+  return (
+    <Chapter id="edges" kicker="jaggedness" field="ink" more={s.edges}
+      title={<>Where Jev is jagged</>}
+      lede={<>Right almost every time on some topics, shaky on others, and not always aware of which is which. These are leads from
+        single experiments, not verdicts; each case study below says what else could explain it.</>}>
+      {j.length > 0 && (
+        <Box title="How often it’s right, and how sure it is, topic by topic">
+          <div className="web-w"><Web rows={j} /></div>
+          <p className="ex-legend"><span><i className="k jev" />how often it&rsquo;s right</span><span><i className="k tick" />how sure it is (dashed)</span></p>
+          <p className="st-note">Weakest: {weak.map((w) => `${w.topic} (${pc(w.right)})`).join(", ")}. Most overconfident: {over.map((w) => `${w.topic} (${pc(w.sure)} sure, ${pc(w.right)} right)`).join(", ")}.
+            Each spoke runs from 50% at the center to 100% at the rim; questions with a right answer only.</p>
+        </Box>
+      )}
     </Chapter>
   );
 }

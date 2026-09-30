@@ -73,7 +73,7 @@ await run("portrait ruler", async () => {
   await p.$eval("#words", (e) => e.scrollIntoView()); await p.click("#words .pr .tf-tabs button:nth-child(2)"); await sleep(900);
 });
 await run("portrait case study link", async () => {
-  const href = await p.$eval("#numbers .st-reads a", (a) => a.getAttribute("href"));
+  const href = await p.$eval("#numbers .st-more-c", (a) => a.getAttribute("href"));
   if (!/^\/portrait\/atlas\/[a-z0-9_]+$/.test(href ?? "")) throw new Error(`link ${href}`);
 });
 await run("portrait keyboard", async () => { await p.$eval(".pt", (e) => { e.scrollTop = 0; }); await p.keyboard.press("Tab"); await p.keyboard.press("Tab"); await p.keyboard.press("Tab"); const f = await p.evaluate(() => document.activeElement?.tagName); if (!f || f === "BODY") throw new Error("focus lost"); });

@@ -57,7 +57,7 @@ TITLES = {
     "The Creation of Adam by Michelangelo": "The Creation of Adam",
     "David by Michelangelo": "David (Michelangelo)",
     # beer
-    "Saison Dupont by Brasserie Dupont sprl (Saison / Farmhouse Ale)": "Brasserie Dupont",
+    "Saison Dupont by Brasserie Dupont sprl (Saison / Farmhouse Ale)": "Saison",
     # nature
     "A blue whale": "Blue whale",
     # culture

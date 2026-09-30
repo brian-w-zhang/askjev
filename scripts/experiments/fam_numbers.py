@@ -170,7 +170,9 @@ def prices_year():
                 continue
             hit = [y for y in ys if r["jev_lo"] <= r["annual"][y] < r["jev_hi"]]
             if hit:
-                implied.append({"item": r["item"], "year": float(np.median(hit)), "id": r["id"]})
+                implied.append({"item": r["item"], "year": float(np.median(hit)), "id": r["id"],
+                                "jev_lo": round(r["jev_lo"], 2), "jev_hi": round(r["jev_hi"], 2),
+                                "now": round(r["now"], 2) if r.get("now") else None})
         yr_q = next((x for x in with_meta("bls_prices") if x["m"].get("when") == "year"), None)
         said = None
         if yr_q:

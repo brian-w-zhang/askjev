@@ -1,7 +1,7 @@
 import type { ExperimentMeme } from "../../experiments/types";
 
 // Shape of portrait.json's "story" (scripts/portrait/story.py): each chapter's numbers, copied from the experiments.
-export type ExLink = { id: string; title: string; rank: number };
+export type ExLink = { id: string; title: string; rank: number; line?: string };
 type VS = { jev: number; people: number };
 
 export type Story = {
@@ -28,7 +28,7 @@ export type Story = {
     stirring: ({ word: string } & VS)[]; hex: number; links: ExLink[];
   };
   numbers: {
-    prices: { median_year: number; said_year: number; items: { item: string; year: number }[] };
+    prices: { median_year: number; said_year: number; items: { item: string; year: number; lo?: number; hi?: number; now?: number | null }[] };
     lethal: { slope_jev: number; slope_people: number; rows: { cause: string; truth: number; jev: number; people: number }[] };
     beauty: { crowd: string; pick: number; win: number | null; p: number }[];
     wallets: { rows: { country: string; true: number; jev: number }[]; money_up_true: number; money_up_jev: number; n: number };
@@ -71,7 +71,9 @@ export type Story = {
     trivia: { label: string; acc: number; ci: number[]; n: number }[];
     fame: { label: string; acc: number; conf: number; n: number }[]; links: ExLink[];
   };
-  more?: Record<string, (ExLink & { line: string })[]>;
+  more?: Record<string, ExLink[]>;
+  self_rating?: { n: number; yes: number; unsure: number };
+  jagged?: { topic: string; right: number; sure: number; n: number }[];
   edges: (ExLink & { line: string })[];
   jev_top: (ExLink & { line: string })[];
   memes: Record<string, ExperimentMeme>;

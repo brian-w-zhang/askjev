@@ -167,8 +167,8 @@ def main():
     exps = json.loads((A / "experiments.json").read_text())["experiments"]
     by = {e["id"]: e for e in exps}
     rank = {e["id"]: k + 1 for k, e in enumerate(exps)}
-    link = lambda i: {"id": i, "title": by[i]["title"], "rank": rank[i]}  # noqa: E731
     take = lambda i, k=0: ((by[i].get("case") or {}).get("takeaways") or [by[i]["result"]])[k]  # noqa: E731
+    link = lambda i: {"id": i, "title": by[i]["title"], "rank": rank[i], "line": take(i)}  # noqa: E731
     imgs = json.loads(TASTE_IMG.read_text()) if TASTE_IMG.exists() else {}
     out: dict = {"n_experiments": len(exps)}
 
@@ -239,7 +239,8 @@ def main():
     wal = sorted(lw["rows"], key=lambda r: r["money_true"])
     out["numbers"] = {
         "prices": {"median_year": py["median_year"], "said_year": py["said_year"],
-                   "items": sorted([{"item": x["item"], "year": x["year"]} for x in py["implied"]], key=lambda x: x["year"])},
+                   "items": sorted([{"item": x["item"], "year": x["year"], "lo": x.get("jev_lo"), "hi": x.get("jev_hi"), "now": x.get("now")}
+                                   for x in py["implied"]], key=lambda x: x["year"])},
         "lethal": {"slope_jev": r2(le["slope_jev"], 2), "slope_people": r2(le["slope_people"], 2),
                    "rows": [{"cause": r["cause"], "truth": r["truth"], "jev": r2(r["jev"], 0), "people": r2(r["people"], 0)} for r in pick]},
         "beauty": [{"crowd": r["crowd"], "pick": r["pick"], "win": r["win"], "p": r2(r["p"])} for r in bc],
@@ -379,6 +380,20 @@ def main():
         "links": [link(i) for i in ("knowledge_calibration", "knowledge_pop_trivia", "knowledge_fame_online")],
     }
 
+    # ---- jaggedness: how often right, and how sure, topic by topic (the claims ledger's knowledge_* entries)
+    C = json.loads((A / "portrait.json").read_text())["claims"]
+    JAG = ["history", "nature", "values", "sports", "food", "science", "money", "places", "support", "health", "legal", "arts",
+           "tech", "trust_safety", "commerce", "documents", "ai_systems", "search", "mind", "code", "society", "people", "future",
+           "education", "operations"]
+    out["jagged"] = [{"topic": {"trust_safety": "safety", "ai_systems": "AI systems"}.get(t, t),
+                      "right": r2(C[f"knowledge_{t}"]["effect"]), "sure": r2(C[f"knowledge_{t}"].get("confidence")),
+                      "n": C[f"knowledge_{t}"]["n"]} for t in JAG if f"knowledge_{t}" in C]
+
+    # ---- Jev's own verdict: how many experiments it says describe it
+    rec = [((e.get("take") or {}).get("scores") or {}).get("recognize") for e in exps]
+    rec = [r for r in rec if r is not None]
+    out["self_rating"] = {"n": len(rec), "yes": sum(1 for r in rec if r >= 0.5), "unsure": sum(1 for r in rec if 0.4 < r < 0.6)}
+
     # ---- more from each chapter: other experiments on the same theme, with their first takeaway
     out["more"] = {ch: [{**link(i), "line": take(i)} for i in ids if i in by] for ch, ids in MORE.items()}
 
@@ -387,7 +402,7 @@ def main():
     out["jev_top"] = [{**link(e["id"]), "line": take(e["id"])} for e in exps[:5]]
     # a few of the case studies' memes, with how funny Jev found them, woven into the chapters
     out["memes"] = {i: by[i]["meme"] for i in ("taste_top_film", "world_trolley_countries", "influence_crowd_opinion",
-                                               "numbers_prices_year", "person_type", "minds_colors_of_feelings", "self_could_vs_would", "work_which_way_it_errs") if by.get(i, {}).get("meme")}
+                                               "numbers_prices_year", "person_type", "lexicon_first_to_mind", "self_could_vs_would", "work_which_way_it_errs") if by.get(i, {}).get("meme")}
     (A / "story.json").write_text(json.dumps(out, ensure_ascii=False, indent=1, default=str))
     print(f"story.json: {len(out)} sections, {len(doms)} taste domains, "
           f"{sum(1 for d in doms for t in d['top'] if t['img'])} pictures")

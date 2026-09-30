@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element -- the tweet screenshot is a private file served by /portrait/memes */
+import Link from "next/link";
 import { Box, Chapter } from "./Story";
 import { Reveal } from "./islands";
 import Landscape from "./Landscape";
@@ -27,8 +28,8 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
           <div className="op-h">
             <span className="st-k"><b>01</b> a portrait of Jev</span>
             <h1>Everyone asks what Jev is. <span>So I asked how it&rsquo;s doing.</span></h1>
-            <p className="st-lede">Then {n0(nQuestions)} other things. This is what one model says about itself, the world and
-              the work it&rsquo;s built for, when someone curious keeps asking.</p>
+            <p className="st-lede">Then {n0(nQuestions)} other things. An unfiltered, slightly unhinged portrait of what one model
+              says about itself, the world and the work it&rsquo;s built for, when someone curious keeps asking.</p>
           </div>
         </div>
         <Reveal className="op-chat">
@@ -77,19 +78,48 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
 }
 
 /* ---------------------------------------------------------------- 02 why ask */
-export function Why() {
+const OPEN: [string, string, string][] = [
+  ["What’s Jev’s favorite film?", "rate 3,935 films one at a time, then play the favorites off head to head", "taste"],
+  ["What’s its personality?", "the same 50-statement test 603,322 people took online", "character"],
+  ["Does it know what things cost?", "ask the price of 29 everyday items, match each to the year it fits", "numbers"],
+  ["Does it know when it’s guessing?", "compare how sure it says it is with how often it’s right", "knows"],
+  ["Would it push the man off the bridge?", "three trolley problems, next to answers from 42 countries", "morals"],
+  ["Does it cave to a crowd?", "tell it most people picked the other answer, and see if it moves", "pressure"],
+];
+
+export function Why({ s }: { s: S }) {
+  const sr = s.self_rating;
   return (
     <Chapter id="why" kicker="why ask" field="paper"
-      title={<>Jev only answers closed questions. <mark>So I asked a lot of them.</mark></>}
-      lede={<>Yes or no, pick one, rate it. That&rsquo;s all Jev does, so you can&rsquo;t just ask what it&rsquo;s like. Ask it a
-        million small things instead, and a picture starts to show.</>}>
+      title={<>Who says Jev can&rsquo;t answer open questions?</>}
+      lede={<>Jev only answers closed ones: yes or no, pick one, rate it. So ask enough of them. &ldquo;What&rsquo;s your favorite
+        film?&rdquo; becomes thousands of small ratings and head-to-heads. Every experiment here is an open question, answered that way.</>}>
       <Box title="What this is, and isn’t">
         <dl className="why-d">
-          <div><dt>Not a score.</dt><dd>No benchmark, no leaderboard, no Jev versus other models. Just what it&rsquo;s like.</dd></div>
+          <div><dt>Not a benchmark.</dt><dd>No score, no leaderboard, no Jev versus other models. It&rsquo;s a curious exploration of
+            what one model is like.</dd></div>
+          <div><dt>First looks, not findings.</dt><dd>Each experiment is one set of questions asked one way, once. Jev itself says only
+            {sr ? ` ${sr.yes} of the ${sr.n}` : " some"} describe it. Every chart links to its case study, which says where the data came
+            from and what could skew it.</dd></div>
           <div><dt>Next to people.</dt><dd>Where real people answered the same question, their answer sits beside Jev&rsquo;s.</dd></div>
-          <div><dt>First looks.</dt><dd>Each finding rests on one set of questions and one way of asking. Every chart links to its case
-            study, which says where the data came from and what could skew it. Read that before quoting anything.</dd></div>
         </dl>
+      </Box>
+      <Box title="Open questions, answered with closed ones">
+        <ul className="oq">
+          {OPEN.map(([q, how, id]) => (
+            <li key={q}><a href={`#${id}`}><b>{q}</b><span>{how}</span></a></li>
+          ))}
+        </ul>
+        <p className="st-note">The method, every time: pick an open question; gather closed questions that bear on it, real data first;
+          ask Jev each one four ways; compare its answers with people or a right answer; write it up with the caveats.</p>
+      </Box>
+      <Box title="Two ways in">
+        <div className="st-grid pair">
+          <Link className="way" href="/" prefetch={false}><b>The map</b><span>Every one of the million questions, as a star. Search any question and see
+            Jev&rsquo;s answer next to people&rsquo;s.</span><em>open the map →</em></Link>
+          <Link className="way" href="/portrait/atlas" prefetch={false}><b>The experiments</b><span>{s.n_experiments} open questions and the story the answers
+            tell, each written up as a case study.</span><em>browse the atlas →</em></Link>
+        </div>
       </Box>
     </Chapter>
   );
@@ -113,9 +143,9 @@ export function Made({ s }: { s: S }) {
   const nSources = m.families.reduce((a, f) => a + f.sources.length, 0);
   return (
     <Chapter id="made" kicker="the data" field="sage"
-      title={<>A million questions from {nSources} places</>}
-      lede={<>Polls, personality tests, trivia, labeled work data, questions people really asked online. {pc(m.real)} come from
-        real data; the rest were written for this project and kept only if Jev filed them where they belonged. {pc(m.truth)} have
+      title={<>A million questions, real and synthetic</>}
+      lede={<>From {nSources} places: polls, personality tests, trivia, labeled work data, questions people really asked online.
+        {pc(m.real)} come from real data; the rest are synthetic, written for this project and kept only if Jev filed them where they belonged. {pc(m.truth)} have
         a right answer, and {pc(m.humans)} have real people&rsquo;s answers to compare with.</>}>
       <Reveal className="mk-strip">
         {[
@@ -174,10 +204,11 @@ export function Jobs({ s }: { s: S }) {
   const all = Object.values(q).reduce((a, n) => a + n, 0);
   const t = s.trip;
   return (
-    <Chapter id="jobs" kicker="all the way down" field="teal"
-      title={<>Jev, studying Jev</>}
-      lede={<>Everything here is built from small calls to Jev, each one typed, each stacked on the last. It read and filed the
-        questions, answered them, judged the experiments made from its answers, then rated the memes about those experiments.</>}>
+    <Chapter id="jobs" kicker="composability" field="teal"
+      title={<>Composable, layer by layer</>}
+      lede={<>Jev isn&rsquo;t bolted on at the end. It runs deep in the guts of this project: every layer is code calling Jev for
+        one small typed decision, stacked on the layer below. It filed the questions, answered them, judged the experiments made
+        from its own answers, then rated the memes about those experiments.</>}>
       <Box title="Seven layers, top to bottom: what Jev reads at each one, and how many times it was asked">
         <ol className="lay">
           {LAYERS.map((L, k) => (
