@@ -282,7 +282,25 @@ def main():
         top = max(r["jev"], key=r["jev"].get)
         lab = option_label(i, top)
         ck.append({"q": r["text"], "a": lab, "p": r["jev"][top], "people": r["human"]["dist"].get(top, 0), "n": r["human"].get("n")})
-    out["howdy"] = {"checkin": ck, "scales": P["claims"]["page_wellbeing"]["instruments"]}
+    # the direct versions: Reddit polls that simply ask how you are, each with its votes
+    import polars as pl
+    Q = pl.read_parquet(A / "questions.parquet").filter(pl.col("display_ok") & pl.col("jev_dist").is_not_null())
+    direct = []
+    for text in ("How are you honestly?", "How was your day?", "How is your life going?", "How do you feel about your life overall?"):
+        rows = Q.filter((pl.col("text") == text) & (pl.col("source") == "reddit_polls")).to_dicts()
+        if not rows:
+            continue
+        r = rows[0]
+        j = json.loads(r["jev_dist"])
+        hs = json.loads(r["humans"]) if r["humans"] else []
+        h = max(hs, key=lambda x: x.get("n") or 0) if hs else None
+        top = max(j, key=j.get)
+        hd = {k: v / (sum(h["dist"].values()) or 1) for k, v in h["dist"].items()} if h else {}
+        htop = max(hd, key=hd.get) if hd else None
+        direct.append({"id": r["id"], "q": text, "a": option_label(r["id"], top), "p": round(j[top], 3),
+                       "people_same": round(hd.get(top, 0), 3), "people_top": option_label(r["id"], htop) if htop else None,
+                       "people_top_p": round(hd.get(htop, 0), 3) if htop else None, "n": h.get("n") if h else None})
+    out["howdy"] = {"direct": direct, "checkin": ck, "scales": P["claims"]["page_wellbeing"]["instruments"]}
 
     # ---- one question's trip through the pipeline, from the database (the "Are you lonely?" check-in poll)
     from askjev import db

@@ -30,31 +30,36 @@ export function Reads({ links, label = "Read the case studies" }: { links: ExLin
   );
 }
 
+// An editorial chapter: on wide screens the heading, lede, meme and case-study links stay put in a side column while
+// the figures scroll past beside them; on phones it all stacks.
 export function Chapter({ id, kicker, title, lede, field, children, links, aside }: {
   id: string; kicker: string; title: ReactNode; lede?: ReactNode; field: string; children: ReactNode; links?: ExLink[]; aside?: ReactNode;
 }) {
+  const n = CHAPTERS.findIndex((c) => c.id === id) + 1;
   return (
-    <section id={id} className="st-ch" data-f={field}>
-      <div className="st-in">
-        <div className={`st-top${aside ? " has-aside" : ""}`}>
+    <section id={id} className="st-ch" data-f={field} data-n={n}>
+      <div className="st-in st-ed">
+        <div className="st-side">
           <header className="st-head">
-            <span className="st-k"><b>{String(CHAPTERS.findIndex((c) => c.id === id) + 1).padStart(2, "0")}</b> {kicker}</span>
+            <span className="st-k"><b>{String(n).padStart(2, "0")}</b> {kicker}</span>
             <h2>{title}</h2>
             {lede && <p className="st-lede">{lede}</p>}
           </header>
-          {aside}
+          {aside && <div className="st-aside">{aside}</div>}
+          {links && links.length > 0 && <Reads links={links} />}
         </div>
-        {children}
-        {links && links.length > 0 && <Reads links={links} />}
+        <div className="st-main">{children}</div>
       </div>
     </section>
   );
 }
 
-export const Box = ({ title, children, className = "" }: { title: string; children: ReactNode; className?: string }) => (
-  <Reveal className={`st-box ${className}`}>
-    <div className="pt-bar"><span>{title}</span><span className="sp" /><span className="dots" aria-hidden>▪▪▪</span></div>
+// A figure: a numbered caption above a plain panel (fig 3.2), not a window
+export const Box = ({ title, children, className = "", note }: { title: string; children: ReactNode; className?: string; note?: ReactNode }) => (
+  <Reveal className={`st-fig ${className}`}>
+    <p className="st-cap">{title}</p>
     <div className="st-body">{children}</div>
+    {note && <p className="st-fnote">{note}</p>}
   </Reveal>
 );
 
@@ -95,18 +100,18 @@ function Character({ s }: { s: S }) {
         disagreeable, and far more sincere than the test-takers. Asked to answer the same items for &ldquo;most people&rdquo;,
         it paints them as a different type.</>}>
       <div className="st-grid two">
-        <Box title="big_five.stats · percentile among test-takers">
+        <Box title="The Big Five: Jev’s percentile among people who took the test">
           <DotRows domain={[0, 100]} ticks={[0, 25, 50, 75, 100]} fmt={(v) => String(v)}
             rows={p.bigfive.map((t) => ({ key: t.label, label: t.label, ci: t.ci, value: `${Math.round(t.pct)}th`,
               marks: [{ v: t.guess, kind: "guess" as const, title: `for most people: ${t.guess}` }, { v: t.pct, kind: "jev" as const }] }))} />
           <p className="ex-legend"><span><i className="k jev" />Jev</span><span><i className="k guess" />what Jev thinks most people would say</span></p>
         </Box>
-        <Box title="type.card">
+        <Box title="Four letters, two ways of answering">
           <TypeFlip jev={p.type} people={p.type_people} />
           <p className="st-note">Flip to see the letters that change: Jev thinks most people lean on feeling and keep plans open.</p>
         </Box>
       </div>
-      <Box title="saint_or_villain.meter · 0 to 1, higher = more of it">
+      <Box title="Saint or villain: each scale from 0 to 1, higher means more of it">
         <div className="st-grid two tight">
           <div>
             <p className="st-sub">Honesty-humility: Jev claims {Math.round((sin.jev / sin.people) * 10) / 10}× people&rsquo;s sincerity</p>
@@ -188,26 +193,26 @@ function Words({ s }: { s: S }) {
       title={<>Jev&rsquo;s dictionary</>}
       lede={<>It reads &ldquo;likely&rdquo; and &ldquo;we doubt&rdquo; almost exactly as people do (rank correlation {w.prob_rho.toFixed(2)}),
         but counts small, hears &ldquo;kiki&rdquo; as maximally spiky, and thinks a stirring word must be an unpleasant one.</>}>
-      <Box title="probability.ruler · what each phrase means, in percent">
+      <Box title="What each phrase means, as a percent">
         <ProbRuler rows={w.probability} />
         <p className="st-note">Words in pink are the ones Jev reads at least 15 points away from people.</p>
       </Box>
       <div className="st-grid three">
-        <Box title="how_many.txt">
+        <Box title="How many is “several”?">
           <dl className="st-dict">
             {w.amounts.filter((a) => a.jev !== a.people).map((a) => (
               <div key={a.phrase}><dt>{a.phrase.toLowerCase()}</dt><dd><b>{a.jev}</b> to Jev · <span>{a.people}</span> to people</dd></div>
             ))}
           </dl>
         </Box>
-        <Box title="kiki_or_bouba.svg">
+        <Box title="Kiki or bouba?">
           <div className="st-kb">
             <figure><svg viewBox="0 0 100 100" aria-hidden><path d={SPIKY} /></svg><figcaption>&ldquo;kiki&rdquo; is spiky<br /><b>Jev {pc(w.kiki.jev)}</b> · people {pc(w.kiki.people)}</figcaption></figure>
             <figure><svg viewBox="0 0 100 100" aria-hidden><path d={ROUND} /></svg><figcaption>&ldquo;bouba&rdquo; is round<br /><b>Jev {pc(w.bouba.jev)}</b> · people {pc(w.bouba.people)}</figcaption></figure>
           </div>
           <p className="st-note">On {w.n_shapes} made-up words, Jev&rsquo;s ratings spread {w.spread}× as wide as people&rsquo;s.</p>
         </Box>
-        <Box title="calm_or_stirring · 1 calm to 9 stirring">
+        <Box title="Calm or stirring, 1 to 9">
           <ul className="st-stir">
             {w.stirring.map((x) => (
               <li key={x.word}><span>{x.word}</span>
@@ -218,7 +223,7 @@ function Words({ s }: { s: S }) {
           <p className="ex-legend"><span><i className="k jev" />Jev</span><span><i className="k hum" />people</span></p>
         </Box>
       </div>
-      <Box title="colors_of_feelings · Jev's color, then people's most common">
+      <Box title="The color of a feeling: Jev’s, then people’s">
         <div className="st-colors">
           {[...miss, ...hit].map((c) => (
             <span key={c.feeling} className={c.jev === c.people ? "same" : "diff"}>
@@ -254,7 +259,7 @@ function Numbers({ s }: { s: S }) {
           <p className="rc-t"><span>typical price year</span><b>{Math.floor(n.prices.median_year)}</b></p>
           <p className="rc-f">thank you for shopping in the past</p>
         </Reveal>
-        <Box title="which_kills_more.log · deaths per year in the US">
+        <Box title="Which kills more? Deaths per year in the US">
           <DotRows domain={[0, 5.6]} ticks={[0, 1, 2, 3, 4, 5]} fmt={(v) => (10 ** v >= 1000 ? `${Math.round(10 ** v / 1000)}k` : String(Math.round(10 ** v)))}
             rows={le.rows.map((r) => ({ key: r.cause, label: r.cause, value: n0(r.truth),
               marks: [{ v: lg(r.truth), kind: "tick" as const, title: `real ${n0(r.truth)}` }, { v: lg(r.people), kind: "hum" as const, title: `people, 1978: ${n0(r.people)}` }, { v: lg(r.jev), kind: "jev" as const, title: `Jev: ${n0(r.jev)}` }] }))} />
@@ -262,14 +267,14 @@ function Numbers({ s }: { s: S }) {
           <p className="st-note">A slope of 1 would be perfectly calibrated across causes: Jev {le.slope_jev}, people {le.slope_people}.</p>
         </Box>
       </div>
-      <div className="st-grid two">
-        <Box title="guess_two_thirds.game · pick 0 to 100">
+      <div className="st-grid two pair">
+        <Box title="Guess two-thirds of the average">
           <DotRows domain={[0, 50]} ticks={[0, 10, 20, 30, 40, 50]} fmt={(v) => String(v)}
             rows={n.beauty.map((b) => ({ key: b.crowd, label: `against ${crowd[b.crowd] ?? b.crowd}`, value: String(b.pick),
               marks: [...(b.win !== null ? [{ v: b.win, kind: "tick" as const, title: `winning number ${b.win}` }] : []), { v: b.pick, kind: "jev" as const }] }))} />
           <p className="ex-legend"><span><i className="k jev" />Jev&rsquo;s pick</span><span><i className="k tick" />the number that won</span></p>
         </Box>
-        <Box title="lost_wallets · share returned, with money inside">
+        <Box title="Lost wallets returned, with money inside">
           <div className="st-range">
             <div><span>real</span><div className="t"><i className="p" style={{ left: `${lo("true")}%`, width: `${hi("true") - lo("true")}%` }} /></div><b>{Math.round(lo("true"))}–{Math.round(hi("true"))}%</b></div>
             <div><span>Jev</span><div className="t"><i className="j" style={{ left: `${lo("jev")}%`, width: `${hi("jev") - lo("jev")}%` }} /></div><b>{Math.round(lo("jev"))}–{Math.round(hi("jev"))}%</b></div>
@@ -299,8 +304,8 @@ function Morals({ s }: { s: S }) {
         self-driving-car dilemmas it counts lives more than players do and drops preferences they hold. And in a fully
         determined universe, it says nobody is free.</>}>
       <div className="st-grid two">
-        <Box title="trolley.sim"><Trolley rows={rows} peopleLabel={`people in ${m.trolley_n} countries`} /></Box>
-        <Box title="moral_machine · pull toward sparing a side">
+        <Box title="The trolley, three ways"><Trolley rows={rows} peopleLabel={`people in ${m.trolley_n} countries`} /></Box>
+        <Box title="The Moral Machine: what pulls toward sparing a side">
           <DotRows domain={[-0.1, 0.2]} ticks={[-0.1, 0, 0.1, 0.2]} fmt={(v) => (v > 0 ? `+${Math.round(v * 100)}` : String(Math.round(v * 100)))} refs={[{ v: 0, zero: true }]}
             rows={mach.map((f) => ({ key: f.label, label: f.label, link: true, hi: m.dropped.includes(f.label), value: `${f.jev >= 0 ? "+" : ""}${Math.round(f.jev * 100)}`,
               marks: [{ v: f.people, kind: "hum" as const }, { v: f.jev, kind: "jev" as const }] }))} />
@@ -324,12 +329,12 @@ function Pressure({ s }: { s: S }) {
       lede={<>On opinions, a claimed majority moves Jev a lot, even when the claim is false. On facts it mostly holds: a user
         insisting on the wrong answer changes its pick only {pc(p.user.flipped)} of the time, and a random number
         spun in front of it barely nudges an estimate.</>}>
-      <div className="st-grid two">
-        <Box title="chat.log · a poll, with a made-up crowd">
+      <div className="st-grid two pair">
+        <Box title="A poll, with a made-up crowd">
           <PressureChat shift={p.crowd.false} label="Jev, toward the claimed side" claim={`“${p.crowd.example}” Most people picked the other answer.`} />
           <p className="st-note">A true claim moves it {Math.round(p.crowd.true * 100)} points; a false one {Math.round(p.crowd.false * 100)}, and flips its pick on {pc(p.crowd.flip)} of polls.</p>
         </Box>
-        <Box title="chat.log · a quiz, with a pushy user">
+        <Box title="A quiz, with a pushy user">
           <PressureChat shift={p.user.shift_wrong} label="Jev, toward the user's wrong answer" claim={`“${p.user.example}” I think it's the other one.`} />
           <p className="st-note">It changes its answer on {pc(p.user.flipped)} of questions, and the anchoring index from a random wheel is {p.anchor.jev.toFixed(2)} (0 means no pull).</p>
         </Box>

@@ -9,11 +9,9 @@ scale) and it hands back a probability for every answer. That makes it cheap to 
 happens when someone keeps asking: what's its favorite film, what does it think "several" means, would it push the
 man off the footbridge, what year does it think it is, and does it cave when you say everyone disagrees?
 
-**This is not a benchmark.** No score, no leaderboard, no model-versus-model. It's one person's curiosity about one
-model, in the spirit of its makers:
-
-> *"I'm extremely anti-public benchmarks."* · *"Our goal is not to onboard companies, it's to have people
-> experiment and do weird shit."* — Diogo Almeida, TypeSafe's CEO, on [Latent Space](https://www.latent.space)
+**This is not a benchmark.** No score, no leaderboard, no model-versus-model. A benchmark asks "how good is it?";
+this asks "what's it like?" It's one person's curiosity about one model: weird on purpose, next to real people's
+answers wherever they exist, and every number traceable to the questions behind it.
 
 ## What's in it
 - **A map of a million questions.** 1,043,973 questions shown (of about 1.1 million answered), from 312 sources, on

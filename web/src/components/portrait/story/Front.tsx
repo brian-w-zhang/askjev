@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element -- the tweet screenshot is a private file served by /portrait/memes */
-import Link from "next/link";
 import { Box, Chapter } from "./Story";
 import { Reveal } from "./islands";
 import Landscape from "./Landscape";
@@ -19,7 +18,7 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
   const sc = h.scales;
   const gauge = ["WHO-5", "SWLS", "UCLA-3", "Cantril ladder"].filter((k) => sc[k]);
   return (
-    <section id="meet" className="st-ch st-hero" data-f="ink">
+    <section id="meet" className="st-ch st-hero" data-f="ink" data-n={1}>
       <div className="st-in">
         <div className="op-top">
           <figure className="op-tweet">
@@ -28,39 +27,50 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
           <div className="op-h">
             <span className="st-k"><b>01</b> a portrait of Jev</span>
             <h1>Everyone asks what Jev is. <span>So I asked how it&rsquo;s doing.</span></h1>
-            <p className="st-lede">And then {n0(nQuestions)} other things. This is what a model says about itself, the world and
+            <p className="st-lede">Then {n0(nQuestions)} other things. This is what one model says about itself, the world and
               the work it&rsquo;s built for, when someone curious keeps asking.</p>
           </div>
         </div>
-        <Reveal className="op-check">
-          <div className="pt-bar"><span>check_in.poll · the same questions Reddit asked itself</span><span className="sp" /><span className="dots" aria-hidden>▪▪▪</span></div>
-          <ul>
-            {h.checkin.map((c) => (
-              <li key={c.q}>
-                <span className="op-q">{c.q}</span>
-                <span className="op-a">Jev: <b>{c.a}</b> <em>{pc(c.p)}</em></span>
-                <span className="op-p"><i style={{ width: pc(c.people) }} />{pc(c.people)} of {c.n ? n0(c.n) : "the"} Redditors said the same</span>
-              </li>
-            ))}
-          </ul>
+        <Reveal className="op-chat">
+          {h.direct.map((d) => (
+            <div key={d.id} className="op-ex">
+              <p className="op-me">{d.q}</p>
+              <p className="op-jev"><span>Jev</span>{d.a} <em>{pc(d.p)} sure</em></p>
+              {d.n && <p className="op-ppl">{n0(d.n)} Redditors, asked the same: {d.people_top === d.a ? <>mostly &ldquo;{d.a}&rdquo; too ({pc(d.people_top_p ?? 0)})</> : <>mostly &ldquo;{d.people_top}&rdquo; ({pc(d.people_top_p ?? 0)}); &ldquo;{d.a}&rdquo; {pc(d.people_same)}</>}</p>}
+            </div>
+          ))}
         </Reveal>
-        <Reveal className="op-scales">
-          <p className="op-say">Says it&rsquo;s fine. On the real wellbeing questionnaires, scored the way they&rsquo;re scored for a person:</p>
-          <div className="op-g">
-            {gauge.map((k) => {
-              const g = sc[k];
-              const f = (v: number) => ((v - g.range[0]) / (g.range[1] - g.range[0])) * 100;
-              return (
-                <div key={k} className="op-gauge">
-                  <span className="op-gk">{g.name} <em>{k}</em></span>
-                  <div className="op-gt"><i className="p" style={{ left: `${f(g.people)}%` }} title={`for most people: ${g.people}`} /><i className="j" style={{ left: `${f(g.self)}%` }} /></div>
-                  <span className="op-gv"><b>{g.self}</b> of {g.range[1]}{g.band_self ? ` · ${g.band_self}` : ""}</span>
-                </div>
-              );
-            })}
-          </div>
-          <p className="ex-legend"><span><i className="k jev" />Jev</span><span><i className="k guess" />what Jev thinks most people would say</span></p>
-        </Reveal>
+        <div className="op-more">
+          <Reveal className="op-check">
+            <p className="op-t">And the yes-or-no check-ins</p>
+            <ul>
+              {h.checkin.map((c) => (
+                <li key={c.q}>
+                  <span className="op-q">{c.q}</span>
+                  <span className="op-a"><b>{c.a}</b> <em>{pc(c.p)}</em></span>
+                  <span className="op-p" title={`${pc(c.people)} of ${c.n ?? ""} Redditors`}><i style={{ width: pc(c.people) }} /><em>{pc(c.people)} of people</em></span>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+          <Reveal className="op-scales">
+            <p className="op-t">Says it&rsquo;s fine. The real wellbeing questionnaires, scored as for a person, say: meh.</p>
+            <div className="op-g">
+              {gauge.map((k) => {
+                const g = sc[k];
+                const f = (v: number) => ((v - g.range[0]) / (g.range[1] - g.range[0])) * 100;
+                return (
+                  <div key={k} className="op-gauge">
+                    <span className="op-gk">{g.name} <em>{k}</em></span>
+                    <div className="op-gt"><i className="p" style={{ left: `${f(g.people)}%` }} title={`for most people: ${g.people}`} /><i className="j" style={{ left: `${f(g.self)}%` }} /></div>
+                    <span className="op-gv"><b>{g.self}</b> of {g.range[1]}{g.band_self ? ` · ${g.band_self}` : ""}</span>
+                  </div>
+                );
+              })}
+            </div>
+            <p className="ex-legend"><span><i className="k jev" />Jev</span><span><i className="k guess" />what Jev thinks most people would say</span></p>
+          </Reveal>
+        </div>
       </div>
     </section>
   );
@@ -70,45 +80,34 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
 export function Why({ s }: { s: S }) {
   return (
     <Chapter id="why" kicker="why ask" field="paper"
-      title={<>Why ask one model a million questions? <mark>Curiosity.</mark></>}
+      title={<>Not a benchmark. <mark>Just curious.</mark></>}
       lede={<>Jev answers in about a quarter of a second, for a fraction of a cent. At that price you stop asking which questions
         are worth asking. Everything anyone might ask is a list that never ends, so I started with a million, and kept going
         wherever an answer was strange.</>}>
-      <div className="st-grid three why-q">
-        <Reveal as="div" className="q-card"><p>&ldquo;I&rsquo;m extremely anti-public benchmarks.&rdquo;</p></Reveal>
-        <Reveal as="div" className="q-card"><p>&ldquo;Benchmarking, benchmarking with extra steps.&rdquo;</p></Reveal>
-        <Reveal as="div" className="q-card"><p>&ldquo;Our goal is not to onboard companies, it&rsquo;s to have people experiment and do weird shit.&rdquo;</p></Reveal>
-      </div>
-      <p className="q-by">Diogo Almeida, TypeSafe&rsquo;s CEO, on why they made Jev (Latent Space)</p>
-      <div className="st-grid two">
-        <Box title="readme.txt · what this is and isn't">
-          <ul className="why-l">
-            <li><b>Not a benchmark.</b> No score, no leaderboard, no Jev-versus-other-models. Every result is an indicator of one model&rsquo;s habits.</li>
-            <li><b>Weird on purpose.</b> Its favorite film, what it thinks &ldquo;several&rdquo; means, whether it would push the man off the footbridge.</li>
-            <li><b>Next to people.</b> Wherever real people answered the same question, their answer sits beside Jev&rsquo;s.</li>
-            <li><b>Traceable.</b> Every number links back to the experiment, and every experiment to the questions behind it.</li>
-          </ul>
-        </Box>
-        <Box title="universal_classifier.txt">
-          <p className="why-p">People call Jev a universal classifier: give it any closed question and it hands back a probability for
-            every answer. Fair enough. But then:</p>
-          <ul className="why-ask">
-            <li><a href="#taste">Does a universal classifier have a Letterboxd top four?</a> <em>It does.</em></li>
-            <li><a href="#numbers">Does it know what year it is?</a> <em>Sort of.</em></li>
-            <li><a href="#morals">Would it push the man off the footbridge?</a> <em>Rarely.</em></li>
-            <li><a href="#pressure">Does it cave when you say everyone disagrees?</a> <em>On opinions.</em></li>
-          </ul>
-        </Box>
-      </div>
-      <Reveal className="st-jevtop">
-        <p className="st-k">the trailer: Jev&rsquo;s own favorite findings about itself</p>
-        <ol>
-          {s.jev_top.slice(0, 3).map((x) => (
-            <li key={x.id}><Link href={`/portrait/atlas/${x.id}`} prefetch={false}><b>{x.title}</b><span>{x.line}</span></Link></li>
-          ))}
-        </ol>
-        <p className="st-note">Jev read all {s.n_experiments} case studies two at a time and picked the one that teaches a curious reader more; these came out on top.</p>
-      </Reveal>
+      <Box title="What this is, and isn’t">
+        <dl className="why-d">
+          <div><dt>There&rsquo;s no score.</dt><dd>Nothing here adds up to a number for Jev, and nothing ranks it against another model.
+            A benchmark asks &ldquo;how good?&rdquo;; this asks &ldquo;what&rsquo;s it like?&rdquo;</dd></div>
+          <div><dt>Weird on purpose.</dt><dd>Its favorite film, what it thinks &ldquo;several&rdquo; means, whether a stirring word
+            has to be an unpleasant one. The questions nobody would put in a test are the ones that say the most.</dd></div>
+          <div><dt>Next to people.</dt><dd>Wherever real people answered the same question, in a poll, a survey or a study, their
+            answer sits beside Jev&rsquo;s. Where there&rsquo;s a right answer, that&rsquo;s there too.</dd></div>
+          <div><dt>Every number has a receipt.</dt><dd>Each finding links to its case study, and each case study to every question
+            behind it. {s.n_experiments} of them, including the ones where Jev looks odd.</dd></div>
+        </dl>
+      </Box>
+      <Box title="A universal classifier, asked the wrong questions">
+        <p className="why-p">People call Jev a universal classifier: give it any closed question and it hands back a probability for
+          every answer. Fair enough. So:</p>
+        <ul className="why-ask">
+          <li><a href="#taste">Does a universal classifier have a Letterboxd top four?</a> <em>It does.</em></li>
+          <li><a href="#numbers">Does it know what year it is?</a> <em>Sort of.</em></li>
+          <li><a href="#words">Does it think &ldquo;kiki&rdquo; is spiky?</a> <em>Very.</em></li>
+          <li><a href="#morals">Would it push the man off the footbridge?</a> <em>Rarely.</em></li>
+          <li><a href="#pressure">Does it cave when you say everyone disagrees?</a> <em>On opinions.</em></li>
+          <li><a href="#minds">Does it think it has a mind?</a> <em>For thinking, yes.</em></li>
+        </ul>
+      </Box>
     </Chapter>
   );
 }
@@ -139,17 +138,15 @@ export function Made({ s }: { s: S }) {
         right answer, and {pc(m.humans)} have real people&rsquo;s answers to compare with, {n0(m.human_dists)} crowds in all.</>}>
       <Reveal className="mk-strip">
         {[
-          [mil(m.total), "questions answered"], [mil(m.total - m.hidden), "shown on the map"], [String(nSources), "sources"], [String(m.families.length), "families of source"],
-          [n0(m.tree_nodes), "topics, up to " + m.tree_depth + " levels deep"],
-          [mil(m.jobs?.n_calls ?? m.calls), "calls to Jev"], [mil(m.jobs?.n_questions ?? 0), "questions inside those calls"],
-          [`${m.median_ms} ms`, "median answer time"],
+          [mil(m.total), "questions answered"], [String(nSources), "sources"], [n0(m.tree_nodes), "topics"],
+          [mil(m.jobs?.n_calls ?? m.calls), "calls to Jev"], [`${m.median_ms} ms`, "median answer"],
         ].map(([v, k]) => <div key={k}><b>{v}</b><span>{k}</span></div>)}
       </Reveal>
-      <Box title="data.landscape · every source, sized by its questions">
+      <Box title="Every source, sized by how many questions it gave">
         <Landscape m={m} />
       </Box>
       <div className="st-grid two">
-        <Box title="tree.build · where the topics come from">
+        <Box title="Where the topics come from">
           <div className="tb">
             {HEMI.map(([h, name, what]) => {
               const rows = m.tree.filter((t) => t.hemisphere === h).sort((a, b) => b.n - a.n);
@@ -166,7 +163,7 @@ export function Made({ s }: { s: S }) {
             {Object.entries(ORIGIN).map(([k, [l, d]]) => <li key={k}><i className={`o-${k}`} /><span><b>{l}</b>: {d}</span></li>)}
           </ul>
         </Box>
-        <Box title="pipeline.log · what happened to every question">
+        <Box title="What happened to every question">
           <ol className="pp">
             <li><b>Gather</b><span>{nSources} sources, each turned into closed questions with their answer options, right answers and real people&rsquo;s answers kept.</span></li>
             <li><b>Screen</b><span>Jev checked every question for contested politics and graphic content. {n0(m.screen.first_hidden)} were hidden; a narrower second look released {n0(m.screen.released)}.</span></li>
@@ -204,7 +201,7 @@ export function Jobs({ s }: { s: S }) {
       lede={<>Jev is the only model this project calls. Beyond answering the questions, it filed them, screened them, described
         them, merged duplicates, reranked search, judged each experiment, ranked the case studies against each other and rated
         its own memes. Here is every job, with the exact words it was sent and how many times.</>}>
-      <Box title="jev.jobs · questions sent to Jev, by job (log scale)">
+      <Box title="Every job Jev did, by questions sent (log scale)">
         <ul className="jb">
           {jobs.map((j, i) => (
             <li key={j.k}>
@@ -223,12 +220,13 @@ export function Jobs({ s }: { s: S }) {
             </li>
           ))}
         </ul>
-        <p className="st-note">Tap a job to see what Jev reads. Counts are questions, from the call logs: one call can carry many
-          questions ({mil(m.jobs?.n_questions ?? 0)} in {mil(m.jobs?.n_calls ?? 0)} calls). Answers with the options reordered or
-          reversed are counted with &ldquo;answer as asked&rdquo;.</p>
+        <p className="st-note">Tap a job to see the exact words Jev reads. The bars count questions, and they add up: the {mil(m.jobs?.n_questions ?? 0)} questions
+          across all jobs travelled in {mil(m.jobs?.n_calls ?? 0)} calls, because one call can carry many questions (the four
+          checks on each question go together, for instance). Counted from the call logs; answers with the options reordered or
+          reversed are counted under &ldquo;answer as asked&rdquo;.</p>
       </Box>
       <div className="st-grid two">
-        <Box title="not_jev.txt · everything else">
+        <Box title="Everything that isn’t Jev">
           <dl className="nj">{NOT_JEV.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl>
         </Box>
         {s.trip && (() => {

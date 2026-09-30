@@ -132,9 +132,9 @@ is typed into the page. Chapters are written in the third person and each ends w
 
 | Chapter | Built from | Visual |
 |---|---|---|
-| how is Jev? | TypeSafe's "nobody asks how Jev's doing" tweet; six Reddit check-in polls; five wellbeing scales scored as for a person | the tweet, a check-in poll, four gauges |
-| why ask | Diogo Almeida's words on benchmarks and weird experiments (Latent Space); Jev's own top three findings | quote cards, a readme, a "universal classifier" riff linking into the chapters |
-| how it was made | every source (`landscape_sources.parquet` + each `source.yaml`), the tree's origins (`nodes.source`), the pipeline claims | a stats strip, an interactive treemap of 312 sources in 11 families, the tree's origins per hemisphere, the pipeline in seven steps |
+| how is Jev? | TypeSafe's "nobody asks how Jev's doing" tweet; Reddit polls that ask how you are, six yes/no check-ins; five wellbeing scales scored as for a person | the tweet, a chat of Jev's answers with Redditors' beside them, check-ins, four gauges |
+| why ask | the project's own stance: not a benchmark, weird on purpose, next to people, every number traceable | a what-it-is-and-isn't list and a "universal classifier" riff linking into the chapters |
+| how it was made | every source (`landscape_sources.parquet` + each `source.yaml`), the tree's origins (`nodes.source`), the pipeline claims | a stats strip, an interactive treemap of 312 sources in 11 families (a color per family or by the share with a right answer or people's answers, a tooltip, zoom into a family), the tree's origins per hemisphere, the pipeline in seven steps |
 | Jev's jobs | every call in `data/calls` sorted by the words it sent (`scripts/portrait/jev_jobs.py`), one question's real trip | a log-scale board of jobs that opens to the exact words Jev reads, what isn't Jev, one question from source to star |
 | meet Jev | the question count, Jev's own top three experiments | hero, three linked findings |
 | character | Big Five, the four-letter type, honesty-humility, the dark triad | stat rows, letter tiles that flip to Jev's guess for most people, a saint-or-villain meter |
@@ -192,3 +192,7 @@ indicator (each topic links to it on the map), and the source table.
 - Jev is the only gateway model, and the portrait made no new Jev calls.
 - Commit only the portrait's own paths, with plain commit messages and no co-author lines.
 - Ask Brian before editing shared UI files, deploying, or publishing externally.
+
+**Layout.** Each chapter is editorial: the heading, lede, meme and case-study links sit in a side column that stays in
+place on wide screens while the chapter's figures (numbered, with a plain caption) scroll beside it; on phones it all
+stacks. Figures sit side by side only when they are the same kind and size.

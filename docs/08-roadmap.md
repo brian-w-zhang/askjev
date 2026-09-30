@@ -65,7 +65,7 @@
 | 2026-09-28 | **Moral Machine thinned for display** to 1,000 per topic (4,031 of 26,020 shown; the rest hidden with the `thinned` flag, not deleted, `scripts/thin_source.py`): one template filled in 26k ways crowded its topics; its four topics renamed "Self-Driving Car: …" |
 | 2026-09-28 | The site is **open, no site key** (`SITE_KEY` unset): Brian shares the link with TypeSafe directly instead of a keyed link |
 | 2026-09-29 | **Portrait rebuilt as chapters from the experiments** (`11-portrait.md` §7, The story): character, taste with pictures, words, numbers, morals, pressure, minds and rough edges, each a custom visual with links to its case studies; third person; numbers copied from result files by `story.py`; the Wrapped-style summary is gone |
-| 2026-09-29 | **Framing: curiosity, not a benchmark.** The portrait opens with TypeSafe's "nobody asks how Jev's doing" tweet and Jev's answers, then why ask (Diogo on public benchmarks and weird experiments), how the data was gathered (a source treemap, the tree's origins, the pipeline) and every job Jev does (counted from the call logs); the README leads the same way |
+| 2026-09-29 | **Framing: curiosity, not a benchmark.** The portrait opens with TypeSafe's "nobody asks how Jev's doing" tweet and Jev's answers, then why ask (the stance in the project's own words: not a benchmark, just curious), how the data was gathered (a source treemap, the tree's origins, the pipeline) and every job Jev does (counted from the call logs); the README leads the same way |
 
 ## M0: Setup
 - [x] Docs, resources (transcript, Notion pages, full TypeSafe docs archive + digest)

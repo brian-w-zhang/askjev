@@ -48,6 +48,7 @@ export type Story = {
     ambiguity: VS; links: ExLink[];
   };
   howdy: {
+    direct: { id: string; q: string; a: string; p: number; people_same: number; people_top: string | null; people_top_p: number | null; n: number | null }[];
     checkin: { q: string; a: string; p: number; people: number; n: number | null }[];
     scales: Record<string, { name: string; items: number; range: [number, number]; self: number; people: number; reversed: number | null; band_self: string; band_people: string }>;
   };
