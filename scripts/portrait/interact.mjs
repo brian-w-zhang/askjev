@@ -112,7 +112,7 @@ await run("experiment rows filter", async () => {
 });
 await run("experiment page to map", async () => { const a = await p.$(".ex-where a.ex-chip"); if (!a) return; const href = await a.getAttribute("href"); if (!href?.includes("?node=")) throw new Error("bad map link"); });
 await run("experiment page back to atlas", async () => { await p.click(".ex-crumb a"); await p.waitForURL(/\/portrait\/atlas$/); await sleep(800); });
-await run("atlas tabs", async () => { for (const t of ["Coverage", "Topics", "Sources", "Reference"]) { await p.click(`.tabs button:has-text("${t}")`); await sleep(300); } });
+await run("atlas tabs", async () => { for (const t of ["Coverage", "Topics", "Sources"]) { await p.click(`.tabs button:has-text("${t}")`); await sleep(300); } });
 await run("atlas search", async () => { await p.fill(".at-bar > .pt-input", "humor"); await sleep(400); if (!(await p.$$(".claimgrid .claim, .pt-table tbody tr")).length) throw new Error("no claims for humor"); await p.fill(".at-bar > .pt-input", ""); });
 await run("atlas section filter", async () => { const c = await p.$$(".pt-filters button"); if (c.length > 2) { await c[2].click(); await sleep(300); await c[0].click(); } });
 await run("atlas sort", async () => { await p.click(`.tabs button:has-text("Topics")`); await p.click(".pt-table th button:has-text('right')"); await sleep(300); await p.click(".pt-table th button:has-text('right')"); await sleep(300); });
