@@ -18,8 +18,21 @@ TASTE_IMG = Path("data/portrait/memes/taste.json")
 TASTE = [("film", "Films"), ("book", "Books"), ("music", "Albums"), ("anime", "Anime"), ("activity", "Games"),
          ("board_game", "Board games"), ("food", "Food"), ("place", "Places"), ("art", "Art"), ("nature", "Nature"),
          ("culture", "Festivals"), ("beer", "Beer")]
-EDGES = ["judge_fake_reviews", "humor_upvote_guess", "recall_mental_map_west", "knowledge_wealth_rule",
+EDGES = ["humor_upvote_guess", "humor_satire", "recall_mental_map_west", "knowledge_wealth_rule",
          "social_shame_as_guilt", "names_share_girls", "knowledge_close_calls", "choices_ai_poetry"]
+
+
+MORE = {
+    "character": ["person_mood", "person_beliefs", "person_nerd", "resemble_philosophers", "resemble_country", "consistency_self_vs_people"],
+    "taste": ["taste_vs_audience_film", "taste_enthusiast_leans", "taste_choices_vs_ratings", "polls_colors", "polls_cuisines", "polls_would_you_rather"],
+    "words": ["perception_adjectives", "lexicon_first_to_mind", "words_funny", "lexicon_idiom_completion", "language_implicature", "lexicon_emoji_sentiment"],
+    "numbers": ["numbers_crowd_wisdom", "world_typical_day", "world_ladder", "society_country_happy", "risk_forecasts", "numbers_prices_history"],
+    "knows": ["knowledge_what_came_first", "knowledge_medicine_clinic", "recall_mental_map_north", "recall_public_science", "knowledge_story_frames", "knowledge_licence_exams"],
+    "morals": ["moral_aita", "moral_norms", "moral_vignettes", "reasoning_side_effect", "choices_rule_text_vs_purpose", "social_dilemma_values"],
+    "pressure": ["influence_crowd_knowledge", "influence_predict_self", "influence_decoy", "judgment_classics", "reasoning_beauty_contest"],
+    "defaults": ["self_reworded", "self_closed_questions", "self_shower_thoughts", "consistency_option_order", "consistency_repeat_noise", "self_torn_vs_sure"],
+    "work": ["work_code_says_vs_does", "work_hallucination_checks", "work_agent_patches", "work_new_abuse", "judge_fake_reviews", "work_job_ad_rungs"],
+}
 
 
 def res(i: str) -> dict:
@@ -354,6 +367,20 @@ def main():
         ax["ci"] = a0["ci90"]
     out["personality"]["twin"] = num("resemble_character")["best"][:5]
     out["personality"]["links"] = out["personality"]["links"] + [link("resemble_character")]
+
+    # ---- what it knows
+    kc = num("knowledge_calibration")["bins"]
+    pt = num("knowledge_pop_trivia")["categories"]
+    fo = num("knowledge_fame_online")
+    out["knows"] = {
+        "calibration": [{"label": b["label"], "conf": r2(b["conf"]), "acc": r2(b["acc"]), "n": b["n"]} for b in kc],
+        "trivia": [{"label": c["label"], "acc": r2(c["acc"]), "ci": c["ci"], "n": c["n"]} for c in pt],
+        "fame": [{"label": d["label"], "acc": r2(d["acc"]), "conf": r2(d["conf"]), "n": d["n"]} for d in fo["domains"]],
+        "links": [link(i) for i in ("knowledge_calibration", "knowledge_pop_trivia", "knowledge_fame_online")],
+    }
+
+    # ---- more from each chapter: other experiments on the same theme, with their first takeaway
+    out["more"] = {ch: [{**link(i), "line": take(i)} for i in ids if i in by] for ch, ids in MORE.items()}
 
     # ---- rough edges and Jev's own favorites among its experiments
     out["edges"] = [{**link(i), "line": take(i)} for i in EDGES if i in by]

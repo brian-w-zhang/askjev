@@ -77,47 +77,30 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
 }
 
 /* ---------------------------------------------------------------- 02 why ask */
-export function Why({ s }: { s: S }) {
+export function Why() {
   return (
     <Chapter id="why" kicker="why ask" field="paper"
-      title={<>Jev can&rsquo;t answer open questions. <mark>So I asked a million closed ones.</mark></>}
-      lede={<>Jev only answers closed questions: yes or no, pick one, rate on a scale. You can&rsquo;t ask it what it&rsquo;s like.
-        But you can ask it enough small things, its favorite film, what &ldquo;several&rdquo; means, whether it would pull the
-        lever, that an answer to the open question starts to show. At a quarter of a second and a fraction of a cent per answer,
-        there was no reason to stop at a few.</>}>
+      title={<>Jev only answers closed questions. <mark>So I asked a lot of them.</mark></>}
+      lede={<>Yes or no, pick one, rate it. That&rsquo;s all Jev does, so you can&rsquo;t just ask what it&rsquo;s like. Ask it a
+        million small things instead, and a picture starts to show.</>}>
       <Box title="What this is, and isn’t">
         <dl className="why-d">
-          <div><dt>Not a benchmark.</dt><dd>Nothing here adds up to a score, and nothing ranks Jev against another model. A benchmark
-            asks how good a model is; this asks what it&rsquo;s like.</dd></div>
-          <div><dt>Curious, and a little weird.</dt><dd>The questions nobody would put in a test, its taste, its temperament, what it
-            assumes about people, often say the most.</dd></div>
-          <div><dt>Next to people.</dt><dd>Wherever real people answered the same question, in a poll, a survey or a published study,
-            their answer sits beside Jev&rsquo;s. Where there&rsquo;s a right answer, that&rsquo;s there too.</dd></div>
-          <div><dt>Not the final word.</dt><dd>These are first looks, not settled findings. Each rests on one set of questions, one way
-            of asking and one crowd of people, and some could be explained by the method as much as by Jev. Every claim links to its
-            case study, which spells out where the data came from and what could bias it. Read those before quoting anything.</dd></div>
+          <div><dt>Not a score.</dt><dd>No benchmark, no leaderboard, no Jev versus other models. Just what it&rsquo;s like.</dd></div>
+          <div><dt>Next to people.</dt><dd>Where real people answered the same question, their answer sits beside Jev&rsquo;s.</dd></div>
+          <div><dt>First looks.</dt><dd>Each finding rests on one set of questions and one way of asking. Every chart links to its case
+            study, which says where the data came from and what could skew it. Read that before quoting anything.</dd></div>
         </dl>
-      </Box>
-      <Box title="The method, in one breath">
-        <ol className="mth">
-          <li><b>Gather</b> closed questions from {s.methods.families.reduce((a, f) => a + f.sources.length, 0)} sources, keeping real people&rsquo;s answers and right answers wherever they exist.</li>
-          <li><b>File</b> each one on a tree of topics, with Jev doing the filing.</li>
-          <li><b>Ask</b> Jev each question four ways: as written, for &ldquo;most people&rdquo;, with the options reordered and with scales reversed.</li>
-          <li><b>Compare</b> in {s.n_experiments} experiments, each a set of questions chosen to test one thing, against people or a right answer.</li>
-          <li><b>Write up</b> every experiment as a case study, with its caveats and every question behind it.</li>
-        </ol>
-        <p className="st-note">The next two chapters show each step in detail.</p>
       </Box>
     </Chapter>
   );
 }
 
-/* ---------------------------------------------------------------- 03 how it was made */
+/* ---------------------------------------------------------------- 03 the data */
 const ORIGIN: Record<string, [string, string]> = {
-  vital: ["Wikipedia", "Vital Articles, Wikipedia's own list of the topics an encyclopedia must cover, with Wikidata entities below them"],
-  hand: ["written by hand", "the top levels, the Self side from published personality and values instruments, the Machine side from TypeSafe's own use cases"],
-  grown: ["grown by Jev", "crowded topics split into subtopics, with Jev assigning each question to one"],
-  experiments: ["for experiments", "small topics added so an experiment's questions have a home"],
+  vital: ["Wikipedia", "its Vital Articles, the topics an encyclopedia has to cover"],
+  hand: ["by hand", "the top levels, the Self side from published tests, the Machine side from TypeSafe's use cases"],
+  grown: ["grown by Jev", "crowded topics split in two, with Jev sorting the questions"],
+  experiments: ["for experiments", "small topics so an experiment's questions have a home"],
 };
 const HEMI: [string, string, string][] = [
   ["world", "The World", "things, places, events, ideas"],
@@ -128,112 +111,116 @@ const HEMI: [string, string, string][] = [
 export function Made({ s }: { s: S }) {
   const m = s.methods;
   const nSources = m.families.reduce((a, f) => a + f.sources.length, 0);
-  const pl = m.placement;
-  const jevWalk = (pl.jev ?? 0) + (pl.jev_fast ?? 0);
   return (
-    <Chapter id="made" kicker="how it was made" field="sage"
-      title={<>{mil(m.total)} questions, {nSources} sources, one tree</>}
-      lede={<>Before any experiment, the questions had to come from somewhere real and land somewhere sensible. {pc(m.real)} come
-        from real data; the rest were written for this project and kept only if they passed a blind test. {pc(m.truth)} have a
-        right answer, and {pc(m.humans)} have real people&rsquo;s answers to compare with, {n0(m.human_dists)} crowds in all.</>}>
+    <Chapter id="made" kicker="the data" field="sage"
+      title={<>A million questions from {nSources} places</>}
+      lede={<>Polls, personality tests, trivia, labeled work data, questions people really asked online. {pc(m.real)} come from
+        real data; the rest were written for this project and kept only if Jev filed them where they belonged. {pc(m.truth)} have
+        a right answer, and {pc(m.humans)} have real people&rsquo;s answers to compare with.</>}>
       <Reveal className="mk-strip">
         {[
-          [mil(m.total), "questions answered"], [String(nSources), "sources"], [n0(m.tree_nodes), "topics"],
-          [mil(m.jobs?.n_calls ?? m.calls), "calls to Jev"], [`${m.median_ms} ms`, "median answer"],
+          [mil(m.total), "questions"], [String(nSources), "sources"], [n0(m.tree_nodes), "topics"],
+          [mil(m.jobs?.n_calls ?? m.calls), "calls to Jev"], [`${m.median_ms} ms`, "per answer"],
         ].map(([v, k]) => <div key={k}><b>{v}</b><span>{k}</span></div>)}
       </Reveal>
       <Box title="Every source, sized by how many questions it gave">
         <Landscape m={m} />
       </Box>
-      <div className="st-grid two">
-        <Box title="Where the topics come from">
-          <div className="tb">
-            {HEMI.map(([h, name, what]) => {
-              const rows = m.tree.filter((t) => t.hemisphere === h).sort((a, b) => b.n - a.n);
-              const tot = rows.reduce((a, r) => a + r.n, 0);
-              return (
-                <div key={h} className="tb-h">
-                  <p><b>{name}</b> <em>{n0(tot)} topics</em><br /><span>{what}</span></p>
-                  <div className="tb-bar">{rows.map((r) => <i key={r.source} className={`o-${r.source}`} style={{ width: pc(r.n / tot) }} title={`${ORIGIN[r.source]?.[0] ?? r.source}: ${r.n}`} />)}</div>
-                </div>
-              );
-            })}
-          </div>
-          <ul className="tb-key">
-            {Object.entries(ORIGIN).map(([k, [l, d]]) => <li key={k}><i className={`o-${k}`} /><span><b>{l}</b>: {d}</span></li>)}
-          </ul>
-        </Box>
-        <Box title="What happened to every question">
-          <ol className="pp">
-            <li><b>Gather</b><span>{nSources} sources, each turned into closed questions with their answer options, right answers and real people&rsquo;s answers kept.</span></li>
-            <li><b>Screen</b><span>Jev checked every question for contested politics and graphic content. {n0(m.screen.first_hidden)} were hidden; a narrower second look released {n0(m.screen.released)}.</span></li>
-            <li><b>Place</b><span>{n0(jevWalk)} questions Jev filed itself, walking the tree from the top; the rest followed their source&rsquo;s own labels{m.placement_eval ? ` (the walk: ${m.placement_eval.split(" (")[0]})` : ""}.</span></li>
-            <li><b>Test the written ones</b><span>Of {n0(m.round_trip.n)} questions written for the project, Jev, not told where they belonged, sent {pc(m.round_trip.kept)} back to the right topic. The rest were dropped.</span></li>
-            <li><b>Answer, four ways</b><span>As asked, for &ldquo;most people&rdquo;, with the options reordered, and with rating scales turned upside down.</span></li>
-            <li><b>Merge</b><span>{n0(m.dedupe)} near-identical questions folded into their originals.</span></li>
-            <li><b>Experiment</b><span>{s.n_experiments} experiments gathered the answers into things to learn, each written up as a case study.</span></li>
-          </ol>
-        </Box>
-      </div>
-      <p className="st-note mk-note">Calls to Jev ran from {m.first_call} to {m.last_call}. Every call is cached by the exact request and never sent twice.</p>
+      <Box title="Where the topics come from">
+        <div className="tb">
+          {HEMI.map(([h, name, what]) => {
+            const rows = m.tree.filter((t) => t.hemisphere === h).sort((a, b) => b.n - a.n);
+            const tot = rows.reduce((a, r) => a + r.n, 0);
+            return (
+              <div key={h} className="tb-h">
+                <p><b>{name}</b> <em>{n0(tot)} topics</em> <span>· {what}</span></p>
+                <div className="tb-bar">{rows.map((r) => <i key={r.source} className={`o-${r.source}`} style={{ width: pc(r.n / tot) }} title={`${ORIGIN[r.source]?.[0] ?? r.source}: ${r.n}`} />)}</div>
+              </div>
+            );
+          })}
+        </div>
+        <ul className="tb-key">
+          {Object.entries(ORIGIN).map(([k, [l, d]]) => <li key={k}><i className={`o-${k}`} /><span><b>{l}</b>: {d}</span></li>)}
+        </ul>
+      </Box>
     </Chapter>
   );
 }
 
-/* ---------------------------------------------------------------- 04 Jev's jobs */
-const NOT_JEV: [string, string][] = [
-  ["Claude Opus 5.5", "wrote the synthetic questions where no dataset existed, the topic descriptions, the case studies and the meme captions, with me editing"],
-  ["bge-small, run locally", "turns every question and topic into an embedding, to find similar questions for search and duplicates, the nearest topics for a quick filing, and the map's layout by meaning"],
-  ["Postgres with pgvector", "stores every question, answer, crowd, embedding and call"],
-  ["Python", "the pipeline: sources, screening, filing, answering, experiments"],
-  ["Next.js and three.js", "this site, and the map with every question drawn as a star"],
-  ["Vercel", "hosting, the AI Gateway every call to Jev goes through, and private storage for the results"],
+/* ---------------------------------------------------------------- 04 Jev, all the way down */
+const PRIM: Record<string, string> = { choice: "pick one", noul: "yes/no", score: "rate" };
+const prims = (t: string) => t.split(/\s*[·+]\s*/).map((x) => x.trim()).map((x) => (x === "yes/no" ? "yes/no" : x === "scale" ? "rate" : x === "choice" ? "pick one" : PRIM[x] ?? x));
+type Node = { job?: string; label: string; code?: boolean; n?: number; note?: string };
+const LAYERS: { name: string; reads: string; nodes: Node[] }[] = [
+  { name: "Gather", reads: "public datasets, polls and tests", nodes: [{ label: "turn each source into closed questions", code: true, note: "Python, one adapter per source" }] },
+  { name: "Read", reads: "each question", nodes: [{ job: "screen for politics and sensitive content", label: "screen it" }, { job: "flag known weak spots", label: "flag weak spots" }, { job: "describe each question", label: "describe it" }] },
+  { name: "File", reads: "each question and the tree", nodes: [{ job: "place a question on the tree", label: "walk it down the tree" }, { job: "check for duplicates", label: "catch duplicates" }] },
+  { name: "Answer", reads: "each question", nodes: [{ job: "answer as asked", label: "answer it" }, { job: "answer for most people", label: "answer for most people" }] },
+  { name: "Compare", reads: "thousands of Jev's answers", nodes: [{ label: "gather answers into 192 experiments", code: true, note: "code, against people or a right answer" }] },
+  { name: "Judge", reads: "case studies about Jev", nodes: [{ job: "judge an experiment", label: "judge each experiment" }, { job: "rank experiments head to head", label: "rank them, two at a time" }] },
+  { name: "Laugh", reads: "memes about those case studies", nodes: [{ job: "rate a meme", label: "rate each meme" }] },
 ];
-const GROUPS: [string, string[]][] = [
-  ["Building the map", ["describe each question", "screen for politics and sensitive content", "flag known weak spots", "place a question on the tree", "check for duplicates"]],
-  ["Answering", ["answer as asked", "answer for most people"]],
-  ["Judging its own experiments", ["judge an experiment", "rank experiments head to head", "rate a meme"]],
-  ["On the site", ["rerank search results"]],
+const NOT_JEV: [string, string][] = [
+  ["Claude Opus 5.5", "wrote the synthetic questions, topic descriptions, case studies and meme captions"],
+  ["bge-small, local", "embeddings: similar questions for search and duplicates, nearest topics, the map's layout"],
+  ["Postgres + pgvector", "every question, answer, crowd and call"],
+  ["Next.js + three.js", "this site and the star map"],
+  ["Vercel", "hosting, and the AI Gateway every call to Jev goes through"],
 ];
 
 export function Jobs({ s }: { s: S }) {
   const m = s.methods;
   const q = m.jobs?.questions ?? {};
   const all = Object.values(q).reduce((a, n) => a + n, 0);
-  const max = Math.log10(Math.max(...Object.values(q), 10));
+  const t = s.trip;
   return (
-    <Chapter id="jobs" kicker="Jev's jobs" field="teal"
+    <Chapter id="jobs" kicker="all the way down" field="teal"
       title={<>Jev, studying Jev</>}
-      lede={<>Jev is the only model this project calls, so it did most of the work of studying itself: it filed the questions,
-        screened them, answered them, judged the experiments about it, and even rated the memes on this page.</>}>
-      <Box title="Every job Jev did, with the words it was sent and how many questions">
-        <div className="jt">
-          {GROUPS.map(([g, keys]) => (
-            <div key={g} className="jt-g">
-              <p className="jt-h">{g}</p>
-              {keys.filter((k) => m.job_info[k]).map((k) => {
-                const n = q[k] ?? 0, j = m.job_info[k];
-                return (
-                  <div key={k} className="jt-r">
-                    <div className="jt-k"><b>{k}</b><span>{j.what}</span></div>
-                    <p className="jt-ask">&ldquo;{j.ask}&rdquo;</p>
-                    <div className="jt-n"><b>{n0(n)}</b><i style={{ width: `${Math.max(3, (Math.log10(Math.max(n, 1)) / max) * 100)}%` }} /></div>
-                  </div>
-                );
-              })}
-            </div>
+      lede={<>Everything here is built from small calls to Jev, each one typed, each stacked on the last. It read and filed the
+        questions, answered them, judged the experiments made from its answers, then rated the memes about those experiments.</>}>
+      <Box title="Seven layers, top to bottom: what Jev reads at each one, and how many times it was asked">
+        <ol className="lay">
+          {LAYERS.map((L, k) => (
+            <li key={L.name} className="lay-l">
+              <div className="lay-h"><b>{k}</b><span>{L.name}</span><em>reads {L.reads}</em></div>
+              <div className="lay-n">
+                {L.nodes.map((n) => {
+                  const info = n.job ? m.job_info[n.job] : null;
+                  const cnt = n.job ? q[n.job] ?? 0 : null;
+                  return (
+                    <div key={n.label} className={`lay-c${n.code ? " code" : ""}`} tabIndex={0}>
+                      <div className="lay-t">
+                        {n.code ? <i className="lay-p code">code</i> : prims(info?.type ?? "").map((p) => <i key={p} className="lay-p">{p}</i>)}
+                        {cnt !== null && <span className="lay-cnt">{mil(cnt)}</span>}
+                      </div>
+                      <b>{n.label}</b>
+                      {info ? <p className="lay-ask">&ldquo;{info.ask}&rdquo;</p> : <p className="lay-ask">{n.note}</p>}
+                    </div>
+                  );
+                })}
+              </div>
+            </li>
           ))}
-          <div className="jt-r jt-tot">
-            <div className="jt-k"><b>all jobs</b><span>questions travel in batches, so these went out in {n0(m.jobs?.n_calls ?? 0)} calls</span></div>
-            <p className="jt-ask" />
-            <div className="jt-n"><b>{n0(all)}</b></div>
-          </div>
-        </div>
-        <p className="st-note">Counted from the log of every call. The counts are questions: they add up to the total, and one call carries
-          many (the four checks on a question go together). Answers with the options reordered or reversed count as &ldquo;answer as
-          asked&rdquo;. Bars are on a log scale so the small jobs show.</p>
+        </ol>
+        <p className="st-note">Counts are questions sent to Jev, from the log of every call: {mil(all)} in all, carried in {mil(m.jobs?.n_calls ?? 0)} calls
+          because one call can hold many questions. Search on the map adds one more job: Jev picks the best match from the
+          candidates ({n0(q["rerank search results"] ?? 0)} so far).</p>
       </Box>
-      <Box title="Everything that isn’t Jev">
+      {t && (
+        <Box title="One layer, up close: filing a question is a chain of picks">
+          <div className="walk">
+            <p className="walk-q">&ldquo;{t.text}&rdquo;</p>
+            <ol>
+              {["Everything", ...t.path].map((p, k, a) => (
+                <li key={p} className={k === a.length - 1 ? "end" : ""}><span>{p}</span>{k < a.length - 1 && <i aria-hidden>↓</i>}</li>
+              ))}
+            </ol>
+            <p className="st-note">Jev&rsquo;s full walk makes one &ldquo;pick one&rdquo; call per level, keeping its three best paths. This
+              question took the quick route instead: one pick among the nearest topics by embedding{t.confidence !== null ? `, ${pc(t.confidence)} sure` : ""}.</p>
+          </div>
+        </Box>
+      )}
+      <Box title="What isn’t Jev">
         <dl className="nj">{NOT_JEV.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl>
       </Box>
     </Chapter>

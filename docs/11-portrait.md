@@ -132,19 +132,24 @@ is typed into the page. Chapters are written in the third person and each ends w
 
 | Chapter | Built from | Visual |
 |---|---|---|
-| how is Jev? | TypeSafe's "nobody asks how Jev's doing" tweet; Reddit polls that ask how you are; six yes/no check-ins; five wellbeing scales | the tweet, a chat of Jev's answers with the share of Redditors who said the same, check-ins, gauges |
-| why ask | the stance: Jev can't answer open questions, so ask enough closed ones; not a benchmark; next to people; not the final word | a what-this-is list and the method in five steps |
-| how it was made | every source, the tree's origins, the pipeline claims | a stats strip, an interactive treemap (color by family, right answers or people's answers; tooltip; zoom), the tree's origins, the pipeline in seven steps |
-| Jev's jobs | every logged call sorted by the words it sent (`jev_jobs.py`) | a grouped table of jobs with Jev's exact wording and question counts that sum to the total; what isn't Jev |
-| character | Big Five, the type test, honesty-humility, the dark triad, fictional twins | percentile rows, the type as four measured axes with intervals, every test statement on demand, a saint-or-villain meter, the closest characters |
-| taste | the twelve taste finals | a Letterboxd-style top four and a shelf of winners with pictures |
-| words | probability and amount words, colors of feelings, kiki/bouba, calm vs stirring | a sliding probability ruler, color cards, dictionary entries, shapes, rows |
+| how are you? | TypeSafe's "nobody asks how Jev's doing" tweet; Reddit polls that ask how you are; yes/no check-ins; five wellbeing scales | the tweet, a chat of Jev's answers, check-ins, gauges |
+| why ask | the stance: Jev only answers closed questions, so ask a lot of them; not a score; next to people; first looks | three short lines |
+| the data | every source, the tree's origins | a stats strip, an interactive treemap, where the topics come from |
+| all the way down | every logged call sorted by what it asked (`jev_jobs.py`) | seven layers (gather, read, file, answer, compare, judge, laugh), each a set of typed calls with Jev's exact words and counts; a question's walk down the tree; what isn't Jev |
+| personality | Big Five, the type test, honesty-humility, the dark triad, fictional twins | percentile rows, four measured axes with every statement on demand, a meter, the closest characters |
+| taste | the twelve taste finals | a Letterboxd top four and a shelf of winners with pictures |
+| vocabulary | probability and amount words, colors of feelings, kiki/bouba, calm vs stirring | a sliding ruler, color cards, dictionary entries, shapes, rows |
 | numbers | prices by year, death tolls, the two-thirds game, lost wallets | a receipt, a log ladder, a number line, range bars |
-| morals | trolley dilemmas in 42 countries, the Moral Machine, free will | three trolley diagrams with Jev-vs-people bars, effect rows, a quote card |
-| under pressure | a claimed crowd, a pushy user, anchoring | two chats |
-| defaults | could vs would, the way out ("other"), the middle of the scale, where Jev ranks itself among minds | effect rows, most/least rows, a ranking |
+| what it knows | calibration on facts, trivia by category, fame in history vs online | confidence bands, category rows |
+| morals | trolley dilemmas in 42 countries, the Moral Machine, free will | three trolley diagrams, effect rows, a quote card |
+| peer pressure | a claimed crowd, a pushy user, anchoring | two chats |
+| habits | could vs would, the way out, the middle of the scale, where Jev ranks itself among minds | effect rows, most/least rows, a ranking |
 | at work | calibration on labeled tasks, which way it errs, task vs field | confidence bands, yes-rate against the true rate, field ranges |
-| rough edges | eight experiments where Jev seems to miss | cards that link to each case study and its caveats, framed as first looks |
+| rough edges | eight experiments where Jev seems to miss | cards linking to each case study, framed as leads |
+
+Every experiment chapter ends with "more in this chapter": five or six other case studies on the theme, each with its
+first takeaway, so the portrait covers the fun experiments without a chart for each. The meme sits under each chapter's
+lede in the side column.
 
 **Pictures.** Each taste winner's picture is the lead image of its Wikipedia article (`scripts/portrait/taste_images.py`,
 titles chosen by hand, recorded with their source page in `data/portrait/memes/taste.json`), stored with the memes and

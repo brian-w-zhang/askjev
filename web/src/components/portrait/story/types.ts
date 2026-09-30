@@ -66,6 +66,12 @@ export type Story = {
     fields: { label: string; value: number; lo: { name: string; value: number }; hi: { name: string; value: number } }[];
     links: ExLink[];
   };
+  knows: {
+    calibration: { label: string; conf: number; acc: number; n: number }[];
+    trivia: { label: string; acc: number; ci: number[]; n: number }[];
+    fame: { label: string; acc: number; conf: number; n: number }[]; links: ExLink[];
+  };
+  more?: Record<string, (ExLink & { line: string })[]>;
   edges: (ExLink & { line: string })[];
   jev_top: (ExLink & { line: string })[];
   memes: Record<string, ExperimentMeme>;
