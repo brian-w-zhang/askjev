@@ -19,6 +19,9 @@ CUT = {
     "work_option_order": "duplicate of consistency_option_order",
     "choices_fair_frames": "the question screen hid one side of every framing pair, so no contrast can be computed",
     "taste_intransitive": "its loops came from a bug (options matched by position); corrected as taste_choices_vs_ratings",
+    "knowledge_heard_of": "page views measure what people look up, not what they've heard of: everyday words ('luck', "
+                          "'doubt') are known to all and rarely read, while Nauru or the Navier-Stokes equations are read "
+                          "by a curious few, so the comparison can't say whether Jev is right",
 }
 
 EXPERIMENTS = []

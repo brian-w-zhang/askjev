@@ -69,6 +69,7 @@ After the five experiments on data already here (`reading_characters`, `knowledg
 `work_money_news_mood`, `social_tweet_emotions`, `moral_ethics_labels`), 68% of shown questions sit in a topic
 experiment and 96% of those with a right answer or real people's answers do. Nearly all that remains has nothing to
 compare Jev with: the banks written for this project (mostly Self), closed questions scraped from Stack Exchange,
-Quora, Yahoo Answers and WildChat, the vital-article judgments (awaiting page-view data for `knowledge_heard_of`),
+Quora, Yahoo Answers and WildChat, the vital-article judgments (`knowledge_heard_of` was tried against Wikipedia page views and cut: views measure what
+people look up, not what they've heard of),
 the "greatest of all time" pairs (fame does not predict Jev's picks, 52%, so no experiment) and the O*NET
 activities. Covering them takes new human data: `research-3.md`.

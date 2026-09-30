@@ -369,7 +369,7 @@ supports at the bar the evaluator holds, not a target:
 | [`reading_writer_vs_readers`](reading_writer_vs_readers.md) | When someone describes an event from their life, does Jev name the emotion they actually felt, or the one other readers guess, and how often do those differ? | 551 | 598 | keep |
 | [`reading_event_appraisals`](reading_event_appraisals.md) | From someone's account of an event in their life, how well does Jev judge how pleasant and sudden it was and who was responsible, compared with the writer's own ratings and with other readers'? | 561 | 600 | keep |
 
-## Cut (8)
+## Cut (9)
 
 - `person_self_regard`: no gap clears the noise on any of its four scales
 - `person_empathy`: no gap clears the noise (empathizing, systemizing)
@@ -379,5 +379,6 @@ supports at the bar the evaluator holds, not a target:
 - `work_option_order`: duplicate of consistency_option_order
 - `choices_fair_frames`: the question screen hid one side of every framing pair, so no contrast can be computed
 - `taste_intransitive`: its loops came from a bug (options matched by position); corrected as taste_choices_vs_ratings
+- `knowledge_heard_of`: page views measure what people look up, not what they've heard of: everyday words ('luck', 'doubt') are known to all and rarely read, while Nauru or the Navier-Stokes equations are read by a curious few, so the comparison can't say whether Jev is right
 
 Other docs here: `evaluator.md` (the self-evaluator and its meta-evaluation), `coverage.md` (the internal coverage pass), `research-2.md` (the second outside research pass).
