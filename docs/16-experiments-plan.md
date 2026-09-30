@@ -137,8 +137,9 @@ a full distribution and identical requests are cached); variety comes from wordi
 - **Atlas becomes the experiments library:** an index of experiment cards (title, one-line result, thumbnail chart,
   verdict, interest, family, data source), filters and search; an experiment page per id showing the question, why
   it matters, the sourcing and coverage, the questions asked (with examples), the scoring method, the result, the
-  chart, robustness, the evaluator's verdict, fine print, the real rows, and links to the map. The old per-topic
-  numbers become a reference tab.
+  chart, robustness, the evaluator's verdict, fine print, the real rows, and links to the map. A Coverage tab shows,
+  per branch and topic, how much of it the experiments use (`scripts/experiments/coverage.py`), which is where the
+  next experiments should go. The old per-topic claims are retired.
 - **Portrait:** a double-digit highlight reel of Brian's favorite experiments. It stays unchanged until he picks from
   the `portrait`/`headline` experiments; the summary lists the candidates ranked.
 

@@ -20,6 +20,7 @@ from export_page import row  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import cases  # noqa: E402
+import coverage  # noqa: E402
 import memes  # noqa: E402
 
 A = Path("data/analysis")
@@ -134,8 +135,10 @@ def main():
     # every question behind each result, for the paged rows (served privately next to experiments.json)
     RD = A / "experiment_rows"
     RD.mkdir(exist_ok=True)
+    used = {}
     for e in exps:
         order = row_order(e, shown)
+        used[e["spec"]["id"]] = [i for i, _ in order]
         (RD / f"{e['spec']['id']}.json").write_text(json.dumps(order, separators=(",", ":")))
         x = next(o for o in out if o["id"] == e["spec"]["id"])
         x["n_rows"] = len(order)
@@ -178,7 +181,9 @@ def main():
     (OUT / "_portrait_candidates.json").write_text(json.dumps(
         [{"rank": i + 1, "id": c, **{k: next(x for x in out if x["id"] == c)[k] for k in ("family", "title", "result")}}
          for i, c in enumerate(cands[:30])], indent=1))
-    data = {"experiments": out, "families": FAMILY}
+    # how much of every tree branch the experiments use (the atlas's Coverage tab)
+    cov = coverage.build(shown, used, {x["id"]: x["title"] for x in out}, labels)
+    data = {"experiments": out, "families": FAMILY, "coverage": cov}
     (A / "experiments.json").write_text(json.dumps(data, separators=(",", ":"), default=str))
     print(f"{len(out)} experiments, {len(rows)} example rows -> {A / 'experiments.json'} "
           f"({(A / 'experiments.json').stat().st_size / 1e6:.1f} MB)")

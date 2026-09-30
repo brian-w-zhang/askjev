@@ -41,6 +41,10 @@ supports at the bar the evaluator holds, not a target:
 - **New questions only where an experiment needed them:** {newexp} experiments rest on {nsrc} new sources, each a
   published human dataset asked the way the study asked it (`sources/<name>`, license recorded).
 - **Jev's verdicts:** {verdicts}.
+- **Coverage is measured, not guessed:** `coverage.py` counts, for every branch of the tree, how much of it an
+  experiment about that topic uses (the atlas's Coverage tab). Nearly every question with a right answer or real
+  people's answers is now in one; what's left is mostly questions with nothing to compare Jev with (question banks
+  written for this project, closed questions scraped from Q&A sites), which need new human data, not more slices.
 - **Not yet:** frequency words (no open item-level human data), ATUS happiness by activity (BLS blocks scripted
   downloads), old/rich/soon (published means only), Small World of Words (license); see `research-2.md` and
   `coverage.md` for the rest of the queue. Thousands would need many more human datasets per family, not more

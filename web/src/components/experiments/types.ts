@@ -26,7 +26,19 @@ export type Experiment = {
   meme?: ExperimentMeme;
   take?: Take;
 };
-export type ExperimentsData = { experiments: Experiment[]; families: Record<string, string> };
+export type ExperimentsData = { experiments: Experiment[]; families: Record<string, string>; coverage?: Coverage };
+// How much of each tree branch the experiments use (scripts/experiments/coverage.py). Counts are shown questions:
+// topic = used by an experiment about that topic; cross_only = used only by one that sweeps the corpus; comparable =
+// has a right answer or real people's answers.
+export type CoverageNode = {
+  id: string; label: string; n: number; topic: number; cross_only: number; comparable: number; n_exps: number;
+  exps: { id: string; title: string; n: number }[];
+};
+export type CoverageBranch = CoverageNode & { topics: CoverageNode[] };
+export type Coverage = {
+  total: Omit<CoverageNode, "id" | "label">; cross: string[];
+  hemispheres: (CoverageNode & { branches: CoverageBranch[] })[];
+};
 // The index needs only the card fields; charts go along as small thumbnails.
 export type ExperimentCard = Pick<Experiment, "id" | "family" | "family_label" | "title" | "result" | "n" | "new_questions" | "n_rows" | "evaluation" | "portrait_rank"> & {
   chart: Chart; jev: JevMetrics | null; line: string;

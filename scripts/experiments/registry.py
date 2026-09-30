@@ -7,7 +7,7 @@ from pathlib import Path
 
 FAMILIES = ["fam_taste", "fam_person", "fam_resemble", "fam_moral", "fam_humor", "fam_judge", "fam_risk",
             "fam_knowledge", "fam_social", "fam_words", "fam_work", "fam_polls", "fam_consistency", "fam_self",
-            "fam_perception", "fam_numbers", "fam_minds", "fam_reasoning", "fam_influence", "fam_world", "fam_language", "fam_lexicon", "fam_society", "fam_choices", "fam_recall", "fam_taste2", "fam_self2", "fam_work2", "fam_reading"]
+            "fam_perception", "fam_numbers", "fam_minds", "fam_reasoning", "fam_influence", "fam_world", "fam_language", "fam_lexicon", "fam_society", "fam_choices", "fam_recall", "fam_taste2", "fam_self2", "fam_work2", "fam_reading", "fam_gaps"]
 
 # Cut in the rework pass (docs/16 step 6): the reason stays on record; the experiment no longer runs.
 CUT = {

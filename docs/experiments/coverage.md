@@ -57,3 +57,18 @@ Per-source table: `data/analysis/experiments/_coverage_sources.csv` (private).
   vs its own guess, and compared with real audiences where they exist.
 - **Nine Moral Machine rows, 127 task rows, 30 knowledge rows, 14 agreement rows:** merged into one experiment each
   per family, with the rows as its chart.
+
+## Measured coverage (2026-09-30)
+`scripts/experiments/coverage.py` now measures this instead of estimating it, on every `export.py` run, and the atlas's
+Coverage tab shows it per branch and topic. A question counts as covered when an experiment about its topic uses it;
+corpus-wide experiments (calibration, option order, repeat noise, self vs people, torn vs sure, closed-question lean)
+are counted apart, since they touch nearly everything. `work_which_way_it_errs` and `work_task_not_domain` sweep every
+work task but report each task, so they count as covering them.
+
+After the five experiments on data already here (`reading_characters`, `knowledge_exam_subjects`,
+`work_money_news_mood`, `social_tweet_emotions`, `moral_ethics_labels`), 68% of shown questions sit in a topic
+experiment and 96% of those with a right answer or real people's answers do. Nearly all that remains has nothing to
+compare Jev with: the banks written for this project (mostly Self), closed questions scraped from Stack Exchange,
+Quora, Yahoo Answers and WildChat, the vital-article judgments (awaiting page-view data for `knowledge_heard_of`),
+the "greatest of all time" pairs (fame does not predict Jev's picks, 52%, so no experiment) and the O*NET
+activities. Covering them takes new human data: `research-3.md`.

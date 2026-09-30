@@ -2,7 +2,7 @@
 
 `/portrait` is one long page in the askjev web app, readable in 15-20 minutes, about what the full answered corpus
 (1,091,643 questions, 3.8M probes) says about Jev. `/portrait/atlas` holds every experiment (`16-experiments-plan.md`,
-`experiments/`), and, for reference, the old per-topic claims, every topic's indicators and every source. This doc is the method: how the numbers are made, how the page is built, and how to regenerate both.
+`experiments/`), how much of each topic they cover, every topic's indicators and every source. This doc is the method: how the numbers are made, how the page is built, and how to regenerate both.
 
 Read first: `CLAUDE.md`, `01-jev.md` (§6: documented jaggedness is labeled as known, never as a discovery),
 `03-questions.md`, `05-experiments.md`, `07-ui.md` ("Look").
@@ -179,9 +179,11 @@ The data is `data/analysis/experiments.json` (private, from `scripts/experiments
 `portrait.json` by `publish.py`); charts come from one library (`components/experiments/Chart.tsx`) that draws each
 chart type full size or as a thumbnail.
 
-The other tabs are reference: the old per-topic claims (the ledger, filter by section), a **coverage** table (what a
-human self-portrait or census asks about, and whether this corpus covers it for Jev), the node cards sortable by any
-indicator (each topic links to it on the map), and the source table.
+The other tabs: **Coverage** (every branch and topic of the tree with the share of its questions an experiment about
+that topic uses, the share only corpus-wide experiments use, the share that has a right answer or real people's answers,
+and the experiments most focused on it; computed by `scripts/experiments/coverage.py` on every export), the node cards
+sortable by any indicator (each topic links to it on the map), and the source table. The heading, description and
+figures follow the open tab, and `?tab=` opens one directly. The old per-topic claims are no longer shown.
 
 ## 9. Verification
 - `verify_page.py` pulls every number from the rendered page and checks it against `portrait.json` in every format the
