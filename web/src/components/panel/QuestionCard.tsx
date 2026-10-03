@@ -73,7 +73,7 @@ export function QuestionCard({ id, note, onClose }: { id: string; note?: string;
   }, [d, frame]);
 
   if (err) return <div className="panel-body"><p className="err">{err}</p></div>;
-  if (!d || !view) return <div className="panel-body"><div className="working"><span className="spinner" />Loading question</div></div>;
+  if (!d || !view) return <><Crumbs items={[]} onClose={onClose} /><div className="panel-body"><div className="working"><span className="spinner" />Loading question</div></div></>;
 
   const { question: q, meta } = d;
   const isSelf = q.hemisphere === "self";

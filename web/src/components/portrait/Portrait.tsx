@@ -18,7 +18,7 @@ import "./story/story.css";
 type CFn = (id: string) => PortraitData["claims"][string];
 const pct = (v: number) => `${Math.round(v * 100)}%`;
 
-export default function Portrait({ d, showIds = false }: { d: PortraitData; showIds?: boolean }) {
+export default function Portrait({ d }: { d: PortraitData }) {
   const C: CFn = (id) => d.claims[id];
   const fam = C("landscape_families");
   const total: number = fam.n;
@@ -36,7 +36,7 @@ export default function Portrait({ d, showIds = false }: { d: PortraitData; show
       <Nav here="portrait" />
       <ChapterRail chapters={chapters} />
       <Story s={d.story} nQuestions={shown} />
-      <Card id="limits" field="paper" c={COPY.limits} showId={showIds}>
+      <Card id="limits" field="paper" c={COPY.limits}>
         <ol className="limits">{LIMITS.map((l) => <li key={l}>{fill(l, common)}</li>)}</ol>
       </Card>
       <section id="closer" className="card" data-f="ink">

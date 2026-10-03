@@ -144,6 +144,8 @@ Production, median of 3 cold loads at 1440 px (`scripts/portrait/vitals.mjs`):
 
 **Left**
 - `THREE.Clock` deprecation warning from @react-three/fiber (fixed only by an upstream release).
-- Cold map API latency (`/api/layout` 12 s, `/api/node` 2 s before the edge cache warms): the map session's code.
+- Cold map API latency: `/api/node` no longer counts a million rows on a cold function (counts come from the star
+  snapshot), the panel opens before its data, and the dots are cached by browsers (docs/07-ui.md, Deployment).
+  `scripts/portrait/perf.mjs` times first dots, topic and dot clicks, and nav switches on a desktop and a phone.
 - GitHub builds need Brian to link GitHub in Vercel (the deploy session's open item); deploys run from this machine.
 - A stories mode (tap-through cards) can wrap the same cards later.

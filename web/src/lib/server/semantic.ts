@@ -1,6 +1,6 @@
 import "server-only";
 import { q } from "./db";
-import { remoteSemantic, stars } from "./stars";
+import { remoteSemantic, starVersion } from "./stars";
 
 // Node positions for the "semantic" nebula layout (docs/07-ui.md, Layouts): each node's mean question
 // embedding, projected to 3D so topics that ask similar things sit near each other whatever their branch.
@@ -12,15 +12,16 @@ const EPOCHS = 400;
 const NEG = 5;
 
 type V3 = [number, number, number];
-let cache: { mtime: number; out: Promise<Record<string, V3>> } | null = null;
+let cache: { version: string; out: Promise<Record<string, V3>> } | null = null;
 
 export async function semanticCoords(): Promise<Record<string, V3>> {
   const pre = await remoteSemantic();
   if (pre) return pre;
-  const { mtime } = await stars();
-  if (cache?.mtime !== mtime) {
-    cache = { mtime, out: compute() };
-    cache.out.catch(() => { cache = null; });
+  const version = await starVersion();
+  if (cache?.version !== version) {
+    const out = compute();
+    cache = { version, out };
+    out.catch(() => { if (cache?.out === out) cache = null; });
   }
   return cache.out;
 }

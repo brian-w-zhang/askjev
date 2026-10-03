@@ -1,7 +1,7 @@
 "use client";
 import { anim, lightMs, now, startLight } from "./anim";
 import { heat, heatJev } from "./heat";
-import { loadTexts, starData, starWorld } from "./stars";
+import { loadTexts, starData, starId, starWorld } from "./stars";
 import { ensurePath, filterQuery, loadSubtree, useStore, type PanelView } from "./store";
 import { flyTo, frameDist, home } from "@/components/scene/CameraRig";
 import type { SearchHit, TreeNode } from "./types";
@@ -71,7 +71,7 @@ let revealing: string | null = null;
  * its trail, mark its dot, and move the camera straight to the dot from wherever it is. The search journey does
  * the same with a slower, followed walk from the root; if it already landed here, this does nothing.
  */
-export async function revealQuestion(id: string, path: string[]) {
+export async function revealQuestion(id: string, path: string[], star?: number) {
   const node = last(path);
   if (!node || revealing === id) return;
   revealing = id;
@@ -80,7 +80,7 @@ export async function revealQuestion(id: string, path: string[]) {
     await ensurePath(path);
     lightPath(path);
     useStore.getState().set({ selected: node });
-    const i = await starIndex(node, id);
+    const i = star ?? await starIndex(node, id);
     if (i >= 0 && useStore.getState().focusStar !== i) await landOnStar(i, 1.0);
   } finally {
     if (revealing === id) revealing = null;
@@ -301,10 +301,11 @@ export async function openStar(i: number) {
   const d = starData();
   if (!d) return;
   const nodeId = d.nodeIds[d.node[i]];
-  const q = (await loadTexts(nodeId))[i - d.offsets.get(nodeId)![0]];
-  if (!q) return;
+  loadTexts(nodeId).catch(() => {}); // the sky labels around it (already here after a hover)
+  const id = await starId(i);
+  if (!id) return;
   useStore.getState().set({ hoverStar: -1 });
   // the card opens right away (its data was prefetched on hover) while the trail lights and the camera moves in
-  openQuestion(q.id);
-  await revealQuestion(q.id, ancestors(nodeId));
+  openQuestion(id);
+  await revealQuestion(id, ancestors(nodeId), i);
 }

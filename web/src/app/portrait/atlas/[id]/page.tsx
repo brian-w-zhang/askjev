@@ -13,6 +13,11 @@ import "@/components/experiments/experiments.css";
 // One experiment as a case study (docs/17, "Page structure"): the finding first (result and chart, in short, what the
 // data shows, what it means), then the caveats beside Jev's own answers about it, then why it was asked and how it was
 // done, where its questions live on the map, and every question behind it.
+// Every case study is built once per deploy, so it comes from the CDN; publish.py redeploys with new data.
+export async function generateStaticParams() {
+  return ((await loadExperiments())?.experiments ?? []).map((e) => ({ id: e.id }));
+}
+
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const e = (await loadExperiments())?.experiments.find((x) => x.id === id);

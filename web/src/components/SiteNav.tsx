@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect } from "react";
-import Link from "next/link";
 import { useStore } from "@/lib/store";
 import { openQuestion, selectNode, travel, resetView } from "@/lib/actions";
+import NavLink from "./NavLink";
 import "./SiteNav.css";
 
 // The map's links to the portrait and atlas: small white chips at the top, like typesafe.ai's nav (at the bottom on
@@ -56,8 +56,8 @@ export default function SiteNav() {
     <nav className="sitenav" aria-label="Site">
       {/* on the map, "Map" is the reset: clears the search and selection and flies home (as Esc does) */}
       <button className="snav here" aria-current="page" onClick={resetView} title="Reset the map view (Esc)">Map</button>
-      <Link className="snav" href="/portrait" prefetch={false}>Portrait</Link>
-      <Link className="snav" href="/portrait/atlas" prefetch={false}>Atlas</Link>
+      <NavLink className="snav" href="/portrait" idle>Portrait</NavLink>
+      <NavLink className="snav" href="/portrait/atlas" idle>Atlas</NavLink>
     </nav>
   );
 }

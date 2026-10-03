@@ -2,7 +2,7 @@ import type { NextRequest } from "next/server";
 import { q, toVector } from "@/lib/server/db";
 import { nearest, vectors, type Hit } from "@/lib/server/search";
 import { embed } from "@/lib/server/embed";
-import { starOf, stars } from "@/lib/server/stars";
+import { starIds, starOf, stars } from "@/lib/server/stars";
 
 // Rewordings of one question sit at cosine ≥ 0.95 to each other (e.g. "Is a hotdog a sandwich?" / "Are hot-dogs
 // sandwiches?" 0.95-0.99), while genuinely different questions next to them stay below ~0.93 ("…or taco?" 0.92).
@@ -43,12 +43,13 @@ export async function GET(req: NextRequest) {
   const t0 = performance.now();
   const vec = toVector(await embed(text));
   const t1 = performance.now();
-  const [cands, nodes, snap] = await Promise.all([
+  const [cands, nodes, snap, starIdList] = await Promise.all([
     nearest(vec, hidden, 40),
     q<{ id: string; label: string; hemisphere: string; sim: number }>(
       `select id, label, hemisphere, 1 - (embedding <=> $1::vector) as sim from nodes
         where status = 'active' and embedding is not null order by embedding <=> $1::vector limit 5`, [vec]),
     stars(), // each result's dot, so the map can light it as you type
+    starIds(),
   ]);
 
   // group rewordings (and same-text variants with different options) under the best-matching one, greedily
@@ -95,7 +96,7 @@ export async function GET(req: NextRequest) {
       // agreement only across true rewordings: same-text variants have different options, so their answers differ by design
       const tops = [lead, ...more.filter((h) => norm(h.text) !== norm(lead.text))].map((h) => answers.get(h.id)?.top).filter((t): t is string => t != null);
       return {
-        ...lead, score: lead.sim, star: starOf(snap, lead.node_id, lead.id), path: pathOf.get(lead.node_id) ?? [],
+        ...lead, score: lead.sim, star: starOf(snap, starIdList, lead.node_id, lead.id), path: pathOf.get(lead.node_id) ?? [],
         answer: answers.get(lead.id)?.a ?? null,
         similar: more.map((h) => ({ id: h.id, text: h.text, variant: norm(h.text) === norm(lead.text) })),
         // do Jev's answers to the rewordings agree? (null: fewer than two answered)

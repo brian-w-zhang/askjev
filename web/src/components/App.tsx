@@ -1,7 +1,8 @@
 "use client";
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
-import { useStore } from "@/lib/store";
+import { loadSubtree, useStore } from "@/lib/store";
+import { loadStars } from "@/lib/stars";
 import { goBack, goForward, deselect, resetView } from "@/lib/actions";
 import { Search } from "./Search";
 import { Legend } from "./Tools";
@@ -18,6 +19,11 @@ export default function App() {
   const open = useStore((s) => s.panel.kind !== "none");
   const count = useStore((s) => Object.keys(s.nodes).length);
   const theme = useStore((s) => s.theme);
+  const starsReady = useStore((s) => s.starsReady);
+  // the whole tree and every dot, fetched while the 3D scene's code is still downloading, not after it
+  useEffect(() => {
+    Promise.all([loadSubtree("root", 12), loadStars()]).then(() => useStore.getState().set({ starsReady: true }));
+  }, []);
   useEffect(() => {
     document.body.classList.toggle("panel-open", open);
   }, [open]);
@@ -58,7 +64,7 @@ export default function App() {
   }, []);
   return (
     <main>
-      <div className="stage" data-testid="stage" data-nodes={count}>
+      <div className="stage" data-testid="stage" data-nodes={count} data-stars={starsReady}>
         <Scene />
       </div>
       <div className="topleft">

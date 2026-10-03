@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Atlas from "@/components/portrait/Atlas";
-import { TABS, type Tab } from "@/components/portrait/atlasTabs";
 import { loadPortrait } from "@/components/portrait/data";
 import { Nav } from "@/components/portrait/ui";
 import { loadExperiments } from "@/components/experiments/data";
@@ -24,10 +23,12 @@ function thumb(c: Chart): Chart {
   return t;
 }
 
-export default async function AtlasPage({ searchParams }: { searchParams: Promise<{ tab?: string | string[] }> }) {
-  const [d, x, sp] = await Promise.all([loadPortrait(), loadExperiments(), searchParams]);
-  const want = typeof sp.tab === "string" ? sp.tab : "";
-  const initial: Tab = (TABS as string[]).includes(want) ? (want as Tab) : "experiments";
+// Built once per deploy, like the portrait, so it comes from the CDN and nav links can fetch it ahead; the open tab
+// (?tab=) is read in the browser.
+export const dynamic = "force-static";
+
+export default async function AtlasPage() {
+  const [d, x] = await Promise.all([loadPortrait(), loadExperiments()]);
   const cards: ExperimentCard[] = (x?.experiments ?? []).map((e) => ({
     id: e.id, family: e.family, family_label: e.family_label, title: e.title, result: e.result, n: e.n,
     new_questions: e.new_questions, n_rows: e.n_rows ?? 0, evaluation: e.evaluation, portrait_rank: e.portrait_rank ?? null, chart: thumb(e.chart), jev: jevOf(e),
@@ -39,7 +40,7 @@ export default async function AtlasPage({ searchParams }: { searchParams: Promis
       <Nav here="atlas" />
       <section className="pt-field atlas-page" data-f="sage">
         {d || cards.length ? (
-          <Atlas initial={initial} nNodes={d?.nodes.length ?? 0} nSources={d?.sources.length ?? 0} nQuestions={nQuestions}
+          <Atlas nNodes={d?.nodes.length ?? 0} nSources={d?.sources.length ?? 0} nQuestions={nQuestions}
             experiments={cards} coverage={x?.coverage ?? null} />
         ) : <p className="at-empty">No data. Run scripts/experiments/export.py and scripts/portrait/export_page.py.</p>}
       </section>

@@ -8,14 +8,26 @@ import { NodeView } from "./NodeView";
 import { QuestionCard } from "./QuestionCard";
 import { AskBox } from "./AskBox";
 
+const SWAP_MS = 250;
+
 export function Panel() {
   const panel = useStore((s) => s.panel);
   const url = viewUrl(panel);
-  const ready = !url || peek(url) !== undefined;
-  // Stale-while-revalidate: the current view stays on screen until the next one's data is in (instantly
-  // when it's cached), so the panel never flashes a loading state or jumps in height between pages.
   const [shown, setShown] = useState<PanelView>(panel);
+  // A closed panel opens at once: each view draws what the map already knows (a topic's name, counts and
+  // indicators from the tree) while the rest loads. Moving between views while open is stale-while-revalidate: the
+  // current view stays until the next one's data is in (instantly when cached), so the panel doesn't flash a
+  // loading state between pages, but never for more than SWAP_MS, so a slow answer can't make a click feel ignored.
+  const [late, setLate] = useState<PanelView | null>(null);
+  // a topic the map has loaded draws its placeholder straight away (NodeView), so it never needs to wait
+  const known = useStore((s) => panel.kind === "node" && !!s.nodes[panel.id]);
+  const ready = !url || peek(url) !== undefined || shown.kind === "none" || late === panel || known;
   if (ready && shown !== panel) setShown(panel);
+  useEffect(() => {
+    if (ready) return;
+    const t = setTimeout(() => setLate(panel), SWAP_MS);
+    return () => clearTimeout(t);
+  }, [ready, panel]);
   // while sliding shut, keep drawing what was there
   const [content, setContent] = useState<PanelView>(panel);
   if (shown.kind !== "none" && shown !== content) setContent(shown);

@@ -6,6 +6,7 @@ import { useResource, prefetch } from "@/lib/cache";
 import { nodeUrl, questionUrl } from "@/lib/panelData";
 import { openQuestion, selectNode } from "@/lib/actions";
 import { attention, rampColor } from "@/lib/color";
+import { starData } from "@/lib/stars";
 import type { Indicator } from "@/lib/types";
 import { Crumbs } from "./Panel";
 
@@ -31,6 +32,37 @@ const IND: { k: Indicator | "fragile_share"; label: string; fmt: (v: number) => 
 const KIDS_SHOWN = 12;
 const KIND_COLORS = ["#4B5BD6", "#F386A1", "#E8663D", "#D45BB6", "#7D89E6", "var(--ink)", "#ABBAB9", "#E9A23B"];
 
+/**
+ * What the map already knows about a topic, so the panel can open on a click without waiting for the server: its
+ * name, description, indicators and subtopics from the loaded tree, and its shown questions counted from the dots.
+ * The question list (and the "not here" notes) fill in when the topic's data arrives.
+ */
+function fromTree(id: string): NodeData | undefined {
+  const s = useStore.getState();
+  const n = s.nodes[id];
+  if (!n) return undefined;
+  const ancestors: NodeData["ancestors"] = [];
+  for (let a: typeof n | undefined = n; a; a = a.parent_id ? s.nodes[a.parent_id] : undefined) ancestors.unshift({ id: a.id, label: a.label });
+  const d = starData();
+  let shown: number | undefined;
+  if (d) {
+    shown = 0;
+    for (const [nid, [, c]] of d.offsets) if (id === "root" || nid === id || nid.startsWith(id + ".")) shown += c;
+  }
+  const filtered = s.filters.kind || s.filters.primitive || s.filters.origin || s.showHidden;
+  return {
+    node: { id, label: n.label, description: n.description, not_for: null, examples: [], hemisphere: n.hemisphere, depth: n.depth, source: "", locked: false },
+    stats: [{ scope: "subtree", n_questions: n.n_questions, n_asked: n.n_asked, kind_counts: n.kind_counts, stability: n.stability, frame_gap: n.frame_gap,
+      human_gap: n.human_gap, calibration_ece: n.calibration_ece, placement_conf: n.placement_conf, fragile_share: n.fragile_share }],
+    ancestors,
+    children: (s.children[id] ?? []).map((c) => ({ id: c, label: s.nodes[c]?.label ?? c, n_questions: s.nodes[c]?.n_questions ?? 0 })),
+    questions: [],
+    total: filtered ? n.n_match ?? 0 : shown ?? n.n_questions,
+    next: null,
+    shown: shown ?? n.n_questions,
+  };
+}
+
 export function NodeView({ id, onClose }: { id: string; onClose: () => void }) {
   const filters = useStore((s) => s.filters);
   const showHidden = useStore((s) => s.showHidden);
@@ -40,7 +72,9 @@ export function NodeView({ id, onClose }: { id: string; onClose: () => void }) {
   // switching scope keeps the list on screen until the other one arrives
   const [last, setLast] = useState<NodeData | undefined>(fresh);
   if (fresh && fresh !== last) setLast(fresh);
-  const data = fresh ?? last;
+  const [stub] = useState(() => fromTree(id));
+  const data = fresh ?? last ?? stub;
+  const loading = !fresh && !last;
   const [extra, setExtra] = useState<{ url: string; qs: NodeData["questions"]; next: string | null | undefined }>({ url, qs: [], next: undefined });
   const [paging, setPaging] = useState<{ url: string; state: "loading" | "error" } | null>(null);
   const [allKids, setAllKids] = useState(false);
@@ -171,7 +205,8 @@ export function NodeView({ id, onClose }: { id: string; onClose: () => void }) {
               <button aria-pressed={scope === "direct"} onClick={() => setScope("direct")}>Here only</button>
             </span>
           </h4>
-          {qs.length === 0 && <p className="note">No questions here yet{filters.kind || filters.primitive || filters.origin ? " for these filters" : ""}. Use the ask box to add one.</p>}
+          {loading && <div className="working"><span className="spinner" />Loading questions</div>}
+          {!loading && qs.length === 0 && <p className="note">No questions here yet{filters.kind || filters.primitive || filters.origin ? " for these filters" : ""}. Use the ask box to add one.</p>}
           <div className="qlist">
             {qs.map((qq) => (
               <button key={qq.id} className="qitem" data-testid="question-item" onClick={() => openQuestion(qq.id)} onPointerEnter={() => prefetch(questionUrl(qq.id))}>

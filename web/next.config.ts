@@ -11,7 +11,8 @@ const nextConfig: NextConfig = {
   // serves repeats: most visits never reach a function or the database. Browsers still revalidate.
   async headers() {
     const edge = [{ key: "Cache-Control", value: "public, max-age=0, s-maxage=86400, stale-while-revalidate=604800" }];
-    return ["/api/tree", "/api/node/:id*", "/api/question/:id*", "/api/stars", "/api/stars/:path*", "/api/layout", "/api/search"].map((source) => ({ source, headers: edge }));
+    // (/api/stars sets its own: the star buffer, asked for by version, is kept by browsers too)
+    return ["/api/tree", "/api/node/:id*", "/api/question/:id*", "/api/stars/:path+", "/api/layout", "/api/search"].map((source) => ({ source, headers: edge }));
   },
   outputFileTracingIncludes: {
     // onnxruntime-node is loaded by a dynamic import the tracer can't follow, so it's listed explicitly

@@ -32,10 +32,9 @@ export function starData(): StarData | null {
 export function loadStars(): Promise<StarData> {
   if (loading) return loading;
   loading = (async () => {
-    const [idx, bin] = await Promise.all([
-      fetch("/api/stars").then((r) => r.json()) as Promise<{ nodes: [string, number, number][]; count: number }>,
-      fetch("/api/stars?bin=1").then((r) => r.arrayBuffer()),
-    ]);
+    // the index names the snapshot's version; the 12 MB of dots are asked for by it, so the browser keeps them
+    const idx = (await fetch("/api/stars").then((r) => r.json())) as { nodes: [string, number, number][]; count: number; version: string };
+    const bin = await fetch(`/api/stars?bin=1&v=${encodeURIComponent(idx.version)}`).then((r) => r.arrayBuffer());
     const n = idx.count;
     const dv = new DataView(bin);
     const d: StarData = {
@@ -88,6 +87,17 @@ export function loadTexts(nodeId: string): Promise<StarText[]> {
     p.catch(() => textLoads.delete(nodeId));
   }
   return p;
+}
+
+/** The question id of star i: from its node's texts when they're here, else one small lookup. */
+export async function starId(i: number): Promise<string | undefined> {
+  const t = starText(i);
+  if (t) return t.id;
+  const d = data!;
+  const nodeId = d.nodeIds[d.node[i]];
+  const k = i - d.offsets.get(nodeId)![0];
+  const r = await fetch(`/api/stars/text?node=${encodeURIComponent(nodeId)}&at=${k}`);
+  return r.ok ? ((await r.json()) as { id?: string }).id : undefined;
 }
 
 export function starText(i: number): StarText | undefined {

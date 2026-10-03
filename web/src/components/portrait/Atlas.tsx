@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useState } from "react";
 import type { NodeCard, SourceRow } from "./types";
 import ExperimentsIndex from "../experiments/Index";
 import Coverage from "./Coverage";
@@ -16,10 +16,15 @@ const fixed = (x: unknown, d = 2) => (typeof x === "number" ? x.toFixed(d) : "â€
 const num = (x: number) => x.toLocaleString("en-US");
 const share = (x: number, n: number) => `${Math.round((n ? x / n : 0) * 100)}%`;
 
-export default function Atlas({ initial, nNodes, nSources, nQuestions, experiments, coverage }: {
-  initial: Tab; nNodes: number; nSources: number; nQuestions: number; experiments: ExperimentCard[]; coverage: Cov | null;
+export default function Atlas({ nNodes, nSources, nQuestions, experiments, coverage }: {
+  nNodes: number; nSources: number; nQuestions: number; experiments: ExperimentCard[]; coverage: Cov | null;
 }) {
-  const [tab, setTab] = useState<Tab>(initial);
+  const [tab, setTab] = useState<Tab>("experiments");
+  // a link or reload with ?tab= opens on that tab (the page itself is static, so the address is read here)
+  useLayoutEffect(() => {
+    const want = new URLSearchParams(window.location.search).get("tab");
+    if (want && (TABS as string[]).includes(want)) setTab(want as Tab);
+  }, []);
   const [q, setQ] = useState("");
   const [sort, setSort] = useState<{ key: string; desc: boolean }>({ key: "n", desc: true });
   const [nodes, setNodes] = useState<NodeCard[] | null>(null);

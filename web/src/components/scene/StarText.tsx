@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { Vector3, type PerspectiveCamera } from "three";
 import { useStore } from "@/lib/store";
@@ -17,6 +17,7 @@ import type { Indicator } from "@/lib/types";
 const POOL = STAR_LABELS;
 const TEXT_PX = 90; // a node's ball must cover this radius on screen before its texts load
 const PICK_PX = 12; // ...and this much before its stars can be hovered one by one
+const TOUCH_PX = 22; // a fingertip covers more than a pointer
 const LABEL_PX = 16; // VT323 at 16px
 const CHARS_PER_LINE = 36;
 const MAX_CHARS = 90;
@@ -132,15 +133,39 @@ export function StarText() {
   return <StarPicker />;
 }
 
-/** Hover a star to read it; click to open its question card. */
+/** Hover a star to read it; click to open its question card. On a touch screen there's no hover: a tap picks the
+ * dot under the finger (with a finger's slop) and opens it, unless the tap landed on a topic, which opens that. */
 function StarPicker() {
   const { gl, camera, size } = useThree();
+  const get = useThree((s) => s.get);
   const mouse = useRef<{ x: number; y: number; dirty: boolean; down: [number, number] | null }>({ x: -1, y: -1, dirty: false, down: null });
   const v = useMemo(() => new Vector3(), []);
   const w: [number, number, number] = useMemo(() => [0, 0, 0], []);
+  // the star nearest canvas point (x, y), within `slop` pixels, or -1
+  const pick = useCallback((x: number, y: number, slop: number) => {
+    const d = starData();
+    if (!d || anim.flight || !introDone()) return -1;
+    const { camera: cam, size: sz } = get();
+    const t = now();
+    let best = -1;
+    let bestD = slop;
+    for (const { p, px, sx, sy } of nodesOnScreen(cam as PerspectiveCamera, sz.width, sz.height, PICK_PX, v)) {
+      if (Math.hypot(sx - x, sy - y) > px * 1.15 + slop) continue; // the point isn't over this ball
+      const off = d.offsets.get(p.id)!;
+      for (let i = off[0]; i < off[0] + off[1]; i++) {
+        starWorld(i, p, t, w);
+        v.set(w[0], w[1], w[2]).project(cam);
+        if (v.z > 1) continue;
+        const dd = Math.hypot(((v.x + 1) / 2) * sz.width - x, ((1 - v.y) / 2) * sz.height - y);
+        if (dd < bestD) { bestD = dd; best = i; }
+      }
+    }
+    return best;
+  }, [get, v, w]);
   useEffect(() => {
     const el = gl.domElement;
     const move = (e: PointerEvent) => {
+      if (e.pointerType !== "mouse") return; // a finger dragging the view isn't hovering
       const r = el.getBoundingClientRect();
       mouse.current.x = e.clientX - r.left;
       mouse.current.y = e.clientY - r.top;
@@ -151,10 +176,19 @@ function StarPicker() {
     const up = (e: PointerEvent) => {
       const dn = mouse.current.down;
       mouse.current.down = null;
-      if (!dn || Math.hypot(e.clientX - dn[0], e.clientY - dn[1]) > 5) return; // a drag, not a click
+      if (!dn || Math.hypot(e.clientX - dn[0], e.clientY - dn[1]) > (e.pointerType === "mouse" ? 5 : 10)) return; // a drag, not a click
       const s = useStore.getState();
-      if (s.hoverStar < 0 || s.hovered) return;
-      openStar(s.hoverStar);
+      if (e.pointerType === "mouse") {
+        if (s.hoverStar < 0 || s.hovered) return;
+        openStar(s.hoverStar);
+        return;
+      }
+      const r = el.getBoundingClientRect();
+      const i = pick(e.clientX - r.left, e.clientY - r.top, TOUCH_PX);
+      if (i < 0) return;
+      // the scene's own click handlers run on this same pointerup: if the tap opened a topic, leave it at that
+      const before = s.panel;
+      requestAnimationFrame(() => { if (useStore.getState().panel === before) openStar(i); });
     };
     el.addEventListener("pointermove", move);
     el.addEventListener("pointerleave", leave);
@@ -166,7 +200,7 @@ function StarPicker() {
       el.removeEventListener("pointerdown", down);
       el.removeEventListener("pointerup", up);
     };
-  }, [gl, w]);
+  }, [gl, pick]);
 
   useFrame(() => {
     const d = starData();
@@ -175,23 +209,7 @@ function StarPicker() {
     const m = mouse.current;
     if (d && m.dirty && !m.down) {
       m.dirty = false;
-      let best = -1;
-      let bestD = PICK_PX;
-      if (!s.hovered && !anim.flight && introDone()) {
-        for (const { p, px, sx, sy } of nodesOnScreen(camera as PerspectiveCamera, size.width, size.height, PICK_PX, v)) {
-          if (Math.hypot(sx - m.x, sy - m.y) > px * 1.15 + PICK_PX) continue; // pointer isn't over this ball
-          const off = d.offsets.get(p.id)!;
-          for (let i = off[0]; i < off[0] + off[1]; i++) {
-            starWorld(i, p, t, w);
-            v.set(w[0], w[1], w[2]).project(camera);
-            if (v.z > 1) continue;
-            const dx = ((v.x + 1) / 2) * size.width - m.x;
-            const dy = ((1 - v.y) / 2) * size.height - m.y;
-            const dd = Math.hypot(dx, dy);
-            if (dd < bestD) { bestD = dd; best = i; }
-          }
-        }
-      }
+      const best = s.hovered ? -1 : pick(m.x, m.y, PICK_PX);
       if (best !== s.hoverStar) s.set({ hoverStar: best });
       document.body.style.cursor = best >= 0 || s.hovered ? "pointer" : "";
     }

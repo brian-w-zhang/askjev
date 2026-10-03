@@ -1,13 +1,15 @@
-// Warm the embedding model, the Postgres pool and the search index at server start, so the first search is as
+// Warm the embedding model, the Postgres pool, the search index and the topic counts at server start, so the first search is as
 // fast as the rest (model load is ~0.7 s cold; a cold index read is ~0.5 s). Not on Vercel, where every route is
 // its own function: a tree or node request's cold start shouldn't load the model (only search's bundle has it).
 export async function register() {
   if (process.env.NEXT_RUNTIME !== "nodejs" || process.env.VERCEL) return;
-  const [{ embed }, { q, toVector }, { nearest }] = await Promise.all([
+  const [{ embed }, { q, toVector }, { nearest }, { counts }] = await Promise.all([
     import("./lib/server/embed"),
     import("./lib/server/db"),
     import("./lib/server/search"),
+    import("./lib/server/counts"),
   ]);
+  counts().catch(() => {}); // the topic panel's counts (~1 s on a cold local database)
   try {
     const v = toVector(await embed("warm up"));
     // the same queries a search runs, in parallel (questions, nodes)

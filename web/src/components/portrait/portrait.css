@@ -102,7 +102,9 @@
 .card[data-f="pink"] { --accent: rgba(243, 134, 161, 0.5); }
 .card[data-f="teal"] { --accent: rgba(9, 174, 161, 0.5); }
 .card[data-f="magenta"] { --accent: rgba(212, 91, 182, 0.5); }
-.card-id { position: absolute; top: 34px; left: 12px; font-family: var(--mono); font-size: 11px; background: #fff200; color: #1e1e1e; padding: 0 5px; z-index: 5; }
+/* shown with ?ids (app/layout.tsx marks the page) */
+:root[data-ids] .card-id { display: block; }
+.card-id { display: none; position: absolute; top: 34px; left: 12px; font-family: var(--mono); font-size: 11px; background: #fff200; color: #1e1e1e; padding: 0 5px; z-index: 5; }
 
 .card-in { width: 100%; max-width: 720px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px 40px; }
 .card-in.wide { max-width: 940px; }

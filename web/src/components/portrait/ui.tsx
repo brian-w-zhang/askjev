@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import Link from "next/link";
+import NavLink from "@/components/NavLink";
 import type { Claim, Row } from "./types";
 import type { CardCopy } from "./copy";
 import { int, pct } from "./fmt";
@@ -11,11 +11,11 @@ export type Field = "paper" | "pink" | "teal" | "sage" | "magenta" | "ink";
 export function Nav({ here }: { here: "portrait" | "atlas" }) {
   return (
     <nav className="pt-nav" aria-label="Portrait">
-      <div className="grp"><Link className="pt-chipnav brand" href="/" prefetch={false}>askjev</Link></div>
+      <div className="grp"><NavLink className="pt-chipnav brand" href="/">askjev</NavLink></div>
       <div className="grp">
-        <Link className="pt-chipnav" href="/" prefetch={false}>Map</Link>
-        <Link className="pt-chipnav" href="/portrait" prefetch={false} aria-current={here === "portrait" ? "page" : undefined}>Portrait</Link>
-        <Link className="pt-chipnav" href="/portrait/atlas" prefetch={false} aria-current={here === "atlas" ? "page" : undefined}>Atlas</Link>
+        <NavLink className="pt-chipnav" href="/" idle>Map</NavLink>
+        <NavLink className="pt-chipnav" href="/portrait" idle aria-current={here === "portrait" ? "page" : undefined}>Portrait</NavLink>
+        <NavLink className="pt-chipnav" href="/portrait/atlas" idle aria-current={here === "atlas" ? "page" : undefined}>Atlas</NavLink>
       </div>
       <ThemeToggle />
     </nav>
@@ -36,14 +36,14 @@ const TIER: Record<string, string> = {
 
 // One card: a full screen with a color field, the words from copy.ts, a visual, an optional aside (usually a meme),
 // the fine print, and the receipts (real rows, n, interval, ledger ids) behind a toggle.
-export function Card({ id, field = "paper", c, vars, big, children, aside, asideAt = "right", claims = [], rows, note, showId, wide }: {
+export function Card({ id, field = "paper", c, vars, big, children, aside, asideAt = "right", claims = [], rows, note, wide }: {
   id: string; field?: Field; c: CardCopy; vars?: Record<string, string | number>; big?: ReactNode; children?: ReactNode;
-  aside?: ReactNode; asideAt?: "right" | "below" | "left"; claims?: Claim[]; rows?: Row[]; note?: ReactNode; showId?: boolean; wide?: boolean;
+  aside?: ReactNode; asideAt?: "right" | "below" | "left"; claims?: Claim[]; rows?: Row[]; note?: ReactNode; wide?: boolean;
 }) {
   const c0 = claims[0];
   return (
     <section id={id} className="card" data-f={field}>
-      {showId && <span className="card-id">{id}</span>}
+      <span className="card-id">{id}</span>
       <div className={`card-in${aside ? ` has-aside at-${asideAt}` : ""}${wide ? " wide" : ""}`}>
         <div className="card-main">
           {c.kicker && <span className="pt-tag">{c.kicker}</span>}

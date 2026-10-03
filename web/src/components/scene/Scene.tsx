@@ -4,10 +4,10 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { THEMES } from "@/lib/theme";
 import { OrbitControls } from "@react-three/drei";
 import { EffectComposer } from "@react-three/postprocessing";
-import { useStore, loadSubtree, loadSemantic } from "@/lib/store";
+import { useStore, loadSemantic } from "@/lib/store";
 import { anim, BURST, fireworks, now } from "@/lib/anim";
 import { DEFAULT_LAYOUT, LAYOUT_KEY, LAYOUTS, layoutFor, type LayoutKind } from "@/lib/layout";
-import { loadStars, starData } from "@/lib/stars";
+import { starData } from "@/lib/stars";
 import { stepHeat } from "@/lib/heat";
 import { deselect, selectNode } from "@/lib/actions";
 import { Edges } from "./Edges";
@@ -100,7 +100,6 @@ export default function Scene() {
   }, [placed, ready, exact]);
 
   useEffect(() => {
-    Promise.all([loadSubtree("root", 12), loadStars()]).then(() => useStore.getState().set({ starsReady: true }));
     // a layout picked by ?layout= or last time (docs/07-ui.md, Layouts)
     let saved: string | null = new URLSearchParams(location.search).get("layout");
     try { saved ??= localStorage.getItem(LAYOUT_KEY); } catch {}
