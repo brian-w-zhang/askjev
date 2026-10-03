@@ -25,7 +25,7 @@ export type Story = {
     amounts: { phrase: string; jev: string; people: string }[];
     kiki: VS; bouba: VS; spread: number; n_shapes: number;
     colors: { feeling: string; jev: string; people: string }[];
-    exciting: ({ word: string } & VS)[]; hex: number; links: ExLink[];
+    stirring: ({ word: string } & VS)[]; hex: number; links: ExLink[];
   };
   numbers: {
     prices: { median_year: number; said_year: number; items: { item: string; year: number; lo?: number; hi?: number; now?: number | null }[] };

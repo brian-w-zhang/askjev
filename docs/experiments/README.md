@@ -158,7 +158,7 @@ supports at the bar the evaluator holds, not a target:
 
 | experiment | question | n | new | verdict |
 |---|---|---:|---:|---|
-| [`words_arousal_is_mood`](words_arousal_is_mood.md) | When Jev rates how calm or exciting a word feels, is it rating excitement, as people do, or just how pleasant the word is? | 468 |  | keep |
+| [`words_arousal_is_mood`](words_arousal_is_mood.md) | When Jev rates how calming or stirring a word feels, is it rating excitement, as people do, or just how pleasant the word is? | 468 |  | keep |
 | [`words_iconicity`](words_iconicity.md) | Asked how much a word sounds like what it means, does Jev hear the same links people do? | 2,488 |  | keep |
 | [`words_senses`](words_senses.md) | Asked how much it experiences each word through sight, hearing, touch, taste and smell, does Jev give the sensory profile people give? | 11,029 |  | keep |
 | [`words_sound_shapes`](words_sound_shapes.md) | Asked whether made-up words sound round or pointed, does Jev show the bouba/kiki effect people do, and how strongly? | 538 |  | keep |

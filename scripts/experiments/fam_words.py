@@ -98,13 +98,13 @@ def word_norms():
 
 def arousal():
     spec = Spec(
-        id="words_arousal_is_mood", family="words", title="To Jev, an exciting word is an unpleasant one",
-        question="When Jev rates how calm or exciting a word feels, is it rating excitement, as people do, or "
+        id="words_arousal_is_mood", family="words", title="To Jev, a stirring word is an unpleasant one",
+        question="When Jev rates how calming or stirring a word feels, is it rating excitement, as people do, or "
                  "just how pleasant the word is?",
         why="Psychologists separate valence (pleasant or not) from arousal (calm or exciting): 'cuddle' is pleasant "
             "and exciting, 'boredom' is unpleasant and calm. Mixing them up is a specific, checkable gap in how a "
             "model represents feeling.",
-        sourcing="Existing Glasgow Norms questions for the words rated on both pleasantness and calm vs exciting "
+        sourcing="Existing Glasgow Norms questions for the words rated on both pleasantness and calming/stirring "
                  "(the same word, both questions, one sense). Enough: 468 words with both, and 1,457 arousal ratings "
                  "overall.",
         scoring="Rank correlations among four numbers per word: Jev's and people's arousal, Jev's and people's "
@@ -113,10 +113,8 @@ def arousal():
         chart="A scatter of people's arousal (x) against Jev's (y), colored by people's pleasantness, with the "
               "largest misses labeled.",
         compared_with="Glasgow Norms raters (Scott et al. 2019)",
-        limits="The question Jev was asked says 'calming or stirring', and its levels are described with examples "
-               "('Calming: it feels sleepy or soothing, like a quiet evening'; 'Intensely stirring: it jolts you awake, "
-               "like danger, a thrill or a scream'). Pleasant examples at the calm end and alarming ones at the top may "
-               "pull Jev toward reading the scale as unpleasant vs pleasant. Mapping Jev's five levels onto 1-9 is "
+        limits="Jev's arousal levels are described with examples ('Calming: it feels sleepy or soothing, like a quiet "
+               "evening'), which may pull pleasant words toward the calm end. Mapping Jev's five levels onto 1-9 is "
                "linear and approximate.", sources=["glasgow_norms"])
 
     def run():
@@ -131,11 +129,11 @@ def arousal():
         calm = a.sort("gap").head(6).to_dicts()
         stir = a.sort("gap", descending=True).head(6).to_dicts()
         return Result(
-            result=f"For Jev, an exciting word is mostly an unpleasant one: its excitement ratings follow people's "
+            result=f"For Jev, a stirring word is mostly an unpleasant one: its excitement ratings follow people's "
                    f"pleasantness ratings in reverse (rank correlation {m['jev_ar_vs_h_va']:.2f}) about as much as "
                    f"people's own excitement ratings ({m['jev_ar_vs_h_ar']:.2f}), while for people pleasant words "
                    f"lean exciting ({m['h_ar_vs_h_va']:+.2f}). So it calls '{calm[0]['w']}' and '{calm[1]['w']}' calming "
-                   f"(people: exciting) and '{stir[0]['w']}' and '{stir[1]['w']}' intensely exciting (people: middling).",
+                   f"(people: stirring) and '{stir[0]['w']}' and '{stir[1]['w']}' intensely stirring (people: middling).",
             evidence=f"{w.height} words rated on both scales; {a.height:,} arousal ratings for the gap lists",
             numbers={**m, "calm_misses": calm, "stir_misses": stir, "n_both": w.height},
             chart={"type": "scatter", "points": w.select("h_calming", "jev_calming").to_numpy().round(3).tolist(),

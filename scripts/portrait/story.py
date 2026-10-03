@@ -222,7 +222,7 @@ def main():
         "bouba": {"jev": r2(ss["bouba_kiki"]["bouba"]["jev"], 2), "people": r2(ss["bouba_kiki"]["bouba"]["people"], 2)},
         "spread": r2(ss["sd_jev"] / ss["sd_people"], 1), "n_shapes": res("words_sound_shapes").get("n"),
         "colors": [{"feeling": e["item"], "jev": e["jev"], "people": e["people"]} for e in col],
-        "exciting": [{"word": m["w"], "jev": r2(m["j9"], 1), "people": r2(m["h"], 1)} for m in ar["calm_misses"][:3]]
+        "stirring": [{"word": m["w"], "jev": r2(m["j9"], 1), "people": r2(m["h"], 1)} for m in ar["calm_misses"][:3]]
                     + [{"word": m["w"], "jev": r2(m["j9"], 1), "people": r2(m["h"], 1)} for m in ar["stir_misses"][:3]],
         "hex": r2(num("language_hex_colors")["share"]["survey"]),
         "links": [link(i) for i in ("perception_probability", "perception_amount", "words_sound_shapes",

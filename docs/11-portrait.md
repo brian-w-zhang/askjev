@@ -137,7 +137,7 @@ is typed into the page. Chapters are written in the third person and each ends w
 | all the way down | every logged call sorted by what it asked (`jev_jobs.py`) | seven layers (gather, read, file, answer, compare, judge, laugh), each a set of typed calls with Jev's exact words and counts; a question's walk down the tree; what isn't Jev |
 | personality | Big Five, the type test, honesty-humility, the dark triad, fictional twins | percentile rows, four measured axes with every statement on demand, a meter, the closest characters |
 | taste | the twelve taste finals | a Letterboxd top four and a shelf of winners with pictures |
-| vocabulary | probability and amount words, colors of feelings, kiki/bouba, calm vs exciting | a sliding ruler, color cards, dictionary entries, shapes, rows |
+| vocabulary | probability and amount words, colors of feelings, kiki/bouba, calm vs stirring | a sliding ruler, color cards, dictionary entries, shapes, rows |
 | numbers | prices by year, death tolls, the two-thirds game, lost wallets | a receipt, a log ladder, a number line, range bars |
 | what it knows | calibration on facts, trivia by category, fame in history vs online | confidence bands, category rows |
 | morals | trolley dilemmas in 42 countries, the Moral Machine, free will | three trolley diagrams, effect rows, a quote card |

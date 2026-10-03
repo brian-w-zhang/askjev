@@ -278,12 +278,12 @@ function Words({ s }: { s: S }) {
           <p className="st-note">On {w.n_shapes} made-up words, Jev&rsquo;s ratings spread {w.spread}× as wide as people&rsquo;s.</p>
         </Box>
       </div>
-      <Box title="Calm or exciting? Each word rated 1 (calm) to 9 (exciting)">
+      <Box title="Calm or stirring? Each word rated 1 (calm) to 9 (stirring)">
         <DotRows domain={[1, 9]} ticks={[1, 3, 5, 7, 9]} fmt={(v) => String(v)}
-          rows={w.exciting.map((x) => ({ key: x.word, label: x.word, link: true, value: x.jev.toFixed(1),
+          rows={w.stirring.map((x) => ({ key: x.word, label: x.word, link: true, value: x.jev.toFixed(1),
             marks: [{ v: x.people, kind: "hum" as const }, { v: x.jev, kind: "jev" as const }] }))} />
         <p className="ex-legend"><span><i className="k jev" />Jev</span><span><i className="k hum" />people</span></p>
-        <p className="st-note">People rate &ldquo;cuddle&rdquo; exciting and &ldquo;misery&rdquo; fairly calm; Jev flips both, as if exciting meant unpleasant. (Jev&rsquo;s question asked how &ldquo;calming or stirring&rdquo; each word feels.)</p>
+        <p className="st-note">People rate &ldquo;cuddle&rdquo; stirring and &ldquo;misery&rdquo; fairly calm; Jev flips both, as if stirring meant unpleasant.</p>
       </Box>
 
     </Chapter>
