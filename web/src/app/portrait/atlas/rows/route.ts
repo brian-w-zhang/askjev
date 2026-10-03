@@ -99,5 +99,5 @@ export async function GET(req: Request) {
     });
   }
   return Response.json({ rows, total: pool.length, page, pages: Math.ceil(pool.length / PAGE) },
-    { headers: { "Cache-Control": "private, max-age=600" } });
+    { headers: { "Cache-Control": "public, max-age=0, s-maxage=86400, stale-while-revalidate=604800" } });
 }

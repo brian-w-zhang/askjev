@@ -11,7 +11,7 @@ export async function GET(_req: Request, ctx: RouteContext<"/portrait/memes/[fil
   const { file } = await ctx.params;
   const type = TYPES[path.extname(file).toLowerCase()];
   if (!type || !/^[a-z0-9_-]+\.(png|jpe?g|webp)$/i.test(file)) return new Response("not found", { status: 404 });
-  const headers = { "Content-Type": type, "Cache-Control": "private, max-age=86400" };
+  const headers = { "Content-Type": type, "Cache-Control": "public, max-age=86400, s-maxage=86400" };
   try {
     if (PORTRAIT_URL) {
       const r = await fetch(`${PORTRAIT_URL}/memes/${file}`);
