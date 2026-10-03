@@ -72,7 +72,7 @@ export default function Atlas({ nNodes, nSources, nQuestions, experiments, cover
       title: "Experiments",
       lede: <>Each one gathers many of Jev&rsquo;s answers into something you can learn about it in a minute, next to real
         people or a right answer where one exists. The <Link href="/portrait" prefetch={false}>portrait</Link> picks a few;
-        here are all of them, in the order Jev ranked them. Indicators, not a benchmark.</>,
+        here are all of them, the ones Jev finds most interesting first. Indicators, not a benchmark.</>,
       stats: [["experiments", num(experiments.length)], ["families", num(new Set(experiments.map((c) => c.family)).size)], ["questions on the map", num(nQuestions)]],
     },
     coverage: {

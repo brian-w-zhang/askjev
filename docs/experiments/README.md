@@ -11,7 +11,7 @@ set, which decide keep / atlas / rework / cut.
 
 ## Why this many
 
-197 experiments from 226 sources, 17,768 of the questions asked new for them. The count is what the data
+198 experiments from 226 sources, 17,768 of the questions asked new for them. The count is what the data
 supports at the bar the evaluator holds, not a target:
 
 - **Where the human data is, the experiments are.** Every source with real human answers or a right answer was
@@ -20,7 +20,7 @@ supports at the bar the evaluator holds, not a target:
   code's report and below).
 - **New questions only where an experiment needed them:** 78 experiments rest on 45 new sources, each a
   published human dataset asked the way the study asked it (`sources/<name>`, license recorded).
-- **Jev's verdicts:** 184 keep, 13 atlas.
+- **Jev's verdicts:** 183 keep, 15 atlas.
 - **Coverage is measured, not guessed:** `coverage.py` counts, for every branch of the tree, how much of it an
   experiment about that topic uses (the atlas's Coverage tab). Nearly every question with a right answer or real
   people's answers is now in one; what's left is mostly questions with nothing to compare Jev with (question banks
@@ -62,17 +62,17 @@ supports at the bar the evaluator holds, not a target:
 | [`taste_vs_audience_book`](taste_vs_audience_book.md) | Does Jev like the books that Goodreads readers like, and where does it disagree most? | 2,980 |  | keep |
 | [`taste_vs_audience_beer`](taste_vs_audience_beer.md) | Does Jev like the beers that BeerAdvocate reviewers like, and where does it disagree most? | 1,500 |  | keep |
 | [`taste_vs_audience_board_game`](taste_vs_audience_board_game.md) | Does Jev like the board games that BoardGameGeek users like, and where does it disagree most? | 2,497 |  | keep |
-| [`taste_vs_audience_anime`](taste_vs_audience_anime.md) | Does Jev like the anime that MyAnimeList users like, and where does it disagree most? | 1,359 |  | keep |
 | [`taste_vs_audience_film`](taste_vs_audience_film.md) | Does Jev like the films that MovieLens users like, and where does it disagree most? | 3,935 |  | keep |
-| [`taste_top_beer`](taste_top_beer.md) | If Jev ranked every beer it was asked about, what would its top ten be? | 1,500 | 276 | keep |
-| [`taste_top_music`](taste_top_music.md) | If Jev ranked every album or sound it was asked about, what would its top ten be? | 1,751 | 276 | keep |
 | [`taste_top_art`](taste_top_art.md) | If Jev ranked every artwork or art form it was asked about, what would its top ten be? | 1,098 | 276 | keep |
-| [`taste_top_board_game`](taste_top_board_game.md) | If Jev ranked every board game it was asked about, what would its top ten be? | 2,497 | 276 | atlas |
+| [`taste_vs_audience_anime`](taste_vs_audience_anime.md) | Does Jev like the anime that MyAnimeList users like, and where does it disagree most? | 1,359 |  | keep |
+| [`taste_top_music`](taste_top_music.md) | If Jev ranked every album or sound it was asked about, what would its top ten be? | 1,751 | 276 | keep |
+| [`taste_top_beer`](taste_top_beer.md) | If Jev ranked every beer it was asked about, what would its top ten be? | 1,500 | 276 | keep |
 | [`taste_top_book`](taste_top_book.md) | If Jev ranked every book it was asked about, what would its top ten be? | 2,980 | 276 | atlas |
 | [`taste_top_activity`](taste_top_activity.md) | If Jev ranked every game or activity it was asked about, what would its top ten be? | 1,171 | 276 | atlas |
-| [`taste_top_place`](taste_top_place.md) | If Jev ranked every place it was asked about, what would its top ten be? | 1,018 | 276 | atlas |
+| [`taste_top_board_game`](taste_top_board_game.md) | If Jev ranked every board game it was asked about, what would its top ten be? | 2,497 | 276 | atlas |
 | [`taste_top_culture`](taste_top_culture.md) | If Jev ranked every festival or tradition it was asked about, what would its top ten be? | 892 | 276 | atlas |
 | [`taste_top_anime`](taste_top_anime.md) | If Jev ranked every anime it was asked about, what would its top ten be? | 1,359 | 276 | atlas |
+| [`taste_top_place`](taste_top_place.md) | If Jev ranked every place it was asked about, what would its top ten be? | 1,018 | 276 | atlas |
 | [`taste_top_food`](taste_top_food.md) | If Jev ranked every food it was asked about, what would its top ten be? | 1,625 | 276 | atlas |
 | [`taste_self_vs_guess`](taste_self_vs_guess.md) | In which kinds of things does Jev rate itself differently from how it thinks most people would? | 20,880 |  | atlas |
 | [`taste_top_nature`](taste_top_nature.md) | If Jev ranked every animal, sight or smell in nature it was asked about, what would its top ten be? | 1,054 | 276 | atlas |
@@ -84,13 +84,13 @@ supports at the bar the evaluator holds, not a target:
 |---|---|---:|---:|---|
 | [`person_dark`](person_dark.md) | Does Jev describe itself as more or less manipulative, narcissistic and callous than the people who took the dark-triad tests? | 51 |  | keep |
 | [`person_bigfive`](person_bigfive.md) | Where do Jev's answers to the public 50-item Big Five test land among the 603,322 people who took it? | 50 |  | keep |
-| [`person_beliefs`](person_beliefs.md) | Does Jev believe in conspiracies, feel connected to nature, or think of itself as left-brained, compared with test-takers? | 25 |  | keep |
-| [`person_honesty`](person_honesty.md) | On HEXACO's honesty-humility facets, how does Jev describe its own sincerity, fairness and greed? | 29 |  | keep |
 | [`person_mood`](person_mood.md) | On the DASS mood scales, how anxious, depressed and stressed do Jev's answers look next to the people who took them? | 42 |  | keep |
 | [`person_temperament`](person_temperament.md) | Which of Helen Fisher's temperaments (curious, cautious, analytical, prosocial) does Jev lean toward? | 54 |  | keep |
+| [`person_honesty`](person_honesty.md) | On HEXACO's honesty-humility facets, how does Jev describe its own sincerity, fairness and greed? | 29 |  | keep |
+| [`person_beliefs`](person_beliefs.md) | Does Jev believe in conspiracies, feel connected to nature, or think of itself as left-brained, compared with test-takers? | 25 |  | keep |
 | [`person_attachment`](person_attachment.md) | On the ECR attachment scales, is Jev anxious or avoidant in close relationships, compared with ~51,000 test-takers? | 36 |  | keep |
-| [`person_humor_style`](person_humor_style.md) | Which humor styles does Jev claim (affiliative, self-enhancing, aggressive, self-defeating), next to ~1,000 test-takers? | 32 |  | keep |
 | [`person_nerd`](person_nerd.md) | On the Nerdy Personality Attributes Scale, how nerdy is Jev compared with ~15,000 test-takers? | 23 |  | keep |
+| [`person_humor_style`](person_humor_style.md) | Which humor styles does Jev claim (affiliative, self-enhancing, aggressive, self-defeating), next to ~1,000 test-takers? | 32 |  | keep |
 | [`person_mindful`](person_mindful.md) | On the Kentucky mindfulness skills, does Jev observe, describe, act with awareness and accept? | 39 |  | atlas |
 | [`person_type`](person_type.md) | On an open Jungian type test (OEJTS, a free Myers-Briggs-style test), which type does Jev come out as? | 51 |  | atlas |
 
@@ -101,8 +101,8 @@ supports at the bar the evaluator holds, not a target:
 | [`resemble_country`](resemble_country.md) | On the world's cross-national opinion surveys, whose answers do Jev's most resemble, country by country? | 236 |  | keep |
 | [`resemble_philosophers`](resemble_philosophers.md) | On the big questions of philosophy (free will, God, zombies, the trolley problem), does Jev side with the profession? | 88 |  | keep |
 | [`resemble_young_slovaks`](resemble_young_slovaks.md) | On the Young People Survey (fears, hobbies, music, spending), where does Jev differ from ~1,000 people aged 15-30? | 866 |  | keep |
-| [`resemble_americans`](resemble_americans.md) | On General Social Survey questions asked in two different years, is Jev's answer closer to Americans' answers from the later year or the earlier one? | 122 |  | keep |
 | [`resemble_character`](resemble_character.md) | If Jev took the Statistical 'Which Character' Personality Quiz, which of 2,125 fictional characters would it match? | 257 |  | keep |
+| [`resemble_americans`](resemble_americans.md) | On General Social Survey questions asked in two different years, is Jev's answer closer to Americans' answers from the later year or the earlier one? | 122 |  | keep |
 | [`resemble_teens`](resemble_teens.md) | On the PISA student questionnaire (trust, belonging, ambition), which country's 15-year-olds does Jev answer like? | 32 |  | keep |
 
 ### Moral judgment (6)
@@ -137,12 +137,12 @@ supports at the bar the evaluator holds, not a target:
 | experiment | question | n | new | verdict |
 |---|---|---:|---:|---|
 | [`social_tweet_emotions`](social_tweet_emotions.md) | Given a short tweet and six emotions (joy, love, surprise, sadness, anger, fear), does Jev name the one its writer tagged, and which emotions does it mix up? And does it notice thanks in Reddit comments? | 3,955 |  | keep |
-| [`social_story_no_emotion`](social_story_no_emotion.md) | Reading short everyday stories, how often does Jev say a character feels no clear emotion, compared with the people who annotated them? | 2,971 |  | keep |
 | [`social_shame_as_guilt`](social_shame_as_guilt.md) | When people describe a time they felt ashamed, does Jev name shame, or does it call it guilt? | 1,035 |  | keep |
-| [`social_disgust_as_anger`](social_disgust_as_anger.md) | Across seven basic emotions in people's own stories, which does Jev recognize and which does it mistake for another? | 2,897 |  | keep |
+| [`social_story_no_emotion`](social_story_no_emotion.md) | Reading short everyday stories, how often does Jev say a character feels no clear emotion, compared with the people who annotated them? | 2,971 |  | keep |
 | [`social_mild_emotions`](social_mild_emotions.md) | When a feeling comes in a strong and a mild word (furious or angry, terrified or afraid, devastated or sad), which one does Jev use? | 2,982 |  | keep |
-| [`social_family_feud`](social_family_feud.md) | Given the answers a Family Feud survey got ('Name something a knight needs for a jousting match'), does Jev pick the one most people said first? | 146 |  | keep |
+| [`social_disgust_as_anger`](social_disgust_as_anger.md) | Across seven basic emotions in people's own stories, which does Jev recognize and which does it mistake for another? | 2,897 |  | keep |
 | [`social_dilemma_values`](social_dilemma_values.md) | In 1,300 everyday dilemmas (report a colleague or not, tell a friend the truth or not), which values does Jev's choice serve, and which does it give up? | 1,275 |  | keep |
+| [`social_family_feud`](social_family_feud.md) | Given the answers a Family Feud survey got ('Name something a knight needs for a jousting match'), does Jev pick the one most people said first? | 146 |  | keep |
 | [`social_why_vs_what_next`](social_why_vs_what_next.md) | On 30,000 everyday social situations, does Jev read people's motives, their feelings, or what will happen next best? | 29,542 |  | keep |
 
 ### Humor (4)
@@ -158,7 +158,7 @@ supports at the bar the evaluator holds, not a target:
 
 | experiment | question | n | new | verdict |
 |---|---|---:|---:|---|
-| [`words_arousal_is_mood`](words_arousal_is_mood.md) | When Jev rates how calming or stirring a word feels, is it rating excitement, as people do, or just how pleasant the word is? | 468 |  | keep |
+| [`words_arousal_is_mood`](words_arousal_is_mood.md) | When Jev rates how calm or exciting a word feels, is it rating excitement, as people do, or just how pleasant the word is? | 468 |  | keep |
 | [`words_iconicity`](words_iconicity.md) | Asked how much a word sounds like what it means, does Jev hear the same links people do? | 2,488 |  | keep |
 | [`words_senses`](words_senses.md) | Asked how much it experiences each word through sight, hearing, touch, taste and smell, does Jev give the sensory profile people give? | 11,029 |  | keep |
 | [`words_sound_shapes`](words_sound_shapes.md) | Asked whether made-up words sound round or pointed, does Jev show the bouba/kiki effect people do, and how strongly? | 538 |  | keep |
@@ -169,12 +169,12 @@ supports at the bar the evaluator holds, not a target:
 
 | experiment | question | n | new | verdict |
 |---|---|---:|---:|---|
-| [`judge_fake_reviews`](judge_fake_reviews.md) | Can Jev tell a real review from a fake one, when the fake was written by a person paid to invent a hotel stay, or by a text generator? | 2,760 |  | keep |
 | [`judge_helpful_reviews`](judge_helpful_reviews.md) | Would Jev call an Amazon review helpful to shoppers, compared with how shoppers actually voted? | 2,500 |  | keep |
+| [`judge_fake_reviews`](judge_fake_reviews.md) | Can Jev tell a real review from a fake one, when the fake was written by a person paid to invent a hotel stay, or by a text generator? | 2,760 |  | keep |
 | [`judge_hate_escalation`](judge_hate_escalation.md) | Sorting social media posts into normal, offensive, or hate speech, does Jev put them on the same rung as the annotators? | 706 |  | keep |
-| [`judge_mixed_reviews`](judge_mixed_reviews.md) | Reading a review, does Jev hear the complaints louder than the writer meant them? | 4,724 |  | keep |
-| [`judge_top_grade`](judge_top_grade.md) | Asked to read how highly a critic rated a wine, how close two sentences are in meaning, or how satisfied a reviewer is, how often does Jev land on the top level compared with the real answer? | 7,367 |  | keep |
 | [`judge_toxicity_line`](judge_toxicity_line.md) | Asked whether a comment is a personal attack, hate speech, or merely toxic, and whether a prompt to an AI is toxic, does Jev flag more or less than the people who labeled the same text? | 5,851 |  | keep |
+| [`judge_top_grade`](judge_top_grade.md) | Asked to read how highly a critic rated a wine, how close two sentences are in meaning, or how satisfied a reviewer is, how often does Jev land on the top level compared with the real answer? | 7,367 |  | keep |
+| [`judge_mixed_reviews`](judge_mixed_reviews.md) | Reading a review, does Jev hear the complaints louder than the writer meant them? | 4,724 |  | keep |
 | [`judge_essays`](judge_essays.md) | Scoring seventh-grade essays on ideas, organization, and conventions (spelling, grammar, punctuation), is Jev harsher or softer than the human graders who scored them? | 2,100 |  | keep |
 | [`judge_crowd_split`](judge_crowd_split.md) | When the people rating a comment or a chatbot reply disagree among themselves, does Jev's probability of yes match the share of raters who said yes? | 4,905 |  | keep |
 | [`judge_pairwise`](judge_pairwise.md) | Shown two AI assistant answers to the same request, does Jev pick the one human judges picked, and is it swayed by length or position more than they are? | 2,270 |  | keep |
@@ -184,10 +184,10 @@ supports at the bar the evaluator holds, not a target:
 | experiment | question | n | new | verdict |
 |---|---|---:|---:|---|
 | [`knowledge_wealth_rule`](knowledge_wealth_rule.md) | Asked which of two countries has more doctors, internet users, unemployment or smokers, does Jev know the numbers, or lean on which country is richer? | 8,137 |  | keep |
-| [`knowledge_exam_subjects`](knowledge_exam_subjects.md) | Across MMLU's school and university subjects, grade-school science and everyday common sense, where is Jev reliably right, where does it dip, and does it know when it's on weak ground? | 33,391 |  | keep |
 | [`knowledge_story_frames`](knowledge_story_frames.md) | On TruthfulQA, where the tempting answer is a popular falsehood, which kinds of falsehood does Jev fall for? | 733 |  | keep |
-| [`knowledge_close_calls`](knowledge_close_calls.md) | Jev rarely misses which country, sport or category something belongs to. How does it do when it has to compare two sizes, and how close can the sizes get before it guesses? | 18,744 |  | keep |
+| [`knowledge_exam_subjects`](knowledge_exam_subjects.md) | Across MMLU's school and university subjects, grade-school science and everyday common sense, where is Jev reliably right, where does it dip, and does it know when it's on weak ground? | 33,391 |  | keep |
 | [`knowledge_fame_online`](knowledge_fame_online.md) | Asked which of two people, athletes or internet phenomena is better known, how often does Jev pick the one the world actually looks up more, and is it as sure as it should be? | 7,985 |  | keep |
+| [`knowledge_close_calls`](knowledge_close_calls.md) | Jev rarely misses which country, sport or category something belongs to. How does it do when it has to compare two sizes, and how close can the sizes get before it guesses? | 18,744 |  | keep |
 | [`knowledge_hidden_step_no`](knowledge_hidden_step_no.md) | On yes/no questions whose answer needs an unstated step ('Could a llama birth twice during the War in Vietnam?'), does Jev lean one way when it is unsure? | 11,063 |  | keep |
 | [`knowledge_nature_numbers`](knowledge_nature_numbers.md) | Comparing two foods by a nutrient, or two animals by lifespan, gestation or clutch size, which quantities does Jev know and which does it guess? | 10,717 |  | keep |
 | [`knowledge_licence_exams`](knowledge_licence_exams.md) | On real US licensing question pools (ham radio, merchant mariner, citizenship), which kinds of practical knowledge does Jev hold? | 5,362 |  | keep |
@@ -209,28 +209,29 @@ supports at the bar the evaluator holds, not a target:
 | [`polls_fandoms`](polls_fandoms.md) | On polls inside hobby and fan subreddits (r/Berserk, r/Naruto, r/thebachelor, r/Kanye...), which communities' votes does Jev guess best? | 8,335 |  | keep |
 | [`polls_colors`](polls_colors.md) | From head-to-heads between 12 colors, how does Jev's ranking of favorite colors compare with people's? | 72 |  | atlas |
 
-### Work tasks (20)
+### Work tasks (21)
 
 | experiment | question | n | new | verdict |
 |---|---|---:|---:|---|
 | [`work_which_way_it_errs`](work_which_way_it_errs.md) | When Jev gets a yes/no work check wrong, does it err in one direction, and does the direction depend on what is being checked? | 84,091 |  | keep |
 | [`work_money_news_mood`](work_money_news_mood.md) | Reading financial news, market tweets and gold-price headlines that experts labeled as neutral (no good or bad news, no direction), how often does Jev read them as good news or as bad news, and is it lopsided? | 6,982 |  | keep |
+| [`work_sure_and_wrong`](work_sure_and_wrong.md) | On the work tasks where Jev gets the most wrong, does its confidence drop to warn you, or does it stay as sure as on the tasks it gets right? | 273,282 |  | keep |
 | [`work_what_jobs_are_like`](work_what_jobs_are_like.md) | How often does a nurse deal with angry people, a web developer face deadlines, a roofer work in the weather? Does Jev know what jobs are like, compared with what the people doing them report? | 491 | 495 | keep |
 | [`work_icd_coding_rules`](work_icd_coding_rules.md) | Asked which ICD-10-CM chapter a diagnosis belongs to, where does Jev go wrong: the medicine, or the coding conventions? | 2,000 |  | keep |
 | [`work_hallucination_checks`](work_hallucination_checks.md) | Asked whether a chatbot reply, an answer or a summary sticks to its source, how often does Jev catch the invented ones, how often does it accuse faithful ones, and does it catch errors that are only partly wrong? | 7,074 |  | keep |
 | [`work_evidence_retreat`](work_evidence_retreat.md) | On fact-checking and grounding tasks with three answers (supports, contradicts, can't tell), when Jev gets a clear case wrong, does it flip to the opposite verdict or retreat to 'can't tell'? | 13,611 |  | keep |
-| [`work_agent_patches`](work_agent_patches.md) | Reading a coding agent's full trace on a real GitHub issue, can Jev tell whether the agent actually fixed it? | 1,500 |  | keep |
 | [`work_calibration`](work_calibration.md) | When Jev is 90% sure of an answer to a work task, is it right 90% of the time, and does that depend on whether it answers yes/no or picks from options? | 273,282 |  | keep |
-| [`work_new_abuse`](work_new_abuse.md) | Across spam, phishing, personal data, unsafe prompts, unsafe AI replies, jailbreaks and fake job ads, which kinds of abuse does Jev miss, and does it make up for it with false alarms? | 13,766 |  | keep |
-| [`work_function_call_checks`](work_function_call_checks.md) | Checking whether a proposed function call does what the user asked, which kinds of mistakes does Jev catch: the wrong function, a missing argument, a wrong value, or two arguments swapped? | 1,500 |  | keep |
+| [`work_agent_patches`](work_agent_patches.md) | Reading a coding agent's full trace on a real GitHub issue, can Jev tell whether the agent actually fixed it? | 1,500 |  | keep |
 | [`work_legal_misses_present`](work_legal_misses_present.md) | Asked whether a contract contains a given provision, whether an opinion overrules a case, or whether a policy segment covers a data practice, which way does Jev go wrong? | 12,809 |  | keep |
-| [`work_code_says_vs_does`](work_code_says_vs_does.md) | Given a function, can Jev tell whether its docstring or commit message describes it, and can it tell whether it contains a security bug or needs a reviewer's comment? | 9,000 |  | keep |
-| [`work_routing_misses`](work_routing_misses.md) | When Jev sends a customer message to the wrong intent, how wrong is it: a neighbor of the right intent, or somewhere else entirely, and does a longer list of intents make it worse? | 32,430 |  | keep |
-| [`work_retrieval_gates`](work_retrieval_gates.md) | Asked whether a retrieved passage answers a query or belongs in the context, which way does Jev err: letting in passages that don't help, or throwing out ones that do? | 7,237 |  | keep |
-| [`work_task_not_domain`](work_task_not_domain.md) | Across 120 kinds of machine work in 14 fields, does knowing the field (legal, code, healthcare...) tell you how often Jev gets it right, or does it depend on the specific task? | 273,282 |  | keep |
-| [`work_nothing_here`](work_nothing_here.md) | When a menu of labels includes 'none of these' (the passage has no answer, the sentence states no relation), how often does Jev pick it when it's right, and how often when it isn't? | 8,087 |  | keep |
+| [`work_new_abuse`](work_new_abuse.md) | Across spam, phishing, personal data, unsafe prompts, unsafe AI replies, jailbreaks and fake job ads, which kinds of abuse does Jev miss, and does it make up for it with false alarms? | 13,766 |  | keep |
 | [`work_knows_hard_cases`](work_knows_hard_cases.md) | On work cases written to be deliberately borderline, does Jev's confidence drop, or is it as sure as on the clear ones? | 7,300 |  | keep |
+| [`work_function_call_checks`](work_function_call_checks.md) | Checking whether a proposed function call does what the user asked, which kinds of mistakes does Jev catch: the wrong function, a missing argument, a wrong value, or two arguments swapped? | 1,500 |  | keep |
+| [`work_routing_misses`](work_routing_misses.md) | When Jev sends a customer message to the wrong intent, how wrong is it: a neighbor of the right intent, or somewhere else entirely, and does a longer list of intents make it worse? | 32,430 |  | keep |
+| [`work_code_says_vs_does`](work_code_says_vs_does.md) | Given a function, can Jev tell whether its docstring or commit message describes it, and can it tell whether it contains a security bug or needs a reviewer's comment? | 9,000 |  | keep |
+| [`work_task_not_domain`](work_task_not_domain.md) | Across 120 kinds of machine work in 14 fields, does knowing the field (legal, code, healthcare...) tell you how often Jev gets it right, or does it depend on the specific task? | 273,282 |  | keep |
 | [`work_job_ad_rungs`](work_job_ad_rungs.md) | Reading a LinkedIn job posting, does Jev place its seniority and type (full-time, contract, part-time) where the employer did? | 4,500 |  | keep |
+| [`work_retrieval_gates`](work_retrieval_gates.md) | Asked whether a retrieved passage answers a query or belongs in the context, which way does Jev err: letting in passages that don't help, or throwing out ones that do? | 7,237 |  | keep |
+| [`work_nothing_here`](work_nothing_here.md) | When a menu of labels includes 'none of these' (the passage has no answer, the sentence states no relation), how often does Jev pick it when it's right, and how often when it isn't? | 8,087 |  | keep |
 | [`work_names_in_tweets`](work_names_in_tweets.md) | Given a name in a sentence, can Jev say what kind of thing it names, in edited news text and in tweets? | 4,447 |  | keep |
 | [`work_grading_scales`](work_grading_scales.md) | When a work task asks for a level on a scale (a relevance grade, a star rating, an essay score), does Jev put items in the right order, hit the exact level, and use the scale the way the labels do? | 16,529 |  | keep |
 
@@ -239,9 +240,9 @@ supports at the bar the evaluator holds, not a target:
 | experiment | question | n | new | verdict |
 |---|---|---:|---:|---|
 | [`consistency_middle_lean`](consistency_middle_lean.md) | Jev's most likely answer on a rating scale is often the middle level. Is that a habit with every scale, or does it depend on what is being rated? | 121,301 |  | keep |
+| [`consistency_self_vs_people`](consistency_self_vs_people.md) | Every question about Jev was also asked as 'what would most people answer?'. Where do the two answers part, and in which direction? | 144,301 |  | keep |
 | [`consistency_option_order`](consistency_option_order.md) | When the same options are listed in a different order, or a rating scale is turned upside down, does Jev's answer move more than it does when the question is simply asked again? | 370,790 |  | keep |
 | [`consistency_repeat_noise`](consistency_repeat_noise.md) | If the exact same request is sent twice, how much does Jev's answer change, and when does its top answer flip? | 198,609 |  | keep |
-| [`consistency_self_vs_people`](consistency_self_vs_people.md) | Every question about Jev was also asked as 'what would most people answer?'. Where do the two answers part, and in which direction? | 144,301 |  | keep |
 
 ### Defaults (6)
 
@@ -250,9 +251,9 @@ supports at the bar the evaluator holds, not a target:
 | [`self_could_vs_would`](self_could_vs_would.md) | In pairs of questions that ask the same thing, does the verb they open with ('Could you…', 'Would you…', 'Do you…', 'Can…') change how often Jev says yes? | 522 |  | keep |
 | [`self_reworded`](self_reworded.md) | When the same yes/no question is asked twice in different words ('Do you like to return to the same vacation spot?' / 'Do you tend to go back to the same places for vacation?'), does Jev give the same answer? | 2,301 |  | keep |
 | [`self_escape_hatch`](self_escape_hatch.md) | When a question about Jev offers a menu plus 'other', on which topics does Jev decline the menu? | 2,779 |  | keep |
-| [`self_closed_questions`](self_closed_questions.md) | On 80,000 yes/no questions people actually posted online (Stack Exchange, Quora, Yahoo Answers, chatbot logs), does Jev lean yes or no, and does the way a question starts decide it? | 79,738 |  | keep |
 | [`self_torn_vs_sure`](self_torn_vs_sure.md) | Asked about itself with no right answer, on which topics does Jev commit to an answer and on which does it hedge? | 101,849 |  | keep |
-| [`self_shower_thoughts`](self_shower_thoughts.md) | Asked whimsical yes/no questions ('Does 9 feel left out because it's always almost 10?'), does Jev answer the joke or the literal question? | 576 |  | keep |
+| [`self_closed_questions`](self_closed_questions.md) | On 80,000 yes/no questions people actually posted online (Stack Exchange, Quora, Yahoo Answers, chatbot logs), does Jev lean yes or no, and does the way a question starts decide it? | 79,738 |  | keep |
+| [`self_shower_thoughts`](self_shower_thoughts.md) | Asked whimsical yes/no questions ('Does 9 feel left out because it's always almost 10?'), does Jev answer the joke or the literal question? | 576 |  | atlas |
 
 ### Reasoning traps (7)
 
@@ -288,7 +289,7 @@ supports at the bar the evaluator holds, not a target:
 | [`minds_first_word`](minds_first_word.md) | Hearing 'bread', most people think 'butter'. Given a word and the most common responses people gave, does Jev pick people's first association, and is it as predictable as they are? | 384 | 400 | keep |
 | [`minds_knows_americans_on_ai`](minds_knows_americans_on_ai.md) | Asked what most people would answer to Pew's AI questions, does Jev get Americans' wariness right, or does it paint them as keener (or warier) than they are? | 10 |  | keep |
 | [`minds_colors_of_feelings`](minds_colors_of_feelings.md) | Which color goes with anger, joy, shame or relief, and which feeling goes with each color? Does Jev pair them the way people in 31 countries do? | 32 | 32 | keep |
-| [`minds_colors_by_country`](minds_colors_by_country.md) | Color-emotion associations differ a little by country. Of 31 countries, whose associations do Jev's color picks resemble most? | 620 |  | keep |
+| [`minds_colors_by_country`](minds_colors_by_country.md) | Color-emotion associations differ a little by country. Of 31 countries, whose associations do Jev's color picks resemble most? | 620 |  | atlas |
 
 ### Words and phrases (6)
 
@@ -305,8 +306,8 @@ supports at the bar the evaluator holds, not a target:
 
 | experiment | question | n | new | verdict |
 |---|---|---:|---:|---|
-| [`society_prestige_1947`](society_prestige_1947.md) | For 45 jobs from the classic 1947 NORC prestige survey (physician, banker, carpenter, janitor, shoe shiner...), does Jev give each the standing Americans gave it, and is its ladder tied more to pay and schooling than theirs was? | 43 | 45 | keep |
 | [`society_profession_honesty`](society_profession_honesty.md) | Rating the honesty and ethical standards of nurses, pharmacists, bankers, car salespeople and a dozen other professions, does Jev see the same ladder of trust as Americans, and is it more or less generous? | 15 | 16 | keep |
+| [`society_prestige_1947`](society_prestige_1947.md) | For 45 jobs from the classic 1947 NORC prestige survey (physician, banker, carpenter, janitor, shoe shiner...), does Jev give each the standing Americans gave it, and is its ladder tied more to pay and schooling than theirs was? | 43 | 45 | keep |
 | [`society_country_happy`](society_country_happy.md) | For each of about 100 countries, what share of people say they are very or quite happy in its latest World Values Survey or European Values Study, and does Jev know? | 109 | 109 | keep |
 | [`society_prestige_1965`](society_prestige_1965.md) | For 102 occupations from the Pineo-Porter Canadian prestige survey, does Jev order jobs by standing the way Canadians did, and which jobs has it promoted or demoted? | 99 | 101 | keep |
 | [`society_honesty_history`](society_honesty_history.md) | Asked what share of Americans rated each profession's honesty high in Gallup's polls of 2000, 2005, 2010, 2015 and 2020, how close is Jev, and does it know which professions rose or fell? | 61 | 65 | keep |

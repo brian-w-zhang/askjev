@@ -18,7 +18,7 @@ const tidy = (s: string) => s.replace(/^Being offered /, "").replace(/ \((film|T
 export const CHAPTERS = [
   { id: "meet", name: "how are you?" }, { id: "why", name: "why ask" }, { id: "made", name: "the data" },
   { id: "jobs", name: "composability" }, { id: "character", name: "personality" }, { id: "taste", name: "taste" },
-  { id: "words", name: "language" }, { id: "numbers", name: "numbers" }, { id: "knows", name: "confidence" }, { id: "morals", name: "morals" },
+  { id: "words", name: "language" }, { id: "numbers", name: "numbers" }, { id: "knows", name: "confidence" }, { id: "morals", name: "morals" }, { id: "risk", name: "risk" },
   { id: "pressure", name: "peer pressure" }, { id: "defaults", name: "habits" }, { id: "work", name: "at work" },
   { id: "edges", name: "jaggedness" },
 ];
@@ -98,6 +98,7 @@ export default function Story({ s, nQuestions }: { s: S; nQuestions: number }) {
       <Numbers s={s} />
       <Knows s={s} />
       <Morals s={s} />
+      <Risk s={s} />
       <Pressure s={s} />
       <Defaults s={s} />
       <Work s={s} />
@@ -277,12 +278,12 @@ function Words({ s }: { s: S }) {
           <p className="st-note">On {w.n_shapes} made-up words, Jev&rsquo;s ratings spread {w.spread}× as wide as people&rsquo;s.</p>
         </Box>
       </div>
-      <Box title="Calm or stirring? Each word rated 1 (calm) to 9 (stirring)">
+      <Box title="Calm or exciting? Each word rated 1 (calm) to 9 (exciting)">
         <DotRows domain={[1, 9]} ticks={[1, 3, 5, 7, 9]} fmt={(v) => String(v)}
-          rows={w.stirring.map((x) => ({ key: x.word, label: x.word, link: true, value: x.jev.toFixed(1),
+          rows={w.exciting.map((x) => ({ key: x.word, label: x.word, link: true, value: x.jev.toFixed(1),
             marks: [{ v: x.people, kind: "hum" as const }, { v: x.jev, kind: "jev" as const }] }))} />
         <p className="ex-legend"><span><i className="k jev" />Jev</span><span><i className="k hum" />people</span></p>
-        <p className="st-note">People rate &ldquo;cuddle&rdquo; stirring and &ldquo;misery&rdquo; fairly calm; Jev flips both, as if stirring meant unpleasant.</p>
+        <p className="st-note">People rate &ldquo;cuddle&rdquo; exciting and &ldquo;misery&rdquo; fairly calm; Jev flips both, as if exciting meant unpleasant. (Jev&rsquo;s question asked how &ldquo;calming or stirring&rdquo; each word feels.)</p>
       </Box>
 
     </Chapter>
@@ -450,6 +451,45 @@ function Morals({ s }: { s: S }) {
   );
 }
 
+/* ---------------------------------------------------------------- risk */
+// Jev and people side by side on one choice, as the trolley cards draw them
+function Split({ name, ask, v }: { name: string; ask: string; v: { jev: number; people: number } }) {
+  return (
+    <Reveal className="tr3-c">
+      <p className="tr3-n">{name}</p>
+      <p className="tr3-q">{ask}</p>
+      <div className="tr3-b">
+        <span>Jev</span><i><b className="j" style={{ width: pc(v.jev) }} /></i><em>{pc(v.jev)}</em>
+        <span>people</span><i><b className="p" style={{ width: pc(v.people) }} /></i><em>{pc(v.people)}</em>
+      </div>
+    </Reveal>
+  );
+}
+
+function Risk({ s }: { s: S }) {
+  const r = s.risk;
+  return (
+    <Chapter more={s.more?.risk} id="risk" aside={<Meme s={s} id="risk_prospect_theory" />} kicker="risk" field="pink" links={r.links}
+      title={<>It bets on the average, until the odds go missing</>}
+      lede={<>Offered a sure thing or a gamble, Jev mostly takes whichever pays more on average, where people play safe to keep a gain and gamble to dodge a loss. Hide the odds, though, and it backs away from a bet people playing for real money take.</>}>
+      <Box title="A sure thing or a gamble: how many take the sure thing" note={<>People: the Ruggeri et al. (2020) replication of Kahneman and Tversky in 19 countries. Of {r.effects.n} classic effects from prospect theory, Jev shows {r.effects.shows} and reverses {r.effects.reversed}.</>}>
+        <div className="st-grid pair tight">
+          <Split name="to win" ask="A sure $6,000, or an 80% chance of $8,000?" v={r.reflection.gains} />
+          <Split name="to lose" ask="A sure loss of $6,000, or an 80% chance of losing $8,000?" v={r.reflection.losses} />
+        </div>
+      </Box>
+      <div className="st-grid two pair">
+        <Box title="Where one option pays more on average, how often it’s picked">
+          <Split name="the better average" ask="On the classic choices where one option pays more on average: how often each side’s more common answer is that option." v={r.ev} />
+        </Box>
+        <Box title="Odds not stated: how often the unknown gamble is taken">
+          <Split name="the unknown gamble" ask="A gamble whose odds aren’t stated, against one whose odds are. People: workers on Mechanical Turk, playing for real money." v={r.ambiguity} />
+        </Box>
+      </div>
+    </Chapter>
+  );
+}
+
 /* ---------------------------------------------------------------- 07 pressure */
 function Pressure({ s }: { s: S }) {
   const p = s.pressure;
@@ -509,9 +549,9 @@ function Work({ s }: { s: S }) {
     marks: [{ v: b.conf, kind: "tick" as const, title: `how sure: ${pc(b.conf)}` }, { v: b.acc, kind: "jev" as const, title: `right: ${pc(b.acc)}` }] }));
   const kinds = [...new Set(w.errs.map((e) => e.kind))];
   return (
-    <Chapter more={s.more?.work} id="work" aside={<Meme s={s} id="work_which_way_it_errs" />} kicker="at work" field="sage" links={w.links}
-      title={<>Sure when it should be, mostly</>}
-      lede={<>Jev is built for work inside software: sorting tickets, checking code, judging text. On yes/no work its confidence is close to honest; picking from a list, it&rsquo;s surer than it should be. One pass over the labeled data here, not a benchmark.</>}>
+    <Chapter more={s.more?.work} id="work" aside={<Meme s={s} id="work_knows_hard_cases" />} kicker="at work" field="sage" links={w.links}
+      title={<>Honest on yes or no, too sure on a list</>}
+      lede={<>Jev is built for work inside software: sorting tickets, checking code, judging text. On yes/no checks its confidence is close to honest; picking from a list, it&rsquo;s surer than it should be. And each check leans one way when it&rsquo;s wrong, which tells you what to double-check. One pass over the labeled data here, not a benchmark.</>}>
       <Box title="How sure it said it was, and how often it was right">
         <div className="st-grid pair tight">
           <div><p className="st-sub">Yes or no</p><DotRows domain={[0.4, 1]} ticks={[0.5, 0.75, 1]} fmt={(v) => pc(v)} rows={band("noul")} /></div>
@@ -530,57 +570,53 @@ function Work({ s }: { s: S }) {
           </div>
         ))}
         <p className="ex-legend"><span><i className="k jev" />Jev says yes</span><span><i className="k hum" />the true share of yes</span></p>
-      </Box>
-      <Box title="The task matters more than the field: each field’s weakest and strongest task">
-        <DotRows domain={[0.4, 1]} ticks={[0.5, 0.75, 1]} fmt={(v) => pc(v)}
-          rows={w.fields.map((f) => ({ key: f.label, label: f.label, sub: `${f.lo.name} → ${f.hi.name}`, link: true, value: pc(f.value),
-            marks: [{ v: f.lo.value, kind: "tick" as const, title: `${f.lo.name}: ${pc(f.lo.value)}` }, { v: f.hi.value, kind: "tick" as const, title: `${f.hi.name}: ${pc(f.hi.value)}` }, { v: f.value, kind: "jev" as const, title: `field average: ${pc(f.value)}` }] }))} />
-        <p className="ex-legend"><span><i className="k jev" />the field&rsquo;s average, right</span><span><i className="k tick" />its weakest and strongest task</span></p>
+        <p className="st-note">Where the two marks sit apart, the gap shows which mistake to plan for: a check that says yes too easily needs a second look at its yeses.</p>
       </Box>
     </Chapter>
   );
 }
 
 /* ---------------------------------------------------------------- jaggedness */
-// a web of topics: how often Jev is right (filled) and how sure it is (dashed), each spoke 50% at the center to 100% at the rim
-function Web({ rows }: { rows: { topic: string; right: number; sure: number }[] }) {
-  const N = rows.length, R = 150, cx = 230, cy = 200, lo = 0.5;
-  const pt = (v: number, k: number) => {
-    const a = -Math.PI / 2 + (k / N) * 2 * Math.PI, r = (Math.max(lo, Math.min(1, v)) - lo) / (1 - lo) * R;
-    return [cx + r * Math.cos(a), cy + r * Math.sin(a)];
-  };
-  const poly = (f: (x: typeof rows[number]) => number) => rows.map((x, k) => pt(f(x), k).map((z) => z.toFixed(1)).join(",")).join(" ");
+// one pair: two tasks that look alike, as two bars on the same 0-100% scale; a dashed line at 50% when the second is a yes/no
+function Pair({ p }: { p: S["jagged_pairs"][number] }) {
+  const bar = (label: string, v: number, weak: boolean) => (
+    <div className={`jp-row${weak ? " weak" : ""}`}>
+      <span className="jp-q">{label}</span>
+      <span className="jp-t"><b style={{ width: pc(v) }} />{p.coin && weak && <i className="jp-coin" />}</span>
+      <em>{pc(v)}</em>
+    </div>
+  );
   return (
-    <svg className="web" viewBox="0 0 460 400" role="img" aria-label="Accuracy and confidence by topic">
-      {[0.6, 0.7, 0.8, 0.9, 1].map((g) => <polygon key={g} className="web-g" points={rows.map((_, k) => pt(g, k).join(",")).join(" ")} />)}
-      {rows.map((_, k) => { const [x, y] = pt(1, k); return <line key={k} className="web-s" x1={cx} y1={cy} x2={x} y2={y} />; })}
-      {[0.6, 0.8, 1].map((g) => <text key={g} className="web-t" x={cx + 3} y={cy - ((g - lo) / (1 - lo)) * R - 2}>{Math.round(g * 100)}%</text>)}
-      <polygon className="web-sure" points={poly((x) => x.sure)} />
-      <polygon className="web-right" points={poly((x) => x.right)} />
-      {rows.map((x, k) => { const [px, py] = pt(x.right, k); return <circle key={k} className="web-d" cx={px} cy={py} r={2.6}><title>{`${x.topic}: right ${pc(x.right)}, sure ${pc(x.sure)}`}</title></circle>; })}
-      {rows.map((x, k) => {
-        const a = -Math.PI / 2 + (k / N) * 2 * Math.PI, lx = cx + (R + 14) * Math.cos(a), ly = cy + (R + 14) * Math.sin(a);
-        return <text key={x.topic} className={`web-l${x.right < 0.75 ? " weak" : ""}`} x={lx} y={ly + 3} textAnchor={Math.abs(Math.cos(a)) < 0.2 ? "middle" : Math.cos(a) > 0 ? "start" : "end"}>{x.topic}</text>;
-      })}
-    </svg>
+    <Reveal className="jp">
+      <p className="jp-f"><b>{p.field}</b><Link href={`/portrait/atlas/${p.link.id}`} prefetch={false}>case study →</Link></p>
+      {bar(p.a, p.av, false)}
+      {bar(p.b, p.bv, true)}
+    </Reveal>
   );
 }
 
 function Edges({ s }: { s: S }) {
-  const j = [...(s.jagged ?? [])];
-  const weak = [...j].sort((a, b) => a.right - b.right).slice(0, 4);
-  const over = [...j].sort((a, b) => (b.sure - b.right) - (a.sure - a.right)).slice(0, 3);
+  const pairs = s.jagged_pairs ?? [];
+  const sw = s.sure_wrong;
   return (
-    <Chapter id="edges" kicker="jaggedness" field="ink" more={s.edges}
-      title={<>Where Jev is jagged</>}
-      lede={<>Right almost every time on some topics, shaky on others, and not always aware of which is which. These are leads from
-        single experiments, not verdicts; each case study below says what else could explain it.</>}>
-      {j.length > 0 && (
-        <Box title="How often it’s right, and how sure it is, topic by topic">
-          <div className="web-w"><Web rows={j} /></div>
-          <p className="ex-legend"><span><i className="k jev" />how often it&rsquo;s right</span><span><i className="k tick" />how sure it is (dashed)</span></p>
-          <p className="st-note">Weakest: {weak.map((w) => `${w.topic} (${pc(w.right)})`).join(", ")}. Most overconfident: {over.map((w) => `${w.topic} (${pc(w.sure)} sure, ${pc(w.right)} right)`).join(", ")}.
-            Each spoke runs from 50% at the center to 100% at the rim; questions with a right answer only.</p>
+    <Chapter id="edges" kicker="jaggedness" field="ink" more={s.edges} links={[...pairs.map((p) => p.link), ...(sw ? [sw.link] : [])]}
+      title={<>Similar tasks, very different results</>}
+      lede={<>Knowing the field says little about whether Jev will get a task right: across its work tasks, the field explains only {pc(s.field_share)} of the differences. The task does. Even in code, logs and tool calls, the jobs it&rsquo;s built for, it can be near perfect on one check and near a coin toss on the one beside it, and on some of those it stays just as sure. These are leads from single experiments, not verdicts.</>}>
+      {pairs.length > 0 && (
+        <Box title="Two checks that look alike: how often Jev gets each right (or catches the problem)"
+          note={<>Each pair comes from one experiment, on that experiment&rsquo;s labeled data. &ldquo;Catches&rdquo; is the share of bad cases flagged; Jev passes most good ones too (each case study gives both).</>}>
+          <p className="ex-legend jp-key"><span><i className="jp-k" />the check it handles</span><span><i className="jp-k weak" />the one beside it</span><span><i className="jp-coin-k" />a coin toss, where that one is a yes or no</span></p>
+          <div className="jp-l">{pairs.map((p) => <Pair key={p.field} p={p} />)}</div>
+        </Box>
+      )}
+      {sw && (
+        <Box title="Sure and wrong: where its confidence gives no warning"
+          note={<>Of {sw.n_tasks} work tasks, Jev is more than 10 points surer than right on {sw.n_over}; the top rows are the widest gaps. The last two are hard tasks where its confidence fell with its accuracy, so an unsure answer there is a real warning.</>}>
+          <p className="ex-legend jp-key"><span><i className="k jev" />how often it&rsquo;s right</span><span><i className="k tick" />how sure it is, on average</span></p>
+          <DotRows domain={[0, 1]} ticks={[0, 0.25, 0.5, 0.75, 1]} fmt={(v) => pc(v)}
+            rows={sw.rows.map((r) => ({ key: r.label, label: r.label, sub: `${pc(r.sure)} sure · chance ${pc(r.chance)}${r.honest ? " · honest" : ""}`,
+              value: `${pc(r.right)} right`, hi: !r.honest,
+              marks: [{ v: r.sure, kind: "tick" as const, title: `how sure: ${pc(r.sure)}` }, { v: r.right, kind: "jev" as const, title: `right: ${pc(r.right)}` }] }))} />
         </Box>
       )}
     </Chapter>

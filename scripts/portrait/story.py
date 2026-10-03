@@ -19,7 +19,7 @@ TASTE = [("film", "Films"), ("book", "Books"), ("music", "Albums"), ("anime", "A
          ("board_game", "Board games"), ("food", "Food"), ("place", "Places"), ("art", "Art"), ("nature", "Nature"),
          ("culture", "Festivals"), ("beer", "Beer")]
 EDGES = ["humor_upvote_guess", "humor_satire", "recall_mental_map_west", "knowledge_wealth_rule",
-         "social_shame_as_guilt", "names_share_girls", "knowledge_close_calls", "choices_ai_poetry"]
+         "social_shame_as_guilt", "names_share_girls", "knowledge_close_calls", "work_new_abuse"]
 
 
 MORE = {
@@ -31,7 +31,8 @@ MORE = {
     "morals": ["moral_aita", "moral_norms", "moral_vignettes", "reasoning_side_effect", "choices_rule_text_vs_purpose", "social_dilemma_values"],
     "pressure": ["influence_crowd_knowledge", "influence_predict_self", "influence_decoy", "judgment_classics", "reasoning_beauty_contest"],
     "defaults": ["self_reworded", "self_closed_questions", "self_shower_thoughts", "consistency_option_order", "consistency_repeat_noise", "self_torn_vs_sure"],
-    "work": ["work_code_says_vs_does", "work_hallucination_checks", "work_agent_patches", "work_new_abuse", "judge_fake_reviews", "work_job_ad_rungs"],
+    "risk": ["risk_forecasts", "risk_better_bet", "risk_everyday", "reasoning_base_rates", "reasoning_traps"],
+    "work": ["work_evidence_retreat", "work_hallucination_checks", "judge_crowd_split", "judge_pairwise", "judge_fake_reviews", "work_job_ad_rungs"],
 }
 
 
@@ -221,7 +222,7 @@ def main():
         "bouba": {"jev": r2(ss["bouba_kiki"]["bouba"]["jev"], 2), "people": r2(ss["bouba_kiki"]["bouba"]["people"], 2)},
         "spread": r2(ss["sd_jev"] / ss["sd_people"], 1), "n_shapes": res("words_sound_shapes").get("n"),
         "colors": [{"feeling": e["item"], "jev": e["jev"], "people": e["people"]} for e in col],
-        "stirring": [{"word": m["w"], "jev": r2(m["j9"], 1), "people": r2(m["h"], 1)} for m in ar["calm_misses"][:3]]
+        "exciting": [{"word": m["w"], "jev": r2(m["j9"], 1), "people": r2(m["h"], 1)} for m in ar["calm_misses"][:3]]
                     + [{"word": m["w"], "jev": r2(m["j9"], 1), "people": r2(m["h"], 1)} for m in ar["stir_misses"][:3]],
         "hex": r2(num("language_hex_colors")["share"]["survey"]),
         "links": [link(i) for i in ("perception_probability", "perception_amount", "words_sound_shapes",
@@ -274,13 +275,17 @@ def main():
         "links": [link(i) for i in ("influence_crowd_opinion", "influence_user_suggestion", "reasoning_anchoring")],
     }
 
-    # ---- minds and risk
-    wp = num("minds_where_jev_puts_itself")["rows"]
+    # ---- risk: sure things, gambles and odds nobody states
+    pt = res("risk_prospect_theory")
     ra = num("risk_ambiguity")
-    out["minds"] = {
-        "self": [{"cap": r["cap"], "jev": r["jev"], "people": r["people"], "above": r["above"], "below": r["below"]} for r in wp],
-        "ambiguity": {"jev": r2(ra["jev"], 2), "people": r2(ra["people"], 2)},
-        "links": [link(i) for i in ("minds_where_jev_puts_itself", "risk_ambiguity", "minds_mind_map")],
+    out["risk"] = {
+        "reflection": {k: {"jev": r2(v["jev"], 2), "people": r2(v["people"], 2)} for k, v in pt["chart"]["pair"].items() if k in ("gains", "losses")},
+        "ev": {"jev": r2(pt["numbers"]["ev_jev"], 2), "people": r2(pt["numbers"]["ev_people"], 2)},
+        "effects": {"n": len(pt["numbers"]["effects"]), "shows": sum(1 for e in pt["numbers"]["effects"] if e["shows"]),
+                    "reversed": sum(1 for e in pt["numbers"]["effects"] if e["reversed"])},
+        "ambiguity": {"jev": r2(ra["jev"], 2), "people": r2(ra["people"], 2),
+                      "vs_sure": {"jev": r2(ra["vs_sure"]["jev"], 2), "people": r2(ra["vs_sure"]["people"], 2)}},
+        "links": [link(i) for i in ("risk_prospect_theory", "risk_ambiguity")],
     }
 
     # ---- how it was made: the sources, the tree, the pipeline and every job Jev does
@@ -345,16 +350,13 @@ def main():
     # ---- at work: the job it was built for
     cal = num("work_calibration")["lines"]
     ww = num("work_which_way_it_errs")["tasks"]
-    td = num("work_task_not_domain")["fields"]
     out["work"] = {
         "calibration": {k: [{"label": b["label"], "conf": r2(b["conf"]), "acc": r2(b["acc"]), "n": b["n"]} for b in v] for k, v in cal.items()},
         # per kind of question, the six tasks where Jev's yes rate is furthest from the true one
         "errs": [{"kind": t["kind"], "label": t["label"], "says": r2(t["says"]), "base": r2(t["base"]), "right": r2(t["right"]), "n": t["n"]}
                  for k in dict.fromkeys(t["kind"] for t in ww)
                  for t in sorted([x for x in ww if x["kind"] == k], key=lambda x: -abs(x["says"] - x["base"]))[:6]],
-        "fields": [{"label": f["label"], "value": r2(f["value"]), "lo": {"name": f["lo"]["name"], "value": r2(f["lo"]["value"])},
-                    "hi": {"name": f["hi"]["name"], "value": r2(f["hi"]["value"])}} for f in td],
-        "links": [link(i) for i in ("work_calibration", "work_which_way_it_errs", "work_task_not_domain")],
+        "links": [link(i) for i in ("work_calibration", "work_knows_hard_cases", "work_which_way_it_errs")],
     }
 
     # ---- character extras: the full question lists, the type's axes with their intervals, the fictional twin
@@ -380,14 +382,38 @@ def main():
         "links": [link(i) for i in ("knowledge_calibration", "knowledge_pop_trivia", "knowledge_fame_online")],
     }
 
-    # ---- jaggedness: how often right, and how sure, topic by topic (the claims ledger's knowledge_* entries)
-    C = json.loads((A / "portrait.json").read_text())["claims"]
-    JAG = ["history", "nature", "values", "sports", "food", "science", "money", "places", "support", "health", "legal", "arts",
-           "tech", "trust_safety", "commerce", "documents", "ai_systems", "search", "mind", "code", "society", "people", "future",
-           "education", "operations"]
-    out["jagged"] = [{"topic": {"trust_safety": "safety", "ai_systems": "AI systems"}.get(t, t),
-                      "right": r2(C[f"knowledge_{t}"]["effect"]), "sure": r2(C[f"knowledge_{t}"].get("confidence")),
-                      "n": C[f"knowledge_{t}"]["n"]} for t in JAG if f"knowledge_{t}" in C]
+    # ---- jaggedness: pairs of tasks that look alike and land far apart, each from one experiment
+    cs = {x["label"]: x for x in num("work_code_says_vs_does")["sets"]}
+    fc = {x["label"]: x for x in num("work_function_call_checks")["kinds"]}
+    ap = num("work_agent_patches")
+    ops = next(f for f in num("work_task_not_domain")["fields"] if f["label"] == "operations and logs")
+    icd = {x["truth"]: x for x in num("work_icd_coding_rules")["chapters"]}
+    ab = {x["label"]: x for x in num("work_new_abuse")["sets"]}
+    fm = {x["label"]: x for x in num("knowledge_fame_online")["domains"]}
+    P2 = lambda field, i, a, av, b, bv, coin=True, unit="right": {  # noqa: E731
+        "field": field, "a": a, "av": r2(av), "b": b, "bv": r2(bv), "coin": coin, "unit": unit, "link": link(i)}
+    out["jagged_pairs"] = [
+        P2("code", "work_code_says_vs_does", "does this docstring describe the function?", cs["docstring fits the function"]["acc"],
+           "does this function have a security bug?", cs["function has a security bug"]["acc"]),
+        P2("tool calls", "work_function_call_checks", "an AI called the wrong function", fc["wrong function"]["value"],
+           "an AI swapped two arguments", fc["two arguments swapped"]["value"], coin=False, unit="caught"),
+        P2("coding agents", "work_agent_patches", "the agent crashed or gave up: not fixed", ap["crashed_unresolved"],
+           "the agent submitted a patch that doesn't work: not fixed", ap["submitted_unresolved"]),
+        P2("logs", "work_task_not_domain", "what kind of line is this log line?", ops["hi"]["value"],
+           "did this storage block go wrong?", ops["lo"]["value"]),
+        P2("medical coding", "work_icd_coding_rules", "file an injury in the injury chapter", icd["injury_poisoning"]["ok"],
+           "file how the injury happened (a fall, a crash) in its own chapter", icd["external_causes"]["ok"], coin=False),
+        P2("abuse", "work_new_abuse", "spam and phishing email", 1 - ab["spam and phishing email"]["miss"],
+           "fake job ads", 1 - ab["fake job ads"]["miss"], coin=False, unit="caught"),
+        P2("fame", "knowledge_fame_online", "which of two athletes is better known?", fm["athletes"]["acc"],
+           "which of two internet memes is better known?", fm["internet phenomena"]["acc"]),
+    ]
+    out["field_share"] = r2(num("work_task_not_domain")["between_share"], 2)
+    # the tasks where Jev stays sure while it's wrong, and a few hard ones where its confidence fell with its accuracy
+    sw = num("work_sure_and_wrong")
+    out["sure_wrong"] = {"rows": [{"label": r["label"], "right": r2(r["acc"]), "sure": r2(r["conf"]), "chance": r2(r["chance"], 2),
+                                   "n": r["n"], "honest": r in sw["honest"]} for r in sw["blind"][:6] + sw["honest"][:2]],
+                         "n_over": sw["n_over"], "n_tasks": sw["n_tasks"], "link": link("work_sure_and_wrong")}
 
     # ---- Jev's own verdict: how many experiments it says describe it
     rec = [((e.get("take") or {}).get("scores") or {}).get("recognize") for e in exps]
@@ -401,8 +427,8 @@ def main():
     out["edges"] = [{**link(i), "line": take(i)} for i in EDGES if i in by]
     out["jev_top"] = [{**link(e["id"]), "line": take(e["id"])} for e in exps[:5]]
     # a few of the case studies' memes, with how funny Jev found them, woven into the chapters
-    out["memes"] = {i: by[i]["meme"] for i in ("taste_top_film", "world_trolley_countries", "influence_crowd_opinion",
-                                               "numbers_prices_year", "person_type", "lexicon_first_to_mind", "self_could_vs_would", "work_which_way_it_errs") if by.get(i, {}).get("meme")}
+    out["memes"] = {i: by[i]["meme"] for i in ("taste_top_film", "world_trolley_countries", "influence_crowd_opinion", "risk_prospect_theory",
+                                               "numbers_prices_year", "person_type", "lexicon_first_to_mind", "self_could_vs_would", "work_knows_hard_cases") if by.get(i, {}).get("meme")}
     (A / "story.json").write_text(json.dumps(out, ensure_ascii=False, indent=1, default=str))
     print(f"story.json: {len(out)} sections, {len(doms)} taste domains, "
           f"{sum(1 for d in doms for t in d['top'] if t['img'])} pictures")

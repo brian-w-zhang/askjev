@@ -7,11 +7,11 @@ import Chart from "./Chart";
 import type { ExperimentCard } from "./types";
 
 // The experiments library (docs/16 pass 4): one card per experiment with its result, a thumbnail of its chart and
-// Jev's own verdict on it. Sorted by Jev's head-to-head ranking by default; family facets and search narrow it.
-// Sorts beyond Jev's rank use its own answers about each experiment; the card then shows the value it's sorted by
+// Jev's own verdict on it. Sorted by how interesting Jev thinks each one is by default; family facets and search narrow
+// it. Sorts use Jev's own answers about each experiment, and the card shows the value it's sorted by
 type Sort = "rank" | "interesting" | "describes" | "describes_least" | "surprising" | "trust" | "fair" | "n" | "family";
 const SORTS: [Sort, string][] = [
-  ["rank", "Jev's rank"], ["interesting", "Most interesting, to Jev"], ["describes", "Describes Jev most"],
+  ["interesting", "Most interesting, to Jev"], ["rank", "Jev's head-to-head picks"], ["describes", "Describes Jev most"],
   ["describes_least", "Describes Jev least"], ["surprising", "Most surprising to Jev"], ["trust", "Most reliable, to Jev"],
   ["fair", "Fairest comparison, to Jev"], ["n", "Most questions"], ["family", "Family"],
 ];
@@ -38,11 +38,10 @@ const FEW = 7;
 export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] }) {
   const [q, setQ] = useState("");
   const [family, setFamily] = useState("");
-  const [sort, setSort] = useState<Sort>("rank");
+  const [sort, setSort] = useState<Sort>("interesting");
   const [open, setOpen] = useState(false);
   const needle = q.trim().toLowerCase();
   const ranks = useMemo(() => new Map(cards.map((c, i) => [c.id, i + 1])), [cards]);
-  const rank = (c: ExperimentCard) => ranks.get(c.id) ?? 999;
   const matches = useMemo(() => cards.filter((c) => !needle || `${c.title} ${c.result} ${c.family_label} ${c.id}`.toLowerCase().includes(needle)), [cards, needle]);
   const families = useMemo(() => {
     const m = new Map<string, { label: string; n: number }>();
@@ -96,7 +95,6 @@ export default function ExperimentsIndex({ cards }: { cards: ExperimentCard[] })
           <Link key={c.id} href={`/portrait/atlas/${c.id}`} prefetch={false} className="ex-card">
             <div className="ex-top">
               <span className="ex-fam">{c.family_label}</span>
-              <span className="ex-rank" title="Rank from Jev's head-to-heads and its own answers about each experiment">{sort === "rank" && !needle && !family && rank(c) <= 3 ? "Jev’s pick · " : ""}#{rank(c)}</span>
             </div>
             <h3>{c.title}</h3>
             <div className="ex-thumb" aria-hidden><Chart chart={c.chart} mini /></div>

@@ -125,8 +125,7 @@ and can't say. Rules:
 shared UI files are untouched. The map's body never scrolls, so the portrait scrolls inside its own `.pt` container
 (scroll-snap, proximity), and all its styles are scoped under `.pt`.
 
-**The story.** The page is thirteen chapters: four on the project (how is Jev, why ask, how it was made, Jev's jobs, in Brian's voice) and nine built from the experiments, then the limits and the fine print (the you-vs-Jev quiz is gone), then the reader's turn, the limits and the fine
-print (`components/portrait/story/`). `scripts/portrait/story.py` copies each chapter's numbers from the experiments'
+**The story.** The page is fifteen chapters: four on the project (how is Jev, why ask, how it was made, Jev's jobs, in Brian's voice) and eleven built from the experiments, then the reader's turn, the limits and the fine print (`components/portrait/story/`). `scripts/portrait/story.py` copies each chapter's numbers from the experiments'
 result files into `data/analysis/story.json`, which `export_page.py` puts into `portrait.json` as `story`; no number
 is typed into the page. Chapters are written in the third person and each ends with links to its case studies.
 
@@ -138,14 +137,15 @@ is typed into the page. Chapters are written in the third person and each ends w
 | all the way down | every logged call sorted by what it asked (`jev_jobs.py`) | seven layers (gather, read, file, answer, compare, judge, laugh), each a set of typed calls with Jev's exact words and counts; a question's walk down the tree; what isn't Jev |
 | personality | Big Five, the type test, honesty-humility, the dark triad, fictional twins | percentile rows, four measured axes with every statement on demand, a meter, the closest characters |
 | taste | the twelve taste finals | a Letterboxd top four and a shelf of winners with pictures |
-| vocabulary | probability and amount words, colors of feelings, kiki/bouba, calm vs stirring | a sliding ruler, color cards, dictionary entries, shapes, rows |
+| vocabulary | probability and amount words, colors of feelings, kiki/bouba, calm vs exciting | a sliding ruler, color cards, dictionary entries, shapes, rows |
 | numbers | prices by year, death tolls, the two-thirds game, lost wallets | a receipt, a log ladder, a number line, range bars |
 | what it knows | calibration on facts, trivia by category, fame in history vs online | confidence bands, category rows |
 | morals | trolley dilemmas in 42 countries, the Moral Machine, free will | three trolley diagrams, effect rows, a quote card |
+| risk | prospect theory's gamble choices (the 2020 replication), unknown odds (choices13k) | Jev-vs-people bars for gains and losses, the better average, the unknown gamble |
 | peer pressure | a claimed crowd, a pushy user, anchoring | two chats |
 | habits | could vs would, the way out, the middle of the scale, where Jev ranks itself among minds | effect rows, most/least rows, a ranking |
-| at work | calibration on labeled tasks, which way it errs, task vs field | confidence bands, yes-rate against the true rate, field ranges |
-| rough edges | eight experiments where Jev seems to miss | cards linking to each case study, framed as leads |
+| at work | calibration on labeled tasks, which way it errs | confidence bands, yes-rate against the true rate |
+| jaggedness | seven pairs of look-alike checks, each from one experiment (code, tool calls, coding agents, logs, medical coding, abuse, fame); how little the field explains; the tasks where Jev stays sure while wrong (`work_sure_and_wrong`) | two bars per pair on one scale with a dashed coin-toss line where the second check is a yes/no, legend on top; right vs how sure per task with its chance level; then more experiments where Jev seems to miss, framed as leads |
 
 Every experiment chapter ends with "more in this chapter": five or six other case studies on the theme, each with its
 first takeaway, so the portrait covers the fun experiments without a chart for each. The meme sits under each chapter's
@@ -171,8 +171,9 @@ which are stored in the original order.
 
 ## 8. Atlas
 `/portrait/atlas` is the experiments library (`16-experiments-plan.md` pass 4). The first tab holds one card per
-experiment: family, title, a thumbnail of its chart, the result sentence, Jev's own verdict (keep, atlas, rework, cut;
-its label and interest) and its rank in Jev's head-to-heads, filterable by family and searchable. Each card opens
+experiment: family, title, a thumbnail of its chart, the result sentence and Jev's own verdict, filterable by family and
+searchable. By default the cards are sorted by how interesting Jev thinks each one is (its probability that a curious
+reader would want it); its head-to-head ranking is one of the other sorts, and the cards no longer show a rank number. Each card opens
 `/portrait/atlas/<id>`: the result and its chart first, then the six steps (question, sourcing and coverage, questions
 asked, scoring, chart, verdict), the fine print, real rows, and links to the topics its questions sit under on the map.
 The data is `data/analysis/experiments.json` (private, from `scripts/experiments/export.py`; published next to

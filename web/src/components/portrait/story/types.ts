@@ -25,7 +25,7 @@ export type Story = {
     amounts: { phrase: string; jev: string; people: string }[];
     kiki: VS; bouba: VS; spread: number; n_shapes: number;
     colors: { feeling: string; jev: string; people: string }[];
-    stirring: ({ word: string } & VS)[]; hex: number; links: ExLink[];
+    exciting: ({ word: string } & VS)[]; hex: number; links: ExLink[];
   };
   numbers: {
     prices: { median_year: number; said_year: number; items: { item: string; year: number; lo?: number; hi?: number; now?: number | null }[] };
@@ -44,9 +44,9 @@ export type Story = {
     user: { flipped: number; shift_wrong: number; example: string };
     anchor: { jev: number }; links: ExLink[];
   };
-  minds: {
-    self: { cap: string; jev: number; people: number; above: string | null; below: string | null }[];
-    ambiguity: VS; links: ExLink[];
+  risk: {
+    reflection: Record<"gains" | "losses", VS>; ev: VS; effects: { n: number; shows: number; reversed: number };
+    ambiguity: VS & { vs_sure: VS }; links: ExLink[];
   };
   howdy: {
     direct: { id: string; q: string; a: string; p: number; people_same: number; people_top: string | null; people_top_p: number | null; n: number | null }[];
@@ -63,7 +63,6 @@ export type Story = {
   work: {
     calibration: Record<"noul" | "choice", { label: string; conf: number; acc: number; n: number }[]>;
     errs: { kind: string; label: string; says: number; base: number; right: number; n: number }[];
-    fields: { label: string; value: number; lo: { name: string; value: number }; hi: { name: string; value: number } }[];
     links: ExLink[];
   };
   knows: {
@@ -73,7 +72,10 @@ export type Story = {
   };
   more?: Record<string, ExLink[]>;
   self_rating?: { n: number; yes: number; unsure: number };
-  jagged?: { topic: string; right: number; sure: number; n: number }[];
+  // two tasks that look alike, one experiment each: a = the one Jev handles, b = its neighbor; coin = b is a yes/no, so 50% is a coin
+  jagged_pairs: { field: string; a: string; av: number; b: string; bv: number; coin: boolean; unit: "right" | "caught"; link: ExLink }[];
+  field_share: number;
+  sure_wrong: { rows: { label: string; right: number; sure: number; chance: number; n: number; honest: boolean }[]; n_over: number; n_tasks: number; link: ExLink };
   edges: (ExLink & { line: string })[];
   jev_top: (ExLink & { line: string })[];
   memes: Record<string, ExperimentMeme>;

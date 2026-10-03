@@ -190,7 +190,7 @@ TASK = {**NAMES, "commit_messages": "commit message type", "code_lang": "program
         "ledgar": "contract clause type", "icd10_chapter": "diagnosis chapter", "drug_reviews": "drug review",
         "airline_complaints": "airline complaint", "multiwoz_domain": "travel dialogue domain",
         "loghub_lines": "log line type", "asap_essays": "essay grade", "dolly_tasks": "task type",
-        "arxiv_screen": "paper topic"}
+        "arxiv_screen": "paper topic", "movielens_recs": "would this user like the film", "so_quality": "Stack Overflow question quality"}
 
 
 def lean():
@@ -451,4 +451,64 @@ def scales():
     return spec, run
 
 
-EXPERIMENTS = [where_reliable(), calibration(), lean(), routing(), borderline(), scales()]
+
+def sure_and_wrong():
+    spec = Spec(
+        id="work_sure_and_wrong", family="work", title="Where Jev is sure and wrong: the tasks its confidence doesn't warn you about",
+        question="On the work tasks where Jev gets the most wrong, does its confidence drop to warn you, or does it stay as "
+                 "sure as on the tasks it gets right?",
+        why="A model that is weak on a task but says so is easy to build on: send its unsure answers to a person. The "
+            "dangerous edge is the task where it is often wrong and still sure. TypeSafe calls Jev calibrated and publishes "
+            "no per-task numbers (docs/01-jev.md §6), so which tasks hide their misses is open ground.",
+        sourcing="Existing Machine-hemisphere questions from public labeled datasets with a right answer (Noul, Choice), "
+                 "grouped by source task, tasks with 200+ questions. Authored TypeSafe-style questions are left out "
+                 "(their labels are the author's). Enough: ~270,000 questions, 120+ tasks.",
+        scoring="Per task: the share right (its most likely answer equals the label), its average confidence (the "
+                "probability on that answer) and the chance level (one over the number of options). The gap is confidence "
+                "minus share right, with a 90% bootstrap interval over questions. Blind spots: the tasks with the widest "
+                "gap; honest hard tasks: the tasks Jev gets right least often whose gap is under 5 points.",
+        chart="One row per task: how sure Jev was against how often it was right, the widest gaps first, then the hard "
+              "tasks where its confidence fell with its accuracy.",
+        compared_with="each dataset's own labels (a right answer, not a crowd)",
+        limits="A dataset's label is not always right, which can make a task look harder than it is (and widen its gap). "
+               "Confidence is Jev's probability on its own top answer, averaged per task. Tasks differ in chance level. "
+               "Indicators, not a ranking of tasks.", sources=[])
+
+    def run():
+        q = public().filter(pl.col("primitive").is_in(["noul", "choice"])).with_columns(
+            pl.when(pl.col("primitive") == "noul").then(0.5)
+            .otherwise(1 / (pl.col("options").str.count_matches('", "') + 1)).alias("chance"),
+            (pl.col("p_top") - pl.col("correct").cast(pl.Float64)).alias("gap"))
+        t = q.group_by("source").agg(pl.len().alias("n"), pl.col("correct").mean().alias("acc"), pl.col("p_top").mean().alias("conf"),
+                                     pl.col("chance").mean().alias("chance"), pl.col("gap").mean().alias("gap"),
+                                     pl.col("primitive").first().alias("primitive")).filter(pl.col("n") >= 200).sort("source")
+        own = {"clone_pairs": "do two pieces of code do the same job?", "hdfs_sessions": "did this storage block go wrong?",
+               "commit_messages": "what kind of change is this commit?", "emotion": "which emotion is this tweet?",
+               "op_spam_reviews": "is this hotel review genuine?", "linkedin_jobs": "which field is this job ad in?",
+               "fake_job_posts": "is this job ad a scam?", "movielens_recs": "would this user like the film?"}
+        rows = [{"task": r["source"], "label": own.get(r["source"]) or TASK.get(r["source"], r["source"].replace("_", " ")), "n": r["n"], "acc": r["acc"],
+                 "conf": r["conf"], "chance": r["chance"], "gap": r["gap"], "primitive": r["primitive"]} for r in t.iter_rows(named=True)]
+        for r in rows:
+            r["ci"] = boot(q.filter(pl.col("source") == r["task"])["gap"].to_numpy(), b=300)
+        blind = sorted(rows, key=lambda r: -r["gap"])[:8]
+        honest = sorted([r for r in rows if r["gap"] < 0.05], key=lambda r: r["acc"])[:4]
+        over = [r for r in rows if r["ci"][0] > 0.1]
+        b0 = blind[0]
+        return Result(
+            result=f"On most work tasks Jev's confidence falls when its accuracy does, but not on all. On {len(over)} of "
+                   f"{len(rows)} tasks it is surer than right by more than 10 points, worst on {b0['label']}: "
+                   f"{b0['conf']:.0%} sure on average, right {b0['acc']:.0%} of the time (a coin would get "
+                   f"{b0['chance']:.0%}). Its hardest honest task is {honest[0]['label']}: right {honest[0]['acc']:.0%} "
+                   f"of the time, and only {honest[0]['conf']:.0%} sure.",
+            evidence=f"{q.height:,} questions from {len(rows)} tasks with 200+ questions; 90% intervals over questions",
+            numbers={"tasks": rows, "blind": blind, "honest": honest, "n_over": len(over), "n_tasks": len(rows)}, n=q.height,
+            chart={"type": "dumbbell", "rows": [{"label": r["label"], "a": r["conf"], "b": r["acc"], "hi": r in blind}
+                                                for r in blind + honest],
+                   "a_label": "how sure", "b_label": "share right", "domain": [0, 1]},
+            robustness=f"Widest gaps hold within their 90% intervals: {b0['label']} {b0['ci'][0]:.0%} to {b0['ci'][1]:.0%}.",
+            examples=seeded(q.filter((pl.col("source") == b0["task"]) & ~pl.col("correct") & (pl.col("p_top") >= 0.9))["id"].to_list(), "sure"),
+            ids=q["id"].to_list())
+    return spec, run
+
+
+EXPERIMENTS = [where_reliable(), calibration(), lean(), routing(), borderline(), scales(), sure_and_wrong()]

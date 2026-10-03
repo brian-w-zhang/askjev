@@ -579,17 +579,25 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 .st-receipt li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0 10px; }
 .st-receipt li small { grid-column: 1 / -1; font-size: 10.5px; color: #777; margin-top: -1px; }
 
-/* jaggedness web */
-.web-w { max-width: 620px; margin: 0 auto; }
-.web { width: 100%; height: auto; display: block; overflow: visible; }
-.web-g { fill: none; stroke: var(--w-grid); }
-.web-s { stroke: var(--w-grid); }
-.web-t { font-family: var(--mono); font-size: 8.5px; fill: var(--w-fg-2); }
-.web-right { fill: color-mix(in oklab, var(--jev) 28%, transparent); stroke: var(--jev); stroke-width: 2; stroke-linejoin: round; }
-.web-sure { fill: none; stroke: var(--w-fg); stroke-width: 1.2; stroke-dasharray: 4 3; }
-.web-d { fill: var(--jev); }
-.web-l { font-size: 10.5px; fill: var(--w-fg); }
-.web-l.weak { fill: var(--jev); font-weight: 700; }
+/* jaggedness: pairs of look-alike checks, two bars each on one 0-100% scale (Story.tsx, Pair) */
+.jp-key { margin: 0 0 14px; }
+.jp-l { display: grid; gap: 16px; }
+.jp { display: grid; gap: 6px; }
+.jp-f { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin: 0; }
+.jp-f b { font-family: var(--pixel); font-size: 18px; font-weight: 400; color: var(--w-fg); }
+.jp-f a { font-family: var(--mono); font-size: 11px; color: var(--w-fg-2); }
+.jp-row { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) 40px; gap: 10px; align-items: center; font-size: 13px; line-height: 1.3; }
+.jp-t { position: relative; height: 12px; background: var(--w-sub); }
+.jp-t b { position: absolute; left: 0; top: 0; bottom: 0; background: var(--ppl); transition: width 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.2s; }
+.jp-row.weak .jp-t b { background: var(--jev); }
+.jp:not([data-in]) .jp-t b { width: 0 !important; }
+.jp-coin { position: absolute; left: 50%; top: -3px; bottom: -3px; border-left: 2px dashed var(--w-fg); }
+.jp-k { display: inline-block; width: 14px; height: 9px; background: var(--ppl); margin-right: 6px; vertical-align: -1px; }
+.jp-k.weak { background: var(--jev); }
+.jp-coin-k { display: inline-block; width: 0; height: 12px; border-left: 2px dashed var(--w-fg); margin-right: 6px; vertical-align: -2px; }
+.jp-row em { font-style: normal; font-family: var(--mono); font-size: 12px; text-align: right; }
+.jp-row.weak em { color: var(--jev); font-weight: 700; }
+@media (max-width: 640px) { .jp-row { grid-template-columns: 1fr 40px; } .jp-row .jp-t { grid-column: 1 / -1; grid-row: 2; } }
 
 /* why ask */
 .oq { list-style: none; margin: 0; padding: 0; display: grid; }

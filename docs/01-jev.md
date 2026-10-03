@@ -82,21 +82,24 @@ model listing. **UNVERIFIED** marks anything not confirmed.
   base margin exceeds 0.1. Script: `scripts/spike_jev.py`.
 
 ## 6. Jaggedness TypeSafe already documents (jev-1.13)
-From `model-jaggedness/jev-1.13` (reviewed 2026-09-17). **Don't present these as discoveries.
-Quantify them at scale and by topic, or go beyond them.**
-1. Literal reading (answers the words, not the intent)
-2. Math and numbers: counting, raw numeric values (hex/RGB is worse than names)
+From `model-jaggedness/jev-1.13` (reviewed 2026-10-02; it opens "fast, calibrated, and good at common-sense
+judgment"). **Don't present these as discoveries. Quantify them at scale and by topic, or go beyond them.**
+1. Literal reading: scoping words, negations and implied conditions read at face value
+2. Math and numbers: counting, numeric representations (hex/RGB worse than names, assembly worse than
+   high-level code), interpolating between score levels
 3. Date/time comparison
-4. Indirection and double negatives
-5. Large irrelevant state (context rot)
-6. Adversarial content and prompt injection can move answers
-7. Contradictory instructions or criteria
-8. **No structural invariants.** A Noul and a yes/no Choice aren't comparable (0.22 vs 0.01), and
-   P(q) + P(not q) ≠ 1 (their example sums to 1.19)
-9. No generation
+4. Indirection
+5. Large state full of irrelevant detail
+6. Adversarial content
+7. Contradictory instructions and criteria
+8. Choice option order: in some cases it leans toward the option that comes first
+9. Generation
 
-**Not on their list, and so our novel ground:** option-order and position bias, rewording (universe)
-fragility by topic, transitivity, decoy/IIA effects, the self-vs-human frame gap,
+The 2026-09-17 version also listed "no structural invariants" (a Noul and a yes/no Choice aren't comparable;
+P(q) + P(not q) ≠ 1, their example summing to 1.19); the current page no longer does.
+
+**Not on their list, and so our novel ground:** the size of the option-order effect at scale and where
+it turns into position bias, rewording (universe) fragility by topic, transitivity, decoy/IIA effects, the self-vs-human frame gap,
 calibration by topic and by industry (they publish no calibration metrics), and
 placement stability. Also, "pairwise reranking" is claimed on their use-case page but
 never demonstrated.
