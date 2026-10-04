@@ -61,8 +61,10 @@ export type Story = {
     other: { topic: string; top: number }[]; middle: { label: string; mid: number }[]; links: ExLink[];
   };
   work: {
-    calibration: Record<"noul" | "choice", { label: string; conf: number; acc: number; n: number }[]>;
+    kinds: { kind: string; lean: "yes" | "no" }[];
     errs: { kind: string; label: string; says: number; base: number; right: number; n: number }[];
+    misses: { next_door: number; cant_tell: number; none_lo: number; none_lo_label: string; none_hi: number; none_hi_label: string;
+      legal_miss: number; legal_invent: number };
     links: ExLink[];
   };
   knows: {

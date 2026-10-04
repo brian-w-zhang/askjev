@@ -22,8 +22,8 @@ answers wherever they exist, and every number traceable to the questions behind 
   it, and every question behind it.
 - **The portrait.** A long read in fifteen chapters: how Jev is doing (asked on real wellbeing scales), why ask a
   model everything, where the questions came from, every job Jev does in this project, and then its personality,
-  taste, language, numbers, confidence, morals, risk, the peer pressure it bends under, its habits, how it does at
-  work, and where similar tasks get very different results.
+  taste, language, numbers, confidence, morals, risk, the peer pressure it bends under, its habits, the predictable ways it's
+  wrong at work, and where similar tasks get different results.
 
 The answers, findings and site data stay private: the site is shared with TypeSafe directly, and this repo holds the
 code and the method. Not affiliated with TypeSafe.
@@ -57,8 +57,8 @@ Two places Jev checks its own inputs:
   so the map's structure is something Jev mostly agrees with, not just something imposed on it.
 
 What isn't Jev:
-- **Claude** wrote the synthetic questions, the topic descriptions, the case studies and the meme captions, and
-  wrote this code with me. It never answers a question.
+- **Claude** wrote the synthetic questions, the topic descriptions, the case studies and the meme captions. It
+  never answers a question.
 - **bge-small-en-v1.5**, run locally, makes the embeddings: similar questions for search and duplicates, nearest
   topics, and the map's Meaning layout.
 - **Code** turns sources into questions, and turns Jev's answers into experiments, intervals and charts.

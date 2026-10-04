@@ -546,32 +546,31 @@ function Defaults({ s }: { s: S }) {
 /* ---------------------------------------------------------------- at work */
 function Work({ s }: { s: S }) {
   const w = s.work;
-  const band = (k: "noul" | "choice") => w.calibration[k].map((b) => ({ key: b.label, label: b.label, value: pc(b.acc),
-    marks: [{ v: b.conf, kind: "tick" as const, title: `how sure: ${pc(b.conf)}` }, { v: b.acc, kind: "jev" as const, title: `right: ${pc(b.acc)}` }] }));
-  const kinds = [...new Set(w.errs.map((e) => e.kind))];
+  const m = w.misses;
   return (
-    <Chapter more={s.more?.work} id="work" aside={<Meme s={s} id="work_knows_hard_cases" />} kicker="at work" field="sage" links={w.links}
-      title={<>Honest on yes or no, too sure on a list</>}
-      lede={<>Jev is built for work inside software: sorting tickets, checking code, judging text. On yes/no checks its confidence is close to honest; picking from a list, it&rsquo;s surer than it should be. And each check leans one way when it&rsquo;s wrong, which tells you what to double-check. One pass over the labeled data here, not a benchmark.</>}>
-      <Box title="How sure it said it was, and how often it was right">
-        <div className="st-grid pair tight">
-          <div><p className="st-sub">Yes or no</p><DotRows domain={[0.4, 1]} ticks={[0.5, 0.75, 1]} fmt={(v) => pc(v)} rows={band("noul")} /></div>
-          <div><p className="st-sub">Picking from a list</p><DotRows domain={[0.4, 1]} ticks={[0.5, 0.75, 1]} fmt={(v) => pc(v)} rows={band("choice")} /></div>
-        </div>
-        <p className="ex-legend"><span><i className="k jev" />how often it was right</span><span><i className="k tick" />how sure it said it was</span></p>
-        <p className="st-note">Rows are bands of stated confidence. A square left of its tick means Jev was surer than it turned out to be.</p>
-      </Box>
-      <Box title="Which way it errs: how often Jev says yes, next to how often yes is right">
-        {kinds.map((k) => (
-          <div key={k} className="we">
-            <p className="st-sub">{k}</p>
+    <Chapter more={s.more?.work} id="work" aside={<Meme s={s} id="work_legal_misses_present" />} kicker="at work" field="sage" links={w.links}
+      title={<>Wrong in predictable ways</>}
+      lede={<>Jev is built for work inside software: checking, matching, sorting. Every checker gets some cases wrong; what makes one usable is knowing which way. Jev&rsquo;s misses lean the same way for each kind of check, and land somewhere you can guess, so you know which of its answers deserve a second look. One pass over each task&rsquo;s labeled data, not a benchmark.</>}>
+      <Box title="Which way each check leans: how often Jev says yes, next to how often yes is right"
+        note={<>The two tasks per kind where Jev&rsquo;s yes rate sits furthest from the true one; the case study has all of them.</>}>
+        {w.kinds.map(({ kind, lean }) => (
+          <div key={kind} className="we">
+            <p className="st-sub">{kind} <em className={`we-lean ${lean}`}>leans {lean}</em></p>
             <DotRows domain={[0, 1]} ticks={[0, 0.5, 1]} fmt={(v) => pc(v)}
-              rows={w.errs.filter((e) => e.kind === k).map((e) => ({ key: e.label, label: e.label, link: true, value: pc(e.says),
+              rows={w.errs.filter((e) => e.kind === kind).map((e) => ({ key: e.label, label: e.label, link: true, value: `${pc(e.says)} yes`,
                 marks: [{ v: e.base, kind: "hum" as const, title: `true share: ${pc(e.base)}` }, { v: e.says, kind: "jev" as const }] }))} />
           </div>
         ))}
-        <p className="ex-legend"><span><i className="k jev" />Jev says yes</span><span><i className="k hum" />the true share of yes</span></p>
-        <p className="st-note">Where the two marks sit apart, the gap shows which mistake to plan for: a check that says yes too easily needs a second look at its yeses.</p>
+        <p className="ex-legend"><span><i className="k jev" />how often Jev says yes</span><span><i className="k hum" />how often yes is right</span></p>
+        <p className="st-note">So: double-check its yeses on quality and on alarms, and its noes on matches and on whether a claim is backed up.</p>
+      </Box>
+      <Box title="Where its misses land" note={<>Each from one experiment&rsquo;s labeled data; the case studies below have the rest.</>}>
+        <div className="wm">
+          <div><b>{pc(m.next_door)}</b><span>of misrouted customer messages had the right place as Jev&rsquo;s second choice. Its misses land next door.</span></div>
+          <div><b>{pc(m.cant_tell)}</b><span>of its misreadings of clear evidence fall back to &ldquo;can&rsquo;t tell&rdquo;, not to the opposite verdict.</span></div>
+          <div><b>{pc(m.none_lo)}&ndash;{pc(m.none_hi)}</b><span>is how often it answers &ldquo;nothing here&rdquo; when that&rsquo;s right ({m.none_lo_label} to {m.none_hi_label}). Otherwise it finds something that isn&rsquo;t there.</span></div>
+          <div><b>{pc(m.legal_miss)} <small>vs</small> {pc(m.legal_invent)}</b><span>of contract provisions missed, against absent ones invented. In legal review it overlooks rather than imagines.</span></div>
+        </div>
       </Box>
     </Chapter>
   );
@@ -601,7 +600,7 @@ function Edges({ s }: { s: S }) {
   const sw = s.sure_wrong;
   return (
     <Chapter id="edges" kicker="jaggedness" field="ink" more={s.edges} links={[...pairs.map((p) => p.link), ...(sw ? [sw.link] : [])]}
-      title={<>Similar tasks, very different results</>}
+      title={<>Similar tasks, different results</>}
       lede={<>Knowing the field says little about whether Jev will get a task right: across its work tasks, the field explains only {pc(s.field_share)} of the differences. The task does. Even in code, logs and tool calls, the jobs it&rsquo;s built for, it can be near perfect on one check and near a coin toss on the one beside it, and on some of those it stays just as sure. These are leads from single experiments, not verdicts.</>}>
       {pairs.length > 0 && (
         <Box title="Two checks that look alike: how often Jev gets each right (or catches the problem)"

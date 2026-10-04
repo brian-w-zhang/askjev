@@ -144,7 +144,7 @@ is typed into the page. Chapters are written in the third person and each ends w
 | risk | prospect theory's gamble choices (the 2020 replication), unknown odds (choices13k) | Jev-vs-people bars for gains and losses, the better average, the unknown gamble |
 | peer pressure | a claimed crowd, a pushy user, anchoring | two chats |
 | habits | could vs would, the way out, the middle of the scale, where Jev ranks itself among minds | effect rows, most/least rows, a ranking |
-| at work | calibration on labeled tasks, which way it errs | confidence bands, yes-rate against the true rate |
+| at work ("Wrong in predictable ways") | which way each kind of check leans when it's wrong, and where its misses land (next door when routing, "can't tell" on evidence, finding something when the answer is "nothing here", missing what's in a contract); no confidence, which the knowledge and jaggedness chapters cover | yes-rate against the true rate, two tasks per kind, each kind marked leans yes or no; four numbered cards |
 | jaggedness | seven pairs of look-alike checks, each from one experiment (code, tool calls, coding agents, logs, medical coding, abuse, fame); how little the field explains; the tasks where Jev stays sure while wrong (`work_sure_and_wrong`) | two bars per pair on one scale with a dashed coin-toss line where the second check is a yes/no, legend on top; right vs how sure per task with its chance level; then more experiments where Jev seems to miss, framed as leads |
 
 Every experiment chapter ends with "more in this chapter": five or six other case studies on the theme, each with its
