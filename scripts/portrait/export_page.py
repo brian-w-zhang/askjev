@@ -336,9 +336,13 @@ def main():
     from askjev import db
     with db.connect() as c:  # topic names, so the atlas can show "Happiness & the Good Life" rather than an id
         labels = {r["id"]: r["label"] for r in c.execute("select id, label from nodes")}
+        # the builds that actually answered: the gateway reports the served version on every call
+        served = [r["model_served"] for r in c.execute(
+            "select model_served from calls where model_served is not null group by 1 order by 1")]
     nodes = nodes.with_columns(pl.col("node_id").replace_strict(labels, default=None).alias("label"))
     out = {
         "version": next((c.get("jev_version") for c in L["claims"] if c.get("jev_version")), "typesafe-ai/jev"),
+        "served": served,
         "claims": byid, "rows": rows,
         "work": [{"id": c["id"], "task": c["id"].removeprefix("task_"), "acc": c["effect"], "decisive": c.get("decisive"),
                   "band": c.get("band"), "n": c["n"],

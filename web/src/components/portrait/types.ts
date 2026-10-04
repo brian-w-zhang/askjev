@@ -46,6 +46,7 @@ export type NodeCard = { node_id: string; n: number; [metric: string]: string | 
 
 export type PortraitData = {
   version: string;
+  served?: string[]; // every Jev build that answered, as the gateway reported it
   claims: Record<string, Claim>;
   rows: Record<string, Row>;
   work: Task[];

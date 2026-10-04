@@ -62,12 +62,12 @@ def pairs() -> dict:
 
 def option_order():
     spec = Spec(
-        id="consistency_option_order", family="consistency", title="The order of the options doesn't matter to Jev",
+        id="consistency_option_order", family="consistency", title="On average, the order of the options doesn't move Jev",
         question="When the same options are listed in a different order, or a rating scale is turned upside down, does "
                  "Jev's answer move more than it does when the question is simply asked again?",
-        why="People and most language models favor whatever is listed first (or last). TypeSafe doesn't document "
-            "position bias either way (docs/01-jev.md §6 lists it as open ground); a model that ignores order is "
-            "safer to use for ranking and multiple choice.",
+        why="People and most language models favor whatever is listed first (or last). TypeSafe notes that Jev, in some "
+            "cases, leans toward the option that comes first (docs/01-jev.md §6.8); this measures how much that adds up "
+            "to across the corpus, which decides whether results elsewhere need a correction for order.",
         sourcing="Every pick-one question in the corpus was also asked with its options shuffled three times; "
                  "two-option questions were asked reversed, in the original order, and reversed again, so the same "
                  "request was sent twice. Every rating question was also asked with its levels reversed. Enough: "

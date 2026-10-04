@@ -1,7 +1,7 @@
 import type { ExperimentMeme } from "../../experiments/types";
 
 // Shape of portrait.json's "story" (scripts/portrait/story.py): each chapter's numbers, copied from the experiments.
-export type ExLink = { id: string; title: string; rank: number; line?: string };
+export type ExLink = { id: string; title: string; rank: number; line?: string; known?: boolean };
 type VS = { jev: number; people: number };
 
 export type Story = {

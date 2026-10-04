@@ -54,7 +54,20 @@ const MODES: [Mode, string][] = [["family", "family"], ["truth", "has a right an
 const ramp = (v: number) => `color-mix(in oklab, #d0419f ${Math.round(12 + v * 80)}%, #f4eef2)`;
 const pc = (v: number) => `${Math.round(v * 100)}%`;
 const n0 = (v: number) => v.toLocaleString("en-US");
-const name = (s: string) => s.replace(/_/g, " ");
+// Source names as a reader would say them. The question banks written for this project are stored by batch
+// ("g5_w10_self_personality"); they show as what they're about.
+const NAMES: Record<string, string> = {
+  vital4: "Wikipedia vital articles", wikidata_g4: "Wikidata facts", wikidata_companies: "Wikidata companies",
+  wikidata_memes: "Wikidata memes", goat_pairs: "greatest-of-all-time pairs", typesafe_authored: "written, TypeSafe-style",
+};
+const name = (s: string) => {
+  if (NAMES[s]) return NAMES[s];
+  if (s.startsWith("g5_")) {
+    const t = s.slice(3).replace(/^[wp]\d+_/, "").replace(/(_[a-c]|\d+)$/, "").replace(/^self_(?=.)/, "");
+    return `written: ${t.replace(/_/g, " ")}`;
+  }
+  return s.replace(/_/g, " ");
+};
 
 export default function Landscape({ m }: { m: Methods }) {
   const [focus, setFocus] = useState<string | null>(null);

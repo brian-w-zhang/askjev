@@ -5,7 +5,7 @@ family: consistency
 ## Why ask this
 People, and most language models, favor whatever is listed first, or last. Ask "Should I take the job in Boston or Denver?" and then "Denver or Boston?", and a model with that habit leans toward whichever city came first. That's why careful surveys shuffle their answers.
 
-TypeSafe doesn't document whether Jev has that bias. If it doesn't, Jev is safer to use for ranking and multiple choice than most models; if it does, every result on this site needs a correction.
+TypeSafe notes that in some cases Jev leans toward the option that comes first. This measures how much that adds up to across hundreds of thousands of questions: if the lean were large, every result on this site would need a correction for order.
 
 ## The people and the data
 No people; this compares Jev with itself. Every multiple-choice question in the project was also asked with its options in shuffled orders, and every rating question with its levels reversed. Two-option questions were asked in the reversed order, the original order and the reversed order again, which means the same request went out twice: that gives the noise floor for free.
@@ -23,6 +23,7 @@ For two-option questions: how much the probability of one option moves (a) betwe
 
 ## Caveats
 - **Only a few orders per question.** Each question was asked in three orders, one of them a repeat. That's enough to measure an average effect over hundreds of thousands of questions, not to rule out an effect on any single one.
+- **An average, not every case.** TypeSafe documents that in some cases Jev leans toward the option listed first. An average near zero over hundreds of thousands of questions is consistent with that; a lean on a few kinds of question disappears in the total.
 - **Model or gateway?.** From outside, there's no way to tell whether the model itself ignores order or whether TypeSafe's service rearranges the options before the model sees them. For anyone using Jev, the effect is the same.
 - **Order in the question text is different.** This is about the order of the answer options. When two items are named inside the question itself, Jev does lean toward one (see the mental map experiments), so this result doesn't cover that.
 

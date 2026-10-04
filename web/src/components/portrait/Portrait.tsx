@@ -66,15 +66,17 @@ function FinePrint({ C, d, total, shown }: { C: CFn; d: PortraitData; total: num
   return (
     <section id="fineprint" className="fineprint">
       <h2>The full fine print</h2>
-      <P l="what this is"><p>A playful self-portrait of one model, from {int(total)} questions it answered ({int(shown)} of them shown on the map). Every number comes from a claims ledger ({int(Object.keys(d.claims).length)} entries), each with its query, n, interval, noise floor and example questions chosen by a fixed seed. Cards built on questions I picked by hand say so.</p></P>
-      <P l="evidence"><p>Most cards rest on published instruments and real answers: the IPIP Big Five markers against {int(C("bigfive_neuroticism").human_n)} online respondents, the Moral Machine, the Moral Foundations Questionnaire, real gambles, crowd votes, and labeled tasks. The trait gaps rest on questions I wrote to measure one trait each, kept only where an audit found their scales in order 90%+ of the time. Themes found by embedding similarity live in the atlas.</p></P>
+      <P l="what this is"><p>A playful self-portrait of one model, from {int(total)} questions it answered ({int(shown)} of them shown on the map). Every number comes from a claims ledger ({int(Object.keys(d.claims).length)} entries), each with its query, n, interval, noise floor and example questions chosen by a fixed seed. Figures built on questions I picked by hand say so.</p></P>
+      <P l="evidence"><p>Most findings rest on published instruments and real answers: the IPIP Big Five markers against {int(C("bigfive_neuroticism").human_n)} online respondents, the Moral Machine, the Moral Foundations Questionnaire, real gambles, crowd votes, and labeled tasks. The trait gaps rest on questions I wrote to measure one trait each, kept only where an audit found their scales in order 90%+ of the time. Themes found by embedding similarity live in the atlas.</p></P>
       <P l="intervals and noise"><p>90% intervals resample whole sources, so one big dataset can&rsquo;t manufacture confidence. Differences under ±0.03 (yes/no, ratings) or ±0.08 (pick-one) are treated as noise.</p></P>
-      <P l="robustness"><p>Every question was asked as written, for “most people”, with options reordered, and with rating scales reversed. No rewordings were sent for this page.</p></P>
+      <P l="robustness"><p>Every question was asked as written, for “most people”, with options reordered, and with rating scales reversed. Samples were also sent twice as the identical request and reworded, to measure how much an answer moves on its own (see “Ask Jev the same thing twice” and “in other words” in the atlas).</p></P>
       <P l="how the map was filed">
         <HBars max={methods[0][1]} fmt={(v) => compact(v)} rows={methods.map(([k, v]) => ({ key: k, label: M[k] ?? label(k), v, jev: k.startsWith("jev") }))} />
       </P>
       <P l="the bill"><p>{int(bill.n)} Jev calls, each cached by request hash and never re-sent, median {int(bill.median_ms)} ms. Jev is the only model called. Everything else (the written questions, the audits, the words on this page) was made by me with Claude, with a local embedding model for similarity.</p></P>
-      <P l="what stays off"><p>Contested politics, sensitive and harmful questions, and questions about private people were answered but aren&rsquo;t shown. TypeSafe&rsquo;s own documented limits aren&rsquo;t presented as discoveries. Jev version: <code>{d.version}</code>.</p></P>
+      <P l="what stays off"><p>Contested politics, sensitive and harmful questions, and questions about private people were answered but aren&rsquo;t shown. TypeSafe&rsquo;s own documented limits aren&rsquo;t presented as discoveries; where a finding touches one, it&rsquo;s marked &ldquo;known limit&rdquo;. {d.served?.length
+        ? <>Jev as served: <code>{d.served[0]}</code>{d.served.length > 1 && <> to <code>{d.served[d.served.length - 1]}</code> ({d.served.length} dated builds)</>}, as the gateway reported on every call.</>
+        : <>Model: <code>{d.version}</code>.</>}</p></P>
       <p className="fp-end">askjev · a toy by Brian Zhang · not affiliated with TypeSafe · indicators, not a benchmark</p>
     </section>
   );

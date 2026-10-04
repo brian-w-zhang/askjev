@@ -2,7 +2,7 @@
    visual in OS windows. Scoped to .pt. Motion is decoration only: every chart is readable without it, and it's off
    for people who ask for less motion. */
 
-.st-ch { position: relative; padding: 72px 16px 64px; background: var(--field, var(--f-paper)); scroll-snap-align: start; }
+.st-ch { position: relative; padding: 72px 16px 64px; background: var(--field, var(--f-paper)); }
 .st-ch[data-f="paper"] { --field: var(--f-paper); }
 .st-ch[data-f="pink"] { --field: var(--f-pink); --hl: #fefefe; }
 .st-ch[data-f="teal"] { --field: var(--f-teal); }
@@ -356,7 +356,7 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 /* figures: a numbered caption and a quiet panel, no window chrome */
 .st-fig { display: grid; gap: 10px; counter-increment: fig; min-width: 0; }
 .st-cap { margin: 0; display: flex; gap: 10px; align-items: baseline; font-size: 14px; font-weight: 600; letter-spacing: -0.005em; color: var(--fg); }
-.st-cap::before { content: "fig " counter(fig); font-family: var(--mono); font-size: 11px; font-weight: 400; color: var(--fg-2); white-space: nowrap; }
+.st-fig > .st-cap::before { content: "fig " counter(fig); font-family: var(--mono); font-size: 11px; font-weight: 400; color: var(--fg-2); white-space: nowrap; }
 .st-fig > .st-body { background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line); padding: 18px 20px; }
 .st-fnote { margin: 0; font-size: 12.5px; color: var(--fg-2); }
 .st-main .st-grid.two, .st-main .st-grid.three { grid-template-columns: 1fr; }
@@ -388,7 +388,7 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 .ls-fh:hover { text-decoration: underline; }
 .ls-s { border: 0; margin: 0; padding: 0; cursor: pointer; box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.55); overflow: hidden; text-align: left; }
 .ls-s:hover, .ls-s.on, .ls-s:focus-visible { box-shadow: inset 0 0 0 2px #1e1e1e; outline: none; z-index: 2; }
-.ls-s > span { position: absolute; left: 6px; top: 5px; right: 4px; font-size: 11.5px; font-weight: 600; line-height: 1.15; color: #1e1e1e; overflow-wrap: anywhere; pointer-events: none; }
+.ls-s > span { position: absolute; left: 6px; top: 5px; right: 4px; font-size: 11.5px; font-weight: 600; line-height: 1.15; color: #1e1e1e; overflow-wrap: break-word; hyphens: auto; overflow: hidden; pointer-events: none; }
 .ls-s > span em { display: block; font-style: normal; font-family: var(--mono); font-weight: 400; font-size: 10px; opacity: 0.7; }
 @container (max-width: 620px) { .ls-s > span { display: none; } .ls-fh { font-size: 11px; padding: 0 5px; } }
 .ls-tip { position: absolute; z-index: 5; width: 280px; pointer-events: none; background: #1e1e1e; color: #f4f1f3; padding: 10px 12px; box-shadow: 4px 4px 0 var(--jev); display: grid; gap: 4px; }
@@ -585,6 +585,7 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 .jp { display: grid; gap: 6px; }
 .jp-f { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin: 0; }
 .jp-f b { font-family: var(--pixel); font-size: 18px; font-weight: 400; color: var(--w-fg); }
+.jp-f .st-known { margin-right: auto; }
 .jp-f a { font-family: var(--mono); font-size: 11px; color: var(--w-fg-2); }
 .jp-row { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr) 40px; gap: 10px; align-items: center; font-size: 13px; line-height: 1.3; }
 .jp-t { position: relative; height: 12px; background: var(--w-sub); }
@@ -609,3 +610,6 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 .way { display: grid; gap: 6px; padding: 14px 16px; background: var(--w-sub); text-decoration: none !important; }
 .way b { font-size: 17px; } .way span { font-size: 13.5px; color: var(--w-fg-2); } .way em { font-style: normal; font-family: var(--mono); font-size: 12px; color: var(--jev); }
 .way:hover { box-shadow: inset 0 0 0 1px var(--jev); }
+
+/* a limit TypeSafe already documents (docs/01-jev.md §6): an outlined tag, so it never reads as a discovery */
+.st-known { display: inline-block; margin-left: 8px; padding: 0 5px; border: 1px solid currentColor; font-family: var(--mono); font-size: 10px; font-style: normal; font-weight: 400; line-height: 16px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--w-fg-2); white-space: nowrap; vertical-align: 2px; }

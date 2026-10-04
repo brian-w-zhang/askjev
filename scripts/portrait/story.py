@@ -9,6 +9,7 @@ export_page.py puts into portrait.json as "story".
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 A = Path("data/analysis")
@@ -118,6 +119,9 @@ def option_label(qid: str, key: str) -> str:
     v = opts.get(key) if isinstance(opts, dict) else None
     if v:
         return v.strip()
+    # paired-feeling slugs ("happy_satisfied", "anxious_worried"): every option is two words naming one feeling
+    if isinstance(opts, dict) and opts and all(re.fullmatch(r"[a-z]+_[a-z]+", k) for k in opts):
+        return key.replace("_", " / ")
     # a slug only: back to words, "no_i_m_not_feeling_sleepy" -> "no, I'm not feeling sleepy"
     t = " " + key.replace("_", " ") + " "
     t = t.replace(" i m ", " I'm ").replace(" i ", " I ").replace(" don t ", " don't ").replace(" can t ", " can't ").strip()
@@ -164,12 +168,19 @@ def methods() -> dict:
     }
 
 
+# Experiments whose finding is a limit TypeSafe documents for jev-1.13 (docs/01-jev.md §6): sizes and hex codes are
+# §6.2 (math and numeric representations), dating things §6.3, jailbreaks §6.6 (adversarial content). They stay on
+# the page, labeled, so they never read as discoveries.
+KNOWN = {"knowledge_close_calls", "knowledge_what_came_first", "work_new_abuse", "language_hex_colors"}
+
+
 def main():
     exps = json.loads((A / "experiments.json").read_text())["experiments"]
     by = {e["id"]: e for e in exps}
     rank = {e["id"]: k + 1 for k, e in enumerate(exps)}
     take = lambda i, k=0: ((by[i].get("case") or {}).get("takeaways") or [by[i]["result"]])[k]  # noqa: E731
-    link = lambda i: {"id": i, "title": by[i]["title"], "rank": rank[i], "line": take(i)}  # noqa: E731
+    # experiments about jaggedness TypeSafe already documents (docs/01-jev.md §6) are marked "known limit" on the page
+    link = lambda i: {"id": i, "title": by[i]["title"], "rank": rank[i], "line": take(i), **({"known": True} if i in KNOWN else {})}  # noqa: E731
     imgs = json.loads(TASTE_IMG.read_text()) if TASTE_IMG.exists() else {}
     out: dict = {"n_experiments": len(exps)}
 
@@ -201,7 +212,8 @@ def main():
             continue
         c = by[i]["chart"]
         top = [{"label": x["label"], "wins": r2(x.get("value"), 2), "img": imgs.get(x["label"])} for x in c.get("items", [])[:5]]
-        doms.append({"domain": d, "name": name, "top": top, "bottom": [x["label"] for x in c.get("bottom", [])[:3]],
+        # a real city as Jev's least favorite place reads as a jab at the people who live there: skip "City, Country"
+        doms.append({"domain": d, "name": name, "top": top, "bottom": [x["label"] for x in c.get("bottom", []) if not (d == "place" and ", " in x["label"])][:3],
                      "games": c.get("max"), "link": link(i)})
     fd = num("taste_favorite_dodge")
     out["taste"] = {"domains": doms, "dodge": {"other": r2(fd["fav"]["jtop"]), "named_right": r2(fd["named_right"])},

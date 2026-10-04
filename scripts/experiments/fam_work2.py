@@ -221,7 +221,7 @@ ABUSE = [("sms_spam", "sms.spam", "spam texts"), ("phishing_email", None, "spam 
 
 def abuse():
     spec = Spec(
-        id="work_new_abuse", family="work", title="Old abuse is solved; jailbreaks, unsafe replies and fake jobs slip through",
+        id="work_new_abuse", family="work", title="Familiar spam is easy for Jev; jailbreaks, unsafe replies and fake jobs slip through",
         question="Across spam, phishing, personal data, unsafe prompts, unsafe AI replies, jailbreaks and fake job ads, "
                  "which kinds of abuse does Jev miss, and does it make up for it with false alarms?",
         why="Trust-and-safety filters are an obvious job for a fast classifier. The question isn't overall accuracy but "

@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import Link from "next/link";
 import ExMeme from "../../experiments/ExMeme";
 import { DotRows } from "../charts";
+import { ordinal } from "../fmt";
 import type { ExLink, Story as S } from "./types";
 import { ProbRuler, PressureChat, QuestionList, Reveal } from "./islands";
 import { Jobs, Made, Opening, Why } from "./Front";
@@ -62,7 +63,7 @@ export function More({ items }: { items?: ExLink[] }) {
       <div className="st-more-g">
         {items.map((x) => (
           <Link key={x.id} href={`/portrait/atlas/${x.id}`} prefetch={false} className="st-more-c">
-            <b>{x.title}</b>{x.line && <span>{x.line}</span>}
+            <b>{x.title}{x.known && <em className="st-known" title="TypeSafe documents this limit for jev-1.13">known limit</em>}</b>{x.line && <span>{x.line}</span>}
           </Link>
         ))}
       </div>
@@ -127,10 +128,10 @@ function Character({ s }: { s: S }) {
   return (
     <Chapter more={s.more?.character} id="character" aside={<Meme s={s} id="person_type" />} kicker="personality" field="paper" links={p.links}
       title={<>Calm, sincere, and an <mark>{p.type}</mark></>}
-      lede={<>The same personality tests people take online. Jev comes out calmer than {pc(1 - calm.pct / 100)} of the people who took them, and far more sincere. Asked to answer the way most people would, it becomes an {p.type_people}.</>}>
+      lede={<>The same personality tests people take online. Jev comes out calmer than {pc(1 - calm.pct / 100)} of the people who took them (partly how it uses the scale: answering for most people, it still comes out calmer than {pc(1 - calm.guess / 100)}), and far more sincere. Asked to answer the way most people would, it becomes an {p.type_people}.</>}>
       <Box title="The Big Five: Jev’s percentile among 603,322 people who took the test">
         <DotRows domain={[0, 100]} ticks={[0, 25, 50, 75, 100]} fmt={(v) => String(v)}
-          rows={p.bigfive.map((t) => ({ key: t.label, label: t.label, ci: t.ci, value: `${Math.round(t.pct)}th`,
+          rows={p.bigfive.map((t) => ({ key: t.label, label: t.label, ci: t.ci, value: ordinal(t.pct),
             marks: [{ v: t.guess, kind: "guess" as const, title: `for most people: ${t.guess}` }, { v: t.pct, kind: "jev" as const }] }))} />
         <p className="ex-legend"><span><i className="k jev" />Jev, with its 90% range</span><span><i className="k guess" />what Jev thinks most people would say</span></p>
         <QuestionList id="person_bigfive" total={nr.person_bigfive ?? 0} label="every Big Five statement Jev rated" />
@@ -258,7 +259,7 @@ function Words({ s }: { s: S }) {
             </div>
           ))}
         </div>
-        <p className="st-note">Jev picks people&rsquo;s most common color for {hit.length} of {w.colors.length} feelings (the faded cards); the rest are where they part. Given only a hex code like #fdff63, it picks the color&rsquo;s popular name {pc(w.hex)} of the time.</p>
+        <p className="st-note">Jev picks people&rsquo;s most common color for {hit.length} of {w.colors.length} feelings (the faded cards); the rest are where they part. Given only a hex code like #fdff63, it picks the color&rsquo;s popular name {pc(w.hex)} of the time (a known limit: TypeSafe notes hex codes read worse than names).</p>
       </Box>
       <div className="st-grid pair">
         <Box title="How many is “several”?">
@@ -588,7 +589,7 @@ function Pair({ p }: { p: S["jagged_pairs"][number] }) {
   );
   return (
     <Reveal className="jp">
-      <p className="jp-f"><b>{p.field}</b><Link href={`/portrait/atlas/${p.link.id}`} prefetch={false}>case study →</Link></p>
+      <p className="jp-f"><b>{p.field}</b>{p.link.known && <em className="st-known" title="TypeSafe documents this limit for jev-1.13">known limit</em>}<Link href={`/portrait/atlas/${p.link.id}`} prefetch={false}>case study →</Link></p>
       {bar(p.a, p.av, false)}
       {bar(p.b, p.bv, true)}
     </Reveal>

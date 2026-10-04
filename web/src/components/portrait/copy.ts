@@ -167,8 +167,8 @@ export const COPY: Record<string, CardCopy> = {
 
 // Plain-language limits, one per line (the "what this can't tell you" card)
 export const LIMITS = [
-  "It's one pass: one Jev version, each question asked once per framing. No test-retest.",
-  "The only robustness checks are reordering the options, reversing rating scales, and asking for “most people”. No rewordings.",
+  "Mostly one pass: each question asked once per framing. Repeating a request and rewording a question were measured on samples, not on every question.",
+  "The robustness checks are reordering the options, reversing rating scales, asking for “most people”, repeating a request and rewording a question. Other framings weren't tried.",
   "“Most people” is Jev's guess. Real human answers exist for {humans} of questions.",
   "The crowds are whoever answered a Reddit poll, rated a movie online, or took a free personality test. That isn't everyone.",
   "Mostly English, mostly US-heavy sources. {authored} of the questions were written for this project.",

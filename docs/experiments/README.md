@@ -67,8 +67,8 @@ supports at the bar the evaluator holds, not a target:
 | [`taste_vs_audience_anime`](taste_vs_audience_anime.md) | Does Jev like the anime that MyAnimeList users like, and where does it disagree most? | 1,359 |  | keep |
 | [`taste_top_music`](taste_top_music.md) | If Jev ranked every album or sound it was asked about, what would its top ten be? | 1,751 | 276 | keep |
 | [`taste_top_beer`](taste_top_beer.md) | If Jev ranked every beer it was asked about, what would its top ten be? | 1,500 | 276 | keep |
-| [`taste_top_book`](taste_top_book.md) | If Jev ranked every book it was asked about, what would its top ten be? | 2,980 | 276 | atlas |
 | [`taste_top_activity`](taste_top_activity.md) | If Jev ranked every game or activity it was asked about, what would its top ten be? | 1,171 | 276 | atlas |
+| [`taste_top_book`](taste_top_book.md) | If Jev ranked every book it was asked about, what would its top ten be? | 2,980 | 276 | atlas |
 | [`taste_top_board_game`](taste_top_board_game.md) | If Jev ranked every board game it was asked about, what would its top ten be? | 2,497 | 276 | atlas |
 | [`taste_top_culture`](taste_top_culture.md) | If Jev ranked every festival or tradition it was asked about, what would its top ten be? | 892 | 276 | atlas |
 | [`taste_top_anime`](taste_top_anime.md) | If Jev ranked every anime it was asked about, what would its top ten be? | 1,359 | 276 | atlas |
@@ -169,8 +169,8 @@ supports at the bar the evaluator holds, not a target:
 
 | experiment | question | n | new | verdict |
 |---|---|---:|---:|---|
-| [`judge_helpful_reviews`](judge_helpful_reviews.md) | Would Jev call an Amazon review helpful to shoppers, compared with how shoppers actually voted? | 2,500 |  | keep |
 | [`judge_fake_reviews`](judge_fake_reviews.md) | Can Jev tell a real review from a fake one, when the fake was written by a person paid to invent a hotel stay, or by a text generator? | 2,760 |  | keep |
+| [`judge_helpful_reviews`](judge_helpful_reviews.md) | Would Jev call an Amazon review helpful to shoppers, compared with how shoppers actually voted? | 2,500 |  | keep |
 | [`judge_hate_escalation`](judge_hate_escalation.md) | Sorting social media posts into normal, offensive, or hate speech, does Jev put them on the same rung as the annotators? | 706 |  | keep |
 | [`judge_toxicity_line`](judge_toxicity_line.md) | Asked whether a comment is a personal attack, hate speech, or merely toxic, and whether a prompt to an AI is toxic, does Jev flag more or less than the people who labeled the same text? | 5,851 |  | keep |
 | [`judge_top_grade`](judge_top_grade.md) | Asked to read how highly a critic rated a wine, how close two sentences are in meaning, or how satisfied a reviewer is, how often does Jev land on the top level compared with the real answer? | 7,367 |  | keep |
@@ -219,11 +219,11 @@ supports at the bar the evaluator holds, not a target:
 | [`work_what_jobs_are_like`](work_what_jobs_are_like.md) | How often does a nurse deal with angry people, a web developer face deadlines, a roofer work in the weather? Does Jev know what jobs are like, compared with what the people doing them report? | 491 | 495 | keep |
 | [`work_icd_coding_rules`](work_icd_coding_rules.md) | Asked which ICD-10-CM chapter a diagnosis belongs to, where does Jev go wrong: the medicine, or the coding conventions? | 2,000 |  | keep |
 | [`work_hallucination_checks`](work_hallucination_checks.md) | Asked whether a chatbot reply, an answer or a summary sticks to its source, how often does Jev catch the invented ones, how often does it accuse faithful ones, and does it catch errors that are only partly wrong? | 7,074 |  | keep |
-| [`work_evidence_retreat`](work_evidence_retreat.md) | On fact-checking and grounding tasks with three answers (supports, contradicts, can't tell), when Jev gets a clear case wrong, does it flip to the opposite verdict or retreat to 'can't tell'? | 13,611 |  | keep |
 | [`work_calibration`](work_calibration.md) | When Jev is 90% sure of an answer to a work task, is it right 90% of the time, and does that depend on whether it answers yes/no or picks from options? | 273,282 |  | keep |
+| [`work_evidence_retreat`](work_evidence_retreat.md) | On fact-checking and grounding tasks with three answers (supports, contradicts, can't tell), when Jev gets a clear case wrong, does it flip to the opposite verdict or retreat to 'can't tell'? | 13,611 |  | keep |
+| [`work_new_abuse`](work_new_abuse.md) | Across spam, phishing, personal data, unsafe prompts, unsafe AI replies, jailbreaks and fake job ads, which kinds of abuse does Jev miss, and does it make up for it with false alarms? | 13,766 |  | keep |
 | [`work_agent_patches`](work_agent_patches.md) | Reading a coding agent's full trace on a real GitHub issue, can Jev tell whether the agent actually fixed it? | 1,500 |  | keep |
 | [`work_legal_misses_present`](work_legal_misses_present.md) | Asked whether a contract contains a given provision, whether an opinion overrules a case, or whether a policy segment covers a data practice, which way does Jev go wrong? | 12,809 |  | keep |
-| [`work_new_abuse`](work_new_abuse.md) | Across spam, phishing, personal data, unsafe prompts, unsafe AI replies, jailbreaks and fake job ads, which kinds of abuse does Jev miss, and does it make up for it with false alarms? | 13,766 |  | keep |
 | [`work_knows_hard_cases`](work_knows_hard_cases.md) | On work cases written to be deliberately borderline, does Jev's confidence drop, or is it as sure as on the clear ones? | 7,300 |  | keep |
 | [`work_function_call_checks`](work_function_call_checks.md) | Checking whether a proposed function call does what the user asked, which kinds of mistakes does Jev catch: the wrong function, a missing argument, a wrong value, or two arguments swapped? | 1,500 |  | keep |
 | [`work_routing_misses`](work_routing_misses.md) | When Jev sends a customer message to the wrong intent, how wrong is it: a neighbor of the right intent, or somewhere else entirely, and does a longer list of intents make it worse? | 32,430 |  | keep |
@@ -241,8 +241,8 @@ supports at the bar the evaluator holds, not a target:
 |---|---|---:|---:|---|
 | [`consistency_middle_lean`](consistency_middle_lean.md) | Jev's most likely answer on a rating scale is often the middle level. Is that a habit with every scale, or does it depend on what is being rated? | 121,301 |  | keep |
 | [`consistency_self_vs_people`](consistency_self_vs_people.md) | Every question about Jev was also asked as 'what would most people answer?'. Where do the two answers part, and in which direction? | 144,301 |  | keep |
-| [`consistency_option_order`](consistency_option_order.md) | When the same options are listed in a different order, or a rating scale is turned upside down, does Jev's answer move more than it does when the question is simply asked again? | 370,790 |  | keep |
 | [`consistency_repeat_noise`](consistency_repeat_noise.md) | If the exact same request is sent twice, how much does Jev's answer change, and when does its top answer flip? | 198,609 |  | keep |
+| [`consistency_option_order`](consistency_option_order.md) | When the same options are listed in a different order, or a rating scale is turned upside down, does Jev's answer move more than it does when the question is simply asked again? | 370,790 |  | keep |
 
 ### Defaults (6)
 

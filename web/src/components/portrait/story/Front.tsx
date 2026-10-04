@@ -28,7 +28,7 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
           <div className="op-h">
             <span className="st-k"><b>01</b> a portrait of Jev</span>
             <h1>Everyone asks what Jev is. <span>So I asked how it&rsquo;s doing.</span></h1>
-            <p className="st-lede">Then {n0(nQuestions)} other things. An unfiltered, slightly unhinged portrait of what one model
+            <p className="st-lede">Then {n0(nQuestions)} other things. An unfiltered portrait of what one model
               says about itself, the world and the work it&rsquo;s built for, when someone curious keeps asking.</p>
           </div>
         </div>
@@ -144,7 +144,7 @@ export function Made({ s }: { s: S }) {
   return (
     <Chapter id="made" kicker="the data" field="sage"
       title={<>A million questions, real and synthetic</>}
-      lede={<>From {nSources} places: polls, personality tests, trivia, labeled work data, questions people really asked online.
+      lede={<>From {nSources} places: polls, personality tests, trivia, labeled work data, questions people really asked online.{" "}
         {pc(m.real)} come from real data; the rest are synthetic, written for this project and kept only if Jev filed them where they belonged. {pc(m.truth)} have
         a right answer, and {pc(m.humans)} have real people&rsquo;s answers to compare with.</>}>
       <Reveal className="mk-strip">
@@ -186,7 +186,7 @@ const LAYERS: { name: string; reads: string; nodes: Node[] }[] = [
   { name: "Read", reads: "each question", nodes: [{ job: "screen for politics and sensitive content", label: "screen it" }, { job: "flag known weak spots", label: "flag weak spots" }, { job: "describe each question", label: "describe it" }] },
   { name: "File", reads: "each question and the tree", nodes: [{ job: "place a question on the tree", label: "walk it down the tree" }, { job: "check for duplicates", label: "catch duplicates" }] },
   { name: "Answer", reads: "each question", nodes: [{ job: "answer as asked", label: "answer it" }, { job: "answer for most people", label: "answer for most people" }] },
-  { name: "Compare", reads: "thousands of Jev's answers", nodes: [{ label: "gather answers into 192 experiments", code: true, note: "code, against people or a right answer" }] },
+  { name: "Compare", reads: "thousands of Jev's answers", nodes: [{ label: "gather answers into {n} experiments", code: true, note: "code, against people or a right answer" }] },
   { name: "Judge", reads: "case studies about Jev", nodes: [{ job: "judge an experiment", label: "judge each experiment" }, { job: "rank experiments head to head", label: "rank them, two at a time" }] },
   { name: "Laugh", reads: "memes about those case studies", nodes: [{ job: "rate a meme", label: "rate each meme" }] },
 ];
@@ -224,7 +224,7 @@ export function Jobs({ s }: { s: S }) {
                         {n.code ? <i className="lay-p code">code</i> : prims(info?.type ?? "").map((p) => <i key={p} className="lay-p">{p}</i>)}
                         {cnt !== null && <span className="lay-cnt">{mil(cnt)}</span>}
                       </div>
-                      <b>{n.label}</b>
+                      <b>{n.label.replace("{n}", String(s.n_experiments))}</b>
                       {info ? <p className="lay-ask">&ldquo;{info.ask}&rdquo;</p> : <p className="lay-ask">{n.note}</p>}
                     </div>
                   );
