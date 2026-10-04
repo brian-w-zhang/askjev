@@ -17,7 +17,7 @@ answers wherever they exist, and every number traceable to the questions behind 
 - **A map of a million questions.** 1,043,973 questions shown (of about 1.1 million answered), from 312 sources, on
   a tree of 1,737 topics, drawn as a nebula where every question is a star. Open any one to see Jev's probabilities
   next to real people's answers.
-- **192 experiments.** Each gathers many questions into one thing you can learn about Jev in a minute, written up as a
+- **198 experiments.** Each gathers many questions into one thing you can learn about Jev in a minute, written up as a
   case study: the result, what it means and doesn't, caveats, and every question behind it. Jev ranked them itself,
   reading the case studies two at a time.
 - **A portrait.** How Jev is doing, why ask a model everything, how the questions were gathered and filed, every job
