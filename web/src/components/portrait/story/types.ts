@@ -60,13 +60,6 @@ export type Story = {
     verbs: { label: string; value: number; ci: number[]; n: number }[];
     other: { topic: string; top: number }[]; middle: { label: string; mid: number }[]; links: ExLink[];
   };
-  work: {
-    kinds: { kind: string; lean: "yes" | "no" }[];
-    errs: { kind: string; label: string; says: number; base: number; right: number; n: number }[];
-    misses: { next_door: number; cant_tell: number; none_lo: number; none_lo_label: string; none_hi: number; none_hi_label: string;
-      legal_miss: number; legal_invent: number };
-    links: ExLink[];
-  };
   knows: {
     calibration: { label: string; conf: number; acc: number; n: number }[];
     trivia: { label: string; acc: number; ci: number[]; n: number }[];

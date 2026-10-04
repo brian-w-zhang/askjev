@@ -20,7 +20,7 @@ export const CHAPTERS = [
   { id: "meet", name: "how are you?" }, { id: "why", name: "why ask" }, { id: "made", name: "the data" },
   { id: "jobs", name: "composability" }, { id: "character", name: "personality" }, { id: "taste", name: "taste" },
   { id: "words", name: "language" }, { id: "numbers", name: "numbers" }, { id: "knows", name: "confidence" }, { id: "morals", name: "morals" }, { id: "risk", name: "risk" },
-  { id: "pressure", name: "peer pressure" }, { id: "defaults", name: "habits" }, { id: "work", name: "at work" },
+  { id: "pressure", name: "peer pressure" }, { id: "defaults", name: "habits" },
   { id: "edges", name: "jaggedness" },
 ];
 
@@ -102,7 +102,6 @@ export default function Story({ s, nQuestions }: { s: S; nQuestions: number }) {
       <Risk s={s} />
       <Pressure s={s} />
       <Defaults s={s} />
-      <Work s={s} />
       <Edges s={s} />
     </>
   );
@@ -538,39 +537,6 @@ function Defaults({ s }: { s: S }) {
       <Box title="How often its likeliest rating is the middle of the scale">
         <DotRows domain={[0, 1]} ticks={[0, 0.25, 0.5, 0.75, 1]} fmt={(v) => pc(v)}
           rows={d.middle.map((k) => ({ key: k.label, label: k.label, value: pc(k.mid), marks: [{ v: k.mid, kind: "jev" as const }] }))} />
-      </Box>
-    </Chapter>
-  );
-}
-
-/* ---------------------------------------------------------------- at work */
-function Work({ s }: { s: S }) {
-  const w = s.work;
-  const m = w.misses;
-  return (
-    <Chapter more={s.more?.work} id="work" aside={<Meme s={s} id="work_legal_misses_present" />} kicker="at work" field="sage" links={w.links}
-      title={<>Wrong in predictable ways</>}
-      lede={<>Jev is built for work inside software: checking, matching, sorting. Every checker gets some cases wrong; what makes one usable is knowing which way. Jev&rsquo;s misses lean the same way for each kind of check, and land somewhere you can guess, so you know which of its answers deserve a second look. One pass over each task&rsquo;s labeled data, not a benchmark.</>}>
-      <Box title="Which way each check leans: how often Jev says yes, next to how often yes is right"
-        note={<>The two tasks per kind where Jev&rsquo;s yes rate sits furthest from the true one; the case study has all of them.</>}>
-        {w.kinds.map(({ kind, lean }) => (
-          <div key={kind} className="we">
-            <p className="st-sub">{kind} <em className={`we-lean ${lean}`}>leans {lean}</em></p>
-            <DotRows domain={[0, 1]} ticks={[0, 0.5, 1]} fmt={(v) => pc(v)}
-              rows={w.errs.filter((e) => e.kind === kind).map((e) => ({ key: e.label, label: e.label, link: true, value: `${pc(e.says)} yes`,
-                marks: [{ v: e.base, kind: "hum" as const, title: `true share: ${pc(e.base)}` }, { v: e.says, kind: "jev" as const }] }))} />
-          </div>
-        ))}
-        <p className="ex-legend"><span><i className="k jev" />how often Jev says yes</span><span><i className="k hum" />how often yes is right</span></p>
-        <p className="st-note">So: double-check its yeses on quality and on alarms, and its noes on matches and on whether a claim is backed up.</p>
-      </Box>
-      <Box title="Where its misses land" note={<>Each from one experiment&rsquo;s labeled data; the case studies below have the rest.</>}>
-        <div className="wm">
-          <div><b>{pc(m.next_door)}</b><span>of misrouted customer messages had the right place as Jev&rsquo;s second choice. Its misses land next door.</span></div>
-          <div><b>{pc(m.cant_tell)}</b><span>of its misreadings of clear evidence fall back to &ldquo;can&rsquo;t tell&rdquo;, not to the opposite verdict.</span></div>
-          <div><b>{pc(m.none_lo)}&ndash;{pc(m.none_hi)}</b><span>is how often it answers &ldquo;nothing here&rdquo; when that&rsquo;s right ({m.none_lo_label} to {m.none_hi_label}). Otherwise it finds something that isn&rsquo;t there.</span></div>
-          <div><b>{pc(m.legal_miss)} <small>vs</small> {pc(m.legal_invent)}</b><span>of contract provisions missed, against absent ones invented. In legal review it overlooks rather than imagines.</span></div>
-        </div>
       </Box>
     </Chapter>
   );

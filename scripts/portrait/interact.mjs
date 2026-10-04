@@ -53,7 +53,7 @@ await run("map nav to portrait", async () => { await p.goto(base + "/", { waitUn
 
 // ---- portrait ----
 await run("portrait chapters", async () => {
-  for (const id of ["meet", "why", "made", "jobs", "character", "taste", "words", "numbers", "knows", "morals", "pressure", "defaults", "work", "edges"]) if (!(await p.$(`#${id}`))) throw new Error(`missing #${id}`);
+  for (const id of ["meet", "why", "made", "jobs", "character", "taste", "words", "numbers", "knows", "morals", "risk", "pressure", "defaults", "edges"]) if (!(await p.$(`#${id}`))) throw new Error(`missing #${id}`);
   const imgs = await p.$$eval("#taste img", (xs) => xs.length);
   if (imgs < 10) throw new Error(`only ${imgs} taste pictures`);
 });

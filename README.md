@@ -20,10 +20,10 @@ answers wherever they exist, and every number traceable to the questions behind 
 - **The atlas: 198 experiments.** Each gathers thousands of questions into one thing you can learn about Jev in a
   minute, written up as a case study: the result, what it means and what it doesn't, the caveats, Jev's own take on
   it, and every question behind it.
-- **The portrait.** A long read in fifteen chapters: how Jev is doing (asked on real wellbeing scales), why ask a
+- **The portrait.** A long read in fourteen chapters: how Jev is doing (asked on real wellbeing scales), why ask a
   model everything, where the questions came from, every job Jev does in this project, and then its personality,
-  taste, language, numbers, confidence, morals, risk, the peer pressure it bends under, its habits, the predictable ways it's
-  wrong at work, and where similar tasks get different results.
+  taste, language, numbers, confidence, morals, risk, the peer pressure it bends under, its habits, and where similar
+  tasks at work get different results.
 
 The answers, findings and site data stay private: the site is shared with TypeSafe directly, and this repo holds the
 code and the method. Not affiliated with TypeSafe.

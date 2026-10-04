@@ -33,7 +33,6 @@ MORE = {
     "pressure": ["influence_crowd_knowledge", "influence_predict_self", "influence_decoy", "judgment_classics", "reasoning_beauty_contest"],
     "defaults": ["self_reworded", "self_closed_questions", "self_shower_thoughts", "consistency_option_order", "consistency_repeat_noise", "self_torn_vs_sure"],
     "risk": ["risk_forecasts", "risk_better_bet", "risk_everyday", "reasoning_base_rates", "reasoning_traps"],
-    "work": ["work_retrieval_gates", "work_hallucination_checks", "work_grading_scales", "judge_fake_reviews", "judge_pairwise", "work_job_ad_rungs"],
 }
 
 
@@ -359,32 +358,6 @@ def main():
         "links": [link(i) for i in ("self_could_vs_would", "self_escape_hatch", "consistency_middle_lean", "minds_where_jev_puts_itself")],
     }
 
-    # ---- at work: the job it was built for
-    # ---- at work: its misses lean one way per kind of check, and land somewhere you can predict (not confidence:
-    # that's the knowledge chapter's, and the jaggedness chapter's "sure and wrong")
-    # the storage-block check already appears twice in the jaggedness chapter
-    ww = [t for t in num("work_which_way_it_errs")["tasks"] if "storage block" not in t["label"]]
-    kinds = list(dict.fromkeys(t["kind"] for t in ww))
-    lean = {k: sum(x["says"] - x["base"] for x in ww if x["kind"] == k) for k in kinds}
-    nh = [x for x in num("work_nothing_here")["sets"] if x["label"] != "kinds of personal data"]
-    lo, hi = min(nh, key=lambda x: x["says_none"]), max(nh, key=lambda x: x["says_none"])
-    cuad = next(t for t in num("work_legal_misses_present")["tasks"] if t["label"].startswith("contract provisions"))
-    out["work"] = {
-        # per kind of check, which way it leans and the two tasks where its yes rate is furthest from the true one
-        "kinds": [{"kind": k, "lean": "yes" if lean[k] > 0 else "no"} for k in kinds],
-        "errs": [{"kind": t["kind"], "label": t["label"], "says": r2(t["says"]), "base": r2(t["base"]), "right": r2(t["right"]), "n": t["n"]}
-                 for k in kinds
-                 for t in sorted([x for x in ww if x["kind"] == k], key=lambda x: -abs(x["says"] - x["base"]))[:2]],
-        "misses": {
-            "next_door": r2(num("work_routing_misses")["second_share"]),
-            "cant_tell": r2(num("work_evidence_retreat")["pooled_retreat"]),
-            "none_lo": r2(lo["says_none"]), "none_lo_label": lo["label"], "none_hi": r2(hi["says_none"]), "none_hi_label": hi["label"],
-            "legal_miss": r2(cuad["miss"]), "legal_invent": r2(cuad["fa"]),
-        },
-        "links": [link(i) for i in ("work_which_way_it_errs", "work_routing_misses", "work_evidence_retreat", "work_nothing_here",
-                                    "work_legal_misses_present")],
-    }
-
     # ---- character extras: the full question lists, the type's axes with their intervals, the fictional twin
     rows_n = {e["id"]: e.get("n_rows", 0) for e in exps}
     out["personality"]["n_rows"] = {i: rows_n.get(i, 0) for i in ("person_bigfive", "person_type", "person_honesty", "person_dark")}
@@ -454,7 +427,7 @@ def main():
     out["jev_top"] = [{**link(e["id"]), "line": take(e["id"])} for e in exps[:5]]
     # a few of the case studies' memes, with how funny Jev found them, woven into the chapters
     out["memes"] = {i: by[i]["meme"] for i in ("taste_top_film", "world_trolley_countries", "influence_crowd_opinion", "risk_prospect_theory",
-                                               "numbers_prices_year", "person_type", "lexicon_first_to_mind", "self_could_vs_would", "work_legal_misses_present") if by.get(i, {}).get("meme")}
+                                               "numbers_prices_year", "person_type", "lexicon_first_to_mind", "self_could_vs_would") if by.get(i, {}).get("meme")}
     (A / "story.json").write_text(json.dumps(out, ensure_ascii=False, indent=1, default=str))
     print(f"story.json: {len(out)} sections, {len(doms)} taste domains, "
           f"{sum(1 for d in doms for t in d['top'] if t['img'])} pictures")
