@@ -298,8 +298,6 @@
 .crop-m b:nth-child(2) { right: 0; top: 0; border-right-width: 1px; border-top-width: 1px; }
 .crop-m b:nth-child(3) { left: 0; bottom: 0; border-left-width: 1px; border-bottom-width: 1px; }
 .crop-m b:nth-child(4) { right: 0; bottom: 0; border-right-width: 1px; border-bottom-width: 1px; }
-.card-t.xl.crops { padding: 26px 28px 30px; margin-left: -28px; }
-@media (max-width: 640px) { .card-t.xl.crops { padding: 18px 10px 22px; margin-left: -10px; } }
 .pt-label { display: block; margin-bottom: 8px; font-family: var(--mono); font-size: 10.5px; color: var(--fg-2); }
 .fp-a .hbar { font-size: 13px; }
 

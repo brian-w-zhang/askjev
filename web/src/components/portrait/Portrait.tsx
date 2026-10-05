@@ -39,7 +39,7 @@ export default function Portrait({ d }: { d: PortraitData }) {
       <section id="closer" className="card" data-f="ink">
         <div className="card-in">
           <div className="card-main">
-            <h2 className="card-t xl crops"><Crops />That&rsquo;s the short tour.</h2>
+            <h2 className="card-t xl">That&rsquo;s the short tour.</h2>
             <p className="card-b">Every chapter above is a handful of the {d.story.n_experiments} experiments. Each has a full case
               study: the data, how Jev was asked, what could bias it, and every question behind the result.</p>
             <p className="links"><Link href="/portrait/atlas" prefetch={false}>all {d.story.n_experiments} experiments, in the atlas →</Link> <a href="#fineprint">the fine print ↓</a></p>
