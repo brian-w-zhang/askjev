@@ -15,12 +15,10 @@
 
 .st-top { display: grid; gap: 22px; }
 .st-top.has-aside { grid-template-columns: minmax(0, 1fr) auto; align-items: end; }
-/* a chapter's heading block, as typesafe.ai sets its sections: a thin rule down the left, a small mono label at the
-   top ("Not Chat", "Our Mission"), then the big type */
-.st-head { display: grid; gap: 10px; max-width: 760px; border-left: 1px solid var(--fg); padding: 0 0 4px 10px; }
+.st-head { display: grid; gap: 10px; max-width: 760px; }
 @media (max-width: 860px) { .st-top.has-aside { grid-template-columns: 1fr; } }
-.st-k { display: block; margin-bottom: 14px; font-family: var(--mono); font-size: 12px; line-height: 16px; font-weight: 500; letter-spacing: 0.02em; color: var(--fg); text-transform: capitalize; }
-.st-k b { font-weight: 300; color: var(--fg-2); margin-right: 10px; }
+.st-k { font-family: var(--pixel); font-size: 20px; line-height: 20px; color: var(--fg-2); text-transform: lowercase; }
+.st-k b { font-weight: 400; background: var(--fg); color: var(--field, var(--f-paper)); padding: 0 5px; margin-right: 4px; }
 .st-head h2 { margin: 0; font-size: clamp(30px, 5vw, 54px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 600; text-wrap: balance; }
 .st-lede { margin: 0; font-size: 18px; line-height: 1.45; color: var(--fg); max-width: 720px; text-wrap: pretty; }
 .st-note { margin: 8px 0 0; font-size: 13px; line-height: 1.4; color: var(--w-fg-2); }
@@ -253,7 +251,6 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 .op-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 36px; align-items: center; }
 .op-tweet { margin: 0; transform: rotate(-1.5deg); box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.18), 6px 6px 0 var(--jev); }
 .op-tweet img { width: 100%; height: auto; display: block; }
-.op-h { border-left: 1px solid var(--fg); padding: 0 0 4px 10px; }
 .op-h h1 { margin: 10px 0 14px; font-size: clamp(38px, 5.6vw, 76px); line-height: 0.98; letter-spacing: -0.04em; font-weight: 600; text-wrap: balance; }
 .op-h h1 span { display: block; color: var(--jev); }
 @media (max-width: 860px) { .op-top { grid-template-columns: 1fr; gap: 24px; } .op-tweet { transform: rotate(-1deg); } }
