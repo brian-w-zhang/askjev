@@ -457,7 +457,8 @@ input, textarea, select { font: inherit; color: inherit; }
   .topleft { top: 12px; left: 12px; width: calc(100vw - 24px); }
   .panel { top: auto; left: 8px; right: 8px; bottom: 8px; width: auto; height: 62vh; }
   .panel[data-open="false"] { transform: translateY(calc(100% + 16px)); }
-  .legend { left: 12px; bottom: 12px; }
+  /* on phones the corner legend sits under the Map / Portrait / Atlas nav; the color tool in the search window keeps its own key */
+  .legend { display: none; }
   .intro, .b64 { display: none; }
   .tooltab { padding: 2px 5px 1px; font-size: 16px; }
   .tooltabs { gap: 0; }
