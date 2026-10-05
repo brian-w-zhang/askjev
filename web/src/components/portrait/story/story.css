@@ -601,24 +601,18 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 /* a limit TypeSafe already documents (docs/01-jev.md §6): an outlined tag, so it never reads as a discovery */
 .st-known { display: inline-block; margin-left: 8px; padding: 0 5px; border: 1px solid currentColor; font-family: var(--mono); font-size: 10px; font-style: normal; font-weight: 400; line-height: 16px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--w-fg-2); white-space: nowrap; vertical-align: 2px; }
 
-/* the yes-or-no check-ins as a small table: question, Jev's answer and how sure, and the share of people who said the
-   same as a bar in a fixed-width track, with its number */
-.op-ct { display: grid; }
-.op-ch, .op-cr { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) 150px; gap: 14px; align-items: center; }
-.op-ch { padding: 0 0 6px; font-family: var(--mono); font-size: 10.5px; color: var(--fg-3); }
-.op-ch span:nth-child(2) { text-align: right; }
-.op-cr { padding: 9px 0; border-top: 1px solid rgba(244, 241, 243, 0.12); font-size: 14px; color: var(--fg); }
-.op-cr .op-a { display: grid; justify-items: end; gap: 1px; text-align: right; line-height: 1.2; }
-.op-cr .op-a em { font-style: normal; font-family: var(--mono); font-size: 10.5px; color: var(--fg-3); margin-left: 0; white-space: nowrap; }
-.op-cr .op-p { display: grid; grid-template-columns: 1fr 34px; gap: 8px; align-items: center; padding: 0; }
-.op-pt { display: block; height: 6px; background: rgba(244, 241, 243, 0.12); }
-.op-pt i { display: block; height: 100%; background: rgba(244, 241, 243, 0.75); }
-.op-cr .op-p em { font-style: normal; font-family: var(--mono); font-size: 11px; color: var(--fg-2); text-align: right; }
+/* the yes-or-no check-ins: the question on the left, Jev's answer on the right with how sure it was beside it */
+.op-ct { display: grid; margin: 0; }
+.op-cr { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 16px; align-items: baseline; padding: 10px 0; border-top: 1px solid rgba(244, 241, 243, 0.12); }
+.op-cr:first-child { border-top: 0; }
+.op-cr dt { margin: 0; font-size: 15px; font-weight: 600; color: var(--fg); }
+.op-cr dd { margin: 0; display: flex; align-items: baseline; justify-content: flex-end; gap: 8px; text-align: right; }
+.op-cr dd b { color: var(--jev); font-weight: 600; font-size: 15px; }
+.op-cr dd em { font-style: normal; font-family: var(--mono); font-size: 11px; color: var(--fg-3); white-space: nowrap; min-width: 62px; text-align: right; }
 @media (max-width: 640px) {
-  .op-ch { display: none; }
-  .op-cr { grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; }
-  .op-cr .op-p { grid-column: 1 / -1; grid-template-columns: 1fr auto; }
-  .op-cr .op-p em::after { content: " of people"; }
-  .op-cr .op-a { grid-template-columns: auto auto; gap: 6px; align-items: baseline; }
+  .op-cr { grid-template-columns: 1fr; gap: 2px; }
+  .op-cr dd { justify-content: flex-start; }
+  .op-cr dd em { min-width: 0; text-align: left; }
   .op-g { grid-template-columns: 1fr; }
 }
+

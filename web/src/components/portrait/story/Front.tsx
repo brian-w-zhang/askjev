@@ -44,18 +44,15 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
         <div className="op-more">
           <Reveal className="op-check">
             <p className="op-t">And the yes-or-no check-ins</p>
-            {/* a small table: the question, Jev's answer and how sure it is, and the share of the Redditors who answered
-                the same, as a bar in a full-width track so the rows compare */}
-            <div className="op-ct" role="table" aria-label="Yes-or-no check-ins: Jev's answer and the share of people who gave the same one">
-              <div className="op-ch" role="row"><span role="columnheader">asked</span><span role="columnheader">Jev says</span><span role="columnheader">people, same answer</span></div>
+            {/* two columns: the question, and Jev's answer with how sure it was */}
+            <dl className="op-ct">
               {h.checkin.map((c) => (
-                <div key={c.q} className="op-cr" role="row">
-                  <span className="op-q" role="cell">{c.q}</span>
-                  <span className="op-a" role="cell"><b>{c.a}</b> <em>{pc(c.p)} sure</em></span>
-                  <span className="op-p" role="cell" title={`${pc(c.people)} of ${c.n ?? ""} Redditors`}><span className="op-pt"><i style={{ width: pc(c.people) }} /></span><em>{pc(c.people)}</em></span>
+                <div key={c.q} className="op-cr">
+                  <dt className="op-q">{c.q}</dt>
+                  <dd className="op-a"><b>{c.a}</b><em>{pc(c.p)} sure</em></dd>
                 </div>
               ))}
-            </div>
+            </dl>
           </Reveal>
           <Reveal className="op-scales">
             <p className="op-t">Says it&rsquo;s fine. The real wellbeing questionnaires, scored as for a person, say: meh.</p>
