@@ -6,7 +6,7 @@ import { useStore } from "@/lib/store";
 import { anim, FLIGHT, now, progress } from "@/lib/anim";
 import { heat } from "@/lib/heat";
 import { edgePoint, type Placed } from "@/lib/layout";
-import { JEV_GREEN, THEMES } from "@/lib/theme";
+import { JEV_COLOR, THEMES } from "@/lib/theme";
 
 const SEG = 24;
 
@@ -77,7 +77,7 @@ export function Edges({ placed }: { placed: Map<string, Placed> }) {
           uProgB: { value: -1 },
           uLevel: { value: 0 },
           uColA: { value: new Color(THEMES.light.ink) },
-          uColB: { value: new Color(JEV_GREEN) },
+          uColB: { value: new Color(JEV_COLOR) },
         },
       }),
     [],

@@ -306,7 +306,7 @@ export function QuestionCard({ id, note, onClose }: { id: string; note?: string;
 
 /**
  * "How would Jev file this?": on demand, Jev walks the tree for the question's text (one /api/walk call) and
- * the sky shows its green path beside the ink path of where the question is stored.
+ * the sky shows its magenta path beside the path of where the question is stored.
  */
 function JevFile({ text, stored }: { text: string; stored: string[] }) {
   const nodes = useStore((s) => s.nodes);
@@ -326,7 +326,7 @@ function JevFile({ text, stored }: { text: string; stored: string[] }) {
           Where Jev would file it
           <Info label="Where Jev would file it">
             Jev sees the tree one level at a time and picks a branch at each step, keeping its best few paths. Its pick is
-            drawn in green beside the ink trail of where the question is actually stored, so any disagreement shows where they part.
+            drawn in magenta beside the trail of where the question is actually stored (ink, or white in dark mode), so any disagreement shows where they part.
             <span><b>Path confidence</b> is how sure it was of the whole path.</span>
           </Info>
         </span>
@@ -341,7 +341,7 @@ function JevFile({ text, stored }: { text: string; stored: string[] }) {
       {st.state === "done" && w && (
         <p className="desc">
           <span className="tag gold">Jev</span> files it under <b>{label(w.node)}</b> <span className="num">({Math.round(w.confidence * 100)}% path confidence)</span>.{" "}
-          {w.node === here ? "That’s where it’s stored." : <>It&apos;s stored under <b>{label(here)}</b>; the green and ink trails show where they part.</>}
+          {w.node === here ? "That’s where it’s stored." : <>It&apos;s stored under <b>{label(here)}</b>; the magenta trail and the stored one show where they part.</>}
         </p>
       )}
     </section>

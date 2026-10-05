@@ -6,7 +6,7 @@ import { useStore } from "@/lib/store";
 import { anim, BURST, now } from "@/lib/anim";
 import { heat, HOT_SLOTS } from "@/lib/heat";
 import { branchColor, rampColor, starAttention } from "@/lib/color";
-import { JEV_GREEN, THEMES } from "@/lib/theme";
+import { JEV_COLOR, THEMES } from "@/lib/theme";
 import { metric, starData } from "@/lib/stars";
 import { starLocal, type Placed, type V3 } from "@/lib/layout";
 import type { Indicator } from "@/lib/types";
@@ -21,7 +21,7 @@ const vert = /* glsl */ `
   uniform float uTime; uniform float uScale; uniform float uPR; uniform float uSel; uniform float uSelK; uniform float uPrev; uniform float uPrevK; uniform float uFocus; uniform float uIntro0; uniform float uForm;
   // live search: the current results' dots (index + level, eased on the CPU), and Jev's pick after the pause
   uniform float uHotI[${HOT_SLOTS}]; uniform float uHotK[${HOT_SLOTS}]; uniform float uJevI; uniform float uJevK;
-  uniform vec3 uInk; uniform vec3 uGreen;
+  uniform vec3 uInk; uniform vec3 uJev;
   uniform sampler2D uHeat; uniform float uLevel; // per-node heat (by aNode), and how much the search owns the map
   varying vec3 vColor; varying float vAlpha; varying float vHot;
   float hash(float n) { return fract(sin(n) * 43758.5453); }
@@ -63,7 +63,7 @@ const vert = /* glsl */ `
     float haze = 1.0 - 0.5 * smoothstep(uFocus * 1.15, uFocus * 3.0, -mv.z);
     vAlpha = mix(aDim * tw * haze * (1.0 + flare * 2.5) * (1.0 + 0.7 * sel) * context, 1.0, max(hot, jev)) * smoothstep(0.0, 0.05, k);
     vHot = max(flare, bang * 0.9);
-    vColor = mix(mix(aColor, uInk, 0.7 * hot), uGreen, jev);
+    vColor = mix(mix(aColor, uInk, 0.7 * hot), uJev, jev);
     gl_PointSize = clamp(px, minPx + 3.0 * max(hot, jev) * uPR, (7.5 + 14.0 * flare + 4.0 * max(hot, jev)) * uPR);
     gl_Position = projectionMatrix * mv;
   }`;
@@ -106,7 +106,7 @@ export function Stars({ placed }: { placed: Map<string, Placed> }) {
         blending: NormalBlending,
         uniforms: { uTime: { value: 0 }, uScale: { value: 500 }, uPR: { value: 1 }, uSel: { value: -1 }, uSelK: { value: 0 }, uPrev: { value: -1 }, uPrevK: { value: 0 }, uFocus: { value: 100 }, uIntro0: { value: 1e9 }, uForm: { value: BURST },
           uHotI: { value: new Array(HOT_SLOTS).fill(-1) }, uHotK: { value: new Array(HOT_SLOTS).fill(0) }, uJevI: { value: -1 }, uJevK: { value: 0 },
-          uInk: { value: new Color(THEMES.light.ink) }, uGreen: { value: new Color(JEV_GREEN) },
+          uInk: { value: new Color(THEMES.light.ink) }, uJev: { value: new Color(JEV_COLOR) },
           uHeat: { value: heatTexture() }, uLevel: { value: 0 } },
       }),
     [],

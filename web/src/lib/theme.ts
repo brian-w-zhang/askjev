@@ -117,5 +117,5 @@ export const THEMES: Record<Theme, ThemeColors> = {
   },
 };
 
-export const JEV_GREEN = "#D45BB6"; // Jev's own acts (its pick, its walk) and the selection, in both themes: typesafe.ai's magenta
+export const JEV_COLOR = "#D45BB6"; // Jev's own acts (its pick, its walk) and the selection, in both themes: typesafe.ai's magenta
 export const HOT = "#D45BB6"; // worth a look

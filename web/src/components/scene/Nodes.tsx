@@ -7,7 +7,7 @@ import { anim, FLIGHT, now, progress } from "@/lib/anim";
 import { heat } from "@/lib/heat";
 import { nodeColor } from "@/lib/color";
 import type { Placed } from "@/lib/layout";
-import { JEV_GREEN, THEMES } from "@/lib/theme";
+import { JEV_COLOR, THEMES } from "@/lib/theme";
 import type { TreeNode } from "@/lib/types";
 
 const MAX = 4096;
@@ -108,9 +108,9 @@ export function Nodes({ placed, onPick }: { placed: Map<string, Placed>; onPick:
       dummy.quaternion.copy(camera.quaternion); // squares face the camera
       dummy.updateMatrix();
       m.setMatrixAt(i, dummy.matrix);
-      // ink squares like the slider markers on typesafe.ai; Jev green where Jev is (its walk, the selection)
+      // ink squares like the slider markers on typesafe.ai; Jev magenta where Jev is (its walk, the selection)
       const T = THEMES[s.theme];
-      if (tone === "jev" || tone === "sel") c.set(JEV_GREEN);
+      if (tone === "jev" || tone === "sel") c.set(JEV_COLOR);
       else if (tone === "dim") c.set(T.dim);
       else if (tone === "path") c.set(T.ink);
       else if (s.indicator === "hemisphere") c.set(T.hemi[n.hemisphere]).multiplyScalar(s.theme === "light" ? 0.8 : 1.1);

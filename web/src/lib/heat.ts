@@ -12,7 +12,7 @@ export const heat = {
   node: new Map<string, number>(), // node id -> current glow 0..1
   target: new Map<string, number>(),
   slots: Array.from({ length: HOT_SLOTS }, (): Slot => ({ star: -1, k: 0, to: 0 })),
-  jev: { star: -1, k: 0, to: 0 } as Slot, // Jev's pick after the pause, in green
+  jev: { star: -1, k: 0, to: 0 } as Slot, // Jev's pick after the pause, in magenta
   focus: null as string | null, // the topic most of the results sit under
   level: 0, // 0..1: how much a live search owns the map (everything outside the heat fades by this much)
   soft: false, // a panel is open: the search stays as a lens, but the rest of the map fades less
@@ -68,7 +68,7 @@ export function heatFrom(hits: SearchHit[]) {
   heat.moving = true;
 }
 
-/** Light Jev's pick (the #1 after its reorder) in green; -1 clears it. */
+/** Light Jev's pick (the #1 after its reorder) in magenta; -1 clears it. */
 export function heatJev(star: number) {
   if (star === heat.jev.star) { heat.jev.to = star >= 0 ? 1 : 0; heat.moving = true; return; }
   heat.jev = { star, k: 0, to: star >= 0 ? 1 : 0 };

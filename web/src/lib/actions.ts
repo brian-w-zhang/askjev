@@ -14,9 +14,9 @@ const frames = (n = 2) => new Promise<void>((r) => {
 });
 
 /**
- * Jev's pick for the live search (docs/07-ui.md, Search), lit green down its path over the ink heat; `null`
+ * Jev's pick for the live search (docs/07-ui.md, Search), lit magenta down its path over the ink heat; `null`
  * clears it. It lives only while its result list does: any navigation (a topic, a dot, a journey) clears it,
- * so the green on the map is always one thing.
+ * so the magenta on the map is always one thing.
  */
 export function showJevPick(h: SearchHit | null) {
   if (h && anim.follow) return; // a journey is flying; don't draw over it
@@ -207,12 +207,12 @@ export async function journey(o: { path: string[]; questionId?: string }) {
 
 /**
  * "How would Jev file this?" (docs/07-ui.md): Jev walks the tree for the question's text, one decision per
- * level, as a green trail with its confidence at each node, beside the ink trail of where the question is
+ * level, as a magenta trail with its confidence at each node, beside the ink trail of where the question is
  * stored, so any disagreement shows where the paths part. One /api/walk call, only when asked.
  */
 export async function jevFile(text: string, stored: string[]): Promise<Walk | { error: string }> {
   const run = ++journeyRun;
-  heatJev(-1); // the walk draws its own green trail
+  heatJev(-1); // the walk draws its own magenta trail
   const w = await fetchWalk(text);
   if ("error" in w || run !== journeyRun) return w;
   const jev = ["root", ...w.path_probs.map((p) => p[0])];

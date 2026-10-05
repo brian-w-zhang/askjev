@@ -4,7 +4,7 @@ import { useFrame } from "@react-three/fiber";
 import { Mesh, Vector3, type Camera, type Group, type PerspectiveCamera } from "three";
 import { anim, now, progress } from "@/lib/anim";
 import { useStore } from "@/lib/store";
-import { JEV_GREEN, THEMES } from "@/lib/theme";
+import { JEV_COLOR, THEMES } from "@/lib/theme";
 
 // Rings in the sky: where Jev's walk leaves the tree path, and the selected node.
 
@@ -33,7 +33,7 @@ function Fork() {
   return (
     <mesh ref={m} visible={false}>
       <ringGeometry args={[0.9, 1.05, 48]} />
-      <meshBasicMaterial color={JEV_GREEN} transparent opacity={0.9} toneMapped={false} depthWrite={false} />
+      <meshBasicMaterial color={JEV_COLOR} transparent opacity={0.9} toneMapped={false} depthWrite={false} />
     </mesh>
   );
 }

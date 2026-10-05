@@ -8,11 +8,11 @@ import { LineMaterial } from "three/examples/jsm/lines/LineMaterial.js";
 import { useStore } from "@/lib/store";
 import { anim, headPosition, now, progress } from "@/lib/anim";
 import { edgePoint, type Placed } from "@/lib/layout";
-import { JEV_GREEN, THEMES } from "@/lib/theme";
+import { JEV_COLOR, THEMES } from "@/lib/theme";
 import { cards, moveCard, publishWalker } from "@/lib/overlay";
 import { starData, starWorld } from "@/lib/stars";
 
-// The journey (docs/07-ui.md): the path walked so far is a thick lit trail (Jev green with a halo, or ink
+// The journey (docs/07-ui.md): the path walked so far is a thick lit trail (Jev magenta with a halo, or ink
 // for the hop to where the chosen question lives), revealed as the walker moves; the walker and the
 // destination dot are drawn in the HTML overlay so they glow crisply above the dither.
 const SEG = 20;
@@ -21,7 +21,7 @@ function Trail({ which, placed }: { which: "A" | "B"; placed: Map<string, Placed
   const path = useStore((s) => (which === "A" ? s.pathA : s.pathB));
   const gl = useThree((s) => s.gl);
   const theme = useStore((s) => s.theme);
-  const color = which === "B" ? JEV_GREEN : THEMES[theme].ink;
+  const color = which === "B" ? JEV_COLOR : THEMES[theme].ink;
   const { lines, segs } = useMemo(() => {
     const pts: number[] = [];
     const pt: [number, number, number] = [0, 0, 0];
