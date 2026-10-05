@@ -27,7 +27,6 @@
   --ok: #03aa5c;
   --band: rgba(30, 30, 30, 0.07);
   --dot: rgba(30, 30, 30, 0.28);
-  --stage-dot: rgba(30, 30, 30, 0.1);
   --hl: #f386a1;
   --hl-fg: #1e1e1e;
   --nav: #fefefe;
@@ -65,7 +64,6 @@
   --guess: #f2b233;
   --band: rgba(235, 230, 234, 0.07);
   --dot: rgba(235, 230, 234, 0.16);
-  --stage-dot: rgba(235, 230, 234, 0.07);
   --hl: #e551ba;
   --hl-fg: #fefefe;
   --nav: #1d191c;

@@ -357,8 +357,7 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 .st-fig { display: grid; gap: 10px; counter-increment: fig; min-width: 0; }
 .st-cap { margin: 0; display: flex; gap: 10px; align-items: baseline; font-size: 14px; font-weight: 600; letter-spacing: -0.005em; color: var(--fg); }
 .st-fig > .st-cap::before { content: "fig " counter(fig); font-family: var(--mono); font-size: 11px; font-weight: 300; letter-spacing: 0.05em; color: var(--fg-2); white-space: nowrap; }
-/* the panel sits on a faint dotted stage, like typesafe.ai's figure stages */
-.st-fig > .st-body { background-color: var(--w-body); background-image: radial-gradient(var(--stage-dot) 0.7px, transparent 0.9px); background-size: 6px 6px; color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line); padding: 18px 20px; }
+.st-fig > .st-body { background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line); padding: 18px 20px; }
 .st-fnote { margin: 0; font-size: 12.5px; color: var(--fg-2); }
 .st-main .st-grid.two, .st-main .st-grid.three { grid-template-columns: 1fr; }
 .st-main .st-grid.pair { grid-template-columns: 1fr 1fr; align-items: stretch; }
