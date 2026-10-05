@@ -28,7 +28,7 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
           <div className="op-h">
             <span className="st-k"><b>01</b> a portrait of Jev</span>
             <h1>Everyone asks what Jev is. <span>So I asked how it&rsquo;s doing.</span></h1>
-            <p className="st-lede">Then {n0(nQuestions)} other things. An unfiltered portrait of what one model
+            <p className="st-lede">Then {n0(nQuestions)} other things. A slightly unhinged portrait of what one model
               says about itself, the world and the work it&rsquo;s built for, when someone curious keeps asking.</p>
           </div>
         </div>
@@ -102,6 +102,8 @@ export function Why({ s }: { s: S }) {
             {sr ? ` ${sr.yes} of the ${sr.n}` : " some"} describe it. Every chart links to its case study, which says where the data came
             from and what could skew it.</dd></div>
           <div><dt>Next to people.</dt><dd>Where real people answered the same question, their answer sits beside Jev&rsquo;s.</dd></div>
+          <div><dt>A look at its data, from the outside.</dt><dd>Nobody outside TypeSafe can see what Jev learned from. Its answers are the
+            next best thing: what it knows, what it assumes most people think, even which year its prices come from all hint at the data behind it.</dd></div>
         </dl>
       </Box>
       <Box title="Open questions, answered with closed ones">
