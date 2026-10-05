@@ -10,9 +10,8 @@ import type { Theme } from "@/lib/theme";
 import { Panel } from "./panel/Panel";
 import SiteNav from "./SiteNav";
 
-// the vertical caption, made the way typesafe.ai hides its "No comment.": the text base64-encoded seven times over.
-// Ours says "I want to join the jevolution".
-const B64 = "Vm0xNFUxSXhVWGhTV0dST1UwZG9jRlZ0TVc5VlJscHlWbXQwVkUxV1ZqTldNblF3VkcxS1JrNVdaRmhoTW1oeVdWUktTMVpzWkhOaVJsWm9UV3hLZVZkV1VrZFRiVlpZVW10c1ZXSkdTbGhXYWtaS1pXeGtXR1JIZEZaTmJFcEhWREZhYzFaWFNsbFZiR3hXWWxoU00xUlVSbXRYUjA1R1kwVTFVMkV3Y0ZSV1ZWcFNaREZDVWxCVU1EMD0=";
+// the vertical caption, as on typesafe.ai: base64 of "I want to join the jevolution" (theirs hides "No comment.")
+const B64 = "SSB3YW50IHRvIGpvaW4gdGhlIGpldm9sdXRpb24=";
 
 const Scene = dynamic(() => import("./scene/Scene"), { ssr: false });
 
