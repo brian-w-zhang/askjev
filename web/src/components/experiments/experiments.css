@@ -275,8 +275,13 @@
 /* ---------- memes: on the page, and following the cursor on the index ---------- */
 .pt .ex-meme { margin: 0 0 18px; transform: rotate(1.2deg); }
 @media (max-width: 600px) { .pt .ex-meme { width: calc(100% - 14px); margin: 4px 0 18px; transform: rotate(0.8deg); } }
-.pt .ex-memefig { margin: 0; background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line), 5px 5px 0 var(--jev); }
-.pt .ex-memefig .cap { padding: 8px 10px 7px; font-size: 14px; line-height: 1.25; font-weight: 500; }
+/* a meme is one of typesafe.ai's team cards, light in both themes: a black pixel title bar, the picture in a grey frame,
+   and Jev's rating as the "fun fact" window stuck over the bottom corner (MemeFunny); the pink offset shadow is Jev's */
+.pt .ex-memefig { position: relative; margin: 0 0 52px; background: #fefefe; color: #1e1e1e; box-shadow: 0 0 0 1px #1e1e1e, 5px 5px 0 var(--jev); }
+.pt .ex-memefig .ex-wbar { display: block; padding: 2px 8px 1px; background: #1e1e1e; color: #fefefe; box-shadow: none; font-family: var(--pixel); font-size: 18px; line-height: 20px; letter-spacing: 0.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pt .ex-memefig > .img { margin: 4px; box-shadow: 0 0 0 1px #8f8f8f; }
+.pt .ex-memefig > .img:last-child { margin-bottom: 4px; }
+.pt .ex-memefig .cap { padding: 8px 10px 4px; font-size: 14px; line-height: 1.25; font-weight: 500; color: #1e1e1e; }
 .pt .ex-memefig .img { position: relative; overflow: hidden; background: #000; container-type: inline-size; }
 .pt .ex-memefig img { display: block; width: 100%; height: 100%; object-fit: cover; user-select: none; }
 .pt .ex-memefig .lab { position: absolute; transform: translate(-50%, -50%); text-align: center; font-family: Impact, "Anton", "Arial Black", sans-serif; font-size: calc(clamp(10px, 6.2cqw, 22px) * var(--s, 1)); line-height: 1.05; letter-spacing: 0.01em; overflow-wrap: anywhere; }

@@ -2,12 +2,14 @@
 import MemeFunny from "@/components/portrait/MemeFunny";
 import type { ExperimentMeme } from "./types";
 
-// An experiment's meme (docs/17 item 8): a template with our words set on it in HTML, the way the portrait does it,
-// so the text stays sharp in both themes. Reaction formats carry a caption above the image instead of labels.
-export default function ExMeme({ m }: { m: ExperimentMeme }) {
+// An experiment's meme (docs/17 item 8): a template with our words set on it in HTML, so the text stays sharp in both
+// themes. Reaction formats carry a caption above the image instead of labels. It's dressed as one of typesafe.ai's team
+// cards: a black pixel title bar naming where it sits, the picture in a grey frame, and Jev's funniness rating as the
+// "fun fact" window stuck over the corner.
+export default function ExMeme({ m, where = "meme" }: { m: ExperimentMeme; where?: string }) {
   return (
     <figure className="ex-memefig">
-      <div className="ex-wbar"><span>{m.name}.jpg</span><span>ours</span></div>
+      <div className="ex-wbar"><span>{where} · meme</span></div>
       {m.caption && <figcaption className="cap">{m.caption}</figcaption>}
       <div className="img" style={{ aspectRatio: `${m.w} / ${m.h}` }}>
         <img src={`/portrait/memes/${m.file}`} alt={m.alt} loading="lazy" draggable={false} />

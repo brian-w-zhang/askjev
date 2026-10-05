@@ -518,15 +518,11 @@
 :root[data-theme="dark"] .wrapped, :root[data-theme="dark"] .wr-grid > div { background: #16121a; color: #ebe6ea; }
 :root[data-theme="dark"] .wr-grid span { color: #a9a4a8; }
 /* Jev rates a meme (MemeFunny): five levels, its pick in pink */
-.meme-funny { padding: 7px 10px 8px; box-shadow: 0 -1px 0 var(--w-line); font-family: var(--sans); font-size: 12px; line-height: 1.3; color: var(--w-fg-2); text-align: left; }
-.meme-funny .q b { color: var(--w-fg); font-weight: 600; }
-.meme-funny .opts { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin-top: 6px; }
-.meme-funny .opts > span { display: grid; grid-template-rows: 22px auto auto; justify-items: center; }
-.meme-funny .opts i { display: block; width: 100%; align-self: end; background: var(--w-grid); }
-.meme-funny .opts .on i { background: var(--jev); }
-.meme-funny .opts em { font-style: normal; font-family: var(--mono); font-size: 11px; line-height: 16px; color: var(--w-fg); }
-.meme-funny .opts .on em { color: var(--jev); font-weight: 700; }
-.meme-funny .opts small { font-family: var(--mono); font-size: 9.5px; line-height: 11px; }
+/* Jev's rating, stuck over the meme card's bottom corner like the "fun fact" notes on typesafe.ai's team cards */
+.meme-funny { position: absolute; right: -16px; bottom: -46px; z-index: 2; display: grid; min-width: 112px; background: #d9d9d9; color: #1e1e1e; box-shadow: 0 0 0 1px #1e1e1e, 3px 3px 0 rgba(0, 0, 0, 0.35); transform: rotate(-2.5deg); font-family: var(--pixel); text-align: left; cursor: help; }
+.meme-funny .mf-bar { padding: 1px 7px 0; background: #1e1e1e; color: #fefefe; font-size: 16px; line-height: 18px; }
+.meme-funny .mf-body { padding: 3px 8px 4px; font-size: 18px; line-height: 20px; white-space: nowrap; }
+.meme-funny .mf-body b { font-weight: 400; color: #d0419f; font-size: 22px; margin-right: 2px; }
 /* atlas tables on phones: the name column stays put while the numbers scroll sideways; the long id line goes */
 @media (max-width: 640px) {
   .atlas .pt-scroll { -webkit-overflow-scrolling: touch; }

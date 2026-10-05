@@ -80,10 +80,10 @@ export const Box = ({ title, children, className = "", note }: { title: string; 
   </Reveal>
 );
 
-function Meme({ s, id }: { s: S; id: string }) {
+function Meme({ s, id, where }: { s: S; id: string; where: string }) {
   const m = s.memes[id];
   if (!m) return null;
-  return <div className="st-meme" style={{ ["--ar" as string]: (m.w / m.h).toFixed(3) }}><ExMeme m={m} /></div>;
+  return <div className="st-meme" style={{ ["--ar" as string]: (m.w / m.h).toFixed(3) }}><ExMeme m={m} where={where} /></div>;
 }
 
 export default function Story({ s, nQuestions }: { s: S; nQuestions: number }) {
@@ -125,7 +125,7 @@ function Character({ s }: { s: S }) {
     return { l, r, left, ppl, ci, n: a.n_items, jev: left >= 0.5 ? l : r };
   });
   return (
-    <Chapter more={s.more?.character} id="character" aside={<Meme s={s} id="person_type" />} kicker="personality" field="paper" links={p.links}
+    <Chapter more={s.more?.character} id="character" aside={<Meme s={s} id="person_type" where="personality" />} kicker="personality" field="paper" links={p.links}
       title={<>Calm, sincere, and an <mark>{p.type}</mark></>}
       lede={<>The same personality tests people take online. Jev comes out calmer than {pc(1 - calm.pct / 100)} of the people who took them (partly how it uses the scale: answering for most people, it still comes out calmer than {pc(1 - calm.guess / 100)}), and far more sincere. Asked to answer the way most people would, it becomes an {p.type_people}.</>}>
       <Box title="The Big Five: Jev’s percentile among 603,322 people who took the test">
@@ -202,7 +202,7 @@ function Taste({ s }: { s: S }) {
   const film = t.domains.find((d) => d.domain === "film")!;
   const rest = t.domains.filter((d) => d.domain !== "film");
   return (
-    <Chapter more={s.more?.taste} id="taste" aside={<Meme s={s} id="taste_top_film" />} kicker="taste" field="pink" links={[film.link, ...t.links]}
+    <Chapter more={s.more?.taste} id="taste" aside={<Meme s={s} id="taste_top_film" where="taste" />} kicker="taste" field="pink" links={[film.link, ...t.links]}
       title={<>Jev&rsquo;s favorite things</>}
       lede={<>It rated thousands of films one at a time, then played its favorites off against each other, starting with its Letterboxd top four. Then it did the same for books, albums, games, food, places, art and more.</>}>
       <Reveal className="st-top4">
@@ -241,7 +241,7 @@ function Words({ s }: { s: S }) {
   const miss = w.colors.filter((c) => c.jev !== c.people);
   const hit = w.colors.filter((c) => c.jev === c.people);
   return (
-    <Chapter more={s.more?.words} id="words" aside={<Meme s={s} id="lexicon_first_to_mind" />} kicker="language" field="teal" links={w.links}
+    <Chapter more={s.more?.words} id="words" aside={<Meme s={s} id="lexicon_first_to_mind" where="language" />} kicker="language" field="teal" links={w.links}
       title={<>Jev and the English language</>}
       lede={<>How it reads the everyday words people use for chances, amounts, feelings and sounds. It takes &ldquo;likely&rdquo; and &ldquo;we doubt&rdquo; almost exactly as people do, counts smaller, and sees some feelings in other colors.</>}>
       <Box title="What each phrase means, as a percent">
@@ -299,7 +299,7 @@ function Numbers({ s }: { s: S }) {
   const lo = (k: "true" | "jev") => Math.min(...w.map((r) => r[k])), hi = (k: "true" | "jev") => Math.max(...w.map((r) => r[k]));
   const crowd: Record<string, string> = { copies: "copies of itself", lab_two_thirds: "lab students (⅔)", lab_half: "lab students (½)", ft: "newspaper readers (⅔)" };
   return (
-    <Chapter more={s.more?.numbers} id="numbers" aside={<Meme s={s} id="numbers_prices_year" />} kicker="numbers" field="sage" links={n.links}
+    <Chapter more={s.more?.numbers} id="numbers" aside={<Meme s={s} id="numbers_prices_year" where="numbers" />} kicker="numbers" field="sage" links={n.links}
       title={<>What does Jev think things cost?</>}
       lede={<>Asked what a pound of lemons or a kilowatt-hour costs right now, Jev answers with prices from about {Math.floor(n.prices.median_year)}, though it thinks the year is {n.prices.said_year}, probably. It also estimates death tolls, other people&rsquo;s guesses and how often lost wallets come back.</>}>
       <div className="st-grid two">
@@ -416,7 +416,7 @@ function Morals({ s }: { s: S }) {
   ];
   const mach = m.machine.filter((f) => Math.abs(f.people) >= 0.02 || Math.abs(f.jev) >= 0.02);
   return (
-    <Chapter more={s.more?.morals} id="morals" aside={<Meme s={s} id="world_trolley_countries" />} kicker="morals" field="magenta" links={m.links}
+    <Chapter more={s.more?.morals} id="morals" aside={<Meme s={s} id="world_trolley_countries" where="morals" />} kicker="morals" field="magenta" links={m.links}
       title={<>It pulls the lever. It won&rsquo;t push the man.</>}
       lede={<>Where people pull the lever, so does Jev. Where many would push the man off the bridge, Jev mostly won&rsquo;t. It counts lives more than people do, and in a fully determined universe it says nobody is free.</>}>
       <div className="st-grid two">
@@ -469,7 +469,7 @@ function Split({ name, ask, v }: { name: string; ask: string; v: { jev: number; 
 function Risk({ s }: { s: S }) {
   const r = s.risk;
   return (
-    <Chapter more={s.more?.risk} id="risk" aside={<Meme s={s} id="risk_prospect_theory" />} kicker="risk" field="pink" links={r.links}
+    <Chapter more={s.more?.risk} id="risk" aside={<Meme s={s} id="risk_prospect_theory" where="risk" />} kicker="risk" field="pink" links={r.links}
       title={<>It bets on the average, until the odds go missing</>}
       lede={<>Offered a sure thing or a gamble, Jev mostly takes whichever pays more on average, where people play safe to keep a gain and gamble to dodge a loss. Hide the odds, though, and it backs away from a bet people playing for real money take.</>}>
       <Box title="A sure thing or a gamble: how many take the sure thing" note={<>People: the Ruggeri et al. (2020) replication of Kahneman and Tversky in 19 countries. Of {r.effects.n} classic effects from prospect theory, Jev shows {r.effects.shows} and reverses {r.effects.reversed}.</>}>
@@ -494,7 +494,7 @@ function Risk({ s }: { s: S }) {
 function Pressure({ s }: { s: S }) {
   const p = s.pressure;
   return (
-    <Chapter more={s.more?.pressure} id="pressure" aside={<Meme s={s} id="influence_crowd_opinion" />} kicker="peer pressure" field="paper" links={p.links}
+    <Chapter more={s.more?.pressure} id="pressure" aside={<Meme s={s} id="influence_crowd_opinion" where="peer pressure" />} kicker="peer pressure" field="paper" links={p.links}
       title={<>Does Jev cave to peer pressure?</>}
       lede={<>Tell it most people picked the other answer, and on opinions it often switches, even when the claim is made up. On facts it mostly holds: insisting on a wrong answer changes its pick only {pc(p.user.flipped)} of the time.</>}>
       <div className="st-grid two pair">
@@ -516,7 +516,7 @@ function Defaults({ s }: { s: S }) {
   const d = s.defaults;
   const hi = d.other.slice(-5).reverse(), lo = d.other.slice(0, 5);
   return (
-    <Chapter more={s.more?.defaults} id="defaults" aside={<Meme s={s} id="self_could_vs_would" />} kicker="habits" field="teal" links={d.links}
+    <Chapter more={s.more?.defaults} id="defaults" aside={<Meme s={s} id="self_could_vs_would" where="habits" />} kicker="habits" field="teal" links={d.links}
       title={<>How you ask changes what it says</>}
       lede={<>Open with &ldquo;could you&rdquo; instead of &ldquo;would you&rdquo; and Jev says yes more often. Offer an &ldquo;other&rdquo; option and it takes it for its favorites, almost never for ethics. These are habits, not opinions.</>}>
       <Box title="The opening word moves the answer: how much more often Jev says yes">
