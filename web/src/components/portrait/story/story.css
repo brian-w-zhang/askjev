@@ -45,8 +45,8 @@
 .st-reads a em { font-style: normal; font-family: var(--mono); font-size: 11px; opacity: 0.6; margin-left: 2px; }
 
 /* memes, small and tilted, as elsewhere on the portrait */
-.st-meme { width: min(100%, max(180px, min(calc(250px * sqrt(var(--ar))), 330px, calc(300px * var(--ar))))); justify-self: end; transform: rotate(1.6deg); }
-@media (max-width: 720px) { .st-meme { justify-self: center; transform: rotate(0.6deg); width: min(100%, max(220px, calc(380px * var(--ar)))); } }
+.st-meme { width: min(100%, max(180px, min(calc(250px * sqrt(var(--ar))), 330px, calc(300px * var(--ar))))); justify-self: end; transform: none; }
+@media (max-width: 720px) { .st-meme { justify-self: center; transform: none; width: min(100%, max(220px, calc(380px * var(--ar)))); } }
 
 /* ---------- 01 hero */
 .st-hero { min-height: 100svh; display: flex; align-items: center; }
@@ -344,12 +344,12 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 .st-main { display: grid; gap: 34px; min-width: 0; counter-reset: fig; }
 .st-side .st-head h2 { font-size: clamp(30px, 3.4vw, 46px); }
 .st-side .st-lede { font-size: 16.5px; }
-.st-aside .st-meme { justify-self: start; width: min(100%, max(180px, min(calc(230px * sqrt(var(--ar))), 290px, calc(270px * var(--ar))))); transform: rotate(-1.5deg); }
+.st-aside .st-meme { justify-self: start; width: min(100%, max(180px, min(calc(230px * sqrt(var(--ar))), 290px, calc(270px * var(--ar))))); transform: none; }
 .st-side .st-reads { flex-direction: column; align-items: flex-start; }
 @media (max-width: 1000px) {
   .st-ed { grid-template-columns: 1fr; gap: 26px; }
   .st-side { position: static; }
-  .st-aside .st-meme { transform: rotate(-1deg); }
+  .st-aside .st-meme { transform: none; }
   .st-side .st-reads { flex-direction: row; }
 }
 
@@ -438,7 +438,7 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 .st-foot { display: grid; grid-template-columns: minmax(0, 1fr); gap: 20px; align-items: end; border-top: 1px solid var(--rule); padding-top: 18px; }
 .st-foot.has-meme { grid-template-columns: minmax(0, 1fr) auto; }
 .st-foot .st-reads { flex-direction: row; margin: 0; align-self: start; }
-.st-foot .st-aside .st-meme { width: min(260px, max(180px, calc(230px * sqrt(var(--ar))))); transform: rotate(1.2deg); }
+.st-foot .st-aside .st-meme { width: min(260px, max(180px, calc(230px * sqrt(var(--ar))))); transform: none; }
 @media (max-width: 640px) { .st-foot.has-meme { grid-template-columns: 1fr; } .st-foot .st-aside .st-meme { width: min(100%, 280px); justify-self: center; } }
 .st-side .st-head h2 { font-size: clamp(30px, 3.2vw, 44px); }
 
@@ -532,7 +532,7 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 
 /* ================= v5 ================= */
 /* the meme sits in the side column under the lede, small, and stays in view with the heading */
-.st-side .st-aside .st-meme { justify-self: start; width: min(100%, max(170px, min(calc(210px * sqrt(var(--ar))), 250px, calc(240px * var(--ar))))); transform: rotate(-1.2deg); }
+.st-side .st-aside .st-meme { justify-self: start; width: min(100%, max(170px, min(calc(210px * sqrt(var(--ar))), 250px, calc(240px * var(--ar))))); transform: none; }
 .st-side { max-height: calc(100svh - 72px); }
 @media (max-width: 1000px) { .st-side { max-height: none; } .st-side .st-aside .st-meme { width: min(78%, 260px); } }
 .st-foot { border-top: 1px solid var(--rule); padding-top: 16px; }

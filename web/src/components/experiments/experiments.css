@@ -220,7 +220,7 @@
 }
 
 /* ---------- case study page (docs/17) ---------- */
-.pt .ex-meme { margin: 0 0 18px; background: var(--w-body); box-shadow: 0 0 0 1px var(--w-line), 5px 5px 0 var(--jev); transform: rotate(1.2deg); }
+.pt .ex-meme { margin: 0 0 18px; background: var(--w-body); box-shadow: 0 0 0 1px var(--w-line), 5px 5px 0 var(--jev); transform: none; }
 .pt .ex-meme img { display: block; width: 100%; height: auto; }
 .pt .ex-meme figcaption { padding: 6px 10px 8px; font-size: 12px; color: var(--w-fg-2); }
 .pt .ex-note { margin: 0; font-size: 13.5px; color: var(--w-fg); padding: 8px 10px; background: var(--w-sub); }
@@ -273,15 +273,16 @@
 }
 
 /* ---------- memes: on the page, and following the cursor on the index ---------- */
-.pt .ex-meme { margin: 0 0 18px; transform: rotate(1.2deg); }
-@media (max-width: 600px) { .pt .ex-meme { width: calc(100% - 14px); margin: 4px 0 18px; transform: rotate(0.8deg); } }
-/* a meme is one of typesafe.ai's team cards, light in both themes: a black pixel title bar, the picture in a grey frame,
-   and Jev's rating as the "fun fact" window stuck over the bottom corner (MemeFunny); the pink offset shadow is Jev's */
-.pt .ex-memefig { position: relative; margin: 0 0 52px; background: #fefefe; color: #1e1e1e; box-shadow: 0 0 0 1px #1e1e1e, 5px 5px 0 var(--jev); }
-.pt .ex-memefig .ex-wbar { display: block; padding: 2px 8px 1px; background: #1e1e1e; color: #fefefe; box-shadow: none; font-family: var(--pixel); font-size: 18px; line-height: 20px; letter-spacing: 0.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.pt .ex-memefig > .img { margin: 4px; box-shadow: 0 0 0 1px #8f8f8f; }
-.pt .ex-memefig > .img:last-child { margin-bottom: 4px; }
-.pt .ex-memefig .cap { padding: 8px 10px 4px; font-size: 14px; line-height: 1.25; font-weight: 500; color: #1e1e1e; }
+.pt .ex-meme { margin: 0 0 18px; transform: none; }
+@media (max-width: 600px) { .pt .ex-meme { width: calc(100% - 14px); margin: 4px 0 18px; transform: none; } }
+/* a meme is one of typesafe.ai's team cards, measured from typesafe.ai/team and light in both themes: straight, no
+   border, their soft drop shadow; a #1e1e1e title bar in 18px pixel type; a #c4c4c4 frame (4px at the sides and foot)
+   holding the picture flush under the bar and, 4px below it, a white block with the caption; Jev's rating as the
+   five-bar "how funny" chart in a white block under it (MemeFunny) */
+.pt .ex-memefig { margin: 0 0 18px; background: none; color: #1e1e1e; box-shadow: 0 0.48px 2.4px rgba(0, 0, 0, 0.02), 0 4px 20px rgba(0, 0, 0, 0.2); }
+.pt .ex-memefig .ex-wbar { display: block; padding: 2px 3px 5px 4px; background: #1e1e1e; color: #fefefe; box-shadow: none; font-family: var(--pixel); font-size: 18px; line-height: 18px; letter-spacing: 0.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pt .ex-memefig .mm-in { display: grid; gap: 4px; padding: 0 4px 4px; background: #c4c4c4; }
+.pt .ex-memefig .cap { padding: 4px 4px 6px; background: #fefefe; font-size: 15px; line-height: 1.2; letter-spacing: 0.01em; font-weight: 400; color: #1e1e1e; }
 .pt .ex-memefig .img { position: relative; overflow: hidden; background: #000; container-type: inline-size; }
 .pt .ex-memefig img { display: block; width: 100%; height: 100%; object-fit: cover; user-select: none; }
 .pt .ex-memefig .lab { position: absolute; transform: translate(-50%, -50%); text-align: center; font-family: Impact, "Anton", "Arial Black", sans-serif; font-size: calc(clamp(10px, 6.2cqw, 22px) * var(--s, 1)); line-height: 1.05; letter-spacing: 0.01em; overflow-wrap: anywhere; }
@@ -292,10 +293,10 @@
 .pt .ex-xy .lab { font-size: 10.5px; }
 
 /* the meme beside "What the data shows": about the same area whatever the template's shape */
-.pt .ex-meme-slot { float: right; width: 250px; width: max(160px, min(calc(260px * sqrt(var(--ar))), 320px, calc(330px * var(--ar)))); margin: 6px 0 14px 24px; transform: rotate(1deg); }
+.pt .ex-meme-slot { float: right; width: 250px; width: max(160px, min(calc(260px * sqrt(var(--ar))), 320px, calc(330px * var(--ar)))); margin: 6px 0 14px 24px; transform: none; }
 .pt .ex-sec.s-found { display: flow-root; }
 @media (max-width: 700px) {
-  .pt .ex-meme-slot { float: none; width: max(180px, min(100% - 8px, calc(380px * var(--ar)))); margin: 4px auto 18px; transform: rotate(0.6deg); }
+  .pt .ex-meme-slot { float: none; width: max(180px, min(100% - 8px, calc(380px * var(--ar)))); margin: 4px auto 18px; transform: none; }
 }
 
 /* caveats and Jev's take as full-width blocks after the write-up (no sticky side column) */

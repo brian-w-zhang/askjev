@@ -148,7 +148,7 @@ export default async function ExperimentPage({ params }: { params: Promise<{ id:
                   follows the template's shape so wide and tall memes take up about the same room */}
               {k === "found" && e.meme && (
                 <div className="ex-meme-slot" style={{ "--ar": (e.meme.w / e.meme.h).toFixed(3) } as React.CSSProperties}>
-                  <ExMeme m={e.meme} where="case study" />
+                  <ExMeme m={e.meme} where={e.family_label.toLowerCase()} />
                 </div>
               )}
               <Md text={s[k] as string} />
