@@ -255,28 +255,19 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 .op-h h1 span { display: block; color: var(--jev); }
 @media (max-width: 860px) { .op-top { grid-template-columns: 1fr; gap: 24px; } .op-tweet { transform: rotate(-1deg); } }
 .op-check { background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line), 5px 5px 0 var(--jev); }
-.op-check ul { list-style: none; margin: 0; padding: 6px 14px 10px; }
-.op-check li { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr) minmax(0, 1.4fr); gap: 12px; align-items: center; padding: 8px 0; border-top: 1px solid var(--w-grid); font-size: 14px; }
-.op-check li:first-child { border-top: 0; }
 .op-q { font-weight: 600; }
 .op-a b { color: var(--jev); } .op-a em { font-style: normal; font-family: var(--mono); font-size: 11px; color: var(--w-fg-2); margin-left: 3px; }
-.op-p { position: relative; font-size: 12.5px; color: var(--w-fg-2); padding-top: 12px; }
-.op-p i { position: absolute; left: 0; top: 0; height: 7px; background: var(--ppl); }
-@media (max-width: 640px) { .op-check li { grid-template-columns: 1fr 1fr; } .op-p { grid-column: 1 / -1; } }
 .op-scales { display: grid; gap: 12px; }
 .op-say { margin: 0; font-size: 18px; color: var(--fg); }
 .op-g { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
 @media (max-width: 860px) { .op-g { grid-template-columns: 1fr 1fr; } }
 .op-gauge { background: var(--w-body); color: var(--w-fg); padding: 12px 14px; box-shadow: 0 0 0 1px var(--w-line); display: grid; gap: 8px; }
 .op-gk { font-size: 13.5px; font-weight: 600; } .op-gk em { font-style: normal; font-family: var(--mono); font-size: 10.5px; color: var(--w-fg-2); font-weight: 400; margin-left: 4px; }
-/* the scale drawn like the other Jev-vs-most-people rows (charts.tsx DotRows): a thin line between the scale's ends,
-   Jev's square and the amber ring of its "most people" answer at the same 11px, joined by a hairline */
+/* the scale drawn like the other rows (charts.tsx DotRows): a thin line between the scale's ends and Jev's 11px square */
 .op-gt { position: relative; height: 22px; border-left: 1px solid var(--w-grid); border-right: 1px solid var(--w-grid); }
 .op-gt::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 1px solid var(--w-grid); }
 .op-gt i { position: absolute; top: 50%; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px; }
-.op-gt i.l { height: 1px; margin: 0; background: var(--w-fg-2); opacity: 0.5; }
 .op-gt i.j { background: var(--jev); z-index: 3; }
-.op-gt i.p { border-radius: 50%; box-shadow: inset 0 0 0 2px var(--guess); background: var(--w-body); z-index: 2; }
 .op-gv { font-family: var(--mono); font-size: 12px; color: var(--w-fg-2); } .op-gv b { color: var(--w-fg); font-size: 15px; }
 
 /* ---------- 02 why ask ---------- */
@@ -428,12 +419,6 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 @media (max-width: 900px) { .op-more { grid-template-columns: 1fr; } }
 .op-t { margin: 0 0 10px; font-size: 15px; font-weight: 600; color: var(--fg); }
 .op-check { background: none; box-shadow: none; }
-.op-check ul { padding: 0; }
-.op-check li { grid-template-columns: minmax(0, 1.5fr) auto minmax(90px, 1fr); border-top-color: rgba(244, 241, 243, 0.12); color: var(--fg); }
-.op-check .op-a em { color: var(--fg-3); }
-.op-check .op-p { color: var(--fg-3); padding-top: 0; display: grid; gap: 3px; }
-.op-check .op-p i { position: static; background: rgba(244, 241, 243, 0.75); height: 6px; }
-.op-check .op-p em { font-style: normal; font-family: var(--mono); font-size: 10.5px; }
 .op-g { grid-template-columns: 1fr 1fr; }
 @media (max-width: 640px) { .mk-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } .mk-strip div:last-child { grid-column: 1 / -1; } }
 
@@ -615,3 +600,25 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 
 /* a limit TypeSafe already documents (docs/01-jev.md §6): an outlined tag, so it never reads as a discovery */
 .st-known { display: inline-block; margin-left: 8px; padding: 0 5px; border: 1px solid currentColor; font-family: var(--mono); font-size: 10px; font-style: normal; font-weight: 400; line-height: 16px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--w-fg-2); white-space: nowrap; vertical-align: 2px; }
+
+/* the yes-or-no check-ins as a small table: question, Jev's answer and how sure, and the share of people who said the
+   same as a bar in a fixed-width track, with its number */
+.op-ct { display: grid; }
+.op-ch, .op-cr { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) 150px; gap: 14px; align-items: center; }
+.op-ch { padding: 0 0 6px; font-family: var(--mono); font-size: 10.5px; color: var(--fg-3); }
+.op-ch span:nth-child(2) { text-align: right; }
+.op-cr { padding: 9px 0; border-top: 1px solid rgba(244, 241, 243, 0.12); font-size: 14px; color: var(--fg); }
+.op-cr .op-a { display: grid; justify-items: end; gap: 1px; text-align: right; line-height: 1.2; }
+.op-cr .op-a em { font-style: normal; font-family: var(--mono); font-size: 10.5px; color: var(--fg-3); margin-left: 0; white-space: nowrap; }
+.op-cr .op-p { display: grid; grid-template-columns: 1fr 34px; gap: 8px; align-items: center; padding: 0; }
+.op-pt { display: block; height: 6px; background: rgba(244, 241, 243, 0.12); }
+.op-pt i { display: block; height: 100%; background: rgba(244, 241, 243, 0.75); }
+.op-cr .op-p em { font-style: normal; font-family: var(--mono); font-size: 11px; color: var(--fg-2); text-align: right; }
+@media (max-width: 640px) {
+  .op-ch { display: none; }
+  .op-cr { grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; }
+  .op-cr .op-p { grid-column: 1 / -1; grid-template-columns: 1fr auto; }
+  .op-cr .op-p em::after { content: " of people"; }
+  .op-cr .op-a { grid-template-columns: auto auto; gap: 6px; align-items: baseline; }
+  .op-g { grid-template-columns: 1fr; }
+}

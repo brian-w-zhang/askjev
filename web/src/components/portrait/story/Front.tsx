@@ -44,15 +44,18 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
         <div className="op-more">
           <Reveal className="op-check">
             <p className="op-t">And the yes-or-no check-ins</p>
-            <ul>
+            {/* a small table: the question, Jev's answer and how sure it is, and the share of the Redditors who answered
+                the same, as a bar in a full-width track so the rows compare */}
+            <div className="op-ct" role="table" aria-label="Yes-or-no check-ins: Jev's answer and the share of people who gave the same one">
+              <div className="op-ch" role="row"><span role="columnheader">asked</span><span role="columnheader">Jev says</span><span role="columnheader">people, same answer</span></div>
               {h.checkin.map((c) => (
-                <li key={c.q}>
-                  <span className="op-q">{c.q}</span>
-                  <span className="op-a"><b>{c.a}</b> <em>{pc(c.p)}</em></span>
-                  <span className="op-p" title={`${pc(c.people)} of ${c.n ?? ""} Redditors`}><i style={{ width: pc(c.people) }} /><em>{pc(c.people)} of people</em></span>
-                </li>
+                <div key={c.q} className="op-cr" role="row">
+                  <span className="op-q" role="cell">{c.q}</span>
+                  <span className="op-a" role="cell"><b>{c.a}</b> <em>{pc(c.p)} sure</em></span>
+                  <span className="op-p" role="cell" title={`${pc(c.people)} of ${c.n ?? ""} Redditors`}><span className="op-pt"><i style={{ width: pc(c.people) }} /></span><em>{pc(c.people)}</em></span>
+                </div>
               ))}
-            </ul>
+            </div>
           </Reveal>
           <Reveal className="op-scales">
             <p className="op-t">Says it&rsquo;s fine. The real wellbeing questionnaires, scored as for a person, say: meh.</p>
@@ -60,19 +63,17 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
               {gauge.map((k) => {
                 const g = sc[k];
                 const f = (v: number) => ((v - g.range[0]) / (g.range[1] - g.range[0])) * 100;
+                // the ladder has no band of its own in the data: Gallup's (7 and up thriving, 4 or below suffering)
+                const band = g.band_self || (k === "Cantril ladder" ? (g.self >= 7 ? "thriving" : g.self <= 4 ? "suffering" : "struggling") : "");
                 return (
                   <div key={k} className="op-gauge">
                     <span className="op-gk">{g.name} <em>{k}</em></span>
-                    <div className="op-gt">
-                      <i className="l" style={{ left: `${Math.min(f(g.people), f(g.self))}%`, width: `${Math.abs(f(g.people) - f(g.self))}%` }} />
-                      <i className="p" style={{ left: `${f(g.people)}%` }} title={`for most people: ${g.people}`} /><i className="j" style={{ left: `${f(g.self)}%` }} />
-                    </div>
-                    <span className="op-gv"><b>{g.self}</b> of {g.range[1]}{g.band_self ? ` · ${g.band_self}` : ""}</span>
+                    <div className="op-gt"><i className="j" style={{ left: `${f(g.self)}%` }} /></div>
+                    <span className="op-gv"><b>{g.self}</b> of {g.range[1]}{band ? ` · ${band}` : ""}</span>
                   </div>
                 );
               })}
             </div>
-            <p className="ex-legend"><span><i className="k jev" />Jev</span><span><i className="k guess" />what Jev thinks most people would say</span></p>
           </Reveal>
         </div>
       </div>
