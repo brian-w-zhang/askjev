@@ -33,29 +33,19 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
           </div>
         </div>
         <Reveal className="op-chat">
-          {h.direct.map((d) => (
-            <div key={d.id} className="op-ex">
+          {/* one conversation: the open check-ins, then the yes-or-no ones, all as text messages */}
+          {[...h.direct.map((d) => ({ key: d.id, q: d.q, a: d.a, p: d.p, same: d.people_same, n: d.n })),
+            ...h.checkin.map((c) => ({ key: c.q, q: c.q, a: c.a, p: c.p, same: c.people, n: c.n }))].map((d) => (
+            <div key={d.key} className="op-ex">
               <p className="op-me">{d.q}</p>
               <p className="op-jev"><span>Jev</span>{d.a} <em>{pc(d.p)} sure</em></p>
-              {d.n && <p className="op-ppl">{pc(d.people_same)} of {n0(d.n)} Redditors said the same</p>}
+              {d.n ? <p className="op-ppl">{pc(d.same)} of {n0(d.n)} Redditors said the same</p> : null}
             </div>
           ))}
         </Reveal>
         <div className="op-more">
-          <Reveal className="op-check">
-            <p className="op-t">And the yes-or-no check-ins</p>
-            {/* two columns: the question, and Jev's answer with how sure it was */}
-            <dl className="op-ct">
-              {h.checkin.map((c) => (
-                <div key={c.q} className="op-cr">
-                  <dt className="op-q">{c.q}</dt>
-                  <dd className="op-a"><b>{c.a}</b><em>{pc(c.p)} sure</em></dd>
-                </div>
-              ))}
-            </dl>
-          </Reveal>
           <Reveal className="op-scales">
-            <p className="op-t">Says it&rsquo;s fine. The real wellbeing questionnaires, scored as for a person, say: meh.</p>
+            <p className="op-t">Says it&rsquo;s fine. The real wellbeing scales say: meh.</p>
             <div className="op-g">
               {gauge.map((k) => {
                 const g = sc[k];
