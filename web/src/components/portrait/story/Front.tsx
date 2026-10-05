@@ -63,7 +63,10 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
                 return (
                   <div key={k} className="op-gauge">
                     <span className="op-gk">{g.name} <em>{k}</em></span>
-                    <div className="op-gt"><i className="p" style={{ left: `${f(g.people)}%` }} title={`for most people: ${g.people}`} /><i className="j" style={{ left: `${f(g.self)}%` }} /></div>
+                    <div className="op-gt">
+                      <i className="l" style={{ left: `${Math.min(f(g.people), f(g.self))}%`, width: `${Math.abs(f(g.people) - f(g.self))}%` }} />
+                      <i className="p" style={{ left: `${f(g.people)}%` }} title={`for most people: ${g.people}`} /><i className="j" style={{ left: `${f(g.self)}%` }} />
+                    </div>
                     <span className="op-gv"><b>{g.self}</b> of {g.range[1]}{g.band_self ? ` · ${g.band_self}` : ""}</span>
                   </div>
                 );
@@ -200,6 +203,21 @@ const NOT_JEV: [string, string][] = [
   ["Vercel", "hosting, and the AI Gateway every call to Jev goes through"],
 ];
 
+// What Jev is asked at each job, shortened from the exact prompt (m.job_info[job].ask, copied from the code that sends
+// it): the placeholders and parentheticals dropped, so every card reads in a line or two
+const SHORT: Record<string, string> = {
+  "screen for politics and sensitive content": "Is this question about a contested political issue?",
+  "flag known weak spots": "Does answering it take arithmetic, counting or comparing dates?",
+  "describe each question": "Does this question have a single correct answer?",
+  "place a question on the tree": "Within The Self, which topic area does this question belong to?",
+  "check for duplicates": "Is this essentially the same question as that one?",
+  "answer as asked": "Who is the greater basketball player?",
+  "answer for most people": "Choose the answer most people would give.",
+  "judge an experiment": "Does this result match how you see yourself?",
+  "rank experiments head to head": "Which one teaches a curious reader something more surprising?",
+  "rate a meme": "How funny is this meme?",
+};
+
 export function Jobs({ s }: { s: S }) {
   const m = s.methods;
   const q = m.jobs?.questions ?? {};
@@ -221,13 +239,13 @@ export function Jobs({ s }: { s: S }) {
                   const info = n.job ? m.job_info[n.job] : null;
                   const cnt = n.job ? q[n.job] ?? 0 : null;
                   return (
-                    <div key={n.label} className={`lay-c${n.code ? " code" : ""}`} tabIndex={0}>
+                    <div key={n.label} className={`lay-c${n.code ? " code" : ""}`}>
                       <div className="lay-t">
                         {n.code ? <i className="lay-p code">code</i> : prims(info?.type ?? "").map((p) => <i key={p} className="lay-p">{p}</i>)}
                         {cnt !== null && <span className="lay-cnt">{mil(cnt)}</span>}
                       </div>
                       <b>{n.label.replace("{n}", String(s.n_experiments))}</b>
-                      {info ? <p className="lay-ask">&ldquo;{info.ask}&rdquo;</p> : <p className="lay-ask">{n.note}</p>}
+                      {info ? <p className="lay-ask" title={info.ask}>&ldquo;{SHORT[n.job!] ?? info.ask}&rdquo;</p> : <p className="lay-ask">{n.note}</p>}
                     </div>
                   );
                 })}
@@ -235,7 +253,7 @@ export function Jobs({ s }: { s: S }) {
             </li>
           ))}
         </ol>
-        <p className="st-note">Counts are questions sent to Jev, from the log of every call: {mil(all)} in all, carried in {mil(m.jobs?.n_calls ?? 0)} calls
+        <p className="st-note">Quotes are Jev&rsquo;s wording, shortened; hover one for the exact prompt. Counts are questions sent to Jev, from the log of every call: {mil(all)} in all, carried in {mil(m.jobs?.n_calls ?? 0)} calls
           because one call can hold many questions. Search on the map adds one more job: Jev picks the best match from the
           candidates ({n0(q["rerank search results"] ?? 0)} so far).</p>
       </Box>

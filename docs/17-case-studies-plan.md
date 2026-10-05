@@ -92,9 +92,9 @@ from them.
   answers "How funny is this meme?" on five levels described as situations, from no reaction to "the kind of meme
   people send to friends" (`scripts/experiments/meme_funny.py`). Each meme is dressed as one of typesafe.ai's team
   cards (measured from typesafe.ai/team): straight, with their soft drop shadow; a black pixel title bar naming the
-  chapter it sits in ("taste"; on a case study, its family); a grey frame holding the picture and, below it in white
-  blocks, the caption (as their bio sits under the photo) and the "How funny is this meme?" chart: Jev's pick and how
-  sure it is of each of the five levels.
+  chapter it sits in ("taste"; on a case study, its family); a grey frame holding the picture and, below it in a white
+  block, the "How funny is this meme?" chart: Jev's pick and how sure it is of each of the five levels. A caption shows
+  only on a reaction format with no words on the picture, where it is the joke, above the picture as its setup.
 
 ## Rows (items 6-7)
 - A private route (`/portrait/atlas/rows?id=&page=`) serves every question id an experiment used, from a list the

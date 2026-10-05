@@ -269,10 +269,14 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 @media (max-width: 860px) { .op-g { grid-template-columns: 1fr 1fr; } }
 .op-gauge { background: var(--w-body); color: var(--w-fg); padding: 12px 14px; box-shadow: 0 0 0 1px var(--w-line); display: grid; gap: 8px; }
 .op-gk { font-size: 13.5px; font-weight: 600; } .op-gk em { font-style: normal; font-family: var(--mono); font-size: 10.5px; color: var(--w-fg-2); font-weight: 400; margin-left: 4px; }
-.op-gt { position: relative; height: 12px; background: var(--w-sub); box-shadow: inset 0 0 0 1px var(--w-grid); }
-.op-gt i { position: absolute; top: 50%; width: 12px; height: 12px; margin: -6px 0 0 -6px; }
-.op-gt i.j { background: var(--jev); box-shadow: 0 0 0 2px var(--w-body); }
-.op-gt i.p { border-radius: 50%; box-shadow: inset 0 0 0 2px var(--guess); background: var(--w-body); }
+/* the scale drawn like the other Jev-vs-most-people rows (charts.tsx DotRows): a thin line between the scale's ends,
+   Jev's square and the amber ring of its "most people" answer at the same 11px, joined by a hairline */
+.op-gt { position: relative; height: 22px; border-left: 1px solid var(--w-grid); border-right: 1px solid var(--w-grid); }
+.op-gt::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; border-top: 1px solid var(--w-grid); }
+.op-gt i { position: absolute; top: 50%; width: 11px; height: 11px; margin: -5.5px 0 0 -5.5px; }
+.op-gt i.l { height: 1px; margin: 0; background: var(--w-fg-2); opacity: 0.5; }
+.op-gt i.j { background: var(--jev); z-index: 3; }
+.op-gt i.p { border-radius: 50%; box-shadow: inset 0 0 0 2px var(--guess); background: var(--w-body); z-index: 2; }
 .op-gv { font-family: var(--mono); font-size: 12px; color: var(--w-fg-2); } .op-gv b { color: var(--w-fg); font-size: 15px; }
 
 /* ---------- 02 why ask ---------- */
@@ -562,8 +566,7 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 .lay-p { font-style: normal; font-family: var(--mono); font-size: 10px; padding: 1px 5px; background: var(--jev); color: #fff; }
 .lay-p.code { background: none; color: var(--w-fg-2); box-shadow: inset 0 0 0 1px var(--w-fg-2); }
 .lay-cnt { margin-left: auto; font-family: var(--mono); font-size: 12px; font-weight: 700; }
-.lay-ask { margin: 0; font-family: var(--mono); font-size: 10.5px; line-height: 1.4; color: var(--w-fg-2); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.lay-c:hover .lay-ask, .lay-c:focus .lay-ask { -webkit-line-clamp: unset; }
+.lay-ask { margin: 0; font-family: var(--mono); font-size: 10.5px; line-height: 1.4; color: var(--w-fg-2); }
 @media (max-width: 720px) { .lay-l { grid-template-columns: 1fr; gap: 8px; } .lay::before { display: none; } }
 
 /* the walk down the tree */

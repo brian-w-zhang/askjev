@@ -4,14 +4,16 @@ import type { ExperimentMeme } from "./types";
 
 // An experiment's meme (docs/17 item 8): a template with our words set on it in HTML, so the text stays sharp in both
 // themes. It's built like one of typesafe.ai's team cards (measured from typesafe.ai/team): a black pixel title bar
-// naming the chapter it sits in, and a grey frame holding the picture and, below it in white blocks, the caption (where a
-// reaction format has one, as their bio sits under the photo) and how funny Jev finds it (MemeFunny). Straight, with
-// their soft drop shadow; light in both themes.
+// naming the chapter it sits in, and a grey frame holding the picture and, below it in a white block, how funny Jev finds
+// it (MemeFunny). A caption shows only where it is the joke (a reaction format with no words on the picture), above the
+// picture as its setup; where the picture carries the words, the caption only restated the result and is left out.
+// Straight, with their soft drop shadow; light in both themes.
 export default function ExMeme({ m, where = "" }: { m: ExperimentMeme; where?: string }) {
   return (
     <figure className="ex-memefig">
       <div className="ex-wbar"><span>{where}</span></div>
       <div className="mm-in">
+        {m.caption && !m.texts.some(Boolean) && <figcaption className="cap">{m.caption}</figcaption>}
         <div className="img" style={{ aspectRatio: `${m.w} / ${m.h}` }}>
           <img src={`/portrait/memes/${m.file}`} alt={m.alt} loading="lazy" draggable={false} />
           {m.boxes.map((b, i) => m.texts[i] ? (
@@ -22,7 +24,6 @@ export default function ExMeme({ m, where = "" }: { m: ExperimentMeme; where?: s
               } as React.CSSProperties}>{m.texts[i]}</span>
           ) : null)}
         </div>
-        {m.caption && <figcaption className="cap">{m.caption}</figcaption>}
         {m.funny && <MemeFunny f={m.funny} />}
       </div>
     </figure>
