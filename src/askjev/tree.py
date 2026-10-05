@@ -17,8 +17,8 @@ HEMISPHERES = ["world", "self", "machine"]
 
 ROOT = {
     "id": "root",
-    "label": "Everything Asked",
-    "description": "Every closed question a human or a program could ask.",
+    "label": "All questions",
+    "description": "Every question on the map, in three branches: the World, the Self and the Machine.",
     "not_for": None,
     "examples": [],
 }

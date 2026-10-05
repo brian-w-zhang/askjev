@@ -1,1 +1,1 @@
-"""askjev: a tree housing every closed question, answered by Jev."""
+"""askjev: a tree of a million closed questions, answered by Jev."""

@@ -1,7 +1,7 @@
 # Vision
 
 ## One line
-A tree that has a place for every closed question a human or a program could ask
+A tree with a place for any closed question a human or a program could ask
 (yes/no, pick one, rate on a scale), filled with a balanced sample of real
 questions answered by Jev, TypeSafe AI's System One model. It's for
 **understanding Jev**: what it can do, what its defaults ("personality") are, and

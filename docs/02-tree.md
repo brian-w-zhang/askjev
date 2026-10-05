@@ -1,4 +1,4 @@
-# The tree: a home for every closed question
+# The tree: a home for any closed question
 
 The tree is **topic only**: what a question is about. What *sort* of judgment it
 is goes in tags (`03-questions.md` §1). Keeping the two apart is the core design rule.

@@ -1,6 +1,6 @@
 # askjev: agent guide
 
-Private project: a tree housing every closed question (Noul / Choice / Score) that humans or machines
+Private project: a tree of a million closed questions (Noul / Choice / Score) that humans or machines
 ask, answered by Jev, for understanding Jev's capabilities, defaults, and jaggedness. It's built as
 outreach to TypeSafe. See `README.md`.
 
