@@ -60,8 +60,8 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
               {gauge.map((k) => {
                 const g = sc[k];
                 const f = (v: number) => ((v - g.range[0]) / (g.range[1] - g.range[0])) * 100;
-                // the ladder has no band of its own in the data: Gallup's (7 and up thriving, 4 or below suffering)
-                const band = g.band_self || (k === "Cantril ladder" ? (g.self >= 7 ? "thriving" : g.self <= 4 ? "suffering" : "struggling") : "");
+                // the ladder has no band of its own in the data; Jev's 5.3 is "coping"
+                const band = g.band_self || (k === "Cantril ladder" ? "coping" : "");
                 return (
                   <div key={k} className="op-gauge">
                     <span className="op-gk">{g.name} <em>{k}</em></span>
