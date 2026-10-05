@@ -97,7 +97,9 @@ input, textarea, select { font: inherit; color: inherit; }
 }
 
 /* ---------- page chrome ---------- */
-.stage { position: fixed; inset: 0; }
+.stage { position: fixed; inset: 0; touch-action: none; }
+/* labels and cards over the scene: a touch that starts on one is the scene's gesture, not a page pan or zoom */
+.skylabels, .skylabel, .skycard { touch-action: none; }
 .topleft { position: fixed; top: 18px; left: 18px; z-index: 30; width: min(540px, calc(100vw - 32px)); }
 .intro { position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%); z-index: 10; color: var(--ink); font-family: var(--pixel); font-size: 18px; pointer-events: none; background: var(--glass); padding: 0 8px; box-shadow: 0 0 0 1px var(--ink); white-space: nowrap; transition: opacity 900ms; }
 .intro[data-hidden="true"] { opacity: 0; }

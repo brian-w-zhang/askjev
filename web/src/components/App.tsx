@@ -55,6 +55,13 @@ export default function App() {
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
+  // iOS Safari pinch-zooms the page whatever the viewport says; on the map a pinch belongs to the 3D scene
+  useEffect(() => {
+    const stop = (e: Event) => e.preventDefault();
+    const opts = { passive: false } as AddEventListenerOptions;
+    for (const t of ["gesturestart", "gesturechange", "gestureend"]) document.addEventListener(t, stop, opts);
+    return () => { for (const t of ["gesturestart", "gesturechange", "gestureend"]) document.removeEventListener(t, stop, opts); };
+  }, []);
   // the hint shows once, then gets out of the way
   const themeTouched = useRef(false);
   const [hintGone, setHintGone] = useState(false);
