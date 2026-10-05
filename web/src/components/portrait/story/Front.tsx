@@ -45,7 +45,6 @@ export function Opening({ s, nQuestions }: { s: S; nQuestions: number }) {
         </Reveal>
         <div className="op-more">
           <Reveal className="op-scales">
-            <p className="op-t">Says it&rsquo;s fine. The real wellbeing scales say: meh.</p>
             <div className="op-g">
               {gauge.map((k) => {
                 const g = sc[k];

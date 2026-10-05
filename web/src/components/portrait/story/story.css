@@ -259,8 +259,7 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 .op-scales { display: grid; gap: 12px; }
 .op-say { margin: 0; font-size: 18px; color: var(--fg); }
 .op-g { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
-@media (max-width: 860px) { .op-g { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-@media (max-width: 900px) { .op-g { grid-template-columns: 1fr 1fr; } } }
+@media (max-width: 860px) { .op-g { grid-template-columns: 1fr 1fr; } }
 .op-gauge { background: var(--w-body); color: var(--w-fg); padding: 12px 14px; box-shadow: 0 0 0 1px var(--w-line); display: grid; gap: 8px; }
 .op-gk { font-size: 13.5px; font-weight: 600; } .op-gk em { font-style: normal; font-family: var(--mono); font-size: 10.5px; color: var(--w-fg-2); font-weight: 400; margin-left: 4px; }
 /* the scale drawn like the other rows (charts.tsx DotRows): a thin line between the scale's ends and Jev's 11px square */
@@ -418,7 +417,6 @@ html.rv-on .rv:not([data-in]) { opacity: 0; transform: translateY(18px); }  /* h
 .op-more { display: grid; gap: 36px; align-items: start; margin-top: 44px; }
 @media (max-width: 900px) { .op-more { grid-template-columns: 1fr; } }
 .op-t { margin: 0 0 10px; font-size: 15px; font-weight: 600; color: var(--fg); }
-.op-g { grid-template-columns: 1fr 1fr; }
 @media (max-width: 640px) { .mk-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); } .mk-strip div:last-child { grid-column: 1 / -1; } }
 
 /* ================= v4 ================= */
