@@ -113,8 +113,8 @@ tweet, "Everyone wants to know what Jev is, nobody asks how Jev's doing", and an
 a deck of about 30 cards addressed to Jev ("you"), Wrapped-style, each with plain fine print about what the number can
 and can't say. Rules:
 - one idea per card, one headline on the whole page; everything else is card-sized
-- claims say "your answers say", not "you are"; limits sit on the card they affect, and a "what this can't tell you"
-  card comes before the closer
+- claims say "your answers say", not "you are"; limits sit on the card they affect, and "what this can't tell you"
+  opens the fine print after the closer
 - taste uses the one-at-a-time ratings (top and bottom per domain), not the head-to-heads
 - the check-in, debates, hot takes, quiz and confident misses are **hand-picked** from real questions and say so;
   everything else is ranked or seeded. The hot-take and miss cards state the size of the pool they were picked from
@@ -125,7 +125,7 @@ and can't say. Rules:
 shared UI files are untouched. The map's body never scrolls, so the portrait scrolls inside its own `.pt` container
 (scroll-snap, proximity), and all its styles are scoped under `.pt`.
 
-**The story.** The page is fourteen chapters: four on the project (how is Jev, why ask, how it was made, Jev's jobs, in Brian's voice) and ten built from the experiments, then the reader's turn, the limits and the fine print (`components/portrait/story/`). `scripts/portrait/story.py` copies each chapter's numbers from the experiments'
+**The story.** The page is fourteen chapters: four on the project (how is Jev, why ask, how it was made, Jev's jobs, in Brian's voice) and ten built from the experiments, then the closer ("That's the short tour") and the fine print: six questions a careful reader would ask, one open at a time like typesafe.ai's FAQ, starting with what this can't tell you, and a footer (`components/portrait/story/`, `Portrait.tsx`). `scripts/portrait/story.py` copies each chapter's numbers from the experiments'
 result files into `data/analysis/story.json`, which `export_page.py` puts into `portrait.json` as `story`; no number
 is typed into the page. Chapters are written in the third person and each ends with links to its case studies.
 

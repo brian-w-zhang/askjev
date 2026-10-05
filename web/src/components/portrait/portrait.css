@@ -264,12 +264,21 @@
 .limits li::marker { font-family: var(--mono); font-size: 12px; color: var(--fg-3); }
 .links { display: flex; flex-wrap: wrap; gap: 8px 20px; font-family: var(--mono); font-size: 12px; }
 .fineprint { max-width: 720px; margin: 0 auto; padding: 72px 16px 64px; }
-.fineprint h2 { margin: 0 0 28px; font-size: 28px; font-weight: 500; letter-spacing: -0.02em; }
-.fp { border-left: 1px solid var(--rule); padding: 0 0 2px 12px; margin: 0 0 22px; }
-.fp p { margin: 0; font-size: 15px; line-height: 1.5; }
+.fineprint h2 { margin: 0 0 22px; font-size: 28px; font-weight: 500; letter-spacing: -0.02em; }
+/* questions, one open at a time, like typesafe.ai's FAQ: a rule between rows, a mono +/− on the right */
+.fp-q { border-top: 1px solid var(--rule); }
+.fp-q:last-of-type { border-bottom: 1px solid var(--rule); }
+.fp-q summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 16px 0; font-size: 19px; font-weight: 500; letter-spacing: -0.01em; }
+.fp-q summary::-webkit-details-marker { display: none; }
+.fp-q summary::after { content: "+"; font-family: var(--mono); font-size: 18px; font-weight: 300; color: var(--fg-3); }
+.fp-q[open] summary::after { content: "−"; }
+.fp-q summary:hover::after, .fp-q summary:focus-visible::after { color: var(--jev); }
+.fp-a { display: grid; gap: 12px; padding: 0 0 22px; }
+.fp-a p { margin: 0; font-size: 15px; line-height: 1.55; }
+.fp-a .limits { font-size: 15px; gap: 8px; list-style: square; }
 .pt-label { display: block; margin-bottom: 8px; font-family: var(--mono); font-size: 10.5px; color: var(--fg-2); }
 .fp-end { margin-top: 40px; font-family: var(--mono); font-size: 11px; color: var(--fg-3); }
-.fp .hbar { font-size: 13px; }
+.fp-a .hbar { font-size: 13px; }
 
 /* ---------- dot rows (HTML, so labels stay readable at phone width) ---------- */
 .dp { display: grid; }
@@ -308,7 +317,7 @@
 
 /* ---------- bars ---------- */
 .hbars { background: var(--w-body); color: var(--w-fg); box-shadow: 0 0 0 1px var(--w-line); padding: 6px 14px; }
-.fp .hbars { box-shadow: none; padding: 0; background: none; color: inherit; }
+.fp-a .hbars { box-shadow: none; padding: 0; background: none; color: inherit; }
 .hbar { display: grid; grid-template-columns: minmax(96px, 30%) 1fr 58px; gap: 10px; align-items: center; min-height: 26px; }
 .hbar + .hbar { border-top: 1px solid var(--w-grid); }
 .hbar .t { height: 12px; background: var(--w-sub); position: relative; }

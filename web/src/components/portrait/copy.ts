@@ -156,22 +156,17 @@ export const COPY: Record<string, CardCopy> = {
     kicker: "the end",
     title: "You vs Jev.",
   },
-  limits: {
-    title: "What this can't tell you.",
-  },
   closer: {
     title: "So, how's Jev doing?",
     body: "Says it's fine; on real wellbeing scales, meh. Calm on paper, hedges on scales, commits when it has to choose. Loves blue whales and The Shawshank Redemption, says GIF with a hard G, can barely tell which joke is funnier, and filed {placed} of its own map. Probably fine.",
   },
 };
 
-// Plain-language limits, one per line (the "what this can't tell you" card)
+// Plain-language limits, one per line (the fine print's first question, "What can't this tell you?")
 export const LIMITS = [
-  "Mostly one pass: each question asked once per framing. Repeating a request and rewording a question were measured on samples, not on every question.",
-  "The robustness checks are reordering the options, reversing rating scales, asking for “most people”, repeating a request and rewording a question. Other framings weren't tried.",
+  "It's mostly one pass. Each question was asked once per framing: as written, for “most people”, with its options reordered and with rating scales reversed. Repeats and rewordings were measured on samples, and other framings weren't tried.",
   "“Most people” is Jev's guess. Real human answers exist for {humans} of questions.",
   "The crowds are whoever answered a Reddit poll, rated a movie online, or took a free personality test. That isn't everyone.",
   "Mostly English, mostly US-heavy sources. {authored} of the questions were written for this project.",
   "Answer keys are imperfect, so some “misses” are the key's fault.",
-  "None of this is a benchmark. It's a picture of one model's answers, not a ranking against others.",
 ];
