@@ -14,15 +14,15 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: [{ media: "(prefers-color-scheme: dark)", color: "#1E1E1E" }, { color: "#DBF0FF" }],
+  themeColor: "#1E1E1E",
   width: "device-width",
   initialScale: 1,
 };
 
-// Picks the theme before first paint (saved choice, else the system's), so dark mode never flashes light.
+// Picks the theme before first paint (saved choice, else dark), so dark mode never flashes light.
 // Only the map offers both themes; every other page (portrait, atlas) is always dark. ?ids marks the page so the
 // portrait shows its card ids.
-const THEME_SCRIPT = `try{if(/[?&]ids(=|&|$)/.test(location.search))document.documentElement.dataset.ids="";if(location.pathname!=="/"){document.documentElement.dataset.theme="dark";throw 1}var t=localStorage.getItem("askjev.theme");if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t}catch(e){if(e!==1)document.documentElement.dataset.theme="light"}`;
+const THEME_SCRIPT = `try{if(/[?&]ids(=|&|$)/.test(location.search))document.documentElement.dataset.ids="";if(location.pathname!=="/"){document.documentElement.dataset.theme="dark";throw 1}var t=localStorage.getItem("askjev.theme");if(t!=="light"&&t!=="dark")t="dark";document.documentElement.dataset.theme=t}catch(e){if(e!==1)document.documentElement.dataset.theme="dark"}`;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

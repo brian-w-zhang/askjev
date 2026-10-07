@@ -46,7 +46,7 @@ export const useStore = create<State>((set) => ({
   born: {},
   indicator: "hemisphere",
   layout: "force",
-  theme: "light",
+  theme: "dark",
   tool: null,
   canBack: false,
   canForward: false,
