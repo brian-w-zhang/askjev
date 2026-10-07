@@ -8,9 +8,14 @@ const sans = Inter_Tight({ subsets: ["latin"], variable: "--font-sans", weight: 
 const pixel = VT323({ subsets: ["latin"], variable: "--font-pixel", weight: "400" });
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono", weight: ["300", "400"] });
 
+const DESCRIPTION = "A curious look at Jev from the outside: a million closed questions, asked to see what it's like.";
+
 export const metadata: Metadata = {
   title: "askjev",
-  description: "A map of the closed questions people and programs ask, answered by Jev.",
+  description: DESCRIPTION,
+  // link previews (Discord, Slack, iMessage) read these
+  openGraph: { title: "askjev", description: DESCRIPTION, siteName: "askjev", type: "website" },
+  twitter: { card: "summary", title: "askjev", description: DESCRIPTION },
 };
 
 export const viewport: Viewport = {
