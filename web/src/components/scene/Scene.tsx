@@ -6,8 +6,8 @@ import { OrbitControls } from "@react-three/drei";
 import { EffectComposer } from "@react-three/postprocessing";
 import { useStore, loadSemantic } from "@/lib/store";
 import { anim, BURST, fireworks, now } from "@/lib/anim";
-import { DEFAULT_LAYOUT, LAYOUT_KEY, LAYOUTS, layoutFor, type LayoutKind } from "@/lib/layout";
-import { starData } from "@/lib/stars";
+import { DEFAULT_LAYOUT, LAYOUT_KEY, LAYOUTS, layoutFor, type LayoutKind, type Placed } from "@/lib/layout";
+import { starCounts } from "@/lib/stars";
 import { stepHeat } from "@/lib/heat";
 import { deselect, selectNode } from "@/lib/actions";
 import { Edges } from "./Edges";
@@ -30,6 +30,11 @@ import { Reflection } from "./Reflection";
 // star lands on a whole cell instead of being sampled away between cell centers.
 const CELL_DPR = 0.5;
 
+const NONE = new Map<string, Placed>();
+// The opening starts close on the root (the layouts put it at the origin) and pulls back to the home view, so
+// the camera waits there from the first frame instead of cutting in from somewhere else once the data arrives.
+const START = { pos: [30, 40, 165] as [number, number, number], target: [0, 0, 0] as [number, number, number] };
+
 function DitherPass() {
   const theme = useStore((s) => s.theme);
   return (
@@ -50,6 +55,7 @@ export default function Scene() {
   const nodes = useStore((s) => s.nodes);
   const children = useStore((s) => s.children);
   const ready = useStore((s) => s.starsReady);
+  const counted = useStore((s) => s.countsReady);
   const kind = useStore((s) => s.layout);
   const theme = useStore((s) => s.theme);
   const downAt = useRef<{ x: number; y: number; star: number } | null>(null);
@@ -57,14 +63,14 @@ export default function Scene() {
   const layoutTick = useStore((s) => s.layoutTick);
   const { placed, exact } = useMemo(() => {
     void layoutTick; // a layout finished in the background
-    const d = ready ? starData() : null;
-    const direct = new Map<string, number>();
-    if (d) for (const [id, [, n]] of d.offsets) direct.set(id, n);
+    // laid out once, as soon as the tree and the per-topic counts are in (the dots may still be downloading)
+    const direct = counted ? starCounts() : null;
+    if (!direct) return { placed: anim.placed.size ? anim.placed : NONE, exact: false };
     // Web and Meaning compute in workers (Meaning's coordinates come from the server)
     const want = layoutFor(kind, nodes, children, direct, semantic);
-    // while a layout computes (Web, Meaning), keep showing the last one; only the very first view falls back
-    return { placed: want ?? (anim.placed.size ? anim.placed : null) ?? layoutFor("balloon", nodes, children, direct)!, exact: !!want };
-  }, [nodes, children, ready, kind, semantic, layoutTick]);
+    // while a layout computes (Web, Meaning), keep showing the last one (the opening waits for the real one)
+    return { placed: want ?? (anim.placed.size ? anim.placed : NONE), exact: !!want };
+  }, [nodes, children, counted, kind, semantic, layoutTick]);
   const [formed, setFormed] = useState(false);
   const homed = useRef(false);
   useLayoutEffect(() => {
@@ -94,7 +100,7 @@ export default function Scene() {
     for (const [id, l] of launch) born[id] = (t0 + l) * 1000;
     useStore.getState().set({ born });
     const r = placed.get("root");
-    const from = r ? { pos: [r.x + 30, r.y + 40, r.z + 165] as [number, number, number], target: [r.x, r.y, r.z] as [number, number, number] } : undefined;
+    const from = r ? { pos: [r.x + START.pos[0], r.y + START.pos[1], r.z + START.pos[2]] as [number, number, number], target: [r.x, r.y, r.z] as [number, number, number] } : undefined;
     home(last + BURST * 0.7, 0.6, from);
     setFormed(true);
   }, [placed, ready, exact]);
@@ -115,10 +121,8 @@ export default function Scene() {
       loadSemantic()
         .then(() => {
           const s = useStore.getState();
-          const d = starData();
-          const direct = new Map<string, number>();
-          if (d) for (const [id, [, n]] of d.offsets) direct.set(id, n);
-          layoutFor("semantic", s.nodes, s.children, direct, s.semantic);
+          const direct = starCounts();
+          if (direct) layoutFor("semantic", s.nodes, s.children, direct, s.semantic);
         })
         .catch(() => {});
     }, wait);
@@ -132,7 +136,7 @@ export default function Scene() {
   return (
     <>
       <Canvas
-        camera={{ position: [0, 28, 1500], fov: 42, near: 0.1, far: 4000 }}
+        camera={{ position: START.pos, fov: 42, near: 0.1, far: 4000 }}
         dpr={CELL_DPR}
         gl={{ antialias: false, powerPreference: "high-performance" }}
         style={{ imageRendering: "pixelated" }}
@@ -162,7 +166,7 @@ export default function Scene() {
         <Comets />
         <Journey placed={placed} />
         <CameraRig />
-        <OrbitControls makeDefault target={[0, 60, 0]} enableDamping dampingFactor={0.07} minDistance={1.2} maxDistance={900} autoRotateSpeed={0.18} zoomSpeed={1.25} zoomToCursor />
+        <OrbitControls makeDefault target={START.target} enableDamping dampingFactor={0.07} minDistance={1.2} maxDistance={900} autoRotateSpeed={0.18} zoomSpeed={1.25} zoomToCursor />
         <DitherPass />
       </Canvas>
       <SkyOverlay />

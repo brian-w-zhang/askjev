@@ -5,7 +5,7 @@ import { BufferAttribute, BufferGeometry, Color, DataTexture, FloatType, Nearest
 import { useStore } from "@/lib/store";
 import { anim, BURST, now } from "@/lib/anim";
 import { heat, HOT_SLOTS } from "@/lib/heat";
-import { branchColor, rampColor, starAttention } from "@/lib/color";
+import { branchShadesOf, rampColor, shadeAt, starAttention } from "@/lib/color";
 import { JEV_COLOR, THEMES } from "@/lib/theme";
 import { metric, starData } from "@/lib/stars";
 import { starLocal, type Placed, type V3 } from "@/lib/layout";
@@ -125,9 +125,12 @@ export function Stars({ placed }: { placed: Map<string, Placed> }) {
     const nodeIdx = new Float32Array(n);
     const delay = new Float32Array(n);
     const tree = useStore.getState().nodes;
+    // per topic once (a million dots share ~1,700 topics): its placement and when the opening lands it
+    const P = d.nodeIds.map((id) => placed.get(id));
+    const land = d.nodeIds.map((id) => anim.intro.arrive.get(id) ?? 0.25 + (tree[id]?.depth ?? 1) * 0.6);
     const l: V3 = [0, 0, 0];
     for (let i = 0; i < n; i++) {
-      const p = placed.get(d.nodeIds[d.node[i]]);
+      const p = P[d.node[i]];
       if (!p) continue;
       pos[i * 3] = p.x; pos[i * 3 + 1] = p.y; pos[i * 3 + 2] = p.z;
       starLocal(d.local[i * 3], d.local[i * 3 + 1], d.local[i * 3 + 2], p, l);
@@ -135,7 +138,7 @@ export function Stars({ placed }: { placed: Map<string, Placed> }) {
       spin[i] = p.spin;
       seed[i] = ((i * 2654435761) % 1000003) / 1000003;
       nodeIdx[i] = d.node[i];
-      delay[i] = (anim.intro.arrive.get(d.nodeIds[d.node[i]]) ?? 0.25 + (tree[d.nodeIds[d.node[i]]]?.depth ?? 1) * 0.6) + seed[i] * 0.08;
+      delay[i] = land[d.node[i]] + seed[i] * 0.08;
     }
     g.setAttribute("position", new BufferAttribute(pos, 3));
     g.setAttribute("aLocal", new BufferAttribute(local, 3));
@@ -164,14 +167,18 @@ export function Stars({ placed }: { placed: Map<string, Placed> }) {
     const nodeMetric = (ind: Indicator, i: number) =>
       ind === "stability" ? metric(d.stability[i]) : ind === "human_gap" ? metric(d.humanGap[i]) : ind === "frame_gap" ? metric(d.frameGap[i])
         : ind === "placement_conf" ? metric(d.placement[i]) : null;
+    // per topic once: its tree row, its branch's shades and where it sits among them
+    const rows = d.nodeIds.map((id) => nodes[id]);
+    const pal = rows.map((n) => branchShadesOf(n?.hemisphere ?? "root", theme));
+    const at = d.nodeIds.map((id) => shade.get(id) ?? 0.5);
     for (let i = 0; i < d.count; i++) {
-      const nid = d.nodeIds[d.node[i]];
-      const n = nodes[nid];
+      const k = d.node[i];
+      const n = rows[k];
       const seed = ((i * 2654435761) % 1000003) / 1000003;
       let s = BASE * (0.7 + 0.6 * seed);
       if (indicator === "hemisphere") {
         // the questions themselves are the cloud: colored particles, like the typesafe.ai header
-        branchColor(n?.hemisphere ?? "root", Math.min(1, Math.max(0, (shade.get(nid) ?? 0.5) + (seed - 0.5) * 0.3)), theme, c);
+        shadeAt(pal[k], Math.min(1, Math.max(0, at[k] + (seed - 0.5) * 0.3)), c);
       } else if (indicator === "calibration_ece") {
         if (d.correct[i] === 2) { c.set("#D45BB6"); s *= 1.6; }
         else c.set(d.correct[i] === 1 ? T.hemi.world : T.nodata);

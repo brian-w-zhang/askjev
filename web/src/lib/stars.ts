@@ -3,6 +3,7 @@
 // Positions are node center + the local unit-ball offset shaped by the layout (`starLocal`), turned slowly around
 // the node by `spin`. The shader and `starWorld` below use the same formula so picking matches the picture.
 import { starLocal, type Placed, type V3 } from "./layout";
+import { bootFetch } from "./boot";
 
 export interface StarData {
   count: number;
@@ -22,21 +23,47 @@ export interface StarText { id: string; text: string; label: string; primitive: 
 
 let data: StarData | null = null;
 let loading: Promise<StarData> | null = null;
+let counts: Map<string, number> | null = null;
+let indexing: Promise<StarIndex> | null = null;
 const texts = new Map<string, StarText[]>();
 const textLoads = new Map<string, Promise<StarText[]>>();
+
+interface StarIndex { nodes: [string, number, number][]; count: number; version: string }
 
 export function starData(): StarData | null {
   return data;
 }
 
-export function loadStars(): Promise<StarData> {
+/** Questions per node, from the small index: enough to lay the map out while the dots are still downloading. */
+export function starCounts(): Map<string, number> | null {
+  return counts;
+}
+
+export function loadStarIndex(): Promise<StarIndex> {
+  indexing ??= bootFetch("/api/stars")
+    .then((r) => r.json())
+    .then((idx: StarIndex) => {
+      counts = new Map(idx.nodes.map(([id, , n]) => [id, n]));
+      return idx;
+    });
+  return indexing;
+}
+
+const binUrl = (v: string) => `/api/stars?bin=1&v=${encodeURIComponent(v)}`;
+const fetchBin = (v: string) => bootFetch(binUrl(v)).then((r) => r.arrayBuffer());
+
+/**
+ * Every dot. The page names the snapshot's version (and starts fetching the dots by it), so the 12 MB start downloading
+ * alongside the index instead of after it; asked for by version, the browser keeps them for return visits.
+ */
+export function loadStars(version?: string): Promise<StarData> {
   if (loading) return loading;
   loading = (async () => {
-    // the index names the snapshot's version; the 12 MB of dots are asked for by it, so the browser keeps them
-    const idx = (await fetch("/api/stars").then((r) => r.json())) as { nodes: [string, number, number][]; count: number; version: string };
-    const bin = await fetch(`/api/stars?bin=1&v=${encodeURIComponent(idx.version)}`).then((r) => r.arrayBuffer());
+    const early = version ? fetchBin(version) : null;
+    const idx = await loadStarIndex();
+    // the page was built against another snapshot: fetch the one the index names (the early one is wasted)
+    const bin = await (early && version === idx.version ? early : fetchBin(idx.version));
     const n = idx.count;
-    const dv = new DataView(bin);
     const d: StarData = {
       count: n,
       nodeIds: idx.nodes.map((x) => x[0]),
@@ -50,18 +77,20 @@ export function loadStars(): Promise<StarData> {
       placement: new Uint8Array(n),
       correct: new Uint8Array(n),
     };
-    for (let i = 0; i < n; i++) {
-      const o = i * 12;
-      d.node[i] = dv.getUint16(o, true);
-      d.local[i * 3] = dv.getInt8(o + 2) / 127;
-      d.local[i * 3 + 1] = dv.getInt8(o + 3) / 127;
-      d.local[i * 3 + 2] = dv.getInt8(o + 4) / 127;
-      d.prim[i] = dv.getUint8(o + 5);
-      d.stability[i] = dv.getUint8(o + 6);
-      d.humanGap[i] = dv.getUint8(o + 7);
-      d.frameGap[i] = dv.getUint8(o + 8);
-      d.placement[i] = dv.getUint8(o + 9);
-      d.correct[i] = dv.getUint8(o + 10);
+    // 12 bytes per star (scripts/star_layout.py): u16 node (little-endian), 3 × i8 offset, 6 × u8, 1 spare
+    const u = new Uint8Array(bin);
+    const s8 = new Int8Array(bin);
+    for (let i = 0, o = 0; i < n; i++, o += 12) {
+      d.node[i] = u[o] | (u[o + 1] << 8);
+      d.local[i * 3] = s8[o + 2] / 127;
+      d.local[i * 3 + 1] = s8[o + 3] / 127;
+      d.local[i * 3 + 2] = s8[o + 4] / 127;
+      d.prim[i] = u[o + 5];
+      d.stability[i] = u[o + 6];
+      d.humanGap[i] = u[o + 7];
+      d.frameGap[i] = u[o + 8];
+      d.placement[i] = u[o + 9];
+      d.correct[i] = u[o + 10];
     }
     data = d;
     return d;

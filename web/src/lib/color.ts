@@ -51,6 +51,11 @@ const shades = new Map<string, Color[]>();
 
 /** Branch shade: `t` in 0..1 is the L1 branch's position among its siblings. */
 export function branchColor(hemisphere: string, t: number, theme: Theme, out = new Color()): Color {
+  return shadeAt(branchShadesOf(hemisphere, theme), t, out);
+}
+
+/** A hemisphere's three branch shades (cached), for callers that color many dots of one hemisphere. */
+export function branchShadesOf(hemisphere: string, theme: Theme): Color[] {
   const key = theme + hemisphere;
   let p = shades.get(key);
   if (!p) {
@@ -58,6 +63,11 @@ export function branchColor(hemisphere: string, t: number, theme: Theme, out = n
     p = (b[hemisphere as keyof typeof b] ?? b.root).map((c) => new Color(c));
     shades.set(key, p);
   }
+  return p;
+}
+
+/** The shade at `t` (0..1) between a branch's three shades. */
+export function shadeAt(p: Color[], t: number, out: Color): Color {
   if (t <= 0.5) return out.copy(p[0]).lerp(p[1], t / 0.5);
   return out.copy(p[1]).lerp(p[2], (t - 0.5) / 0.5);
 }

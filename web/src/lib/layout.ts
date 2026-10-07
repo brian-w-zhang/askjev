@@ -3,10 +3,10 @@ import { balloon } from "./layouts/balloon";
 import { galaxy } from "./layouts/galaxy";
 import { pack } from "./layouts/pack";
 import { onion } from "./layouts/onion";
-import { force, forceFinish, forceInput } from "./layouts/force";
+import { force, forceInput, forcePlace, forceRelax } from "./layouts/force";
 import { useStore } from "./store";
 import { semantic } from "./layouts/semantic";
-import type { LayoutInput, Placed, V3 } from "./layouts/common";
+import { preorder, treeKey, type LayoutInput, type Placed, type V3 } from "./layouts/common";
 
 // Nebula layouts (docs/07-ui.md, Layouts). Every layout places node centers and star-ball sizes; stars,
 // edges, labels and the camera all read the same Placed map, so layouts can be swapped live to compare.
@@ -29,19 +29,6 @@ export const LAYOUTS: { id: LayoutKind; label: string; hint: string }[] = [
 ];
 
 const cache = new Map<string, Map<string, Placed>>();
-
-function treeKey(inp: LayoutInput): string {
-  let h = 0, n = 0, total = 0;
-  for (const [id, ks] of Object.entries(inp.children)) {
-    n += ks.length;
-    for (let i = 0; i < id.length; i++) h = (Math.imul(h, 31) + id.charCodeAt(i)) | 0;
-  }
-  for (const v of inp.direct.values()) total += v;
-  // the Meaning layout also depends on its coordinates (they change when the questions do)
-  let c = 0;
-  if (inp.semantic) for (const [id, v] of Object.entries(inp.semantic)) c = (Math.imul(c, 31) + id.length + Math.round(v[0] * 1e4) + Math.round(v[1] * 1e3)) | 0;
-  return `${Object.keys(inp.nodes).length}:${n}:${h}:${total}:${c}`;
-}
 
 /** Node placement for `kind`; null while that layout is still being computed (Web) or loaded (Meaning). */
 export function layoutFor(
@@ -73,44 +60,60 @@ export function layoutFor(
   return out;
 }
 
-const FORCE_KEY = "askjev.force:"; // settled Web layouts, per browser, keyed by the tree's shape
+const FORCE_KEY = "askjev.force2:"; // finished Web layouts (after the overlap pass), per browser, keyed by the tree's shape
 const pending = new Set<string>();
 
 /**
- * The Web layout without blocking the page: the simulation runs in a worker (about 2-3 s) and the result is
+ * The Web layout without blocking the page: settled on the server (or, failing that, in a worker: about 2-3 s), and
  * kept in this browser, so later visits are instant. Null until it's ready; the Scene re-renders then.
  */
 function forceAsync(key: string, inp: LayoutInput, startOf: () => Map<string, Placed>): Map<string, Placed> | null {
   try {
     const saved = localStorage.getItem(FORCE_KEY + key);
     const P = saved ? (JSON.parse(saved) as number[]) : null;
-    const { ids, sim } = forceInput(inp); // saved positions need no start layout
-    if (P && P.length === ids.length * 3) return forceFinish(inp, ids, sim, P);
+    const ids = preorder(inp); // saved positions need no start layout
+    if (P && P.length === ids.length * 3) return forcePlace(inp, ids, P);
   } catch {}
   if (pending.has(key)) return null;
-  const start = startOf();
-  if (typeof Worker === "undefined") return force(inp, start);
-  const { ids, sim } = forceInput(inp, start);
   pending.add(key);
   const done = (layout: Map<string, Placed>) => {
     pending.delete(key);
     cache.set(key, layout);
     useStore.getState().set({ layoutTick: useStore.getState().layoutTick + 1 });
   };
-  const worker = new Worker(new URL("./layouts/force.worker.ts", import.meta.url), { type: "module" });
-  worker.onmessage = (e: MessageEvent<number[]>) => {
-    worker.terminate();
+  const keep = (P: number[]) => {
     try {
-      for (let i = localStorage.length - 1; i >= 0; i--) { const k = localStorage.key(i); if (k?.startsWith(FORCE_KEY)) localStorage.removeItem(k); }
-      localStorage.setItem(FORCE_KEY + key, JSON.stringify(e.data.map((v) => Math.round(v * 100) / 100)));
+      for (let i = localStorage.length - 1; i >= 0; i--) { const k = localStorage.key(i); if (k?.startsWith("askjev.force")) localStorage.removeItem(k); }
+      localStorage.setItem(FORCE_KEY + key, JSON.stringify(P.map((v) => Math.round(v * 100) / 100)));
     } catch {}
-    done(forceFinish(inp, ids, sim, e.data));
   };
-  worker.onerror = () => {
-    worker.terminate();
-    done(force(inp, start)); // no worker after all: do it here
+  // The server has usually settled this exact tree already (/api/layout/web); only if it hasn't, simulate here.
+  const simulateHere = () => {
+    const start = startOf();
+    if (typeof Worker === "undefined") return done(force(inp, start));
+    const { ids, sim } = forceInput(inp, start);
+    const worker = new Worker(new URL("./layouts/force.worker.ts", import.meta.url), { type: "module" });
+    worker.onmessage = (e: MessageEvent<number[]>) => {
+      worker.terminate();
+      const final = forceRelax(sim, e.data);
+      keep(final);
+      done(forcePlace(inp, ids, final));
+    };
+    worker.onerror = () => {
+      worker.terminate();
+      done(force(inp, start)); // no worker after all: do it here
+    };
+    worker.postMessage(sim);
   };
-  worker.postMessage(sim);
+  fetch(`/api/layout/web?key=${encodeURIComponent(treeKey(inp))}`)
+    .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+    .then(({ P }: { P: number[] }) => {
+      const ids = preorder(inp);
+      if (!Array.isArray(P) || P.length !== ids.length * 3) throw new Error("layout size");
+      keep(P);
+      done(forcePlace(inp, ids, P));
+    })
+    .catch(simulateHere);
   return null;
 }
 

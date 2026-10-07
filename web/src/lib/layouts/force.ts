@@ -21,12 +21,22 @@ export function forceInput(inp: LayoutInput, start?: Map<string, Placed>): { ids
   return { ids, sim: { P, r, edges, root: idx.get(inp.rootId)! } };
 }
 
+/** Settled positions → final positions: a pass that pushes overlapping balls apart (flat xyz per node, in `ids` order). */
+export function forceRelax(sim: SimInput, settled: ArrayLike<number>): number[] {
+  const bodies: Body[] = sim.r.map((r, i) => ({ p: [settled[i * 3], settled[i * 3 + 1], settled[i * 3 + 2]] as V3, r: r * 1.1, fixed: i === sim.root }));
+  relax(bodies, 60, 0.3);
+  return bodies.flatMap((b) => b.p);
+}
+
+/** Final positions (from forceRelax) → the layout. */
+export function forcePlace(inp: LayoutInput, ids: string[], final: ArrayLike<number>): Map<string, Placed> {
+  const pos = new Map<string, V3>(ids.map((id, i) => [id, [final[i * 3], final[i * 3 + 1], final[i * 3 + 2]] as V3]));
+  return finish(inp, pos, { halo: true, squash: 0.3 });
+}
+
 /** Settled positions → the layout. */
 export function forceFinish(inp: LayoutInput, ids: string[], sim: SimInput, settled: ArrayLike<number>): Map<string, Placed> {
-  const bodies: Body[] = ids.map((_, i) => ({ p: [settled[i * 3], settled[i * 3 + 1], settled[i * 3 + 2]] as V3, r: sim.r[i] * 1.1, fixed: i === sim.root }));
-  relax(bodies, 60, 0.3);
-  const pos = new Map<string, V3>(ids.map((id, i) => [id, bodies[i].p]));
-  return finish(inp, pos, { halo: true, squash: 0.3 });
+  return forcePlace(inp, ids, forceRelax(sim, settled));
 }
 
 /** The whole layout, synchronously (no worker available). */

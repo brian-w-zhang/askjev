@@ -1,6 +1,7 @@
 "use client";
 import { create } from "zustand";
 import type { Filters, Indicator, TreeNode } from "./types";
+import { bootFetch } from "./boot";
 import type { LayoutKind, V3 } from "./layout";
 import type { Theme } from "./theme";
 
@@ -31,6 +32,7 @@ interface State {
   selected: string | null;
   hovered: string | null;
   hoverStar: number; // star index under the pointer, -1 for none
+  countsReady: boolean; // the tree and the star index are in: the map can be laid out
   starsReady: boolean;
   focusStar: number; // the question dot a search or "feeling lucky" flight landed on, -1 for none
   pathA: string[]; // embedding path (root → result node)
@@ -58,6 +60,7 @@ export const useStore = create<State>((set) => ({
   selected: null,
   hovered: null,
   hoverStar: -1,
+  countsReady: false,
   starsReady: false,
   focusStar: -1,
   pathA: [],
@@ -102,7 +105,7 @@ export function loadSubtree(root: string, depth = 2): Promise<void> {
   const key = `sub:${root}:${depth}`;
   if (inflight.has(key)) return inflight.get(key)!;
   const { filters, showHidden } = useStore.getState();
-  const p = fetch(`/api/tree?root=${encodeURIComponent(root)}&depth=${depth}${filterQuery(filters, showHidden)}`)
+  const p = bootFetch(`/api/tree?root=${encodeURIComponent(root)}&depth=${depth}${filterQuery(filters, showHidden)}`)
     .then((r) => r.json())
     .then(({ nodes }: { nodes: TreeNode[] }) => {
       const base = nodes.find((n) => n.id === root)?.depth ?? 0;

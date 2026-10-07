@@ -2,7 +2,7 @@
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import { loadSubtree, useStore } from "@/lib/store";
-import { loadStars } from "@/lib/stars";
+import { loadStarIndex, loadStars } from "@/lib/stars";
 import { goBack, goForward, deselect, resetView } from "@/lib/actions";
 import { Search } from "./Search";
 import { Legend } from "./Tools";
@@ -15,19 +15,22 @@ const B64 = "SSB3YW50IHRvIGpvaW4gdGhlIGpldm9sdXRpb24=";
 
 const Scene = dynamic(() => import("./scene/Scene"), { ssr: false });
 
-export default function App() {
+export default function App({ starsVersion }: { starsVersion?: string }) {
   const open = useStore((s) => s.panel.kind !== "none");
   const count = useStore((s) => Object.keys(s.nodes).length);
   const theme = useStore((s) => s.theme);
   const starsReady = useStore((s) => s.starsReady);
-  // the whole tree and every dot, fetched while the 3D scene's code is still downloading, not after it
+  // the whole tree and every dot, fetched while the 3D scene's code is still downloading, not after it (the page
+  // starts all three before any bundle loads). The layout needs only the tree and the index, so it's done while the dots download.
   useEffect(() => {
-    Promise.all([loadSubtree("root", 12), loadStars()]).then(() => useStore.getState().set({ starsReady: true }));
-  }, []);
+    const tree = loadSubtree("root", 12);
+    Promise.all([tree, loadStarIndex()]).then(() => useStore.getState().set({ countsReady: true }));
+    Promise.all([tree, loadStars(starsVersion)]).then(() => useStore.getState().set({ starsReady: true }));
+  }, [starsVersion]);
   useEffect(() => {
     document.body.classList.toggle("panel-open", open);
   }, [open]);
-  // theme: whatever the pre-paint script in layout.tsx picked (saved choice, else the system's), then kept in sync
+  // theme: whatever the pre-paint script in layout.tsx picked (saved choice, else dark), then kept in sync
   useEffect(() => {
     const t = document.documentElement.dataset.theme as Theme | undefined;
     if (t === "dark" || t === "light") useStore.getState().set({ theme: t });

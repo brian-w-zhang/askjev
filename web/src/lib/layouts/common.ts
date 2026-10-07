@@ -196,3 +196,17 @@ export function relax(bodies: Body[], iters = 40, pad = 0.2, project?: (i: numbe
   }
   bodies.forEach((b, i) => { b.p = [X[i * 3], X[i * 3 + 1], X[i * 3 + 2]]; });
 }
+
+/** A layout's cache key: the tree's shape, its question counts and (Meaning) its coordinates. */
+export function treeKey(inp: LayoutInput): string {
+  let h = 0, n = 0, total = 0;
+  for (const [id, ks] of Object.entries(inp.children)) {
+    n += ks.length;
+    for (let i = 0; i < id.length; i++) h = (Math.imul(h, 31) + id.charCodeAt(i)) | 0;
+  }
+  for (const v of inp.direct.values()) total += v;
+  // the Meaning layout also depends on its coordinates (they change when the questions do)
+  let c = 0;
+  if (inp.semantic) for (const [id, v] of Object.entries(inp.semantic)) c = (Math.imul(c, 31) + id.length + Math.round(v[0] * 1e4) + Math.round(v[1] * 1e3)) | 0;
+  return `${Object.keys(inp.nodes).length}:${n}:${h}:${total}:${c}`;
+}
